@@ -1,7 +1,7 @@
 @PACKAGE_INIT@
 
 find_dependency(KF5Akonadi "@KDEPIMLIBS_LIB_VERSION@")
-find_dependency(KF5CalendarSupport "@KDEPIM_LIB_VERSION@")
+find_dependency(KF5CalendarSupport "@CALENDARSUPPORT_LIB_VERSION@")
 find_dependency(KF5CalendarCore "@KCALENDARCORE_LIB_VERSION@")
 find_dependency(KF5CalendarUtils "@CALENDARUTILS_LIB_VERSION@")
 find_dependency(KF5AkonadiCalendar "@AKONADICALENDAR_LIB_VERSION@")
