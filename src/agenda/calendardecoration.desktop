@@ -1,6 +1,9 @@
 [Desktop Entry]
 Name=Calendar Decoration Interface
 Name[ca]=Interfície de decoració del calendari
+Name[ca@valencia]=Interfície de decoració del calendari
+Name[de]=Dekoration für den Kalender
+Name[en_GB]=Calendar Decoration Interface
 Name[es]=Interfaz de decoración del calendario
 Name[fi]=Kalenteritekstin koristeluliitännäinen
 Name[gl]=Interface de decoración de calendarios
@@ -19,6 +22,9 @@ Type=ServiceType
 X-KDE-ServiceType=Calendar/Decoration
 Comment=Calendar Decoration Plugin
 Comment[ca]=Connector de decoració del calendari
+Comment[ca@valencia]=Connector de decoració del calendari
+Comment[de]=Dekoration für den Kalender
+Comment[en_GB]=Calendar Decoration Plugin
 Comment[es]=Complemento de decoración del calendario
 Comment[fi]=Kalenteritekstin koristeluliitännäinen
 Comment[gl]=Engadido para a decoración do calendario
