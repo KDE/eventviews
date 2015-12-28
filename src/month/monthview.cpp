@@ -76,7 +76,7 @@ protected:
     /* reimplemented from KCalCore::Calendar::CalendarObserver */
     void calendarIncidenceAdded(const KCalCore::Incidence::Ptr &incidence) Q_DECL_OVERRIDE;
     void calendarIncidenceChanged(const KCalCore::Incidence::Ptr &incidence) Q_DECL_OVERRIDE;
-    void calendarIncidenceDeleted(const KCalCore::Incidence::Ptr &incidence) Q_DECL_OVERRIDE;
+    void calendarIncidenceDeleted(const KCalCore::Incidence::Ptr &incidence, const KCalCore::Calendar *calaendar) Q_DECL_OVERRIDE;
 };
 
 }
@@ -146,8 +146,9 @@ void MonthViewPrivate::calendarIncidenceChanged(const KCalCore::Incidence::Ptr &
     triggerDelayedReload(MonthView::IncidencesEdited);
 }
 
-void MonthViewPrivate::calendarIncidenceDeleted(const KCalCore::Incidence::Ptr &incidence)
+void MonthViewPrivate::calendarIncidenceDeleted(const KCalCore::Incidence::Ptr &incidence, const KCalCore::Calendar *calendar)
 {
+    Q_UNUSED(calendar);
     Q_ASSERT(!incidence->uid().isEmpty());
     scene->removeIncidence(incidence->uid());
 }

@@ -294,7 +294,7 @@ protected:
     /* reimplemented from KCalCore::Calendar::CalendarObserver */
     void calendarIncidenceAdded(const KCalCore::Incidence::Ptr &incidence) Q_DECL_OVERRIDE;
     void calendarIncidenceChanged(const KCalCore::Incidence::Ptr &incidence) Q_DECL_OVERRIDE;
-    void calendarIncidenceDeleted(const KCalCore::Incidence::Ptr &incidence) Q_DECL_OVERRIDE;
+    void calendarIncidenceDeleted(const KCalCore::Incidence::Ptr &incidence, const KCalCore::Calendar *calendar) Q_DECL_OVERRIDE;
 };
 
 bool AgendaView::Private::datesEqual(const KCalCore::Incidence::Ptr &one, const KCalCore::Incidence::Ptr &two) const
@@ -471,8 +471,9 @@ void AgendaView::Private::calendarIncidenceChanged(const KCalCore::Incidence::Pt
     // setChanges(q->changes() | IncidencesEdited, incidence);
 }
 
-void AgendaView::Private::calendarIncidenceDeleted(const KCalCore::Incidence::Ptr &incidence)
+void AgendaView::Private::calendarIncidenceDeleted(const KCalCore::Incidence::Ptr &incidence, const KCalCore::Calendar *calendar)
 {
+    Q_UNUSED(calendar);
     if (!incidence || incidence->uid().isEmpty()) {
         qCWarning(CALENDARVIEW_LOG) << "invalid incidence or empty uid: " << incidence;
         Q_ASSERT(false);
