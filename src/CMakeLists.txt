@@ -200,7 +200,6 @@ ecm_generate_pri_file(BASE_NAME EventViews
 )
 
 
-if(${CMAKE_SOURCE_DIR} STREQUAL ${eventviews_SOURCE_DIR})
 install(FILES
     ${eventviews_CamelCase_HEADERS}
     ${eventviews_CamelCaseagenda_HEADERS}
@@ -235,9 +234,6 @@ install(FILES
 install(FILES
     ${PRI_FILENAME}
     DESTINATION ${ECM_MKSPECS_INSTALL_DIR})
-
-
-endif()
 
 install(FILES agenda/calendardecoration.desktop DESTINATION ${KDE_INSTALL_KSERVICETYPES5DIR})
 
