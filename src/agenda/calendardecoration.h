@@ -114,6 +114,7 @@ protected:
 */
 class EVENTVIEWS_EXPORT StoredElement : public Element
 {
+    Q_OBJECT
 public:
     explicit StoredElement(const QString &id);
     StoredElement(const QString &id, const QString &shortText);

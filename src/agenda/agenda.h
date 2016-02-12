@@ -342,6 +342,7 @@ private:
 
 class AgendaScrollArea : public QScrollArea
 {
+    Q_OBJECT
 public:
     AgendaScrollArea(bool allDay, AgendaView *agendaView, bool isInteractive, QWidget *parent);
     ~AgendaScrollArea();

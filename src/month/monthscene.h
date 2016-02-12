@@ -322,6 +322,7 @@ private:
  */
 class MonthGraphicsView : public QGraphicsView
 {
+    Q_OBJECT
 public:
     explicit MonthGraphicsView(MonthView *parent);
 

@@ -75,8 +75,7 @@ static QString tzWithUTC(KTimeZones::ZoneMap::ConstIterator it)
 {
     return
         QStringLiteral("%1 (UTC%2)").
-        arg(i18n(it.key().toUtf8())).
-        arg(tzUTCOffsetStr(it.value()));
+        arg(i18n(it.key().toUtf8()), tzUTCOffsetStr(it.value()));
 }
 
 TimeScaleConfigDialog::TimeScaleConfigDialog(const PrefsPtr &preferences, QWidget *parent)
