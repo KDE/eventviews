@@ -37,7 +37,6 @@
 
 #include <QTextBrowser>
 #include <KLocalizedString>
-#include <KIconLoader>
 #include "calendarview_debug.h"
 
 #include <QEvent>

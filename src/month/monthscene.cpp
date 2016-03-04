@@ -28,7 +28,6 @@
 
 #include <CalendarSupport/Utils>
 
-#include <KIconLoader>
 
 #include <QGraphicsSceneMouseEvent>
 #include <QResizeEvent>

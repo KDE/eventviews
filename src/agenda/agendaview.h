@@ -35,7 +35,6 @@
 #include <QFrame>
 
 class KConfig;
-class KHBox;
 
 class QSplitter;
 

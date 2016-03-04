@@ -25,7 +25,6 @@
 #include <KSystemTimeZone>
 #include <KLocalizedString>
 #include <QIcon>
-#include <KConfigGroup>
 #include <QDialogButtonBox>
 #include <QPushButton>
 #include <QVBoxLayout>

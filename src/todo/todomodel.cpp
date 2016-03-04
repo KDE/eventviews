@@ -41,7 +41,6 @@
 
 #include <KMessageBox>
 #include "calendarview_debug.h"
-#include <KIconLoader>
 
 #include <QMimeData>
 #include <QIcon>
