@@ -119,7 +119,7 @@ void WhatsNextView::updateView()
                       KIconLoader::DefaultState, QStringList(), &ipath);
         mText += QLatin1String("<h2><img src=\"");
         mText += ipath;
-        mText += QLatin1String("\">");
+        mText += QLatin1String("\" width=\"22\" height=\"22\">");
         mText += i18n("Events:") + QLatin1String("</h2>\n");
         mText += QLatin1String("<table>\n");
         Q_FOREACH (const KCalCore::Event::Ptr &ev, events) {
@@ -200,7 +200,7 @@ void WhatsNextView::updateView()
                                   KIconLoader::DefaultState, QStringList(), &ipath);
                     mText += QLatin1String("<h2><img src=\"");
                     mText += ipath;
-                    mText += QLatin1String("\">");
+                    mText += QLatin1String("\" width=\"22\" height=\"22\">");
                     mText += i18n("Events and to-dos that need a reply:") + QLatin1String("</h2>\n");
                     mText += QLatin1String("<table>\n");
                 }
@@ -220,7 +220,7 @@ void WhatsNextView::updateView()
                                   KIconLoader::DefaultState, QStringList(), &ipath);
                     mText += QLatin1String("<h2><img src=\"");
                     mText += ipath;
-                    mText += QLatin1String("\">");
+                    mText += QLatin1String("\" width=\"22\" height=\"22\">");
                     mText += i18n("Events and to-dos that need a reply:") + QLatin1String("</h2>\n");
                     mText += QLatin1String("<table>\n");
                 }
