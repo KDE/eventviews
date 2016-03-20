@@ -96,7 +96,6 @@ private:
     Akonadi::Item mJournal;
     Akonadi::ETMCalendar::Ptr mCalendar;
     QDate mDate;
-    bool mReadOnly;
 
     QTextBrowser *mBrowser;
     QPushButton *mEditButton;
