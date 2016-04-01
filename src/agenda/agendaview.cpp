@@ -745,7 +745,10 @@ void AgendaView::init(const QDate &start, const QDate &end)
 
     // Alignment and description widgets
     if (!d->mIsSideBySide) {
-        d->mTimeBarHeaderFrame = new KHBox(d->mAllDayFrame);
+        d->mTimeBarHeaderFrame = new QFrame(d->mAllDayFrame);
+        auto timeBarHeaderFrameLayout = new QHBoxLayout(d->mTimeBarHeaderFrame);
+        timeBarHeaderFrameLayout->setMargin(0);
+        timeBarHeaderFrameLayout->setSpacing(0);
         d->mDummyAllDayLeft = new QWidget(d->mAllDayFrame);
     }
 
@@ -1399,6 +1402,7 @@ void AgendaView::createTimeBarHeaders()
         TimeLabels *timeLabel = static_cast<TimeLabels *>(area->widget());
         QLabel *label = new QLabel(timeLabel->header().replace(QLatin1Char('/'), QStringLiteral("/ ")),
                                    d->mTimeBarHeaderFrame);
+        d->mTimeBarHeaderFrame->layout()->addWidget(label);
         label->setFont(labelFont);
         label->setAlignment(Qt::AlignBottom | Qt::AlignRight);
         label->setMargin(0);
