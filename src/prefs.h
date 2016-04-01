@@ -30,6 +30,7 @@
 
 #include <KConfigSkeleton>
 #include <KDateTime>
+#include <QTimeZone>
 
 namespace EventViews
 {
@@ -155,6 +156,7 @@ public:
 
     void setTimeSpec(const KDateTime::Spec &spec);
     KDateTime::Spec timeSpec() const;
+    QTimeZone timeZone() const;
 
     QStringList timeScaleTimezones() const;
     void setTimeScaleTimezones(const QStringList &list);

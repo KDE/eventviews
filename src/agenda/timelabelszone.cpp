@@ -25,8 +25,6 @@
 #include "prefs.h"
 #include "timelabels.h"
 
-#include <KSystemTimeZone>
-
 #include <QHBoxLayout>
 #include <QScrollArea>
 #include <QScrollBar>
@@ -64,13 +62,13 @@ void TimeLabelsZone::reset()
 
 void TimeLabelsZone::init()
 {
-    QStringList seenTimeZones(mPrefs->timeSpec().timeZone().name());
+    QStringList seenTimeZones(QString::fromUtf8(mPrefs->timeZone().id()));
 
-    addTimeLabels(mPrefs->timeSpec());
+    addTimeLabels(mPrefs->timeZone());
 
     foreach (const QString &zoneStr, mPrefs->timeScaleTimezones()) {
         if (!seenTimeZones.contains(zoneStr)) {
-            KTimeZone zone = KSystemTimeZones::zone(zoneStr);
+            auto zone = QTimeZone(zoneStr.toUtf8());
             if (zone.isValid()) {
                 addTimeLabels(zone);
                 seenTimeZones += zoneStr;
@@ -79,10 +77,10 @@ void TimeLabelsZone::init()
     }
 }
 
-void TimeLabelsZone::addTimeLabels(const KDateTime::Spec &spec)
+void TimeLabelsZone::addTimeLabels(const QTimeZone &zone)
 {
     QScrollArea *area = new QScrollArea(this);
-    TimeLabels *labels = new TimeLabels(spec, 24, this);
+    TimeLabels *labels = new TimeLabels(zone, 24, this);
     mTimeLabelsList.prepend(area);
     area->setWidgetResizable(true);
     area->setWidget(labels);

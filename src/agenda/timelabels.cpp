@@ -27,11 +27,10 @@
 #include "timelabelszone.h"
 #include "timescaleconfigdialog.h"
 
-#include <QIcon>
 #include <KLocalizedString>
-#include <KTimeZone>
 
 #include <QFrame>
+#include <QIcon>
 #include <QMenu>
 #include <QPainter>
 #include <QPointer>
@@ -39,12 +38,11 @@
 
 using namespace EventViews;
 
-TimeLabels::TimeLabels(const KDateTime::Spec &spec, int rows,
-                       TimeLabelsZone *parent, Qt::WindowFlags f)
-    : QFrame(parent, f)
+TimeLabels::TimeLabels(const QTimeZone &zone, int rows, TimeLabelsZone *parent, Qt::WindowFlags f) :
+    QFrame(parent, f),
+    mTimezone(zone)
 {
     mTimeLabelsZone = parent;
-    mSpec = spec;
     mRows = rows;
     mMiniWidth = 0;
 
@@ -59,8 +57,8 @@ TimeLabels::TimeLabels(const KDateTime::Spec &spec, int rows,
     colorMousePos();
     mAgenda = Q_NULLPTR;
 
-    if (mSpec.isValid()) {
-        setToolTip(i18n("Timezone:") + i18n(mSpec.timeZone().name().toUtf8()));
+    if (mTimezone.isValid()) {
+        setToolTip(i18n("Timezone:") + i18n(mTimezone.id()));
     }
 
     setSizePolicy(QSizePolicy::Minimum, QSizePolicy::Fixed);
@@ -177,10 +175,10 @@ void TimeLabels::paintEvent(QPaintEvent *)
     const int cy = -y();// y() returns a negative value.
 
     const int beginning =
-        !mSpec.isValid() ?
+        !mTimezone.isValid() ?
         0 :
-        (mSpec.timeZone().currentOffset() -
-         mTimeLabelsZone->preferences()->timeSpec().timeZone().currentOffset()) / (60 * 60);
+        (mTimezone.offsetFromUtc(QDateTime::currentDateTimeUtc()) -
+         mTimeLabelsZone->preferences()->timeZone().offsetFromUtc(QDateTime::currentDateTimeUtc())) / (60 * 60);
 
     // bug:  the parameters cx and cw are the areas that need to be
     //       redrawn, not the area of the widget.  unfortunately, this
@@ -296,10 +294,10 @@ void TimeLabels::contextMenuEvent(QContextMenuEvent *event)
         popup.addAction(QIcon::fromTheme(QStringLiteral("document-properties")), i18n("&Add Timezones..."));
     QAction *removeTimeZone =
         popup.addAction(QIcon::fromTheme(QStringLiteral("edit-delete")),
-                        i18n("&Remove Timezone %1", i18n(mSpec.timeZone().name().toUtf8())));
-    if (!mSpec.isValid() ||
+                        i18n("&Remove Timezone %1", i18n(mTimezone.id())));
+    if (!mTimezone.isValid() ||
             !mTimeLabelsZone->preferences()->timeScaleTimezones().count() ||
-            mSpec == mTimeLabelsZone->preferences()->timeSpec()) {
+            mTimezone == mTimeLabelsZone->preferences()->timeZone()) {
         removeTimeZone->setEnabled(false);
     }
 
@@ -313,7 +311,7 @@ void TimeLabels::contextMenuEvent(QContextMenuEvent *event)
         delete dialog;
     } else if (activatedAction == removeTimeZone) {
         QStringList list = mTimeLabelsZone->preferences()->timeScaleTimezones();
-        list.removeAll(mSpec.timeZone().name());
+        list.removeAll(QString::fromUtf8(mTimezone.id()));
         mTimeLabelsZone->preferences()->setTimeScaleTimezones(list);
         mTimeLabelsZone->preferences()->writeConfig();
         mTimeLabelsZone->reset();
@@ -322,41 +320,41 @@ void TimeLabels::contextMenuEvent(QContextMenuEvent *event)
     }
 }
 
-KDateTime::Spec TimeLabels::timeSpec()
+QTimeZone TimeLabels::timeZone() const
 {
-    return mSpec;
+    return mTimezone;
 }
 
 QString TimeLabels::header() const
 {
-    return i18n(mSpec.timeZone().name().toUtf8());
+    return i18n(mTimezone.id());
 }
 
 QString TimeLabels::headerToolTip() const
 {
-    KTimeZone tz = mSpec.timeZone();
-
     QString toolTip;
     toolTip += QLatin1String("<qt>");
-    toolTip += i18n("<b>%1</b>", i18n(tz.name().toUtf8()));
+    toolTip += i18n("<b>%1</b>", i18n(mTimezone.id()));
     toolTip += QLatin1String("<hr>");
     //TODO: Once string freeze is lifted, add UTC offset here
-    if (!tz.countryCode().isEmpty()) {
-        toolTip += i18n("<i>Country Code:</i> %1", tz.countryCode());
+    if (mTimezone.country() != QLocale::AnyCountry) {
+        toolTip += i18n("<i>Country:</i> %1", QLocale::countryToString(mTimezone.country()));
         toolTip += QLatin1String("<br/>");
     }
-    if (!tz.abbreviations().isEmpty()) {
-        toolTip += i18n("<i>Abbreviations:</i>") + QLatin1String("</i>");
-        toolTip += QLatin1String("&nbsp;");
-        foreach (const QByteArray &a, tz.abbreviations()) {
-            toolTip += QString::fromLocal8Bit(a);
-            toolTip += QLatin1String(",&nbsp;");
-        }
-        toolTip.chop(7);
+
+    auto abbreviations = QStringLiteral("&nbsp;");
+    foreach (const auto &transition, mTimezone.transitions(QDateTime::currentDateTime(), QDateTime::currentDateTime().addYears(1))) {
+        abbreviations += transition.abbreviation;
+        abbreviations += QLatin1String(",&nbsp;");
+    }
+    abbreviations.chop(7);
+    if (!abbreviations.isEmpty()) {
+        toolTip += i18n("<i>Abbreviations:</i>");
+        toolTip += abbreviations;
         toolTip += QLatin1String("<br/>");
     }
-    if (!tz.comment().isEmpty()) {
-        toolTip += i18n("<i>Comment:</i> %1", tz.comment());
+    if (!mTimezone.comment().isEmpty()) {
+        toolTip += i18n("<i>Comment:</i> %1", mTimezone.comment());
     }
     toolTip += QLatin1String("</qt>");
 

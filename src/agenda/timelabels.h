@@ -24,7 +24,7 @@
 #ifndef EVENTVIEWS_TIMELABELS_H
 #define EVENTVIEWS_TIMELABELS_H
 
-#include <KDateTime>
+#include <QTimeZone>
 
 #include <QFrame>
 
@@ -43,8 +43,7 @@ class TimeLabels : public QFrame
 public:
     typedef QList<TimeLabels *> List;
 
-    TimeLabels(const KDateTime::Spec &spec, int rows,
-               TimeLabelsZone *parent = Q_NULLPTR, Qt::WindowFlags f = Q_NULLPTR);
+    TimeLabels(const QTimeZone &zone, int rows, TimeLabelsZone *parent = Q_NULLPTR, Qt::WindowFlags f = Q_NULLPTR);
 
     /** updates widget's internal state */
     void updateConfig();
@@ -58,8 +57,8 @@ public:
     /** */
     void contextMenuEvent(QContextMenuEvent *event) Q_DECL_OVERRIDE;
 
-    /** Returns time spec of this label */
-    KDateTime::Spec timeSpec();
+    /** Returns the time zone of this label */
+    QTimeZone timeZone() const;
 
     /**
       Return string which can be used as a header for the time label.
@@ -86,7 +85,7 @@ private Q_SLOTS:
 
 private:
     void colorMousePos();
-    KDateTime::Spec mSpec;
+    QTimeZone mTimezone;
     int mRows;
     double mCellHeight;
     int mMiniWidth;

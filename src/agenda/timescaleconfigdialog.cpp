@@ -22,11 +22,11 @@
 #include "timescaleconfigdialog.h"
 #include "prefs.h"
 
-#include <KSystemTimeZone>
 #include <KLocalizedString>
 #include <QIcon>
 #include <QDialogButtonBox>
 #include <QPushButton>
+#include <QTimeZone>
 #include <QVBoxLayout>
 
 using namespace EventViews;
@@ -48,13 +48,14 @@ enum {
     TimeZoneNameRole = Qt::UserRole
 };
 
-typedef QPair<QString, QString> TimeZoneNamePair;
+typedef QPair<QString, QByteArray> TimeZoneNamePair;
 
 //TODO: move to KCalCore::Stringify
-static QString tzUTCOffsetStr(const KTimeZone &tz)
+static QString tzUTCOffsetStr(const QTimeZone &tz)
 {
-    int utcOffsetHrs = tz.currentOffset() / 3600;  // in hours
-    int utcOffsetMins = (tz.currentOffset() % 3600) / 60;    // in minutes
+    auto currentOffset = tz.offsetFromUtc(QDateTime::currentDateTimeUtc());
+    int utcOffsetHrs = currentOffset / 3600;  // in hours
+    int utcOffsetMins = (currentOffset % 3600) / 60;    // in minutes
     QString utcStr;
     if (utcOffsetMins > 0) {
         utcStr = utcOffsetHrs >= 0 ?
@@ -70,11 +71,12 @@ static QString tzUTCOffsetStr(const KTimeZone &tz)
 }
 
 //TODO: move to KCalCore::Stringify
-static QString tzWithUTC(KTimeZones::ZoneMap::ConstIterator it)
+static QString tzWithUTC(const QByteArray &zoneId)
 {
+    auto tz = QTimeZone(zoneId);
     return
         QStringLiteral("%1 (UTC%2)").
-        arg(i18n(it.key().toUtf8()), tzUTCOffsetStr(it.value()));
+        arg(i18n(zoneId), tzUTCOffsetStr(tz));
 }
 
 TimeScaleConfigDialog::TimeScaleConfigDialog(const PrefsPtr &preferences, QWidget *parent)
@@ -97,18 +99,18 @@ TimeScaleConfigDialog::TimeScaleConfigDialog(const PrefsPtr &preferences, QWidge
     mainLayout->addWidget(mainwidget);
     mainLayout->addWidget(buttonBox);
 
-    QStringList shownTimeZones(d->mPreferences->timeSpec().timeZone().name());
+    QStringList shownTimeZones(QString::fromUtf8(d->mPreferences->timeZone().id()));
     shownTimeZones += d->mPreferences->timeScaleTimezones();
     shownTimeZones.removeDuplicates();
 
     QList<TimeZoneNamePair> availList, selList;
-    const KTimeZones::ZoneMap timezones = KSystemTimeZones::zones();
-    for (KTimeZones::ZoneMap::ConstIterator it = timezones.begin();  it != timezones.end();  ++it) {
+    const auto zoneIds = QTimeZone::availableTimeZoneIds();
+    foreach (const auto &zoneId, zoneIds) {
         // do not list timezones already shown
-        if (!shownTimeZones.contains(it.key())) {
-            availList.append(TimeZoneNamePair(tzWithUTC(it), it.key()));
+        if (!shownTimeZones.contains(QString::fromUtf8(zoneId))) {
+            availList.append(TimeZoneNamePair(tzWithUTC(zoneId), zoneId));
         } else {
-            selList.append(TimeZoneNamePair(tzWithUTC(it), it.key()));
+            selList.append(TimeZoneNamePair(tzWithUTC(zoneId), zoneId));
         }
     }
     qSort(availList.begin(), availList.end());

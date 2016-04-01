@@ -858,6 +858,11 @@ KDateTime::Spec Prefs::timeSpec() const
     return KSystemTimeZones::local();
 }
 
+QTimeZone Prefs::timeZone() const
+{
+    return QTimeZone(timeSpec().timeZone().name().toUtf8());
+}
+
 void Prefs::setTimeSpec(const KDateTime::Spec &spec)
 {
     d->mBaseConfig.mTimeSpec = spec;

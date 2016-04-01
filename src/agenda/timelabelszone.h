@@ -28,6 +28,7 @@
 
 class QHBoxLayout;
 class QScrollArea;
+class QTimeZone;
 
 namespace EventViews
 {
@@ -44,10 +45,10 @@ class TimeLabelsZone : public QWidget
 public:
     explicit TimeLabelsZone(QWidget *parent, const PrefsPtr &preferences, Agenda *agenda = Q_NULLPTR);
 
-    /** Add a new time label with the given spec.
-        If spec is not valid, use the display timespec.
+    /** Add a new time label with the given time zone.
+        If @p zone is not valid, use the display time zone.
     */
-    void addTimeLabels(const KDateTime::Spec &spec);
+    void addTimeLabels(const QTimeZone &zone);
 
     /**
        Returns the best width for each TimeLabels widget
