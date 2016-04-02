@@ -47,7 +47,6 @@
 #include <KCalCore/OccurrenceIterator>
 
 #include <KIconLoader> // for SmallIcon()
-#include <KHBox>
 #include <KMessageBox>
 #include <KServiceTypeTrader>
 #include <KVBox>
@@ -209,12 +208,12 @@ public:
     QGridLayout *mGridLayout;
     QFrame *mTopDayLabels;
     QBoxLayout *mLayoutTopDayLabels;
-    KHBox *mTopDayLabelsFrame;
+    QFrame *mTopDayLabelsFrame;
     QList<AlternateLabel *> mDateDayLabels;
     QBoxLayout *mLayoutBottomDayLabels;
     QFrame *mBottomDayLabels;
-    KHBox *mBottomDayLabelsFrame;
-    KHBox *mAllDayFrame;
+    QFrame *mBottomDayLabelsFrame;
+    QFrame *mAllDayFrame;
     QWidget *mTimeBarHeaderFrame;
     QSplitter *mSplitterAgenda;
     QList<QLabel *> mTimeBarHeaders;
@@ -736,25 +735,31 @@ void AgendaView::init(const QDate &start, const QDate &end)
     d->mGridLayout->addWidget(d->mSplitterAgenda, 1, 0);
 
     /* Create day name labels for agenda columns */
-    d->mTopDayLabelsFrame = new KHBox(d->mSplitterAgenda);
-    d->mTopDayLabelsFrame->setSpacing(SPACING);
+    d->mTopDayLabelsFrame = new QFrame(d->mSplitterAgenda);
+    auto layout = new QHBoxLayout(d->mTopDayLabelsFrame);
+    layout->setMargin(0);
+    layout->setSpacing(SPACING);
 
     /* Create all-day agenda widget */
-    d->mAllDayFrame = new KHBox(d->mSplitterAgenda);
-    d->mAllDayFrame->setSpacing(SPACING);
+    d->mAllDayFrame = new QFrame(d->mSplitterAgenda);
+    auto allDayFrameLayout = new QHBoxLayout(d->mAllDayFrame);
+    allDayFrameLayout->setMargin(0);
+    allDayFrameLayout->setSpacing(SPACING);
 
     // Alignment and description widgets
     if (!d->mIsSideBySide) {
         d->mTimeBarHeaderFrame = new QFrame(d->mAllDayFrame);
+        allDayFrameLayout->addWidget(d->mTimeBarHeaderFrame);
         auto timeBarHeaderFrameLayout = new QHBoxLayout(d->mTimeBarHeaderFrame);
         timeBarHeaderFrameLayout->setMargin(0);
         timeBarHeaderFrameLayout->setSpacing(0);
         d->mDummyAllDayLeft = new QWidget(d->mAllDayFrame);
+        allDayFrameLayout->addWidget(d->mDummyAllDayLeft);
     }
 
     // The widget itself
-    AgendaScrollArea *allDayScrollArea = new AgendaScrollArea(true, this,
-            d->mIsInteractive, d->mAllDayFrame);
+    AgendaScrollArea *allDayScrollArea = new AgendaScrollArea(true, this, d->mIsInteractive, d->mAllDayFrame);
+    allDayFrameLayout->addWidget(allDayScrollArea);
     d->mAllDayAgenda = allDayScrollArea->agenda();
 
     /* Create the main agenda widget and the related widgets */
@@ -798,8 +803,10 @@ void AgendaView::init(const QDate &start, const QDate &end)
     }
 
     /* Create a frame at the bottom which may be used by decorations */
-    d->mBottomDayLabelsFrame = new KHBox(d->mSplitterAgenda);
-    d->mBottomDayLabelsFrame->setSpacing(SPACING);
+    d->mBottomDayLabelsFrame = new QFrame(d->mSplitterAgenda);
+    layout = new QHBoxLayout(d->mBottomDayLabelsFrame);
+    layout->setMargin(0);
+    layout->setSpacing(SPACING);
 
     if (!d->mIsSideBySide) {
         /* Make the all-day and normal agendas line up with each other */
@@ -1158,7 +1165,8 @@ void AgendaView::createDayLabels(bool force)
     QFontMetrics fm = fontMetrics();
 
     d->mTopDayLabels = new QFrame(d->mTopDayLabelsFrame);
-    d->mTopDayLabelsFrame->setStretchFactor(d->mTopDayLabels, 1);
+    d->mTopDayLabelsFrame->layout()->addWidget(d->mTopDayLabels);
+    static_cast<QBoxLayout*>(d->mTopDayLabelsFrame->layout())->setStretchFactor(d->mTopDayLabels, 1);
     d->mLayoutTopDayLabels = new QHBoxLayout(d->mTopDayLabels);
     d->mLayoutTopDayLabels->setMargin(0);
     d->mLayoutTopDayLabels->setSpacing(1);
@@ -1178,7 +1186,8 @@ void AgendaView::createDayLabels(bool force)
     }
 
     d->mBottomDayLabels = new QFrame(d->mBottomDayLabelsFrame);
-    d->mBottomDayLabelsFrame->setStretchFactor(d->mBottomDayLabels, 1);
+    d->mBottomDayLabelsFrame->layout()->addWidget(d->mBottomDayLabels);
+    static_cast<QBoxLayout*>(d->mBottomDayLabelsFrame->layout())->setStretchFactor(d->mBottomDayLabels, 1);
     d->mLayoutBottomDayLabels = new QHBoxLayout(d->mBottomDayLabels);
     d->mLayoutBottomDayLabels->setMargin(0);
     KVBox *bottomWeekLabelBox = new KVBox(d->mBottomDayLabels);
