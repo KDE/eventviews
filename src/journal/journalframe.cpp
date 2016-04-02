@@ -47,8 +47,11 @@
 using namespace EventViews;
 
 JournalDateView::JournalDateView(const Akonadi::ETMCalendar::Ptr &calendar, QWidget *parent)
-    : KVBox(parent), mCalendar(calendar), mChanger(Q_NULLPTR)
+    : QFrame(parent), mCalendar(calendar), mChanger(Q_NULLPTR)
 {
+    auto layout = new QVBoxLayout(this);
+    layout->setMargin(0);
+    layout->setSpacing(0);
 }
 
 JournalDateView::~JournalDateView()
@@ -76,6 +79,7 @@ void JournalDateView::addJournal(const Akonadi::Item &j)
     }
 
     QWidget *container = new QWidget(this);
+    layout()->addWidget(container);
     QHBoxLayout *layout = new QHBoxLayout(container);
     layout->addStretch(1);
     JournalFrame *entry = new JournalFrame(j, mCalendar, this);

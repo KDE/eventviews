@@ -30,7 +30,6 @@
 #include <Akonadi/Calendar/IncidenceChanger>
 #include <Akonadi/Calendar/ETMCalendar>
 #include <Item>
-#include <KVBox>
 
 #include <QDate>
 #include <QFrame>
@@ -108,7 +107,7 @@ private:
     Akonadi::IncidenceChanger *mChanger;
 };
 
-class JournalDateView : public KVBox
+class JournalDateView : public QFrame
 {
     Q_OBJECT
 public:
