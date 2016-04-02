@@ -49,7 +49,6 @@
 #include <KIconLoader> // for SmallIcon()
 #include <KMessageBox>
 #include <KServiceTypeTrader>
-#include <KVBox>
 #include <KWordWrap>
 
 #include <QApplication>
@@ -1131,6 +1130,7 @@ void AgendaView::placeDecorations(DecorationList &decoList, const QDate &date,
         elements = forWeek ? deco->weekElements(date) : deco->dayElements(date);
         if (elements.count() > 0) {
             auto decoHBox = new QFrame(labelBox);
+            labelBox->layout()->addWidget(decoHBox);
             auto layout = new QHBoxLayout(decoHBox);
             layout->setSpacing(0);
             layout->setMargin(0);
@@ -1179,7 +1179,10 @@ void AgendaView::createDayLabels(bool force)
                         1, QSizePolicy::Fixed);
 
     d->mLayoutTopDayLabels->addSpacerItem(spacer);
-    KVBox *topWeekLabelBox = new KVBox(d->mTopDayLabels);
+    auto topWeekLabelBox = new QFrame(d->mTopDayLabels);
+    auto topWeekLabelBoxLayout = new QVBoxLayout(topWeekLabelBox);
+    topWeekLabelBoxLayout->setMargin(0);
+    topWeekLabelBoxLayout->setSpacing(0);
     d->mLayoutTopDayLabels->addWidget(topWeekLabelBox);
     if (d->mIsSideBySide) {
         topWeekLabelBox->hide();
@@ -1190,7 +1193,10 @@ void AgendaView::createDayLabels(bool force)
     static_cast<QBoxLayout*>(d->mBottomDayLabelsFrame->layout())->setStretchFactor(d->mBottomDayLabels, 1);
     d->mLayoutBottomDayLabels = new QHBoxLayout(d->mBottomDayLabels);
     d->mLayoutBottomDayLabels->setMargin(0);
-    KVBox *bottomWeekLabelBox = new KVBox(d->mBottomDayLabels);
+    auto bottomWeekLabelBox = new QFrame(d->mBottomDayLabels);
+    auto bottomWeekLabelBoxLayout = new QVBoxLayout(bottomWeekLabelBox);
+    bottomWeekLabelBoxLayout->setMargin(0);
+    bottomWeekLabelBoxLayout->setSpacing(0);
     d->mLayoutBottomDayLabels->addWidget(bottomWeekLabelBox);
 
 #ifndef EVENTVIEWS_NODECOS
@@ -1205,9 +1211,15 @@ void AgendaView::createDayLabels(bool force)
 #endif
 
     Q_FOREACH (const QDate &date, d->mSelectedDates) {
-        KVBox *topDayLabelBox = new KVBox(d->mTopDayLabels);
+        auto topDayLabelBox = new QFrame(d->mTopDayLabels);
+        auto topDayLabelBoxLayout = new QVBoxLayout(topDayLabelBox);
+        topDayLabelBoxLayout->setMargin(0);
+        topDayLabelBoxLayout->setSpacing(0);
         d->mLayoutTopDayLabels->addWidget(topDayLabelBox);
-        KVBox *bottomDayLabelBox = new KVBox(d->mBottomDayLabels);
+        auto bottomDayLabelBox = new QFrame(d->mBottomDayLabels);
+        auto bottomDayLabelBoxLayout = new QVBoxLayout(bottomDayLabelBox);
+        bottomDayLabelBoxLayout->setMargin(0);
+        bottomDayLabelBoxLayout->setSpacing(0);
         d->mLayoutBottomDayLabels->addWidget(bottomDayLabelBox);
 
         int dW = date.dayOfWeek();
@@ -1217,8 +1229,8 @@ void AgendaView::createDayLabels(bool force)
                                 date.day());
         QString shortstr = QString::number(date.day());
 
-        AlternateLabel *dayLabel =
-            new AlternateLabel(shortstr, longstr, veryLongStr, topDayLabelBox);
+        AlternateLabel *dayLabel = new AlternateLabel(shortstr, longstr, veryLongStr, topDayLabelBox);
+        topDayLabelBoxLayout->addWidget(dayLabel);
         dayLabel->useShortText(); // will be recalculated in updateDayLabelSizes() anyway
         dayLabel->setAlignment(Qt::AlignHCenter);
         if (date == QDate::currentDate()) {
@@ -1232,8 +1244,8 @@ void AgendaView::createDayLabels(bool force)
         Q_FOREACH (const QString &text, texts) {
             // Compute a small version of the holiday string for AlternateLabel
             const KWordWrap ww = KWordWrap::formatText(fm, topDayLabelBox->rect(), 0, text, -1);
-            AlternateLabel *label =
-                new AlternateLabel(ww.truncatedString(), text, text, topDayLabelBox);
+            AlternateLabel *label = new AlternateLabel(ww.truncatedString(), text, text, topDayLabelBox);
+            topDayLabelBoxLayout->addWidget(label);
             label->setAlignment(Qt::AlignCenter);
         }
 
