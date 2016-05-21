@@ -76,7 +76,10 @@ protected:
     /* reimplemented from KCalCore::Calendar::CalendarObserver */
     void calendarIncidenceAdded(const KCalCore::Incidence::Ptr &incidence) Q_DECL_OVERRIDE;
     void calendarIncidenceChanged(const KCalCore::Incidence::Ptr &incidence) Q_DECL_OVERRIDE;
-    void calendarIncidenceDeleted(const KCalCore::Incidence::Ptr &incidence, const KCalCore::Calendar *calaendar) Q_DECL_OVERRIDE;
+    void calendarIncidenceDeleted(const KCalCore::Incidence::Ptr &incidence, const KCalCore::Calendar *calendar) Q_DECL_OVERRIDE;
+private:
+    //quiet --overloaded-virtual warning
+    using KCalCore::Calendar::CalendarObserver::calendarIncidenceDeleted;
 };
 
 }
@@ -634,4 +637,3 @@ void MonthView::setCalendar(const Akonadi::ETMCalendar::Ptr &cal)
     EventView::setCalendar(cal);
     calendar()->registerObserver(d);
 }
-
