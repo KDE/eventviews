@@ -3,7 +3,8 @@ cmake_minimum_required(VERSION 2.8.12)
 project(eventviews)
 
 # ECM setup
-find_package(ECM 5.19.0 CONFIG REQUIRED)
+set(KF5_VERSION "5.22.0")
+find_package(ECM ${KF5_VERSION} CONFIG REQUIRED)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
 set(LIBRARY_NAMELINK)
 include(GenerateExportHeader)
@@ -22,7 +23,6 @@ include(ECMAddTests)
 set(PIM_VERSION "5.2.40")
 
 set(EVENTVIEW_LIB_VERSION ${PIM_VERSION})
-set(KF5_VERSION "5.19.0")
 set(CALENDARUTILS_LIB_VERSION "5.2.40")
 set(KDEPIMLIBS_LIB_VERSION "5.2.40")
 set(QT_REQUIRED_VERSION "5.4.0")
