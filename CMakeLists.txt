@@ -19,7 +19,7 @@ include(KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
 include(ECMQtDeclareLoggingCategory)
 include(ECMAddTests)
 
-set(EVENTVIEW_LIB_VERSION "5.2.2")
+set(EVENTVIEW_LIB_VERSION "5.2.3")
 set(KF5_VERSION "5.19.0")
 set(CALENDARUTILS_LIB_VERSION "5.2.0")
 set(KDEPIMLIBS_LIB_VERSION "5.2.0")
