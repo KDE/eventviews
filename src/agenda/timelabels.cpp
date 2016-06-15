@@ -35,7 +35,6 @@
 #include <QMenu>
 #include <QPainter>
 #include <QPointer>
-#include <KLocale>
 
 using namespace EventViews;
 
@@ -114,17 +113,25 @@ QSize TimeLabels::minimumSizeHint() const
     return sh;
 }
 
+static bool use12Clock()
+{
+    const QString str = QLocale().timeFormat();
+    // 'A' or 'a' means am/pm is shown (and then 'h' uses 12-hour format)
+    // but 'H' forces a 24-hour format anyway, even with am/pm shown.
+    return str.contains(QLatin1Char('a'), Qt::CaseInsensitive) && !str.contains(QLatin1Char('H'));
+}
+
 /** updates widget's internal state */
 void TimeLabels::updateConfig()
 {
     setFont(mTimeLabelsZone->preferences()->agendaTimeLabelsFont());
 
     QString test = QStringLiteral("20");
-    if (KLocale::global()->use12Clock()) {
+    if (use12Clock()) {
         test = QStringLiteral("12");
     }
     mMiniWidth = fontMetrics().width(test);
-    if (KLocale::global()->use12Clock()) {
+    if (use12Clock()) {
         test = QStringLiteral("pm");
     } else {
         test = QStringLiteral("00");
@@ -199,10 +206,10 @@ void TimeLabels::paintEvent(QPaintEvent *)
     QFont hourFont = mTimeLabelsZone->preferences()->agendaTimeLabelsFont();
     p.setFont(font());
 
-    //TODO: rewrite this using KLocale's time formats. "am/pm" doesn't make sense
+    //TODO: rewrite this using QTime's time formats. "am/pm" doesn't make sense
     // in some locale's
     QString suffix;
-    if (!KLocale::global()->use12Clock()) {
+    if (!use12Clock()) {
         suffix = QStringLiteral("00");
     } else {
         suffix = QStringLiteral("am");
@@ -254,7 +261,7 @@ void TimeLabels::paintEvent(QPaintEvent *)
             hour.setNum(cell + 24);
         }
         // handle 24h and am/pm time formats
-        if (KLocale::global()->use12Clock()) {
+        if (use12Clock()) {
             if (cell == 12) {
                 suffix = QStringLiteral("pm");
             }
