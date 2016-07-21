@@ -83,6 +83,16 @@ add_library(KF5EventViews ${eventviews_LIB_SRCS})
 generate_export_header(KF5EventViews BASE_NAME eventviews)
 
 add_library(KF5::EventViews ALIAS KF5EventViews)
+
+if (KDIAGRAM_SUPPORT)
+    set(grant_lib KGantt)
+else()
+    set(grant_lib KF5::KDGantt2)
+endif()
+
+
+set(grant_lib KF5::KDGantt2)
+
 target_link_libraries(KF5EventViews
 PUBLIC
   KF5::AkonadiCore
@@ -94,7 +104,7 @@ PUBLIC
 PRIVATE
   KF5::Libkdepim
   KF5::Codecs
-  KF5::KDGantt2
+  ${grant_lib}
   KF5::AkonadiWidgets
 )
 
