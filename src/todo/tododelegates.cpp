@@ -63,7 +63,7 @@ void TodoCompleteDelegate::paint(QPainter *painter,
 {
     QStyle *style;
 
-    QStyleOptionViewItemV4 opt = option;
+    QStyleOptionViewItem opt = option;
     initStyleOption(&opt, index);
 
     style = opt.widget ? opt.widget->style() : QApplication::style();
@@ -92,7 +92,7 @@ void TodoCompleteDelegate::paint(QPainter *painter,
 QSize TodoCompleteDelegate::sizeHint(const QStyleOptionViewItem &option,
                                      const QModelIndex &index) const
 {
-    QStyleOptionViewItemV4 opt = option;
+    QStyleOptionViewItem opt = option;
     initStyleOption(&opt, index);
 
     QStyle *style = opt.widget ? opt.widget->style() : QApplication::style();
@@ -358,7 +358,7 @@ void TodoRichTextDelegate::paint(QPainter *painter,
                                  const QModelIndex &index) const
 {
     if (index.data(TodoModel::IsRichTextRole).toBool()) {
-        QStyleOptionViewItemV4 opt = option;
+        QStyleOptionViewItem opt = option;
         initStyleOption(&opt, index);
 
         const QWidget *widget = opt.widget;
