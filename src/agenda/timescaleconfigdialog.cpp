@@ -76,7 +76,7 @@ static QString tzWithUTC(const QByteArray &zoneId)
     auto tz = QTimeZone(zoneId);
     return
         QStringLiteral("%1 (UTC%2)").
-        arg(i18n(zoneId), tzUTCOffsetStr(tz));
+        arg(i18n(zoneId.constData()), tzUTCOffsetStr(tz));
 }
 
 TimeScaleConfigDialog::TimeScaleConfigDialog(const PrefsPtr &preferences, QWidget *parent)

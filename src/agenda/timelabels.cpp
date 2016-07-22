@@ -57,7 +57,7 @@ TimeLabels::TimeLabels(const QTimeZone &zone, int rows, TimeLabelsZone *parent, 
     mAgenda = Q_NULLPTR;
 
     if (mTimezone.isValid()) {
-        setToolTip(i18n("Timezone:") + i18n(mTimezone.id()));
+        setToolTip(i18n("Timezone:") + i18n(mTimezone.id().constData()));
     }
 
     setSizePolicy(QSizePolicy::Minimum, QSizePolicy::Fixed);
@@ -301,7 +301,7 @@ void TimeLabels::contextMenuEvent(QContextMenuEvent *event)
         popup.addAction(QIcon::fromTheme(QStringLiteral("document-properties")), i18n("&Add Timezones..."));
     QAction *removeTimeZone =
         popup.addAction(QIcon::fromTheme(QStringLiteral("edit-delete")),
-                        i18n("&Remove Timezone %1", i18n(mTimezone.id())));
+                        i18n("&Remove Timezone %1", i18n(mTimezone.id().constData())));
     if (!mTimezone.isValid() ||
             !mTimeLabelsZone->preferences()->timeScaleTimezones().count() ||
             mTimezone == mTimeLabelsZone->preferences()->timeZone()) {
@@ -334,14 +334,14 @@ QTimeZone TimeLabels::timeZone() const
 
 QString TimeLabels::header() const
 {
-    return i18n(mTimezone.id());
+    return i18n(mTimezone.id().constData());
 }
 
 QString TimeLabels::headerToolTip() const
 {
     QString toolTip;
     toolTip += QLatin1String("<qt>");
-    toolTip += i18n("<b>%1</b>", i18n(mTimezone.id()));
+    toolTip += i18n("<b>%1</b>", i18n(mTimezone.id().constData()));
     toolTip += QLatin1String("<hr>");
     //TODO: Once string freeze is lifted, add UTC offset here
     if (mTimezone.country() != QLocale::AnyCountry) {
