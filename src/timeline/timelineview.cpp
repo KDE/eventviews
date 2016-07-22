@@ -288,7 +288,11 @@ TimelineView::TimelineView(QWidget *parent)
     d->mLeftView->setRootIsDecorated(false);
     d->mLeftView->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
 
+#ifdef KDIAGRAM_SUPPORT
+    d->mGantt = new KGantt::GraphicsView();
+#else
     d->mGantt = new KDGantt::GraphicsView();
+#endif
     splitter->addWidget(d->mLeftView);
     splitter->addWidget(d->mGantt);
     connect(splitter, &QSplitter::splitterMoved,
@@ -300,9 +304,13 @@ TimelineView::TimelineView(QWidget *parent)
 
     d->mRowController->setModel(model);
     d->mGantt->setRowController(d->mRowController);
-
+#ifdef KDIAGRAM_SUPPORT
+    KGantt::DateTimeGrid *grid = new KGantt::DateTimeGrid;
+    grid->setScale(KGantt::DateTimeGrid::ScaleHour);
+#else
     KDGantt::DateTimeGrid *grid = new KDGantt::DateTimeGrid;
     grid->setScale(KDGantt::DateTimeGrid::ScaleHour);
+#endif
     grid->setDayWidth(800);
     grid->setRowSeparators(true);
     d->mGantt->setGrid(grid);
@@ -338,10 +346,19 @@ TimelineView::TimelineView(QWidget *parent)
 #endif
     connect(model, &QStandardItemModel::itemChanged,
             d, &Private::itemChanged);
+
+#ifdef KDIAGRAM_SUPPORT
+    //TODO FIXME doubleClicked doesn't exist PORTING KDIAGRAM
+    //connect(d->mGantt, &KGantt::GraphicsView::doubleClicked,
+    //        d, &Private::itemDoubleClicked);
+    connect(d->mGantt, &KGantt::GraphicsView::activated,
+            d, &Private::itemSelected);
+#else
     connect(d->mGantt, &KDGantt::GraphicsView::doubleClicked,
             d, &Private::itemDoubleClicked);
     connect(d->mGantt, &KDGantt::GraphicsView::activated,
             d, &Private::itemSelected);
+#endif
     d->mGantt->setContextMenuPolicy(Qt::CustomContextMenu);
     connect(d->mGantt, &QWidget::customContextMenuRequested,
             d, &Private::contextMenuRequested);
@@ -387,8 +404,14 @@ void TimelineView::showDates(const QDate &start, const QDate &end, const QDate &
     d->mStartDate = start;
     d->mEndDate = end;
     d->mHintDate = QDateTime();
+
+#ifdef KDIAGRAM_SUPPORT
+    KGantt::DateTimeGrid *grid = static_cast<KGantt::DateTimeGrid *>(d->mGantt->grid());
+    grid->setStartDateTime(QDateTime(start));
+#else
     KDGantt::DateTimeGrid *grid = static_cast<KDGantt::DateTimeGrid *>(d->mGantt->grid());
     grid->setStartDateTime(QDateTime(start));
+#endif
 #if 0
     d->mGantt->setHorizonStart(QDateTime(start));
     d->mGantt->setHorizonEnd(QDateTime(end.addDays(1)));
@@ -540,8 +563,13 @@ bool TimelineView::eventFilter(QObject *object, QEvent *event)
         QHelpEvent *helpEvent = static_cast<QHelpEvent *>(event);
         QGraphicsItem *item = d->mGantt->itemAt(helpEvent->pos());
         if (item) {
+#ifdef KDIAGRAM_SUPPORT
+            if (item->type() == KGantt::GraphicsItem::Type) {
+                KGantt::GraphicsItem *graphicsItem = static_cast<KGantt::GraphicsItem *>(item);
+#else
             if (item->type() == KDGantt::GraphicsItem::Type) {
                 KDGantt::GraphicsItem *graphicsItem = static_cast<KDGantt::GraphicsItem *>(item);
+#endif
                 const QModelIndex itemIndex = graphicsItem->index();
 
                 QStandardItemModel *itemModel =
