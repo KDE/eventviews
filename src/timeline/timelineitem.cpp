@@ -20,8 +20,11 @@
 
 #include "timelineitem.h"
 
+#ifdef KDIAGRAM_SUPPORT
+#include <KGantt/KGanttGlobal>
+#else
 #include <KDGantt2/KDGanttGlobal>
-
+#endif
 #include <CalendarSupport/KCalPrefs>
 
 #include <CalendarSupport/Utils>
@@ -39,8 +42,11 @@ TimelineItem::TimelineItem(const Akonadi::ETMCalendar::Ptr &calendar, uint index
 {
     mModel->removeRow(mIndex);
     QStandardItem *dummyItem = new QStandardItem;
+#ifdef KDIAGRAM_SUPPORT
+    dummyItem->setData(KGantt::TypeTask, KGantt::ItemTypeRole);
+#else
     dummyItem->setData(KDGantt::TypeTask, KDGantt::ItemTypeRole);
-
+#endif
     mModel->insertRow(mIndex, dummyItem);
 }
 
@@ -115,7 +121,11 @@ TimelineSubItem::TimelineSubItem(const Akonadi::ETMCalendar::Ptr &calendar,
     : QStandardItem(), mCalendar(calendar), mIncidence(incidence),
       mParent(parent), mToolTipNeedsUpdate(true)
 {
+#ifdef KDIAGRAM_SUPPORT
+    setData(KGantt::TypeTask, KGantt::ItemTypeRole);
+#else
     setData(KDGantt::TypeTask, KDGantt::ItemTypeRole);
+#endif
     if (!CalendarSupport::incidence(incidence)->isReadOnly()) {
         setFlags(Qt::ItemIsSelectable);
     }
@@ -127,22 +137,38 @@ TimelineSubItem::~TimelineSubItem()
 
 void TimelineSubItem::setStartTime(const QDateTime &dt)
 {
+#ifdef KDIAGRAM_SUPPORT
+    setData(dt, KGantt::StartTimeRole);
+#else
     setData(dt, KDGantt::StartTimeRole);
+#endif
 }
 
 QDateTime TimelineSubItem::startTime() const
 {
+#ifdef KDIAGRAM_SUPPORT
+    return data(KGantt::StartTimeRole).toDateTime();
+#else
     return data(KDGantt::StartTimeRole).toDateTime();
+#endif
 }
 
 void TimelineSubItem::setEndTime(const QDateTime &dt)
 {
+#ifdef KDIAGRAM_SUPPORT
+    setData(dt, KGantt::EndTimeRole);
+#else
     setData(dt, KDGantt::EndTimeRole);
+#endif
 }
 
 QDateTime TimelineSubItem::endTime() const
 {
+#ifdef KDIAGRAM_SUPPORT
+    return data(KGantt::EndTimeRole).toDateTime();
+#else
     return data(KDGantt::EndTimeRole).toDateTime();
+#endif
 }
 
 void TimelineSubItem::updateToolTip()

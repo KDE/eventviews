@@ -90,9 +90,6 @@ else()
     set(grant_lib KF5::KDGantt2)
 endif()
 
-
-set(grant_lib KF5::KDGantt2)
-
 target_link_libraries(KF5EventViews
 PUBLIC
   KF5::AkonadiCore

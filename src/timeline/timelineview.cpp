@@ -27,12 +27,21 @@
 #include "timelineitem.h"
 #include "helper.h"
 
+#ifdef KDIAGRAM_SUPPORT
+#include <KGantt/KGanttGraphicsItem>
+#include <KGantt/KGanttGraphicsView>
+#include <KGantt/KGanttAbstractRowController>
+#include <KGantt/KGanttDateTimeGrid>
+#include <KGantt/KGanttItemDelegate>
+#include <KGantt/KGanttStyleOptionGanttItem>
+#else
 #include <KDGantt2/KDGanttGraphicsItem>
 #include <KDGantt2/KDGanttGraphicsView>
 #include <KDGantt2/KDGanttAbstractRowController>
 #include <KDGantt2/KDGanttDateTimeGrid>
 #include <KDGantt2/KDGanttItemDelegate>
 #include <KDGantt2/KDGanttStyleOptionGanttItem>
+#endif
 
 #include <Akonadi/Calendar/ETMCalendar>
 #include <CalendarSupport/CollectionSelection>
@@ -58,8 +67,11 @@ using namespace EventViews;
 
 namespace EventViews
 {
-
+#ifdef KDIAGRAM_SUPPORT
+class RowController : public KGantt::AbstractRowController
+#else
 class RowController : public KDGantt::AbstractRowController
+#endif
 {
 private:
     static const int ROW_HEIGHT;
@@ -90,11 +102,17 @@ public:
     {
         return false;
     }
-
+#ifdef KDIAGRAM_SUPPORT
+    KGantt::Span rowGeometry(const QModelIndex &idx) const Q_DECL_OVERRIDE
+    {
+        return KGantt::Span(idx.row() * mRowHeight, mRowHeight);
+    }
+#else
     KDGantt::Span rowGeometry(const QModelIndex &idx) const Q_DECL_OVERRIDE
     {
         return KDGantt::Span(idx.row() * mRowHeight, mRowHeight);
     }
+#endif
 
     int maximumItemHeight() const Q_DECL_OVERRIDE
     {
@@ -150,20 +168,33 @@ public:
         return s;
     }
 };
-
+#ifdef KDIAGRAM_SUPPORT
+class GanttItemDelegate : public KGantt::ItemDelegate
+#else
 class GanttItemDelegate : public KDGantt::ItemDelegate
+#endif
 {
+#ifdef KDIAGRAM_SUPPORT
+    void paintGanttItem(QPainter *painter,
+                        const KGantt::StyleOptionGanttItem &opt,
+                        const QModelIndex &idx) Q_DECL_OVERRIDE {
+#else
     void paintGanttItem(QPainter *painter,
                         const KDGantt::StyleOptionGanttItem &opt,
                         const QModelIndex &idx) Q_DECL_OVERRIDE {
+#endif
         painter->setRenderHints(QPainter::Antialiasing);
         if (!idx.isValid())
         {
             return;
         }
-
+#ifdef KDIAGRAM_SUPPORT
+        KGantt::ItemType type = static_cast<KGantt::ItemType>(
+            idx.model()->data(idx, KGantt::ItemTypeRole).toInt());
+#else
         KDGantt::ItemType type = static_cast<KDGantt::ItemType>(
             idx.model()->data(idx, KDGantt::ItemTypeRole).toInt());
+#endif
 
         QString txt = idx.model()->data(idx, Qt::DisplayRole).toString();
         QRectF itemRect = opt.itemRect;
@@ -190,6 +221,31 @@ class GanttItemDelegate : public KDGantt::ItemDelegate
 
         switch (type)
         {
+#ifdef KDIAGRAM_SUPPORT
+        case KGantt::TypeTask:
+            if (itemRect.isValid()) {
+                QRectF r = itemRect;
+                painter->drawRect(r);
+
+                Qt::Alignment ta;
+                switch (opt.displayPosition) {
+                case KGantt::StyleOptionGanttItem::Left:
+                    ta = Qt::AlignLeft;
+                    break;
+                case KGantt::StyleOptionGanttItem::Right:
+                    ta = Qt::AlignRight;
+                    break;
+                case KGantt::StyleOptionGanttItem::Center:
+                    ta = Qt::AlignCenter;
+                    break;
+                }
+                painter->drawText(boundingRect, ta, txt);
+            }
+            break;
+        default:
+            KGantt::ItemDelegate::paintGanttItem(painter, opt, idx);
+            break;
+#else
         case KDGantt::TypeTask:
             if (itemRect.isValid()) {
                 QRectF r = itemRect;
@@ -213,6 +269,7 @@ class GanttItemDelegate : public KDGantt::ItemDelegate
         default:
             KDGantt::ItemDelegate::paintGanttItem(painter, opt, idx);
             break;
+#endif
         }
     }
 };
