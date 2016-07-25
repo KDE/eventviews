@@ -35,17 +35,10 @@
 class QStandardItem;
 class QTreeWidget;
 
-#ifdef KDIAGRAM_SUPPORT
 namespace KGantt
 {
 class GraphicsView;
 }
-#else
-namespace KDGantt
-{
-class GraphicsView;
-}
-#endif
 
 
 namespace EventViews
@@ -77,11 +70,7 @@ public Q_SLOTS:
 
 public:
     Akonadi::Item::List mSelectedItemList;
-#ifdef KDIAGRAM_SUPPORT
     KGantt::GraphicsView *mGantt;
-#else
-    KDGantt::GraphicsView *mGantt;
-#endif
     QTreeWidget *mLeftView;
     RowController *mRowController;
     QMap<Akonadi::Collection::Id, TimelineItem *> mCalendarItemMap;

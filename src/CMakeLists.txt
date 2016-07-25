@@ -84,11 +84,7 @@ generate_export_header(KF5EventViews BASE_NAME eventviews)
 
 add_library(KF5::EventViews ALIAS KF5EventViews)
 
-if (KDIAGRAM_SUPPORT)
-    set(grant_lib KGantt)
-else()
-    set(grant_lib KF5::KDGantt2)
-endif()
+set(grant_lib KGantt)
 
 target_link_libraries(KF5EventViews
 PUBLIC
