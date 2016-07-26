@@ -74,7 +74,7 @@ public:
 
     QSize minimumSizeHint() const Q_DECL_OVERRIDE;
 
-private Q_SLOTS:
+private:
     /** update the position of the marker showing the mouse position */
     void mousePosChanged(const QPoint &pos);
 
@@ -82,8 +82,6 @@ private Q_SLOTS:
     void hideMousePos();
 
     void setCellHeight(double height);
-
-private:
     void colorMousePos();
     QTimeZone mTimezone;
     int mRows;

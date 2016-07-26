@@ -482,7 +482,7 @@ Q_SIGNALS:
 protected Q_SLOTS:
     virtual void calendarReset();
 
-private Q_SLOTS:
+private:
     void onCollectionChanged(const Akonadi::Collection &, const QSet<QByteArray> &);
 
 protected:
