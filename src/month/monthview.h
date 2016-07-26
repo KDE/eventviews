@@ -109,6 +109,7 @@ private Q_SLOTS:
     // void rowsInserted( const QModelIndex &parent, int start, int end );
     // void rowsAboutToBeRemoved( const QModelIndex &parent, int start, int end );
 
+protected:
 #ifndef QT_NO_WHEELEVENT
     void wheelEvent(QWheelEvent *event) Q_DECL_OVERRIDE;
 #endif
