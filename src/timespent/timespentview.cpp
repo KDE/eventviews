@@ -200,6 +200,7 @@ TimeSpentView::TimeSpentView(QWidget *parent)
     mView = new TimeSpentWidget(this);
 
     QBoxLayout *topLayout = new QVBoxLayout(this);
+    topLayout->setMargin(0);
     topLayout->addWidget(mView);
 }
 
