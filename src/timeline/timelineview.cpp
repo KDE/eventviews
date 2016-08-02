@@ -191,7 +191,7 @@ class GanttItemDelegate : public KGantt::ItemDelegate
             if (itemRect.isValid()) {
                 QRectF r = itemRect;
                 painter->drawRect(r);
-
+                bool drawText = true;
                 Qt::Alignment ta;
                 switch (opt.displayPosition) {
                 case KGantt::StyleOptionGanttItem::Left:
@@ -203,8 +203,13 @@ class GanttItemDelegate : public KGantt::ItemDelegate
                 case KGantt::StyleOptionGanttItem::Center:
                     ta = Qt::AlignCenter;
                     break;
+                case KGantt::StyleOptionGanttItem::Hidden:
+                    drawText = false;
+                    break;
                 }
-                painter->drawText(boundingRect, ta, txt);
+                if (drawText) {
+                    painter->drawText(boundingRect, ta, txt);
+                }
             }
             break;
         default:
