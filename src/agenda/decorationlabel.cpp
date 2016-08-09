@@ -44,8 +44,8 @@ DecorationLabel::DecorationLabel(CalendarDecoration::Element *e,
             this, &DecorationLabel::setExtensiveText);
     connect(e, &CalendarDecoration::Element::gotNewLongText,
             this, &DecorationLabel::setLongText);
-    connect(e, SIGNAL(gotNewPixmap(QPixmap)),
-            this, SLOT(setPixmap(QPixmap)));
+    connect(e, &CalendarDecoration::Element::gotNewPixmap,
+            this, &DecorationLabel::setPixmap);
     connect(e, &CalendarDecoration::Element::gotNewShortText,
             this, &DecorationLabel::setShortText);
     connect(e, &CalendarDecoration::Element::gotNewUrl,
