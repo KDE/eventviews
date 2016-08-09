@@ -166,8 +166,6 @@ void BaseConfig::usrSetDefaults()
 
 void BaseConfig::usrRead()
 {
-    KConfigGroup generalConfig(config(), "General");
-
     // Note that the [Category Colors] group was removed after 3.2 due to
     // an algorithm change. That's why we now use [Category Colors2]
     // Resource colors
@@ -175,7 +173,8 @@ void BaseConfig::usrRead()
     const QStringList colorKeyList = rColorsConfig.keyList();
 
     QStringList::ConstIterator it3;
-    for (it3 = colorKeyList.begin(); it3 != colorKeyList.end(); ++it3) {
+    QStringList::ConstIterator end3(colorKeyList.end());
+    for (it3 = colorKeyList.begin(); it3 != end3; ++it3) {
         QColor color = rColorsConfig.readEntry(*it3, mDefaultResourceColor);
         //qCDebug(CALENDARVIEW_LOG) << "key:" << (*it3) << "value:" << color;
         setResourceColor(*it3, color);
@@ -192,7 +191,6 @@ void BaseConfig::usrRead()
             KStringHandler::obscure(config()->readEntry("Retrieve Server Password"));
     }
 #endif
-    KConfigGroup defaultCalendarConfig(config(), "Calendar");
 
     KConfigGroup timeScaleConfig(config(), "Timescale");
     setTimeScaleTimezones(timeScaleConfig.readEntry("Timescale Timezones", QStringList()));
@@ -216,7 +214,8 @@ bool BaseConfig::usrSave()
 
     KConfigGroup rColorsConfig(config(), "Resources Colors");
     QHash<QString, QColor>::const_iterator i = mResourceColors.constBegin();
-    while (i != mResourceColors.constEnd()) {
+    QHash<QString, QColor>::const_iterator end(mResourceColors.constEnd());
+    while (i != end) {
         rColorsConfig.writeEntry(i.key(), i.value());
         ++i;
     }
