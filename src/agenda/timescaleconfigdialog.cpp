@@ -83,20 +83,20 @@ TimeScaleConfigDialog::TimeScaleConfigDialog(const PrefsPtr &preferences, QWidge
     : QDialog(parent), d(new Private(this, preferences))
 {
     setWindowTitle(i18n("Timezone"));
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
-    QVBoxLayout *mainLayout = new QVBoxLayout;
-    setLayout(mainLayout);
-    QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
-    okButton->setDefault(true);
-    okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
-    connect(buttonBox, &QDialogButtonBox::rejected, this, &TimeScaleConfigDialog::reject);
-    okButton->setDefault(true);
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
     setModal(true);
 
     QWidget *mainwidget = new QWidget(this);
     setupUi(mainwidget);
 
     mainLayout->addWidget(mainwidget);
+
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
+    QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
+    okButton->setDefault(true);
+    okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
+    connect(buttonBox, &QDialogButtonBox::rejected, this, &TimeScaleConfigDialog::reject);
+
     mainLayout->addWidget(buttonBox);
 
     QStringList shownTimeZones(QString::fromUtf8(d->mPreferences->timeZone().id()));
@@ -162,7 +162,8 @@ void TimeScaleConfigDialog::add()
 {
     // Do not add duplicates
     if (zoneCombo->currentIndex() >= 0) {
-        for (int i = 0; i < listWidget->count(); ++i) {
+        const int numberItem(listWidget->count());
+        for (int i = 0; i < numberItem; ++i) {
             if (listWidget->item(i)->data(TimeZoneNameRole).toString() == zoneCombo->itemData(zoneCombo->currentIndex(), TimeZoneNameRole).toString()) {
                 return;
             }
