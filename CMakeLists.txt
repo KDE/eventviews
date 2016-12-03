@@ -20,7 +20,7 @@ include(KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
 include(ECMQtDeclareLoggingCategory)
 include(ECMAddTests)
 
-set(PIM_VERSION "5.3.90")
+set(PIM_VERSION "5.4.0")
 
 
 set(EVENTVIEW_LIB_VERSION ${PIM_VERSION})
