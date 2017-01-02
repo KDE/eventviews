@@ -77,9 +77,9 @@ public:
     ModelStack(const EventViews::PrefsPtr &preferences, QObject *parent_)
         : todoModel(new TodoModel(preferences)),
           parent(parent_),
-          calendar(Q_NULLPTR),
-          todoTreeModel(Q_NULLPTR),
-          todoFlatModel(Q_NULLPTR),
+          calendar(nullptr),
+          todoTreeModel(nullptr),
+          todoFlatModel(nullptr),
           prefs(preferences)
     {
     }
@@ -118,11 +118,11 @@ public:
             delete todoFlatModel;
             todoFlatModel = new Akonadi::EntityMimeTypeFilterModel(parent);
             todoFlatModel->addMimeTypeInclusionFilter(todoMimeType);
-            todoFlatModel->setSourceModel(calendar ? calendar->model() : Q_NULLPTR);
+            todoFlatModel->setSourceModel(calendar ? calendar->model() : nullptr);
             todoModel->setSourceModel(todoFlatModel);
 
             delete todoTreeModel;
-            todoTreeModel = Q_NULLPTR;
+            todoTreeModel = nullptr;
         } else {
             delete todoTreeModel;
             todoTreeModel = new IncidenceTreeModel(QStringList() << todoMimeType, parent);
@@ -132,10 +132,10 @@ public:
                 view->mView->setDragDropMode(QAbstractItemView::DragDrop);
                 view->setFlatView(flat, /**propagate=*/false);   // So other views update their toggle icon
             }
-            todoTreeModel->setSourceModel(calendar ? calendar->model() : Q_NULLPTR);
+            todoTreeModel->setSourceModel(calendar ? calendar->model() : nullptr);
             todoModel->setSourceModel(todoTreeModel);
             delete todoFlatModel;
-            todoFlatModel = Q_NULLPTR;
+            todoFlatModel = nullptr;
         }
 
         foreach (TodoView *view, views) {
@@ -156,13 +156,13 @@ public:
         calendar = newCalendar;
         todoModel->setCalendar(calendar);
         if (todoTreeModel) {
-            todoTreeModel->setSourceModel(calendar ? calendar->model() : Q_NULLPTR);
+            todoTreeModel->setSourceModel(calendar ? calendar->model() : nullptr);
         }
     }
 
     bool isFlatView() const
     {
-        return todoFlatModel != Q_NULLPTR;
+        return todoFlatModel != nullptr;
     }
 
     TodoModel *todoModel;
@@ -177,14 +177,14 @@ public:
 }
 
 // Don't use K_GLOBAL_STATIC, see QTBUG-22667
-static ModelStack *sModels = Q_NULLPTR;
+static ModelStack *sModels = nullptr;
 
 TodoView::TodoView(const EventViews::PrefsPtr &prefs,
                    bool sidebarView, QWidget *parent)
     : EventView(parent)
-    , mQuickSearch(Q_NULLPTR)
-    , mQuickAdd(Q_NULLPTR)
-    , mTreeStateRestorer(Q_NULLPTR)
+    , mQuickSearch(nullptr)
+    , mQuickAdd(nullptr)
+    , mTreeStateRestorer(nullptr)
     , mSidebarView(sidebarView)
     , mResizeColumnsScheduled(false)
 {
@@ -266,7 +266,7 @@ TodoView::TodoView(const EventViews::PrefsPtr &prefs,
     connect(mQuickAdd, SIGNAL(returnPressed(Qt::KeyboardModifiers)),
             this, SLOT(addQuickTodo(Qt::KeyboardModifiers)));
 
-    mFullViewButton = Q_NULLPTR;
+    mFullViewButton = nullptr;
     if (!mSidebarView) {
         mFullViewButton = new QToolButton(this);
         mFullViewButton->setAutoRaise(true);
@@ -421,8 +421,8 @@ TodoView::TodoView(const EventViews::PrefsPtr &prefs,
 
     connect(mMovePopupMenu, &KPIM::KDatePickerPopup::dateChanged, mItemPopupMenu, &QMenu::hide);
 
-    mItemPopupMenu->insertMenu(Q_NULLPTR, mCopyPopupMenu);
-    mItemPopupMenu->insertMenu(Q_NULLPTR, mMovePopupMenu);
+    mItemPopupMenu->insertMenu(nullptr, mCopyPopupMenu);
+    mItemPopupMenu->insertMenu(nullptr, mMovePopupMenu);
 
     mItemPopupMenu->addSeparator();
     mItemPopupMenu->addAction(
@@ -475,7 +475,7 @@ TodoView::~TodoView()
     sModels->unregisterView(this);
     if (sModels->views.isEmpty()) {
         delete sModels;
-        sModels = Q_NULLPTR;
+        sModels = nullptr;
     }
 }
 

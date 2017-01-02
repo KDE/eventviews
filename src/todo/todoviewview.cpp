@@ -35,7 +35,7 @@
 #include <QMouseEvent>
 
 TodoViewView::TodoViewView(QWidget *parent)
-    : QTreeView(parent), mHeaderPopup(Q_NULLPTR), mIgnoreNextMouseRelease(false)
+    : QTreeView(parent), mHeaderPopup(nullptr), mIgnoreNextMouseRelease(false)
 {
     header()->installEventFilter(this);
     setAlternatingRowColors(true);

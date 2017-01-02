@@ -67,7 +67,7 @@ class Q_DECL_HIDDEN MarcusBains::Private
 public:
     Private(EventView *eventView, Agenda *agenda)
         : mEventView(eventView), mAgenda(agenda),
-          mTimer(Q_NULLPTR), mTimeBox(Q_NULLPTR), mOldTodayCol(-1)
+          mTimer(nullptr), mTimeBox(nullptr), mOldTodayCol(-1)
     {
     }
 
@@ -206,10 +206,10 @@ public:
             int columns, int rows, int rowSize, bool isInteractive)
         : mAgendaView(agendaView), mScrollArea(scrollArea), mAllDayMode(false),
           mColumns(columns), mRows(rows), mGridSpacingX(0.0), mGridSpacingY(rowSize),
-          mDesiredGridSpacingY(rowSize), mChanger(Q_NULLPTR),
+          mDesiredGridSpacingY(rowSize), mChanger(nullptr),
           mResizeBorderWidth(0), mScrollBorderWidth(0), mScrollDelay(0), mScrollOffset(0),
-          mWorkingHoursEnable(false), mHolidayMask(Q_NULLPTR), mWorkingHoursYTop(0),
-          mWorkingHoursYBottom(0), mHasSelection(0), mSelectedId(-1), mMarcusBains(Q_NULLPTR),
+          mWorkingHoursEnable(false), mHolidayMask(nullptr), mWorkingHoursYTop(0),
+          mWorkingHoursYBottom(0), mHasSelection(0), mSelectedId(-1), mMarcusBains(nullptr),
           mActionType(Agenda::NOP), mItemMoved(false), mOldLowerScrollValue(0),
           mOldUpperScrollValue(0), mReturnPressed(false), mIsInteractive(isInteractive)
     {
@@ -402,13 +402,13 @@ void Agenda::init()
     d->mOldLowerScrollValue = -1;
     d->mOldUpperScrollValue = -1;
 
-    d->mClickedItem = Q_NULLPTR;
+    d->mClickedItem = nullptr;
 
-    d->mActionItem = Q_NULLPTR;
+    d->mActionItem = nullptr;
     d->mActionType = NOP;
     d->mItemMoved = false;
 
-    d->mSelectedItem = Q_NULLPTR;
+    d->mSelectedItem = nullptr;
     d->mSelectedId = -1;
 
     setAcceptDrops(true);
@@ -427,7 +427,7 @@ void Agenda::init()
 
     // Create the Marcus Bains line.
     if (d->mAllDayMode) {
-        d->mMarcusBains = Q_NULLPTR;
+        d->mMarcusBains = nullptr;
     } else {
         d->mMarcusBains = new MarcusBains(d->mAgendaView, this);
     }
@@ -442,7 +442,7 @@ void Agenda::clear()
     d->mAgendaItemsById.clear();
     d->mItemsQueuedForDeletion.clear();
 
-    d->mSelectedItem = Q_NULLPTR;
+    d->mSelectedItem = nullptr;
 
     clearSelection();
 }
@@ -674,7 +674,7 @@ bool Agenda::eventFilter_mouse(QObject *object, QMouseEvent *me)
                 if (item) {
                     KCalCore::Incidence::Ptr incidence = item->incidence();
                     if (incidence->isReadOnly()) {
-                        d->mActionItem = Q_NULLPTR;
+                        d->mActionItem = nullptr;
                     } else {
                         d->mActionItem = item;
                         startItemAction(viewportPos);
@@ -700,8 +700,8 @@ bool Agenda::eventFilter_mouse(QObject *object, QMouseEvent *me)
                 }
                 showNewEventPopupSignal();
             } else {
-                selectItem(Q_NULLPTR);
-                d->mActionItem = Q_NULLPTR;
+                selectItem(nullptr);
+                d->mActionItem = nullptr;
 #ifndef QT_NO_CURSOR
                 setCursor(Qt::ArrowCursor);
 #endif
@@ -776,7 +776,7 @@ bool Agenda::eventFilter_mouse(QObject *object, QMouseEvent *me)
 
     case QEvent::MouseButtonDblClick:
         if (object == this) {
-            selectItem(Q_NULLPTR);
+            selectItem(nullptr);
             Q_EMIT newEventSignal();
         } else {
             AgendaItem::QPtr doubleClickedItem = qobject_cast<AgendaItem *>(object);
@@ -966,7 +966,7 @@ void Agenda::performItemAction(const QPoint &pos)
             if (d->mChanger) {
 //        d->mChanger->cancelChange(d->mActionItem->incidence());
             }
-            d->mActionItem = Q_NULLPTR;
+            d->mActionItem = nullptr;
             d->mActionType = NOP;
             d->mItemMoved = false;
             return;
@@ -1002,7 +1002,7 @@ void Agenda::performItemAction(const QPoint &pos)
 #ifndef QT_NO_CURSOR
                 setCursor(Qt::ArrowCursor);
 #endif
-                d->mActionItem = Q_NULLPTR;
+                d->mActionItem = nullptr;
                 d->mActionType = NOP;
                 d->mItemMoved = false;
                 return;
@@ -1290,7 +1290,7 @@ void Agenda::endItemAction()
         }
     }
 
-    d->mActionItem = Q_NULLPTR;
+    d->mActionItem = nullptr;
     d->mItemMoved = false;
 
     if (multiModify) {
@@ -1732,7 +1732,7 @@ AgendaItem::QPtr Agenda::insertItem(const KCalCore::Incidence::Ptr &incidence, c
 {
     if (d->mAllDayMode) {
         qCDebug(CALENDARVIEW_LOG) << "using this in all-day mode is illegal.";
-        return Q_NULLPTR;
+        return nullptr;
     }
 
     d->mActionType = NOP;
@@ -1777,7 +1777,7 @@ AgendaItem::QPtr Agenda::insertAllDayItem(const KCalCore::Incidence::Ptr &incide
 {
     if (!d->mAllDayMode) {
         qCCritical(CALENDARVIEW_LOG) << "using this in non all-day mode is illegal.";
-        return Q_NULLPTR;
+        return nullptr;
     }
 
     d->mActionType = NOP;
@@ -1842,7 +1842,7 @@ void Agenda::insertMultiItem(const KCalCore::Incidence::Ptr &event, const KDateT
     QString newtext;
     int width = XEnd - XBegin + 1;
     int count = 0;
-    AgendaItem::QPtr current = Q_NULLPTR;
+    AgendaItem::QPtr current = nullptr;
     QList<AgendaItem::QPtr> multiItems;
     int visibleCount = d->mSelectedDates.first().daysTo(d->mSelectedDates.last());
     for (cellX = XBegin; cellX <= XEnd; ++cellX) {
@@ -1875,16 +1875,16 @@ void Agenda::insertMultiItem(const KCalCore::Incidence::Ptr &event, const KDateT
     if (it != e) {   // .first asserts if the list is empty
         AgendaItem::QPtr first = multiItems.first();
         AgendaItem::QPtr last = multiItems.last();
-        AgendaItem::QPtr prev = Q_NULLPTR, next = Q_NULLPTR;
+        AgendaItem::QPtr prev = nullptr, next = nullptr;
 
         while (it != e) {
             AgendaItem::QPtr item = *it;
             ++it;
-            next = (it == e) ? Q_NULLPTR : (*it);
+            next = (it == e) ? nullptr : (*it);
             if (item) {
-                item->setMultiItem((item == first) ? Q_NULLPTR : first,
+                item->setMultiItem((item == first) ? nullptr : first,
                                    prev, next,
-                                   (item == last) ? Q_NULLPTR : last);
+                                   (item == last) ? nullptr : last);
             }
             prev = item;
         }
@@ -2160,7 +2160,7 @@ void Agenda::deselectItem()
         }
     }
 
-    d->mSelectedItem = Q_NULLPTR;
+    d->mSelectedItem = nullptr;
 }
 
 void Agenda::selectItem(const AgendaItem::QPtr &item)
@@ -2169,7 +2169,7 @@ void Agenda::selectItem(const AgendaItem::QPtr &item)
         return;
     }
     deselectItem();
-    if (item == Q_NULLPTR) {
+    if (item == nullptr) {
         Q_EMIT incidenceSelected(KCalCore::Incidence::Ptr(), QDate());
         return;
     }

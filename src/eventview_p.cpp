@@ -37,16 +37,16 @@
 using namespace EventViews;
 
 EventViewPrivate::EventViewPrivate()
-    : calendar(Q_NULLPTR),
-      customCollectionSelection(Q_NULLPTR),
-      collectionSelectionModel(Q_NULLPTR),
+    : calendar(nullptr),
+      customCollectionSelection(nullptr),
+      collectionSelectionModel(nullptr),
       mReturnPressed(false),
       mDateRangeSelectionEnabled(true),
       mTypeAhead(false),
-      mTypeAheadReceiver(Q_NULLPTR),
+      mTypeAheadReceiver(nullptr),
       mPrefs(new Prefs()),
       mKCalPrefs(new CalendarSupport::KCalPrefs()),
-      mChanger(Q_NULLPTR),
+      mChanger(nullptr),
       mChanges(EventView::DatesChanged),
       mCollectionId(-1)
 { }
@@ -71,7 +71,7 @@ void EventViewPrivate::finishTypeAhead()
 void EventViewPrivate::setUpModels()
 {
     delete customCollectionSelection;
-    customCollectionSelection = Q_NULLPTR;
+    customCollectionSelection = nullptr;
     if (collectionSelectionModel) {
         customCollectionSelection = new CalendarSupport::CollectionSelection(collectionSelectionModel->selectionModel());
     }

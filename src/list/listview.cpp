@@ -264,7 +264,7 @@ ListView::ListView(const Akonadi::ETMCalendar::Ptr &calendar,
     : EventView(parent), d(new Private())
 {
     setCalendar(calendar);
-    d->mActiveItem = Q_NULLPTR;
+    d->mActiveItem = nullptr;
     d->mIsNonInteractive = nonInteractive;
 
     d->mTreeWidget = new QTreeWidget(this);
@@ -312,7 +312,7 @@ int ListView::currentDateCount() const
 Akonadi::Item::List ListView::selectedIncidences() const
 {
     Akonadi::Item::List eventList;
-    QTreeWidgetItem *item = d->mTreeWidget->selectedItems().isEmpty() ? Q_NULLPTR :
+    QTreeWidgetItem *item = d->mTreeWidget->selectedItems().isEmpty() ? nullptr :
                             d->mTreeWidget->selectedItems().first();
     if (item) {
         ListViewItem *i = static_cast<ListViewItem *>(item);
@@ -514,7 +514,7 @@ ListViewItem *ListView::Private::getItemForIncidence(const Akonadi::Item &aitem)
         ++index;
     }
 
-    return Q_NULLPTR;
+    return nullptr;
 }
 
 void ListView::defaultItemAction(const QModelIndex &index)
@@ -570,7 +570,7 @@ void ListView::processSelectionChange()
     if (!d->mIsNonInteractive) {
         ListViewItem *item;
         if (d->mTreeWidget->selectedItems().isEmpty()) {
-            item = Q_NULLPTR;
+            item = nullptr;
         } else {
             item = static_cast<ListViewItem *>(d->mTreeWidget->selectedItems().first());
         }

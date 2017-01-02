@@ -138,7 +138,7 @@ private:
 class GanttHeaderView : public QHeaderView
 {
 public:
-    explicit GanttHeaderView(QWidget *parent = Q_NULLPTR) : QHeaderView(Qt::Horizontal, parent)
+    explicit GanttHeaderView(QWidget *parent = nullptr) : QHeaderView(Qt::Horizontal, parent)
     {
     }
 
@@ -353,7 +353,7 @@ void TimelineView::showDates(const QDate &start, const QDate &end, const QDate &
     d->mLeftView->clear();
     uint index = 0;
     // item for every calendar
-    TimelineItem *item = Q_NULLPTR;
+    TimelineItem *item = nullptr;
     Akonadi::ETMCalendar::Ptr calres = calendar();
     if (!calres) {
         item = new TimelineItem(calendar(),
@@ -396,7 +396,7 @@ void TimelineView::showDates(const QDate &start, const QDate &end, const QDate &
      * updateScene() call otherwise.
      */
     QAbstractItemModel *ganttModel = d->mGantt->model();
-    d->mGantt->setModel(Q_NULLPTR);
+    d->mGantt->setModel(nullptr);
 
     KCalCore::Event::List events;
     KDateTime::Spec timeSpec = CalendarSupport::KCalPrefs::instance()->timeSpec();

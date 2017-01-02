@@ -54,7 +54,7 @@ TimeLabels::TimeLabels(const QTimeZone &zone, int rows, TimeLabelsZone *parent, 
     mMousePos->setFrameStyle(QFrame::HLine | QFrame::Plain);
     mMousePos->setFixedSize(width(), 1);
     colorMousePos();
-    mAgenda = Q_NULLPTR;
+    mAgenda = nullptr;
 
     if (mTimezone.isValid()) {
         setToolTip(i18n("Timezone:") + i18n(mTimezone.id().constData()));

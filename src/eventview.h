@@ -133,7 +133,7 @@ public:
      *        will be retrieved for display.
      * @param parent is the parent QWidget.
      */
-    explicit EventView(QWidget *parent = Q_NULLPTR);
+    explicit EventView(QWidget *parent = nullptr);
 
     /**
      * Destructor. Views will do view-specific cleanups here.

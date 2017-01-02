@@ -260,7 +260,7 @@ void BaseConfig::setTimeZoneDefault()
 class Q_DECL_HIDDEN Prefs::Private
 {
 public:
-    Private(Prefs *parent) : mAppConfig(Q_NULLPTR), q(parent) {}
+    Private(Prefs *parent) : mAppConfig(nullptr), q(parent) {}
     Private(Prefs *parent, KCoreConfigSkeleton *appConfig)
         : mAppConfig(appConfig), q(parent) {}
 
@@ -307,7 +307,7 @@ KConfigSkeletonItem *Prefs::Private::appConfigItem(
         return mAppConfig->findItem(baseConfigItem->name());
     }
 
-    return Q_NULLPTR;
+    return nullptr;
 }
 
 void Prefs::Private::setBool(KCoreConfigSkeleton::ItemBool *baseConfigItem, bool value)
@@ -1019,7 +1019,7 @@ void Prefs::setTimeScaleTimezones(const QStringList &list)
 
 KConfigSkeleton::ItemFont *Prefs::fontItem(const QString &name) const
 {
-    KConfigSkeletonItem *item = d->mAppConfig ? d->mAppConfig->findItem(name) : Q_NULLPTR;
+    KConfigSkeletonItem *item = d->mAppConfig ? d->mAppConfig->findItem(name) : nullptr;
 
     if (!item) {
         item = d->mBaseConfig.findItem(name);

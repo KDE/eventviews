@@ -62,7 +62,7 @@ void MonthItem::deleteAll()
 
 QWidget *MonthItem::parentWidget() const
 {
-    return mMonthScene ? mMonthScene->monthView() : Q_NULLPTR;
+    return mMonthScene ? mMonthScene->monthView() : nullptr;
 }
 
 void MonthItem::updateMonthGraphicsItems()

@@ -37,7 +37,7 @@
 
 using namespace EventViews;
 
-JournalView::JournalView(QWidget *parent) : EventView(parent), mChanger(Q_NULLPTR)
+JournalView::JournalView(QWidget *parent) : EventView(parent), mChanger(nullptr)
 {
     QVBoxLayout *topLayout = new QVBoxLayout(this);
     topLayout->setMargin(0);
@@ -59,7 +59,7 @@ JournalView::~JournalView()
 
 void JournalView::appendJournal(const Akonadi::Item &journal, const QDate &dt)
 {
-    JournalDateView *entry = Q_NULLPTR;
+    JournalDateView *entry = nullptr;
     if (mEntries.contains(dt)) {
         entry = mEntries[dt];
     } else {
