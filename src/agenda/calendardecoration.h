@@ -263,7 +263,7 @@ class EVENTVIEWS_EXPORT DecorationFactory : public CalendarSupport::PluginFactor
 {
     Q_OBJECT
 public:
-    virtual Decoration *createPluginFactory() = 0;
+    Decoration *createPluginFactory() Q_DECL_OVERRIDE = 0;
 };
 
 }
