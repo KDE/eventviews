@@ -1,6 +1,7 @@
-cmake_minimum_required(VERSION 2.8.12)
+cmake_minimum_required(VERSION 3.0)
+set(PIM_VERSION "5.4.40")
 
-project(eventviews)
+project(eventviews VERSION ${PIM_VERSION})
 
 # ECM setup
 set(KF5_VERSION "5.28.0")
@@ -22,7 +23,6 @@ include(ECMAddTests)
 include(ECMCoverageOption)
 
 
-set(PIM_VERSION "5.4.40")
 
 
 set(EVENTVIEW_LIB_VERSION ${PIM_VERSION})
@@ -52,7 +52,7 @@ find_package(KF5AkonadiCalendar ${AKONADICALENDAR_LIB_VERSION} CONFIG REQUIRED)
 find_package(KF5Mime ${KMIME_LIB_VERSION} CONFIG REQUIRED)
 find_package(KF5IdentityManagement ${IDENTITYMANAGEMENT_LIB_VERSION} CONFIG REQUIRED)
 
-ecm_setup_version(${EVENTVIEW_LIB_VERSION} VARIABLE_PREFIX EVENTVIEWS
+ecm_setup_version(PROJECT VARIABLE_PREFIX EVENTVIEWS
                         VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/eventviews_version.h"
                         PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF5EventViewsConfigVersion.cmake"
                         SOVERSION 5
