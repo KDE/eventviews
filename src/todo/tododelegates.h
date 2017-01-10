@@ -44,7 +44,7 @@ class TodoCompleteDelegate : public QStyledItemDelegate
 {
     Q_OBJECT
 public:
-    explicit TodoCompleteDelegate(QObject *parent = Q_NULLPTR);
+    explicit TodoCompleteDelegate(QObject *parent = nullptr);
 
     ~TodoCompleteDelegate();
 
@@ -89,7 +89,7 @@ class TodoPriorityDelegate : public QStyledItemDelegate
 {
     Q_OBJECT
 public:
-    explicit TodoPriorityDelegate(QObject *parent = Q_NULLPTR);
+    explicit TodoPriorityDelegate(QObject *parent = nullptr);
 
     ~TodoPriorityDelegate();
 
@@ -114,7 +114,7 @@ class TodoDueDateDelegate : public QStyledItemDelegate
 {
     Q_OBJECT
 public:
-    explicit TodoDueDateDelegate(QObject *parent = Q_NULLPTR);
+    explicit TodoDueDateDelegate(QObject *parent = nullptr);
 
     ~TodoDueDateDelegate();
 
@@ -139,7 +139,7 @@ class TodoCategoriesDelegate : public QStyledItemDelegate
 {
     Q_OBJECT
 public:
-    explicit TodoCategoriesDelegate(QObject *parent = Q_NULLPTR);
+    explicit TodoCategoriesDelegate(QObject *parent = nullptr);
 
     ~TodoCategoriesDelegate();
 
@@ -167,7 +167,7 @@ class TodoRichTextDelegate : public QStyledItemDelegate
 {
     Q_OBJECT
 public:
-    explicit TodoRichTextDelegate(QObject *parent = Q_NULLPTR);
+    explicit TodoRichTextDelegate(QObject *parent = nullptr);
 
     ~TodoRichTextDelegate();
 

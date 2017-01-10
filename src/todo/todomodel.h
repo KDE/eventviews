@@ -62,7 +62,7 @@ public:
         IsRichTextRole
     };
 
-    explicit TodoModel(const EventViews::PrefsPtr &preferences, QObject *parent = Q_NULLPTR);
+    explicit TodoModel(const EventViews::PrefsPtr &preferences, QObject *parent = nullptr);
 
     ~TodoModel();
 

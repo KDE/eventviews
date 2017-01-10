@@ -35,7 +35,7 @@ class TodoViewView : public QTreeView
     Q_OBJECT
 
 public:
-    explicit TodoViewView(QWidget *parent = Q_NULLPTR);
+    explicit TodoViewView(QWidget *parent = nullptr);
 
     bool isEditing(const QModelIndex &index) const;
 

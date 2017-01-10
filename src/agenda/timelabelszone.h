@@ -42,7 +42,7 @@ class TimeLabelsZone : public QWidget
 {
     Q_OBJECT
 public:
-    explicit TimeLabelsZone(QWidget *parent, const PrefsPtr &preferences, Agenda *agenda = Q_NULLPTR);
+    explicit TimeLabelsZone(QWidget *parent, const PrefsPtr &preferences, Agenda *agenda = nullptr);
 
     /** Add a new time label with the given time zone.
         If @p zone is not valid, use the display time zone.

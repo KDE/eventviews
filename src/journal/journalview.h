@@ -47,7 +47,7 @@ class EVENTVIEWS_EXPORT JournalView : public EventView
 {
     Q_OBJECT
 public:
-    explicit JournalView(QWidget *parent = Q_NULLPTR);
+    explicit JournalView(QWidget *parent = nullptr);
     ~JournalView();
 
     int currentDateCount() const Q_DECL_OVERRIDE;

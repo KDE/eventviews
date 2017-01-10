@@ -52,7 +52,7 @@ class MarcusBains : public QFrame
 {
     Q_OBJECT
 public:
-    explicit MarcusBains(EventView *eventView, Agenda *agenda = Q_NULLPTR);
+    explicit MarcusBains(EventView *eventView, Agenda *agenda = nullptr);
     void updateLocationRecalc(bool recalculate = false);
     virtual ~MarcusBains();
 

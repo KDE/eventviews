@@ -36,14 +36,14 @@ class DecorationLabel : public QLabel
     Q_OBJECT
 public:
     explicit DecorationLabel(EventViews::CalendarDecoration::Element *e,
-                             QWidget *parent = Q_NULLPTR);
+                             QWidget *parent = nullptr);
 
     explicit DecorationLabel(const QString &shortText,
                              const QString &longText = QString(),
                              const QString &extensiveText = QString(),
                              const QPixmap &pixmap = QPixmap(),
                              const QUrl &url = QUrl(),
-                             QWidget *parent = Q_NULLPTR);
+                             QWidget *parent = nullptr);
     ~DecorationLabel();
 
 public Q_SLOTS:

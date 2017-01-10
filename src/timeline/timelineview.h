@@ -40,7 +40,7 @@ class EVENTVIEWS_EXPORT TimelineView : public EventView
 {
     Q_OBJECT
 public:
-    explicit TimelineView(QWidget *parent = Q_NULLPTR);
+    explicit TimelineView(QWidget *parent = nullptr);
     ~TimelineView();
 
     Akonadi::Item::List selectedIncidences() const Q_DECL_OVERRIDE;

@@ -40,7 +40,7 @@ class EVENTVIEWS_EXPORT TimeSpentView : public EventViews::EventView
 {
     Q_OBJECT
 public:
-    explicit TimeSpentView(QWidget *parent = Q_NULLPTR);
+    explicit TimeSpentView(QWidget *parent = nullptr);
     ~TimeSpentView();
 
     int currentDateCount() const Q_DECL_OVERRIDE;
