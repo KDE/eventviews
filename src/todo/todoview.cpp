@@ -737,7 +737,7 @@ void TodoView::contextMenu(const QPoint &pos)
                 const bool incidenceIsRO = !calendar()->hasRight(item, Akonadi::Collection::CanChangeItem);
 
                 enable = hasItem && (!actionIsRw ||
-                                     (actionIsRw && !incidenceIsRO));
+                                     !incidenceIsRO);
 
             }
         } else {

@@ -1945,11 +1945,10 @@ bool Agenda::removeAgendaItem(const AgendaItem::QPtr &agendaItem)
 {
     Q_ASSERT(agendaItem);
     // we found the item. Let's remove it and update the conflicts
-    bool taken = false;
     QList<AgendaItem::QPtr> conflictItems = agendaItem->conflictItems();
     // removeChild(thisItem);
 
-    taken = d->mItems.removeAll(agendaItem) > 0;
+    bool taken = d->mItems.removeAll(agendaItem) > 0;
     d->mAgendaItemsById.remove(agendaItem->incidence()->uid(), agendaItem);
 
     QList<AgendaItem::QPtr>::iterator it;
