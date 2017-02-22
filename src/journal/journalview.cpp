@@ -124,7 +124,7 @@ void JournalView::updateView()
         it.value()->clear();
         const KCalCore::Journal::List journals = calendar()->journals(it.key());
         qCDebug(CALENDARVIEW_LOG) << "updateview found" << journals.count();
-        Q_FOREACH (const KCalCore::Journal::Ptr &journal, journals) {
+        for (const KCalCore::Journal::Ptr &journal : journals) {
             Akonadi::Item item = calendar()->item(journal);
             it.value()->addJournal(item);
         }
@@ -144,11 +144,10 @@ void JournalView::showDates(const QDate &start, const QDate &end, const QDate &)
         return;
     }
 
-    KCalCore::Journal::List jnls;
     for (QDate d = end; d >= start; d = d.addDays(-1)) {
-        jnls = calendar()->journals(d);
+        const KCalCore::Journal::List jnls = calendar()->journals(d);
         //qCDebug(CALENDARVIEW_LOG) << "Found" << jnls.count() << "journals on date" << d;
-        foreach (const KCalCore::Journal::Ptr &journal, jnls) {
+        for (const KCalCore::Journal::Ptr &journal : jnls) {
             Akonadi::Item item = calendar()->item(journal);
             appendJournal(item, d);
         }
@@ -165,7 +164,7 @@ void JournalView::showIncidences(const Akonadi::Item::List &incidences, const QD
 {
     Q_UNUSED(date);
     clearEntries();
-    Q_FOREACH (const Akonadi::Item &i, incidences) {
+    for (const Akonadi::Item &i : incidences) {
         if (const KCalCore::Journal::Ptr j = CalendarSupport::journal(i)) {
             appendJournal(i, j->dtStart().date());
         }

@@ -57,11 +57,11 @@ bool TodoViewSortFilterProxyModel::filterAcceptsRow(int source_row,
         returnValue = mPriorities.contains(priorityValue);
     }
     if (ret && !mCategories.isEmpty()) {
-        QStringList categories =
+        const QStringList categories =
             sourceModel()->index(source_row, TodoModel::CategoriesColumn, source_parent).
             data(Qt::EditRole).toStringList();
 
-        foreach (const QString &category, categories) {
+        for (const QString &category : categories) {
             if (mCategories.contains(category)) {
                 return returnValue && true;
             }
@@ -170,7 +170,7 @@ void TodoViewSortFilterProxyModel::setPriorityFilter(const QStringList &prioriti
 {
     // preparing priority list for comparison
     mPriorities.clear();
-    foreach (const QString &eachPriority, priorities) {
+    for (const QString &eachPriority : priorities) {
         if (eachPriority == i18nc("priority is unspecified", "unspecified")) {
             mPriorities.append(i18n("%1", 0));
         } else if (eachPriority == i18nc("highest priority", "%1 (highest)", 1)) {

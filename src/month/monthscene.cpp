@@ -25,6 +25,7 @@
 #include "monthitem.h"
 #include "monthview.h"
 #include "prefs.h"
+#include "helper_p.h"
 
 #include <CalendarSupport/Utils>
 
@@ -128,7 +129,7 @@ MonthCell *MonthScene::firstCellForMonthItem(MonthItem *manager)
 
 void MonthScene::updateGeometry()
 {
-    foreach (MonthItem *manager, mManagerList) {
+    for (MonthItem *manager : qAsConst(mManagerList)) {
         manager->updateGeometry();
     }
 }
@@ -458,7 +459,7 @@ void MonthScene::scrollCellsDown()
     int newHeight = startHeight() + 1;
     setStartHeight(newHeight);
 
-    foreach (MonthItem *manager, mManagerList) {
+    for (MonthItem *manager : qAsConst(mManagerList)) {
         manager->updateGeometry();
     }
 
@@ -470,7 +471,7 @@ void MonthScene::scrollCellsUp()
     int newHeight = startHeight() - 1;
     setStartHeight(newHeight);
 
-    foreach (MonthItem *manager, mManagerList) {
+    for (MonthItem *manager : qAsConst(mManagerList)) {
         manager->updateGeometry();
     }
 
@@ -744,7 +745,7 @@ void MonthScene::selectItem(MonthItem *item)
 
 void MonthScene::removeIncidence(const QString &uid)
 {
-    foreach (MonthItem *manager, mManagerList) {
+    for (MonthItem *manager : qAsConst(mManagerList)) {
         IncidenceMonthItem *imi = qobject_cast<IncidenceMonthItem *>(manager);
         if (!imi) {
             continue;

@@ -285,10 +285,10 @@ void MonthGraphicsItem::paint(QPainter *p, const QStyleOptionGraphicsItem *, QWi
                            scene->itemHeight());
 
     if (mMonthItem->monthScene()->monthView()->preferences()->enableMonthItemIcons()) {
-        QVector<QPixmap> icons = mMonthItem->icons();
+        const QVector<QPixmap> icons = mMonthItem->icons();
         int iconWidths = 0;
 
-        foreach (const QPixmap &icon, icons) {
+        for (const QPixmap &icon : icons) {
             iconWidths += icon.width();
         }
 

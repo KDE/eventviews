@@ -1100,7 +1100,7 @@ void AgendaView::zoomView(const int delta, const QPoint &pos, const Qt::Orientat
 bool AgendaView::loadDecorations(const QStringList &decorations,
                                  DecorationList &decoList)
 {
-    foreach (const QString &decoName, decorations) {
+    for (const QString &decoName : decorations) {
         if (preferences()->selectedPlugins().contains(decoName)) {
             decoList << d->loadCalendarDecoration(decoName);
         }

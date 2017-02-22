@@ -367,7 +367,7 @@ void TimelineView::showDates(const QDate &start, const QDate &end, const QDate &
         const CalendarSupport::CollectionSelection *colSel = collectionSelection();
         const Akonadi::Collection::List collections = colSel->selectedCollections();
 
-        Q_FOREACH (const Akonadi::Collection &collection, collections) {
+        for (const Akonadi::Collection &collection : collections) {
             if (collection.contentMimeTypes().contains(Event::eventMimeType())) {
                 item = new TimelineItem(calendar(),
                                         index++,

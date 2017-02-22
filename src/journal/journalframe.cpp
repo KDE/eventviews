@@ -27,6 +27,7 @@
 // Journal Entry
 
 #include "journalframe.h"
+#include "helper_p.h"
 
 #include <CalendarSupport/Utils>
 
@@ -109,7 +110,7 @@ Akonadi::Item::List JournalDateView::journals() const
 {
     Akonadi::Item::List l;
     l.reserve(mEntries.count());
-    Q_FOREACH (const JournalFrame *const i, mEntries) {
+    for (const JournalFrame *const i : qAsConst(mEntries)) {
         l.push_back(i->journal());
     }
     return l;

@@ -24,6 +24,7 @@
 #include "agendaview.h"
 #include "prefs.h"
 #include "timelabels.h"
+#include "helper_p.h"
 
 #include <QHBoxLayout>
 #include <QScrollArea>
@@ -44,7 +45,7 @@ TimeLabelsZone::TimeLabelsZone(QWidget *parent, const PrefsPtr &preferences, Age
 
 void TimeLabelsZone::reset()
 {
-    foreach (QScrollArea *label, mTimeLabelsList) {
+    for (QScrollArea *label : qAsConst(mTimeLabelsList)) {
         label->hide();
         label->deleteLater();
     }
@@ -129,7 +130,7 @@ int TimeLabelsZone::preferedTimeLabelsWidth() const
 
 void TimeLabelsZone::updateAll()
 {
-    foreach (QScrollArea *area, mTimeLabelsList) {
+    for (QScrollArea *area : qAsConst(mTimeLabelsList)) {
         TimeLabels *timeLabel = static_cast<TimeLabels *>(area->widget());
         timeLabel->updateConfig();
     }
@@ -145,7 +146,7 @@ void TimeLabelsZone::setAgendaView(AgendaView *agendaView)
     mParent = agendaView;
     mAgenda = agendaView ? agendaView->agenda() : nullptr;
 
-    foreach (QScrollArea *timeLabel, mTimeLabelsList) {
+    for (QScrollArea *timeLabel : qAsConst(mTimeLabelsList)) {
         setupTimeLabel(timeLabel);
     }
 }

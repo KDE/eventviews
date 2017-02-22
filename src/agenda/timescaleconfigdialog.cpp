@@ -21,6 +21,7 @@
 */
 #include "timescaleconfigdialog.h"
 #include "prefs.h"
+#include "helper_p.h"
 
 #include <KLocalizedString>
 #include <QIcon>
@@ -105,7 +106,7 @@ TimeScaleConfigDialog::TimeScaleConfigDialog(const PrefsPtr &preferences, QWidge
 
     QList<TimeZoneNamePair> availList, selList;
     const auto zoneIds = QTimeZone::availableTimeZoneIds();
-    foreach (const auto &zoneId, zoneIds) {
+    for (const auto &zoneId : qAsConst(zoneIds)) {
         // do not list timezones already shown
         if (!shownTimeZones.contains(QString::fromUtf8(zoneId))) {
             availList.append(TimeZoneNamePair(tzWithUTC(zoneId), zoneId));
@@ -115,7 +116,7 @@ TimeScaleConfigDialog::TimeScaleConfigDialog(const PrefsPtr &preferences, QWidge
     }
     qSort(availList.begin(), availList.end());
 
-    Q_FOREACH (const TimeZoneNamePair &item, availList) {
+    for (const TimeZoneNamePair &item : qAsConst(availList)) {
         zoneCombo->addItem(item.first, item.second);
     }
     zoneCombo->setCurrentIndex(0);
@@ -133,7 +134,7 @@ TimeScaleConfigDialog::TimeScaleConfigDialog(const PrefsPtr &preferences, QWidge
     connect(okButton, &QPushButton::clicked, this, &TimeScaleConfigDialog::okClicked);
     connect(buttonBox->button(QDialogButtonBox::Cancel), &QPushButton::clicked, this, &TimeScaleConfigDialog::reject);
 
-    Q_FOREACH (const TimeZoneNamePair &item, selList) {
+    for (const TimeZoneNamePair &item : qAsConst(selList)) {
         QListWidgetItem *widgetItem = new QListWidgetItem(item.first);
         widgetItem->setData(TimeZoneNameRole, item.second);
         listWidget->addItem(widgetItem);

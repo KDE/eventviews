@@ -385,7 +385,7 @@ void ListView::Private::addIncidences(const Akonadi::ETMCalendar::Ptr &calendar,
                                       const KCalCore::Incidence::List &incidences,
                                       const QDate &date)
 {
-    Q_FOREACH (const KCalCore::Incidence::Ptr &incidence, incidences) {
+    for (const KCalCore::Incidence::Ptr &incidence : incidences) {
         addIncidence(calendar, incidence, date);
     }
 }

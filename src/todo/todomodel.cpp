@@ -679,7 +679,7 @@ QStringList TodoModel::mimeTypes() const
 QMimeData *TodoModel::mimeData(const QModelIndexList &indexes) const
 {
     Akonadi::Item::List items;
-    Q_FOREACH (const QModelIndex &index, indexes) {
+    for (const QModelIndex &index : indexes) {
         const Akonadi::Item item =
             this->data(index, Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
         if (item.isValid() && !items.contains(item)) {

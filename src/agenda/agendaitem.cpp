@@ -24,6 +24,7 @@
 #include "eventview.h"
 #include "viewcalendar.h"
 #include "helper.h"
+#include "helper_p.h"
 #include "prefs.h"
 #include "prefs_base.h" // for enums
 
@@ -671,7 +672,7 @@ void AgendaItem::dropEvent(QDropEvent *e)
     KContacts::Addressee::List list;
 
     if (KContacts::VCardDrag::fromMimeData(md, list)) {
-        Q_FOREACH (const KContacts::Addressee &addressee, list) {
+        for (const KContacts::Addressee &addressee : qAsConst(list)) {
             QString em(addressee.fullEmail());
             if (em.isEmpty()) {
                 em = addressee.realName();
