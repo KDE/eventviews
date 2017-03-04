@@ -32,7 +32,7 @@
 #include <CalendarSupport/CategoryConfig>
 
 #include <Libkdepim/KCheckComboBox>
-#include <Libkdepim/TagSelectionCombo>
+#include <LibkdepimAkonadi/TagSelectionCombo>
 
 #include <CalendarSupport/CategoryHierarchyReader>
 

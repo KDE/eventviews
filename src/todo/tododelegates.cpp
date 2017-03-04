@@ -30,10 +30,10 @@
 #include <CalendarSupport/CategoryConfig>
 #include <CalendarSupport/KCalPrefs>
 #include <CalendarSupport/CategoryHierarchyReader>
-#include <Libkdepim/TagSelectionCombo>
+#include <LibkdepimAkonadi/TagSelectionCombo>
 
 #include <Libkdepim/KCheckComboBox>
-#include <Libkdepim/TagWidgets>
+#include <LibkdepimAkonadi/TagWidgets>
 
 #include <KCalCore/CalFilter>
 

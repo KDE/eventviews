@@ -84,8 +84,6 @@ generate_export_header(KF5EventViews BASE_NAME eventviews)
 
 add_library(KF5::EventViews ALIAS KF5EventViews)
 
-set(grant_lib KGantt)
-
 target_link_libraries(KF5EventViews
 PUBLIC
   KF5::AkonadiCore
@@ -95,9 +93,9 @@ PUBLIC
   KF5::CalendarUtils
   KF5::AkonadiCalendar
 PRIVATE
-  KF5::Libkdepim
+  KF5::LibkdepimAkonadi
   KF5::Codecs
-  ${grant_lib}
+  KGantt
   KF5::AkonadiWidgets
 )
 
