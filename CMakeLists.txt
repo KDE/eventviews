@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0)
-set(PIM_VERSION "5.4.41")
+set(PIM_VERSION "5.4.80")
 
 project(eventviews VERSION ${PIM_VERSION})
 
