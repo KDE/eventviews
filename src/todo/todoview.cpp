@@ -662,14 +662,15 @@ void TodoView::addTodo(const QString &summary,
                        const Akonadi::Item &parentItem,
                        const QStringList &categories)
 {
-    if (!changer() || summary.trimmed().isEmpty()) {
+    const QString summaryTrimmed = summary.trimmed();
+    if (!changer() || summaryTrimmed.isEmpty()) {
         return;
     }
 
     KCalCore::Todo::Ptr parent = CalendarSupport::todo(parentItem);
 
     KCalCore::Todo::Ptr todo(new KCalCore::Todo);
-    todo->setSummary(summary.trimmed());
+    todo->setSummary(summaryTrimmed);
     todo->setOrganizer(
         Person::Ptr(new Person(CalendarSupport::KCalPrefs::instance()->fullName(),
                                CalendarSupport::KCalPrefs::instance()->email())));
