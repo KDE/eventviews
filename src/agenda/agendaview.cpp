@@ -333,9 +333,6 @@ AgendaItem::List AgendaView::Private::agendaItems(const QString &uid) const
 bool AgendaView::Private::mightBeVisible(const KCalCore::Incidence::Ptr &incidence) const
 {
     KCalCore::Todo::Ptr todo = incidence.dynamicCast<KCalCore::Todo>();
-    const KDateTime::Spec timeSpec = q->preferences()->timeSpec();
-    KDateTime firstVisibleDateTime(mSelectedDates.first(), timeSpec);
-    KDateTime lastVisibleDateTime(mSelectedDates.last(), timeSpec);
 
     // KDateTime::toTimeSpec() is expensive, so lets first compare only the date,
     // to see if the incidence is visible.
@@ -350,17 +347,17 @@ bool AgendaView::Private::mightBeVisible(const KCalCore::Incidence::Ptr &inciden
 
     if (!incidence->recurs()) {
         // If DTEND/DTDUE is before the 1st visible column
-        if (incidence->dateTime(KCalCore::Incidence::RoleEnd).date().daysTo(firstVisibleDateTime.date()) > 2) {
+        if (incidence->dateTime(KCalCore::Incidence::RoleEnd).date().daysTo(mSelectedDates.first()) > 2) {
             return false;
         }
 
         // if DTSTART is after the last visible column
-        if (!todo && lastVisibleDateTime.date().daysTo(incidence->dtStart().date()) > 2) {
+        if (!todo && mSelectedDates.last().daysTo(incidence->dtStart().date()) > 2) {
             return false;
         }
 
         // if DTDUE is after the last visible column
-        if (todo && lastVisibleDateTime.date().daysTo(todo->dtDue().date()) > 2) {
+        if (todo && mSelectedDates.last().daysTo(todo->dtDue().date()) > 2) {
             return false;
         }
     }
@@ -593,7 +590,7 @@ void AgendaView::Private::insertIncidence(const KCalCore::Incidence::Ptr &incide
     }
 
     const KDateTime::Spec timeSpec = q->preferences()->timeSpec();
-    const QDate today = KDateTime::currentDateTime(timeSpec).date();
+    const QDate today = QDateTime::currentDateTime().date();
     if (todo && todo->isOverdue() && today >= insertAtDate) {
         mAllDayAgenda->insertAllDayItem(incidence, recurrenceId, curCol, curCol,
                                         createSelected);
