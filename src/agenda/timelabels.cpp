@@ -181,11 +181,12 @@ void TimeLabels::paintEvent(QPaintEvent *)
     // We won't paint parts that aren't visible
     const int cy = -y();// y() returns a negative value.
 
+    const auto firstDay = QDateTime(mAgenda->dateList().first(), QTime(0,0,0), Qt::LocalTime).toUTC();
     const int beginning =
         !mTimezone.isValid() ?
         0 :
-        (mTimezone.offsetFromUtc(QDateTime::currentDateTimeUtc()) -
-         mTimeLabelsZone->preferences()->timeZone().offsetFromUtc(QDateTime::currentDateTimeUtc())) / (60 * 60);
+        (mTimezone.offsetFromUtc(firstDay) -
+         mTimeLabelsZone->preferences()->timeZone().offsetFromUtc(firstDay)) / (60 * 60);
 
     // bug:  the parameters cx and cw are the areas that need to be
     //       redrawn, not the area of the widget.  unfortunately, this
