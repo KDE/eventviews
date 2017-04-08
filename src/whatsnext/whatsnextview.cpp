@@ -264,33 +264,30 @@ void WhatsNextView::appendEvent(const KCalCore::Incidence::Ptr &incidence, const
 {
     mText += QLatin1String("<tr><td><b>");
     if (const KCalCore::Event::Ptr event = incidence.dynamicCast<KCalCore::Event>()) {
-        KDateTime::Spec timeSpec = CalendarSupport::KCalPrefs::instance()->timeSpec();
-        KDateTime starttime(start, timeSpec);
+        auto starttime = start.toLocalTime();
         if (!starttime.isValid()) {
-            starttime = event->dtStart();
+            starttime = event->dtStart().dateTime().toLocalTime();
         }
-        KDateTime endtime(end, timeSpec);
+        auto endtime = end.toLocalTime();
         if (!endtime.isValid()) {
             endtime = starttime.addSecs(event->dtStart().secsTo(event->dtEnd()));
         }
 
         if (starttime.date().daysTo(endtime.date()) >= 1) {
-            mText += i18nc(
-                         "date from - to", "%1 - %2",
-                         KLocale::global()->formatDateTime(
-                             starttime.toTimeSpec(CalendarSupport::KCalPrefs::instance()->timeSpec())),
-                         KLocale::global()->formatDateTime(
-                             endtime.toTimeSpec(CalendarSupport::KCalPrefs::instance()->timeSpec())));
+            if (event->allDay())
+                mText += i18nc("date from - to", "%1 - %2", QLocale().toString(starttime.date(), QLocale::ShortFormat),
+                               QLocale().toString(endtime.date(), QLocale::ShortFormat));
+            else
+                mText += i18nc("date from - to", "%1 - %2", QLocale().toString(starttime, QLocale::ShortFormat),
+                               QLocale().toString(endtime, QLocale::ShortFormat));
         } else {
-            mText += i18nc(
-                         "date, from - to", "%1, %2 - %3",
-                         QLocale::system().toString(
-                             starttime.toTimeSpec(CalendarSupport::KCalPrefs::instance()->timeSpec()).date(),
-                             QLocale::ShortFormat),
-                         QLocale::system().toString(
-                             starttime.toTimeSpec(CalendarSupport::KCalPrefs::instance()->timeSpec()).time(), QLocale::ShortFormat),
-                         QLocale::system().toString(
-                             endtime.toTimeSpec(CalendarSupport::KCalPrefs::instance()->timeSpec()).time(), QLocale::ShortFormat));
+            if (event->allDay())
+                mText += QLocale().toString(starttime.date(), QLocale::ShortFormat);
+            else
+                mText += i18nc("date, from - to", "%1, %2 - %3",
+                         QLocale().toString(starttime.date(), QLocale::ShortFormat),
+                         QLocale().toString(starttime.time(), QLocale::ShortFormat),
+                         QLocale().toString(endtime.time(), QLocale::ShortFormat));
         }
     }
     mText += QLatin1String("</b></td><td><a ");
