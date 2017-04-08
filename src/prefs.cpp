@@ -105,7 +105,6 @@ public:
     QFont mDefaultMonthViewFont;
     QFont mDefaultAgendaTimeLabelsFont;
 
-    KDateTime::Spec mTimeSpec;
     QStringList mTimeScaleTimeZones;
 
     QSet<EventViews::EventView::ItemIcon> mAgendaViewIcons;
@@ -115,8 +114,6 @@ protected:
     void usrSetDefaults() Q_DECL_OVERRIDE;
     void usrRead() Q_DECL_OVERRIDE;
     bool usrSave() Q_DECL_OVERRIDE;
-
-    void setTimeZoneDefault();
 };
 
 BaseConfig::BaseConfig() : PrefsBase()
@@ -159,8 +156,6 @@ void BaseConfig::usrSetDefaults()
     setAgendaTimeLabelsFont(mDefaultAgendaTimeLabelsFont);
     setMonthViewFont(mDefaultMonthViewFont);
 
-    setTimeZoneDefault();
-
     PrefsBase::usrSetDefaults();
 }
 
@@ -178,10 +173,6 @@ void BaseConfig::usrRead()
         QColor color = rColorsConfig.readEntry(*it3, mDefaultResourceColor);
         //qCDebug(CALENDARVIEW_LOG) << "key:" << (*it3) << "value:" << color;
         setResourceColor(*it3, color);
-    }
-
-    if (!mTimeSpec.isValid()) {
-        setTimeZoneDefault();
     }
 
 #if 0
@@ -244,27 +235,12 @@ bool BaseConfig::usrSave()
     return KConfigSkeleton::usrSave();
 }
 
-void BaseConfig::setTimeZoneDefault()
-{
-    KTimeZone zone = KSystemTimeZones::local();
-    if (!zone.isValid()) {
-        qCCritical(CALENDARVIEW_LOG) << "KSystemTimeZones::local() return 0";
-        return;
-    }
-
-    qCDebug(CALENDARVIEW_LOG) << "----- time zone:" << zone.name();
-
-    mTimeSpec = zone;
-}
-
 class Q_DECL_HIDDEN Prefs::Private
 {
 public:
     Private(Prefs *parent) : mAppConfig(nullptr), q(parent) {}
     Private(Prefs *parent, KCoreConfigSkeleton *appConfig)
         : mAppConfig(appConfig), q(parent) {}
-
-    void setTimeZoneDefault();
 
     KConfigSkeletonItem *appConfigItem(const KConfigSkeletonItem *baseConfigItem) const;
 
@@ -859,12 +835,7 @@ KDateTime::Spec Prefs::timeSpec() const
 
 QTimeZone Prefs::timeZone() const
 {
-    return QTimeZone(timeSpec().timeZone().name().toUtf8());
-}
-
-void Prefs::setTimeSpec(const KDateTime::Spec &spec)
-{
-    d->mBaseConfig.mTimeSpec = spec;
+    return QTimeZone::systemTimeZone();
 }
 
 bool Prefs::colorAgendaBusyDays() const

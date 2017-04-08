@@ -154,7 +154,6 @@ public:
     QColor resourceColor(const QString &);
     QColor resourceColorKnown(const QString &) const;
 
-    void setTimeSpec(const KDateTime::Spec &spec);
     KDateTime::Spec timeSpec() const;
     QTimeZone timeZone() const;
 
