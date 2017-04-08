@@ -133,7 +133,7 @@ void WhatsNextView::updateView()
                 KDateTime end = start.addSecs(duration);
                 KDateTime endDate(mEndDate, QTime(23, 59, 59), timeSpec);
                 if (end.date() >= mStartDate) {
-                    appendEvent(ev, start.dateTime(), end.dateTime());
+                    appendEvent(ev, start.toLocalZone().dateTime(), end.toLocalZone().dateTime());
                 }
                 KCalCore::DateTimeList times = recur->timesInInterval(start, endDate);
                 int count = times.count();
@@ -146,7 +146,7 @@ void WhatsNextView::updateView()
                         --count;  // list overflow
                     }
                     for (;  i < count && times[i].date() <= mEndDate;  ++i) {
-                        appendEvent(ev, times[i].dateTime());
+                        appendEvent(ev, times[i].toLocalZone().dateTime());
                     }
                 }
             }
