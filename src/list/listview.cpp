@@ -29,7 +29,6 @@
 #include "listview.h"
 #include "helper.h"
 
-#include <CalendarSupport/KCalPrefs>
 #include <CalendarSupport/Utils>
 
 #include <Akonadi/Calendar/ETMCalendar>
@@ -38,6 +37,8 @@
 #include <KCalUtils/IncidenceFormatter>
 #include <KCalCore/Visitor>
 
+#include <KConfig>
+#include <KConfigGroup>
 #include <KIconLoader>
 
 #include "calendarview_debug.h"
@@ -58,16 +59,13 @@ enum {
     Dummy_EOF_Column // Dummy enum value for iteration purposes only. Always keep at the end.
 };
 
-static QString cleanSummary(const QString &summary, const KDateTime &next)
+static QString cleanSummary(const QString &summary, const QDateTime &next)
 {
     QString retStr = summary;
     retStr.replace(QLatin1Char('\n'), QLatin1Char(' '));
 
     if (next.isValid()) {
-        const QString dateStr =
-            QLocale::system().toString(
-                next.toTimeSpec(CalendarSupport::KCalPrefs::instance()->timeSpec()).date(),
-                QLocale::ShortFormat);
+        const QString dateStr = QLocale().toString(next.date(), QLocale::ShortFormat);
         retStr = i18nc("%1 is an item summary. %2 is the date when this item reoccurs",
                        "%1 (next: %2)", retStr, dateStr);
     }
@@ -86,8 +84,8 @@ public:
 
     const QTreeWidget *mTreeWidget;
     const Akonadi::Item mIncidence;
-    KDateTime start;
-    KDateTime end;
+    QDateTime start;
+    QDateTime end;
 };
 
 bool ListViewItem::operator<(const QTreeWidgetItem &other) const
@@ -100,13 +98,11 @@ bool ListViewItem::operator<(const QTreeWidgetItem &other) const
         return otheritem->start < start;
     }
     case EndDateTime_Column: {
-        KDateTime thisEnd;
         Incidence::Ptr thisInc = CalendarSupport::incidence(mIncidence);
-        thisEnd = thisInc->dateTime(Incidence::RoleEnd);
+        const auto thisEnd = thisInc->dateTime(Incidence::RoleEnd).toLocalZone().dateTime();
 
-        KDateTime otherEnd;
         Incidence::Ptr otherInc = CalendarSupport::incidence(otheritem->mIncidence);
-        otherEnd = otherInc->dateTime(Incidence::RoleEnd);
+        const auto otherEnd = otherInc->dateTime(Incidence::RoleEnd).toLocalZone().dateTime();
 
         return otherEnd < thisEnd;
     }
@@ -186,28 +182,27 @@ bool ListView::Private::ListItemVisitor::visit(const Event::Ptr &e)
     }
     mItem->setIcon(Summary_Column, eventPxmp);
 
-    KDateTime next;
-    mItem->start = e->dtStart();
-    mItem->end = e->dtEnd();
+    QDateTime next;
+    mItem->start = e->dtStart().toLocalZone().dateTime();
+    mItem->end = e->dtEnd().toLocalZone().dateTime();
     if (e->recurs()) {
         const int duration = e->dtStart().secsTo(e->dtEnd());
-        KDateTime kdt = KDateTime::currentDateTime(
-                            CalendarSupport::KCalPrefs::instance()->timeSpec());
+        KDateTime kdt(mStartDate, QTime(0,0,0));
         kdt = kdt.addSecs(-1);
-        mItem->start.setDate(e->recurrence()->getNextDateTime(kdt).date());
+        mItem->start = e->recurrence()->getNextDateTime(kdt).toLocalZone().dateTime();
         mItem->end = mItem->start.addSecs(duration);
-        next = e->recurrence()->getNextDateTime(mItem->start);
+        next = e->recurrence()->getNextDateTime(KDateTime(mItem->start)).toLocalZone().dateTime();
     }
 
     mItem->setText(Summary_Column, cleanSummary(e->summary(), next));
 
-    mItem->setText(StartDateTime_Column, IncidenceFormatter::dateTimeToString(
-                       mItem->start, e->allDay(), true,
-                       CalendarSupport::KCalPrefs::instance()->timeSpec()));
-
-    mItem->setText(EndDateTime_Column, IncidenceFormatter::dateTimeToString(
-                       mItem->end, e->allDay(), true,
-                       CalendarSupport::KCalPrefs::instance()->timeSpec()));
+    if (e->allDay()) {
+        mItem->setText(StartDateTime_Column, QLocale().toString(mItem->start.date(), QLocale::ShortFormat));
+        mItem->setText(EndDateTime_Column, QLocale().toString(mItem->end.date(), QLocale::ShortFormat));
+    } else {
+        mItem->setText(StartDateTime_Column, QLocale().toString(mItem->start, QLocale::ShortFormat));
+        mItem->setText(EndDateTime_Column, QLocale().toString(mItem->end, QLocale::ShortFormat));
+    }
 
     mItem->setText(Categories_Column, e->categoriesStr());
 
@@ -218,21 +213,22 @@ bool ListView::Private::ListItemVisitor::visit(const Todo::Ptr &t)
 {
     mItem->setIcon(Summary_Column, QIcon::fromTheme(t->iconName()));
 
-    mItem->setText(Summary_Column, cleanSummary(t->summary(), KDateTime()));
+    mItem->setText(Summary_Column, cleanSummary(t->summary(), QDateTime()));
 
     if (t->hasStartDate()) {
-        mItem->setText(StartDateTime_Column, IncidenceFormatter::dateTimeToString(
-                           t->dtStart(), t->allDay(), true,
-                           CalendarSupport::KCalPrefs::instance()->timeSpec()));
+        if (t->allDay())
+            mItem->setText(StartDateTime_Column, QLocale().toString(t->dtStart().toLocalZone().date(), QLocale::ShortFormat));
+        else
+            mItem->setText(StartDateTime_Column, QLocale().toString(t->dtStart().toLocalZone().dateTime(), QLocale::ShortFormat));
     } else {
         mItem->setText(StartDateTime_Column, QStringLiteral("---"));
     }
 
     if (t->hasDueDate()) {
-        mItem->setText(EndDateTime_Column, IncidenceFormatter::dateTimeToString(
-                           t->dtDue(), t->allDay(), true,
-                           CalendarSupport::KCalPrefs::instance()->timeSpec()));
-
+        if (t->allDay())
+            mItem->setText(EndDateTime_Column, QLocale().toString(t->dtDue().toLocalZone().date(), QLocale::ShortFormat));
+        else
+            mItem->setText(EndDateTime_Column, QLocale().toString(t->dtDue().toLocalZone().dateTime(), QLocale::ShortFormat));
     } else {
         mItem->setText(EndDateTime_Column, QStringLiteral("---"));
     }
@@ -248,13 +244,14 @@ bool ListView::Private::ListItemVisitor::visit(const Journal::Ptr &j)
     if (j->summary().isEmpty()) {
         mItem->setText(Summary_Column,
                        cleanSummary(j->description().section(QLatin1Char('\n'), 0, 0),
-                                    KDateTime()));
+                                    QDateTime()));
     } else {
-        mItem->setText(Summary_Column, cleanSummary(j->summary(), KDateTime()));
+        mItem->setText(Summary_Column, cleanSummary(j->summary(), QDateTime()));
     }
-    mItem->setText(StartDateTime_Column, IncidenceFormatter::dateTimeToString(
-                       j->dtStart(), j->allDay(), true,
-                       CalendarSupport::KCalPrefs::instance()->timeSpec()));
+    if (j->allDay())
+        mItem->setText(StartDateTime_Column, QLocale().toString(j->dtStart().toLocalZone().date(), QLocale::ShortFormat));
+    else
+        mItem->setText(StartDateTime_Column, QLocale().toString(j->dtStart().toLocalZone().dateTime(), QLocale::ShortFormat));
 
     return true;
 }
@@ -349,17 +346,8 @@ void ListView::showDates(const QDate &start, const QDate &end, const QDate &pref
     d->mStartDate = start;
     d->mEndDate = end;
 
-    KDateTime kStart(start);
-    const QString startStr =
-        QLocale::system().toString(
-            kStart.toTimeSpec(CalendarSupport::KCalPrefs::instance()->timeSpec()).date(),
-            QLocale::ShortFormat);
-
-    KDateTime kEnd(end);
-    const QString endStr =
-        QLocale::system().toString(
-            kEnd.toTimeSpec(CalendarSupport::KCalPrefs::instance()->timeSpec()).date(),
-            QLocale::ShortFormat);
+    const QString startStr = QLocale().toString(start, QLocale::ShortFormat);
+    const QString endStr = QLocale().toString(end, QLocale::ShortFormat);
 
     d->mTreeWidget->headerItem()->setText(Summary_Column,
                                           i18n("Summary [%1 - %2]", startStr, endStr));
@@ -425,7 +413,7 @@ void ListView::Private::addIncidence(const Akonadi::ETMCalendar::Ptr &calendar,
             tinc = Incidence::Ptr(incidence->clone());
             tinc->setReadOnly(false);
             tinc->setSummary(i18np("%2 (1 year)", "%2 (%1 years)", years,
-                                   cleanSummary(incidence->summary(), KDateTime())));
+                                   cleanSummary(incidence->summary(), QDateTime())));
             tinc->setReadOnly(true);
         }
     }
@@ -467,11 +455,9 @@ void ListView::changeIncidenceDisplay(const Akonadi::Item &aitem, int action)
 
     QDate date;
     if (CalendarSupport::hasTodo(aitem)) {
-        date = CalendarSupport::todo(aitem)->dtDue().
-               toTimeSpec(CalendarSupport::KCalPrefs::instance()->timeSpec()).date();
+        date = CalendarSupport::todo(aitem)->dtDue().toLocalZone().date();
     } else {
-        date = incidence->dtStart().
-               toTimeSpec(CalendarSupport::KCalPrefs::instance()->timeSpec()).date();
+        date = incidence->dtStart().toLocalZone().date();
     }
 
     switch (action) {
