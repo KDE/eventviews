@@ -537,14 +537,12 @@ bool Agenda::eventFilter(QObject *object, QEvent *event)
         return QWidget::eventFilter(object, event);
 
 #ifndef QT_NO_DRAGANDDROP
-#ifndef KORG_NODND
     case QEvent::DragEnter:
     case QEvent::DragMove:
     case QEvent::DragLeave:
     case QEvent::Drop:
 //  case QEvent::DragResponse:
         return eventFilter_drag(object, static_cast<QDropEvent *>(event));
-#endif
 #endif
 
     default:

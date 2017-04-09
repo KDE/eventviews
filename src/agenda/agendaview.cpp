@@ -2059,13 +2059,9 @@ void AgendaView::startDrag(const Akonadi::Item &incidence)
         qCCritical(CALENDARVIEW_LOG) << "No Calendar set";
         return;
     }
-#ifndef KORG_NODND
     if (QDrag *drag = CalendarSupport::createDrag(incidence, calendar()->timeSpec(), this)) {
         drag->exec();
     }
-#else
-    Q_UNUSED(incidence);
-#endif
 }
 
 void AgendaView::readSettings()

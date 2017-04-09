@@ -614,7 +614,6 @@ void AgendaItem::expandRight(int dx)
 
 void AgendaItem::dragEnterEvent(QDragEnterEvent *e)
 {
-#ifndef KORG_NODND
     const QMimeData *md = e->mimeData();
     if (KCalUtils::ICalDrag::canDecode(md) || KCalUtils::VCalDrag::canDecode(md)) {
         // TODO: Allow dragging events/todos onto other events to create a relation
@@ -626,9 +625,6 @@ void AgendaItem::dragEnterEvent(QDragEnterEvent *e)
     } else {
         e->ignore();
     }
-#else
-    Q_UNUSED(e);
-#endif
 }
 
 void AgendaItem::addAttendee(const QString &newAttendee)
@@ -655,7 +651,6 @@ void AgendaItem::dropEvent(QDropEvent *e)
     // (not only file, also any other url!), then if it's a vcard,
     // otherwise check for attendees, then if the data is binary,
     // add a binary attachment.
-#ifndef KORG_NODND
     if (!mValid) {
         return;
     }
@@ -680,9 +675,6 @@ void AgendaItem::dropEvent(QDropEvent *e)
             addAttendee(em);
         }
     }
-#else
-    Q_UNUSED(e);
-#endif // KORG_NODND
 }
 
 QList<AgendaItem::QPtr> &AgendaItem::conflictItems()
