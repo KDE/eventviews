@@ -280,10 +280,10 @@ QVariant TodoModel::data(const QModelIndex &index, int role) const
         case PercentColumn:
             return QVariant(todo->percentComplete());
         case StartDateColumn:
-            return todo->hasStartDate() ? QVariant(KCalUtils::IncidenceFormatter::dateToString(todo->dtStart()))
+            return todo->hasStartDate() ? QLocale().toString(todo->dtStart().toLocalZone().date(), QLocale::ShortFormat)
                    : QVariant(QString());
         case DueDateColumn:
-            return todo->hasDueDate() ? QVariant(KCalUtils::IncidenceFormatter::dateToString(todo->dtDue()))
+            return todo->hasDueDate() ? QLocale().toString(todo->dtDue().toLocalZone().date(), QLocale::ShortFormat)
                    : QVariant(QString());
         case CategoriesColumn: {
             QString categories = todo->categories().join(
