@@ -365,9 +365,7 @@ QDate IncidenceMonthItem::realStartDate() const
     }
 
     const KDateTime dt = mIncidence->dateTime(Incidence::RoleDisplayStart);
-    const QDate start = dt.isDateOnly() ?
-                        dt.date() :
-                        dt.toTimeSpec(CalendarSupport::KCalPrefs::instance()->timeSpec()).date();
+    const QDate start = dt.isDateOnly() ? dt.date() : dt.toLocalZone().date();
 
     return start.addDays(mRecurDayOffset);
 }
@@ -378,9 +376,7 @@ QDate IncidenceMonthItem::realEndDate() const
     }
 
     const KDateTime dt = mIncidence->dateTime(KCalCore::Incidence::RoleDisplayEnd);
-    const QDate end = dt.isDateOnly() ?
-                      dt.date() :
-                      dt.toTimeSpec(CalendarSupport::KCalPrefs::instance()->timeSpec()).date();
+    const QDate end = dt.isDateOnly() ? dt.date() : dt.toLocalZone().date();
 
     return end.addDays(mRecurDayOffset);
 }
@@ -484,16 +480,20 @@ QString IncidenceMonthItem::text(bool end) const
         QString timeStr;
         if (mIsTodo) {
             KCalCore::Todo::Ptr todo = mIncidence.staticCast<Todo>();
-            timeStr = KCalUtils::IncidenceFormatter::timeToString(
-                          todo->dtDue(), true, CalendarSupport::KCalPrefs::instance()->timeSpec());
+            timeStr = QLocale().toString(todo->dtDue().toLocalZone().time(), QLocale::ShortFormat);
         } else {
             if (!end) {
-                timeStr = KCalUtils::IncidenceFormatter::timeToString(
-                              mIncidence->dtStart(), true, CalendarSupport::KCalPrefs::instance()->timeSpec());
+                QTime time;
+                if (mIncidence->recurs()) {
+                    const auto start = mIncidence->dtStart().addDays(mRecurDayOffset).addSecs(-1);
+                    time  = mIncidence->recurrence()->getNextDateTime(start).toLocalZone().time();
+                } else {
+                    time = mIncidence->dtStart().toLocalZone().time();
+                }
+                timeStr = QLocale().toString(time, QLocale::ShortFormat);
             } else {
                 KCalCore::Event::Ptr event = mIncidence.staticCast<Event>();
-                timeStr = KCalUtils::IncidenceFormatter::timeToString(
-                              event->dtEnd(), true, CalendarSupport::KCalPrefs::instance()->timeSpec());
+                timeStr = QLocale().toString(event->dtEnd().toLocalZone().time(), QLocale::ShortFormat);
             }
         }
         if (!timeStr.isEmpty()) {
@@ -615,9 +615,8 @@ QColor IncidenceMonthItem::bgColor() const
         Q_ASSERT(todo);
         if (todo) {
             const QDate dtRecurrence = // this is dtDue if there's no dtRecurrence
-                todo->dtRecurrence().toTimeSpec(CalendarSupport::KCalPrefs::instance()->timeSpec()).date();
-            const QDate today =
-                KDateTime::currentDateTime(CalendarSupport::KCalPrefs::instance()->timeSpec()).date();
+                todo->dtRecurrence().toLocalZone().date();
+            const QDate today = QDate::currentDate();
             if (todo->isOverdue() && today > startDate() && startDate() >= dtRecurrence) {
                 bgColor = prefs->todoOverdueColor();
             } else if (today == startDate() && !todo->isCompleted() && startDate() >= dtRecurrence) {
