@@ -1673,6 +1673,7 @@ void AgendaView::showDates(const QDate &start, const QDate &end, const QDate &pr
     // and update the view
     setChanges(changes() | DatesChanged);
     fillAgenda();
+    d->mTimeLabelsZone->update();
 }
 
 void AgendaView::showIncidences(const Akonadi::Item::List &incidences, const QDate &date)
