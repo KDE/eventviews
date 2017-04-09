@@ -240,7 +240,7 @@ void AgendaItem::setOccurrenceDateTime(const KDateTime &qd)
 
 QDate AgendaItem::occurrenceDate() const
 {
-    return mOccurrenceDateTime.toTimeSpec(mEventView->preferences()->timeSpec()).date();
+    return mOccurrenceDateTime.toLocalZone().date();
 }
 
 void AgendaItem::setCellXY(int X, int YTop, int YBottom)
@@ -843,10 +843,8 @@ void AgendaItem::paintEvent(QPaintEvent *ev)
             !mEventView->preferences()->todosUseCategoryColors()) {
         Todo::Ptr todo = CalendarSupport::todo(mIncidence);
         Q_ASSERT(todo);
-        const QDate dueDate =
-            todo->dtDue().toTimeSpec(CalendarSupport::KCalPrefs::instance()->timeSpec()).date();
-        const QDate today =
-            KDateTime::currentDateTime(CalendarSupport::KCalPrefs::instance()->timeSpec()).date();
+        const QDate dueDate = todo->dtDue().toLocalZone().date();
+        const QDate today = QDate::currentDate();
         const QDate occurrenceDate = this->occurrenceDate();
         if (todo->isOverdue() && today >= occurrenceDate) {
             bgColor = mEventView->preferences()->todoOverdueColor();
@@ -932,26 +930,20 @@ void AgendaItem::paintEvent(QPaintEvent *ev)
     QString shortH;
     QString longH;
     if (!isMultiItem()) {
-        shortH = QLocale::system().toString(mIncidence->dateTime(KCalCore::Incidence::RoleDisplayStart).
-                                            toTimeSpec(mEventView->preferences()->timeSpec()).time(), QLocale::ShortFormat);
+        shortH = QLocale().toString(mIncidence->dateTime(KCalCore::Incidence::RoleDisplayStart).toLocalZone().time(), QLocale::ShortFormat);
 
         if (CalendarSupport::hasEvent(mIncidence)) {
             longH = i18n("%1 - %2",
                          shortH,
-                         QLocale::system().toString(
-                             mIncidence->dateTime(KCalCore::Incidence::RoleEnd).toTimeSpec(
-                                 mEventView->preferences()->timeSpec()).time(), QLocale::ShortFormat));
+                         QLocale().toString(mIncidence->dateTime(KCalCore::Incidence::RoleEnd).toLocalZone().time(), QLocale::ShortFormat));
         } else {
             longH = shortH;
         }
     } else if (!mMultiItemInfo->mFirstMultiItem) {
-        shortH = QLocale::system().toString(
-                     mIncidence->dtStart().toTimeSpec(mEventView->preferences()->timeSpec()).time(), QLocale::ShortFormat);
+        shortH = QLocale().toString(mIncidence->dtStart().toLocalZone().time(), QLocale::ShortFormat);
         longH = shortH;
     } else {
-        shortH = QLocale::system().toString(
-                     mIncidence->dateTime(KCalCore::Incidence::RoleEnd).toTimeSpec(
-                         mEventView->preferences()->timeSpec()).time(), QLocale::ShortFormat);
+        shortH = QLocale().toString(mIncidence->dateTime(KCalCore::Incidence::RoleEnd).toLocalZone().time(), QLocale::ShortFormat);
         longH = i18n("- %1", shortH);
     }
 
@@ -1041,11 +1033,8 @@ void AgendaItem::paintEvent(QPaintEvent *ev)
                 // multi-day, all-day event
                 shortH =
                     i18n("%1 - %2",
-                         QLocale::system().toString(
-                             mIncidence->dtStart().toTimeSpec(mEventView->preferences()->timeSpec()).date()),
-                         QLocale::system().toString(
-                             mIncidence->dateTime(KCalCore::Incidence::RoleEnd).toTimeSpec(
-                                 mEventView->preferences()->timeSpec()).date()));
+                         QLocale().toString(mIncidence->dtStart().toLocalZone().date()),
+                         QLocale().toString(mIncidence->dateTime(KCalCore::Incidence::RoleEnd).toLocalZone().date()));
                 longH = shortH;
 
                 // paint headline

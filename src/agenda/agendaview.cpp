@@ -572,7 +572,7 @@ void AgendaView::Private::insertIncidence(const KCalCore::Incidence::Ptr &incide
     if (event) {
         const QDate firstVisibleDate = mSelectedDates.first();
         // its crossing bounderies, lets calculate beginX and endX
-        const int duration = event->dtStart().toTimeSpec(q->preferences()->timeSpec()).daysTo(event->dtEnd());
+        const int duration = event->dtStart().toLocalZone().daysTo(event->dtEnd());
         if (insertAtDate < firstVisibleDate) {
             beginX = curCol + firstVisibleDate.daysTo(insertAtDate);
             endX   = beginX + duration;
@@ -1542,7 +1542,7 @@ void AgendaView::updateEventDates(AgendaItem *item, bool addIncidence,
         startDt = incidence->dtStart();
         // convert to calendar timespec because we then manipulate it
         // with time coming from the calendar
-        startDt = startDt.toTimeSpec(preferences()->timeSpec());
+        startDt = startDt.toLocalZone();
         startDt = startDt.addDays(daysOffset);
         if (!startDt.isDateOnly()) {
             startDt.setTime(startTime);
@@ -1551,8 +1551,7 @@ void AgendaView::updateEventDates(AgendaItem *item, bool addIncidence,
         if (!endDt.isDateOnly()) {
             endDt.setTime(endTime);
         }
-        if (incidence->dtStart().toTimeSpec(preferences()->timeSpec()) == startDt &&
-                ev->dtEnd().toTimeSpec(preferences()->timeSpec()) == endDt) {
+        if (incidence->dtStart().toLocalZone() == startDt && ev->dtEnd().toLocalZone() == endDt) {
             // No change
             QTimer::singleShot(0, this, SLOT(updateView()));
             return;
@@ -1561,7 +1560,7 @@ void AgendaView::updateEventDates(AgendaItem *item, bool addIncidence,
         startDt = td->hasStartDate() ? td->dtStart() : td->dtDue();
         // convert to calendar timespec because we then manipulate it with time coming from
         // the calendar
-        startDt = startDt.toTimeSpec(preferences()->timeSpec());
+        startDt = startDt.toLocalZone();
         startDt.setDate(thisDate.addDays(td->dtDue().daysTo(startDt)));
         if (!startDt.isDateOnly()) {
             startDt.setTime(startTime);
@@ -1573,7 +1572,7 @@ void AgendaView::updateEventDates(AgendaItem *item, bool addIncidence,
             endDt.setTime(endTime);
         }
 
-        if (td->dtDue().toTimeSpec(preferences()->timeSpec())  == endDt) {
+        if (td->dtDue().toLocalZone() == endDt) {
             // No change
             QMetaObject::invokeMethod(this, "updateView", Qt::QueuedConnection);
             return;
@@ -1700,22 +1699,18 @@ void AgendaView::showIncidences(const Akonadi::Item::List &incidences, const QDa
         calendar()->setFilter(nullptr);
     }
 
-    const KDateTime::Spec timeSpec = preferences()->timeSpec();
-    KDateTime start =
-        CalendarSupport::incidence(incidences.first())->dtStart().toTimeSpec(timeSpec);
-    KDateTime end =
-        CalendarSupport::incidence(incidences.first())->dateTime(
-            KCalCore::Incidence::RoleEnd).toTimeSpec(timeSpec);
+    KDateTime start = CalendarSupport::incidence(incidences.first())->dtStart().toLocalZone();
+    KDateTime end = CalendarSupport::incidence(incidences.first())->dateTime(KCalCore::Incidence::RoleEnd).toLocalZone();
     Akonadi::Item first = incidences.first();
     Q_FOREACH (const Akonadi::Item &aitem, incidences) {
-        if (CalendarSupport::incidence(aitem)->dtStart().toTimeSpec(timeSpec) < start) {
+        if (CalendarSupport::incidence(aitem)->dtStart().toLocalZone() < start) {
             first = aitem;
         }
         start = qMin(start,
-                     CalendarSupport::incidence(aitem)->dtStart().toTimeSpec(timeSpec));
+                     CalendarSupport::incidence(aitem)->dtStart().toLocalZone());
         end = qMax(start,
                    CalendarSupport::incidence(aitem)->dateTime(
-                       KCalCore::Incidence::RoleEnd).toTimeSpec(timeSpec));
+                       KCalCore::Incidence::RoleEnd).toLocalZone());
     }
 
     end.toTimeSpec(start);      // allow direct comparison of dates
@@ -1829,9 +1824,8 @@ bool AgendaView::displayIncidence(const  KCalCore::Incidence::Ptr &incidence, bo
     firstVisibleDateTime.setTime(QTime(0, 0));
     KCalCore::DateTimeList dateTimeList;
 
-    const KDateTime incDtStart = incidence->dtStart().toTimeSpec(timeSpec);
-    const KDateTime incDtEnd =
-        incidence->dateTime(KCalCore::Incidence::RoleEnd).toTimeSpec(timeSpec);
+    const KDateTime incDtStart = incidence->dtStart().toLocalZone();
+    const KDateTime incDtEnd = incidence->dateTime(KCalCore::Incidence::RoleEnd).toLocalZone();
 
     bool alreadyAddedToday = false;
 
@@ -1851,7 +1845,7 @@ bool AgendaView::displayIncidence(const  KCalCore::Incidence::Ptr &incidence, bo
                                          startDateTimeWithOffset, lastVisibleDateTime);
         while (rIt.hasNext()) {
             rIt.next();
-            const KDateTime occurrenceDate(rIt.occurrenceStartDate().toTimeSpec(timeSpec));
+            const KDateTime occurrenceDate(rIt.occurrenceStartDate().toLocalZone());
             const bool makesDayBusy =
                 preferences()->colorAgendaBusyDays() && makesWholeDayBusy(rIt.incidence());
             if (makesDayBusy) {
@@ -1872,7 +1866,7 @@ bool AgendaView::displayIncidence(const  KCalCore::Incidence::Ptr &incidence, bo
 
         if (todo && todo->hasDueDate() && !todo->isOverdue()) {
             // If it's not overdue it will be shown at the original date (not today)
-            dateToAdd = todo->dtDue().toTimeSpec(timeSpec);
+            dateToAdd = todo->dtDue().toLocalZone();
 
             // To-dos are drawn with the bottom of the rectangle at dtDue
             // if dtDue is at 00:00, then it should be displayed in the previous day, at 23:59
@@ -1917,7 +1911,7 @@ bool AgendaView::displayIncidence(const  KCalCore::Incidence::Ptr &incidence, bo
             busyEvents.append(event);
         }
 
-        d->insertIncidence(incidence, t->toTimeSpec(timeSpec), t->toTimeSpec(timeSpec), createSelected);
+        d->insertIncidence(incidence, t->toLocalZone(), t->toLocalZone(), createSelected);
     }
 
     // Can be multiday
