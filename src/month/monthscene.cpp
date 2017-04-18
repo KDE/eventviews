@@ -25,7 +25,7 @@
 #include "monthitem.h"
 #include "monthview.h"
 #include "prefs.h"
-#include "helper_p.h"
+
 
 #include <CalendarSupport/Utils>
 

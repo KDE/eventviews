@@ -21,7 +21,7 @@
 */
 #include "timescaleconfigdialog.h"
 #include "prefs.h"
-#include "helper_p.h"
+
 
 #include <KLocalizedString>
 #include <QIcon>

@@ -17,7 +17,7 @@
   Boston, MA 02110-1301, USA.
 */
 #include "calendardecoration.h"
-#include "helper_p.h"
+
 #include <QDate>
 
 using namespace EventViews::CalendarDecoration;

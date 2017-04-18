@@ -27,7 +27,7 @@
 // Journal Entry
 
 #include "journalframe.h"
-#include "helper_p.h"
+
 
 #include <CalendarSupport/Utils>
 

@@ -24,7 +24,7 @@
 #include "eventview.h"
 #include "viewcalendar.h"
 #include "helper.h"
-#include "helper_p.h"
+
 #include "prefs.h"
 #include "prefs_base.h" // for enums
 

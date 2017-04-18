@@ -24,7 +24,7 @@
 #include "agendaview.h"
 #include "prefs.h"
 #include "timelabels.h"
-#include "helper_p.h"
+
 
 #include <QHBoxLayout>
 #include <QScrollArea>
