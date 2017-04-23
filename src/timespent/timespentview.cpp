@@ -134,7 +134,7 @@ public:
                 continue;
             }
 
-            if (e->categories().count()) {
+            if (!e->categories().isEmpty()) {
                 foreach (const QString &s, e->categories()) {
                     secondsSpent[ s ] += totalDuration;
                 }

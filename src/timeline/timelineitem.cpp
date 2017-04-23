@@ -94,7 +94,8 @@ void TimelineItem::moveItems(const Akonadi::Item &incidence, int delta, int dura
 {
     typedef QList<QStandardItem *> ItemList;
     ItemList list = mItemMap.value(incidence.id());
-    for (ItemList::ConstIterator it = list.constBegin(); it != list.constEnd(); ++it) {
+    const ItemList::ConstIterator end(list.constEnd());
+    for (ItemList::ConstIterator it = list.constBegin(); it != end; ++it) {
         QDateTime start = static_cast<TimelineSubItem *>(*it)->originalStart().dateTime();
         start = start.addSecs(delta);
         static_cast<TimelineSubItem *>(*it)->setStartTime(start);
