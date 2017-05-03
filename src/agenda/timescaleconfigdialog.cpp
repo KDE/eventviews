@@ -114,7 +114,7 @@ TimeScaleConfigDialog::TimeScaleConfigDialog(const PrefsPtr &preferences, QWidge
             selList.append(TimeZoneNamePair(tzWithUTC(zoneId), zoneId));
         }
     }
-    qSort(availList.begin(), availList.end());
+    std::sort(availList.begin(), availList.end());
 
     for (const TimeZoneNamePair &item : qAsConst(availList)) {
         zoneCombo->addItem(item.first, item.second);

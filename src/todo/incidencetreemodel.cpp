@@ -81,7 +81,7 @@ static PreNode::List sortedPrenodes(const PreNode::List &nodes)
     }
 
     PreNode::List sorted = nodes;
-    qSort(sorted.begin(), sorted.end(), greaterThan);
+    std::sort(sorted.begin(), sorted.end(), greaterThan);
     return sorted;
 }
 
@@ -435,7 +435,7 @@ Node::List IncidenceTreeModel::Private::sorted(const Node::List &nodes) const
     }
 
     Node::List sorted = nodes;
-    qSort(sorted.begin(), sorted.end(), lessThan);
+    std::sort(sorted.begin(), sorted.end(), lessThan);
 
     return sorted;
 }

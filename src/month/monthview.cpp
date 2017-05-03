@@ -570,7 +570,7 @@ void MonthView::reloadIncidences()
     }
 
     // sort it
-    qSort(d->scene->mManagerList.begin(),
+    std::sort(d->scene->mManagerList.begin(),
           d->scene->mManagerList.end(),
           MonthItem::greaterThan);
 
