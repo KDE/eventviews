@@ -508,7 +508,7 @@ Akonadi::Item::List TodoView::selectedIncidences() const
     Akonadi::Item::List ret;
     const QModelIndexList selection = mView->selectionModel()->selectedRows();
     ret.reserve(selection.count());
-    Q_FOREACH (const QModelIndex &mi, selection) {
+    for (const QModelIndex &mi : selection) {
         ret << mi.data(TodoModel::TodoRole).value<Akonadi::Item>();
     }
     return ret;

@@ -1676,7 +1676,7 @@ QVector<int> Agenda::minContentsY() const
 {
     QVector<int> minArray;
     minArray.fill(timeToY(QTime(23, 59)), d->mSelectedDates.count());
-    foreach (AgendaItem::QPtr item, d->mItems) {
+    for (AgendaItem::QPtr item : qAsConst(d->mItems)) {
         if (item) {
             int ymin = item->cellYTop();
             int index = item->cellXLeft();
@@ -1695,7 +1695,7 @@ QVector<int> Agenda::maxContentsY() const
 {
     QVector<int> maxArray;
     maxArray.fill(timeToY(QTime(0, 0)), d->mSelectedDates.count());
-    foreach (AgendaItem::QPtr item, d->mItems) {
+    for (AgendaItem::QPtr item : qAsConst(d->mItems)) {
         if (item) {
             int ymax = item->cellYBottom();
 
@@ -2175,7 +2175,7 @@ void Agenda::selectItem(const AgendaItem::QPtr &item)
     Q_ASSERT(d->mSelectedItem->incidence());
     d->mSelectedId = d->mSelectedItem->incidence()->uid();
 
-    foreach (AgendaItem::QPtr item, d->mItems) {
+    for (AgendaItem::QPtr item : qAsConst(d->mItems)) {
         if (item && item->incidence()->uid() == d->mSelectedId) {
             item->select();
         }
@@ -2185,7 +2185,7 @@ void Agenda::selectItem(const AgendaItem::QPtr &item)
 
 void Agenda::selectIncidenceByUid(const QString &uid)
 {
-    foreach (AgendaItem::QPtr item, d->mItems) {
+    for (const AgendaItem::QPtr &item : qAsConst(d->mItems)) {
         if (item && item->incidence()->uid() == uid) {
             selectItem(item);
             break;

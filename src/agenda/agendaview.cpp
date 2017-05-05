@@ -449,7 +449,7 @@ void AgendaView::Private::calendarIncidenceChanged(const KCalCore::Incidence::Pt
         KCalCore::Incidence::Ptr originalIncidence = agendaItems.first()->incidence();
 
         if (datesEqual(originalIncidence, incidence)) {
-            foreach (const AgendaItem::QPtr &agendaItem, agendaItems) {
+            for (const AgendaItem::QPtr &agendaItem : qAsConst(agendaItems)) {
                 agendaItem->setIncidence(KCalCore::Incidence::Ptr(incidence->clone()));
                 agendaItem->update();
             }
@@ -1241,7 +1241,7 @@ void AgendaView::createDayLabels(bool force)
         d->mDateDayLabels.append(dayLabel);
         // if a holiday region is selected, show the holiday name
         const QStringList texts = CalendarSupport::holiday(date);
-        Q_FOREACH (const QString &text, texts) {
+        for (const QString &text : texts) {
             // Compute a small version of the holiday string for AlternateLabel
             const KWordWrap ww = KWordWrap::formatText(fm, topDayLabelBox->rect(), 0, text, -1);
             AlternateLabel *label = new AlternateLabel(ww.truncatedString(), text, text, topDayLabelBox);
@@ -1282,7 +1282,7 @@ void AgendaView::updateDayLabelSizes()
 {
     // First, calculate the maximum text type that fits for all labels
     AlternateLabel::TextType overallType = AlternateLabel::Extensive;
-    foreach (AlternateLabel *label, d->mDateDayLabels) {
+    for (AlternateLabel *label : qAsConst(d->mDateDayLabels)) {
         AlternateLabel::TextType type = label->largestFittingTextType();
         if (type < overallType) {
             overallType = type;
