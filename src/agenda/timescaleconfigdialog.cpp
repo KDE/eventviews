@@ -133,7 +133,7 @@ TimeScaleConfigDialog::TimeScaleConfigDialog(const PrefsPtr &preferences, QWidge
 
     connect(okButton, &QPushButton::clicked, this, &TimeScaleConfigDialog::okClicked);
     connect(buttonBox->button(QDialogButtonBox::Cancel), &QPushButton::clicked, this, &TimeScaleConfigDialog::reject);
-
+    connect(listWidget, &QListWidget::currentItemChanged, this, &TimeScaleConfigDialog::slotUpdateButton);
     for (const TimeZoneNamePair &item : qAsConst(selList)) {
         QListWidgetItem *widgetItem = new QListWidgetItem(item.first);
         widgetItem->setData(TimeZoneNameRole, item.second);
@@ -149,7 +149,7 @@ TimeScaleConfigDialog::~TimeScaleConfigDialog()
 
 void TimeScaleConfigDialog::slotUpdateButton()
 {
-    removeButton->setEnabled(listWidget->count() > 0);
+    removeButton->setEnabled(listWidget->currentItem());
 }
 
 void TimeScaleConfigDialog::okClicked()
