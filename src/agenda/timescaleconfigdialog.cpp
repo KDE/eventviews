@@ -150,6 +150,9 @@ TimeScaleConfigDialog::~TimeScaleConfigDialog()
 void TimeScaleConfigDialog::slotUpdateButton()
 {
     removeButton->setEnabled(listWidget->currentItem());
+    const bool numberElementMoreThanOneElement = (listWidget->count() > 1);
+    upButton->setEnabled(numberElementMoreThanOneElement && (listWidget->currentRow() >= 1));
+    downButton->setEnabled(numberElementMoreThanOneElement && (listWidget->currentRow() < listWidget->count() - 1));
 }
 
 void TimeScaleConfigDialog::okClicked()
