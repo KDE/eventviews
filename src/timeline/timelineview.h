@@ -43,29 +43,29 @@ public:
     explicit TimelineView(QWidget *parent = nullptr);
     ~TimelineView();
 
-    Akonadi::Item::List selectedIncidences() const Q_DECL_OVERRIDE;
-    KCalCore::DateList selectedIncidenceDates() const Q_DECL_OVERRIDE;
-    int currentDateCount() const Q_DECL_OVERRIDE;
+    Akonadi::Item::List selectedIncidences() const override;
+    KCalCore::DateList selectedIncidenceDates() const override;
+    int currentDateCount() const override;
 
     // ensure start and end are valid before calling this.
-    void showDates(const QDate &, const QDate &, const QDate &preferredMonth = QDate()) Q_DECL_OVERRIDE;
+    void showDates(const QDate &, const QDate &, const QDate &preferredMonth = QDate()) override;
 
     // FIXME: we already have startDateTime() in the base class
     // why aren't we using it.
     QDate startDate() const;
     QDate endDate() const;
 
-    void showIncidences(const Akonadi::Item::List &incidenceList, const QDate &date) Q_DECL_OVERRIDE;
-    void updateView() Q_DECL_OVERRIDE;
+    void showIncidences(const Akonadi::Item::List &incidenceList, const QDate &date) override;
+    void updateView() override;
     virtual void changeIncidenceDisplay(const Akonadi::Item &incidence, int mode);
-    bool eventDurationHint(QDateTime &startDt, QDateTime &endDt, bool &allDay) const Q_DECL_OVERRIDE;
+    bool eventDurationHint(QDateTime &startDt, QDateTime &endDt, bool &allDay) const override;
 
 Q_SIGNALS:
     void showNewEventPopupSignal();
     void showIncidencePopupSignal(const Akonadi::Item &, const QDate &);
 
 protected:
-    bool eventFilter(QObject *object, QEvent *event) Q_DECL_OVERRIDE;
+    bool eventFilter(QObject *object, QEvent *event) override;
 
 private:
     class Private;

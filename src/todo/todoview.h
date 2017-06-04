@@ -69,11 +69,11 @@ public:
     TodoView(const EventViews::PrefsPtr &preferences, bool sidebarView, QWidget *parent);
     ~TodoView();
 
-    void setCalendar(const Akonadi::ETMCalendar::Ptr &) Q_DECL_OVERRIDE;
+    void setCalendar(const Akonadi::ETMCalendar::Ptr &) override;
 
-    Akonadi::Item::List selectedIncidences() const Q_DECL_OVERRIDE;
-    KCalCore::DateList selectedIncidenceDates() const Q_DECL_OVERRIDE;
-    int currentDateCount() const Q_DECL_OVERRIDE
+    Akonadi::Item::List selectedIncidences() const override;
+    KCalCore::DateList selectedIncidenceDates() const override;
+    int currentDateCount() const override
     {
         return 0;
     }
@@ -97,14 +97,14 @@ public:
     }
 
 public Q_SLOTS:
-    void setIncidenceChanger(Akonadi::IncidenceChanger *changer) Q_DECL_OVERRIDE;
+    void setIncidenceChanger(Akonadi::IncidenceChanger *changer) override;
     void showDates(const QDate &start, const QDate &end,
-                   const QDate &preferredMonth = QDate()) Q_DECL_OVERRIDE;
-    void showIncidences(const Akonadi::Item::List &incidenceList, const QDate &date) Q_DECL_OVERRIDE;
-    void updateView() Q_DECL_OVERRIDE;
+                   const QDate &preferredMonth = QDate()) override;
+    void showIncidences(const Akonadi::Item::List &incidenceList, const QDate &date) override;
+    void updateView() override;
     virtual void changeIncidenceDisplay(const Akonadi::Item &incidence, Akonadi::IncidenceChanger::ChangeType changeType);
-    void updateConfig() Q_DECL_OVERRIDE;
-    void clearSelection() Q_DECL_OVERRIDE;
+    void updateConfig() override;
+    void clearSelection() override;
     void expandIndex(const QModelIndex &index);
     void restoreViewState();
     void saveViewState();
@@ -113,7 +113,7 @@ public Q_SLOTS:
     void createEvent();
 
 protected Q_SLOTS:
-    void resizeEvent(QResizeEvent *) Q_DECL_OVERRIDE;
+    void resizeEvent(QResizeEvent *) override;
     void addQuickTodo(Qt::KeyboardModifiers modifier);
 
     void contextMenu(const QPoint &pos);

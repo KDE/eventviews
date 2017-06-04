@@ -52,7 +52,7 @@ public Q_SLOTS:
     void useDefaultText();
 
 protected:
-    void resizeEvent(QResizeEvent *) Q_DECL_OVERRIDE;
+    void resizeEvent(QResizeEvent *) override;
     virtual void squeezeTextToLabel();
     bool mTextTypeFixed;
     QString mShortText, mLongText, mExtensiveText;

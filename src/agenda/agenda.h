@@ -77,8 +77,8 @@ public:
 
     KCalCore::Incidence::Ptr selectedIncidence() const;
     QDate selectedIncidenceDate() const;
-    QSize sizeHint() const Q_DECL_OVERRIDE;
-    QSize minimumSizeHint() const Q_DECL_OVERRIDE;
+    QSize sizeHint() const override;
+    QSize minimumSizeHint() const override;
     QSize minimumSize() const;
     int minimumHeight() const;
     // QSizePolicy sizePolicy() const;
@@ -105,9 +105,9 @@ public:
     */
     QString lastSelectedItemUid() const;
 
-    bool eventFilter(QObject *, QEvent *) Q_DECL_OVERRIDE;
+    bool eventFilter(QObject *, QEvent *) override;
 
-    void paintEvent(QPaintEvent *) Q_DECL_OVERRIDE;
+    void paintEvent(QPaintEvent *) override;
 
     QPoint contentsToGrid(const QPoint &pos) const;
     QPoint gridToContents(const QPoint &gpos) const;
@@ -248,7 +248,7 @@ protected:
     void drawContents(QPainter *p, int cx, int cy, int cw, int ch);
 
     int columnWidth(int column) const;
-    void resizeEvent(QResizeEvent *) Q_DECL_OVERRIDE;
+    void resizeEvent(QResizeEvent *) override;
 
     /** Handles mouse events. Called from eventFilter */
     virtual bool eventFilter_mouse(QObject *, QMouseEvent *);
@@ -316,7 +316,7 @@ protected:
     /** Process the keyevent, including the ignored keyevents of eventwidgets.
      * Implements pgup/pgdn and cursor key navigation in the view.
      */
-    void keyPressEvent(QKeyEvent *) Q_DECL_OVERRIDE;
+    void keyPressEvent(QKeyEvent *) override;
 
     void calculateWorkingHours();
 

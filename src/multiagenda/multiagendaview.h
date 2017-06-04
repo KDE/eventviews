@@ -40,25 +40,25 @@ public:
     explicit MultiAgendaView(QWidget *parent = nullptr);
     ~MultiAgendaView();
 
-    Akonadi::Item::List selectedIncidences() const Q_DECL_OVERRIDE;
-    KCalCore::DateList selectedIncidenceDates() const Q_DECL_OVERRIDE;
-    int currentDateCount() const Q_DECL_OVERRIDE;
+    Akonadi::Item::List selectedIncidences() const override;
+    KCalCore::DateList selectedIncidenceDates() const override;
+    int currentDateCount() const override;
     int maxDatesHint() const;
 
-    bool eventDurationHint(QDateTime &startDt, QDateTime &endDt, bool &allDay) const Q_DECL_OVERRIDE;
+    bool eventDurationHint(QDateTime &startDt, QDateTime &endDt, bool &allDay) const override;
 
-    void setCalendar(const Akonadi::ETMCalendar::Ptr &cal) Q_DECL_OVERRIDE;
+    void setCalendar(const Akonadi::ETMCalendar::Ptr &cal) override;
 
-    bool hasConfigurationDialog() const Q_DECL_OVERRIDE;
+    bool hasConfigurationDialog() const override;
 
-    void setChanges(Changes changes) Q_DECL_OVERRIDE;
+    void setChanges(Changes changes) override;
 
     bool customColumnSetupUsed() const;
     int customNumberOfColumns() const;
     QStringList customColumnTitles() const;
     QVector<KCheckableProxyModel *>collectionSelectionModels() const;
 
-    void setPreferences(const PrefsPtr &prefs) Q_DECL_OVERRIDE;
+    void setPreferences(const PrefsPtr &prefs) override;
 
 Q_SIGNALS:
     void showNewEventPopupSignal();
@@ -68,19 +68,19 @@ public Q_SLOTS:
 
     void customCollectionsChanged(ConfigDialogInterface *dlg);
 
-    void showDates(const QDate &start, const QDate &end, const QDate &preferredMonth = QDate()) Q_DECL_OVERRIDE;
-    void showIncidences(const Akonadi::Item::List &incidenceList, const QDate &date) Q_DECL_OVERRIDE;
-    void updateView() Q_DECL_OVERRIDE;
-    void updateConfig() Q_DECL_OVERRIDE;
+    void showDates(const QDate &start, const QDate &end, const QDate &preferredMonth = QDate()) override;
+    void showIncidences(const Akonadi::Item::List &incidenceList, const QDate &date) override;
+    void updateView() override;
+    void updateConfig() override;
 
-    void setIncidenceChanger(Akonadi::IncidenceChanger *changer) Q_DECL_OVERRIDE;
+    void setIncidenceChanger(Akonadi::IncidenceChanger *changer) override;
 
 protected:
-    void resizeEvent(QResizeEvent *event) Q_DECL_OVERRIDE;
-    void showEvent(QShowEvent *event) Q_DECL_OVERRIDE;
+    void resizeEvent(QResizeEvent *event) override;
+    void showEvent(QShowEvent *event) override;
 
-    void doRestoreConfig(const KConfigGroup &configGroup) Q_DECL_OVERRIDE;
-    void doSaveConfig(KConfigGroup &configGroup) Q_DECL_OVERRIDE;
+    void doRestoreConfig(const KConfigGroup &configGroup) override;
+    void doSaveConfig(KConfigGroup &configGroup) override;
 
 protected Q_SLOTS:
     /**

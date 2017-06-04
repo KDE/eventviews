@@ -75,42 +75,42 @@ public:
         m_model = model;
     }
 
-    int headerHeight() const Q_DECL_OVERRIDE
+    int headerHeight() const override
     {
         return 2 * mRowHeight + 10;
     }
 
-    bool isRowVisible(const QModelIndex &) const Q_DECL_OVERRIDE
+    bool isRowVisible(const QModelIndex &) const override
     {
         return true;
     }
 
-    bool isRowExpanded(const QModelIndex &) const Q_DECL_OVERRIDE
+    bool isRowExpanded(const QModelIndex &) const override
     {
         return false;
     }
 
-    KGantt::Span rowGeometry(const QModelIndex &idx) const Q_DECL_OVERRIDE
+    KGantt::Span rowGeometry(const QModelIndex &idx) const override
     {
         return KGantt::Span(idx.row() * mRowHeight, mRowHeight);
     }
 
-    int maximumItemHeight() const Q_DECL_OVERRIDE
+    int maximumItemHeight() const override
     {
         return mRowHeight / 2;
     }
 
-    int totalHeight() const Q_DECL_OVERRIDE
+    int totalHeight() const override
     {
         return m_model->rowCount() * mRowHeight;
     }
 
-    QModelIndex indexAt(int height) const Q_DECL_OVERRIDE
+    QModelIndex indexAt(int height) const override
     {
         return m_model->index(height / mRowHeight, 0);
     }
 
-    QModelIndex indexBelow(const QModelIndex &idx) const Q_DECL_OVERRIDE
+    QModelIndex indexBelow(const QModelIndex &idx) const override
     {
         if (!idx.isValid()) {
             return QModelIndex();
@@ -118,7 +118,7 @@ public:
         return idx.model()->index(idx.row() + 1, idx.column(), idx.parent());
     }
 
-    QModelIndex indexAbove(const QModelIndex &idx) const Q_DECL_OVERRIDE
+    QModelIndex indexAbove(const QModelIndex &idx) const override
     {
         if (!idx.isValid()) {
             return QModelIndex();
@@ -142,7 +142,7 @@ public:
     {
     }
 
-    QSize sizeHint() const Q_DECL_OVERRIDE
+    QSize sizeHint() const override
     {
         QSize s = QHeaderView::sizeHint();
         s.rheight() *= 2;
@@ -153,7 +153,7 @@ class GanttItemDelegate : public KGantt::ItemDelegate
 {
     void paintGanttItem(QPainter *painter,
                         const KGantt::StyleOptionGanttItem &opt,
-                        const QModelIndex &idx) Q_DECL_OVERRIDE {
+                        const QModelIndex &idx) override {
         painter->setRenderHints(QPainter::Antialiasing);
         if (!idx.isValid())
         {

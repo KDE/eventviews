@@ -238,10 +238,10 @@ public:
     void setConflictItems(const QList<AgendaItem::QPtr> &);
     void addConflictItem(const AgendaItem::QPtr &ci);
 
-    QString label() const Q_DECL_OVERRIDE;
+    QString label() const override;
 
     /** Tells whether this item overlaps item @p o */
-    bool overlaps(CellItem *o) const Q_DECL_OVERRIDE;
+    bool overlaps(CellItem *o) const override;
 
     void setResourceColor(const QColor &color)
     {
@@ -263,11 +263,11 @@ public Q_SLOTS:
     void addAttendee(const QString &);
 
 protected:
-    bool eventFilter(QObject *obj, QEvent *event) Q_DECL_OVERRIDE;
-    bool event(QEvent *event) Q_DECL_OVERRIDE;
-    void dragEnterEvent(QDragEnterEvent *e) Q_DECL_OVERRIDE;
-    void dropEvent(QDropEvent *e) Q_DECL_OVERRIDE;
-    void paintEvent(QPaintEvent *e) Q_DECL_OVERRIDE;
+    bool eventFilter(QObject *obj, QEvent *event) override;
+    bool event(QEvent *event) override;
+    void dragEnterEvent(QDragEnterEvent *e) override;
+    void dropEvent(QDropEvent *e) override;
+    void paintEvent(QPaintEvent *e) override;
 
     /** private movement functions. startMove needs to be called of only one of
      *  the multitems. it will then loop through the whole series using

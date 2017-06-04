@@ -125,19 +125,19 @@ public:
     StoredElement(const QString &id, const QPixmap &pixmap);
 
     virtual void setShortText(const QString &t);
-    QString shortText() Q_DECL_OVERRIDE;
+    QString shortText() override;
 
     virtual void setLongText(const QString &t);
-    QString longText() Q_DECL_OVERRIDE;
+    QString longText() override;
 
     virtual void setExtensiveText(const QString &t);
-    QString extensiveText() Q_DECL_OVERRIDE;
+    QString extensiveText() override;
 
     virtual void setPixmap(const QPixmap &p);
     virtual QPixmap pixmap();
 
     virtual void setUrl(const QUrl &u);
-    QUrl url() Q_DECL_OVERRIDE;
+    QUrl url() override;
 
 protected:
     QString mShortText;
@@ -263,7 +263,7 @@ class EVENTVIEWS_EXPORT DecorationFactory : public CalendarSupport::PluginFactor
 {
     Q_OBJECT
 public:
-    Decoration *createPluginFactory() Q_DECL_OVERRIDE = 0;
+    Decoration *createPluginFactory() override = 0;
 };
 
 }

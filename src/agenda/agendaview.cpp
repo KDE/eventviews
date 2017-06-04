@@ -290,9 +290,9 @@ public:
 
 protected:
     /* reimplemented from KCalCore::Calendar::CalendarObserver */
-    void calendarIncidenceAdded(const KCalCore::Incidence::Ptr &incidence) Q_DECL_OVERRIDE;
-    void calendarIncidenceChanged(const KCalCore::Incidence::Ptr &incidence) Q_DECL_OVERRIDE;
-    void calendarIncidenceDeleted(const KCalCore::Incidence::Ptr &incidence, const KCalCore::Calendar *calendar) Q_DECL_OVERRIDE;
+    void calendarIncidenceAdded(const KCalCore::Incidence::Ptr &incidence) override;
+    void calendarIncidenceChanged(const KCalCore::Incidence::Ptr &incidence) override;
+    void calendarIncidenceDeleted(const KCalCore::Incidence::Ptr &incidence, const KCalCore::Calendar *calendar) override;
 private:
     //quiet --overloaded-virtual warning
     using KCalCore::Calendar::CalendarObserver::calendarIncidenceDeleted;

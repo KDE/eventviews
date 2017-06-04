@@ -80,7 +80,7 @@ public:
     {
     }
 
-    bool operator<(const QTreeWidgetItem &other) const Q_DECL_OVERRIDE;
+    bool operator<(const QTreeWidgetItem &other) const override;
 
     const QTreeWidget *mTreeWidget;
     const Akonadi::Item mIncidence;
@@ -157,10 +157,10 @@ public:
     {
     }
 
-    bool visit(const Event::Ptr &) Q_DECL_OVERRIDE;
-    bool visit(const Todo::Ptr &) Q_DECL_OVERRIDE;
-    bool visit(const Journal::Ptr &) Q_DECL_OVERRIDE;
-    bool visit(const FreeBusy::Ptr &) Q_DECL_OVERRIDE {
+    bool visit(const Event::Ptr &) override;
+    bool visit(const Todo::Ptr &) override;
+    bool visit(const Journal::Ptr &) override;
+    bool visit(const FreeBusy::Ptr &) override {
         // to inhibit hidden virtual compile warning
         return true;
     };

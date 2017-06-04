@@ -52,10 +52,10 @@ public:
     void setAgenda(Agenda *agenda);
 
     /**  */
-    void paintEvent(QPaintEvent *e) Q_DECL_OVERRIDE;
+    void paintEvent(QPaintEvent *e) override;
 
     /** */
-    void contextMenuEvent(QContextMenuEvent *event) Q_DECL_OVERRIDE;
+    void contextMenuEvent(QContextMenuEvent *event) override;
 
     /** Returns the time zone of this label */
     QTimeZone timeZone() const;
@@ -70,9 +70,9 @@ public:
     */
     QString headerToolTip() const;
 
-    QSize sizeHint() const Q_DECL_OVERRIDE;
+    QSize sizeHint() const override;
 
-    QSize minimumSizeHint() const Q_DECL_OVERRIDE;
+    QSize minimumSizeHint() const override;
 
 private:
     /** update the position of the marker showing the mouse position */

@@ -102,10 +102,10 @@ private:
     public:
         ElidedLabel(const QString &text): mText(text) {}
 
-        QSize minimumSizeHint() const Q_DECL_OVERRIDE;
+        QSize minimumSizeHint() const override;
 
     protected:
-        void paintEvent(QPaintEvent *event) Q_DECL_OVERRIDE;
+        void paintEvent(QPaintEvent *event) override;
 
     private:
         QString mText;

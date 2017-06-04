@@ -50,9 +50,9 @@ public:
     explicit JournalView(QWidget *parent = nullptr);
     ~JournalView();
 
-    int currentDateCount() const Q_DECL_OVERRIDE;
-    Akonadi::Item::List selectedIncidences() const Q_DECL_OVERRIDE;
-    KCalCore::DateList selectedIncidenceDates() const Q_DECL_OVERRIDE
+    int currentDateCount() const override;
+    Akonadi::Item::List selectedIncidences() const override;
+    KCalCore::DateList selectedIncidenceDates() const override
     {
         return KCalCore::DateList();
     }
@@ -64,20 +64,20 @@ public:
                           bool &highlightTodos,
                           bool &highlightJournals);
 
-    bool eventFilter(QObject *, QEvent *) Q_DECL_OVERRIDE;
+    bool eventFilter(QObject *, QEvent *) override;
 
 public Q_SLOTS:
     // Don't update the view when midnight passed, otherwise we'll have data loss (bug 79145)
-    void dayPassed(const QDate &) Q_DECL_OVERRIDE {}
-    void updateView() Q_DECL_OVERRIDE;
-    void flushView() Q_DECL_OVERRIDE;
+    void dayPassed(const QDate &) override {}
+    void updateView() override;
+    void flushView() override;
 
-    void showDates(const QDate &start, const QDate &end, const QDate &preferredMonth = QDate()) Q_DECL_OVERRIDE;
-    void showIncidences(const Akonadi::Item::List &incidences, const QDate &date) Q_DECL_OVERRIDE;
+    void showDates(const QDate &start, const QDate &end, const QDate &preferredMonth = QDate()) override;
+    void showIncidences(const Akonadi::Item::List &incidences, const QDate &date) override;
 
     void changeIncidenceDisplay(const Akonadi::Item &incidence,
                                 Akonadi::IncidenceChanger::ChangeType);
-    void setIncidenceChanger(Akonadi::IncidenceChanger *changer) Q_DECL_OVERRIDE;
+    void setIncidenceChanger(Akonadi::IncidenceChanger *changer) override;
     void newJournal();
 Q_SIGNALS:
     void flushEntries();

@@ -46,8 +46,8 @@ public:
 
     explicit ScrollIndicator(ArrowDirection direction);
 
-    QRectF boundingRect() const Q_DECL_OVERRIDE;
-    void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) Q_DECL_OVERRIDE;
+    QRectF boundingRect() const override;
+    void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) override;
 
     ArrowDirection direction() const
     {
@@ -199,9 +199,9 @@ public:
     /**
       Reimplemented from QGraphicsItem
     */
-    QRectF boundingRect() const Q_DECL_OVERRIDE;
-    void paint(QPainter *, const QStyleOptionGraphicsItem *, QWidget *) Q_DECL_OVERRIDE;
-    QPainterPath shape() const Q_DECL_OVERRIDE;
+    QRectF boundingRect() const override;
+    void paint(QPainter *, const QStyleOptionGraphicsItem *, QWidget *) override;
+    QPainterPath shape() const override;
 
     QString getToolTip() const;
 

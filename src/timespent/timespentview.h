@@ -43,23 +43,23 @@ public:
     explicit TimeSpentView(QWidget *parent = nullptr);
     ~TimeSpentView();
 
-    int currentDateCount() const Q_DECL_OVERRIDE;
+    int currentDateCount() const override;
 
-    Akonadi::Item::List selectedIncidences() const Q_DECL_OVERRIDE
+    Akonadi::Item::List selectedIncidences() const override
     {
         return Akonadi::Item::List();
     }
 
-    KCalCore::DateList selectedIncidenceDates() const Q_DECL_OVERRIDE
+    KCalCore::DateList selectedIncidenceDates() const override
     {
         return KCalCore::DateList();
     }
 
 public Q_SLOTS:
-    void updateView() Q_DECL_OVERRIDE;
+    void updateView() override;
     void showDates(const QDate &start, const QDate &end,
-                   const QDate &preferredMonth = QDate()) Q_DECL_OVERRIDE;
-    void showIncidences(const Akonadi::Item::List &incidenceList, const QDate &date) Q_DECL_OVERRIDE;
+                   const QDate &preferredMonth = QDate()) override;
+    void showIncidences(const Akonadi::Item::List &incidenceList, const QDate &date) override;
 
     void changeIncidenceDisplay(const Akonadi::Item &, Akonadi::IncidenceChanger::ChangeType);
 

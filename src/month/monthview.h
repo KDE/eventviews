@@ -51,22 +51,22 @@ public:
     explicit MonthView(NavButtonsVisibility visibility = Visible, QWidget *parent = nullptr);
     ~MonthView();
 
-    int currentDateCount() const Q_DECL_OVERRIDE;
+    int currentDateCount() const override;
     int currentMonth() const;
 
-    Akonadi::Item::List selectedIncidences() const Q_DECL_OVERRIDE;
+    Akonadi::Item::List selectedIncidences() const override;
 
     /** Returns dates of the currently selected events */
-    KCalCore::DateList selectedIncidenceDates() const Q_DECL_OVERRIDE;
+    KCalCore::DateList selectedIncidenceDates() const override;
 
-    QDateTime selectionStart() const Q_DECL_OVERRIDE;
+    QDateTime selectionStart() const override;
 
-    QDateTime selectionEnd() const Q_DECL_OVERRIDE;
+    QDateTime selectionEnd() const override;
 
     virtual void setDateRange(const KDateTime &start, const KDateTime &end,
-                              const QDate &preferredMonth = QDate()) Q_DECL_OVERRIDE;
+                              const QDate &preferredMonth = QDate()) override;
 
-    bool eventDurationHint(QDateTime &startDt, QDateTime &endDt, bool &allDay) const Q_DECL_OVERRIDE;
+    bool eventDurationHint(QDateTime &startDt, QDateTime &endDt, bool &allDay) const override;
 
     /**
      * Returns the average date in the view
@@ -82,7 +82,7 @@ public:
 
     bool isBusyDay(const QDate &day) const;
 
-    void setCalendar(const Akonadi::ETMCalendar::Ptr &cal) Q_DECL_OVERRIDE;
+    void setCalendar(const Akonadi::ETMCalendar::Ptr &cal) override;
 
 Q_SIGNALS:
     void showIncidencePopupSignal(const Akonadi::Item &item, const QDate &date);
@@ -90,9 +90,9 @@ Q_SIGNALS:
     void fullViewChanged(bool enabled);
 
 public Q_SLOTS:
-    void updateConfig() Q_DECL_OVERRIDE;
-    void updateView() Q_DECL_OVERRIDE;
-    void showIncidences(const Akonadi::Item::List &incidenceList, const QDate &date) Q_DECL_OVERRIDE;
+    void updateConfig() override;
+    void updateView() override;
+    void showIncidences(const Akonadi::Item::List &incidenceList, const QDate &date) override;
 
     void changeIncidenceDisplay(const Akonadi::Item &, int);
     void changeFullView(); /// Display in full window mode
@@ -102,7 +102,7 @@ public Q_SLOTS:
     void moveFwdMonth();   /// Shift the view one month forward
 
 protected Q_SLOTS:
-    void calendarReset() Q_DECL_OVERRIDE;
+    void calendarReset() override;
 
 private Q_SLOTS:
     // void dataChanged( const QModelIndex &topLeft, const QModelIndex &bottomRight );
@@ -111,13 +111,13 @@ private Q_SLOTS:
 
 protected:
 #ifndef QT_NO_WHEELEVENT
-    void wheelEvent(QWheelEvent *event) Q_DECL_OVERRIDE;
+    void wheelEvent(QWheelEvent *event) override;
 #endif
-    void keyPressEvent(QKeyEvent *event) Q_DECL_OVERRIDE;
-    void keyReleaseEvent(QKeyEvent *event) Q_DECL_OVERRIDE;
+    void keyPressEvent(QKeyEvent *event) override;
+    void keyReleaseEvent(QKeyEvent *event) override;
 
     QPair<KDateTime, KDateTime> actualDateRange(
-        const KDateTime &start, const KDateTime &end, const QDate &preferredMonth = QDate()) const Q_DECL_OVERRIDE;
+        const KDateTime &start, const KDateTime &end, const QDate &preferredMonth = QDate()) const override;
 
     // Compute and update the whole view
     void reloadIncidences();
@@ -126,7 +126,7 @@ protected:
     /**
      * @deprecated
      */
-    void showDates(const QDate &start, const QDate &end, const QDate &preferedMonth = QDate()) Q_DECL_OVERRIDE;
+    void showDates(const QDate &start, const QDate &end, const QDate &preferedMonth = QDate()) override;
 
 private:
     MonthViewPrivate *const d;

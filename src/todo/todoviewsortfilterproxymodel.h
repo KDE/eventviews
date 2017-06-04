@@ -38,7 +38,7 @@ public:
     explicit TodoViewSortFilterProxyModel(const EventViews::PrefsPtr &prefs,
                                           QObject *parent = nullptr);
 
-    void sort(int column, Qt::SortOrder order = Qt::AscendingOrder) Q_DECL_OVERRIDE;
+    void sort(int column, Qt::SortOrder order = Qt::AscendingOrder) override;
 
     const QStringList &categories() const
     {
@@ -51,8 +51,8 @@ public:
     }
 
 protected:
-    bool filterAcceptsRow(int source_row, const QModelIndex &source_parent) const Q_DECL_OVERRIDE;
-    bool lessThan(const QModelIndex &left, const QModelIndex &right) const Q_DECL_OVERRIDE;
+    bool filterAcceptsRow(int source_row, const QModelIndex &source_parent) const override;
+    bool lessThan(const QModelIndex &left, const QModelIndex &right) const override;
 
 public Q_SLOTS:
     void setCategoryFilter(const QStringList &categories);

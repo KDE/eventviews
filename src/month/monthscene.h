@@ -212,13 +212,13 @@ Q_SIGNALS:
     void showNewEventPopupSignal();
 
 protected:
-    void mouseDoubleClickEvent(QGraphicsSceneMouseEvent *mouseEvent) Q_DECL_OVERRIDE;
-    void mouseMoveEvent(QGraphicsSceneMouseEvent *mouseEvent) Q_DECL_OVERRIDE;
-    void mousePressEvent(QGraphicsSceneMouseEvent *mouseEvent) Q_DECL_OVERRIDE;
-    void mouseReleaseEvent(QGraphicsSceneMouseEvent *mouseEvent) Q_DECL_OVERRIDE;
-    void wheelEvent(QGraphicsSceneWheelEvent *wheelEvent) Q_DECL_OVERRIDE;
-    void timerEvent(QTimerEvent *e) Q_DECL_OVERRIDE;
-    void helpEvent(QGraphicsSceneHelpEvent *helpEvent) Q_DECL_OVERRIDE;
+    void mouseDoubleClickEvent(QGraphicsSceneMouseEvent *mouseEvent) override;
+    void mouseMoveEvent(QGraphicsSceneMouseEvent *mouseEvent) override;
+    void mousePressEvent(QGraphicsSceneMouseEvent *mouseEvent) override;
+    void mouseReleaseEvent(QGraphicsSceneMouseEvent *mouseEvent) override;
+    void wheelEvent(QGraphicsSceneWheelEvent *wheelEvent) override;
+    void timerEvent(QTimerEvent *e) override;
+    void helpEvent(QGraphicsSceneHelpEvent *helpEvent) override;
     /**
        Scrolls all incidences in cells up
      */
@@ -329,7 +329,7 @@ public:
     /**
       Draws the cells.
     */
-    void drawBackground(QPainter *painter, const QRectF &rect) Q_DECL_OVERRIDE;
+    void drawBackground(QPainter *painter, const QRectF &rect) override;
 
     void setScene(MonthScene *scene);
 
@@ -339,7 +339,7 @@ public:
     void setActionCursor(MonthScene::ActionType actionType);
 
 protected:
-    void resizeEvent(QResizeEvent *) Q_DECL_OVERRIDE;
+    void resizeEvent(QResizeEvent *) override;
 
 private:
     MonthScene *mScene;

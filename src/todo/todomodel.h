@@ -66,43 +66,43 @@ public:
 
     ~TodoModel();
 
-    int rowCount(const QModelIndex &parent = QModelIndex()) const Q_DECL_OVERRIDE;
+    int rowCount(const QModelIndex &parent = QModelIndex()) const override;
 
-    int columnCount(const QModelIndex &parent = QModelIndex()) const Q_DECL_OVERRIDE;
+    int columnCount(const QModelIndex &parent = QModelIndex()) const override;
 
-    void setSourceModel(QAbstractItemModel *sourceModel) Q_DECL_OVERRIDE;
+    void setSourceModel(QAbstractItemModel *sourceModel) override;
 
-    QVariant data(const QModelIndex &index, int role) const Q_DECL_OVERRIDE;
+    QVariant data(const QModelIndex &index, int role) const override;
 
-    bool setData(const QModelIndex &index, const QVariant &value, int role) Q_DECL_OVERRIDE;
+    bool setData(const QModelIndex &index, const QVariant &value, int role) override;
 
-    QVariant headerData(int section, Qt::Orientation, int role) const Q_DECL_OVERRIDE;
+    QVariant headerData(int section, Qt::Orientation, int role) const override;
 
     void setCalendar(const Akonadi::ETMCalendar::Ptr &calendar);
 
     void setIncidenceChanger(Akonadi::IncidenceChanger *changer);
 
-    QMimeData *mimeData(const QModelIndexList &indexes) const Q_DECL_OVERRIDE;
+    QMimeData *mimeData(const QModelIndexList &indexes) const override;
 
     bool dropMimeData(const QMimeData *data, Qt::DropAction action,
-                      int row, int column, const QModelIndex &parent) Q_DECL_OVERRIDE;
+                      int row, int column, const QModelIndex &parent) override;
 
-    QStringList mimeTypes() const Q_DECL_OVERRIDE;
+    QStringList mimeTypes() const override;
 
-    Qt::DropActions supportedDropActions() const Q_DECL_OVERRIDE;
+    Qt::DropActions supportedDropActions() const override;
 
-    Qt::ItemFlags flags(const QModelIndex &index) const Q_DECL_OVERRIDE;
+    Qt::ItemFlags flags(const QModelIndex &index) const override;
 
-    QModelIndex parent(const QModelIndex &child) const Q_DECL_OVERRIDE;
+    QModelIndex parent(const QModelIndex &child) const override;
 
-    QModelIndex mapFromSource(const QModelIndex &sourceIndex) const Q_DECL_OVERRIDE;
+    QModelIndex mapFromSource(const QModelIndex &sourceIndex) const override;
 
-    QModelIndex mapToSource(const QModelIndex &proxyIndex) const Q_DECL_OVERRIDE;
+    QModelIndex mapToSource(const QModelIndex &proxyIndex) const override;
 
     QModelIndex index(int row, int column,
-                      const QModelIndex &parent = QModelIndex()) const Q_DECL_OVERRIDE;
+                      const QModelIndex &parent = QModelIndex()) const override;
 
-    QModelIndex buddy(const QModelIndex &index) const Q_DECL_OVERRIDE;
+    QModelIndex buddy(const QModelIndex &index) const override;
 
 private:
     class Private;

@@ -52,9 +52,9 @@ public:
                       QWidget *parent = nullptr, bool nonInteractive = false);
     ~ListView();
 
-    int currentDateCount() const Q_DECL_OVERRIDE;
-    Akonadi::Item::List selectedIncidences() const Q_DECL_OVERRIDE;
-    KCalCore::DateList selectedIncidenceDates() const Q_DECL_OVERRIDE;
+    int currentDateCount() const override;
+    Akonadi::Item::List selectedIncidences() const override;
+    KCalCore::DateList selectedIncidenceDates() const override;
 
     // Shows all incidences of the calendar
     void showAll();
@@ -63,17 +63,17 @@ public:
     void writeSettings(KConfig *config);
 
     void clear();
-    QSize sizeHint() const Q_DECL_OVERRIDE;
+    QSize sizeHint() const override;
 
 public Q_SLOTS:
-    void updateView() Q_DECL_OVERRIDE;
+    void updateView() override;
 
     void showDates(const QDate &start, const QDate &end,
-                   const QDate &preferredMonth = QDate()) Q_DECL_OVERRIDE;
+                   const QDate &preferredMonth = QDate()) override;
 
-    void showIncidences(const Akonadi::Item::List &incidenceList, const QDate &date) Q_DECL_OVERRIDE;
+    void showIncidences(const Akonadi::Item::List &incidenceList, const QDate &date) override;
 
-    void clearSelection() Q_DECL_OVERRIDE;
+    void clearSelection() override;
 
     void changeIncidenceDisplay(const Akonadi::Item &, int);
 

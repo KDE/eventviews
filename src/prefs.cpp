@@ -111,9 +111,9 @@ public:
     QSet<EventViews::EventView::ItemIcon> mMonthViewIcons;
 
 protected:
-    void usrSetDefaults() Q_DECL_OVERRIDE;
-    void usrRead() Q_DECL_OVERRIDE;
-    bool usrSave() Q_DECL_OVERRIDE;
+    void usrSetDefaults() override;
+    void usrRead() override;
+    bool usrSave() override;
 };
 
 BaseConfig::BaseConfig() : PrefsBase()

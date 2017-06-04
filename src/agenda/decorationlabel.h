@@ -60,8 +60,8 @@ public Q_SLOTS:
     void useDefaultText();
 
 protected:
-    void resizeEvent(QResizeEvent *) Q_DECL_OVERRIDE;
-    void mouseReleaseEvent(QMouseEvent *) Q_DECL_OVERRIDE;
+    void resizeEvent(QResizeEvent *) override;
+    void mouseReleaseEvent(QMouseEvent *) override;
     virtual void squeezeContentsToLabel();
     bool mAutomaticSqueeze;
     EventViews::CalendarDecoration::Element *mDecorationElement;
