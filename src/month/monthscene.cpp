@@ -290,7 +290,7 @@ void MonthGraphicsView::drawBackground(QPainter *p, const QRectF &rect)
     }
 
     font = mMonthView->preferences()->monthViewFont();
-    font.setPointSize(MonthCell::topMargin() - 4);
+    font.setPixelSize(MonthCell::topMargin() - 4);
 
     p->setFont(font);
 
