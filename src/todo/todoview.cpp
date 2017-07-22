@@ -720,7 +720,7 @@ void TodoView::contextMenu(const QPoint &pos)
     const bool hasItem = mView->indexAt(pos).isValid();
     Incidence::Ptr incidencePtr;
 
-    Q_FOREACH (QAction *entry, mItemPopupMenuItemOnlyEntries) {
+    for (QAction *entry : qAsConst(mItemPopupMenuItemOnlyEntries)) {
         bool enable;
 
         if (hasItem) {
