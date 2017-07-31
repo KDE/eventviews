@@ -1224,7 +1224,7 @@ void AgendaView::createDayLabels(bool force)
 
         int dW = date.dayOfWeek();
         QString veryLongStr = QLocale::system().toString(date, QLocale::LongFormat);
-        QString longstr = i18nc("short_weekday date (e.g. Mon 13)", "%1 %2 %3",
+        QString longstr = i18nc("short_weekday short_monthname date (e.g. Mon Aug 13)", "%1 %2 %3",
                                 QLocale::system().dayName(dW, QLocale::ShortFormat),
                                 QDate::shortMonthName(date.month()),
                                 date.day());
