@@ -1449,7 +1449,7 @@ void AgendaView::updateTimeBarWidth()
     QFontMetrics fm(labelFont);
 
     int width = d->mTimeLabelsZone->preferedTimeLabelsWidth();
-    foreach (QLabel *l, d->mTimeBarHeaders) {
+    for (QLabel *l : qAsConst(d->mTimeBarHeaders)) {
         foreach (const QString &word, l->text().split(QLatin1Char(' '))) {
             width = qMax(width, fm.width(word));
         }

@@ -163,7 +163,7 @@ public:
     bool visit(const FreeBusy::Ptr &) override {
         // to inhibit hidden virtual compile warning
         return true;
-    };
+    }
 
 private:
     ListViewItem *mItem;

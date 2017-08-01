@@ -361,8 +361,9 @@ QString TimeLabels::headerToolTip() const
         toolTip += abbreviations;
         toolTip += QLatin1String("<br/>");
     }
-    if (!mTimezone.comment().isEmpty()) {
-        toolTip += i18n("<i>Comment:</i> %1", mTimezone.comment());
+    const QString timeZoneComment(mTimezone.comment());
+    if (!timeZoneComment.isEmpty()) {
+        toolTip += i18n("<i>Comment:</i> %1", timeZoneComment);
     }
     toolTip += QLatin1String("</qt>");
 

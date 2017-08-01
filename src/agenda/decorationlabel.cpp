@@ -38,7 +38,7 @@ DecorationLabel::DecorationLabel(CalendarDecoration::Element *e,
 {
     mPixmap = e->newPixmap(size());
     mUrl = e->url();
-    setUrl(e->url());
+    setUrl(mUrl);
 
     connect(e, &CalendarDecoration::Element::gotNewExtensiveText,
             this, &DecorationLabel::setExtensiveText);

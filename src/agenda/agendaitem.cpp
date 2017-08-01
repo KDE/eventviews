@@ -685,8 +685,7 @@ QList<AgendaItem::QPtr> &AgendaItem::conflictItems()
 void AgendaItem::setConflictItems(const QList<AgendaItem::QPtr> &ci)
 {
     mConflictItems = ci;
-    QList<AgendaItem::QPtr>::iterator it;
-    for (it = mConflictItems.begin(); it != mConflictItems.end(); ++it) {
+    for (QList<AgendaItem::QPtr>::iterator it = mConflictItems.begin(), end(mConflictItems.end()); it != end; ++it) {
         (*it)->addConflictItem(this);
     }
 }
