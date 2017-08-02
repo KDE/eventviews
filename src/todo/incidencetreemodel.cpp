@@ -113,7 +113,7 @@ void IncidenceTreeModel::Private::assert_and_dump(bool condition, const QString 
 
 void IncidenceTreeModel::Private::dumpTree()
 {
-    foreach (const Node::Ptr &node, m_toplevelNodeList) {
+    for (const Node::Ptr &node : qAsConst(m_toplevelNodeList)) {
         qCDebug(CALENDARVIEW_LOG) << node;
     }
 }
