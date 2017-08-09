@@ -36,7 +36,7 @@ set(LIBKDEPIM_LIB_VERSION "5.6.40")
 set(CALENDARSUPPORT_LIB_VERSION "5.6.40")
 
 find_package(KF5Akonadi ${AKONADI_LIB_VERSION} CONFIG REQUIRED)
-find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets Test UiTools)
+find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets UiTools)
 find_package(KF5I18n ${KF5_VERSION} CONFIG REQUIRED)
 find_package(KF5Codecs ${KF5_VERSION} CONFIG REQUIRED)
 find_package(KF5LibkdepimAkonadi ${LIBKDEPIM_LIB_VERSION} CONFIG REQUIRED)
@@ -89,6 +89,7 @@ install(FILES
 
 add_subdirectory(src)
 if (BUILD_TESTING)
+    find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Test)
    add_subdirectory(tests)
 endif()
 install( FILES eventviews.renamecategories eventviews.categories DESTINATION ${KDE_INSTALL_CONFDIR} )
