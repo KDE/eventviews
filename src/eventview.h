@@ -144,8 +144,9 @@ public:
 
     /**
       Return calendar object of this view.
-      TODO: replace with a version that returns a KCalcCore::Calendar to be able to use it in different enviroments
-           see agendaview for example calendar2(incidence)
+      TODO: replace with a version that returns a KCalCore::Calendar so it
+            can be used in different environments.
+            see agendaview for example calendar2(incidence)
     */
     virtual Akonadi::ETMCalendar::Ptr calendar() const;
 
