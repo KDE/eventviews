@@ -201,8 +201,6 @@ void BaseConfig::usrRead()
 
 bool BaseConfig::usrSave()
 {
-    KConfigGroup generalConfig(config(), "General");
-
     KConfigGroup rColorsConfig(config(), "Resources Colors");
     QHash<QString, QColor>::const_iterator i = mResourceColors.constBegin();
     QHash<QString, QColor>::const_iterator end(mResourceColors.constEnd());
