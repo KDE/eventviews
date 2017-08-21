@@ -1102,7 +1102,7 @@ bool AgendaView::loadDecorations(const QStringList &decorations,
             decoList << d->loadCalendarDecoration(decoName);
         }
     }
-    return decoList.count() > 0;
+    return !decoList.isEmpty();
 }
 
 void AgendaView::placeDecorationsFrame(QFrame *frame, bool decorationsFound, bool isTop)
@@ -1128,7 +1128,7 @@ void AgendaView::placeDecorations(DecorationList &decoList, const QDate &date,
     foreach (CalendarDecoration::Decoration *deco, decoList) {
         CalendarDecoration::Element::List elements;
         elements = forWeek ? deco->weekElements(date) : deco->dayElements(date);
-        if (elements.count() > 0) {
+        if (!elements.isEmpty()) {
             auto decoHBox = new QFrame(labelBox);
             labelBox->layout()->addWidget(decoHBox);
             auto layout = new QHBoxLayout(decoHBox);

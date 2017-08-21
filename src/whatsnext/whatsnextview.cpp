@@ -114,7 +114,7 @@ void WhatsNextView::updateView()
     events = calendar()->sortEvents(events, KCalCore::EventSortStartDate,
                                     KCalCore::SortDirectionAscending);
 
-    if (events.count() > 0) {
+    if (!events.isEmpty()) {
         mText += QLatin1String("<p></p>");
         kil->loadIcon(QStringLiteral("view-calendar-day"), KIconLoader::NoGroup, 22,
                       KIconLoader::DefaultState, QStringList(), &ipath);
@@ -157,7 +157,7 @@ void WhatsNextView::updateView()
     mTodos.clear();
     KCalCore::Todo::List todos = calendar()->todos(KCalCore::TodoSortDueDate,
                                  KCalCore::SortDirectionAscending);
-    if (todos.count() > 0) {
+    if (!todos.isEmpty()) {
         bool taskHeaderWasCreated = false;
         Q_FOREACH (const KCalCore::Todo::Ptr &todo, todos) {
             if (!todo->isCompleted() && todo->hasDueDate() && todo->dtDue().date() <= mEndDate) {
