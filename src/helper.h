@@ -22,6 +22,9 @@
 #ifndef EVENTVIEWS_HELPER_H
 #define EVENTVIEWS_HELPER_H
 
+#include "eventviews_export.h"
+
+
 #include <QColor>
 #include <QSharedPointer>
 
@@ -49,17 +52,33 @@ QColor getTextColor(const QColor &c);
 
 /**
   This method returns the proper resource / subresource color for the view.
+  If a value is stored in the preferences, we use it, else we try to find a
+  CollectionColorAttribute in the collection. If everything else fails, a
+  random color can be set.
+  It is prefered to use this function instead of the
+  EventViews::Prefs::resourceColor function.
   @return The resource color for the incidence. If the incidence belongs
   to a subresource, the color for the subresource is returned (if set).
   @param calendar the calendar for which the resource color should be obtained
   @param incidence the incidence for which the color is needed (to
                    determine which  subresource needs to be used)
 */
-QColor resourceColor(const Akonadi::Item &incidence,
+EVENTVIEWS_EXPORT QColor resourceColor(const Akonadi::Item &incidence,
                      const PrefsPtr &preferences);
 
-QColor resourceColor(const Akonadi::Collection &collection,
+EVENTVIEWS_EXPORT QColor resourceColor(const Akonadi::Collection &collection,
                      const PrefsPtr &preferences);
+
+/**
+  This method sets the resource color in the preferences, only if it is
+  different from the CollectionColorAttribute. It is prefered to use this
+  instead of the EventViews::Prefs::setResourceColor function.
+  @param collection the collection for which the resource color should be stored
+  @param color the color to stored
+  @param preferences a pointer to the EventViews::Prefs to use
+*/
+EVENTVIEWS_EXPORT void setResourceColor(const Akonadi::Collection &collection,
+                                        const QColor &color, const PrefsPtr &preferences);
 
 /**
   Returns the number of years between the @p start QDate and the @p end QDate

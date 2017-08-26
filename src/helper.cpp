@@ -26,6 +26,8 @@
 #include <Collection>
 #include <Item>
 
+#include <AkonadiCore/CollectionColorAttribute>
+
 #include <QIcon>
 #include <QPixmap>
 
@@ -35,13 +37,41 @@ QColor EventViews::getTextColor(const QColor &c)
     return (luminance > 128.0) ? QColor(0, 0, 0) : QColor(255, 255, 255);
 }
 
+void EventViews::setResourceColor(const Akonadi::Collection &coll, const QColor &color, const PrefsPtr &preferences)
+{
+    if (!coll.isValid()) {
+        return;
+    }
+
+    const QString id = QString::number(coll.id());
+    if (coll.hasAttribute<Akonadi::CollectionColorAttribute>()) {
+        Akonadi::CollectionColorAttribute *colorAttr = coll.attribute<Akonadi::CollectionColorAttribute>();
+        if (colorAttr && colorAttr->color().isValid() && (colorAttr->color() == color)) {
+            // It's the same color: we save an invalid color
+            preferences->setResourceColor(id, QColor());
+        }
+    }
+    // in all other cases, we save the resourceColor
+    preferences->setResourceColor(id, color);
+}
+
+
 QColor EventViews::resourceColor(const Akonadi::Collection &coll, const PrefsPtr &preferences)
 {
     if (!coll.isValid()) {
         return QColor();
     }
     const QString id = QString::number(coll.id());
-    return preferences->resourceColor(id);
+    QColor color = preferences->resourceColorKnown(id);
+    if (!color.isValid() && coll.hasAttribute<Akonadi::CollectionColorAttribute>()) {
+        Akonadi::CollectionColorAttribute *colorAttr = coll.attribute<Akonadi::CollectionColorAttribute>();
+        if (colorAttr && colorAttr->color().isValid()) {
+            color = colorAttr->color();
+        } else {
+            return preferences->resourceColor(id);
+        }
+    }
+    return color;
 }
 
 QColor EventViews::resourceColor(const Akonadi::Item &item, const PrefsPtr &preferences)
@@ -50,7 +80,17 @@ QColor EventViews::resourceColor(const Akonadi::Item &item, const PrefsPtr &pref
         return QColor();
     }
     const QString id = QString::number(item.parentCollection().id());
-    return preferences->resourceColor(id);
+
+    QColor color = preferences->resourceColorKnown(id);
+    if (!color.isValid() && item.parentCollection().hasAttribute<Akonadi::CollectionColorAttribute>()) {
+        Akonadi::CollectionColorAttribute *colorAttr = item.parentCollection().attribute<Akonadi::CollectionColorAttribute>();
+        if (colorAttr && colorAttr->color().isValid()) {
+            color = colorAttr->color();
+        } else {
+            return preferences->resourceColor(id);
+        }
+    }
+    return color;
 }
 
 int EventViews::yearDiff(const QDate &start, const QDate &end)

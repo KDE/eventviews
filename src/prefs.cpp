@@ -30,6 +30,9 @@
 #include "calendarview_debug.h"
 #include <QFontDatabase>
 
+#include <AkonadiCore/AttributeFactory>
+#include <AkonadiCore/CollectionColorAttribute>
+
 using namespace EventViews;
 
 QSet<EventViews::EventView::ItemIcon> iconArrayToSet(const QByteArray &array)
@@ -499,10 +502,14 @@ QFont Prefs::Private::getFont(const KConfigSkeleton::ItemFont *baseConfigItem) c
 
 Prefs::Prefs() : d(new Private(this))
 {
+    // necessary to use CollectionColorAttribute in the EventViews::resourceColor and EventViews::setResourceColor
+    Akonadi::AttributeFactory::registerAttribute<Akonadi::CollectionColorAttribute>();
 }
 
 Prefs::Prefs(KCoreConfigSkeleton *appConfig) : d(new Private(this, appConfig))
 {
+    // necessary to use CollectionColorAttribute in the EventViews::resourceColor and EventViews::setResourceColor
+    Akonadi::AttributeFactory::registerAttribute<Akonadi::CollectionColorAttribute>();
 }
 
 Prefs::~Prefs()

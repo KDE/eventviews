@@ -115,6 +115,7 @@ install(TARGETS
 
 ecm_generate_headers(eventviews_CamelCase_HEADERS
   HEADER_NAMES
+  Helper
   Prefs
   EventView
   REQUIRED_HEADERS eventviews_CamelCase_HEADERS
