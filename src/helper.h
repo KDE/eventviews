@@ -24,7 +24,6 @@
 
 #include "eventviews_export.h"
 
-
 #include <QColor>
 #include <QSharedPointer>
 
@@ -55,7 +54,7 @@ QColor getTextColor(const QColor &c);
   If a value is stored in the preferences, we use it, else we try to find a
   CollectionColorAttribute in the collection. If everything else fails, a
   random color can be set.
-  It is prefered to use this function instead of the
+  It is preferred to use this function instead of the
   EventViews::Prefs::resourceColor function.
   @return The resource color for the incidence. If the incidence belongs
   to a subresource, the color for the subresource is returned (if set).
@@ -71,7 +70,7 @@ EVENTVIEWS_EXPORT QColor resourceColor(const Akonadi::Collection &collection,
 
 /**
   This method sets the resource color in the preferences, only if it is
-  different from the CollectionColorAttribute. It is prefered to use this
+  different from the CollectionColorAttribute. It is preferred to use this
   instead of the EventViews::Prefs::setResourceColor function.
   @param collection the collection for which the resource color should be stored
   @param color the color to stored
@@ -94,7 +93,6 @@ int yearDiff(const QDate &start, const QDate &end);
            cached one.
 */
 QPixmap cachedSmallIcon(const QString &name);
-
 }
 
 #endif
