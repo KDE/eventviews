@@ -29,8 +29,7 @@
 CreateColorGui_test::CreateColorGui_test(QWidget *parent)
     : QWidget(parent)
 {
-    QVBoxLayout *vbox = new QVBoxLayout;
-    setLayout(vbox);
+    QVBoxLayout *vbox = new QVBoxLayout(this);
     mListWidget = new QListWidget;
     vbox->addWidget(mListWidget);
     createListWidgetItem();

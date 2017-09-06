@@ -106,8 +106,6 @@ TodoViewQuickSearch::TodoViewQuickSearch(const Akonadi::ETMCalendar::Ptr &calend
 
     layout->addWidget(mPriorityCombo, 1);
     fillPriorities();
-
-    setLayout(layout);
 }
 
 void TodoViewQuickSearch::setCalendar(const Akonadi::ETMCalendar::Ptr &calendar)

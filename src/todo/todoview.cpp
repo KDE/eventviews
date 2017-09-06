@@ -319,7 +319,6 @@ TodoView::TodoView(const EventViews::PrefsPtr &prefs,
     dummyLayout->addWidget(mFlatViewButton);
 
     layout->addLayout(dummyLayout, 2, 1);
-    setLayout(layout);
 
     // ---------------- POPUP-MENUS -----------------------
     mItemPopupMenu = new QMenu(this);
