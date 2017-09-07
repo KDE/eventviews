@@ -56,7 +56,7 @@ public:
 private:
     Akonadi::ETMCalendar::Ptr mCalendar;
     QMap<Akonadi::Item::Id, QList<QStandardItem *> > mItemMap;
-    QStandardItemModel *mModel;
+    QStandardItemModel *mModel = nullptr;
     QColor mColor;
     uint mIndex;
 };
@@ -100,7 +100,7 @@ private:
     Akonadi::ETMCalendar::Ptr mCalendar;
     Akonadi::Item mIncidence;
     KDateTime mStart;
-    TimelineItem *mParent;
+    TimelineItem *mParent = nullptr;
     bool mToolTipNeedsUpdate;
 };
 

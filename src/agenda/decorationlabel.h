@@ -64,7 +64,7 @@ protected:
     void mouseReleaseEvent(QMouseEvent *) override;
     virtual void squeezeContentsToLabel();
     bool mAutomaticSqueeze;
-    EventViews::CalendarDecoration::Element *mDecorationElement;
+    EventViews::CalendarDecoration::Element *mDecorationElement = nullptr;
     QString mShortText, mLongText, mExtensiveText;
     QPixmap mPixmap;
     QUrl mUrl;

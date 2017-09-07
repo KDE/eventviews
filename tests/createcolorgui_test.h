@@ -28,7 +28,7 @@ public:
     ~CreateColorGui_test();
 private:
     void createListWidgetItem();
-    QListWidget *mListWidget;
+    QListWidget *mListWidget = nullptr;
 };
 
 #endif // CREATECOLORGUI_TEST_H

@@ -189,7 +189,7 @@ public:
     }
 
     KCalCore::Event::List mEventList;
-    TimeSpentView *mTimeSpentView;
+    TimeSpentView *mTimeSpentView = nullptr;
 };
 
 }

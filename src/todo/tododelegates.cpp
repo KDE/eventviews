@@ -61,7 +61,7 @@ void TodoCompleteDelegate::paint(QPainter *painter,
                                  const QStyleOptionViewItem &option,
                                  const QModelIndex &index) const
 {
-    QStyle *style;
+    QStyle *style = nullptr;
 
     QStyleOptionViewItem opt = option;
     initStyleOption(&opt, index);

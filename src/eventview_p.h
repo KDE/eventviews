@@ -68,7 +68,7 @@ public: /// Members
     bool mReturnPressed;
     bool mDateRangeSelectionEnabled;
     bool mTypeAhead;
-    QObject *mTypeAheadReceiver;
+    QObject *mTypeAheadReceiver = nullptr;
     QList<QEvent *> mTypeAheadEvents;
     static CalendarSupport::CollectionSelection *sGlobalCollectionSelection;
 
@@ -76,7 +76,7 @@ public: /// Members
     PrefsPtr mPrefs;
     KCalPrefsPtr mKCalPrefs;
 
-    Akonadi::IncidenceChanger *mChanger;
+    Akonadi::IncidenceChanger *mChanger = nullptr;
     EventView::Changes mChanges;
     Akonadi::Collection::Id mCollectionId;
 };

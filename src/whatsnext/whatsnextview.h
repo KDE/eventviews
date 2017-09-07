@@ -89,7 +89,7 @@ private Q_SLOTS:
 
 private:
     void createTaskRow(KIconLoader *kil);
-    WhatsNextTextBrowser *mView;
+    WhatsNextTextBrowser *mView = nullptr;
     QString mText;
     QDate mStartDate;
     QDate mEndDate;

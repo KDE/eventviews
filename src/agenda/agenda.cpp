@@ -74,10 +74,10 @@ public:
     int todayColumn() const;
 
 public:
-    EventView *mEventView;
-    Agenda *mAgenda;
-    QTimer *mTimer;
-    QLabel *mTimeBox;  // Label showing the current time
+    EventView *mEventView = nullptr;
+    Agenda *mAgenda = nullptr;
+    QTimer *mTimer = nullptr;
+    QLabel *mTimeBox = nullptr;  // Label showing the current time
     KDateTime mOldDateTime;
     int mOldTodayCol;
 };
@@ -234,8 +234,8 @@ public:
     QMultiHash<QString, AgendaItem::QPtr> mAgendaItemsById; // It's a QMultiHash because recurring incidences might have many agenda items
     QSet<QString> mItemsQueuedForDeletion;
 
-    AgendaView *mAgendaView;
-    QScrollArea *mScrollArea;
+    AgendaView *mAgendaView = nullptr;
+    QScrollArea *mScrollArea = nullptr;
 
     bool mAllDayMode;
 

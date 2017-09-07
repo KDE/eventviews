@@ -96,15 +96,15 @@ private:
     Akonadi::ETMCalendar::Ptr mCalendar;
     QDate mDate;
 
-    QTextBrowser *mBrowser;
-    QPushButton *mEditButton;
-    QPushButton *mDeleteButton;
-    QPushButton *mPrintButton;
-    QPushButton *mPrintPreviewButton;
+    QTextBrowser *mBrowser = nullptr;
+    QPushButton *mEditButton = nullptr;
+    QPushButton *mDeleteButton = nullptr;
+    QPushButton *mPrintButton = nullptr;
+    QPushButton *mPrintPreviewButton = nullptr;
 
     bool mDirty;
     bool mWriteInProgress;
-    Akonadi::IncidenceChanger *mChanger;
+    Akonadi::IncidenceChanger *mChanger = nullptr;
 };
 
 class JournalDateView : public QFrame

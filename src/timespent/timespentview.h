@@ -64,7 +64,7 @@ public Q_SLOTS:
     void changeIncidenceDisplay(const Akonadi::Item &, Akonadi::IncidenceChanger::ChangeType);
 
 private:
-    TimeSpentWidget *mView;
+    TimeSpentWidget *mView = nullptr;
     QDate mStartDate;
     QDate mEndDate;
 

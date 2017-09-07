@@ -273,7 +273,7 @@ private:
 
     QList<MonthGraphicsItem *> mMonthGraphicsItemList;
 
-    MonthScene *mMonthScene;
+    MonthScene *mMonthScene = nullptr;
 
     bool mSelected;
     bool mMoving; // during move

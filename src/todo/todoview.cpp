@@ -165,13 +165,13 @@ public:
         return todoFlatModel != nullptr;
     }
 
-    TodoModel *todoModel;
+    TodoModel *todoModel = nullptr;
     QList<TodoView *> views;
-    QObject *parent;
+    QObject *parent = nullptr;
 
     Akonadi::ETMCalendar::Ptr calendar;
-    IncidenceTreeModel *todoTreeModel;
-    Akonadi::EntityMimeTypeFilterModel *todoFlatModel;
+    IncidenceTreeModel *todoTreeModel = nullptr;
+    Akonadi::EntityMimeTypeFilterModel *todoFlatModel = nullptr;
     EventViews::PrefsPtr prefs;
 };
 }

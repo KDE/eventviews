@@ -48,7 +48,7 @@ public:
 
 public:
     Akonadi::ETMCalendar::Ptr m_calendar;
-    Akonadi::IncidenceChanger *m_changer;
+    Akonadi::IncidenceChanger *m_changer = nullptr;
 
     //For adjusting persistent indexes
     QList<QPersistentModelIndex> m_layoutChangePersistentIndexes;

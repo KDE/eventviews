@@ -118,10 +118,10 @@ private:
     int mId;
     QDate mDate;
 
-    QGraphicsScene *mScene;
+    QGraphicsScene *mScene = nullptr;
 
-    ScrollIndicator *mUpArrow;
-    ScrollIndicator *mDownArrow;
+    ScrollIndicator *mUpArrow = nullptr;
+    ScrollIndicator *mDownArrow = nullptr;
 };
 
 /**
@@ -216,7 +216,7 @@ private:
     int mDaySpan;
 
     // The current item is part of a MonthItem
-    MonthItem *mMonthItem;
+    MonthItem *mMonthItem = nullptr;
 };
 
 }

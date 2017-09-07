@@ -204,29 +204,29 @@ public:
 
 public:
     // view widgets
-    QGridLayout *mGridLayout;
-    QFrame *mTopDayLabels;
-    QBoxLayout *mLayoutTopDayLabels;
-    QFrame *mTopDayLabelsFrame;
+    QGridLayout *mGridLayout = nullptr;
+    QFrame *mTopDayLabels = nullptr;
+    QBoxLayout *mLayoutTopDayLabels = nullptr;
+    QFrame *mTopDayLabelsFrame = nullptr;
     QList<AlternateLabel *> mDateDayLabels;
-    QBoxLayout *mLayoutBottomDayLabels;
-    QFrame *mBottomDayLabels;
-    QFrame *mBottomDayLabelsFrame;
-    QFrame *mAllDayFrame;
-    QWidget *mTimeBarHeaderFrame;
-    QSplitter *mSplitterAgenda;
+    QBoxLayout *mLayoutBottomDayLabels = nullptr;
+    QFrame *mBottomDayLabels = nullptr;
+    QFrame *mBottomDayLabelsFrame = nullptr;
+    QFrame *mAllDayFrame = nullptr;
+    QWidget *mTimeBarHeaderFrame = nullptr;
+    QSplitter *mSplitterAgenda = nullptr;
     QList<QLabel *> mTimeBarHeaders;
 
-    Agenda *mAllDayAgenda;
-    Agenda *mAgenda;
+    Agenda *mAllDayAgenda = nullptr;
+    Agenda *mAgenda = nullptr;
 
-    TimeLabelsZone *mTimeLabelsZone;
+    TimeLabelsZone *mTimeLabelsZone = nullptr;
 
     KCalCore::DateList mSelectedDates;  // List of dates to be displayed
     KCalCore::DateList mSaveSelectedDates; // Save the list of dates between updateViews
     int mViewType;
-    EventIndicator *mEventIndicatorTop;
-    EventIndicator *mEventIndicatorBottom;
+    EventIndicator *mEventIndicatorTop = nullptr;
+    EventIndicator *mEventIndicatorBottom = nullptr;
 
     QVector<int> mMinY;
     QVector<int> mMaxY;
@@ -242,7 +242,7 @@ public:
 
     const bool mIsSideBySide;
 
-    QWidget *mDummyAllDayLeft;
+    QWidget *mDummyAllDayLeft = nullptr;
     bool mUpdateAllDayAgenda;
     bool mUpdateAgenda;
     bool mIsInteractive;

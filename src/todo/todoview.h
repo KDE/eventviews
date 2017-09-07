@@ -165,25 +165,25 @@ private:
                  const Akonadi::Item &parentItem,
                  const QStringList &categories = QStringList());
 
-    TodoViewView *mView;
-    TodoViewSortFilterProxyModel *mProxyModel;
-    TodoCategoriesDelegate *mCategoriesDelegate;
+    TodoViewView *mView = nullptr;
+    TodoViewSortFilterProxyModel *mProxyModel = nullptr;
+    TodoCategoriesDelegate *mCategoriesDelegate = nullptr;
 
-    TodoViewQuickSearch *mQuickSearch;
-    TodoViewQuickAddLine *mQuickAdd;
-    QToolButton *mFullViewButton;
-    QToolButton *mFlatViewButton;
+    TodoViewQuickSearch *mQuickSearch = nullptr;
+    TodoViewQuickAddLine *mQuickAdd = nullptr;
+    QToolButton *mFullViewButton = nullptr;
+    QToolButton *mFlatViewButton = nullptr;
 
-    QMenu *mItemPopupMenu;
-    KPIM::KDatePickerPopup *mCopyPopupMenu;
-    KPIM::KDatePickerPopup *mMovePopupMenu;
-    QMenu *mPriorityPopupMenu;
-    QMenu *mPercentageCompletedPopupMenu;
+    QMenu *mItemPopupMenu = nullptr;
+    KPIM::KDatePickerPopup *mCopyPopupMenu = nullptr;
+    KPIM::KDatePickerPopup *mMovePopupMenu = nullptr;
+    QMenu *mPriorityPopupMenu = nullptr;
+    QMenu *mPercentageCompletedPopupMenu = nullptr;
     QList<QAction *> mItemPopupMenuItemOnlyEntries;
     QList<QAction *> mItemPopupMenuReadWriteEntries;
 
-    QAction *mMakeTodoIndependent;
-    QAction *mMakeSubtodosIndependent;
+    QAction *mMakeTodoIndependent = nullptr;
+    QAction *mMakeSubtodosIndependent = nullptr;
 
     QPointer<Akonadi::ETMViewStateSaver> mTreeStateRestorer;
 
@@ -191,7 +191,7 @@ private:
     QMap<QAction *, int> mPriority;
     bool mSidebarView;
     bool mResizeColumnsScheduled;
-    QTimer *mResizeColumnsTimer;
+    QTimer *mResizeColumnsTimer = nullptr;
 };
 
 }

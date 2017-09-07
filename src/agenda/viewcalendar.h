@@ -74,7 +74,7 @@ public:
     KDateTime::Spec timeSpec() const;
 
     Akonadi::ETMCalendar::Ptr mCalendar;
-    AgendaView *mAgendaView;
+    AgendaView *mAgendaView = nullptr;
 };
 
 class MultiViewCalendar : public ViewCalendar
@@ -100,7 +100,7 @@ public:
     KCalCore::Calendar::Ptr getCalendar() const override;
     KCalCore::Incidence::List incidences() const;
 
-    AgendaView *mAgendaView;
+    AgendaView *mAgendaView = nullptr;
     AkonadiViewCalendar::Ptr mETMCalendar;
     QList<ViewCalendar::Ptr> mSubCalendars;
 };

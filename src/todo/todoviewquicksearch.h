@@ -73,9 +73,9 @@ private:
 
     Akonadi::ETMCalendar::Ptr mCalendar;
 
-    QLineEdit *mSearchLine;
-    KPIM::TagSelectionCombo *mCategoryCombo;
-    KPIM::KCheckComboBox *mPriorityCombo;
+    QLineEdit *mSearchLine = nullptr;
+    KPIM::TagSelectionCombo *mCategoryCombo = nullptr;
+    KPIM::KCheckComboBox *mPriorityCombo = nullptr;
 };
 
 #endif

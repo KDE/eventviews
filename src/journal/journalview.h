@@ -90,10 +90,10 @@ protected:
     void clearEntries();
 
 private:
-    QScrollArea *mSA;
-    QWidget *mCurrentWidget;
+    QScrollArea *mSA = nullptr;
+    QWidget *mCurrentWidget = nullptr;
     QMap<QDate, EventViews::JournalDateView *> mEntries;
-    Akonadi::IncidenceChanger *mChanger;
+    Akonadi::IncidenceChanger *mChanger = nullptr;
 //    DateList mSelectedDates;  // List of dates to be displayed
 };
 

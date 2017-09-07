@@ -53,9 +53,9 @@ private:
     Ui_MainWindow mUi;
 
     Akonadi::ETMCalendar::Ptr mCalendar;
-    Akonadi::IncidenceChanger *mIncidenceChanger;
-    Settings *mSettings;
-    EventViews::PrefsPtr *mViewPreferences;
+    Akonadi::IncidenceChanger *mIncidenceChanger = nullptr;
+    Settings *mSettings = nullptr;
+    EventViews::PrefsPtr *mViewPreferences = nullptr;
 
 private:
     void addView(const QString &viewName);

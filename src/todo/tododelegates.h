@@ -176,7 +176,7 @@ public:
     QSize sizeHint(const QStyleOptionViewItem &option,
                    const QModelIndex &index) const override;
 private:
-    QTextDocument *m_textDoc;
+    QTextDocument *m_textDoc = nullptr;
 };
 
 #endif

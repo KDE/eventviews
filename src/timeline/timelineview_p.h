@@ -70,9 +70,9 @@ public Q_SLOTS:
 
 public:
     Akonadi::Item::List mSelectedItemList;
-    KGantt::GraphicsView *mGantt;
-    QTreeWidget *mLeftView;
-    RowController *mRowController;
+    KGantt::GraphicsView *mGantt = nullptr;
+    QTreeWidget *mLeftView = nullptr;
+    RowController *mRowController = nullptr;
     QMap<Akonadi::Collection::Id, TimelineItem *> mCalendarItemMap;
     QDate mStartDate, mEndDate;
     QDateTime mHintDate;

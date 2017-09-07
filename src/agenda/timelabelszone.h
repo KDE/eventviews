@@ -71,11 +71,11 @@ public:
 
 private:
     void setupTimeLabel(QScrollArea *area);
-    Agenda *mAgenda;
+    Agenda *mAgenda = nullptr;
     PrefsPtr mPrefs;
-    AgendaView *mParent;
+    AgendaView *mParent = nullptr;
 
-    QHBoxLayout *mTimeLabelsLayout;
+    QHBoxLayout *mTimeLabelsLayout = nullptr;
     QList<QScrollArea *> mTimeLabelsList;
 };
 

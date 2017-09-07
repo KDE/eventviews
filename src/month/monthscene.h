@@ -72,7 +72,7 @@ public:
     int itemHeight();
     int itemHeightIncludingSpacing();
     QList<MonthItem *> mManagerList;
-    MonthView *mMonthView;
+    MonthView *mMonthView = nullptr;
 
     MonthView *monthView() const
     {
@@ -284,14 +284,14 @@ private:
     bool mInitialized;
 
     // User interaction.
-    MonthItem *mClickedItem; // todo ini in ctor
-    MonthItem *mActionItem;
+    MonthItem *mClickedItem = nullptr; // todo ini in ctor
+    MonthItem *mActionItem = nullptr;
     bool mActionInitiated;
 
-    MonthItem *mSelectedItem;
+    MonthItem *mSelectedItem = nullptr;
     QDate mSelectedCellDate;
-    MonthCell *mStartCell; // start cell when dragging
-    MonthCell *mPreviousCell; // the cell before that one during dragging
+    MonthCell *mStartCell = nullptr; // start cell when dragging
+    MonthCell *mPreviousCell = nullptr; // the cell before that one during dragging
 
     ActionType mActionType;
     ResizeType mResizeType;

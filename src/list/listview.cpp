@@ -82,7 +82,7 @@ public:
 
     bool operator<(const QTreeWidgetItem &other) const override;
 
-    const QTreeWidget *mTreeWidget;
+    const QTreeWidget *mTreeWidget = nullptr;
     const Akonadi::Item mIncidence;
     QDateTime start;
     QDateTime end;
@@ -130,8 +130,8 @@ public:
                       const Akonadi::Item &, const QDate &date);
     ListViewItem *getItemForIncidence(const Akonadi::Item &);
 
-    QTreeWidget *mTreeWidget;
-    ListViewItem *mActiveItem;
+    QTreeWidget *mTreeWidget = nullptr;
+    ListViewItem *mActiveItem = nullptr;
     QHash<Akonadi::Item::Id, Akonadi::Item> mItems;
     QHash<Akonadi::Item::Id, QDate> mDateList;
     QDate mStartDate;
@@ -166,7 +166,7 @@ public:
     }
 
 private:
-    ListViewItem *mItem;
+    ListViewItem *mItem = nullptr;
     QDate mStartDate;
 };
 
@@ -449,7 +449,7 @@ void ListView::showIncidences(const Akonadi::Item::List &itemList, const QDate &
 void ListView::changeIncidenceDisplay(const Akonadi::Item &aitem, int action)
 {
     const Incidence::Ptr incidence = CalendarSupport::incidence(aitem);
-    ListViewItem *item;
+    ListViewItem *item = nullptr;
     QDate f = d->mSelectedDates.first();
     QDate l = d->mSelectedDates.last();
 

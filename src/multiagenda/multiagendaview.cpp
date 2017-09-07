@@ -136,12 +136,14 @@ public:
     MultiAgendaView *q;
     QList<AgendaView *> mAgendaViews;
     QList<QWidget *> mAgendaWidgets;
-    QWidget *mTopBox;
-    QScrollArea *mScrollArea;
-    TimeLabelsZone *mTimeLabelsZone;
-    QSplitter *mLeftSplitter, *mRightSplitter;
-    QScrollBar *mScrollBar;
-    QWidget *mLeftBottomSpacer, *mRightBottomSpacer;
+    QWidget *mTopBox = nullptr;
+    QScrollArea *mScrollArea = nullptr;
+    TimeLabelsZone *mTimeLabelsZone = nullptr;
+    QSplitter *mLeftSplitter = nullptr;
+    QSplitter *mRightSplitter = nullptr;
+    QScrollBar *mScrollBar = nullptr;
+    QWidget *mLeftBottomSpacer = nullptr;
+    QWidget *mRightBottomSpacer = nullptr;
     QDate mStartDate, mEndDate;
     bool mUpdateOnShow;
     bool mPendingChanges;
@@ -149,8 +151,8 @@ public:
     QVector<KCheckableProxyModel *> mCollectionSelectionModels;
     QStringList mCustomColumnTitles;
     int mCustomNumberOfColumns;
-    QLabel *mLabel;
-    QWidget *mRightDummyWidget;
+    QLabel *mLabel = nullptr;
+    QWidget *mRightDummyWidget = nullptr;
     QHash<QString, KViewStateMaintainer<ETMViewStateSaver>* > mSelectionSavers;
 };
 

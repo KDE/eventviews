@@ -63,11 +63,11 @@ public: /// Methods
 
 public:  /// Members
     QTimer                           reloadTimer;
-    MonthScene                      *scene;
+    MonthScene                      *scene = nullptr;
     QDate                            selectedItemDate;
     Akonadi::Item::Id                selectedItemId;
-    MonthGraphicsView               *view;
-    QToolButton                     *fullView;
+    MonthGraphicsView               *view = nullptr;
+    QToolButton                     *fullView = nullptr;
 
     // List of uids for QDate
     QMap<QDate, QStringList > mBusyDays;

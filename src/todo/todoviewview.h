@@ -50,7 +50,7 @@ protected:
 private:
     QModelIndex getNextEditableIndex(const QModelIndex &cur, int inc);
 
-    QMenu *mHeaderPopup;
+    QMenu *mHeaderPopup = nullptr;
     QList<QAction *> mColumnActions;
     QTimer mExpandTimer;
     bool mIgnoreNextMouseRelease;
