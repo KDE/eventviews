@@ -174,6 +174,9 @@ void TimeLabels::setAgenda(Agenda *agenda)
 /** This is called in response to repaint() */
 void TimeLabels::paintEvent(QPaintEvent *)
 {
+    if (!mAgenda) {
+        return;
+    }
     QPainter p(this);
 
     const int ch = height();

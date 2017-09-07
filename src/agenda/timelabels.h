@@ -87,10 +87,10 @@ private:
     int mRows;
     double mCellHeight;
     int mMiniWidth;
-    Agenda *mAgenda;
-    TimeLabelsZone *mTimeLabelsZone;
+    Agenda *mAgenda = nullptr;
+    TimeLabelsZone *mTimeLabelsZone = nullptr;
 
-    QFrame *mMousePos;  // shows a marker for the current mouse position in y direction
+    QFrame *mMousePos = nullptr;  // shows a marker for the current mouse position in y direction
 };
 
 }
