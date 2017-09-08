@@ -131,8 +131,7 @@ void TimelineView::Private::insertIncidence(const Akonadi::Item &aitem, const QD
             const Akonadi::Item akonadiItem = q->calendar()->item(occurIter.incidence());
             const KDateTime startOfOccurrence = occurIter.occurrenceStartDate();
             const KDateTime endOfOccurrence = occurIter.incidence()->endDateForStart(startOfOccurrence);
-            const KDateTime::Spec spec = CalendarSupport::KCalPrefs::instance()->timeSpec();
-            item->insertIncidence(akonadiItem, startOfOccurrence.toTimeSpec(spec),  endOfOccurrence.toTimeSpec(spec));
+            item->insertIncidence(akonadiItem, startOfOccurrence.toLocalZone().dateTime(),  endOfOccurrence.toLocalZone().dateTime());
         }
     } else {
         if (incidence->dtStart().date() == day ||
@@ -203,9 +202,9 @@ void TimelineView::Private::itemChanged(QStandardItem *item)
     const Akonadi::Item i = tlit->incidence();
     const Incidence::Ptr inc = CalendarSupport::incidence(i);
 
-    KDateTime newStart(tlit->startTime());
+    QDateTime newStart(tlit->startTime());
     if (inc->allDay()) {
-        newStart = KDateTime(newStart.date());
+        newStart = QDateTime(newStart.date());
     }
 
     int delta = tlit->originalStart().secsTo(newStart);

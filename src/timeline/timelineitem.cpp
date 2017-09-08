@@ -43,17 +43,16 @@ TimelineItem::TimelineItem(const Akonadi::ETMCalendar::Ptr &calendar, uint index
 }
 
 void TimelineItem::insertIncidence(const Akonadi::Item &aitem,
-                                   const KDateTime &_start, const KDateTime &_end)
+                                   const QDateTime &_start, const QDateTime &_end)
 {
     const Incidence::Ptr incidence = CalendarSupport::incidence(aitem);
-    KDateTime start(_start);
-    KDateTime end(_end);
+    QDateTime start(_start);
+    QDateTime end(_end);
     if (!start.isValid()) {
-        start = incidence->dtStart().toTimeSpec(CalendarSupport::KCalPrefs::instance()->timeSpec());
+        start = incidence->dtStart().toLocalZone().dateTime();
     }
     if (!end.isValid()) {
-        end = incidence->dateTime(Incidence::RoleEnd).toTimeSpec(
-                  CalendarSupport::KCalPrefs::instance()->timeSpec());
+        end = incidence->dateTime(Incidence::RoleEnd).toLocalZone().dateTime();
     }
     if (incidence->allDay()) {
         end = end.addDays(1);
@@ -62,17 +61,17 @@ void TimelineItem::insertIncidence(const Akonadi::Item &aitem,
     typedef QList<QStandardItem *> ItemList;
     ItemList list = mItemMap.value(aitem.id());
     for (ItemList::ConstIterator it = list.constBegin(); it != list.constEnd(); ++it) {
-        if (KDateTime(static_cast<TimelineSubItem *>(*it)->startTime()) == start &&
-                KDateTime(static_cast<TimelineSubItem *>(*it)->endTime()) == end) {
+        if (static_cast<TimelineSubItem *>(*it)->startTime() == start &&
+                static_cast<TimelineSubItem *>(*it)->endTime() == end) {
             return;
         }
     }
 
     TimelineSubItem *item = new TimelineSubItem(mCalendar, aitem, this);
 
-    item->setStartTime(start.dateTime());
+    item->setStartTime(start);
     item->setOriginalStart(start);
-    item->setEndTime(end.dateTime());
+    item->setEndTime(end);
     item->setData(mColor, Qt::DecorationRole);
 
     list = mModel->takeRow(mIndex);
@@ -96,10 +95,10 @@ void TimelineItem::moveItems(const Akonadi::Item &incidence, int delta, int dura
     ItemList list = mItemMap.value(incidence.id());
     const ItemList::ConstIterator end(list.constEnd());
     for (ItemList::ConstIterator it = list.constBegin(); it != end; ++it) {
-        QDateTime start = static_cast<TimelineSubItem *>(*it)->originalStart().dateTime();
+        QDateTime start = static_cast<TimelineSubItem *>(*it)->originalStart();
         start = start.addSecs(delta);
         static_cast<TimelineSubItem *>(*it)->setStartTime(start);
-        static_cast<TimelineSubItem *>(*it)->setOriginalStart(KDateTime(start));
+        static_cast<TimelineSubItem *>(*it)->setOriginalStart(start);
         static_cast<TimelineSubItem *>(*it)->setEndTime(start.addSecs(duration));
     }
 }

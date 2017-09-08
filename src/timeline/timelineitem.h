@@ -26,8 +26,7 @@
 #include <Akonadi/Calendar/ETMCalendar>
 #include <AkonadiCore/Item>
 
-#include <KDateTime>
-
+#include <QDateTime>
 #include <QMap>
 #include <QList>
 #include <QStandardItemModel>
@@ -45,8 +44,8 @@ public:
                  QObject *parent);
 
     void insertIncidence(const Akonadi::Item &incidence,
-                         const KDateTime &start = KDateTime(),
-                         const KDateTime &end = KDateTime());
+                         const QDateTime &start = QDateTime(),
+                         const QDateTime &end = QDateTime());
     void removeIncidence(const Akonadi::Item &incidence);
 
     void moveItems(const Akonadi::Item &incidence, int delta, int duration);
@@ -73,12 +72,12 @@ public:
         return mIncidence;
     }
 
-    KDateTime originalStart() const
+    QDateTime originalStart() const
     {
         return mStart;
     }
 
-    void setOriginalStart(const KDateTime &dt)
+    void setOriginalStart(const QDateTime &dt)
     {
         mStart = dt;
     }
@@ -99,7 +98,7 @@ public:
 private:
     Akonadi::ETMCalendar::Ptr mCalendar;
     Akonadi::Item mIncidence;
-    KDateTime mStart;
+    QDateTime mStart;
     TimelineItem *mParent = nullptr;
     bool mToolTipNeedsUpdate;
 };
