@@ -663,9 +663,9 @@ void AgendaView::Private::insertIncidence(const KCalCore::Incidence::Ptr &incide
                 // The time we get depends on the insertAtDate, because of daylight savings changes
                 const KDateTime ocurrrenceDateTime = KDateTime(insertAtDate, todo->dtDue().time(),
                                                      todo->dtDue().timeSpec());
-                t = ocurrrenceDateTime.toTimeSpec(timeSpec).time();
+                t = ocurrrenceDateTime.toLocalZone().time();
             } else {
-                t = todo->dtDue().toTimeSpec(timeSpec).time();
+                t = todo->dtDue().toLocalZone().time();
             }
 
             if (t == QTime(0, 0) && !todo->recurs()) {

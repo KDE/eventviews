@@ -82,7 +82,7 @@ AgendaItem::AgendaItem(EventView *eventView, const MultiViewCalendar::Ptr &calen
     mIncidence = Incidence::Ptr(mIncidence->clone());
     if (mIncidence->customProperty("KABC", "BIRTHDAY") == QLatin1String("YES") ||
             mIncidence->customProperty("KABC", "ANNIVERSARY") == QLatin1String("YES")) {
-        const int years = EventViews::yearDiff(mIncidence->dtStart().date(), qd.toTimeSpec(mEventView->preferences()->timeSpec()).date());
+        const int years = EventViews::yearDiff(mIncidence->dtStart().date(), qd.toLocalZone().date());
         if (years > 0) {
             mIncidence->setReadOnly(false);
             mIncidence->setSummary(i18np("%2 (1 year)", "%2 (%1 years)", years, mIncidence->summary()));

@@ -504,7 +504,6 @@ void MonthView::reloadIncidences()
     }
 
     // build global event list
-    KDateTime::Spec timeSpec = CalendarSupport::KCalPrefs::instance()->timeSpec();
     const bool colorMonthBusyDays = preferences()->colorMonthBusyDays();
 
     KCalCore::OccurrenceIterator occurIter(*calendar(), actualStartDateTime(), actualEndDateTime());
@@ -537,7 +536,7 @@ void MonthView::reloadIncidences()
                 calendar(),
                 item,
                 occurIter.incidence(),
-                occurIter.occurrenceStartDate().toTimeSpec(timeSpec).date());
+                occurIter.occurrenceStartDate().toLocalZone().date());
         d->scene->mManagerList << manager;
         if (d->selectedItemId == item.id() &&
                 manager->realStartDate() == d->selectedItemDate) {
