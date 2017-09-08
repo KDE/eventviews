@@ -231,6 +231,7 @@ TimelineView::TimelineView(QWidget *parent)
     d->mLeftView->setHeaderLabel(i18n("Calendar"));
     d->mLeftView->setRootIsDecorated(false);
     d->mLeftView->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+    d->mLeftView->setUniformRowHeights(true);
 
     d->mGantt = new KGantt::GraphicsView();
     splitter->addWidget(d->mLeftView);
@@ -240,7 +241,11 @@ TimelineView::TimelineView(QWidget *parent)
     QStandardItemModel *model = new QStandardItemModel(this);
 
     d->mRowController = new RowController;
-    d->mRowController->setRowHeight(fontMetrics().height());   //TODO: detect
+
+    QStyleOptionViewItem opt;
+    opt.initFrom(d->mLeftView);
+    const auto h = d->mLeftView->style()->sizeFromContents(QStyle::CT_ItemViewItem, &opt, QSize(), d->mLeftView).height();
+    d->mRowController->setRowHeight(h);
 
     d->mRowController->setModel(model);
     d->mGantt->setRowController(d->mRowController);
