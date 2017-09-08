@@ -148,7 +148,7 @@ private:
     QDate mDate;
     QMap<Akonadi::Item::Id, JournalFrame *> mEntries;
 
-    Akonadi::IncidenceChanger *mChanger;
+    Akonadi::IncidenceChanger *mChanger = nullptr;
 };
 
 }

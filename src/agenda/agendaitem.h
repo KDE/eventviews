@@ -277,7 +277,7 @@ protected:
     void endMovePrivate();
 
     // Variables to remember start position
-    MultiItemInfo *mStartMoveInfo;
+    MultiItemInfo *mStartMoveInfo = nullptr;
     //Color of the resource
     QColor mResourceColor;
 
@@ -294,7 +294,7 @@ private:
     int mCellXLeft, mCellXRight;
     int mCellYTop, mCellYBottom;
 
-    EventView *mEventView;
+    EventView *mEventView = nullptr;
     MultiViewCalendar::Ptr mCalendar;
     KCalCore::Incidence::Ptr mIncidence;
     KDateTime mOccurrenceDateTime;
@@ -312,7 +312,7 @@ private:
     int mItemCount;
 
     // Multi item pointers
-    MultiItemInfo *mMultiItemInfo;
+    MultiItemInfo *mMultiItemInfo = nullptr;
 
     QList<AgendaItem::QPtr> mConflictItems;
 

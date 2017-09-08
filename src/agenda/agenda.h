@@ -350,7 +350,7 @@ public:
     Agenda *agenda() const;
 
 private:
-    Agenda *mAgenda;
+    Agenda *mAgenda = nullptr;
 
 };
 

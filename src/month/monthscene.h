@@ -313,7 +313,7 @@ private:
     QPixmap mReplyPixmap;
     QPixmap mHolidayPixmap;
     QBasicTimer repeatTimer;
-    ScrollIndicator *mCurrentIndicator;
+    ScrollIndicator *mCurrentIndicator = nullptr;
     friend class MonthGraphicsView;
 };
 
@@ -342,8 +342,8 @@ protected:
     void resizeEvent(QResizeEvent *) override;
 
 private:
-    MonthScene *mScene;
-    MonthView *mMonthView;
+    MonthScene *mScene = nullptr;
+    MonthView *mMonthView = nullptr;
 };
 
 }

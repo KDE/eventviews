@@ -250,7 +250,7 @@ public:
     double mGridSpacingY;
     double mDesiredGridSpacingY;
 
-    Akonadi::IncidenceChanger *mChanger;
+    Akonadi::IncidenceChanger *mChanger = nullptr;
 
     // size of border, where mouse action will resize the AgendaItem
     int mResizeBorderWidth;
@@ -269,7 +269,7 @@ public:
 
     // Working Hour coordiantes
     bool mWorkingHoursEnable;
-    QVector<bool> *mHolidayMask;
+    QVector<bool> *mHolidayMask = nullptr;
     int mWorkingHoursYTop;
     int mWorkingHoursYBottom;
 
@@ -296,7 +296,7 @@ public:
     QString mSelectedId;
 
     // The Marcus Bains Line widget.
-    MarcusBains *mMarcusBains;
+    MarcusBains *mMarcusBains = nullptr;
 
     MouseActionType mActionType;
 

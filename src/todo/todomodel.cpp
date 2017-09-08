@@ -58,7 +58,7 @@ struct SourceModelIndex {
 
     int r, c;
     void *p;
-    const QAbstractItemModel *m;
+    const QAbstractItemModel *m = nullptr;
 };
 
 static bool isDueToday(const KCalCore::Todo::Ptr &todo)
