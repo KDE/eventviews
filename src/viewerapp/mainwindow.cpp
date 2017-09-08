@@ -70,8 +70,8 @@ void MainWindow::addView(const QString &viewName)
 {
     EventView *eventView = 0;
 
-    const KDateTime start = KDateTime::currentLocalDateTime().addDays(-1);
-    const KDateTime end = KDateTime::currentLocalDateTime().addDays(1);
+    const auto start = QDateTime::currentDateTime().addDays(-1);
+    const auto end = QDateTime::currentDateTime().addDays(1);
 
     if (viewName == QStringLiteral("agenda")) {
         eventView = new AgendaView(start.date(), end.date(), true, false, this);

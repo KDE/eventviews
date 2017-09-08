@@ -273,7 +273,7 @@ public:
 
     // insertAtDateTime is in the view's timezone
     void insertIncidence(const KCalCore::Incidence::Ptr &, const KDateTime &recurrenceId,
-                         const KDateTime &insertAtDateTime, bool createSelected);
+                         const QDateTime &insertAtDateTime, bool createSelected);
     void reevaluateIncidence(const KCalCore::Incidence::Ptr &incidence);
 
     bool datesEqual(const KCalCore::Incidence::Ptr &one, const KCalCore::Incidence::Ptr &two) const;
@@ -300,10 +300,10 @@ private:
 
 bool AgendaView::Private::datesEqual(const KCalCore::Incidence::Ptr &one, const KCalCore::Incidence::Ptr &two) const
 {
-    const KDateTime start1 = one->dtStart();
-    const KDateTime start2 = two->dtStart();
-    const KDateTime end1   = one->dateTime(KCalCore::Incidence::RoleDisplayEnd);
-    const KDateTime end2   = two->dateTime(KCalCore::Incidence::RoleDisplayEnd);
+    const auto start1 = one->dtStart().dateTime();
+    const auto start2 = two->dtStart().dateTime();
+    const auto end1   = one->dateTime(KCalCore::Incidence::RoleDisplayEnd).dateTime();
+    const auto end2   = two->dateTime(KCalCore::Incidence::RoleDisplayEnd).dateTime();
 
     if (start1.isValid() ^ start2.isValid()) {
         return false;
@@ -535,7 +535,7 @@ void AgendaView::Private::clearView()
 }
 
 void AgendaView::Private::insertIncidence(const KCalCore::Incidence::Ptr &incidence,
-        const KDateTime &recurrenceId, const KDateTime &insertAtDateTime,
+        const KDateTime &recurrenceId, const QDateTime &insertAtDateTime,
         bool createSelected)
 {
     if (!q->filterByCollectionSelection(incidence)) {
@@ -1847,7 +1847,7 @@ bool AgendaView::displayIncidence(const  KCalCore::Incidence::Ptr &incidence, bo
                                          startDateTimeWithOffset, lastVisibleDateTime);
         while (rIt.hasNext()) {
             rIt.next();
-            const KDateTime occurrenceDate(rIt.occurrenceStartDate().toLocalZone());
+            const auto occurrenceDate = rIt.occurrenceStartDate().toLocalZone().dateTime();
             const bool makesDayBusy =
                 preferences()->colorAgendaBusyDays() && makesWholeDayBusy(rIt.incidence());
             if (makesDayBusy) {
@@ -1913,7 +1913,7 @@ bool AgendaView::displayIncidence(const  KCalCore::Incidence::Ptr &incidence, bo
             busyEvents.append(event);
         }
 
-        d->insertIncidence(incidence, t->toLocalZone(), t->toLocalZone(), createSelected);
+        d->insertIncidence(incidence, t->toLocalZone(), t->toLocalZone().dateTime(), createSelected);
     }
 
     // Can be multiday
