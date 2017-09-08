@@ -267,14 +267,14 @@ public:
      * month to show when the week crosses months.  It's a QDate instead
      * of uint so it can be easily fed to KCalendarSystem's functions.
      */
-    virtual void setDateRange(const KDateTime &start, const KDateTime &end,
+    virtual void setDateRange(const QDateTime &start, const QDateTime &end,
                               const QDate &preferredMonth = QDate());
 
-    KDateTime startDateTime() const;
-    KDateTime endDateTime() const;
+    QDateTime startDateTime() const;
+    QDateTime endDateTime() const;
 
-    KDateTime actualStartDateTime() const;
-    KDateTime actualEndDateTime() const;
+    QDateTime actualStartDateTime() const;
+    QDateTime actualEndDateTime() const;
 
     int showMoveRecurDialog(const KCalCore::Incidence::Ptr &incidence, const QDate &date);
 
@@ -516,8 +516,8 @@ protected:
      * month to show when the week crosses months.  It's a QDate instead of
      * uint so it can be easily fed to KCalendarSystem's functions.
      */
-    virtual QPair<KDateTime, KDateTime> actualDateRange(
-        const KDateTime &start, const KDateTime &end, const QDate &preferredMonth = QDate()) const;
+    virtual QPair<QDateTime, QDateTime> actualDateRange(
+        const QDateTime &start, const QDateTime &end, const QDate &preferredMonth = QDate()) const;
     /*
     virtual void incidencesAdded( const Akonadi::Item::List &incidences );
     virtual void incidencesAboutToBeRemoved( const Akonadi::Item::List &incidences );

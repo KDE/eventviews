@@ -63,7 +63,7 @@ public:
 
     QDateTime selectionEnd() const override;
 
-    virtual void setDateRange(const KDateTime &start, const KDateTime &end,
+    virtual void setDateRange(const QDateTime &start, const QDateTime &end,
                               const QDate &preferredMonth = QDate()) override;
 
     bool eventDurationHint(QDateTime &startDt, QDateTime &endDt, bool &allDay) const override;
@@ -116,8 +116,8 @@ protected:
     void keyPressEvent(QKeyEvent *event) override;
     void keyReleaseEvent(QKeyEvent *event) override;
 
-    QPair<KDateTime, KDateTime> actualDateRange(
-        const KDateTime &start, const KDateTime &end, const QDate &preferredMonth = QDate()) const override;
+    QPair<QDateTime, QDateTime> actualDateRange(
+        const QDateTime &start, const QDateTime &end, const QDate &preferredMonth = QDate()) const override;
 
     // Compute and update the whole view
     void reloadIncidences();

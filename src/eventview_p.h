@@ -28,7 +28,7 @@
 
 #include "eventview.h"
 
-#include <KDateTime>
+#include <QDateTime>
 
 class KCheckableProxyModel;
 
@@ -56,10 +56,10 @@ public: /// Members
     KCheckableProxyModel *collectionSelectionModel;
 
     QByteArray identifier;
-    KDateTime startDateTime;
-    KDateTime endDateTime;
-    KDateTime actualStartDateTime;
-    KDateTime actualEndDateTime;
+    QDateTime startDateTime;
+    QDateTime endDateTime;
+    QDateTime actualStartDateTime;
+    QDateTime actualEndDateTime;
 
     /* When we receive a QEvent with a key_Return release
      * we will only show a new event dialog if we previously received a

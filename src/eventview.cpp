@@ -280,7 +280,7 @@ bool EventView::hasConfigurationDialog() const
     return false;
 }
 
-void EventView::setDateRange(const KDateTime &start, const KDateTime &end,
+void EventView::setDateRange(const QDateTime &start, const QDateTime &end,
                              const QDate &preferredMonth)
 {
     Q_D(EventView);
@@ -288,30 +288,30 @@ void EventView::setDateRange(const KDateTime &start, const KDateTime &end,
     d->startDateTime = start;
     d->endDateTime = end;
     showDates(start.date(), end.date(), preferredMonth);
-    const QPair<KDateTime, KDateTime> adjusted = actualDateRange(start, end, preferredMonth);
+    const QPair<QDateTime, QDateTime> adjusted = actualDateRange(start, end, preferredMonth);
     d->actualStartDateTime = adjusted.first;
     d->actualEndDateTime = adjusted.second;
 }
 
-KDateTime EventView::startDateTime() const
+QDateTime EventView::startDateTime() const
 {
     Q_D(const EventView);
     return d->startDateTime;
 }
 
-KDateTime EventView::endDateTime() const
+QDateTime EventView::endDateTime() const
 {
     Q_D(const EventView);
     return d->endDateTime;
 }
 
-KDateTime EventView::actualStartDateTime() const
+QDateTime EventView::actualStartDateTime() const
 {
     Q_D(const EventView);
     return d->actualStartDateTime;
 }
 
-KDateTime EventView::actualEndDateTime() const
+QDateTime EventView::actualEndDateTime() const
 {
     Q_D(const EventView);
     return d->actualEndDateTime;
@@ -462,8 +462,8 @@ void EventView::doSaveConfig(KConfigGroup &)
 {
 }
 
-QPair<KDateTime, KDateTime> EventView::actualDateRange(const KDateTime &start,
-        const KDateTime &end,
+QPair<QDateTime, QDateTime> EventView::actualDateRange(const QDateTime &start,
+        const QDateTime &end,
         const QDate &preferredMonth) const
 {
     Q_UNUSED(preferredMonth);

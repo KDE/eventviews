@@ -105,8 +105,8 @@ void MonthViewPrivate::addIncidence(const Akonadi::Item &incidence)
 
 void MonthViewPrivate::moveStartDate(int weeks, int months)
 {
-    KDateTime start = q->startDateTime();
-    KDateTime end = q->endDateTime();
+    auto start = q->startDateTime();
+    auto end = q->endDateTime();
     start = start.addDays(weeks * 7);
     end = end.addDays(weeks * 7);
     start = start.addMonths(months);
@@ -314,7 +314,7 @@ QDateTime MonthView::selectionEnd() const
     return selectionStart();
 }
 
-void MonthView::setDateRange(const KDateTime &start, const KDateTime &end,
+void MonthView::setDateRange(const QDateTime &start, const QDateTime &end,
                              const QDate &preferredMonth)
 {
     EventView::setDateRange(start, end, preferredMonth);
@@ -446,16 +446,16 @@ void MonthView::showDates(const QDate &start, const QDate &end, const QDate &pre
     d->triggerDelayedReload(DatesChanged);
 }
 
-QPair<KDateTime, KDateTime> MonthView::actualDateRange(const KDateTime &start,
-        const KDateTime &,
+QPair<QDateTime, QDateTime> MonthView::actualDateRange(const QDateTime &start,
+        const QDateTime &,
         const QDate &preferredMonth) const
 {
-    KDateTime dayOne = preferredMonth.isValid() ? KDateTime(preferredMonth) : start;
+    QDateTime dayOne = preferredMonth.isValid() ? QDateTime(preferredMonth) : start;
     dayOne.setDate(QDate(dayOne.date().year(), dayOne.date().month(), 1));
     const int weekdayCol = (dayOne.date().dayOfWeek() + 7 - QLocale().firstDayOfWeek()) % 7;
-    KDateTime actualStart = dayOne.addDays(-weekdayCol);
+    QDateTime actualStart = dayOne.addDays(-weekdayCol);
     actualStart.setTime(QTime(0, 0, 0, 0));
-    KDateTime actualEnd = actualStart.addDays(6 * 7 - 1);
+    QDateTime actualEnd = actualStart.addDays(6 * 7 - 1);
     actualEnd.setTime(QTime(23, 59, 59, 99));
     return qMakePair(actualStart, actualEnd);
 }
@@ -506,7 +506,7 @@ void MonthView::reloadIncidences()
     // build global event list
     const bool colorMonthBusyDays = preferences()->colorMonthBusyDays();
 
-    KCalCore::OccurrenceIterator occurIter(*calendar(), actualStartDateTime(), actualEndDateTime());
+    KCalCore::OccurrenceIterator occurIter(*calendar(), KDateTime(actualStartDateTime()), KDateTime(actualEndDateTime()));
     while (occurIter.hasNext()) {
         occurIter.next();
 
