@@ -327,8 +327,7 @@ QVariant TodoModel::data(const QModelIndex &index, int role) const
         if (d->m_preferences->enableToolTips()) {
             return QVariant(KCalUtils::IncidenceFormatter::toolTipStr(
                                 CalendarSupport::displayName(d->m_calendar.data(), item.parentCollection()),
-                                todo, QDate(), true,
-                                CalendarSupport::KCalPrefs::instance()->timeSpec()));
+                                todo, QDate(), true));
         } else {
             return QVariant();
         }

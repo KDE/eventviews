@@ -153,6 +153,5 @@ void TimelineSubItem::updateToolTip()
 
     setData(IncidenceFormatter::toolTipStr(
                 CalendarSupport::displayName(mCalendar.data(), mIncidence.parentCollection()),
-                CalendarSupport::incidence(mIncidence), originalStart().date(),
-                true, CalendarSupport::KCalPrefs::instance()->timeSpec()), Qt::ToolTipRole);
+                CalendarSupport::incidence(mIncidence), originalStart().date(), true), Qt::ToolTipRole);
 }

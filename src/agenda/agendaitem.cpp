@@ -1341,8 +1341,7 @@ bool AgendaItem::event(QEvent *event)
                 helpEvent->globalPos(),
                 KCalUtils::IncidenceFormatter::toolTipStr(
                     mCalendar->displayName(mIncidence),
-                    mIncidence,
-                    occurrenceDate(), true, mEventView->preferences()->timeSpec()),
+                    mIncidence, occurrenceDate(), true),
                 this);
         }
     }

@@ -512,8 +512,7 @@ QString IncidenceMonthItem::toolTipText(const QDate &date) const
 {
     return KCalUtils::IncidenceFormatter::toolTipStr(
                CalendarSupport::displayName(mCalendar.data(), akonadiItem().parentCollection()),
-               mIncidence,
-               date, true, CalendarSupport::KCalPrefs::instance()->timeSpec());
+               mIncidence, date, true);
 }
 
 QVector<QPixmap> IncidenceMonthItem::icons() const
