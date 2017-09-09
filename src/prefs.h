@@ -29,7 +29,6 @@
 #include "eventview.h"
 
 #include <KConfigSkeleton>
-#include <KDateTime>
 #include <QTimeZone>
 
 namespace EventViews
@@ -154,7 +153,6 @@ public:
     QColor resourceColor(const QString &);
     QColor resourceColorKnown(const QString &) const;
 
-    KDateTime::Spec timeSpec() const;
     QTimeZone timeZone() const;
 
     QStringList timeScaleTimezones() const;

@@ -26,7 +26,6 @@
 #include "prefs.h"
 #include "prefs_base.h"
 
-#include <KSystemTimeZone>
 #include "calendarview_debug.h"
 #include <QFontDatabase>
 
@@ -831,11 +830,6 @@ void Prefs::setAgendaTimeLabelsFont(const QFont &font)
 QFont Prefs::agendaTimeLabelsFont() const
 {
     return d->getFont(d->mBaseConfig.agendaTimeLabelsFontItem());
-}
-
-KDateTime::Spec Prefs::timeSpec() const
-{
-    return KSystemTimeZones::local();
 }
 
 QTimeZone Prefs::timeZone() const

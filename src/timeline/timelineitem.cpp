@@ -21,7 +21,6 @@
 #include "timelineitem.h"
 
 #include <KGantt/KGanttGlobal>
-#include <CalendarSupport/KCalPrefs>
 
 #include <CalendarSupport/Utils>
 

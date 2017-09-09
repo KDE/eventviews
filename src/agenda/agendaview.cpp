@@ -589,7 +589,6 @@ void AgendaView::Private::insertIncidence(const KCalCore::Incidence::Ptr &incide
         return;
     }
 
-    const KDateTime::Spec timeSpec = q->preferences()->timeSpec();
     const QDate today = QDateTime::currentDateTime().date();
     if (todo && todo->isOverdue() && today >= insertAtDate) {
         mAllDayAgenda->insertAllDayItem(incidence, recurrenceId, curCol, curCol,
@@ -597,7 +596,7 @@ void AgendaView::Private::insertIncidence(const KCalCore::Incidence::Ptr &incide
     } else if (incidence->allDay()) {
         mAllDayAgenda->insertAllDayItem(incidence, recurrenceId, beginX, endX,
                                         createSelected);
-    } else if (event && event->isMultiDay(timeSpec)) {
+    } else if (event && event->isMultiDay(KDateTime::LocalZone)) {
         // TODO: We need a better isMultiDay(), one that receives the occurrence.
 
         // In the single-day handling code there's a neat comment on why
@@ -1812,10 +1811,8 @@ bool AgendaView::displayIncidence(const  KCalCore::Incidence::Ptr &incidence, bo
     const QDate today = QDate::currentDate();
     KCalCore::DateTimeList::iterator t;
 
-    const KDateTime::Spec timeSpec = preferences()->timeSpec();
-
-    KDateTime firstVisibleDateTime(d->mSelectedDates.first(), timeSpec);
-    KDateTime lastVisibleDateTime(d->mSelectedDates.last(), timeSpec);
+    KDateTime firstVisibleDateTime(d->mSelectedDates.first(), KDateTime::LocalZone);
+    KDateTime lastVisibleDateTime(d->mSelectedDates.last(), KDateTime::LocalZone);
 
     // Optimization, very cheap operation that discards incidences that aren't in the timespan
     if (!d->mightBeVisible(incidence)) {
@@ -1894,7 +1891,7 @@ bool AgendaView::displayIncidence(const  KCalCore::Incidence::Ptr &incidence, bo
     }
 
     // ToDo items shall be displayed today if they are overdue
-    const KDateTime dateTimeToday = KDateTime(today, timeSpec);
+    const KDateTime dateTimeToday = KDateTime(today, KDateTime::LocalZone);
     if (todo &&
             todo->isOverdue() &&
             dateTimeToday >= firstVisibleDateTime &&
@@ -2003,7 +2000,7 @@ void AgendaView::slotIncidencesDropped(const KCalCore::Incidence::List &incidenc
 
     const QDate day = d->mSelectedDates[gpos.x()];
     const QTime time = d->mAgenda->gyToTime(gpos.y());
-    KDateTime newTime(day, time, preferences()->timeSpec());
+    KDateTime newTime(day, KDateTime::LocalZone);
     newTime.setDateOnly(allDay);
 
     Q_FOREACH (const KCalCore::Incidence::Ptr &incidence, incidences) {

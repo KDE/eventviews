@@ -28,7 +28,6 @@
 
 #include <Akonadi/Calendar/ETMCalendar>
 #include <CalendarSupport/CategoryConfig>
-#include <CalendarSupport/KCalPrefs>
 #include <CalendarSupport/CategoryHierarchyReader>
 #include <LibkdepimAkonadi/TagSelectionCombo>
 

@@ -30,7 +30,6 @@
 #include <Akonadi/Calendar/ETMCalendar>
 #include <CalendarSupport/CollectionSelection>
 #include <CalendarSupport/Utils>
-#include <CalendarSupport/KCalPrefs>
 #include <Akonadi/Calendar/IncidenceChanger>
 #include <KCalCore/OccurrenceIterator>
 
@@ -152,10 +151,9 @@ void TimelineView::Private::insertIncidence(const Akonadi::Item &incidence)
         insertIncidence(incidence, QDate());
     }
 
-    KDateTime::Spec timeSpec = CalendarSupport::KCalPrefs::instance()->timeSpec();
     for (QDate day = mStartDate; day <= mEndDate; day = day.addDays(1)) {
         KCalCore::Event::List events = q->calendar()->events(day,
-                                       timeSpec,
+                                       KDateTime::LocalZone,
                                        KCalCore::EventSortStartDate,
                                        KCalCore::SortDirectionAscending);
         if (events.contains(event)) {

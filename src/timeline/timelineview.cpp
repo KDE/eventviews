@@ -37,7 +37,6 @@
 #include <Akonadi/Calendar/ETMCalendar>
 #include <CalendarSupport/CollectionSelection>
 #include <CalendarSupport/Utils>
-#include <CalendarSupport/KCalPrefs>
 #include <Akonadi/Calendar/IncidenceChanger>
 
 #include "calendarview_debug.h"
@@ -404,9 +403,8 @@ void TimelineView::showDates(const QDate &start, const QDate &end, const QDate &
     d->mGantt->setModel(nullptr);
 
     KCalCore::Event::List events;
-    KDateTime::Spec timeSpec = CalendarSupport::KCalPrefs::instance()->timeSpec();
     for (QDate day = start; day <= end; day = day.addDays(1)) {
-        events = calendar()->events(day, timeSpec,
+        events = calendar()->events(day, KDateTime::LocalZone,
                                     KCalCore::EventSortStartDate,
                                     KCalCore::SortDirectionAscending);
         Q_FOREACH (const KCalCore::Event::Ptr &event, events) {

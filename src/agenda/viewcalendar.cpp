@@ -204,11 +204,6 @@ QString AkonadiViewCalendar::iconForIncidence(const KCalCore::Incidence::Ptr &in
     return mAgendaView->iconForItem(item(incidence));
 }
 
-KDateTime::Spec AkonadiViewCalendar::timeSpec() const
-{
-    return mCalendar->timeSpec();
-}
-
 KCalCore::Calendar::Ptr AkonadiViewCalendar::getCalendar() const
 {
     return mCalendar;

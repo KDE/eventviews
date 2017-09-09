@@ -257,8 +257,7 @@ void TimeSpentView::updateView()
     text+="</h2>\n";
     */
 
-    KDateTime::Spec timeSpec = CalendarSupport::KCalPrefs::instance()->timeSpec();
-    mView->mEventList = calendar()->events(mStartDate, mEndDate, timeSpec);
+    mView->mEventList = calendar()->events(mStartDate, mEndDate, KDateTime::LocalZone);
     mView->repaint();
 }
 

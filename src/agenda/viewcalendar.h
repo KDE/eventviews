@@ -71,8 +71,6 @@ public:
 
     KCalCore::Calendar::Ptr getCalendar() const override;
 
-    KDateTime::Spec timeSpec() const;
-
     Akonadi::ETMCalendar::Ptr mCalendar;
     AgendaView *mAgendaView = nullptr;
 };

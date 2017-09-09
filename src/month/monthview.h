@@ -27,8 +27,6 @@
 
 #include "eventview.h"
 
-#include <KDateTime>
-
 class QModelIndex;
 
 namespace EventViews

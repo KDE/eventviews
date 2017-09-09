@@ -108,9 +108,7 @@ void WhatsNextView::updateView()
     mText += QLatin1String("</h2>\n");
 
     KCalCore::Event::List events;
-    KDateTime::Spec timeSpec = CalendarSupport::KCalPrefs::instance()->timeSpec();
-
-    events = calendar()->events(mStartDate, mEndDate, timeSpec, false);
+    events = calendar()->events(mStartDate, mEndDate, KDateTime::LocalZone, false);
     events = calendar()->sortEvents(events, KCalCore::EventSortStartDate,
                                     KCalCore::SortDirectionAscending);
 
@@ -129,9 +127,9 @@ void WhatsNextView::updateView()
             } else {
                 KCalCore::Recurrence *recur = ev->recurrence();
                 int duration = ev->dtStart().secsTo(ev->dtEnd());
-                KDateTime start = recur->getPreviousDateTime(KDateTime(mStartDate, QTime(), timeSpec));
+                KDateTime start = recur->getPreviousDateTime(KDateTime(mStartDate, QTime(), KDateTime::LocalZone));
                 KDateTime end = start.addSecs(duration);
-                KDateTime endDate(mEndDate, QTime(23, 59, 59), timeSpec);
+                KDateTime endDate(mEndDate, QTime(23, 59, 59), KDateTime::LocalZone);
                 if (end.date() >= mStartDate) {
                     appendEvent(ev, start.toLocalZone().dateTime(), end.toLocalZone().dateTime());
                 }
@@ -190,7 +188,7 @@ void WhatsNextView::updateView()
 
     QStringList myEmails(CalendarSupport::KCalPrefs::instance()->allEmails());
     int replies = 0;
-    events = calendar()->events(QDate::currentDate(), QDate(2975, 12, 6), timeSpec);
+    events = calendar()->events(QDate::currentDate(), QDate(2975, 12, 6), KDateTime::LocalZone);
     Q_FOREACH (const KCalCore::Event::Ptr &ev, events) {
         KCalCore::Attendee::Ptr me = ev->attendeeByMails(myEmails);
         if (me != nullptr) {
