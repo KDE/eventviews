@@ -686,7 +686,7 @@ QMimeData *TodoModel::mimeData(const QModelIndexList &indexes) const
             items.push_back(item);
         }
     }
-    return CalendarSupport::createMimeData(items, d->m_calendar->timeSpec());
+    return CalendarSupport::createMimeData(items);
 }
 
 bool TodoModel::dropMimeData(const QMimeData *data, Qt::DropAction action,

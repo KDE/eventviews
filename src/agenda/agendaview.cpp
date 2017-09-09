@@ -2061,7 +2061,7 @@ void AgendaView::startDrag(const Akonadi::Item &incidence)
         qCCritical(CALENDARVIEW_LOG) << "No Calendar set";
         return;
     }
-    if (QDrag *drag = CalendarSupport::createDrag(incidence, calendar()->timeSpec(), this)) {
+    if (QDrag *drag = CalendarSupport::createDrag(incidence, this)) {
         drag->exec();
     }
 }

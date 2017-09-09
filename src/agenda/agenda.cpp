@@ -578,8 +578,7 @@ bool Agenda::eventFilter_drag(QObject *obj, QDropEvent *de)
         }
 
         const QList<QUrl> incidenceUrls = CalendarSupport::incidenceItemUrls(md);
-        const KCalCore::Incidence::List incidences =
-            CalendarSupport::incidences(md, d->mCalendar->mETMCalendar->timeSpec());
+        const KCalCore::Incidence::List incidences = CalendarSupport::incidences(md);
 
         Q_ASSERT(!incidenceUrls.isEmpty() || !incidences.isEmpty());
 
