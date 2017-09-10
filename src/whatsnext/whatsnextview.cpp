@@ -33,7 +33,7 @@
 #include <KIconLoader>
 
 #include <QBoxLayout>
-#include <KLocale>
+
 using namespace EventViews;
 
 void WhatsNextTextBrowser::setSource(const QUrl &name)
