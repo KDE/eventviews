@@ -318,7 +318,7 @@ void JournalFrame::readJournal(const Akonadi::Item &j)
     dateFormat.setFontWeight(QFont::Bold);
     dateFormat.setFontPointSize(baseFontSize + 1);
     cursor.insertText(KCalUtils::IncidenceFormatter::dateTimeToString(
-                          journal->dtStart(), journal->allDay()), dateFormat);
+                          journal->dtStart().dateTime(), journal->allDay()), dateFormat);
     cursor.insertBlock();
     cursor.insertBlock();
     cursor.setBlockCharFormat(bodyFormat);

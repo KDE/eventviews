@@ -315,7 +315,7 @@ void WhatsNextView::appendTodo(const KCalCore::Incidence::Ptr &incidence)
         if (todo->hasDueDate()) {
             mText += i18nc("to-do due date", "  (Due: %1)",
                            KCalUtils::IncidenceFormatter::dateTimeToString(
-                               todo->dtDue(), todo->allDay()));
+                               todo->dtDue().dateTime(), todo->allDay()));
         }
         mText += QLatin1String("</li>\n");
     }
