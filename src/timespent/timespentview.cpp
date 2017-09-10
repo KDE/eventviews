@@ -234,29 +234,6 @@ void TimeSpentView::changeIncidenceDisplay(const Akonadi::Item &,
 
 void TimeSpentView::updateView()
 {
-    /*
-    QString text;
-
-    text = "<table width=\"100%\">\n";
-    text += "<tr bgcolor=\"#3679AD\"><td><h1>";
-    text += "<img src=\"";
-    // text +=  todo: put something there.
-    text += "\">";
-    text += "<font color=\"white\"> ";
-    text += i18n("Time tracker") + "</font></h1>";
-    text += "</td></tr>\n<tr><td>";
-
-    text += "<h2>";
-    if ( mStartDate.daysTo( mEndDate ) < 1 ) {
-      text += KLocale::global()->formatDate( mStartDate );
-    } else {
-      text += i18nc("Date from - to", "%1 - %2",
-                KLocale::global()->formatDate( mStartDate ) ,
-                KLocale::global()->formatDate( mEndDate ) );
-    }
-    text+="</h2>\n";
-    */
-
     mView->mEventList = calendar()->events(mStartDate, mEndDate, KDateTime::LocalZone);
     mView->repaint();
 }

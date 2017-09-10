@@ -257,50 +257,18 @@ TimelineView::TimelineView(QWidget *parent)
     d->mGantt->viewport()->setFixedWidth(8000);
 
     d->mGantt->viewport()->installEventFilter(this);
-
-#if 0
-    d->mGantt->setCalendarMode(true);
-    d->mGantt->setShowLegendButton(false);
-    d->mGantt->setFixedHorizon(true);
-    d->mGantt->removeColumn(0);
-    d->mGantt->addColumn(i18n("Calendar"));
-    d->mGantt->setHeaderVisible(true);
-    if (KLocale::global()->use12Clock()) {
-        d->mGantt->setHourFormat(KDGanttView::Hour_12);
-    } else {
-        d->mGantt->setHourFormat(KDGanttView::Hour_24_FourDigit);
-    }
-#else
-    qCDebug(CALENDARVIEW_LOG) << "Disabled code, port to KDGantt2";
-#endif
     d->mGantt->setItemDelegate(new GanttItemDelegate);
 
     vbox->addWidget(splitter);
 
-#if 0
-    connect(d->mGantt, SIGNAL(rescaling(KDGanttView::Scale)),
-            SLOT(overscale(KDGanttView::Scale)));
-#else
-    qCDebug(CALENDARVIEW_LOG) << "Disabled code, port to KDGantt2";
-#endif
     connect(model, &QStandardItemModel::itemChanged,
             d, &Private::itemChanged);
 
-    //TODO FIXME doubleClicked doesn't exist PORTING KDIAGRAM
-    //connect(d->mGantt, &KGantt::GraphicsView::doubleClicked,
-    //        d, &Private::itemDoubleClicked);
     connect(d->mGantt, &KGantt::GraphicsView::activated,
             d, &Private::itemSelected);
     d->mGantt->setContextMenuPolicy(Qt::CustomContextMenu);
     connect(d->mGantt, &QWidget::customContextMenuRequested,
             d, &Private::contextMenuRequested);
-
-#if 0
-    connect(d->mGantt, SIGNAL(dateTimeDoubleClicked(QDateTime)),
-            d, SLOT(newEventWithHint(QDateTime)));
-#else
-    qCDebug(CALENDARVIEW_LOG) << "Disabled code, port to KDGantt2";
-#endif
 }
 
 TimelineView::~TimelineView()
@@ -339,21 +307,6 @@ void TimelineView::showDates(const QDate &start, const QDate &end, const QDate &
 
     KGantt::DateTimeGrid *grid = static_cast<KGantt::DateTimeGrid *>(d->mGantt->grid());
     grid->setStartDateTime(QDateTime(start));
-#if 0
-    d->mGantt->setHorizonStart(QDateTime(start));
-    d->mGantt->setHorizonEnd(QDateTime(end.addDays(1)));
-    d->mGantt->setMinorScaleCount(1);
-    d->mGantt->setScale(KDGanttView::Hour);
-    d->mGantt->setMinimumScale(KDGanttView::Hour);
-    d->mGantt->setMaximumScale(KDGanttView::Hour);
-    d->mGantt->zoomToFit();
-
-    d->mGantt->setUpdateEnabled(false);
-    d->mGantt->clear();
-#else
-    qCDebug(CALENDARVIEW_LOG) << "Disabled code, port to KDGantt2";
-#endif
-
     d->mLeftView->clear();
     uint index = 0;
     // item for every calendar
@@ -458,20 +411,6 @@ bool TimelineView::eventDurationHint(QDateTime &startDt, QDateTime &endDt,
     allDay = false;
     return d->mHintDate.isValid();
 }
-
-// void TimelineView::overscale( KDGanttView::Scale scale )
-// {
-//   Q_UNUSED( scale );
-//   /* Disabled, looks *really* bogus:
-//      this triggers and endless rescaling loop; we want to set
-//      a fixed scale, the Gantt view doesn't like it and rescales
-//      (emitting a rescaling signal that leads here) and so on...
-//   //set a relative zoom factor of 1 (?!)
-//   d->mGantt->setZoomFactor( 1, false );
-//   d->mGantt->setScale( KDGanttView::Hour );
-//   d->mGantt->setMinorScaleCount( 12 );
-//   */
-// }
 
 QDate TimelineView::startDate() const
 {
