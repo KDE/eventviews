@@ -45,6 +45,7 @@
 #include <KCalCore/CalFilter>
 #include <KCalCore/CalFormat>
 #include <KCalCore/OccurrenceIterator>
+#include <KCalCore/Utils>
 
 #include <KIconLoader> // for SmallIcon()
 #include <KMessageBox>
@@ -1600,7 +1601,7 @@ void AgendaView::updateEventDates(AgendaItem *item, bool addIncidence,
     }
 
     if (!incidence->hasRecurrenceId()) {
-        item->setOccurrenceDateTime(startDt.dateTime());
+        item->setOccurrenceDateTime(KCalCore::k2q(startDt));
     }
 
     bool result;
@@ -1910,7 +1911,7 @@ bool AgendaView::displayIncidence(const  KCalCore::Incidence::Ptr &incidence, bo
             busyEvents.append(event);
         }
 
-        d->insertIncidence(incidence, t->toLocalZone().dateTime(), t->toLocalZone().dateTime(), createSelected);
+        d->insertIncidence(incidence, KCalCore::k2q(t->toLocalZone()), KCalCore::k2q(t->toLocalZone()), createSelected);
     }
 
     // Can be multiday
