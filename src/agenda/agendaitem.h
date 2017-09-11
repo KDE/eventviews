@@ -28,10 +28,9 @@
 #include <CalendarSupport/CellItem>
 
 #include <Akonadi/Calendar/ETMCalendar>
-#include <Item>
+#include <AkonadiCore/Item>
 
-#include <KDateTime>
-
+#include <QDateTime>
 #include <QWidget>
 #include <QPointer>
 
@@ -89,7 +88,7 @@ public:
                const KCalCore::Incidence::Ptr &incidence,
                int itemPos,
                int itemCount,
-               const KDateTime &qd,
+               const QDateTime &qd,
                bool isSelected,
                QWidget *parent);
     ~AgendaItem();
@@ -214,7 +213,7 @@ public:
         return mIncidence;
     }
 
-    KDateTime occurrenceDateTime() const
+    QDateTime occurrenceDateTime() const
     {
         return mOccurrenceDateTime;
     }
@@ -222,7 +221,7 @@ public:
     QDate occurrenceDate() const;
 
     // /** Update the date of this item's occurrence (not in the event) */
-    void setOccurrenceDateTime(const KDateTime &qd);
+    void setOccurrenceDateTime(const QDateTime &qd);
 
     void setText(const QString &text)
     {
@@ -297,7 +296,7 @@ private:
     EventView *mEventView = nullptr;
     MultiViewCalendar::Ptr mCalendar;
     KCalCore::Incidence::Ptr mIncidence;
-    KDateTime mOccurrenceDateTime;
+    QDateTime mOccurrenceDateTime;
     bool mValid;
     bool mCloned;
     QString mLabelText;

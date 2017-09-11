@@ -440,7 +440,7 @@ void IncidenceMonthItem::updateDates(int startOffset, int endOffset)
         case KCalUtils::RecurrenceActions::SelectedOccurrence: // Just this occurrence
         case KCalUtils::RecurrenceActions::FutureOccurrences: { // All future occurrences
             const bool thisAndFuture = (res == KCalUtils::RecurrenceActions::FutureOccurrences);
-            KDateTime occurrenceDate(mIncidence->dtStart());
+            QDateTime occurrenceDate(mIncidence->dtStart().dateTime());
             occurrenceDate.setDate(startDate());
             KCalCore::Incidence::Ptr newIncidence(KCalCore::Calendar::createException(
                     mIncidence, occurrenceDate, thisAndFuture));

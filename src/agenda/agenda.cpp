@@ -1158,7 +1158,7 @@ void Agenda::endItemAction()
     bool multiModify = false;
     // FIXME: do the cloning here...
     KCalCore::Incidence::Ptr incidence = d->mActionItem->incidence();
-    const KDateTime recurrenceId = d->mActionItem->occurrenceDateTime();
+    const auto recurrenceId = d->mActionItem->occurrenceDateTime();
 
     d->mItemMoved = d->mItemMoved && !(d->mStartCell.x() == d->mEndCell.x() &&
                                        d->mStartCell.y() == d->mEndCell.y());
@@ -1723,7 +1723,7 @@ void Agenda::setStartTime(const QTime &startHour)
 /*
   Insert AgendaItem into agenda.
 */
-AgendaItem::QPtr Agenda::insertItem(const KCalCore::Incidence::Ptr &incidence, const KDateTime &recurrenceId,
+AgendaItem::QPtr Agenda::insertItem(const KCalCore::Incidence::Ptr &incidence, const QDateTime &recurrenceId,
                                     int X, int YTop, int YBottom, int itemPos, int itemCount,
                                     bool isSelected)
 {
@@ -1769,7 +1769,7 @@ AgendaItem::QPtr Agenda::insertItem(const KCalCore::Incidence::Ptr &incidence, c
 /*
   Insert all-day AgendaItem into agenda.
 */
-AgendaItem::QPtr Agenda::insertAllDayItem(const KCalCore::Incidence::Ptr &incidence, const KDateTime &recurrenceId,
+AgendaItem::QPtr Agenda::insertAllDayItem(const KCalCore::Incidence::Ptr &incidence, const QDateTime &recurrenceId,
         int XBegin, int XEnd, bool isSelected)
 {
     if (!d->mAllDayMode) {
@@ -1806,7 +1806,7 @@ AgendaItem::QPtr Agenda::insertAllDayItem(const KCalCore::Incidence::Ptr &incide
 }
 
 AgendaItem::QPtr Agenda::createAgendaItem(const KCalCore::Incidence::Ptr &incidence, int itemPos,
-        int itemCount, const KDateTime &recurrenceId, bool isSelected)
+        int itemCount, const QDateTime &recurrenceId, bool isSelected)
 {
     if (!incidence) {
         qCWarning(CALENDARVIEW_LOG) << "Agenda::createAgendaItem() item is invalid.";
@@ -1824,7 +1824,7 @@ AgendaItem::QPtr Agenda::createAgendaItem(const KCalCore::Incidence::Ptr &incide
     return agendaItem;
 }
 
-void Agenda::insertMultiItem(const KCalCore::Incidence::Ptr &event, const KDateTime &recurrenceId, int XBegin,
+void Agenda::insertMultiItem(const KCalCore::Incidence::Ptr &event, const QDateTime &recurrenceId, int XBegin,
                              int XEnd, int YTop, int YBottom, bool isSelected)
 {
     KCalCore::Event::Ptr ev = CalendarSupport::event(event);

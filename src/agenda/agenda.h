@@ -123,13 +123,13 @@ public:
 
     void setStartTime(const QTime &startHour);
 
-    AgendaItem::QPtr insertItem(const KCalCore::Incidence::Ptr &incidence, const KDateTime &recurrenceId, int X, int YTop,
+    AgendaItem::QPtr insertItem(const KCalCore::Incidence::Ptr &incidence, const QDateTime &recurrenceId, int X, int YTop,
                                 int YBottom, int itemPos, int itemCount, bool isSelected);
 
-    AgendaItem::QPtr insertAllDayItem(const KCalCore::Incidence::Ptr &event, const KDateTime &recurrenceId, int XBegin,
+    AgendaItem::QPtr insertAllDayItem(const KCalCore::Incidence::Ptr &event, const QDateTime &recurrenceId, int XBegin,
                                       int XEnd, bool isSelected);
 
-    void insertMultiItem(const KCalCore::Incidence::Ptr &event, const KDateTime &recurrenceId, int XBegin, int XEnd,
+    void insertMultiItem(const KCalCore::Incidence::Ptr &event, const QDateTime &recurrenceId, int XBegin, int XEnd,
                          int YTop, int YBottom, bool isSelected);
 
     /**
@@ -237,7 +237,7 @@ private:
     };
 
     AgendaItem::QPtr createAgendaItem(const KCalCore::Incidence::Ptr &incidence, int itemPos,
-                                      int itemCount, const KDateTime &recurrentId, bool isSelected);
+                                      int itemCount, const QDateTime &recurrentId, bool isSelected);
 
 protected:
     /**

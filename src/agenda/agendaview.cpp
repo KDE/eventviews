@@ -272,7 +272,7 @@ public:
     AgendaItem::List agendaItems(const QString &uid) const;
 
     // insertAtDateTime is in the view's timezone
-    void insertIncidence(const KCalCore::Incidence::Ptr &, const KDateTime &recurrenceId,
+    void insertIncidence(const KCalCore::Incidence::Ptr &, const QDateTime &recurrenceId,
                          const QDateTime &insertAtDateTime, bool createSelected);
     void reevaluateIncidence(const KCalCore::Incidence::Ptr &incidence);
 
@@ -535,7 +535,7 @@ void AgendaView::Private::clearView()
 }
 
 void AgendaView::Private::insertIncidence(const KCalCore::Incidence::Ptr &incidence,
-        const KDateTime &recurrenceId, const QDateTime &insertAtDateTime,
+        const QDateTime &recurrenceId, const QDateTime &insertAtDateTime,
         bool createSelected)
 {
     if (!q->filterByCollectionSelection(incidence)) {
@@ -589,7 +589,7 @@ void AgendaView::Private::insertIncidence(const KCalCore::Incidence::Ptr &incide
         return;
     }
 
-    const QDate today = QDateTime::currentDateTime().date();
+    const QDate today = QDate::currentDate();
     if (todo && todo->isOverdue() && today >= insertAtDate) {
         mAllDayAgenda->insertAllDayItem(incidence, recurrenceId, curCol, curCol,
                                         createSelected);
@@ -1600,7 +1600,7 @@ void AgendaView::updateEventDates(AgendaItem *item, bool addIncidence,
     }
 
     if (!incidence->hasRecurrenceId()) {
-        item->setOccurrenceDateTime(startDt);
+        item->setOccurrenceDateTime(startDt.dateTime());
     }
 
     bool result;
@@ -1910,7 +1910,7 @@ bool AgendaView::displayIncidence(const  KCalCore::Incidence::Ptr &incidence, bo
             busyEvents.append(event);
         }
 
-        d->insertIncidence(incidence, t->toLocalZone(), t->toLocalZone().dateTime(), createSelected);
+        d->insertIncidence(incidence, t->toLocalZone().dateTime(), t->toLocalZone().dateTime(), createSelected);
     }
 
     // Can be multiday

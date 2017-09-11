@@ -70,7 +70,7 @@ QPixmap *AgendaItem::eventPxmp = nullptr;
 AgendaItem::AgendaItem(EventView *eventView, const MultiViewCalendar::Ptr &calendar,
                        const KCalCore::Incidence::Ptr &item,
                        int itemPos, int itemCount,
-                       const KDateTime &qd, bool isSelected, QWidget *parent)
+                       const QDateTime &qd, bool isSelected, QWidget *parent)
     : QWidget(parent), mEventView(eventView), mCalendar(calendar), mIncidence(item),
       mOccurrenceDateTime(qd), mValid(true), mCloned(false), mSelected(isSelected), mSpecialEvent(false)
 {
@@ -82,7 +82,7 @@ AgendaItem::AgendaItem(EventView *eventView, const MultiViewCalendar::Ptr &calen
     mIncidence = Incidence::Ptr(mIncidence->clone());
     if (mIncidence->customProperty("KABC", "BIRTHDAY") == QLatin1String("YES") ||
             mIncidence->customProperty("KABC", "ANNIVERSARY") == QLatin1String("YES")) {
-        const int years = EventViews::yearDiff(mIncidence->dtStart().date(), qd.toLocalZone().date());
+        const int years = EventViews::yearDiff(mIncidence->dtStart().date(), qd.toLocalTime().date());
         if (years > 0) {
             mIncidence->setReadOnly(false);
             mIncidence->setSummary(i18np("%2 (1 year)", "%2 (%1 years)", years, mIncidence->summary()));
@@ -233,14 +233,14 @@ int AgendaItem::cellWidth() const
     return mCellXRight - mCellXLeft + 1;
 }
 
-void AgendaItem::setOccurrenceDateTime(const KDateTime &qd)
+void AgendaItem::setOccurrenceDateTime(const QDateTime &qd)
 {
     mOccurrenceDateTime = qd;
 }
 
 QDate AgendaItem::occurrenceDate() const
 {
-    return mOccurrenceDateTime.toLocalZone().date();
+    return mOccurrenceDateTime.toLocalTime().date();
 }
 
 void AgendaItem::setCellXY(int X, int YTop, int YBottom)
@@ -758,7 +758,7 @@ void AgendaItem::paintIcons(QPainter *p, int &x, int y, int ft)
     const bool isTodo = mIncidence && mIncidence->type() == Incidence::TypeTodo;
 
     if (isTodo && icons.contains(EventViews::EventView::TaskIcon)) {
-        const QString iconName = mIncidence->iconName(mOccurrenceDateTime.toTimeSpec(mIncidence->dtStart().timeSpec()));
+        const QString iconName = mIncidence->iconName(KDateTime(mOccurrenceDateTime.toLocalTime()));
         conditionalPaint(p, !mSpecialEvent, x, y, ft, QIcon::fromTheme(iconName).pixmap(16, 16));
     }
 
