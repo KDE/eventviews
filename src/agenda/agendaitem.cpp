@@ -758,7 +758,7 @@ void AgendaItem::paintIcons(QPainter *p, int &x, int y, int ft)
     const bool isTodo = mIncidence && mIncidence->type() == Incidence::TypeTodo;
 
     if (isTodo && icons.contains(EventViews::EventView::TaskIcon)) {
-        const QString iconName = mIncidence->iconName(KDateTime(mOccurrenceDateTime.toLocalTime()));
+        const QString iconName = mIncidence->iconName(mOccurrenceDateTime.toLocalTime());
         conditionalPaint(p, !mSpecialEvent, x, y, ft, QIcon::fromTheme(iconName).pixmap(16, 16));
     }
 
