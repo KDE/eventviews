@@ -562,7 +562,7 @@ QVector<QPixmap> IncidenceMonthItem::icons() const
     } else if ((mIsTodo || mIsJournal) && icons.contains(mIsTodo ?
                EventView::TaskIcon :
                EventView::JournalIcon)) {
-        KDateTime occurrenceDateTime = mIncidence->dateTime(Incidence::RoleRecurrenceStart);
+        QDateTime occurrenceDateTime = KCalCore::k2q(mIncidence->dateTime(Incidence::RoleRecurrenceStart));
         occurrenceDateTime.setDate(realStartDate());
 
         const QString incidenceIconName = mIncidence->iconName(occurrenceDateTime);

@@ -115,7 +115,7 @@ void EventView::setHolidayRegion(const KHolidays::HolidayRegionPtr &holidayRegio
 
 int EventView::showMoveRecurDialog(const Incidence::Ptr &inc, const QDate &date)
 {
-    KDateTime dateTime(date, KDateTime::LocalZone);
+    QDateTime dateTime(date, QTime(0, 0), Qt::LocalTime);
 
     int availableOccurrences = KCalUtils::RecurrenceActions::availableOccurrences(inc, dateTime);
 
