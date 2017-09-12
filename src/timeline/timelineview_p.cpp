@@ -153,7 +153,7 @@ void TimelineView::Private::insertIncidence(const Akonadi::Item &incidence)
 
     for (QDate day = mStartDate; day <= mEndDate; day = day.addDays(1)) {
         KCalCore::Event::List events = q->calendar()->events(day,
-                                       KDateTime::LocalZone,
+                                       QTimeZone::systemTimeZone(),
                                        KCalCore::EventSortStartDate,
                                        KCalCore::SortDirectionAscending);
         if (events.contains(event)) {

@@ -234,7 +234,7 @@ void TimeSpentView::changeIncidenceDisplay(const Akonadi::Item &,
 
 void TimeSpentView::updateView()
 {
-    mView->mEventList = calendar()->events(mStartDate, mEndDate, KDateTime::LocalZone);
+    mView->mEventList = calendar()->events(mStartDate, mEndDate, QTimeZone::systemTimeZone());
     mView->repaint();
 }
 

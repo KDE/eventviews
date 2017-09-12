@@ -357,7 +357,7 @@ void TimelineView::showDates(const QDate &start, const QDate &end, const QDate &
 
     KCalCore::Event::List events;
     for (QDate day = start; day <= end; day = day.addDays(1)) {
-        events = calendar()->events(day, KDateTime::LocalZone,
+        events = calendar()->events(day, QTimeZone::systemTimeZone(),
                                     KCalCore::EventSortStartDate,
                                     KCalCore::SortDirectionAscending);
         Q_FOREACH (const KCalCore::Event::Ptr &event, events) {

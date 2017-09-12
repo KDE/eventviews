@@ -108,7 +108,7 @@ void WhatsNextView::updateView()
     mText += QLatin1String("</h2>\n");
 
     KCalCore::Event::List events;
-    events = calendar()->events(mStartDate, mEndDate, KDateTime::LocalZone, false);
+    events = calendar()->events(mStartDate, mEndDate, QTimeZone::systemTimeZone(), false);
     events = calendar()->sortEvents(events, KCalCore::EventSortStartDate,
                                     KCalCore::SortDirectionAscending);
 
@@ -188,7 +188,7 @@ void WhatsNextView::updateView()
 
     QStringList myEmails(CalendarSupport::KCalPrefs::instance()->allEmails());
     int replies = 0;
-    events = calendar()->events(QDate::currentDate(), QDate(2975, 12, 6), KDateTime::LocalZone);
+    events = calendar()->events(QDate::currentDate(), QDate(2975, 12, 6), QTimeZone::systemTimeZone());
     Q_FOREACH (const KCalCore::Event::Ptr &ev, events) {
         KCalCore::Attendee::Ptr me = ev->attendeeByMails(myEmails);
         if (me != nullptr) {
