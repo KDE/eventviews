@@ -29,7 +29,6 @@
 #include <CalendarSupport/Utils>
 
 #include <KCalUtils/IncidenceFormatter>
-#include <KCalCore/Utils>
 
 #include <KIconLoader>
 
@@ -128,17 +127,17 @@ void WhatsNextView::updateView()
             } else {
                 KCalCore::Recurrence *recur = ev->recurrence();
                 int duration = ev->dtStart().secsTo(ev->dtEnd());
-                KDateTime start = KCalCore::q2k(recur->getPreviousDateTime(QDateTime(mStartDate, QTime(), Qt::LocalTime)));
-                KDateTime end = start.addSecs(duration);
-                KDateTime endDate(mEndDate, QTime(23, 59, 59), KDateTime::LocalZone);
+                QDateTime start = recur->getPreviousDateTime(QDateTime(mStartDate, QTime(), Qt::LocalTime));
+                QDateTime end = start.addSecs(duration);
+                QDateTime endDate(mEndDate, QTime(23, 59, 59), Qt::LocalTime);
                 if (end.date() >= mStartDate) {
-                    appendEvent(ev, start.toLocalZone().dateTime(), end.toLocalZone().dateTime());
+                    appendEvent(ev, start.toLocalTime(), end.toLocalTime());
                 }
-                const auto times = recur->timesInInterval(KCalCore::k2q(start), KCalCore::k2q(endDate));
+                const auto times = recur->timesInInterval(start, endDate);
                 int count = times.count();
                 if (count > 0) {
                     int i = 0;
-                    if (times[0] == KCalCore::k2q(start)) {
+                    if (times[0] == start) {
                         ++i;  // start has already been appended
                     }
                     if (!times[count - 1].isValid()) {

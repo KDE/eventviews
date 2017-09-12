@@ -90,16 +90,12 @@ public:
         foreach (const KCalCore::Event::Ptr &e, mEventList)
         {
             Q_ASSERT(e);
-            KDateTime selectedStart(mTimeSpentView->mStartDate,
-            QTime(0, 0),
-            e->dtStart().timeSpec());
+            QDateTime selectedStart(mTimeSpentView->mStartDate, QTime(0, 0), KCalCore::specToZone(e->dtStart().timeSpec()));
 
-            KDateTime selectedEnd(mTimeSpentView->mEndDate.addDays(1),
-            QTime(0, 0),
-            e->dtEnd().timeSpec());
+            QDateTime selectedEnd(mTimeSpentView->mEndDate.addDays(1), QTime(0, 0), KCalCore::specToZone(e->dtEnd().timeSpec()));
 
-            KDateTime start;
-            KDateTime end;
+            QDateTime start;
+            QDateTime end;
 
             // duration of all occurrences added
             int totalDuration = 0;
@@ -109,26 +105,22 @@ public:
 
                 // timesInInterval only return events that have their start inside the interval
                 // so we resize the interval by -eventDuration
-                const auto times = e->recurrence()->timesInInterval(
-                    KCalCore::k2q(selectedStart).addSecs(-eventDuration), KCalCore::k2q(selectedEnd));
+                const auto times = e->recurrence()->timesInInterval(selectedStart.addSecs(-eventDuration), selectedEnd);
 
                 foreach (const QDateTime &dt, times) {
-                    const auto kdt = KCalCore::q2k(dt);
                     // either the event's start or the event's end must be in the view's interval
-                    if (kdt >= selectedStart ||
-                    kdt.addSecs(eventDuration) >= selectedStart) {
+                    if (dt >= selectedStart || dt.addSecs(eventDuration) >= selectedStart) {
 
-                        start = kdt > selectedStart ? kdt : selectedStart;
-                        end   = kdt.addSecs(eventDuration) < selectedEnd ?
-                        kdt.addSecs(eventDuration) : selectedEnd;
+                        start = dt > selectedStart ? dt : selectedStart;
+                        end   = dt.addSecs(eventDuration) < selectedEnd ? dt.addSecs(eventDuration) : selectedEnd;
                         totalDuration += start.secsTo(end);
                     }
                 }
 
             } else {
                 // The event's start can be before the view's start date or end after the view's end
-                start  = e->dtStart() > selectedStart ? e->dtStart() : selectedStart;
-                end    = e->dtEnd()   < selectedEnd   ? e->dtEnd()   : selectedEnd;
+                start  = KCalCore::k2q(e->dtStart()) > selectedStart ? KCalCore::k2q(e->dtStart()) : selectedStart;
+                end    = KCalCore::k2q(e->dtEnd())   < selectedEnd   ? KCalCore::k2q(e->dtEnd())   : selectedEnd;
 
                 totalDuration += start.secsTo(end);
             }

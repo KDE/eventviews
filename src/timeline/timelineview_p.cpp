@@ -32,6 +32,7 @@
 #include <CalendarSupport/Utils>
 #include <Akonadi/Calendar/IncidenceChanger>
 #include <KCalCore/OccurrenceIterator>
+#include <KCalCore/Utils>
 
 #include "calendarview_debug.h"
 
@@ -124,13 +125,13 @@ void TimelineView::Private::insertIncidence(const Akonadi::Item &aitem, const QD
     }
 
     if (incidence->recurs()) {
-        KCalCore::OccurrenceIterator occurIter(*(q->calendar()), incidence, KDateTime(day, QTime(0, 0, 0)), KDateTime(day, QTime(23, 59, 59)));
+        KCalCore::OccurrenceIterator occurIter(*(q->calendar()), incidence, QDateTime(day, QTime(0, 0, 0)), QDateTime(day, QTime(23, 59, 59)));
         while (occurIter.hasNext()) {
             occurIter.next();
             const Akonadi::Item akonadiItem = q->calendar()->item(occurIter.incidence());
-            const KDateTime startOfOccurrence = occurIter.occurrenceStartDate();
-            const KDateTime endOfOccurrence = occurIter.incidence()->endDateForStart(startOfOccurrence);
-            item->insertIncidence(akonadiItem, startOfOccurrence.toLocalZone().dateTime(),  endOfOccurrence.toLocalZone().dateTime());
+            const QDateTime startOfOccurrence = occurIter.occurrenceStartDate();
+            const QDateTime endOfOccurrence = KCalCore::k2q(occurIter.incidence()->endDateForStart(KCalCore::q2k(startOfOccurrence)));
+            item->insertIncidence(akonadiItem, startOfOccurrence.toLocalTime(),  endOfOccurrence.toLocalTime());
         }
     } else {
         if (incidence->dtStart().date() == day ||

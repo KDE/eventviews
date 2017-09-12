@@ -1810,10 +1810,9 @@ bool AgendaView::displayIncidence(const  KCalCore::Incidence::Ptr &incidence, bo
 
     KCalCore::Event::Ptr event = CalendarSupport::event(incidence);
     const QDate today = QDate::currentDate();
-    KCalCore::DateTimeList::iterator t;
 
-    KDateTime firstVisibleDateTime(d->mSelectedDates.first(), KDateTime::LocalZone);
-    KDateTime lastVisibleDateTime(d->mSelectedDates.last(), KDateTime::LocalZone);
+    QDateTime firstVisibleDateTime(d->mSelectedDates.first(), QTime(0, 0, 0), Qt::LocalTime);
+    QDateTime lastVisibleDateTime(d->mSelectedDates.last(), QTime(23, 59, 59, 999), Qt::LocalTime);
 
     // Optimization, very cheap operation that discards incidences that aren't in the timespan
     if (!d->mightBeVisible(incidence)) {
@@ -1822,10 +1821,10 @@ bool AgendaView::displayIncidence(const  KCalCore::Incidence::Ptr &incidence, bo
 
     lastVisibleDateTime.setTime(QTime(23, 59, 59, 59));
     firstVisibleDateTime.setTime(QTime(0, 0));
-    KCalCore::DateTimeList dateTimeList;
+    KCalCore::SortableList<QDateTime> dateTimeList;
 
-    const KDateTime incDtStart = incidence->dtStart().toLocalZone();
-    const KDateTime incDtEnd = incidence->dateTime(KCalCore::Incidence::RoleEnd).toLocalZone();
+    const QDateTime incDtStart = KCalCore::k2q(incidence->dtStart().toLocalZone());
+    const QDateTime incDtEnd = KCalCore::k2q(incidence->dateTime(KCalCore::Incidence::RoleEnd).toLocalZone());
 
     bool alreadyAddedToday = false;
 
@@ -1839,13 +1838,13 @@ bool AgendaView::displayIncidence(const  KCalCore::Incidence::Ptr &incidence, bo
         // if there's a multiday event that starts before firstVisibleDateTime but ends after
         // lets include it. timesInInterval() ignores incidences that aren't totaly inside
         // the range
-        const KDateTime startDateTimeWithOffset = firstVisibleDateTime.addDays(-eventDuration);
+        const QDateTime startDateTimeWithOffset = firstVisibleDateTime.addDays(-eventDuration);
 
         KCalCore::OccurrenceIterator rIt(*calendar(), incidence,
                                          startDateTimeWithOffset, lastVisibleDateTime);
         while (rIt.hasNext()) {
             rIt.next();
-            const auto occurrenceDate = rIt.occurrenceStartDate().toLocalZone().dateTime();
+            const auto occurrenceDate = rIt.occurrenceStartDate().toLocalTime();
             const bool makesDayBusy =
                 preferences()->colorAgendaBusyDays() && makesWholeDayBusy(rIt.incidence());
             if (makesDayBusy) {
@@ -1860,13 +1859,13 @@ bool AgendaView::displayIncidence(const  KCalCore::Incidence::Ptr &incidence, bo
         }
 
     } else {
-        KDateTime dateToAdd; // date to add to our date list
-        KDateTime incidenceStart;
-        KDateTime incidenceEnd;
+        QDateTime dateToAdd; // date to add to our date list
+        QDateTime incidenceStart;
+        QDateTime incidenceEnd;
 
         if (todo && todo->hasDueDate() && !todo->isOverdue()) {
             // If it's not overdue it will be shown at the original date (not today)
-            dateToAdd = todo->dtDue().toLocalZone();
+            dateToAdd = KCalCore::k2q(todo->dtDue().toLocalZone());
 
             // To-dos are drawn with the bottom of the rectangle at dtDue
             // if dtDue is at 00:00, then it should be displayed in the previous day, at 23:59
@@ -1880,7 +1879,7 @@ bool AgendaView::displayIncidence(const  KCalCore::Incidence::Ptr &incidence, bo
             incidenceEnd = incDtEnd;
         }
 
-        if (dateToAdd.isValid() && dateToAdd.isDateOnly()) {
+        if (dateToAdd.isValid() && incidence->allDay()) {
             // so comparisons with < > actually work
             dateToAdd.setTime(QTime(0, 0));
             incidenceEnd.setTime(QTime(23, 59, 59, 59));
@@ -1892,7 +1891,7 @@ bool AgendaView::displayIncidence(const  KCalCore::Incidence::Ptr &incidence, bo
     }
 
     // ToDo items shall be displayed today if they are overdue
-    const KDateTime dateTimeToday = KDateTime(today, KDateTime::LocalZone);
+    const QDateTime dateTimeToday = QDateTime(today, QTime(0, 0), Qt::LocalTime);
     if (todo &&
             todo->isOverdue() &&
             dateTimeToday >= firstVisibleDateTime &&
@@ -1905,13 +1904,13 @@ bool AgendaView::displayIncidence(const  KCalCore::Incidence::Ptr &incidence, bo
     }
 
     const bool makesDayBusy = preferences()->colorAgendaBusyDays() && makesWholeDayBusy(incidence);
-    for (t = dateTimeList.begin(); t != dateTimeList.end(); ++t) {
+    for (auto t = dateTimeList.begin(); t != dateTimeList.end(); ++t) {
         if (makesDayBusy) {
             KCalCore::Event::List &busyEvents = d->mBusyDays[(*t).date()];
             busyEvents.append(event);
         }
 
-        d->insertIncidence(incidence, KCalCore::k2q(t->toLocalZone()), KCalCore::k2q(t->toLocalZone()), createSelected);
+        d->insertIncidence(incidence, t->toLocalTime(), t->toLocalTime(), createSelected);
     }
 
     // Can be multiday
