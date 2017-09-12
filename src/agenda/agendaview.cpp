@@ -597,7 +597,7 @@ void AgendaView::Private::insertIncidence(const KCalCore::Incidence::Ptr &incide
     } else if (incidence->allDay()) {
         mAllDayAgenda->insertAllDayItem(incidence, recurrenceId, beginX, endX,
                                         createSelected);
-    } else if (event && event->isMultiDay(KDateTime::LocalZone)) {
+    } else if (event && event->isMultiDay(QTimeZone::systemTimeZone())) {
         // TODO: We need a better isMultiDay(), one that receives the occurrence.
 
         // In the single-day handling code there's a neat comment on why

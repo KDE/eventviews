@@ -1020,7 +1020,7 @@ void AgendaItem::paintEvent(QPaintEvent *ev)
         longH.clear();
 
         if (const KCalCore::Event::Ptr event = CalendarSupport::event(mIncidence)) {
-            if (event->isMultiDay(KDateTime::LocalZone)) {
+            if (event->isMultiDay(QTimeZone::systemTimeZone())) {
                 // multi-day, all-day event
                 shortH =
                     i18n("%1 - %2",
