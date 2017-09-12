@@ -487,7 +487,7 @@ QString IncidenceMonthItem::text(bool end) const
                 QTime time;
                 if (mIncidence->recurs()) {
                     const auto start = mIncidence->dtStart().addDays(mRecurDayOffset).addSecs(-1);
-                    time  = mIncidence->recurrence()->getNextDateTime(start).toLocalZone().time();
+                    time  = mIncidence->recurrence()->getNextDateTime(KCalCore::k2q(start)).toLocalTime().time();
                 } else {
                     time = mIncidence->dtStart().toLocalZone().time();
                 }

@@ -187,11 +187,11 @@ bool ListView::Private::ListItemVisitor::visit(const Event::Ptr &e)
     mItem->end = e->dtEnd().toLocalZone().dateTime();
     if (e->recurs()) {
         const int duration = e->dtStart().secsTo(e->dtEnd());
-        KDateTime kdt(mStartDate, QTime(0,0,0));
+        QDateTime kdt(mStartDate, QTime(0,0,0));
         kdt = kdt.addSecs(-1);
-        mItem->start = e->recurrence()->getNextDateTime(kdt).toLocalZone().dateTime();
+        mItem->start = e->recurrence()->getNextDateTime(kdt).toLocalTime();
         mItem->end = mItem->start.addSecs(duration);
-        next = e->recurrence()->getNextDateTime(KDateTime(mItem->start)).toLocalZone().dateTime();
+        next = e->recurrence()->getNextDateTime(mItem->start).toLocalTime();
     }
 
     mItem->setText(Summary_Column, cleanSummary(e->summary(), next));

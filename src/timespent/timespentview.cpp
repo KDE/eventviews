@@ -30,6 +30,8 @@
 #include <CalendarSupport/KCalPrefs>
 #include <CalendarSupport/Utils>
 
+#include <KCalCore/Utils>
+
 #include <QBoxLayout>
 #include <QPainter>
 #include <QPaintEvent>
@@ -107,10 +109,11 @@ public:
 
                 // timesInInterval only return events that have their start inside the interval
                 // so we resize the interval by -eventDuration
-                KCalCore::DateTimeList times = e->recurrence()->timesInInterval(
-                    selectedStart.addSecs(-eventDuration), selectedEnd);
+                const auto times = e->recurrence()->timesInInterval(
+                    KCalCore::k2q(selectedStart).addSecs(-eventDuration), KCalCore::k2q(selectedEnd));
 
-                foreach (const KDateTime &kdt, times) {
+                foreach (const QDateTime &dt, times) {
+                    const auto kdt = KCalCore::q2k(dt);
                     // either the event's start or the event's end must be in the view's interval
                     if (kdt >= selectedStart ||
                     kdt.addSecs(eventDuration) >= selectedStart) {
