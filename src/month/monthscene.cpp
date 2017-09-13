@@ -491,7 +491,7 @@ void MonthScene::mouseDoubleClickEvent(QGraphicsSceneMouseEvent *mouseEvent)
 {
     QPointF pos = mouseEvent->scenePos();
     repeatTimer.stop();
-    MonthGraphicsItem *iItem = dynamic_cast<MonthGraphicsItem *>(itemAt(pos));
+    MonthGraphicsItem *iItem = dynamic_cast<MonthGraphicsItem *>(itemAt(pos, {}));
     if (iItem) {
         if (iItem->monthItem()) {
             IncidenceMonthItem *tmp = qobject_cast<IncidenceMonthItem *>(iItem->monthItem());
@@ -516,7 +516,7 @@ void MonthScene::mouseMoveEvent(QGraphicsSceneMouseEvent *mouseEvent)
     // Change cursor depending on the part of the item it hovers to inform
     // the user that he can resize the item.
     if (mActionType == None) {
-        MonthGraphicsItem *iItem = dynamic_cast<MonthGraphicsItem *>(itemAt(pos));
+        MonthGraphicsItem *iItem = dynamic_cast<MonthGraphicsItem *>(itemAt(pos, {}));
         if (iItem) {
             if (iItem->monthItem()->isResizable() &&
                     iItem->isBeginItem() && iItem->mapFromScene(pos).x() <= 10) {
@@ -577,7 +577,7 @@ void MonthScene::mousePressEvent(QGraphicsSceneMouseEvent *mouseEvent)
     mClickedItem = nullptr;
     mCurrentIndicator = nullptr;
 
-    MonthGraphicsItem *iItem = dynamic_cast<MonthGraphicsItem *>(itemAt(pos));
+    MonthGraphicsItem *iItem = dynamic_cast<MonthGraphicsItem *>(itemAt(pos, {}));
     if (iItem) {
         mClickedItem = iItem->monthItem();
 
@@ -611,7 +611,7 @@ void MonthScene::mousePressEvent(QGraphicsSceneMouseEvent *mouseEvent)
             }
         }
         mouseEvent->accept();
-    } else if (ScrollIndicator *scrollItem = dynamic_cast<ScrollIndicator *>(itemAt(pos))) {
+    } else if (ScrollIndicator *scrollItem = dynamic_cast<ScrollIndicator *>(itemAt(pos, {}))) {
         clickOnScrollIndicator(scrollItem);
         mCurrentIndicator = scrollItem;
         repeatTimer.start(AUTO_REPEAT_DELAY, this);
@@ -648,7 +648,7 @@ void MonthScene::helpEvent(QGraphicsSceneHelpEvent *helpEvent)
 {
     // Find the first item that does tooltips
     const QPointF pos = helpEvent->scenePos();
-    MonthGraphicsItem *toolTipItem = dynamic_cast<MonthGraphicsItem *>(itemAt(pos));
+    MonthGraphicsItem *toolTipItem = dynamic_cast<MonthGraphicsItem *>(itemAt(pos, {}));
 
     // Show or hide the tooltip
     QString text;
