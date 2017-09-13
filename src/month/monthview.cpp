@@ -35,6 +35,7 @@
 
 #include <KCalCore/OccurrenceIterator>
 #include <KCheckableProxyModel>
+#include <KLocalizedString>
 #include <QIcon>
 #include "calendarview_debug.h"
 

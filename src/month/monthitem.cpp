@@ -32,7 +32,6 @@
 #include <CalendarSupport/KCalPrefs>
 #include <CalendarSupport/Utils>
 
-#include <KCalCore/Utils>
 #include <KCalUtils/IncidenceFormatter>
 #include <KCalUtils/RecurrenceActions>
 
@@ -365,8 +364,8 @@ QDate IncidenceMonthItem::realStartDate() const
         return QDate();
     }
 
-    const KDateTime dt = mIncidence->dateTime(Incidence::RoleDisplayStart);
-    const QDate start = dt.isDateOnly() ? dt.date() : dt.toLocalZone().date();
+    const QDateTime dt = mIncidence->dateTime(Incidence::RoleDisplayStart);
+    const QDate start = dt.toLocalTime().date();
 
     return start.addDays(mRecurDayOffset);
 }
@@ -376,8 +375,8 @@ QDate IncidenceMonthItem::realEndDate() const
         return QDate();
     }
 
-    const KDateTime dt = mIncidence->dateTime(KCalCore::Incidence::RoleDisplayEnd);
-    const QDate end = dt.isDateOnly() ? dt.date() : dt.toLocalZone().date();
+    const QDateTime dt = mIncidence->dateTime(KCalCore::Incidence::RoleDisplayEnd);
+    const QDate end = dt.toLocalTime().date();
 
     return end.addDays(mRecurDayOffset);
 }
@@ -441,7 +440,7 @@ void IncidenceMonthItem::updateDates(int startOffset, int endOffset)
         case KCalUtils::RecurrenceActions::SelectedOccurrence: // Just this occurrence
         case KCalUtils::RecurrenceActions::FutureOccurrences: { // All future occurrences
             const bool thisAndFuture = (res == KCalUtils::RecurrenceActions::FutureOccurrences);
-            QDateTime occurrenceDate(KCalCore::k2q(mIncidence->dtStart()));
+            QDateTime occurrenceDate(mIncidence->dtStart());
             occurrenceDate.setDate(startDate());
             KCalCore::Incidence::Ptr newIncidence(KCalCore::Calendar::createException(
                     mIncidence, occurrenceDate, thisAndFuture));
@@ -481,20 +480,20 @@ QString IncidenceMonthItem::text(bool end) const
         QString timeStr;
         if (mIsTodo) {
             KCalCore::Todo::Ptr todo = mIncidence.staticCast<Todo>();
-            timeStr = QLocale().toString(todo->dtDue().toLocalZone().time(), QLocale::ShortFormat);
+            timeStr = QLocale().toString(todo->dtDue().toLocalTime().time(), QLocale::ShortFormat);
         } else {
             if (!end) {
                 QTime time;
                 if (mIncidence->recurs()) {
                     const auto start = mIncidence->dtStart().addDays(mRecurDayOffset).addSecs(-1);
-                    time  = mIncidence->recurrence()->getNextDateTime(KCalCore::k2q(start)).toLocalTime().time();
+                    time  = mIncidence->recurrence()->getNextDateTime(start).toLocalTime().time();
                 } else {
-                    time = mIncidence->dtStart().toLocalZone().time();
+                    time = mIncidence->dtStart().toLocalTime().time();
                 }
                 timeStr = QLocale().toString(time, QLocale::ShortFormat);
             } else {
                 KCalCore::Event::Ptr event = mIncidence.staticCast<Event>();
-                timeStr = QLocale().toString(event->dtEnd().toLocalZone().time(), QLocale::ShortFormat);
+                timeStr = QLocale().toString(event->dtEnd().toLocalTime().time(), QLocale::ShortFormat);
             }
         }
         if (!timeStr.isEmpty()) {
@@ -562,7 +561,7 @@ QVector<QPixmap> IncidenceMonthItem::icons() const
     } else if ((mIsTodo || mIsJournal) && icons.contains(mIsTodo ?
                EventView::TaskIcon :
                EventView::JournalIcon)) {
-        QDateTime occurrenceDateTime = KCalCore::k2q(mIncidence->dateTime(Incidence::RoleRecurrenceStart));
+        QDateTime occurrenceDateTime = mIncidence->dateTime(Incidence::RoleRecurrenceStart);
         occurrenceDateTime.setDate(realStartDate());
 
         const QString incidenceIconName = mIncidence->iconName(occurrenceDateTime);
@@ -615,7 +614,7 @@ QColor IncidenceMonthItem::bgColor() const
         Q_ASSERT(todo);
         if (todo) {
             const QDate dtRecurrence = // this is dtDue if there's no dtRecurrence
-                todo->dtRecurrence().toLocalZone().date();
+                todo->dtRecurrence().toLocalTime().date();
             const QDate today = QDate::currentDate();
             if (todo->isOverdue() && today > startDate() && startDate() >= dtRecurrence) {
                 bgColor = prefs->todoOverdueColor();
@@ -689,8 +688,8 @@ void IncidenceMonthItem::setNewDates(const KCalCore::Incidence::Ptr &incidence,
         const int offset = startOffset;
 
         KCalCore::Todo::Ptr todo = incidence.staticCast<Todo>();
-        KDateTime due   = todo->dtDue();
-        KDateTime start = todo->dtStart();
+        QDateTime due   = todo->dtDue();
+        QDateTime start = todo->dtStart();
         if (due.isValid()) {   // Due has priority over start.
             // We will only move the due date, unlike events where we move both.
             due = due.addDays(offset);

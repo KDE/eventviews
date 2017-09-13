@@ -264,7 +264,7 @@ void WhatsNextView::appendEvent(const KCalCore::Incidence::Ptr &incidence, const
     if (const KCalCore::Event::Ptr event = incidence.dynamicCast<KCalCore::Event>()) {
         auto starttime = start.toLocalTime();
         if (!starttime.isValid()) {
-            starttime = event->dtStart().dateTime().toLocalTime();
+            starttime = event->dtStart().toLocalTime();
         }
         auto endtime = end.toLocalTime();
         if (!endtime.isValid()) {
@@ -315,7 +315,7 @@ void WhatsNextView::appendTodo(const KCalCore::Incidence::Ptr &incidence)
         if (todo->hasDueDate()) {
             mText += i18nc("to-do due date", "  (Due: %1)",
                            KCalUtils::IncidenceFormatter::dateTimeToString(
-                               todo->dtDue().dateTime(), todo->allDay()));
+                               todo->dtDue(), todo->allDay()));
         }
         mText += QLatin1String("</li>\n");
     }

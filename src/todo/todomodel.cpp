@@ -280,10 +280,10 @@ QVariant TodoModel::data(const QModelIndex &index, int role) const
         case PercentColumn:
             return QVariant(todo->percentComplete());
         case StartDateColumn:
-            return todo->hasStartDate() ? QLocale().toString(todo->dtStart().toLocalZone().date(), QLocale::ShortFormat)
+            return todo->hasStartDate() ? QLocale().toString(todo->dtStart().toLocalTime().date(), QLocale::ShortFormat)
                    : QVariant(QString());
         case DueDateColumn:
-            return todo->hasDueDate() ? QLocale().toString(todo->dtDue().toLocalZone().date(), QLocale::ShortFormat)
+            return todo->hasDueDate() ? QLocale().toString(todo->dtDue().toLocalTime().date(), QLocale::ShortFormat)
                    : QVariant(QString());
         case CategoriesColumn: {
             QString categories = todo->categories().join(
@@ -442,7 +442,7 @@ bool TodoModel::setData(const QModelIndex &index, const QVariant &value, int rol
         if (role == Qt::CheckStateRole && index.column() == 0) {
             const bool checked = static_cast<Qt::CheckState>(value.toInt()) == Qt::Checked;
             if (checked) {
-                todo->setCompleted(KDateTime::currentLocalDateTime());    // Because it calls Todo::recurTodo()
+                todo->setCompleted(QDateTime::currentDateTimeUtc());    // Because it calls Todo::recurTodo()
             } else {
                 todo->setCompleted(false);
             }
@@ -462,13 +462,13 @@ bool TodoModel::setData(const QModelIndex &index, const QVariant &value, int rol
                 todo->setPercentComplete(value.toInt());
                 break;
             case StartDateColumn: {
-                KDateTime tmp = todo->dtStart();
+                QDateTime tmp = todo->dtStart();
                 tmp.setDate(value.toDate());
                 todo->setDtStart(tmp);
             }
             break;
             case DueDateColumn: {
-                KDateTime tmp = todo->dtDue();
+                QDateTime tmp = todo->dtDue();
                 tmp.setDate(value.toDate());
                 todo->setDtDue(tmp);
             }

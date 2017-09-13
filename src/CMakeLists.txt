@@ -93,6 +93,11 @@ PUBLIC
   KF5::CalendarUtils
   KF5::AkonadiCalendar
 PRIVATE
+  KF5::Completion
+  KF5::Service
+  KF5::IconThemes
+  KF5::GuiAddons
+  KF5::I18n
   KF5::LibkdepimAkonadi
   KF5::Codecs
   KGantt

@@ -882,7 +882,7 @@ void TodoView::copyTodoToDate(const QDate &date)
 
     todo->setUid(KCalCore::CalFormat::createUniqueId());
 
-    KDateTime due = todo->dtDue();
+    QDateTime due = todo->dtDue();
     due.setDate(date);
     todo->setDtDue(due);
 
@@ -968,7 +968,7 @@ void TodoView::setNewDate(const QDate &date)
     if (calendar()->hasRight(todoItem, Akonadi::Collection::CanChangeItem)) {
         KCalCore::Todo::Ptr oldTodo(todo->clone());
 
-        KDateTime dt(date);
+        QDateTime dt(date);
 
         if (!todo->allDay()) {
             dt.setTime(todo->dtDue().time());
@@ -998,7 +998,7 @@ void TodoView::setNewPercentage(QAction *action)
 
         int percentage = mPercentage.value(action);
         if (percentage == 100) {
-            todo->setCompleted(KDateTime::currentLocalDateTime());
+            todo->setCompleted(QDateTime::currentDateTime());
             todo->setPercentComplete(100);
         } else {
             todo->setPercentComplete(percentage);

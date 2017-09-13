@@ -45,7 +45,6 @@
 #include <KCalCore/CalFilter>
 #include <KCalCore/CalFormat>
 #include <KCalCore/OccurrenceIterator>
-#include <KCalCore/Utils>
 
 #include <KIconLoader> // for SmallIcon()
 #include <KMessageBox>
@@ -301,10 +300,10 @@ private:
 
 bool AgendaView::Private::datesEqual(const KCalCore::Incidence::Ptr &one, const KCalCore::Incidence::Ptr &two) const
 {
-    const auto start1 = one->dtStart().dateTime();
-    const auto start2 = two->dtStart().dateTime();
-    const auto end1   = one->dateTime(KCalCore::Incidence::RoleDisplayEnd).dateTime();
-    const auto end2   = two->dateTime(KCalCore::Incidence::RoleDisplayEnd).dateTime();
+    const auto start1 = one->dtStart();
+    const auto start2 = two->dtStart();
+    const auto end1   = one->dateTime(KCalCore::Incidence::RoleDisplayEnd);
+    const auto end2   = two->dateTime(KCalCore::Incidence::RoleDisplayEnd);
 
     if (start1.isValid() ^ start2.isValid()) {
         return false;
@@ -573,7 +572,7 @@ void AgendaView::Private::insertIncidence(const KCalCore::Incidence::Ptr &incide
     if (event) {
         const QDate firstVisibleDate = mSelectedDates.first();
         // its crossing bounderies, lets calculate beginX and endX
-        const int duration = event->dtStart().toLocalZone().daysTo(event->dtEnd());
+        const int duration = event->dtStart().toLocalTime().daysTo(event->dtEnd());
         if (insertAtDate < firstVisibleDate) {
             beginX = curCol + firstVisibleDate.daysTo(insertAtDate);
             endX   = beginX + duration;
@@ -661,11 +660,11 @@ void AgendaView::Private::insertIncidence(const KCalCore::Incidence::Ptr &incide
             QTime t;
             if (todo->recurs()) {
                 // The time we get depends on the insertAtDate, because of daylight savings changes
-                const KDateTime ocurrrenceDateTime = KDateTime(insertAtDate, todo->dtDue().time(),
-                                                     todo->dtDue().timeSpec());
-                t = ocurrrenceDateTime.toLocalZone().time();
+                const QDateTime ocurrrenceDateTime = QDateTime(insertAtDate, todo->dtDue().time(),
+                                                               todo->dtDue().timeZone());
+                t = ocurrrenceDateTime.toLocalTime().time();
             } else {
-                t = todo->dtDue().toLocalZone().time();
+                t = todo->dtDue().toLocalTime().time();
             }
 
             if (t == QTime(0, 0) && !todo->recurs()) {
@@ -1477,7 +1476,7 @@ void AgendaView::updateEventDates(AgendaItem *item, bool addIncidence,
                               << "; item->itemPos(): " << item->itemPos()
                               << "; item->itemCount(): " << item->itemCount();
 
-    KDateTime startDt, endDt;
+    QDateTime startDt, endDt;
 
     // Start date of this incidence, calculate the offset from it
     // (so recurring and non-recurring items can be treated exactly the same,
@@ -1543,16 +1542,16 @@ void AgendaView::updateEventDates(AgendaItem *item, bool addIncidence,
         startDt = incidence->dtStart();
         // convert to calendar timespec because we then manipulate it
         // with time coming from the calendar
-        startDt = startDt.toLocalZone();
+        startDt = startDt.toLocalTime();
         startDt = startDt.addDays(daysOffset);
-        if (!startDt.isDateOnly()) {
+        if (!incidence->allDay()) {
             startDt.setTime(startTime);
         }
         endDt = startDt.addDays(daysLength);
-        if (!endDt.isDateOnly()) {
+        if (!incidence->allDay()) {
             endDt.setTime(endTime);
         }
-        if (incidence->dtStart().toLocalZone() == startDt && ev->dtEnd().toLocalZone() == endDt) {
+        if (incidence->dtStart().toLocalTime() == startDt && ev->dtEnd().toLocalTime() == endDt) {
             // No change
             QTimer::singleShot(0, this, SLOT(updateView()));
             return;
@@ -1561,19 +1560,19 @@ void AgendaView::updateEventDates(AgendaItem *item, bool addIncidence,
         startDt = td->hasStartDate() ? td->dtStart() : td->dtDue();
         // convert to calendar timespec because we then manipulate it with time coming from
         // the calendar
-        startDt = startDt.toLocalZone();
+        startDt = startDt.toLocalTime();
         startDt.setDate(thisDate.addDays(td->dtDue().daysTo(startDt)));
-        if (!startDt.isDateOnly()) {
+        if (!td->allDay()) {
             startDt.setTime(startTime);
         }
 
         endDt = startDt;
         endDt.setDate(thisDate);
-        if (!endDt.isDateOnly()) {
+        if (!td->allDay()) {
             endDt.setTime(endTime);
         }
 
-        if (td->dtDue().toLocalZone() == endDt) {
+        if (td->dtDue().toLocalTime() == endDt) {
             // No change
             QMetaObject::invokeMethod(this, "updateView", Qt::QueuedConnection);
             return;
@@ -1601,7 +1600,7 @@ void AgendaView::updateEventDates(AgendaItem *item, bool addIncidence,
     }
 
     if (!incidence->hasRecurrenceId()) {
-        item->setOccurrenceDateTime(KCalCore::k2q(startDt));
+        item->setOccurrenceDateTime(startDt);
     }
 
     bool result;
@@ -1701,21 +1700,21 @@ void AgendaView::showIncidences(const Akonadi::Item::List &incidences, const QDa
         calendar()->setFilter(nullptr);
     }
 
-    KDateTime start = CalendarSupport::incidence(incidences.first())->dtStart().toLocalZone();
-    KDateTime end = CalendarSupport::incidence(incidences.first())->dateTime(KCalCore::Incidence::RoleEnd).toLocalZone();
+    QDateTime start = CalendarSupport::incidence(incidences.first())->dtStart().toLocalTime();
+    QDateTime end = CalendarSupport::incidence(incidences.first())->dateTime(KCalCore::Incidence::RoleEnd).toLocalTime();
     Akonadi::Item first = incidences.first();
     Q_FOREACH (const Akonadi::Item &aitem, incidences) {
-        if (CalendarSupport::incidence(aitem)->dtStart().toLocalZone() < start) {
+        if (CalendarSupport::incidence(aitem)->dtStart().toLocalTime() < start) {
             first = aitem;
         }
         start = qMin(start,
-                     CalendarSupport::incidence(aitem)->dtStart().toLocalZone());
+                     CalendarSupport::incidence(aitem)->dtStart().toLocalTime());
         end = qMax(start,
                    CalendarSupport::incidence(aitem)->dateTime(
-                       KCalCore::Incidence::RoleEnd).toLocalZone());
+                       KCalCore::Incidence::RoleEnd).toLocalTime());
     }
 
-    end.toTimeSpec(start);      // allow direct comparison of dates
+    end.toTimeZone(start.timeZone());      // allow direct comparison of dates
     if (start.date().daysTo(end.date()) + 1 <= currentDateCount()) {
         showDates(start.date(), end.date());
     } else {
@@ -1823,8 +1822,8 @@ bool AgendaView::displayIncidence(const  KCalCore::Incidence::Ptr &incidence, bo
     firstVisibleDateTime.setTime(QTime(0, 0));
     KCalCore::SortableList<QDateTime> dateTimeList;
 
-    const QDateTime incDtStart = KCalCore::k2q(incidence->dtStart().toLocalZone());
-    const QDateTime incDtEnd = KCalCore::k2q(incidence->dateTime(KCalCore::Incidence::RoleEnd).toLocalZone());
+    const QDateTime incDtStart = incidence->dtStart().toLocalTime();
+    const QDateTime incDtEnd = incidence->dateTime(KCalCore::Incidence::RoleEnd).toLocalTime();
 
     bool alreadyAddedToday = false;
 
@@ -1865,7 +1864,7 @@ bool AgendaView::displayIncidence(const  KCalCore::Incidence::Ptr &incidence, bo
 
         if (todo && todo->hasDueDate() && !todo->isOverdue()) {
             // If it's not overdue it will be shown at the original date (not today)
-            dateToAdd = KCalCore::k2q(todo->dtDue().toLocalZone());
+            dateToAdd = todo->dtDue().toLocalTime();
 
             // To-dos are drawn with the bottom of the rectangle at dtDue
             // if dtDue is at 00:00, then it should be displayed in the previous day, at 23:59
@@ -2000,9 +1999,8 @@ void AgendaView::slotIncidencesDropped(const KCalCore::Incidence::List &incidenc
 
     const QDate day = d->mSelectedDates[gpos.x()];
     const QTime time = d->mAgenda->gyToTime(gpos.y());
-    KDateTime newTime(day, KDateTime::LocalZone);
-    newTime.setDateOnly(allDay);
-
+    QDateTime newTime(day, {}, Qt::LocalTime);
+ 
     Q_FOREACH (const KCalCore::Incidence::Ptr &incidence, incidences) {
         const Akonadi::Item existingItem = calendar()->item(incidence);
         const bool existsInSameCollection = existingItem.isValid() &&

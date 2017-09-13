@@ -210,8 +210,8 @@ int TodoViewSortFilterProxyModel::compareStartDates(const QModelIndex &left,
         // For sorting, no date is considered a very big date
         return rightIsEmpty ? -1 : 1;
     } else if (!leftIsEmpty) {   // Both have start dates
-        const auto leftDateTime = leftTodo->dtStart().dateTime();
-        const auto rightDateTime = rightTodo->dtStart().dateTime();
+        const auto leftDateTime = leftTodo->dtStart();
+        const auto rightDateTime = rightTodo->dtStart();
 
         if (leftDateTime == rightDateTime) {
             return 0;
@@ -257,8 +257,8 @@ int TodoViewSortFilterProxyModel::compareDueDates(const QModelIndex &left,
         // For sorting, no date is considered a very big date
         return rightIsEmpty ? -1 : 1;
     } else if (!leftIsEmpty) {   // Both have due dates
-        const auto leftDateTime = leftTodo->dtDue().dateTime();
-        const auto rightDateTime = rightTodo->dtDue().dateTime();
+        const auto leftDateTime = leftTodo->dtDue();
+        const auto rightDateTime = rightTodo->dtDue();
 
         if (leftDateTime == rightDateTime) {
             return 0;

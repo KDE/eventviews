@@ -48,10 +48,10 @@ void TimelineItem::insertIncidence(const Akonadi::Item &aitem,
     QDateTime start(_start);
     QDateTime end(_end);
     if (!start.isValid()) {
-        start = incidence->dtStart().toLocalZone().dateTime();
+        start = incidence->dtStart().toLocalTime();
     }
     if (!end.isValid()) {
-        end = incidence->dateTime(Incidence::RoleEnd).toLocalZone().dateTime();
+        end = incidence->dateTime(Incidence::RoleEnd).toLocalTime();
     }
     if (incidence->allDay()) {
         end = end.addDays(1);

@@ -99,10 +99,10 @@ bool ListViewItem::operator<(const QTreeWidgetItem &other) const
     }
     case EndDateTime_Column: {
         Incidence::Ptr thisInc = CalendarSupport::incidence(mIncidence);
-        const auto thisEnd = thisInc->dateTime(Incidence::RoleEnd).toLocalZone().dateTime();
+        const auto thisEnd = thisInc->dateTime(Incidence::RoleEnd).toLocalTime();
 
         Incidence::Ptr otherInc = CalendarSupport::incidence(otheritem->mIncidence);
-        const auto otherEnd = otherInc->dateTime(Incidence::RoleEnd).toLocalZone().dateTime();
+        const auto otherEnd = otherInc->dateTime(Incidence::RoleEnd).toLocalTime();
 
         return otherEnd < thisEnd;
     }
@@ -183,8 +183,8 @@ bool ListView::Private::ListItemVisitor::visit(const Event::Ptr &e)
     mItem->setIcon(Summary_Column, eventPxmp);
 
     QDateTime next;
-    mItem->start = e->dtStart().toLocalZone().dateTime();
-    mItem->end = e->dtEnd().toLocalZone().dateTime();
+    mItem->start = e->dtStart().toLocalTime();
+    mItem->end = e->dtEnd().toLocalTime();
     if (e->recurs()) {
         const int duration = e->dtStart().secsTo(e->dtEnd());
         QDateTime kdt(mStartDate, QTime(0,0,0));
@@ -217,18 +217,18 @@ bool ListView::Private::ListItemVisitor::visit(const Todo::Ptr &t)
 
     if (t->hasStartDate()) {
         if (t->allDay())
-            mItem->setText(StartDateTime_Column, QLocale().toString(t->dtStart().toLocalZone().date(), QLocale::ShortFormat));
+            mItem->setText(StartDateTime_Column, QLocale().toString(t->dtStart().toLocalTime().date(), QLocale::ShortFormat));
         else
-            mItem->setText(StartDateTime_Column, QLocale().toString(t->dtStart().toLocalZone().dateTime(), QLocale::ShortFormat));
+            mItem->setText(StartDateTime_Column, QLocale().toString(t->dtStart().toLocalTime(), QLocale::ShortFormat));
     } else {
         mItem->setText(StartDateTime_Column, QStringLiteral("---"));
     }
 
     if (t->hasDueDate()) {
         if (t->allDay())
-            mItem->setText(EndDateTime_Column, QLocale().toString(t->dtDue().toLocalZone().date(), QLocale::ShortFormat));
+            mItem->setText(EndDateTime_Column, QLocale().toString(t->dtDue().toLocalTime().date(), QLocale::ShortFormat));
         else
-            mItem->setText(EndDateTime_Column, QLocale().toString(t->dtDue().toLocalZone().dateTime(), QLocale::ShortFormat));
+            mItem->setText(EndDateTime_Column, QLocale().toString(t->dtDue().toLocalTime(), QLocale::ShortFormat));
     } else {
         mItem->setText(EndDateTime_Column, QStringLiteral("---"));
     }
@@ -249,9 +249,9 @@ bool ListView::Private::ListItemVisitor::visit(const Journal::Ptr &j)
         mItem->setText(Summary_Column, cleanSummary(j->summary(), QDateTime()));
     }
     if (j->allDay())
-        mItem->setText(StartDateTime_Column, QLocale().toString(j->dtStart().toLocalZone().date(), QLocale::ShortFormat));
+        mItem->setText(StartDateTime_Column, QLocale().toString(j->dtStart().toLocalTime().date(), QLocale::ShortFormat));
     else
-        mItem->setText(StartDateTime_Column, QLocale().toString(j->dtStart().toLocalZone().dateTime(), QLocale::ShortFormat));
+        mItem->setText(StartDateTime_Column, QLocale().toString(j->dtStart().toLocalTime(), QLocale::ShortFormat));
 
     return true;
 }
@@ -455,9 +455,9 @@ void ListView::changeIncidenceDisplay(const Akonadi::Item &aitem, int action)
 
     QDate date;
     if (CalendarSupport::hasTodo(aitem)) {
-        date = CalendarSupport::todo(aitem)->dtDue().toLocalZone().date();
+        date = CalendarSupport::todo(aitem)->dtDue().toLocalTime().date();
     } else {
-        date = incidence->dtStart().toLocalZone().date();
+        date = incidence->dtStart().toLocalTime().date();
     }
 
     switch (action) {

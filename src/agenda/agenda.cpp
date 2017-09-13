@@ -78,7 +78,7 @@ public:
     Agenda *mAgenda = nullptr;
     QTimer *mTimer = nullptr;
     QLabel *mTimeBox = nullptr;  // Label showing the current time
-    KDateTime mOldDateTime;
+    QDateTime mOldDateTime;
     int mOldTodayCol;
 };
 
@@ -125,7 +125,7 @@ void MarcusBains::updateLocationRecalc(bool recalculate)
     const bool showSeconds = d->mEventView->preferences()->marcusBainsShowSeconds();
     const QColor color = d->mEventView->preferences()->agendaMarcusBainsLineLineColor();
 
-    const KDateTime now = KDateTime::currentLocalDateTime();
+    const QDateTime now = QDateTime::currentDateTimeUtc();
     const QTime time = now.time();
 
     if (now.date() != d->mOldDateTime.date()) {

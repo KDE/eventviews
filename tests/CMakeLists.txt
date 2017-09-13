@@ -5,5 +5,6 @@ target_link_libraries(createcolorgui_test
   Qt5::Core
   Qt5::Gui
   KF5::EventViews
+  KF5::I18n
 )
 

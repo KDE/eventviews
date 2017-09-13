@@ -834,7 +834,7 @@ void AgendaItem::paintEvent(QPaintEvent *ev)
             !mEventView->preferences()->todosUseCategoryColors()) {
         Todo::Ptr todo = CalendarSupport::todo(mIncidence);
         Q_ASSERT(todo);
-        const QDate dueDate = todo->dtDue().toLocalZone().date();
+        const QDate dueDate = todo->dtDue().toLocalTime().date();
         const QDate today = QDate::currentDate();
         const QDate occurrenceDate = this->occurrenceDate();
         if (todo->isOverdue() && today >= occurrenceDate) {
@@ -921,20 +921,20 @@ void AgendaItem::paintEvent(QPaintEvent *ev)
     QString shortH;
     QString longH;
     if (!isMultiItem()) {
-        shortH = QLocale().toString(mIncidence->dateTime(KCalCore::Incidence::RoleDisplayStart).toLocalZone().time(), QLocale::ShortFormat);
+        shortH = QLocale().toString(mIncidence->dateTime(KCalCore::Incidence::RoleDisplayStart).toLocalTime().time(), QLocale::ShortFormat);
 
         if (CalendarSupport::hasEvent(mIncidence)) {
             longH = i18n("%1 - %2",
                          shortH,
-                         QLocale().toString(mIncidence->dateTime(KCalCore::Incidence::RoleEnd).toLocalZone().time(), QLocale::ShortFormat));
+                         QLocale().toString(mIncidence->dateTime(KCalCore::Incidence::RoleEnd).toLocalTime().time(), QLocale::ShortFormat));
         } else {
             longH = shortH;
         }
     } else if (!mMultiItemInfo->mFirstMultiItem) {
-        shortH = QLocale().toString(mIncidence->dtStart().toLocalZone().time(), QLocale::ShortFormat);
+        shortH = QLocale().toString(mIncidence->dtStart().toLocalTime().time(), QLocale::ShortFormat);
         longH = shortH;
     } else {
-        shortH = QLocale().toString(mIncidence->dateTime(KCalCore::Incidence::RoleEnd).toLocalZone().time(), QLocale::ShortFormat);
+        shortH = QLocale().toString(mIncidence->dateTime(KCalCore::Incidence::RoleEnd).toLocalTime().time(), QLocale::ShortFormat);
         longH = i18n("- %1", shortH);
     }
 
@@ -1024,8 +1024,8 @@ void AgendaItem::paintEvent(QPaintEvent *ev)
                 // multi-day, all-day event
                 shortH =
                     i18n("%1 - %2",
-                         QLocale().toString(mIncidence->dtStart().toLocalZone().date()),
-                         QLocale().toString(mIncidence->dateTime(KCalCore::Incidence::RoleEnd).toLocalZone().date()));
+                         QLocale().toString(mIncidence->dtStart().toLocalTime().date()),
+                         QLocale().toString(mIncidence->dateTime(KCalCore::Incidence::RoleEnd).toLocalTime().date()));
                 longH = shortH;
 
                 // paint headline

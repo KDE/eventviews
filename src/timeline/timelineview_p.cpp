@@ -32,7 +32,6 @@
 #include <CalendarSupport/Utils>
 #include <Akonadi/Calendar/IncidenceChanger>
 #include <KCalCore/OccurrenceIterator>
-#include <KCalCore/Utils>
 
 #include "calendarview_debug.h"
 
@@ -130,7 +129,7 @@ void TimelineView::Private::insertIncidence(const Akonadi::Item &aitem, const QD
             occurIter.next();
             const Akonadi::Item akonadiItem = q->calendar()->item(occurIter.incidence());
             const QDateTime startOfOccurrence = occurIter.occurrenceStartDate();
-            const QDateTime endOfOccurrence = KCalCore::k2q(occurIter.incidence()->endDateForStart(KCalCore::q2k(startOfOccurrence)));
+            const QDateTime endOfOccurrence = occurIter.incidence()->endDateForStart(startOfOccurrence);
             item->insertIncidence(akonadiItem, startOfOccurrence.toLocalTime(),  endOfOccurrence.toLocalTime());
         }
     } else {

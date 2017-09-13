@@ -30,8 +30,6 @@
 #include <CalendarSupport/KCalPrefs>
 #include <CalendarSupport/Utils>
 
-#include <KCalCore/Utils>
-
 #include <QBoxLayout>
 #include <QPainter>
 #include <QPaintEvent>
@@ -90,9 +88,9 @@ public:
         foreach (const KCalCore::Event::Ptr &e, mEventList)
         {
             Q_ASSERT(e);
-            QDateTime selectedStart(mTimeSpentView->mStartDate, QTime(0, 0), KCalCore::specToZone(e->dtStart().timeSpec()));
+            QDateTime selectedStart(mTimeSpentView->mStartDate, QTime(0, 0), e->dtStart().timeZone());
 
-            QDateTime selectedEnd(mTimeSpentView->mEndDate.addDays(1), QTime(0, 0), KCalCore::specToZone(e->dtEnd().timeSpec()));
+            QDateTime selectedEnd(mTimeSpentView->mEndDate.addDays(1), QTime(0, 0), e->dtEnd().timeZone());
 
             QDateTime start;
             QDateTime end;
@@ -119,8 +117,8 @@ public:
 
             } else {
                 // The event's start can be before the view's start date or end after the view's end
-                start  = KCalCore::k2q(e->dtStart()) > selectedStart ? KCalCore::k2q(e->dtStart()) : selectedStart;
-                end    = KCalCore::k2q(e->dtEnd())   < selectedEnd   ? KCalCore::k2q(e->dtEnd())   : selectedEnd;
+                start  = e->dtStart() > selectedStart ? e->dtStart() : selectedStart;
+                end    = e->dtEnd()   < selectedEnd   ? e->dtEnd()   : selectedEnd;
 
                 totalDuration += start.secsTo(end);
             }
