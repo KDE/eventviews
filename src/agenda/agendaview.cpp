@@ -1998,7 +1998,6 @@ void AgendaView::slotIncidencesDropped(const KCalCore::Incidence::List &incidenc
     }
 
     const QDate day = d->mSelectedDates[gpos.x()];
-    const QTime time = d->mAgenda->gyToTime(gpos.y());
     QDateTime newTime(day, {}, Qt::LocalTime);
  
     Q_FOREACH (const KCalCore::Incidence::Ptr &incidence, incidences) {
