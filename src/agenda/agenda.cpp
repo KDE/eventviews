@@ -125,7 +125,7 @@ void MarcusBains::updateLocationRecalc(bool recalculate)
     const bool showSeconds = d->mEventView->preferences()->marcusBainsShowSeconds();
     const QColor color = d->mEventView->preferences()->agendaMarcusBainsLineLineColor();
 
-    const QDateTime now = QDateTime::currentDateTimeUtc();
+    const QDateTime now = QDateTime::currentDateTime();
     const QTime time = now.time();
 
     if (now.date() != d->mOldDateTime.date()) {
