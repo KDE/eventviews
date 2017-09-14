@@ -67,8 +67,6 @@ set(eventviews_LIB_SRCS
   timeline/timelineitem.cpp
   timeline/timelineview_p.cpp
 
-  timespent/timespentview.cpp
-
   whatsnext/whatsnextview.cpp
 )
 
@@ -186,14 +184,6 @@ ecm_generate_headers(eventviews_CamelCasetimeline_HEADERS
   RELATIVE timeline
 )
 
-ecm_generate_headers(eventviews_CamelCasetimespent_HEADERS
-  HEADER_NAMES
-  TimeSpentView
-  REQUIRED_HEADERS eventviews_timespent_HEADERS
-  PREFIX EventViews
-  RELATIVE timespent
-)
-
 ecm_generate_headers(eventviews_CamelCasewhatsnext_HEADERS
   HEADER_NAMES
   WhatsNextView
@@ -211,7 +201,6 @@ install(FILES
     ${eventviews_CamelCase_HEADERS}
     ${eventviews_CamelCaseagenda_HEADERS}
     ${eventviews_CamelCasetodo_HEADERS}
-    ${eventviews_CamelCasetimespent_HEADERS}
     ${eventviews_CamelCasewhatsnext_HEADERS}
     ${eventviews_CamelCasetimeline_HEADERS}
     ${eventviews_CamelCasemultiagenda_HEADERS}
@@ -228,7 +217,6 @@ install(FILES
     ${eventviews_CamelCase_HEADERS}
     ${eventviews_agenda_HEADERS}
     ${eventviews_todo_HEADERS}
-    ${eventviews_timespent_HEADERS}
     ${eventviews_whatsnext_HEADERS}
     ${eventviews_timeline_HEADERS}
     ${eventviews_multiagenda_HEADERS}
