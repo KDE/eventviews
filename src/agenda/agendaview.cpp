@@ -1553,7 +1553,7 @@ void AgendaView::updateEventDates(AgendaItem *item, bool addIncidence,
         }
         if (incidence->dtStart().toLocalTime() == startDt && ev->dtEnd().toLocalTime() == endDt) {
             // No change
-            QTimer::singleShot(0, this, SLOT(updateView()));
+            QTimer::singleShot(0, this, &AgendaView::updateView);
             return;
         }
     } else if (const KCalCore::Todo::Ptr td = CalendarSupport::todo(incidence)) {

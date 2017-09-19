@@ -244,7 +244,7 @@ MultiAgendaView::MultiAgendaView(QWidget *parent)
 void MultiAgendaView::setCalendar(const Akonadi::ETMCalendar::Ptr &calendar)
 {
     EventView::setCalendar(calendar);
-    Q_FOREACH (KCheckableProxyModel *proxy, d->mCollectionSelectionModels) {
+    for (KCheckableProxyModel *proxy : qAsConst(d->mCollectionSelectionModels)) {
         proxy->setSourceModel(calendar->entityTreeModel());
     }
 
