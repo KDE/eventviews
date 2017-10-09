@@ -2019,6 +2019,13 @@ void Agenda::resizeEvent(QResizeEvent *ev)
 void Agenda::resizeAllContents()
 {
     double subCellWidth;
+    foreach (const AgendaItem::QPtr &item, d->mItems) {
+        if (item) {
+            subCellWidth = calcSubCellWidth(item);
+            placeAgendaItem(item, subCellWidth);
+        }
+    }
+    /*
     if (d->mAllDayMode) {
         foreach (const AgendaItem::QPtr &item, d->mItems) {
             if (item) {
@@ -2034,6 +2041,7 @@ void Agenda::resizeAllContents()
             }
         }
     }
+    */
     checkScrollBoundaries();
     marcus_bains();
     update();

@@ -60,12 +60,10 @@ void TodoCompleteDelegate::paint(QPainter *painter,
                                  const QStyleOptionViewItem &option,
                                  const QModelIndex &index) const
 {
-    QStyle *style = nullptr;
-
     QStyleOptionViewItem opt = option;
     initStyleOption(&opt, index);
 
-    style = opt.widget ? opt.widget->style() : QApplication::style();
+    QStyle *style = opt.widget ? opt.widget->style() : QApplication::style();
     style->drawPrimitive(QStyle::PE_PanelItemViewItem, &opt, painter);
 
     if (index.data(Qt::EditRole).toInt() > 0) {
@@ -371,7 +369,7 @@ void TodoRichTextDelegate::paint(QPainter *painter,
         style->drawControl(QStyle::CE_ItemViewItem, &opt, painter, widget);
 
         // draw the text (rich text)
-        QPalette::ColorGroup cg = opt.state & QStyle::State_Enabled ?
+        QPalette::ColorGroup cg = (opt.state & QStyle::State_Enabled) ?
                                   QPalette::Normal : QPalette::Disabled;
         if (cg == QPalette::Normal && !(opt.state & QStyle::State_Active)) {
             cg = QPalette::Inactive;
