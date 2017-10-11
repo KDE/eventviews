@@ -60,8 +60,6 @@ int main(int argc, char **argv)
     aboutData.setShortDescription(i18n("Test creating color"));
     QCommandLineParser parser;
     KAboutData::setApplicationData(aboutData);
-    parser.addVersionOption();
-    parser.addHelpOption();
     aboutData.setupCommandLine(&parser);
     parser.process(app);
     aboutData.processCommandLine(&parser);
