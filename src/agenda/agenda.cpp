@@ -1591,8 +1591,8 @@ void Agenda::drawContents(QPainter *p, int cx, int cy, int cw, int ch)
         }
     }
 
-    QPen hourPen(d->preferences()->agendaGridBackgroundColor().dark(150));
-    QPen halfHourPen(d->preferences()->agendaGridBackgroundColor().dark(125));
+    QPen hourPen(d->preferences()->agendaGridBackgroundColor().darker(150));
+    QPen halfHourPen(d->preferences()->agendaGridBackgroundColor().darker(125));
     dbp.setPen(hourPen);
 
     // Draw vertical lines of grid, start with the last line not yet visible

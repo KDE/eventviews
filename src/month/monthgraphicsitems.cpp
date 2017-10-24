@@ -247,8 +247,8 @@ void MonthGraphicsItem::paint(QPainter *p, const QStyleOptionGraphicsItem *, QWi
 
     QLinearGradient gradient(0, 0, 0, boundingRect().height());
     gradient.setColorAt(0, bgColor);
-    gradient.setColorAt(0.7, bgColor.dark(110));
-    gradient.setColorAt(1, bgColor.dark(150));
+    gradient.setColorAt(0.7, bgColor.darker(110));
+    gradient.setColorAt(1, bgColor.darker(150));
     QBrush brush(gradient);
     p->setBrush(brush);
     p->setPen(Qt::NoPen);

@@ -640,7 +640,7 @@ QColor EventView::itemFrameColor(const QColor &color, bool selected)
     if (color.isValid()) {
         return selected ? QColor(85 + color.red() * 2.0 / 3,
                                  85 + color.green() * 2.0 / 3,
-                                 85 + color.blue() * 2.0 / 3) : color.dark(115);
+                                 85 + color.blue() * 2.0 / 3) : color.darker(115);
     } else {
         return Qt::black;
     }

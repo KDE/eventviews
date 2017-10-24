@@ -898,7 +898,7 @@ void AgendaItem::paintEvent(QPaintEvent *ev)
     }
 
     if (mSelected) {
-        bgColor = bgColor.light(EventView::BRIGHTNESS_FACTOR);
+        bgColor = bgColor.lighter(EventView::BRIGHTNESS_FACTOR);
     }
 
     const QColor textColor = EventViews::getTextColor(bgColor);
@@ -1157,7 +1157,7 @@ void AgendaItem::drawRoundedRect(QPainter *p, const QRect &rect,
         QLinearGradient gradient(QPointF(r.x(), r.y()), QPointF(r.x(), r.height()));
 
         if (selected) {
-            QColor top = bgColor.dark(250);
+            QColor top = bgColor.darker(250);
             top.setAlpha(40);
             gradient.setColorAt(0, top);
             gradient.setColorAt(1, QColor(255, 255, 255, 30));
@@ -1193,29 +1193,29 @@ void AgendaItem::drawRoundedRect(QPainter *p, const QRect &rect,
         if (mIncidence->allDay() &&
                 mIncidence->dtStart() == mIncidence->dateTime(KCalCore::Incidence::RoleEnd) &&
                 CalendarSupport::hasEvent(mIncidence)) {
-            gradient.setColorAt(0, bgColor.light(130));
+            gradient.setColorAt(0, bgColor.lighter(130));
             qreal t = 1.0 - (r.height() - 18.0) / r.height();
-            gradient.setColorAt(t, bgColor.light(115));
+            gradient.setColorAt(t, bgColor.lighter(115));
             qreal b = (r.height() - 20.0) / r.height();
             gradient.setColorAt(b, bgColor);
         } else {
-            gradient.setColorAt(0, bgColor.light(115));
+            gradient.setColorAt(0, bgColor.lighter(115));
             qreal b = (r.height() - 20.0) / r.height();
             gradient.setColorAt(b, bgColor);
         }
-        gradient.setColorAt(1, bgColor.dark(110));
+        gradient.setColorAt(1, bgColor.darker(110));
     } else {
         if (mIncidence->allDay() &&
                 mIncidence->dtStart() == mIncidence->dateTime(KCalCore::Incidence::RoleEnd) &&
                 !CalendarSupport::hasTodo(mIncidence)) {
-            gradient.setColorAt(0, bgColor.light(130));
-            gradient.setColorAt(0.35, bgColor.light(115));
+            gradient.setColorAt(0, bgColor.lighter(130));
+            gradient.setColorAt(0.35, bgColor.lighter(115));
             gradient.setColorAt(0.65, bgColor);
         } else {
-            gradient.setColorAt(0, bgColor.light(115));
+            gradient.setColorAt(0, bgColor.lighter(115));
             gradient.setColorAt(0.65, bgColor);
         }
-        gradient.setColorAt(1, bgColor.dark(110));
+        gradient.setColorAt(1, bgColor.darker(110));
     }
 
     p->setBrush(gradient);
