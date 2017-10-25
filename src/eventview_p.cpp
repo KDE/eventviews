@@ -59,7 +59,7 @@ EventViewPrivate::~EventViewPrivate()
 void EventViewPrivate::finishTypeAhead()
 {
     if (mTypeAheadReceiver) {
-        foreach (QEvent *e, mTypeAheadEvents) {
+        for (QEvent *e : qAsConst(mTypeAheadEvents)) {
             QApplication::sendEvent(mTypeAheadReceiver, e);
         }
     }
