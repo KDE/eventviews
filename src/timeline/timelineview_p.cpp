@@ -41,8 +41,8 @@
 using namespace KCalCore;
 using namespace EventViews;
 
-TimelineView::Private::Private(TimelineView *parent) :
-    q(parent)
+TimelineView::Private::Private(TimelineView *parent)
+    : q(parent)
 {
 }
 
@@ -57,9 +57,9 @@ void TimelineView::Private::splitterMoved()
 
 void TimelineView::Private::itemSelected(const QModelIndex &index)
 {
-    TimelineSubItem *tlitem =
-        dynamic_cast<TimelineSubItem *>(static_cast<QStandardItemModel *>(
-                                            mGantt->model())->item(index.row(), index.column()));
+    TimelineSubItem *tlitem
+        = dynamic_cast<TimelineSubItem *>(static_cast<QStandardItemModel *>(
+                                              mGantt->model())->item(index.row(), index.column()));
     if (tlitem) {
         Q_EMIT q->incidenceSelected(tlitem->incidence(), tlitem->originalStart().date());
     }
@@ -67,9 +67,9 @@ void TimelineView::Private::itemSelected(const QModelIndex &index)
 
 void TimelineView::Private::itemDoubleClicked(const QModelIndex &index)
 {
-    TimelineSubItem *tlitem =
-        dynamic_cast<TimelineSubItem *>(static_cast<QStandardItemModel *>(
-                                            mGantt->model())->item(index.row(), index.column()));
+    TimelineSubItem *tlitem
+        = dynamic_cast<TimelineSubItem *>(static_cast<QStandardItemModel *>(
+                                              mGantt->model())->item(index.row(), index.column()));
     if (tlitem) {
         Q_EMIT q->editIncidenceSignal(tlitem->incidence());
     }
@@ -79,9 +79,9 @@ void TimelineView::Private::contextMenuRequested(const QPoint &point)
 {
     QPersistentModelIndex index = mGantt->indexAt(point);
     // mHintDate = QDateTime( mGantt->getDateTimeForCoordX( QCursor::pos().x(), true ) );
-    TimelineSubItem *tlitem =
-        dynamic_cast<TimelineSubItem *>(static_cast<QStandardItemModel *>(
-                                            mGantt->model())->item(index.row(), index.column()));
+    TimelineSubItem *tlitem
+        = dynamic_cast<TimelineSubItem *>(static_cast<QStandardItemModel *>(
+                                              mGantt->model())->item(index.row(), index.column()));
     if (!tlitem) {
         Q_EMIT q->showNewEventPopupSignal();
         mSelectedItemList = Akonadi::Item::List();
@@ -124,17 +124,22 @@ void TimelineView::Private::insertIncidence(const Akonadi::Item &aitem, const QD
     }
 
     if (incidence->recurs()) {
-        KCalCore::OccurrenceIterator occurIter(*(q->calendar()), incidence, QDateTime(day, QTime(0, 0, 0)), QDateTime(day, QTime(23, 59, 59)));
+        KCalCore::OccurrenceIterator occurIter(*(q->calendar()), incidence, QDateTime(day, QTime(0,
+                                                                                                 0,
+                                                                                                 0)), QDateTime(
+                                                   day, QTime(23, 59, 59)));
         while (occurIter.hasNext()) {
             occurIter.next();
             const Akonadi::Item akonadiItem = q->calendar()->item(occurIter.incidence());
             const QDateTime startOfOccurrence = occurIter.occurrenceStartDate();
-            const QDateTime endOfOccurrence = occurIter.incidence()->endDateForStart(startOfOccurrence);
-            item->insertIncidence(akonadiItem, startOfOccurrence.toLocalTime(),  endOfOccurrence.toLocalTime());
+            const QDateTime endOfOccurrence = occurIter.incidence()->endDateForStart(
+                startOfOccurrence);
+            item->insertIncidence(akonadiItem,
+                                  startOfOccurrence.toLocalTime(), endOfOccurrence.toLocalTime());
         }
     } else {
-        if (incidence->dtStart().date() == day ||
-                incidence->dtStart().date() < mStartDate) {
+        if (incidence->dtStart().date() == day
+            || incidence->dtStart().date() < mStartDate) {
             item->insertIncidence(aitem);
         }
     }
@@ -153,9 +158,9 @@ void TimelineView::Private::insertIncidence(const Akonadi::Item &incidence)
 
     for (QDate day = mStartDate; day <= mEndDate; day = day.addDays(1)) {
         KCalCore::Event::List events = q->calendar()->events(day,
-                                       QTimeZone::systemTimeZone(),
-                                       KCalCore::EventSortStartDate,
-                                       KCalCore::SortDirectionAscending);
+                                                             QTimeZone::systemTimeZone(),
+                                                             KCalCore::EventSortStartDate,
+                                                             KCalCore::SortDirectionAscending);
         if (events.contains(event)) {
             //PENDING(AKONADI_PORT) check if correct. also check the original if,
             //was inside the for loop (unnecessarily)
@@ -174,13 +179,13 @@ void TimelineView::Private::removeIncidence(const Akonadi::Item &incidence)
         item->removeIncidence(incidence);
     } else {
 #if 0 //AKONADI_PORT_DISABLED
-        // try harder, the incidence might already be removed from the resource
+      // try harder, the incidence might already be removed from the resource
         typedef QMap<QString, KOrg::TimelineItem *> M2_t;
         typedef QMap<KCalCore::ResourceCalendar *, M2_t> M1_t;
         for (M1_t::ConstIterator it1 = d->mCalendarItemMap.constBegin();
-                it1 != mCalendarItemMap.constEnd(); ++it1) {
+             it1 != mCalendarItemMap.constEnd(); ++it1) {
             for (M2_t::ConstIterator it2 = it1.value().constBegin();
-                    it2 != it1.value().constEnd(); ++it2) {
+                 it2 != it1.value().constEnd(); ++it2) {
                 if (it2.value()) {
                     it2.value()->removeIncidence(incidence);
                 }
@@ -223,4 +228,3 @@ void TimelineView::Private::itemChanged(QStandardItem *item)
     TimelineItem *parent = tlit->parent();
     parent->moveItems(i, tlit->originalStart().secsTo(newStart), duration + allDayOffset);
 }
-

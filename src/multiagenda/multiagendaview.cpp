@@ -97,10 +97,12 @@ static QString generateColumnLabel(int c)
 class Q_DECL_HIDDEN MultiAgendaView::Private
 {
 private:
-    class ElidedLabel: public QFrame
+    class ElidedLabel : public QFrame
     {
     public:
-        ElidedLabel(const QString &text): mText(text) {}
+        ElidedLabel(const QString &text) : mText(text)
+        {
+        }
 
         QSize minimumSizeHint() const override;
 
@@ -112,12 +114,12 @@ private:
     };
 
 public:
-    Private(MultiAgendaView *qq) :
-        q(qq),
-        mUpdateOnShow(true),
-        mPendingChanges(true),
-        mCustomColumnSetupUsed(false),
-        mCustomNumberOfColumns(2)
+    Private(MultiAgendaView *qq)
+        : q(qq)
+        , mUpdateOnShow(true)
+        , mPendingChanges(true)
+        , mCustomColumnSetupUsed(false)
+        , mCustomNumberOfColumns(2)
     {
     }
 
@@ -153,12 +155,12 @@ public:
     int mCustomNumberOfColumns;
     QLabel *mLabel = nullptr;
     QWidget *mRightDummyWidget = nullptr;
-    QHash<QString, KViewStateMaintainer<ETMViewStateSaver>* > mSelectionSavers;
+    QHash<QString, KViewStateMaintainer<ETMViewStateSaver> * > mSelectionSavers;
 };
 
 MultiAgendaView::MultiAgendaView(QWidget *parent)
-    : EventView(parent), d(new Private(this))
-
+    : EventView(parent)
+    , d(new Private(this))
 {
     QHBoxLayout *topLevelLayout = new QHBoxLayout(this);
     topLevelLayout->setSpacing(0);
@@ -248,7 +250,8 @@ void MultiAgendaView::setCalendar(const Akonadi::ETMCalendar::Ptr &calendar)
         proxy->setSourceModel(calendar->entityTreeModel());
     }
 
-    disconnect(nullptr, SIGNAL(selectionChanged(Akonadi::Collection::List,Akonadi::Collection::List)),
+    disconnect(nullptr, SIGNAL(selectionChanged(Akonadi::Collection::List,
+                                                Akonadi::Collection::List)),
                this, SLOT(forceRecreateViews()));
 
     connect(collectionSelection(), &CalendarSupport::CollectionSelection::selectionChanged,
@@ -459,8 +462,7 @@ void MultiAgendaView::slotSelectionChanged()
     }
 }
 
-bool MultiAgendaView::eventDurationHint(QDateTime &startDt, QDateTime &endDt,
-                                        bool &allDay) const
+bool MultiAgendaView::eventDurationHint(QDateTime &startDt, QDateTime &endDt, bool &allDay) const
 {
     foreach (AgendaView *agenda, d->mAgendaViews) {
         bool valid = agenda->eventDurationHint(startDt, endDt, allDay);
@@ -544,8 +546,8 @@ void MultiAgendaView::resizeEvent(QResizeEvent *ev)
 
 void MultiAgendaView::Private::resizeScrollView(const QSize &size)
 {
-    const int widgetWidth = size.width() - mTimeLabelsZone->width() -
-                            mScrollBar->width();
+    const int widgetWidth = size.width() - mTimeLabelsZone->width()
+                            -mScrollBar->width();
 
     int height = size.height();
     if (mScrollArea->horizontalScrollBar()->isVisible()) {
@@ -675,7 +677,6 @@ void MultiAgendaView::collectionSelectionChanged()
 
 bool MultiAgendaView::hasConfigurationDialog() const
 {
-
     /** The wrapper in korg has the dialog. Too complicated to move to CalendarViews.
         Depends on korg/AkonadiCollectionView, and will be refactored some day
         to get rid of CollectionSelectionProxyModel/EntityStateSaver */
@@ -692,7 +693,7 @@ void MultiAgendaView::doRestoreConfig(const KConfigGroup &configGroup)
 
     d->mCustomColumnSetupUsed = configGroup.readEntry("UseCustomColumnSetup", false);
     d->mCustomNumberOfColumns = configGroup.readEntry("CustomNumberOfColumns", 2);
-    d->mCustomColumnTitles =  configGroup.readEntry("ColumnTitles", QStringList());
+    d->mCustomColumnTitles = configGroup.readEntry("ColumnTitles", QStringList());
     if (d->mCustomColumnTitles.size() != d->mCustomNumberOfColumns) {
         const int orig = d->mCustomColumnTitles.size();
         d->mCustomColumnTitles.reserve(d->mCustomNumberOfColumns);
@@ -715,7 +716,8 @@ void MultiAgendaView::doRestoreConfig(const KConfigGroup &configGroup)
 
             // Only show the first column
             KRearrangeColumnsProxyModel *columnFilterProxy = new KRearrangeColumnsProxyModel(this);
-            columnFilterProxy->setSourceColumns(QVector<int>() << Akonadi::ETMCalendar::CollectionTitle);
+            columnFilterProxy->setSourceColumns(
+                QVector<int>() << Akonadi::ETMCalendar::CollectionTitle);
             columnFilterProxy->setSourceModel(sortProxy);
 
             // Keep track of selection.
@@ -725,11 +727,13 @@ void MultiAgendaView::doRestoreConfig(const KConfigGroup &configGroup)
             KCheckableProxyModel *checkableProxy = new KCheckableProxyModel(this);
             checkableProxy->setSourceModel(columnFilterProxy);
             checkableProxy->setSelectionModel(qsm);
-            const QString groupName = configGroup.name() + QLatin1String("_subView_") + QString::number(i);
+            const QString groupName = configGroup.name() + QLatin1String("_subView_")
+                                      + QString::number(i);
             const KConfigGroup group = configGroup.config()->group(groupName);
 
             if (!d->mSelectionSavers.contains(groupName)) {
-                d->mSelectionSavers.insert(groupName, new KViewStateMaintainer<ETMViewStateSaver>(group));
+                d->mSelectionSavers.insert(groupName,
+                                           new KViewStateMaintainer<ETMViewStateSaver>(group));
                 d->mSelectionSavers[groupName]->setSelectionModel(checkableProxy->selectionModel());
             }
 
@@ -750,13 +754,15 @@ void MultiAgendaView::doSaveConfig(KConfigGroup &configGroup)
     configGroup.writeEntry("ColumnTitles", d->mCustomColumnTitles);
     int idx = 0;
     foreach (KCheckableProxyModel *checkableProxyModel, d->mCollectionSelectionModels) {
-        const QString groupName = configGroup.name() + QLatin1String("_subView_") + QString::number(idx);
+        const QString groupName = configGroup.name() + QLatin1String("_subView_") + QString::number(
+            idx);
         KConfigGroup group = configGroup.config()->group(groupName);
         ++idx;
         //TODO never used ?
         KViewStateMaintainer<ETMViewStateSaver> saver(group);
         if (!d->mSelectionSavers.contains(groupName)) {
-            d->mSelectionSavers.insert(groupName, new KViewStateMaintainer<ETMViewStateSaver>(group));
+            d->mSelectionSavers.insert(groupName,
+                                       new KViewStateMaintainer<ETMViewStateSaver>(group));
             d->mSelectionSavers[groupName]->setSelectionModel(checkableProxyModel->selectionModel());
         }
         d->mSelectionSavers[groupName]->saveState();

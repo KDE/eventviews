@@ -47,9 +47,7 @@
 
 using namespace EventViews;
 
-namespace EventViews
-{
-
+namespace EventViews {
 class MonthViewPrivate : public Akonadi::ETMCalendar::CalendarObserver
 {
     MonthView *q;
@@ -63,12 +61,12 @@ public: /// Methods
     void triggerDelayedReload(EventView::Change reason);
 
 public:  /// Members
-    QTimer                           reloadTimer;
-    MonthScene                      *scene = nullptr;
-    QDate                            selectedItemDate;
-    Akonadi::Item::Id                selectedItemId;
-    MonthGraphicsView               *view = nullptr;
-    QToolButton                     *fullView = nullptr;
+    QTimer reloadTimer;
+    MonthScene *scene = nullptr;
+    QDate selectedItemDate;
+    Akonadi::Item::Id selectedItemId;
+    MonthGraphicsView *view = nullptr;
+    QToolButton *fullView = nullptr;
 
     // List of uids for QDate
     QMap<QDate, QStringList > mBusyDays;
@@ -77,20 +75,20 @@ protected:
     /* reimplemented from KCalCore::Calendar::CalendarObserver */
     void calendarIncidenceAdded(const KCalCore::Incidence::Ptr &incidence) override;
     void calendarIncidenceChanged(const KCalCore::Incidence::Ptr &incidence) override;
-    void calendarIncidenceDeleted(const KCalCore::Incidence::Ptr &incidence, const KCalCore::Calendar *calendar) override;
+    void calendarIncidenceDeleted(const KCalCore::Incidence::Ptr &incidence,
+                                  const KCalCore::Calendar *calendar) override;
 private:
     //quiet --overloaded-virtual warning
     using KCalCore::Calendar::CalendarObserver::calendarIncidenceDeleted;
 };
-
 }
 
 MonthViewPrivate::MonthViewPrivate(MonthView *qq)
-    : q(qq),
-      scene(new MonthScene(qq)),
-      selectedItemId(-1),
-      view(new MonthGraphicsView(qq)),
-      fullView(nullptr)
+    : q(qq)
+    , scene(new MonthScene(qq))
+    , selectedItemId(-1)
+    , view(new MonthGraphicsView(qq))
+    , fullView(nullptr)
 {
     reloadTimer.setSingleShot(true);
     view->setScene(scene);
@@ -150,7 +148,8 @@ void MonthViewPrivate::calendarIncidenceChanged(const KCalCore::Incidence::Ptr &
     triggerDelayedReload(MonthView::IncidencesEdited);
 }
 
-void MonthViewPrivate::calendarIncidenceDeleted(const KCalCore::Incidence::Ptr &incidence, const KCalCore::Calendar *calendar)
+void MonthViewPrivate::calendarIncidenceDeleted(const KCalCore::Incidence::Ptr &incidence,
+                                                const KCalCore::Calendar *calendar)
 {
     Q_UNUSED(calendar);
     Q_ASSERT(!incidence->uid().isEmpty());
@@ -160,7 +159,8 @@ void MonthViewPrivate::calendarIncidenceDeleted(const KCalCore::Incidence::Ptr &
 /// MonthView
 
 MonthView::MonthView(NavButtonsVisibility visibility, QWidget *parent)
-    : EventView(parent), d(new MonthViewPrivate(this))
+    : EventView(parent)
+    , d(new MonthViewPrivate(this))
 {
     QHBoxLayout *topLayout = new QHBoxLayout(this);
     topLayout->addWidget(d->view);
@@ -179,11 +179,11 @@ MonthView::MonthView(NavButtonsVisibility visibility, QWidget *parent)
         d->fullView->setAutoRaise(true);
         d->fullView->setCheckable(true);
         d->fullView->setChecked(preferences()->fullViewMonth());
-        d->fullView->isChecked() ?
-        d->fullView->setToolTip(i18nc("@info:tooltip",
-                                      "Display calendar in a normal size")) :
-        d->fullView->setToolTip(i18nc("@info:tooltip",
-                                      "Display calendar in a full window"));
+        d->fullView->isChecked()
+        ? d->fullView->setToolTip(i18nc("@info:tooltip",
+                                        "Display calendar in a normal size"))
+        : d->fullView->setToolTip(i18nc("@info:tooltip",
+                                        "Display calendar in a full window"));
         d->fullView->setWhatsThis(
             i18nc("@info:whatsthis",
                   "Click this button and the month view will be enlarged to fill the "
@@ -374,6 +374,7 @@ void MonthView::wheelEvent(QWheelEvent *event)
     // call accept in every case, we do not want anybody else to react
     event->accept();
 }
+
 #endif
 
 void MonthView::keyPressEvent(QKeyEvent *event)
@@ -447,9 +448,8 @@ void MonthView::showDates(const QDate &start, const QDate &end, const QDate &pre
     d->triggerDelayedReload(DatesChanged);
 }
 
-QPair<QDateTime, QDateTime> MonthView::actualDateRange(const QDateTime &start,
-        const QDateTime &,
-        const QDate &preferredMonth) const
+QPair<QDateTime, QDateTime> MonthView::actualDateRange(const QDateTime &start, const QDateTime &,
+                                                       const QDate &preferredMonth) const
 {
     QDateTime dayOne = preferredMonth.isValid() ? QDateTime(preferredMonth) : start;
     dayOne.setDate(QDate(dayOne.date().year(), dayOne.date().month(), 1));
@@ -499,9 +499,9 @@ void MonthView::reloadIncidences()
     // build monthcells hash
     int i = 0;
     for (QDate date = actualStartDateTime().date();
-            date <= actualEndDateTime().date(); date = date.addDays(1)) {
+         date <= actualEndDateTime().date(); date = date.addDays(1)) {
         d->scene->mMonthCellMap[ date ] = new MonthCell(i, date, d->scene);
-        i ++;
+        i++;
     }
 
     // build global event list
@@ -512,12 +512,12 @@ void MonthView::reloadIncidences()
         occurIter.next();
 
         // Remove the two checks when filtering is done through a proxyModel, when using calendar search
-        if (!preferences()->showTodosMonthView() &&
-                occurIter.incidence()->type() == KCalCore::Incidence::TypeTodo) {
+        if (!preferences()->showTodosMonthView()
+            && occurIter.incidence()->type() == KCalCore::Incidence::TypeTodo) {
             continue;
         }
-        if (!preferences()->showJournalsMonthView() &&
-                occurIter.incidence()->type() == KCalCore::Incidence::TypeJournal) {
+        if (!preferences()->showJournalsMonthView()
+            && occurIter.incidence()->type() == KCalCore::Incidence::TypeJournal) {
             continue;
         }
 
@@ -534,13 +534,13 @@ void MonthView::reloadIncidences()
         Q_ASSERT(item.isValid());
         Q_ASSERT(item.hasPayload());
         MonthItem *manager = new IncidenceMonthItem(d->scene,
-                calendar(),
-                item,
-                occurIter.incidence(),
-                occurIter.occurrenceStartDate().toLocalTime().date());
+                                                    calendar(),
+                                                    item,
+                                                    occurIter.incidence(),
+                                                    occurIter.occurrenceStartDate().toLocalTime().date());
         d->scene->mManagerList << manager;
-        if (d->selectedItemId == item.id() &&
-                manager->realStartDate() == d->selectedItemDate) {
+        if (d->selectedItemId == item.id()
+            && manager->realStartDate() == d->selectedItemDate) {
             // only select it outside the loop because we are still creating items
             itemToReselect = manager;
         }
@@ -552,16 +552,16 @@ void MonthView::reloadIncidences()
 
     // add holidays
     const QList<QDate> workDays = CalendarSupport::workDays(actualStartDateTime().date(),
-                                  actualEndDateTime().date());
+                                                            actualEndDateTime().date());
 
     for (QDate date = actualStartDateTime().date();
-            date <= actualEndDateTime().date(); date = date.addDays(1)) {
+         date <= actualEndDateTime().date(); date = date.addDays(1)) {
         // Only call CalendarSupport::holiday() if it's not a workDay, saves come cpu cicles.
         if (!workDays.contains(date)) {
             QStringList holidays(CalendarSupport::holiday(date));
             if (!holidays.isEmpty()) {
-                MonthItem *holidayItem =
-                    new HolidayMonthItem(
+                MonthItem *holidayItem
+                    = new HolidayMonthItem(
                     d->scene, date,
                     holidays.join(i18nc("@item:intext delimiter for joining holiday names", ",")));
                 d->scene->mManagerList << holidayItem;
@@ -571,13 +571,13 @@ void MonthView::reloadIncidences()
 
     // sort it
     std::sort(d->scene->mManagerList.begin(),
-          d->scene->mManagerList.end(),
-          MonthItem::greaterThan);
+              d->scene->mManagerList.end(),
+              MonthItem::greaterThan);
 
     // build each month's cell event list
     foreach (MonthItem *manager, d->scene->mManagerList) {
         for (QDate date = manager->startDate();
-                date <= manager->endDate(); date = date.addDays(1)) {
+             date <= manager->endDate(); date = date.addDays(1)) {
             MonthCell *cell = d->scene->mMonthCellMap.value(date);
             if (cell) {
                 cell->mMonthItemList << manager;
@@ -608,7 +608,7 @@ void MonthView::calendarReset()
 QDate MonthView::averageDate() const
 {
     return actualStartDateTime().date().addDays(
-               actualStartDateTime().date().daysTo(actualEndDateTime().date()) / 2);
+        actualStartDateTime().date().daysTo(actualEndDateTime().date()) / 2);
 }
 
 int MonthView::currentMonth() const

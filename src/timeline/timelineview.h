@@ -30,9 +30,7 @@
 
 #include <QDateTime>
 
-namespace EventViews
-{
-
+namespace EventViews {
 /**
   This class provides a view ....
 */
@@ -70,9 +68,7 @@ protected:
 private:
     class Private;
     Private *const d;
-
 };
-
 } // namespace EventViews
 
 #endif

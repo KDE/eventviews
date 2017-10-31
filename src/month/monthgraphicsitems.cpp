@@ -43,7 +43,7 @@ ScrollIndicator::ScrollIndicator(ScrollIndicator::ArrowDirection dir)
 
 QRectF ScrollIndicator::boundingRect() const
 {
-    return QRectF(- mWidth / 2, - mHeight / 2, mWidth, mHeight);
+    return QRectF(-mWidth / 2, -mHeight / 2, mWidth, mHeight);
 }
 
 void ScrollIndicator::paint(QPainter *painter, const QStyleOptionGraphicsItem *option,
@@ -56,12 +56,12 @@ void ScrollIndicator::paint(QPainter *painter, const QStyleOptionGraphicsItem *o
 
     QPolygon arrow(3);
     if (mDirection == ScrollIndicator::UpArrow) {
-        arrow.setPoint(0, 0, - mHeight / 2);
+        arrow.setPoint(0, 0, -mHeight / 2);
         arrow.setPoint(1, mWidth / 2, mHeight / 2);
-        arrow.setPoint(2, - mWidth / 2, mHeight / 2);
+        arrow.setPoint(2, -mWidth / 2, mHeight / 2);
     } else if (mDirection == ScrollIndicator::DownArrow) {   // down
-        arrow.setPoint(1, mWidth / 2, - mHeight / 2);
-        arrow.setPoint(2, - mWidth / 2, - mHeight / 2);
+        arrow.setPoint(1, mWidth / 2, -mHeight / 2);
+        arrow.setPoint(2, -mWidth / 2, -mHeight / 2);
         arrow.setPoint(0, 0, mHeight / 2);
     }
     QColor color(Qt::black);
@@ -73,7 +73,9 @@ void ScrollIndicator::paint(QPainter *painter, const QStyleOptionGraphicsItem *o
 
 //-------------------------------------------------------------
 MonthCell::MonthCell(int id, const QDate &date, QGraphicsScene *scene)
-    : mId(id), mDate(date), mScene(scene)
+    : mId(id)
+    , mDate(date)
+    , mScene(scene)
 {
     mUpArrow = new ScrollIndicator(ScrollIndicator::UpArrow);
     mDownArrow = new ScrollIndicator(ScrollIndicator::DownArrow);
@@ -132,8 +134,8 @@ int MonthCell::firstFreeSpace()
 static const int ft = 2; // frame thickness
 
 MonthGraphicsItem::MonthGraphicsItem(MonthItem *manager)
-    : QGraphicsItem(nullptr),
-      mMonthItem(manager)
+    : QGraphicsItem(nullptr)
+    , mMonthItem(manager)
 {
     manager->monthScene()->addItem(this);
     QTransform transform;
@@ -216,7 +218,7 @@ QPainterPath MonthGraphicsItem::widgetPath(bool border) const
 QRectF MonthGraphicsItem::boundingRect() const
 {
     // width - 2 because of the cell-dividing line with width == 1 at beginning and end
-    return QRectF(0,  0, (daySpan() + 1) * mMonthItem->monthScene()->columnWidth() - 2,
+    return QRectF(0, 0, (daySpan() + 1) * mMonthItem->monthScene()->columnWidth() - 2,
                   mMonthItem->monthScene()->itemHeight());
 }
 
@@ -233,11 +235,11 @@ void MonthGraphicsItem::paint(QPainter *p, const QStyleOptionGraphicsItem *, QWi
     int textMargin = 7;
 
     QColor bgColor = mMonthItem->bgColor();
-    bgColor = mMonthItem->selected() ?
-              bgColor.lighter(EventView::BRIGHTNESS_FACTOR) : bgColor;
+    bgColor = mMonthItem->selected()
+              ? bgColor.lighter(EventView::BRIGHTNESS_FACTOR) : bgColor;
     QColor frameColor = mMonthItem->frameColor();
-    frameColor = mMonthItem->selected() ?
-                 frameColor.lighter(EventView::BRIGHTNESS_FACTOR) : frameColor;
+    frameColor = mMonthItem->selected()
+                 ? frameColor.lighter(EventView::BRIGHTNESS_FACTOR) : frameColor;
     QColor textColor = EventViews::getTextColor(bgColor);
 
     // make moving or resizing items translucent
@@ -327,7 +329,6 @@ void MonthGraphicsItem::paint(QPainter *p, const QStyleOptionGraphicsItem *, QWi
         text = p->fontMetrics().elidedText(text, Qt::ElideRight, textRect.width());
         p->drawText(textRect, alignFlag, text);
     }
-
 }
 
 void MonthGraphicsItem::setStartDate(const QDate &date)
@@ -357,7 +358,7 @@ int MonthGraphicsItem::daySpan() const
 
 void MonthGraphicsItem::updateGeometry()
 {
-    MonthCell *cell =  mMonthItem->monthScene()->mMonthCellMap.value(startDate());
+    MonthCell *cell = mMonthItem->monthScene()->mMonthCellMap.value(startDate());
 
     // If the item is moving and this one is moved outside the view,
     // cell will be null
@@ -373,16 +374,16 @@ void MonthGraphicsItem::updateGeometry()
     int beginX = 1 + mMonthItem->monthScene()->cellHorizontalPos(cell);
     int beginY = 1 + cell->topMargin() + mMonthItem->monthScene()->cellVerticalPos(cell);
 
-    beginY += mMonthItem->position() *
-              mMonthItem->monthScene()->itemHeightIncludingSpacing() -
-              mMonthItem->monthScene()->startHeight() *
-              mMonthItem->monthScene()->itemHeightIncludingSpacing(); // scrolling
+    beginY += mMonthItem->position()
+              *mMonthItem->monthScene()->itemHeightIncludingSpacing()
+              -mMonthItem->monthScene()->startHeight()
+              *mMonthItem->monthScene()->itemHeightIncludingSpacing(); // scrolling
 
     setPos(beginX, beginY);
 
-    if (mMonthItem->position() < mMonthItem->monthScene()->startHeight() ||
-            mMonthItem->position() - mMonthItem->monthScene()->startHeight() >=
-            mMonthItem->monthScene()->maxRowCount()) {
+    if (mMonthItem->position() < mMonthItem->monthScene()->startHeight()
+        || mMonthItem->position() - mMonthItem->monthScene()->startHeight()
+        >= mMonthItem->monthScene()->maxRowCount()) {
         hide();
     } else {
         show();
@@ -394,4 +395,3 @@ QString MonthGraphicsItem::getToolTip() const
 {
     return mMonthItem->toolTipText(mStartDate);
 }
-

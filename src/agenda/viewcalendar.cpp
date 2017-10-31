@@ -181,7 +181,8 @@ Akonadi::Item AkonadiViewCalendar::item(const KCalCore::Incidence::Ptr &incidenc
 
         if (id == -1) {
             // Ok, we really don't know the ID, give up.
-            qCWarning(CALENDARVIEW_LOG) << "Item is invalid. uid = " << incidence->instanceIdentifier();
+            qCWarning(CALENDARVIEW_LOG) << "Item is invalid. uid = "
+                                        << incidence->instanceIdentifier();
             return Akonadi::Item();
         }
         return mCalendar->item(incidence->instanceIdentifier());

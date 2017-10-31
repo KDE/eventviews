@@ -32,9 +32,7 @@
 
 class KCheckableProxyModel;
 
-namespace EventViews
-{
-
+namespace EventViews {
 class EventViewPrivate
 {
 public: /// Methods
@@ -80,7 +78,6 @@ public: /// Members
     EventView::Changes mChanges;
     Akonadi::Collection::Id mCollectionId;
 };
-
 } // EventViews
 
 #endif

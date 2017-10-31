@@ -22,13 +22,13 @@
 
 class KCheckableProxyModel;
 
-namespace EventViews
-{
-
+namespace EventViews {
 class ConfigDialogInterface
 {
 public:
-    virtual ~ConfigDialogInterface() { };
+    virtual ~ConfigDialogInterface()
+    {
+    }
 
     virtual int numberOfColumns() const = 0;
     virtual bool useCustomColumns() const = 0;
@@ -36,7 +36,6 @@ public:
 
     virtual KCheckableProxyModel *takeSelectionModel(int column) = 0;
 };
-
 }
 
 #endif

@@ -73,26 +73,30 @@ StoredElement::StoredElement(const QString &id) : Element(id)
 }
 
 StoredElement::StoredElement(const QString &id, const QString &shortText)
-    : Element(id), mShortText(shortText)
+    : Element(id)
+    , mShortText(shortText)
 {
 }
 
-StoredElement::StoredElement(const QString &id, const QString &shortText,
-                             const QString &longText)
-    : Element(id), mShortText(shortText), mLongText(longText)
+StoredElement::StoredElement(const QString &id, const QString &shortText, const QString &longText)
+    : Element(id)
+    , mShortText(shortText)
+    , mLongText(longText)
 {
 }
 
-StoredElement::StoredElement(const QString &id, const QString &shortText,
-                             const QString &longText,
+StoredElement::StoredElement(const QString &id, const QString &shortText, const QString &longText,
                              const QString &extensiveText)
-    : Element(id), mShortText(shortText), mLongText(longText),
-      mExtensiveText(extensiveText)
+    : Element(id)
+    , mShortText(shortText)
+    , mLongText(longText)
+    , mExtensiveText(extensiveText)
 {
 }
 
 StoredElement::StoredElement(const QString &id, const QPixmap &pixmap)
-    : Element(id), mPixmap(pixmap)
+    : Element(id)
+    , mPixmap(pixmap)
 {
 }
 
@@ -282,4 +286,3 @@ QDate Decoration::yearDate(const QDate &date)
 {
     return QDate(date.year(), 1, 1);
 }
-

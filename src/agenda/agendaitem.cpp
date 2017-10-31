@@ -68,11 +68,17 @@ QPixmap *AgendaItem::eventPxmp = nullptr;
 //-----------------------------------------------------------------------------
 
 AgendaItem::AgendaItem(EventView *eventView, const MultiViewCalendar::Ptr &calendar,
-                       const KCalCore::Incidence::Ptr &item,
-                       int itemPos, int itemCount,
+                       const KCalCore::Incidence::Ptr &item, int itemPos, int itemCount,
                        const QDateTime &qd, bool isSelected, QWidget *parent)
-    : QWidget(parent), mEventView(eventView), mCalendar(calendar), mIncidence(item),
-      mOccurrenceDateTime(qd), mValid(true), mCloned(false), mSelected(isSelected), mSpecialEvent(false)
+    : QWidget(parent)
+    , mEventView(eventView)
+    , mCalendar(calendar)
+    , mIncidence(item)
+    , mOccurrenceDateTime(qd)
+    , mValid(true)
+    , mCloned(false)
+    , mSelected(isSelected)
+    , mSpecialEvent(false)
 {
     if (!mIncidence) {
         mValid = false;
@@ -80,12 +86,14 @@ AgendaItem::AgendaItem(EventView *eventView, const MultiViewCalendar::Ptr &calen
     }
 
     mIncidence = Incidence::Ptr(mIncidence->clone());
-    if (mIncidence->customProperty("KABC", "BIRTHDAY") == QLatin1String("YES") ||
-            mIncidence->customProperty("KABC", "ANNIVERSARY") == QLatin1String("YES")) {
-        const int years = EventViews::yearDiff(mIncidence->dtStart().date(), qd.toLocalTime().date());
+    if (mIncidence->customProperty("KABC", "BIRTHDAY") == QLatin1String("YES")
+        || mIncidence->customProperty("KABC", "ANNIVERSARY") == QLatin1String("YES")) {
+        const int years
+            = EventViews::yearDiff(mIncidence->dtStart().date(), qd.toLocalTime().date());
         if (years > 0) {
             mIncidence->setReadOnly(false);
-            mIncidence->setSummary(i18np("%2 (1 year)", "%2 (%1 years)", years, mIncidence->summary()));
+            mIncidence->setSummary(i18np("%2 (1 year)", "%2 (%1 years)", years,
+                                         mIncidence->summary()));
             mIncidence->setReadOnly(true);
             mCloned = true;
         }
@@ -137,8 +145,8 @@ void AgendaItem::updateIcons()
             mIconGroupTent = false;
             mIconOrganizer = true;
         } else {
-            KCalCore::Attendee::Ptr me =
-                mIncidence->attendeeByMails(mEventView->kcalPreferences()->allEmails());
+            KCalCore::Attendee::Ptr me
+                = mIncidence->attendeeByMails(mEventView->kcalPreferences()->allEmails());
 
             if (me) {
                 if (me->status() == KCalCore::Attendee::NeedsAction && me->RSVP()) {
@@ -386,7 +394,7 @@ AgendaItem::QPtr AgendaItem::removeMoveItem(const AgendaItem::QPtr &e)
             last->setMultiItem(last->firstMultiItem(), last->prevMultiItem(), nullptr, nullptr);
         }
 
-        AgendaItem::QPtr tmp =  first;
+        AgendaItem::QPtr tmp = first;
         if (first == last) {
             delete mMultiItemInfo;
             tmp = nullptr;
@@ -502,7 +510,8 @@ void AgendaItem::resetMovePrivate()
                 mMultiItemInfo->mNextMultiItem = nullptr;
             }
 
-            if (mStartMoveInfo->mFirstMultiItem == nullptr && mStartMoveInfo->mLastMultiItem == nullptr) {
+            if (mStartMoveInfo->mFirstMultiItem == nullptr
+                && mStartMoveInfo->mLastMultiItem == nullptr) {
                 // it was a single-day event before we started the move.
                 delete mMultiItemInfo;
                 mMultiItemInfo = nullptr;
@@ -685,7 +694,8 @@ QList<AgendaItem::QPtr> &AgendaItem::conflictItems()
 void AgendaItem::setConflictItems(const QList<AgendaItem::QPtr> &ci)
 {
     mConflictItems = ci;
-    for (QList<AgendaItem::QPtr>::iterator it = mConflictItems.begin(), end(mConflictItems.end()); it != end; ++it) {
+    for (QList<AgendaItem::QPtr>::iterator it = mConflictItems.begin(), end(mConflictItems.end());
+         it != end; ++it) {
         (*it)->addConflictItem(this);
     }
 }
@@ -715,8 +725,8 @@ bool AgendaItem::overlaps(CellItem *o) const
     return false;
 }
 
-static void conditionalPaint(QPainter *p, bool condition, int &x, int y,
-                             int ft, const QPixmap &pxmp)
+static void conditionalPaint(QPainter *p, bool condition, int &x, int y, int ft,
+                             const QPixmap &pxmp)
 {
     if (condition) {
         p->drawPixmap(x, y, pxmp);
@@ -729,7 +739,7 @@ void AgendaItem::paintIcon(QPainter *p, int &x, int y, int ft)
     QString iconName;
     if (mIncidence->customProperty("KABC", "ANNIVERSARY") == QLatin1String("YES")) {
         mSpecialEvent = true;
-        iconName =  QStringLiteral("view-calendar-wedding-anniversary");
+        iconName = QStringLiteral("view-calendar-wedding-anniversary");
     } else if (mIncidence->customProperty("KABC", "BIRTHDAY") == QLatin1String("YES")) {
         mSpecialEvent = true;
         // We don't draw icon. The icon is drawn already, because it's the Akonadi::Collection's icon
@@ -750,7 +760,8 @@ void AgendaItem::paintIcons(QPainter *p, int &x, int y, int ft)
 
     if (icons.contains(EventViews::EventView::CalendarCustomIcon)) {
         const QString iconName = mCalendar->iconForIncidence(mIncidence);
-        if (!iconName.isEmpty() && iconName != QLatin1String("view-calendar") && iconName != QLatin1String("office-calendar")) {
+        if (!iconName.isEmpty() && iconName != QLatin1String("view-calendar")
+            && iconName != QLatin1String("office-calendar")) {
             conditionalPaint(p, true, x, y, ft, QIcon::fromTheme(iconName).pixmap(16, 16));
         }
     }
@@ -819,19 +830,26 @@ void AgendaItem::paintEvent(QPaintEvent *ev)
     // Also look at #17984
 
     if (!alarmPxmp) {
-        alarmPxmp     = new QPixmap(QIcon::fromTheme(QStringLiteral("task-reminder")).pixmap(16, 16));
-        recurPxmp     = new QPixmap(QIcon::fromTheme(QStringLiteral("appointment-recurring")).pixmap(16, 16));
-        readonlyPxmp  = new QPixmap(QIcon::fromTheme(QStringLiteral("object-locked")).pixmap(16, 16));
-        replyPxmp     = new QPixmap(QIcon::fromTheme(QStringLiteral("mail-reply-sender")).pixmap(16, 16));
-        groupPxmp     = new QPixmap(QIcon::fromTheme(QStringLiteral("meeting-attending")).pixmap(16, 16));
-        groupPxmpTent = new QPixmap(QIcon::fromTheme(QStringLiteral("meeting-attending-tentative")).pixmap(16, 16));
-        organizerPxmp = new QPixmap(QIcon::fromTheme(QStringLiteral("meeting-organizer")).pixmap(16, 16));
+        alarmPxmp = new QPixmap(QIcon::fromTheme(QStringLiteral("task-reminder")).pixmap(16, 16));
+        recurPxmp
+            = new QPixmap(QIcon::fromTheme(QStringLiteral("appointment-recurring")).pixmap(16, 16));
+        readonlyPxmp
+            = new QPixmap(QIcon::fromTheme(QStringLiteral("object-locked")).pixmap(16, 16));
+        replyPxmp
+            = new QPixmap(QIcon::fromTheme(QStringLiteral("mail-reply-sender")).pixmap(16, 16));
+        groupPxmp
+            = new QPixmap(QIcon::fromTheme(QStringLiteral("meeting-attending")).pixmap(16, 16));
+        groupPxmpTent = new QPixmap(QIcon::fromTheme(QStringLiteral(
+                                                         "meeting-attending-tentative")).pixmap(16,
+                                                                                                16));
+        organizerPxmp
+            = new QPixmap(QIcon::fromTheme(QStringLiteral("meeting-organizer")).pixmap(16, 16));
     }
 
     QColor bgColor;
 
-    if (CalendarSupport::hasTodo(mIncidence) &&
-            !mEventView->preferences()->todosUseCategoryColors()) {
+    if (CalendarSupport::hasTodo(mIncidence)
+        && !mEventView->preferences()->todosUseCategoryColors()) {
         Todo::Ptr todo = CalendarSupport::todo(mIncidence);
         Q_ASSERT(todo);
         const QDate dueDate = todo->dtDue().toLocalTime().date();
@@ -851,8 +869,8 @@ void AgendaItem::paintEvent(QPaintEvent *ev)
         cat = categories.first();
     }
 
-    categoryColor = cat.isEmpty() ? CalendarSupport::KCalPrefs::instance()->unsetCategoryColor() :
-                    CalendarSupport::KCalPrefs::instance()->categoryColor(cat);
+    categoryColor = cat.isEmpty() ? CalendarSupport::KCalPrefs::instance()->unsetCategoryColor()
+                    : CalendarSupport::KCalPrefs::instance()->categoryColor(cat);
 
     QColor resourceColor = mResourceColor;
     if (!resourceColor.isValid()) {
@@ -861,29 +879,33 @@ void AgendaItem::paintEvent(QPaintEvent *ev)
 
     QColor frameColor;
     // TODO PrefsBase enums should probably be redefined in Prefs
-    if (mEventView->preferences()->agendaViewColors() == PrefsBase::ResourceOnly ||
-            mEventView->preferences()->agendaViewColors() == PrefsBase::CategoryInsideResourceOutside) {
+    if (mEventView->preferences()->agendaViewColors() == PrefsBase::ResourceOnly
+        || mEventView->preferences()->agendaViewColors()
+        == PrefsBase::CategoryInsideResourceOutside) {
         frameColor = bgColor.isValid() ? bgColor : resourceColor;
     } else {
         frameColor = bgColor.isValid() ? bgColor : categoryColor;
     }
 
     if (!bgColor.isValid()) {
-        if (mEventView->preferences()->agendaViewColors() == PrefsBase::ResourceOnly ||
-                mEventView->preferences()->agendaViewColors() == PrefsBase::ResourceInsideCategoryOutside) {
+        if (mEventView->preferences()->agendaViewColors() == PrefsBase::ResourceOnly
+            || mEventView->preferences()->agendaViewColors()
+            == PrefsBase::ResourceInsideCategoryOutside) {
             bgColor = resourceColor;
         } else {
             bgColor = categoryColor;
         }
     }
 
-    if (cat.isEmpty() &&
-            mEventView->preferences()->agendaViewColors() == PrefsBase::ResourceInsideCategoryOutside) {
+    if (cat.isEmpty()
+        && mEventView->preferences()->agendaViewColors()
+        == PrefsBase::ResourceInsideCategoryOutside) {
         frameColor = bgColor;
     }
 
-    if (cat.isEmpty() &&
-            mEventView->preferences()->agendaViewColors() == PrefsBase::CategoryInsideResourceOutside) {
+    if (cat.isEmpty()
+        && mEventView->preferences()->agendaViewColors()
+        == PrefsBase::CategoryInsideResourceOutside) {
         bgColor = frameColor;
     }
 
@@ -921,25 +943,31 @@ void AgendaItem::paintEvent(QPaintEvent *ev)
     QString shortH;
     QString longH;
     if (!isMultiItem()) {
-        shortH = QLocale().toString(mIncidence->dateTime(KCalCore::Incidence::RoleDisplayStart).toLocalTime().time(), QLocale::ShortFormat);
+        shortH = QLocale().toString(mIncidence->dateTime(
+                                        KCalCore::Incidence::RoleDisplayStart).toLocalTime().time(),
+                                    QLocale::ShortFormat);
 
         if (CalendarSupport::hasEvent(mIncidence)) {
             longH = i18n("%1 - %2",
                          shortH,
-                         QLocale().toString(mIncidence->dateTime(KCalCore::Incidence::RoleEnd).toLocalTime().time(), QLocale::ShortFormat));
+                         QLocale().toString(mIncidence->dateTime(KCalCore::Incidence::RoleEnd).
+                                            toLocalTime().time(), QLocale::ShortFormat));
         } else {
             longH = shortH;
         }
     } else if (!mMultiItemInfo->mFirstMultiItem) {
-        shortH = QLocale().toString(mIncidence->dtStart().toLocalTime().time(), QLocale::ShortFormat);
+        shortH
+            = QLocale().toString(mIncidence->dtStart().toLocalTime().time(), QLocale::ShortFormat);
         longH = shortH;
     } else {
-        shortH = QLocale().toString(mIncidence->dateTime(KCalCore::Incidence::RoleEnd).toLocalTime().time(), QLocale::ShortFormat);
+        shortH = QLocale().toString(mIncidence->dateTime(
+                                        KCalCore::Incidence::RoleEnd).toLocalTime().time(),
+                                    QLocale::ShortFormat);
         longH = i18n("- %1", shortH);
     }
 
     KWordWrap ww = KWordWrap::formatText(
-                       fm, QRect(0, 0, width() - (2 * margin), -1), 0, mLabelText);
+        fm, QRect(0, 0, width() - (2 * margin), -1), 0, mLabelText);
     int th = ww.boundingRect().height();
 
     int hlHeight = qMax(fm.boundingRect(longH).height(),
@@ -948,7 +976,7 @@ void AgendaItem::paintEvent(QPaintEvent *ev)
                                   qMax(readonlyPxmp->height(),
                                        qMax(replyPxmp->height(),
                                             qMax(groupPxmp->height(),
-                                                    organizerPxmp->height()))))));
+                                                 organizerPxmp->height()))))));
 
     const bool completelyRenderable = th < (height() - 2 * ft - 2 - hlHeight);
 
@@ -959,7 +987,7 @@ void AgendaItem::paintEvent(QPaintEvent *ev)
     if ( //( singleLineHeight > height() - 4 ) ||
         (width() < 16)) {
         int x = qRound((width() - 16) / 2.0);
-        paintIcon(&p, x/*by-ref*/, margin, ft);
+        paintIcon(&p, x /*by-ref*/, margin, ft);
         return;
     }
 
@@ -969,11 +997,11 @@ void AgendaItem::paintEvent(QPaintEvent *ev)
 
         if (mIncidence->allDay()) {
             x += visRect.left();
-            const int y =  qRound((height() - 16) / 2.0);
+            const int y = qRound((height() - 16) / 2.0);
             paintIcons(&p, x, y, ft);
             txtWidth = visRect.right() - margin - x;
         } else {
-            const int y =  qRound((height() - 16) / 2.0);
+            const int y = qRound((height() - 16) / 2.0);
             paintIcons(&p, x, y, ft);
             txtWidth = width() - margin - x;
         }
@@ -985,9 +1013,9 @@ void AgendaItem::paintEvent(QPaintEvent *ev)
 
     // case 3: enough for 2-5 lines, but not for the header.
     //         Also used for the middle days in multi-events
-    if (((!completelyRenderable) &&
-            ((height() - (2 * margin)) <= (5 * singleLineHeight))) ||
-            (isMultiItem() && mMultiItemInfo->mNextMultiItem && mMultiItemInfo->mFirstMultiItem)) {
+    if (((!completelyRenderable)
+         && ((height() - (2 * margin)) <= (5 * singleLineHeight)))
+        || (isMultiItem() && mMultiItemInfo->mNextMultiItem && mMultiItemInfo->mFirstMultiItem)) {
         int x = margin, txtWidth;
 
         if (mIncidence->allDay()) {
@@ -1000,7 +1028,7 @@ void AgendaItem::paintEvent(QPaintEvent *ev)
         }
 
         ww = KWordWrap::formatText(
-                 fm, QRect(0, 0, txtWidth, (height() - (2 * margin))), 0, mLabelText);
+            fm, QRect(0, 0, txtWidth, (height() - (2 * margin))), 0, mLabelText);
 
         ww.drawText(&p, x, margin, Qt::AlignHCenter | KWordWrap::FadeOut);
         return;
@@ -1022,16 +1050,18 @@ void AgendaItem::paintEvent(QPaintEvent *ev)
         if (const KCalCore::Event::Ptr event = CalendarSupport::event(mIncidence)) {
             if (event->isMultiDay(QTimeZone::systemTimeZone())) {
                 // multi-day, all-day event
-                shortH =
-                    i18n("%1 - %2",
-                         QLocale().toString(mIncidence->dtStart().toLocalTime().date()),
-                         QLocale().toString(mIncidence->dateTime(KCalCore::Incidence::RoleEnd).toLocalTime().date()));
+                shortH
+                    = i18n("%1 - %2",
+                           QLocale().toString(mIncidence->dtStart().toLocalTime().date()),
+                           QLocale().toString(mIncidence->dateTime(KCalCore::Incidence::RoleEnd).
+                                              toLocalTime().date()));
                 longH = shortH;
 
                 // paint headline
                 drawRoundedRect(
                     &p,
-                    QRect(fmargin, fmargin, width() - fmargin * 2, - fmargin * 2 + margin + hlHeight),
+                    QRect(fmargin, fmargin,
+                          width() - fmargin * 2, -fmargin * 2 + margin + hlHeight),
                     mSelected, frameColor, false, ft, roundTop, false);
             } else {
                 // single-day, all-day event
@@ -1039,7 +1069,8 @@ void AgendaItem::paintEvent(QPaintEvent *ev)
                 // paint headline
                 drawRoundedRect(
                     &p,
-                    QRect(fmargin, fmargin, width() - fmargin * 2, - fmargin * 2 + margin + hlHeight),
+                    QRect(fmargin, fmargin,
+                          width() - fmargin * 2, -fmargin * 2 + margin + hlHeight),
                     mSelected, frameColor, false, ft, roundTop, false);
             }
         } else {
@@ -1048,7 +1079,7 @@ void AgendaItem::paintEvent(QPaintEvent *ev)
             // paint headline
             drawRoundedRect(
                 &p,
-                QRect(fmargin, fmargin, width() - fmargin * 2, - fmargin * 2 + margin + hlHeight),
+                QRect(fmargin, fmargin, width() - fmargin * 2, -fmargin * 2 + margin + hlHeight),
                 mSelected, frameColor, false, ft, roundTop, false);
         }
 
@@ -1061,7 +1092,7 @@ void AgendaItem::paintEvent(QPaintEvent *ev)
         // paint headline
         drawRoundedRect(
             &p,
-            QRect(fmargin, fmargin, width() - fmargin * 2, - fmargin * 2 + margin + hlHeight),
+            QRect(fmargin, fmargin, width() - fmargin * 2, -fmargin * 2 + margin + hlHeight),
             mSelected, frameColor, false, ft, roundTop, false);
 
         txtWidth = width() - margin - x;
@@ -1089,7 +1120,7 @@ void AgendaItem::paintEvent(QPaintEvent *ev)
 
     // draw event text
     ww = KWordWrap::formatText(
-             fm, QRect(0, 0, txtWidth, height() - margin - y), 0, mLabelText);
+        fm, QRect(0, 0, txtWidth, height() - margin - y), 0, mLabelText);
 
     p.setBackground(QBrush(bgColor));
     p.setPen(textColor);
@@ -1100,12 +1131,10 @@ void AgendaItem::paintEvent(QPaintEvent *ev)
         ww.drawText(&p, eventX + (txtWidth - ww.boundingRect().width() - 2 * margin) / 2, y,
                     Qt::AlignHCenter | KWordWrap::FadeOut);
     }
-
 }
 
-void AgendaItem::drawRoundedRect(QPainter *p, const QRect &rect,
-                                 bool selected, const QColor &bgColor,
-                                 bool frame, int ft, bool roundTop,
+void AgendaItem::drawRoundedRect(QPainter *p, const QRect &rect, bool selected,
+                                 const QColor &bgColor, bool frame, int ft, bool roundTop,
                                  bool roundBottom)
 {
     Q_UNUSED(ft);
@@ -1190,9 +1219,9 @@ void AgendaItem::drawRoundedRect(QPainter *p, const QRect &rect,
     QLinearGradient gradient(QPointF(r.x(), r.y()), QPointF(r.x(), r.height()));
 
     if (r.height() > 50) {
-        if (mIncidence->allDay() &&
-                mIncidence->dtStart() == mIncidence->dateTime(KCalCore::Incidence::RoleEnd) &&
-                CalendarSupport::hasEvent(mIncidence)) {
+        if (mIncidence->allDay()
+            && mIncidence->dtStart() == mIncidence->dateTime(KCalCore::Incidence::RoleEnd)
+            && CalendarSupport::hasEvent(mIncidence)) {
             gradient.setColorAt(0, bgColor.lighter(130));
             qreal t = 1.0 - (r.height() - 18.0) / r.height();
             gradient.setColorAt(t, bgColor.lighter(115));
@@ -1205,9 +1234,9 @@ void AgendaItem::drawRoundedRect(QPainter *p, const QRect &rect,
         }
         gradient.setColorAt(1, bgColor.darker(110));
     } else {
-        if (mIncidence->allDay() &&
-                mIncidence->dtStart() == mIncidence->dateTime(KCalCore::Incidence::RoleEnd) &&
-                !CalendarSupport::hasTodo(mIncidence)) {
+        if (mIncidence->allDay()
+            && mIncidence->dtStart() == mIncidence->dateTime(KCalCore::Incidence::RoleEnd)
+            && !CalendarSupport::hasTodo(mIncidence)) {
             gradient.setColorAt(0, bgColor.lighter(130));
             gradient.setColorAt(0.35, bgColor.lighter(115));
             gradient.setColorAt(0.65, bgColor);
@@ -1244,11 +1273,9 @@ void AgendaItem::drawRoundedRect(QPainter *p, const QRect &rect,
         p->setBrushOrigin(r.x() + 8, r.y() + r.height() - 6);
         p->fillRect(QRect(r.x() + 8, r.y() + r.height() - 6, r.width() - 16, 6),
                     QBrush(bottomLines));
-
     }
 
     if (r.height() - 16 > 0) {
-
         QPixmap leftLines;
         QString key(QStringLiteral("ko_l"));
         if (!QPixmapCache::find(key, leftLines)) {
@@ -1285,7 +1312,9 @@ void AgendaItem::drawRoundedRect(QPainter *p, const QRect &rect,
     QPixmap topLeft;
     QString key = roundTop ? QStringLiteral("ko_tl") : QStringLiteral("ko_rtl");
     if (!QPixmapCache::find(key, topLeft)) {
-        topLeft = roundTop ? QPixmap(QStringLiteral(":/roundTopLeft.png")) : QPixmap(QStringLiteral(":/rectangularTopLeft.png"));
+        topLeft
+            = roundTop ? QPixmap(QStringLiteral(":/roundTopLeft.png")) : QPixmap(QStringLiteral(
+                                                                                     ":/rectangularTopLeft.png"));
         QPixmapCache::insert(key, topLeft);
     }
     p->drawPixmap(r.x(), r.y(), topLeft, 0, 0, lw, th);
@@ -1293,7 +1322,8 @@ void AgendaItem::drawRoundedRect(QPainter *p, const QRect &rect,
     QPixmap topRight;
     key = roundTop ? QStringLiteral("ko_tr") : QStringLiteral("ko_rtr");
     if (!QPixmapCache::find(key, topRight)) {
-        topRight = roundTop ? QPixmap(QStringLiteral(":/roundTopRight.png")) : QPixmap(QStringLiteral(":/rectangularTopRight.png"));
+        topRight = roundTop ? QPixmap(QStringLiteral(":/roundTopRight.png")) : QPixmap(QStringLiteral(
+                                                                                           ":/rectangularTopRight.png"));
         QPixmapCache::insert(key, topRight);
     }
     p->drawPixmap(r.x() + r.width() - rw, r.y(), topRight, 8 - rw, 0, rw, th);
@@ -1301,8 +1331,8 @@ void AgendaItem::drawRoundedRect(QPainter *p, const QRect &rect,
     QPixmap bottomLeft;
     key = roundBottom ? QStringLiteral("ko_bl") : QStringLiteral("ko_rbl");
     if (!QPixmapCache::find(key, bottomLeft)) {
-        bottomLeft = roundBottom ? QPixmap(QStringLiteral(":/roundBottomLeft.png")) :
-                     QPixmap(QStringLiteral(":/rectangularBottomLeft.png"));
+        bottomLeft = roundBottom ? QPixmap(QStringLiteral(":/roundBottomLeft.png"))
+                     : QPixmap(QStringLiteral(":/rectangularBottomLeft.png"));
         QPixmapCache::insert(key, bottomLeft);
     }
     p->drawPixmap(r.x(), r.y() + r.height() - bh, bottomLeft, 0, 8 - bh, lw, bh);
@@ -1310,8 +1340,8 @@ void AgendaItem::drawRoundedRect(QPainter *p, const QRect &rect,
     QPixmap bottomRight;
     key = roundBottom ? QStringLiteral("ko_br") : QStringLiteral("ko_rbr");
     if (!QPixmapCache::find(key, bottomRight)) {
-        bottomRight = roundBottom ? QPixmap(QStringLiteral(":/roundBottomRight.png")) :
-                      QPixmap(QStringLiteral(":/rectangularBottomRight.png"));
+        bottomRight = roundBottom ? QPixmap(QStringLiteral(":/roundBottomRight.png"))
+                      : QPixmap(QStringLiteral(":/rectangularBottomRight.png"));
         QPixmapCache::insert(key, bottomRight);
     }
     p->drawPixmap(r.x() + r.width() - rw, r.y() + r.height() - bh, bottomRight,
@@ -1347,4 +1377,3 @@ bool AgendaItem::event(QEvent *event)
     }
     return QWidget::event(event);
 }
-

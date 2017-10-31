@@ -32,14 +32,11 @@
 #include <QGraphicsView>
 #include <QMap>
 
-namespace Akonadi
-{
+namespace Akonadi {
 class IncidenceChanger;
 }
 
-namespace EventViews
-{
-
+namespace EventViews {
 class MonthCell;
 class MonthItem;
 class MonthView;
@@ -78,16 +75,19 @@ public:
     {
         return mMonthView;
     }
+
     QMap<QDate, MonthCell *> mMonthCellMap;
 
     bool initialized()
     {
         return mInitialized;
     }
+
     void setInitialized(bool i)
     {
         mInitialized = i;
     }
+
     void resetAll();
     Akonadi::IncidenceChanger *incidenceChanger() const;
 
@@ -175,26 +175,32 @@ public:
     {
         return mBirthdayPixmap;
     }
+
     QPixmap anniversaryPixmap() const
     {
         return mAnniversaryPixmap;
     }
+
     QPixmap alarmPixmap() const
     {
         return mAlarmPixmap;
     }
+
     QPixmap recurPixmap() const
     {
         return mRecurPixmap;
     }
+
     QPixmap readonlyPixmap() const
     {
         return mReadonlyPixmap;
     }
+
     QPixmap replyPixmap() const
     {
-        return  mReplyPixmap;
+        return mReplyPixmap;
     }
+
     QPixmap holidayPixmap() const
     {
         return mHolidayPixmap;
@@ -345,7 +351,6 @@ private:
     MonthScene *mScene = nullptr;
     MonthView *mMonthView = nullptr;
 };
-
 }
 
 #endif

@@ -25,9 +25,7 @@
 
 #include <QDateTime>
 
-namespace EventViews
-{
-
+namespace EventViews {
 class ConfigDialogInterface;
 
 /**
@@ -56,7 +54,7 @@ public:
     bool customColumnSetupUsed() const;
     int customNumberOfColumns() const;
     QStringList customColumnTitles() const;
-    QVector<KCheckableProxyModel *>collectionSelectionModels() const;
+    QVector<KCheckableProxyModel *> collectionSelectionModels() const;
 
     void setPreferences(const PrefsPtr &prefs) override;
 
@@ -68,7 +66,8 @@ public Q_SLOTS:
 
     void customCollectionsChanged(ConfigDialogInterface *dlg);
 
-    void showDates(const QDate &start, const QDate &end, const QDate &preferredMonth = QDate()) override;
+    void showDates(const QDate &start, const QDate &end,
+                   const QDate &preferredMonth = QDate()) override;
     void showIncidences(const Akonadi::Item::List &incidenceList, const QDate &date) override;
     void updateView() override;
     void updateConfig() override;
@@ -102,7 +101,6 @@ private:
     class Private;
     Private *const d;
 };
-
 }
 
 #endif

@@ -30,8 +30,7 @@
 #include <Akonadi/Calendar/ETMCalendar>
 #include <QWidget>
 
-namespace KPIM
-{
+namespace KPIM {
 class KCheckComboBox;
 class TagSelectionCombo;
 }
@@ -42,9 +41,10 @@ class TodoViewQuickSearch : public QWidget
 {
     Q_OBJECT
 public:
-    TodoViewQuickSearch(const Akonadi::ETMCalendar::Ptr &calendar,
-                        QWidget *parent);
-    ~TodoViewQuickSearch() {}
+    TodoViewQuickSearch(const Akonadi::ETMCalendar::Ptr &calendar, QWidget *parent);
+    ~TodoViewQuickSearch()
+    {
+    }
 
     void setCalendar(const Akonadi::ETMCalendar::Ptr &calendar);
 

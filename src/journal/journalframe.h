@@ -37,17 +37,14 @@
 class QTextBrowser;
 class QPushButton;
 
-namespace EventViews
-{
-
+namespace EventViews {
 class JournalFrame : public QFrame
 {
     Q_OBJECT
 public:
     typedef QList<JournalFrame *> List;
 
-    JournalFrame(const Akonadi::Item &journal,
-                 const Akonadi::ETMCalendar::Ptr &calendar,
+    JournalFrame(const Akonadi::Item &journal, const Akonadi::ETMCalendar::Ptr &calendar,
                  QWidget *parent);
 
     ~JournalFrame();
@@ -80,6 +77,7 @@ public Q_SLOTS:
     {
         mChanger = changer;
     }
+
     void setDate(const QDate &date);
 
 Q_SIGNALS:
@@ -150,7 +148,6 @@ private:
 
     Akonadi::IncidenceChanger *mChanger = nullptr;
 };
-
 }
 
 #endif

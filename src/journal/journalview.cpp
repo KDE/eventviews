@@ -37,7 +37,8 @@
 
 using namespace EventViews;
 
-JournalView::JournalView(QWidget *parent) : EventView(parent), mChanger(nullptr)
+JournalView::JournalView(QWidget *parent) : EventView(parent)
+    , mChanger(nullptr)
 {
     QVBoxLayout *topLayout = new QVBoxLayout(this);
     topLayout->setMargin(0);
@@ -116,6 +117,7 @@ void JournalView::clearEntries()
     }
     mEntries.clear();
 }
+
 void JournalView::updateView()
 {
     QMap<QDate, JournalDateView *>::Iterator it = mEntries.end();
@@ -140,7 +142,8 @@ void JournalView::showDates(const QDate &start, const QDate &end, const QDate &)
 {
     clearEntries();
     if (end < start) {
-        qCWarning(CALENDARVIEW_LOG) << "End is smaller than start. end=" << end << "; start=" << start;
+        qCWarning(CALENDARVIEW_LOG) << "End is smaller than start. end=" << end << "; start="
+                                    << start;
         return;
     }
 
@@ -172,7 +175,7 @@ void JournalView::showIncidences(const Akonadi::Item::List &incidences, const QD
 }
 
 void JournalView::changeIncidenceDisplay(const Akonadi::Item &incidence,
-        Akonadi::IncidenceChanger::ChangeType changeType)
+                                         Akonadi::IncidenceChanger::ChangeType changeType)
 {
     if (KCalCore::Journal::Ptr journal = CalendarSupport::journal(incidence)) {
         switch (changeType) {
@@ -213,4 +216,3 @@ bool JournalView::eventFilter(QObject *object, QEvent *event)
         return false;
     }
 }
-

@@ -27,9 +27,7 @@
 #include <QDate>
 #include <QGraphicsItem>
 
-namespace EventViews
-{
-
+namespace EventViews {
 class MonthItem;
 
 /**
@@ -85,6 +83,7 @@ public:
     {
         return mId;
     }
+
     QDate date() const
     {
         return mDate;
@@ -109,6 +108,7 @@ public:
     {
         return mUpArrow;
     }
+
     ScrollIndicator *downArrow() const
     {
         return mDownArrow;
@@ -218,7 +218,6 @@ private:
     // The current item is part of a MonthItem
     MonthItem *mMonthItem = nullptr;
 };
-
 }
 
 #endif

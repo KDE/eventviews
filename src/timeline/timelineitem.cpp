@@ -33,7 +33,10 @@ using namespace EventViews;
 
 TimelineItem::TimelineItem(const Akonadi::ETMCalendar::Ptr &calendar, uint index,
                            QStandardItemModel *model, QObject *parent)
-    : QObject(parent), mCalendar(calendar), mModel(model), mIndex(index)
+    : QObject(parent)
+    , mCalendar(calendar)
+    , mModel(model)
+    , mIndex(index)
 {
     mModel->removeRow(mIndex);
     QStandardItem *dummyItem = new QStandardItem;
@@ -41,8 +44,8 @@ TimelineItem::TimelineItem(const Akonadi::ETMCalendar::Ptr &calendar, uint index
     mModel->insertRow(mIndex, dummyItem);
 }
 
-void TimelineItem::insertIncidence(const Akonadi::Item &aitem,
-                                   const QDateTime &_start, const QDateTime &_end)
+void TimelineItem::insertIncidence(const Akonadi::Item &aitem, const QDateTime &_start,
+                                   const QDateTime &_end)
 {
     const Incidence::Ptr incidence = CalendarSupport::incidence(aitem);
     QDateTime start(_start);
@@ -60,8 +63,8 @@ void TimelineItem::insertIncidence(const Akonadi::Item &aitem,
     typedef QList<QStandardItem *> ItemList;
     ItemList list = mItemMap.value(aitem.id());
     for (ItemList::ConstIterator it = list.constBegin(); it != list.constEnd(); ++it) {
-        if (static_cast<TimelineSubItem *>(*it)->startTime() == start &&
-                static_cast<TimelineSubItem *>(*it)->endTime() == end) {
+        if (static_cast<TimelineSubItem *>(*it)->startTime() == start
+            && static_cast<TimelineSubItem *>(*it)->endTime() == end) {
             return;
         }
     }
@@ -109,8 +112,11 @@ void TimelineItem::setColor(const QColor &color)
 
 TimelineSubItem::TimelineSubItem(const Akonadi::ETMCalendar::Ptr &calendar,
                                  const Akonadi::Item &incidence, TimelineItem *parent)
-    : QStandardItem(), mCalendar(calendar), mIncidence(incidence),
-      mParent(parent), mToolTipNeedsUpdate(true)
+    : QStandardItem()
+    , mCalendar(calendar)
+    , mIncidence(incidence)
+    , mParent(parent)
+    , mToolTipNeedsUpdate(true)
 {
     setData(KGantt::TypeTask, KGantt::ItemTypeRole);
     if (!CalendarSupport::incidence(incidence)->isReadOnly()) {
@@ -152,5 +158,6 @@ void TimelineSubItem::updateToolTip()
 
     setData(IncidenceFormatter::toolTipStr(
                 CalendarSupport::displayName(mCalendar.data(), mIncidence.parentCollection()),
-                CalendarSupport::incidence(mIncidence), originalStart().date(), true), Qt::ToolTipRole);
+                CalendarSupport::incidence(mIncidence),
+                originalStart().date(), true), Qt::ToolTipRole);
 }

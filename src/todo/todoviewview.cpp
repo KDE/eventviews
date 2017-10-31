@@ -35,7 +35,9 @@
 #include <QMouseEvent>
 
 TodoViewView::TodoViewView(QWidget *parent)
-    : QTreeView(parent), mHeaderPopup(nullptr), mIgnoreNextMouseRelease(false)
+    : QTreeView(parent)
+    , mHeaderPopup(nullptr)
+    , mIgnoreNextMouseRelease(false)
 {
     header()->installEventFilter(this);
     setAlternatingRowColors(true);
@@ -46,8 +48,8 @@ TodoViewView::TodoViewView(QWidget *parent)
 
 bool TodoViewView::isEditing(const QModelIndex &index) const
 {
-    return state() & QAbstractItemView::EditingState &&
-           currentIndex() == index;
+    return state() & QAbstractItemView::EditingState
+           && currentIndex() == index;
 }
 
 bool TodoViewView::eventFilter(QObject *watched, QEvent *event)
@@ -61,8 +63,8 @@ bool TodoViewView::eventFilter(QObject *watched, QEvent *event)
             mHeaderPopup->setTitle(i18n("View Columns"));
             // First entry can't be disabled
             for (int i = 1; i < model()->columnCount(); ++i) {
-                QAction *tmp =
-                    mHeaderPopup->addAction(model()->headerData(i, Qt::Horizontal).toString());
+                QAction *tmp
+                    = mHeaderPopup->addAction(model()->headerData(i, Qt::Horizontal).toString());
                 tmp->setData(QVariant(i));
                 tmp->setCheckable(true);
                 mColumnActions << tmp;
@@ -94,8 +96,7 @@ void TodoViewView::toggleColumnHidden(QAction *action)
     Q_EMIT visibleColumnCountChanged();
 }
 
-QModelIndex TodoViewView::moveCursor(CursorAction cursorAction,
-                                     Qt::KeyboardModifiers modifiers)
+QModelIndex TodoViewView::moveCursor(CursorAction cursorAction, Qt::KeyboardModifiers modifiers)
 {
     QModelIndex current = currentIndex();
     if (!current.isValid()) {
@@ -103,10 +104,11 @@ QModelIndex TodoViewView::moveCursor(CursorAction cursorAction,
     }
 
     switch (cursorAction) {
-    case MoveNext: {
+    case MoveNext:
+    {
         // try to find an editable item right of the current one
         QModelIndex tmp = getNextEditableIndex(
-                              current.sibling(current.row(), current.column() + 1), 1);
+            current.sibling(current.row(), current.column() + 1), 1);
         if (tmp.isValid()) {
             return tmp;
         }
@@ -137,10 +139,11 @@ QModelIndex TodoViewView::moveCursor(CursorAction cursorAction,
         }
         return QModelIndex();
     }
-    case MovePrevious: {
+    case MovePrevious:
+    {
         // try to find an editable item left of the current one
         QModelIndex tmp = getNextEditableIndex(
-                              current.sibling(current.row(), current.column() - 1), -1);
+            current.sibling(current.row(), current.column() - 1), -1);
         if (tmp.isValid()) {
             return tmp;
         }
@@ -232,4 +235,3 @@ void TodoViewView::expandParent()
         QTreeView::keyPressEvent(&keyEvent);
     }
 }
-

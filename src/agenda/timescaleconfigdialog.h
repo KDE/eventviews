@@ -26,9 +26,7 @@
 
 #include <QDialog>
 
-namespace EventViews
-{
-
+namespace EventViews {
 class Prefs;
 typedef QSharedPointer<Prefs> PrefsPtr;
 
@@ -54,7 +52,6 @@ private:
     class Private;
     Private *const d;
 };
-
 }
 
 #endif

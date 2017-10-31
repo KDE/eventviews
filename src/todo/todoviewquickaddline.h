@@ -33,7 +33,9 @@ class TodoViewQuickAddLine : public KLineEdit
 
 public:
     explicit TodoViewQuickAddLine(QWidget *parent);
-    ~TodoViewQuickAddLine() {}
+    ~TodoViewQuickAddLine()
+    {
+    }
 
 protected:
     void keyPressEvent(QKeyEvent *event) override;

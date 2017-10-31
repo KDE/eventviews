@@ -36,14 +36,11 @@
 #include <QFrame>
 #include <QScrollArea>
 
-namespace Akonadi
-{
+namespace Akonadi {
 class IncidenceChanger;
 }
 
-namespace EventViews
-{
-
+namespace EventViews {
 class Agenda;
 class AgendaItem;
 class AgendaView;
@@ -68,8 +65,8 @@ class EVENTVIEWS_EXPORT Agenda : public QWidget
 {
     Q_OBJECT
 public:
-    Agenda(AgendaView *agendaView, QScrollArea *scrollArea,
-           int columns, int rows, int rowSize, bool isInteractive);
+    Agenda(AgendaView *agendaView, QScrollArea *scrollArea, int columns, int rows, int rowSize,
+           bool isInteractive);
 
     Agenda(AgendaView *agendaView, QScrollArea *scrollArea, int columns, bool isInteractive);
 
@@ -123,14 +120,16 @@ public:
 
     void setStartTime(const QTime &startHour);
 
-    AgendaItem::QPtr insertItem(const KCalCore::Incidence::Ptr &incidence, const QDateTime &recurrenceId, int X, int YTop,
-                                int YBottom, int itemPos, int itemCount, bool isSelected);
+    AgendaItem::QPtr insertItem(const KCalCore::Incidence::Ptr &incidence,
+                                const QDateTime &recurrenceId, int X, int YTop, int YBottom,
+                                int itemPos, int itemCount, bool isSelected);
 
-    AgendaItem::QPtr insertAllDayItem(const KCalCore::Incidence::Ptr &event, const QDateTime &recurrenceId, int XBegin,
-                                      int XEnd, bool isSelected);
+    AgendaItem::QPtr insertAllDayItem(const KCalCore::Incidence::Ptr &event,
+                                      const QDateTime &recurrenceId, int XBegin, int XEnd,
+                                      bool isSelected);
 
-    void insertMultiItem(const KCalCore::Incidence::Ptr &event, const QDateTime &recurrenceId, int XBegin, int XEnd,
-                         int YTop, int YBottom, bool isSelected);
+    void insertMultiItem(const KCalCore::Incidence::Ptr &event, const QDateTime &recurrenceId,
+                         int XBegin, int XEnd, int YTop, int YBottom, bool isSelected);
 
     /**
       Removes an event and all its multi-items from the agenda. This function
@@ -271,7 +270,8 @@ protected:
         @param pos The current mouse position
         @param item The affected item
     */
-    MouseActionType isInResizeArea(bool horizontal, const QPoint &pos, const AgendaItem::QPtr &item);
+    MouseActionType isInResizeArea(bool horizontal, const QPoint &pos,
+                                   const AgendaItem::QPtr &item);
     /** Return whether the cell specified by the grid point belongs to the current select
     */
     bool ptInSelection(const QPoint &gpos) const;
@@ -351,10 +351,7 @@ public:
 
 private:
     Agenda *mAgenda = nullptr;
-
 };
-
 }
 
 #endif
-

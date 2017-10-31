@@ -38,9 +38,7 @@ class QScrollArea;
  * @author Cornelius Schumacher <schumacher@kde.org>, Reinhold Kainhofer <reinhold@kainhofer.com>
  * @see KOBaseView
  */
-namespace EventViews
-{
-
+namespace EventViews {
 class JournalDateView;
 
 class EVENTVIEWS_EXPORT JournalView : public EventView
@@ -60,19 +58,21 @@ public:
     void appendJournal(const Akonadi::Item &journal, const QDate &dt);
 
     /** documentation in baseview.h */
-    void getHighlightMode(bool &highlightEvents,
-                          bool &highlightTodos,
-                          bool &highlightJournals);
+    void getHighlightMode(bool &highlightEvents, bool &highlightTodos, bool &highlightJournals);
 
     bool eventFilter(QObject *, QEvent *) override;
 
 public Q_SLOTS:
     // Don't update the view when midnight passed, otherwise we'll have data loss (bug 79145)
-    void dayPassed(const QDate &) override {}
+    void dayPassed(const QDate &) override
+    {
+    }
+
     void updateView() override;
     void flushView() override;
 
-    void showDates(const QDate &start, const QDate &end, const QDate &preferredMonth = QDate()) override;
+    void showDates(const QDate &start, const QDate &end,
+                   const QDate &preferredMonth = QDate()) override;
     void showIncidences(const Akonadi::Item::List &incidences, const QDate &date) override;
 
     void changeIncidenceDisplay(const Akonadi::Item &incidence,
@@ -96,7 +96,6 @@ private:
     Akonadi::IncidenceChanger *mChanger = nullptr;
 //    DateList mSelectedDates;  // List of dates to be displayed
 };
-
 }
 
 #endif

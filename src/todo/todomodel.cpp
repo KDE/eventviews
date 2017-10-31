@@ -47,7 +47,10 @@
 
 struct SourceModelIndex {
     SourceModelIndex(int _r, int _c, void *_p, QAbstractItemModel *_m)
-        : r(_r), c(_c), p(_p), m(_m)
+        : r(_r)
+        , c(_c)
+        , p(_p)
+        , m(_m)
     {
     }
 
@@ -66,15 +69,14 @@ static bool isDueToday(const KCalCore::Todo::Ptr &todo)
     return !todo->isCompleted() && todo->dtDue().date() == QDate::currentDate();
 }
 
-TodoModel::Private::Private(const EventViews::PrefsPtr &preferences,
-                            TodoModel *qq) : QObject(), m_changer(nullptr)
+TodoModel::Private::Private(const EventViews::PrefsPtr &preferences, TodoModel *qq) : QObject()
+    , m_changer(nullptr)
     , m_preferences(preferences)
     , q(qq)
 {
 }
 
-Akonadi::Item TodoModel::Private::findItemByUid(const QString &uid,
-        const QModelIndex &parent) const
+Akonadi::Item TodoModel::Private::findItemByUid(const QString &uid, const QModelIndex &parent) const
 {
     Q_ASSERT(!uid.isEmpty());
     IncidenceTreeModel *treeModel = qobject_cast<IncidenceTreeModel *>(q->sourceModel());
@@ -144,11 +146,9 @@ void TodoModel::Private::onRowsRemoved(const QModelIndex &, int, int)
     q->endRemoveRows();
 }
 
-void TodoModel::Private::onRowsAboutToBeMoved(const QModelIndex &sourceParent,
-        int sourceStart,
-        int sourceEnd,
-        const QModelIndex &destinationParent,
-        int destinationRow)
+void TodoModel::Private::onRowsAboutToBeMoved(const QModelIndex &sourceParent, int sourceStart,
+                                              int sourceEnd, const QModelIndex &destinationParent,
+                                              int destinationRow)
 {
     Q_UNUSED(sourceParent);
     Q_UNUSED(sourceStart);
@@ -201,10 +201,10 @@ void TodoModel::Private::onLayoutChanged()
         QModelIndex newIndex_col0 = q->mapFromSource(m_layoutChangePersistentIndexes.at(i));
         Q_ASSERT(newIndex_col0.isValid());
         const int column = m_columns.at(i);
-        QModelIndex newIndex =
-            column == 0 ?
-            newIndex_col0 :
-            q->createIndex(newIndex_col0.row(), column, newIndex_col0.internalPointer());
+        QModelIndex newIndex
+            = column == 0
+              ? newIndex_col0
+              : q->createIndex(newIndex_col0.row(), column, newIndex_col0.internalPointer());
         q->changePersistentIndex(m_persistentIndexes.at(i), newIndex);
     }
 
@@ -215,7 +215,8 @@ void TodoModel::Private::onLayoutChanged()
 }
 
 TodoModel::TodoModel(const EventViews::PrefsPtr &preferences, QObject *parent)
-    : QAbstractProxyModel(parent), d(new Private(preferences, this))
+    : QAbstractProxyModel(parent)
+    , d(new Private(preferences, this))
 {
     setObjectName(QStringLiteral("TodoModel"));
 }
@@ -237,8 +238,8 @@ QVariant TodoModel::data(const QModelIndex &index, int role) const
         return QVariant();
     }
     Q_ASSERT(sourceIndex.isValid());
-    const Akonadi::Item item =
-        sourceIndex.data(Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
+    const Akonadi::Item item
+        = sourceIndex.data(Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
     if (!item.isValid()) {
         qCWarning(CALENDARVIEW_LOG) << "Invalid index: " << sourceIndex;
         //Q_ASSERT( false );
@@ -280,20 +281,24 @@ QVariant TodoModel::data(const QModelIndex &index, int role) const
         case PercentColumn:
             return QVariant(todo->percentComplete());
         case StartDateColumn:
-            return todo->hasStartDate() ? QLocale().toString(todo->dtStart().toLocalTime().date(), QLocale::ShortFormat)
+            return todo->hasStartDate() ? QLocale().toString(
+                todo->dtStart().toLocalTime().date(), QLocale::ShortFormat)
                    : QVariant(QString());
         case DueDateColumn:
-            return todo->hasDueDate() ? QLocale().toString(todo->dtDue().toLocalTime().date(), QLocale::ShortFormat)
+            return todo->hasDueDate() ? QLocale().toString(
+                todo->dtDue().toLocalTime().date(), QLocale::ShortFormat)
                    : QVariant(QString());
-        case CategoriesColumn: {
+        case CategoriesColumn:
+        {
             QString categories = todo->categories().join(
-                                     i18nc("delimiter for joining category names", ","));
+                i18nc("delimiter for joining category names", ","));
             return QVariant(categories);
         }
         case DescriptionColumn:
             return QVariant(todo->description());
         case CalendarColumn:
-            return QVariant(CalendarSupport::displayName(d->m_calendar.data(), item.parentCollection()));
+            return QVariant(CalendarSupport::displayName(d->m_calendar.data(),
+                                                         item.parentCollection()));
         }
         return QVariant();
     }
@@ -317,7 +322,8 @@ QVariant TodoModel::data(const QModelIndex &index, int role) const
         case DescriptionColumn:
             return QVariant(todo->description());
         case CalendarColumn:
-            return QVariant(CalendarSupport::displayName(d->m_calendar.data(), item.parentCollection()));
+            return QVariant(CalendarSupport::displayName(d->m_calendar.data(),
+                                                         item.parentCollection()));
         }
         return QVariant();
     }
@@ -326,7 +332,8 @@ QVariant TodoModel::data(const QModelIndex &index, int role) const
     if (role == Qt::ToolTipRole) {
         if (d->m_preferences->enableToolTips()) {
             return QVariant(KCalUtils::IncidenceFormatter::toolTipStr(
-                                CalendarSupport::displayName(d->m_calendar.data(), item.parentCollection()),
+                                CalendarSupport::displayName(d->m_calendar.data(),
+                                                             item.parentCollection()),
                                 todo, QDate(), true));
         } else {
             return QVariant();
@@ -337,16 +344,15 @@ QVariant TodoModel::data(const QModelIndex &index, int role) const
     if (role == Qt::BackgroundRole) {
         if (todo->isOverdue()) {
             return QVariant(
-                       QBrush(d->m_preferences->todoOverdueColor()));
+                QBrush(d->m_preferences->todoOverdueColor()));
         } else if (isDueToday(todo)) {
             return QVariant(
-                       QBrush(d->m_preferences->todoDueTodayColor()));
+                QBrush(d->m_preferences->todoDueTodayColor()));
         }
     }
 
     // indicate if a row is checked (=completed) only in the first column
     if (role == Qt::CheckStateRole && index.column() == 0) {
-
         if (hasChildren(index) && !index.parent().isValid()) {
             return QVariant();
         }
@@ -370,9 +376,9 @@ QVariant TodoModel::data(const QModelIndex &index, int role) const
     // category colour
     if (role == Qt::DecorationRole && index.column() == SummaryColumn) {
         QStringList categories = todo->categories();
-        return categories.isEmpty() ?
-               QVariant() :
-               QVariant(CalendarSupport::KCalPrefs::instance()->categoryColor(categories.first()));
+        return categories.isEmpty()
+               ? QVariant()
+               : QVariant(CalendarSupport::KCalPrefs::instance()->categoryColor(categories.first()));
     } else if (role == Qt::DecorationRole) {
         return QVariant();
     }
@@ -427,12 +433,13 @@ bool TodoModel::setData(const QModelIndex &index, const QVariant &value, int rol
         return true;
     }
 
-    const Akonadi::Item item =
-        data(index, Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
+    const Akonadi::Item item
+        = data(index, Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
     const KCalCore::Todo::Ptr todo = CalendarSupport::todo(item);
 
     if (!item.isValid() || !todo) {
-        qCWarning(CALENDARVIEW_LOG) << "TodoModel::setData() called, bug item is invalid or doesn't have payload";
+        qCWarning(CALENDARVIEW_LOG)
+            << "TodoModel::setData() called, bug item is invalid or doesn't have payload";
         Q_ASSERT(false);
         return false;
     }
@@ -461,18 +468,20 @@ bool TodoModel::setData(const QModelIndex &index, const QVariant &value, int rol
             case PercentColumn:
                 todo->setPercentComplete(value.toInt());
                 break;
-            case StartDateColumn: {
+            case StartDateColumn:
+            {
                 QDateTime tmp = todo->dtStart();
                 tmp.setDate(value.toDate());
                 todo->setDtStart(tmp);
+                break;
             }
-            break;
-            case DueDateColumn: {
+            case DueDateColumn:
+            {
                 QDateTime tmp = todo->dtDue();
                 tmp.setDate(value.toDate());
                 todo->setDtDue(tmp);
+                break;
             }
-            break;
             case CategoriesColumn:
                 todo->setCategories(value.toStringList());
                 break;
@@ -679,8 +688,8 @@ QMimeData *TodoModel::mimeData(const QModelIndexList &indexes) const
 {
     Akonadi::Item::List items;
     for (const QModelIndex &index : indexes) {
-        const Akonadi::Item item =
-            this->data(index, Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
+        const Akonadi::Item item
+            = this->data(index, Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
         if (item.isValid() && !items.contains(item)) {
             items.push_back(item);
         }
@@ -688,8 +697,8 @@ QMimeData *TodoModel::mimeData(const QModelIndexList &indexes) const
     return CalendarSupport::createMimeData(items);
 }
 
-bool TodoModel::dropMimeData(const QMimeData *data, Qt::DropAction action,
-                             int row, int column, const QModelIndex &parent)
+bool TodoModel::dropMimeData(const QMimeData *data, Qt::DropAction action, int row, int column,
+                             const QModelIndex &parent)
 {
     Q_UNUSED(row);
     Q_UNUSED(column);
@@ -699,8 +708,8 @@ bool TodoModel::dropMimeData(const QMimeData *data, Qt::DropAction action,
         return false;
     }
 
-    if (d->m_calendar && d->m_changer &&
-            (KCalUtils::ICalDrag::canDecode(data) || KCalUtils::VCalDrag::canDecode(data))) {
+    if (d->m_calendar && d->m_changer
+        && (KCalUtils::ICalDrag::canDecode(data) || KCalUtils::VCalDrag::canDecode(data))) {
         KCalUtils::DndFactory dndFactory(d->m_calendar);
         KCalCore::Todo::Ptr t = dndFactory.createDropTodo(data);
         KCalCore::Event::Ptr e = dndFactory.createDropEvent(data);
@@ -712,8 +721,8 @@ bool TodoModel::dropMimeData(const QMimeData *data, Qt::DropAction action,
             KCalCore::Todo::Ptr todo = CalendarSupport::todo(item);
             KCalCore::Todo::Ptr destTodo;
             if (parent.isValid()) {
-                const Akonadi::Item parentItem =
-                    this->data(parent, Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
+                const Akonadi::Item parentItem
+                    = this->data(parent, Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
                 if (parentItem.isValid()) {
                     destTodo = CalendarSupport::todo(parentItem);
                 }
@@ -744,7 +753,6 @@ bool TodoModel::dropMimeData(const QMimeData *data, Qt::DropAction action,
                 qCDebug(CALENDARVIEW_LOG) << "Todo's with recurring id can't have child todos yet.";
                 return false;
             }
-
         } else if (e) {
             // TODO: Implement dropping an event onto a to-do: Generate a relationship to the event!
         } else {
@@ -754,8 +762,8 @@ bool TodoModel::dropMimeData(const QMimeData *data, Qt::DropAction action,
                 return false;
             }
 
-            const Akonadi::Item parentItem =
-                this->data(parent, Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
+            const Akonadi::Item parentItem
+                = this->data(parent, Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
             KCalCore::Todo::Ptr destTodo = CalendarSupport::todo(parentItem);
 
             if (data->hasText()) {
@@ -764,14 +772,15 @@ bool TodoModel::dropMimeData(const QMimeData *data, Qt::DropAction action,
                 KCalCore::Todo::Ptr oldTodo = KCalCore::Todo::Ptr(destTodo->clone());
 
                 if (text.startsWith(QStringLiteral("file:"))) {
-                    destTodo->addAttachment(KCalCore::Attachment::Ptr(new KCalCore::Attachment(text)));
+                    destTodo->addAttachment(KCalCore::Attachment::Ptr(new KCalCore::Attachment(
+                                                                          text)));
                 } else {
                     QStringList emails = KEmailAddress::splitAddressList(text);
                     for (QStringList::ConstIterator it = emails.constBegin();
-                            it != emails.constEnd(); ++it) {
+                         it != emails.constEnd(); ++it) {
                         QString name, email, comment;
-                        if (KEmailAddress::splitAddress(*it, name, email, comment) ==
-                                KEmailAddress::AddressOk) {
+                        if (KEmailAddress::splitAddress(*it, name, email, comment)
+                            == KEmailAddress::AddressOk) {
                             destTodo->addAttendee(
                                 KCalCore::Attendee::Ptr(new KCalCore::Attendee(name, email)));
                         }
@@ -794,8 +803,8 @@ Qt::ItemFlags TodoModel::flags(const QModelIndex &index) const
 
     Qt::ItemFlags ret = QAbstractItemModel::flags(index);
 
-    const Akonadi::Item item =
-        data(index, Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
+    const Akonadi::Item item
+        = data(index, Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
 
     if (!item.isValid()) {
         Q_ASSERT(mapToSource(index).isValid());
@@ -831,8 +840,8 @@ Qt::ItemFlags TodoModel::flags(const QModelIndex &index) const
         // whole rows should have checkboxes, so append the flag for the
         // first item of every row only. Also, only the first item of every
         // row should be used as a target for a drag and drop operation.
-        ret |= Qt::ItemIsUserCheckable |
-               Qt::ItemIsDropEnabled;
+        ret |= Qt::ItemIsUserCheckable
+               |Qt::ItemIsDropEnabled;
     }
     return ret;
 }
@@ -855,7 +864,8 @@ QModelIndex TodoModel::mapToSource(const QModelIndex &proxyIndex) const
     }
 
     if (proxyIndex.column() != 0) {
-        qCCritical(CALENDARVIEW_LOG) << "Map to source called with column>0, but source model only has 1 column";
+        qCCritical(CALENDARVIEW_LOG)
+            << "Map to source called with column>0, but source model only has 1 column";
         Q_ASSERT(false);
     }
 
@@ -863,7 +873,7 @@ QModelIndex TodoModel::mapToSource(const QModelIndex &proxyIndex) const
 
     // we convert to column 0
     const QModelIndex sourceIndex = SourceModelIndex(proxyIndex.row(), 0,
-                                    proxyIndex.internalPointer(), sourceModel());
+                                                     proxyIndex.internalPointer(), sourceModel());
 
     return sourceIndex;
 }
@@ -875,14 +885,14 @@ QModelIndex TodoModel::index(int row, int column, const QModelIndex &parent) con
     }
 
     Q_ASSERT(!parent.isValid() || parent.internalPointer());
-    QModelIndex parent_col0 =
-        parent.isValid() ?
-        createIndex(parent.row(), 0, parent.internalPointer()) :
-        QModelIndex();
+    QModelIndex parent_col0
+        = parent.isValid()
+          ? createIndex(parent.row(), 0, parent.internalPointer())
+          : QModelIndex();
 
     // Lets preserve the original internalPointer
-    const QModelIndex index =
-        mapFromSource(sourceModel()->index(row, 0, mapToSource(parent_col0)));
+    const QModelIndex index
+        = mapFromSource(sourceModel()->index(row, 0, mapToSource(parent_col0)));
 
     Q_ASSERT(!index.isValid() || index.internalPointer());
 

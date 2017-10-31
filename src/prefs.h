@@ -31,9 +31,7 @@
 #include <KConfigSkeleton>
 #include <QTimeZone>
 
-namespace EventViews
-{
-
+namespace EventViews {
 class EVENTVIEWS_EXPORT Prefs
 {
 public:
@@ -221,8 +219,6 @@ private:
 };
 
 typedef QSharedPointer<Prefs> PrefsPtr;
-
 }
 
 #endif
-

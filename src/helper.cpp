@@ -37,7 +37,8 @@ QColor EventViews::getTextColor(const QColor &c)
     return (luminance > 128.0) ? QColor(0, 0, 0) : QColor(255, 255, 255);
 }
 
-void EventViews::setResourceColor(const Akonadi::Collection &coll, const QColor &color, const PrefsPtr &preferences)
+void EventViews::setResourceColor(const Akonadi::Collection &coll, const QColor &color,
+                                  const PrefsPtr &preferences)
 {
     if (!coll.isValid()) {
         return;
@@ -45,7 +46,8 @@ void EventViews::setResourceColor(const Akonadi::Collection &coll, const QColor 
 
     const QString id = QString::number(coll.id());
     if (coll.hasAttribute<Akonadi::CollectionColorAttribute>()) {
-        Akonadi::CollectionColorAttribute *colorAttr = coll.attribute<Akonadi::CollectionColorAttribute>();
+        Akonadi::CollectionColorAttribute *colorAttr
+            = coll.attribute<Akonadi::CollectionColorAttribute>();
         if (colorAttr && colorAttr->color().isValid() && (colorAttr->color() == color)) {
             // It's the same color: we save an invalid color
             preferences->setResourceColor(id, QColor());
@@ -55,7 +57,6 @@ void EventViews::setResourceColor(const Akonadi::Collection &coll, const QColor 
     preferences->setResourceColor(id, color);
 }
 
-
 QColor EventViews::resourceColor(const Akonadi::Collection &coll, const PrefsPtr &preferences)
 {
     if (!coll.isValid()) {
@@ -64,7 +65,8 @@ QColor EventViews::resourceColor(const Akonadi::Collection &coll, const PrefsPtr
     const QString id = QString::number(coll.id());
     QColor color = preferences->resourceColorKnown(id);
     if (!color.isValid() && coll.hasAttribute<Akonadi::CollectionColorAttribute>()) {
-        Akonadi::CollectionColorAttribute *colorAttr = coll.attribute<Akonadi::CollectionColorAttribute>();
+        Akonadi::CollectionColorAttribute *colorAttr
+            = coll.attribute<Akonadi::CollectionColorAttribute>();
         if (colorAttr && colorAttr->color().isValid()) {
             color = colorAttr->color();
         } else {
@@ -82,8 +84,10 @@ QColor EventViews::resourceColor(const Akonadi::Item &item, const PrefsPtr &pref
     const QString id = QString::number(item.parentCollection().id());
 
     QColor color = preferences->resourceColorKnown(id);
-    if (!color.isValid() && item.parentCollection().hasAttribute<Akonadi::CollectionColorAttribute>()) {
-        Akonadi::CollectionColorAttribute *colorAttr = item.parentCollection().attribute<Akonadi::CollectionColorAttribute>();
+    if (!color.isValid()
+        && item.parentCollection().hasAttribute<Akonadi::CollectionColorAttribute>()) {
+        Akonadi::CollectionColorAttribute *colorAttr
+            = item.parentCollection().attribute<Akonadi::CollectionColorAttribute>();
         if (colorAttr && colorAttr->color().isValid()) {
             color = colorAttr->color();
         } else {

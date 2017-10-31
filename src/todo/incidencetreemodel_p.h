@@ -61,7 +61,9 @@ struct PreNode {
     QPersistentModelIndex sourceIndex;
     Akonadi::Item item;
     int depth;
-    PreNode() : depth(-1) {}
+    PreNode() : depth(-1)
+    {
+    }
 };
 
 class IncidenceTreeModel::Private : public QObject

@@ -25,9 +25,7 @@
 
 #include <QLabel>
 
-namespace EventViews
-{
-
+namespace EventViews {
 class AlternateLabel : public QLabel
 {
     Q_OBJECT
@@ -60,7 +58,6 @@ protected:
 private:
     int getIndent() const;
 };
-
 }
 
 #endif

@@ -25,13 +25,11 @@
 #include <Akonadi/Calendar/ETMCalendar>
 #include <QMainWindow>
 
-namespace Akonadi
-{
+namespace Akonadi {
 class IncidenceChanger;
 }
 
-namespace EventViews
-{
+namespace EventViews {
 class Prefs;
 typedef QSharedPointer<Prefs> PrefsPtr;
 }

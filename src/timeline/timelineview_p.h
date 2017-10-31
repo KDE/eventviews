@@ -35,15 +35,11 @@
 class QStandardItem;
 class QTreeWidget;
 
-namespace KGantt
-{
+namespace KGantt {
 class GraphicsView;
 }
 
-
-namespace EventViews
-{
-
+namespace EventViews {
 class TimelineItem;
 class RowController;
 
@@ -80,7 +76,6 @@ public:
 private:
     TimelineView *const q;
 };
-
 } // namespace EventViews
 
 #endif

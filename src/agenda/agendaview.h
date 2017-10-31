@@ -38,12 +38,9 @@ class KConfig;
 
 class QSplitter;
 
-namespace EventViews
-{
-
+namespace EventViews {
 #ifndef EVENTVIEWS_NODECOS
-namespace CalendarDecoration
-{
+namespace CalendarDecoration {
 class Decoration;
 }
 #endif
@@ -87,18 +84,11 @@ class EVENTVIEWS_EXPORT AgendaView : public EventView
 {
     Q_OBJECT
 public:
-    explicit AgendaView(const PrefsPtr &preferences,
-                        const QDate &start,
-                        const QDate &end,
-                        bool isInteractive,
-                        bool isSideBySide = false,
-                        QWidget *parent = nullptr);
+    explicit AgendaView(const PrefsPtr &preferences, const QDate &start, const QDate &end,
+                        bool isInteractive, bool isSideBySide = false, QWidget *parent = nullptr);
 
-    explicit AgendaView(const QDate &start,
-                        const QDate &end,
-                        bool isInteractive,
-                        bool isSideBySide = false,
-                        QWidget *parent = nullptr);
+    explicit AgendaView(const QDate &start, const QDate &end, bool isInteractive,
+                        bool isSideBySide = false, QWidget *parent = nullptr);
 
     virtual ~AgendaView();
 
@@ -116,8 +106,7 @@ public:
     KCalCore::DateList selectedIncidenceDates() const override;
 
     /** return the default start/end date/time for new events   */
-    virtual bool eventDurationHint(QDateTime &startDt,
-                                   QDateTime &endDt,
+    virtual bool eventDurationHint(QDateTime &startDt, QDateTime &endDt,
                                    bool &allDay) const override;
 
     /** start-datetime of selection */
@@ -227,8 +216,7 @@ public Q_SLOTS:
     void updateConfig() override;
     /** reschedule the todo  to the given x- and y- coordinates.
         Third parameter determines all-day (no time specified) */
-    void slotIncidencesDropped(const KCalCore::Incidence::List &incidences,
-                               const QPoint &, bool);
+    void slotIncidencesDropped(const KCalCore::Incidence::List &incidences, const QPoint &, bool);
     void slotIncidencesDropped(const QList<QUrl> &incidences, const QPoint &, bool);
     void startDrag(const KCalCore::Incidence::Ptr &);
 
@@ -259,7 +247,7 @@ private Q_SLOTS:
 
 private:
     void init(const QDate &start, const QDate &end);
-    bool filterByCollectionSelection(const  KCalCore::Incidence::Ptr &incidence);
+    bool filterByCollectionSelection(const KCalCore::Incidence::Ptr &incidence);
     void setupTimeLabel(TimeLabels *timeLabel);
     bool displayIncidence(const KCalCore::Incidence::Ptr &incidence, bool createSelected);
 
@@ -267,7 +255,8 @@ private:
     typedef QList<EventViews::CalendarDecoration::Decoration *> DecorationList;
     bool loadDecorations(const QStringList &decorations, DecorationList &decoList);
     void placeDecorationsFrame(QFrame *frame, bool decorationsFound, bool isTop);
-    void placeDecorations(EventViews::AgendaView::DecorationList &decoList, const QDate &date, QWidget *labelBox, bool forWeek);
+    void placeDecorations(EventViews::AgendaView::DecorationList &decoList, const QDate &date,
+                          QWidget *labelBox, bool forWeek);
 #endif
 
     friend class TimeLabelsZone;
@@ -278,7 +267,6 @@ private:
     class Private;
     Private *const d;
 };
-
 }
 
 #endif

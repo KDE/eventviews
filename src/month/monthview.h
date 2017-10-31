@@ -29,9 +29,7 @@
 
 class QModelIndex;
 
-namespace EventViews
-{
-
+namespace EventViews {
 class MonthViewPrivate;
 
 /**
@@ -115,7 +113,8 @@ protected:
     void keyReleaseEvent(QKeyEvent *event) override;
 
     QPair<QDateTime, QDateTime> actualDateRange(
-        const QDateTime &start, const QDateTime &end, const QDate &preferredMonth = QDate()) const override;
+        const QDateTime &start, const QDateTime &end,
+        const QDate &preferredMonth = QDate()) const override;
 
     // Compute and update the whole view
     void reloadIncidences();
@@ -124,14 +123,14 @@ protected:
     /**
      * @deprecated
      */
-    void showDates(const QDate &start, const QDate &end, const QDate &preferedMonth = QDate()) override;
+    void showDates(const QDate &start, const QDate &end,
+                   const QDate &preferedMonth = QDate()) override;
 
 private:
     MonthViewPrivate *const d;
     friend class MonthViewPrivate;
     friend class MonthScene;
 };
-
 }
 
 #endif

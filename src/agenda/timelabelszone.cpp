@@ -25,7 +25,6 @@
 #include "prefs.h"
 #include "timelabels.h"
 
-
 #include <QHBoxLayout>
 #include <QScrollArea>
 #include <QScrollBar>
@@ -33,8 +32,10 @@
 using namespace EventViews;
 
 TimeLabelsZone::TimeLabelsZone(QWidget *parent, const PrefsPtr &preferences, Agenda *agenda)
-    : QWidget(parent), mAgenda(agenda), mPrefs(preferences),
-      mParent(qobject_cast<AgendaView * >(parent))
+    : QWidget(parent)
+    , mAgenda(agenda)
+    , mPrefs(preferences)
+    , mParent(qobject_cast<AgendaView * >(parent))
 {
     mTimeLabelsLayout = new QHBoxLayout(this);
     mTimeLabelsLayout->setMargin(0);
@@ -106,7 +107,6 @@ void TimeLabelsZone::setupTimeLabel(QScrollArea *area)
                 mAgenda->verticalScrollBar(), &QAbstractSlider::setValue);
 
         area->verticalScrollBar()->setValue(mAgenda->verticalScrollBar()->value());
-
     }
 
     TimeLabels *timeLabels = static_cast<TimeLabels *>(area->widget());
@@ -177,4 +177,3 @@ void TimeLabelsZone::setPreferences(const PrefsPtr &prefs)
         mPrefs = prefs;
     }
 }
-

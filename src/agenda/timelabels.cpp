@@ -37,9 +37,9 @@
 
 using namespace EventViews;
 
-TimeLabels::TimeLabels(const QTimeZone &zone, int rows, TimeLabelsZone *parent, Qt::WindowFlags f) :
-    QFrame(parent, f),
-    mTimezone(zone)
+TimeLabels::TimeLabels(const QTimeZone &zone, int rows, TimeLabelsZone *parent, Qt::WindowFlags f)
+    : QFrame(parent, f)
+    , mTimezone(zone)
 {
     mTimeLabelsZone = parent;
     mRows = rows;
@@ -184,12 +184,13 @@ void TimeLabels::paintEvent(QPaintEvent *)
     // We won't paint parts that aren't visible
     const int cy = -y();// y() returns a negative value.
 
-    const auto firstDay = QDateTime(mAgenda->dateList().first(), QTime(0,0,0), Qt::LocalTime).toUTC();
-    const int beginning =
-        !mTimezone.isValid() ?
-        0 :
-        (mTimezone.offsetFromUtc(firstDay) -
-         mTimeLabelsZone->preferences()->timeZone().offsetFromUtc(firstDay)) / (60 * 60);
+    const auto firstDay
+        = QDateTime(mAgenda->dateList().first(), QTime(0, 0, 0), Qt::LocalTime).toUTC();
+    const int beginning
+        = !mTimezone.isValid()
+          ? 0
+          : (mTimezone.offsetFromUtc(firstDay)
+             -mTimeLabelsZone->preferences()->timeZone().offsetFromUtc(firstDay)) / (60 * 60);
 
     // bug:  the parameters cx and cw are the areas that need to be
     //       redrawn, not the area of the widget.  unfortunately, this
@@ -301,21 +302,22 @@ void TimeLabels::contextMenuEvent(QContextMenuEvent *event)
     Q_UNUSED(event);
 
     QMenu popup(this);
-    QAction *editTimeZones =
-        popup.addAction(QIcon::fromTheme(QStringLiteral("document-properties")), i18n("&Add Timezones..."));
-    QAction *removeTimeZone =
-        popup.addAction(QIcon::fromTheme(QStringLiteral("edit-delete")),
-                        i18n("&Remove Timezone %1", i18n(mTimezone.id().constData())));
-    if (!mTimezone.isValid() ||
-            !mTimeLabelsZone->preferences()->timeScaleTimezones().count() ||
-            mTimezone == mTimeLabelsZone->preferences()->timeZone()) {
+    QAction *editTimeZones
+        = popup.addAction(QIcon::fromTheme(QStringLiteral("document-properties")),
+                          i18n("&Add Timezones..."));
+    QAction *removeTimeZone
+        = popup.addAction(QIcon::fromTheme(QStringLiteral("edit-delete")),
+                          i18n("&Remove Timezone %1", i18n(mTimezone.id().constData())));
+    if (!mTimezone.isValid()
+        || !mTimeLabelsZone->preferences()->timeScaleTimezones().count()
+        || mTimezone == mTimeLabelsZone->preferences()->timeZone()) {
         removeTimeZone->setEnabled(false);
     }
 
     QAction *activatedAction = popup.exec(QCursor::pos());
     if (activatedAction == editTimeZones) {
-        QPointer<TimeScaleConfigDialog> dialog =
-            new TimeScaleConfigDialog(mTimeLabelsZone->preferences(), this);
+        QPointer<TimeScaleConfigDialog> dialog
+            = new TimeScaleConfigDialog(mTimeLabelsZone->preferences(), this);
         if (dialog->exec() == QDialog::Accepted) {
             mTimeLabelsZone->reset();
         }
@@ -354,7 +356,9 @@ QString TimeLabels::headerToolTip() const
     }
 
     auto abbreviations = QStringLiteral("&nbsp;");
-    foreach (const auto &transition, mTimezone.transitions(QDateTime::currentDateTime(), QDateTime::currentDateTime().addYears(1))) {
+    foreach (const auto &transition,
+             mTimezone.transitions(QDateTime::currentDateTime(),
+                                   QDateTime::currentDateTime().addYears(1))) {
         abbreviations += transition.abbreviation;
         abbreviations += QLatin1String(",&nbsp;");
     }
@@ -372,4 +376,3 @@ QString TimeLabels::headerToolTip() const
 
     return toolTip;
 }
-

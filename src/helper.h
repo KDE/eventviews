@@ -27,8 +27,7 @@
 #include <QColor>
 #include <QSharedPointer>
 
-namespace Akonadi
-{
+namespace Akonadi {
 class Collection;
 class Item;
 }
@@ -38,9 +37,7 @@ class QDate;
 
 // Provides static methods that are useful to all views.
 
-namespace EventViews
-{
-
+namespace EventViews {
 class Prefs;
 typedef QSharedPointer<Prefs> PrefsPtr;
 
@@ -62,11 +59,10 @@ QColor getTextColor(const QColor &c);
   @param incidence the incidence for which the color is needed (to
                    determine which  subresource needs to be used)
 */
-EVENTVIEWS_EXPORT QColor resourceColor(const Akonadi::Item &incidence,
-                     const PrefsPtr &preferences);
+EVENTVIEWS_EXPORT QColor resourceColor(const Akonadi::Item &incidence, const PrefsPtr &preferences);
 
 EVENTVIEWS_EXPORT QColor resourceColor(const Akonadi::Collection &collection,
-                     const PrefsPtr &preferences);
+                                       const PrefsPtr &preferences);
 
 /**
   This method sets the resource color in the preferences, only if it is
@@ -76,8 +72,8 @@ EVENTVIEWS_EXPORT QColor resourceColor(const Akonadi::Collection &collection,
   @param color the color to stored
   @param preferences a pointer to the EventViews::Prefs to use
 */
-EVENTVIEWS_EXPORT void setResourceColor(const Akonadi::Collection &collection,
-                                        const QColor &color, const PrefsPtr &preferences);
+EVENTVIEWS_EXPORT void setResourceColor(const Akonadi::Collection &collection, const QColor &color,
+                                        const PrefsPtr &preferences);
 
 /**
   Returns the number of years between the @p start QDate and the @p end QDate

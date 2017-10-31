@@ -43,9 +43,9 @@
 
 #include <QHBoxLayout>
 
-TodoViewQuickSearch::TodoViewQuickSearch(const Akonadi::ETMCalendar::Ptr &calendar,
-        QWidget *parent)
-    : QWidget(parent), mCalendar(calendar)
+TodoViewQuickSearch::TodoViewQuickSearch(const Akonadi::ETMCalendar::Ptr &calendar, QWidget *parent)
+    : QWidget(parent)
+    , mCalendar(calendar)
 {
     QHBoxLayout *layout = new QHBoxLayout(this);
     // no special margin because it is added by the view
@@ -74,7 +74,8 @@ TodoViewQuickSearch::TodoViewQuickSearch(const Akonadi::ETMCalendar::Ptr &calend
     mCategoryCombo->setDefaultText(defaultText);
     mCategoryCombo->setSeparator(i18nc("@item:intext delimiter for joining category names", ","));
 
-    connect(mCategoryCombo, &KPIM::TagSelectionCombo::checkedItemsChanged, this, &TodoViewQuickSearch::emitFilterCategoryChanged);
+    connect(mCategoryCombo, &KPIM::TagSelectionCombo::checkedItemsChanged, this,
+            &TodoViewQuickSearch::emitFilterCategoryChanged);
 
     layout->addWidget(mCategoryCombo, 1);
 
@@ -86,9 +87,9 @@ TodoViewQuickSearch::TodoViewQuickSearch(const Akonadi::ETMCalendar::Ptr &calend
         const int currentPreferedWidth = mCategoryCombo->lineEdit()->sizeHint().width();
 
         // Calculate a nice size for "Select Categories"
-        const int newPreferedWidth = currentPreferedWidth -
-                                     fm.width(QLatin1Char('x')) * 17 +
-                                     fm.width(defaultText);
+        const int newPreferedWidth = currentPreferedWidth
+                                     -fm.width(QLatin1Char('x')) * 17
+                                     +fm.width(defaultText);
 
         const int pixelsToAdd = newPreferedWidth - mCategoryCombo->lineEdit()->width();
         mCategoryCombo->setMinimumWidth(mCategoryCombo->width() + pixelsToAdd);
@@ -102,7 +103,8 @@ TodoViewQuickSearch::TodoViewQuickSearch(const Akonadi::ETMCalendar::Ptr &calend
               "Use this combobox to filter the to-dos that are shown by "
               "a list of selected priorities."));
     mPriorityCombo->setDefaultText(i18nc("@item:inlistbox", "Select Priority"));
-    connect(mPriorityCombo, &KPIM::KCheckComboBox::checkedItemsChanged, this, &TodoViewQuickSearch::emitFilterPriorityChanged);
+    connect(mPriorityCombo, &KPIM::KCheckComboBox::checkedItemsChanged, this,
+            &TodoViewQuickSearch::emitFilterPriorityChanged);
 
     layout->addWidget(mPriorityCombo, 1);
     fillPriorities();
@@ -149,4 +151,3 @@ void TodoViewQuickSearch::emitFilterPriorityChanged()
 {
     Q_EMIT filterPriorityChanged(mPriorityCombo->checkedItems(Qt::UserRole));
 }
-

@@ -41,15 +41,13 @@ class QModelIndex;
   @see KOBaseView, KODayListView
 */
 
-namespace EventViews
-{
-
+namespace EventViews {
 class EVENTVIEWS_EXPORT ListView : public EventView
 {
     Q_OBJECT
 public:
-    explicit ListView(const Akonadi::ETMCalendar::Ptr &calendar,
-                      QWidget *parent = nullptr, bool nonInteractive = false);
+    explicit ListView(const Akonadi::ETMCalendar::Ptr &calendar, QWidget *parent = nullptr,
+                      bool nonInteractive = false);
     ~ListView();
 
     int currentDateCount() const override;
@@ -93,7 +91,6 @@ private:
     class Private;
     Private *const d;
 };
-
 }
 
 #endif

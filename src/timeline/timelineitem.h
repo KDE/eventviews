@@ -31,9 +31,7 @@
 #include <QList>
 #include <QStandardItemModel>
 
-namespace EventViews
-{
-
+namespace EventViews {
 class TimelineSubItem;
 
 class TimelineItem : public QObject
@@ -44,8 +42,7 @@ public:
                  QObject *parent);
 
     void insertIncidence(const Akonadi::Item &incidence,
-                         const QDateTime &start = QDateTime(),
-                         const QDateTime &end = QDateTime());
+                         const QDateTime &start = QDateTime(), const QDateTime &end = QDateTime());
     void removeIncidence(const Akonadi::Item &incidence);
 
     void moveItems(const Akonadi::Item &incidence, int delta, int duration);
@@ -63,8 +60,8 @@ private:
 class TimelineSubItem : public QStandardItem
 {
 public:
-    TimelineSubItem(const Akonadi::ETMCalendar::Ptr &calendar,
-                    const Akonadi::Item &incidence, TimelineItem *parent);
+    TimelineSubItem(const Akonadi::ETMCalendar::Ptr &calendar, const Akonadi::Item &incidence,
+                    TimelineItem *parent);
     ~TimelineSubItem();
 
     Akonadi::Item  incidence() const
@@ -102,7 +99,6 @@ private:
     TimelineItem *mParent = nullptr;
     bool mToolTipNeedsUpdate;
 };
-
 }
 
 #endif

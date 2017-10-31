@@ -32,8 +32,7 @@
 #include <QModelIndex>
 #include <QString>
 
-namespace Akonadi
-{
+namespace Akonadi {
 class IncidenceChanger;
 }
 

@@ -32,14 +32,11 @@
 #include <QColor>
 #include <QList>
 
-namespace EventViews
-{
-
+namespace EventViews {
 class AgendaView;
 
 class EVENTVIEWS_EXPORT ViewCalendar
 {
-
 public:
     typedef QSharedPointer<ViewCalendar> Ptr;
 
@@ -54,7 +51,7 @@ public:
     virtual KCalCore::Calendar::Ptr getCalendar() const = 0;
 };
 
-class AkonadiViewCalendar: public ViewCalendar
+class AkonadiViewCalendar : public ViewCalendar
 {
 public:
     typedef QSharedPointer<AkonadiViewCalendar> Ptr;
@@ -102,7 +99,6 @@ public:
     AkonadiViewCalendar::Ptr mETMCalendar;
     QList<ViewCalendar::Ptr> mSubCalendars;
 };
-
 }
 
 #endif

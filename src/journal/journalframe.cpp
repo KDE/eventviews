@@ -28,7 +28,6 @@
 
 #include "journalframe.h"
 
-
 #include <CalendarSupport/Utils>
 
 #include <KCalCore/Journal>
@@ -48,7 +47,9 @@
 using namespace EventViews;
 
 JournalDateView::JournalDateView(const Akonadi::ETMCalendar::Ptr &calendar, QWidget *parent)
-    : QFrame(parent), mCalendar(calendar), mChanger(nullptr)
+    : QFrame(parent)
+    , mCalendar(calendar)
+    , mChanger(nullptr)
 {
     auto layout = new QVBoxLayout(this);
     layout->setMargin(0);
@@ -84,7 +85,7 @@ void JournalDateView::addJournal(const Akonadi::Item &j)
     QHBoxLayout *layout = new QHBoxLayout(container);
     layout->addStretch(1);
     JournalFrame *entry = new JournalFrame(j, mCalendar, this);
-    layout->addWidget(entry, 3/*stretch*/);
+    layout->addWidget(entry, 3 /*stretch*/);
     layout->addStretch(1);
 
     entry->show();
@@ -148,10 +149,11 @@ void JournalDateView::journalDeleted(const Akonadi::Item &journal)
     mEntries.remove(journal.id());
 }
 
-JournalFrame::JournalFrame(const Akonadi::Item &j,
-                           const Akonadi::ETMCalendar::Ptr &calendar,
+JournalFrame::JournalFrame(const Akonadi::Item &j, const Akonadi::ETMCalendar::Ptr &calendar,
                            QWidget *parent)
-    : QFrame(parent), mJournal(j), mCalendar(calendar)
+    : QFrame(parent)
+    , mJournal(j)
+    , mCalendar(calendar)
 {
     mDirty = false;
     mWriteInProgress = false;
@@ -205,7 +207,8 @@ JournalFrame::JournalFrame(const Akonadi::Item &j,
     mPrintPreviewButton->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
     mPrintPreviewButton->setToolTip(i18n("Print preview this journal entry"));
     buttonsLayout->addWidget(mPrintPreviewButton);
-    connect(mPrintPreviewButton, &QAbstractButton::clicked, this, &JournalFrame::printPreviewJournal);
+    connect(mPrintPreviewButton, &QAbstractButton::clicked, this,
+            &JournalFrame::printPreviewJournal);
 
     readJournal(mJournal);
     mDirty = false;
@@ -333,6 +336,4 @@ void JournalFrame::readJournal(const Akonadi::Item &j)
         mEditButton->setEnabled(mCalendar->hasRight(j, Akonadi::Collection::CanChangeItem));
         mDeleteButton->setEnabled(mCalendar->hasRight(j, Akonadi::Collection::CanDeleteItem));
     }
-
 }
-

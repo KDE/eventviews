@@ -101,9 +101,9 @@ void WhatsNextView::updateView()
         mText += QLocale::system().toString(mStartDate);
     } else {
         mText += i18nc(
-                     "date from - to", "%1 - %2",
-                     QLocale::system().toString(mStartDate),
-                     QLocale::system().toString(mEndDate));
+            "date from - to", "%1 - %2",
+            QLocale::system().toString(mStartDate),
+            QLocale::system().toString(mEndDate));
     }
     mText += QLatin1String("</h2>\n");
 
@@ -127,7 +127,8 @@ void WhatsNextView::updateView()
             } else {
                 KCalCore::Recurrence *recur = ev->recurrence();
                 int duration = ev->dtStart().secsTo(ev->dtEnd());
-                QDateTime start = recur->getPreviousDateTime(QDateTime(mStartDate, QTime(), Qt::LocalTime));
+                QDateTime start
+                    = recur->getPreviousDateTime(QDateTime(mStartDate, QTime(), Qt::LocalTime));
                 QDateTime end = start.addSecs(duration);
                 QDateTime endDate(mEndDate, QTime(23, 59, 59), Qt::LocalTime);
                 if (end.date() >= mStartDate) {
@@ -143,7 +144,7 @@ void WhatsNextView::updateView()
                     if (!times[count - 1].isValid()) {
                         --count;  // list overflow
                     }
-                    for (;  i < count && times[i].date() <= mEndDate;  ++i) {
+                    for (; i < count && times[i].date() <= mEndDate; ++i) {
                         appendEvent(ev, times[i].toLocalTime());
                     }
                 }
@@ -154,7 +155,7 @@ void WhatsNextView::updateView()
 
     mTodos.clear();
     KCalCore::Todo::List todos = calendar()->todos(KCalCore::TodoSortDueDate,
-                                 KCalCore::SortDirectionAscending);
+                                                   KCalCore::SortDirectionAscending);
     if (!todos.isEmpty()) {
         bool taskHeaderWasCreated = false;
         Q_FOREACH (const KCalCore::Todo::Ptr &todo, todos) {
@@ -188,7 +189,8 @@ void WhatsNextView::updateView()
 
     QStringList myEmails(CalendarSupport::KCalPrefs::instance()->allEmails());
     int replies = 0;
-    events = calendar()->events(QDate::currentDate(), QDate(2975, 12, 6), QTimeZone::systemTimeZone());
+    events = calendar()->events(QDate::currentDate(), QDate(2975, 12, 6),
+                                QTimeZone::systemTimeZone());
     Q_FOREACH (const KCalCore::Event::Ptr &ev, events) {
         KCalCore::Attendee::Ptr me = ev->attendeeByMails(myEmails);
         if (me != nullptr) {
@@ -200,7 +202,8 @@ void WhatsNextView::updateView()
                     mText += QLatin1String("<h2><img src=\"");
                     mText += ipath;
                     mText += QLatin1String("\" width=\"22\" height=\"22\">");
-                    mText += i18n("Events and to-dos that need a reply:") + QLatin1String("</h2>\n");
+                    mText += i18n("Events and to-dos that need a reply:")
+                             + QLatin1String("</h2>\n");
                     mText += QLatin1String("<table>\n");
                 }
                 replies++;
@@ -220,7 +223,8 @@ void WhatsNextView::updateView()
                     mText += QLatin1String("<h2><img src=\"");
                     mText += ipath;
                     mText += QLatin1String("\" width=\"22\" height=\"22\">");
-                    mText += i18n("Events and to-dos that need a reply:") + QLatin1String("</h2>\n");
+                    mText += i18n("Events and to-dos that need a reply:")
+                             + QLatin1String("</h2>\n");
                     mText += QLatin1String("<table>\n");
                 }
                 replies++;
@@ -235,7 +239,6 @@ void WhatsNextView::updateView()
     mText += QLatin1String("</td></tr>\n</table>\n");
 
     mView->setText(mText);
-
 }
 
 void WhatsNextView::showDates(const QDate &start, const QDate &end, const QDate &)
@@ -252,7 +255,7 @@ void WhatsNextView::showIncidences(const Akonadi::Item::List &incidenceList, con
 }
 
 void WhatsNextView::changeIncidenceDisplay(const Akonadi::Item &,
-        Akonadi::IncidenceChanger::ChangeType)
+                                           Akonadi::IncidenceChanger::ChangeType)
 {
     updateView();
 }
@@ -272,20 +275,26 @@ void WhatsNextView::appendEvent(const KCalCore::Incidence::Ptr &incidence, const
         }
 
         if (starttime.date().daysTo(endtime.date()) >= 1) {
-            if (event->allDay())
-                mText += i18nc("date from - to", "%1 - %2", QLocale().toString(starttime.date(), QLocale::ShortFormat),
-                               QLocale().toString(endtime.date(), QLocale::ShortFormat));
-            else
-                mText += i18nc("date from - to", "%1 - %2", QLocale().toString(starttime, QLocale::ShortFormat),
-                               QLocale().toString(endtime, QLocale::ShortFormat));
+            if (event->allDay()) {
+                mText
+                    += i18nc("date from - to", "%1 - %2",
+                             QLocale().toString(starttime.date(), QLocale::ShortFormat),
+                             QLocale().toString(endtime.date(), QLocale::ShortFormat));
+            } else {
+                mText
+                    += i18nc("date from - to", "%1 - %2", QLocale().toString(starttime,
+                                                                             QLocale::ShortFormat),
+                             QLocale().toString(endtime, QLocale::ShortFormat));
+            }
         } else {
-            if (event->allDay())
+            if (event->allDay()) {
                 mText += QLocale().toString(starttime.date(), QLocale::ShortFormat);
-            else
+            } else {
                 mText += i18nc("date, from - to", "%1, %2 - %3",
-                         QLocale().toString(starttime.date(), QLocale::ShortFormat),
-                         QLocale().toString(starttime.time(), QLocale::ShortFormat),
-                         QLocale().toString(endtime.time(), QLocale::ShortFormat));
+                               QLocale().toString(starttime.date(), QLocale::ShortFormat),
+                               QLocale().toString(starttime.time(), QLocale::ShortFormat),
+                               QLocale().toString(endtime.time(), QLocale::ShortFormat));
+            }
         }
     }
     mText += QLatin1String("</b></td><td><a ");
@@ -340,4 +349,3 @@ void WhatsNextView::showIncidence(const QString &uid)
         Q_EMIT showIncidenceSignal(item);
     }
 }
-

@@ -26,7 +26,6 @@
 #include "monthview.h"
 #include "prefs.h"
 
-
 #include <CalendarSupport/Utils>
 
 #include <QGraphicsSceneMouseEvent>
@@ -40,26 +39,27 @@ static const int AUTO_REPEAT_DELAY = 600;
 using namespace EventViews;
 
 MonthScene::MonthScene(MonthView *parent)
-    : QGraphicsScene(parent),
-      mMonthView(parent),
-      mInitialized(false),
-      mClickedItem(nullptr),
-      mActionItem(nullptr),
-      mActionInitiated(false),
-      mSelectedItem(nullptr),
-      mStartCell(nullptr),
-      mPreviousCell(nullptr),
-      mActionType(None),
-      mStartHeight(0),
-      mCurrentIndicator(nullptr)
+    : QGraphicsScene(parent)
+    , mMonthView(parent)
+    , mInitialized(false)
+    , mClickedItem(nullptr)
+    , mActionItem(nullptr)
+    , mActionInitiated(false)
+    , mSelectedItem(nullptr)
+    , mStartCell(nullptr)
+    , mPreviousCell(nullptr)
+    , mActionType(None)
+    , mStartHeight(0)
+    , mCurrentIndicator(nullptr)
 {
-    mBirthdayPixmap  = QIcon::fromTheme(QStringLiteral("view-calendar-birthday")).pixmap(16, 16);
-    mAnniversaryPixmap = QIcon::fromTheme(QStringLiteral("view-calendar-wedding-anniversary")).pixmap(16, 16);
-    mAlarmPixmap     = QIcon::fromTheme(QStringLiteral("appointment-reminder")).pixmap(16, 16);
-    mRecurPixmap     = QIcon::fromTheme(QStringLiteral("appointment-recurring")).pixmap(16, 16);
-    mReadonlyPixmap  = QIcon::fromTheme(QStringLiteral("object-locked")).pixmap(16, 16);
-    mReplyPixmap     = QIcon::fromTheme(QStringLiteral("mail-reply-sender")).pixmap(16, 16);
-    mHolidayPixmap   = QIcon::fromTheme(QStringLiteral("view-calendar-holiday")).pixmap(16, 16);
+    mBirthdayPixmap = QIcon::fromTheme(QStringLiteral("view-calendar-birthday")).pixmap(16, 16);
+    mAnniversaryPixmap
+        = QIcon::fromTheme(QStringLiteral("view-calendar-wedding-anniversary")).pixmap(16, 16);
+    mAlarmPixmap = QIcon::fromTheme(QStringLiteral("appointment-reminder")).pixmap(16, 16);
+    mRecurPixmap = QIcon::fromTheme(QStringLiteral("appointment-recurring")).pixmap(16, 16);
+    mReadonlyPixmap = QIcon::fromTheme(QStringLiteral("object-locked")).pixmap(16, 16);
+    mReplyPixmap = QIcon::fromTheme(QStringLiteral("mail-reply-sender")).pixmap(16, 16);
+    mHolidayPixmap = QIcon::fromTheme(QStringLiteral("view-calendar-holiday")).pixmap(16, 16);
 
     setSceneRect(0, 0, parent->width(), parent->height());
 }
@@ -194,7 +194,7 @@ void MonthGraphicsView::drawBackground(QPainter *p, const QRectF &rect)
     font.setPointSize(15);
     p->setFont(font);
     const int dayLabelsHeight = 20;
-    p->drawText(QRect(0,  0,   // top right
+    p->drawText(QRect(0, 0,    // top right
                       static_cast<int>(mScene->sceneRect().width()),
                       static_cast<int>(mScene->headerHeight() - dayLabelsHeight)),
                 Qt::AlignCenter,
@@ -209,7 +209,7 @@ void MonthGraphicsView::drawBackground(QPainter *p, const QRectF &rect)
     const QDate end = mMonthView->actualEndDateTime().date();
 
     for (QDate d = start;
-            d <= start.addDays(6); d = d.addDays(1)) {
+         d <= start.addDays(6); d = d.addDays(1)) {
         MonthCell *cell = mScene->mMonthCellMap.value(d);
 
         if (!cell) {
@@ -232,8 +232,9 @@ void MonthGraphicsView::drawBackground(QPainter *p, const QRectF &rect)
     int columnWidth = mScene->columnWidth();
     int rowHeight = mScene->rowHeight();
 
-    const QList<QDate> workDays = CalendarSupport::workDays(mMonthView->actualStartDateTime().date(),
-                                  mMonthView->actualEndDateTime().date());
+    const QList<QDate> workDays = CalendarSupport::workDays(
+        mMonthView->actualStartDateTime().date(),
+        mMonthView->actualEndDateTime().date());
 
     for (QDate d = start; d <= end; d = d.addDays(1)) {
         if (!mScene->mMonthCellMap.contains(d)) {
@@ -294,11 +295,11 @@ void MonthGraphicsView::drawBackground(QPainter *p, const QRectF &rect)
 
     p->setFont(font);
 
-    QPen oldPen =  mMonthView->preferences()->monthGridBackgroundColor().darker(150);
+    QPen oldPen = mMonthView->preferences()->monthGridBackgroundColor().darker(150);
 
     // Draw dates
     for (QDate d = mMonthView->actualStartDateTime().date();
-            d <= mMonthView->actualEndDateTime().date(); d = d.addDays(1)) {
+         d <= mMonthView->actualEndDateTime().date(); d = d.addDays(1)) {
         MonthCell *cell = mScene->mMonthCellMap.value(d);
 
         QFont font = p->font();
@@ -333,8 +334,8 @@ void MonthGraphicsView::drawBackground(QPainter *p, const QRectF &rect)
         if (!mScene->lastItemFit(cell)) {
             cell->downArrow()->setPos(
                 mScene->cellHorizontalPos(cell) + columnWidth / 2,
-                mScene->cellVerticalPos(cell) + rowHeight -
-                cell->downArrow()->boundingRect().height() / 2 - 2);
+                mScene->cellVerticalPos(cell) + rowHeight
+                -cell->downArrow()->boundingRect().height() / 2 - 2);
             cell->downArrow()->show();
         } else {
             cell->downArrow()->hide();
@@ -342,8 +343,8 @@ void MonthGraphicsView::drawBackground(QPainter *p, const QRectF &rect)
 
         QString dayText;
         // Prepend month name if d is the first or last day of month
-        if (d.day() == 1 ||                   // d is the first day of month
-                d.addDays(1).day() == 1) {       // d is the last day of month
+        if (d.day() == 1                      // d is the first day of month
+            || d.addDays(1).day() == 1) {        // d is the last day of month
             dayText = i18nc("'Month day' for month view cells", "%1 %2",
                             QLocale::system().monthName(d.month(), QLocale::ShortFormat),
                             d.day());
@@ -398,7 +399,7 @@ int MonthScene::totalHeight()
 {
     int max = 0;
     for (QDate d = mMonthView->actualStartDateTime().date();
-            d <= mMonthView->actualEndDateTime().date(); d = d.addDays(1)) {
+         d <= mMonthView->actualEndDateTime().date(); d = d.addDays(1)) {
         int c = mMonthCellMap[ d ]->firstFreeSpace();
         if (c > max) {
             max = c;
@@ -518,12 +519,12 @@ void MonthScene::mouseMoveEvent(QGraphicsSceneMouseEvent *mouseEvent)
     if (mActionType == None) {
         MonthGraphicsItem *iItem = dynamic_cast<MonthGraphicsItem *>(itemAt(pos, {}));
         if (iItem) {
-            if (iItem->monthItem()->isResizable() &&
-                    iItem->isBeginItem() && iItem->mapFromScene(pos).x() <= 10) {
+            if (iItem->monthItem()->isResizable()
+                && iItem->isBeginItem() && iItem->mapFromScene(pos).x() <= 10) {
                 view->setActionCursor(Resize);
-            } else if (iItem->monthItem()->isResizable() &&
-                       iItem->isEndItem() &&
-                       iItem->mapFromScene(pos).x() >= iItem->boundingRect().width() - 10) {
+            } else if (iItem->monthItem()->isResizable()
+                       && iItem->isEndItem()
+                       && iItem->mapFromScene(pos).x() >= iItem->boundingRect().width() - 10) {
                 view->setActionCursor(Resize);
             } else {
                 view->setActionCursor(None);
@@ -552,7 +553,6 @@ void MonthScene::mouseMoveEvent(QGraphicsSceneMouseEvent *mouseEvent)
 
         // Move or resize action
         if (currentCell && currentCell != mPreviousCell) {
-
             bool ok = true;
             if (mActionType == Move) {
                 mActionItem->moveBy(mPreviousCell->date().daysTo(currentCell->date()));
@@ -597,13 +597,13 @@ void MonthScene::mousePressEvent(QGraphicsSceneMouseEvent *mouseEvent)
             mActionInitiated = false;
 
             // Move or resize ?
-            if (iItem->monthItem()->isResizable() &&
-                    iItem->isBeginItem() && iItem->mapFromScene(pos).x() <= 10) {
+            if (iItem->monthItem()->isResizable()
+                && iItem->isBeginItem() && iItem->mapFromScene(pos).x() <= 10) {
                 mActionType = Resize;
                 mResizeType = ResizeLeft;
-            } else if (iItem->monthItem()->isResizable() &&
-                       iItem->isEndItem() &&
-                       iItem->mapFromScene(pos).x() >= iItem->boundingRect().width() - 10) {
+            } else if (iItem->monthItem()->isResizable()
+                       && iItem->isEndItem()
+                       && iItem->mapFromScene(pos).x() >= iItem->boundingRect().width() - 10) {
                 mActionType = Resize;
                 mResizeType = ResizeRight;
             } else if (iItem->monthItem()->isMoveable()) {
@@ -765,7 +765,8 @@ void MonthScene::removeIncidence(const QString &uid)
 
 //----------------------------------------------------------
 MonthGraphicsView::MonthGraphicsView(MonthView *parent)
-    : QGraphicsView(parent), mMonthView(parent)
+    : QGraphicsView(parent)
+    , mMonthView(parent)
 {
     setMouseTracking(true);
 }
@@ -801,4 +802,3 @@ void MonthGraphicsView::resizeEvent(QResizeEvent *event)
     mScene->setSceneRect(0, 0, event->size().width(), event->size().height());
     mScene->updateGeometry();
 }
-

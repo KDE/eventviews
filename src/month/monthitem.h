@@ -32,9 +32,7 @@
 #include <QDate>
 #include <QObject>
 
-namespace EventViews
-{
-
+namespace EventViews {
 class MonthGraphicsItem;
 class MonthScene;
 
@@ -262,8 +260,7 @@ protected:
     /**
       Called after a resize operation.
     */
-    virtual void finalizeResize(const QDate &newStartDate,
-                                const QDate &newEndDate) = 0;
+    virtual void finalizeResize(const QDate &newStartDate, const QDate &newEndDate) = 0;
 
 private:
     /**
@@ -289,10 +286,8 @@ class EVENTVIEWS_EXPORT IncidenceMonthItem : public MonthItem
     Q_OBJECT
 
 public:
-    IncidenceMonthItem(MonthScene *monthScene,
-                       const Akonadi::ETMCalendar::Ptr &calendar,
-                       const Akonadi::Item &item,
-                       const KCalCore::Incidence::Ptr &incidence,
+    IncidenceMonthItem(MonthScene *monthScene, const Akonadi::ETMCalendar::Ptr &calendar,
+                       const Akonadi::Item &item, const KCalCore::Incidence::Ptr &incidence,
                        const QDate &recurStartDate = QDate());
 
     virtual ~IncidenceMonthItem();
@@ -320,8 +315,7 @@ public:
 
 protected:
     void finalizeMove(const QDate &newStartDate) override;
-    virtual void finalizeResize(const QDate &newStartDate,
-                                const QDate &newEndDate) override;
+    virtual void finalizeResize(const QDate &newStartDate, const QDate &newEndDate) override;
 
 protected Q_SLOTS:
     /**
@@ -334,8 +328,7 @@ protected Q_SLOTS:
 private:
     void updateDates(int startOffset, int endOffset);
 
-    void setNewDates(const KCalCore::Incidence::Ptr &incidence,
-                     int startOffset, int endOffset);
+    void setNewDates(const KCalCore::Incidence::Ptr &incidence, int startOffset, int endOffset);
 
     /**
       Returns the category color for this incidence.
@@ -363,10 +356,12 @@ public:
     {
         return mDate;
     }
+
     QDate realEndDate() const override
     {
         return mDate;
     }
+
     bool allDay() const override
     {
         return true;
@@ -376,6 +371,7 @@ public:
     {
         return false;
     }
+
     bool isResizable() const override
     {
         return false;
@@ -386,6 +382,7 @@ public:
         Q_UNUSED(end);
         return mName;
     }
+
     QString toolTipText(const QDate &) const override
     {
         return mName;
@@ -398,14 +395,12 @@ public:
 
 protected:
     void finalizeMove(const QDate &newStartDate) override;
-    virtual void finalizeResize(const QDate &newStartDate,
-                                const QDate &newEndDate) override;
+    virtual void finalizeResize(const QDate &newStartDate, const QDate &newEndDate) override;
 
 private:
     QDate mDate;
     QString mName;
 };
-
 }
 
 #endif

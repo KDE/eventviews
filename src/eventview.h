@@ -40,35 +40,29 @@
 #include <QByteArray>
 #include <QDate>
 
-namespace KCalCore
-{
-template <typename T> class SortableList;
+namespace KCalCore {
+template<typename T> class SortableList;
 typedef SortableList<QDate> DateList;
 }
 
-namespace KHolidays
-{
+namespace KHolidays {
 class HolidayRegion;
 typedef QSharedPointer<HolidayRegion> HolidayRegionPtr;
 }
 
-namespace CalendarSupport
-{
+namespace CalendarSupport {
 class CollectionSelection;
 class KCalPrefs;
 }
 
-namespace Akonadi
-{
+namespace Akonadi {
 class IncidenceChanger;
 }
 
 class KCheckableProxyModel;
 class KConfigGroup;
 
-namespace EventViews
-{
-
+namespace EventViews {
 enum {
     BUSY_BACKGROUND_ALPHA = 70
 };
@@ -322,8 +316,7 @@ public Q_SLOTS:
       @param incidenceList a list of incidences to show.
       @param date is the QDate on which the incidences are being shown.
     */
-    virtual void showIncidences(const Akonadi::Item::List &incidenceList,
-                                const QDate &date) = 0;
+    virtual void showIncidences(const Akonadi::Item::List &incidenceList, const QDate &date) = 0;
 
     /**
       Updates the current display to reflect changes that may have happened
@@ -529,7 +522,6 @@ private:
     EventViewPrivate *const d_ptr;
     Q_DECLARE_PRIVATE(EventView)
 };
-
 }
 
 #endif

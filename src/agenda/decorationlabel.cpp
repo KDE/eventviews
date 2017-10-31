@@ -30,11 +30,13 @@
 
 using namespace EventViews;
 
-DecorationLabel::DecorationLabel(CalendarDecoration::Element *e,
-                                 QWidget *parent)
-    : QLabel(parent), mAutomaticSqueeze(true), mDecorationElement(e),
-      mShortText(e->shortText()), mLongText(e->longText()),
-      mExtensiveText(e->extensiveText())
+DecorationLabel::DecorationLabel(CalendarDecoration::Element *e, QWidget *parent)
+    : QLabel(parent)
+    , mAutomaticSqueeze(true)
+    , mDecorationElement(e)
+    , mShortText(e->shortText())
+    , mLongText(e->longText())
+    , mExtensiveText(e->extensiveText())
 {
     mPixmap = e->newPixmap(size());
     mUrl = e->url();
@@ -53,15 +55,15 @@ DecorationLabel::DecorationLabel(CalendarDecoration::Element *e,
     squeezeContentsToLabel();
 }
 
-DecorationLabel::DecorationLabel(const QString &shortText,
-                                 const QString &longText,
-                                 const QString &extensiveText,
-                                 const QPixmap &pixmap,
-                                 const QUrl &url,
-                                 QWidget *parent)
-    : QLabel(parent), mAutomaticSqueeze(true), mShortText(shortText),
-      mLongText(longText), mExtensiveText(extensiveText),
-      mPixmap(pixmap)
+DecorationLabel::DecorationLabel(const QString &shortText, const QString &longText,
+                                 const QString &extensiveText, const QPixmap &pixmap,
+                                 const QUrl &url, QWidget *parent)
+    : QLabel(parent)
+    , mAutomaticSqueeze(true)
+    , mShortText(shortText)
+    , mLongText(longText)
+    , mExtensiveText(extensiveText)
+    , mPixmap(pixmap)
 {
     setUrl(url);
 
@@ -78,7 +80,7 @@ void DecorationLabel::mouseReleaseEvent(QMouseEvent *event)
 
     switch (event->button()) {
     case Qt::LeftButton:
-        if (! mUrl.isEmpty()) {
+        if (!mUrl.isEmpty()) {
             QDesktopServices::openUrl(mUrl);
             setForegroundRole(QPalette::LinkVisited);
         }
@@ -158,7 +160,7 @@ void DecorationLabel::squeezeContentsToLabel()
     int longTextWidth = fm.width(mLongText);
     int extensiveTextWidth = fm.width(mExtensiveText);
 
-    if (! mPixmap.isNull()) {
+    if (!mPixmap.isNull()) {
         usePixmap(true);
     } else if ((!mExtensiveText.isEmpty()) && (extensiveTextWidth <= labelWidth)) {
         useExtensiveText(true);
@@ -211,4 +213,3 @@ void DecorationLabel::useShortText(bool allowAutomaticSqueeze)
     QLabel::setText(mShortText);
     setToolTip(mExtensiveText.isEmpty() ? mLongText : mExtensiveText);
 }
-

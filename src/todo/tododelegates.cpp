@@ -56,8 +56,7 @@ TodoCompleteDelegate::~TodoCompleteDelegate()
 {
 }
 
-void TodoCompleteDelegate::paint(QPainter *painter,
-                                 const QStyleOptionViewItem &option,
+void TodoCompleteDelegate::paint(QPainter *painter, const QStyleOptionViewItem &option,
                                  const QModelIndex &index) const
 {
     QStyleOptionViewItem opt = option;
@@ -103,8 +102,7 @@ QSize TodoCompleteDelegate::sizeHint(const QStyleOptionViewItem &option,
 }
 
 void TodoCompleteDelegate::initStyleOptionProgressBar(
-    QStyleOptionProgressBar *option,
-    const QModelIndex &index) const
+    QStyleOptionProgressBar *option, const QModelIndex &index) const
 {
     option->rect.adjust(0, 1, 0, -1);
     option->maximum = 100;
@@ -115,9 +113,8 @@ void TodoCompleteDelegate::initStyleOptionProgressBar(
     option->textVisible = true;
 }
 
-QWidget *TodoCompleteDelegate::createEditor(QWidget *parent,
-        const QStyleOptionViewItem &option,
-        const QModelIndex &index) const
+QWidget *TodoCompleteDelegate::createEditor(QWidget *parent, const QStyleOptionViewItem &option,
+                                            const QModelIndex &index) const
 {
     Q_UNUSED(option);
     Q_UNUSED(index);
@@ -130,16 +127,14 @@ QWidget *TodoCompleteDelegate::createEditor(QWidget *parent,
     return slider;
 }
 
-void TodoCompleteDelegate::setEditorData(QWidget *editor,
-        const QModelIndex &index) const
+void TodoCompleteDelegate::setEditorData(QWidget *editor, const QModelIndex &index) const
 {
     QSlider *slider = static_cast<QSlider *>(editor);
 
     slider->setValue(index.data(Qt::EditRole).toInt());
 }
 
-void TodoCompleteDelegate::setModelData(QWidget *editor,
-                                        QAbstractItemModel *model,
+void TodoCompleteDelegate::setModelData(QWidget *editor, QAbstractItemModel *model,
                                         const QModelIndex &index) const
 {
     QSlider *slider = static_cast<QSlider *>(editor);
@@ -147,9 +142,8 @@ void TodoCompleteDelegate::setModelData(QWidget *editor,
     model->setData(index, slider->value());
 }
 
-void TodoCompleteDelegate::updateEditorGeometry(QWidget *editor,
-        const QStyleOptionViewItem &option,
-        const QModelIndex &index) const
+void TodoCompleteDelegate::updateEditorGeometry(QWidget *editor, const QStyleOptionViewItem &option,
+                                                const QModelIndex &index) const
 {
     Q_UNUSED(index);
 
@@ -185,9 +179,8 @@ TodoPriorityDelegate::~TodoPriorityDelegate()
 {
 }
 
-QWidget *TodoPriorityDelegate::createEditor(QWidget *parent,
-        const QStyleOptionViewItem &option,
-        const QModelIndex &index) const
+QWidget *TodoPriorityDelegate::createEditor(QWidget *parent, const QStyleOptionViewItem &option,
+                                            const QModelIndex &index) const
 {
     Q_UNUSED(option);
     Q_UNUSED(index);
@@ -208,16 +201,14 @@ QWidget *TodoPriorityDelegate::createEditor(QWidget *parent,
     return combo;
 }
 
-void TodoPriorityDelegate::setEditorData(QWidget *editor,
-        const QModelIndex &index) const
+void TodoPriorityDelegate::setEditorData(QWidget *editor, const QModelIndex &index) const
 {
     KComboBox *combo = static_cast<KComboBox *>(editor);
 
     combo->setCurrentIndex(index.data(Qt::EditRole).toInt());
 }
 
-void TodoPriorityDelegate::setModelData(QWidget *editor,
-                                        QAbstractItemModel *model,
+void TodoPriorityDelegate::setModelData(QWidget *editor, QAbstractItemModel *model,
                                         const QModelIndex &index) const
 {
     KComboBox *combo = static_cast<KComboBox *>(editor);
@@ -225,9 +216,8 @@ void TodoPriorityDelegate::setModelData(QWidget *editor,
     model->setData(index, combo->currentIndex());
 }
 
-void TodoPriorityDelegate::updateEditorGeometry(QWidget *editor,
-        const QStyleOptionViewItem &option,
-        const QModelIndex &index) const
+void TodoPriorityDelegate::updateEditorGeometry(QWidget *editor, const QStyleOptionViewItem &option,
+                                                const QModelIndex &index) const
 {
     Q_UNUSED(index);
 
@@ -246,9 +236,8 @@ TodoDueDateDelegate::~TodoDueDateDelegate()
 {
 }
 
-QWidget *TodoDueDateDelegate::createEditor(QWidget *parent,
-        const QStyleOptionViewItem &option,
-        const QModelIndex &index) const
+QWidget *TodoDueDateDelegate::createEditor(QWidget *parent, const QStyleOptionViewItem &option,
+                                           const QModelIndex &index) const
 {
     Q_UNUSED(option);
     Q_UNUSED(index);
@@ -258,16 +247,14 @@ QWidget *TodoDueDateDelegate::createEditor(QWidget *parent,
     return dateEdit;
 }
 
-void TodoDueDateDelegate::setEditorData(QWidget *editor,
-                                        const QModelIndex &index) const
+void TodoDueDateDelegate::setEditorData(QWidget *editor, const QModelIndex &index) const
 {
     KDateComboBox *dateEdit = static_cast<KDateComboBox *>(editor);
 
     dateEdit->setDate(index.data(Qt::EditRole).toDate());
 }
 
-void TodoDueDateDelegate::setModelData(QWidget *editor,
-                                       QAbstractItemModel *model,
+void TodoDueDateDelegate::setModelData(QWidget *editor, QAbstractItemModel *model,
                                        const QModelIndex &index) const
 {
     KDateComboBox *dateEdit = static_cast<KDateComboBox *>(editor);
@@ -275,9 +262,8 @@ void TodoDueDateDelegate::setModelData(QWidget *editor,
     model->setData(index, dateEdit->date());
 }
 
-void TodoDueDateDelegate::updateEditorGeometry(QWidget *editor,
-        const QStyleOptionViewItem &option,
-        const QModelIndex &index) const
+void TodoDueDateDelegate::updateEditorGeometry(QWidget *editor, const QStyleOptionViewItem &option,
+                                               const QModelIndex &index) const
 {
     Q_UNUSED(index);
     editor->setGeometry(QStyle::alignedRect(QApplication::layoutDirection(), Qt::AlignCenter,
@@ -288,7 +274,8 @@ void TodoDueDateDelegate::updateEditorGeometry(QWidget *editor,
 // ---------------------------------------------------------------
 
 TodoCategoriesDelegate::TodoCategoriesDelegate(QObject *parent)
-    : QStyledItemDelegate(parent), mCalendar(nullptr)
+    : QStyledItemDelegate(parent)
+    , mCalendar(nullptr)
 {
 }
 
@@ -296,9 +283,8 @@ TodoCategoriesDelegate::~TodoCategoriesDelegate()
 {
 }
 
-QWidget *TodoCategoriesDelegate::createEditor(QWidget *parent,
-        const QStyleOptionViewItem &option,
-        const QModelIndex &index) const
+QWidget *TodoCategoriesDelegate::createEditor(QWidget *parent, const QStyleOptionViewItem &option,
+                                              const QModelIndex &index) const
 {
     Q_UNUSED(option);
     Q_UNUSED(index);
@@ -306,17 +292,15 @@ QWidget *TodoCategoriesDelegate::createEditor(QWidget *parent,
     return new KPIM::TagSelectionCombo(parent);
 }
 
-void TodoCategoriesDelegate::setEditorData(QWidget *editor,
-        const QModelIndex &index) const
+void TodoCategoriesDelegate::setEditorData(QWidget *editor, const QModelIndex &index) const
 {
     KPIM::KCheckComboBox *combo = static_cast<KPIM::KCheckComboBox *>(editor);
 
     combo->setCheckedItems(index.data(Qt::EditRole).toStringList(), Qt::UserRole);
 }
 
-void TodoCategoriesDelegate::setModelData(QWidget *editor,
-        QAbstractItemModel *model,
-        const QModelIndex &index) const
+void TodoCategoriesDelegate::setModelData(QWidget *editor, QAbstractItemModel *model,
+                                          const QModelIndex &index) const
 {
     KPIM::KCheckComboBox *combo = static_cast<KPIM::KCheckComboBox *>(editor);
 
@@ -324,8 +308,8 @@ void TodoCategoriesDelegate::setModelData(QWidget *editor,
 }
 
 void TodoCategoriesDelegate::updateEditorGeometry(QWidget *editor,
-        const QStyleOptionViewItem &option,
-        const QModelIndex &index) const
+                                                  const QStyleOptionViewItem &option,
+                                                  const QModelIndex &index) const
 {
     Q_UNUSED(index);
 
@@ -350,8 +334,7 @@ TodoRichTextDelegate::~TodoRichTextDelegate()
 {
 }
 
-void TodoRichTextDelegate::paint(QPainter *painter,
-                                 const QStyleOptionViewItem &option,
+void TodoRichTextDelegate::paint(QPainter *painter, const QStyleOptionViewItem &option,
                                  const QModelIndex &index) const
 {
     if (index.data(TodoModel::IsRichTextRole).toBool()) {
@@ -369,8 +352,8 @@ void TodoRichTextDelegate::paint(QPainter *painter,
         style->drawControl(QStyle::CE_ItemViewItem, &opt, painter, widget);
 
         // draw the text (rich text)
-        QPalette::ColorGroup cg = (opt.state & QStyle::State_Enabled) ?
-                                  QPalette::Normal : QPalette::Disabled;
+        QPalette::ColorGroup cg = (opt.state & QStyle::State_Enabled)
+                                  ? QPalette::Normal : QPalette::Disabled;
         if (cg == QPalette::Normal && !(opt.state & QStyle::State_Active)) {
             cg = QPalette::Inactive;
         }
@@ -422,7 +405,7 @@ QSize TodoRichTextDelegate::sizeHint(const QStyleOptionViewItem &option,
     }
 
     // This row might not have a checkbox, so give it more height so it appears the same size as other rows.
-    const int checkboxHeight = QApplication::style()->sizeFromContents(QStyle::CT_CheckBox, &option, QSize()).height();
+    const int checkboxHeight = QApplication::style()->sizeFromContents(QStyle::CT_CheckBox, &option,
+                                                                       QSize()).height();
     return QSize(ret.width(), qMax(ret.height(), checkboxHeight));
 }
-

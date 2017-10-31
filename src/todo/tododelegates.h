@@ -50,16 +50,14 @@ public:
 
     void paint(QPainter *painter, const QStyleOptionViewItem &option,
                const QModelIndex &index) const override;
-    QSize sizeHint(const QStyleOptionViewItem &option,
-                   const QModelIndex &index) const override;
+    QSize sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const override;
 
     QWidget *createEditor(QWidget *parent, const QStyleOptionViewItem &option,
                           const QModelIndex &index) const override;
     void setEditorData(QWidget *editor, const QModelIndex &index) const override;
     void setModelData(QWidget *editor, QAbstractItemModel *model,
                       const QModelIndex &index) const override;
-    void updateEditorGeometry(QWidget *editor,
-                              const QStyleOptionViewItem &option,
+    void updateEditorGeometry(QWidget *editor, const QStyleOptionViewItem &option,
                               const QModelIndex &index) const override;
 
 private:
@@ -98,8 +96,7 @@ public:
     void setEditorData(QWidget *editor, const QModelIndex &index) const override;
     void setModelData(QWidget *editor, QAbstractItemModel *model,
                       const QModelIndex &index) const override;
-    void updateEditorGeometry(QWidget *editor,
-                              const QStyleOptionViewItem &option,
+    void updateEditorGeometry(QWidget *editor, const QStyleOptionViewItem &option,
                               const QModelIndex &index) const override;
 };
 
@@ -123,8 +120,7 @@ public:
     void setEditorData(QWidget *editor, const QModelIndex &index) const override;
     void setModelData(QWidget *editor, QAbstractItemModel *model,
                       const QModelIndex &index) const override;
-    void updateEditorGeometry(QWidget *editor,
-                              const QStyleOptionViewItem &option,
+    void updateEditorGeometry(QWidget *editor, const QStyleOptionViewItem &option,
                               const QModelIndex &index) const override;
 };
 
@@ -148,8 +144,7 @@ public:
     void setEditorData(QWidget *editor, const QModelIndex &index) const override;
     void setModelData(QWidget *editor, QAbstractItemModel *model,
                       const QModelIndex &index) const override;
-    void updateEditorGeometry(QWidget *editor,
-                              const QStyleOptionViewItem &option,
+    void updateEditorGeometry(QWidget *editor, const QStyleOptionViewItem &option,
                               const QModelIndex &index) const override;
 
     void setCalendar(const Akonadi::ETMCalendar::Ptr &cal);
@@ -173,8 +168,7 @@ public:
 
     void paint(QPainter *painter, const QStyleOptionViewItem &option,
                const QModelIndex &index) const override;
-    QSize sizeHint(const QStyleOptionViewItem &option,
-                   const QModelIndex &index) const override;
+    QSize sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const override;
 private:
     QTextDocument *m_textDoc = nullptr;
 };

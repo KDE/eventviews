@@ -65,4 +65,3 @@ void TodoViewQuickAddLine::resizeEvent(QResizeEvent *event)
                            Qt::ElideRight,
                            width() - clearButtonUsedSize().width()));
 }
-

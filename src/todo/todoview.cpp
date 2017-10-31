@@ -68,19 +68,18 @@ Q_DECLARE_METATYPE(QPointer<QMenu>)
 using namespace EventViews;
 using namespace KCalCore;
 
-namespace EventViews
-{
+namespace EventViews {
 // We share this struct between all views, for performance and memory purposes
 class ModelStack
 {
 public:
     ModelStack(const EventViews::PrefsPtr &preferences, QObject *parent_)
-        : todoModel(new TodoModel(preferences)),
-          parent(parent_),
-          calendar(nullptr),
-          todoTreeModel(nullptr),
-          todoFlatModel(nullptr),
-          prefs(preferences)
+        : todoModel(new TodoModel(preferences))
+        , parent(parent_)
+        , calendar(nullptr)
+        , todoTreeModel(nullptr)
+        , todoFlatModel(nullptr)
+        , prefs(preferences)
     {
     }
 
@@ -108,7 +107,7 @@ public:
             foreach (TodoView *view, views) {
                 // In flatview dropping confuses users and it's very easy to drop into a child item
                 view->mView->setDragDropMode(QAbstractItemView::DragOnly);
-                view->setFlatView(flat, /**propagate=*/false);   // So other views update their toggle icon
+                view->setFlatView(flat, /**propagate=*/ false);   // So other views update their toggle icon
 
                 if (todoTreeModel) {
                     view->saveViewState(); // Save the tree state before it's gone
@@ -127,10 +126,12 @@ public:
             delete todoTreeModel;
             todoTreeModel = new IncidenceTreeModel(QStringList() << todoMimeType, parent);
             foreach (TodoView *view, views) {
-                QObject::connect(todoTreeModel, &IncidenceTreeModel::indexChangedParent, view, &TodoView::expandIndex);
-                QObject::connect(todoTreeModel, &IncidenceTreeModel::batchInsertionFinished, view, &TodoView::restoreViewState);
+                QObject::connect(todoTreeModel, &IncidenceTreeModel::indexChangedParent, view,
+                                 &TodoView::expandIndex);
+                QObject::connect(todoTreeModel, &IncidenceTreeModel::batchInsertionFinished, view,
+                                 &TodoView::restoreViewState);
                 view->mView->setDragDropMode(QAbstractItemView::DragDrop);
-                view->setFlatView(flat, /**propagate=*/false);   // So other views update their toggle icon
+                view->setFlatView(flat, /**propagate=*/ false);   // So other views update their toggle icon
             }
             todoTreeModel->setSourceModel(calendar ? calendar->model() : nullptr);
             todoModel->setSourceModel(todoTreeModel);
@@ -179,8 +180,7 @@ public:
 // Don't use K_GLOBAL_STATIC, see QTBUG-22667
 static ModelStack *sModels = nullptr;
 
-TodoView::TodoView(const EventViews::PrefsPtr &prefs,
-                   bool sidebarView, QWidget *parent)
+TodoView::TodoView(const EventViews::PrefsPtr &prefs, bool sidebarView, QWidget *parent)
     : EventView(parent)
     , mQuickSearch(nullptr)
     , mQuickAdd(nullptr)
@@ -205,18 +205,24 @@ TodoView::TodoView(const EventViews::PrefsPtr &prefs,
     mProxyModel->setFilterKeyColumn(TodoModel::SummaryColumn);
     mProxyModel->setFilterCaseSensitivity(Qt::CaseInsensitive);
     mProxyModel->setSortRole(Qt::EditRole);
-    connect(mProxyModel, &TodoViewSortFilterProxyModel::rowsInserted, this, &TodoView::onRowsInserted);
+    connect(mProxyModel, &TodoViewSortFilterProxyModel::rowsInserted, this,
+            &TodoView::onRowsInserted);
 
     if (!mSidebarView) {
         mQuickSearch = new TodoViewQuickSearch(calendar(), this);
         mQuickSearch->setVisible(prefs->enableTodoQuickSearch());
         connect(mQuickSearch, SIGNAL(searchTextChanged(QString)),
                 mProxyModel, SLOT(setFilterRegExp(QString)));
-        connect(mQuickSearch, &TodoViewQuickSearch::searchTextChanged, this, &TodoView::restoreViewState);
-        connect(mQuickSearch, &TodoViewQuickSearch::filterCategoryChanged, mProxyModel, &TodoViewSortFilterProxyModel::setCategoryFilter);
-        connect(mQuickSearch, &TodoViewQuickSearch::filterCategoryChanged, this, &TodoView::restoreViewState);
-        connect(mQuickSearch, &TodoViewQuickSearch::filterPriorityChanged, mProxyModel, &TodoViewSortFilterProxyModel::setPriorityFilter);
-        connect(mQuickSearch, &TodoViewQuickSearch::filterPriorityChanged, this, &TodoView::restoreViewState);
+        connect(mQuickSearch, &TodoViewQuickSearch::searchTextChanged, this,
+                &TodoView::restoreViewState);
+        connect(mQuickSearch, &TodoViewQuickSearch::filterCategoryChanged, mProxyModel,
+                &TodoViewSortFilterProxyModel::setCategoryFilter);
+        connect(mQuickSearch, &TodoViewQuickSearch::filterCategoryChanged, this,
+                &TodoView::restoreViewState);
+        connect(mQuickSearch, &TodoViewQuickSearch::filterPriorityChanged, mProxyModel,
+                &TodoViewSortFilterProxyModel::setPriorityFilter);
+        connect(mQuickSearch, &TodoViewQuickSearch::filterPriorityChanged, this,
+                &TodoView::restoreViewState);
     }
 
     mView = new TodoViewView(this);
@@ -230,10 +236,11 @@ TodoView::TodoView(const EventViews::PrefsPtr &prefs,
     mView->setDragDropMode(QAbstractItemView::DragDrop);
 
     mView->setExpandsOnDoubleClick(false);
-    mView->setEditTriggers(QAbstractItemView::SelectedClicked |
-                           QAbstractItemView::EditKeyPressed);
+    mView->setEditTriggers(QAbstractItemView::SelectedClicked
+                           |QAbstractItemView::EditKeyPressed);
 
-    connect(mView->header(), &QHeaderView::geometriesChanged, this, &TodoView::scheduleResizeColumns);
+    connect(mView->header(), &QHeaderView::geometriesChanged, this,
+            &TodoView::scheduleResizeColumns);
     connect(mView, &TodoViewView::visibleColumnCountChanged, this, &TodoView::resizeColumns);
 
     TodoRichTextDelegate *richTextDelegate = new TodoRichTextDelegate(mView);
@@ -258,7 +265,9 @@ TodoView::TodoView(const EventViews::PrefsPtr &prefs,
     connect(mView, &TodoViewView::customContextMenuRequested, this, &TodoView::contextMenu);
     connect(mView, &TodoViewView::doubleClicked, this, &TodoView::itemDoubleClicked);
 
-    connect(mView->selectionModel(), &QItemSelectionModel::selectionChanged, this, &TodoView::selectionChanged);
+    connect(
+        mView->selectionModel(), &QItemSelectionModel::selectionChanged, this,
+        &TodoView::selectionChanged);
 
     mQuickAdd = new TodoViewQuickAddLine(this);
     mQuickAdd->setClearButtonEnabled(true);
@@ -308,7 +317,7 @@ TodoView::TodoView(const EventViews::PrefsPtr &prefs,
     // Dummy layout just to add a few px of right margin so the checkbox is aligned
     // with the QAbstractItemView's viewport.
     QHBoxLayout *dummyLayout = new QHBoxLayout();
-    dummyLayout->setContentsMargins(0, 0, mView->frameWidth()/*right*/, 0);
+    dummyLayout->setContentsMargins(0, 0, mView->frameWidth() /*right*/, 0);
     if (!mSidebarView) {
         QFrame *f = new QFrame(this);
         f->setFrameShape(QFrame::VLine);
@@ -324,30 +333,31 @@ TodoView::TodoView(const EventViews::PrefsPtr &prefs,
     mItemPopupMenu = new QMenu(this);
 
     mItemPopupMenuItemOnlyEntries << mItemPopupMenu->addAction(
-                                      i18nc("@action:inmenu show the to-do", "&Show"),
-                                      this, SLOT(showTodo()));
+        i18nc("@action:inmenu show the to-do", "&Show"),
+        this, SLOT(showTodo()));
 
     QAction *a = mItemPopupMenu->addAction(
-                     i18nc("@action:inmenu edit the to-do", "&Edit..."),
-                     this, SLOT(editTodo()));
+        i18nc("@action:inmenu edit the to-do", "&Edit..."),
+        this, SLOT(editTodo()));
     mItemPopupMenuReadWriteEntries << a;
     mItemPopupMenuItemOnlyEntries << a;
 
     mItemPopupMenu->addSeparator();
     mItemPopupMenuItemOnlyEntries << mItemPopupMenu->addAction(
-                                      QIcon::fromTheme(QStringLiteral("document-print")),
-                                      i18nc("@action:inmenu print the to-do", "&Print..."),
-                                      this, SIGNAL(printTodo()));
+        QIcon::fromTheme(QStringLiteral("document-print")),
+        i18nc("@action:inmenu print the to-do", "&Print..."),
+        this, SIGNAL(printTodo()));
 
     mItemPopupMenuItemOnlyEntries << mItemPopupMenu->addAction(
-                                      QIcon::fromTheme(QStringLiteral("document-print-preview")),
-                                      i18nc("@action:inmenu print preview the to-do", "Print Previe&w..."),
-                                      this, SIGNAL(printPreviewTodo()));
+        QIcon::fromTheme(QStringLiteral("document-print-preview")),
+        i18nc("@action:inmenu print preview the to-do", "Print Previe&w..."),
+        this, SIGNAL(printPreviewTodo()));
     mItemPopupMenu->addSeparator();
     a = mItemPopupMenu->addAction(
-            KIconLoader::global()->loadIcon(QStringLiteral("edit-delete"), KIconLoader::NoGroup, KIconLoader::SizeSmall),
-            i18nc("@action:inmenu delete the to-do", "&Delete"),
-            this, SLOT(deleteTodo()));
+        KIconLoader::global()->loadIcon(QStringLiteral("edit-delete"), KIconLoader::NoGroup,
+                                        KIconLoader::SizeSmall),
+        i18nc("@action:inmenu delete the to-do", "&Delete"),
+        this, SLOT(deleteTodo()));
     mItemPopupMenuReadWriteEntries << a;
     mItemPopupMenuItemOnlyEntries << a;
 
@@ -360,19 +370,19 @@ TodoView::TodoView(const EventViews::PrefsPtr &prefs,
         this, SLOT(newTodo()));
 
     a = mItemPopupMenu->addAction(
-            i18nc("@action:inmenu create a new sub-to-do", "New Su&b-to-do..."),
-            this, SLOT(newSubTodo()));
+        i18nc("@action:inmenu create a new sub-to-do", "New Su&b-to-do..."),
+        this, SLOT(newSubTodo()));
     mItemPopupMenuReadWriteEntries << a;
     mItemPopupMenuItemOnlyEntries << a;
 
     mMakeTodoIndependent = mItemPopupMenu->addAction(
-                               i18nc("@action:inmenu", "&Make this To-do Independent"),
-                               this, SIGNAL(unSubTodoSignal()));
+        i18nc("@action:inmenu", "&Make this To-do Independent"),
+        this, SIGNAL(unSubTodoSignal()));
 
-    mMakeSubtodosIndependent =
-        mItemPopupMenu->addAction(
-            i18nc("@action:inmenu", "Make all Sub-to-dos &Independent"),
-            this, SIGNAL(unAllSubTodoSignal()));
+    mMakeSubtodosIndependent
+        = mItemPopupMenu->addAction(
+        i18nc("@action:inmenu", "Make all Sub-to-dos &Independent"),
+        this, SIGNAL(unAllSubTodoSignal()));
 
     mItemPopupMenuItemOnlyEntries << mMakeTodoIndependent;
     mItemPopupMenuItemOnlyEntries << mMakeSubtodosIndependent;
@@ -382,38 +392,44 @@ TodoView::TodoView(const EventViews::PrefsPtr &prefs,
 
     mItemPopupMenu->addSeparator();
 
-    a = mItemPopupMenu->addAction(KIconLoader::global()->loadIcon(QStringLiteral("appointment-new"), KIconLoader::NoGroup, KIconLoader::SizeSmall),
-                                  i18n("Create Event"),
-                                  this, SLOT(createEvent()));
+    a
+        = mItemPopupMenu->addAction(KIconLoader::global()->loadIcon(QStringLiteral("appointment-new"),
+                                                                    KIconLoader::NoGroup,
+                                                                    KIconLoader::SizeSmall),
+                                    i18n("Create Event"),
+                                    this, SLOT(createEvent()));
     a->setObjectName(QStringLiteral("createevent"));
     mItemPopupMenuReadWriteEntries << a;
     mItemPopupMenuItemOnlyEntries << a;
 
-    a = mItemPopupMenu->addAction(KIconLoader::global()->loadIcon(QStringLiteral("view-pim-notes"), KIconLoader::NoGroup, KIconLoader::SizeSmall),
-                                  i18n("Create Note"),
-                                  this, SLOT(createNote()));
+    a
+        = mItemPopupMenu->addAction(KIconLoader::global()->loadIcon(QStringLiteral("view-pim-notes"),
+                                                                    KIconLoader::NoGroup,
+                                                                    KIconLoader::SizeSmall),
+                                    i18n("Create Note"),
+                                    this, SLOT(createNote()));
     a->setObjectName(QStringLiteral("createnote"));
     mItemPopupMenuReadWriteEntries << a;
     mItemPopupMenuItemOnlyEntries << a;
 
     mItemPopupMenu->addSeparator();
 
-    mCopyPopupMenu =
-        new KPIM::KDatePickerPopup(KPIM::KDatePickerPopup::NoDate |
-                                   KPIM::KDatePickerPopup::DatePicker |
-                                   KPIM::KDatePickerPopup::Words,
-                                   QDate::currentDate(), this);
+    mCopyPopupMenu
+        = new KPIM::KDatePickerPopup(KPIM::KDatePickerPopup::NoDate
+                                     |KPIM::KDatePickerPopup::DatePicker
+                                     |KPIM::KDatePickerPopup::Words,
+                                     QDate::currentDate(), this);
     mCopyPopupMenu->setTitle(i18nc("@title:menu", "&Copy To"));
 
     connect(mCopyPopupMenu, &KPIM::KDatePickerPopup::dateChanged, this, &TodoView::copyTodoToDate);
 
     connect(mCopyPopupMenu, &KPIM::KDatePickerPopup::dateChanged, mItemPopupMenu, &QMenu::hide);
 
-    mMovePopupMenu =
-        new KPIM:: KDatePickerPopup(KPIM::KDatePickerPopup::NoDate |
-                                    KPIM::KDatePickerPopup::DatePicker |
-                                    KPIM::KDatePickerPopup::Words,
-                                    QDate::currentDate(), this);
+    mMovePopupMenu
+        = new KPIM:: KDatePickerPopup(KPIM::KDatePickerPopup::NoDate
+                                      |KPIM::KDatePickerPopup::DatePicker
+                                      |KPIM::KDatePickerPopup::Words,
+                                      QDate::currentDate(), this);
     mMovePopupMenu->setTitle(i18nc("@title:menu", "&Move To"));
 
     connect(mMovePopupMenu, &KPIM::KDatePickerPopup::dateChanged, this, &TodoView::setNewDate);
@@ -580,14 +596,13 @@ void TodoView::restoreLayout(KConfig *config, const QString &group, bool minimal
 
         // We don't have any incidences (content) yet, so we delay resizing
         QTimer::singleShot(0, this, &TodoView::resizeColumns);
-
     } else {
         for (int i = 0;
-                i < header->count() &&
-                i < columnOrder.size() &&
-                i < columnWidths.size() &&
-                i < columnVisibility.size();
-                i++) {
+             i < header->count()
+             && i < columnOrder.size()
+             && i < columnWidths.size()
+             && i < columnVisibility.size();
+             i++) {
             bool visible = columnVisibility[i].toBool();
             int width = columnWidths[i].toInt();
             int order = columnOrder[i].toInt();
@@ -657,8 +672,7 @@ void TodoView::clearSelection()
     mView->selectionModel()->clearSelection();
 }
 
-void TodoView::addTodo(const QString &summary,
-                       const Akonadi::Item &parentItem,
+void TodoView::addTodo(const QString &summary, const Akonadi::Item &parentItem,
                        const QStringList &categories)
 {
     const QString summaryTrimmed = summary.trimmed();
@@ -694,9 +708,9 @@ void TodoView::addTodo(const QString &summary,
 void TodoView::addQuickTodo(Qt::KeyboardModifiers modifiers)
 {
     if (modifiers == Qt::NoModifier) {
-        /*const QModelIndex index = */ addTodo(mQuickAdd->text(), Akonadi::Item(),
-                                               mProxyModel->categories());
-
+        /*const QModelIndex index = */
+        addTodo(mQuickAdd->text(), Akonadi::Item(),
+                mProxyModel->categories());
     } else if (modifiers == Qt::ControlModifier) {
         QModelIndexList selection = mView->selectionModel()->selectedRows();
         if (selection.count() != 1) {
@@ -706,7 +720,8 @@ void TodoView::addQuickTodo(Qt::KeyboardModifiers modifiers)
         const QModelIndex idx = mProxyModel->mapToSource(selection[0]);
         mView->expand(selection[0]);
         const Akonadi::Item parent = sModels->todoModel->data(idx,
-                                     Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
+                                                              Akonadi::EntityTreeModel::ItemRole).
+                                     value<Akonadi::Item>();
         addTodo(mQuickAdd->text(), parent, mProxyModel->categories());
     } else {
         return;
@@ -734,11 +749,11 @@ void TodoView::contextMenu(const QPoint &pos)
                 // Action isn't RO, it can change the incidence, "Edit" for example.
                 const bool actionIsRw = mItemPopupMenuReadWriteEntries.contains(entry);
 
-                const bool incidenceIsRO = !calendar()->hasRight(item, Akonadi::Collection::CanChangeItem);
+                const bool incidenceIsRO = !calendar()->hasRight(item,
+                                                                 Akonadi::Collection::CanChangeItem);
 
-                enable = hasItem && (!actionIsRw ||
-                                     !incidenceIsRO);
-
+                enable = hasItem && (!actionIsRw
+                                     || !incidenceIsRO);
             }
         } else {
             enable = false;
@@ -753,7 +768,9 @@ void TodoView::contextMenu(const QPoint &pos)
         if (incidencePtr) {
             const bool hasRecId = incidencePtr->hasRecurrenceId();
             if (calendar()) {
-                mMakeSubtodosIndependent->setEnabled(!hasRecId && !calendar()->childItems(incidencePtr->uid()).isEmpty());
+                mMakeSubtodosIndependent->setEnabled(!hasRecId
+                                                     && !calendar()->childItems(
+                                                         incidencePtr->uid()).isEmpty());
             }
             mMakeTodoIndependent->setEnabled(!hasRecId && !incidencePtr->relatedTo().isEmpty());
         }
@@ -781,8 +798,7 @@ void TodoView::contextMenu(const QPoint &pos)
     }
 }
 
-void TodoView::selectionChanged(const QItemSelection &selected,
-                                const QItemSelection &deselected)
+void TodoView::selectionChanged(const QItemSelection &selected, const QItemSelection &deselected)
 {
     Q_UNUSED(deselected);
     QModelIndexList selection = selected.indexes();
@@ -827,8 +843,8 @@ void TodoView::deleteTodo()
 {
     QModelIndexList selection = mView->selectionModel()->selectedRows();
     if (selection.size() == 1) {
-        const Akonadi::Item todoItem =
-            selection[0].data(TodoModel::TodoRole).value<Akonadi::Item>();
+        const Akonadi::Item todoItem
+            = selection[0].data(TodoModel::TodoRole).value<Akonadi::Item>();
 
         if (!changer()->deletedRecently(todoItem.id())) {
             Q_EMIT deleteIncidenceSignal(todoItem);
@@ -845,8 +861,8 @@ void TodoView::newSubTodo()
 {
     QModelIndexList selection = mView->selectionModel()->selectedRows();
     if (selection.size() == 1) {
-        const Akonadi::Item todoItem =
-            selection[0].data(TodoModel::TodoRole).value<Akonadi::Item>();
+        const Akonadi::Item todoItem
+            = selection[0].data(TodoModel::TodoRole).value<Akonadi::Item>();
 
         Q_EMIT newSubTodoSignal(todoItem);
     } else {
@@ -869,9 +885,9 @@ void TodoView::copyTodoToDate(const QDate &date)
     const QModelIndex origIndex = mProxyModel->mapToSource(selection[0]);
     Q_ASSERT(origIndex.isValid());
 
-    const Akonadi::Item origItem =
-        sModels->todoModel->data(origIndex,
-                                 Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
+    const Akonadi::Item origItem
+        = sModels->todoModel->data(origIndex,
+                                   Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
 
     const KCalCore::Todo::Ptr orig = CalendarSupport::todo(origItem);
     if (!orig) {
@@ -1114,7 +1130,8 @@ void TodoView::onRowsInserted(const QModelIndex &parent, int start, int end)
         return;
     }
 
-    const bool isPopulated = calendar()->entityTreeModel()->isCollectionPopulated(item.storageCollectionId());
+    const bool isPopulated = calendar()->entityTreeModel()->isCollectionPopulated(
+        item.storageCollectionId());
     if (!isPopulated) {
         return;
     }
@@ -1126,9 +1143,11 @@ void TodoView::onRowsInserted(const QModelIndex &parent, int start, int end)
             // don't destroy complex selections, not applicable now (only single
             // selection allowed), but for the future...
             int colCount = static_cast<int>(TodoModel::ColumnCount);
-            mView->selectionModel()->select(QItemSelection(idx, mView->model()->index(start, colCount - 1)),
-                                            QItemSelectionModel::ClearAndSelect |
-                                            QItemSelectionModel::Rows);
+            mView->selectionModel()->select(QItemSelection(idx,
+                                                           mView->model()->index(start,
+                                                                                 colCount - 1)),
+                                            QItemSelectionModel::ClearAndSelect
+                                            |QItemSelectionModel::Rows);
         }
         return;
     }
@@ -1146,12 +1165,11 @@ void TodoView::onRowsInserted(const QModelIndex &parent, int start, int end)
     }
 }
 
-void TodoView::getHighlightMode(bool &highlightEvents,
-                                bool &highlightTodos,
+void TodoView::getHighlightMode(bool &highlightEvents, bool &highlightTodos,
                                 bool &highlightJournals)
 {
-    highlightTodos    = preferences()->highlightTodos();
-    highlightEvents   = !highlightTodos;
+    highlightTodos = preferences()->highlightTodos();
+    highlightEvents = !highlightTodos;
     highlightJournals = false;
 }
 
@@ -1174,12 +1192,13 @@ void TodoView::resizeColumns()
     // We have 3 columns that should stretch: summary, description and categories.
     // Summary is always visible.
     const bool descriptionVisible = !mView->isColumnHidden(TodoModel::DescriptionColumn);
-    const bool categoriesVisible  = !mView->isColumnHidden(TodoModel::CategoriesColumn);
+    const bool categoriesVisible = !mView->isColumnHidden(TodoModel::CategoriesColumn);
 
     // Calculate size of non-stretchable columns:
     int size = 0;
     for (int i = 0; i < TodoModel::ColumnCount; ++i) {
-        if (!mView->isColumnHidden(i) && i != TodoModel::SummaryColumn && i != TodoModel::DescriptionColumn && i != TodoModel::CategoriesColumn) {
+        if (!mView->isColumnHidden(i) && i != TodoModel::SummaryColumn
+            && i != TodoModel::DescriptionColumn && i != TodoModel::CategoriesColumn) {
             size += mView->columnWidth(i);
         }
     }

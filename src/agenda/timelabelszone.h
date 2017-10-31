@@ -22,16 +22,13 @@
 #ifndef EVENTVIEWS_TIMELABELSZONE_H
 #define EVENTVIEWS_TIMELABELSZONE_H
 
-
 #include <QWidget>
 
 class QHBoxLayout;
 class QScrollArea;
 class QTimeZone;
 
-namespace EventViews
-{
-
+namespace EventViews {
 class Agenda;
 class AgendaView;
 
@@ -78,7 +75,6 @@ private:
     QHBoxLayout *mTimeLabelsLayout = nullptr;
     QList<QScrollArea *> mTimeLabelsList;
 };
-
 }
 
 #endif

@@ -31,14 +31,15 @@
 #include <QTextBrowser>
 #include <kiconloader.h>
 
-namespace EventViews
-{
-
+namespace EventViews {
 class WhatsNextTextBrowser : public QTextBrowser
 {
     Q_OBJECT
 public:
-    explicit WhatsNextTextBrowser(QWidget *parent) : QTextBrowser(parent) {}
+    explicit WhatsNextTextBrowser(QWidget *parent) : QTextBrowser(parent)
+    {
+    }
+
     /** Reimplemented from QTextBrowser to handle links. */
     void setSource(const QUrl &name) override;
 
@@ -61,6 +62,7 @@ public:
     {
         return Akonadi::Item::List();
     }
+
     KCalCore::DateList selectedIncidenceDates() const override
     {
         return KCalCore::DateList();
@@ -80,8 +82,7 @@ public Q_SLOTS:
 
 protected:
     void appendEvent(const KCalCore::Incidence::Ptr &,
-                     const QDateTime &start = QDateTime(),
-                     const QDateTime &end = QDateTime());
+                     const QDateTime &start = QDateTime(), const QDateTime &end = QDateTime());
     void appendTodo(const KCalCore::Incidence::Ptr &);
 
 private Q_SLOTS:
@@ -96,7 +97,6 @@ private:
 
     Akonadi::Item::List mTodos;
 };
-
 }
 
 #endif

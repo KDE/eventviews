@@ -55,8 +55,7 @@
 using namespace KCalCore;
 using namespace EventViews;
 
-namespace EventViews
-{
+namespace EventViews {
 class RowController : public KGantt::AbstractRowController
 {
 private:
@@ -150,12 +149,11 @@ public:
 };
 class GanttItemDelegate : public KGantt::ItemDelegate
 {
-    void paintGanttItem(QPainter *painter,
-                        const KGantt::StyleOptionGanttItem &opt,
-                        const QModelIndex &idx) override {
+    void paintGanttItem(QPainter *painter, const KGantt::StyleOptionGanttItem &opt,
+                        const QModelIndex &idx) override
+    {
         painter->setRenderHints(QPainter::Antialiasing);
-        if (!idx.isValid())
-        {
+        if (!idx.isValid()) {
             return;
         }
         KGantt::ItemType type = static_cast<KGantt::ItemType>(
@@ -168,10 +166,9 @@ class GanttItemDelegate : public KGantt::ItemDelegate
         boundingRect.setHeight(itemRect.height());
 
         QBrush brush = defaultBrush(type);
-        if (opt.state & QStyle::State_Selected)
-        {
+        if (opt.state & QStyle::State_Selected) {
             QLinearGradient selectedGrad(0., 0., 0.,
-            QApplication::fontMetrics().height());
+                                         QApplication::fontMetrics().height());
             selectedGrad.setColorAt(0., Qt::red);
             selectedGrad.setColorAt(1., Qt::darkRed);
 
@@ -184,8 +181,7 @@ class GanttItemDelegate : public KGantt::ItemDelegate
         painter->setPen(defaultPen(type));
         painter->setBrushOrigin(itemRect.topLeft());
 
-        switch (type)
-        {
+        switch (type) {
         case KGantt::TypeTask:
             if (itemRect.isValid()) {
                 QRectF r = itemRect;
@@ -217,11 +213,11 @@ class GanttItemDelegate : public KGantt::ItemDelegate
         }
     }
 };
-
 }
 
 TimelineView::TimelineView(QWidget *parent)
-    : EventView(parent), d(new Private(this))
+    : EventView(parent)
+    , d(new Private(this))
 {
     QVBoxLayout *vbox = new QVBoxLayout(this);
     QSplitter *splitter = new QSplitter(Qt::Horizontal, this);
@@ -243,7 +239,8 @@ TimelineView::TimelineView(QWidget *parent)
 
     QStyleOptionViewItem opt;
     opt.initFrom(d->mLeftView);
-    const auto h = d->mLeftView->style()->sizeFromContents(QStyle::CT_ItemViewItem, &opt, QSize(), d->mLeftView).height();
+    const auto h = d->mLeftView->style()->sizeFromContents(QStyle::CT_ItemViewItem, &opt,
+                                                           QSize(), d->mLeftView).height();
     d->mRowController->setRowHeight(h);
 
     d->mRowController->setModel(model);
@@ -319,7 +316,6 @@ void TimelineView::showDates(const QDate &start, const QDate &end, const QDate &
                                 d->mGantt);
         d->mLeftView->addTopLevelItem(new QTreeWidgetItem(QStringList() << i18n("Calendar")));
         d->mCalendarItemMap.insert(-1, item);
-
     } else {
         const CalendarSupport::CollectionSelection *colSel = collectionSelection();
         const Akonadi::Collection::List collections = colSel->selectedCollections();
@@ -332,14 +328,17 @@ void TimelineView::showDates(const QDate &start, const QDate &end, const QDate &
                                         d->mGantt);
                 d->mLeftView->addTopLevelItem(
                     new QTreeWidgetItem(
-                        QStringList() << CalendarSupport::displayName(calendar().data(), collection)));
+                        QStringList() << CalendarSupport::displayName(
+                            calendar().data(), collection)));
                 const QColor resourceColor = EventViews::resourceColor(collection, preferences());
                 if (resourceColor.isValid()) {
                     item->setColor(resourceColor);
                 }
                 qCDebug(CALENDARVIEW_LOG) << "Created item " << item
-                                          << " (" <<  CalendarSupport::displayName(calendar().data(), collection) << ") "
-                                          << "with index " <<  index - 1 << " from collection " << collection.id();
+                                          << " (" <<  CalendarSupport::displayName(
+                    calendar().data(), collection) << ") "
+                                          << "with index " <<  index - 1 << " from collection "
+                                          << collection.id();
                 d->mCalendarItemMap.insert(collection.id(), item);
             }
         }
@@ -403,8 +402,7 @@ void TimelineView::changeIncidenceDisplay(const Akonadi::Item &incidence, int mo
     }
 }
 
-bool TimelineView::eventDurationHint(QDateTime &startDt, QDateTime &endDt,
-                                     bool &allDay) const
+bool TimelineView::eventDurationHint(QDateTime &startDt, QDateTime &endDt, bool &allDay) const
 {
     startDt = QDateTime(d->mHintDate);
     endDt = QDateTime(d->mHintDate.addSecs(2 * 60 * 60));
@@ -432,11 +430,12 @@ bool TimelineView::eventFilter(QObject *object, QEvent *event)
                 KGantt::GraphicsItem *graphicsItem = static_cast<KGantt::GraphicsItem *>(item);
                 const QModelIndex itemIndex = graphicsItem->index();
 
-                QStandardItemModel *itemModel =
-                    qobject_cast<QStandardItemModel *>(d->mGantt->model());
+                QStandardItemModel *itemModel
+                    = qobject_cast<QStandardItemModel *>(d->mGantt->model());
 
-                TimelineSubItem *timelineItem =
-                    dynamic_cast<TimelineSubItem *>(itemModel->item(itemIndex.row(), itemIndex.column()));
+                TimelineSubItem *timelineItem
+                    = dynamic_cast<TimelineSubItem *>(itemModel->item(itemIndex.row(),
+                                                                      itemIndex.column()));
 
                 if (timelineItem) {
                     timelineItem->updateToolTip();
@@ -447,4 +446,3 @@ bool TimelineView::eventFilter(QObject *object, QEvent *event)
 
     return EventView::eventFilter(object, event);
 }
-

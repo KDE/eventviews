@@ -43,11 +43,11 @@ using namespace CalendarSupport;
 using namespace EventViews;
 
 MainWindow::MainWindow(const QStringList &viewNames)
-    : QMainWindow(),
-      mViewNames(viewNames),
-      mIncidenceChanger(0),
-      mSettings(0),
-      mViewPreferences(0)
+    : QMainWindow()
+    , mViewNames(viewNames)
+    , mIncidenceChanger(0)
+    , mSettings(0)
+    , mViewPreferences(0)
 {
     mUi.setupUi(this);
     mUi.tabWidget->clear();
@@ -108,7 +108,8 @@ void MainWindow::delayedInit()
     KCheckableProxyModel *checkableProxy = mCalendar->checkableProxyModel();
     QItemSelectionModel *selectionModel = checkableProxy->selectionModel();
 
-    CalendarSupport::CollectionSelection *collectionSelection = new CalendarSupport::CollectionSelection(selectionModel);
+    CalendarSupport::CollectionSelection *collectionSelection
+        = new CalendarSupport::CollectionSelection(selectionModel);
     EventViews::EventView::setGlobalCollectionSelection(collectionSelection);
 
     mIncidenceChanger = new IncidenceChanger(this);
@@ -125,4 +126,3 @@ void MainWindow::addViewTriggered(QAction *action)
     viewName.remove(QLatin1Char('&'));
     addView(viewName);
 }
-

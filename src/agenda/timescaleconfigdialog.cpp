@@ -22,7 +22,6 @@
 #include "timescaleconfigdialog.h"
 #include "prefs.h"
 
-
 #include <KLocalizedString>
 #include <QIcon>
 #include <QDialogButtonBox>
@@ -36,7 +35,8 @@ class Q_DECL_HIDDEN TimeScaleConfigDialog::Private
 {
 public:
     Private(TimeScaleConfigDialog *parent, const PrefsPtr &preferences)
-        : q(parent), mPreferences(preferences)
+        : q(parent)
+        , mPreferences(preferences)
     {
     }
 
@@ -59,14 +59,13 @@ static QString tzUTCOffsetStr(const QTimeZone &tz)
     int utcOffsetMins = (currentOffset % 3600) / 60;    // in minutes
     QString utcStr;
     if (utcOffsetMins > 0) {
-        utcStr = utcOffsetHrs >= 0 ?
-                 QStringLiteral("+%1:%2").arg(utcOffsetHrs).arg(utcOffsetMins) :
-                 QStringLiteral("%1:%2").arg(utcOffsetHrs).arg(utcOffsetMins);
-
+        utcStr = utcOffsetHrs >= 0
+                 ? QStringLiteral("+%1:%2").arg(utcOffsetHrs).arg(utcOffsetMins)
+                 : QStringLiteral("%1:%2").arg(utcOffsetHrs).arg(utcOffsetMins);
     } else {
-        utcStr = utcOffsetHrs >= 0 ?
-                 QStringLiteral("+%1").arg(utcOffsetHrs) :
-                 QStringLiteral("%1").arg(utcOffsetHrs);
+        utcStr = utcOffsetHrs >= 0
+                 ? QStringLiteral("+%1").arg(utcOffsetHrs)
+                 : QStringLiteral("%1").arg(utcOffsetHrs);
     }
     return utcStr;
 }
@@ -81,7 +80,8 @@ static QString tzWithUTC(const QByteArray &zoneId)
 }
 
 TimeScaleConfigDialog::TimeScaleConfigDialog(const PrefsPtr &preferences, QWidget *parent)
-    : QDialog(parent), d(new Private(this, preferences))
+    : QDialog(parent)
+    , d(new Private(this, preferences))
 {
     setWindowTitle(i18n("Timezone"));
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
@@ -92,7 +92,8 @@ TimeScaleConfigDialog::TimeScaleConfigDialog(const PrefsPtr &preferences, QWidge
 
     mainLayout->addWidget(mainwidget);
 
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(
+        QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
     okButton->setDefault(true);
     okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
@@ -132,8 +133,11 @@ TimeScaleConfigDialog::TimeScaleConfigDialog(const PrefsPtr &preferences, QWidge
     connect(downButton, &QPushButton::clicked, this, &TimeScaleConfigDialog::down);
 
     connect(okButton, &QPushButton::clicked, this, &TimeScaleConfigDialog::okClicked);
-    connect(buttonBox->button(QDialogButtonBox::Cancel), &QPushButton::clicked, this, &TimeScaleConfigDialog::reject);
-    connect(listWidget, &QListWidget::currentItemChanged, this, &TimeScaleConfigDialog::slotUpdateButton);
+    connect(buttonBox->button(
+                QDialogButtonBox::Cancel), &QPushButton::clicked, this,
+            &TimeScaleConfigDialog::reject);
+    connect(listWidget, &QListWidget::currentItemChanged, this,
+            &TimeScaleConfigDialog::slotUpdateButton);
     for (const TimeZoneNamePair &item : qAsConst(selList)) {
         QListWidgetItem *widgetItem = new QListWidgetItem(item.first);
         widgetItem->setData(TimeZoneNameRole, item.second);
@@ -152,7 +156,8 @@ void TimeScaleConfigDialog::slotUpdateButton()
     removeButton->setEnabled(listWidget->currentItem());
     const bool numberElementMoreThanOneElement = (listWidget->count() > 1);
     upButton->setEnabled(numberElementMoreThanOneElement && (listWidget->currentRow() >= 1));
-    downButton->setEnabled(numberElementMoreThanOneElement && (listWidget->currentRow() < listWidget->count() - 1));
+    downButton->setEnabled(numberElementMoreThanOneElement
+                           && (listWidget->currentRow() < listWidget->count() - 1));
 }
 
 void TimeScaleConfigDialog::okClicked()
@@ -168,13 +173,15 @@ void TimeScaleConfigDialog::add()
     if (zoneCombo->currentIndex() >= 0) {
         const int numberItem(listWidget->count());
         for (int i = 0; i < numberItem; ++i) {
-            if (listWidget->item(i)->data(TimeZoneNameRole).toString() == zoneCombo->itemData(zoneCombo->currentIndex(), TimeZoneNameRole).toString()) {
+            if (listWidget->item(i)->data(TimeZoneNameRole).toString()
+                == zoneCombo->itemData(zoneCombo->currentIndex(), TimeZoneNameRole).toString()) {
                 return;
             }
         }
 
         QListWidgetItem *item = new QListWidgetItem(zoneCombo->currentText());
-        item->setData(TimeZoneNameRole, zoneCombo->itemData(zoneCombo->currentIndex(), TimeZoneNameRole).toString());
+        item->setData(TimeZoneNameRole,
+                      zoneCombo->itemData(zoneCombo->currentIndex(), TimeZoneNameRole).toString());
         listWidget->addItem(item);
         zoneCombo->removeItem(zoneCombo->currentIndex());
     }
@@ -183,7 +190,9 @@ void TimeScaleConfigDialog::add()
 
 void TimeScaleConfigDialog::remove()
 {
-    zoneCombo->insertItem(0, listWidget->currentItem()->text(), zoneCombo->itemData(zoneCombo->currentIndex(), TimeZoneNameRole).toString());
+    zoneCombo->insertItem(0, listWidget->currentItem()->text(),
+                          zoneCombo->itemData(zoneCombo->currentIndex(),
+                                              TimeZoneNameRole).toString());
     delete listWidget->takeItem(listWidget->currentRow());
     slotUpdateButton();
 }
@@ -214,4 +223,3 @@ QStringList TimeScaleConfigDialog::zones() const
     }
     return list;
 }
-
