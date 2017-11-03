@@ -338,7 +338,7 @@ TodoView::TodoView(const EventViews::PrefsPtr &prefs, bool sidebarView, QWidget 
 
     QAction *a = mItemPopupMenu->addAction(
         i18nc("@action:inmenu edit the to-do", "&Edit..."),
-        this, SLOT(editTodo()));
+        this, &TodoView::editTodo);
     mItemPopupMenuReadWriteEntries << a;
     mItemPopupMenuItemOnlyEntries << a;
 
@@ -346,7 +346,7 @@ TodoView::TodoView(const EventViews::PrefsPtr &prefs, bool sidebarView, QWidget 
     mItemPopupMenuItemOnlyEntries << mItemPopupMenu->addAction(
         QIcon::fromTheme(QStringLiteral("document-print")),
         i18nc("@action:inmenu print the to-do", "&Print..."),
-        this, SIGNAL(printTodo()));
+        this, &TodoView::printTodo);
 
     mItemPopupMenuItemOnlyEntries << mItemPopupMenu->addAction(
         QIcon::fromTheme(QStringLiteral("document-print-preview")),

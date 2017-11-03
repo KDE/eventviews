@@ -914,8 +914,7 @@ void AgendaView::connectAgenda(Agenda *agenda, Agenda *otherAgenda)
             this, &AgendaView::slotDeleteIncidence);
 
     // drag signals
-    connect(agenda, SIGNAL(startDragSignal(KCalCore::Incidence::Ptr)),
-            SLOT(startDrag(KCalCore::Incidence::Ptr)));
+    connect(agenda, &Agenda::startDragSignal, this, [this](const KCalCore::Incidence::Ptr &ptr) { startDrag(ptr); });
 
     // synchronize selections
     connect(agenda, &Agenda::incidenceSelected,
