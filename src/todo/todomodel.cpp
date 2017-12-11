@@ -369,7 +369,7 @@ QVariant TodoModel::data(const QModelIndex &index, int role) const
     // the checkbox ( which increments the next occurrence date ).
     if (role == Qt::DecorationRole && index.column() == SummaryColumn) {
         if (todo->recurs()) {
-            return QVariant(QIcon(QIcon::fromTheme(QStringLiteral("task-recurring"))));
+            return QVariant(QIcon::fromTheme(QStringLiteral("task-recurring")));
         }
     }
 
