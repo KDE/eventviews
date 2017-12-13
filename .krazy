@@ -1,0 +1,5 @@
+EXTRA camelcase,defines,kdebug,null,qenums,tipsandthis
+
+PRIORITY all
+
+STRICT all
