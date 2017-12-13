@@ -9,8 +9,8 @@ set(KF5_VERSION "5.41.0")
 find_package(ECM ${KF5_VERSION} CONFIG REQUIRED)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
 set(LIBRARY_NAMELINK)
-if (POLICY CMP0053)
-    cmake_policy(SET CMP0053 NEW)
+if(POLICY CMP0053)
+  cmake_policy(SET CMP0053 NEW)
 endif()
 include(GenerateExportHeader)
 include(ECMSetupVersion)
@@ -26,11 +26,8 @@ include(ECMQtDeclareLoggingCategory)
 include(ECMAddTests)
 include(ECMCoverageOption)
 
-
-
-
 set(EVENTVIEW_LIB_VERSION ${PIM_VERSION})
-set(CALENDARUTILS_LIB_VERSION "5.7.40")
+set(CALENDARUTILS_LIB_VERSION "5.7.41")
 set(AKONADI_LIB_VERSION "5.7.40")
 set(QT_REQUIRED_VERSION "5.8.0")
 set(KCALENDARCORE_LIB_VERSION "5.7.40")
@@ -77,7 +74,7 @@ set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5EventViews")
 configure_package_config_file(
   "${CMAKE_CURRENT_SOURCE_DIR}/KF5EventViewsConfig.cmake.in"
   "${CMAKE_CURRENT_BINARY_DIR}/KF5EventViewsConfig.cmake"
-  INSTALL_DESTINATION  ${CMAKECONFIG_INSTALL_DIR}
+  INSTALL_DESTINATION ${CMAKECONFIG_INSTALL_DIR}
 )
 
 install(FILES
@@ -90,15 +87,15 @@ install(FILES
 install(EXPORT KF5EventViewsTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KF5EventViewsTargets.cmake NAMESPACE KF5::)
 
 install(FILES
-   ${CMAKE_CURRENT_BINARY_DIR}/eventviews_version.h
+  ${CMAKE_CURRENT_BINARY_DIR}/eventviews_version.h
   DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5} COMPONENT Devel
 )
 
-
 add_subdirectory(src)
-if (BUILD_TESTING)
-    find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Test)
-   add_subdirectory(tests)
+if(BUILD_TESTING)
+  find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Test)
+  add_subdirectory(tests)
 endif()
-install( FILES eventviews.renamecategories eventviews.categories DESTINATION ${KDE_INSTALL_CONFDIR} )
+
+install(FILES eventviews.renamecategories eventviews.categories DESTINATION ${KDE_INSTALL_CONFDIR})
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)

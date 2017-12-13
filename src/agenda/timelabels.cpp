@@ -27,6 +27,8 @@
 #include "timelabelszone.h"
 #include "timescaleconfigdialog.h"
 
+#include <KCalUtils/Stringify>
+
 #include <KLocalizedString>
 
 #include <QFrame>
@@ -184,13 +186,12 @@ void TimeLabels::paintEvent(QPaintEvent *)
     // We won't paint parts that aren't visible
     const int cy = -y();// y() returns a negative value.
 
-    const auto firstDay
-        = QDateTime(mAgenda->dateList().first(), QTime(0, 0, 0), Qt::LocalTime).toUTC();
-    const int beginning
-        = !mTimezone.isValid()
-          ? 0
-          : (mTimezone.offsetFromUtc(firstDay)
-             -mTimeLabelsZone->preferences()->timeZone().offsetFromUtc(firstDay)) / (60 * 60);
+    const auto firstDay =
+        QDateTime(mAgenda->dateList().first(), QTime(0, 0, 0), Qt::LocalTime).toUTC();
+    const int beginning =
+        !mTimezone.isValid() ?
+        0 :
+        (mTimezone.offsetFromUtc(firstDay) - mTimeLabelsZone->preferences()->timeZone().offsetFromUtc(firstDay)) / 3600;
 
     // bug:  the parameters cx and cw are the areas that need to be
     //       redrawn, not the area of the widget.  unfortunately, this
@@ -302,22 +303,19 @@ void TimeLabels::contextMenuEvent(QContextMenuEvent *event)
     Q_UNUSED(event);
 
     QMenu popup(this);
-    QAction *editTimeZones
-        = popup.addAction(QIcon::fromTheme(QStringLiteral("document-properties")),
-                          i18n("&Add Timezones..."));
-    QAction *removeTimeZone
-        = popup.addAction(QIcon::fromTheme(QStringLiteral("edit-delete")),
-                          i18n("&Remove Timezone %1", i18n(mTimezone.id().constData())));
-    if (!mTimezone.isValid()
-        || !mTimeLabelsZone->preferences()->timeScaleTimezones().count()
-        || mTimezone == mTimeLabelsZone->preferences()->timeZone()) {
+    QAction *editTimeZones = popup.addAction(QIcon::fromTheme(QStringLiteral("document-properties")),
+                                             i18n("&Add Timezones..."));
+    QAction *removeTimeZone = popup.addAction(QIcon::fromTheme(QStringLiteral("edit-delete")),
+                                              i18n("&Remove Timezone %1", i18n(mTimezone.id().constData())));
+    if (!mTimezone.isValid() ||
+        !mTimeLabelsZone->preferences()->timeScaleTimezones().count() ||
+        mTimezone == mTimeLabelsZone->preferences()->timeZone()) {
         removeTimeZone->setEnabled(false);
     }
 
     QAction *activatedAction = popup.exec(QCursor::pos());
     if (activatedAction == editTimeZones) {
-        QPointer<TimeScaleConfigDialog> dialog
-            = new TimeScaleConfigDialog(mTimeLabelsZone->preferences(), this);
+        QPointer<TimeScaleConfigDialog> dialog = new TimeScaleConfigDialog(mTimeLabelsZone->preferences(), this);
         if (dialog->exec() == QDialog::Accepted) {
             mTimeLabelsZone->reset();
         }
@@ -345,32 +343,40 @@ QString TimeLabels::header() const
 
 QString TimeLabels::headerToolTip() const
 {
+    QDateTime now = QDateTime::currentDateTime();
     QString toolTip;
+
     toolTip += QLatin1String("<qt>");
-    toolTip += i18n("<b>%1</b>", i18n(mTimezone.id().constData()));
+    toolTip += i18nc("title for timezone info, the timezone id and utc offset",
+                     "<b>%1 (%2)</b>", i18n(mTimezone.id().constData()),
+                     KCalUtils::Stringify::tzUTCOffsetStr(mTimezone));
     toolTip += QLatin1String("<hr>");
-    //TODO: Once string freeze is lifted, add UTC offset here
+    toolTip += i18nc("heading for timezone display name",
+                     "<i>Name:</i> %1", mTimezone.displayName(now, QTimeZone::LongName));
+    toolTip += QLatin1String("<br/>");
+
     if (mTimezone.country() != QLocale::AnyCountry) {
-        toolTip += i18n("<i>Country:</i> %1", QLocale::countryToString(mTimezone.country()));
+        toolTip += i18nc("heading for timezone country",
+                         "<i>Country:</i> %1", QLocale::countryToString(mTimezone.country()));
         toolTip += QLatin1String("<br/>");
     }
 
     auto abbreviations = QStringLiteral("&nbsp;");
-    foreach (const auto &transition,
-             mTimezone.transitions(QDateTime::currentDateTime(),
-                                   QDateTime::currentDateTime().addYears(1))) {
+    foreach (const auto &transition, mTimezone.transitions(now, now.addYears(1))) {
         abbreviations += transition.abbreviation;
         abbreviations += QLatin1String(",&nbsp;");
     }
     abbreviations.chop(7);
     if (!abbreviations.isEmpty()) {
-        toolTip += i18n("<i>Abbreviations:</i>");
+        toolTip += i18nc("heading for comma-separated list of timezone abbreviations",
+                         "<i>Abbreviations:</i>");
         toolTip += abbreviations;
         toolTip += QLatin1String("<br/>");
     }
     const QString timeZoneComment(mTimezone.comment());
     if (!timeZoneComment.isEmpty()) {
-        toolTip += i18n("<i>Comment:</i> %1", timeZoneComment);
+        toolTip += i18nc("heading for the timezone comment",
+                         "<i>Comment:</i> %1", timeZoneComment);
     }
     toolTip += QLatin1String("</qt>");
 
