@@ -1106,7 +1106,10 @@ bool AgendaView::loadDecorations(const QStringList &decorations, DecorationList 
 {
     for (const QString &decoName : decorations) {
         if (preferences()->selectedPlugins().contains(decoName)) {
-            decoList << d->loadCalendarDecoration(decoName);
+            CalendarDecoration::Decoration *deco = d->loadCalendarDecoration(decoName);
+            if (deco != nullptr) {
+                decoList << deco;
+            }
         }
     }
     return !decoList.isEmpty();
