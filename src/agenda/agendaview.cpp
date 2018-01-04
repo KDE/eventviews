@@ -830,7 +830,11 @@ void AgendaView::init(const QDate &start, const QDate &end)
     updateTimeBarWidth();
 
     // Don't call it now, bottom agenda isn't fully up yet
+#if QT_VERSION >= QT_VERSION_CHECK(5, 10, 0)
+    QMetaObject::invokeMethod(this, &AgendaView::alignAgendas, Qt::QueuedConnection);
+#else
     QMetaObject::invokeMethod(this, "alignAgendas", Qt::QueuedConnection);
+#endif
 
     // Whoever changes this code, remember to leave createDayLabels()
     // inside the ctor, so it's always called before readSettings(), so
@@ -1590,7 +1594,11 @@ void AgendaView::updateEventDates(AgendaItem *item, bool addIncidence,
 
         if (td->dtDue().toLocalTime() == endDt) {
             // No change
+#if QT_VERSION >= QT_VERSION_CHECK(5, 10, 0)
+            QMetaObject::invokeMethod(this, &AgendaView::updateView, Qt::QueuedConnection);
+#else
             QMetaObject::invokeMethod(this, "updateView", Qt::QueuedConnection);
+#endif
             return;
         }
     }
@@ -1633,7 +1641,11 @@ void AgendaView::updateEventDates(AgendaItem *item, bool addIncidence,
     // cancelling one of the subsequent dialogs.
     if (!result) {
         setChanges(changes() | IncidencesEdited);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 10, 0)
+        QMetaObject::invokeMethod(this, &AgendaView::updateView, Qt::QueuedConnection);
+#else
         QMetaObject::invokeMethod(this, "updateView", Qt::QueuedConnection);
+#endif
         return;
     }
 
@@ -1647,7 +1659,11 @@ void AgendaView::updateEventDates(AgendaItem *item, bool addIncidence,
     // recreated. All others have to!!!
     if (incidence->recurs() || incidence->hasRecurrenceId()) {
         d->mUpdateItem = aitem;
+#if QT_VERSION >= QT_VERSION_CHECK(5, 10, 0)
+        QMetaObject::invokeMethod(this, &AgendaView::updateView, Qt::QueuedConnection);
+#else
         QMetaObject::invokeMethod(this, "updateView", Qt::QueuedConnection);
+#endif
     }
 
     enableAgendaUpdate(true);
