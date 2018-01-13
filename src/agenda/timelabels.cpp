@@ -265,14 +265,25 @@ void TimeLabels::paintEvent(QPaintEvent *)
         }
         // handle 24h and am/pm time formats
         if (use12Clock()) {
-            if (cell == 12) {
-                suffix = QStringLiteral("pm");
-            }
             if (cell == 0) {
                 hour.setNum(12);
             }
-            if (cell > 12) {
-                hour.setNum(cell - 12);
+            int tCell = cell;
+            if (tCell < 0) {
+                tCell += 24;
+            }
+            if (tCell > 12) {
+                tCell %= 12;
+                if (tCell == 0) {
+                    hour.setNum(12);
+                } else {
+                    hour.setNum(tCell);
+                }
+            }
+            if ((cell / 12) % 2 != 0) {
+                suffix = QStringLiteral("pm");
+            } else {
+                suffix = QStringLiteral("am");
             }
         }
 
