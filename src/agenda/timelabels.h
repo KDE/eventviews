@@ -73,7 +73,14 @@ public:
 
     QSize minimumSizeHint() const override;
 
+    /** */
+    bool event(QEvent *event) override;
+
 private:
+    int yposToCell(const int ypos) const;
+    int cellToHour(const int cell) const;
+    QString cellToSuffix(const int cell) const;
+
     /** update the position of the marker showing the mouse position */
     void mousePosChanged(const QPoint &pos);
 

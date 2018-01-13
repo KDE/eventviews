@@ -32,10 +32,12 @@
 #include <KLocalizedString>
 
 #include <QFrame>
+#include <QHelpEvent>
 #include <QIcon>
 #include <QMenu>
 #include <QPainter>
 #include <QPointer>
+#include <QToolTip>
 
 using namespace EventViews;
 
@@ -57,10 +59,6 @@ TimeLabels::TimeLabels(const QTimeZone &zone, int rows, TimeLabelsZone *parent, 
     mMousePos->setFixedSize(width(), 1);
     colorMousePos();
     mAgenda = nullptr;
-
-    if (mTimezone.isValid()) {
-        setToolTip(i18n("Timezone:") + i18n(mTimezone.id().constData()));
-    }
 
     setSizePolicy(QSizePolicy::Minimum, QSizePolicy::Fixed);
 
@@ -173,6 +171,59 @@ void TimeLabels::setAgenda(Agenda *agenda)
     }
 }
 
+int TimeLabels::yposToCell(const int ypos) const
+{
+   const auto firstDay =
+       QDateTime(mAgenda->dateList().first(), QTime(0, 0, 0), Qt::LocalTime).toUTC();
+    const int beginning = // the hour we start drawing with
+        !mTimezone.isValid() ?
+        0 :
+        (mTimezone.offsetFromUtc(firstDay) - mTimeLabelsZone->preferences()->timeZone().offsetFromUtc(firstDay)) / 3600;
+    return static_cast<int>(ypos / mCellHeight) + beginning;
+}
+
+int TimeLabels::cellToHour(const int cell) const
+{
+    int tCell = cell % 24;
+    // handle different timezones
+    if (tCell < 0) {
+        tCell += 24;
+    }
+    // handle 24h and am/pm time formats
+    if (use12Clock()) {
+        if (tCell == 0) {
+            tCell = 12;
+        }
+        if (tCell < 0) {
+            tCell += 24;
+        }
+        if (tCell > 12) {
+            tCell %= 12;
+            if (tCell == 0) {
+                tCell = 12;
+            }
+        }
+    }
+    return tCell;
+}
+
+QString TimeLabels::cellToSuffix(const int cell) const
+{
+    //TODO: rewrite this using QTime's time formats. "am/pm" doesn't make sense
+    // in some locale's
+    QString suffix;
+    if (use12Clock()) {
+        if ((cell / 12) % 2 != 0) {
+            suffix = QStringLiteral("pm");
+        } else {
+            suffix = QStringLiteral("am");
+        }
+    } else {
+        suffix = QStringLiteral("00");
+    }
+    return suffix;
+}
+
 /** This is called in response to repaint() */
 void TimeLabels::paintEvent(QPaintEvent *)
 {
@@ -202,7 +253,7 @@ void TimeLabels::paintEvent(QPaintEvent *)
     const int cw = width();
     // end of workaround
 
-    int cell = static_cast<int>(cy / mCellHeight) + beginning;    // the hour we start drawing with
+    int cell = yposToCell(cy);
     double y = (cell - beginning) * mCellHeight;
     QFontMetrics fm = fontMetrics();
     QString hour;
@@ -217,9 +268,6 @@ void TimeLabels::paintEvent(QPaintEvent *)
         suffix = QStringLiteral("00");
     } else {
         suffix = QStringLiteral("am");
-        if (cell > 11) {
-            suffix = QStringLiteral("pm");
-        }
     }
 
     // We adjust the size of the hour font to keep it reasonable
@@ -259,34 +307,9 @@ void TimeLabels::paintEvent(QPaintEvent *)
         // hour, full line
         p.drawLine(cx, int(y), cw + 2, int(y));
 
-        hour.setNum(cell % 24);
-        // handle different timezones
-        if (cell < 0) {
-            hour.setNum(cell + 24);
-        }
-        // handle 24h and am/pm time formats
-        if (use12Clock()) {
-            if (cell == 0) {
-                hour.setNum(12);
-            }
-            int tCell = cell;
-            if (tCell < 0) {
-                tCell += 24;
-            }
-            if (tCell > 12) {
-                tCell %= 12;
-                if (tCell == 0) {
-                    hour.setNum(12);
-                } else {
-                    hour.setNum(tCell);
-                }
-            }
-            if ((cell / 12) % 2 != 0) {
-                suffix = QStringLiteral("pm");
-            } else {
-                suffix = QStringLiteral("am");
-            }
-        }
+        // set the hour and suffix from the cell
+        hour.setNum(cellToHour(cell));
+        suffix = cellToSuffix(cell);
 
         // draw the time label
         p.setPen(textColor);
@@ -392,4 +415,26 @@ QString TimeLabels::headerToolTip() const
     toolTip += QLatin1String("</qt>");
 
     return toolTip;
+}
+
+bool TimeLabels::event(QEvent *event)
+{
+    if (event->type() == QEvent::ToolTip) {
+        QHelpEvent *helpEvent = static_cast<QHelpEvent *>(event);
+        const int cell = yposToCell(helpEvent->pos().y());
+
+        QString toolTip;
+        toolTip += QLatin1String("<qt>");
+        toolTip += i18nc("[hour of the day][am/pm/00] [timezone id (timezone-offset)]",
+                         "%1%2<br/>%3 (%4)",
+                         cellToHour(cell),  cellToSuffix(cell),
+                         i18n(mTimezone.id().constData()),
+                         KCalUtils::Stringify::tzUTCOffsetStr(mTimezone));
+        toolTip += QLatin1String("</qt>");
+
+        QToolTip::showText(helpEvent->globalPos(), toolTip, this);
+
+        return true;
+    }
+    return QWidget::event(event);
 }
