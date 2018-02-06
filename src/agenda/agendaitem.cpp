@@ -668,7 +668,7 @@ void AgendaItem::dropEvent(QDropEvent *e)
 
     bool decoded = md->hasText();
     QString text = md->text();
-    if (decoded && text.startsWith(QStringLiteral("file:"))) {
+    if (decoded && text.startsWith(QLatin1String("file:"))) {
         mIncidence->addAttachment(KCalCore::Attachment::Ptr(new KCalCore::Attachment(text)));
         return;
     }

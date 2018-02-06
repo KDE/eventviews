@@ -771,7 +771,7 @@ bool TodoModel::dropMimeData(const QMimeData *data, Qt::DropAction action, int r
 
                 KCalCore::Todo::Ptr oldTodo = KCalCore::Todo::Ptr(destTodo->clone());
 
-                if (text.startsWith(QStringLiteral("file:"))) {
+                if (text.startsWith(QLatin1String("file:"))) {
                     destTodo->addAttachment(KCalCore::Attachment::Ptr(new KCalCore::Attachment(
                                                                           text)));
                 } else {
