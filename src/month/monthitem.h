@@ -45,7 +45,7 @@ class EVENTVIEWS_EXPORT MonthItem : public QObject
 
 public:
     explicit MonthItem(MonthScene *monthWidget);
-    virtual ~MonthItem();
+    ~MonthItem() override;
 
     QWidget *parentWidget() const;
 
@@ -290,7 +290,7 @@ public:
                        const Akonadi::Item &item, const KCalCore::Incidence::Ptr &incidence,
                        const QDate &recurStartDate = QDate());
 
-    virtual ~IncidenceMonthItem();
+    ~IncidenceMonthItem() override;
 
     KCalCore::Incidence::Ptr incidence() const;
     Akonadi::Item akonadiItem() const;
@@ -348,7 +348,7 @@ class EVENTVIEWS_EXPORT HolidayMonthItem : public MonthItem
 
 public:
     HolidayMonthItem(MonthScene *monthScene, const QDate &date, const QString &name);
-    virtual ~HolidayMonthItem();
+    ~HolidayMonthItem() override;
 
     bool greaterThanFallback(const MonthItem *other) const override;
 

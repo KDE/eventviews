@@ -61,7 +61,7 @@ public:
         Bottom
     };
     explicit EventIndicator(Location loc = Top, QWidget *parent = nullptr);
-    virtual ~EventIndicator();
+    ~EventIndicator() override;
 
     void changeColumns(int columns);
 
@@ -90,7 +90,7 @@ public:
     explicit AgendaView(const QDate &start, const QDate &end, bool isInteractive,
                         bool isSideBySide = false, QWidget *parent = nullptr);
 
-    virtual ~AgendaView();
+    ~AgendaView() override;
 
     enum {
         MAX_DAY_COUNT = 42 // (6 * 7)

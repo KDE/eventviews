@@ -46,7 +46,7 @@ public:
     typedef QList<Element *> List;
 
     explicit Element(const QString &id);
-    virtual ~Element();
+    ~Element() override;
 
     /**
       Return a name for easy identification.
@@ -166,7 +166,7 @@ public:
     typedef QList<Decoration *> List;
 
     Decoration();
-    virtual ~Decoration();
+    ~Decoration() override;
 
     /**
       Return all Elements for the given day.

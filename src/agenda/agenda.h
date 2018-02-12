@@ -51,7 +51,7 @@ class MarcusBains : public QFrame
 public:
     explicit MarcusBains(EventView *eventView, Agenda *agenda = nullptr);
     void updateLocationRecalc(bool recalculate = false);
-    virtual ~MarcusBains();
+    ~MarcusBains() override;
 
 public Q_SLOTS:
     void updateLocation();
@@ -70,7 +70,7 @@ public:
 
     Agenda(AgendaView *agendaView, QScrollArea *scrollArea, int columns, bool isInteractive);
 
-    virtual ~Agenda();
+    ~Agenda() override;
 
     KCalCore::Incidence::Ptr selectedIncidence() const;
     QDate selectedIncidenceDate() const;
