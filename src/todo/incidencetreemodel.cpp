@@ -38,13 +38,17 @@ static void calculateDepth(const Node::Ptr &node)
     }
 }
 
-bool lessThan(const Node::Ptr &node1, const Node::Ptr &node2)
+// Desired ordering [...],3,2,1,0,-1
+static bool reverseDepthLessThan(const Node::Ptr &node1, const Node::Ptr &node2)
 {
     return node1->depth > node2->depth;
 }
 
-bool greaterThan(const PreNode::Ptr &node1, const PreNode::Ptr &node2)
+// Desired ordering 0,1,2,3,[...],-1
+static bool depthLessThan(const PreNode::Ptr &node1, const PreNode::Ptr &node2)
 {
+    if (node1->depth == -1)
+        return false;
     return node1->depth < node2->depth || node2->depth == -1;
 }
 
@@ -81,7 +85,7 @@ static PreNode::List sortedPrenodes(const PreNode::List &nodes)
     }
 
     PreNode::List sorted = nodes;
-    std::sort(sorted.begin(), sorted.end(), greaterThan);
+    std::sort(sorted.begin(), sorted.end(), depthLessThan);
     return sorted;
 }
 
@@ -446,7 +450,7 @@ Node::List IncidenceTreeModel::Private::sorted(const Node::List &nodes) const
     }
 
     Node::List sorted = nodes;
-    std::sort(sorted.begin(), sorted.end(), lessThan);
+    std::sort(sorted.begin(), sorted.end(), reverseDepthLessThan);
 
     return sorted;
 }
