@@ -31,37 +31,31 @@
 #include "incidencetreemodel.h"
 #include "tododelegates.h"
 #include "todomodel.h"
-#include "todoviewsortfilterproxymodel.h"
 #include "todoviewquickaddline.h"
 #include "todoviewquicksearch.h"
+#include "todoviewsortfilterproxymodel.h"
 #include "todoviewview.h"
-#include "helper.h"
+#include "calendarview_debug.h"
 
-#include <CalendarSupport/CategoryConfig>
-#include <CalendarSupport/CollectionSelection>
+#include <AkonadiCore/EntityMimeTypeFilterModel>
+#include <AkonadiCore/TagFetchJob>
+
+#include <AkonadiWidgets/ETMViewStateSaver>
+
 #include <CalendarSupport/KCalPrefs>
 #include <CalendarSupport/Utils>
 
 #include <Libkdepim/KDatePickerPopup>
 
-#include <entitymimetypefiltermodel.h>
-#include <ETMViewStateSaver>
-#include <TagFetchJob>
-#include <Tag>
-
 #include <KCalCore/CalFormat>
-#include <QIcon>
+
 #include <KIconLoader>
 #include <KJob>
-#include "calendarview_debug.h"
 
-#include <QCheckBox>
 #include <QGridLayout>
 #include <QHeaderView>
 #include <QMenu>
 #include <QToolButton>
-#include <QItemSelection>
-#include <QTimer>
 
 Q_DECLARE_METATYPE(QPointer<QMenu>)
 
@@ -107,7 +101,7 @@ public:
             foreach (TodoView *view, views) {
                 // In flatview dropping confuses users and it's very easy to drop into a child item
                 view->mView->setDragDropMode(QAbstractItemView::DragOnly);
-                view->setFlatView(flat, /**propagate=*/ false);   // So other views update their toggle icon
+                view->setFlatView(flat, /**propagate=*/false);   // So other views update their toggle icon
 
                 if (todoTreeModel) {
                     view->saveViewState(); // Save the tree state before it's gone
@@ -131,7 +125,7 @@ public:
                 QObject::connect(todoTreeModel, &IncidenceTreeModel::batchInsertionFinished, view,
                                  &TodoView::restoreViewState);
                 view->mView->setDragDropMode(QAbstractItemView::DragDrop);
-                view->setFlatView(flat, /**propagate=*/ false);   // So other views update their toggle icon
+                view->setFlatView(flat, /**propagate=*/false);   // So other views update their toggle icon
             }
             todoTreeModel->setSourceModel(calendar ? calendar->model() : nullptr);
             todoModel->setSourceModel(todoTreeModel);
@@ -236,12 +230,12 @@ TodoView::TodoView(const EventViews::PrefsPtr &prefs, bool sidebarView, QWidget 
     mView->setDragDropMode(QAbstractItemView::DragDrop);
 
     mView->setExpandsOnDoubleClick(false);
-    mView->setEditTriggers(QAbstractItemView::SelectedClicked
-                           |QAbstractItemView::EditKeyPressed);
+    mView->setEditTriggers(QAbstractItemView::SelectedClicked | QAbstractItemView::EditKeyPressed);
 
-    connect(mView->header(), &QHeaderView::geometriesChanged, this,
-            &TodoView::scheduleResizeColumns);
-    connect(mView, &TodoViewView::visibleColumnCountChanged, this, &TodoView::resizeColumns);
+    connect(mView->header(), &QHeaderView::geometriesChanged,
+            this, &TodoView::scheduleResizeColumns);
+    connect(mView, &TodoViewView::visibleColumnCountChanged,
+            this, &TodoView::resizeColumns);
 
     TodoRichTextDelegate *richTextDelegate = new TodoRichTextDelegate(mView);
     mView->setItemDelegateForColumn(TodoModel::SummaryColumn, richTextDelegate);
@@ -317,7 +311,7 @@ TodoView::TodoView(const EventViews::PrefsPtr &prefs, bool sidebarView, QWidget 
     // Dummy layout just to add a few px of right margin so the checkbox is aligned
     // with the QAbstractItemView's viewport.
     QHBoxLayout *dummyLayout = new QHBoxLayout();
-    dummyLayout->setContentsMargins(0, 0, mView->frameWidth() /*right*/, 0);
+    dummyLayout->setContentsMargins(0, 0, mView->frameWidth()/*right*/, 0);
     if (!mSidebarView) {
         QFrame *f = new QFrame(this);
         f->setFrameShape(QFrame::VLine);
@@ -414,22 +408,20 @@ TodoView::TodoView(const EventViews::PrefsPtr &prefs, bool sidebarView, QWidget 
 
     mItemPopupMenu->addSeparator();
 
-    mCopyPopupMenu
-        = new KPIM::KDatePickerPopup(KPIM::KDatePickerPopup::NoDate
-                                     |KPIM::KDatePickerPopup::DatePicker
-                                     |KPIM::KDatePickerPopup::Words,
-                                     QDate::currentDate(), this);
+    mCopyPopupMenu = new KPIM::KDatePickerPopup(KPIM::KDatePickerPopup::NoDate |
+                                                KPIM::KDatePickerPopup::DatePicker |
+                                                KPIM::KDatePickerPopup::Words,
+                                                QDate::currentDate(), this);
     mCopyPopupMenu->setTitle(i18nc("@title:menu", "&Copy To"));
 
     connect(mCopyPopupMenu, &KPIM::KDatePickerPopup::dateChanged, this, &TodoView::copyTodoToDate);
 
     connect(mCopyPopupMenu, &KPIM::KDatePickerPopup::dateChanged, mItemPopupMenu, &QMenu::hide);
 
-    mMovePopupMenu
-        = new KPIM:: KDatePickerPopup(KPIM::KDatePickerPopup::NoDate
-                                      |KPIM::KDatePickerPopup::DatePicker
-                                      |KPIM::KDatePickerPopup::Words,
-                                      QDate::currentDate(), this);
+    mMovePopupMenu = new KPIM:: KDatePickerPopup(KPIM::KDatePickerPopup::NoDate |
+                                                 KPIM::KDatePickerPopup::DatePicker |
+                                                 KPIM::KDatePickerPopup::Words,
+                                                 QDate::currentDate(), this);
     mMovePopupMenu->setTitle(i18nc("@title:menu", "&Move To"));
 
     connect(mMovePopupMenu, &KPIM::KDatePickerPopup::dateChanged, this, &TodoView::setNewDate);
@@ -752,8 +744,7 @@ void TodoView::contextMenu(const QPoint &pos)
                 const bool incidenceIsRO = !calendar()->hasRight(item,
                                                                  Akonadi::Collection::CanChangeItem);
 
-                enable = hasItem && (!actionIsRw
-                                     || !incidenceIsRO);
+                enable = hasItem && (!actionIsRw || !incidenceIsRO);
             }
         } else {
             enable = false;
@@ -768,9 +759,8 @@ void TodoView::contextMenu(const QPoint &pos)
         if (incidencePtr) {
             const bool hasRecId = incidencePtr->hasRecurrenceId();
             if (calendar()) {
-                mMakeSubtodosIndependent->setEnabled(!hasRecId
-                                                     && !calendar()->childItems(
-                                                         incidencePtr->uid()).isEmpty());
+                mMakeSubtodosIndependent->setEnabled(
+                    !hasRecId && !calendar()->childItems(incidencePtr->uid()).isEmpty());
             }
             mMakeTodoIndependent->setEnabled(!hasRecId && !incidencePtr->relatedTo().isEmpty());
         }
@@ -1143,11 +1133,9 @@ void TodoView::onRowsInserted(const QModelIndex &parent, int start, int end)
             // don't destroy complex selections, not applicable now (only single
             // selection allowed), but for the future...
             int colCount = static_cast<int>(TodoModel::ColumnCount);
-            mView->selectionModel()->select(QItemSelection(idx,
-                                                           mView->model()->index(start,
-                                                                                 colCount - 1)),
-                                            QItemSelectionModel::ClearAndSelect
-                                            |QItemSelectionModel::Rows);
+            mView->selectionModel()->select(
+                QItemSelection(idx, mView->model()->index(start, colCount - 1)),
+                QItemSelectionModel::ClearAndSelect | QItemSelectionModel::Rows);
         }
         return;
     }
@@ -1197,8 +1185,10 @@ void TodoView::resizeColumns()
     // Calculate size of non-stretchable columns:
     int size = 0;
     for (int i = 0; i < TodoModel::ColumnCount; ++i) {
-        if (!mView->isColumnHidden(i) && i != TodoModel::SummaryColumn
-            && i != TodoModel::DescriptionColumn && i != TodoModel::CategoriesColumn) {
+        if (!mView->isColumnHidden(i) &&
+            i != TodoModel::SummaryColumn &&
+            i != TodoModel::DescriptionColumn &&
+            i != TodoModel::CategoriesColumn) {
             size += mView->columnWidth(i);
         }
     }
@@ -1216,7 +1206,7 @@ void TodoView::resizeColumns()
     }
 
     if (remainingSize < requiredSize) {
-        // We have too little size (that's what she...), so lets use an horizontal scrollbar and make these columns use whatever they need.
+        // Too little size, so let's use a horizontal scrollbar
         mView->resizeColumnToContents(TodoModel::SummaryColumn);
         mView->resizeColumnToContents(TodoModel::DescriptionColumn);
     } else if (descriptionVisible) {

@@ -21,10 +21,9 @@
 */
 
 #include "incidencetreemodel_p.h"
-
-#include <entitytreemodel.h>
-#include <QElapsedTimer>
 #include "calendarview_debug.h"
+
+#include <AkonadiCore/EntityTreeModel>
 
 using namespace Akonadi;
 QDebug operator<<(QDebug s, const Node::Ptr &node);
@@ -47,8 +46,9 @@ static bool reverseDepthLessThan(const Node::Ptr &node1, const Node::Ptr &node2)
 // Desired ordering 0,1,2,3,[...],-1
 static bool depthLessThan(const PreNode::Ptr &node1, const PreNode::Ptr &node2)
 {
-    if (node1->depth == -1)
+    if (node1->depth == -1) {
         return false;
+    }
     return node1->depth < node2->depth || node2->depth == -1;
 }
 
@@ -89,8 +89,8 @@ static PreNode::List sortedPrenodes(const PreNode::List &nodes)
     return sorted;
 }
 
-IncidenceTreeModel::Private::Private(IncidenceTreeModel *qq,
-                                     const QStringList &mimeTypes) : QObject()
+IncidenceTreeModel::Private::Private(IncidenceTreeModel *qq, const QStringList &mimeTypes)
+    : QObject()
     , m_mimeTypes(mimeTypes)
     , q(qq)
 {
@@ -99,8 +99,10 @@ IncidenceTreeModel::Private::Private(IncidenceTreeModel *qq,
 int IncidenceTreeModel::Private::rowForNode(const Node::Ptr &node) const
 {
     // Returns it's row number
-    const int row = node->parentNode ? node->parentNode->directChilds.indexOf(node)
-                    : m_toplevelNodeList.indexOf(node);
+    const int row =
+        node->parentNode ?
+            node->parentNode->directChilds.indexOf(node) :
+            m_toplevelNodeList.indexOf(node);
     Q_ASSERT(row != -1);
     return row;
 }
@@ -147,10 +149,10 @@ void IncidenceTreeModel::Private::reset(bool silent)
         const int sourceCount = q->sourceModel()->rowCount();
         for (int i = 0; i < sourceCount; ++i) {
             PreNode::Ptr prenode = prenodeFromSourceRow(i);
-            if (prenode
-                && (m_mimeTypes.isEmpty()
-                    || m_mimeTypes.contains(prenode->incidence->mimeType()))) {
-                insertNode(prenode, /**silent=*/ true);
+            if (prenode &&
+                (m_mimeTypes.isEmpty() ||
+                 m_mimeTypes.contains(prenode->incidence->mimeType()))) {
+                insertNode(prenode, /**silent=*/true);
             }
         }
     }
@@ -312,8 +314,8 @@ void IncidenceTreeModel::Private::onRowsInserted(const QModelIndex &parent, int 
     for (int i = begin; i <= end; ++i) {
         PreNode::Ptr node = prenodeFromSourceRow(i);
         // if m_mimeTypes is empty, we ignore this feature
-        if (!node
-            || (!m_mimeTypes.isEmpty() && !m_mimeTypes.contains(node->incidence->mimeType()))) {
+        if (!node ||
+            (!m_mimeTypes.isEmpty() && !m_mimeTypes.contains(node->incidence->mimeType()))) {
             continue;
         }
         nodes << node;
@@ -585,21 +587,21 @@ void IncidenceTreeModel::Private::onLayoutChanged()
     Q_EMIT q->layoutChanged();
 }
 
-void IncidenceTreeModel::Private::onRowsMoved(const QModelIndex &, int, int, const QModelIndex &,
-                                              int)
+void IncidenceTreeModel::Private::onRowsMoved(const QModelIndex &, int, int, const QModelIndex &, int)
 {
     // Not implemented yet
     Q_ASSERT(false);
 }
 
-IncidenceTreeModel::IncidenceTreeModel(QObject *parent) : QAbstractProxyModel(parent)
+IncidenceTreeModel::IncidenceTreeModel(QObject *parent)
+    : QAbstractProxyModel(parent)
     , d(new Private(this, QStringList()))
 {
     setObjectName(QStringLiteral("IncidenceTreeModel"));
 }
 
-IncidenceTreeModel::IncidenceTreeModel(const QStringList &mimeTypes,
-                                       QObject *parent) : QAbstractProxyModel(parent)
+IncidenceTreeModel::IncidenceTreeModel(const QStringList &mimeTypes, QObject *parent)
+    : QAbstractProxyModel(parent)
     , d(new Private(this, mimeTypes))
 {
     setObjectName(QStringLiteral("IncidenceTreeModel"));

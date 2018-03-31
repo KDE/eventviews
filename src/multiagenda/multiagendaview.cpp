@@ -18,39 +18,34 @@
   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
 */
 #include "multiagendaview.h"
-#include "configdialoginterface.h"
-#include "prefs.h"
 
+#include "prefs.h"
 #include "agenda/agenda.h"
 #include "agenda/agendaview.h"
 #include "agenda/timelabelszone.h"
+#include "configdialoginterface.h"
+#include "calendarview_debug.h"
 
-#include <entitytreemodel.h>
-#include <Akonadi/Calendar/ETMCalendar>
+#include <AkonadiCore/EntityTreeModel>
+#include <AkonadiWidgets/ETMViewStateSaver>
+
 #include <CalendarSupport/CollectionSelection>
 #include <CalendarSupport/Utils>
 
-#include <ETMViewStateSaver>
-
-#include <KCalCore/Event>
-
 #include <KCheckableProxyModel>
 #include <KLocalizedString>
-#include <QVBoxLayout>
+#include <KRearrangeColumnsProxyModel>
 #include <KViewStateMaintainer>
-#include "calendarview_debug.h"
 
 #include <QHBoxLayout>
-#include <QItemSelectionModel>
 #include <QLabel>
+#include <QPainter>
 #include <QResizeEvent>
 #include <QScrollArea>
 #include <QScrollBar>
-#include <QSplitter>
 #include <QSortFilterProxyModel>
+#include <QSplitter>
 #include <QTimer>
-#include <QPainter>
-#include <KRearrangeColumnsProxyModel>
 
 using namespace Akonadi;
 using namespace EventViews;
@@ -250,8 +245,8 @@ void MultiAgendaView::setCalendar(const Akonadi::ETMCalendar::Ptr &calendar)
         proxy->setSourceModel(calendar->entityTreeModel());
     }
 
-    disconnect(nullptr, SIGNAL(selectionChanged(Akonadi::Collection::List,
-                                                Akonadi::Collection::List)),
+    disconnect(nullptr,
+               SIGNAL(selectionChanged(Akonadi::Collection::List,Akonadi::Collection::List)),
                this, SLOT(forceRecreateViews()));
 
     connect(collectionSelection(), &CalendarSupport::CollectionSelection::selectionChanged,
@@ -546,8 +541,7 @@ void MultiAgendaView::resizeEvent(QResizeEvent *ev)
 
 void MultiAgendaView::Private::resizeScrollView(const QSize &size)
 {
-    const int widgetWidth = size.width() - mTimeLabelsZone->width()
-                            -mScrollBar->width();
+    const int widgetWidth = size.width() - mTimeLabelsZone->width() - mScrollBar->width();
 
     int height = size.height();
     if (mScrollArea->horizontalScrollBar()->isVisible()) {
@@ -727,8 +721,8 @@ void MultiAgendaView::doRestoreConfig(const KConfigGroup &configGroup)
             KCheckableProxyModel *checkableProxy = new KCheckableProxyModel(this);
             checkableProxy->setSourceModel(columnFilterProxy);
             checkableProxy->setSelectionModel(qsm);
-            const QString groupName = configGroup.name() + QLatin1String("_subView_")
-                                      + QString::number(i);
+            const QString groupName =
+                configGroup.name() + QLatin1String("_subView_") + QString::number(i);
             const KConfigGroup group = configGroup.config()->group(groupName);
 
             if (!d->mSelectionSavers.contains(groupName)) {

@@ -27,9 +27,11 @@
 #include "eventview.h"
 
 #include <Akonadi/Calendar/IncidenceChanger>
-#include <Akonadi/Calendar/ETMCalendar>
+
+#include <KIconLoader>
+
+#include <QUrl>
 #include <QTextBrowser>
-#include <kiconloader.h>
 
 namespace EventViews {
 class WhatsNextTextBrowser : public QTextBrowser
