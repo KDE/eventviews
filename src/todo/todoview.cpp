@@ -386,22 +386,20 @@ TodoView::TodoView(const EventViews::PrefsPtr &prefs, bool sidebarView, QWidget 
 
     mItemPopupMenu->addSeparator();
 
-    a
-        = mItemPopupMenu->addAction(KIconLoader::global()->loadIcon(QStringLiteral("appointment-new"),
-                                                                    KIconLoader::NoGroup,
-                                                                    KIconLoader::SizeSmall),
-                                    i18n("Create Event"),
-                                    this, SLOT(createEvent()));
+    a = mItemPopupMenu->addAction(KIconLoader::global()->loadIcon(QStringLiteral("appointment-new"),
+                                                                  KIconLoader::NoGroup,
+                                                                  KIconLoader::SizeSmall),
+                                  i18nc("@action:inmenu", "Create Event"),
+                                  this, SLOT(createEvent()));
     a->setObjectName(QStringLiteral("createevent"));
     mItemPopupMenuReadWriteEntries << a;
     mItemPopupMenuItemOnlyEntries << a;
 
-    a
-        = mItemPopupMenu->addAction(KIconLoader::global()->loadIcon(QStringLiteral("view-pim-notes"),
-                                                                    KIconLoader::NoGroup,
-                                                                    KIconLoader::SizeSmall),
-                                    i18n("Create Note"),
-                                    this, SLOT(createNote()));
+    a = mItemPopupMenu->addAction(KIconLoader::global()->loadIcon(QStringLiteral("view-pim-notes"),
+                                                                  KIconLoader::NoGroup,
+                                                                  KIconLoader::SizeSmall),
+                                  i18nc("@action:inmenu", "Create Note"),
+                                  this, SLOT(createNote()));
     a->setObjectName(QStringLiteral("createnote"));
     mItemPopupMenuReadWriteEntries << a;
     mItemPopupMenuItemOnlyEntries << a;
