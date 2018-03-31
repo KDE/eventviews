@@ -43,7 +43,6 @@
 #include <QTimer>
 #include <QToolButton>
 #include <QWheelEvent>
-#include <QLocale>
 
 using namespace EventViews;
 
@@ -453,7 +452,7 @@ QPair<QDateTime, QDateTime> MonthView::actualDateRange(const QDateTime &start, c
 {
     QDateTime dayOne = preferredMonth.isValid() ? QDateTime(preferredMonth) : start;
     dayOne.setDate(QDate(dayOne.date().year(), dayOne.date().month(), 1));
-    const int weekdayCol = (dayOne.date().dayOfWeek() + 7 - QLocale().firstDayOfWeek()) % 7;
+    const int weekdayCol = (dayOne.date().dayOfWeek() + 7 - preferences()->firstDayOfWeek()) % 7;
     QDateTime actualStart = dayOne.addDays(-weekdayCol);
     actualStart.setTime(QTime(0, 0, 0, 0));
     QDateTime actualEnd = actualStart.addDays(6 * 7 - 1);
@@ -512,12 +511,12 @@ void MonthView::reloadIncidences()
         occurIter.next();
 
         // Remove the two checks when filtering is done through a proxyModel, when using calendar search
-        if (!preferences()->showTodosMonthView()
-            && occurIter.incidence()->type() == KCalCore::Incidence::TypeTodo) {
+        if (!preferences()->showTodosMonthView() &&
+            occurIter.incidence()->type() == KCalCore::Incidence::TypeTodo) {
             continue;
         }
-        if (!preferences()->showJournalsMonthView()
-            && occurIter.incidence()->type() == KCalCore::Incidence::TypeJournal) {
+        if (!preferences()->showJournalsMonthView() &&
+            occurIter.incidence()->type() == KCalCore::Incidence::TypeJournal) {
             continue;
         }
 
@@ -539,8 +538,8 @@ void MonthView::reloadIncidences()
                                                     occurIter.incidence(),
                                                     occurIter.occurrenceStartDate().toLocalTime().date());
         d->scene->mManagerList << manager;
-        if (d->selectedItemId == item.id()
-            && manager->realStartDate() == d->selectedItemDate) {
+        if (d->selectedItemId == item.id() &&
+            manager->realStartDate() == d->selectedItemDate) {
             // only select it outside the loop because we are still creating items
             itemToReselect = manager;
         }

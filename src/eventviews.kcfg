@@ -108,6 +108,12 @@
       <default>QDateTime(QDate(1752,1,1), QTime(17,0))</default>
     </entry>
 
+    <entry type="Enum" name="WeekStartDay">
+      <label>Weekly start day:</label>
+      <tooltip>Select the first day of each week</tooltip>
+      <whatsthis>Select the first day of each week. Normally, you can ignore this since it is set in your locale.</whatsthis>
+      <default>QLocale().firstDayOfWeek()-1</default>
+    </entry>
   </group>
 
 <!-- Views Page: General Tab -->

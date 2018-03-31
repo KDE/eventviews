@@ -29,9 +29,11 @@
 #include "eventview.h"
 
 #include <KConfigSkeleton>
+
 #include <QTimeZone>
 
 namespace EventViews {
+
 class EVENTVIEWS_EXPORT Prefs
 {
 public:
@@ -209,6 +211,9 @@ public:
 
     bool highlightTodos() const;
     void setHighlightTodos(bool);
+
+    void setFirstDayOfWeek(const int day);
+    int firstDayOfWeek() const;
 
     KConfig *config() const;
     void createNewColor(QColor &defColor, int seed);

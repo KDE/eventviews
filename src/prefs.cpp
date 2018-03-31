@@ -27,10 +27,11 @@
 #include "prefs_base.h"
 
 #include "calendarview_debug.h"
-#include <QFontDatabase>
 
 #include <AkonadiCore/AttributeFactory>
 #include <AkonadiCore/CollectionColorAttribute>
+
+#include <QFontDatabase>
 
 using namespace EventViews;
 
@@ -238,7 +239,8 @@ bool BaseConfig::usrSave()
 class Q_DECL_HIDDEN Prefs::Private
 {
 public:
-    Private(Prefs *parent) : mAppConfig(nullptr)
+    Private(Prefs *parent)
+        : mAppConfig(nullptr)
         , q(parent)
     {
     }
@@ -615,6 +617,16 @@ QDateTime Prefs::dayBegins() const
     return d->getDateTime(d->mBaseConfig.dayBeginsItem());
 }
 
+void Prefs::setFirstDayOfWeek(const int day)
+{
+    d->setInt(d->mBaseConfig.weekStartDayItem(), day - 1);
+}
+
+int Prefs::firstDayOfWeek() const
+{
+    return d->getInt(d->mBaseConfig.weekStartDayItem()) + 1;
+}
+
 void Prefs::setWorkingHoursStart(const QDateTime &dateTime)
 {
     d->setDateTime(d->mBaseConfig.workingHoursStartItem(), dateTime);
@@ -964,8 +976,7 @@ void Prefs::createNewColor(QColor &defColor, int seed)
 QColor Prefs::resourceColorKnown(const QString &cal) const
 {
     QColor color;
-    if (!cal.isEmpty()
-        && d->mBaseConfig.mResourceColors.contains(cal)) {
+    if (!cal.isEmpty() && d->mBaseConfig.mResourceColors.contains(cal)) {
         color = d->mBaseConfig.mResourceColors.value(cal);
     }
     return color;
@@ -980,8 +991,7 @@ QColor Prefs::resourceColor(const QString &cal)
     QColor color = resourceColorKnown(cal);
 
     // assign default color if enabled
-    if (!color.isValid()
-        && d->getBool(d->mBaseConfig.assignDefaultResourceColorsItem())) {
+    if (!color.isValid() && d->getBool(d->mBaseConfig.assignDefaultResourceColorsItem())) {
         QColor defColor(0x37, 0x7A, 0xBC);
         const int seed = d->getInt(d->mBaseConfig.defaultResourceColorSeedItem());
         const QStringList colors = d->getStringList(d->mBaseConfig.defaultResourceColorsItem());
