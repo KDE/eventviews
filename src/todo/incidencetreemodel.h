@@ -20,10 +20,11 @@
   without including the source code for Qt in the source distribution.
 */
 
-#ifndef INCIDENCE_TREEMODEL_H_
-#define INCIDENCE_TREEMODEL_H_
+#ifndef INCIDENCE_TREEMODEL_H
+#define INCIDENCE_TREEMODEL_H
 
-#include <Item>
+#include <AkonadiCore/Item>
+
 #include <QAbstractProxyModel>
 
 class IncidenceTreeModel : public QAbstractProxyModel
