@@ -144,6 +144,7 @@ int EventView::showMoveRecurDialog(const Incidence::Ptr &inc, const QDate &date)
             return KCalUtils::RecurrenceActions::questionSelectedFutureAllCancel(
                 message, caption, itemSelected, itemFuture, itemAll, this);
         }
+        Q_FALLTHROUGH();
 
     default:
         Q_ASSERT(availableOccurrences & KCalUtils::RecurrenceActions::SelectedOccurrence);
@@ -471,7 +472,6 @@ QPair<QDateTime, QDateTime> EventView::actualDateRange(const QDateTime &start, c
 /*
 void EventView::incidencesAdded( const Akonadi::Item::List & )
 {
-
 }
 
 void EventView::incidencesAboutToBeRemoved( const Akonadi::Item::List & )
