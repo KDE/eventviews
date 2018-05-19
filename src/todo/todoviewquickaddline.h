@@ -45,7 +45,7 @@ Q_SIGNALS:
     void returnPressed(Qt::KeyboardModifiers modifiers);
 
 private Q_SLOTS:
-    void returnPressed();
+    void returnPressedSlot();
 
 private:
     Qt::KeyboardModifiers mModifiers;

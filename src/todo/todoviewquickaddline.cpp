@@ -33,9 +33,9 @@ TodoViewQuickAddLine::TodoViewQuickAddLine(QWidget *parent)
     : KLineEdit(parent)
 {
     connect(this, SIGNAL(returnPressed()),
-            this, SLOT(returnPressed()));
+            this, SLOT(returnPressedSlot()));
 
-    mClickMessage = i18n("Click to add a new to-do");
+    mClickMessage = i18n("Enter a summary to create a new to-do");
     setToolTip(mClickMessage);
 }
 
@@ -48,7 +48,7 @@ void TodoViewQuickAddLine::keyPressEvent(QKeyEvent *event)
     KLineEdit::keyPressEvent(event);
 }
 
-void TodoViewQuickAddLine::returnPressed()
+void TodoViewQuickAddLine::returnPressedSlot()
 {
     // Workaround bug #217592 (disappearing cursor)
     unsetCursor();
