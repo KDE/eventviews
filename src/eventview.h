@@ -180,6 +180,12 @@ public:
     virtual QDateTime selectionEnd() const;
 
     /**
+      Sets the default start/end date/time for new events.
+      Return true if anything was changed
+    */
+    virtual bool eventDurationHint(QDateTime &startDt, QDateTime &endDt, bool &allDay) const;
+
+    /**
       Returns whether or not date range selection is enabled. This setting only
       applies to views that actually supports selecting cells.
       @see selectionStart()
@@ -345,12 +351,6 @@ public Q_SLOTS:
       Clear selection. The incidenceSelected signal is not emitted.
     */
     virtual void clearSelection();
-
-    /**
-      Sets the default start/end date/time for new events.
-      Return true if anything was changed
-    */
-    virtual bool eventDurationHint(QDateTime &startDt, QDateTime &endDt, bool &allDay) const;
 
     void focusChanged(QWidget *, QWidget *);
 
