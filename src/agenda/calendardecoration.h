@@ -94,11 +94,11 @@ public:
     virtual QUrl url();
 
 Q_SIGNALS:
-    void gotNewPixmap(const QPixmap &) const;
-    void gotNewShortText(const QString &) const;
-    void gotNewLongText(const QString &) const;
-    void gotNewExtensiveText(const QString &) const;
-    void gotNewUrl(const QUrl &) const;
+    void gotNewPixmap(const QPixmap &);
+    void gotNewShortText(const QString &);
+    void gotNewLongText(const QString &);
+    void gotNewExtensiveText(const QString &);
+    void gotNewUrl(const QUrl &);
 
 protected:
     QString mId;
