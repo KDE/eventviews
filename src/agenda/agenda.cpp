@@ -255,7 +255,8 @@ public:
         return mItemsQueuedForDeletion.contains(uid) && !mAgendaItemsById.contains(uid);
     }
 
-    QMultiHash<QString, AgendaItem::QPtr> mAgendaItemsById; // It's a QMultiHash because recurring incidences might have many agenda items
+    QMultiHash<QString, AgendaItem::QPtr> mAgendaItemsById; // A QMultiHash because recurring incs
+                                                            // might have many agenda items
     QSet<QString> mItemsQueuedForDeletion;
 
     AgendaView *mAgendaView = nullptr;
@@ -543,7 +544,7 @@ bool Agenda::eventFilter(QObject *object, QEvent *event)
     case QEvent::KeyRelease:
         return eventFilter_key(object, static_cast<QKeyEvent *>(event));
 
-    case (QEvent::Leave):
+    case QEvent::Leave:
 #ifndef QT_NO_CURSOR
         if (!d->mActionItem) {
             setCursor(Qt::ArrowCursor);
@@ -721,7 +722,7 @@ bool Agenda::eventFilter_mouse(QObject *object, QMouseEvent *me)
                     Q_EMIT newTimeSpanSignal(d->mSelectionStartCell, d->mSelectionEndCell);
 //          updateContents();
                 }
-                showNewEventPopupSignal();
+                Q_EMIT showNewEventPopupSignal();
             } else {
                 selectItem(nullptr);
                 d->mActionItem = nullptr;
@@ -784,9 +785,9 @@ bool Agenda::eventFilter_mouse(QObject *object, QMouseEvent *me)
                 performSelectAction(viewportPos);
 
                 // show cursor at end of timespan
-                if (((d->mStartCell.y() < d->mEndCell.y())
-                     && (d->mEndCell.x() >= d->mStartCell.x()))
-                    || (d->mEndCell.x() > d->mStartCell.x())) {
+                if (((d->mStartCell.y() < d->mEndCell.y()) &&
+                     (d->mEndCell.x() >= d->mStartCell.x())) ||
+                    (d->mEndCell.x() > d->mStartCell.x())) {
                     indicatorPos = gridToContents(QPoint(d->mEndCell.x(), d->mEndCell.y() + 1));
                 } else {
                     indicatorPos = gridToContents(d->mEndCell);
@@ -821,13 +822,14 @@ bool Agenda::ptInSelection(const QPoint &gpos) const
 {
     if (!d->mHasSelection) {
         return false;
-    } else if (gpos.x() < d->mSelectionStartCell.x() || gpos.x() > d->mSelectionEndCell.x()) {
+    } else if (gpos.x() < d->mSelectionStartCell.x() ||
+               gpos.x() > d->mSelectionEndCell.x()) {
         return false;
-    } else if ((gpos.x() == d->mSelectionStartCell.x())
-               && (gpos.y() < d->mSelectionStartCell.y())) {
+    } else if ((gpos.x() == d->mSelectionStartCell.x()) &&
+               (gpos.y() < d->mSelectionStartCell.y())) {
         return false;
-    } else if ((gpos.x() == d->mSelectionEndCell.x())
-               && (gpos.y() > d->mSelectionEndCell.y())) {
+    } else if ((gpos.x() == d->mSelectionEndCell.x()) &&
+               (gpos.y() > d->mSelectionEndCell.y())) {
         return false;
     }
     return true;
@@ -860,8 +862,7 @@ void Agenda::performSelectAction(const QPoint &pos)
     // Scroll if cursor was moved to upper or lower end of agenda.
     if (pos.y() - contentsY() < d->mScrollBorderWidth && contentsY() > 0) {
         d->mScrollUpTimer.start(d->mScrollDelay);
-    } else if (contentsY() + d->mScrollArea->viewport()->height()
-               -d->mScrollBorderWidth < pos.y()) {
+    } else if (contentsY() + d->mScrollArea->viewport()->height() - d->mScrollBorderWidth < pos.y()) {
         d->mScrollDownTimer.start(d->mScrollDelay);
     } else {
         d->mScrollUpTimer.stop();
@@ -870,8 +871,8 @@ void Agenda::performSelectAction(const QPoint &pos)
 
     if (gpos != d->mEndCell) {
         d->mEndCell = gpos;
-        if (d->mStartCell.x() > d->mEndCell.x()
-            || (d->mStartCell.x() == d->mEndCell.x() && d->mStartCell.y() > d->mEndCell.y())) {
+        if (d->mStartCell.x() > d->mEndCell.x() ||
+            (d->mStartCell.x() == d->mEndCell.x() && d->mStartCell.y() > d->mEndCell.y())) {
             // backward selection
             d->mSelectionStartCell = d->mEndCell;
             d->mSelectionEndCell = d->mStartCell;
@@ -894,8 +895,7 @@ void Agenda::endSelectAction(const QPoint &currentPos)
     Q_EMIT newTimeSpanSignal(d->mSelectionStartCell, d->mSelectionEndCell);
 
     if (d->preferences()->selectionStartsEditor()) {
-        if ((d->mSelectionStartPoint - currentPos).manhattanLength()
-            > QApplication::startDragDistance()) {
+        if ((d->mSelectionStartPoint - currentPos).manhattanLength() > QApplication::startDragDistance()) {
             Q_EMIT newEventSignal();
         }
     }
@@ -926,8 +926,8 @@ Agenda::MouseActionType Agenda::isInResizeArea(bool horizontal, const QPoint &po
             } else {
                 return RESIZELEFT;
             }
-        } else if ((d->mGridSpacingX - gridDistanceX) < d->mResizeBorderWidth
-                   && clXRight == gridpos.x()) {
+        } else if ((d->mGridSpacingX - gridDistanceX) < d->mResizeBorderWidth &&
+                    clXRight == gridpos.x()) {
             if (QApplication::isRightToLeft()) {
                 return RESIZELEFT;
             } else {
@@ -938,11 +938,13 @@ Agenda::MouseActionType Agenda::isInResizeArea(bool horizontal, const QPoint &po
         }
     } else {
         int gridDistanceY = int(pos.y() - contpos.y());
-        if (gridDistanceY < d->mResizeBorderWidth
-            && item->cellYTop() == gridpos.y() && !item->firstMultiItem()) {
+        if (gridDistanceY < d->mResizeBorderWidth &&
+            item->cellYTop() == gridpos.y() &&
+            !item->firstMultiItem()) {
             return RESIZETOP;
-        } else if ((d->mGridSpacingY - gridDistanceY) < d->mResizeBorderWidth
-                   && item->cellYBottom() == gridpos.y() && !item->lastMultiItem()) {
+        } else if ((d->mGridSpacingY - gridDistanceY) < d->mResizeBorderWidth &&
+                    item->cellYBottom() == gridpos.y() &&
+                    !item->lastMultiItem()) {
             return RESIZEBOTTOM;
         } else {
             return MOVE;
@@ -974,8 +976,10 @@ void Agenda::performItemAction(const QPoint &pos)
 
     // Cursor left active agenda area.
     // This starts a drag.
-    if (pos.y() < 0 || pos.y() >= contentsY() + d->mScrollArea->viewport()->height()
-        || pos.x() < 0 || pos.x() >= width()) {
+    if (pos.y() < 0 ||
+        pos.y() >= contentsY() + d->mScrollArea->viewport()->height() ||
+        pos.x() < 0 ||
+        pos.x() >= width()) {
         if (d->mActionType == MOVE) {
             d->mScrollUpTimer.stop();
             d->mScrollDownTimer.stop();
@@ -1001,8 +1005,7 @@ void Agenda::performItemAction(const QPoint &pos)
     const int distanceToTop = pos.y() - contentsY();
     if (distanceToTop < d->mScrollBorderWidth && distanceToTop > -d->mScrollBorderWidth) {
         d->mScrollUpTimer.start(d->mScrollDelay);
-    } else if (contentsY() + d->mScrollArea->viewport()->height()
-               -d->mScrollBorderWidth < pos.y()) {
+    } else if (contentsY() + d->mScrollArea->viewport()->height() - d->mScrollBorderWidth < pos.y()) {
         d->mScrollDownTimer.start(d->mScrollDelay);
     } else {
         d->mScrollUpTimer.stop();
@@ -1192,8 +1195,9 @@ void Agenda::endItemAction()
     KCalCore::Incidence::Ptr incidence = d->mActionItem->incidence();
     const auto recurrenceId = d->mActionItem->occurrenceDateTime();
 
-    d->mItemMoved = d->mItemMoved && !(d->mStartCell.x() == d->mEndCell.x()
-                                       && d->mStartCell.y() == d->mEndCell.y());
+    d->mItemMoved =
+        d->mItemMoved &&
+        !(d->mStartCell.x() == d->mEndCell.x() && d->mStartCell.y() == d->mEndCell.y());
 
     bool addIncidence = false;
     if (d->mItemMoved) {
@@ -1217,7 +1221,7 @@ void Agenda::endItemAction()
             const int res = d->mAgendaView->showMoveRecurDialog(incidence, recurrenceId.date());
             switch (res) {
             case KCalUtils::RecurrenceActions::AllOccurrences: // All occurrences
-                // Moving the whole sequene of events is handled by the itemModified below.
+                // Moving the whole sequence of events is handled by the itemModified below.
                 modify = true;
                 break;
             case KCalUtils::RecurrenceActions::SelectedOccurrence:
@@ -1563,15 +1567,15 @@ void Agenda::drawContents(QPainter *p, int cx, int cy, int cw, int ch)
 
                 if (pt2.y() < pt1.y()) {
                     // overnight working hours
-                    if (((gxStart == 0) && !d->mHolidayMask->at(d->mHolidayMask->count() - 1))
-                        || ((gxStart > 0) && (gxStart < int(d->mHolidayMask->count()))
-                            && (!d->mHolidayMask->at(gxStart - 1)))) {
+                    if (((gxStart == 0) && !d->mHolidayMask->at(d->mHolidayMask->count() - 1)) ||
+                        ((gxStart > 0) && (gxStart < int(d->mHolidayMask->count())) &&
+                        (!d->mHolidayMask->at(gxStart - 1)))) {
                         if (pt2.y() > cy) {
                             dbp.fillRect(xStart, cy, xWidth, pt2.y() - cy + 1, workColor);
                         }
                     }
-                    if ((gxStart < int(d->mHolidayMask->count() - 1))
-                        && (!d->mHolidayMask->at(gxStart))) {
+                    if ((gxStart < int(d->mHolidayMask->count() - 1)) &&
+                        (!d->mHolidayMask->at(gxStart))) {
                         if (pt1.y() < cy + ch - 1) {
                             dbp.fillRect(xStart, pt1.y(), xWidth, cy + ch - pt1.y() + 1, workColor);
                         }
@@ -1579,8 +1583,8 @@ void Agenda::drawContents(QPainter *p, int cx, int cy, int cw, int ch)
                 } else {
                     // last entry in holiday mask denotes the previous day not visible
                     // (needed for overnight shifts)
-                    if (gxStart < int(d->mHolidayMask->count() - 1)
-                        && !d->mHolidayMask->at(gxStart)) {
+                    if (gxStart < int(d->mHolidayMask->count() - 1) &&
+                        !d->mHolidayMask->at(gxStart)) {
                         dbp.fillRect(xStart, pt1.y(), xWidth, pt2.y() - pt1.y() + 1, workColor);
                     }
                 }
@@ -1659,8 +1663,9 @@ void Agenda::drawContents(QPainter *p, int cx, int cy, int cw, int ch)
 */
 QPoint Agenda::contentsToGrid(const QPoint &pos) const
 {
-    int gx = int(QApplication::isRightToLeft()
-                 ? d->mColumns - pos.x() / d->mGridSpacingX : pos.x() / d->mGridSpacingX);
+    int gx = int(QApplication::isRightToLeft() ?
+                     d->mColumns - pos.x() / d->mGridSpacingX :
+                     pos.x() / d->mGridSpacingX);
     int gy = int(pos.y() / d->mGridSpacingY);
     return QPoint(gx, gy);
 }
@@ -1670,8 +1675,9 @@ QPoint Agenda::contentsToGrid(const QPoint &pos) const
 */
 QPoint Agenda::gridToContents(const QPoint &gpos) const
 {
-    int x = int(QApplication::isRightToLeft()
-                ? (d->mColumns - gpos.x()) * d->mGridSpacingX : gpos.x() * d->mGridSpacingX);
+    int x = int(QApplication::isRightToLeft() ?
+                    (d->mColumns - gpos.x()) * d->mGridSpacingX :
+                    gpos.x() * d->mGridSpacingX);
     int y = int(gpos.y() * d->mGridSpacingY);
     return QPoint(x, y);
 }
@@ -1748,9 +1754,9 @@ QVector<int> Agenda::maxContentsY() const
 
 void Agenda::setStartTime(const QTime &startHour)
 {
-    const double startPos
-        = (startHour.hour() / 24. + startHour.minute() / 1440. + startHour.second() / 86400.)
-          *d->mRows * gridSpacingY();
+    const double startPos =
+        (startHour.hour() / 24. + startHour.minute() / 1440. + startHour.second() / 86400.) *
+        d->mRows * gridSpacingY();
 
     verticalScrollBar()->setValue(startPos);
 }
@@ -1780,10 +1786,8 @@ AgendaItem::QPtr Agenda::insertItem(const KCalCore::Incidence::Ptr &incidence,
         YBottom = YTop;
     }
 
-    agendaItem->resize(int((X + 1) * d->mGridSpacingX)
-                       -int(X * d->mGridSpacingX),
-                       int(YTop * d->mGridSpacingY)
-                       -int((YBottom + 1) * d->mGridSpacingY));
+    agendaItem->resize(int((X + 1) * d->mGridSpacingX) - int(X * d->mGridSpacingX),
+                       int(YTop * d->mGridSpacingY) - int((YBottom + 1) * d->mGridSpacingY));
     agendaItem->setCellXY(X, YTop, YBottom);
     agendaItem->setCellXRight(X);
     agendaItem->setResourceColor(d->mCalendar->resourceColor(incidence));
@@ -1825,8 +1829,7 @@ AgendaItem::QPtr Agenda::insertAllDayItem(const KCalCore::Incidence::Ptr &incide
     agendaItem->setCellXRight(XEnd);
 
     const double startIt = d->mGridSpacingX * (agendaItem->cellXLeft());
-    const double endIt = d->mGridSpacingX * (agendaItem->cellWidth()
-                                             +agendaItem->cellXLeft());
+    const double endIt = d->mGridSpacingX * (agendaItem->cellWidth() + agendaItem->cellXLeft());
 
     agendaItem->resize(int(endIt) - int(startIt), int(d->mGridSpacingY));
 
@@ -2273,13 +2276,11 @@ void Agenda::calculateWorkingHours()
     d->mWorkingHoursEnable = !d->mAllDayMode;
 
     QTime tmp = d->preferences()->workingHoursStart().time();
-    d->mWorkingHoursYTop = int(4 * d->mGridSpacingY
-                               *(tmp.hour() + tmp.minute() / 60.
-                                 +tmp.second() / 3600.));
+    d->mWorkingHoursYTop =
+        int(4 * d->mGridSpacingY * (tmp.hour() + tmp.minute() / 60. + tmp.second() / 3600.));
     tmp = d->preferences()->workingHoursEnd().time();
-    d->mWorkingHoursYBottom = int(4 * d->mGridSpacingY
-                                  *(tmp.hour() + tmp.minute() / 60.
-                                    +tmp.second() / 3600.) - 1);
+    d->mWorkingHoursYBottom =
+        int(4 * d->mGridSpacingY * (tmp.hour() + tmp.minute() / 60. + tmp.second() / 3600.) - 1);
 }
 
 void Agenda::setDateList(const KCalCore::DateList &selectedDates)
