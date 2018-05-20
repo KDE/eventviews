@@ -173,12 +173,17 @@ void TimeLabels::setAgenda(Agenda *agenda)
 
 int TimeLabels::yposToCell(const int ypos) const
 {
-   const auto firstDay =
-       QDateTime(mAgenda->dateList().first(), QTime(0, 0, 0), Qt::LocalTime).toUTC();
+    const KCalCore::DateList datelist = mAgenda->dateList();
+    if (datelist.isEmpty())
+        return 0;
+
+    const auto firstDay = QDateTime(datelist.first(), QTime(0, 0, 0), Qt::LocalTime).toUTC();
     const int beginning = // the hour we start drawing with
         !mTimezone.isValid() ?
-        0 :
-        (mTimezone.offsetFromUtc(firstDay) - mTimeLabelsZone->preferences()->timeZone().offsetFromUtc(firstDay)) / 3600;
+            0 :
+            (mTimezone.offsetFromUtc(firstDay) -
+            mTimeLabelsZone->preferences()->timeZone().offsetFromUtc(firstDay)) / 3600;
+
     return static_cast<int>(ypos / mCellHeight) + beginning;
 }
 
@@ -230,19 +235,23 @@ void TimeLabels::paintEvent(QPaintEvent *)
     if (!mAgenda) {
         return;
     }
+    const KCalCore::DateList datelist = mAgenda->dateList();
+    if (datelist.isEmpty())
+        return;
+
     QPainter p(this);
 
     const int ch = height();
 
     // We won't paint parts that aren't visible
-    const int cy = -y();// y() returns a negative value.
+    const int cy = -y(); // y() returns a negative value.
 
-    const auto firstDay =
-        QDateTime(mAgenda->dateList().first(), QTime(0, 0, 0), Qt::LocalTime).toUTC();
+    const auto firstDay = QDateTime(datelist.first(), QTime(0, 0, 0), Qt::LocalTime).toUTC();
     const int beginning =
         !mTimezone.isValid() ?
-        0 :
-        (mTimezone.offsetFromUtc(firstDay) - mTimeLabelsZone->preferences()->timeZone().offsetFromUtc(firstDay)) / 3600;
+            0 :
+            (mTimezone.offsetFromUtc(firstDay) -
+            mTimeLabelsZone->preferences()->timeZone().offsetFromUtc(firstDay)) / 3600;
 
     // bug:  the parameters cx and cw are the areas that need to be
     //       redrawn, not the area of the widget.  unfortunately, this
