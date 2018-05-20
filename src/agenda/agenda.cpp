@@ -1717,7 +1717,7 @@ QVector<int> Agenda::minContentsY() const
 {
     QVector<int> minArray;
     minArray.fill(timeToY(QTime(23, 59)), d->mSelectedDates.count());
-    for (AgendaItem::QPtr item : qAsConst(d->mItems)) {
+    for (const AgendaItem::QPtr &item : qAsConst(d->mItems)) {
         if (item) {
             int ymin = item->cellYTop();
             int index = item->cellXLeft();
@@ -1736,7 +1736,7 @@ QVector<int> Agenda::maxContentsY() const
 {
     QVector<int> maxArray;
     maxArray.fill(timeToY(QTime(0, 0)), d->mSelectedDates.count());
-    for (AgendaItem::QPtr item : qAsConst(d->mItems)) {
+    for (const AgendaItem::QPtr &item : qAsConst(d->mItems)) {
         if (item) {
             int ymax = item->cellYBottom();
 
