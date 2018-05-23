@@ -55,9 +55,7 @@ DecorationLabel::DecorationLabel(CalendarDecoration::Element *e, QWidget *parent
     squeezeContentsToLabel();
 }
 
-DecorationLabel::DecorationLabel(const QString &shortText, const QString &longText,
-                                 const QString &extensiveText, const QPixmap &pixmap,
-                                 const QUrl &url, QWidget *parent)
+DecorationLabel::DecorationLabel(const QString &shortText, const QString &longText, const QString &extensiveText, const QPixmap &pixmap, const QUrl &url, QWidget *parent)
     : QLabel(parent)
     , mAutomaticSqueeze(true)
     , mShortText(shortText)

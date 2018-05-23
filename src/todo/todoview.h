@@ -94,12 +94,10 @@ public:
 
 public Q_SLOTS:
     void setIncidenceChanger(Akonadi::IncidenceChanger *changer) override;
-    void showDates(const QDate &start, const QDate &end,
-                   const QDate &preferredMonth = QDate()) override;
+    void showDates(const QDate &start, const QDate &end, const QDate &preferredMonth = QDate()) override;
     void showIncidences(const Akonadi::Item::List &incidenceList, const QDate &date) override;
     void updateView() override;
-    virtual void changeIncidenceDisplay(const Akonadi::Item &incidence,
-                                        Akonadi::IncidenceChanger::ChangeType changeType);
+    virtual void changeIncidenceDisplay(const Akonadi::Item &incidence, Akonadi::IncidenceChanger::ChangeType changeType);
     void updateConfig() override;
     void clearSelection() override;
     void expandIndex(const QModelIndex &index);
@@ -157,8 +155,7 @@ private:
     QString stateSaverGroup() const;
 
     /** Creates a new todo with the given text as summary under the given parent */
-    void addTodo(const QString &summary, const Akonadi::Item &parentItem,
-                 const QStringList &categories = QStringList());
+    void addTodo(const QString &summary, const Akonadi::Item &parentItem, const QStringList &categories = QStringList());
 
     TodoViewView *mView = nullptr;
     TodoViewSortFilterProxyModel *mProxyModel = nullptr;

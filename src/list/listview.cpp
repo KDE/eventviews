@@ -123,12 +123,9 @@ public:
     {
     }
 
-    void addIncidences(const Akonadi::ETMCalendar::Ptr &calendar,
-                       const KCalCore::Incidence::List &incidenceList, const QDate &date);
-    void addIncidence(const Akonadi::ETMCalendar::Ptr &calendar, const KCalCore::Incidence::Ptr &,
-                      const QDate &date);
-    void addIncidence(const Akonadi::ETMCalendar::Ptr &calendar, const Akonadi::Item &,
-                      const QDate &date);
+    void addIncidences(const Akonadi::ETMCalendar::Ptr &calendar, const KCalCore::Incidence::List &incidenceList, const QDate &date);
+    void addIncidence(const Akonadi::ETMCalendar::Ptr &calendar, const KCalCore::Incidence::Ptr &, const QDate &date);
+    void addIncidence(const Akonadi::ETMCalendar::Ptr &calendar, const Akonadi::Item &, const QDate &date);
     ListViewItem *getItemForIncidence(const Akonadi::Item &);
 
     QTreeWidget *mTreeWidget = nullptr;

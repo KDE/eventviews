@@ -38,11 +38,9 @@ class TimelineItem : public QObject
 {
     Q_OBJECT
 public:
-    TimelineItem(const Akonadi::ETMCalendar::Ptr &calendar, uint index, QStandardItemModel *model,
-                 QObject *parent);
+    TimelineItem(const Akonadi::ETMCalendar::Ptr &calendar, uint index, QStandardItemModel *model, QObject *parent);
 
-    void insertIncidence(const Akonadi::Item &incidence,
-                         const QDateTime &start = QDateTime(), const QDateTime &end = QDateTime());
+    void insertIncidence(const Akonadi::Item &incidence, const QDateTime &start = QDateTime(), const QDateTime &end = QDateTime());
     void removeIncidence(const Akonadi::Item &incidence);
 
     void moveItems(const Akonadi::Item &incidence, int delta, int duration);
@@ -60,8 +58,7 @@ private:
 class TimelineSubItem : public QStandardItem
 {
 public:
-    TimelineSubItem(const Akonadi::ETMCalendar::Ptr &calendar, const Akonadi::Item &incidence,
-                    TimelineItem *parent);
+    TimelineSubItem(const Akonadi::ETMCalendar::Ptr &calendar, const Akonadi::Item &incidence, TimelineItem *parent);
     ~TimelineSubItem();
 
     Akonadi::Item  incidence() const

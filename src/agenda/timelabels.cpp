@@ -174,15 +174,16 @@ void TimeLabels::setAgenda(Agenda *agenda)
 int TimeLabels::yposToCell(const int ypos) const
 {
     const KCalCore::DateList datelist = mAgenda->dateList();
-    if (datelist.isEmpty())
+    if (datelist.isEmpty()) {
         return 0;
+    }
 
     const auto firstDay = QDateTime(datelist.first(), QTime(0, 0, 0), Qt::LocalTime).toUTC();
-    const int beginning = // the hour we start drawing with
-        !mTimezone.isValid() ?
-            0 :
-            (mTimezone.offsetFromUtc(firstDay) -
-            mTimeLabelsZone->preferences()->timeZone().offsetFromUtc(firstDay)) / 3600;
+    const int beginning   // the hour we start drawing with
+        = !mTimezone.isValid()
+          ? 0
+          : (mTimezone.offsetFromUtc(firstDay)
+             -mTimeLabelsZone->preferences()->timeZone().offsetFromUtc(firstDay)) / 3600;
 
     return static_cast<int>(ypos / mCellHeight) + beginning;
 }
@@ -236,8 +237,9 @@ void TimeLabels::paintEvent(QPaintEvent *)
         return;
     }
     const KCalCore::DateList datelist = mAgenda->dateList();
-    if (datelist.isEmpty())
+    if (datelist.isEmpty()) {
         return;
+    }
 
     QPainter p(this);
 
@@ -247,11 +249,11 @@ void TimeLabels::paintEvent(QPaintEvent *)
     const int cy = -y(); // y() returns a negative value.
 
     const auto firstDay = QDateTime(datelist.first(), QTime(0, 0, 0), Qt::LocalTime).toUTC();
-    const int beginning =
-        !mTimezone.isValid() ?
-            0 :
-            (mTimezone.offsetFromUtc(firstDay) -
-            mTimeLabelsZone->preferences()->timeZone().offsetFromUtc(firstDay)) / 3600;
+    const int beginning
+        = !mTimezone.isValid()
+          ? 0
+          : (mTimezone.offsetFromUtc(firstDay)
+             -mTimeLabelsZone->preferences()->timeZone().offsetFromUtc(firstDay)) / 3600;
 
     // bug:  the parameters cx and cw are the areas that need to be
     //       redrawn, not the area of the widget.  unfortunately, this
@@ -350,9 +352,9 @@ void TimeLabels::contextMenuEvent(QContextMenuEvent *event)
                                              i18n("&Add Timezones..."));
     QAction *removeTimeZone = popup.addAction(QIcon::fromTheme(QStringLiteral("edit-delete")),
                                               i18n("&Remove Timezone %1", i18n(mTimezone.id().constData())));
-    if (!mTimezone.isValid() ||
-        !mTimeLabelsZone->preferences()->timeScaleTimezones().count() ||
-        mTimezone == mTimeLabelsZone->preferences()->timeZone()) {
+    if (!mTimezone.isValid()
+        || !mTimeLabelsZone->preferences()->timeScaleTimezones().count()
+        || mTimezone == mTimeLabelsZone->preferences()->timeZone()) {
         removeTimeZone->setEnabled(false);
     }
 
@@ -436,7 +438,7 @@ bool TimeLabels::event(QEvent *event)
         toolTip += QLatin1String("<qt>");
         toolTip += i18nc("[hour of the day][am/pm/00] [timezone id (timezone-offset)]",
                          "%1%2<br/>%3 (%4)",
-                         cellToHour(cell),  cellToSuffix(cell),
+                         cellToHour(cell), cellToSuffix(cell),
                          i18n(mTimezone.id().constData()),
                          KCalUtils::Stringify::tzUTCOffsetStr(mTimezone));
         toolTip += QLatin1String("</qt>");

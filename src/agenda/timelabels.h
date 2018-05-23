@@ -41,8 +41,7 @@ class TimeLabels : public QFrame
 public:
     typedef QList<TimeLabels *> List;
 
-    TimeLabels(const QTimeZone &zone, int rows, TimeLabelsZone *parent = nullptr,
-               Qt::WindowFlags f = nullptr);
+    TimeLabels(const QTimeZone &zone, int rows, TimeLabelsZone *parent = nullptr, Qt::WindowFlags f = nullptr);
 
     /** updates widget's internal state */
     void updateConfig();

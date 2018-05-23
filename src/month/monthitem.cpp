@@ -296,10 +296,7 @@ QList<MonthGraphicsItem *> EventViews::MonthItem::monthGraphicsItems() const
 
 //-----------------------------------------------------------------
 // INCIDENCEMONTHITEM
-IncidenceMonthItem::IncidenceMonthItem(MonthScene *monthScene,
-                                       const Akonadi::ETMCalendar::Ptr &calendar,
-                                       const Akonadi::Item &aitem,
-                                       const KCalCore::Incidence::Ptr &incidence,
+IncidenceMonthItem::IncidenceMonthItem(MonthScene *monthScene, const Akonadi::ETMCalendar::Ptr &calendar, const Akonadi::Item &aitem, const KCalCore::Incidence::Ptr &incidence,
                                        const QDate &recurStartDate)
     : MonthItem(monthScene)
     , mCalendar(calendar)
@@ -686,8 +683,7 @@ Akonadi::Item::Id IncidenceMonthItem::akonadiItemId() const
     return mAkonadiItemId;
 }
 
-void IncidenceMonthItem::setNewDates(const KCalCore::Incidence::Ptr &incidence, int startOffset,
-                                     int endOffset)
+void IncidenceMonthItem::setNewDates(const KCalCore::Incidence::Ptr &incidence, int startOffset, int endOffset)
 {
     if (mIsTodo) {
         // For to-dos endOffset is ignored because it will always be == to startOffset because we only

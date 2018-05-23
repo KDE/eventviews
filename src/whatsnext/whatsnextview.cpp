@@ -254,14 +254,12 @@ void WhatsNextView::showIncidences(const Akonadi::Item::List &incidenceList, con
     Q_UNUSED(date);
 }
 
-void WhatsNextView::changeIncidenceDisplay(const Akonadi::Item &,
-                                           Akonadi::IncidenceChanger::ChangeType)
+void WhatsNextView::changeIncidenceDisplay(const Akonadi::Item &, Akonadi::IncidenceChanger::ChangeType)
 {
     updateView();
 }
 
-void WhatsNextView::appendEvent(const KCalCore::Incidence::Ptr &incidence, const QDateTime &start,
-                                const QDateTime &end)
+void WhatsNextView::appendEvent(const KCalCore::Incidence::Ptr &incidence, const QDateTime &start, const QDateTime &end)
 {
     mText += QLatin1String("<tr><td><b>");
     if (const KCalCore::Event::Ptr event = incidence.dynamicCast<KCalCore::Event>()) {

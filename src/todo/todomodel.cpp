@@ -697,8 +697,7 @@ QMimeData *TodoModel::mimeData(const QModelIndexList &indexes) const
     return CalendarSupport::createMimeData(items);
 }
 
-bool TodoModel::dropMimeData(const QMimeData *data, Qt::DropAction action, int row, int column,
-                             const QModelIndex &parent)
+bool TodoModel::dropMimeData(const QMimeData *data, Qt::DropAction action, int row, int column, const QModelIndex &parent)
 {
     Q_UNUSED(row);
     Q_UNUSED(column);

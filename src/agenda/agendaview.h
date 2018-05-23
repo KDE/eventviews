@@ -84,11 +84,9 @@ class EVENTVIEWS_EXPORT AgendaView : public EventView
 {
     Q_OBJECT
 public:
-    explicit AgendaView(const PrefsPtr &preferences, const QDate &start, const QDate &end,
-                        bool isInteractive, bool isSideBySide = false, QWidget *parent = nullptr);
+    explicit AgendaView(const PrefsPtr &preferences, const QDate &start, const QDate &end, bool isInteractive, bool isSideBySide = false, QWidget *parent = nullptr);
 
-    explicit AgendaView(const QDate &start, const QDate &end, bool isInteractive,
-                        bool isSideBySide = false, QWidget *parent = nullptr);
+    explicit AgendaView(const QDate &start, const QDate &end, bool isInteractive, bool isSideBySide = false, QWidget *parent = nullptr);
 
     ~AgendaView() override;
 
@@ -106,8 +104,7 @@ public:
     KCalCore::DateList selectedIncidenceDates() const override;
 
     /** return the default start/end date/time for new events   */
-    virtual bool eventDurationHint(QDateTime &startDt, QDateTime &endDt,
-                                   bool &allDay) const override;
+    virtual bool eventDurationHint(QDateTime &startDt, QDateTime &endDt, bool &allDay) const override;
 
     /** start-datetime of selection */
     QDateTime selectionStart() const override;
@@ -140,8 +137,7 @@ public:
     /** Update event belonging to agenda item
         If the incidence is multi-day, item is the first one
     */
-    void updateEventDates(AgendaItem *item, bool addIncidence,
-                          Akonadi::Collection::Id collectionId);
+    void updateEventDates(AgendaItem *item, bool addIncidence, Akonadi::Collection::Id collectionId);
 
     QVector<bool> busyDayMask() const;
 
@@ -153,8 +149,7 @@ public:
     virtual KCalCore::Calendar::Ptr calendar2(const KCalCore::Incidence::Ptr &incidence) const;
     virtual KCalCore::Calendar::Ptr calendar2(const QString &incidenceIdentifier) const;
 
-    virtual void showDates(const QDate &start, const QDate &end,
-                           const QDate &preferredMonth = QDate()) override;
+    virtual void showDates(const QDate &start, const QDate &end, const QDate &preferredMonth = QDate()) override;
 
     void showIncidences(const Akonadi::Item::List &incidenceList, const QDate &date) override;
 
@@ -175,8 +170,7 @@ public:
     void zoomInVertically();
     void zoomOutVertically();
 
-    void zoomView(const int delta, const QPoint &pos,
-                  const Qt::Orientation orient = Qt::Horizontal);
+    void zoomView(const int delta, const QPoint &pos, const Qt::Orientation orient = Qt::Horizontal);
 
     void clearTimeSpanSelection();
 
@@ -255,8 +249,7 @@ private:
     typedef QList<EventViews::CalendarDecoration::Decoration *> DecorationList;
     bool loadDecorations(const QStringList &decorations, DecorationList &decoList);
     void placeDecorationsFrame(QFrame *frame, bool decorationsFound, bool isTop);
-    void placeDecorations(EventViews::AgendaView::DecorationList &decoList, const QDate &date,
-                          QWidget *labelBox, bool forWeek);
+    void placeDecorations(EventViews::AgendaView::DecorationList &decoList, const QDate &date, QWidget *labelBox, bool forWeek);
 #endif
 
     friend class TimeLabelsZone;

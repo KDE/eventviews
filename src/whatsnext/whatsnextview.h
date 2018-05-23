@@ -83,8 +83,7 @@ public Q_SLOTS:
     void changeIncidenceDisplay(const Akonadi::Item &, Akonadi::IncidenceChanger::ChangeType);
 
 protected:
-    void appendEvent(const KCalCore::Incidence::Ptr &,
-                     const QDateTime &start = QDateTime(), const QDateTime &end = QDateTime());
+    void appendEvent(const KCalCore::Incidence::Ptr &, const QDateTime &start = QDateTime(), const QDateTime &end = QDateTime());
     void appendTodo(const KCalCore::Incidence::Ptr &);
 
 private Q_SLOTS:

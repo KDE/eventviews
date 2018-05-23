@@ -46,8 +46,7 @@ class EVENTVIEWS_EXPORT ListView : public EventView
 {
     Q_OBJECT
 public:
-    explicit ListView(const Akonadi::ETMCalendar::Ptr &calendar, QWidget *parent = nullptr,
-                      bool nonInteractive = false);
+    explicit ListView(const Akonadi::ETMCalendar::Ptr &calendar, QWidget *parent = nullptr, bool nonInteractive = false);
     ~ListView();
 
     int currentDateCount() const override;
@@ -66,8 +65,7 @@ public:
 public Q_SLOTS:
     void updateView() override;
 
-    void showDates(const QDate &start, const QDate &end,
-                   const QDate &preferredMonth = QDate()) override;
+    void showDates(const QDate &start, const QDate &end, const QDate &preferredMonth = QDate()) override;
 
     void showIncidences(const Akonadi::Item::List &incidenceList, const QDate &date) override;
 

@@ -30,8 +30,7 @@
 
 #include <KLocalizedString>
 
-TodoViewSortFilterProxyModel::TodoViewSortFilterProxyModel(const EventViews::PrefsPtr &prefs,
-                                                           QObject *parent)
+TodoViewSortFilterProxyModel::TodoViewSortFilterProxyModel(const EventViews::PrefsPtr &prefs, QObject *parent)
     : QSortFilterProxyModel(parent)
     , mSortOrder(Qt::AscendingOrder)
     , mPreferences(prefs)
@@ -44,8 +43,7 @@ void TodoViewSortFilterProxyModel::sort(int column, Qt::SortOrder order)
     QSortFilterProxyModel::sort(column, order);
 }
 
-bool TodoViewSortFilterProxyModel::filterAcceptsRow(int source_row,
-                                                    const QModelIndex &source_parent) const
+bool TodoViewSortFilterProxyModel::filterAcceptsRow(int source_row, const QModelIndex &source_parent) const
 {
     bool ret = QSortFilterProxyModel::filterAcceptsRow(source_row, source_parent);
 
@@ -184,8 +182,7 @@ void TodoViewSortFilterProxyModel::setPriorityFilter(const QStringList &prioriti
     invalidateFilter();
 }
 
-int TodoViewSortFilterProxyModel::compareStartDates(const QModelIndex &left,
-                                                    const QModelIndex &right) const
+int TodoViewSortFilterProxyModel::compareStartDates(const QModelIndex &left, const QModelIndex &right) const
 {
     Q_ASSERT(left.column() == TodoModel::StartDateColumn);
     Q_ASSERT(right.column() == TodoModel::StartDateColumn);
@@ -231,8 +228,7 @@ void TodoViewSortFilterProxyModel::setCategoryFilter(const QStringList &categori
  *  0 - equal
  *  1 - bigger than
  */
-int TodoViewSortFilterProxyModel::compareDueDates(const QModelIndex &left,
-                                                  const QModelIndex &right) const
+int TodoViewSortFilterProxyModel::compareDueDates(const QModelIndex &left, const QModelIndex &right) const
 {
     Q_ASSERT(left.column() == TodoModel::DueDateColumn);
     Q_ASSERT(right.column() == TodoModel::DueDateColumn);
@@ -272,8 +268,7 @@ int TodoViewSortFilterProxyModel::compareDueDates(const QModelIndex &left,
  *  0 - equal
  *  1 - bigger than
  */
-int TodoViewSortFilterProxyModel::compareCompletion(const QModelIndex &left,
-                                                    const QModelIndex &right) const
+int TodoViewSortFilterProxyModel::compareCompletion(const QModelIndex &left, const QModelIndex &right) const
 {
     Q_ASSERT(left.column() == TodoModel::PercentColumn);
     Q_ASSERT(right.column() == TodoModel::PercentColumn);
@@ -302,8 +297,7 @@ int TodoViewSortFilterProxyModel::compareCompletion(const QModelIndex &left,
  *  0 - equal
  *  1 - bigger than
  */
-int TodoViewSortFilterProxyModel::comparePriorities(const QModelIndex &left,
-                                                    const QModelIndex &right) const
+int TodoViewSortFilterProxyModel::comparePriorities(const QModelIndex &left, const QModelIndex &right) const
 {
     Q_ASSERT(left.column() == TodoModel::PriorityColumn);
     Q_ASSERT(right.column() == TodoModel::PriorityColumn);

@@ -85,8 +85,7 @@ StoredElement::StoredElement(const QString &id, const QString &shortText, const 
 {
 }
 
-StoredElement::StoredElement(const QString &id, const QString &shortText, const QString &longText,
-                             const QString &extensiveText)
+StoredElement::StoredElement(const QString &id, const QString &shortText, const QString &longText, const QString &extensiveText)
     : Element(id)
     , mShortText(shortText)
     , mLongText(longText)

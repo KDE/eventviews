@@ -63,8 +63,7 @@ private Q_SLOTS:
     void onRowsInserted(const QModelIndex &parent, int begin, int end);
     void onRowsAboutToBeRemoved(const QModelIndex &parent, int begin, int end);
     void onRowsRemoved(const QModelIndex &parent, int begin, int end);
-    void onRowsAboutToBeMoved(const QModelIndex &sourceParent, int sourceStart, int sourceEnd,
-                              const QModelIndex &destinationParent, int destinationRow);
+    void onRowsAboutToBeMoved(const QModelIndex &sourceParent, int sourceStart, int sourceEnd, const QModelIndex &destinationParent, int destinationRow);
     void onRowsMoved(const QModelIndex &, int, int, const QModelIndex &, int);
 
     void onModelAboutToBeReset();

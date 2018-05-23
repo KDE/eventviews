@@ -721,8 +721,8 @@ void MultiAgendaView::doRestoreConfig(const KConfigGroup &configGroup)
             KCheckableProxyModel *checkableProxy = new KCheckableProxyModel(this);
             checkableProxy->setSourceModel(columnFilterProxy);
             checkableProxy->setSelectionModel(qsm);
-            const QString groupName =
-                configGroup.name() + QLatin1String("_subView_") + QString::number(i);
+            const QString groupName
+                = configGroup.name() + QLatin1String("_subView_") + QString::number(i);
             const KConfigGroup group = configGroup.config()->group(groupName);
 
             if (!d->mSelectionSavers.contains(groupName)) {

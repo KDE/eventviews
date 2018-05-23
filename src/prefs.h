@@ -33,7 +33,6 @@
 #include <QTimeZone>
 
 namespace EventViews {
-
 class EVENTVIEWS_EXPORT Prefs
 {
 public:

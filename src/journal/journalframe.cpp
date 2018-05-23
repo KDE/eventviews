@@ -149,8 +149,7 @@ void JournalDateView::journalDeleted(const Akonadi::Item &journal)
     mEntries.remove(journal.id());
 }
 
-JournalFrame::JournalFrame(const Akonadi::Item &j, const Akonadi::ETMCalendar::Ptr &calendar,
-                           QWidget *parent)
+JournalFrame::JournalFrame(const Akonadi::Item &j, const Akonadi::ETMCalendar::Ptr &calendar, QWidget *parent)
     : QFrame(parent)
     , mJournal(j)
     , mCalendar(calendar)

@@ -66,8 +66,7 @@ public Q_SLOTS:
 
     void customCollectionsChanged(ConfigDialogInterface *dlg);
 
-    void showDates(const QDate &start, const QDate &end,
-                   const QDate &preferredMonth = QDate()) override;
+    void showDates(const QDate &start, const QDate &end, const QDate &preferredMonth = QDate()) override;
     void showIncidences(const Akonadi::Item::List &incidenceList, const QDate &date) override;
     void updateView() override;
     void updateConfig() override;

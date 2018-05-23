@@ -35,10 +35,7 @@ class DecorationLabel : public QLabel
 public:
     explicit DecorationLabel(EventViews::CalendarDecoration::Element *e, QWidget *parent = nullptr);
 
-    explicit DecorationLabel(const QString &shortText,
-                             const QString &longText = QString(),
-                             const QString &extensiveText = QString(),
-                             const QPixmap &pixmap = QPixmap(),
+    explicit DecorationLabel(const QString &shortText, const QString &longText = QString(), const QString &extensiveText = QString(), const QPixmap &pixmap = QPixmap(),
                              const QUrl &url = QUrl(), QWidget *parent = nullptr);
     ~DecorationLabel();
 

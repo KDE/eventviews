@@ -59,8 +59,7 @@ public:
 
     QDateTime selectionEnd() const override;
 
-    virtual void setDateRange(const QDateTime &start, const QDateTime &end,
-                              const QDate &preferredMonth = QDate()) override;
+    virtual void setDateRange(const QDateTime &start, const QDateTime &end, const QDate &preferredMonth = QDate()) override;
 
     bool eventDurationHint(QDateTime &startDt, QDateTime &endDt, bool &allDay) const override;
 
@@ -113,8 +112,7 @@ protected:
     void keyReleaseEvent(QKeyEvent *event) override;
 
     QPair<QDateTime, QDateTime> actualDateRange(
-        const QDateTime &start, const QDateTime &end,
-        const QDate &preferredMonth = QDate()) const override;
+        const QDateTime &start, const QDateTime &end, const QDate &preferredMonth = QDate()) const override;
 
     // Compute and update the whole view
     void reloadIncidences();
@@ -123,8 +121,7 @@ protected:
     /**
      * @deprecated
      */
-    void showDates(const QDate &start, const QDate &end,
-                   const QDate &preferedMonth = QDate()) override;
+    void showDates(const QDate &start, const QDate &end, const QDate &preferedMonth = QDate()) override;
 
 private:
     MonthViewPrivate *const d;

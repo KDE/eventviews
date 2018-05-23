@@ -71,11 +71,10 @@ public Q_SLOTS:
     void updateView() override;
     void flushView() override;
 
-    void showDates(const QDate &start, const QDate &end,
-                   const QDate &preferredMonth = QDate()) override;
+    void showDates(const QDate &start, const QDate &end, const QDate &preferredMonth = QDate()) override;
     void showIncidences(const Akonadi::Item::List &incidences, const QDate &date) override;
 
-    void changeIncidenceDisplay(const Akonadi::Item &incidence,
+    void changeIncidenceDisplay(const Akonadi::Item & incidence,
                                 Akonadi::IncidenceChanger::ChangeType);
     void setIncidenceChanger(Akonadi::IncidenceChanger *changer) override;
     void newJournal();

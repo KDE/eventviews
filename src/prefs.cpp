@@ -265,8 +265,7 @@ public:
     void setDateTime(KCoreConfigSkeleton::ItemDateTime *baseConfigItem, const QDateTime &value);
     QDateTime getDateTime(const KCoreConfigSkeleton::ItemDateTime *baseConfigItem) const;
 
-    void setStringList(KCoreConfigSkeleton::ItemStringList *baseConfigItem,
-                       const QStringList &value);
+    void setStringList(KCoreConfigSkeleton::ItemStringList *baseConfigItem, const QStringList &value);
     QStringList getStringList(const KCoreConfigSkeleton::ItemStringList *baseConfigItem) const;
 
     void setColor(KConfigSkeleton::ItemColor *baseConfigItem, const QColor &value);

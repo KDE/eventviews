@@ -74,8 +74,7 @@ protected:
     /* reimplemented from KCalCore::Calendar::CalendarObserver */
     void calendarIncidenceAdded(const KCalCore::Incidence::Ptr &incidence) override;
     void calendarIncidenceChanged(const KCalCore::Incidence::Ptr &incidence) override;
-    void calendarIncidenceDeleted(const KCalCore::Incidence::Ptr &incidence,
-                                  const KCalCore::Calendar *calendar) override;
+    void calendarIncidenceDeleted(const KCalCore::Incidence::Ptr &incidence, const KCalCore::Calendar *calendar) override;
 private:
     //quiet --overloaded-virtual warning
     using KCalCore::Calendar::CalendarObserver::calendarIncidenceDeleted;
@@ -147,8 +146,7 @@ void MonthViewPrivate::calendarIncidenceChanged(const KCalCore::Incidence::Ptr &
     triggerDelayedReload(MonthView::IncidencesEdited);
 }
 
-void MonthViewPrivate::calendarIncidenceDeleted(const KCalCore::Incidence::Ptr &incidence,
-                                                const KCalCore::Calendar *calendar)
+void MonthViewPrivate::calendarIncidenceDeleted(const KCalCore::Incidence::Ptr &incidence, const KCalCore::Calendar *calendar)
 {
     Q_UNUSED(calendar);
     Q_ASSERT(!incidence->uid().isEmpty());
@@ -314,8 +312,7 @@ QDateTime MonthView::selectionEnd() const
     return selectionStart();
 }
 
-void MonthView::setDateRange(const QDateTime &start, const QDateTime &end,
-                             const QDate &preferredMonth)
+void MonthView::setDateRange(const QDateTime &start, const QDateTime &end, const QDate &preferredMonth)
 {
     EventView::setDateRange(start, end, preferredMonth);
     setChanges(changes() | DatesChanged);
@@ -447,8 +444,7 @@ void MonthView::showDates(const QDate &start, const QDate &end, const QDate &pre
     d->triggerDelayedReload(DatesChanged);
 }
 
-QPair<QDateTime, QDateTime> MonthView::actualDateRange(const QDateTime &start, const QDateTime &,
-                                                       const QDate &preferredMonth) const
+QPair<QDateTime, QDateTime> MonthView::actualDateRange(const QDateTime &start, const QDateTime &, const QDate &preferredMonth) const
 {
     QDateTime dayOne = preferredMonth.isValid() ? QDateTime(preferredMonth) : start;
     dayOne.setDate(QDate(dayOne.date().year(), dayOne.date().month(), 1));
@@ -511,12 +507,12 @@ void MonthView::reloadIncidences()
         occurIter.next();
 
         // Remove the two checks when filtering is done through a proxyModel, when using calendar search
-        if (!preferences()->showTodosMonthView() &&
-            occurIter.incidence()->type() == KCalCore::Incidence::TypeTodo) {
+        if (!preferences()->showTodosMonthView()
+            && occurIter.incidence()->type() == KCalCore::Incidence::TypeTodo) {
             continue;
         }
-        if (!preferences()->showJournalsMonthView() &&
-            occurIter.incidence()->type() == KCalCore::Incidence::TypeJournal) {
+        if (!preferences()->showJournalsMonthView()
+            && occurIter.incidence()->type() == KCalCore::Incidence::TypeJournal) {
             continue;
         }
 
@@ -538,8 +534,8 @@ void MonthView::reloadIncidences()
                                                     occurIter.incidence(),
                                                     occurIter.occurrenceStartDate().toLocalTime().date());
         d->scene->mManagerList << manager;
-        if (d->selectedItemId == item.id() &&
-            manager->realStartDate() == d->selectedItemDate) {
+        if (d->selectedItemId == item.id()
+            && manager->realStartDate() == d->selectedItemDate) {
             // only select it outside the loop because we are still creating items
             itemToReselect = manager;
         }
@@ -561,8 +557,8 @@ void MonthView::reloadIncidences()
             if (!holidays.isEmpty()) {
                 MonthItem *holidayItem
                     = new HolidayMonthItem(
-                    d->scene, date,
-                    holidays.join(i18nc("@item:intext delimiter for joining holiday names", ",")));
+                          d->scene, date,
+                          holidays.join(i18nc("@item:intext delimiter for joining holiday names", ",")));
                 d->scene->mManagerList << holidayItem;
             }
         }

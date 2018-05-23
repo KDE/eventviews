@@ -31,8 +31,7 @@ using namespace KCalCore;
 using namespace KCalUtils;
 using namespace EventViews;
 
-TimelineItem::TimelineItem(const Akonadi::ETMCalendar::Ptr &calendar, uint index,
-                           QStandardItemModel *model, QObject *parent)
+TimelineItem::TimelineItem(const Akonadi::ETMCalendar::Ptr &calendar, uint index, QStandardItemModel *model, QObject *parent)
     : QObject(parent)
     , mCalendar(calendar)
     , mModel(model)
@@ -44,8 +43,7 @@ TimelineItem::TimelineItem(const Akonadi::ETMCalendar::Ptr &calendar, uint index
     mModel->insertRow(mIndex, dummyItem);
 }
 
-void TimelineItem::insertIncidence(const Akonadi::Item &aitem, const QDateTime &_start,
-                                   const QDateTime &_end)
+void TimelineItem::insertIncidence(const Akonadi::Item &aitem, const QDateTime &_start, const QDateTime &_end)
 {
     const Incidence::Ptr incidence = CalendarSupport::incidence(aitem);
     QDateTime start(_start);
@@ -110,8 +108,7 @@ void TimelineItem::setColor(const QColor &color)
     mColor = color;
 }
 
-TimelineSubItem::TimelineSubItem(const Akonadi::ETMCalendar::Ptr &calendar,
-                                 const Akonadi::Item &incidence, TimelineItem *parent)
+TimelineSubItem::TimelineSubItem(const Akonadi::ETMCalendar::Ptr &calendar, const Akonadi::Item &incidence, TimelineItem *parent)
     : QStandardItem()
     , mCalendar(calendar)
     , mIncidence(incidence)

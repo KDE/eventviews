@@ -84,8 +84,7 @@ public:
 
     QMimeData *mimeData(const QModelIndexList &indexes) const override;
 
-    bool dropMimeData(const QMimeData *data, Qt::DropAction action, int row, int column,
-                      const QModelIndex &parent) override;
+    bool dropMimeData(const QMimeData *data, Qt::DropAction action, int row, int column, const QModelIndex &parent) override;
 
     QStringList mimeTypes() const override;
 
@@ -99,8 +98,7 @@ public:
 
     QModelIndex mapToSource(const QModelIndex &proxyIndex) const override;
 
-    QModelIndex index(int row, int column,
-                      const QModelIndex &parent = QModelIndex()) const override;
+    QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const override;
 
     QModelIndex buddy(const QModelIndex &index) const override;
 

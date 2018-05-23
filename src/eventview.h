@@ -267,8 +267,7 @@ public:
      * month to show when the week crosses months.  It's a QDate instead
      * of uint so it can be easily fed to KCalendarSystem's functions.
      */
-    virtual void setDateRange(const QDateTime &start, const QDateTime &end,
-                              const QDate &preferredMonth = QDate());
+    virtual void setDateRange(const QDateTime &start, const QDateTime &end, const QDate &preferredMonth = QDate());
 
     QDateTime startDateTime() const;
     QDateTime endDateTime() const;
@@ -496,8 +495,7 @@ protected:
     /**
       @deprecated
      */
-    virtual void showDates(const QDate &start, const QDate &end,
-                           const QDate &preferredMonth = QDate()) = 0;
+    virtual void showDates(const QDate &start, const QDate &end, const QDate &preferredMonth = QDate()) = 0;
 
     /**
      * from the requested date range (passed via setDateRange()), calculates the

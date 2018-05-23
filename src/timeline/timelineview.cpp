@@ -149,8 +149,7 @@ public:
 };
 class GanttItemDelegate : public KGantt::ItemDelegate
 {
-    void paintGanttItem(QPainter *painter, const KGantt::StyleOptionGanttItem &opt,
-                        const QModelIndex &idx) override
+    void paintGanttItem(QPainter *painter, const KGantt::StyleOptionGanttItem &opt, const QModelIndex &idx) override
     {
         painter->setRenderHints(QPainter::Antialiasing);
         if (!idx.isValid()) {

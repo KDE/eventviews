@@ -67,9 +67,8 @@ QPixmap *AgendaItem::eventPxmp = nullptr;
 
 //-----------------------------------------------------------------------------
 
-AgendaItem::AgendaItem(EventView *eventView, const MultiViewCalendar::Ptr &calendar,
-                       const KCalCore::Incidence::Ptr &item, int itemPos, int itemCount,
-                       const QDateTime &qd, bool isSelected, QWidget *parent)
+AgendaItem::AgendaItem(EventView *eventView, const MultiViewCalendar::Ptr &calendar, const KCalCore::Incidence::Ptr &item, int itemPos, int itemCount, const QDateTime &qd, bool isSelected,
+                       QWidget *parent)
     : QWidget(parent)
     , mEventView(eventView)
     , mCalendar(calendar)
@@ -275,8 +274,7 @@ void AgendaItem::setCellY(int YTop, int YBottom)
     mCellYBottom = YBottom;
 }
 
-void AgendaItem::setMultiItem(const AgendaItem::QPtr &first, const AgendaItem::QPtr &prev,
-                              const AgendaItem::QPtr &next, const AgendaItem::QPtr &last)
+void AgendaItem::setMultiItem(const AgendaItem::QPtr &first, const AgendaItem::QPtr &prev, const AgendaItem::QPtr &next, const AgendaItem::QPtr &last)
 {
     if (!mMultiItemInfo) {
         mMultiItemInfo = new MultiItemInfo;
@@ -725,8 +723,7 @@ bool AgendaItem::overlaps(CellItem *o) const
     return false;
 }
 
-static void conditionalPaint(QPainter *p, bool condition, int &x, int y, int ft,
-                             const QPixmap &pxmp)
+static void conditionalPaint(QPainter *p, bool condition, int &x, int y, int ft, const QPixmap &pxmp)
 {
     if (condition) {
         p->drawPixmap(x, y, pxmp);
@@ -1133,9 +1130,7 @@ void AgendaItem::paintEvent(QPaintEvent *ev)
     }
 }
 
-void AgendaItem::drawRoundedRect(QPainter *p, const QRect &rect, bool selected,
-                                 const QColor &bgColor, bool frame, int ft, bool roundTop,
-                                 bool roundBottom)
+void AgendaItem::drawRoundedRect(QPainter *p, const QRect &rect, bool selected, const QColor &bgColor, bool frame, int ft, bool roundTop, bool roundBottom)
 {
     Q_UNUSED(ft);
     if (!mValid) {

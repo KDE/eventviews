@@ -174,8 +174,7 @@ void JournalView::showIncidences(const Akonadi::Item::List &incidences, const QD
     }
 }
 
-void JournalView::changeIncidenceDisplay(const Akonadi::Item &incidence,
-                                         Akonadi::IncidenceChanger::ChangeType changeType)
+void JournalView::changeIncidenceDisplay(const Akonadi::Item &incidence, Akonadi::IncidenceChanger::ChangeType changeType)
 {
     if (KCalCore::Journal::Ptr journal = CalendarSupport::journal(incidence)) {
         switch (changeType) {

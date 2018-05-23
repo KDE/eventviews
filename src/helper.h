@@ -61,8 +61,7 @@ QColor getTextColor(const QColor &c);
 */
 EVENTVIEWS_EXPORT QColor resourceColor(const Akonadi::Item &incidence, const PrefsPtr &preferences);
 
-EVENTVIEWS_EXPORT QColor resourceColor(const Akonadi::Collection &collection,
-                                       const PrefsPtr &preferences);
+EVENTVIEWS_EXPORT QColor resourceColor(const Akonadi::Collection &collection, const PrefsPtr &preferences);
 
 /**
   This method sets the resource color in the preferences, only if it is
@@ -72,8 +71,7 @@ EVENTVIEWS_EXPORT QColor resourceColor(const Akonadi::Collection &collection,
   @param color the color to stored
   @param preferences a pointer to the EventViews::Prefs to use
 */
-EVENTVIEWS_EXPORT void setResourceColor(const Akonadi::Collection &collection, const QColor &color,
-                                        const PrefsPtr &preferences);
+EVENTVIEWS_EXPORT void setResourceColor(const Akonadi::Collection &collection, const QColor &color, const PrefsPtr &preferences);
 
 /**
   Returns the number of years between the @p start QDate and the @p end QDate

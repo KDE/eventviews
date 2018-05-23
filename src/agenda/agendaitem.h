@@ -81,9 +81,8 @@ public:
     typedef QPointer<AgendaItem> QPtr;
     typedef QList<QPtr> List;
 
-    AgendaItem(EventView *eventView, const MultiViewCalendar::Ptr &calendar,
-               const KCalCore::Incidence::Ptr &incidence, int itemPos, int itemCount,
-               const QDateTime &qd, bool isSelected, QWidget *parent);
+    AgendaItem(EventView *eventView, const MultiViewCalendar::Ptr &calendar, const KCalCore::Incidence::Ptr &incidence, int itemPos, int itemCount, const QDateTime &qd, bool isSelected,
+               QWidget *parent);
     ~AgendaItem();
 
     int cellXLeft() const
@@ -168,8 +167,7 @@ public:
         return mStartMoveInfo;
     }
 
-    void setMultiItem(const AgendaItem::QPtr &first, const AgendaItem::QPtr &prev,
-                      const AgendaItem::QPtr &next, const AgendaItem::QPtr &last);
+    void setMultiItem(const AgendaItem::QPtr &first, const AgendaItem::QPtr &prev, const AgendaItem::QPtr &next, const AgendaItem::QPtr &last);
 
     AgendaItem::QPtr prependMoveItem(const AgendaItem::QPtr &);
 
@@ -279,8 +277,7 @@ private:
     // paint all visible icons
     void paintIcons(QPainter *p, int &x, int y, int ft);
 
-    void drawRoundedRect(QPainter *p, const QRect &rect, bool selected, const QColor &bgcolor,
-                         bool frame, int ft, bool roundTop, bool roundBottom);
+    void drawRoundedRect(QPainter *p, const QRect &rect, bool selected, const QColor &bgcolor, bool frame, int ft, bool roundTop, bool roundBottom);
 
     int mCellXLeft, mCellXRight;
     int mCellYTop, mCellYBottom;

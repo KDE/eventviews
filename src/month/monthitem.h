@@ -286,9 +286,7 @@ class EVENTVIEWS_EXPORT IncidenceMonthItem : public MonthItem
     Q_OBJECT
 
 public:
-    IncidenceMonthItem(MonthScene *monthScene, const Akonadi::ETMCalendar::Ptr &calendar,
-                       const Akonadi::Item &item, const KCalCore::Incidence::Ptr &incidence,
-                       const QDate &recurStartDate = QDate());
+    IncidenceMonthItem(MonthScene *monthScene, const Akonadi::ETMCalendar::Ptr &calendar, const Akonadi::Item &item, const KCalCore::Incidence::Ptr &incidence, const QDate &recurStartDate = QDate());
 
     ~IncidenceMonthItem() override;
 

@@ -115,8 +115,7 @@ public:
     explicit StoredElement(const QString &id);
     StoredElement(const QString &id, const QString &shortText);
     StoredElement(const QString &id, const QString &shortText, const QString &longText);
-    StoredElement(const QString &id, const QString &shortText, const QString &longText,
-                  const QString &extensiveText);
+    StoredElement(const QString &id, const QString &shortText, const QString &longText, const QString &extensiveText);
     StoredElement(const QString &id, const QPixmap &pixmap);
 
     virtual void setShortText(const QString &t);

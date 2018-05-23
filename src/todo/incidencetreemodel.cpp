@@ -99,10 +99,10 @@ IncidenceTreeModel::Private::Private(IncidenceTreeModel *qq, const QStringList &
 int IncidenceTreeModel::Private::rowForNode(const Node::Ptr &node) const
 {
     // Returns it's row number
-    const int row =
-        node->parentNode ?
-            node->parentNode->directChilds.indexOf(node) :
-            m_toplevelNodeList.indexOf(node);
+    const int row
+        = node->parentNode
+          ? node->parentNode->directChilds.indexOf(node)
+          : m_toplevelNodeList.indexOf(node);
     Q_ASSERT(row != -1);
     return row;
 }
@@ -149,10 +149,10 @@ void IncidenceTreeModel::Private::reset(bool silent)
         const int sourceCount = q->sourceModel()->rowCount();
         for (int i = 0; i < sourceCount; ++i) {
             PreNode::Ptr prenode = prenodeFromSourceRow(i);
-            if (prenode &&
-                (m_mimeTypes.isEmpty() ||
-                 m_mimeTypes.contains(prenode->incidence->mimeType()))) {
-                insertNode(prenode, /**silent=*/true);
+            if (prenode
+                && (m_mimeTypes.isEmpty()
+                    || m_mimeTypes.contains(prenode->incidence->mimeType()))) {
+                insertNode(prenode, /**silent=*/ true);
             }
         }
     }
@@ -314,8 +314,8 @@ void IncidenceTreeModel::Private::onRowsInserted(const QModelIndex &parent, int 
     for (int i = begin; i <= end; ++i) {
         PreNode::Ptr node = prenodeFromSourceRow(i);
         // if m_mimeTypes is empty, we ignore this feature
-        if (!node ||
-            (!m_mimeTypes.isEmpty() && !m_mimeTypes.contains(node->incidence->mimeType()))) {
+        if (!node
+            || (!m_mimeTypes.isEmpty() && !m_mimeTypes.contains(node->incidence->mimeType()))) {
             continue;
         }
         nodes << node;

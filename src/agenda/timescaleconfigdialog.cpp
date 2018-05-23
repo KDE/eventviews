@@ -139,8 +139,8 @@ void TimeScaleConfigDialog::slotUpdateButton()
     removeButton->setEnabled(listWidget->currentItem());
     const bool numberElementMoreThanOneElement = (listWidget->count() > 1);
     upButton->setEnabled(numberElementMoreThanOneElement && (listWidget->currentRow() >= 1));
-    downButton->setEnabled(numberElementMoreThanOneElement &&
-                           (listWidget->currentRow() < listWidget->count() - 1));
+    downButton->setEnabled(numberElementMoreThanOneElement
+                           && (listWidget->currentRow() < listWidget->count() - 1));
 }
 
 void TimeScaleConfigDialog::okClicked()
@@ -156,8 +156,8 @@ void TimeScaleConfigDialog::add()
     if (zoneCombo->currentIndex() >= 0) {
         const int numberItem(listWidget->count());
         for (int i = 0; i < numberItem; ++i) {
-            if (listWidget->item(i)->data(TimeZoneNameRole).toString() ==
-                zoneCombo->itemData(zoneCombo->currentIndex(), TimeZoneNameRole).toString()) {
+            if (listWidget->item(i)->data(TimeZoneNameRole).toString()
+                == zoneCombo->itemData(zoneCombo->currentIndex(), TimeZoneNameRole).toString()) {
                 return;
             }
         }

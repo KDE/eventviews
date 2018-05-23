@@ -280,8 +280,7 @@ bool EventView::hasConfigurationDialog() const
     return false;
 }
 
-void EventView::setDateRange(const QDateTime &start, const QDateTime &end,
-                             const QDate &preferredMonth)
+void EventView::setDateRange(const QDateTime &start, const QDateTime &end, const QDate &preferredMonth)
 {
     Q_D(EventView);
 
@@ -462,8 +461,7 @@ void EventView::doSaveConfig(KConfigGroup &)
 {
 }
 
-QPair<QDateTime, QDateTime> EventView::actualDateRange(const QDateTime &start, const QDateTime &end,
-                                                       const QDate &preferredMonth) const
+QPair<QDateTime, QDateTime> EventView::actualDateRange(const QDateTime &start, const QDateTime &end, const QDate &preferredMonth) const
 {
     Q_UNUSED(preferredMonth);
     return qMakePair(start, end);
@@ -664,8 +662,7 @@ QString EventView::iconForItem(const Akonadi::Item &item)
     return iconName;
 }
 
-void EventView::onCollectionChanged(const Akonadi::Collection &collection,
-                                    const QSet<QByteArray> &changedAttributes)
+void EventView::onCollectionChanged(const Akonadi::Collection &collection, const QSet<QByteArray> &changedAttributes)
 {
     Q_UNUSED(collection);
     if (changedAttributes.contains("AccessRights")) {

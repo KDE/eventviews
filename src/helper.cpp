@@ -37,8 +37,7 @@ QColor EventViews::getTextColor(const QColor &c)
     return (luminance > 128.0) ? QColor(0, 0, 0) : QColor(255, 255, 255);
 }
 
-void EventViews::setResourceColor(const Akonadi::Collection &coll, const QColor &color,
-                                  const PrefsPtr &preferences)
+void EventViews::setResourceColor(const Akonadi::Collection &coll, const QColor &color, const PrefsPtr &preferences)
 {
     if (!coll.isValid()) {
         return;

@@ -44,8 +44,7 @@ class JournalFrame : public QFrame
 public:
     typedef QList<JournalFrame *> List;
 
-    JournalFrame(const Akonadi::Item &journal, const Akonadi::ETMCalendar::Ptr &calendar,
-                 QWidget *parent);
+    JournalFrame(const Akonadi::Item &journal, const Akonadi::ETMCalendar::Ptr &calendar, QWidget *parent);
 
     ~JournalFrame();
     bool eventFilter(QObject *, QEvent *) override;
