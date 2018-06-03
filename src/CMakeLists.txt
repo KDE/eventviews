@@ -5,8 +5,8 @@
 #                No idea why you would want to define this, perhaps to save
 #                screen real estate? But there are a config options for that.
 
-add_definitions( -DQT_NO_CAST_FROM_ASCII )
-add_definitions( -DQT_NO_CAST_TO_ASCII )
+add_definitions(-DQT_NO_CAST_FROM_ASCII)
+add_definitions(-DQT_NO_CAST_TO_ASCII)
 
 add_definitions(-DTRANSLATION_DOMAIN=\"libeventviews\")
 
@@ -19,7 +19,6 @@ option(EVENTVIEWS_NODECOS "Turn-off decoration plugins in views." FALSE)
 if(EVENTVIEWS_NODECOS)
   add_definitions(-DEVENTVIEWS_NODECOS)
 endif()
-
 
 ########### next target ###############
 
@@ -91,6 +90,7 @@ PUBLIC
   KF5::CalendarUtils
   KF5::AkonadiCalendar
 PRIVATE
+  KF5::Holidays
   KF5::Completion
   KF5::Service
   KF5::IconThemes
@@ -106,14 +106,14 @@ target_include_directories(KF5EventViews INTERFACE "$<INSTALL_INTERFACE:${KDE_IN
 target_include_directories(KF5EventViews PUBLIC "$<BUILD_INTERFACE:${eventviews_SOURCE_DIR}/src;${eventviews_BINARY_DIR}/src;>")
 
 set_target_properties(KF5EventViews PROPERTIES
-    VERSION ${EVENTVIEWS_VERSION_STRING}
-    SOVERSION ${EVENTVIEWS_SOVERSION}
-    EXPORT_NAME EventViews
+  VERSION ${EVENTVIEWS_VERSION_STRING}
+  SOVERSION ${EVENTVIEWS_SOVERSION}
+  EXPORT_NAME EventViews
 )
 
 install(TARGETS
-    KF5EventViews
-    EXPORT KF5EventViewsTargets ${KF5_INSTALL_TARGETS_DEFAULT_ARGS} ${LIBRARY_NAMELINK}
+  KF5EventViews
+  EXPORT KF5EventViewsTargets ${KF5_INSTALL_TARGETS_DEFAULT_ARGS} ${LIBRARY_NAMELINK}
 )
 
 ecm_generate_headers(eventviews_CamelCase_HEADERS
@@ -191,45 +191,43 @@ ecm_generate_headers(eventviews_CamelCasewhatsnext_HEADERS
   PREFIX EventViews
   RELATIVE whatsnext
 )
+
 ecm_generate_pri_file(BASE_NAME EventViews
-    LIB_NAME KF5EventViews
-    DEPS "Mime AkonadiCalendar" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF5}/EventViews
-)
-
-
-install(FILES
-    ${eventviews_CamelCase_HEADERS}
-    ${eventviews_CamelCaseagenda_HEADERS}
-    ${eventviews_CamelCasetodo_HEADERS}
-    ${eventviews_CamelCasewhatsnext_HEADERS}
-    ${eventviews_CamelCasetimeline_HEADERS}
-    ${eventviews_CamelCasemultiagenda_HEADERS}
-    ${eventviews_CamelCasejournal_HEADERS}
-    ${eventviews_CamelCaselist_HEADERS}
-    ${eventviews_CamelCasemonth_HEADERS}
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/EventViews
-    COMPONENT Devel
+  LIB_NAME KF5EventViews
+  DEPS "Mime AkonadiCalendar" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR
+  ${KDE_INSTALL_INCLUDEDIR_KF5}/EventViews
 )
 
 install(FILES
-    ${eventviews_HEADERS}
-    ${CMAKE_CURRENT_BINARY_DIR}/eventviews_export.h
-    ${eventviews_CamelCase_HEADERS}
-    ${eventviews_agenda_HEADERS}
-    ${eventviews_todo_HEADERS}
-    ${eventviews_whatsnext_HEADERS}
-    ${eventviews_timeline_HEADERS}
-    ${eventviews_multiagenda_HEADERS}
-    ${eventviews_journal_HEADERS}
-    ${eventviews_list_HEADERS}
-    ${eventviews_month_HEADERS}
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/eventviews
-    COMPONENT Devel
+  ${eventviews_CamelCase_HEADERS}
+  ${eventviews_CamelCaseagenda_HEADERS}
+  ${eventviews_CamelCasetodo_HEADERS}
+  ${eventviews_CamelCasewhatsnext_HEADERS}
+  ${eventviews_CamelCasetimeline_HEADERS}
+  ${eventviews_CamelCasemultiagenda_HEADERS}
+  ${eventviews_CamelCasejournal_HEADERS}
+  ${eventviews_CamelCaselist_HEADERS}
+  ${eventviews_CamelCasemonth_HEADERS}
+  DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/EventViews
+  COMPONENT Devel
 )
+
 install(FILES
-    ${PRI_FILENAME}
-    DESTINATION ${ECM_MKSPECS_INSTALL_DIR})
+  ${eventviews_HEADERS}
+  ${CMAKE_CURRENT_BINARY_DIR}/eventviews_export.h
+  ${eventviews_CamelCase_HEADERS}
+  ${eventviews_agenda_HEADERS}
+  ${eventviews_todo_HEADERS}
+  ${eventviews_whatsnext_HEADERS}
+  ${eventviews_timeline_HEADERS}
+  ${eventviews_multiagenda_HEADERS}
+  ${eventviews_journal_HEADERS}
+  ${eventviews_list_HEADERS}
+  ${eventviews_month_HEADERS}
+  DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/eventviews
+  COMPONENT Devel
+)
+
+install(FILES ${PRI_FILENAME} DESTINATION ${ECM_MKSPECS_INSTALL_DIR})
 
 install(FILES agenda/calendardecoration.desktop DESTINATION ${KDE_INSTALL_KSERVICETYPES5DIR})
-
-

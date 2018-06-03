@@ -28,9 +28,13 @@
 
 #include "eventview.h"
 
-#include <QDateTime>
+namespace KHolidays {
+class HolidayRegion;
+}
 
 class KCheckableProxyModel;
+
+#include <QDateTime>
 
 namespace EventViews {
 class EventViewPrivate
@@ -70,7 +74,7 @@ public: /// Members
     QList<QEvent *> mTypeAheadEvents;
     static CalendarSupport::CollectionSelection *sGlobalCollectionSelection;
 
-    KHolidays::HolidayRegionPtr mHolidayRegion;
+    QList<KHolidays::HolidayRegion *> mHolidayRegions;
     PrefsPtr mPrefs;
     KCalPrefsPtr mKCalPrefs;
 

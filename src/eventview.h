@@ -45,11 +45,6 @@ template<typename T> class SortableList;
 typedef SortableList<QDate> DateList;
 }
 
-namespace KHolidays {
-class HolidayRegion;
-typedef QSharedPointer<HolidayRegion> HolidayRegionPtr;
-}
-
 namespace CalendarSupport {
 class CollectionSelection;
 class KCalPrefs;
@@ -360,10 +355,10 @@ public Q_SLOTS:
     void defaultAction(const Akonadi::Item &incidence);
 
     /**
-       Set which holidays the user wants to use.
-       @param holidayRegion a HolidayRegion object initialized with the desired locale.
+       Set which holiday regions the user wants to use.
+       @param regions a list of Holiday Regions strings.
     */
-    void setHolidayRegion(const KHolidays::HolidayRegionPtr &holidayRegion);
+    void setHolidayRegions(const QStringList &regions);
 
 Q_SIGNALS:
     /**

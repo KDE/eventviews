@@ -41,6 +41,8 @@
 
 #include <KCalUtils/RecurrenceActions>
 
+#include <KHolidays/HolidayRegion>
+
 #include <KCheckableProxyModel>
 #include <KGuiItem>
 #include <KLocalizedString>
@@ -107,10 +109,19 @@ void EventView::defaultAction(const Akonadi::Item &aitem)
     }
 }
 
-void EventView::setHolidayRegion(const KHolidays::HolidayRegionPtr &holidayRegion)
+void EventView::setHolidayRegions(const QStringList &regions)
 {
     Q_D(EventView);
-    d->mHolidayRegion = holidayRegion;
+    qDeleteAll(d->mHolidayRegions);
+    d->mHolidayRegions.clear();
+    foreach (const QString &regionStr, regions) {
+        KHolidays::HolidayRegion *region = new KHolidays::HolidayRegion(regionStr);
+        if (region->isValid()) {
+            d->mHolidayRegions.append(region);
+        } else {
+            delete region;
+        }
+    }
 }
 
 int EventView::showMoveRecurDialog(const Incidence::Ptr &inc, const QDate &date)
@@ -461,7 +472,8 @@ void EventView::doSaveConfig(KConfigGroup &)
 {
 }
 
-QPair<QDateTime, QDateTime> EventView::actualDateRange(const QDateTime &start, const QDateTime &end, const QDate &preferredMonth) const
+QPair<QDateTime, QDateTime> EventView::actualDateRange(const QDateTime &start, const QDateTime &end,
+                                                       const QDate &preferredMonth) const
 {
     Q_UNUSED(preferredMonth);
     return qMakePair(start, end);

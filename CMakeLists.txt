@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0)
-set(PIM_VERSION "5.8.41")
+set(PIM_VERSION "5.8.42")
 
 project(eventviews VERSION ${PIM_VERSION})
 
@@ -44,6 +44,7 @@ find_package(KF5GuiAddons ${KF5_VERSION} CONFIG REQUIRED)
 find_package(KF5IconThemes ${KF5_VERSION} CONFIG REQUIRED)
 find_package(KF5Service ${KF5_VERSION} CONFIG REQUIRED)
 find_package(KF5Completion ${KF5_VERSION} CONFIG REQUIRED)
+find_package(KF5Holidays ${KF5_VERSION} CONFIG REQUIRED)
 
 set(KDIAGRAM_LIB_VERSION "1.4.0")
 find_package(KGantt ${KDIAGRAM_LIB_VERSION} CONFIG REQUIRED)
