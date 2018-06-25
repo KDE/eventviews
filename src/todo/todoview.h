@@ -63,13 +63,13 @@ class EVENTVIEWS_EXPORT TodoView : public EventViews::EventView
 
 public:
     TodoView(const EventViews::PrefsPtr &preferences, bool sidebarView, QWidget *parent);
-    ~TodoView();
+    ~TodoView() override;
 
     void setCalendar(const Akonadi::ETMCalendar::Ptr &) override;
 
-    Akonadi::Item::List selectedIncidences() const override;
-    KCalCore::DateList selectedIncidenceDates() const override;
-    int currentDateCount() const override
+    Q_REQUIRED_RESULT Akonadi::Item::List selectedIncidences() const override;
+    Q_REQUIRED_RESULT KCalCore::DateList selectedIncidenceDates() const override;
+    Q_REQUIRED_RESULT int currentDateCount() const override
     {
         return 0;
     }
@@ -85,9 +85,9 @@ public:
     /** documentation in baseview.h */
     void getHighlightMode(bool &highlightEvents, bool &highlightTodos, bool &highlightJournals);
 
-    bool usesFullWindow();
+    Q_REQUIRED_RESULT bool usesFullWindow();
 
-    bool supportsDateRangeSelection()
+    Q_REQUIRED_RESULT bool supportsDateRangeSelection() const
     {
         return false;
     }

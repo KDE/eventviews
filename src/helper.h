@@ -44,7 +44,7 @@ typedef QSharedPointer<Prefs> PrefsPtr;
 /**
  Returns a nice QColor for text, give the input color &c.
 */
-QColor getTextColor(const QColor &c);
+Q_REQUIRED_RESULT QColor getTextColor(const QColor &c);
 
 /**
   This method returns the proper resource / subresource color for the view.
@@ -59,9 +59,9 @@ QColor getTextColor(const QColor &c);
   @param incidence the incidence for which the color is needed (to
                    determine which  subresource needs to be used)
 */
-EVENTVIEWS_EXPORT QColor resourceColor(const Akonadi::Item &incidence, const PrefsPtr &preferences);
+Q_REQUIRED_RESULT EVENTVIEWS_EXPORT QColor resourceColor(const Akonadi::Item &incidence, const PrefsPtr &preferences);
 
-EVENTVIEWS_EXPORT QColor resourceColor(const Akonadi::Collection &collection, const PrefsPtr &preferences);
+Q_REQUIRED_RESULT EVENTVIEWS_EXPORT QColor resourceColor(const Akonadi::Collection &collection, const PrefsPtr &preferences);
 
 /**
   This method sets the resource color in the preferences, only if it is
@@ -77,7 +77,7 @@ EVENTVIEWS_EXPORT void setResourceColor(const Akonadi::Collection &collection, c
   Returns the number of years between the @p start QDate and the @p end QDate
   (i.e. the difference in the year number of both dates)
 */
-int yearDiff(const QDate &start, const QDate &end);
+Q_REQUIRED_RESULT int yearDiff(const QDate &start, const QDate &end);
 
 /**
    Equivalent to SmallIcon( name ), but uses QPixmapCache.
@@ -86,7 +86,7 @@ int yearDiff(const QDate &start, const QDate &end);
    @return A new pixmap if it isn't yet in cache, otherwise returns the
            cached one.
 */
-QPixmap cachedSmallIcon(const QString &name);
+Q_REQUIRED_RESULT QPixmap cachedSmallIcon(const QString &name);
 }
 
 #endif

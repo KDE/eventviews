@@ -33,7 +33,7 @@ class TodoViewQuickAddLine : public KLineEdit
 
 public:
     explicit TodoViewQuickAddLine(QWidget *parent);
-    ~TodoViewQuickAddLine()
+    ~TodoViewQuickAddLine() override
     {
     }
 

@@ -64,43 +64,43 @@ public:
 
     explicit TodoModel(const EventViews::PrefsPtr &preferences, QObject *parent = nullptr);
 
-    ~TodoModel();
+    ~TodoModel() override;
 
-    int rowCount(const QModelIndex &parent = QModelIndex()) const override;
+    Q_REQUIRED_RESULT int rowCount(const QModelIndex &parent = QModelIndex()) const override;
 
-    int columnCount(const QModelIndex &parent = QModelIndex()) const override;
+    Q_REQUIRED_RESULT int columnCount(const QModelIndex &parent = QModelIndex()) const override;
 
     void setSourceModel(QAbstractItemModel *sourceModel) override;
 
-    QVariant data(const QModelIndex &index, int role) const override;
+    Q_REQUIRED_RESULT QVariant data(const QModelIndex &index, int role) const override;
 
-    bool setData(const QModelIndex &index, const QVariant &value, int role) override;
+    Q_REQUIRED_RESULT bool setData(const QModelIndex &index, const QVariant &value, int role) override;
 
-    QVariant headerData(int section, Qt::Orientation, int role) const override;
+    Q_REQUIRED_RESULT QVariant headerData(int section, Qt::Orientation, int role) const override;
 
     void setCalendar(const Akonadi::ETMCalendar::Ptr &calendar);
 
     void setIncidenceChanger(Akonadi::IncidenceChanger *changer);
 
-    QMimeData *mimeData(const QModelIndexList &indexes) const override;
+    Q_REQUIRED_RESULT QMimeData *mimeData(const QModelIndexList &indexes) const override;
 
-    bool dropMimeData(const QMimeData *data, Qt::DropAction action, int row, int column, const QModelIndex &parent) override;
+    Q_REQUIRED_RESULT bool dropMimeData(const QMimeData *data, Qt::DropAction action, int row, int column, const QModelIndex &parent) override;
 
-    QStringList mimeTypes() const override;
+    Q_REQUIRED_RESULT QStringList mimeTypes() const override;
 
-    Qt::DropActions supportedDropActions() const override;
+    Q_REQUIRED_RESULT Qt::DropActions supportedDropActions() const override;
 
-    Qt::ItemFlags flags(const QModelIndex &index) const override;
+    Q_REQUIRED_RESULT Qt::ItemFlags flags(const QModelIndex &index) const override;
 
-    QModelIndex parent(const QModelIndex &child) const override;
+    Q_REQUIRED_RESULT QModelIndex parent(const QModelIndex &child) const override;
 
-    QModelIndex mapFromSource(const QModelIndex &sourceIndex) const override;
+    Q_REQUIRED_RESULT QModelIndex mapFromSource(const QModelIndex &sourceIndex) const override;
 
-    QModelIndex mapToSource(const QModelIndex &proxyIndex) const override;
+    Q_REQUIRED_RESULT QModelIndex mapToSource(const QModelIndex &proxyIndex) const override;
 
-    QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const override;
+    Q_REQUIRED_RESULT QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const override;
 
-    QModelIndex buddy(const QModelIndex &index) const override;
+    Q_REQUIRED_RESULT QModelIndex buddy(const QModelIndex &index) const override;
 
 private:
     class Private;

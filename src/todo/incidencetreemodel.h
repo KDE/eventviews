@@ -49,27 +49,27 @@ public:
      */
     explicit IncidenceTreeModel(const QStringList &mimeTypes, QObject *parent = nullptr);
 
-    ~IncidenceTreeModel();
+    ~IncidenceTreeModel() override;
 
-    int rowCount(const QModelIndex &parent = QModelIndex()) const override;
-    int columnCount(const QModelIndex &parent = QModelIndex()) const override;
+    Q_REQUIRED_RESULT int rowCount(const QModelIndex &parent = QModelIndex()) const override;
+    Q_REQUIRED_RESULT int columnCount(const QModelIndex &parent = QModelIndex()) const override;
 
-    QVariant data(const QModelIndex &index, int role) const override;
+    Q_REQUIRED_RESULT QVariant data(const QModelIndex &index, int role) const override;
 
-    QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const override;
+    Q_REQUIRED_RESULT QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const override;
 
-    QModelIndex mapFromSource(const QModelIndex &sourceIndex) const override;
-    QModelIndex mapToSource(const QModelIndex &proxyIndex) const override;
+    Q_REQUIRED_RESULT QModelIndex mapFromSource(const QModelIndex &sourceIndex) const override;
+    Q_REQUIRED_RESULT QModelIndex mapToSource(const QModelIndex &proxyIndex) const override;
 
-    QModelIndex parent(const QModelIndex &child) const override;
+    Q_REQUIRED_RESULT QModelIndex parent(const QModelIndex &child) const override;
 
     void setSourceModel(QAbstractItemModel *sourceModel) override;
-    bool hasChildren(const QModelIndex &parent = QModelIndex()) const override;
+    Q_REQUIRED_RESULT bool hasChildren(const QModelIndex &parent = QModelIndex()) const override;
 
     /**
      * Returns the akonadi item containing the incidence with @p incidenceUid.
      */
-    Akonadi::Item item(const QString &incidenceUid) const;
+    Q_REQUIRED_RESULT Akonadi::Item item(const QString &incidenceUid) const;
 
 Q_SIGNALS:
     /**

@@ -56,17 +56,17 @@ public:
     void contextMenuEvent(QContextMenuEvent *event) override;
 
     /** Returns the time zone of this label */
-    QTimeZone timeZone() const;
+    Q_REQUIRED_RESULT QTimeZone timeZone() const;
 
     /**
       Return string which can be used as a header for the time label.
     */
-    QString header() const;
+    Q_REQUIRED_RESULT QString header() const;
 
     /**
       Return string which can be used as a tool tip for the header.
     */
-    QString headerToolTip() const;
+    Q_REQUIRED_RESULT QString headerToolTip() const;
 
     QSize sizeHint() const override;
 
@@ -76,9 +76,9 @@ public:
     bool event(QEvent *event) override;
 
 private:
-    int yposToCell(const int ypos) const;
-    int cellToHour(const int cell) const;
-    QString cellToSuffix(const int cell) const;
+    Q_REQUIRED_RESULT int yposToCell(const int ypos) const;
+    Q_REQUIRED_RESULT int cellToHour(const int cell) const;
+    Q_REQUIRED_RESULT QString cellToSuffix(const int cell) const;
 
     /** update the position of the marker showing the mouse position */
     void mousePosChanged(const QPoint &pos);

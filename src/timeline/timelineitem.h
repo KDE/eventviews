@@ -61,12 +61,12 @@ public:
     TimelineSubItem(const Akonadi::ETMCalendar::Ptr &calendar, const Akonadi::Item &incidence, TimelineItem *parent);
     ~TimelineSubItem();
 
-    Akonadi::Item  incidence() const
+    Q_REQUIRED_RESULT Akonadi::Item  incidence() const
     {
         return mIncidence;
     }
 
-    QDateTime originalStart() const
+    Q_REQUIRED_RESULT QDateTime originalStart() const
     {
         return mStart;
     }
@@ -77,12 +77,12 @@ public:
     }
 
     void setStartTime(const QDateTime &dt);
-    QDateTime startTime() const;
+    Q_REQUIRED_RESULT QDateTime startTime() const;
 
     void setEndTime(const QDateTime &dt);
-    QDateTime endTime() const;
+    Q_REQUIRED_RESULT QDateTime endTime() const;
 
-    TimelineItem *parent()
+    Q_REQUIRED_RESULT TimelineItem *parent() const
     {
         return mParent;
     }

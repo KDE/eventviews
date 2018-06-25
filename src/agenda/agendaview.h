@@ -95,31 +95,31 @@ public:
     };
 
     /** Returns number of currently shown dates. */
-    int currentDateCount() const override;
+    Q_REQUIRED_RESULT int currentDateCount() const override;
 
     /** returns the currently selected events */
-    Akonadi::Item::List selectedIncidences() const override;
+    Q_REQUIRED_RESULT Akonadi::Item::List selectedIncidences() const override;
 
     /** returns the currently selected incidence's dates */
-    KCalCore::DateList selectedIncidenceDates() const override;
+    Q_REQUIRED_RESULT KCalCore::DateList selectedIncidenceDates() const override;
 
     /** return the default start/end date/time for new events   */
     virtual bool eventDurationHint(QDateTime &startDt, QDateTime &endDt, bool &allDay) const override;
 
     /** start-datetime of selection */
-    QDateTime selectionStart() const override;
+    Q_REQUIRED_RESULT QDateTime selectionStart() const override;
 
     /** end-datetime of selection */
-    QDateTime selectionEnd() const override;
+    Q_REQUIRED_RESULT QDateTime selectionEnd() const override;
 
     /** returns true if selection is for whole day */
-    bool selectedIsAllDay() const;
+    Q_REQUIRED_RESULT bool selectedIsAllDay() const;
 
     /** make selected start/end invalid */
     void deleteSelectedDateTime();
 
     /** returns if only a single cell is selected, or a range of cells */
-    bool selectedIsSingleCell() const;
+    Q_REQUIRED_RESULT bool selectedIsSingleCell() const;
 
     /* reimp from EventView */
     void setCalendar(const Akonadi::ETMCalendar::Ptr &cal) override;
@@ -130,16 +130,16 @@ public:
     // FIXME: we already have startDateTime() and endDateTime() in the base class
 
     /** First shown day */
-    QDate startDate() const;
+    Q_REQUIRED_RESULT QDate startDate() const;
     /** Last shown day */
-    QDate endDate() const;
+    Q_REQUIRED_RESULT QDate endDate() const;
 
     /** Update event belonging to agenda item
         If the incidence is multi-day, item is the first one
     */
     void updateEventDates(AgendaItem *item, bool addIncidence, Akonadi::Collection::Id collectionId);
 
-    QVector<bool> busyDayMask() const;
+    Q_REQUIRED_RESULT QVector<bool> busyDayMask() const;
 
     /**
      * Return calendar object for a concrete incidence.

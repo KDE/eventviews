@@ -46,17 +46,17 @@ public:
 
     JournalFrame(const Akonadi::Item &journal, const Akonadi::ETMCalendar::Ptr &calendar, QWidget *parent);
 
-    ~JournalFrame();
+    ~JournalFrame() override;
     bool eventFilter(QObject *, QEvent *) override;
 
     void setJournal(const Akonadi::Item &journal);
-    Akonadi::Item journal() const
+    Q_REQUIRED_RESULT Akonadi::Item journal() const
     {
         return mJournal;
     }
 
     void setCalendar(const Akonadi::ETMCalendar::Ptr &);
-    QDate date() const
+    Q_REQUIRED_RESULT QDate date() const
     {
         return mDate;
     }

@@ -71,18 +71,18 @@ public:
       The start date of the incidence, generally realStartDate. But it
       reflect changes, even during move.
     */
-    QDate startDate() const;
+    Q_REQUIRED_RESULT QDate startDate() const;
 
     /**
       The end date of the incidence, generally realEndDate. But it
       reflect changes, even during move.
      */
-    QDate endDate() const;
+    Q_REQUIRED_RESULT QDate endDate() const;
 
     /**
       The number of days this item spans.
     */
-    int daySpan() const;
+    Q_REQUIRED_RESULT int daySpan() const;
 
     /**
       This is the real start date, usually the start date of the incidence.
@@ -116,7 +116,7 @@ public:
     /**
       Returns true if this item is selected.
     */
-    bool selected() const
+    Q_REQUIRED_RESULT bool selected() const
     {
         return mSelected;
     }
@@ -124,7 +124,7 @@ public:
     /**
       Returns the position of the item ( > 0 ).
     */
-    int position() const
+    Q_REQUIRED_RESULT int position() const
     {
         return mPosition;
     }
@@ -172,7 +172,7 @@ public:
     /**
       Returns true if the item is being moved.
     */
-    bool isMoving() const
+    Q_REQUIRED_RESULT bool isMoving() const
     {
         return mMoving;
     }
@@ -180,7 +180,7 @@ public:
     /**
       Returns true if the item is being resized.
     */
-    bool isResizing() const
+    Q_REQUIRED_RESULT bool isResizing() const
     {
         return mResizing;
     }

@@ -53,18 +53,18 @@ public:
       This will be used for example for internal configuration (position, etc.),
       so don't i18n it and make it unique for your decoration.
     */
-    virtual QString id() const;
+    Q_REQUIRED_RESULT virtual QString id() const;
 
     /**
       Description of element.
     */
-    virtual QString elementInfo() const;
+    Q_REQUIRED_RESULT virtual QString elementInfo() const;
 
     /**
       Return a short text for a given date,
       usually only a few words.
     */
-    virtual QString shortText();
+    Q_REQUIRED_RESULT virtual QString shortText();
 
     /**
       Return a long text for a given date.
@@ -73,25 +73,25 @@ public:
 
       Can for example be used as a tool tip.
     */
-    virtual QString longText();
+    Q_REQUIRED_RESULT virtual QString longText();
 
     /**
       Return an extensive text for a given date.
       This text can be of any length,
       but usually it will have one or a few paragraphs.
     */
-    virtual QString extensiveText();
+    Q_REQUIRED_RESULT virtual QString extensiveText();
 
     /**
       Return a pixmap for a given date and a given size.
     */
-    virtual QPixmap newPixmap(const QSize &);
+    Q_REQUIRED_RESULT virtual QPixmap newPixmap(const QSize &);
 
     /**
       Return a URL pointing to more information about the content of the
       element.
      */
-    virtual QUrl url();
+    Q_REQUIRED_RESULT virtual QUrl url();
 
 Q_SIGNALS:
     void gotNewPixmap(const QPixmap &);

@@ -45,37 +45,37 @@ public:
     };
 
     explicit MonthView(NavButtonsVisibility visibility = Visible, QWidget *parent = nullptr);
-    ~MonthView();
+    ~MonthView() override;
 
-    int currentDateCount() const override;
-    int currentMonth() const;
+    Q_REQUIRED_RESULT int currentDateCount() const override;
+    Q_REQUIRED_RESULT int currentMonth() const;
 
-    Akonadi::Item::List selectedIncidences() const override;
+    Q_REQUIRED_RESULT Akonadi::Item::List selectedIncidences() const override;
 
     /** Returns dates of the currently selected events */
-    KCalCore::DateList selectedIncidenceDates() const override;
+    Q_REQUIRED_RESULT KCalCore::DateList selectedIncidenceDates() const override;
 
-    QDateTime selectionStart() const override;
+    Q_REQUIRED_RESULT QDateTime selectionStart() const override;
 
-    QDateTime selectionEnd() const override;
+    Q_REQUIRED_RESULT QDateTime selectionEnd() const override;
 
     virtual void setDateRange(const QDateTime &start, const QDateTime &end, const QDate &preferredMonth = QDate()) override;
 
-    bool eventDurationHint(QDateTime &startDt, QDateTime &endDt, bool &allDay) const override;
+    Q_REQUIRED_RESULT bool eventDurationHint(QDateTime &startDt, QDateTime &endDt, bool &allDay) const override;
 
     /**
      * Returns the average date in the view
      */
-    QDate averageDate() const;
+    Q_REQUIRED_RESULT QDate averageDate() const;
 
-    bool usesFullWindow();
+    Q_REQUIRED_RESULT bool usesFullWindow();
 
-    bool supportsDateRangeSelection()
+    Q_REQUIRED_RESULT bool supportsDateRangeSelection() const
     {
         return false;
     }
 
-    bool isBusyDay(const QDate &day) const;
+    Q_REQUIRED_RESULT bool isBusyDay(const QDate &day) const;
 
     void setCalendar(const Akonadi::ETMCalendar::Ptr &cal) override;
 

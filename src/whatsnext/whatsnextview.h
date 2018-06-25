@@ -57,20 +57,20 @@ class EVENTVIEWS_EXPORT WhatsNextView : public EventViews::EventView
     Q_OBJECT
 public:
     explicit WhatsNextView(QWidget *parent = nullptr);
-    ~WhatsNextView();
+    ~WhatsNextView() override;
 
-    int currentDateCount() const override;
-    Akonadi::Item::List selectedIncidences() const override
+    Q_REQUIRED_RESULT int currentDateCount() const override;
+    Q_REQUIRED_RESULT Akonadi::Item::List selectedIncidences() const override
     {
         return Akonadi::Item::List();
     }
 
-    KCalCore::DateList selectedIncidenceDates() const override
+    Q_REQUIRED_RESULT KCalCore::DateList selectedIncidenceDates() const override
     {
         return KCalCore::DateList();
     }
 
-    bool supportsDateNavigation() const
+    Q_REQUIRED_RESULT bool supportsDateNavigation() const
     {
         return true;
     }

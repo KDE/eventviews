@@ -36,25 +36,25 @@ class EVENTVIEWS_EXPORT MultiAgendaView : public EventView
     Q_OBJECT
 public:
     explicit MultiAgendaView(QWidget *parent = nullptr);
-    ~MultiAgendaView();
+    ~MultiAgendaView() override;
 
-    Akonadi::Item::List selectedIncidences() const override;
-    KCalCore::DateList selectedIncidenceDates() const override;
-    int currentDateCount() const override;
-    int maxDatesHint() const;
+    Q_REQUIRED_RESULT Akonadi::Item::List selectedIncidences() const override;
+    Q_REQUIRED_RESULT KCalCore::DateList selectedIncidenceDates() const override;
+    Q_REQUIRED_RESULT int currentDateCount() const override;
+    Q_REQUIRED_RESULT int maxDatesHint() const;
 
-    bool eventDurationHint(QDateTime &startDt, QDateTime &endDt, bool &allDay) const override;
+    Q_REQUIRED_RESULT bool eventDurationHint(QDateTime &startDt, QDateTime &endDt, bool &allDay) const override;
 
     void setCalendar(const Akonadi::ETMCalendar::Ptr &cal) override;
 
-    bool hasConfigurationDialog() const override;
+    Q_REQUIRED_RESULT bool hasConfigurationDialog() const override;
 
     void setChanges(Changes changes) override;
 
-    bool customColumnSetupUsed() const;
-    int customNumberOfColumns() const;
-    QStringList customColumnTitles() const;
-    QVector<KCheckableProxyModel *> collectionSelectionModels() const;
+    Q_REQUIRED_RESULT bool customColumnSetupUsed() const;
+    Q_REQUIRED_RESULT int customNumberOfColumns() const;
+    Q_REQUIRED_RESULT QStringList customColumnTitles() const;
+    Q_REQUIRED_RESULT QVector<KCheckableProxyModel *> collectionSelectionModels() const;
 
     void setPreferences(const PrefsPtr &prefs) override;
 

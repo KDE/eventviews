@@ -37,7 +37,7 @@ public:
 
     explicit DecorationLabel(const QString &shortText, const QString &longText = QString(), const QString &extensiveText = QString(), const QPixmap &pixmap = QPixmap(),
                              const QUrl &url = QUrl(), QWidget *parent = nullptr);
-    ~DecorationLabel();
+    ~DecorationLabel() override;
 
 public Q_SLOTS:
     void setExtensiveText(const QString &);

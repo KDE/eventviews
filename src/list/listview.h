@@ -47,11 +47,11 @@ class EVENTVIEWS_EXPORT ListView : public EventView
     Q_OBJECT
 public:
     explicit ListView(const Akonadi::ETMCalendar::Ptr &calendar, QWidget *parent = nullptr, bool nonInteractive = false);
-    ~ListView();
+    ~ListView() override;
 
-    int currentDateCount() const override;
-    Akonadi::Item::List selectedIncidences() const override;
-    KCalCore::DateList selectedIncidenceDates() const override;
+    Q_REQUIRED_RESULT int currentDateCount() const override;
+    Q_REQUIRED_RESULT Akonadi::Item::List selectedIncidences() const override;
+    Q_REQUIRED_RESULT KCalCore::DateList selectedIncidenceDates() const override;
 
     // Shows all incidences of the calendar
     void showAll();

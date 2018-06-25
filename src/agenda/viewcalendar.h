@@ -56,7 +56,7 @@ class AkonadiViewCalendar : public ViewCalendar
 public:
     typedef QSharedPointer<AkonadiViewCalendar> Ptr;
 
-    virtual ~AkonadiViewCalendar();
+    ~AkonadiViewCalendar() override;
     bool isValid(const KCalCore::Incidence::Ptr &incidence) const override;
     bool isValid(const QString &incidenceIdentifier) const override;
     QString displayName(const KCalCore::Incidence::Ptr &incidence) const override;
@@ -77,23 +77,23 @@ class MultiViewCalendar : public ViewCalendar
 public:
     typedef QSharedPointer<MultiViewCalendar> Ptr;
 
-    virtual ~MultiViewCalendar();
+    ~MultiViewCalendar() override;
     ViewCalendar::Ptr findCalendar(const KCalCore::Incidence::Ptr &incidence) const;
     ViewCalendar::Ptr findCalendar(const QString &incidenceIdentifier) const;
-    bool isValid(const KCalCore::Incidence::Ptr &incidence) const override;
-    bool isValid(const QString &incidenceIdentifier) const override;
-    QString displayName(const KCalCore::Incidence::Ptr &incidence) const override;
+    Q_REQUIRED_RESULT bool isValid(const KCalCore::Incidence::Ptr &incidence) const override;
+    Q_REQUIRED_RESULT bool isValid(const QString &incidenceIdentifier) const override;
+    Q_REQUIRED_RESULT QString displayName(const KCalCore::Incidence::Ptr &incidence) const override;
 
-    QColor resourceColor(const KCalCore::Incidence::Ptr &incidence) const override;
-    QString iconForIncidence(const KCalCore::Incidence::Ptr &incidence) const override;
+    Q_REQUIRED_RESULT QColor resourceColor(const KCalCore::Incidence::Ptr &incidence) const override;
+    Q_REQUIRED_RESULT QString iconForIncidence(const KCalCore::Incidence::Ptr &incidence) const override;
 
-    Akonadi::Item item(const KCalCore::Incidence::Ptr &incidence) const;
+    Q_REQUIRED_RESULT Akonadi::Item item(const KCalCore::Incidence::Ptr &incidence) const;
 
     void addCalendar(const ViewCalendar::Ptr &calendar);
     void setETMCalendar(const Akonadi::ETMCalendar::Ptr &calendar);
     int calendars() const;
-    KCalCore::Calendar::Ptr getCalendar() const override;
-    KCalCore::Incidence::List incidences() const;
+    Q_REQUIRED_RESULT KCalCore::Calendar::Ptr getCalendar() const override;
+    Q_REQUIRED_RESULT KCalCore::Incidence::List incidences() const;
 
     AgendaView *mAgendaView = nullptr;
     AkonadiViewCalendar::Ptr mETMCalendar;

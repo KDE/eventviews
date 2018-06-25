@@ -46,11 +46,11 @@ class EVENTVIEWS_EXPORT JournalView : public EventView
     Q_OBJECT
 public:
     explicit JournalView(QWidget *parent = nullptr);
-    ~JournalView();
+    ~JournalView() override;
 
-    int currentDateCount() const override;
-    Akonadi::Item::List selectedIncidences() const override;
-    KCalCore::DateList selectedIncidenceDates() const override
+    Q_REQUIRED_RESULT int currentDateCount() const override;
+    Q_REQUIRED_RESULT Akonadi::Item::List selectedIncidences() const override;
+    Q_REQUIRED_RESULT KCalCore::DateList selectedIncidenceDates() const override
     {
         return KCalCore::DateList();
     }

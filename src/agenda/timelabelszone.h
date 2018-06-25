@@ -49,17 +49,17 @@ public:
     /**
        Returns the best width for each TimeLabels widget
     */
-    int preferedTimeLabelsWidth() const;
+    Q_REQUIRED_RESULT int preferedTimeLabelsWidth() const;
 
     void updateAll();
     void reset();
     void init();
     void setAgendaView(AgendaView *agenda);
 
-    QList<QScrollArea *> timeLabels() const;
+    Q_REQUIRED_RESULT QList<QScrollArea *> timeLabels() const;
 
     void setPreferences(const PrefsPtr &prefs);
-    PrefsPtr preferences() const;
+    Q_REQUIRED_RESULT PrefsPtr preferences() const;
 
     /** Checks how much agenda is scrolled relative to it's QScrollArea
         and makes each TimeLabels scroll that amount

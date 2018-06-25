@@ -37,9 +37,9 @@ class TodoViewView : public QTreeView
 public:
     explicit TodoViewView(QWidget *parent = nullptr);
 
-    bool isEditing(const QModelIndex &index) const;
+    Q_REQUIRED_RESULT bool isEditing(const QModelIndex &index) const;
 
-    bool eventFilter(QObject *watched, QEvent *event) override;
+    Q_REQUIRED_RESULT bool eventFilter(QObject *watched, QEvent *event) override;
 
 protected:
     QModelIndex moveCursor(CursorAction cursorAction, Qt::KeyboardModifiers modifiers) override;

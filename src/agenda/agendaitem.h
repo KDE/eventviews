@@ -83,37 +83,37 @@ public:
 
     AgendaItem(EventView *eventView, const MultiViewCalendar::Ptr &calendar, const KCalCore::Incidence::Ptr &incidence, int itemPos, int itemCount, const QDateTime &qd, bool isSelected,
                QWidget *parent);
-    ~AgendaItem();
+    ~AgendaItem() override;
 
-    int cellXLeft() const
+    Q_REQUIRED_RESULT int cellXLeft() const
     {
         return mCellXLeft;
     }
 
-    int cellXRight() const
+    Q_REQUIRED_RESULT int cellXRight() const
     {
         return mCellXRight;
     }
 
-    int cellYTop() const
+    Q_REQUIRED_RESULT int cellYTop() const
     {
         return mCellYTop;
     }
 
-    int cellYBottom() const
+    Q_REQUIRED_RESULT int cellYBottom() const
     {
         return mCellYBottom;
     }
 
-    int cellHeight() const;
-    int cellWidth() const;
+    Q_REQUIRED_RESULT int cellHeight() const;
+    Q_REQUIRED_RESULT int cellWidth() const;
 
-    int itemPos() const
+    Q_REQUIRED_RESULT int itemPos() const
     {
         return mItemPos;
     }
 
-    int itemCount() const
+    Q_REQUIRED_RESULT int itemCount() const
     {
         return mItemCount;
     }
@@ -150,7 +150,7 @@ public:
     void expandLeft(int dx);
     void expandRight(int dx);
 
-    bool isMultiItem() const;
+    Q_REQUIRED_RESULT bool isMultiItem() const;
 
     AgendaItem::QPtr prevMoveItem() const
     {
@@ -195,7 +195,7 @@ public:
         return (mMultiItemInfo) ? (mMultiItemInfo->mLastMultiItem) : nullptr;
     }
 
-    bool dissociateFromMultiItem();
+    Q_REQUIRED_RESULT bool dissociateFromMultiItem();
 
     void setIncidence(const KCalCore::Incidence::Ptr &incidence);
 
@@ -204,12 +204,12 @@ public:
         return mIncidence;
     }
 
-    QDateTime occurrenceDateTime() const
+    Q_REQUIRED_RESULT QDateTime occurrenceDateTime() const
     {
         return mOccurrenceDateTime;
     }
 
-    QDate occurrenceDate() const;
+    Q_REQUIRED_RESULT QDate occurrenceDate() const;
 
     // /** Update the date of this item's occurrence (not in the event) */
     void setOccurrenceDateTime(const QDateTime &qd);
@@ -219,7 +219,7 @@ public:
         mLabelText = text;
     }
 
-    QString text()
+    Q_REQUIRED_RESULT QString text() const
     {
         return mLabelText;
     }
@@ -238,7 +238,7 @@ public:
         mResourceColor = color;
     }
 
-    QColor resourceColor()
+    Q_REQUIRED_RESULT QColor resourceColor() const
     {
         return mResourceColor;
     }

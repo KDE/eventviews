@@ -39,12 +39,12 @@ public:
 
     void sort(int column, Qt::SortOrder order = Qt::AscendingOrder) override;
 
-    const QStringList &categories() const
+    Q_REQUIRED_RESULT const QStringList &categories() const
     {
         return mCategories;
     }
 
-    const QStringList &priorities() const
+    Q_REQUIRED_RESULT const QStringList &priorities() const
     {
         return mPriorities;
     }

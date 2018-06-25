@@ -31,7 +31,7 @@ class AlternateLabel : public QLabel
     Q_OBJECT
 public:
     AlternateLabel(const QString &shortlabel, const QString &longlabel, const QString &extensivelabel = QString(), QWidget *parent = nullptr);
-    ~AlternateLabel();
+    ~AlternateLabel() override;
 
     enum TextType {
         Short = 0,
@@ -39,7 +39,7 @@ public:
         Extensive = 2
     };
 
-    TextType largestFittingTextType() const;
+    Q_REQUIRED_RESULT TextType largestFittingTextType() const;
     void setFixedType(TextType type);
 
 public Q_SLOTS:

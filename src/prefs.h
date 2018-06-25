@@ -57,162 +57,162 @@ public:
 
 public:
     void setMarcusBainsShowSeconds(bool showSeconds);
-    bool marcusBainsShowSeconds() const;
+    Q_REQUIRED_RESULT bool marcusBainsShowSeconds() const;
 
     void setAgendaMarcusBainsLineLineColor(const QColor &color);
-    QColor agendaMarcusBainsLineLineColor() const;
+    Q_REQUIRED_RESULT QColor agendaMarcusBainsLineLineColor() const;
 
     void setMarcusBainsEnabled(bool enabled);
-    bool marcusBainsEnabled() const;
+    Q_REQUIRED_RESULT bool marcusBainsEnabled() const;
 
     void setAgendaMarcusBainsLineFont(const QFont &font);
-    QFont agendaMarcusBainsLineFont() const;
+    Q_REQUIRED_RESULT QFont agendaMarcusBainsLineFont() const;
 
     void setHourSize(int size);
-    int hourSize() const;
+    Q_REQUIRED_RESULT int hourSize() const;
 
     void setDayBegins(const QDateTime &dateTime);
-    QDateTime dayBegins() const;
+    Q_REQUIRED_RESULT QDateTime dayBegins() const;
 
     void setWorkingHoursStart(const QDateTime &dateTime);
-    QDateTime workingHoursStart() const;
+    Q_REQUIRED_RESULT QDateTime workingHoursStart() const;
 
     void setWorkingHoursEnd(const QDateTime &dateTime);
-    QDateTime workingHoursEnd() const;
+    Q_REQUIRED_RESULT QDateTime workingHoursEnd() const;
 
     void setSelectionStartsEditor(bool startEditor);
-    bool selectionStartsEditor() const;
+    Q_REQUIRED_RESULT bool selectionStartsEditor() const;
 
     void setAgendaGridWorkHoursBackgroundColor(const QColor &color);
-    QColor agendaGridWorkHoursBackgroundColor() const;
+    Q_REQUIRED_RESULT QColor agendaGridWorkHoursBackgroundColor() const;
 
     void setAgendaGridHighlightColor(const QColor &color);
-    QColor agendaGridHighlightColor() const;
+    Q_REQUIRED_RESULT QColor agendaGridHighlightColor() const;
 
     void setAgendaGridBackgroundColor(const QColor &color);
-    QColor agendaGridBackgroundColor() const;
+    Q_REQUIRED_RESULT QColor agendaGridBackgroundColor() const;
 
     void setEnableAgendaItemIcons(bool enable);
-    bool enableAgendaItemIcons() const;
+    Q_REQUIRED_RESULT bool enableAgendaItemIcons() const;
 
     void setTodosUseCategoryColors(bool useColors);
-    bool todosUseCategoryColors() const;
+    Q_REQUIRED_RESULT bool todosUseCategoryColors() const;
 
     void setAgendaHolidaysBackgroundColor(const QColor &color) const;
-    QColor agendaHolidaysBackgroundColor() const;
+    Q_REQUIRED_RESULT QColor agendaHolidaysBackgroundColor() const;
 
     void setAgendaViewColors(int colors);
-    int agendaViewColors() const;
+    Q_REQUIRED_RESULT int agendaViewColors() const;
 
     void setAgendaViewFont(const QFont &font);
-    QFont agendaViewFont() const;
+    Q_REQUIRED_RESULT QFont agendaViewFont() const;
 
     void setMonthViewFont(const QFont &font);
-    QFont monthViewFont() const;
+    Q_REQUIRED_RESULT QFont monthViewFont() const;
 
-    QColor monthGridBackgroundColor() const;
+    Q_REQUIRED_RESULT QColor monthGridBackgroundColor() const;
     void setMonthGridBackgroundColor(const QColor &color);
 
-    QColor monthGridWorkHoursBackgroundColor() const;
+    Q_REQUIRED_RESULT QColor monthGridWorkHoursBackgroundColor() const;
     void monthGridWorkHoursBackgroundColor(const QColor &color);
 
     void setMonthViewColors(int colors) const;
-    int monthViewColors() const;
+    Q_REQUIRED_RESULT int monthViewColors() const;
 
-    bool enableMonthItemIcons() const;
+    Q_REQUIRED_RESULT bool enableMonthItemIcons() const;
     void setEnableMonthItemIcons(bool enable);
 
-    bool showTimeInMonthView() const;
+    Q_REQUIRED_RESULT bool showTimeInMonthView() const;
     void setShowTimeInMonthView(bool show);
 
-    bool showTodosMonthView() const;
+    Q_REQUIRED_RESULT bool showTodosMonthView() const;
     void setShowTodosMonthView(bool show);
 
-    bool showJournalsMonthView() const;
+    Q_REQUIRED_RESULT bool showJournalsMonthView() const;
     void setShowJournalsMonthView(bool show);
 
-    bool fullViewMonth() const;
+    Q_REQUIRED_RESULT bool fullViewMonth() const;
     void setFullViewMonth(bool fullView);
 
-    bool sortCompletedTodosSeparately() const;
+    Q_REQUIRED_RESULT bool sortCompletedTodosSeparately() const;
     void setSortCompletedTodosSeparately(bool sort);
 
     void setEnableToolTips(bool enable);
-    bool enableToolTips() const;
+    Q_REQUIRED_RESULT bool enableToolTips() const;
 
     void setShowTodosAgendaView(bool show);
-    bool showTodosAgendaView() const;
+    Q_REQUIRED_RESULT bool showTodosAgendaView() const;
 
     void setAgendaTimeLabelsFont(const QFont &font);
-    QFont agendaTimeLabelsFont() const;
+    Q_REQUIRED_RESULT QFont agendaTimeLabelsFont() const;
 
     KConfigSkeleton::ItemFont *fontItem(const QString &name) const;
 
     void setResourceColor(const QString &, const QColor &);
-    QColor resourceColor(const QString &);
-    QColor resourceColorKnown(const QString &) const;
+    Q_REQUIRED_RESULT QColor resourceColor(const QString &);
+    Q_REQUIRED_RESULT QColor resourceColorKnown(const QString &) const;
 
-    QTimeZone timeZone() const;
+    Q_REQUIRED_RESULT QTimeZone timeZone() const;
 
-    QStringList timeScaleTimezones() const;
+    Q_REQUIRED_RESULT QStringList timeScaleTimezones() const;
     void setTimeScaleTimezones(const QStringList &list);
 
-    QStringList selectedPlugins() const;
+    Q_REQUIRED_RESULT QStringList selectedPlugins() const;
     void setSelectedPlugins(const QStringList &);
 
-    QStringList decorationsAtAgendaViewTop() const;
+    Q_REQUIRED_RESULT QStringList decorationsAtAgendaViewTop() const;
     void setDecorationsAtAgendaViewTop(const QStringList &);
 
-    QStringList decorationsAtAgendaViewBottom() const;
+    Q_REQUIRED_RESULT QStringList decorationsAtAgendaViewBottom() const;
     void setDecorationsAtAgendaViewBottom(const QStringList &);
 
-    bool colorAgendaBusyDays() const;
+    Q_REQUIRED_RESULT bool colorAgendaBusyDays() const;
     void setColorAgendaBusyDays(bool enable);
 
-    bool colorMonthBusyDays() const;
+    Q_REQUIRED_RESULT bool colorMonthBusyDays() const;
     void setColorMonthBusyDays(bool enable);
 
-    QColor viewBgBusyColor() const;
+    Q_REQUIRED_RESULT QColor viewBgBusyColor() const;
     void setViewBgBusyColor(const QColor &);
 
-    QColor holidayColor() const;
+    Q_REQUIRED_RESULT QColor holidayColor() const;
     void setHolidayColor(const QColor &color);
 
-    QColor agendaViewBackgroundColor() const;
+    Q_REQUIRED_RESULT QColor agendaViewBackgroundColor() const;
     void setAgendaViewBackgroundColor(const QColor &color);
 
-    QColor workingHoursColor() const;
+    Q_REQUIRED_RESULT QColor workingHoursColor() const;
     void setWorkingHoursColor(const QColor &color);
 
-    QColor todoDueTodayColor() const;
+    Q_REQUIRED_RESULT QColor todoDueTodayColor() const;
     void setTodoDueTodayColor(const QColor &color);
 
-    QColor todoOverdueColor() const;
+    Q_REQUIRED_RESULT QColor todoOverdueColor() const;
     void setTodoOverdueColor(const QColor &color);
 
-    QSet<EventViews::EventView::ItemIcon> agendaViewIcons() const;
+    Q_REQUIRED_RESULT QSet<EventViews::EventView::ItemIcon> agendaViewIcons() const;
     void setAgendaViewIcons(const QSet<EventViews::EventView::ItemIcon> &icons);
 
-    QSet<EventViews::EventView::ItemIcon> monthViewIcons() const;
+    Q_REQUIRED_RESULT QSet<EventViews::EventView::ItemIcon> monthViewIcons() const;
     void setMonthViewIcons(const QSet<EventViews::EventView::ItemIcon> &icons);
 
     void setFlatListTodo(bool);
-    bool flatListTodo() const;
+    Q_REQUIRED_RESULT bool flatListTodo() const;
 
     void setFullViewTodo(bool);
-    bool fullViewTodo() const;
+    Q_REQUIRED_RESULT bool fullViewTodo() const;
 
-    bool enableTodoQuickSearch() const;
+    Q_REQUIRED_RESULT bool enableTodoQuickSearch() const;
     void setEnableTodoQuickSearch(bool enable);
 
-    bool enableQuickTodo() const;
+    Q_REQUIRED_RESULT bool enableQuickTodo() const;
     void setEnableQuickTodo(bool enable);
 
-    bool highlightTodos() const;
+    Q_REQUIRED_RESULT bool highlightTodos() const;
     void setHighlightTodos(bool);
 
     void setFirstDayOfWeek(const int day);
-    int firstDayOfWeek() const;
+    Q_REQUIRED_RESULT int firstDayOfWeek() const;
 
     KConfig *config() const;
     void createNewColor(QColor &defColor, int seed);
