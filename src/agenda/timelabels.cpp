@@ -128,7 +128,7 @@ void TimeLabels::updateConfig()
     if (use12Clock()) {
         test = QStringLiteral("12");
     }
-    mMiniWidth = fontMetrics().width(test);
+    mMiniWidth = fontMetrics().boundingRect(test).width();
     if (use12Clock()) {
         test = QStringLiteral("pm");
     } else {
@@ -137,7 +137,7 @@ void TimeLabels::updateConfig()
     QFont sFont = font();
     sFont.setPointSize(sFont.pointSize() / 2);
     QFontMetrics fmS(sFont);
-    mMiniWidth += fmS.width(test) + frameWidth() * 2 + 4;
+    mMiniWidth += fmS.boundingRect(test).width() + frameWidth() * 2 + 4;
 
     /** Can happen if all resources are disabled */
     if (!mAgenda) {
@@ -301,7 +301,7 @@ void TimeLabels::paintEvent(QPaintEvent *)
     suffixFont.setPointSize(suffixFont.pointSize() / 2);
     QFontMetrics fmS(suffixFont);
     const int startW = cw - frameWidth() - 2;
-    const int tw2 = fmS.width(suffix);
+    const int tw2 = fmS.boundingRect(suffix).width();
     const int divTimeHeight = (timeHeight - 1) / 2 - 1;
     //testline
     //p->drawLine(0,0,0,contentsHeight());
@@ -324,7 +324,7 @@ void TimeLabels::paintEvent(QPaintEvent *)
 
         // draw the time label
         p.setPen(textColor);
-        const int timeWidth = fm.width(hour);
+        const int timeWidth = fm.boundingRect(hour).width();
         int offset = startW - timeWidth - tw2 - 1;
         p.setFont(hourFont);
         p.drawText(offset, static_cast<int>(y + timeHeight), hour);

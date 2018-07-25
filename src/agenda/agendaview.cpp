@@ -1240,7 +1240,7 @@ void AgendaView::createDayLabels(bool force)
         QString veryLongStr = QLocale::system().toString(date, QLocale::LongFormat);
         QString longstr = i18nc("short_weekday short_monthname date (e.g. Mon Aug 13)", "%1 %2 %3",
                                 QLocale::system().dayName(dW, QLocale::ShortFormat),
-                                QDate::shortMonthName(date.month()),
+                                QLocale::system().monthName(date.month(), QLocale::ShortFormat),
                                 date.day());
         QString shortstr = QString::number(date.day());
 
@@ -1468,12 +1468,12 @@ void AgendaView::updateTimeBarWidth()
     int width = d->mTimeLabelsZone->preferedTimeLabelsWidth();
     for (QLabel *l : qAsConst(d->mTimeBarHeaders)) {
         foreach (const QString &word, l->text().split(QLatin1Char(' '))) {
-            width = qMax(width, fm.width(word));
+            width = qMax(width, fm.boundingRect(word).width());
         }
     }
     setFont(oldFont);
 
-    width = width + fm.width(QLatin1Char('/'));
+    width = width + fm.boundingRect(QLatin1Char('/')).width();
 
     const int timeBarWidth = width * d->mTimeBarHeaders.count();
 

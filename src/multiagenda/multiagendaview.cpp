@@ -817,5 +817,5 @@ void MultiAgendaView::Private::ElidedLabel::paintEvent(QPaintEvent *event)
 QSize MultiAgendaView::Private::ElidedLabel::minimumSizeHint() const
 {
     const QFontMetrics &fm = fontMetrics();
-    return QSize(fm.width(QStringLiteral("...")), fm.height());
+    return QSize(fm.boundingRect(QStringLiteral("...")).width(), fm.height());
 }

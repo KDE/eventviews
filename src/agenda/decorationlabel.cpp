@@ -155,8 +155,8 @@ void DecorationLabel::squeezeContentsToLabel()
     QFontMetrics fm(fontMetrics());
 
     int labelWidth = size().width();
-    int longTextWidth = fm.width(mLongText);
-    int extensiveTextWidth = fm.width(mExtensiveText);
+    int longTextWidth = fm.boundingRect(mLongText).width();
+    int extensiveTextWidth = fm.boundingRect(mExtensiveText).width();
 
     if (!mPixmap.isNull()) {
         usePixmap(true);

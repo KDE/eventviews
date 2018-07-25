@@ -38,7 +38,7 @@ AlternateLabel::AlternateLabel(const QString &shortlabel, const QString &longlab
     const QFontMetrics &fm = fontMetrics();
     // We use at least averageCharWidth * 2 here to avoid misalignment
     // for single char labels.
-    setMinimumWidth(qMax(fm.averageCharWidth() * 2, fm.width(shortlabel)) + getIndent());
+    setMinimumWidth(qMax(fm.averageCharWidth() * 2, fm.boundingRect(shortlabel).width()) + getIndent());
 
     squeezeTextToLabel();
 }
@@ -82,8 +82,8 @@ void AlternateLabel::squeezeTextToLabel()
 
     QFontMetrics fm(fontMetrics());
     int labelWidth = size().width() - getIndent();
-    int textWidth = fm.width(mLongText);
-    int longTextWidth = fm.width(mExtensiveText);
+    int textWidth = fm.boundingRect(mLongText).width();
+    int longTextWidth = fm.boundingRect(mExtensiveText).width();
     if (longTextWidth <= labelWidth) {
         QLabel::setText(mExtensiveText);
         this->setToolTip(QString());
@@ -105,8 +105,8 @@ AlternateLabel::TextType AlternateLabel::largestFittingTextType() const
 {
     QFontMetrics fm(fontMetrics());
     const int labelWidth = size().width() - getIndent();
-    const int longTextWidth = fm.width(mLongText);
-    const int extensiveTextWidth = fm.width(mExtensiveText);
+    const int longTextWidth = fm.boundingRect(mLongText).width();
+    const int extensiveTextWidth = fm.boundingRect(mExtensiveText).width();
     if (extensiveTextWidth <= labelWidth) {
         return Extensive;
     } else if (longTextWidth <= labelWidth) {
@@ -133,5 +133,5 @@ void AlternateLabel::setFixedType(TextType type)
 
 int AlternateLabel::getIndent() const
 {
-    return indent() == -1 ? fontMetrics().width(QStringLiteral("x")) / 2 : indent();
+    return indent() == -1 ? fontMetrics().boundingRect(QStringLiteral("x")).width() / 2 : indent();
 }

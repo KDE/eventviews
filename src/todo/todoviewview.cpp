@@ -117,7 +117,7 @@ QModelIndex TodoViewView::moveCursor(CursorAction cursorAction, Qt::KeyboardModi
         // just below it if so
         current = current.sibling(current.row(), 0);
         if (isExpanded(current)) {
-            tmp = getNextEditableIndex(current.child(0, 0), 1);
+            tmp = getNextEditableIndex(model()->index(0, 0, current), 1);
             if (tmp.isValid()) {
                 return tmp;
             }
@@ -153,7 +153,7 @@ QModelIndex TodoViewView::moveCursor(CursorAction cursorAction, Qt::KeyboardModi
         // search on top of the item, also include expanded items
         tmp = current.sibling(current.row() - 1, 0);
         while (tmp.isValid() && isExpanded(tmp)) {
-            tmp = tmp.child(model()->rowCount(tmp) - 1, 0);
+            tmp = model()->index(model()->rowCount(tmp) - 1, 0, tmp);
         }
         if (tmp.isValid()) {
             tmp = getNextEditableIndex(tmp.sibling(tmp.row(), lastCol), -1);

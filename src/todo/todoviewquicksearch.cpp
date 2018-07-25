@@ -88,8 +88,8 @@ TodoViewQuickSearch::TodoViewQuickSearch(const Akonadi::ETMCalendar::Ptr &calend
 
         // Calculate a nice size for "Select Categories"
         const int newPreferedWidth = currentPreferedWidth
-                                     -fm.width(QLatin1Char('x')) * 17
-                                     +fm.width(defaultText);
+                                     -fm.boundingRect(QLatin1Char('x')).width() * 17
+                                     +fm.boundingRect(defaultText).width();
 
         const int pixelsToAdd = newPreferedWidth - mCategoryCombo->lineEdit()->width();
         mCategoryCombo->setMinimumWidth(mCategoryCombo->width() + pixelsToAdd);
