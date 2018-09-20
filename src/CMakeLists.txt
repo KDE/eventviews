@@ -5,8 +5,6 @@
 #                No idea why you would want to define this, perhaps to save
 #                screen real estate? But there are a config options for that.
 
-add_definitions(-DQT_NO_CAST_FROM_ASCII)
-add_definitions(-DQT_NO_CAST_TO_ASCII)
 
 add_definitions(-DTRANSLATION_DOMAIN=\"libeventviews\")
 
