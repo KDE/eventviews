@@ -86,7 +86,7 @@ class EVENTVIEWS_EXPORT EventView : public QWidget
 public:
     enum {
         // This value is passed to QColor's lighter(int factor) for selected events
-        BRIGHTNESS_FACTOR = 125
+        BRIGHTNESS_FACTOR = 110
     };
 
     enum ItemIcon {

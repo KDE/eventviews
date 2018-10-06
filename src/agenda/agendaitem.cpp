@@ -1137,211 +1137,70 @@ void AgendaItem::drawRoundedRect(QPainter *p, const QRect &rect, bool selected, 
         return;
     }
 
-    QRect r = rect;
-    r.adjust(0, 0, 1, 1);
-
-    p->save();
-
     QPainterPath path;
 
-    bool shrinkWidth = r.width() < 16;
-    bool shrinkHeight = r.height() < 16;
+    const int RECT_MARGIN = 2;
+    const int RADIUS = 2; // absolute radius
 
-    qreal rnd = 2.1;
-    int sw = shrinkWidth ? 10 : 11;
-    int sh = shrinkHeight ? 10 : 11;
-    QRectF tr(r.x() + r.width() - sw - rnd, r.y() + rnd, sw, sh);
-    QRectF tl(r.x() + rnd, r.y() + rnd, sw, sh);
-    QRectF bl(r.x() + rnd, r.y() + r.height() - sh - 1 - rnd, sw, sh);
-    QRectF br(r.x() + r.width() - sw - rnd, r.y() + r.height() - sh - 1 - rnd, sw, sh);
+    const QRect rectWithMargin(rect.x() + RECT_MARGIN, rect.y() + RECT_MARGIN, rect.width() - 2 * RECT_MARGIN, rect.height() - 2 * RECT_MARGIN);
 
-    if (roundTop) {
-        path.moveTo(tr.topRight());
-        path.arcTo(tr, 0.0, 90.0);
-        path.lineTo(tl.topRight());
-        path.arcTo(tl, 90.0, 90.0);
-    } else {
-        path.moveTo(tr.topRight());
-        path.lineTo(tl.topLeft());
+    const QPoint pointLeftTop(rectWithMargin.x(), rectWithMargin.y());
+    const QPoint pointRightTop(rectWithMargin.x() + rectWithMargin.width(), rectWithMargin.y());
+    const QPoint pointLeftBottom(rectWithMargin.x(), rectWithMargin.y() + rectWithMargin.height());
+    const QPoint pointRightBottom(rectWithMargin.x() + rectWithMargin.width(), rectWithMargin.y() + rectWithMargin.height());
+
+    if (!roundTop && !roundBottom) {
+        path.addRect(rectWithMargin);
+    } else if (roundTop && roundBottom) {
+        path.addRoundedRect(rectWithMargin, RADIUS, RADIUS, Qt::AbsoluteSize);
+    } else if (roundTop) {
+        path.moveTo(pointRightBottom);
+        path.lineTo(pointLeftBottom);
+        path.lineTo(QPoint(pointLeftTop.x(), pointLeftTop.y() + RADIUS));
+        path.quadTo(pointLeftTop, QPoint(pointLeftTop.x() + RADIUS, pointLeftTop.y()));
+        path.lineTo(QPoint(pointRightTop.x() - RADIUS, pointRightTop.y()));
+        path.quadTo(pointRightTop, QPoint(pointRightTop.x(), pointRightTop.y() + RADIUS));
+        path.lineTo(pointRightBottom);
+    } else if (roundBottom) {
+        path.moveTo(pointRightTop);
+        path.lineTo(QPoint(pointRightBottom.x(), pointRightBottom.y() - RADIUS));
+        path.quadTo(pointRightBottom, QPoint(pointRightBottom.x() - RADIUS, pointRightBottom.y()));
+        path.lineTo(QPoint(pointLeftBottom.x() + RADIUS, pointLeftBottom.y()));
+        path.quadTo(pointLeftBottom, QPoint(pointLeftBottom.x(), pointLeftBottom.y() - RADIUS));
+        path.lineTo(pointLeftTop);
+        path.lineTo(pointRightTop);
     }
 
-    if (roundBottom) {
-        path.lineTo(bl.topLeft());
-        path.arcTo(bl, 180.0, 90.0);
-        path.lineTo(br.bottomLeft());
-        path.arcTo(br, 270.0, 90.0);
-    } else {
-        path.lineTo(bl.bottomLeft());
-        path.lineTo(br.bottomRight());
-    }
     path.closeSubpath();
+    p->save();
+    p->setRenderHint(QPainter::Antialiasing, false);
+    const QPen border(QBrush(QColor(200, 200, 200, 255)),1.0, Qt::SolidLine, Qt::RoundCap, Qt::RoundJoin);
+    p->setPen(border);
 
     // header
     if (!frame) {
-        QLinearGradient gradient(QPointF(r.x(), r.y()), QPointF(r.x(), r.height()));
+        QBrush brushSolid(Qt::SolidPattern);
 
         if (selected) {
             QColor top = bgColor.darker(250);
-            top.setAlpha(40);
-            gradient.setColorAt(0, top);
-            gradient.setColorAt(1, QColor(255, 255, 255, 30));
+            top.setAlpha(20);
+            brushSolid.setColor(top);
         } else {
-            gradient.setColorAt(0, QColor(255, 255, 255, 90));
-            gradient.setColorAt(1, QColor(0, 0, 0, 10));
+            brushSolid.setColor(QColor(255, 255, 255, 10));
         }
 
         p->setBrush(bgColor);
-        p->setPen(Qt::NoPen);
         p->drawPath(path);
 
-        p->setBrush(gradient);
-        p->setPen(Qt::NoPen);
+        p->setBrush(brushSolid);
         p->drawPath(path);
-
-        QPixmap separator;
-        QString key(QStringLiteral("ko_hsep"));
-        if (!QPixmapCache::find(key, separator)) {
-            separator = QPixmap(QStringLiteral(":/headerSeparator.png"));
-            QPixmapCache::insert(key, separator);
-        }
-        p->fillRect(QRect(r.x() + 3, r.y() + r.height() - 2, r.x() + r.width() - 4, 2),
-                    QBrush(separator));
-
         p->restore();
+
         return;
     }
 
-    QLinearGradient gradient(QPointF(r.x(), r.y()), QPointF(r.x(), r.height()));
-
-    if (r.height() > 50) {
-        if (mIncidence->allDay()
-            && mIncidence->dtStart() == mIncidence->dateTime(KCalCore::Incidence::RoleEnd)
-            && CalendarSupport::hasEvent(mIncidence)) {
-            gradient.setColorAt(0, bgColor.lighter(130));
-            qreal t = 1.0 - (r.height() - 18.0) / r.height();
-            gradient.setColorAt(t, bgColor.lighter(115));
-            qreal b = (r.height() - 20.0) / r.height();
-            gradient.setColorAt(b, bgColor);
-        } else {
-            gradient.setColorAt(0, bgColor.lighter(115));
-            qreal b = (r.height() - 20.0) / r.height();
-            gradient.setColorAt(b, bgColor);
-        }
-        gradient.setColorAt(1, bgColor.darker(110));
-    } else {
-        if (mIncidence->allDay()
-            && mIncidence->dtStart() == mIncidence->dateTime(KCalCore::Incidence::RoleEnd)
-            && !CalendarSupport::hasTodo(mIncidence)) {
-            gradient.setColorAt(0, bgColor.lighter(130));
-            gradient.setColorAt(0.35, bgColor.lighter(115));
-            gradient.setColorAt(0.65, bgColor);
-        } else {
-            gradient.setColorAt(0, bgColor.lighter(115));
-            gradient.setColorAt(0.65, bgColor);
-        }
-        gradient.setColorAt(1, bgColor.darker(110));
-    }
-
-    p->setBrush(gradient);
-    p->setPen(Qt::NoPen);
+    p->setBrush(bgColor);
     p->drawPath(path);
-
-    p->setRenderHint(QPainter::Antialiasing, false);
-
-    if (r.width() - 16 > 0) {
-        QPixmap topLines;
-        QString key(QStringLiteral("ko_t"));
-        if (!QPixmapCache::find(key, topLines)) {
-            topLines = QPixmap(QStringLiteral(":/topLines.png"));
-            QPixmapCache::insert(key, topLines);
-        }
-        p->setBrushOrigin(r.x() + 8, r.y());
-        p->fillRect(QRect(r.x() + 8, r.y(), r.width() - 16, 5),
-                    QBrush(topLines));
-
-        QPixmap bottomLines;
-        key = QStringLiteral("ko_b");
-        if (!QPixmapCache::find(key, bottomLines)) {
-            bottomLines = QPixmap(QStringLiteral(":/bottomLines.png"));
-            QPixmapCache::insert(key, bottomLines);
-        }
-        p->setBrushOrigin(r.x() + 8, r.y() + r.height() - 6);
-        p->fillRect(QRect(r.x() + 8, r.y() + r.height() - 6, r.width() - 16, 6),
-                    QBrush(bottomLines));
-    }
-
-    if (r.height() - 16 > 0) {
-        QPixmap leftLines;
-        QString key(QStringLiteral("ko_l"));
-        if (!QPixmapCache::find(key, leftLines)) {
-            leftLines = QPixmap(QStringLiteral(":/leftLines.png"));
-            QPixmapCache::insert(key, leftLines);
-        }
-        p->setBrushOrigin(r.x(), r.y() + 8);
-        p->fillRect(QRect(r.x(), r.y() + 8, 5, r.height() - 16),
-                    QBrush(leftLines));
-
-        QPixmap rightLines;
-        key = QStringLiteral("ko_r");
-        if (!QPixmapCache::find(key, rightLines)) {
-            rightLines = QPixmap(QStringLiteral(":/rightLines.png"));
-            QPixmapCache::insert(key, rightLines);
-        }
-        p->setBrushOrigin(r.x() + r.width() - 5, r.y() + 8);
-        p->fillRect(QRect(r.x() + r.width() - 5, r.y() + 8, 5, r.height() - 16),
-                    QBrush(rightLines));
-    }
-
-    // don't overlap the edges
-    int lw = shrinkWidth ? r.width() / 2 : 8;
-    int rw = shrinkWidth ? r.width() - lw : 8;
-    int th = shrinkHeight ? r.height() / 2 : 8;
-    int bh = shrinkHeight ? r.height() - th : 8;
-
-    // keep the bottom round for items which ending at 00:15
-    if (shrinkHeight && !roundTop && roundBottom && r.height() > 3) {
-        bh += th - 3;
-        th = 3;
-    }
-
-    QPixmap topLeft;
-    QString key = roundTop ? QStringLiteral("ko_tl") : QStringLiteral("ko_rtl");
-    if (!QPixmapCache::find(key, topLeft)) {
-        topLeft
-            = roundTop ? QPixmap(QStringLiteral(":/roundTopLeft.png")) : QPixmap(QStringLiteral(
-                                                                                     ":/rectangularTopLeft.png"));
-        QPixmapCache::insert(key, topLeft);
-    }
-    p->drawPixmap(r.x(), r.y(), topLeft, 0, 0, lw, th);
-
-    QPixmap topRight;
-    key = roundTop ? QStringLiteral("ko_tr") : QStringLiteral("ko_rtr");
-    if (!QPixmapCache::find(key, topRight)) {
-        topRight = roundTop ? QPixmap(QStringLiteral(":/roundTopRight.png")) : QPixmap(QStringLiteral(
-                                                                                           ":/rectangularTopRight.png"));
-        QPixmapCache::insert(key, topRight);
-    }
-    p->drawPixmap(r.x() + r.width() - rw, r.y(), topRight, 8 - rw, 0, rw, th);
-
-    QPixmap bottomLeft;
-    key = roundBottom ? QStringLiteral("ko_bl") : QStringLiteral("ko_rbl");
-    if (!QPixmapCache::find(key, bottomLeft)) {
-        bottomLeft = roundBottom ? QPixmap(QStringLiteral(":/roundBottomLeft.png"))
-                     : QPixmap(QStringLiteral(":/rectangularBottomLeft.png"));
-        QPixmapCache::insert(key, bottomLeft);
-    }
-    p->drawPixmap(r.x(), r.y() + r.height() - bh, bottomLeft, 0, 8 - bh, lw, bh);
-
-    QPixmap bottomRight;
-    key = roundBottom ? QStringLiteral("ko_br") : QStringLiteral("ko_rbr");
-    if (!QPixmapCache::find(key, bottomRight)) {
-        bottomRight = roundBottom ? QPixmap(QStringLiteral(":/roundBottomRight.png"))
-                      : QPixmap(QStringLiteral(":/rectangularBottomRight.png"));
-        QPixmapCache::insert(key, bottomRight);
-    }
-    p->drawPixmap(r.x() + r.width() - rw, r.y() + r.height() - bh, bottomRight,
-                  8 - rw, 8 - bh, rw, 8);
-
     p->restore();
 }
 
