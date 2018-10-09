@@ -237,12 +237,12 @@ public:
     /**
       Returns the background color of the item.
     */
-    virtual QColor bgColor() const = 0;
+    virtual Q_REQUIRED_RESULT QColor bgColor() const = 0;
 
     /**
       Returns the frame color of the item.
     */
-    virtual QColor frameColor() const = 0;
+    virtual Q_REQUIRED_RESULT QColor frameColor() const = 0;
 
     /**
       Returns a list of pixmaps to draw next to the items.

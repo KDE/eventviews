@@ -599,68 +599,54 @@ QVector<QPixmap> IncidenceMonthItem::icons() const
 QColor IncidenceMonthItem::catColor() const
 {
     Q_ASSERT(mIncidence);
-    const QStringList categories = mIncidence->categories();
-    QString cat;
-    if (!categories.isEmpty()) {
-        cat = categories.at(0);
-    }
+    const auto &prefs = monthScene()->monthView()->preferences();
 
-    return cat.isEmpty() ? CalendarSupport::KCalPrefs::instance()->unsetCategoryColor()
-           : CalendarSupport::KCalPrefs::instance()->categoryColor(cat);
+    const auto &categories = mIncidence->categories();
+    if (categories.isEmpty() || !CalendarSupport::KCalPrefs::instance()->hasCategoryColor(categories.first())) {
+        const auto &colorPreference = prefs->monthViewColors();
+        if (colorPreference == PrefsBase::CategoryOnly) {
+            return CalendarSupport::KCalPrefs::instance()->unsetCategoryColor();
+        }
+        return EventViews::resourceColor(akonadiItem(), prefs);
+    }
+    return CalendarSupport::KCalPrefs::instance()->categoryColor(categories.first());
 }
 
 QColor IncidenceMonthItem::bgColor() const
 {
-    QColor bgColor = QColor(); // Default invalid color;
+    const auto &prefs = monthScene()->monthView()->preferences();
 
-    PrefsPtr prefs = monthScene()->monthView()->preferences();
-    if (mIsTodo && !prefs->todosUseCategoryColors()) {
+    if (!prefs->todosUseCategoryColors() && mIsTodo) {
         Todo::Ptr todo = CalendarSupport::todo(akonadiItem());
         Q_ASSERT(todo);
         if (todo) {
-            const QDate dtRecurrence   // this is dtDue if there's no dtRecurrence
-                = todo->dtRecurrence().toLocalTime().date();
-            const QDate today = QDate::currentDate();
-            if (todo->isOverdue() && today > startDate() && startDate() >= dtRecurrence) {
-                bgColor = prefs->todoOverdueColor();
-            } else if (today == startDate() && !todo->isCompleted()
-                       && startDate() >= dtRecurrence) {
-                bgColor = prefs->todoDueTodayColor();
+            // this is dtDue if there's no dtRecurrence
+            const auto dtRecurrence = todo->dtRecurrence().toLocalTime().date();
+            const auto today = QDate::currentDate();
+            if (startDate() >= dtRecurrence) {
+                if (todo->isOverdue() && today > startDate()) {
+                    return prefs->todoOverdueColor();
+                }
+                if (today == startDate() && !todo->isCompleted()) {
+                    return prefs->todoDueTodayColor();
+                }
             }
         }
     }
 
-    if (!bgColor.isValid()) {
-        if (prefs->monthViewColors() == PrefsBase::MonthItemResourceOnly
-            || prefs->monthViewColors() == PrefsBase::MonthItemResourceInsideCategoryOutside) {
-            bgColor = EventViews::resourceColor(akonadiItem(), prefs);
-        } else {
-            bgColor = catColor();
-        }
-    }
-
-    if (!bgColor.isValid()) {
-        bgColor = Qt::white;
-    }
-
-    return bgColor;
+    const auto &colorPreference = prefs->monthViewColors();
+    const auto bgDisplaysResource = colorPreference == PrefsBase::MonthItemResourceInsideCategoryOutside
+                                    || colorPreference == PrefsBase::MonthItemResourceOnly;
+    return bgDisplaysResource ? EventViews::resourceColor(akonadiItem(), prefs) : catColor();
 }
 
 QColor IncidenceMonthItem::frameColor() const
 {
-    QColor frameColor;
-
-    PrefsPtr prefs = monthScene()->monthView()->preferences();
-    if (prefs->monthViewColors() == PrefsBase::MonthItemResourceOnly
-        || prefs->monthViewColors() == PrefsBase::MonthItemCategoryInsideResourceOutside
-        || (mIncidence->categories().isEmpty() && prefs->monthViewColors()
-            == PrefsBase::MonthItemResourceInsideCategoryOutside)) {
-        Q_ASSERT(mIncidence);
-        frameColor = EventViews::resourceColor(akonadiItem(), prefs);
-    } else {
-        frameColor = catColor();
-    }
-
+    const auto &prefs = monthScene()->monthView()->preferences();
+    const auto frameDisplaysResource =
+        (prefs->monthViewColors() == PrefsBase::MonthItemResourceOnly
+         || prefs->monthViewColors() == PrefsBase::MonthItemCategoryInsideResourceOutside);
+    const auto frameColor = frameDisplaysResource ? EventViews::resourceColor(akonadiItem(), prefs) : catColor();
     return EventView::itemFrameColor(frameColor, selected());
 }
 
