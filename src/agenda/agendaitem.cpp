@@ -843,84 +843,13 @@ void AgendaItem::paintEvent(QPaintEvent *ev)
             = new QPixmap(QIcon::fromTheme(QStringLiteral("meeting-organizer")).pixmap(16, 16));
     }
 
-    QColor bgColor;
+    const auto categoryColor = getCategoryColor();
+    const auto resourceColor = mResourceColor.isValid() ? mResourceColor : categoryColor;
+    const auto frameColor = getFrameColor(resourceColor, categoryColor);
+    const auto bgBaseColor = getBackgroundColor(resourceColor, categoryColor);
+    const auto bgColor = mSelected ? bgBaseColor.lighter(EventView::BRIGHTNESS_FACTOR) : bgBaseColor;
+    const auto textColor = EventViews::getTextColor(bgColor);
 
-    if (CalendarSupport::hasTodo(mIncidence)
-        && !mEventView->preferences()->todosUseCategoryColors()) {
-        Todo::Ptr todo = CalendarSupport::todo(mIncidence);
-        Q_ASSERT(todo);
-        const QDate dueDate = todo->dtDue().toLocalTime().date();
-        const QDate today = QDate::currentDate();
-        const QDate occurrenceDate = this->occurrenceDate();
-        if (todo->isOverdue() && today >= occurrenceDate) {
-            bgColor = mEventView->preferences()->todoOverdueColor();
-        } else if (dueDate == today && dueDate == occurrenceDate) {
-            bgColor = mEventView->preferences()->todoDueTodayColor();
-        }
-    }
-
-    QColor categoryColor;
-    const QStringList categories = mIncidence->categories();
-    QString cat;
-    if (!categories.isEmpty()) {
-        cat = categories.first();
-    }
-
-    categoryColor = cat.isEmpty() ? CalendarSupport::KCalPrefs::instance()->unsetCategoryColor()
-                    : CalendarSupport::KCalPrefs::instance()->categoryColor(cat);
-
-    QColor resourceColor = mResourceColor;
-    if (!resourceColor.isValid()) {
-        resourceColor = categoryColor;
-    }
-
-    QColor frameColor;
-    // TODO PrefsBase enums should probably be redefined in Prefs
-    if (mEventView->preferences()->agendaViewColors() == PrefsBase::ResourceOnly
-        || mEventView->preferences()->agendaViewColors()
-        == PrefsBase::CategoryInsideResourceOutside) {
-        frameColor = bgColor.isValid() ? bgColor : resourceColor;
-    } else {
-        frameColor = bgColor.isValid() ? bgColor : categoryColor;
-    }
-
-    if (!bgColor.isValid()) {
-        if (mEventView->preferences()->agendaViewColors() == PrefsBase::ResourceOnly
-            || mEventView->preferences()->agendaViewColors()
-            == PrefsBase::ResourceInsideCategoryOutside) {
-            bgColor = resourceColor;
-        } else {
-            bgColor = categoryColor;
-        }
-    }
-
-    if (cat.isEmpty()
-        && mEventView->preferences()->agendaViewColors()
-        == PrefsBase::ResourceInsideCategoryOutside) {
-        frameColor = bgColor;
-    }
-
-    if (cat.isEmpty()
-        && mEventView->preferences()->agendaViewColors()
-        == PrefsBase::CategoryInsideResourceOutside) {
-        bgColor = frameColor;
-    }
-
-    frameColor = EventView::itemFrameColor(frameColor, mSelected);
-
-    if (!CalendarSupport::KCalPrefs::instance()->hasCategoryColor(cat)) {
-        categoryColor = resourceColor;
-    }
-
-    if (!bgColor.isValid()) {
-        bgColor = categoryColor;
-    }
-
-    if (mSelected) {
-        bgColor = bgColor.lighter(EventView::BRIGHTNESS_FACTOR);
-    }
-
-    const QColor textColor = EventViews::getTextColor(bgColor);
     p.setPen(textColor);
 
     p.setFont(mEventView->preferences()->agendaViewFont());
@@ -1343,6 +1272,47 @@ void AgendaItem::drawRoundedRect(QPainter *p, const QRect &rect, bool selected, 
                   8 - rw, 8 - bh, rw, 8);
 
     p->restore();
+}
+
+QColor AgendaItem::getCategoryColor() const
+{
+    const QStringList &categories = mIncidence->categories();
+    if (categories.isEmpty() || !CalendarSupport::KCalPrefs::instance()->hasCategoryColor(categories.first())) {
+        const auto colorPreference = mEventView->preferences()->agendaViewColors();
+        if (colorPreference == PrefsBase::CategoryOnly || !mResourceColor.isValid()) {
+            return CalendarSupport::KCalPrefs::instance()->unsetCategoryColor();
+        }
+        return mResourceColor;
+    }
+    return CalendarSupport::KCalPrefs::instance()->categoryColor(categories.first());
+}
+
+QColor AgendaItem::getFrameColor(const QColor &resourceColor, const QColor &categoryColor) const
+{
+    const auto colorPreference = mEventView->preferences()->agendaViewColors();
+    const bool frameDisplaysCategory = (colorPreference == PrefsBase::CategoryOnly
+                                        || colorPreference == PrefsBase::ResourceInsideCategoryOutside);
+    return frameDisplaysCategory ? categoryColor : resourceColor;
+}
+
+QColor AgendaItem::getBackgroundColor(const QColor &resourceColor, const QColor &categoryColor) const
+{
+    if (CalendarSupport::hasTodo(mIncidence) && !mEventView->preferences()->todosUseCategoryColors()) {
+        Todo::Ptr todo = CalendarSupport::todo(mIncidence);
+        Q_ASSERT(todo);
+        const QDate dueDate = todo->dtDue().toLocalTime().date();
+        const QDate today = QDate::currentDate();
+        const QDate occurrenceDate = this->occurrenceDate();
+        if (todo->isOverdue() && today >= occurrenceDate) {
+            return mEventView->preferences()->todoOverdueColor();
+        } else if (dueDate == today && dueDate == occurrenceDate) {
+            return mEventView->preferences()->todoDueTodayColor();
+        }
+    }
+    const auto colorPreference = mEventView->preferences()->agendaViewColors();
+    const bool bgDisplaysCategory = (colorPreference == PrefsBase::CategoryOnly
+                                     || colorPreference == PrefsBase::CategoryInsideResourceOutside);
+    return bgDisplaysCategory ? categoryColor : resourceColor;
 }
 
 bool AgendaItem::eventFilter(QObject *obj, QEvent *event)
