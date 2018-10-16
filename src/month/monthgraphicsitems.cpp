@@ -130,7 +130,7 @@ int MonthCell::firstFreeSpace()
 
 //-------------------------------------------------------------
 // MONTHGRAPHICSITEM
-static const int ft = 2; // frame thickness
+static const int ft = 1; // frame thickness
 
 MonthGraphicsItem::MonthGraphicsItem(MonthItem *manager)
     : QGraphicsItem(nullptr)
@@ -175,17 +175,19 @@ QPainterPath MonthGraphicsItem::widgetPath(bool border) const
     // If border is set we won't draw all the path. Items spanning on multiple
     // rows won't have borders on their boundaries.
     // If this is the mask, we draw it one pixel bigger
-    int x0 = 0;
-    int y0 = 0;
-    int x1 = static_cast<int>(boundingRect().width());
-    int y1 = static_cast<int>(boundingRect().height());
+    const int x0 = (!border && !isBeginItem())? -1 : 0;
+    const int y0 = 0;
+    const int x1 = static_cast<int>(boundingRect().width());
+    const int y1 = static_cast<int>(boundingRect().height());
 
-    int height = y1 - y0;
-    int beginRound = height / 3;
+    const int beginRound = 2;
+    const int margin = 1;
 
     QPainterPath path(QPoint(x0 + beginRound, y0));
     if (isBeginItem()) {
-        path.arcTo(QRect(x0, y0, beginRound * 2, height), +90, +180);
+        path.quadTo(QPoint(x0 + margin, y0), QPoint(x0 + margin, y0 + beginRound));
+        path.lineTo(QPoint(x0 + margin, y1 - beginRound));
+        path.quadTo(QPoint(x0 + margin, y1), QPoint(x0 + beginRound + margin, y1));
     } else {
         path.lineTo(x0, y0);
         if (!border) {
@@ -198,7 +200,9 @@ QPainterPath MonthGraphicsItem::widgetPath(bool border) const
 
     if (isEndItem()) {
         path.lineTo(x1 - beginRound, y1);
-        path.arcTo(QRect(x1 - 2 * beginRound, y0, beginRound * 2, height), -90, +180);
+        path.quadTo(QPoint(x1 - margin, y1), QPoint(x1 - margin, y1 - beginRound));
+        path.lineTo(QPoint(x1 - margin, y0 + beginRound));
+        path.quadTo(QPoint(x1 - margin, y0), QPoint(x1 - margin - beginRound, y0));
     } else {
         path.lineTo(x1, y1);
         if (!border) {
@@ -229,7 +233,6 @@ void MonthGraphicsItem::paint(QPainter *p, const QStyleOptionGraphicsItem *, QWi
 
     MonthScene *scene = mMonthItem->monthScene();
 
-    p->setRenderHint(QPainter::Antialiasing);
 
     int textMargin = 7;
 
@@ -246,23 +249,20 @@ void MonthGraphicsItem::paint(QPainter *p, const QStyleOptionGraphicsItem *, QWi
         bgColor.setAlphaF(0.75f);
     }
 
-    QLinearGradient gradient(0, 0, 0, boundingRect().height());
-    gradient.setColorAt(0, bgColor);
-    gradient.setColorAt(0.7, bgColor.darker(110));
-    gradient.setColorAt(1, bgColor.darker(150));
-    QBrush brush(gradient);
-    p->setBrush(brush);
+    // draw the widget without border
+    p->setRenderHint(QPainter::Antialiasing, false);
+    p->setBrush(bgColor);
     p->setPen(Qt::NoPen);
-    // Rounded rect without border
     p->drawPath(widgetPath(false));
-
-    // Draw the border without fill
-    QPen pen(frameColor);
-    pen.setWidth(ft);
+    
+    p->setRenderHint(QPainter::Antialiasing, true);
+    // draw the border without fill
+    const QPen pen(frameColor, ft, Qt::SolidLine, Qt::RoundCap, Qt::RoundJoin);
     p->setPen(pen);
     p->setBrush(Qt::NoBrush);
     p->drawPath(widgetPath(true));
 
+    // draw text
     p->setPen(textColor);
 
     int alignFlag = Qt::AlignVCenter;
