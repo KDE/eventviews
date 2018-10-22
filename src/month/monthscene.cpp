@@ -184,7 +184,7 @@ void MonthGraphicsView::drawBackground(QPainter *p, const QRectF &rect)
     Q_ASSERT(mScene);
     PrefsPtr prefs = mScene->monthView()->preferences();
     p->setFont(prefs->monthViewFont());
-    p->fillRect(rect, palette().color(QPalette::Base));
+    p->fillRect(rect, palette().color(QPalette::Window));
 
     /*
       Headers
@@ -246,10 +246,18 @@ void MonthGraphicsView::drawBackground(QPainter *p, const QRectF &rect)
         MonthCell *cell = mScene->mMonthCellMap[ d ];
 
         QColor color;
-        if (workDays.contains(d)) {
-            color = mMonthView->preferences()->monthGridWorkHoursBackgroundColor();
+        if (!mMonthView->preferences()->useSystemColor()) {
+            if (workDays.contains(d)) {
+                color = mMonthView->preferences()->monthGridWorkHoursBackgroundColor();
+            } else {
+                color = mMonthView->preferences()->monthGridBackgroundColor();
+            }
         } else {
-            color = mMonthView->preferences()->monthGridBackgroundColor();
+            if (workDays.contains(d)) {
+                color = palette().color(QPalette::Base);
+            } else {
+                color = palette().color(QPalette::AlternateBase);
+            }
         }
         if (cell == mScene->selectedCell()) {
             color = color.darker(115);
@@ -280,10 +288,13 @@ void MonthGraphicsView::drawBackground(QPainter *p, const QRectF &rect)
         QLinearGradient bgGradient(QPointF(cellHeaderX, cellHeaderY),
                                    QPointF(cellHeaderX + cellHeaderWidth,
                                            cellHeaderY + cellHeaderHeight));
-        bgGradient.setColorAt(0, color.darker(105));
-        bgGradient.setColorAt(0.7, color.darker(105));
+        if ((color.blue() + color.red() + color.green()) > (256 / 2 * 3)) {
+            p->setBrush(color.darker(110));
+        } else {
+            p->setBrush(color.lighter(140));
+        }
+            
         bgGradient.setColorAt(1, color);
-        p->setBrush(bgGradient);
 
         p->setPen(Qt::NoPen);
         p->drawRect(QRect(cellHeaderX, cellHeaderY,
@@ -295,7 +306,13 @@ void MonthGraphicsView::drawBackground(QPainter *p, const QRectF &rect)
 
     p->setFont(font);
 
-    QPen oldPen = mMonthView->preferences()->monthGridBackgroundColor().darker(150);
+    QPen oldPen;
+    if (!mMonthView->preferences()->useSystemColor()) {
+        oldPen = mMonthView->preferences()->monthGridBackgroundColor().darker(150);
+    } else {
+        oldPen = palette().color(QPalette::WindowText).darker(150);
+    }
+    
 
     // Draw dates
     for (QDate d = mMonthView->actualStartDateTime().date();
@@ -311,7 +328,7 @@ void MonthGraphicsView::drawBackground(QPainter *p, const QRectF &rect)
         p->setFont(font);
 
         if (d.month() == mMonthView->currentMonth()) {
-            p->setPen(QPalette::Text);
+            p->setPen(palette().color(QPalette::WindowText));
         } else {
             p->setPen(oldPen);
         }

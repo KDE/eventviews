@@ -374,6 +374,7 @@
 
 <!-- Colors and Fonts Page: Colors Tab -->
   <group name="Colors">
+
     <entry type="Color" key="Holiday Color">
       <label>Holiday color</label>
       <whatsthis>Select the holiday color here. The holiday color will be used for the holiday name in the month view and the holiday number in the date navigator.</whatsthis>
@@ -711,5 +712,11 @@
     <entry key="Month Holidays Background Image" type="String">
     </entry>
     <!-- END:   These entries are the same for the Month and month views, please keep them in sync -->
+    
+    <entry type="Bool" key="Use System Color">
+      <label>Use system color</label>
+      <whatsthis>Use system color. If enabled will ignore all other color settings</whatsthis>
+      <default>true</default>
+    </entry>
   </group>
 </kcfg>

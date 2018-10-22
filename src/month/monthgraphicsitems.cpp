@@ -63,7 +63,7 @@ void ScrollIndicator::paint(QPainter *painter, const QStyleOptionGraphicsItem *o
         arrow.setPoint(2, -mWidth / 2, -mHeight / 2);
         arrow.setPoint(0, 0, mHeight / 2);
     }
-    QColor color(Qt::black);
+    QColor color(QPalette().color(QPalette::WindowText));
     color.setAlpha(155);
     painter->setBrush(color);
     painter->setPen(color);

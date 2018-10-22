@@ -1528,9 +1528,12 @@ void Agenda::drawContents(QPainter *p, int cx, int cy, int cw, int ch)
     //    QPixmap bgImage(d->preferences()->agendaGridBackgroundImage());
     //    dbp.drawPixmap(0, 0, cw, ch, bgImage); FIXME
     //  }
-
-    dbp.fillRect(0, 0, cw, ch,
-                 d->preferences()->agendaGridBackgroundColor());
+    if (!d->preferences()->useSystemColor()) {
+        dbp.fillRect(0, 0, cw, ch,
+                    d->preferences()->agendaGridBackgroundColor());
+    } else {
+        dbp.fillRect(0, 0, cw, ch, palette().color(QPalette::Window));
+    }
 
     dbp.translate(-cx, -cy);
 
@@ -1544,7 +1547,12 @@ void Agenda::drawContents(QPainter *p, int cx, int cy, int cw, int ch)
 
     // Highlight working hours
     if (d->mWorkingHoursEnable && d->mHolidayMask) {
-        const QColor workColor = d->preferences()->workingHoursColor();
+        QColor workColor; 
+        if (!d->preferences()->useSystemColor()) {
+            workColor = d->preferences()->workingHoursColor();
+        } else {
+            workColor = palette().color(QPalette::Base);
+        }
 
         QPoint pt1(cx, d->mWorkingHoursYTop);
         QPoint pt2(cx + cw, d->mWorkingHoursYBottom);
@@ -1596,7 +1604,19 @@ void Agenda::drawContents(QPainter *p, int cx, int cy, int cw, int ch)
             if (busyDayMask[i]) {
                 const QPoint pt1(cx + d->mGridSpacingX *i, 0);
                 // const QPoint pt2(cx + mGridSpacingX * (i+1), ch);
-                QColor busyColor = d->preferences()->viewBgBusyColor();
+                QColor busyColor;
+                if (!d->preferences()->useSystemColor()) {
+                    busyColor = d->preferences()->viewBgBusyColor();
+                } else {
+                    busyColor = palette().color(QPalette::Window);
+                    if ((busyColor.blue() + busyColor.red() + busyColor.green()) > (256 / 2 * 3)) {
+                        // dark 
+                        busyColor.lighter(140);
+                    } else {
+                        // light 
+                        busyColor.darker(140);
+                    }
+                }
                 busyColor.setAlpha(EventViews::BUSY_BACKGROUND_ALPHA);
                 dbp.fillRect(pt1.x(), pt1.y(), d->mGridSpacingX, cy + ch, busyColor);
             }
@@ -1606,31 +1626,45 @@ void Agenda::drawContents(QPainter *p, int cx, int cy, int cw, int ch)
     // draw selection
     if (d->mHasSelection && d->mAgendaView->dateRangeSelectionEnabled()) {
         QPoint pt, pt1;
+        QColor highlightColor;
+        if (!d->preferences()->useSystemColor()) {
+            highlightColor = d->preferences()->agendaGridHighlightColor();
+        } else {
+            highlightColor = palette().color(QPalette::Highlight);
+        }
 
         if (d->mSelectionEndCell.x() > d->mSelectionStartCell.x()) {   // multi day selection
             // draw start day
             pt = gridToContents(d->mSelectionStartCell);
             pt1 = gridToContents(QPoint(d->mSelectionStartCell.x() + 1, d->mRows + 1));
-            dbp.fillRect(QRect(pt, pt1), d->preferences()->agendaGridHighlightColor());
+            dbp.fillRect(QRect(pt, pt1), highlightColor);
             // draw all other days between the start day and the day of the selection end
             for (int c = d->mSelectionStartCell.x() + 1; c < d->mSelectionEndCell.x(); ++c) {
                 pt = gridToContents(QPoint(c, 0));
                 pt1 = gridToContents(QPoint(c + 1, d->mRows + 1));
-                dbp.fillRect(QRect(pt, pt1), d->preferences()->agendaGridHighlightColor());
+                dbp.fillRect(QRect(pt, pt1), highlightColor);
             }
             // draw end day
             pt = gridToContents(QPoint(d->mSelectionEndCell.x(), 0));
             pt1 = gridToContents(d->mSelectionEndCell + QPoint(1, 1));
-            dbp.fillRect(QRect(pt, pt1), d->preferences()->agendaGridHighlightColor());
+            dbp.fillRect(QRect(pt, pt1), highlightColor);
         } else { // single day selection
             pt = gridToContents(d->mSelectionStartCell);
             pt1 = gridToContents(d->mSelectionEndCell + QPoint(1, 1));
-            dbp.fillRect(QRect(pt, pt1), d->preferences()->agendaGridHighlightColor());
+            dbp.fillRect(QRect(pt, pt1), highlightColor);
         }
     }
 
-    QPen hourPen(d->preferences()->agendaGridBackgroundColor().darker(150));
-    QPen halfHourPen(d->preferences()->agendaGridBackgroundColor().darker(125));
+    QPen hourPen;
+    QPen halfHourPen;
+    
+    if (d->preferences()->useSystemColor()) {
+        hourPen = d->preferences()->agendaGridBackgroundColor().darker(150);
+        halfHourPen = d->preferences()->agendaGridBackgroundColor().darker(125);
+    } else {
+        hourPen = palette().color(QPalette::WindowText).darker(150);
+        halfHourPen = palette().color(QPalette::WindowText).darker(125);
+    }
     dbp.setPen(hourPen);
 
     // Draw vertical lines of grid, start with the last line not yet visible

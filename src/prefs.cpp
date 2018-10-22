@@ -556,6 +556,16 @@ void Prefs::writeConfig()
     }
 }
 
+void Prefs::setUseSystemColor(bool useSystemColor)
+{
+    d->setBool(d->mBaseConfig.useSystemColorItem(), useSystemColor);
+}
+
+bool Prefs::useSystemColor() const
+{
+    return d->getBool(d->mBaseConfig.useSystemColorItem());
+}
+
 void Prefs::setMarcusBainsShowSeconds(bool showSeconds)
 {
     d->setBool(d->mBaseConfig.marcusBainsShowSecondsItem(), showSeconds);

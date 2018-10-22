@@ -82,6 +82,9 @@ public:
 
     void setSelectionStartsEditor(bool startEditor);
     Q_REQUIRED_RESULT bool selectionStartsEditor() const;
+    
+    void setUseSystemColor(bool useSystemColor);
+    Q_REQUIRED_RESULT bool useSystemColor() const;
 
     void setAgendaGridWorkHoursBackgroundColor(const QColor &color);
     Q_REQUIRED_RESULT QColor agendaGridWorkHoursBackgroundColor() const;
