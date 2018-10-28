@@ -1658,13 +1658,22 @@ void Agenda::drawContents(QPainter *p, int cx, int cy, int cw, int ch)
     QPen hourPen;
     QPen halfHourPen;
     
-    if (d->preferences()->useSystemColor()) {
+    if (!d->preferences()->useSystemColor()) {
         hourPen = d->preferences()->agendaGridBackgroundColor().darker(150);
         halfHourPen = d->preferences()->agendaGridBackgroundColor().darker(125);
     } else {
-        hourPen = palette().color(QPalette::WindowText).darker(150);
-        halfHourPen = palette().color(QPalette::WindowText).darker(125);
+        const QColor windowTextColor = palette().color(QPalette::WindowText);
+        if (windowTextColor.red() + windowTextColor.green() + windowTextColor.blue() < (256 / 2 * 3)) {
+            // dark grey line
+            hourPen = windowTextColor.lighter(200);
+            halfHourPen = windowTextColor.lighter(500);
+        } else {
+            // light grey line
+            hourPen = windowTextColor.darker(150);
+            halfHourPen = windowTextColor.darker(200);
+        }
     }
+    
     dbp.setPen(hourPen);
 
     // Draw vertical lines of grid, start with the last line not yet visible
