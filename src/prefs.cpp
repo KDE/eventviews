@@ -164,18 +164,13 @@ void BaseConfig::usrSetDefaults()
 
 void BaseConfig::usrRead()
 {
-    // Note that the [Category Colors] group was removed after 3.2 due to
-    // an algorithm change. That's why we now use [Category Colors2]
-    // Resource colors
     KConfigGroup rColorsConfig(config(), "Resources Colors");
     const QStringList colorKeyList = rColorsConfig.keyList();
 
-    QStringList::ConstIterator it3;
-    QStringList::ConstIterator end3(colorKeyList.end());
-    for (it3 = colorKeyList.begin(); it3 != end3; ++it3) {
-        QColor color = rColorsConfig.readEntry(*it3, mDefaultResourceColor);
-        //qCDebug(CALENDARVIEW_LOG) << "key:" << (*it3) << "value:" << color;
-        setResourceColor(*it3, color);
+    for (const QString &key : colorKeyList) {
+        QColor color = rColorsConfig.readEntry(key, mDefaultResourceColor);
+        //qCDebug(CALENDARVIEW_LOG) << "key:" << key << "value:" << color;
+        setResourceColor(key, color);
     }
 
 #if 0
@@ -205,11 +200,8 @@ void BaseConfig::usrRead()
 bool BaseConfig::usrSave()
 {
     KConfigGroup rColorsConfig(config(), "Resources Colors");
-    QHash<QString, QColor>::const_iterator i = mResourceColors.constBegin();
-    QHash<QString, QColor>::const_iterator end(mResourceColors.constEnd());
-    while (i != end) {
-        rColorsConfig.writeEntry(i.key(), i.value());
-        ++i;
+    for (auto it = mResourceColors.constBegin(); it != mResourceColors.constEnd(); ++it) {
+        rColorsConfig.writeEntry(it.key(), it.value());
     }
 
 #if 0
@@ -956,26 +948,10 @@ void Prefs::setResourceColor(const QString &cal, const QColor &color)
     d->mBaseConfig.setResourceColor(cal, color);
 }
 
-#define USE_RANDOM
-void Prefs::createNewColor(QColor &defColor, int seed)
-{
-#ifdef USE_RANDOM
-    Q_UNUSED(seed);
-    QColor col = QColor(qrand() % 256, qrand() % 256, qrand() % 256);
-    defColor = col;
-#else
-    int h, s, v;
-    defColor.getHsv(&h, &s, &v);
-    h = (seed % 12) * 30;
-    s -= s * static_cast<int>(((seed / 12) % 2) * 0.5);
-    defColor.setHsv(h, s, v);
-#endif
-}
-
 QColor Prefs::resourceColorKnown(const QString &cal) const
 {
     QColor color;
-    if (!cal.isEmpty() && d->mBaseConfig.mResourceColors.contains(cal)) {
+    if (!cal.isEmpty()) {
         color = d->mBaseConfig.mResourceColors.value(cal);
     }
     return color;
@@ -991,17 +967,16 @@ QColor Prefs::resourceColor(const QString &cal)
 
     // assign default color if enabled
     if (!color.isValid() && d->getBool(d->mBaseConfig.assignDefaultResourceColorsItem())) {
-        QColor defColor(0x37, 0x7A, 0xBC);
+        color.setRgb(0x37, 0x7A, 0xBC); // blueish
         const int seed = d->getInt(d->mBaseConfig.defaultResourceColorSeedItem());
         const QStringList colors = d->getStringList(d->mBaseConfig.defaultResourceColorsItem());
-        if (seed > 0 && seed - 1 < (int)colors.size()) {
-            defColor = QColor(colors[seed - 1]);
+        if (seed > 0 && seed - 1 < colors.size()) {
+            color.setNamedColor(colors[seed - 1]);
         } else {
-            createNewColor(defColor, seed);
+            color.setRgb(qrand() % 256, qrand() % 256, qrand() % 256);
         }
         d->setInt(d->mBaseConfig.defaultResourceColorSeedItem(), (seed + 1));
-        d->mBaseConfig.setResourceColor(cal, defColor);
-        color = d->mBaseConfig.mResourceColors[cal];
+        d->mBaseConfig.setResourceColor(cal, color);
     }
     if (color.isValid()) {
         return color;

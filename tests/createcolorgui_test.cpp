@@ -45,9 +45,8 @@ void CreateColorGui_test::createListWidgetItem()
     mListWidget->clear();
     for (int i = 0; i < 100; ++i) {
         QListWidgetItem *item = new QListWidgetItem;
-        QColor defColor(0x37, 0x7A, 0xBC);
-        prefs.createNewColor(defColor, i);
-        item->setBackgroundColor(defColor);
+        QColor color = prefs.resourceColor(QString::number(i));
+        item->setBackgroundColor(color);
         mListWidget->addItem(item);
     }
 }

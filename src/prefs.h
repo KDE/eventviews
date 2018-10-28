@@ -215,7 +215,6 @@ public:
     Q_REQUIRED_RESULT int firstDayOfWeek() const;
 
     KConfig *config() const;
-    void createNewColor(QColor &defColor, int seed);
 
 private:
     class Private;
