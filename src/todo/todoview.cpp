@@ -205,8 +205,8 @@ TodoView::TodoView(const EventViews::PrefsPtr &prefs, bool sidebarView, QWidget 
     if (!mSidebarView) {
         mQuickSearch = new TodoViewQuickSearch(calendar(), this);
         mQuickSearch->setVisible(prefs->enableTodoQuickSearch());
-        connect(mQuickSearch, SIGNAL(searchTextChanged(QString)),
-                mProxyModel, SLOT(setFilterRegExp(QString)));
+        connect(mQuickSearch, &TodoViewQuickSearch::searchTextChanged,
+                mProxyModel, QOverload<const QString&>::of(&QSortFilterProxyModel::setFilterRegExp));
         connect(mQuickSearch, &TodoViewQuickSearch::searchTextChanged, this,
                 &TodoView::restoreViewState);
         connect(mQuickSearch, &TodoViewQuickSearch::filterCategoryChanged, mProxyModel,

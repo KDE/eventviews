@@ -82,7 +82,8 @@ public:
     void assert_and_dump(bool condition, const QString &message);
     Node::List sorted(const Node::List &nodes) const;
     PreNode::Ptr prenodeFromSourceRow(int sourceRow) const;
-
+    void setSourceModel(QAbstractItemModel *model);
+    
 public:
     Node::Map m_nodeMap;
     Node::List m_toplevelNodeList;

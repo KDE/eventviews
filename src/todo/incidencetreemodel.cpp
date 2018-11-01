@@ -593,6 +593,88 @@ void IncidenceTreeModel::Private::onRowsMoved(const QModelIndex &, int, int, con
     Q_ASSERT(false);
 }
 
+void IncidenceTreeModel::Private::setSourceModel(QAbstractItemModel *model)
+{
+    q->beginResetModel();
+
+    if (q->sourceModel()) {
+        disconnect(q->sourceModel(), &IncidenceTreeModel::dataChanged,
+                   this, &IncidenceTreeModel::Private::onDataChanged);
+
+        disconnect(q->sourceModel(), &IncidenceTreeModel::headerDataChanged,
+                   this, &IncidenceTreeModel::Private::onHeaderDataChanged);
+
+        disconnect(q->sourceModel(), &IncidenceTreeModel::rowsInserted,
+                   this, &IncidenceTreeModel::Private::onRowsInserted);
+
+        disconnect(q->sourceModel(), &IncidenceTreeModel::rowsRemoved,
+                   this, &IncidenceTreeModel::Private::onRowsRemoved);
+
+        disconnect(q->sourceModel(), &IncidenceTreeModel::rowsMoved,
+                   this, &IncidenceTreeModel::Private::onRowsMoved);
+
+        disconnect(q->sourceModel(), &IncidenceTreeModel::rowsAboutToBeInserted,
+                   this, &IncidenceTreeModel::Private::onRowsAboutToBeInserted);
+
+        disconnect(q->sourceModel(), &IncidenceTreeModel::rowsAboutToBeRemoved,
+                   this, &IncidenceTreeModel::Private::onRowsAboutToBeRemoved);
+
+        disconnect(q->sourceModel(), &IncidenceTreeModel::modelAboutToBeReset,
+                   this, &IncidenceTreeModel::Private::onModelAboutToBeReset);
+
+        disconnect(q->sourceModel(), &IncidenceTreeModel::modelReset,
+                   this, &IncidenceTreeModel::Private::onModelReset);
+
+        disconnect(q->sourceModel(), &IncidenceTreeModel::layoutAboutToBeChanged,
+                   this, &IncidenceTreeModel::Private::onLayoutAboutToBeChanged);
+
+        disconnect(q->sourceModel(), &IncidenceTreeModel::layoutChanged,
+                   this, &IncidenceTreeModel::Private::onLayoutChanged);
+    }
+
+    q->QAbstractProxyModel::setSourceModel(model);
+
+    if (q->sourceModel()) {
+        connect(q->sourceModel(), &IncidenceTreeModel::dataChanged,
+                this, &IncidenceTreeModel::Private::onDataChanged);
+
+        connect(q->sourceModel(), &IncidenceTreeModel::headerDataChanged,
+                this, &IncidenceTreeModel::Private::onHeaderDataChanged);
+
+        connect(q->sourceModel(), &IncidenceTreeModel::rowsAboutToBeInserted,
+                this, &IncidenceTreeModel::Private::onRowsAboutToBeInserted);
+
+        connect(q->sourceModel(), &IncidenceTreeModel::rowsInserted,
+                this, &IncidenceTreeModel::Private::onRowsInserted);
+
+        connect(q->sourceModel(), &IncidenceTreeModel::rowsAboutToBeRemoved,
+                this, &IncidenceTreeModel::Private::onRowsAboutToBeRemoved);
+
+        connect(q->sourceModel(), &IncidenceTreeModel::rowsRemoved,
+                this, &IncidenceTreeModel::Private::onRowsRemoved);
+
+        connect(q->sourceModel(), &IncidenceTreeModel::rowsMoved,
+                this, &IncidenceTreeModel::Private::onRowsMoved);
+
+        connect(q->sourceModel(), &IncidenceTreeModel::modelAboutToBeReset,
+                this, &IncidenceTreeModel::Private::onModelAboutToBeReset);
+
+        connect(q->sourceModel(), &IncidenceTreeModel::modelReset,
+                this, &IncidenceTreeModel::Private::onModelReset);
+
+        connect(q->sourceModel(), &IncidenceTreeModel::layoutAboutToBeChanged,
+                this, &IncidenceTreeModel::Private::onLayoutAboutToBeChanged);
+
+        connect(q->sourceModel(), &IncidenceTreeModel::layoutChanged,
+                this, &IncidenceTreeModel::Private::onLayoutChanged);
+    }
+
+    reset(/**silent=*/ true);
+    q->endResetModel();
+}
+
+
+
 IncidenceTreeModel::IncidenceTreeModel(QObject *parent)
     : QAbstractProxyModel(parent)
     , d(new Private(this, QStringList()))
@@ -655,83 +737,7 @@ void IncidenceTreeModel::setSourceModel(QAbstractItemModel *model)
     if (model == sourceModel()) {
         return;
     }
-
-    beginResetModel();
-
-    if (sourceModel()) {
-        disconnect(sourceModel(), SIGNAL(dataChanged(QModelIndex,QModelIndex)),
-                   d, SLOT(onDataChanged(QModelIndex,QModelIndex)));
-
-        disconnect(sourceModel(), SIGNAL(headerDataChanged(Qt::Orientation,int,int)),
-                   d, SLOT(onHeaderDataChanged(Qt::Orientation,int,int)));
-
-        disconnect(sourceModel(), SIGNAL(rowsInserted(QModelIndex,int,int)),
-                   d, SLOT(onRowsInserted(QModelIndex,int,int)));
-
-        disconnect(sourceModel(), SIGNAL(rowsRemoved(QModelIndex,int,int)),
-                   d, SLOT(onRowsRemoved(QModelIndex,int,int)));
-
-        disconnect(sourceModel(), SIGNAL(rowsMoved(QModelIndex,int,int,QModelIndex,int)),
-                   d, SLOT(onRowsMoved(QModelIndex,int,int,QModelIndex,int)));
-
-        disconnect(sourceModel(), SIGNAL(rowsAboutToBeInserted(QModelIndex,int,int)),
-                   d, SLOT(onRowsAboutToBeInserted(QModelIndex,int,int)));
-
-        disconnect(sourceModel(), SIGNAL(rowsAboutToBeRemoved(QModelIndex,int,int)),
-                   d, SLOT(onRowsAboutToBeRemoved(QModelIndex,int,int)));
-
-        disconnect(sourceModel(), SIGNAL(modelAboutToBeReset()),
-                   d, SLOT(onModelAboutToBeReset()));
-
-        disconnect(sourceModel(), SIGNAL(modelReset()),
-                   d, SLOT(onModelReset()));
-
-        disconnect(sourceModel(), SIGNAL(layoutAboutToBeChanged()),
-                   d, SLOT(onLayoutAboutToBeChanged()));
-
-        disconnect(sourceModel(), SIGNAL(layoutChanged()),
-                   d, SLOT(onLayoutChanged()));
-    }
-
-    QAbstractProxyModel::setSourceModel(model);
-
-    if (sourceModel()) {
-        connect(sourceModel(), SIGNAL(dataChanged(QModelIndex,QModelIndex)),
-                d, SLOT(onDataChanged(QModelIndex,QModelIndex)));
-
-        connect(sourceModel(), SIGNAL(headerDataChanged(Qt::Orientation,int,int)),
-                d, SLOT(onHeaderDataChanged(Qt::Orientation,int,int)));
-
-        connect(sourceModel(), SIGNAL(rowsAboutToBeInserted(QModelIndex,int,int)),
-                d, SLOT(onRowsAboutToBeInserted(QModelIndex,int,int)));
-
-        connect(sourceModel(), SIGNAL(rowsInserted(QModelIndex,int,int)),
-                d, SLOT(onRowsInserted(QModelIndex,int,int)));
-
-        connect(sourceModel(), SIGNAL(rowsAboutToBeRemoved(QModelIndex,int,int)),
-                d, SLOT(onRowsAboutToBeRemoved(QModelIndex,int,int)));
-
-        connect(sourceModel(), SIGNAL(rowsRemoved(QModelIndex,int,int)),
-                d, SLOT(onRowsRemoved(QModelIndex,int,int)));
-
-        connect(sourceModel(), SIGNAL(rowsMoved(QModelIndex,int,int,QModelIndex,int)),
-                d, SLOT(onRowsMoved(QModelIndex,int,int,QModelIndex,int)));
-
-        connect(sourceModel(), SIGNAL(modelAboutToBeReset()),
-                d, SLOT(onModelAboutToBeReset()));
-
-        connect(sourceModel(), SIGNAL(modelReset()),
-                d, SLOT(onModelReset()));
-
-        connect(sourceModel(), SIGNAL(layoutAboutToBeChanged()),
-                d, SLOT(onLayoutAboutToBeChanged()));
-
-        connect(sourceModel(), SIGNAL(layoutChanged()),
-                d, SLOT(onLayoutChanged()));
-    }
-
-    d->reset(/**silent=*/ true);
-    endResetModel();
+    d->setSourceModel(model);
 }
 
 QModelIndex IncidenceTreeModel::mapFromSource(const QModelIndex &sourceIndex) const
