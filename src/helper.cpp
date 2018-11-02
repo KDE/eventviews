@@ -62,17 +62,21 @@ QColor EventViews::resourceColor(const Akonadi::Collection &coll, const PrefsPtr
         return QColor();
     }
     const QString id = QString::number(coll.id());
+    // Color stored in eventviewsrc (and in memory)
     QColor color = preferences->resourceColorKnown(id);
-    if (!color.isValid() && coll.hasAttribute<Akonadi::CollectionColorAttribute>()) {
+    if (color.isValid()) {
+        return color;
+    }
+    // Color stored in akonadi
+    if (coll.hasAttribute<Akonadi::CollectionColorAttribute>()) {
         Akonadi::CollectionColorAttribute *colorAttr
             = coll.attribute<Akonadi::CollectionColorAttribute>();
         if (colorAttr && colorAttr->color().isValid()) {
-            color = colorAttr->color();
-        } else {
-            return preferences->resourceColor(id);
+            return colorAttr->color();
         }
     }
-    return color;
+    // Generate new color and store it in eventsviewsrc (and in memory)
+    return preferences->resourceColor(id);
 }
 
 QColor EventViews::resourceColor(const Akonadi::Item &item, const PrefsPtr &preferences)
@@ -80,20 +84,7 @@ QColor EventViews::resourceColor(const Akonadi::Item &item, const PrefsPtr &pref
     if (!item.isValid()) {
         return QColor();
     }
-    const QString id = QString::number(item.parentCollection().id());
-
-    QColor color = preferences->resourceColorKnown(id);
-    if (!color.isValid()
-        && item.parentCollection().hasAttribute<Akonadi::CollectionColorAttribute>()) {
-        Akonadi::CollectionColorAttribute *colorAttr
-            = item.parentCollection().attribute<Akonadi::CollectionColorAttribute>();
-        if (colorAttr && colorAttr->color().isValid()) {
-            color = colorAttr->color();
-        } else {
-            return preferences->resourceColor(id);
-        }
-    }
-    return color;
+    return resourceColor(item.parentCollection(), preferences);
 }
 
 int EventViews::yearDiff(const QDate &start, const QDate &end)
