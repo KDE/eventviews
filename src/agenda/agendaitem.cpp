@@ -1110,13 +1110,9 @@ void AgendaItem::drawRoundedRect(QPainter *p, const QRect &rect, bool selected, 
     if (!frame) {
         QBrush brushSolid(Qt::SolidPattern);
 
-        if (selected) {
-            QColor top = bgColor.darker(250);
-            top.setAlpha(20);
-            brushSolid.setColor(top);
-        } else {
-            brushSolid.setColor(QColor(255, 255, 255, 10));
-        }
+        QColor top = bgColor.darker(250);
+        top.setAlpha(selected ? 40 : 60);
+        brushSolid.setColor(top);
 
         p->setBrush(bgColor);
         p->drawPath(path);
