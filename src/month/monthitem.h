@@ -313,7 +313,7 @@ public:
 
 protected:
     void finalizeMove(const QDate &newStartDate) override;
-    virtual void finalizeResize(const QDate &newStartDate, const QDate &newEndDate) override;
+    void finalizeResize(const QDate &newStartDate, const QDate &newEndDate) override;
 
 protected Q_SLOTS:
     /**
@@ -393,7 +393,7 @@ public:
 
 protected:
     void finalizeMove(const QDate &newStartDate) override;
-    virtual void finalizeResize(const QDate &newStartDate, const QDate &newEndDate) override;
+    void finalizeResize(const QDate &newStartDate, const QDate &newEndDate) override;
 
 private:
     QDate mDate;

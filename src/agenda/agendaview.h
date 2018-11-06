@@ -104,7 +104,7 @@ public:
     Q_REQUIRED_RESULT KCalCore::DateList selectedIncidenceDates() const override;
 
     /** return the default start/end date/time for new events   */
-    virtual bool eventDurationHint(QDateTime &startDt, QDateTime &endDt, bool &allDay) const override;
+    bool eventDurationHint(QDateTime &startDt, QDateTime &endDt, bool &allDay) const override;
 
     /** start-datetime of selection */
     Q_REQUIRED_RESULT QDateTime selectionStart() const override;
@@ -149,7 +149,7 @@ public:
     virtual KCalCore::Calendar::Ptr calendar2(const KCalCore::Incidence::Ptr &incidence) const;
     virtual KCalCore::Calendar::Ptr calendar2(const QString &incidenceIdentifier) const;
 
-    virtual void showDates(const QDate &start, const QDate &end, const QDate &preferredMonth = QDate()) override;
+    void showDates(const QDate &start, const QDate &end, const QDate &preferredMonth = QDate()) override;
 
     void showIncidences(const Akonadi::Item::List &incidenceList, const QDate &date) override;
 
