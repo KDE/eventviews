@@ -1293,6 +1293,8 @@ void AgendaView::createDayLabels(bool force)
     // Update the labels now and after a single event loop run. Now to avoid flicker, and
     // delayed so that the delayed layouting size is taken into account.
     updateDayLabelSizes();
+    qDeleteAll(topDecos);
+    qDeleteAll(botDecos);
 }
 
 void AgendaView::updateDayLabelSizes()

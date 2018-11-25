@@ -17,7 +17,6 @@
   Boston, MA 02110-1301, USA.
 */
 #include "calendardecoration.h"
-
 #include <QDate>
 
 using namespace EventViews::CalendarDecoration;
@@ -157,6 +156,8 @@ Decoration::Decoration()
 
 Decoration::~Decoration()
 {
+    //Deleted by label directly.
+#if 0
     for (Element::List lst : qAsConst(mDayElements)) {
         qDeleteAll(lst);
         lst.clear();
@@ -173,6 +174,7 @@ Decoration::~Decoration()
         qDeleteAll(lst);
         lst.clear();
     }
+#endif
     mDayElements.clear();
     mWeekElements.clear();
     mMonthElements.clear();
