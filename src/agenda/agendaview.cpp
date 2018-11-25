@@ -1150,7 +1150,7 @@ void AgendaView::placeDecorations(DecorationList &decoList, const QDate &date, Q
             decoHBox->setMinimumWidth(1);
 
             foreach (CalendarDecoration::Element *it, elements) {
-                DecorationLabel *label = new DecorationLabel(it);
+                DecorationLabel *label = new DecorationLabel(it, decoHBox);
                 label->setAlignment(Qt::AlignBottom);
                 label->setMinimumWidth(1);
                 layout->addWidget(label);

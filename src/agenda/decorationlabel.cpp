@@ -70,6 +70,7 @@ DecorationLabel::DecorationLabel(const QString &shortText, const QString &longTe
 
 DecorationLabel::~DecorationLabel()
 {
+    delete mDecorationElement;
 }
 
 void DecorationLabel::mouseReleaseEvent(QMouseEvent *event)
