@@ -523,11 +523,7 @@ void EventView::setChanges(Changes changes)
 {
     Q_D(EventView);
     if (d->mChanges == NothingChanged) {
-#if QT_VERSION >= QT_VERSION_CHECK(5, 10, 0)
         QMetaObject::invokeMethod(this, &EventView::updateView, Qt::QueuedConnection);
-#else
-        QMetaObject::invokeMethod(this, "updateView", Qt::QueuedConnection);
-#endif
     }
 
     d->mChanges = changes;
