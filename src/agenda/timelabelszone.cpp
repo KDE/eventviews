@@ -38,7 +38,7 @@ TimeLabelsZone::TimeLabelsZone(QWidget *parent, const PrefsPtr &preferences, Age
     , mParent(qobject_cast<AgendaView * >(parent))
 {
     mTimeLabelsLayout = new QHBoxLayout(this);
-    mTimeLabelsLayout->setMargin(0);
+    mTimeLabelsLayout->setContentsMargins(0, 0, 0, 0);
     mTimeLabelsLayout->setSpacing(0);
 
     init();

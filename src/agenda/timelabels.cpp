@@ -51,7 +51,7 @@ TimeLabels::TimeLabels(const QTimeZone &zone, int rows, TimeLabelsZone *parent, 
 
     mCellHeight = mTimeLabelsZone->preferences()->hourSize() * 4;
 
-    setBackgroundRole(QPalette::Background);
+    setBackgroundRole(QPalette::Window);
 
     mMousePos = new QFrame(this);
     mMousePos->setLineWidth(1);

@@ -293,7 +293,7 @@ ListView::ListView(const Akonadi::ETMCalendar::Ptr &calendar, QWidget *parent, b
     d->mTreeWidget->setRootIsDecorated(false);
 
     QBoxLayout *layoutTop = new QVBoxLayout(this);
-    layoutTop->setMargin(0);
+    layoutTop->setContentsMargins(0, 0, 0, 0);
     layoutTop->addWidget(d->mTreeWidget);
 
     QObject::connect(d->mTreeWidget, QOverload<const QModelIndex &>::of(&QTreeWidget::doubleClicked), this,

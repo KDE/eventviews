@@ -159,14 +159,14 @@ MultiAgendaView::MultiAgendaView(QWidget *parent)
 {
     QHBoxLayout *topLevelLayout = new QHBoxLayout(this);
     topLevelLayout->setSpacing(0);
-    topLevelLayout->setMargin(0);
+    topLevelLayout->setContentsMargins(0, 0, 0, 0);
 
     QFontMetrics fm(font());
     int topLabelHeight = 2 * fm.height() + fm.lineSpacing();
 
     QWidget *topSideBox = new QWidget(this);
     QVBoxLayout *topSideBoxVBoxLayout = new QVBoxLayout(topSideBox);
-    topSideBoxVBoxLayout->setMargin(0);
+    topSideBoxVBoxLayout->setContentsMargins(0, 0, 0, 0);
 
     QWidget *topSideSpacer = new QWidget(topSideBox);
     topSideBoxVBoxLayout->addWidget(topSideSpacer);
@@ -181,7 +181,7 @@ MultiAgendaView::MultiAgendaView(QWidget *parent)
 
     QWidget *sideBox = new QWidget(d->mLeftSplitter);
     QVBoxLayout *sideBoxVBoxLayout = new QVBoxLayout(sideBox);
-    sideBoxVBoxLayout->setMargin(0);
+    sideBoxVBoxLayout->setContentsMargins(0, 0, 0, 0);
 
     // compensate for the frame the agenda views but not the timelabels have
     QWidget *timeLabelTopAlignmentSpacer = new QWidget(sideBox);
@@ -212,12 +212,12 @@ MultiAgendaView::MultiAgendaView(QWidget *parent)
     topLevelLayout->addWidget(d->mScrollArea, 100);
     d->mTopBox = new QWidget(d->mScrollArea->viewport());
     QHBoxLayout *mTopBoxHBoxLayout = new QHBoxLayout(d->mTopBox);
-    mTopBoxHBoxLayout->setMargin(0);
+    mTopBoxHBoxLayout->setContentsMargins(0, 0, 0, 0);
     d->mScrollArea->setWidget(d->mTopBox);
 
     topSideBox = new QWidget(this);
     topSideBoxVBoxLayout = new QVBoxLayout(topSideBox);
-    topSideBoxVBoxLayout->setMargin(0);
+    topSideBoxVBoxLayout->setContentsMargins(0, 0, 0, 0);
 
     topSideSpacer = new QWidget(topSideBox);
     topSideBoxVBoxLayout->addWidget(topSideSpacer);
@@ -484,7 +484,7 @@ AgendaView *MultiAgendaView::Private::createView(const QString &title)
     QWidget *box = new QWidget(mTopBox);
     mTopBox->layout()->addWidget(box);
     QVBoxLayout *layout = new QVBoxLayout(box);
-    layout->setMargin(0);
+    layout->setContentsMargins(0, 0, 0, 0);
     layout->addWidget(new ElidedLabel(title));
     AgendaView *av = new AgendaView(q->preferences(),
                                     q->startDateTime().date(),

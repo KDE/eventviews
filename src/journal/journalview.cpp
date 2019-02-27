@@ -41,11 +41,11 @@ JournalView::JournalView(QWidget *parent) : EventView(parent)
     , mChanger(nullptr)
 {
     QVBoxLayout *topLayout = new QVBoxLayout(this);
-    topLayout->setMargin(0);
+    topLayout->setContentsMargins(0, 0, 0, 0);
     mSA = new QScrollArea(this);
     mCurrentWidget = new QWidget(mSA->viewport());
     QVBoxLayout *mVBoxVBoxLayout = new QVBoxLayout(mCurrentWidget);
-    mVBoxVBoxLayout->setMargin(0);
+    mVBoxVBoxLayout->setContentsMargins(0, 0, 0, 0);
     mSA->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     mSA->setWidgetResizable(true);
     mSA->setWidget(mCurrentWidget);

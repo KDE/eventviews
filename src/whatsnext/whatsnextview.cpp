@@ -55,7 +55,7 @@ WhatsNextView::WhatsNextView(QWidget *parent)
     connect(mView, &WhatsNextTextBrowser::showIncidence, this, &WhatsNextView::showIncidence);
 
     QBoxLayout *topLayout = new QVBoxLayout(this);
-    topLayout->setMargin(0);
+    topLayout->setContentsMargins(0, 0, 0, 0);
     topLayout->addWidget(mView);
 }
 
