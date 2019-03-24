@@ -1611,10 +1611,10 @@ void Agenda::drawContents(QPainter *p, int cx, int cy, int cw, int ch)
                     busyColor = palette().color(QPalette::Window);
                     if ((busyColor.blue() + busyColor.red() + busyColor.green()) > (256 / 2 * 3)) {
                         // dark 
-                        busyColor.lighter(140);
+                        busyColor = busyColor.lighter(140);
                     } else {
                         // light 
-                        busyColor.darker(140);
+                        busyColor = busyColor.darker(140);
                     }
                 }
                 busyColor.setAlpha(EventViews::BUSY_BACKGROUND_ALPHA);
