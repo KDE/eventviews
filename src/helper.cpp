@@ -45,7 +45,7 @@ void EventViews::setResourceColor(const Akonadi::Collection &coll, const QColor 
 
     const QString id = QString::number(coll.id());
     if (coll.hasAttribute<Akonadi::CollectionColorAttribute>()) {
-        Akonadi::CollectionColorAttribute *colorAttr
+        const Akonadi::CollectionColorAttribute *colorAttr
             = coll.attribute<Akonadi::CollectionColorAttribute>();
         if (colorAttr && colorAttr->color().isValid() && (colorAttr->color() == color)) {
             // It's the same color: we save an invalid color
@@ -69,7 +69,7 @@ QColor EventViews::resourceColor(const Akonadi::Collection &coll, const PrefsPtr
     }
     // Color stored in akonadi
     if (coll.hasAttribute<Akonadi::CollectionColorAttribute>()) {
-        Akonadi::CollectionColorAttribute *colorAttr
+        const Akonadi::CollectionColorAttribute *colorAttr
             = coll.attribute<Akonadi::CollectionColorAttribute>();
         if (colorAttr && colorAttr->color().isValid()) {
             return colorAttr->color();
