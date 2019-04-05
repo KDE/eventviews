@@ -178,14 +178,14 @@ void MonthItem::moveBy(int offsetToPreviousDate)
 
 void MonthItem::updateGeometry()
 {
-    foreach (MonthGraphicsItem *item, mMonthGraphicsItemList) {
+    for (MonthGraphicsItem *item : qAsConst(mMonthGraphicsItemList)) {
         item->updateGeometry();
     }
 }
 
 void MonthItem::setZValue(qreal z)
 {
-    foreach (MonthGraphicsItem *item, mMonthGraphicsItemList) {
+    for (MonthGraphicsItem *item : qAsConst(mMonthGraphicsItemList)) {
         item->setZValue(z);
     }
 }

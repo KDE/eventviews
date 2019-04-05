@@ -570,7 +570,7 @@ void MonthView::reloadIncidences()
               MonthItem::greaterThan);
 
     // build each month's cell event list
-    foreach (MonthItem *manager, d->scene->mManagerList) {
+    for (MonthItem *manager : qAsConst(d->scene->mManagerList)) {
         for (QDate date = manager->startDate();
              date <= manager->endDate(); date = date.addDays(1)) {
             MonthCell *cell = d->scene->mMonthCellMap.value(date);
@@ -580,12 +580,12 @@ void MonthView::reloadIncidences()
         }
     }
 
-    foreach (MonthItem *manager, d->scene->mManagerList) {
+    for (MonthItem *manager : qAsConst(d->scene->mManagerList)) {
         manager->updateMonthGraphicsItems();
         manager->updatePosition();
     }
 
-    foreach (MonthItem *manager, d->scene->mManagerList) {
+    for (MonthItem *manager : qAsConst(d->scene->mManagerList)) {
         manager->updateGeometry();
     }
 

@@ -114,7 +114,7 @@ void EventView::setHolidayRegions(const QStringList &regions)
     Q_D(EventView);
     qDeleteAll(d->mHolidayRegions);
     d->mHolidayRegions.clear();
-    foreach (const QString &regionStr, regions) {
+    for (const QString &regionStr : regions) {
         KHolidays::HolidayRegion *region = new KHolidays::HolidayRegion(regionStr);
         if (region->isValid()) {
             d->mHolidayRegions.append(region);

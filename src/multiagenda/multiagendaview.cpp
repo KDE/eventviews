@@ -270,7 +270,8 @@ void MultiAgendaView::recreateViews()
             d->addView(d->mCollectionSelectionModels[i], d->mCustomColumnTitles[i]);
         }
     } else {
-        Q_FOREACH (const Akonadi::Collection &i, collectionSelection()->selectedCollections()) {
+        const auto lst = collectionSelection()->selectedCollections();
+        for (const Akonadi::Collection &i : lst) {
             if (i.contentMimeTypes().contains(KCalCore::Event::eventMimeType())) {
                 d->addView(i);
             }
@@ -306,7 +307,7 @@ void MultiAgendaView::forceRecreateViews()
 
 void MultiAgendaView::Private::deleteViews()
 {
-    Q_FOREACH (AgendaView *const i, mAgendaViews) {
+    for (AgendaView *const i : qAsConst(mAgendaViews)) {
         KCheckableProxyModel *proxy = i->takeCustomCollectionSelectionProxyModel();
         if (proxy && !mCollectionSelectionModels.contains(proxy)) {
             delete proxy;
@@ -322,7 +323,7 @@ void MultiAgendaView::Private::deleteViews()
 
 void MultiAgendaView::Private::setupViews()
 {
-    foreach (AgendaView *agenda, mAgendaViews) {
+    for (AgendaView *agenda : qAsConst(mAgendaViews)) {
         q->connect(agenda, SIGNAL(newEventSignal()),
                    q, SIGNAL(newEventSignal()));
         q->connect(agenda, SIGNAL(newEventSignal(QDate)),
@@ -372,14 +373,14 @@ void MultiAgendaView::Private::setupViews()
     }
 
     AgendaView *lastView = mAgendaViews.last();
-    foreach (AgendaView *agenda, mAgendaViews) {
+    for (AgendaView *agenda : qAsConst(mAgendaViews)) {
         if (agenda != lastView) {
             connect(agenda->agenda()->verticalScrollBar(), &QAbstractSlider::valueChanged,
                     lastView->agenda()->verticalScrollBar(), &QAbstractSlider::setValue);
         }
     }
 
-    foreach (AgendaView *agenda, mAgendaViews) {
+    for (AgendaView *agenda : qAsConst(mAgendaViews)) {
         agenda->readSettings();
     }
 }
@@ -392,7 +393,7 @@ MultiAgendaView::~MultiAgendaView()
 Akonadi::Item::List MultiAgendaView::selectedIncidences() const
 {
     Akonadi::Item::List list;
-    foreach (AgendaView *agendaView, d->mAgendaViews) {
+    for (AgendaView *agendaView : qAsConst(d->mAgendaViews)) {
         list += agendaView->selectedIncidences();
     }
     return list;
@@ -401,7 +402,7 @@ Akonadi::Item::List MultiAgendaView::selectedIncidences() const
 KCalCore::DateList MultiAgendaView::selectedIncidenceDates() const
 {
     KCalCore::DateList list;
-    foreach (AgendaView *agendaView, d->mAgendaViews) {
+    for (AgendaView *agendaView : qAsConst(d->mAgendaViews)) {
         list += agendaView->selectedIncidenceDates();
     }
     return list;
@@ -409,7 +410,7 @@ KCalCore::DateList MultiAgendaView::selectedIncidenceDates() const
 
 int MultiAgendaView::currentDateCount() const
 {
-    foreach (AgendaView *agendaView, d->mAgendaViews) {
+    for (AgendaView *agendaView : qAsConst(d->mAgendaViews)) {
         return agendaView->currentDateCount();
     }
     return 0;
@@ -422,14 +423,14 @@ void MultiAgendaView::showDates(const QDate &start, const QDate &end, const QDat
     d->mEndDate = end;
     slotResizeScrollView();
     d->mTimeLabelsZone->updateAll();
-    foreach (AgendaView *agendaView, d->mAgendaViews) {
+    for (AgendaView *agendaView : qAsConst(d->mAgendaViews)) {
         agendaView->showDates(start, end);
     }
 }
 
 void MultiAgendaView::showIncidences(const Akonadi::Item::List &incidenceList, const QDate &date)
 {
-    foreach (AgendaView *agendaView, d->mAgendaViews) {
+    for (AgendaView *agendaView : qAsConst(d->mAgendaViews)) {
         agendaView->showIncidences(incidenceList, date);
     }
 }
@@ -437,7 +438,7 @@ void MultiAgendaView::showIncidences(const Akonadi::Item::List &incidenceList, c
 void MultiAgendaView::updateView()
 {
     recreateViews();
-    foreach (AgendaView *agendaView, d->mAgendaViews) {
+    for (AgendaView *agendaView : qAsConst(d->mAgendaViews)) {
         agendaView->updateView();
     }
 }
@@ -450,7 +451,7 @@ int MultiAgendaView::maxDatesHint() const
 
 void MultiAgendaView::slotSelectionChanged()
 {
-    foreach (AgendaView *agenda, d->mAgendaViews) {
+    for (AgendaView *agenda : qAsConst(d->mAgendaViews)) {
         if (agenda != sender()) {
             agenda->clearSelection();
         }
@@ -459,7 +460,7 @@ void MultiAgendaView::slotSelectionChanged()
 
 bool MultiAgendaView::eventDurationHint(QDateTime &startDt, QDateTime &endDt, bool &allDay) const
 {
-    foreach (AgendaView *agenda, d->mAgendaViews) {
+    for (AgendaView *agenda : qAsConst(d->mAgendaViews)) {
         bool valid = agenda->eventDurationHint(startDt, endDt, allDay);
         if (valid) {
             return true;
@@ -470,7 +471,7 @@ bool MultiAgendaView::eventDurationHint(QDateTime &startDt, QDateTime &endDt, bo
 
 void MultiAgendaView::slotClearTimeSpanSelection()
 {
-    foreach (AgendaView *agenda, d->mAgendaViews) {
+    for (AgendaView *agenda : qAsConst(d->mAgendaViews)) {
         if (agenda != sender()) {
             agenda->clearTimeSpanSelection();
         } else {
@@ -560,14 +561,14 @@ void MultiAgendaView::Private::resizeScrollView(const QSize &size)
 void MultiAgendaView::setIncidenceChanger(Akonadi::IncidenceChanger *changer)
 {
     EventView::setIncidenceChanger(changer);
-    foreach (AgendaView *agenda, d->mAgendaViews) {
+    for (AgendaView *agenda : qAsConst(d->mAgendaViews)) {
         agenda->setIncidenceChanger(changer);
     }
 }
 
 void MultiAgendaView::setPreferences(const PrefsPtr &prefs)
 {
-    foreach (AgendaView *agenda, d->mAgendaViews) {
+    for (AgendaView *agenda : qAsConst(d->mAgendaViews)) {
         agenda->setPreferences(prefs);
     }
     EventView::setPreferences(prefs);
@@ -578,7 +579,7 @@ void MultiAgendaView::updateConfig()
     EventView::updateConfig();
     d->mTimeLabelsZone->setPreferences(preferences());
     d->mTimeLabelsZone->updateAll();
-    foreach (AgendaView *agenda, d->mAgendaViews) {
+    for (AgendaView *agenda : qAsConst(d->mAgendaViews)) {
         agenda->updateConfig();
     }
 }
@@ -593,7 +594,7 @@ void MultiAgendaView::resizeSplitters()
     if (!lastMovedSplitter) {
         lastMovedSplitter = d->mLeftSplitter;
     }
-    foreach (AgendaView *agenda, d->mAgendaViews) {
+    for (AgendaView *agenda : qAsConst(d->mAgendaViews)) {
         if (agenda->splitter() == lastMovedSplitter) {
             continue;
         }
@@ -620,7 +621,7 @@ void MultiAgendaView::zoomView(const int delta, const QPoint &pos, const Qt::Ori
         }
     }
 
-    foreach (AgendaView *agenda, d->mAgendaViews) {
+    for (AgendaView *agenda : qAsConst(d->mAgendaViews)) {
         agenda->zoomView(delta, pos, ori);
     }
 
@@ -645,7 +646,7 @@ void MultiAgendaView::showEvent(QShowEvent *event)
 void MultiAgendaView::setChanges(Changes changes)
 {
     EventView::setChanges(changes);
-    foreach (AgendaView *agenda, d->mAgendaViews) {
+    for (AgendaView *agenda : qAsConst(d->mAgendaViews)) {
         agenda->setChanges(changes);
     }
 }
@@ -747,7 +748,7 @@ void MultiAgendaView::doSaveConfig(KConfigGroup &configGroup)
     configGroup.writeEntry("CustomNumberOfColumns", d->mCustomNumberOfColumns);
     configGroup.writeEntry("ColumnTitles", d->mCustomColumnTitles);
     int idx = 0;
-    foreach (KCheckableProxyModel *checkableProxyModel, d->mCollectionSelectionModels) {
+    for (KCheckableProxyModel *checkableProxyModel : qAsConst(d->mCollectionSelectionModels)) {
         const QString groupName = configGroup.name() + QLatin1String("_subView_") + QString::number(
             idx);
         KConfigGroup group = configGroup.config()->group(groupName);

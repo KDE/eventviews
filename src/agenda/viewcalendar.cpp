@@ -45,7 +45,7 @@ KCalCore::Calendar::Ptr MultiViewCalendar::getCalendar() const
 KCalCore::Incidence::List MultiViewCalendar::incidences() const
 {
     KCalCore::Incidence::List list;
-    foreach (const ViewCalendar::Ptr &cal, mSubCalendars) {
+    for (const ViewCalendar::Ptr &cal : qAsConst(mSubCalendars)) {
         if (cal->getCalendar()) {
             list += cal->getCalendar()->incidences();
         }

@@ -407,7 +407,8 @@ QString TimeLabels::headerToolTip() const
     }
 
     auto abbreviations = QStringLiteral("&nbsp;");
-    foreach (const auto &transition, mTimezone.transitions(now, now.addYears(1))) {
+    const auto lst = mTimezone.transitions(now, now.addYears(1));
+    for (const auto &transition : lst) {
         abbreviations += transition.abbreviation;
         abbreviations += QLatin1String(",&nbsp;");
     }

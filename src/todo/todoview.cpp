@@ -98,7 +98,7 @@ public:
     {
         const QString todoMimeType = QStringLiteral("application/x-vnd.akonadi.calendar.todo");
         if (flat) {
-            foreach (TodoView *view, views) {
+            for (TodoView *view : qAsConst(views)) {
                 // In flatview dropping confuses users and it's very easy to drop into a child item
                 view->mView->setDragDropMode(QAbstractItemView::DragOnly);
                 view->setFlatView(flat, /**propagate=*/ false);   // So other views update their toggle icon
@@ -119,7 +119,7 @@ public:
         } else {
             delete todoTreeModel;
             todoTreeModel = new IncidenceTreeModel(QStringList() << todoMimeType, parent);
-            foreach (TodoView *view, views) {
+            for (TodoView *view : qAsConst(views)) {
                 QObject::connect(todoTreeModel, &IncidenceTreeModel::indexChangedParent, view,
                                  &TodoView::expandIndex);
                 QObject::connect(todoTreeModel, &IncidenceTreeModel::batchInsertionFinished, view,
@@ -133,7 +133,7 @@ public:
             todoFlatModel = nullptr;
         }
 
-        foreach (TodoView *view, views) {
+        for (TodoView *view : qAsConst(views)) {
             view->mFlatViewButton->blockSignals(true);
             // We block signals to avoid recursion, we have two TodoViews and mFlatViewButton is synchronized
             view->mFlatViewButton->setChecked(flat);
@@ -945,7 +945,8 @@ void TodoView::onTagsFetched(KJob *job)
     const QStringList checkedCategories = job->property("checkedCategories").toStringList();
     QPointer<QMenu> menu = job->property("menu").value<QPointer<QMenu> >();
     if (menu) {
-        Q_FOREACH (const Akonadi::Tag &tag, fetchJob->tags()) {
+        const auto lst = fetchJob->tags();
+        for (const Akonadi::Tag &tag : lst) {
             const QString name = tag.name();
             QAction *action = menu->addAction(name);
             action->setCheckable(true);

@@ -91,7 +91,7 @@ int MarcusBains::Private::todayColumn() const
 
     int col = 0;
     const KCalCore::DateList dateList = mAgenda->dateList();
-    foreach (const QDate &date, dateList) {
+    for (const QDate &date : dateList) {
         if (date == currentDate) {
             return QApplication::isRightToLeft() ? mAgenda->columns() - 1 - col : col;
         }
@@ -1471,7 +1471,7 @@ void Agenda::placeSubCells(const AgendaItem::QPtr &placeItem)
 #endif
 
     QList<CalendarSupport::CellItem *> cells;
-    foreach (CalendarSupport::CellItem *item, d->mItems) {
+    for (CalendarSupport::CellItem *item : qAsConst(d->mItems)) {
         if (item) {
             cells.append(item);
         }
@@ -1978,13 +1978,13 @@ void Agenda::removeIncidence(const KCalCore::Incidence::Ptr &incidence)
         return; // It's already queued for deletion
     }
 
-    AgendaItem::List agendaItems = d->mAgendaItemsById.values(incidence->uid());
+    const AgendaItem::List agendaItems = d->mAgendaItemsById.values(incidence->uid());
     if (agendaItems.isEmpty()) {
         // We're not displaying such item
         // qCDebug(CALENDARVIEW_LOG) << "Ignoring";
         return;
     }
-    foreach (const AgendaItem::QPtr &agendaItem, agendaItems) {
+    for (const AgendaItem::QPtr &agendaItem : agendaItems) {
         if (agendaItem) {
             if (incidence->instanceIdentifier() != agendaItem->incidence()->instanceIdentifier()) {
                 continue;
@@ -2097,7 +2097,7 @@ void Agenda::resizeEvent(QResizeEvent *ev)
 void Agenda::resizeAllContents()
 {
     double subCellWidth;
-    foreach (const AgendaItem::QPtr &item, d->mItems) {
+    for (const AgendaItem::QPtr &item : qAsConst(d->mItems)) {
         if (item) {
             subCellWidth = calcSubCellWidth(item);
             placeAgendaItem(item, subCellWidth);
@@ -2233,7 +2233,7 @@ void Agenda::deselectItem()
 
     const KCalCore::Incidence::Ptr selectedItem = d->mSelectedItem->incidence();
 
-    foreach (AgendaItem::QPtr item, d->mItems) {
+    for (AgendaItem::QPtr item : qAsConst(d->mItems)) {
         if (item) {
             const KCalCore::Incidence::Ptr itemInc = item->incidence();
             if (itemInc && selectedItem && itemInc->uid() == selectedItem->uid()) {

@@ -32,7 +32,7 @@ static void calculateDepth(const Node::Ptr &node)
 {
     Q_ASSERT(node);
     node->depth = node->parentNode ? 1 + node->parentNode->depth : 0;
-    foreach (const Node::Ptr &child, node->directChilds) {
+    for (const Node::Ptr &child : qAsConst(node->directChilds)) {
         calculateDepth(child);
     }
 }
@@ -60,7 +60,7 @@ static PreNode::List sortedPrenodes(const PreNode::List &nodes)
 
     while (prenodeByUid.count() < count) {
         bool foundAtLeastOne = false; // this bool saves us from infinit looping if the parent doesn't exist
-        foreach (const PreNode::Ptr &node, remainingNodes) {
+        for (const PreNode::Ptr &node : nodes) {
             Q_ASSERT(node);
             const QString uid = node->incidence->instanceIdentifier();
             const QString parentUid = node->incidence->relatedTo();
@@ -321,9 +321,9 @@ void IncidenceTreeModel::Private::onRowsInserted(const QModelIndex &parent, int 
         nodes << node;
     }
 
-    PreNode::List sortedNodes = sortedPrenodes(nodes);
+    const PreNode::List sortedNodes = sortedPrenodes(nodes);
 
-    foreach (const PreNode::Ptr &node, sortedNodes) {
+    for (const PreNode::Ptr &node : sortedNodes) {
         insertNode(node);
     }
 
@@ -411,7 +411,7 @@ void IncidenceTreeModel::Private::insertNode(const PreNode::Ptr &prenode, bool s
         m_waitingForParent.remove(node->uid);
         Q_ASSERT(!childs.isEmpty());
 
-        foreach (const Node::Ptr &child, childs) {
+        for (const Node::Ptr &child : childs) {
             const int fromRow = m_toplevelNodeList.indexOf(child);
             Q_ASSERT(fromRow != -1);
             const QModelIndex toParent = indexForNode(node);
@@ -447,7 +447,7 @@ Node::List IncidenceTreeModel::Private::sorted(const Node::List &nodes) const
     }
 
     // Initialize depths
-    foreach (const Node::Ptr &topLevelNode, m_toplevelNodeList) {
+    for (const Node::Ptr &topLevelNode : qAsConst(m_toplevelNodeList)) {
         calculateDepth(topLevelNode);
     }
 
@@ -485,9 +485,9 @@ void IncidenceTreeModel::Private::onRowsAboutToBeRemoved(const QModelIndex &pare
     }
 
     // We want to remove childs first, to avoid row moving
-    Node::List nodesToRemoveSorted = sorted(nodesToRemove);
+    const Node::List nodesToRemoveSorted = sorted(nodesToRemove);
 
-    foreach (const Node::Ptr &node, nodesToRemoveSorted) {
+    for (const Node::Ptr &node : nodesToRemoveSorted) {
         // Go ahead and remove it now. We don't do it in ::onRowsRemoved(), because
         // while unparenting childs with moveRows() the view might call data() on the
         // item that is already removed from ETM.
@@ -508,7 +508,7 @@ void IncidenceTreeModel::Private::removeNode(const Node::Ptr &node)
 
     // First, unparent the children
     if (!node->directChilds.isEmpty()) {
-        Node::List childs = node->directChilds;
+        const Node::List childs = node->directChilds;
         const QModelIndex fromParent = indexForNode(node);
         Q_ASSERT(fromParent.isValid());
 //    const int firstSourceRow = 0;
@@ -518,7 +518,7 @@ void IncidenceTreeModel::Private::removeNode(const Node::Ptr &node)
         //                  /**toParent is root*/QModelIndex(), toRow );
         q->beginResetModel();
         node->directChilds.clear();
-        foreach (const Node::Ptr &child, childs) {
+        for (const Node::Ptr &child : childs) {
             //qCDebug(CALENDARVIEW_LOG) << "Dealing with child: " << child.data() << child->uid;
             m_toplevelNodeList.append(child);
             child->parentNode = Node::Ptr();
@@ -916,7 +916,7 @@ QDebug operator<<(QDebug s, const Node::Ptr &node)
       << QStringLiteral(";id=") << node->id << QStringLiteral(";parentUid=") << node->parentUid
       << QStringLiteral(";parentNode=") << (void *)(node->parentNode.data()) << '\n';
 
-    foreach (const Node::Ptr &child, node->directChilds) {
+    for (const Node::Ptr &child : qAsConst(node->directChilds)) {
         s << child;
     }
 

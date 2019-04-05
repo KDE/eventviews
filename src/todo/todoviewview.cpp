@@ -73,7 +73,7 @@ bool TodoViewView::eventFilter(QObject *watched, QEvent *event)
             connect(mHeaderPopup, &QMenu::triggered, this, &TodoViewView::toggleColumnHidden);
         }
 
-        foreach (QAction *action, mColumnActions) {
+        for (QAction *action : qAsConst(mColumnActions)) {
             int column = action->data().toInt();
             action->setChecked(!isColumnHidden(column));
         }

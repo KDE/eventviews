@@ -68,7 +68,8 @@ void TimeLabelsZone::init()
 
     addTimeLabels(mPrefs->timeZone());
 
-    foreach (const QString &zoneStr, mPrefs->timeScaleTimezones()) {
+    const auto lst = mPrefs->timeScaleTimezones();
+    for (const QString &zoneStr : lst) {
         if (!seenTimeZones.contains(zoneStr)) {
             auto zone = QTimeZone(zoneStr.toUtf8());
             if (zone.isValid()) {
@@ -154,7 +155,8 @@ void TimeLabelsZone::setAgendaView(AgendaView *agendaView)
 void TimeLabelsZone::updateTimeLabelsPosition()
 {
     if (mAgenda) {
-        foreach (QScrollArea *area, timeLabels()) {
+        const auto lst = timeLabels();
+        for (QScrollArea *area : lst) {
             TimeLabels *label = static_cast<TimeLabels *>(area->widget());
             const int adjustment = mAgenda->contentsY();
             // y() is the offset to our parent (QScrollArea)

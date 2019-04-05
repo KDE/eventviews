@@ -773,7 +773,8 @@ void MonthScene::removeIncidence(const QString &uid)
             continue;
         }
         if (incidence->uid() == uid) {
-            foreach (MonthGraphicsItem *gitem, imi->monthGraphicsItems()) {
+            const auto lst = imi->monthGraphicsItems();
+            for (MonthGraphicsItem *gitem : lst) {
                 removeItem(gitem);
             }
         }

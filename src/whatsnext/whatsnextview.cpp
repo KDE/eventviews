@@ -121,7 +121,7 @@ void WhatsNextView::updateView()
         mText += QLatin1String("\" width=\"22\" height=\"22\">");
         mText += i18n("Events:") + QLatin1String("</h2>\n");
         mText += QLatin1String("<table>\n");
-        Q_FOREACH (const KCalCore::Event::Ptr &ev, events) {
+        for (const KCalCore::Event::Ptr &ev : qAsConst(events)) {
             if (!ev->recurs()) {
                 appendEvent(ev);
             } else {
@@ -158,7 +158,7 @@ void WhatsNextView::updateView()
                                                    KCalCore::SortDirectionAscending);
     if (!todos.isEmpty()) {
         bool taskHeaderWasCreated = false;
-        Q_FOREACH (const KCalCore::Todo::Ptr &todo, todos) {
+        for (const KCalCore::Todo::Ptr &todo : qAsConst(todos)) {
             if (!todo->isCompleted() && todo->hasDueDate() && todo->dtDue().date() <= mEndDate) {
                 if (!taskHeaderWasCreated) {
                     createTaskRow(kil);
@@ -170,7 +170,7 @@ void WhatsNextView::updateView()
         bool gotone = false;
         int priority = 1;
         while (!gotone && priority <= 9) {
-            Q_FOREACH (const KCalCore::Todo::Ptr &todo, todos) {
+            for (const KCalCore::Todo::Ptr &todo : qAsConst(todos)) {
                 if (!todo->isCompleted() && (todo->priority() == priority)) {
                     if (!taskHeaderWasCreated) {
                         createTaskRow(kil);
@@ -191,7 +191,7 @@ void WhatsNextView::updateView()
     int replies = 0;
     events = calendar()->events(QDate::currentDate(), QDate(2975, 12, 6),
                                 QTimeZone::systemTimeZone());
-    Q_FOREACH (const KCalCore::Event::Ptr &ev, events) {
+    for (const KCalCore::Event::Ptr &ev : qAsConst(events)) {
         KCalCore::Attendee::Ptr me = ev->attendeeByMails(myEmails);
         if (me != nullptr) {
             if (me->status() == KCalCore::Attendee::NeedsAction && me->RSVP()) {
@@ -212,7 +212,7 @@ void WhatsNextView::updateView()
         }
     }
     todos = calendar()->todos();
-    Q_FOREACH (const KCalCore::Todo::Ptr &to, todos) {
+    for (const KCalCore::Todo::Ptr &to : qAsConst(todos)) {
         KCalCore::Attendee::Ptr me = to->attendeeByMails(myEmails);
         if (me != nullptr) {
             if (me->status() == KCalCore::Attendee::NeedsAction && me->RSVP()) {

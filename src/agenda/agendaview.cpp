@@ -849,7 +849,7 @@ void AgendaView::init(const QDate &start, const QDate &end)
 
 AgendaView::~AgendaView()
 {
-    foreach (const ViewCalendar::Ptr &cal, d->mViewCalendar->mSubCalendars) {
+    for (const ViewCalendar::Ptr &cal : qAsConst(d->mViewCalendar->mSubCalendars)) {
         if (cal->getCalendar()) {
             cal->getCalendar()->unregisterObserver(d);
         }
@@ -1133,9 +1133,8 @@ void AgendaView::placeDecorationsFrame(QFrame *frame, bool decorationsFound, boo
 
 void AgendaView::placeDecorations(DecorationList &decoList, const QDate &date, QWidget *labelBox, bool forWeek)
 {
-    foreach (CalendarDecoration::Decoration *deco, decoList) {
-        CalendarDecoration::Element::List elements;
-        elements = forWeek ? deco->weekElements(date) : deco->dayElements(date);
+    for (CalendarDecoration::Decoration *deco : qAsConst(decoList)) {
+        const CalendarDecoration::Element::List elements = forWeek ? deco->weekElements(date) : deco->dayElements(date);
         if (!elements.isEmpty()) {
             auto decoHBox = new QFrame(labelBox);
             labelBox->layout()->addWidget(decoHBox);
@@ -1145,7 +1144,7 @@ void AgendaView::placeDecorations(DecorationList &decoList, const QDate &date, Q
             decoHBox->setFrameShape(QFrame::StyledPanel);
             decoHBox->setMinimumWidth(1);
 
-            foreach (CalendarDecoration::Element *it, elements) {
+            for (CalendarDecoration::Element *it : elements) {
                 DecorationLabel *label = new DecorationLabel(it, decoHBox);
                 label->setAlignment(Qt::AlignBottom);
                 label->setMinimumWidth(1);
@@ -1220,7 +1219,7 @@ void AgendaView::createDayLabels(bool force)
                           loadDecorations(botStrDecos, botDecos), false);
 #endif
 
-    Q_FOREACH (const QDate &date, d->mSelectedDates) {
+    for (const QDate &date : qAsConst(d->mSelectedDates)) {
         auto topDayLabelBox = new QFrame(d->mTopDayLabels);
         auto topDayLabelBoxLayout = new QVBoxLayout(topDayLabelBox);
         topDayLabelBoxLayout->setContentsMargins(0, 0, 0, 0);
@@ -1305,7 +1304,7 @@ void AgendaView::updateDayLabelSizes()
     }
 
     // Then, set that maximum text type to all the labels
-    foreach (AlternateLabel *label, d->mDateDayLabels) {
+    for (AlternateLabel *label : qAsConst(d->mDateDayLabels)) {
         label->setFixedType(overallType);
     }
 }
@@ -1434,7 +1433,8 @@ void AgendaView::createTimeBarHeaders()
     QFont labelFont = d->mTimeLabelsZone->preferences()->agendaTimeLabelsFont();
     labelFont.setPointSize(labelFont.pointSize() - SHRINKDOWN);
 
-    foreach (QScrollArea *area, d->mTimeLabelsZone->timeLabels()) {
+    const auto lst = d->mTimeLabelsZone->timeLabels();
+    for (QScrollArea *area : lst) {
         TimeLabels *timeLabel = static_cast<TimeLabels *>(area->widget());
         QLabel *label
             = new QLabel(timeLabel->header().replace(QLatin1Char('/'), QStringLiteral("/ ")),
@@ -1465,7 +1465,8 @@ void AgendaView::updateTimeBarWidth()
 
     int width = d->mTimeLabelsZone->preferedTimeLabelsWidth();
     for (QLabel *l : qAsConst(d->mTimeBarHeaders)) {
-        foreach (const QString &word, l->text().split(QLatin1Char(' '))) {
+        const auto lst = l->text().split(QLatin1Char(' '));
+        for (const QString &word : lst) {
             width = qMax(width, fm.boundingRect(word).width());
         }
     }
@@ -1708,7 +1709,7 @@ void AgendaView::showIncidences(const Akonadi::Item::List &incidences, const QDa
     KCalCore::CalFilter *filter = calendar()->filter();
     bool wehaveall = true;
     if (filter) {
-        Q_FOREACH (const Akonadi::Item &aitem, incidences) {
+        for (const Akonadi::Item &aitem : incidences) {
             if (!(wehaveall = filter->filterIncidence(CalendarSupport::incidence(aitem)))) {
                 break;
             }
@@ -1723,7 +1724,7 @@ void AgendaView::showIncidences(const Akonadi::Item::List &incidences, const QDa
     QDateTime end = CalendarSupport::incidence(incidences.first())->dateTime(
         KCalCore::Incidence::RoleEnd).toLocalTime();
     Akonadi::Item first = incidences.first();
-    Q_FOREACH (const Akonadi::Item &aitem, incidences) {
+    for (const Akonadi::Item &aitem : incidences) {
         if (CalendarSupport::incidence(aitem)->dtStart().toLocalTime() < start) {
             first = aitem;
         }
@@ -1784,7 +1785,7 @@ void AgendaView::fillAgenda()
     bool somethingReselected = false;
     const KCalCore::Incidence::List incidences = d->mViewCalendar->incidences();
 
-    foreach (const KCalCore::Incidence::Ptr &incidence, incidences) {
+    for (const KCalCore::Incidence::Ptr &incidence : incidences) {
         Q_ASSERT(incidence);
         const bool wasSelected = (incidence->uid() == selectedAgendaId)
                                  || (incidence->uid() == selectedAllDayAgendaId);
@@ -2018,7 +2019,7 @@ void AgendaView::slotIncidencesDropped(const KCalCore::Incidence::List &incidenc
     const QDate day = d->mSelectedDates[gpos.x()];
     QDateTime newTime(day, {}, Qt::LocalTime);
 
-    Q_FOREACH (const KCalCore::Incidence::Ptr &incidence, incidences) {
+    for (const KCalCore::Incidence::Ptr &incidence : incidences) {
         const Akonadi::Item existingItem = calendar()->item(incidence);
         const bool existsInSameCollection
             = existingItem.isValid()
@@ -2211,8 +2212,8 @@ void AgendaView::removeIncidence(const KCalCore::Incidence::Ptr &incidence)
     if (!incidence->hasRecurrenceId() && d->mViewCalendar->isValid(incidence->uid())) {
         // Deleted incidence is an main incidence
         // Delete all exceptions as well
-        KCalCore::Incidence::List exceptions = calendar2(incidence->uid())->instances(incidence);
-        foreach (const KCalCore::Incidence::Ptr &exception, exceptions) {
+        const KCalCore::Incidence::List exceptions = calendar2(incidence->uid())->instances(incidence);
+        for (const KCalCore::Incidence::Ptr &exception : exceptions) {
             if (exception->allDay()) {
                 d->mAllDayAgenda->removeIncidence(exception);
             } else {

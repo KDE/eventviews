@@ -157,14 +157,14 @@ void TimelineView::Private::insertIncidence(const Akonadi::Item &incidence)
     }
 
     for (QDate day = mStartDate; day <= mEndDate; day = day.addDays(1)) {
-        KCalCore::Event::List events = q->calendar()->events(day,
+        const KCalCore::Event::List events = q->calendar()->events(day,
                                                              QTimeZone::systemTimeZone(),
                                                              KCalCore::EventSortStartDate,
                                                              KCalCore::SortDirectionAscending);
         if (events.contains(event)) {
             //PENDING(AKONADI_PORT) check if correct. also check the original if,
             //was inside the for loop (unnecessarily)
-            foreach (const KCalCore::Event::Ptr &i, events) {
+            for (const KCalCore::Event::Ptr &i : events) {
                 Akonadi::Item item = q->calendar()->item(i);
                 insertIncidence(item, day);
             }

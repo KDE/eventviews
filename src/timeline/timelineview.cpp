@@ -358,7 +358,7 @@ void TimelineView::showDates(const QDate &start, const QDate &end, const QDate &
         events = calendar()->events(day, QTimeZone::systemTimeZone(),
                                     KCalCore::EventSortStartDate,
                                     KCalCore::SortDirectionAscending);
-        Q_FOREACH (const KCalCore::Event::Ptr &event, events) {
+        for (const KCalCore::Event::Ptr &event : qAsConst(events)) {
             if (event->hasRecurrenceId()) {
                 continue;
             }
