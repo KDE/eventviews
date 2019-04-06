@@ -62,6 +62,8 @@
 #include <QTimer>
 #include <KLocalizedString>
 
+#include <vector>
+
 using namespace EventViews;
 
 enum {
@@ -1841,7 +1843,7 @@ bool AgendaView::displayIncidence(const KCalCore::Incidence::Ptr &incidence, boo
 
     lastVisibleDateTime.setTime(QTime(23, 59, 59, 59));
     firstVisibleDateTime.setTime(QTime(0, 0));
-    KCalCore::SortableList<QDateTime> dateTimeList;
+    std::vector<QDateTime> dateTimeList;
 
     const QDateTime incDtStart = incidence->dtStart().toLocalTime();
     const QDateTime incDtEnd = incidence->dateTime(KCalCore::Incidence::RoleEnd).toLocalTime();
@@ -1904,7 +1906,7 @@ bool AgendaView::displayIncidence(const KCalCore::Incidence::Ptr &incidence, boo
         }
 
         if (dateToAdd <= lastVisibleDateTime && incidenceEnd > firstVisibleDateTime) {
-            dateTimeList += dateToAdd;
+            dateTimeList.push_back(dateToAdd);
         }
     }
 
@@ -1917,7 +1919,7 @@ bool AgendaView::displayIncidence(const KCalCore::Incidence::Ptr &incidence, boo
         /* If there's a recurring instance showing up today don't add "today" again
          * we don't want the event to appear duplicated */
         if (!alreadyAddedToday) {
-            dateTimeList += dateTimeToday;
+            dateTimeList.push_back(dateTimeToday);
         }
     }
 
@@ -1942,7 +1944,7 @@ bool AgendaView::displayIncidence(const KCalCore::Incidence::Ptr &incidence, boo
         }
     }
 
-    return !dateTimeList.isEmpty();
+    return !dateTimeList.empty();
 }
 
 void AgendaView::updateEventIndicatorTop(int newY)
