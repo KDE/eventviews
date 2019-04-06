@@ -40,11 +40,6 @@
 #include <QByteArray>
 #include <QDate>
 
-namespace KCalCore {
-template<typename T> class SortableList;
-typedef SortableList<QDate> DateList;
-}
-
 namespace CalendarSupport {
 class CollectionSelection;
 class KCalPrefs;
