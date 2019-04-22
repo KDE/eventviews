@@ -328,7 +328,7 @@ TodoView::TodoView(const EventViews::PrefsPtr &prefs, bool sidebarView, QWidget 
 
     mItemPopupMenuItemOnlyEntries << mItemPopupMenu->addAction(
         i18nc("@action:inmenu show the to-do", "&Show"),
-        this, SLOT(showTodo()));
+        this, &TodoView::showTodo);
 
     QAction *a = mItemPopupMenu->addAction(
         i18nc("@action:inmenu edit the to-do", "&Edit..."),
@@ -345,13 +345,13 @@ TodoView::TodoView(const EventViews::PrefsPtr &prefs, bool sidebarView, QWidget 
     mItemPopupMenuItemOnlyEntries << mItemPopupMenu->addAction(
         QIcon::fromTheme(QStringLiteral("document-print-preview")),
         i18nc("@action:inmenu print preview the to-do", "Print Previe&w..."),
-        this, SIGNAL(printPreviewTodo()));
+        this, &TodoView::printPreviewTodo);
     mItemPopupMenu->addSeparator();
     a = mItemPopupMenu->addAction(
         KIconLoader::global()->loadIcon(QStringLiteral("edit-delete"), KIconLoader::NoGroup,
                                         KIconLoader::SizeSmall),
         i18nc("@action:inmenu delete the to-do", "&Delete"),
-        this, SLOT(deleteTodo()));
+        this, &TodoView::deleteTodo);
     mItemPopupMenuReadWriteEntries << a;
     mItemPopupMenuItemOnlyEntries << a;
 
@@ -361,22 +361,22 @@ TodoView::TodoView(const EventViews::PrefsPtr &prefs, bool sidebarView, QWidget 
         KIconLoader::global()->loadIcon(
             QStringLiteral("view-calendar-tasks"), KIconLoader::NoGroup, KIconLoader::SizeSmall),
         i18nc("@action:inmenu create a new to-do", "New &To-do..."),
-        this, SLOT(newTodo()));
+        this, &TodoView::newTodo);
 
     a = mItemPopupMenu->addAction(
         i18nc("@action:inmenu create a new sub-to-do", "New Su&b-to-do..."),
-        this, SLOT(newSubTodo()));
+        this, &TodoView::newSubTodo);
     mItemPopupMenuReadWriteEntries << a;
     mItemPopupMenuItemOnlyEntries << a;
 
     mMakeTodoIndependent = mItemPopupMenu->addAction(
         i18nc("@action:inmenu", "&Make this To-do Independent"),
-        this, SIGNAL(unSubTodoSignal()));
+        this, &TodoView::unSubTodoSignal);
 
     mMakeSubtodosIndependent
         = mItemPopupMenu->addAction(
               i18nc("@action:inmenu", "Make all Sub-to-dos &Independent"),
-              this, SIGNAL(unAllSubTodoSignal()));
+              this, &TodoView::unAllSubTodoSignal);
 
     mItemPopupMenuItemOnlyEntries << mMakeTodoIndependent;
     mItemPopupMenuItemOnlyEntries << mMakeSubtodosIndependent;
@@ -432,7 +432,7 @@ TodoView::TodoView(const EventViews::PrefsPtr &prefs, bool sidebarView, QWidget 
     mItemPopupMenu->addSeparator();
     mItemPopupMenu->addAction(
         i18nc("@action:inmenu delete completed to-dos", "Pur&ge Completed"),
-        this, SIGNAL(purgeCompletedSignal()));
+        this, &TodoView::purgeCompletedSignal);
 
     mPriorityPopupMenu = new QMenu(this);
     mPriority[ mPriorityPopupMenu->addAction(
