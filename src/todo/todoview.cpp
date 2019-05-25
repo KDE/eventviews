@@ -673,9 +673,7 @@ void TodoView::addTodo(const QString &summary, const Akonadi::Item &parentItem, 
 
     KCalCore::Todo::Ptr todo(new KCalCore::Todo);
     todo->setSummary(summaryTrimmed);
-    todo->setOrganizer(
-        Person::Ptr(new Person(CalendarSupport::KCalPrefs::instance()->fullName(),
-                               CalendarSupport::KCalPrefs::instance()->email())));
+    todo->setOrganizer(Person(CalendarSupport::KCalPrefs::instance()->fullName(), CalendarSupport::KCalPrefs::instance()->email()));
 
     todo->setCategories(categories);
 

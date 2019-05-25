@@ -138,7 +138,7 @@ void AgendaItem::updateIcons()
     mIconRecur = mIncidence->recurs() || mIncidence->hasRecurrenceId();
     mIconAlarm = mIncidence->hasEnabledAlarms();
     if (mIncidence->attendeeCount() > 1) {
-        if (mEventView->kcalPreferences()->thatIsMe(mIncidence->organizer()->email())) {
+        if (mEventView->kcalPreferences()->thatIsMe(mIncidence->organizer().email())) {
             mIconReply = false;
             mIconGroup = false;
             mIconGroupTent = false;

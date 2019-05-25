@@ -627,7 +627,7 @@ bool EventView::makesWholeDayBusy(const KCalCore::Incidence::Ptr &incidence) con
 
     // Last check: must be organizer or attendee:
 
-    if (kcalPreferences()->thatIsMe(ev->organizer()->email())) {
+    if (kcalPreferences()->thatIsMe(ev->organizer().email())) {
         return true;
     }
 
