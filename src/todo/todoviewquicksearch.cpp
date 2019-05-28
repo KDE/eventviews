@@ -57,7 +57,7 @@ TodoViewQuickSearch::TodoViewQuickSearch(const Akonadi::ETMCalendar::Ptr &calend
     mSearchLine->setWhatsThis(
         i18nc("@info:whatsthis",
               "Enter text here to filter the to-dos that are shown by matching summaries."));
-    mSearchLine->setPlaceholderText(i18nc("@label in QuickSearchLine", "Search Summaries"));
+    mSearchLine->setPlaceholderText(i18nc("@label in QuickSearchLine", "Search Summaries..."));
     mSearchLine->setClearButtonEnabled(true);
     connect(mSearchLine, &QLineEdit::textChanged, this, &TodoViewQuickSearch::searchTextChanged);
 
