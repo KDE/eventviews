@@ -59,7 +59,7 @@ static PreNode::List sortedPrenodes(const PreNode::List &nodes)
     PreNode::List remainingNodes = nodes;
 
     while (prenodeByUid.count() < count) {
-        bool foundAtLeastOne = false; // this bool saves us from infinit looping if the parent doesn't exist
+        const auto preSize = prenodeByUid.count(); // this saves us from infinit looping if the parent doesn't exist
         for (const PreNode::Ptr &node : nodes) {
             Q_ASSERT(node);
             const QString uid = node->incidence->instanceIdentifier();
@@ -68,18 +68,16 @@ static PreNode::List sortedPrenodes(const PreNode::List &nodes)
                 prenodeByUid.insert(uid, node);
                 remainingNodes.removeAll(node);
                 node->depth = 0;
-                foundAtLeastOne = true;
             } else {
                 if (prenodeByUid.contains(parentUid)) {
                     node->depth = 1 + prenodeByUid.value(parentUid)->depth;
                     remainingNodes.removeAll(node);
                     prenodeByUid.insert(uid, node);
-                    foundAtLeastOne = true;
                 }
             }
         }
 
-        if (!foundAtLeastOne) {
+        if (preSize == prenodeByUid.count()) {
             break;
         }
     }
