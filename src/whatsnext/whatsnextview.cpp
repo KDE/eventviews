@@ -192,9 +192,9 @@ void WhatsNextView::updateView()
     events = calendar()->events(QDate::currentDate(), QDate(2975, 12, 6),
                                 QTimeZone::systemTimeZone());
     for (const KCalCore::Event::Ptr &ev : qAsConst(events)) {
-        KCalCore::Attendee::Ptr me = ev->attendeeByMails(myEmails);
-        if (me != nullptr) {
-            if (me->status() == KCalCore::Attendee::NeedsAction && me->RSVP()) {
+        KCalCore::Attendee me = ev->attendeeByMails(myEmails);
+        if (!me.isNull()) {
+            if (me.status() == KCalCore::Attendee::NeedsAction && me.RSVP()) {
                 if (replies == 0) {
                     mText += QLatin1String("<p></p>");
                     kil->loadIcon(QStringLiteral("mail-reply-sender"), KIconLoader::NoGroup, 22,
@@ -213,9 +213,9 @@ void WhatsNextView::updateView()
     }
     todos = calendar()->todos();
     for (const KCalCore::Todo::Ptr &to : qAsConst(todos)) {
-        KCalCore::Attendee::Ptr me = to->attendeeByMails(myEmails);
-        if (me != nullptr) {
-            if (me->status() == KCalCore::Attendee::NeedsAction && me->RSVP()) {
+        KCalCore::Attendee me = to->attendeeByMails(myEmails);
+        if (!me.isNull()) {
+            if (me.status() == KCalCore::Attendee::NeedsAction && me.RSVP()) {
                 if (replies == 0) {
                     mText += QLatin1String("<p></p>");
                     kil->loadIcon(QStringLiteral("mail-reply-sender"), KIconLoader::NoGroup, 22,

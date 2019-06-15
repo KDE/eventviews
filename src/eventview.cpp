@@ -634,7 +634,7 @@ bool EventView::makesWholeDayBusy(const KCalCore::Incidence::Ptr &incidence) con
     KCalCore::Attendee::List attendees = ev->attendees();
     KCalCore::Attendee::List::ConstIterator it;
     for (it = attendees.constBegin(); it != attendees.constEnd(); ++it) {
-        if (kcalPreferences()->thatIsMe((*it)->email())) {
+        if (kcalPreferences()->thatIsMe((*it).email())) {
             return true;
         }
     }

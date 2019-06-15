@@ -780,8 +780,7 @@ bool TodoModel::dropMimeData(const QMimeData *data, Qt::DropAction action, int r
                         QString name, email, comment;
                         if (KEmailAddress::splitAddress(*it, name, email, comment)
                             == KEmailAddress::AddressOk) {
-                            destTodo->addAttendee(
-                                KCalCore::Attendee::Ptr(new KCalCore::Attendee(name, email)));
+                            destTodo->addAttendee(KCalCore::Attendee(name, email));
                         }
                     }
                 }

@@ -144,16 +144,15 @@ void AgendaItem::updateIcons()
             mIconGroupTent = false;
             mIconOrganizer = true;
         } else {
-            KCalCore::Attendee::Ptr me
-                = mIncidence->attendeeByMails(mEventView->kcalPreferences()->allEmails());
+            KCalCore::Attendee me = mIncidence->attendeeByMails(mEventView->kcalPreferences()->allEmails());
 
-            if (me) {
-                if (me->status() == KCalCore::Attendee::NeedsAction && me->RSVP()) {
+            if (!me.isNull()) {
+                if (me.status() == KCalCore::Attendee::NeedsAction && me.RSVP()) {
                     mIconReply = true;
                     mIconGroup = false;
                     mIconGroupTent = false;
                     mIconOrganizer = false;
-                } else if (me->status() == KCalCore::Attendee::Tentative) {
+                } else if (me.status() == KCalCore::Attendee::Tentative) {
                     mIconReply = false;
                     mIconGroup = false;
                     mIconGroupTent = true;
@@ -643,7 +642,7 @@ void AgendaItem::addAttendee(const QString &newAttendee)
     QString name, email;
     KEmailAddress::extractEmailAddressAndName(newAttendee, email, name);
     if (!(name.isEmpty() && email.isEmpty())) {
-        mIncidence->addAttendee(KCalCore::Attendee::Ptr(new KCalCore::Attendee(name, email)));
+        mIncidence->addAttendee(KCalCore::Attendee(name, email));
         KMessageBox::information(
             this,
             i18n("Attendee \"%1\" added to the calendar item \"%2\"",
