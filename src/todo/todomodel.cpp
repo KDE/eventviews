@@ -771,8 +771,7 @@ bool TodoModel::dropMimeData(const QMimeData *data, Qt::DropAction action, int r
                 KCalCore::Todo::Ptr oldTodo = KCalCore::Todo::Ptr(destTodo->clone());
 
                 if (text.startsWith(QLatin1String("file:"))) {
-                    destTodo->addAttachment(KCalCore::Attachment::Ptr(new KCalCore::Attachment(
-                                                                          text)));
+                    destTodo->addAttachment(KCalCore::Attachment(text));
                 } else {
                     QStringList emails = KEmailAddress::splitAddressList(text);
                     for (QStringList::ConstIterator it = emails.constBegin();
