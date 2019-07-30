@@ -32,8 +32,8 @@
 #include <Item>
 #include <Akonadi/Calendar/ETMCalendar>
 
-#include <KCalCore/Incidence>
-#include <KCalCore/Todo>
+#include <KCalendarCore/Incidence>
+#include <KCalendarCore/Todo>
 
 #include <QWidget>
 #include <QSet>
@@ -128,7 +128,7 @@ public:
 
     /**
       Return calendar object of this view.
-      TODO: replace with a version that returns a KCalCore::Calendar so it
+      TODO: replace with a version that returns a KCalendarCore::Calendar so it
             can be used in different environments.
             see agendaview for example calendar2(incidence)
     */
@@ -155,7 +155,7 @@ public:
       probably only select a single event at a time, but some may be able
       to select more than one.
     */
-    virtual KCalCore::DateList selectedIncidenceDates() const = 0;
+    virtual KCalendarCore::DateList selectedIncidenceDates() const = 0;
 
     /**
        Returns the start of the selection, or an invalid QDateTime if there is no selection
@@ -265,7 +265,7 @@ public:
     Q_REQUIRED_RESULT QDateTime actualStartDateTime() const;
     Q_REQUIRED_RESULT QDateTime actualEndDateTime() const;
 
-    Q_REQUIRED_RESULT int showMoveRecurDialog(const KCalCore::Incidence::Ptr &incidence, const QDate &date);
+    Q_REQUIRED_RESULT int showMoveRecurDialog(const KCalendarCore::Incidence::Ptr &incidence, const QDate &date);
 
     /**
       Handles key events, opens the new event dialog when enter is pressed, activates type ahead.
@@ -364,7 +364,7 @@ Q_SIGNALS:
      * selected dates has changed.
      *   @param datelist the new list of selected dates
      */
-    void datesSelected(const KCalCore::DateList &datelist);
+    void datesSelected(const KCalendarCore::DateList &datelist);
 
     /**
      * Emitted when an event is moved using the mouse in an agenda
@@ -469,7 +469,7 @@ private:
     void onCollectionChanged(const Akonadi::Collection &, const QSet<QByteArray> &);
 
 protected:
-    bool makesWholeDayBusy(const KCalCore::Incidence::Ptr &incidence) const;
+    bool makesWholeDayBusy(const KCalendarCore::Incidence::Ptr &incidence) const;
     Akonadi::IncidenceChanger *changer() const;
 
     /**

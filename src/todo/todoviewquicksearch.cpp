@@ -36,7 +36,7 @@
 
 #include <CalendarSupport/CategoryHierarchyReader>
 
-#include <KCalCore/CalFilter>
+#include <KCalendarCore/CalFilter>
 
 #include <QLineEdit>
 #include <KLocalizedString>

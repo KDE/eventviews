@@ -107,10 +107,10 @@ void WhatsNextView::updateView()
     }
     mText += QLatin1String("</h2>\n");
 
-    KCalCore::Event::List events;
+    KCalendarCore::Event::List events;
     events = calendar()->events(mStartDate, mEndDate, QTimeZone::systemTimeZone(), false);
-    events = calendar()->sortEvents(events, KCalCore::EventSortStartDate,
-                                    KCalCore::SortDirectionAscending);
+    events = calendar()->sortEvents(events, KCalendarCore::EventSortStartDate,
+                                    KCalendarCore::SortDirectionAscending);
 
     if (!events.isEmpty()) {
         mText += QLatin1String("<p></p>");
@@ -121,11 +121,11 @@ void WhatsNextView::updateView()
         mText += QLatin1String("\" width=\"22\" height=\"22\">");
         mText += i18n("Events:") + QLatin1String("</h2>\n");
         mText += QLatin1String("<table>\n");
-        for (const KCalCore::Event::Ptr &ev : qAsConst(events)) {
+        for (const KCalendarCore::Event::Ptr &ev : qAsConst(events)) {
             if (!ev->recurs()) {
                 appendEvent(ev);
             } else {
-                KCalCore::Recurrence *recur = ev->recurrence();
+                KCalendarCore::Recurrence *recur = ev->recurrence();
                 int duration = ev->dtStart().secsTo(ev->dtEnd());
                 QDateTime start
                     = recur->getPreviousDateTime(QDateTime(mStartDate, QTime(), Qt::LocalTime));
@@ -154,11 +154,11 @@ void WhatsNextView::updateView()
     }
 
     mTodos.clear();
-    KCalCore::Todo::List todos = calendar()->todos(KCalCore::TodoSortDueDate,
-                                                   KCalCore::SortDirectionAscending);
+    KCalendarCore::Todo::List todos = calendar()->todos(KCalendarCore::TodoSortDueDate,
+                                                   KCalendarCore::SortDirectionAscending);
     if (!todos.isEmpty()) {
         bool taskHeaderWasCreated = false;
-        for (const KCalCore::Todo::Ptr &todo : qAsConst(todos)) {
+        for (const KCalendarCore::Todo::Ptr &todo : qAsConst(todos)) {
             if (!todo->isCompleted() && todo->hasDueDate() && todo->dtDue().date() <= mEndDate) {
                 if (!taskHeaderWasCreated) {
                     createTaskRow(kil);
@@ -170,7 +170,7 @@ void WhatsNextView::updateView()
         bool gotone = false;
         int priority = 1;
         while (!gotone && priority <= 9) {
-            for (const KCalCore::Todo::Ptr &todo : qAsConst(todos)) {
+            for (const KCalendarCore::Todo::Ptr &todo : qAsConst(todos)) {
                 if (!todo->isCompleted() && (todo->priority() == priority)) {
                     if (!taskHeaderWasCreated) {
                         createTaskRow(kil);
@@ -191,10 +191,10 @@ void WhatsNextView::updateView()
     int replies = 0;
     events = calendar()->events(QDate::currentDate(), QDate(2975, 12, 6),
                                 QTimeZone::systemTimeZone());
-    for (const KCalCore::Event::Ptr &ev : qAsConst(events)) {
-        KCalCore::Attendee me = ev->attendeeByMails(myEmails);
+    for (const KCalendarCore::Event::Ptr &ev : qAsConst(events)) {
+        KCalendarCore::Attendee me = ev->attendeeByMails(myEmails);
         if (!me.isNull()) {
-            if (me.status() == KCalCore::Attendee::NeedsAction && me.RSVP()) {
+            if (me.status() == KCalendarCore::Attendee::NeedsAction && me.RSVP()) {
                 if (replies == 0) {
                     mText += QLatin1String("<p></p>");
                     kil->loadIcon(QStringLiteral("mail-reply-sender"), KIconLoader::NoGroup, 22,
@@ -212,10 +212,10 @@ void WhatsNextView::updateView()
         }
     }
     todos = calendar()->todos();
-    for (const KCalCore::Todo::Ptr &to : qAsConst(todos)) {
-        KCalCore::Attendee me = to->attendeeByMails(myEmails);
+    for (const KCalendarCore::Todo::Ptr &to : qAsConst(todos)) {
+        KCalendarCore::Attendee me = to->attendeeByMails(myEmails);
         if (!me.isNull()) {
-            if (me.status() == KCalCore::Attendee::NeedsAction && me.RSVP()) {
+            if (me.status() == KCalendarCore::Attendee::NeedsAction && me.RSVP()) {
                 if (replies == 0) {
                     mText += QLatin1String("<p></p>");
                     kil->loadIcon(QStringLiteral("mail-reply-sender"), KIconLoader::NoGroup, 22,
@@ -259,10 +259,10 @@ void WhatsNextView::changeIncidenceDisplay(const Akonadi::Item &, Akonadi::Incid
     updateView();
 }
 
-void WhatsNextView::appendEvent(const KCalCore::Incidence::Ptr &incidence, const QDateTime &start, const QDateTime &end)
+void WhatsNextView::appendEvent(const KCalendarCore::Incidence::Ptr &incidence, const QDateTime &start, const QDateTime &end)
 {
     mText += QLatin1String("<tr><td><b>");
-    if (const KCalCore::Event::Ptr event = incidence.dynamicCast<KCalCore::Event>()) {
+    if (const KCalendarCore::Event::Ptr event = incidence.dynamicCast<KCalendarCore::Event>()) {
         auto starttime = start.toLocalTime();
         if (!starttime.isValid()) {
             starttime = event->dtStart().toLocalTime();
@@ -296,10 +296,10 @@ void WhatsNextView::appendEvent(const KCalCore::Incidence::Ptr &incidence, const
         }
     }
     mText += QLatin1String("</b></td><td><a ");
-    if (incidence->type() == KCalCore::Incidence::TypeEvent) {
+    if (incidence->type() == KCalendarCore::Incidence::TypeEvent) {
         mText += QLatin1String("href=\"event:");
     }
-    if (incidence->type() == KCalCore::Incidence::TypeTodo) {
+    if (incidence->type() == KCalendarCore::Incidence::TypeTodo) {
         mText += QLatin1String("href=\"todo:");
     }
     mText += incidence->uid() + QLatin1String("\">");
@@ -307,7 +307,7 @@ void WhatsNextView::appendEvent(const KCalCore::Incidence::Ptr &incidence, const
     mText += QLatin1String("</a></td></tr>\n");
 }
 
-void WhatsNextView::appendTodo(const KCalCore::Incidence::Ptr &incidence)
+void WhatsNextView::appendTodo(const KCalendarCore::Incidence::Ptr &incidence)
 {
     Akonadi::Item aitem = calendar()->item(incidence);
     if (mTodos.contains(aitem)) {
@@ -318,7 +318,7 @@ void WhatsNextView::appendTodo(const KCalCore::Incidence::Ptr &incidence)
     mText += incidence->summary();
     mText += QLatin1String("</a>");
 
-    if (const KCalCore::Todo::Ptr todo = CalendarSupport::todo(aitem)) {
+    if (const KCalendarCore::Todo::Ptr todo = CalendarSupport::todo(aitem)) {
         if (todo->hasDueDate()) {
             mText += i18nc("to-do due date", "  (Due: %1)",
                            KCalUtils::IncidenceFormatter::dateTimeToString(

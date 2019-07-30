@@ -31,7 +31,7 @@
 #include <calendarsupport/collectionselection.h>
 
 #include <Akonadi/Calendar/IncidenceChanger>
-#include <KCalCore/Event>
+#include <KCalendarCore/Event>
 
 #include <AkonadiCore/Collection>
 #include <AkonadiWidgets/ControlGui>

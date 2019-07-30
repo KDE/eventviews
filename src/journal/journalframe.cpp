@@ -30,7 +30,7 @@
 
 #include <CalendarSupport/Utils>
 
-#include <KCalCore/Journal>
+#include <KCalendarCore/Journal>
 
 #include <KCalUtils/IncidenceFormatter>
 #include <Akonadi/Calendar/ETMCalendar>
@@ -103,8 +103,8 @@ void JournalDateView::addJournal(const Akonadi::Item &j)
             this, &JournalDateView::editIncidence);
     connect(entry, &JournalFrame::incidenceSelected,
             this, &JournalDateView::incidenceSelected);
-    connect(entry, QOverload<const KCalCore::Journal::Ptr &, bool>::of(&JournalFrame::printJournal),
-            this, QOverload<const KCalCore::Journal::Ptr &, bool>::of(&JournalDateView::printJournal));
+    connect(entry, QOverload<const KCalendarCore::Journal::Ptr &, bool>::of(&JournalFrame::printJournal),
+            this, QOverload<const KCalendarCore::Journal::Ptr &, bool>::of(&JournalDateView::printJournal));
 }
 
 Akonadi::Item::List JournalDateView::journals() const
@@ -300,7 +300,7 @@ void JournalFrame::readJournal(const Akonadi::Item &j)
 {
     int baseFontSize = QFontDatabase::systemFont(QFontDatabase::GeneralFont).pointSize();
     mJournal = j;
-    const KCalCore::Journal::Ptr journal = CalendarSupport::journal(j);
+    const KCalendarCore::Journal::Ptr journal = CalendarSupport::journal(j);
     mBrowser->clear();
     QTextCursor cursor = QTextCursor(mBrowser->textCursor());
     cursor.movePosition(QTextCursor::Start);

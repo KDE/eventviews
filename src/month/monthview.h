@@ -53,7 +53,7 @@ public:
     Q_REQUIRED_RESULT Akonadi::Item::List selectedIncidences() const override;
 
     /** Returns dates of the currently selected events */
-    Q_REQUIRED_RESULT KCalCore::DateList selectedIncidenceDates() const override;
+    Q_REQUIRED_RESULT KCalendarCore::DateList selectedIncidenceDates() const override;
 
     Q_REQUIRED_RESULT QDateTime selectionStart() const override;
 

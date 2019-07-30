@@ -768,7 +768,7 @@ void MonthScene::removeIncidence(const QString &uid)
             continue;
         }
 
-        KCalCore::Incidence::Ptr incidence = imi->incidence();
+        KCalendarCore::Incidence::Ptr incidence = imi->incidence();
         if (!incidence) {
             continue;
         }

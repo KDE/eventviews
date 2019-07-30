@@ -26,7 +26,7 @@
 #include "eventviews_export.h"
 
 #include <Item>
-#include <KCalCore/Incidence>
+#include <KCalendarCore/Incidence>
 #include <Akonadi/Calendar/ETMCalendar>
 
 #include <QDate>
@@ -286,11 +286,11 @@ class EVENTVIEWS_EXPORT IncidenceMonthItem : public MonthItem
     Q_OBJECT
 
 public:
-    IncidenceMonthItem(MonthScene *monthScene, const Akonadi::ETMCalendar::Ptr &calendar, const Akonadi::Item &item, const KCalCore::Incidence::Ptr &incidence, const QDate &recurStartDate = QDate());
+    IncidenceMonthItem(MonthScene *monthScene, const Akonadi::ETMCalendar::Ptr &calendar, const Akonadi::Item &item, const KCalendarCore::Incidence::Ptr &incidence, const QDate &recurStartDate = QDate());
 
     ~IncidenceMonthItem() override;
 
-    KCalCore::Incidence::Ptr incidence() const;
+    KCalendarCore::Incidence::Ptr incidence() const;
     Akonadi::Item akonadiItem() const;
     Akonadi::Item::Id akonadiItemId() const;
 
@@ -326,7 +326,7 @@ protected Q_SLOTS:
 private:
     void updateDates(int startOffset, int endOffset);
 
-    void setNewDates(const KCalCore::Incidence::Ptr &incidence, int startOffset, int endOffset);
+    void setNewDates(const KCalendarCore::Incidence::Ptr &incidence, int startOffset, int endOffset);
 
     /**
       Returns the category color for this incidence.
@@ -334,7 +334,7 @@ private:
     QColor catColor() const;
 
     Akonadi::ETMCalendar::Ptr mCalendar;
-    KCalCore::Incidence::Ptr mIncidence;
+    KCalendarCore::Incidence::Ptr mIncidence;
     Akonadi::Item::Id mAkonadiItemId;
     int mRecurDayOffset;
     bool mIsEvent, mIsTodo, mIsJournal;

@@ -31,14 +31,14 @@
 #include <CalendarSupport/CollectionSelection>
 #include <CalendarSupport/Utils>
 #include <Akonadi/Calendar/IncidenceChanger>
-#include <KCalCore/OccurrenceIterator>
+#include <KCalendarCore/OccurrenceIterator>
 
 #include "calendarview_debug.h"
 
 #include <QStandardItemModel>
 #include <QTreeWidget>
 
-using namespace KCalCore;
+using namespace KCalendarCore;
 using namespace EventViews;
 
 TimelineView::Private::Private(TimelineView *parent)
@@ -124,7 +124,7 @@ void TimelineView::Private::insertIncidence(const Akonadi::Item &aitem, const QD
     }
 
     if (incidence->recurs()) {
-        KCalCore::OccurrenceIterator occurIter(*(q->calendar()), incidence, QDateTime(day, QTime(0,
+        KCalendarCore::OccurrenceIterator occurIter(*(q->calendar()), incidence, QDateTime(day, QTime(0,
                                                                                                  0,
                                                                                                  0)), QDateTime(
                                                    day, QTime(23, 59, 59)));
@@ -157,14 +157,14 @@ void TimelineView::Private::insertIncidence(const Akonadi::Item &incidence)
     }
 
     for (QDate day = mStartDate; day <= mEndDate; day = day.addDays(1)) {
-        const KCalCore::Event::List events = q->calendar()->events(day,
+        const KCalendarCore::Event::List events = q->calendar()->events(day,
                                                              QTimeZone::systemTimeZone(),
-                                                             KCalCore::EventSortStartDate,
-                                                             KCalCore::SortDirectionAscending);
+                                                             KCalendarCore::EventSortStartDate,
+                                                             KCalendarCore::SortDirectionAscending);
         if (events.contains(event)) {
             //PENDING(AKONADI_PORT) check if correct. also check the original if,
             //was inside the for loop (unnecessarily)
-            for (const KCalCore::Event::Ptr &i : events) {
+            for (const KCalendarCore::Event::Ptr &i : events) {
                 Akonadi::Item item = q->calendar()->item(i);
                 insertIncidence(item, day);
             }
@@ -181,7 +181,7 @@ void TimelineView::Private::removeIncidence(const Akonadi::Item &incidence)
 #if 0 //AKONADI_PORT_DISABLED
       // try harder, the incidence might already be removed from the resource
         typedef QMap<QString, KOrg::TimelineItem *> M2_t;
-        typedef QMap<KCalCore::ResourceCalendar *, M2_t> M1_t;
+        typedef QMap<KCalendarCore::ResourceCalendar *, M2_t> M1_t;
         for (M1_t::ConstIterator it1 = d->mCalendarItemMap.constBegin();
              it1 != mCalendarItemMap.constEnd(); ++it1) {
             for (M2_t::ConstIterator it2 = it1.value().constBegin();

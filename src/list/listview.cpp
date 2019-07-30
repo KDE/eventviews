@@ -35,7 +35,7 @@
 #include <Akonadi/Calendar/IncidenceChanger>
 
 #include <KCalUtils/IncidenceFormatter>
-#include <KCalCore/Visitor>
+#include <KCalendarCore/Visitor>
 
 #include <KConfig>
 #include <KConfigGroup>
@@ -48,7 +48,7 @@
 #include <QLocale>
 
 using namespace EventViews;
-using namespace KCalCore;
+using namespace KCalendarCore;
 using namespace KCalUtils;
 
 enum {
@@ -123,8 +123,8 @@ public:
     {
     }
 
-    void addIncidences(const Akonadi::ETMCalendar::Ptr &calendar, const KCalCore::Incidence::List &incidenceList, const QDate &date);
-    void addIncidence(const Akonadi::ETMCalendar::Ptr &calendar, const KCalCore::Incidence::Ptr &, const QDate &date);
+    void addIncidences(const Akonadi::ETMCalendar::Ptr &calendar, const KCalendarCore::Incidence::List &incidenceList, const QDate &date);
+    void addIncidence(const Akonadi::ETMCalendar::Ptr &calendar, const KCalendarCore::Incidence::Ptr &, const QDate &date);
     void addIncidence(const Akonadi::ETMCalendar::Ptr &calendar, const Akonadi::Item &, const QDate &date);
     ListViewItem *getItemForIncidence(const Akonadi::Item &);
 
@@ -145,7 +145,7 @@ public:
   This class provides the initialization of a ListViewItem for calendar
   components using the Incidence::Visitor.
 */
-class ListView::Private::ListItemVisitor : public KCalCore::Visitor
+class ListView::Private::ListItemVisitor : public KCalendarCore::Visitor
 {
 public:
     ListItemVisitor(ListViewItem *item, QDate dt) : mItem(item)
@@ -385,10 +385,10 @@ void ListView::showAll()
 }
 
 void ListView::Private::addIncidences(const Akonadi::ETMCalendar::Ptr &calendar,
-                                      const KCalCore::Incidence::List &incidences,
+                                      const KCalendarCore::Incidence::List &incidences,
                                       const QDate &date)
 {
-    for (const KCalCore::Incidence::Ptr &incidence : incidences) {
+    for (const KCalendarCore::Incidence::Ptr &incidence : incidences) {
         addIncidence(calendar, incidence, date);
     }
 }
@@ -397,13 +397,13 @@ void ListView::Private::addIncidence(const Akonadi::ETMCalendar::Ptr &calendar,
                                      const Akonadi::Item &item, const QDate &date)
 {
     Q_ASSERT(calendar);
-    if (item.isValid() && item.hasPayload<KCalCore::Incidence::Ptr>()) {
-        addIncidence(calendar, item.payload<KCalCore::Incidence::Ptr>(), date);
+    if (item.isValid() && item.hasPayload<KCalendarCore::Incidence::Ptr>()) {
+        addIncidence(calendar, item.payload<KCalendarCore::Incidence::Ptr>(), date);
     }
 }
 
 void ListView::Private::addIncidence(const Akonadi::ETMCalendar::Ptr &calendar,
-                                     const KCalCore::Incidence::Ptr &incidence, const QDate &date)
+                                     const KCalendarCore::Incidence::Ptr &incidence, const QDate &date)
 {
     if (!incidence) {
         return;

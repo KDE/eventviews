@@ -24,10 +24,10 @@
 
 #include <CalendarSupport/Utils>
 
-#include <KCalCore/Incidence>
+#include <KCalendarCore/Incidence>
 #include <KCalUtils/IncidenceFormatter>
 
-using namespace KCalCore;
+using namespace KCalendarCore;
 using namespace KCalUtils;
 using namespace EventViews;
 

@@ -51,7 +51,7 @@ public:
 
     Q_REQUIRED_RESULT int currentDateCount() const override;
     Q_REQUIRED_RESULT Akonadi::Item::List selectedIncidences() const override;
-    Q_REQUIRED_RESULT KCalCore::DateList selectedIncidenceDates() const override;
+    Q_REQUIRED_RESULT KCalendarCore::DateList selectedIncidenceDates() const override;
 
     // Shows all incidences of the calendar
     void showAll();

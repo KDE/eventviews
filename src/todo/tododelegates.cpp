@@ -34,7 +34,7 @@
 #include <Libkdepim/KCheckComboBox>
 #include <LibkdepimAkonadi/TagWidgets>
 
-#include <KCalCore/CalFilter>
+#include <KCalendarCore/CalFilter>
 
 #include <KComboBox>
 #include <KDateComboBox>

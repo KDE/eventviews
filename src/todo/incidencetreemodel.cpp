@@ -193,9 +193,9 @@ void IncidenceTreeModel::Private::onDataChanged(const QModelIndex &begin, const 
             Akonadi::Item item = q->data(index,
                                          Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
             Q_ASSERT(item.isValid());
-            KCalCore::Incidence::Ptr incidence
-                = !item.hasPayload<KCalCore::Incidence::Ptr>() ? KCalCore::Incidence::Ptr()
-                  : item.payload<KCalCore::Incidence::Ptr>();
+            KCalendarCore::Incidence::Ptr incidence
+                = !item.hasPayload<KCalendarCore::Incidence::Ptr>() ? KCalendarCore::Incidence::Ptr()
+                  : item.payload<KCalendarCore::Incidence::Ptr>();
             if (!incidence) {
                 qCCritical(CALENDARVIEW_LOG) << "Incidence shouldn't be invalid."
                                              << item.hasPayload() << item.id();
@@ -295,7 +295,7 @@ PreNode::Ptr IncidenceTreeModel::Private::prenodeFromSourceRow(int row) const
     }
 
     node->item = item;
-    node->incidence = item.payload<KCalCore::Incidence::Ptr>();
+    node->incidence = item.payload<KCalendarCore::Incidence::Ptr>();
     Q_ASSERT(node->incidence);
 
     return node;
@@ -334,7 +334,7 @@ void IncidenceTreeModel::Private::onRowsInserted(const QModelIndex &parent, int 
 
 void IncidenceTreeModel::Private::insertNode(const PreNode::Ptr &prenode, bool silent)
 {
-    KCalCore::Incidence::Ptr incidence = prenode->incidence;
+    KCalendarCore::Incidence::Ptr incidence = prenode->incidence;
     Akonadi::Item item = prenode->item;
     Node::Ptr node(new Node());
     node->sourceIndex = prenode->sourceIndex;

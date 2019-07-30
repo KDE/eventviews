@@ -34,7 +34,7 @@
 #include <QSharedPointer>
 #include <QStringList>
 #include <QPersistentModelIndex>
-#include <KCalCore/Incidence>
+#include <KCalendarCore/Incidence>
 
 typedef QString Uid;
 typedef QString ParentUid;
@@ -57,7 +57,7 @@ struct Node {
 struct PreNode {
     typedef QSharedPointer<PreNode> Ptr;
     typedef QList<Ptr> List;
-    KCalCore::Incidence::Ptr incidence;
+    KCalendarCore::Incidence::Ptr incidence;
     QPersistentModelIndex sourceIndex;
     Akonadi::Item item;
     int depth;

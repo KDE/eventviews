@@ -42,7 +42,7 @@ public:
     ~TimelineView() override;
 
     Q_REQUIRED_RESULT Akonadi::Item::List selectedIncidences() const override;
-    Q_REQUIRED_RESULT KCalCore::DateList selectedIncidenceDates() const override;
+    Q_REQUIRED_RESULT KCalendarCore::DateList selectedIncidenceDates() const override;
     Q_REQUIRED_RESULT int currentDateCount() const override;
 
     // ensure start and end are valid before calling this.

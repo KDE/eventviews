@@ -272,7 +272,7 @@ void MultiAgendaView::recreateViews()
     } else {
         const auto lst = collectionSelection()->selectedCollections();
         for (const Akonadi::Collection &i : lst) {
-            if (i.contentMimeTypes().contains(KCalCore::Event::eventMimeType())) {
+            if (i.contentMimeTypes().contains(KCalendarCore::Event::eventMimeType())) {
                 d->addView(i);
             }
         }
@@ -399,9 +399,9 @@ Akonadi::Item::List MultiAgendaView::selectedIncidences() const
     return list;
 }
 
-KCalCore::DateList MultiAgendaView::selectedIncidenceDates() const
+KCalendarCore::DateList MultiAgendaView::selectedIncidenceDates() const
 {
-    KCalCore::DateList list;
+    KCalendarCore::DateList list;
     for (AgendaView *agendaView : qAsConst(d->mAgendaViews)) {
         list += agendaView->selectedIncidenceDates();
     }
