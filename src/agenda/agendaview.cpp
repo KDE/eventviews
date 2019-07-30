@@ -926,10 +926,10 @@ void AgendaView::connectAgenda(Agenda *agenda, Agenda *otherAgenda)
             this, &AgendaView::slotIncidenceSelected);
 
     // rescheduling of todos by d'n'd
-    connect(agenda, SIGNAL(droppedIncidences(KCalCore::Incidence::List,QPoint,bool)),
-            SLOT(slotIncidencesDropped(KCalCore::Incidence::List,QPoint,bool)));
-    connect(agenda, SIGNAL(droppedIncidences(QList<QUrl>,QPoint,bool)),
-            SLOT(slotIncidencesDropped(QList<QUrl>,QPoint,bool)));
+    connect(agenda, QOverload<const KCalCore::Incidence::List &, const QPoint &, bool>::of(&Agenda::droppedIncidences),
+            this, QOverload<const KCalCore::Incidence::List &, const QPoint &, bool>::of(&AgendaView::slotIncidencesDropped));
+    connect(agenda, QOverload<const QList<QUrl> &, const QPoint &, bool>::of(&Agenda::droppedIncidences),
+            this, QOverload<const QList<QUrl> &, const QPoint &, bool>::of(&AgendaView::slotIncidencesDropped));
 }
 
 void AgendaView::slotIncidenceSelected(const KCalCore::Incidence::Ptr &incidence, const QDate &date)

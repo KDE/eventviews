@@ -103,8 +103,8 @@ void JournalDateView::addJournal(const Akonadi::Item &j)
             this, &JournalDateView::editIncidence);
     connect(entry, &JournalFrame::incidenceSelected,
             this, &JournalDateView::incidenceSelected);
-    connect(entry, SIGNAL(printJournal(KCalCore::Journal::Ptr,bool)),
-            SIGNAL(printJournal(KCalCore::Journal::Ptr,bool)));
+    connect(entry, QOverload<const KCalCore::Journal::Ptr &, bool>::of(&JournalFrame::printJournal),
+            this, QOverload<const KCalCore::Journal::Ptr &, bool>::of(&JournalDateView::printJournal));
 }
 
 Akonadi::Item::List JournalDateView::journals() const
