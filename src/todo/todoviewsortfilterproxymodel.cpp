@@ -189,9 +189,9 @@ int TodoViewSortFilterProxyModel::compareStartDates(const QModelIndex &left, con
 
     // The due date column is a QString so fetch the akonadi item
     // We can't compare QStrings because it won't work if the format is MM/DD/YYYY
-    const KCalCore::Todo::Ptr leftTodo
+    const KCalendarCore::Todo::Ptr leftTodo
         = CalendarSupport::todo(left.data(TodoModel::TodoRole).value<Akonadi::Item>());
-    const KCalCore::Todo::Ptr rightTodo
+    const KCalendarCore::Todo::Ptr rightTodo
         = CalendarSupport::todo(right.data(TodoModel::TodoRole).value<Akonadi::Item>());
 
     if (!leftTodo || !rightTodo) {
@@ -235,9 +235,9 @@ int TodoViewSortFilterProxyModel::compareDueDates(const QModelIndex &left, const
 
     // The due date column is a QString so fetch the akonadi item
     // We can't compare QStrings because it won't work if the format is MM/DD/YYYY
-    const KCalCore::Todo::Ptr leftTodo
+    const KCalendarCore::Todo::Ptr leftTodo
         = CalendarSupport::todo(left.data(TodoModel::TodoRole).value<Akonadi::Item>());
-    const KCalCore::Todo::Ptr rightTodo
+    const KCalendarCore::Todo::Ptr rightTodo
         = CalendarSupport::todo(right.data(TodoModel::TodoRole).value<Akonadi::Item>());
 
     if (!leftTodo || !rightTodo) {
@@ -278,9 +278,9 @@ int TodoViewSortFilterProxyModel::compareCompletion(const QModelIndex &left, con
 
     if (leftValue == 100 && rightValue == 100) {
         // Untie with the completion date
-        const KCalCore::Todo::Ptr leftTodo
+        const KCalendarCore::Todo::Ptr leftTodo
             = CalendarSupport::todo(left.data(TodoModel::TodoRole).value<Akonadi::Item>());
-        const KCalCore::Todo::Ptr rightTodo
+        const KCalendarCore::Todo::Ptr rightTodo
             = CalendarSupport::todo(right.data(TodoModel::TodoRole).value<Akonadi::Item>());
 
         if (!leftTodo || !rightTodo) {

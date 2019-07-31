@@ -30,7 +30,7 @@
 #include <Akonadi/Calendar/ETMCalendar>
 #include <Item>
 
-#include <KCalCore/Todo>
+#include <KCalendarCore/Todo>
 #include <QAbstractItemModel>
 #include <EntityTreeModel>
 #include <QAbstractProxyModel>

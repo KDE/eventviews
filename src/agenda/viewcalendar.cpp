@@ -37,14 +37,14 @@ MultiViewCalendar::~MultiViewCalendar()
 {
 }
 
-KCalCore::Calendar::Ptr MultiViewCalendar::getCalendar() const
+KCalendarCore::Calendar::Ptr MultiViewCalendar::getCalendar() const
 {
-    return KCalCore::Calendar::Ptr();
+    return KCalendarCore::Calendar::Ptr();
 }
 
-KCalCore::Incidence::List MultiViewCalendar::incidences() const
+KCalendarCore::Incidence::List MultiViewCalendar::incidences() const
 {
-    KCalCore::Incidence::List list;
+    KCalendarCore::Incidence::List list;
     for (const ViewCalendar::Ptr &cal : qAsConst(mSubCalendars)) {
         if (cal->getCalendar()) {
             list += cal->getCalendar()->incidences();
@@ -58,7 +58,7 @@ int MultiViewCalendar::calendars() const
     return mSubCalendars.size();
 }
 
-ViewCalendar::Ptr MultiViewCalendar::findCalendar(const KCalCore::Incidence::Ptr &incidence) const
+ViewCalendar::Ptr MultiViewCalendar::findCalendar(const KCalendarCore::Incidence::Ptr &incidence) const
 {
     for (const ViewCalendar::Ptr &cal : qAsConst(mSubCalendars)) {
         if (cal->isValid(incidence)) {
@@ -95,7 +95,7 @@ void MultiViewCalendar::setETMCalendar(const Akonadi::ETMCalendar::Ptr &calendar
     addCalendar(mETMCalendar);
 }
 
-QString MultiViewCalendar::displayName(const KCalCore::Incidence::Ptr &incidence) const
+QString MultiViewCalendar::displayName(const KCalendarCore::Incidence::Ptr &incidence) const
 {
     ViewCalendar::Ptr cal = findCalendar(incidence);
     if (cal) {
@@ -104,7 +104,7 @@ QString MultiViewCalendar::displayName(const KCalCore::Incidence::Ptr &incidence
     return QString();
 }
 
-QString MultiViewCalendar::iconForIncidence(const KCalCore::Incidence::Ptr &incidence) const
+QString MultiViewCalendar::iconForIncidence(const KCalendarCore::Incidence::Ptr &incidence) const
 {
     ViewCalendar::Ptr cal = findCalendar(incidence);
     if (cal) {
@@ -113,7 +113,7 @@ QString MultiViewCalendar::iconForIncidence(const KCalCore::Incidence::Ptr &inci
     return QString();
 }
 
-bool MultiViewCalendar::isValid(const KCalCore::Incidence::Ptr &incidence) const
+bool MultiViewCalendar::isValid(const KCalendarCore::Incidence::Ptr &incidence) const
 {
     ViewCalendar::Ptr cal = findCalendar(incidence);
     return cal;
@@ -125,7 +125,7 @@ bool MultiViewCalendar::isValid(const QString &incidenceIdentifier) const
     return cal;
 }
 
-QColor MultiViewCalendar::resourceColor(const KCalCore::Incidence::Ptr &incidence) const
+QColor MultiViewCalendar::resourceColor(const KCalendarCore::Incidence::Ptr &incidence) const
 {
     ViewCalendar::Ptr cal = findCalendar(incidence);
     if (cal) {
@@ -134,7 +134,7 @@ QColor MultiViewCalendar::resourceColor(const KCalCore::Incidence::Ptr &incidenc
     return QColor();
 }
 
-Akonadi::Item MultiViewCalendar::item(const KCalCore::Incidence::Ptr &incidence) const
+Akonadi::Item MultiViewCalendar::item(const KCalendarCore::Incidence::Ptr &incidence) const
 {
     if (mETMCalendar->isValid(incidence)) {
         return mETMCalendar->item(incidence);
@@ -147,7 +147,7 @@ AkonadiViewCalendar::~AkonadiViewCalendar()
 {
 }
 
-bool AkonadiViewCalendar::isValid(const KCalCore::Incidence::Ptr &incidence) const
+bool AkonadiViewCalendar::isValid(const KCalendarCore::Incidence::Ptr &incidence) const
 {
     if (!mCalendar) {
         return false;
@@ -168,7 +168,7 @@ bool AkonadiViewCalendar::isValid(const QString &incidenceIdentifier) const
     return !mCalendar->incidence(incidenceIdentifier).isNull();
 }
 
-Akonadi::Item AkonadiViewCalendar::item(const KCalCore::Incidence::Ptr &incidence) const
+Akonadi::Item AkonadiViewCalendar::item(const KCalendarCore::Incidence::Ptr &incidence) const
 {
     if (!mCalendar || !incidence) {
         return Akonadi::Item();
@@ -190,22 +190,22 @@ Akonadi::Item AkonadiViewCalendar::item(const KCalCore::Incidence::Ptr &incidenc
     return mCalendar->item(id);
 }
 
-QString AkonadiViewCalendar::displayName(const KCalCore::Incidence::Ptr &incidence) const
+QString AkonadiViewCalendar::displayName(const KCalendarCore::Incidence::Ptr &incidence) const
 {
     return CalendarSupport::displayName(mCalendar.data(), item(incidence).parentCollection());
 }
 
-QColor AkonadiViewCalendar::resourceColor(const KCalCore::Incidence::Ptr &incidence) const
+QColor AkonadiViewCalendar::resourceColor(const KCalendarCore::Incidence::Ptr &incidence) const
 {
     return EventViews::resourceColor(item(incidence), mAgendaView->preferences());
 }
 
-QString AkonadiViewCalendar::iconForIncidence(const KCalCore::Incidence::Ptr &incidence) const
+QString AkonadiViewCalendar::iconForIncidence(const KCalendarCore::Incidence::Ptr &incidence) const
 {
     return mAgendaView->iconForItem(item(incidence));
 }
 
-KCalCore::Calendar::Ptr AkonadiViewCalendar::getCalendar() const
+KCalendarCore::Calendar::Ptr AkonadiViewCalendar::getCalendar() const
 {
     return mCalendar;
 }

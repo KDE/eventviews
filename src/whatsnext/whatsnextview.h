@@ -65,9 +65,9 @@ public:
         return Akonadi::Item::List();
     }
 
-    Q_REQUIRED_RESULT KCalCore::DateList selectedIncidenceDates() const override
+    Q_REQUIRED_RESULT KCalendarCore::DateList selectedIncidenceDates() const override
     {
-        return KCalCore::DateList();
+        return KCalendarCore::DateList();
     }
 
     Q_REQUIRED_RESULT bool supportsDateNavigation() const
@@ -83,8 +83,8 @@ public Q_SLOTS:
     void changeIncidenceDisplay(const Akonadi::Item &, Akonadi::IncidenceChanger::ChangeType);
 
 protected:
-    void appendEvent(const KCalCore::Incidence::Ptr &, const QDateTime &start = QDateTime(), const QDateTime &end = QDateTime());
-    void appendTodo(const KCalCore::Incidence::Ptr &);
+    void appendEvent(const KCalendarCore::Incidence::Ptr &, const QDateTime &start = QDateTime(), const QDateTime &end = QDateTime());
+    void appendTodo(const KCalendarCore::Incidence::Ptr &);
 
 private Q_SLOTS:
     void showIncidence(const QString &);

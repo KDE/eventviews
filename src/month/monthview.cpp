@@ -33,7 +33,7 @@
 #include <CalendarSupport/KCalPrefs>
 #include <CalendarSupport/Utils>
 
-#include <KCalCore/OccurrenceIterator>
+#include <KCalendarCore/OccurrenceIterator>
 #include <KCheckableProxyModel>
 #include <KLocalizedString>
 #include <QIcon>
@@ -71,13 +71,13 @@ public:  /// Members
     QMap<QDate, QStringList > mBusyDays;
 
 protected:
-    /* reimplemented from KCalCore::Calendar::CalendarObserver */
-    void calendarIncidenceAdded(const KCalCore::Incidence::Ptr &incidence) override;
-    void calendarIncidenceChanged(const KCalCore::Incidence::Ptr &incidence) override;
-    void calendarIncidenceDeleted(const KCalCore::Incidence::Ptr &incidence, const KCalCore::Calendar *calendar) override;
+    /* reimplemented from KCalendarCore::Calendar::CalendarObserver */
+    void calendarIncidenceAdded(const KCalendarCore::Incidence::Ptr &incidence) override;
+    void calendarIncidenceChanged(const KCalendarCore::Incidence::Ptr &incidence) override;
+    void calendarIncidenceDeleted(const KCalendarCore::Incidence::Ptr &incidence, const KCalendarCore::Calendar *calendar) override;
 private:
     //quiet --overloaded-virtual warning
-    using KCalCore::Calendar::CalendarObserver::calendarIncidenceDeleted;
+    using KCalendarCore::Calendar::CalendarObserver::calendarIncidenceDeleted;
 };
 }
 
@@ -109,7 +109,7 @@ void MonthViewPrivate::moveStartDate(int weeks, int months)
     start = start.addMonths(months);
     end = end.addMonths(months);
 
-    KCalCore::DateList dateList;
+    KCalendarCore::DateList dateList;
     QDate d = start.date();
     const QDate e = end.date();
     dateList.reserve(d.daysTo(e) + 1);
@@ -136,17 +136,17 @@ void MonthViewPrivate::triggerDelayedReload(EventView::Change reason)
     }
 }
 
-void MonthViewPrivate::calendarIncidenceAdded(const KCalCore::Incidence::Ptr &)
+void MonthViewPrivate::calendarIncidenceAdded(const KCalendarCore::Incidence::Ptr &)
 {
     triggerDelayedReload(MonthView::IncidencesAdded);
 }
 
-void MonthViewPrivate::calendarIncidenceChanged(const KCalCore::Incidence::Ptr &)
+void MonthViewPrivate::calendarIncidenceChanged(const KCalendarCore::Incidence::Ptr &)
 {
     triggerDelayedReload(MonthView::IncidencesEdited);
 }
 
-void MonthViewPrivate::calendarIncidenceDeleted(const KCalCore::Incidence::Ptr &incidence, const KCalCore::Calendar *calendar)
+void MonthViewPrivate::calendarIncidenceDeleted(const KCalendarCore::Incidence::Ptr &incidence, const KCalendarCore::Calendar *calendar)
 {
     Q_UNUSED(calendar);
     Q_ASSERT(!incidence->uid().isEmpty());
@@ -279,9 +279,9 @@ int MonthView::currentDateCount() const
     return actualStartDateTime().date().daysTo(actualEndDateTime().date());
 }
 
-KCalCore::DateList MonthView::selectedIncidenceDates() const
+KCalendarCore::DateList MonthView::selectedIncidenceDates() const
 {
-    KCalCore::DateList list;
+    KCalendarCore::DateList list;
     if (d->scene->selectedItem()) {
         IncidenceMonthItem *tmp = qobject_cast<IncidenceMonthItem *>(d->scene->selectedItem());
         if (tmp) {
@@ -502,17 +502,17 @@ void MonthView::reloadIncidences()
     // build global event list
     const bool colorMonthBusyDays = preferences()->colorMonthBusyDays();
 
-    KCalCore::OccurrenceIterator occurIter(*calendar(), actualStartDateTime(), actualEndDateTime());
+    KCalendarCore::OccurrenceIterator occurIter(*calendar(), actualStartDateTime(), actualEndDateTime());
     while (occurIter.hasNext()) {
         occurIter.next();
 
         // Remove the two checks when filtering is done through a proxyModel, when using calendar search
         if (!preferences()->showTodosMonthView()
-            && occurIter.incidence()->type() == KCalCore::Incidence::TypeTodo) {
+            && occurIter.incidence()->type() == KCalendarCore::Incidence::TypeTodo) {
             continue;
         }
         if (!preferences()->showJournalsMonthView()
-            && occurIter.incidence()->type() == KCalCore::Incidence::TypeJournal) {
+            && occurIter.incidence()->type() == KCalendarCore::Incidence::TypeJournal) {
             continue;
         }
 

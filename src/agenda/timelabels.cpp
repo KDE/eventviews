@@ -173,7 +173,7 @@ void TimeLabels::setAgenda(Agenda *agenda)
 
 int TimeLabels::yposToCell(const int ypos) const
 {
-    const KCalCore::DateList datelist = mAgenda->dateList();
+    const KCalendarCore::DateList datelist = mAgenda->dateList();
     if (datelist.isEmpty()) {
         return 0;
     }
@@ -236,7 +236,7 @@ void TimeLabels::paintEvent(QPaintEvent *)
     if (!mAgenda) {
         return;
     }
-    const KCalCore::DateList datelist = mAgenda->dateList();
+    const KCalendarCore::DateList datelist = mAgenda->dateList();
     if (datelist.isEmpty()) {
         return;
     }

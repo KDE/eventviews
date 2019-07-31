@@ -47,7 +47,7 @@
 
 #include <Libkdepim/KDatePickerPopup>
 
-#include <KCalCore/CalFormat>
+#include <KCalendarCore/CalFormat>
 
 #include <KIconLoader>
 #include <KJob>
@@ -60,7 +60,7 @@
 Q_DECLARE_METATYPE(QPointer<QMenu>)
 
 using namespace EventViews;
-using namespace KCalCore;
+using namespace KCalendarCore;
 
 namespace EventViews {
 // We share this struct between all views, for performance and memory purposes
@@ -669,9 +669,9 @@ void TodoView::addTodo(const QString &summary, const Akonadi::Item &parentItem, 
         return;
     }
 
-    KCalCore::Todo::Ptr parent = CalendarSupport::todo(parentItem);
+    KCalendarCore::Todo::Ptr parent = CalendarSupport::todo(parentItem);
 
-    KCalCore::Todo::Ptr todo(new KCalCore::Todo);
+    KCalendarCore::Todo::Ptr todo(new KCalendarCore::Todo);
     todo->setSummary(summaryTrimmed);
     todo->setOrganizer(Person(CalendarSupport::KCalPrefs::instance()->fullName(), CalendarSupport::KCalPrefs::instance()->email()));
 
@@ -874,14 +874,14 @@ void TodoView::copyTodoToDate(const QDate &date)
         = sModels->todoModel->data(origIndex,
                                    Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
 
-    const KCalCore::Todo::Ptr orig = CalendarSupport::todo(origItem);
+    const KCalendarCore::Todo::Ptr orig = CalendarSupport::todo(origItem);
     if (!orig) {
         return;
     }
 
-    KCalCore::Todo::Ptr todo(orig->clone());
+    KCalendarCore::Todo::Ptr todo(orig->clone());
 
-    todo->setUid(KCalCore::CalFormat::createUniqueId());
+    todo->setUid(KCalendarCore::CalFormat::createUniqueId());
 
     QDateTime due = todo->dtDue();
     due.setDate(date);
@@ -918,7 +918,7 @@ QMenu *TodoView::createCategoryPopupMenu()
     }
 
     const Akonadi::Item todoItem = selection[0].data(TodoModel::TodoRole).value<Akonadi::Item>();
-    KCalCore::Todo::Ptr todo = CalendarSupport::todo(todoItem);
+    KCalendarCore::Todo::Ptr todo = CalendarSupport::todo(todoItem);
     Q_ASSERT(todo);
 
     const QStringList checkedCategories = todo->categories();
@@ -964,11 +964,11 @@ void TodoView::setNewDate(const QDate &date)
     }
 
     const Akonadi::Item todoItem = selection[0].data(TodoModel::TodoRole).value<Akonadi::Item>();
-    KCalCore::Todo::Ptr todo = CalendarSupport::todo(todoItem);
+    KCalendarCore::Todo::Ptr todo = CalendarSupport::todo(todoItem);
     Q_ASSERT(todo);
 
     if (calendar()->hasRight(todoItem, Akonadi::Collection::CanChangeItem)) {
-        KCalCore::Todo::Ptr oldTodo(todo->clone());
+        KCalendarCore::Todo::Ptr oldTodo(todo->clone());
 
         QDateTime dt(date);
 
@@ -992,11 +992,11 @@ void TodoView::setNewPercentage(QAction *action)
     }
 
     const Akonadi::Item todoItem = selection[0].data(TodoModel::TodoRole).value<Akonadi::Item>();
-    KCalCore::Todo::Ptr todo = CalendarSupport::todo(todoItem);
+    KCalendarCore::Todo::Ptr todo = CalendarSupport::todo(todoItem);
     Q_ASSERT(todo);
 
     if (calendar()->hasRight(todoItem, Akonadi::Collection::CanChangeItem)) {
-        KCalCore::Todo::Ptr oldTodo(todo->clone());
+        KCalendarCore::Todo::Ptr oldTodo(todo->clone());
 
         int percentage = mPercentage.value(action);
         if (percentage == 100) {
@@ -1022,9 +1022,9 @@ void TodoView::setNewPriority(QAction *action)
         return;
     }
     const Akonadi::Item todoItem = selection[0].data(TodoModel::TodoRole).value<Akonadi::Item>();
-    KCalCore::Todo::Ptr todo = CalendarSupport::todo(todoItem);
+    KCalendarCore::Todo::Ptr todo = CalendarSupport::todo(todoItem);
     if (calendar()->hasRight(todoItem, Akonadi::Collection::CanChangeItem)) {
-        KCalCore::Todo::Ptr oldTodo(todo->clone());
+        KCalendarCore::Todo::Ptr oldTodo(todo->clone());
         todo->setPriority(mPriority[action]);
 
         changer()->modifyIncidence(todoItem, oldTodo, this);
@@ -1039,10 +1039,10 @@ void TodoView::changedCategories(QAction *action)
     }
 
     const Akonadi::Item todoItem = selection[0].data(TodoModel::TodoRole).value<Akonadi::Item>();
-    KCalCore::Todo::Ptr todo = CalendarSupport::todo(todoItem);
+    KCalendarCore::Todo::Ptr todo = CalendarSupport::todo(todoItem);
     Q_ASSERT(todo);
     if (calendar()->hasRight(todoItem, Akonadi::Collection::CanChangeItem)) {
-        KCalCore::Todo::Ptr oldTodo(todo->clone());
+        KCalendarCore::Todo::Ptr oldTodo(todo->clone());
 
         const QString cat = action->data().toString();
         QStringList categories = todo->categories();

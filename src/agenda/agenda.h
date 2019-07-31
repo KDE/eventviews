@@ -31,7 +31,7 @@
 
 #include <Item>
 
-#include <KCalCore/Todo>
+#include <KCalendarCore/Todo>
 
 #include <QFrame>
 #include <QScrollArea>
@@ -71,7 +71,7 @@ public:
 
     ~Agenda() override;
 
-    Q_REQUIRED_RESULT KCalCore::Incidence::Ptr selectedIncidence() const;
+    Q_REQUIRED_RESULT KCalendarCore::Incidence::Ptr selectedIncidence() const;
     Q_REQUIRED_RESULT QDate selectedIncidenceDate() const;
     QSize sizeHint() const override;
     QSize minimumSizeHint() const override;
@@ -119,11 +119,11 @@ public:
 
     void setStartTime(const QTime &startHour);
 
-    AgendaItem::QPtr insertItem(const KCalCore::Incidence::Ptr &incidence, const QDateTime &recurrenceId, int X, int YTop, int YBottom, int itemPos, int itemCount, bool isSelected);
+    AgendaItem::QPtr insertItem(const KCalendarCore::Incidence::Ptr &incidence, const QDateTime &recurrenceId, int X, int YTop, int YBottom, int itemPos, int itemCount, bool isSelected);
 
-    AgendaItem::QPtr insertAllDayItem(const KCalCore::Incidence::Ptr &event, const QDateTime &recurrenceId, int XBegin, int XEnd, bool isSelected);
+    AgendaItem::QPtr insertAllDayItem(const KCalendarCore::Incidence::Ptr &event, const QDateTime &recurrenceId, int XBegin, int XEnd, bool isSelected);
 
-    void insertMultiItem(const KCalCore::Incidence::Ptr &event, const QDateTime &recurrenceId, int XBegin, int XEnd, int YTop, int YBottom, bool isSelected);
+    void insertMultiItem(const KCalendarCore::Incidence::Ptr &event, const QDateTime &recurrenceId, int XBegin, int XEnd, int YTop, int YBottom, bool isSelected);
 
     /**
       Removes an event and all its multi-items from the agenda. This function
@@ -132,7 +132,7 @@ public:
       slot deleteItemsToDelete() (called by QTimer::singleShot ).
       @param incidence The pointer to the incidence that should be removed.
     */
-    void removeIncidence(const KCalCore::Incidence::Ptr &incidence);
+    void removeIncidence(const KCalendarCore::Incidence::Ptr &incidence);
 
     void changeColumns(int columns);
 
@@ -151,8 +151,8 @@ public:
 
     void setHolidayMask(QVector<bool> *);
 
-    void setDateList(const KCalCore::DateList &selectedDates);
-    Q_REQUIRED_RESULT KCalCore::DateList dateList() const;
+    void setDateList(const KCalendarCore::DateList &selectedDates);
+    Q_REQUIRED_RESULT KCalendarCore::DateList dateList() const;
 
     void setCalendar(const EventViews::MultiViewCalendar::Ptr &cal);
 
@@ -193,20 +193,20 @@ Q_SIGNALS:
     void newTimeSpanSignal(const QPoint &, const QPoint &);
     void newStartSelectSignal();
 
-    void showIncidenceSignal(const KCalCore::Incidence::Ptr &);
-    void editIncidenceSignal(const KCalCore::Incidence::Ptr &);
-    void deleteIncidenceSignal(const KCalCore::Incidence::Ptr &);
-    void showIncidencePopupSignal(const KCalCore::Incidence::Ptr &, const QDate &);
+    void showIncidenceSignal(const KCalendarCore::Incidence::Ptr &);
+    void editIncidenceSignal(const KCalendarCore::Incidence::Ptr &);
+    void deleteIncidenceSignal(const KCalendarCore::Incidence::Ptr &);
+    void showIncidencePopupSignal(const KCalendarCore::Incidence::Ptr &, const QDate &);
 
     void showNewEventPopupSignal();
 
-    void incidenceSelected(const KCalCore::Incidence::Ptr &, const QDate &);
+    void incidenceSelected(const KCalendarCore::Incidence::Ptr &, const QDate &);
 
     void lowerYChanged(int);
     void upperYChanged(int);
 
-    void startDragSignal(const KCalCore::Incidence::Ptr &);
-    void droppedIncidences(const KCalCore::Incidence::List &, const QPoint &gpos, bool allDay);
+    void startDragSignal(const KCalendarCore::Incidence::Ptr &);
+    void droppedIncidences(const KCalendarCore::Incidence::List &, const QPoint &gpos, bool allDay);
     void droppedIncidences(const QList<QUrl> &, const QPoint &gpos, bool allDay);
 
     void enableAgendaUpdate(bool enable);
@@ -229,7 +229,7 @@ private:
         RESIZERIGHT
     };
 
-    AgendaItem::QPtr createAgendaItem(const KCalCore::Incidence::Ptr &incidence, int itemPos, int itemCount, const QDateTime &recurrentId, bool isSelected);
+    AgendaItem::QPtr createAgendaItem(const KCalendarCore::Incidence::Ptr &incidence, int itemPos, int itemCount, const QDateTime &recurrentId, bool isSelected);
 
 protected:
     /**

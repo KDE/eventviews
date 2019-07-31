@@ -36,8 +36,8 @@
 #include <EntityDisplayAttribute>
 #include <ETMViewStateSaver>
 
-#include <KCalCore/Todo>
-#include <KCalCore/CalFilter>
+#include <KCalendarCore/Todo>
+#include <KCalendarCore/CalFilter>
 
 #include <KCalUtils/RecurrenceActions>
 
@@ -55,7 +55,7 @@
 #include <QKeyEvent>
 #include <QSortFilterProxyModel>
 
-using namespace KCalCore;
+using namespace KCalendarCore;
 using namespace EventViews;
 using namespace Akonadi;
 
@@ -608,20 +608,20 @@ Akonadi::Collection::Id EventView::collectionId() const
     return d->mCollectionId;
 }
 
-bool EventView::makesWholeDayBusy(const KCalCore::Incidence::Ptr &incidence) const
+bool EventView::makesWholeDayBusy(const KCalendarCore::Incidence::Ptr &incidence) const
 {
     // Must be event
     // Must be all day
     // Must be marked busy (TRANSP: OPAQUE)
     // You must be attendee or organizer
 
-    if (incidence->type() != KCalCore::Incidence::TypeEvent || !incidence->allDay()) {
+    if (incidence->type() != KCalendarCore::Incidence::TypeEvent || !incidence->allDay()) {
         return false;
     }
 
-    KCalCore::Event::Ptr ev = incidence.staticCast<KCalCore::Event>();
+    KCalendarCore::Event::Ptr ev = incidence.staticCast<KCalendarCore::Event>();
 
-    if (ev->transparency() != KCalCore::Event::Opaque) {
+    if (ev->transparency() != KCalendarCore::Event::Opaque) {
         return false;
     }
 
@@ -631,8 +631,8 @@ bool EventView::makesWholeDayBusy(const KCalCore::Incidence::Ptr &incidence) con
         return true;
     }
 
-    KCalCore::Attendee::List attendees = ev->attendees();
-    KCalCore::Attendee::List::ConstIterator it;
+    KCalendarCore::Attendee::List attendees = ev->attendees();
+    KCalendarCore::Attendee::List::ConstIterator it;
     for (it = attendees.constBegin(); it != attendees.constEnd(); ++it) {
         if (kcalPreferences()->thatIsMe((*it).email())) {
             return true;

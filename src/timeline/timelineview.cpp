@@ -52,7 +52,7 @@
 #include <QHelpEvent>
 #include <KLocalizedString>
 
-using namespace KCalCore;
+using namespace KCalendarCore;
 using namespace EventViews;
 
 namespace EventViews {
@@ -278,9 +278,9 @@ Akonadi::Item::List TimelineView::selectedIncidences() const
     return d->mSelectedItemList;
 }
 
-KCalCore::DateList TimelineView::selectedIncidenceDates() const
+KCalendarCore::DateList TimelineView::selectedIncidenceDates() const
 {
-    return KCalCore::DateList();
+    return KCalendarCore::DateList();
 }
 
 int TimelineView::currentDateCount() const
@@ -353,12 +353,12 @@ void TimelineView::showDates(const QDate &start, const QDate &end, const QDate &
     QAbstractItemModel *ganttModel = d->mGantt->model();
     d->mGantt->setModel(nullptr);
 
-    KCalCore::Event::List events;
+    KCalendarCore::Event::List events;
     for (QDate day = start; day <= end; day = day.addDays(1)) {
         events = calendar()->events(day, QTimeZone::systemTimeZone(),
-                                    KCalCore::EventSortStartDate,
-                                    KCalCore::SortDirectionAscending);
-        for (const KCalCore::Event::Ptr &event : qAsConst(events)) {
+                                    KCalendarCore::EventSortStartDate,
+                                    KCalendarCore::SortDirectionAscending);
+        for (const KCalendarCore::Event::Ptr &event : qAsConst(events)) {
             if (event->hasRecurrenceId()) {
                 continue;
             }

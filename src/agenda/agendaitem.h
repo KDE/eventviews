@@ -81,7 +81,7 @@ public:
     typedef QPointer<AgendaItem> QPtr;
     typedef QList<QPtr> List;
 
-    AgendaItem(EventView *eventView, const MultiViewCalendar::Ptr &calendar, const KCalCore::Incidence::Ptr &incidence, int itemPos, int itemCount, const QDateTime &qd, bool isSelected,
+    AgendaItem(EventView *eventView, const MultiViewCalendar::Ptr &calendar, const KCalendarCore::Incidence::Ptr &incidence, int itemPos, int itemCount, const QDateTime &qd, bool isSelected,
                QWidget *parent);
     ~AgendaItem() override;
 
@@ -197,9 +197,9 @@ public:
 
     Q_REQUIRED_RESULT bool dissociateFromMultiItem();
 
-    void setIncidence(const KCalCore::Incidence::Ptr &incidence);
+    void setIncidence(const KCalendarCore::Incidence::Ptr &incidence);
 
-    const KCalCore::Incidence::Ptr &incidence() const
+    const KCalendarCore::Incidence::Ptr &incidence() const
     {
         return mIncidence;
     }
@@ -288,7 +288,7 @@ private:
 
     EventView *mEventView = nullptr;
     MultiViewCalendar::Ptr mCalendar;
-    KCalCore::Incidence::Ptr mIncidence;
+    KCalendarCore::Incidence::Ptr mIncidence;
     QDateTime mOccurrenceDateTime;
     bool mValid;
     bool mCloned;

@@ -124,9 +124,9 @@ void JournalView::updateView()
     while (it != mEntries.begin()) {
         --it;
         it.value()->clear();
-        const KCalCore::Journal::List journals = calendar()->journals(it.key());
+        const KCalendarCore::Journal::List journals = calendar()->journals(it.key());
         qCDebug(CALENDARVIEW_LOG) << "updateview found" << journals.count();
-        for (const KCalCore::Journal::Ptr &journal : journals) {
+        for (const KCalendarCore::Journal::Ptr &journal : journals) {
             Akonadi::Item item = calendar()->item(journal);
             it.value()->addJournal(item);
         }
@@ -148,9 +148,9 @@ void JournalView::showDates(const QDate &start, const QDate &end, const QDate &)
     }
 
     for (QDate d = end; d >= start; d = d.addDays(-1)) {
-        const KCalCore::Journal::List jnls = calendar()->journals(d);
+        const KCalendarCore::Journal::List jnls = calendar()->journals(d);
         //qCDebug(CALENDARVIEW_LOG) << "Found" << jnls.count() << "journals on date" << d;
-        for (const KCalCore::Journal::Ptr &journal : jnls) {
+        for (const KCalendarCore::Journal::Ptr &journal : jnls) {
             Akonadi::Item item = calendar()->item(journal);
             appendJournal(item, d);
         }
@@ -168,7 +168,7 @@ void JournalView::showIncidences(const Akonadi::Item::List &incidences, const QD
     Q_UNUSED(date);
     clearEntries();
     for (const Akonadi::Item &i : incidences) {
-        if (const KCalCore::Journal::Ptr j = CalendarSupport::journal(i)) {
+        if (const KCalendarCore::Journal::Ptr j = CalendarSupport::journal(i)) {
             appendJournal(i, j->dtStart().date());
         }
     }
@@ -176,7 +176,7 @@ void JournalView::showIncidences(const Akonadi::Item::List &incidences, const QD
 
 void JournalView::changeIncidenceDisplay(const Akonadi::Item &incidence, Akonadi::IncidenceChanger::ChangeType changeType)
 {
-    if (KCalCore::Journal::Ptr journal = CalendarSupport::journal(incidence)) {
+    if (KCalendarCore::Journal::Ptr journal = CalendarSupport::journal(incidence)) {
         switch (changeType) {
         case Akonadi::IncidenceChanger::ChangeTypeCreate:
             appendJournal(incidence, journal->dtStart().date());

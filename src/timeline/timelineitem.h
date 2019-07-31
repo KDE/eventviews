@@ -21,7 +21,7 @@
 #ifndef EVENTVIEWS_TIMELINEITEM_H
 #define EVENTVIEWS_TIMELINEITEM_H
 
-#include <KCalCore/Incidence>
+#include <KCalendarCore/Incidence>
 
 #include <Akonadi/Calendar/ETMCalendar>
 #include <AkonadiCore/Item>

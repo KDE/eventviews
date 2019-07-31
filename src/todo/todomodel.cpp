@@ -27,9 +27,9 @@
 #include <CalendarSupport/Utils>
 #include <CalendarSupport/KCalPrefs>
 #include <KLocalizedString>
-#include <KCalCore/Todo>
-#include <KCalCore/Event>
-#include <KCalCore/Attachment>
+#include <KCalendarCore/Todo>
+#include <KCalendarCore/Event>
+#include <KCalendarCore/Attachment>
 #include <KCalUtils/IncidenceFormatter>
 #include <KEmailAddress>
 
@@ -64,7 +64,7 @@ struct SourceModelIndex {
     const QAbstractItemModel *m = nullptr;
 };
 
-static bool isDueToday(const KCalCore::Todo::Ptr &todo)
+static bool isDueToday(const KCalendarCore::Todo::Ptr &todo)
 {
     return !todo->isCompleted() && todo->dtDue().date() == QDate::currentDate();
 }
@@ -245,11 +245,11 @@ QVariant TodoModel::data(const QModelIndex &index, int role) const
         //Q_ASSERT( false );
         return QVariant();
     }
-    const KCalCore::Todo::Ptr todo = CalendarSupport::todo(item);
+    const KCalendarCore::Todo::Ptr todo = CalendarSupport::todo(item);
     if (!todo) {
         qCCritical(CALENDARVIEW_LOG) << "item.hasPayload()" << item.hasPayload();
-        if (item.hasPayload<KCalCore::Incidence::Ptr>()) {
-            KCalCore::Incidence::Ptr incidence = item.payload<KCalCore::Incidence::Ptr>();
+        if (item.hasPayload<KCalendarCore::Incidence::Ptr>()) {
+            KCalendarCore::Incidence::Ptr incidence = item.payload<KCalendarCore::Incidence::Ptr>();
             if (incidence) {
                 qCCritical(CALENDARVIEW_LOG) << "It's actually " << incidence->type();
             }
@@ -435,7 +435,7 @@ bool TodoModel::setData(const QModelIndex &index, const QVariant &value, int rol
 
     const Akonadi::Item item
         = data(index, Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
-    const KCalCore::Todo::Ptr todo = CalendarSupport::todo(item);
+    const KCalendarCore::Todo::Ptr todo = CalendarSupport::todo(item);
 
     if (!item.isValid() || !todo) {
         qCWarning(CALENDARVIEW_LOG)
@@ -445,7 +445,7 @@ bool TodoModel::setData(const QModelIndex &index, const QVariant &value, int rol
     }
 
     if (d->m_calendar->hasRight(item, Akonadi::Collection::CanChangeItem)) {
-        KCalCore::Todo::Ptr oldTodo(todo->clone());
+        KCalendarCore::Todo::Ptr oldTodo(todo->clone());
         if (role == Qt::CheckStateRole && index.column() == 0) {
             const bool checked = static_cast<Qt::CheckState>(value.toInt()) == Qt::Checked;
             if (checked) {
@@ -710,15 +710,15 @@ bool TodoModel::dropMimeData(const QMimeData *data, Qt::DropAction action, int r
     if (d->m_calendar && d->m_changer
         && (KCalUtils::ICalDrag::canDecode(data) || KCalUtils::VCalDrag::canDecode(data))) {
         KCalUtils::DndFactory dndFactory(d->m_calendar);
-        KCalCore::Todo::Ptr t = dndFactory.createDropTodo(data);
-        KCalCore::Event::Ptr e = dndFactory.createDropEvent(data);
+        KCalendarCore::Todo::Ptr t = dndFactory.createDropTodo(data);
+        KCalendarCore::Event::Ptr e = dndFactory.createDropEvent(data);
 
         if (t) {
             // we don't want to change the created todo, but the one which is already
             // stored in our calendar / tree
             const Akonadi::Item item = d->findItemByUid(t->uid(), QModelIndex());
-            KCalCore::Todo::Ptr todo = CalendarSupport::todo(item);
-            KCalCore::Todo::Ptr destTodo;
+            KCalendarCore::Todo::Ptr todo = CalendarSupport::todo(item);
+            KCalendarCore::Todo::Ptr destTodo;
             if (parent.isValid()) {
                 const Akonadi::Item parentItem
                     = this->data(parent, Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
@@ -727,7 +727,7 @@ bool TodoModel::dropMimeData(const QMimeData *data, Qt::DropAction action, int r
                 }
             }
 
-            KCalCore::Incidence::Ptr tmp = destTodo;
+            KCalendarCore::Incidence::Ptr tmp = destTodo;
             while (tmp) {
                 if (tmp->uid() == todo->uid()) {   //correct, don't use instanceIdentifier() here
                     KMessageBox::information(
@@ -741,7 +741,7 @@ bool TodoModel::dropMimeData(const QMimeData *data, Qt::DropAction action, int r
             }
 
             if (!destTodo || !destTodo->hasRecurrenceId()) {
-                KCalCore::Todo::Ptr oldTodo = KCalCore::Todo::Ptr(todo->clone());
+                KCalendarCore::Todo::Ptr oldTodo = KCalendarCore::Todo::Ptr(todo->clone());
                 // destTodo is empty when we drag a to-do out of a relationship
                 todo->setRelatedTo(destTodo ? destTodo->uid() : QString());
                 d->m_changer->modifyIncidence(item, oldTodo);
@@ -763,15 +763,15 @@ bool TodoModel::dropMimeData(const QMimeData *data, Qt::DropAction action, int r
 
             const Akonadi::Item parentItem
                 = this->data(parent, Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
-            KCalCore::Todo::Ptr destTodo = CalendarSupport::todo(parentItem);
+            KCalendarCore::Todo::Ptr destTodo = CalendarSupport::todo(parentItem);
 
             if (data->hasText()) {
                 QString text = data->text();
 
-                KCalCore::Todo::Ptr oldTodo = KCalCore::Todo::Ptr(destTodo->clone());
+                KCalendarCore::Todo::Ptr oldTodo = KCalendarCore::Todo::Ptr(destTodo->clone());
 
                 if (text.startsWith(QLatin1String("file:"))) {
-                    destTodo->addAttachment(KCalCore::Attachment(text));
+                    destTodo->addAttachment(KCalendarCore::Attachment(text));
                 } else {
                     QStringList emails = KEmailAddress::splitAddressList(text);
                     for (QStringList::ConstIterator it = emails.constBegin();
@@ -779,7 +779,7 @@ bool TodoModel::dropMimeData(const QMimeData *data, Qt::DropAction action, int r
                         QString name, email, comment;
                         if (KEmailAddress::splitAddress(*it, name, email, comment)
                             == KEmailAddress::AddressOk) {
-                            destTodo->addAttendee(KCalCore::Attendee(name, email));
+                            destTodo->addAttendee(KCalendarCore::Attendee(name, email));
                         }
                     }
                 }
@@ -812,7 +812,7 @@ Qt::ItemFlags TodoModel::flags(const QModelIndex &index) const
 
     ret |= Qt::ItemIsDragEnabled;
 
-    const KCalCore::Todo::Ptr todo = CalendarSupport::todo(item);
+    const KCalendarCore::Todo::Ptr todo = CalendarSupport::todo(item);
 
     if (d->m_calendar->hasRight(item, Akonadi::Collection::CanChangeItem)) {
         // the following columns are editable:

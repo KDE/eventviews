@@ -39,7 +39,7 @@
 #include "calendarview_debug.h"
 
 using namespace EventViews;
-using namespace KCalCore;
+using namespace KCalendarCore;
 
 MonthItem::MonthItem(MonthScene *monthScene)
     : mMonthScene(monthScene)
@@ -296,7 +296,7 @@ QList<MonthGraphicsItem *> EventViews::MonthItem::monthGraphicsItems() const
 
 //-----------------------------------------------------------------
 // INCIDENCEMONTHITEM
-IncidenceMonthItem::IncidenceMonthItem(MonthScene *monthScene, const Akonadi::ETMCalendar::Ptr &calendar, const Akonadi::Item &aitem, const KCalCore::Incidence::Ptr &incidence,
+IncidenceMonthItem::IncidenceMonthItem(MonthScene *monthScene, const Akonadi::ETMCalendar::Ptr &calendar, const Akonadi::Item &aitem, const KCalendarCore::Incidence::Ptr &incidence,
                                        const QDate &recurStartDate)
     : MonthItem(monthScene)
     , mCalendar(calendar)
@@ -307,12 +307,12 @@ IncidenceMonthItem::IncidenceMonthItem(MonthScene *monthScene, const Akonadi::ET
     mIsJournal = CalendarSupport::hasJournal(aitem);
     mIsTodo = CalendarSupport::hasTodo(aitem);
 
-    KCalCore::Incidence::Ptr inc = mIncidence;
+    KCalendarCore::Incidence::Ptr inc = mIncidence;
     if (inc->customProperty("KABC", "BIRTHDAY") == QLatin1String("YES")
         || inc->customProperty("KABC", "ANNIVERSARY") == QLatin1String("YES")) {
         const int years = EventViews::yearDiff(inc->dtStart().date(), recurStartDate);
         if (years > 0) {
-            inc = KCalCore::Incidence::Ptr(inc->clone());
+            inc = KCalendarCore::Incidence::Ptr(inc->clone());
             inc->setReadOnly(false);
             inc->setDescription(i18np("%2 1 year", "%2 %1 years", years, i18n("Age:")));
             inc->setReadOnly(true);
@@ -345,7 +345,7 @@ bool IncidenceMonthItem::greaterThanFallback(const MonthItem *other) const
     if (allDay() != o->allDay()) {
         return allDay();
     }
-    const KCalCore::Incidence::Ptr otherIncidence = o->mIncidence;
+    const KCalendarCore::Incidence::Ptr otherIncidence = o->mIncidence;
 
     if (mIncidence->dtStart().time() != otherIncidence->dtStart().time()) {
         return mIncidence->dtStart().time() < otherIncidence->dtStart().time();
@@ -373,7 +373,7 @@ QDate IncidenceMonthItem::realEndDate() const
         return QDate();
     }
 
-    const QDateTime dt = mIncidence->dateTime(KCalCore::Incidence::RoleDisplayEnd);
+    const QDateTime dt = mIncidence->dateTime(KCalendarCore::Incidence::RoleDisplayEnd);
     const QDate end = dt.toLocalTime().date();
 
     return end.addDays(mRecurDayOffset);
@@ -434,7 +434,7 @@ void IncidenceMonthItem::updateDates(int startOffset, int endOffset)
         case KCalUtils::RecurrenceActions::AllOccurrences:
         {
             // All occurrences
-            KCalCore::Incidence::Ptr oldIncidence(mIncidence->clone());
+            KCalendarCore::Incidence::Ptr oldIncidence(mIncidence->clone());
             setNewDates(mIncidence, startOffset, endOffset);
             changer->modifyIncidence(item, oldIncidence);
             break;
@@ -445,7 +445,7 @@ void IncidenceMonthItem::updateDates(int startOffset, int endOffset)
             const bool thisAndFuture = (res == KCalUtils::RecurrenceActions::FutureOccurrences);
             QDateTime occurrenceDate(mIncidence->dtStart());
             occurrenceDate.setDate(startDate());
-            KCalCore::Incidence::Ptr newIncidence(KCalCore::Calendar::createException(
+            KCalendarCore::Incidence::Ptr newIncidence(KCalendarCore::Calendar::createException(
                                                       mIncidence, occurrenceDate, thisAndFuture));
             if (newIncidence) {
                 changer->startAtomicOperation(i18n("Move occurrence(s)"));
@@ -463,7 +463,7 @@ void IncidenceMonthItem::updateDates(int startOffset, int endOffset)
         }
         }
     } else { // Doesn't recur
-        KCalCore::Incidence::Ptr oldIncidence(mIncidence->clone());
+        KCalendarCore::Incidence::Ptr oldIncidence(mIncidence->clone());
         setNewDates(mIncidence, startOffset, endOffset);
         changer->modifyIncidence(item, oldIncidence);
     }
@@ -483,7 +483,7 @@ QString IncidenceMonthItem::text(bool end) const
         // Prepend the time str to the text
         QString timeStr;
         if (mIsTodo) {
-            KCalCore::Todo::Ptr todo = mIncidence.staticCast<Todo>();
+            KCalendarCore::Todo::Ptr todo = mIncidence.staticCast<Todo>();
             timeStr = QLocale().toString(todo->dtDue().toLocalTime().time(), QLocale::ShortFormat);
         } else {
             if (!end) {
@@ -496,7 +496,7 @@ QString IncidenceMonthItem::text(bool end) const
                 }
                 timeStr = QLocale().toString(time, QLocale::ShortFormat);
             } else {
-                KCalCore::Event::Ptr event = mIncidence.staticCast<Event>();
+                KCalendarCore::Event::Ptr event = mIncidence.staticCast<Event>();
                 timeStr = QLocale().toString(
                     event->dtEnd().toLocalTime().time(), QLocale::ShortFormat);
             }
@@ -659,7 +659,7 @@ Akonadi::Item IncidenceMonthItem::akonadiItem() const
     }
 }
 
-KCalCore::Incidence::Ptr IncidenceMonthItem::incidence() const
+KCalendarCore::Incidence::Ptr IncidenceMonthItem::incidence() const
 {
     return mIncidence;
 }
@@ -669,7 +669,7 @@ Akonadi::Item::Id IncidenceMonthItem::akonadiItemId() const
     return mAkonadiItemId;
 }
 
-void IncidenceMonthItem::setNewDates(const KCalCore::Incidence::Ptr &incidence, int startOffset, int endOffset)
+void IncidenceMonthItem::setNewDates(const KCalendarCore::Incidence::Ptr &incidence, int startOffset, int endOffset)
 {
     if (mIsTodo) {
         // For to-dos endOffset is ignored because it will always be == to startOffset because we only
@@ -677,7 +677,7 @@ void IncidenceMonthItem::setNewDates(const KCalCore::Incidence::Ptr &incidence, 
         // Lets just call it offset to reduce confusion.
         const int offset = startOffset;
 
-        KCalCore::Todo::Ptr todo = incidence.staticCast<Todo>();
+        KCalendarCore::Todo::Ptr todo = incidence.staticCast<Todo>();
         QDateTime due = todo->dtDue();
         QDateTime start = todo->dtStart();
         if (due.isValid()) {   // Due has priority over start.
@@ -701,7 +701,7 @@ void IncidenceMonthItem::setNewDates(const KCalCore::Incidence::Ptr &incidence, 
     } else {
         incidence->setDtStart(incidence->dtStart().addDays(startOffset));
         if (mIsEvent) {
-            KCalCore::Event::Ptr event = incidence.staticCast<Event>();
+            KCalendarCore::Event::Ptr event = incidence.staticCast<Event>();
             event->setDtEnd(event->dtEnd().addDays(endOffset));
         }
     }

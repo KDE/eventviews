@@ -51,7 +51,7 @@
 #include <QMimeData>
 #include <QLocale>
 
-using namespace KCalCore;
+using namespace KCalendarCore;
 using namespace EventViews;
 
 //-----------------------------------------------------------------------------
@@ -67,7 +67,7 @@ QPixmap *AgendaItem::eventPxmp = nullptr;
 
 //-----------------------------------------------------------------------------
 
-AgendaItem::AgendaItem(EventView *eventView, const MultiViewCalendar::Ptr &calendar, const KCalCore::Incidence::Ptr &item, int itemPos, int itemCount, const QDateTime &qd, bool isSelected,
+AgendaItem::AgendaItem(EventView *eventView, const MultiViewCalendar::Ptr &calendar, const KCalendarCore::Incidence::Ptr &item, int itemPos, int itemCount, const QDateTime &qd, bool isSelected,
                        QWidget *parent)
     : QWidget(parent)
     , mEventView(eventView)
@@ -144,15 +144,15 @@ void AgendaItem::updateIcons()
             mIconGroupTent = false;
             mIconOrganizer = true;
         } else {
-            KCalCore::Attendee me = mIncidence->attendeeByMails(mEventView->kcalPreferences()->allEmails());
+            KCalendarCore::Attendee me = mIncidence->attendeeByMails(mEventView->kcalPreferences()->allEmails());
 
             if (!me.isNull()) {
-                if (me.status() == KCalCore::Attendee::NeedsAction && me.RSVP()) {
+                if (me.status() == KCalendarCore::Attendee::NeedsAction && me.RSVP()) {
                     mIconReply = true;
                     mIconGroup = false;
                     mIconGroupTent = false;
                     mIconOrganizer = false;
-                } else if (me.status() == KCalCore::Attendee::Tentative) {
+                } else if (me.status() == KCalendarCore::Attendee::Tentative) {
                     mIconReply = false;
                     mIconGroup = false;
                     mIconGroupTent = true;
@@ -212,7 +212,7 @@ bool AgendaItem::dissociateFromMultiItem()
     return true;
 }
 
-void AgendaItem::setIncidence(const KCalCore::Incidence::Ptr &incidence)
+void AgendaItem::setIncidence(const KCalendarCore::Incidence::Ptr &incidence)
 {
     mValid = false;
     if (incidence) {
@@ -642,7 +642,7 @@ void AgendaItem::addAttendee(const QString &newAttendee)
     QString name, email;
     KEmailAddress::extractEmailAddressAndName(newAttendee, email, name);
     if (!(name.isEmpty() && email.isEmpty())) {
-        mIncidence->addAttendee(KCalCore::Attendee(name, email));
+        mIncidence->addAttendee(KCalendarCore::Attendee(name, email));
         KMessageBox::information(
             this,
             i18n("Attendee \"%1\" added to the calendar item \"%2\"",
@@ -666,7 +666,7 @@ void AgendaItem::dropEvent(QDropEvent *e)
     bool decoded = md->hasText();
     QString text = md->text();
     if (decoded && text.startsWith(QLatin1String("file:"))) {
-        mIncidence->addAttachment(KCalCore::Attachment(text));
+        mIncidence->addAttachment(KCalendarCore::Attachment(text));
         return;
     }
 
@@ -869,13 +869,13 @@ void AgendaItem::paintEvent(QPaintEvent *ev)
     QString longH;
     if (!isMultiItem()) {
         shortH = QLocale().toString(mIncidence->dateTime(
-                                        KCalCore::Incidence::RoleDisplayStart).toLocalTime().time(),
+                                        KCalendarCore::Incidence::RoleDisplayStart).toLocalTime().time(),
                                     QLocale::ShortFormat);
 
         if (CalendarSupport::hasEvent(mIncidence)) {
             longH = i18n("%1 - %2",
                          shortH,
-                         QLocale().toString(mIncidence->dateTime(KCalCore::Incidence::RoleEnd).
+                         QLocale().toString(mIncidence->dateTime(KCalendarCore::Incidence::RoleEnd).
                                             toLocalTime().time(), QLocale::ShortFormat));
         } else {
             longH = shortH;
@@ -886,7 +886,7 @@ void AgendaItem::paintEvent(QPaintEvent *ev)
         longH = shortH;
     } else {
         shortH = QLocale().toString(mIncidence->dateTime(
-                                        KCalCore::Incidence::RoleEnd).toLocalTime().time(),
+                                        KCalendarCore::Incidence::RoleEnd).toLocalTime().time(),
                                     QLocale::ShortFormat);
         longH = i18n("- %1", shortH);
     }
@@ -972,13 +972,13 @@ void AgendaItem::paintEvent(QPaintEvent *ev)
         shortH.clear();
         longH.clear();
 
-        if (const KCalCore::Event::Ptr event = CalendarSupport::event(mIncidence)) {
+        if (const KCalendarCore::Event::Ptr event = CalendarSupport::event(mIncidence)) {
             if (event->isMultiDay(QTimeZone::systemTimeZone())) {
                 // multi-day, all-day event
                 shortH
                     = i18n("%1 - %2",
                            QLocale().toString(mIncidence->dtStart().toLocalTime().date()),
-                           QLocale().toString(mIncidence->dateTime(KCalCore::Incidence::RoleEnd).
+                           QLocale().toString(mIncidence->dateTime(KCalendarCore::Incidence::RoleEnd).
                                               toLocalTime().date()));
                 longH = shortH;
 

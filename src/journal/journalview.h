@@ -27,7 +27,7 @@
 
 #include "eventview.h"
 #include <Akonadi/Calendar/IncidenceChanger>
-#include <KCalCore/Journal>
+#include <KCalendarCore/Journal>
 
 class QScrollArea;
 
@@ -50,9 +50,9 @@ public:
 
     Q_REQUIRED_RESULT int currentDateCount() const override;
     Q_REQUIRED_RESULT Akonadi::Item::List selectedIncidences() const override;
-    Q_REQUIRED_RESULT KCalCore::DateList selectedIncidenceDates() const override
+    Q_REQUIRED_RESULT KCalendarCore::DateList selectedIncidenceDates() const override
     {
-        return KCalCore::DateList();
+        return KCalendarCore::DateList();
     }
 
     void appendJournal(const Akonadi::Item &journal, const QDate &dt);
@@ -83,7 +83,7 @@ Q_SIGNALS:
     void setIncidenceChangerSignal(Akonadi::IncidenceChanger *);
     void journalEdited(const Akonadi::Item &journal);
     void journalDeleted(const Akonadi::Item &journal);
-    void printJournal(const KCalCore::Journal::Ptr &, bool preview);
+    void printJournal(const KCalendarCore::Journal::Ptr &, bool preview);
 
 protected:
     void clearEntries();
