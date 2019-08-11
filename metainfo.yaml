@@ -1,0 +1,14 @@
+description: Event views library
+tier: 3
+type: functional
+platforms:
+    - name: All
+portingAid: false
+deprecated: false
+release: false
+libraries:
+ - qmake: EventViews
+   cmake: "KF5::EventViews"
+cmakename: KF5EventViews
+group: kdepim
+public_lib: true
