@@ -153,7 +153,7 @@ public:
     {
     }
 
-    ~ListItemVisitor()
+    ~ListItemVisitor() override
     {
     }
 
@@ -187,7 +187,7 @@ bool ListView::Private::ListItemVisitor::visit(const Event::Ptr &e)
     mItem->start = e->dtStart().toLocalTime();
     mItem->end = e->dtEnd().toLocalTime();
     if (e->recurs()) {
-        const int duration = e->dtStart().secsTo(e->dtEnd());
+        const qint64 duration = e->dtStart().secsTo(e->dtEnd());
         QDateTime kdt(mStartDate, QTime(0, 0, 0));
         kdt = kdt.addSecs(-1);
         mItem->start = e->recurrence()->getNextDateTime(kdt).toLocalTime();
@@ -303,8 +303,6 @@ ListView::ListView(const Akonadi::ETMCalendar::Ptr &calendar, QWidget *parent, b
                      this, &ListView::popupMenu);
     QObject::connect(d->mTreeWidget, &QTreeWidget::itemSelectionChanged,
                      this, &ListView::processSelectionChange);
-    // TODO
-    //d->mTreeWidget->restoreLayout( KOGlobals::self()->config(), "ListView Layout" );
 
     d->mSelectedDates.append(QDate::currentDate());
 
