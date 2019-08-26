@@ -73,13 +73,13 @@ void MainWindow::addView(const QString &viewName)
     const auto start = QDateTime::currentDateTime().addDays(-1);
     const auto end = QDateTime::currentDateTime().addDays(1);
 
-    if (viewName == QStringLiteral("agenda")) {
+    if (viewName == QLatin1String("agenda")) {
         eventView = new AgendaView(start.date(), end.date(), true, false, this);
-    } else if (viewName == QStringLiteral("multiagenda")) {
+    } else if (viewName == QLatin1String("multiagenda")) {
         eventView = new MultiAgendaView(this);
-    } else if (viewName == QStringLiteral("month")) {
+    } else if (viewName == QLatin1String("month")) {
         eventView = new MonthView(MonthView::Visible, this);
-    } else if (viewName == QStringLiteral("timeline")) {
+    } else if (viewName == QLatin1String("timeline")) {
         eventView = new TimelineView(this);
     }
 
