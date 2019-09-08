@@ -361,9 +361,9 @@ void MonthView::updateView()
 void MonthView::wheelEvent(QWheelEvent *event)
 {
     // invert direction to get scroll-like behaviour
-    if (event->delta() > 0) {
+    if (event->angleDelta().y() > 0) {
         d->moveStartDate(-1, 0);
-    } else if (event->delta() < 0) {
+    } else if (event->angleDelta().y() < 0) {
         d->moveStartDate(1, 0);
     }
 
