@@ -637,25 +637,30 @@ bool Agenda::eventFilter_wheel(QObject *object, QWheelEvent *e)
 {
     QPoint viewportPos;
     bool accepted = false;
+#if QT_VERSION < QT_VERSION_CHECK(5, 14, 0)
+    const QPoint pos = e->pos();
+#else
+    const QPoint pos = e->position().toPoint();
+#endif
     if ((e->modifiers() & Qt::ShiftModifier) == Qt::ShiftModifier) {
         if (object != this) {
-            viewportPos = ((QWidget *)object)->mapToParent(e->pos());
+            viewportPos = ((QWidget *)object)->mapToParent(pos);
         } else {
-            viewportPos = e->pos();
+            viewportPos = pos;
         }
-        //qCDebug(CALENDARVIEW_LOG) << type:" << e->type() << "delta:" << e->delta();
-        Q_EMIT zoomView(-e->delta(),
+        //qCDebug(CALENDARVIEW_LOG) << type:" << e->type() << "angleDelta:" << e->angleDelta();
+        Q_EMIT zoomView(-e->angleDelta().y(),
                         contentsToGrid(viewportPos), Qt::Horizontal);
         accepted = true;
     }
 
     if ((e->modifiers() & Qt::ControlModifier) == Qt::ControlModifier) {
         if (object != this) {
-            viewportPos = ((QWidget *)object)->mapToParent(e->pos());
+            viewportPos = ((QWidget *)object)->mapToParent(pos);
         } else {
-            viewportPos = e->pos();
+            viewportPos = pos;
         }
-        Q_EMIT zoomView(-e->delta(), contentsToGrid(viewportPos), Qt::Vertical);
+        Q_EMIT zoomView(-e->angleDelta().y(), contentsToGrid(viewportPos), Qt::Vertical);
         Q_EMIT mousePosSignal(gridToContents(contentsToGrid(viewportPos)));
         accepted = true;
     }
