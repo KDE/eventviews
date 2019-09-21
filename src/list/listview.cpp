@@ -39,11 +39,11 @@
 
 #include <KConfig>
 #include <KConfigGroup>
-#include <KIconLoader>
 
 #include "calendarview_debug.h"
 #include <QBoxLayout>
 #include <QHeaderView>
+#include <QIcon>
 #include <QTreeWidget>
 #include <QLocale>
 
@@ -251,8 +251,7 @@ bool ListView::Private::ListItemVisitor::visit(const Todo::Ptr &t)
 
 bool ListView::Private::ListItemVisitor::visit(const Journal::Ptr &j)
 {
-    static const QPixmap jrnalPxmp = SmallIcon(j->iconName());
-    mItem->setIcon(Summary_Column, jrnalPxmp);
+    mItem->setIcon(Summary_Column, QIcon::fromTheme(j->iconName()));
     if (j->summary().isEmpty()) {
         mItem->setText(Summary_Column,
                        cleanSummary(j->description().section(QLatin1Char('\n'), 0, 0),

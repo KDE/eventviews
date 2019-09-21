@@ -49,11 +49,11 @@
 
 #include <KCalendarCore/CalFormat>
 
-#include <KIconLoader>
 #include <KJob>
 
 #include <QGridLayout>
 #include <QHeaderView>
+#include <QIcon>
 #include <QMenu>
 #include <QToolButton>
 
@@ -347,9 +347,7 @@ TodoView::TodoView(const EventViews::PrefsPtr &prefs, bool sidebarView, QWidget 
         i18nc("@action:inmenu print preview the to-do", "Print Previe&w..."),
         this, &TodoView::printPreviewTodo);
     mItemPopupMenu->addSeparator();
-    a = mItemPopupMenu->addAction(
-        KIconLoader::global()->loadIcon(QStringLiteral("edit-delete"), KIconLoader::NoGroup,
-                                        KIconLoader::SizeSmall),
+    a = mItemPopupMenu->addAction(QIcon::fromTheme(QStringLiteral("edit-delete")),
         i18nc("@action:inmenu delete the to-do", "&Delete"),
         this, &TodoView::deleteTodo);
     mItemPopupMenuReadWriteEntries << a;
@@ -358,8 +356,7 @@ TodoView::TodoView(const EventViews::PrefsPtr &prefs, bool sidebarView, QWidget 
     mItemPopupMenu->addSeparator();
 
     mItemPopupMenu->addAction(
-        KIconLoader::global()->loadIcon(
-            QStringLiteral("view-calendar-tasks"), KIconLoader::NoGroup, KIconLoader::SizeSmall),
+        QIcon::fromTheme(QStringLiteral("view-calendar-tasks")),
         i18nc("@action:inmenu create a new to-do", "New &To-do..."),
         this, &TodoView::newTodo);
 
@@ -386,18 +383,14 @@ TodoView::TodoView(const EventViews::PrefsPtr &prefs, bool sidebarView, QWidget 
 
     mItemPopupMenu->addSeparator();
 
-    a = mItemPopupMenu->addAction(KIconLoader::global()->loadIcon(QStringLiteral("appointment-new"),
-                                                                  KIconLoader::NoGroup,
-                                                                  KIconLoader::SizeSmall),
+    a = mItemPopupMenu->addAction(QIcon::fromTheme(QStringLiteral("appointment-new")),
                                   i18nc("@action:inmenu", "Create Event"),
                                   this, SLOT(createEvent()));
     a->setObjectName(QStringLiteral("createevent"));
     mItemPopupMenuReadWriteEntries << a;
     mItemPopupMenuItemOnlyEntries << a;
 
-    a = mItemPopupMenu->addAction(KIconLoader::global()->loadIcon(QStringLiteral("view-pim-notes"),
-                                                                  KIconLoader::NoGroup,
-                                                                  KIconLoader::SizeSmall),
+    a = mItemPopupMenu->addAction(QIcon::fromTheme(QStringLiteral("view-pim-notes")),
                                   i18nc("@action:inmenu", "Create Note"),
                                   this, SLOT(createNote()));
     a->setObjectName(QStringLiteral("createnote"));
