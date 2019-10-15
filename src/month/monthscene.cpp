@@ -200,7 +200,7 @@ void MonthGraphicsView::drawBackground(QPainter *p, const QRectF &rect)
                 Qt::AlignCenter,
                 i18nc("monthname year", "%1 %2",
                       QLocale::system().standaloneMonthName(mMonthView->averageDate().month()),
-                      mMonthView->averageDate().year()));
+                      QString::number(mMonthView->averageDate().year())));
 
     font.setPointSize(dayLabelsHeight - 10);
     p->setFont(font);
@@ -293,7 +293,7 @@ void MonthGraphicsView::drawBackground(QPainter *p, const QRectF &rect)
         } else {
             p->setBrush(color.lighter(140));
         }
-            
+
         bgGradient.setColorAt(1, color);
 
         p->setPen(Qt::NoPen);
@@ -312,7 +312,7 @@ void MonthGraphicsView::drawBackground(QPainter *p, const QRectF &rect)
     } else {
         oldPen = palette().color(QPalette::WindowText).darker(150);
     }
-    
+
 
     // Draw dates
     for (QDate d = mMonthView->actualStartDateTime().date();
