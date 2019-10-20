@@ -198,9 +198,7 @@ void MonthGraphicsView::drawBackground(QPainter *p, const QRectF &rect)
                       static_cast<int>(mScene->sceneRect().width()),
                       static_cast<int>(mScene->headerHeight() - dayLabelsHeight)),
                 Qt::AlignCenter,
-                i18nc("monthname year", "%1 %2",
-                      QLocale::system().standaloneMonthName(mMonthView->averageDate().month()),
-                      QString::number(mMonthView->averageDate().year())));
+                mMonthView->averageDate().toString(QStringLiteral("MMMM yyyy")));
 
     font.setPointSize(dayLabelsHeight - 10);
     p->setFont(font);
@@ -313,7 +311,6 @@ void MonthGraphicsView::drawBackground(QPainter *p, const QRectF &rect)
         oldPen = palette().color(QPalette::WindowText).darker(150);
     }
 
-
     // Draw dates
     for (QDate d = mMonthView->actualStartDateTime().date();
          d <= mMonthView->actualEndDateTime().date(); d = d.addDays(1)) {
@@ -360,8 +357,8 @@ void MonthGraphicsView::drawBackground(QPainter *p, const QRectF &rect)
 
         QString dayText;
         // Prepend month name if d is the first or last day of month
-        if (d.day() == 1                      // d is the first day of month
-            || d.addDays(1).day() == 1) {        // d is the last day of month
+        if (d.day() == 1 ||             // d is the first day of month
+            d.addDays(1).day() == 1) {  // d is the last day of month
             dayText = i18nc("'Month day' for month view cells", "%1 %2",
                             QLocale::system().monthName(d.month(), QLocale::ShortFormat),
                             d.day());
@@ -536,12 +533,12 @@ void MonthScene::mouseMoveEvent(QGraphicsSceneMouseEvent *mouseEvent)
     if (mActionType == None) {
         MonthGraphicsItem *iItem = dynamic_cast<MonthGraphicsItem *>(itemAt(pos, {}));
         if (iItem) {
-            if (iItem->monthItem()->isResizable()
-                && iItem->isBeginItem() && iItem->mapFromScene(pos).x() <= 10) {
+            if (iItem->monthItem()->isResizable() &&
+                iItem->isBeginItem() && iItem->mapFromScene(pos).x() <= 10) {
                 view->setActionCursor(Resize);
-            } else if (iItem->monthItem()->isResizable()
-                       && iItem->isEndItem()
-                       && iItem->mapFromScene(pos).x() >= iItem->boundingRect().width() - 10) {
+            } else if (iItem->monthItem()->isResizable() &&
+                       iItem->isEndItem() &&
+                       iItem->mapFromScene(pos).x() >= iItem->boundingRect().width() - 10) {
                 view->setActionCursor(Resize);
             } else {
                 view->setActionCursor(None);
@@ -614,13 +611,13 @@ void MonthScene::mousePressEvent(QGraphicsSceneMouseEvent *mouseEvent)
             mActionInitiated = false;
 
             // Move or resize ?
-            if (iItem->monthItem()->isResizable()
-                && iItem->isBeginItem() && iItem->mapFromScene(pos).x() <= 10) {
+            if (iItem->monthItem()->isResizable() &&
+                iItem->isBeginItem() && iItem->mapFromScene(pos).x() <= 10) {
                 mActionType = Resize;
                 mResizeType = ResizeLeft;
-            } else if (iItem->monthItem()->isResizable()
-                       && iItem->isEndItem()
-                       && iItem->mapFromScene(pos).x() >= iItem->boundingRect().width() - 10) {
+            } else if (iItem->monthItem()->isResizable() &&
+                       iItem->isEndItem() &&
+                       iItem->mapFromScene(pos).x() >= iItem->boundingRect().width() - 10) {
                 mActionType = Resize;
                 mResizeType = ResizeRight;
             } else if (iItem->monthItem()->isMoveable()) {
