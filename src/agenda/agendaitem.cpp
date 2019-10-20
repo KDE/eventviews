@@ -42,7 +42,6 @@
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <KWordWrap>
-#include <KIconLoader>
 
 #include <QDragEnterEvent>
 #include <QPainter>
