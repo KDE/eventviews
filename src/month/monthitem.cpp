@@ -249,7 +249,7 @@ bool MonthItem::greaterThan(const MonthItem *e1, const MonthItem *e2)
         }
     }
 
-    return leftStartDate < rightStartDate;
+    return leftStartDate > rightStartDate;
 }
 
 bool MonthItem::greaterThanFallback(const MonthItem *other) const
