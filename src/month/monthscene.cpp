@@ -24,6 +24,7 @@
 #include "monthgraphicsitems.h"
 #include "monthitem.h"
 #include "monthview.h"
+#include "helper.h"
 #include "prefs.h"
 
 #include <CalendarSupport/Utils>
@@ -257,11 +258,12 @@ void MonthGraphicsView::drawBackground(QPainter *p, const QRectF &rect)
                 color = palette().color(QPalette::AlternateBase);
             }
         }
+        const bool usingDark = EventViews::isColorDark(color);
         if (cell == mScene->selectedCell()) {
-            color = color.darker(115);
+            color = (usingDark) ? color.lighter(150) : color.darker(115);
         }
         if (cell->date() == QDate::currentDate()) {
-            color = color.darker(140);
+            color = (usingDark) ? color.lighter(200) : color.darker(140);
         }
 
         // Draw cell
@@ -286,7 +288,8 @@ void MonthGraphicsView::drawBackground(QPainter *p, const QRectF &rect)
         QLinearGradient bgGradient(QPointF(cellHeaderX, cellHeaderY),
                                    QPointF(cellHeaderX + cellHeaderWidth,
                                            cellHeaderY + cellHeaderHeight));
-        if ((color.blue() + color.red() + color.green()) > (256 / 2 * 3)) {
+        // Compute color of grid lines based on dark/lightness
+        if (!usingDark) {
             p->setBrush(color.darker(110));
         } else {
             p->setBrush(color.lighter(140));

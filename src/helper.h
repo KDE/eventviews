@@ -47,6 +47,15 @@ typedef QSharedPointer<Prefs> PrefsPtr;
 Q_REQUIRED_RESULT QColor getTextColor(const QColor &c);
 
 /**
+ * Determines if the @p color is "dark" or "light" by looking at its luminance.
+ * idea taken from:
+ * https://stackoverflow.com/questions/9780632/how-do-i-determine-if-a-color-is-closer-to-white-or-black
+ *
+ * @return true if the specified color is closer to black than white.
+ */
+Q_REQUIRED_RESULT bool isColorDark(const QColor &color);
+
+/**
   This method returns the proper resource / subresource color for the view.
   If a value is stored in the preferences, we use it, else we try to find a
   CollectionColorAttribute in the collection. If everything else fails, a

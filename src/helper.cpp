@@ -31,10 +31,15 @@
 #include <QIcon>
 #include <QPixmap>
 
-QColor EventViews::getTextColor(const QColor &c)
+bool EventViews::isColorDark(const QColor &c)
 {
     double luminance = (c.red() * 0.299) + (c.green() * 0.587) + (c.blue() * 0.114);
-    return (luminance > 128.0) ? QColor(0, 0, 0) : QColor(255, 255, 255);
+    return (luminance < 128.0) ? true : false;
+}
+
+QColor EventViews::getTextColor(const QColor &c)
+{
+    return (!isColorDark(c)) ? QColor(0, 0, 0) : QColor(255, 255, 255);
 }
 
 void EventViews::setResourceColor(const Akonadi::Collection &coll, const QColor &color, const PrefsPtr &preferences)
