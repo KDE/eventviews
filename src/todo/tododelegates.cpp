@@ -179,7 +179,7 @@ QWidget *TodoPriorityDelegate::createEditor(QWidget *parent, const QStyleOptionV
     Q_UNUSED(option);
     Q_UNUSED(index);
 
-    KComboBox *combo = new KComboBox(parent);
+    QComboBox *combo = new QComboBox(parent);
 
     combo->addItem(i18nc("@action:inmenu Unspecified priority", "unspecified"));
     combo->addItem(i18nc("@action:inmenu highest priority", "1 (highest)"));
@@ -197,14 +197,14 @@ QWidget *TodoPriorityDelegate::createEditor(QWidget *parent, const QStyleOptionV
 
 void TodoPriorityDelegate::setEditorData(QWidget *editor, const QModelIndex &index) const
 {
-    KComboBox *combo = static_cast<KComboBox *>(editor);
+    QComboBox *combo = static_cast<QComboBox *>(editor);
 
     combo->setCurrentIndex(index.data(Qt::EditRole).toInt());
 }
 
 void TodoPriorityDelegate::setModelData(QWidget *editor, QAbstractItemModel *model, const QModelIndex &index) const
 {
-    KComboBox *combo = static_cast<KComboBox *>(editor);
+    QComboBox *combo = static_cast<QComboBox *>(editor);
 
     model->setData(index, combo->currentIndex());
 }

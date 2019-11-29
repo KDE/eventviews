@@ -24,7 +24,7 @@
     <number>0</number>
    </property>
    <item>
-    <widget class="KComboBox" name="zoneCombo"/>
+    <widget class="QComboBox" name="zoneCombo"/>
    </item>
    <item>
     <layout class="QHBoxLayout">
@@ -80,13 +80,6 @@
    </item>
   </layout>
  </widget>
- <customwidgets>
-  <customwidget>
-   <class>KComboBox</class>
-   <extends>QComboBox</extends>
-   <header>kcombobox.h</header>
-  </customwidget>
- </customwidgets>
  <resources/>
  <connections/>
 </ui>
