@@ -795,7 +795,7 @@ bool TodoModel::dropMimeData(const QMimeData *data, Qt::DropAction action, int r
 Qt::ItemFlags TodoModel::flags(const QModelIndex &index) const
 {
     if (!index.isValid()) {
-        return nullptr;
+        return Qt::NoItemFlags;
     }
 
     Qt::ItemFlags ret = QAbstractItemModel::flags(index);
@@ -807,7 +807,7 @@ Qt::ItemFlags TodoModel::flags(const QModelIndex &index) const
         Q_ASSERT(mapToSource(index).isValid());
         qCWarning(CALENDARVIEW_LOG) << "Item is invalid " << index;
         Q_ASSERT(false);
-        return nullptr;
+        return Qt::NoItemFlags;
     }
 
     ret |= Qt::ItemIsDragEnabled;
