@@ -32,7 +32,7 @@
 #include <AkonadiCore/CollectionColorAttribute>
 
 #include <QFontDatabase>
-
+#include <QRandomGenerator>
 using namespace EventViews;
 
 QSet<EventViews::EventView::ItemIcon> iconArrayToSet(const QByteArray &array)
@@ -983,7 +983,7 @@ QColor Prefs::resourceColor(const QString &cal)
         if (seed > 0 && seed - 1 < colors.size()) {
             color.setNamedColor(colors[seed - 1]);
         } else {
-            color.setRgb(qrand() % 256, qrand() % 256, qrand() % 256);
+            color.setRgb(QRandomGenerator::global()->bounded(256), QRandomGenerator::global()->bounded(256), QRandomGenerator::global()->bounded(256));
         }
         d->setInt(d->mBaseConfig.defaultResourceColorSeedItem(), (seed + 1));
         d->mBaseConfig.setResourceColor(cal, color);
