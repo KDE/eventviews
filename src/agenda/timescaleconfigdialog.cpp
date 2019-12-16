@@ -66,7 +66,7 @@ TimeScaleConfigDialog::TimeScaleConfigDialog(const PrefsPtr &preferences, QWidge
     : QDialog(parent)
     , d(new Private(this, preferences))
 {
-    setWindowTitle(i18n("Timezone"));
+    setWindowTitle(i18nc("@title:window", "Timezone"));
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     setModal(true);
 
