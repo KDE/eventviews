@@ -302,7 +302,11 @@ void TimelineView::showDates(const QDate &start, const QDate &end, const QDate &
     d->mHintDate = QDateTime();
 
     KGantt::DateTimeGrid *grid = static_cast<KGantt::DateTimeGrid *>(d->mGantt->grid());
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
     grid->setStartDateTime(QDateTime(start));
+#else
+    grid->setStartDateTime(QDateTime(start.startOfDay()));
+#endif
     d->mLeftView->clear();
     uint index = 0;
     // item for every calendar
