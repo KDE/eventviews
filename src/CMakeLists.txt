@@ -69,15 +69,11 @@ set(eventviews_LIB_SRCS
 
 kconfig_add_kcfg_files(eventviews_LIB_SRCS prefs_base.kcfgc)
 
-if (ECM_VERSION VERSION_LESS "5.68.0")
-    ecm_qt_declare_logging_category(eventviews_LIB_SRCS HEADER calendarview_debug.h IDENTIFIER CALENDARVIEW_LOG CATEGORY_NAME org.kde.pim.calendarview)
-else()
-    ecm_qt_declare_logging_category(eventviews_LIB_SRCS HEADER calendarview_debug.h
+ecm_qt_declare_logging_category(eventviews_LIB_SRCS HEADER calendarview_debug.h
         IDENTIFIER CALENDARVIEW_LOG
         CATEGORY_NAME org.kde.pim.calendarview
         OLD_CATEGORY_NAMES log_calendarview
         DESCRIPTION "kdepim (eventviews)" EXPORT EVENTVIEWS)
-endif()
 
 ki18n_wrap_ui(eventviews_LIB_SRCS
   agenda/timescaleedit_base.ui
@@ -236,8 +232,6 @@ install(FILES
 )
 
 install(FILES ${PRI_FILENAME} DESTINATION ${ECM_MKSPECS_INSTALL_DIR})
-if (NOT ECM_VERSION VERSION_LESS "5.68.0")
-   ecm_qt_install_logging_categories(EXPORT EVENTVIEWS FILE eventviews.categories DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR})
-endif()
+ecm_qt_install_logging_categories(EXPORT EVENTVIEWS FILE eventviews.categories DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR})
 
 install(FILES agenda/calendardecoration.desktop DESTINATION ${KDE_INSTALL_KSERVICETYPES5DIR})
