@@ -45,6 +45,7 @@
 
 #include <QDragEnterEvent>
 #include <QPainter>
+#include <QPainterPath>
 #include <QPixmapCache>
 #include <QToolTip>
 #include <QMimeData>
