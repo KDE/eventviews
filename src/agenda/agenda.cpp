@@ -1552,7 +1552,7 @@ void Agenda::drawContents(QPainter *p, int cx, int cy, int cw, int ch)
 
     // Highlight working hours
     if (d->mWorkingHoursEnable && d->mHolidayMask) {
-        QColor workColor; 
+        QColor workColor;
         if (!d->preferences()->useSystemColor()) {
             workColor = d->preferences()->workingHoursColor();
         } else {
@@ -1615,10 +1615,10 @@ void Agenda::drawContents(QPainter *p, int cx, int cy, int cw, int ch)
                 } else {
                     busyColor = palette().color(QPalette::Window);
                     if ((busyColor.blue() + busyColor.red() + busyColor.green()) > (256 / 2 * 3)) {
-                        // dark 
+                        // dark
                         busyColor = busyColor.lighter(140);
                     } else {
-                        // light 
+                        // light
                         busyColor = busyColor.darker(140);
                     }
                 }
@@ -1664,7 +1664,7 @@ void Agenda::drawContents(QPainter *p, int cx, int cy, int cw, int ch)
     // The grid colors are always computed as a function of the palette's windowText color.
     QPen hourPen;
     QPen halfHourPen;
-    
+
     const QColor windowTextColor = palette().color(QPalette::WindowText);
     if (windowTextColor.red() + windowTextColor.green() + windowTextColor.blue() < (256 / 2 * 3)) {
         // dark grey line
@@ -1675,7 +1675,7 @@ void Agenda::drawContents(QPainter *p, int cx, int cy, int cw, int ch)
         hourPen = windowTextColor.darker(150);
         halfHourPen = windowTextColor.darker(200);
     }
-    
+
     dbp.setPen(hourPen);
 
     // Draw vertical lines of grid, start with the last line not yet visible
@@ -1991,7 +1991,7 @@ void Agenda::removeIncidence(const KCalendarCore::Incidence::Ptr &incidence)
             if (incidence->instanceIdentifier() != agendaItem->incidence()->instanceIdentifier()) {
                 continue;
             }
-            if (removeAgendaItem(agendaItem)) {
+            if (!removeAgendaItem(agendaItem)) {
                 qCWarning(CALENDARVIEW_LOG) << "Agenda::removeIncidence() Failed to remove "
                                             << incidence->uid();
             }
