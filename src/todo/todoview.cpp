@@ -682,7 +682,7 @@ void TodoView::addTodo(const QString &summary, const Akonadi::Item &parentItem, 
         collection = calendar()->collection(parentItem.storageCollectionId());
     }
 
-    changer()->createIncidence(todo, Akonadi::Collection(), this);
+    changer()->createIncidence(todo, collection, this);
 }
 
 void TodoView::addQuickTodo(Qt::KeyboardModifiers modifiers)
