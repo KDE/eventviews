@@ -202,6 +202,15 @@ void IncidenceTreeModel::Private::onDataChanged(const QModelIndex &begin, const 
                 Q_ASSERT(false);
                 return;
             }
+
+            // An UID could have changed, update hashes!
+            if (node->uid != incidence->instanceIdentifier()) {
+                qCDebug(CALENDARVIEW_LOG) << "Incidence UID has changed" << node->uid << incidence->instanceIdentifier();
+                m_itemByUid.remove(node->uid);
+                m_uidMap.remove(node->uid);
+                node->uid = incidence->instanceIdentifier();
+                m_uidMap.insert(node->uid, node);
+            }
             m_itemByUid.insert(incidence->instanceIdentifier(), item);
 
             Node::Ptr newParentNode;
