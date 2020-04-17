@@ -36,7 +36,6 @@
 
 #include <KCalendarCore/CalFilter>
 
-#include <KComboBox>
 #include <KDateComboBox>
 
 #include <QApplication>
