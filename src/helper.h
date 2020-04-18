@@ -73,8 +73,8 @@ Q_REQUIRED_RESULT EVENTVIEWS_EXPORT QColor resourceColor(const Akonadi::Item &in
 Q_REQUIRED_RESULT EVENTVIEWS_EXPORT QColor resourceColor(const Akonadi::Collection &collection, const PrefsPtr &preferences);
 
 /**
-  This method sets the resource color in the preferences, only if it is
-  different from the CollectionColorAttribute. It is preferred to use this
+  This method sets the resource color as an Akonadi collection attribute and
+  in the local preferences. It is preferred to use this
   instead of the EventViews::Prefs::setResourceColor function.
   @param collection the collection for which the resource color should be stored
   @param color the color to stored

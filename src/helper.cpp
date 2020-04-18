@@ -22,11 +22,13 @@
 
 #include "helper.h"
 #include "prefs.h"
+#include "calendarview_debug.h"
 
 #include <Collection>
 #include <Item>
 
 #include <AkonadiCore/CollectionColorAttribute>
+#include <AkonadiCore/CollectionModifyJob>
 
 #include <QIcon>
 #include <QPixmap>
@@ -49,15 +51,20 @@ void EventViews::setResourceColor(const Akonadi::Collection &coll, const QColor 
     }
 
     const QString id = QString::number(coll.id());
-    if (coll.hasAttribute<Akonadi::CollectionColorAttribute>()) {
-        const Akonadi::CollectionColorAttribute *colorAttr
-            = coll.attribute<Akonadi::CollectionColorAttribute>();
-        if (colorAttr && colorAttr->color().isValid() && (colorAttr->color() == color)) {
-            // It's the same color: we save an invalid color
-            preferences->setResourceColor(id, QColor());
+
+    // Save the color in akonadi (so the resource can even save it server-side)
+    Akonadi::Collection collection = coll;
+    Akonadi::CollectionColorAttribute *colorAttr
+            = collection.attribute<Akonadi::CollectionColorAttribute>(Akonadi::Collection::AddIfMissing);
+    colorAttr->setColor(color);
+    Akonadi::CollectionModifyJob *job = new Akonadi::CollectionModifyJob(collection, nullptr);
+    QObject::connect(job, &Akonadi::CollectionModifyJob::result, [=]() {
+        if (job->error()) {
+            qCWarning(CALENDARVIEW_LOG) << "Failed to set CollectionColorAttribute:" << job->errorString();
         }
-    }
-    // in all other cases, we save the resourceColor
+    });
+
+    // Also save the color in eventviewsrc (mostly historical)
     preferences->setResourceColor(id, color);
 }
 
