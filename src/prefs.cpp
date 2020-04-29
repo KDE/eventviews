@@ -64,6 +64,7 @@ QByteArray iconSetToArray(const QSet<EventViews::EventView::ItemIcon> &set)
 QByteArray agendaViewIconDefaults()
 {
     QByteArray iconDefaults;
+    iconDefaults.resize(7);
 
     iconDefaults[EventViews::EventView::CalendarCustomIcon] = 1;
     iconDefaults[EventViews::EventView::TaskIcon] = 1;
@@ -79,6 +80,7 @@ QByteArray agendaViewIconDefaults()
 QByteArray monthViewIconDefaults()
 {
     QByteArray iconDefaults;
+    iconDefaults.resize(7);
 
     iconDefaults[EventViews::EventView::CalendarCustomIcon] = 1;
     iconDefaults[EventViews::EventView::TaskIcon] = 1;
