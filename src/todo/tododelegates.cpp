@@ -32,7 +32,6 @@
 #include <LibkdepimAkonadi/TagSelectionCombo>
 
 #include <Libkdepim/KCheckComboBox>
-#include <LibkdepimAkonadi/TagWidgets>
 
 #include <KCalendarCore/CalFilter>
 
