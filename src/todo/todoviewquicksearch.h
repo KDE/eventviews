@@ -32,7 +32,10 @@
 
 namespace KPIM {
 class KCheckComboBox;
-class TagSelectionCombo;
+}
+
+namespace Akonadi {
+class TagSelectionComboBox;
 }
 
 class QLineEdit;
@@ -42,9 +45,6 @@ class TodoViewQuickSearch : public QWidget
     Q_OBJECT
 public:
     TodoViewQuickSearch(const Akonadi::ETMCalendar::Ptr &calendar, QWidget *parent);
-    ~TodoViewQuickSearch()
-    {
-    }
 
     void setCalendar(const Akonadi::ETMCalendar::Ptr &calendar);
 
@@ -63,10 +63,6 @@ Q_SIGNALS:
 public Q_SLOTS:
     void reset();
 
-private Q_SLOTS:
-    void emitFilterCategoryChanged();
-    void emitFilterPriorityChanged();
-
 private:
     /** Helper method for the filling of the priority combo. */
     void fillPriorities();
@@ -74,7 +70,7 @@ private:
     Akonadi::ETMCalendar::Ptr mCalendar;
 
     QLineEdit *mSearchLine = nullptr;
-    KPIM::TagSelectionCombo *mCategoryCombo = nullptr;
+    Akonadi::TagSelectionComboBox *mCategoryCombo = nullptr;
     KPIM::KCheckComboBox *mPriorityCombo = nullptr;
 };
 

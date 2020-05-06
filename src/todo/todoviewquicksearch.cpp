@@ -28,11 +28,11 @@
 #include "todoviewquicksearch.h"
 #include <CalendarSupport/KCalPrefs>
 
+#include <AkonadiWidgets/TagSelectionComboBox>
 #include <Akonadi/Calendar/ETMCalendar>
 #include <CalendarSupport/CategoryConfig>
 
 #include <Libkdepim/KCheckComboBox>
-#include <LibkdepimAkonadi/TagSelectionCombo>
 
 #include <CalendarSupport/CategoryHierarchyReader>
 
@@ -63,7 +63,8 @@ TodoViewQuickSearch::TodoViewQuickSearch(const Akonadi::ETMCalendar::Ptr &calend
 
     layout->addWidget(mSearchLine, 3);
 
-    mCategoryCombo = new KPIM::TagSelectionCombo(this);
+    mCategoryCombo = new Akonadi::TagSelectionComboBox(this);
+    mCategoryCombo->setCheckable(true);
     mCategoryCombo->setToolTip(
         i18nc("@info:tooltip", "Filter on these categories"));
     mCategoryCombo->setWhatsThis(
@@ -71,11 +72,12 @@ TodoViewQuickSearch::TodoViewQuickSearch(const Akonadi::ETMCalendar::Ptr &calend
               "Use this combobox to filter the to-dos that are shown by "
               "a list of selected categories."));
     const QString defaultText = i18nc("@item:inlistbox", "Select Categories");
-    mCategoryCombo->setDefaultText(defaultText);
-    mCategoryCombo->setSeparator(i18nc("@item:intext delimiter for joining category names", ","));
+    mCategoryCombo->lineEdit()->setPlaceholderText(defaultText);
 
-    connect(mCategoryCombo, &KPIM::TagSelectionCombo::checkedItemsChanged, this,
-            &TodoViewQuickSearch::emitFilterCategoryChanged);
+    connect(mCategoryCombo, &Akonadi::TagSelectionComboBox::selectionChanged,
+            this, [this]() {
+                Q_EMIT filterCategoryChanged(mCategoryCombo->selectionNames());
+            });
 
     layout->addWidget(mCategoryCombo, 1);
 
@@ -103,8 +105,10 @@ TodoViewQuickSearch::TodoViewQuickSearch(const Akonadi::ETMCalendar::Ptr &calend
               "Use this combobox to filter the to-dos that are shown by "
               "a list of selected priorities."));
     mPriorityCombo->setDefaultText(i18nc("@item:inlistbox", "Select Priority"));
-    connect(mPriorityCombo, &KPIM::KCheckComboBox::checkedItemsChanged, this,
-            &TodoViewQuickSearch::emitFilterPriorityChanged);
+    connect(mPriorityCombo, &KPIM::KCheckComboBox::checkedItemsChanged,
+            this, [this]() {
+                Q_EMIT filterPriorityChanged(mPriorityCombo->checkedItems(Qt::UserRole));
+            });
 
     layout->addWidget(mPriorityCombo, 1);
     fillPriorities();
@@ -142,12 +146,3 @@ void TodoViewQuickSearch::fillPriorities()
     CalendarSupport::CategoryHierarchyReaderQComboBox(mPriorityCombo).read(priorityValues);
 }
 
-void TodoViewQuickSearch::emitFilterCategoryChanged()
-{
-    Q_EMIT filterCategoryChanged(mCategoryCombo->checkedItems());
-}
-
-void TodoViewQuickSearch::emitFilterPriorityChanged()
-{
-    Q_EMIT filterPriorityChanged(mPriorityCombo->checkedItems(Qt::UserRole));
-}

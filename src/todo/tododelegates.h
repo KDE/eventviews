@@ -46,8 +46,6 @@ class TodoCompleteDelegate : public QStyledItemDelegate
 public:
     explicit TodoCompleteDelegate(QObject *parent = nullptr);
 
-    ~TodoCompleteDelegate() override;
-
     void paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const override;
     QSize sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const override;
 
@@ -84,8 +82,6 @@ class TodoPriorityDelegate : public QStyledItemDelegate
 public:
     explicit TodoPriorityDelegate(QObject *parent = nullptr);
 
-    ~TodoPriorityDelegate() override;
-
     QWidget *createEditor(QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index) const override;
     void setEditorData(QWidget *editor, const QModelIndex &index) const override;
     void setModelData(QWidget *editor, QAbstractItemModel *model, const QModelIndex &index) const override;
@@ -105,8 +101,6 @@ class TodoDueDateDelegate : public QStyledItemDelegate
 public:
     explicit TodoDueDateDelegate(QObject *parent = nullptr);
 
-    ~TodoDueDateDelegate() override;
-
     QWidget *createEditor(QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index) const override;
     void setEditorData(QWidget *editor, const QModelIndex &index) const override;
     void setModelData(QWidget *editor, QAbstractItemModel *model, const QModelIndex &index) const override;
@@ -125,8 +119,6 @@ class TodoCategoriesDelegate : public QStyledItemDelegate
     Q_OBJECT
 public:
     explicit TodoCategoriesDelegate(QObject *parent = nullptr);
-
-    ~TodoCategoriesDelegate() override;
 
     QWidget *createEditor(QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index) const override;
     void setEditorData(QWidget *editor, const QModelIndex &index) const override;
@@ -149,8 +141,6 @@ class TodoRichTextDelegate : public QStyledItemDelegate
     Q_OBJECT
 public:
     explicit TodoRichTextDelegate(QObject *parent = nullptr);
-
-    ~TodoRichTextDelegate() override;
 
     void paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const override;
     QSize sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const override;

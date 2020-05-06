@@ -26,10 +26,10 @@
 #include "todomodel.h"
 #include "todoviewview.h"
 
+#include <AkonadiWidgets/TagSelectionComboBox>
 #include <Akonadi/Calendar/ETMCalendar>
 #include <CalendarSupport/CategoryConfig>
 #include <CalendarSupport/CategoryHierarchyReader>
-#include <LibkdepimAkonadi/TagSelectionCombo>
 
 #include <Libkdepim/KCheckComboBox>
 
@@ -47,10 +47,6 @@
 
 TodoCompleteDelegate::TodoCompleteDelegate(QObject *parent)
     : QStyledItemDelegate(parent)
-{
-}
-
-TodoCompleteDelegate::~TodoCompleteDelegate()
 {
 }
 
@@ -168,10 +164,6 @@ TodoPriorityDelegate::TodoPriorityDelegate(QObject *parent)
 {
 }
 
-TodoPriorityDelegate::~TodoPriorityDelegate()
-{
-}
-
 QWidget *TodoPriorityDelegate::createEditor(QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index) const
 {
     Q_UNUSED(option);
@@ -222,10 +214,6 @@ TodoDueDateDelegate::TodoDueDateDelegate(QObject *parent)
 {
 }
 
-TodoDueDateDelegate::~TodoDueDateDelegate()
-{
-}
-
 QWidget *TodoDueDateDelegate::createEditor(QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index) const
 {
     Q_UNUSED(option);
@@ -266,30 +254,24 @@ TodoCategoriesDelegate::TodoCategoriesDelegate(QObject *parent)
 {
 }
 
-TodoCategoriesDelegate::~TodoCategoriesDelegate()
-{
-}
-
 QWidget *TodoCategoriesDelegate::createEditor(QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index) const
 {
     Q_UNUSED(option);
     Q_UNUSED(index);
 
-    return new KPIM::TagSelectionCombo(parent);
+    return new Akonadi::TagSelectionComboBox(parent);
 }
 
 void TodoCategoriesDelegate::setEditorData(QWidget *editor, const QModelIndex &index) const
 {
-    KPIM::KCheckComboBox *combo = static_cast<KPIM::KCheckComboBox *>(editor);
-
-    combo->setCheckedItems(index.data(Qt::EditRole).toStringList(), Qt::UserRole);
+    auto *combo = static_cast<Akonadi::TagSelectionComboBox *>(editor);
+    combo->setSelection(index.data(Qt::EditRole).toStringList());
 }
 
 void TodoCategoriesDelegate::setModelData(QWidget *editor, QAbstractItemModel *model, const QModelIndex &index) const
 {
-    KPIM::KCheckComboBox *combo = static_cast<KPIM::KCheckComboBox *>(editor);
-
-    model->setData(index, combo->checkedItems(Qt::UserRole));
+    auto *combo = static_cast<Akonadi::TagSelectionComboBox *>(editor);
+    model->setData(index, combo->selectionNames());
 }
 
 void TodoCategoriesDelegate::updateEditorGeometry(QWidget *editor, const QStyleOptionViewItem &option, const QModelIndex &index) const
@@ -311,10 +293,6 @@ TodoRichTextDelegate::TodoRichTextDelegate(QObject *parent)
     : QStyledItemDelegate(parent)
 {
     m_textDoc = new QTextDocument(this);
-}
-
-TodoRichTextDelegate::~TodoRichTextDelegate()
-{
 }
 
 void TodoRichTextDelegate::paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const
