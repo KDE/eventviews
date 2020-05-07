@@ -31,8 +31,6 @@
 #include <CalendarSupport/CategoryConfig>
 #include <CalendarSupport/CategoryHierarchyReader>
 
-#include <Libkdepim/KCheckComboBox>
-
 #include <KCalendarCore/CalFilter>
 
 #include <KDateComboBox>
