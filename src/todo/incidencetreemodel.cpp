@@ -414,7 +414,7 @@ void IncidenceTreeModel::Private::insertNode(const PreNode::Ptr &prenode, bool s
     // Are we a parent?
     if (m_waitingForParent.contains(node->uid)) {
         Q_ASSERT(m_waitingForParent.count(node->uid) > 0);
-        QList<Node::Ptr> childs = m_waitingForParent.values(node->uid);
+        const QList<Node::Ptr> childs = m_waitingForParent.values(node->uid);
         m_waitingForParent.remove(node->uid);
         Q_ASSERT(!childs.isEmpty());
 
