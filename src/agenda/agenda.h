@@ -117,7 +117,7 @@ public:
     Q_REQUIRED_RESULT int visibleContentsYMin() const;
     Q_REQUIRED_RESULT int visibleContentsYMax() const;
 
-    void setStartTime(const QTime &startHour);
+    void setStartTime(QTime startHour);
 
     AgendaItem::QPtr insertItem(const KCalendarCore::Incidence::Ptr &incidence, const QDateTime &recurrenceId, int X, int YTop, int YBottom, int itemPos, int itemCount, bool isSelected);
 

@@ -56,7 +56,7 @@ struct Node {
 /** Just a struct to contain some data before we create the node */
 struct PreNode {
     typedef QSharedPointer<PreNode> Ptr;
-    typedef QList<Ptr> List;
+    typedef QVector<Ptr> List;
     KCalendarCore::Incidence::Ptr incidence;
     QPersistentModelIndex sourceIndex;
     Akonadi::Item item;

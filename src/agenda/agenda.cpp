@@ -1794,7 +1794,7 @@ QVector<int> Agenda::maxContentsY() const
     return maxArray;
 }
 
-void Agenda::setStartTime(const QTime &startHour)
+void Agenda::setStartTime(QTime startHour)
 {
     const double startPos
         = (startHour.hour() / 24. + startHour.minute() / 1440. + startHour.second() / 86400.)
