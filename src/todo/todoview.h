@@ -41,7 +41,7 @@ class TodoViewQuickSearch;
 class TodoViewSortFilterProxyModel;
 class TodoViewView;
 
-namespace KPIM {
+namespace CalendarSupport {
 class KDatePickerPopup;
 }
 
@@ -167,8 +167,8 @@ private:
     QToolButton *mFlatViewButton = nullptr;
 
     QMenu *mItemPopupMenu = nullptr;
-    KPIM::KDatePickerPopup *mCopyPopupMenu = nullptr;
-    KPIM::KDatePickerPopup *mMovePopupMenu = nullptr;
+    CalendarSupport::KDatePickerPopup *mCopyPopupMenu = nullptr;
+    CalendarSupport::KDatePickerPopup *mMovePopupMenu = nullptr;
     QMenu *mPriorityPopupMenu = nullptr;
     QMenu *mPercentageCompletedPopupMenu = nullptr;
     QList<QAction *> mItemPopupMenuItemOnlyEntries;
