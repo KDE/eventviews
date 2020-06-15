@@ -99,10 +99,11 @@ PRIVATE
   KF5::IconThemes
   KF5::GuiAddons
   KF5::I18n
-  KF5::LibkdepimAkonadi
+  KF5::Libkdepim
   KF5::Codecs
   KGantt
   KF5::AkonadiWidgets
+  KF5::Contacts
 )
 
 target_include_directories(KF5EventViews INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF5}/EventViews/;${KDE_INSTALL_INCLUDEDIR_KF5}/eventviews>")
