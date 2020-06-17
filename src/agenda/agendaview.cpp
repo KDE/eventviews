@@ -1841,8 +1841,6 @@ bool AgendaView::displayIncidence(const KCalendarCore::Incidence::Ptr &incidence
         return false;
     }
 
-    lastVisibleDateTime.setTime(QTime(23, 59, 59, 59));
-    firstVisibleDateTime.setTime(QTime(0, 0));
     std::vector<QDateTime> dateTimeList;
 
     const QDateTime incDtStart = incidence->dtStart().toLocalTime();
@@ -1887,9 +1885,9 @@ bool AgendaView::displayIncidence(const KCalendarCore::Incidence::Ptr &incidence
             // If it's not overdue it will be shown at the original date (not today)
             dateToAdd = todo->dtDue().toLocalTime();
 
-            // To-dos are drawn with the bottom of the rectangle at dtDue
-            // if dtDue is at 00:00, then it should be displayed in the previous day, at 23:59
-            if (dateToAdd.time() == QTime(0, 0)) {
+            // To-dos due at a specific time are drawn with the bottom of the rectangle at dtDue.
+            // If dtDue is at 00:00, then it should be displayed in the previous day, at 23:59.
+            if (!todo->allDay() && dateToAdd.time() == QTime(0, 0)) {
                 dateToAdd = dateToAdd.addSecs(-1);
             }
 
@@ -1902,7 +1900,7 @@ bool AgendaView::displayIncidence(const KCalendarCore::Incidence::Ptr &incidence
         if (dateToAdd.isValid() && incidence->allDay()) {
             // so comparisons with < > actually work
             dateToAdd.setTime(QTime(0, 0));
-            incidenceEnd.setTime(QTime(23, 59, 59, 59));
+            incidenceEnd.setTime(QTime(23, 59, 59, 999));
         }
 
         if (dateToAdd <= lastVisibleDateTime && incidenceEnd > firstVisibleDateTime) {
