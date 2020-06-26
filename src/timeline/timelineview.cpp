@@ -149,16 +149,22 @@ public:
 };
 class GanttItemDelegate : public KGantt::ItemDelegate
 {
+public:
+    explicit GanttItemDelegate(QObject *parent)
+        : KGantt::ItemDelegate(parent)
+    {
+    }
+private:
     void paintGanttItem(QPainter *painter, const KGantt::StyleOptionGanttItem &opt, const QModelIndex &idx) override
     {
         painter->setRenderHints(QPainter::Antialiasing);
         if (!idx.isValid()) {
             return;
         }
-        KGantt::ItemType type = static_cast<KGantt::ItemType>(
+        const KGantt::ItemType type = static_cast<KGantt::ItemType>(
             idx.model()->data(idx, KGantt::ItemTypeRole).toInt());
 
-        QString txt = idx.model()->data(idx, Qt::DisplayRole).toString();
+        const QString txt = idx.model()->data(idx, Qt::DisplayRole).toString();
         QRectF itemRect = opt.itemRect;
         QRectF boundingRect = opt.boundingRect;
         boundingRect.setY(itemRect.y());
@@ -227,7 +233,7 @@ TimelineView::TimelineView(QWidget *parent)
     d->mLeftView->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     d->mLeftView->setUniformRowHeights(true);
 
-    d->mGantt = new KGantt::GraphicsView();
+    d->mGantt = new KGantt::GraphicsView(this);
     splitter->addWidget(d->mLeftView);
     splitter->addWidget(d->mGantt);
     connect(splitter, &QSplitter::splitterMoved,
@@ -244,7 +250,7 @@ TimelineView::TimelineView(QWidget *parent)
 
     d->mRowController->setModel(model);
     d->mGantt->setRowController(d->mRowController);
-    KGantt::DateTimeGrid *grid = new KGantt::DateTimeGrid;
+    KGantt::DateTimeGrid *grid = new KGantt::DateTimeGrid();
     grid->setScale(KGantt::DateTimeGrid::ScaleHour);
     grid->setDayWidth(800);
     grid->setRowSeparators(true);
@@ -253,7 +259,7 @@ TimelineView::TimelineView(QWidget *parent)
     d->mGantt->viewport()->setFixedWidth(8000);
 
     d->mGantt->viewport()->installEventFilter(this);
-    d->mGantt->setItemDelegate(new GanttItemDelegate);
+    d->mGantt->setItemDelegate(new GanttItemDelegate(this));
 
     vbox->addWidget(splitter);
 
