@@ -1864,7 +1864,11 @@ bool AgendaView::displayIncidence(const KCalendarCore::Incidence::Ptr &incidence
                                          startDateTimeWithOffset, lastVisibleDateTime);
         while (rIt.hasNext()) {
             rIt.next();
-            const auto occurrenceDate = rIt.occurrenceStartDate().toLocalTime();
+            auto occurrenceDate = rIt.occurrenceStartDate().toLocalTime();
+            if (const auto todo = CalendarSupport::todo(rIt.incidence())) {
+                // Recurrence exceptions may have durations different from the normal recurrences.
+                occurrenceDate = occurrenceDate.addSecs(todo->dtStart().secsTo(todo->dtDue()));
+            }
             const bool makesDayBusy
                 = preferences()->colorAgendaBusyDays() && makesWholeDayBusy(rIt.incidence());
             if (makesDayBusy) {
