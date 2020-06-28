@@ -2014,6 +2014,35 @@ void AgendaView::slotIncidencesDropped(const QList<QUrl> &items, const QPoint &g
 #endif
 }
 
+static void setDateTime(KCalendarCore::Incidence::Ptr incidence, QDateTime dt, bool allDay)
+{
+    incidence->setAllDay(allDay);
+
+    if (auto todo = CalendarSupport::todo(incidence)) {
+        // To-dos are displayed on their due date and time.  Make sure the todo is displayed
+        // where it was dropped.
+        QDateTime dtStart = todo->dtStart();
+        if (dtStart.isValid()) {
+            auto duration = todo->dtStart().daysTo(todo->dtDue());
+            dtStart = dt.addDays(-duration);
+            dtStart.setTime({0, 0, 0});
+        }
+        // Set dtDue before dtStart;  see comment in updateEventDates().
+        todo->setDtDue(dt, true);
+        todo->setDtStart(dtStart);
+    } else if (auto event = CalendarSupport::event(incidence)) {
+        auto duration = event->dtStart().secsTo(event->dtEnd());
+        if (duration == 0) {
+            auto defaultDuration = CalendarSupport::KCalPrefs::instance()->defaultDuration().time();
+            duration = (defaultDuration.hour() * 3600) + (defaultDuration.minute() * 60);
+        }
+        event->setDtEnd(dt.addSecs(duration));
+        event->setDtStart(dt);
+    } else {    // Can't happen, but ...
+        incidence->setDtStart(dt);
+    }
+}
+
 void AgendaView::slotIncidencesDropped(const KCalendarCore::Incidence::List &incidences, const QPoint &gpos, bool allDay)
 {
     if (gpos.x() < 0 || gpos.y() < 0) {
@@ -2021,7 +2050,8 @@ void AgendaView::slotIncidencesDropped(const KCalendarCore::Incidence::List &inc
     }
 
     const QDate day = d->mSelectedDates[gpos.x()];
-    QDateTime newTime(day, {}, Qt::LocalTime);
+    const QTime time = d->mAgenda->gyToTime(gpos.y());
+    QDateTime newTime(day, time, Qt::LocalTime);
 
     for (const KCalendarCore::Incidence::Ptr &incidence : incidences) {
         const Akonadi::Item existingItem = calendar()->item(incidence);
@@ -2032,21 +2062,19 @@ void AgendaView::slotIncidencesDropped(const KCalendarCore::Incidence::List &inc
         if (existingItem.isValid() && existsInSameCollection) {
             KCalendarCore::Incidence::Ptr newIncidence
                 = existingItem.payload<KCalendarCore::Incidence::Ptr>();
-            KCalendarCore::Incidence::Ptr oldIncidence(newIncidence->clone());
 
             if (newIncidence->dtStart() == newTime && newIncidence->allDay() == allDay) {
                 // Nothing changed
                 continue;
             }
 
-            newIncidence->setAllDay(allDay);
-            newIncidence->setDateTime(newTime, KCalendarCore::Incidence::RoleDnD);
+            KCalendarCore::Incidence::Ptr oldIncidence(newIncidence->clone());
+            setDateTime(newIncidence, newTime, allDay);
 
-            changer()->modifyIncidence(existingItem, oldIncidence, this);
+            (void) changer()->modifyIncidence(existingItem, oldIncidence, this);
         } else { // Create a new one
-            // The drop came from another application create a new incidence
-            incidence->setDateTime(newTime, KCalendarCore::Incidence::RoleDnD);
-            incidence->setAllDay(allDay);
+            // The drop came from another application.  Create a new incidence.
+            setDateTime(incidence, newTime, allDay);
             incidence->setUid(KCalendarCore::CalFormat::createUniqueId());
             Akonadi::Collection collection(collectionId());
             const bool added = -1 != changer()->createIncidence(incidence, collection, this);
@@ -2054,7 +2082,7 @@ void AgendaView::slotIncidencesDropped(const KCalendarCore::Incidence::List &inc
             if (added) {
                 // TODO: make async
                 if (existingItem.isValid()) {   // Dragged from one agenda to another, delete origin
-                    changer()->deleteIncidence(existingItem);
+                    (void) changer()->deleteIncidence(existingItem);
                 }
             }
         }
