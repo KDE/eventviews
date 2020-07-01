@@ -59,6 +59,9 @@ enum {
     Dummy_EOF_Column // Dummy enum value for iteration purposes only. Always keep at the end.
 };
 
+static const QTime DAY_START {00, 00};
+static const QTime DAY_END   {23, 59, 59, 999};
+
 static QString cleanSummary(const QString &summary, const QDateTime &next)
 {
     QString retStr = summary;
@@ -96,17 +99,11 @@ bool ListViewItem::operator<(const QTreeWidgetItem &other) const
 
     switch (treeWidget()->sortColumn()) {
     case StartDateTime_Column:
-        return otheritem->start < start;
+        // Missing start times are sorted before any defined time.
+        return otheritem->start.isValid() && (!start.isValid() || start < otheritem->start);
     case EndDateTime_Column:
-    {
-        Incidence::Ptr thisInc = CalendarSupport::incidence(mIncidence);
-        const auto thisEnd = thisInc->dateTime(Incidence::RoleEnd).toLocalTime();
-
-        Incidence::Ptr otherInc = CalendarSupport::incidence(otheritem->mIncidence);
-        const auto otherEnd = otherInc->dateTime(Incidence::RoleEnd).toLocalTime();
-
-        return otherEnd < thisEnd;
-    }
+        // Missing end times are sorted after any defined time.
+        return end.isValid() && (!otheritem->end.isValid() || end < otheritem->end);
     default:
         return QTreeWidgetItem::operator <(other);
     }
@@ -184,20 +181,23 @@ bool ListView::Private::ListItemVisitor::visit(const Event::Ptr &e)
     mItem->setIcon(Summary_Column, eventPxmp);
 
     QDateTime next;
-    mItem->start = e->dtStart().toLocalTime();
-    mItem->end = e->dtEnd().toLocalTime();
     if (e->recurs()) {
         const qint64 duration = e->dtStart().secsTo(e->dtEnd());
-        QDateTime kdt(mStartDate, QTime(0, 0, 0));
-        kdt = kdt.addSecs(-1);
+        QDateTime kdt(mStartDate, DAY_START);
+        kdt = kdt.addMSecs(-1);
         mItem->start = e->recurrence()->getNextDateTime(kdt).toLocalTime();
         mItem->end = mItem->start.addSecs(duration);
         next = e->recurrence()->getNextDateTime(mItem->start).toLocalTime();
+    } else {
+        mItem->start = e->dtStart().toLocalTime();
+        mItem->end = e->dtEnd().toLocalTime();
     }
 
     mItem->setText(Summary_Column, cleanSummary(e->summary(), next));
 
     if (e->allDay()) {
+        mItem->start.setTime(DAY_START);
+        mItem->end.setTime(DAY_END);
         mItem->setText(StartDateTime_Column,
                        QLocale().toString(mItem->start.date(), QLocale::ShortFormat));
         mItem->setText(EndDateTime_Column,
@@ -216,6 +216,25 @@ bool ListView::Private::ListItemVisitor::visit(const Event::Ptr &e)
 bool ListView::Private::ListItemVisitor::visit(const Todo::Ptr &t)
 {
     mItem->setIcon(Summary_Column, QIcon::fromTheme(t->iconName()));
+
+    if (t->recurs()) {
+        QDateTime kdt(mStartDate, DAY_START);
+        kdt = kdt.addMSecs(-1);
+        mItem->start = t->recurrence()->getNextDateTime(kdt).toLocalTime();
+        if (t->hasDueDate()) {
+            const qint64 duration = t->dtStart().secsTo(t->dtDue());
+            mItem->end = mItem->start.addSecs(duration);
+        } else {
+            mItem->end = QDateTime();
+        }
+    } else {
+        mItem->start = t->hasStartDate() ? t->dtStart().toLocalTime() : QDateTime();
+        mItem->end = t->hasDueDate() ? t->dtDue().toLocalTime() : QDateTime();
+    }
+    if (t->allDay()) {
+        mItem->start.setTime(DAY_START);
+        mItem->end.setTime(DAY_END);
+    }
 
     mItem->setText(Summary_Column, cleanSummary(t->summary(), QDateTime()));
 
@@ -252,6 +271,10 @@ bool ListView::Private::ListItemVisitor::visit(const Todo::Ptr &t)
 bool ListView::Private::ListItemVisitor::visit(const Journal::Ptr &j)
 {
     mItem->setIcon(Summary_Column, QIcon::fromTheme(j->iconName()));
+
+    mItem->start = j->dtStart();
+    mItem->end = QDateTime();
+
     if (j->summary().isEmpty()) {
         mItem->setText(Summary_Column,
                        cleanSummary(j->description().section(QLatin1Char('\n'), 0, 0),
@@ -260,12 +283,15 @@ bool ListView::Private::ListItemVisitor::visit(const Journal::Ptr &j)
         mItem->setText(Summary_Column, cleanSummary(j->summary(), QDateTime()));
     }
     if (j->allDay()) {
+        mItem->start.setTime(DAY_START);
         mItem->setText(StartDateTime_Column,
                        QLocale().toString(j->dtStart().toLocalTime().date(), QLocale::ShortFormat));
     } else {
         mItem->setText(StartDateTime_Column,
                        QLocale().toString(j->dtStart().toLocalTime(), QLocale::ShortFormat));
     }
+    mItem->setText(EndDateTime_Column, QStringLiteral("---"));
+    mItem->setText(Categories_Column, j->categoriesStr());
 
     return true;
 }
@@ -347,7 +373,7 @@ void ListView::updateView()
     for (int col = StartDateTime_Column; col < Dummy_EOF_Column; ++col) {
         d->mTreeWidget->resizeColumnToContents(col);
     }
-    d->mTreeWidget->sortItems(StartDateTime_Column, Qt::DescendingOrder);
+    d->mTreeWidget->sortItems(StartDateTime_Column, Qt::AscendingOrder);
 }
 
 void ListView::showDates(const QDate &start, const QDate &end, const QDate &preferredMonth)
