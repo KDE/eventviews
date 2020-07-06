@@ -56,7 +56,7 @@ protected:
     void resizeEvent(QResizeEvent *) override;
     void mouseReleaseEvent(QMouseEvent *) override;
     virtual void squeezeContentsToLabel();
-    bool mAutomaticSqueeze;
+    bool mAutomaticSqueeze = true;
     EventViews::CalendarDecoration::Element *mDecorationElement = nullptr;
     QString mShortText, mLongText, mExtensiveText;
     QPixmap mPixmap;

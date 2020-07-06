@@ -49,7 +49,6 @@ using namespace EventViews;
 JournalDateView::JournalDateView(const Akonadi::ETMCalendar::Ptr &calendar, QWidget *parent)
     : QFrame(parent)
     , mCalendar(calendar)
-    , mChanger(nullptr)
 {
     auto layout = new QVBoxLayout(this);
     layout->setContentsMargins(0, 0, 0, 0);

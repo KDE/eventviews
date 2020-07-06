@@ -32,7 +32,6 @@ using namespace EventViews;
 
 DecorationLabel::DecorationLabel(CalendarDecoration::Element *e, QWidget *parent)
     : QLabel(parent)
-    , mAutomaticSqueeze(true)
     , mDecorationElement(e)
     , mShortText(e->shortText())
     , mLongText(e->longText())
@@ -57,7 +56,6 @@ DecorationLabel::DecorationLabel(CalendarDecoration::Element *e, QWidget *parent
 
 DecorationLabel::DecorationLabel(const QString &shortText, const QString &longText, const QString &extensiveText, const QPixmap &pixmap, const QUrl &url, QWidget *parent)
     : QLabel(parent)
-    , mAutomaticSqueeze(true)
     , mShortText(shortText)
     , mLongText(longText)
     , mExtensiveText(extensiveText)

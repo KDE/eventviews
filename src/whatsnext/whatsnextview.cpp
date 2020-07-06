@@ -38,7 +38,7 @@ using namespace EventViews;
 
 void WhatsNextTextBrowser::setSource(const QUrl &name)
 {
-    QString uri = name.toString();
+    const QString uri = name.toString();
     if (uri.startsWith(QLatin1String("event:"))) {
         Q_EMIT showIncidence(uri);
     } else if (uri.startsWith(QLatin1String("todo:"))) {

@@ -68,9 +68,6 @@ public:
     Private(EventView *eventView, Agenda *agenda)
         : mEventView(eventView)
         , mAgenda(agenda)
-        , mTimer(nullptr)
-        , mTimeBox(nullptr)
-        , mOldTodayCol(-1)
     {
     }
 
@@ -82,7 +79,7 @@ public:
     QTimer *mTimer = nullptr;
     QLabel *mTimeBox = nullptr;  // Label showing the current time
     QDateTime mOldDateTime;
-    int mOldTodayCol;
+    int mOldTodayCol = -1;
 };
 
 int MarcusBains::Private::todayColumn() const

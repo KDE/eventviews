@@ -75,7 +75,6 @@ enum {
 
 class Q_DECL_HIDDEN EventIndicator::Private
 {
-    EventIndicator *const q;
 
 public:
     Private(EventIndicator *parent, EventIndicator::Location loc)
@@ -118,6 +117,8 @@ public:
     Location mLocation;
     QPixmap mPixmap;
     QVector<bool> mEnabled;
+private:
+    EventIndicator *const q;
 };
 
 EventIndicator::EventIndicator(Location loc, QWidget *parent)

@@ -51,7 +51,7 @@ public Q_SLOTS:
 protected:
     void resizeEvent(QResizeEvent *) override;
     virtual void squeezeTextToLabel();
-    bool mTextTypeFixed;
+    bool mTextTypeFixed = false;
     QString mShortText, mLongText, mExtensiveText;
 
 private:
