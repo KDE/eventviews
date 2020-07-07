@@ -1516,7 +1516,6 @@ void AgendaView::updateEventDates(AgendaItem *item, bool addIncidence, Akonadi::
     }
 
     int daysLength = 0;
-    //  startDt.setDate(startDate);
 
     KCalendarCore::Incidence::Ptr incidence = item->incidence();
     Akonadi::Item aitem = d->mViewCalendar->item(incidence);
@@ -1576,33 +1575,6 @@ void AgendaView::updateEventDates(AgendaItem *item, bool addIncidence, Akonadi::
             QTimer::singleShot(0, this, &AgendaView::updateView);
             return;
         }
-    } else if (const KCalendarCore::Todo::Ptr td = CalendarSupport::todo(incidence)) {
-        startDt = td->hasStartDate() ? td->dtStart() : td->dtDue();
-        // convert to calendar timespec because we then manipulate it with time coming from
-        // the calendar
-        startDt = startDt.toLocalTime();
-        startDt.setDate(thisDate.addDays(td->dtDue().daysTo(startDt)));
-        if (!td->allDay()) {
-            startDt.setTime(startTime);
-        }
-
-        endDt = startDt;
-        endDt.setDate(thisDate);
-        if (!td->allDay()) {
-            endDt.setTime(endTime);
-        }
-
-        if (td->dtDue().toLocalTime() == endDt) {
-            // No change
-            QMetaObject::invokeMethod(this, &AgendaView::updateView, Qt::QueuedConnection);
-            return;
-        }
-    }
-
-    // A commented code block which had 150 lines to adjust recurrence was here.
-    // I deleted it in rev 1180272 to make this function readable.
-
-    if (const KCalendarCore::Event::Ptr ev = CalendarSupport::event(incidence)) {
         /* setDtEnd() must be called before setDtStart(), otherwise, when moving
          * events, CalendarLocal::incidenceUpdated() will not remove the old hash
          * and that causes the event to be shown in the old date also (bug #179157).
@@ -1613,10 +1585,24 @@ void AgendaView::updateEventDates(AgendaItem *item, bool addIncidence, Akonadi::
             endDt.toTimeSpec(incidence->dateTime(KCalendarCore::Incidence::RoleEnd).timeSpec()));
         incidence->setDtStart(startDt.toTimeSpec(incidence->dtStart().timeSpec()));
     } else if (const KCalendarCore::Todo::Ptr td = CalendarSupport::todo(incidence)) {
+        endDt = td->dtDue(true).toLocalTime().addDays(daysOffset);
+        endDt.setTime(td->allDay() ? QTime(00, 00, 00) : endTime);
+
+        if (td->dtDue(true).toLocalTime() == endDt) {
+            // No change
+            QMetaObject::invokeMethod(this, &AgendaView::updateView, Qt::QueuedConnection);
+            return;
+        }
+
+        const auto shift = td->dtDue(true).secsTo(endDt);
+        startDt = td->dtStart(true).addSecs(shift);
         if (td->hasStartDate()) {
             td->setDtStart(startDt.toTimeSpec(incidence->dtStart().timeSpec()));
         }
-        td->setDtDue(endDt.toTimeSpec(td->dtDue().timeSpec()));
+        if (td->recurs()) {
+            td->setDtRecurrence(td->dtRecurrence().addSecs(shift));
+        }
+        td->setDtDue(endDt.toTimeSpec(td->dtDue().timeSpec()), true);
     }
 
     if (!incidence->hasRecurrenceId()) {
