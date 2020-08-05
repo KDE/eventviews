@@ -653,8 +653,8 @@ void MultiAgendaView::setChanges(Changes changes)
 
 void MultiAgendaView::setupScrollBar()
 {
-    if (!d->mAgendaViews.isEmpty() && d->mAgendaViews.first()->agenda()) {
-        QScrollBar *scrollBar = d->mAgendaViews.first()->agenda()->verticalScrollBar();
+    if (!d->mAgendaViews.isEmpty() && d->mAgendaViews.constFirst()->agenda()) {
+        QScrollBar *scrollBar = d->mAgendaViews.constFirst()->agenda()->verticalScrollBar();
         d->mScrollBar->setMinimum(scrollBar->minimum());
         d->mScrollBar->setMaximum(scrollBar->maximum());
         d->mScrollBar->setSingleStep(scrollBar->singleStep());

@@ -88,7 +88,7 @@ TimeScaleConfigDialog::TimeScaleConfigDialog(const PrefsPtr &preferences, QWidge
     shownTimeZones += d->mPreferences->timeScaleTimezones();
     shownTimeZones.removeDuplicates();
 
-    QList<TimeZoneNamePair> availList, selList;
+    QVector<TimeZoneNamePair> availList, selList;
     const auto zoneIds = QTimeZone::availableTimeZoneIds();
     for (const auto &zoneId : qAsConst(zoneIds)) {
         // do not list timezones already shown

@@ -81,7 +81,7 @@ MonthCell *MonthScene::previousCell() const
     return mPreviousCell;
 }
 
-int MonthScene::getRightSpan(const QDate &date) const
+int MonthScene::getRightSpan(QDate date) const
 {
     MonthCell *cell = mMonthCellMap.value(date);
     if (!cell) {
@@ -91,7 +91,7 @@ int MonthScene::getRightSpan(const QDate &date) const
     return 7 - cell->x() - 1;
 }
 
-int MonthScene::getLeftSpan(const QDate &date) const
+int MonthScene::getLeftSpan(QDate date) const
 {
     MonthCell *cell = mMonthCellMap.value(date);
     if (!cell) {

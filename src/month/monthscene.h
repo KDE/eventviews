@@ -118,12 +118,12 @@ public:
     /**
       Get the space on the right of the cell associated to the date @p date.
     */
-    Q_REQUIRED_RESULT int getRightSpan(const QDate &date) const;
+    Q_REQUIRED_RESULT int getRightSpan(QDate date) const;
 
     /**
       Get the space on the left of the cell associated to the date @p date.
     */
-    Q_REQUIRED_RESULT int getLeftSpan(const QDate &date) const;
+    Q_REQUIRED_RESULT int getLeftSpan(QDate date) const;
 
     /**
       Returns the date in the first column of the row given by @p row.

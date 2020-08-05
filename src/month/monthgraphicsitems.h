@@ -169,7 +169,7 @@ public:
     */
     QDate endDate() const;
 
-    void setStartDate(const QDate &d);
+    void setStartDate(QDate d);
     void setDaySpan(int span);
 
     /**

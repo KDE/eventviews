@@ -330,7 +330,7 @@ void MonthGraphicsItem::paint(QPainter *p, const QStyleOptionGraphicsItem *, QWi
     }
 }
 
-void MonthGraphicsItem::setStartDate(const QDate &date)
+void MonthGraphicsItem::setStartDate(QDate date)
 {
     mStartDate = date;
 }

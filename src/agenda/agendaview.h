@@ -86,7 +86,7 @@ class EVENTVIEWS_EXPORT AgendaView : public EventView
 public:
     explicit AgendaView(const PrefsPtr &preferences, const QDate &start, const QDate &end, bool isInteractive, bool isSideBySide = false, QWidget *parent = nullptr);
 
-    explicit AgendaView(const QDate &start, const QDate &end, bool isInteractive, bool isSideBySide = false, QWidget *parent = nullptr);
+    explicit AgendaView(QDate start, QDate end, bool isInteractive, bool isSideBySide = false, QWidget *parent = nullptr);
 
     ~AgendaView() override;
 
@@ -240,7 +240,7 @@ private Q_SLOTS:
     void slotDeleteIncidence(const KCalendarCore::Incidence::Ptr &incidence);
 
 private:
-    void init(const QDate &start, const QDate &end);
+    void init(QDate start, QDate end);
     bool filterByCollectionSelection(const KCalendarCore::Incidence::Ptr &incidence);
     void setupTimeLabel(TimeLabels *timeLabel);
     bool displayIncidence(const KCalendarCore::Incidence::Ptr &incidence, bool createSelected);

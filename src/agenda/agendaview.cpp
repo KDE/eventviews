@@ -78,9 +78,9 @@ class Q_DECL_HIDDEN EventIndicator::Private
 
 public:
     Private(EventIndicator *parent, EventIndicator::Location loc)
-        : q(parent)
-        , mColumns(1)
+        : mColumns(1)
         , mLocation(loc)
+        , q(parent)
     {
         mEnabled.resize(mColumns);
 
@@ -717,7 +717,7 @@ void AgendaView::Private::insertIncidence(const KCalendarCore::Incidence::Ptr &i
 
 ////////////////////////////////////////////////////////////////////////////
 
-AgendaView::AgendaView(const QDate &start, const QDate &end, bool isInteractive, bool isSideBySide, QWidget *parent)
+AgendaView::AgendaView(QDate start, QDate end, bool isInteractive, bool isSideBySide, QWidget *parent)
     : EventView(parent)
     , d(new Private(this, isInteractive, isSideBySide))
 {
@@ -732,7 +732,7 @@ AgendaView::AgendaView(const PrefsPtr &prefs, const QDate &start, const QDate &e
     init(start, end);
 }
 
-void AgendaView::init(const QDate &start, const QDate &end)
+void AgendaView::init(QDate start, QDate end)
 {
     d->mSelectedDates = Private::generateDateList(start, end);
 
@@ -2152,7 +2152,7 @@ void AgendaView::setHolidayMasks()
 
     d->mHolidayMask.resize(d->mSelectedDates.count() + 1);
 
-    const QList<QDate> workDays = CalendarSupport::workDays(d->mSelectedDates.first().addDays(-1),
+    const QList<QDate> workDays = CalendarSupport::workDays(d->mSelectedDates.constFirst().addDays(-1),
                                                             d->mSelectedDates.last());
     for (int i = 0; i < d->mSelectedDates.count(); ++i) {
         d->mHolidayMask[i] = !workDays.contains(d->mSelectedDates[ i ]);
