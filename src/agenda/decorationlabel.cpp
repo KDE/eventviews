@@ -82,7 +82,7 @@ void DecorationLabel::mouseReleaseEvent(QMouseEvent *event)
             setForegroundRole(QPalette::LinkVisited);
         }
         break;
-    case Qt::MidButton:
+    case Qt::MiddleButton:
     case Qt::RightButton:
     default:
         break;
