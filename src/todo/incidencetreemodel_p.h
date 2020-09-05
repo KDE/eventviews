@@ -92,7 +92,7 @@ private Q_SLOTS:
     void onLayoutAboutToBeChanged();
     void onLayoutChanged();
 private:
-    IncidenceTreeModel *q;
+    IncidenceTreeModel *const q;
 };
 
 #endif

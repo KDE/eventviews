@@ -10,7 +10,6 @@ using namespace EventViews;
 
 AlternateLabel::AlternateLabel(const QString &shortlabel, const QString &longlabel, const QString &extensivelabel, QWidget *parent)
     : QLabel(parent)
-    , mTextTypeFixed(false)
     , mShortText(shortlabel)
     , mLongText(longlabel)
     , mExtensiveText(extensivelabel)

@@ -27,9 +27,6 @@ using namespace KCalendarCore;
 
 MonthItem::MonthItem(MonthScene *monthScene)
     : mMonthScene(monthScene)
-    , mSelected(false)
-    , mMoving(false)
-    , mResizing(false)
 {
 }
 

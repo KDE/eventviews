@@ -97,7 +97,7 @@ public:
     }
 
 public:
-    int mColumns;
+    int mColumns = 1;
     Location mLocation;
     QPixmap mPixmap;
     QVector<bool> mEnabled;

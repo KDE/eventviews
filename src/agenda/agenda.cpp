@@ -58,8 +58,8 @@ public:
     int todayColumn() const;
 
 public:
-    EventView *mEventView = nullptr;
-    Agenda *mAgenda = nullptr;
+    EventView *const mEventView;
+    Agenda *const mAgenda;
     QTimer *mTimer = nullptr;
     QLabel *mTimeBox = nullptr;  // Label showing the current time
     QDateTime mOldDateTime;

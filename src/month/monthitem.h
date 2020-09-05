@@ -256,9 +256,9 @@ private:
 
     MonthScene *mMonthScene = nullptr;
 
-    bool mSelected;
-    bool mMoving; // during move
-    bool mResizing; // during resize
+    bool mSelected = false;
+    bool mMoving = false; // during move
+    bool mResizing = false; // during resize
     QDate mOverrideStartDate;
     int mOverrideDaySpan;
 

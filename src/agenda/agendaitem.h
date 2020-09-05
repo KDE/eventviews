@@ -274,8 +274,8 @@ private:
     MultiViewCalendar::Ptr mCalendar;
     KCalendarCore::Incidence::Ptr mIncidence;
     QDateTime mOccurrenceDateTime;
-    bool mValid;
-    bool mCloned;
+    bool mValid = true;
+    bool mCloned = false;
     QString mLabelText;
     bool mSelected;
     bool mIconAlarm, mIconRecur, mIconReadonly;

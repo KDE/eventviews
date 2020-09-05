@@ -37,7 +37,7 @@ private:
     QMenu *mHeaderPopup = nullptr;
     QList<QAction *> mColumnActions;
     QTimer mExpandTimer;
-    bool mIgnoreNextMouseRelease;
+    bool mIgnoreNextMouseRelease = false;
 
 Q_SIGNALS:
     void visibleColumnCountChanged();

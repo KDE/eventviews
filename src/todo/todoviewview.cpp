@@ -19,8 +19,6 @@
 
 TodoViewView::TodoViewView(QWidget *parent)
     : QTreeView(parent)
-    , mHeaderPopup(nullptr)
-    , mIgnoreNextMouseRelease(false)
 {
     header()->installEventFilter(this);
     setAlternatingRowColors(true);

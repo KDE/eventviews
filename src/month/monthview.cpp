@@ -33,7 +33,7 @@ using namespace EventViews;
 namespace EventViews {
 class MonthViewPrivate : public Akonadi::ETMCalendar::CalendarObserver
 {
-    MonthView *q;
+    MonthView *const q;
 
 public: /// Methods
     explicit MonthViewPrivate(MonthView *qq);

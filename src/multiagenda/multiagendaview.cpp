@@ -118,7 +118,7 @@ public:
     void setupViews();
     void resizeScrollView(const QSize &size);
 
-    MultiAgendaView *q;
+    MultiAgendaView *const q;
     QList<AgendaView *> mAgendaViews;
     QList<QWidget *> mAgendaWidgets;
     QWidget *mTopBox = nullptr;
@@ -130,9 +130,9 @@ public:
     QWidget *mLeftBottomSpacer = nullptr;
     QWidget *mRightBottomSpacer = nullptr;
     QDate mStartDate, mEndDate;
-    bool mUpdateOnShow;
-    bool mPendingChanges;
-    bool mCustomColumnSetupUsed;
+    bool mUpdateOnShow = true;
+    bool mPendingChanges = true;
+    bool mCustomColumnSetupUsed = false;
     QVector<KCheckableProxyModel *> mCollectionSelectionModels;
     QStringList mCustomColumnTitles;
     int mCustomNumberOfColumns;
