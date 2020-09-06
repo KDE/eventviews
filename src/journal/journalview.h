@@ -15,16 +15,16 @@
 
 class QScrollArea;
 
+namespace EventViews {
+class JournalDateView;
+
 /**
  * This class provides a journal view.
 
  * @short View for Journal components.
  * @author Cornelius Schumacher <schumacher@kde.org>, Reinhold Kainhofer <reinhold@kainhofer.com>
- * @see KOBaseView
+ * @see EventView
  */
-namespace EventViews {
-class JournalDateView;
-
 class EVENTVIEWS_EXPORT JournalView : public EventView
 {
     Q_OBJECT

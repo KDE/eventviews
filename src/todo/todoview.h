@@ -40,6 +40,14 @@ class QToolButton;
 class QTimer;
 
 namespace EventViews {
+
+/**
+ * This class provides a view for Todo items.
+
+ * @short View for Todo components.
+ * @author Cornelius Schumacher <schumacher@kde.org>, Reinhold Kainhofer <reinhold@kainhofer.com>
+ * @see EventView
+ */
 class EVENTVIEWS_EXPORT TodoView : public EventViews::EventView
 {
     Q_OBJECT

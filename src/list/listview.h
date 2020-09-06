@@ -14,18 +14,17 @@ class KConfig;
 
 class QModelIndex;
 
+namespace EventViews {
+
 /**
   This class provides a multi-column list view of events.  It can
   display events from one particular day or several days, it doesn't
-  matter.  To use a view that only handles one day at a time, use
-  KODayListView.
+  matter.
 
   @short multi-column list view of various events.
   @author Preston Brown <pbrown@kde.org>
-  @see KOBaseView, KODayListView
+  @see EventView
 */
-
-namespace EventViews {
 class EVENTVIEWS_EXPORT ListView : public EventView
 {
     Q_OBJECT
