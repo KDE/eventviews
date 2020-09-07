@@ -19,8 +19,11 @@ class Item;
 class QPixmap;
 class QDate;
 
-// Provides static methods that are useful to all views.
-
+// This include file declares static methods that are useful to all views.
+/**
+ * Namespace EventViews provides facilities for displaying incidences,
+ * including events, to-dos, and journal entries.
+ */
 namespace EventViews {
 class Prefs;
 typedef QSharedPointer<Prefs> PrefsPtr;
