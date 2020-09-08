@@ -22,15 +22,8 @@ using namespace EventViews;
 
 EventViewPrivate::EventViewPrivate()
     : calendar(nullptr)
-    , customCollectionSelection(nullptr)
-    , collectionSelectionModel(nullptr)
-    , mReturnPressed(false)
-    , mDateRangeSelectionEnabled(true)
-    , mTypeAhead(false)
-    , mTypeAheadReceiver(nullptr)
     , mPrefs(new Prefs())
     , mKCalPrefs(new CalendarSupport::KCalPrefs())
-    , mChanger(nullptr)
     , mChanges(EventView::DatesChanged)
     , mCollectionId(-1)
 {

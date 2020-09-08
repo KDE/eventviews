@@ -55,8 +55,6 @@ public:
         : todoModel(new TodoModel(preferences))
         , parent(parent_)
         , calendar(nullptr)
-        , todoTreeModel(nullptr)
-        , todoFlatModel(nullptr)
         , prefs(preferences)
     {
     }

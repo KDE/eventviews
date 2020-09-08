@@ -93,16 +93,12 @@ private:
         void paintEvent(QPaintEvent *event) override;
 
     private:
-        QString mText;
+        const QString mText;
     };
 
 public:
     Private(MultiAgendaView *qq)
         : q(qq)
-        , mUpdateOnShow(true)
-        , mPendingChanges(true)
-        , mCustomColumnSetupUsed(false)
-        , mCustomNumberOfColumns(2)
     {
     }
 
@@ -135,7 +131,7 @@ public:
     bool mCustomColumnSetupUsed = false;
     QVector<KCheckableProxyModel *> mCollectionSelectionModels;
     QStringList mCustomColumnTitles;
-    int mCustomNumberOfColumns;
+    int mCustomNumberOfColumns = 2;
     QLabel *mLabel = nullptr;
     QWidget *mRightDummyWidget = nullptr;
     QHash<QString, KViewStateMaintainer<ETMViewStateSaver> * > mSelectionSavers;

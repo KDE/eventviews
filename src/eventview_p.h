@@ -38,8 +38,8 @@ public: // virtual functions
 
 public: /// Members
     Akonadi::ETMCalendar::Ptr calendar;
-    CalendarSupport::CollectionSelection *customCollectionSelection;
-    KCheckableProxyModel *collectionSelectionModel;
+    CalendarSupport::CollectionSelection *customCollectionSelection = nullptr;
+    KCheckableProxyModel *collectionSelectionModel = nullptr;
 
     QByteArray identifier;
     QDateTime startDateTime;
@@ -51,9 +51,9 @@ public: /// Members
      * we will only show a new event dialog if we previously received a
      * key_Return press, otherwise a new event dialog appears when
      * you hit return in some yes/no dialog */
-    bool mReturnPressed;
-    bool mDateRangeSelectionEnabled;
-    bool mTypeAhead;
+    bool mReturnPressed = false;
+    bool mDateRangeSelectionEnabled = true;
+    bool mTypeAhead = false;
     QObject *mTypeAheadReceiver = nullptr;
     QList<QEvent *> mTypeAheadEvents;
     static CalendarSupport::CollectionSelection *sGlobalCollectionSelection;

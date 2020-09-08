@@ -15,7 +15,6 @@
 
 TodoViewSortFilterProxyModel::TodoViewSortFilterProxyModel(const EventViews::PrefsPtr &prefs, QObject *parent)
     : QSortFilterProxyModel(parent)
-    , mSortOrder(Qt::AscendingOrder)
     , mPreferences(prefs)
 {
 }

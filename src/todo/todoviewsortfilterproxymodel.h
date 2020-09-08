@@ -48,7 +48,7 @@ private:
     int compareCompletion(const QModelIndex &left, const QModelIndex &right) const;
     QStringList mCategories;
     QStringList mPriorities;
-    Qt::SortOrder mSortOrder;
+    Qt::SortOrder mSortOrder = Qt::AscendingOrder;
     EventViews::PrefsPtr mPreferences;
 };
 

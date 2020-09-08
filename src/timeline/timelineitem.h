@@ -38,9 +38,9 @@ public:
 private:
     Akonadi::ETMCalendar::Ptr mCalendar;
     QMap<Akonadi::Item::Id, QList<QStandardItem *> > mItemMap;
-    QStandardItemModel *mModel = nullptr;
+    QStandardItemModel *const mModel;
     QColor mColor;
-    uint mIndex;
+    const uint mIndex;
 };
 
 class TimelineSubItem : public QStandardItem
