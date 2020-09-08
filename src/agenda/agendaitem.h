@@ -278,9 +278,14 @@ private:
     bool mCloned = false;
     QString mLabelText;
     bool mSelected;
-    bool mIconAlarm, mIconRecur, mIconReadonly;
-    bool mIconReply, mIconGroup, mIconGroupTent;
-    bool mIconOrganizer, mSpecialEvent;
+    bool mIconAlarm;
+    bool mIconRecur;
+    bool mIconReadonly;
+    bool mIconReply;
+    bool mIconGroup;
+    bool mIconGroupTent;
+    bool mIconOrganizer;
+    bool mSpecialEvent;
 
     // For incidences that expand through more than 1 day
     // Will be 1 for single day incidences

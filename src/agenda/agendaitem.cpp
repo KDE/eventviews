@@ -58,8 +58,6 @@ AgendaItem::AgendaItem(EventView *eventView, const MultiViewCalendar::Ptr &calen
     , mCalendar(calendar)
     , mIncidence(item)
     , mOccurrenceDateTime(qd)
-    , mValid(true)
-    , mCloned(false)
     , mSelected(isSelected)
     , mSpecialEvent(false)
 {

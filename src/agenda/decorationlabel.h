@@ -42,7 +42,9 @@ protected:
     virtual void squeezeContentsToLabel();
     bool mAutomaticSqueeze = true;
     EventViews::CalendarDecoration::Element *mDecorationElement = nullptr;
-    QString mShortText, mLongText, mExtensiveText;
+    QString mShortText;
+    QString mLongText;
+    QString mExtensiveText;
     QPixmap mPixmap;
     QUrl mUrl;
 };

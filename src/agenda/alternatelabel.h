@@ -36,7 +36,9 @@ protected:
     void resizeEvent(QResizeEvent *) override;
     virtual void squeezeTextToLabel();
     bool mTextTypeFixed = false;
-    QString mShortText, mLongText, mExtensiveText;
+    const QString mShortText;
+    const QString mLongText;
+    QString mExtensiveText;
 
 private:
     int getIndent() const;

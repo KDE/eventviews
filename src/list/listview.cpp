@@ -71,7 +71,7 @@ public:
 
     bool operator<(const QTreeWidgetItem &other) const override;
 
-    const QTreeWidget *mTreeWidget = nullptr;
+    QTreeWidget *const mTreeWidget;
     const Akonadi::Item mIncidence;
     QDateTime start;
     QDateTime end;

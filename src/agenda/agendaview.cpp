@@ -62,8 +62,7 @@ class Q_DECL_HIDDEN EventIndicator::Private
 
 public:
     Private(EventIndicator *parent, EventIndicator::Location loc)
-        : mColumns(1)
-        , mLocation(loc)
+        : mLocation(loc)
         , q(parent)
     {
         mEnabled.resize(mColumns);
