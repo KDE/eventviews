@@ -17,7 +17,6 @@
 #include <KCalendarCore/Journal>
 
 #include <KCalUtils/IncidenceFormatter>
-#include <Akonadi/Calendar/ETMCalendar>
 
 #include <QTextBrowser>
 #include <KLocalizedString>

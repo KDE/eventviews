@@ -10,7 +10,6 @@
 #include "agendaview.h"
 #include "agenda.h"
 #include "agendaitem.h"
-#include "viewcalendar.h"
 #include "alternatelabel.h"
 #include "calendardecoration.h"
 #include "decorationlabel.h"

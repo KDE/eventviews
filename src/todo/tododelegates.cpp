@@ -11,7 +11,6 @@
 #include "todoviewview.h"
 
 #include <AkonadiWidgets/TagSelectionComboBox>
-#include <Akonadi/Calendar/ETMCalendar>
 #include <CalendarSupport/CategoryConfig>
 #include <CalendarSupport/CategoryHierarchyReader>
 

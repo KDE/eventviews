@@ -11,7 +11,6 @@
 #include <CalendarSupport/Utils>
 #include <CalendarSupport/KCalPrefs>
 #include <KLocalizedString>
-#include <KCalendarCore/Todo>
 #include <KCalendarCore/Event>
 #include <KCalendarCore/Attachment>
 #include <KCalUtils/IncidenceFormatter>
@@ -21,7 +20,6 @@
 #include <KCalUtils/ICalDrag>
 #include <KCalUtils/VCalDrag>
 
-#include <Akonadi/Calendar/ETMCalendar>
 
 #include <KMessageBox>
 #include "calendarview_debug.h"

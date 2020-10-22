@@ -12,7 +12,6 @@
 
 #include <CalendarSupport/Utils>
 
-#include <KCalendarCore/Incidence>
 #include <KCalUtils/IncidenceFormatter>
 
 using namespace KCalendarCore;

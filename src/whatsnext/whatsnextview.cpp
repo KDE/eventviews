@@ -14,7 +14,6 @@
 
 #include <KCalUtils/IncidenceFormatter>
 
-#include <KIconLoader>
 
 #include <QBoxLayout>
 

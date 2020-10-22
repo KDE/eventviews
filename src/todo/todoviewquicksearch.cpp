@@ -12,7 +12,6 @@
 #include <CalendarSupport/KCalPrefs>
 
 #include <AkonadiWidgets/TagSelectionComboBox>
-#include <Akonadi/Calendar/ETMCalendar>
 #include <CalendarSupport/CategoryConfig>
 
 #include <Libkdepim/KCheckComboBox>

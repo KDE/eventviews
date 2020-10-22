@@ -20,7 +20,6 @@
 #include <EntityDisplayAttribute>
 #include <ETMViewStateSaver>
 
-#include <KCalendarCore/Todo>
 #include <KCalendarCore/CalFilter>
 
 #include <KCalUtils/RecurrenceActions>

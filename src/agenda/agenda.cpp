@@ -11,9 +11,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later WITH Qt-Commercial-exception-1.0
 */
 #include "agenda.h"
-#include "agendaitem.h"
 #include "agendaview.h"
-#include "viewcalendar.h"
 #include "prefs.h"
 
 #include <Akonadi/Calendar/ETMCalendar>
@@ -21,7 +19,6 @@
 #include <CalendarSupport/Utils>
 
 #include <KCalendarCore/Incidence>
-#include <KCalendarCore/Todo>
 
 #include <KCalUtils/RecurrenceActions>
 

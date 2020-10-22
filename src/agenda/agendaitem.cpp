@@ -6,7 +6,6 @@
 */
 #include "agendaitem.h"
 #include "eventview.h"
-#include "viewcalendar.h"
 #include "helper.h"
 
 #include "prefs.h"
