@@ -64,9 +64,9 @@ void JournalDateView::addJournal(const Akonadi::Item &j)
 
     QWidget *container = new QWidget(this);
     layout()->addWidget(container);
-    QHBoxLayout *layout = new QHBoxLayout(container);
+    auto *layout = new QHBoxLayout(container);
     layout->addStretch(1);
-    JournalFrame *entry = new JournalFrame(j, mCalendar, this);
+    auto *entry = new JournalFrame(j, mCalendar, this);
     layout->addWidget(entry, 3 /*stretch*/);
     layout->addStretch(1);
 
@@ -140,14 +140,14 @@ JournalFrame::JournalFrame(const Akonadi::Item &j, const Akonadi::ETMCalendar::P
     mWriteInProgress = false;
     mChanger = nullptr;
 
-    QVBoxLayout *verticalLayout = new QVBoxLayout(this);
+    auto *verticalLayout = new QVBoxLayout(this);
 
     mBrowser = new QTextBrowser(this);
     mBrowser->viewport()->installEventFilter(this);
     mBrowser->setFrameStyle(QFrame::NoFrame);
     verticalLayout->addWidget(mBrowser);
 
-    QHBoxLayout *buttonsLayout = new QHBoxLayout();
+    auto *buttonsLayout = new QHBoxLayout();
     verticalLayout->addLayout(buttonsLayout);
     buttonsLayout->addStretch();
 

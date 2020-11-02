@@ -204,7 +204,7 @@ public:
         , mHolidayMask(nullptr)
         , mWorkingHoursYTop(0)
         , mWorkingHoursYBottom(0)
-        , mHasSelection(0)
+        , mHasSelection(false)
         , mSelectedId(-1)
         , mMarcusBains(nullptr)
         , mActionType(Agenda::NOP)

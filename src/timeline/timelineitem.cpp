@@ -25,7 +25,7 @@ TimelineItem::TimelineItem(const Akonadi::ETMCalendar::Ptr &calendar, uint index
     , mIndex(index)
 {
     mModel->removeRow(mIndex);
-    QStandardItem *dummyItem = new QStandardItem;
+    auto *dummyItem = new QStandardItem;
     dummyItem->setData(KGantt::TypeTask, KGantt::ItemTypeRole);
     mModel->insertRow(mIndex, dummyItem);
 }
@@ -54,7 +54,7 @@ void TimelineItem::insertIncidence(const Akonadi::Item &aitem, const QDateTime &
         }
     }
 
-    TimelineSubItem *item = new TimelineSubItem(mCalendar, aitem, this);
+    auto *item = new TimelineSubItem(mCalendar, aitem, this);
 
     item->setStartTime(start);
     item->setOriginalStart(start);

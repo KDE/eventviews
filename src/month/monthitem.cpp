@@ -80,7 +80,7 @@ void MonthItem::updateMonthGraphicsItems()
         }
 
         // A new item needs to be created
-        MonthGraphicsItem *newItem = new MonthGraphicsItem(this);
+        auto *newItem = new MonthGraphicsItem(this);
         mMonthGraphicsItemList << newItem;
         newItem->setStartDate(start);
         newItem->setDaySpan(span);
@@ -239,7 +239,7 @@ bool MonthItem::greaterThan(const MonthItem *e1, const MonthItem *e2)
 
 bool MonthItem::greaterThanFallback(const MonthItem *other) const
 {
-    const HolidayMonthItem *h = qobject_cast<const HolidayMonthItem *>(other);
+    const auto *h = qobject_cast<const HolidayMonthItem *>(other);
 
     // If "other" is a holiday, display it first.
     return !h;
@@ -322,7 +322,7 @@ IncidenceMonthItem::~IncidenceMonthItem()
 
 bool IncidenceMonthItem::greaterThanFallback(const MonthItem *other) const
 {
-    const IncidenceMonthItem *o = qobject_cast<const IncidenceMonthItem *>(other);
+    const auto *o = qobject_cast<const IncidenceMonthItem *>(other);
     if (!o) {
         return MonthItem::greaterThanFallback(other);
     }
@@ -707,7 +707,7 @@ HolidayMonthItem::~HolidayMonthItem()
 
 bool HolidayMonthItem::greaterThanFallback(const MonthItem *other) const
 {
-    const HolidayMonthItem *o = qobject_cast<const HolidayMonthItem *>(other);
+    const auto *o = qobject_cast<const HolidayMonthItem *>(other);
     if (o) {
         return MonthItem::greaterThanFallback(other);
     }

@@ -143,12 +143,12 @@ MonthView::MonthView(NavButtonsVisibility visibility, QWidget *parent)
     : EventView(parent)
     , d(new MonthViewPrivate(this))
 {
-    QHBoxLayout *topLayout = new QHBoxLayout(this);
+    auto *topLayout = new QHBoxLayout(this);
     topLayout->addWidget(d->view);
     topLayout->setContentsMargins(0, 0, 0, 0);
 
     if (visibility == Visible) {
-        QVBoxLayout *rightLayout = new QVBoxLayout();
+        auto *rightLayout = new QVBoxLayout();
         rightLayout->setSpacing(0);
         rightLayout->setContentsMargins(0, 0, 0, 0);
 
@@ -172,7 +172,7 @@ MonthView::MonthView(NavButtonsVisibility visibility, QWidget *parent)
         connect(d->fullView, &QAbstractButton::clicked,
                 this, &MonthView::changeFullView);
 
-        QToolButton *minusMonth = new QToolButton(this);
+        auto *minusMonth = new QToolButton(this);
         minusMonth->setIcon(QIcon::fromTheme(QStringLiteral("arrow-up-double")));
         minusMonth->setAutoRaise(true);
         minusMonth->setToolTip(i18nc("@info:tooltip", "Go back one month"));
@@ -182,7 +182,7 @@ MonthView::MonthView(NavButtonsVisibility visibility, QWidget *parent)
         connect(minusMonth, &QAbstractButton::clicked,
                 this, &MonthView::moveBackMonth);
 
-        QToolButton *minusWeek = new QToolButton(this);
+        auto *minusWeek = new QToolButton(this);
         minusWeek->setIcon(QIcon::fromTheme(QStringLiteral("arrow-up")));
         minusWeek->setAutoRaise(true);
         minusWeek->setToolTip(i18nc("@info:tooltip", "Go back one week"));
@@ -192,7 +192,7 @@ MonthView::MonthView(NavButtonsVisibility visibility, QWidget *parent)
         connect(minusWeek, &QAbstractButton::clicked,
                 this, &MonthView::moveBackWeek);
 
-        QToolButton *plusWeek = new QToolButton(this);
+        auto *plusWeek = new QToolButton(this);
         plusWeek->setIcon(QIcon::fromTheme(QStringLiteral("arrow-down")));
         plusWeek->setAutoRaise(true);
         plusWeek->setToolTip(i18nc("@info:tooltip", "Go forward one week"));
@@ -202,7 +202,7 @@ MonthView::MonthView(NavButtonsVisibility visibility, QWidget *parent)
         connect(plusWeek, &QAbstractButton::clicked,
                 this, &MonthView::moveFwdWeek);
 
-        QToolButton *plusMonth = new QToolButton(this);
+        auto *plusMonth = new QToolButton(this);
         plusMonth->setIcon(QIcon::fromTheme(QStringLiteral("arrow-down-double")));
         plusMonth->setAutoRaise(true);
         plusMonth->setToolTip(i18nc("@info:tooltip", "Go forward one month"));
@@ -267,7 +267,7 @@ KCalendarCore::DateList MonthView::selectedIncidenceDates() const
 {
     KCalendarCore::DateList list;
     if (d->scene->selectedItem()) {
-        IncidenceMonthItem *tmp = qobject_cast<IncidenceMonthItem *>(d->scene->selectedItem());
+        auto *tmp = qobject_cast<IncidenceMonthItem *>(d->scene->selectedItem());
         if (tmp) {
             QDate selectedItemDate = tmp->realStartDate();
             if (selectedItemDate.isValid()) {
@@ -453,7 +453,7 @@ Akonadi::Item::List MonthView::selectedIncidences() const
 {
     Akonadi::Item::List selected;
     if (d->scene->selectedItem()) {
-        IncidenceMonthItem *tmp = qobject_cast<IncidenceMonthItem *>(d->scene->selectedItem());
+        auto *tmp = qobject_cast<IncidenceMonthItem *>(d->scene->selectedItem());
         if (tmp) {
             Akonadi::Item incidenceSelected = tmp->akonadiItem();
             if (incidenceSelected.isValid()) {
@@ -474,7 +474,7 @@ void MonthView::reloadIncidences()
 
     MonthItem *itemToReselect = nullptr;
 
-    if (IncidenceMonthItem *tmp = qobject_cast<IncidenceMonthItem *>(d->scene->selectedItem())) {
+    if (auto *tmp = qobject_cast<IncidenceMonthItem *>(d->scene->selectedItem())) {
         d->selectedItemId = tmp->akonadiItem().id();
         d->selectedItemDate = tmp->realStartDate();
         if (!d->selectedItemDate.isValid()) {

@@ -749,19 +749,19 @@ void AgendaView::init(QDate start, QDate end)
     }
 
     // The widget itself
-    AgendaScrollArea *allDayScrollArea = new AgendaScrollArea(true, this, d->mIsInteractive,
+    auto *allDayScrollArea = new AgendaScrollArea(true, this, d->mIsInteractive,
                                                               d->mAllDayFrame);
     allDayFrameLayout->addWidget(allDayScrollArea);
     d->mAllDayAgenda = allDayScrollArea->agenda();
 
     /* Create the main agenda widget and the related widgets */
     QWidget *agendaFrame = new QWidget(d->mSplitterAgenda);
-    QHBoxLayout *agendaLayout = new QHBoxLayout(agendaFrame);
+    auto *agendaLayout = new QHBoxLayout(agendaFrame);
     agendaLayout->setContentsMargins(0, 0, 0, 0);
     agendaLayout->setSpacing(SPACING);
 
     // Create agenda
-    AgendaScrollArea *scrollArea = new AgendaScrollArea(false, this, d->mIsInteractive,
+    auto *scrollArea = new AgendaScrollArea(false, this, d->mIsInteractive,
                                                         agendaFrame);
     d->mAgenda = scrollArea->agenda();
 
@@ -774,7 +774,7 @@ void AgendaView::init(QDate start, QDate end)
 
     // This timeLabelsZoneLayout is for adding some spacing
     // to align timelabels, to agenda's grid
-    QVBoxLayout *timeLabelsZoneLayout = new QVBoxLayout();
+    auto *timeLabelsZoneLayout = new QVBoxLayout();
 
     agendaLayout->addLayout(timeLabelsZoneLayout);
     agendaLayout->addWidget(scrollArea);
@@ -1052,7 +1052,7 @@ void AgendaView::zoomView(const int delta, const QPoint &pos, const Qt::Orientat
 {
     // TODO find out why this is necessary. seems to be some kind of performance hack
     static QDate zoomDate;
-    static QTimer *t = new QTimer(this);
+    static auto *t = new QTimer(this);
 
     //Zoom to the selected incidence, on the other way
     // zoom to the date on screen after the first mousewheel move.
@@ -1130,7 +1130,7 @@ void AgendaView::placeDecorations(DecorationList &decoList, const QDate &date, Q
             decoHBox->setMinimumWidth(1);
 
             for (CalendarDecoration::Element *it : elements) {
-                DecorationLabel *label = new DecorationLabel(it, decoHBox);
+                auto *label = new DecorationLabel(it, decoHBox);
                 label->setAlignment(Qt::AlignBottom);
                 label->setMinimumWidth(1);
                 layout->addWidget(label);
@@ -1165,7 +1165,7 @@ void AgendaView::createDayLabels(bool force)
     d->mLayoutTopDayLabels->setSpacing(1);
 
     // this spacer moves the day labels over to line up with the day columns
-    QSpacerItem *spacer
+    auto *spacer
         = new QSpacerItem((!d->mIsSideBySide ? d->mTimeLabelsZone->width() : 0)
                           +SPACING
                           +d->mAllDayAgenda->scrollArea()->frameWidth(),
@@ -1224,7 +1224,7 @@ void AgendaView::createDayLabels(bool force)
                                 date.day());
         QString shortstr = QString::number(date.day());
 
-        AlternateLabel *dayLabel
+        auto *dayLabel
             = new AlternateLabel(shortstr, longstr, veryLongStr, topDayLabelBox);
         topDayLabelBoxLayout->addWidget(dayLabel);
         dayLabel->useShortText(); // will be recalculated in updateDayLabelSizes() anyway
@@ -1253,7 +1253,7 @@ void AgendaView::createDayLabels(bool force)
 #endif
     }
 
-    QSpacerItem *rightSpacer = new QSpacerItem(d->mAllDayAgenda->scrollArea()->frameWidth(),
+    auto *rightSpacer = new QSpacerItem(d->mAllDayAgenda->scrollArea()->frameWidth(),
                                                1, QSizePolicy::Fixed);
     d->mLayoutTopDayLabels->addSpacerItem(rightSpacer);
 
@@ -1420,7 +1420,7 @@ void AgendaView::createTimeBarHeaders()
 
     const auto lst = d->mTimeLabelsZone->timeLabels();
     for (QScrollArea *area : lst) {
-        TimeLabels *timeLabel = static_cast<TimeLabels *>(area->widget());
+        auto *timeLabel = static_cast<TimeLabels *>(area->widget());
         QLabel *label
             = new QLabel(timeLabel->header().replace(QLatin1Char('/'), QStringLiteral("/ ")),
                          d->mTimeBarHeaderFrame);

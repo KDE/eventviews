@@ -37,7 +37,7 @@ bool TodoViewView::eventFilter(QObject *watched, QEvent *event)
 {
     Q_UNUSED(watched);
     if (event->type() == QEvent::ContextMenu) {
-        QContextMenuEvent *e = static_cast<QContextMenuEvent *>(event);
+        auto *e = static_cast<QContextMenuEvent *>(event);
 
         if (!mHeaderPopup) {
             mHeaderPopup = new QMenu(this);

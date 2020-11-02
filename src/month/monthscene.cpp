@@ -496,7 +496,7 @@ void MonthScene::mouseDoubleClickEvent(QGraphicsSceneMouseEvent *mouseEvent)
     MonthGraphicsItem *iItem = dynamic_cast<MonthGraphicsItem *>(itemAt(pos, {}));
     if (iItem) {
         if (iItem->monthItem()) {
-            IncidenceMonthItem *tmp = qobject_cast<IncidenceMonthItem *>(iItem->monthItem());
+            auto *tmp = qobject_cast<IncidenceMonthItem *>(iItem->monthItem());
             if (tmp) {
                 selectItem(iItem->monthItem());
                 mMonthView->defaultAction(tmp->akonadiItem());
@@ -584,7 +584,7 @@ void MonthScene::mousePressEvent(QGraphicsSceneMouseEvent *mouseEvent)
 
         selectItem(mClickedItem);
         if (mouseEvent->button() == Qt::RightButton) {
-            IncidenceMonthItem *tmp = qobject_cast<IncidenceMonthItem *>(mClickedItem);
+            auto *tmp = qobject_cast<IncidenceMonthItem *>(mClickedItem);
             if (tmp) {
                 Q_EMIT showIncidencePopupSignal(tmp->akonadiItem(), tmp->realStartDate());
             }
@@ -725,7 +725,7 @@ void MonthScene::selectItem(MonthItem *item)
       Another solution would be to have two Q_SIGNALS: incidenceSelected() and incidenceClicked()
     */
 
-    IncidenceMonthItem *tmp = qobject_cast<IncidenceMonthItem *>(item);
+    auto *tmp = qobject_cast<IncidenceMonthItem *>(item);
 
     if (!tmp) {
         mSelectedItem = nullptr;
@@ -747,7 +747,7 @@ void MonthScene::selectItem(MonthItem *item)
 void MonthScene::removeIncidence(const QString &uid)
 {
     for (MonthItem *manager : qAsConst(mManagerList)) {
-        IncidenceMonthItem *imi = qobject_cast<IncidenceMonthItem *>(manager);
+        auto *imi = qobject_cast<IncidenceMonthItem *>(manager);
         if (!imi) {
             continue;
         }

@@ -18,7 +18,7 @@
 CreateColorGui_test::CreateColorGui_test(QWidget *parent)
     : QWidget(parent)
 {
-    QVBoxLayout *vbox = new QVBoxLayout(this);
+    auto *vbox = new QVBoxLayout(this);
     mListWidget = new QListWidget;
     vbox->addWidget(mListWidget);
     createListWidgetItem();
@@ -33,7 +33,7 @@ void CreateColorGui_test::createListWidgetItem()
     EventViews::Prefs prefs;
     mListWidget->clear();
     for (int i = 0; i < 100; ++i) {
-        QListWidgetItem *item = new QListWidgetItem;
+        auto *item = new QListWidgetItem;
         QColor color = prefs.resourceColor(QString::number(i));
         item->setBackground(color);
         mListWidget->addItem(item);
@@ -52,7 +52,7 @@ int main(int argc, char **argv)
     parser.process(app);
     aboutData.processCommandLine(&parser);
 
-    CreateColorGui_test *createColor = new CreateColorGui_test;
+    auto *createColor = new CreateColorGui_test;
     createColor->resize(800, 600);
     createColor->show();
 

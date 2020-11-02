@@ -141,7 +141,7 @@ MultiAgendaView::MultiAgendaView(QWidget *parent)
     : EventView(parent)
     , d(new Private(this))
 {
-    QHBoxLayout *topLevelLayout = new QHBoxLayout(this);
+    auto *topLevelLayout = new QHBoxLayout(this);
     topLevelLayout->setSpacing(0);
     topLevelLayout->setContentsMargins(0, 0, 0, 0);
 
@@ -149,7 +149,7 @@ MultiAgendaView::MultiAgendaView(QWidget *parent)
     int topLabelHeight = 2 * fm.height() + fm.lineSpacing();
 
     QWidget *topSideBox = new QWidget(this);
-    QVBoxLayout *topSideBoxVBoxLayout = new QVBoxLayout(topSideBox);
+    auto *topSideBoxVBoxLayout = new QVBoxLayout(topSideBox);
     topSideBoxVBoxLayout->setContentsMargins(0, 0, 0, 0);
 
     QWidget *topSideSpacer = new QWidget(topSideBox);
@@ -164,7 +164,7 @@ MultiAgendaView::MultiAgendaView(QWidget *parent)
     d->mLabel->setWordWrap(true);
 
     QWidget *sideBox = new QWidget(d->mLeftSplitter);
-    QVBoxLayout *sideBoxVBoxLayout = new QVBoxLayout(sideBox);
+    auto *sideBoxVBoxLayout = new QVBoxLayout(sideBox);
     sideBoxVBoxLayout->setContentsMargins(0, 0, 0, 0);
 
     // compensate for the frame the agenda views but not the timelabels have
@@ -195,7 +195,7 @@ MultiAgendaView::MultiAgendaView(QWidget *parent)
     d->mScrollArea->setFrameShape(QFrame::NoFrame);
     topLevelLayout->addWidget(d->mScrollArea, 100);
     d->mTopBox = new QWidget(d->mScrollArea->viewport());
-    QHBoxLayout *mTopBoxHBoxLayout = new QHBoxLayout(d->mTopBox);
+    auto *mTopBoxHBoxLayout = new QHBoxLayout(d->mTopBox);
     mTopBoxHBoxLayout->setContentsMargins(0, 0, 0, 0);
     d->mScrollArea->setWidget(d->mTopBox);
 
@@ -468,7 +468,7 @@ AgendaView *MultiAgendaView::Private::createView(const QString &title)
 {
     QWidget *box = new QWidget(mTopBox);
     mTopBox->layout()->addWidget(box);
-    QVBoxLayout *layout = new QVBoxLayout(box);
+    auto *layout = new QVBoxLayout(box);
     layout->setContentsMargins(0, 0, 0, 0);
     layout->addWidget(new ElidedLabel(title));
     AgendaView *av = new AgendaView(q->preferences(),
@@ -574,7 +574,7 @@ void MultiAgendaView::resizeSplitters()
         return;
     }
 
-    QSplitter *lastMovedSplitter = qobject_cast<QSplitter *>(sender());
+    auto *lastMovedSplitter = qobject_cast<QSplitter *>(sender());
     if (!lastMovedSplitter) {
         lastMovedSplitter = d->mLeftSplitter;
     }
@@ -688,22 +688,22 @@ void MultiAgendaView::doRestoreConfig(const KConfigGroup &configGroup)
         d->mCollectionSelectionModels.resize(d->mCustomNumberOfColumns);
         for (int i = 0; i < d->mCustomNumberOfColumns; ++i) {
             // Sort the calanders by name
-            QSortFilterProxyModel *sortProxy = new QSortFilterProxyModel(this);
+            auto *sortProxy = new QSortFilterProxyModel(this);
             sortProxy->setDynamicSortFilter(true);
 
             sortProxy->setSourceModel(calendar()->entityTreeModel());
 
             // Only show the first column
-            KRearrangeColumnsProxyModel *columnFilterProxy = new KRearrangeColumnsProxyModel(this);
+            auto *columnFilterProxy = new KRearrangeColumnsProxyModel(this);
             columnFilterProxy->setSourceColumns(
                 QVector<int>() << Akonadi::ETMCalendar::CollectionTitle);
             columnFilterProxy->setSourceModel(sortProxy);
 
             // Keep track of selection.
-            QItemSelectionModel *qsm = new QItemSelectionModel(columnFilterProxy);
+            auto *qsm = new QItemSelectionModel(columnFilterProxy);
 
             // Make the model checkable.
-            KCheckableProxyModel *checkableProxy = new KCheckableProxyModel(this);
+            auto *checkableProxy = new KCheckableProxyModel(this);
             checkableProxy->setSourceModel(columnFilterProxy);
             checkableProxy->setSelectionModel(qsm);
             const QString groupName

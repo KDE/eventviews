@@ -98,7 +98,7 @@ void EventView::setHolidayRegions(const QStringList &regions)
     qDeleteAll(d->mHolidayRegions);
     d->mHolidayRegions.clear();
     for (const QString &regionStr : regions) {
-        KHolidays::HolidayRegion *region = new KHolidays::HolidayRegion(regionStr);
+        auto *region = new KHolidays::HolidayRegion(regionStr);
         if (region->isValid()) {
             d->mHolidayRegions.append(region);
         } else {
@@ -529,7 +529,7 @@ void EventView::restoreConfig(const KConfigGroup &configGroup)
     } else if (useCustom) {
         if (!d->collectionSelectionModel) {
             // Sort the calendar model on calendar name
-            QSortFilterProxyModel *sortProxy = new QSortFilterProxyModel(this);
+            auto *sortProxy = new QSortFilterProxyModel(this);
             sortProxy->setDynamicSortFilter(true);
             sortProxy->setSortCaseSensitivity(Qt::CaseInsensitive);
 
@@ -538,7 +538,7 @@ void EventView::restoreConfig(const KConfigGroup &configGroup)
             }
 
             // Only show the first column.
-            KRearrangeColumnsProxyModel *columnFilterProxy = new KRearrangeColumnsProxyModel(this);
+            auto *columnFilterProxy = new KRearrangeColumnsProxyModel(this);
             columnFilterProxy->setSourceColumns(
                 QVector<int>() << Akonadi::ETMCalendar::CollectionTitle);
             columnFilterProxy->setSourceModel(sortProxy);

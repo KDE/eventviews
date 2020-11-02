@@ -51,7 +51,7 @@ TimeScaleConfigDialog::TimeScaleConfigDialog(const PrefsPtr &preferences, QWidge
     , d(new Private(this, preferences))
 {
     setWindowTitle(i18nc("@title:window", "Timezone"));
-    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    auto *mainLayout = new QVBoxLayout(this);
     setModal(true);
 
     QWidget *mainwidget = new QWidget(this);
@@ -106,7 +106,7 @@ TimeScaleConfigDialog::TimeScaleConfigDialog(const PrefsPtr &preferences, QWidge
             this, &TimeScaleConfigDialog::slotUpdateButton);
 
     for (const TimeZoneNamePair &item : qAsConst(selList)) {
-        QListWidgetItem *widgetItem = new QListWidgetItem(item.first);
+        auto *widgetItem = new QListWidgetItem(item.first);
         widgetItem->setData(TimeZoneNameRole, item.second);
         listWidget->addItem(widgetItem);
     }

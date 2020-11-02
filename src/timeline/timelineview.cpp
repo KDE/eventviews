@@ -208,8 +208,8 @@ TimelineView::TimelineView(QWidget *parent)
     : EventView(parent)
     , d(new Private(this))
 {
-    QVBoxLayout *vbox = new QVBoxLayout(this);
-    QSplitter *splitter = new QSplitter(Qt::Horizontal, this);
+    auto *vbox = new QVBoxLayout(this);
+    auto *splitter = new QSplitter(Qt::Horizontal, this);
     d->mLeftView = new QTreeWidget;
     d->mLeftView->setHeader(new GanttHeaderView);
     d->mLeftView->setHeaderLabel(i18n("Calendar"));
@@ -222,7 +222,7 @@ TimelineView::TimelineView(QWidget *parent)
     splitter->addWidget(d->mGantt);
     connect(splitter, &QSplitter::splitterMoved,
             d, &Private::splitterMoved);
-    QStandardItemModel *model = new QStandardItemModel(this);
+    auto *model = new QStandardItemModel(this);
 
     d->mRowController = new RowController;
 
@@ -234,7 +234,7 @@ TimelineView::TimelineView(QWidget *parent)
 
     d->mRowController->setModel(model);
     d->mGantt->setRowController(d->mRowController);
-    KGantt::DateTimeGrid *grid = new KGantt::DateTimeGrid();
+    auto *grid = new KGantt::DateTimeGrid();
     grid->setScale(KGantt::DateTimeGrid::ScaleHour);
     grid->setDayWidth(800);
     grid->setRowSeparators(true);
@@ -291,7 +291,7 @@ void TimelineView::showDates(const QDate &start, const QDate &end, const QDate &
     d->mEndDate = end;
     d->mHintDate = QDateTime();
 
-    KGantt::DateTimeGrid *grid = static_cast<KGantt::DateTimeGrid *>(d->mGantt->grid());
+    auto *grid = static_cast<KGantt::DateTimeGrid *>(d->mGantt->grid());
 #if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
     grid->setStartDateTime(QDateTime(start));
 #else
@@ -416,17 +416,17 @@ QDate TimelineView::endDate() const
 bool TimelineView::eventFilter(QObject *object, QEvent *event)
 {
     if (event->type() == QEvent::ToolTip) {
-        QHelpEvent *helpEvent = static_cast<QHelpEvent *>(event);
+        auto *helpEvent = static_cast<QHelpEvent *>(event);
         QGraphicsItem *item = d->mGantt->itemAt(helpEvent->pos());
         if (item) {
             if (item->type() == KGantt::GraphicsItem::Type) {
-                KGantt::GraphicsItem *graphicsItem = static_cast<KGantt::GraphicsItem *>(item);
+                auto *graphicsItem = static_cast<KGantt::GraphicsItem *>(item);
                 const QModelIndex itemIndex = graphicsItem->index();
 
-                QStandardItemModel *itemModel
+                auto *itemModel
                     = qobject_cast<QStandardItemModel *>(d->mGantt->model());
 
-                TimelineSubItem *timelineItem
+                auto *timelineItem
                     = dynamic_cast<TimelineSubItem *>(itemModel->item(itemIndex.row(),
                                                                       itemIndex.column()));
 

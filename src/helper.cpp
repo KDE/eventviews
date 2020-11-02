@@ -38,10 +38,10 @@ void EventViews::setResourceColor(const Akonadi::Collection &coll, const QColor 
 
     // Save the color in akonadi (so the resource can even save it server-side)
     Akonadi::Collection collection = coll;
-    Akonadi::CollectionColorAttribute *colorAttr
+    auto *colorAttr
             = collection.attribute<Akonadi::CollectionColorAttribute>(Akonadi::Collection::AddIfMissing);
     colorAttr->setColor(color);
-    Akonadi::CollectionModifyJob *job = new Akonadi::CollectionModifyJob(collection, nullptr);
+    auto *job = new Akonadi::CollectionModifyJob(collection, nullptr);
     QObject::connect(job, &Akonadi::CollectionModifyJob::result, [=]() {
         if (job->error()) {
             qCWarning(CALENDARVIEW_LOG) << "Failed to set CollectionColorAttribute:" << job->errorString();
@@ -65,7 +65,7 @@ QColor EventViews::resourceColor(const Akonadi::Collection &coll, const PrefsPtr
     }
     // Color stored in akonadi
     if (coll.hasAttribute<Akonadi::CollectionColorAttribute>()) {
-        const Akonadi::CollectionColorAttribute *colorAttr
+        const auto *colorAttr
             = coll.attribute<Akonadi::CollectionColorAttribute>();
         if (colorAttr && colorAttr->color().isValid()) {
             return colorAttr->color();

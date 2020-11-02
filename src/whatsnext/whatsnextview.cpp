@@ -58,7 +58,7 @@ void WhatsNextView::createTaskRow(KIconLoader *kil)
                   KIconLoader::DefaultState, QStringList(), &ipath);
     mText += QLatin1String("<h2><img src=\"");
     mText += ipath;
-    mText += QLatin1String("\" width=\"22\" height=\"22\">");
+    mText += QLatin1String(R"(" width="22" height="22">)");
     mText += i18n("To-dos:") + QLatin1String("</h2>\n");
     mText += QLatin1String("<ul>\n");
 }
@@ -74,7 +74,7 @@ void WhatsNextView::updateView()
     mText += QLatin1String("<tr bgcolor=\"#3679AD\"><td><h1>");
     mText += QLatin1String("<img src=\"");
     mText += ipath;
-    mText += QLatin1String("\" width=\"32\" height=\"32\">");
+    mText += QLatin1String(R"(" width="32" height="32">)");
     mText += QLatin1String("<font color=\"white\"> ");
     mText += i18n("What's Next?") + QLatin1String("</font></h1>");
     mText += QLatin1String("</td></tr>\n<tr><td>");
@@ -101,7 +101,7 @@ void WhatsNextView::updateView()
                       KIconLoader::DefaultState, QStringList(), &ipath);
         mText += QLatin1String("<h2><img src=\"");
         mText += ipath;
-        mText += QLatin1String("\" width=\"22\" height=\"22\">");
+        mText += QLatin1String(R"(" width="22" height="22">)");
         mText += i18n("Events:") + QLatin1String("</h2>\n");
         mText += QLatin1String("<table>\n");
         for (const KCalendarCore::Event::Ptr &ev : qAsConst(events)) {
@@ -184,7 +184,7 @@ void WhatsNextView::updateView()
                                   KIconLoader::DefaultState, QStringList(), &ipath);
                     mText += QLatin1String("<h2><img src=\"");
                     mText += ipath;
-                    mText += QLatin1String("\" width=\"22\" height=\"22\">");
+                    mText += QLatin1String(R"(" width="22" height="22">)");
                     mText += i18n("Events and to-dos that need a reply:")
                              + QLatin1String("</h2>\n");
                     mText += QLatin1String("<table>\n");
@@ -205,7 +205,7 @@ void WhatsNextView::updateView()
                                   KIconLoader::DefaultState, QStringList(), &ipath);
                     mText += QLatin1String("<h2><img src=\"");
                     mText += ipath;
-                    mText += QLatin1String("\" width=\"22\" height=\"22\">");
+                    mText += QLatin1String(R"(" width="22" height="22">)");
                     mText += i18n("Events and to-dos that need a reply:")
                              + QLatin1String("</h2>\n");
                     mText += QLatin1String("<table>\n");

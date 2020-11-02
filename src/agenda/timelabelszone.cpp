@@ -66,8 +66,8 @@ void TimeLabelsZone::init()
 
 void TimeLabelsZone::addTimeLabels(const QTimeZone &zone)
 {
-    QScrollArea *area = new QScrollArea(this);
-    TimeLabels *labels = new TimeLabels(zone, 24, this);
+    auto *area = new QScrollArea(this);
+    auto *labels = new TimeLabels(zone, 24, this);
     mTimeLabelsList.prepend(area);
     area->setWidgetResizable(true);
     area->setWidget(labels);
@@ -94,7 +94,7 @@ void TimeLabelsZone::setupTimeLabel(QScrollArea *area)
         area->verticalScrollBar()->setValue(mAgenda->verticalScrollBar()->value());
     }
 
-    TimeLabels *timeLabels = static_cast<TimeLabels *>(area->widget());
+    auto *timeLabels = static_cast<TimeLabels *>(area->widget());
     timeLabels->setAgenda(mAgenda);
 
     // timelabel's scroll is just a slave, this shouldn't be here
@@ -116,7 +116,7 @@ int TimeLabelsZone::preferedTimeLabelsWidth() const
 void TimeLabelsZone::updateAll()
 {
     for (QScrollArea *area : qAsConst(mTimeLabelsList)) {
-        TimeLabels *timeLabel = static_cast<TimeLabels *>(area->widget());
+        auto *timeLabel = static_cast<TimeLabels *>(area->widget());
         timeLabel->updateConfig();
     }
 }
@@ -141,7 +141,7 @@ void TimeLabelsZone::updateTimeLabelsPosition()
     if (mAgenda) {
         const auto lst = timeLabels();
         for (QScrollArea *area : lst) {
-            TimeLabels *label = static_cast<TimeLabels *>(area->widget());
+            auto *label = static_cast<TimeLabels *>(area->widget());
             const int adjustment = mAgenda->contentsY();
             // y() is the offset to our parent (QScrollArea)
             // and gets negative as we scroll
