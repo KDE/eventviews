@@ -198,7 +198,7 @@ ecm_generate_headers(eventviews_CamelCasewhatsnext_HEADERS
 
 ecm_generate_pri_file(BASE_NAME EventViews
   LIB_NAME KF5EventViews
-  DEPS "Mime AkonadiCalendar" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR
+  DEPS "KMime AkonadiCalendar" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR
   ${KDE_INSTALL_INCLUDEDIR_KF5}/EventViews
 )
 
