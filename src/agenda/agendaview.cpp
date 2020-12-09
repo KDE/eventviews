@@ -572,7 +572,7 @@ void AgendaView::Private::insertIncidence(const KCalendarCore::Incidence::Ptr &i
     if (event) {
         const QDate firstVisibleDate = mSelectedDates.first();
         // its crossing bounderies, lets calculate beginX and endX
-        const int duration = event->dtStart().toLocalTime().daysTo(event->dtEnd());
+        const int duration = event->dtStart().toLocalTime().daysTo(event->dtEnd().toLocalTime());
         if (insertAtDate < firstVisibleDate) {
             beginX = curCol + firstVisibleDate.daysTo(insertAtDate);
             endX = beginX + duration;
