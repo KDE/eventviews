@@ -345,7 +345,7 @@ void IncidenceTreeModel::Private::insertNode(const PreNode::Ptr &prenode, bool s
 
     if (m_uidMap.contains(node->uid)) {
         qCWarning(CALENDARVIEW_LOG)
-            << "Duplicate incidence detected. File a bug against the resource. collection="
+            << "Duplicate incidence detected:" << "uid=" << node->uid << ". File a bug against the resource. collection="
             << item.storageCollectionId();
         return;
     }
