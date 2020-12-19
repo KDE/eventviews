@@ -615,11 +615,7 @@ bool Agenda::eventFilter_wheel(QObject *object, QWheelEvent *e)
 {
     QPoint viewportPos;
     bool accepted = false;
-#if QT_VERSION < QT_VERSION_CHECK(5, 14, 0)
-    const QPoint pos = e->pos();
-#else
     const QPoint pos = e->position().toPoint();
-#endif
     if ((e->modifiers() & Qt::ShiftModifier) == Qt::ShiftModifier) {
         if (object != this) {
             viewportPos = ((QWidget *)object)->mapToParent(pos);
