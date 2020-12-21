@@ -29,7 +29,7 @@ TodoViewQuickSearch::TodoViewQuickSearch(const Akonadi::ETMCalendar::Ptr &calend
     : QWidget(parent)
     , mCalendar(calendar)
 {
-    auto *layout = new QHBoxLayout(this);
+    auto layout = new QHBoxLayout(this);
     // no special margin because it is added by the view
     layout->setContentsMargins(0, 0, 0, 0);
 

@@ -41,7 +41,7 @@ void EventViews::setResourceColor(const Akonadi::Collection &coll, const QColor 
     auto *colorAttr
             = collection.attribute<Akonadi::CollectionColorAttribute>(Akonadi::Collection::AddIfMissing);
     colorAttr->setColor(color);
-    auto *job = new Akonadi::CollectionModifyJob(collection, nullptr);
+    auto job = new Akonadi::CollectionModifyJob(collection, nullptr);
     QObject::connect(job, &Akonadi::CollectionModifyJob::result, [=]() {
         if (job->error()) {
             qCWarning(CALENDARVIEW_LOG) << "Failed to set CollectionColorAttribute:" << job->errorString();

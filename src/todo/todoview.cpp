@@ -219,20 +219,20 @@ TodoView::TodoView(const EventViews::PrefsPtr &prefs, bool sidebarView, QWidget 
     connect(mView, &TodoViewView::visibleColumnCountChanged,
             this, &TodoView::resizeColumns);
 
-    auto *richTextDelegate = new TodoRichTextDelegate(mView);
+    auto richTextDelegate = new TodoRichTextDelegate(mView);
     mView->setItemDelegateForColumn(TodoModel::SummaryColumn, richTextDelegate);
     mView->setItemDelegateForColumn(TodoModel::DescriptionColumn, richTextDelegate);
 
-    auto *priorityDelegate = new TodoPriorityDelegate(mView);
+    auto priorityDelegate = new TodoPriorityDelegate(mView);
     mView->setItemDelegateForColumn(TodoModel::PriorityColumn, priorityDelegate);
 
-    auto *startDateDelegate = new TodoDueDateDelegate(mView);
+    auto startDateDelegate = new TodoDueDateDelegate(mView);
     mView->setItemDelegateForColumn(TodoModel::StartDateColumn, startDateDelegate);
 
-    auto *dueDateDelegate = new TodoDueDateDelegate(mView);
+    auto dueDateDelegate = new TodoDueDateDelegate(mView);
     mView->setItemDelegateForColumn(TodoModel::DueDateColumn, dueDateDelegate);
 
-    auto *completeDelegate = new TodoCompleteDelegate(mView);
+    auto completeDelegate = new TodoCompleteDelegate(mView);
     mView->setItemDelegateForColumn(TodoModel::PercentColumn, completeDelegate);
 
     mCategoriesDelegate = new TodoCategoriesDelegate(mView);
@@ -281,7 +281,7 @@ TodoView::TodoView(const EventViews::PrefsPtr &prefs, bool sidebarView, QWidget 
         connect(mFullViewButton, &QToolButton::toggled, this, &TodoView::setFullView);
     }
 
-    auto *layout = new QGridLayout(this);
+    auto layout = new QGridLayout(this);
     layout->setContentsMargins(0, 0, 0, 0);
     if (!mSidebarView) {
         layout->addWidget(mQuickSearch, 0, 0, 1, 2);
@@ -292,7 +292,7 @@ TodoView::TodoView(const EventViews::PrefsPtr &prefs, bool sidebarView, QWidget 
 
     // Dummy layout just to add a few px of right margin so the checkbox is aligned
     // with the QAbstractItemView's viewport.
-    auto *dummyLayout = new QHBoxLayout();
+    auto dummyLayout = new QHBoxLayout();
     dummyLayout->setContentsMargins(0, 0, mView->frameWidth() /*right*/, 0);
     if (!mSidebarView) {
         QFrame *f = new QFrame(this);
@@ -885,7 +885,7 @@ void TodoView::itemDoubleClicked(const QModelIndex &index)
 
 QMenu *TodoView::createCategoryPopupMenu()
 {
-    auto *tempMenu = new QMenu(this);
+    auto tempMenu = new QMenu(this);
 
     QModelIndexList selection = mView->selectionModel()->selectedRows();
     if (selection.size() != 1) {
@@ -898,7 +898,7 @@ QMenu *TodoView::createCategoryPopupMenu()
 
     const QStringList checkedCategories = todo->categories();
 
-    auto *tagFetchJob = new Akonadi::TagFetchJob(this);
+    auto tagFetchJob = new Akonadi::TagFetchJob(this);
     connect(tagFetchJob, &Akonadi::TagFetchJob::result, this, &TodoView::onTagsFetched);
     tagFetchJob->setProperty("menu", QVariant::fromValue(QPointer<QMenu>(tempMenu)));
     tagFetchJob->setProperty("checkedCategories", checkedCategories);
@@ -914,7 +914,7 @@ void TodoView::onTagsFetched(KJob *job)
         qCWarning(CALENDARVIEW_LOG) << "Failed to fetch tags " << job->errorString();
         return;
     }
-    auto *fetchJob = static_cast<Akonadi::TagFetchJob *>(job);
+    auto fetchJob = static_cast<Akonadi::TagFetchJob *>(job);
     const QStringList checkedCategories = job->property("checkedCategories").toStringList();
     QPointer<QMenu> menu = job->property("menu").value<QPointer<QMenu> >();
     if (menu) {

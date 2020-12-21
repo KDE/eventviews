@@ -415,7 +415,7 @@ QString TimeLabels::headerToolTip() const
 bool TimeLabels::event(QEvent *event)
 {
     if (event->type() == QEvent::ToolTip) {
-        auto *helpEvent = static_cast<QHelpEvent *>(event);
+        auto helpEvent = static_cast<QHelpEvent *>(event);
         const int cell = yposToCell(helpEvent->pos().y());
 
         QString toolTip;

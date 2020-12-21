@@ -79,7 +79,7 @@ public:
 
 bool ListViewItem::operator<(const QTreeWidgetItem &other) const
 {
-    const auto *otheritem = static_cast<const ListViewItem *>(&other);
+    const auto otheritem = static_cast<const ListViewItem *>(&other);
 
     switch (treeWidget()->sortColumn()) {
     case StartDateTime_Column:
@@ -334,7 +334,7 @@ Akonadi::Item::List ListView::selectedIncidences() const
     QTreeWidgetItem *item = d->mTreeWidget->selectedItems().isEmpty() ? nullptr
                             : d->mTreeWidget->selectedItems().first();
     if (item) {
-        auto *i = static_cast<ListViewItem *>(item);
+        auto i = static_cast<ListViewItem *>(item);
         eventList.append(i->mIncidence);
     }
     return eventList;
@@ -437,7 +437,7 @@ void ListView::Private::addIncidence(const Akonadi::ETMCalendar::Ptr &calendar,
             tinc->setReadOnly(true);
         }
     }
-    auto *item = new ListViewItem(aitem, mTreeWidget);
+    auto item = new ListViewItem(aitem, mTreeWidget);
 
     // set tooltips
     for (int col = 0; col < Dummy_EOF_Column; ++col) {
@@ -511,7 +511,7 @@ ListViewItem *ListView::Private::getItemForIncidence(const Akonadi::Item &aitem)
 {
     int index = 0;
     while (QTreeWidgetItem *it = mTreeWidget->topLevelItem(index)) {
-        auto *item = static_cast<ListViewItem *>(it);
+        auto item = static_cast<ListViewItem *>(it);
         if (item->mIncidence.id() == aitem.id()) {
             return item;
         }

@@ -41,7 +41,7 @@ void TodoCompleteDelegate::paint(QPainter *painter, const QStyleOptionViewItem &
 
     if (index.data(Qt::EditRole).toInt() > 0) {
         bool isEditing = false;
-        auto *view = qobject_cast<TodoViewView *>(parent());
+        auto view = qobject_cast<TodoViewView *>(parent());
         if (view) {
             isEditing = view->isEditing(index);
         }
@@ -91,7 +91,7 @@ QWidget *TodoCompleteDelegate::createEditor(QWidget *parent, const QStyleOptionV
     Q_UNUSED(option);
     Q_UNUSED(index);
 
-    auto *slider = new TodoCompleteSlider(parent);
+    auto slider = new TodoCompleteSlider(parent);
 
     slider->setRange(0, 100);
     slider->setOrientation(Qt::Horizontal);
@@ -101,14 +101,14 @@ QWidget *TodoCompleteDelegate::createEditor(QWidget *parent, const QStyleOptionV
 
 void TodoCompleteDelegate::setEditorData(QWidget *editor, const QModelIndex &index) const
 {
-    auto *slider = static_cast<QSlider *>(editor);
+    auto slider = static_cast<QSlider *>(editor);
 
     slider->setValue(index.data(Qt::EditRole).toInt());
 }
 
 void TodoCompleteDelegate::setModelData(QWidget *editor, QAbstractItemModel *model, const QModelIndex &index) const
 {
-    auto *slider = static_cast<QSlider *>(editor);
+    auto slider = static_cast<QSlider *>(editor);
 
     model->setData(index, slider->value());
 }
@@ -150,7 +150,7 @@ QWidget *TodoPriorityDelegate::createEditor(QWidget *parent, const QStyleOptionV
     Q_UNUSED(option);
     Q_UNUSED(index);
 
-    auto *combo = new QComboBox(parent);
+    auto combo = new QComboBox(parent);
 
     combo->addItem(i18nc("@action:inmenu Unspecified priority", "unspecified"));
     combo->addItem(i18nc("@action:inmenu highest priority", "1 (highest)"));
@@ -168,14 +168,14 @@ QWidget *TodoPriorityDelegate::createEditor(QWidget *parent, const QStyleOptionV
 
 void TodoPriorityDelegate::setEditorData(QWidget *editor, const QModelIndex &index) const
 {
-    auto *combo = static_cast<QComboBox *>(editor);
+    auto combo = static_cast<QComboBox *>(editor);
 
     combo->setCurrentIndex(index.data(Qt::EditRole).toInt());
 }
 
 void TodoPriorityDelegate::setModelData(QWidget *editor, QAbstractItemModel *model, const QModelIndex &index) const
 {
-    auto *combo = static_cast<QComboBox *>(editor);
+    auto combo = static_cast<QComboBox *>(editor);
 
     model->setData(index, combo->currentIndex());
 }
@@ -200,21 +200,21 @@ QWidget *TodoDueDateDelegate::createEditor(QWidget *parent, const QStyleOptionVi
     Q_UNUSED(option);
     Q_UNUSED(index);
 
-    auto *dateEdit = new KDateComboBox(parent);
+    auto dateEdit = new KDateComboBox(parent);
 
     return dateEdit;
 }
 
 void TodoDueDateDelegate::setEditorData(QWidget *editor, const QModelIndex &index) const
 {
-    auto *dateEdit = static_cast<KDateComboBox *>(editor);
+    auto dateEdit = static_cast<KDateComboBox *>(editor);
 
     dateEdit->setDate(index.data(Qt::EditRole).toDate());
 }
 
 void TodoDueDateDelegate::setModelData(QWidget *editor, QAbstractItemModel *model, const QModelIndex &index) const
 {
-    auto *dateEdit = static_cast<KDateComboBox *>(editor);
+    auto dateEdit = static_cast<KDateComboBox *>(editor);
 
     model->setData(index, dateEdit->date());
 }
@@ -245,13 +245,13 @@ QWidget *TodoCategoriesDelegate::createEditor(QWidget *parent, const QStyleOptio
 
 void TodoCategoriesDelegate::setEditorData(QWidget *editor, const QModelIndex &index) const
 {
-    auto *combo = static_cast<Akonadi::TagSelectionComboBox *>(editor);
+    auto combo = static_cast<Akonadi::TagSelectionComboBox *>(editor);
     combo->setSelection(index.data(Qt::EditRole).toStringList());
 }
 
 void TodoCategoriesDelegate::setModelData(QWidget *editor, QAbstractItemModel *model, const QModelIndex &index) const
 {
-    auto *combo = static_cast<Akonadi::TagSelectionComboBox *>(editor);
+    auto combo = static_cast<Akonadi::TagSelectionComboBox *>(editor);
     model->setData(index, combo->selectionNames());
 }
 

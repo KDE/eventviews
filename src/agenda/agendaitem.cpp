@@ -1166,7 +1166,7 @@ bool AgendaItem::event(QEvent *event)
         if (!mEventView->preferences()->enableToolTips()) {
             return true;
         } else if (mValid) {
-            auto *helpEvent = static_cast<QHelpEvent *>(event);
+            auto helpEvent = static_cast<QHelpEvent *>(event);
             QToolTip::showText(
                 helpEvent->globalPos(),
                 KCalUtils::IncidenceFormatter::toolTipStr(

@@ -60,7 +60,7 @@ TodoModel::Private::Private(const EventViews::PrefsPtr &preferences, TodoModel *
 Akonadi::Item TodoModel::Private::findItemByUid(const QString &uid, const QModelIndex &parent) const
 {
     Q_ASSERT(!uid.isEmpty());
-    auto *treeModel = qobject_cast<IncidenceTreeModel *>(q->sourceModel());
+    auto treeModel = qobject_cast<IncidenceTreeModel *>(q->sourceModel());
     if (treeModel) {   // O(1) Shortcut
         return treeModel->item(uid);
     }
