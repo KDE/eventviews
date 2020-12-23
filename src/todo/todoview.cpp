@@ -309,16 +309,26 @@ TodoView::TodoView(const EventViews::PrefsPtr &prefs, bool sidebarView, QWidget 
     mItemPopupMenu = new QMenu(this);
 
     mItemPopupMenuItemOnlyEntries << mItemPopupMenu->addAction(
+        QIcon::fromTheme(QStringLiteral("document-preview")),
         i18nc("@action:inmenu show the to-do", "&Show"),
         this, &TodoView::showTodo);
 
     QAction *a = mItemPopupMenu->addAction(
+        QIcon::fromTheme(QStringLiteral("document-edit")),
         i18nc("@action:inmenu edit the to-do", "&Edit..."),
         this, &TodoView::editTodo);
     mItemPopupMenuReadWriteEntries << a;
     mItemPopupMenuItemOnlyEntries << a;
 
+    a = mItemPopupMenu->addAction(
+        QIcon::fromTheme(QStringLiteral("edit-delete")),
+        i18nc("@action:inmenu delete the to-do", "&Delete"),
+        this, &TodoView::deleteTodo);
+    mItemPopupMenuReadWriteEntries << a;
+    mItemPopupMenuItemOnlyEntries << a;
+
     mItemPopupMenu->addSeparator();
+
     mItemPopupMenuItemOnlyEntries << mItemPopupMenu->addAction(
         QIcon::fromTheme(QStringLiteral("document-print")),
         i18nc("@action:inmenu print the to-do", "&Print..."),
@@ -328,12 +338,6 @@ TodoView::TodoView(const EventViews::PrefsPtr &prefs, bool sidebarView, QWidget 
         QIcon::fromTheme(QStringLiteral("document-print-preview")),
         i18nc("@action:inmenu print preview the to-do", "Print Previe&w..."),
         this, &TodoView::printPreviewTodo);
-    mItemPopupMenu->addSeparator();
-    a = mItemPopupMenu->addAction(QIcon::fromTheme(QStringLiteral("edit-delete")),
-        i18nc("@action:inmenu delete the to-do", "&Delete"),
-        this, &TodoView::deleteTodo);
-    mItemPopupMenuReadWriteEntries << a;
-    mItemPopupMenuItemOnlyEntries << a;
 
     mItemPopupMenu->addSeparator();
 
