@@ -409,14 +409,18 @@ void AgendaView::Private::calendarIncidenceAdded(const KCalendarCore::Incidence:
         return;
     }
 
-    if (incidence->hasRecurrenceId() && mViewCalendar->isValid(incidence)) {
+    if (incidence->hasRecurrenceId()) {
         // Reevaluate the main event instead, if it was inserted before this one
-        KCalendarCore::Incidence::Ptr mainIncidence
-            = q->calendar2(incidence)->incidence(incidence->uid());
+        auto mainIncidence = q->calendar2(incidence)->incidence(incidence->uid());
         if (mainIncidence) {
             reevaluateIncidence(mainIncidence);
+            return;
         }
-    } else if (q->displayIncidence(incidence, false)) {
+
+        qCCritical(CALENDARVIEW_LOG) << "Failed to find main incidence of recurring incidence with uid=" << incidence->uid() << "trying to display this recurrence instead";
+    }
+
+    if (q->displayIncidence(incidence, false)) {
         mAgenda->checkScrollBoundaries();
         q->scheduleUpdateEventIndicators();
     }
@@ -1758,6 +1762,9 @@ void AgendaView::fillAgenda()
 
     for (const KCalendarCore::Incidence::Ptr &incidence : incidences) {
         Q_ASSERT(incidence);
+        if (incidence->hasRecurrenceId())
+            continue;
+
         const bool wasSelected = (incidence->uid() == selectedAgendaId)
                                  || (incidence->uid() == selectedAllDayAgendaId);
 
@@ -1790,7 +1797,7 @@ void AgendaView::fillAgenda()
 
 bool AgendaView::displayIncidence(const KCalendarCore::Incidence::Ptr &incidence, bool createSelected)
 {
-    if (!incidence || incidence->hasRecurrenceId()) {
+    if (!incidence) {
         return false;
     }
 
