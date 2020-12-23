@@ -370,14 +370,14 @@ TodoView::TodoView(const EventViews::PrefsPtr &prefs, bool sidebarView, QWidget 
     mItemPopupMenu->addSeparator();
 
     a = mItemPopupMenu->addAction(QIcon::fromTheme(QStringLiteral("appointment-new")),
-                                  i18nc("@action:inmenu", "Create Event"),
+                                  i18nc("@action:inmenu", "Create Event from To-do"),
                                   this, SLOT(createEvent()));
     a->setObjectName(QStringLiteral("createevent"));
     mItemPopupMenuReadWriteEntries << a;
     mItemPopupMenuItemOnlyEntries << a;
 
     a = mItemPopupMenu->addAction(QIcon::fromTheme(QStringLiteral("view-pim-notes")),
-                                  i18nc("@action:inmenu", "Create Note"),
+                                  i18nc("@action:inmenu", "Create Note for To-do"),
                                   this, SLOT(createNote()));
     a->setObjectName(QStringLiteral("createnote"));
     mItemPopupMenuReadWriteEntries << a;
