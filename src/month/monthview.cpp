@@ -78,7 +78,7 @@ MonthViewPrivate::MonthViewPrivate(MonthView *qq)
 
 void MonthViewPrivate::addIncidence(const Akonadi::Item &incidence)
 {
-    Q_UNUSED(incidence);
+    Q_UNUSED(incidence)
     //TODO: add some more intelligence here...
     q->setChanges(q->changes() | EventView::IncidencesAdded);
     reloadTimer.start(50);
@@ -132,7 +132,7 @@ void MonthViewPrivate::calendarIncidenceChanged(const KCalendarCore::Incidence::
 
 void MonthViewPrivate::calendarIncidenceDeleted(const KCalendarCore::Incidence::Ptr &incidence, const KCalendarCore::Calendar *calendar)
 {
-    Q_UNUSED(calendar);
+    Q_UNUSED(calendar)
     Q_ASSERT(!incidence->uid().isEmpty());
     scene->removeIncidence(incidence->uid());
 }
@@ -321,14 +321,14 @@ bool MonthView::eventDurationHint(QDateTime &startDt, QDateTime &endDt, bool &al
 
 void MonthView::showIncidences(const Akonadi::Item::List &incidenceList, const QDate &date)
 {
-    Q_UNUSED(incidenceList);
-    Q_UNUSED(date);
+    Q_UNUSED(incidenceList)
+    Q_UNUSED(date)
 }
 
 void MonthView::changeIncidenceDisplay(const Akonadi::Item &incidence, int action)
 {
-    Q_UNUSED(incidence);
-    Q_UNUSED(action);
+    Q_UNUSED(incidence)
+    Q_UNUSED(action)
 
     //TODO: add some more intelligence here...
 
@@ -426,9 +426,9 @@ void MonthView::moveFwdMonth()
 
 void MonthView::showDates(const QDate &start, const QDate &end, const QDate &preferedMonth)
 {
-    Q_UNUSED(start);
-    Q_UNUSED(end);
-    Q_UNUSED(preferedMonth);
+    Q_UNUSED(start)
+    Q_UNUSED(end)
+    Q_UNUSED(preferedMonth)
     d->triggerDelayedReload(DatesChanged);
 }
 

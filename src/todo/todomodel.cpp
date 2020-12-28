@@ -131,11 +131,11 @@ void TodoModel::Private::onRowsAboutToBeMoved(const QModelIndex &sourceParent, i
                                               int sourceEnd, const QModelIndex &destinationParent,
                                               int destinationRow)
 {
-    Q_UNUSED(sourceParent);
-    Q_UNUSED(sourceStart);
-    Q_UNUSED(sourceEnd);
-    Q_UNUSED(destinationParent);
-    Q_UNUSED(destinationRow);
+    Q_UNUSED(sourceParent)
+    Q_UNUSED(sourceStart)
+    Q_UNUSED(sourceEnd)
+    Q_UNUSED(destinationParent)
+    Q_UNUSED(destinationRow)
     /* Disabled for now, layoutAboutToBeChanged() is emitted
     q->beginMoveRows( q->mapFromSource( sourceParent ), sourceStart, sourceEnd,
                       q->mapFromSource( destinationParent ), destinationRow );
@@ -680,8 +680,8 @@ QMimeData *TodoModel::mimeData(const QModelIndexList &indexes) const
 
 bool TodoModel::dropMimeData(const QMimeData *data, Qt::DropAction action, int row, int column, const QModelIndex &parent)
 {
-    Q_UNUSED(row);
-    Q_UNUSED(column);
+    Q_UNUSED(row)
+    Q_UNUSED(column)
 
     if (action != Qt::MoveAction) {
         qCWarning(CALENDARVIEW_LOG) << "No action other than MoveAction currently supported!"; //TODO

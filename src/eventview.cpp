@@ -435,9 +435,9 @@ void EventView::clearSelection()
 
 bool EventView::eventDurationHint(QDateTime &startDt, QDateTime &endDt, bool &allDay) const
 {
-    Q_UNUSED(startDt);
-    Q_UNUSED(endDt);
-    Q_UNUSED(allDay);
+    Q_UNUSED(startDt)
+    Q_UNUSED(endDt)
+    Q_UNUSED(allDay)
     return false;
 }
 
@@ -458,7 +458,7 @@ void EventView::doSaveConfig(KConfigGroup &)
 QPair<QDateTime, QDateTime> EventView::actualDateRange(const QDateTime &start, const QDateTime &end,
                                                        const QDate &preferredMonth) const
 {
-    Q_UNUSED(preferredMonth);
+    Q_UNUSED(preferredMonth)
     return qMakePair(start, end);
 }
 
@@ -655,7 +655,7 @@ QString EventView::iconForItem(const Akonadi::Item &item)
 
 void EventView::onCollectionChanged(const Akonadi::Collection &collection, const QSet<QByteArray> &changedAttributes)
 {
-    Q_UNUSED(collection);
+    Q_UNUSED(collection)
     if (changedAttributes.contains("AccessRights")) {
         setChanges(changes() | EventViews::EventView::ResourcesChanged);
         updateView();

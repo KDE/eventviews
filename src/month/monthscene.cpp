@@ -412,7 +412,7 @@ int MonthScene::totalHeight()
 
 void MonthScene::wheelEvent(QGraphicsSceneWheelEvent *event)
 {
-    Q_UNUSED(event);   // until we figure out what to do in here
+    Q_UNUSED(event)   // until we figure out what to do in here
 
     /*  int numDegrees = -event->delta() / 8;
       int numSteps = numDegrees / 15;

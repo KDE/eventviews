@@ -88,8 +88,8 @@ void TodoCompleteDelegate::initStyleOptionProgressBar(
 
 QWidget *TodoCompleteDelegate::createEditor(QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index) const
 {
-    Q_UNUSED(option);
-    Q_UNUSED(index);
+    Q_UNUSED(option)
+    Q_UNUSED(index)
 
     auto slider = new TodoCompleteSlider(parent);
 
@@ -115,7 +115,7 @@ void TodoCompleteDelegate::setModelData(QWidget *editor, QAbstractItemModel *mod
 
 void TodoCompleteDelegate::updateEditorGeometry(QWidget *editor, const QStyleOptionViewItem &option, const QModelIndex &index) const
 {
-    Q_UNUSED(index);
+    Q_UNUSED(index)
 
     editor->setGeometry(option.rect);
 }
@@ -147,8 +147,8 @@ TodoPriorityDelegate::TodoPriorityDelegate(QObject *parent)
 
 QWidget *TodoPriorityDelegate::createEditor(QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index) const
 {
-    Q_UNUSED(option);
-    Q_UNUSED(index);
+    Q_UNUSED(option)
+    Q_UNUSED(index)
 
     auto combo = new QComboBox(parent);
 
@@ -182,7 +182,7 @@ void TodoPriorityDelegate::setModelData(QWidget *editor, QAbstractItemModel *mod
 
 void TodoPriorityDelegate::updateEditorGeometry(QWidget *editor, const QStyleOptionViewItem &option, const QModelIndex &index) const
 {
-    Q_UNUSED(index);
+    Q_UNUSED(index)
 
     editor->setGeometry(option.rect);
 }
@@ -197,8 +197,8 @@ TodoDueDateDelegate::TodoDueDateDelegate(QObject *parent)
 
 QWidget *TodoDueDateDelegate::createEditor(QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index) const
 {
-    Q_UNUSED(option);
-    Q_UNUSED(index);
+    Q_UNUSED(option)
+    Q_UNUSED(index)
 
     auto dateEdit = new KDateComboBox(parent);
 
@@ -221,7 +221,7 @@ void TodoDueDateDelegate::setModelData(QWidget *editor, QAbstractItemModel *mode
 
 void TodoDueDateDelegate::updateEditorGeometry(QWidget *editor, const QStyleOptionViewItem &option, const QModelIndex &index) const
 {
-    Q_UNUSED(index);
+    Q_UNUSED(index)
     editor->setGeometry(QStyle::alignedRect(QApplication::layoutDirection(), Qt::AlignCenter,
                                             editor->size(), option.rect));
 }
@@ -237,8 +237,8 @@ TodoCategoriesDelegate::TodoCategoriesDelegate(QObject *parent)
 
 QWidget *TodoCategoriesDelegate::createEditor(QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index) const
 {
-    Q_UNUSED(option);
-    Q_UNUSED(index);
+    Q_UNUSED(option)
+    Q_UNUSED(index)
 
     return new Akonadi::TagSelectionComboBox(parent);
 }
@@ -257,7 +257,7 @@ void TodoCategoriesDelegate::setModelData(QWidget *editor, QAbstractItemModel *m
 
 void TodoCategoriesDelegate::updateEditorGeometry(QWidget *editor, const QStyleOptionViewItem &option, const QModelIndex &index) const
 {
-    Q_UNUSED(index);
+    Q_UNUSED(index)
 
     editor->setGeometry(option.rect);
 }

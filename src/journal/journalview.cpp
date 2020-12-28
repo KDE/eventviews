@@ -148,7 +148,7 @@ void JournalView::showDates(const QDate &start, const QDate &end, const QDate &)
 
 void JournalView::showIncidences(const Akonadi::Item::List &incidences, const QDate &date)
 {
-    Q_UNUSED(date);
+    Q_UNUSED(date)
     clearEntries();
     for (const Akonadi::Item &i : incidences) {
         if (const KCalendarCore::Journal::Ptr j = CalendarSupport::journal(i)) {
@@ -189,7 +189,7 @@ void JournalView::newJournal()
 
 bool JournalView::eventFilter(QObject *object, QEvent *event)
 {
-    Q_UNUSED(object);
+    Q_UNUSED(object)
     switch (event->type()) {
     case QEvent::MouseButtonDblClick:
         Q_EMIT newJournalSignal(QDate());

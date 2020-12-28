@@ -602,14 +602,14 @@ void TodoView::setIncidenceChanger(Akonadi::IncidenceChanger *changer)
 void TodoView::showDates(const QDate &start, const QDate &end, const QDate &)
 {
     // There is nothing to do here for the Todo View
-    Q_UNUSED(start);
-    Q_UNUSED(end);
+    Q_UNUSED(start)
+    Q_UNUSED(end)
 }
 
 void TodoView::showIncidences(const Akonadi::Item::List &incidenceList, const QDate &date)
 {
-    Q_UNUSED(incidenceList);
-    Q_UNUSED(date);
+    Q_UNUSED(incidenceList)
+    Q_UNUSED(date)
 }
 
 void TodoView::updateView()
@@ -764,7 +764,7 @@ void TodoView::contextMenu(const QPoint &pos)
 
 void TodoView::selectionChanged(const QItemSelection &selected, const QItemSelection &deselected)
 {
-    Q_UNUSED(deselected);
+    Q_UNUSED(deselected)
     QModelIndexList selection = selected.indexes();
     if (selection.isEmpty() || !selection[0].isValid()) {
         Q_EMIT incidenceSelected(Akonadi::Item(), QDate());

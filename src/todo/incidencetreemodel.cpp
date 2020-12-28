@@ -226,7 +226,7 @@ void IncidenceTreeModel::Private::onDataChanged(const QModelIndex &begin, const 
                 const bool res = q->beginMoveRows(/**fromParent*/ index.parent(), fromRow,
                                                                   fromRow, newParentIndex, toRow);
                 Q_ASSERT(res);
-                Q_UNUSED(res);
+                Q_UNUSED(res)
 
                 // Now that beginmoveRows() was called, we can do the actual moving:
                 if (newParentNode) {
@@ -268,7 +268,7 @@ void IncidenceTreeModel::Private::onRowsAboutToBeInserted(const QModelIndex &par
 {
     // We are a reparenting proxy, the source proxy is flat
     Q_ASSERT(!parent.isValid());
-    Q_UNUSED(parent);
+    Q_UNUSED(parent)
     // Nothing to do yet. We don't know if all the new incidences in this range belong to the same
     // parent yet.
 }
@@ -299,7 +299,7 @@ void IncidenceTreeModel::Private::onRowsInserted(const QModelIndex &parent, int 
     //QElapsedTimer timer;
     //timer.start();
     Q_ASSERT(!parent.isValid());
-    Q_UNUSED(parent);
+    Q_UNUSED(parent)
     Q_ASSERT(begin <= end);
     PreNode::List nodes;
     for (int i = begin; i <= end; ++i) {
@@ -454,7 +454,7 @@ void IncidenceTreeModel::Private::onRowsAboutToBeRemoved(const QModelIndex &pare
     //QElapsedTimer timer;
     //timer.start();
     Q_ASSERT(!parent.isValid());
-    Q_UNUSED(parent);
+    Q_UNUSED(parent)
     Q_ASSERT(begin <= end);
 
     // First, gather nodes to remove
@@ -548,9 +548,9 @@ void IncidenceTreeModel::Private::removeNode(const Node::Ptr &node)
 
 void IncidenceTreeModel::Private::onRowsRemoved(const QModelIndex &parent, int begin, int end)
 {
-    Q_UNUSED(parent);
-    Q_UNUSED(begin);
-    Q_UNUSED(end);
+    Q_UNUSED(parent)
+    Q_UNUSED(begin)
+    Q_UNUSED(end)
     // Nothing to do here, see comment on ::onRowsAboutToBeRemoved()
 }
 

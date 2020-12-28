@@ -32,8 +32,8 @@ QRectF ScrollIndicator::boundingRect() const
 
 void ScrollIndicator::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
 {
-    Q_UNUSED(option);
-    Q_UNUSED(widget);
+    Q_UNUSED(option)
+    Q_UNUSED(widget)
 
     painter->setRenderHint(QPainter::Antialiasing);
 

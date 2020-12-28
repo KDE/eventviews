@@ -205,7 +205,7 @@ JournalFrame::~JournalFrame()
 
 bool JournalFrame::eventFilter(QObject *object, QEvent *event)
 {
-    Q_UNUSED(object);
+    Q_UNUSED(object)
 
     // object is our QTextBrowser
     if (!mJournal.isValid()) {

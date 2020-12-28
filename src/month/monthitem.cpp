@@ -456,7 +456,7 @@ void IncidenceMonthItem::updateDates(int startOffset, int endOffset)
 
 void IncidenceMonthItem::updateSelection(const Akonadi::Item &incidence, const QDate &date)
 {
-    Q_UNUSED(date);
+    Q_UNUSED(date)
     setSelected(incidence == akonadiItem());
 }
 
@@ -718,14 +718,14 @@ bool HolidayMonthItem::greaterThanFallback(const MonthItem *other) const
 
 void HolidayMonthItem::finalizeMove(const QDate &newStartDate)
 {
-    Q_UNUSED(newStartDate);
+    Q_UNUSED(newStartDate)
     Q_ASSERT(false);
 }
 
 void HolidayMonthItem::finalizeResize(const QDate &newStartDate, const QDate &newEndDate)
 {
-    Q_UNUSED(newStartDate);
-    Q_UNUSED(newEndDate);
+    Q_UNUSED(newStartDate)
+    Q_UNUSED(newEndDate)
     Q_ASSERT(false);
 }
 

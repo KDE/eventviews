@@ -280,7 +280,7 @@ int TimelineView::currentDateCount() const
 
 void TimelineView::showDates(const QDate &start, const QDate &end, const QDate &preferredMonth)
 {
-    Q_UNUSED(preferredMonth);
+    Q_UNUSED(preferredMonth)
     Q_ASSERT_X(calendar(), "showDates()", "set a Akonadi::ETMCalendar");
     Q_ASSERT_X(start.isValid(), "showDates()", "start date must be valid");
     Q_ASSERT_X(end.isValid(), "showDates()", "end date must be valid");
@@ -366,8 +366,8 @@ void TimelineView::showDates(const QDate &start, const QDate &end, const QDate &
 
 void TimelineView::showIncidences(const Akonadi::Item::List &incidenceList, const QDate &date)
 {
-    Q_UNUSED(incidenceList);
-    Q_UNUSED(date);
+    Q_UNUSED(incidenceList)
+    Q_UNUSED(date)
 }
 
 void TimelineView::updateView()

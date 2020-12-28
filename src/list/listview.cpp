@@ -362,7 +362,7 @@ void ListView::updateView()
 
 void ListView::showDates(const QDate &start, const QDate &end, const QDate &preferredMonth)
 {
-    Q_UNUSED(preferredMonth);
+    Q_UNUSED(preferredMonth)
     clear();
 
     d->mStartDate = start;

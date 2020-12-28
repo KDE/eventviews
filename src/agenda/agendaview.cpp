@@ -474,7 +474,7 @@ void AgendaView::Private::calendarIncidenceChanged(const KCalendarCore::Incidenc
 void AgendaView::Private::calendarIncidenceDeleted(const KCalendarCore::Incidence::Ptr &incidence,
                                                    const KCalendarCore::Calendar *calendar)
 {
-    Q_UNUSED(calendar);
+    Q_UNUSED(calendar)
     if (!incidence || incidence->uid().isEmpty()) {
         qCWarning(CALENDARVIEW_LOG) << "invalid incidence or empty uid: " << incidence;
         Q_ASSERT(false);
@@ -1647,7 +1647,7 @@ QDate AgendaView::endDate() const
 
 void AgendaView::showDates(const QDate &start, const QDate &end, const QDate &preferredMonth)
 {
-    Q_UNUSED(preferredMonth);
+    Q_UNUSED(preferredMonth)
     if (!d->mSelectedDates.isEmpty()
         && d->mSelectedDates.first() == start
         && d->mSelectedDates.last() == end) {
@@ -1673,7 +1673,7 @@ void AgendaView::showDates(const QDate &start, const QDate &end, const QDate &pr
 
 void AgendaView::showIncidences(const Akonadi::Item::List &incidences, const QDate &date)
 {
-    Q_UNUSED(date);
+    Q_UNUSED(date)
 
     if (!calendar()) {
         qCCritical(CALENDARVIEW_LOG) << "No Calendar set";
@@ -1943,9 +1943,9 @@ void AgendaView::updateEventIndicatorBottom(int newY)
 
 void AgendaView::slotIncidencesDropped(const QList<QUrl> &items, const QPoint &gpos, bool allDay)
 {
-    Q_UNUSED(items);
-    Q_UNUSED(gpos);
-    Q_UNUSED(allDay);
+    Q_UNUSED(items)
+    Q_UNUSED(gpos)
+    Q_UNUSED(allDay)
 
 #ifdef AKONADI_PORT_DISABLED // one item -> multiple items, Incidence* -> akonadi item url
                              // (we might have to fetch the items here first!)

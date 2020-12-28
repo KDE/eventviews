@@ -328,7 +328,7 @@ QSize TimeLabels::sizeHint() const
 
 void TimeLabels::contextMenuEvent(QContextMenuEvent *event)
 {
-    Q_UNUSED(event);
+    Q_UNUSED(event)
 
     QMenu popup(this);
     QAction *editTimeZones = popup.addAction(QIcon::fromTheme(QStringLiteral("document-properties")),

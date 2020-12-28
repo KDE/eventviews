@@ -35,7 +35,7 @@ bool TodoViewView::isEditing(const QModelIndex &index) const
 
 bool TodoViewView::eventFilter(QObject *watched, QEvent *event)
 {
-    Q_UNUSED(watched);
+    Q_UNUSED(watched)
     if (event->type() == QEvent::ContextMenu) {
         auto e = static_cast<QContextMenuEvent *>(event);
 

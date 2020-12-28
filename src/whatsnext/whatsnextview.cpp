@@ -233,8 +233,8 @@ void WhatsNextView::showDates(const QDate &start, const QDate &end, const QDate 
 
 void WhatsNextView::showIncidences(const Akonadi::Item::List &incidenceList, const QDate &date)
 {
-    Q_UNUSED(incidenceList);
-    Q_UNUSED(date);
+    Q_UNUSED(incidenceList)
+    Q_UNUSED(date)
 }
 
 void WhatsNextView::changeIncidenceDisplay(const Akonadi::Item &, Akonadi::IncidenceChanger::ChangeType)

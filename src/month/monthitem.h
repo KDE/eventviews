@@ -361,7 +361,7 @@ public:
 
     QString text(bool end) const override
     {
-        Q_UNUSED(end);
+        Q_UNUSED(end)
         return mName;
     }
 

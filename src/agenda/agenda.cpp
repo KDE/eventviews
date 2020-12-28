@@ -2320,7 +2320,7 @@ void Agenda::setHolidayMask(QVector<bool> *mask)
 
 void Agenda::contentsMousePressEvent(QMouseEvent *event)
 {
-    Q_UNUSED(event);
+    Q_UNUSED(event)
 }
 
 QSize Agenda::sizeHint() const
