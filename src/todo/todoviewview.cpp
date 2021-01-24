@@ -118,7 +118,7 @@ QModelIndex TodoViewView::moveCursor(CursorAction cursorAction, Qt::KeyboardModi
                 return tmp;
             }
         }
-        return QModelIndex();
+        return {};
     }
     case MovePrevious:
     {
@@ -170,7 +170,7 @@ QModelIndex TodoViewView::getNextEditableIndex(const QModelIndex &cur, int inc)
             return tmp;
         }
     }
-    return QModelIndex();
+    return {};
 }
 
 void TodoViewView::mouseReleaseEvent(QMouseEvent *event)

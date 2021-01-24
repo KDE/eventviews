@@ -755,7 +755,7 @@ void AgendaView::init(QDate start, QDate end)
     d->mAllDayAgenda = allDayScrollArea->agenda();
 
     /* Create the main agenda widget and the related widgets */
-    QWidget *agendaFrame = new QWidget(d->mSplitterAgenda);
+    auto *agendaFrame = new QWidget(d->mSplitterAgenda);
     auto agendaLayout = new QHBoxLayout(agendaFrame);
     agendaLayout->setContentsMargins(0, 0, 0, 0);
     agendaLayout->setSpacing(SPACING);
@@ -1240,7 +1240,7 @@ void AgendaView::createDayLabels(bool force)
         for (const QString &text : texts) {
             // Compute a small version of the holiday string for AlternateLabel
             const KWordWrap ww = KWordWrap::formatText(fm, topDayLabelBox->rect(), 0, text, -1);
-            AlternateLabel *label = new AlternateLabel(
+            auto *label = new AlternateLabel(
                 ww.truncatedString(), text, text, topDayLabelBox);
             topDayLabelBoxLayout->addWidget(label);
             label->setAlignment(Qt::AlignCenter);
@@ -1421,7 +1421,7 @@ void AgendaView::createTimeBarHeaders()
     const auto lst = d->mTimeLabelsZone->timeLabels();
     for (QScrollArea *area : lst) {
         auto timeLabel = static_cast<TimeLabels *>(area->widget());
-        QLabel *label
+        auto *label
             = new QLabel(timeLabel->header().replace(QLatin1Char('/'), QStringLiteral("/ ")),
                          d->mTimeBarHeaderFrame);
         d->mTimeBarHeaderFrame->layout()->addWidget(label);
@@ -1628,7 +1628,7 @@ void AgendaView::updateEventDates(AgendaItem *item, bool addIncidence, Akonadi::
 QDate AgendaView::startDate() const
 {
     if (d->mSelectedDates.isEmpty()) {
-        return QDate();
+        return {};
     }
     return d->mSelectedDates.first();
 }
@@ -1636,7 +1636,7 @@ QDate AgendaView::startDate() const
 QDate AgendaView::endDate() const
 {
     if (d->mSelectedDates.isEmpty()) {
-        return QDate();
+        return {};
     }
     return d->mSelectedDates.last();
 }

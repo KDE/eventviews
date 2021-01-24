@@ -148,11 +148,11 @@ MultiAgendaView::MultiAgendaView(QWidget *parent)
     QFontMetrics fm(font());
     int topLabelHeight = 2 * fm.height() + fm.lineSpacing();
 
-    QWidget *topSideBox = new QWidget(this);
+    auto *topSideBox = new QWidget(this);
     auto topSideBoxVBoxLayout = new QVBoxLayout(topSideBox);
     topSideBoxVBoxLayout->setContentsMargins(0, 0, 0, 0);
 
-    QWidget *topSideSpacer = new QWidget(topSideBox);
+    auto *topSideSpacer = new QWidget(topSideBox);
     topSideBoxVBoxLayout->addWidget(topSideSpacer);
     topSideSpacer->setFixedHeight(topLabelHeight);
 
@@ -163,17 +163,17 @@ MultiAgendaView::MultiAgendaView(QWidget *parent)
     d->mLabel->setAlignment(Qt::AlignRight | Qt::AlignVCenter);
     d->mLabel->setWordWrap(true);
 
-    QWidget *sideBox = new QWidget(d->mLeftSplitter);
+    auto *sideBox = new QWidget(d->mLeftSplitter);
     auto sideBoxVBoxLayout = new QVBoxLayout(sideBox);
     sideBoxVBoxLayout->setContentsMargins(0, 0, 0, 0);
 
     // compensate for the frame the agenda views but not the timelabels have
-    QWidget *timeLabelTopAlignmentSpacer = new QWidget(sideBox);
+    auto *timeLabelTopAlignmentSpacer = new QWidget(sideBox);
     sideBoxVBoxLayout->addWidget(timeLabelTopAlignmentSpacer);
 
     d->mTimeLabelsZone = new TimeLabelsZone(sideBox, PrefsPtr(new Prefs()));
 
-    QWidget *timeLabelBotAlignmentSpacer = new QWidget(sideBox);
+    auto *timeLabelBotAlignmentSpacer = new QWidget(sideBox);
     sideBoxVBoxLayout->addWidget(timeLabelBotAlignmentSpacer);
 
     d->mLeftBottomSpacer = new QWidget(topSideBox);
@@ -466,12 +466,12 @@ void MultiAgendaView::slotClearTimeSpanSelection()
 
 AgendaView *MultiAgendaView::Private::createView(const QString &title)
 {
-    QWidget *box = new QWidget(mTopBox);
+    auto *box = new QWidget(mTopBox);
     mTopBox->layout()->addWidget(box);
     auto layout = new QVBoxLayout(box);
     layout->setContentsMargins(0, 0, 0, 0);
     layout->addWidget(new ElidedLabel(title));
-    AgendaView *av = new AgendaView(q->preferences(),
+    auto *av = new AgendaView(q->preferences(),
                                     q->startDateTime().date(),
                                     q->endDateTime().date(),
                                     true,

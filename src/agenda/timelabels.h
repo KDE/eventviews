@@ -17,13 +17,13 @@ class Agenda;
 class TimeLabelsZone;
 
 class Prefs;
-typedef QSharedPointer<Prefs> PrefsPtr;
+using PrefsPtr = QSharedPointer<Prefs>;
 
 class TimeLabels : public QFrame
 {
     Q_OBJECT
 public:
-    typedef QList<TimeLabels *> List;
+    using List = QList<TimeLabels *>;
 
     TimeLabels(const QTimeZone &zone, int rows, TimeLabelsZone *parent = nullptr, Qt::WindowFlags f = {});
 

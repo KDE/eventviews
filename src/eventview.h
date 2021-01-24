@@ -43,8 +43,8 @@ enum {
 
 class EventViewPrivate;
 class Prefs;
-typedef QSharedPointer<Prefs> PrefsPtr;
-typedef QSharedPointer<CalendarSupport::KCalPrefs> KCalPrefsPtr;
+using PrefsPtr = QSharedPointer<Prefs>;
+using KCalPrefsPtr = QSharedPointer<CalendarSupport::KCalPrefs>;
 
 /**
   EventView is the abstract base class from which all other calendar views

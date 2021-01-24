@@ -347,5 +347,5 @@ QSize TodoRichTextDelegate::sizeHint(const QStyleOptionViewItem &option, const Q
     // This row might not have a checkbox, so give it more height so it appears the same size as other rows.
     const int checkboxHeight = QApplication::style()->sizeFromContents(QStyle::CT_CheckBox, &option,
                                                                        QSize()).height();
-    return QSize(ret.width(), qMax(ret.height(), checkboxHeight));
+    return {ret.width(), qMax(ret.height(), checkboxHeight)};
 }

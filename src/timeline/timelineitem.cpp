@@ -45,7 +45,7 @@ void TimelineItem::insertIncidence(const Akonadi::Item &aitem, const QDateTime &
         end = end.addDays(1);
     }
 
-    typedef QList<QStandardItem *> ItemList;
+    using ItemList = QList<QStandardItem *>;
     ItemList list = mItemMap.value(aitem.id());
     for (ItemList::ConstIterator it = list.constBegin(); it != list.constEnd(); ++it) {
         if (static_cast<TimelineSubItem *>(*it)->startTime() == start
@@ -78,7 +78,7 @@ void TimelineItem::removeIncidence(const Akonadi::Item &incidence)
 
 void TimelineItem::moveItems(const Akonadi::Item &incidence, int delta, int duration)
 {
-    typedef QList<QStandardItem *> ItemList;
+    using ItemList = QList<QStandardItem *>;
     ItemList list = mItemMap.value(incidence.id());
     const ItemList::ConstIterator end(list.constEnd());
     for (ItemList::ConstIterator it = list.constBegin(); it != end; ++it) {

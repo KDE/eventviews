@@ -12,7 +12,7 @@
 
 namespace EventViews {
 class Prefs;
-typedef QSharedPointer<Prefs> PrefsPtr;
+using PrefsPtr = QSharedPointer<Prefs>;
 
 class TimeScaleConfigDialog : public QDialog, private Ui::TimeScaleEditWidget
 {

@@ -108,7 +108,7 @@ void IncidenceTreeModel::Private::dumpTree()
 QModelIndex IncidenceTreeModel::Private::indexForNode(const Node::Ptr &node) const
 {
     if (!node) {
-        return QModelIndex();
+        return {};
     }
     const int row = node->parentNode ? node->parentNode->directChilds.indexOf(node)
                     : m_toplevelNodeList.indexOf(node);
@@ -737,7 +737,7 @@ QModelIndex IncidenceTreeModel::mapFromSource(const QModelIndex &sourceIndex) co
         qCWarning(CALENDARVIEW_LOG)
             << "IncidenceTreeModel::mapFromSource() source index is invalid";
         // Q_ASSERT( false );
-        return QModelIndex();
+        return {};
     }
 
     if (!sourceModel()) {
@@ -761,7 +761,7 @@ QModelIndex IncidenceTreeModel::mapFromSource(const QModelIndex &sourceIndex) co
 QModelIndex IncidenceTreeModel::mapToSource(const QModelIndex &proxyIndex) const
 {
     if (!proxyIndex.isValid() || !sourceModel()) {
-        return QModelIndex();
+        return {};
     }
 
     Q_ASSERT(proxyIndex.column() < columnCount());
@@ -799,7 +799,7 @@ QModelIndex IncidenceTreeModel::parent(const QModelIndex &child) const
     if (!child.isValid()) {
         qCWarning(CALENDARVIEW_LOG) << "IncidenceTreeModel::parent(): child is invalid";
         Q_ASSERT(false);
-        return QModelIndex();
+        return {};
     }
 
     Q_ASSERT(child.model() == this);
@@ -837,7 +837,7 @@ QModelIndex IncidenceTreeModel::index(int row, int column, const QModelIndex &pa
                    << "; row=" << row << "; column=" << column
                    << "; rowCount() = " << rowCount( parent ); */
         // Q_ASSERT( false );
-        return QModelIndex();
+        return {};
     }
 
     Q_ASSERT(column >= 0);

@@ -343,7 +343,7 @@ bool IncidenceMonthItem::greaterThanFallback(const MonthItem *other) const
 QDate IncidenceMonthItem::realStartDate() const
 {
     if (!mIncidence) {
-        return QDate();
+        return {};
     }
 
     const QDateTime dt = mIncidence->dateTime(Incidence::RoleDisplayStart);
@@ -355,7 +355,7 @@ QDate IncidenceMonthItem::realStartDate() const
 QDate IncidenceMonthItem::realEndDate() const
 {
     if (!mIncidence) {
-        return QDate();
+        return {};
     }
 
     const QDateTime dt = mIncidence->dateTime(KCalendarCore::Incidence::RoleDisplayEnd);

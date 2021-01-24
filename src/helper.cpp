@@ -55,7 +55,7 @@ void EventViews::setResourceColor(const Akonadi::Collection &coll, const QColor 
 QColor EventViews::resourceColor(const Akonadi::Collection &coll, const PrefsPtr &preferences)
 {
     if (!coll.isValid()) {
-        return QColor();
+        return {};
     }
     const QString id = QString::number(coll.id());
     // Color stored in eventviewsrc (and in memory)
@@ -78,7 +78,7 @@ QColor EventViews::resourceColor(const Akonadi::Collection &coll, const PrefsPtr
 QColor EventViews::resourceColor(const Akonadi::Item &item, const PrefsPtr &preferences)
 {
     if (!item.isValid()) {
-        return QColor();
+        return {};
     }
     return resourceColor(item.parentCollection(), preferences);
 }

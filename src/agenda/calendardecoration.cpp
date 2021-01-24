@@ -266,10 +266,10 @@ QDate Decoration::weekDate(const QDate &date)
 
 QDate Decoration::monthDate(const QDate &date)
 {
-    return QDate(date.year(), date.month(), 1);
+    return {date.year(), date.month(), 1};
 }
 
 QDate Decoration::yearDate(const QDate &date)
 {
-    return QDate(date.year(), 1, 1);
+    return {date.year(), 1, 1};
 }

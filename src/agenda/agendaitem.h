@@ -62,8 +62,8 @@ class AgendaItem : public QWidget, public CalendarSupport::CellItem
 {
     Q_OBJECT
 public:
-    typedef QPointer<AgendaItem> QPtr;
-    typedef QList<QPtr> List;
+    using QPtr = QPointer<AgendaItem>;
+    using List = QList<QPtr>;
 
     AgendaItem(EventView *eventView, const MultiViewCalendar::Ptr &calendar, const KCalendarCore::Incidence::Ptr &incidence, int itemPos, int itemCount, const QDateTime &qd, bool isSelected,
                QWidget *parent);

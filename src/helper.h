@@ -26,7 +26,7 @@ class QDate;
  */
 namespace EventViews {
 class Prefs;
-typedef QSharedPointer<Prefs> PrefsPtr;
+using PrefsPtr = QSharedPointer<Prefs>;
 
 /**
  Returns a nice QColor for text, give the input color &c.

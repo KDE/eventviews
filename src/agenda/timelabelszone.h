@@ -17,7 +17,7 @@ class Agenda;
 class AgendaView;
 
 class Prefs;
-typedef QSharedPointer<Prefs> PrefsPtr;
+using PrefsPtr = QSharedPointer<Prefs>;
 
 class TimeLabelsZone : public QWidget
 {

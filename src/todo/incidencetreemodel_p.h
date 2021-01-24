@@ -20,13 +20,13 @@
 #include <QPersistentModelIndex>
 #include <KCalendarCore/Incidence>
 
-typedef QString Uid;
-typedef QString ParentUid;
+using Uid = QString;
+using ParentUid = QString;
 
 struct Node {
-    typedef QSharedPointer<Node> Ptr;
-    typedef QMap<Akonadi::Item::Id, Ptr> Map;
-    typedef QVector<Ptr> List;
+    using Ptr = QSharedPointer<Node>;
+    using Map = QMap<Akonadi::Item::Id, Ptr>;
+    using List = QVector<Ptr>;
 
     QPersistentModelIndex sourceIndex; // because ETM::modelIndexesForItem is so slow
     Akonadi::Item::Id id;
@@ -39,8 +39,8 @@ struct Node {
 
 /** Just a struct to contain some data before we create the node */
 struct PreNode {
-    typedef QSharedPointer<PreNode> Ptr;
-    typedef QVector<Ptr> List;
+    using Ptr = QSharedPointer<PreNode>;
+    using List = QVector<Ptr>;
     KCalendarCore::Incidence::Ptr incidence;
     QPersistentModelIndex sourceIndex;
     Akonadi::Item item;

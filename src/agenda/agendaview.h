@@ -230,7 +230,7 @@ private:
     bool displayIncidence(const KCalendarCore::Incidence::Ptr &incidence, bool createSelected);
 
 #ifndef EVENTVIEWS_NODECOS
-    typedef QList<EventViews::CalendarDecoration::Decoration *> DecorationList;
+    using DecorationList = QList<EventViews::CalendarDecoration::Decoration *>;
     bool loadDecorations(const QStringList &decorations, DecorationList &decoList);
     void placeDecorationsFrame(QFrame *frame, bool decorationsFound, bool isTop);
     void placeDecorations(EventViews::AgendaView::DecorationList &decoList, const QDate &date, QWidget *labelBox, bool forWeek);

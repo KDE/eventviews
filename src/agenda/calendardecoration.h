@@ -30,7 +30,7 @@ class EVENTVIEWS_EXPORT Element : public QObject
     Q_OBJECT
 
 public:
-    typedef QList<Element *> List;
+    using List = QList<Element *>;
 
     explicit Element(const QString &id);
     ~Element() override;
@@ -149,7 +149,7 @@ public:
         return QStringLiteral("Calendar/Decoration");
     }
 
-    typedef QList<Decoration *> List;
+    using List = QList<Decoration *>;
 
     Decoration();
     ~Decoration() override;

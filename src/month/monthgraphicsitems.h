@@ -118,7 +118,7 @@ class MonthGraphicsItem : public QObject, public QGraphicsItem
     Q_INTERFACES(QGraphicsItem)
 
 public:
-    typedef QList<MonthGraphicsItem *> List;
+    using List = QList<MonthGraphicsItem *>;
 
     explicit MonthGraphicsItem(MonthItem *manager);
     ~MonthGraphicsItem();

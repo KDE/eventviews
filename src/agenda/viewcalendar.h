@@ -22,7 +22,7 @@ class AgendaView;
 class EVENTVIEWS_EXPORT ViewCalendar
 {
 public:
-    typedef QSharedPointer<ViewCalendar> Ptr;
+    using Ptr = QSharedPointer<ViewCalendar>;
 
     virtual ~ViewCalendar();
     virtual bool isValid(const KCalendarCore::Incidence::Ptr &incidence) const = 0;
@@ -38,7 +38,7 @@ public:
 class AkonadiViewCalendar : public ViewCalendar
 {
 public:
-    typedef QSharedPointer<AkonadiViewCalendar> Ptr;
+    using Ptr = QSharedPointer<AkonadiViewCalendar>;
 
     ~AkonadiViewCalendar() override;
     bool isValid(const KCalendarCore::Incidence::Ptr &incidence) const override;
@@ -59,7 +59,7 @@ public:
 class MultiViewCalendar : public ViewCalendar
 {
 public:
-    typedef QSharedPointer<MultiViewCalendar> Ptr;
+    using Ptr = QSharedPointer<MultiViewCalendar>;
 
     ~MultiViewCalendar() override;
     ViewCalendar::Ptr findCalendar(const KCalendarCore::Incidence::Ptr &incidence) const;

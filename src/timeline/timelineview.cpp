@@ -95,7 +95,7 @@ public:
     QModelIndex indexBelow(const QModelIndex &idx) const override
     {
         if (!idx.isValid()) {
-            return QModelIndex();
+            return {};
         }
         return idx.model()->index(idx.row() + 1, idx.column(), idx.parent());
     }
@@ -103,7 +103,7 @@ public:
     QModelIndex indexAbove(const QModelIndex &idx) const override
     {
         if (!idx.isValid()) {
-            return QModelIndex();
+            return {};
         }
         return idx.model()->index(idx.row() - 1, idx.column(), idx.parent());
     }

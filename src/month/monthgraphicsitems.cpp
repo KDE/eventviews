@@ -27,7 +27,7 @@ ScrollIndicator::ScrollIndicator(ScrollIndicator::ArrowDirection dir)
 
 QRectF ScrollIndicator::boundingRect() const
 {
-    return QRectF(-mWidth / 2, -mHeight / 2, mWidth, mHeight);
+    return {-mWidth / 2, -mHeight / 2, mWidth, mHeight};
 }
 
 void ScrollIndicator::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
@@ -205,8 +205,8 @@ QPainterPath MonthGraphicsItem::widgetPath(bool border) const
 QRectF MonthGraphicsItem::boundingRect() const
 {
     // width - 2 because of the cell-dividing line with width == 1 at beginning and end
-    return QRectF(0, 0, (daySpan() + 1) * mMonthItem->monthScene()->columnWidth() - 2,
-                  mMonthItem->monthScene()->itemHeight());
+    return {0, 0, (daySpan() + 1) * mMonthItem->monthScene()->columnWidth() - 2,
+                  mMonthItem->monthScene()->itemHeight()};
 }
 
 void MonthGraphicsItem::paint(QPainter *p, const QStyleOptionGraphicsItem *, QWidget *)

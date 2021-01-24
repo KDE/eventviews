@@ -62,7 +62,7 @@ void JournalDateView::addJournal(const Akonadi::Item &j)
         return;
     }
 
-    QWidget *container = new QWidget(this);
+    auto *container = new QWidget(this);
     layout()->addWidget(container);
     auto layout = new QHBoxLayout(container);
     layout->addStretch(1);

@@ -1683,7 +1683,7 @@ QPoint Agenda::contentsToGrid(const QPoint &pos) const
                  ? d->mColumns - pos.x() / d->mGridSpacingX
                  : pos.x() / d->mGridSpacingX);
     int gy = int(pos.y() / d->mGridSpacingY);
-    return QPoint(gx, gy);
+    return {gx, gy};
 }
 
 /*
@@ -1695,7 +1695,7 @@ QPoint Agenda::gridToContents(const QPoint &gpos) const
                 ? (d->mColumns - gpos.x()) * d->mGridSpacingX
                 : gpos.x() * d->mGridSpacingX);
     int y = int(gpos.y() * d->mGridSpacingY);
-    return QPoint(x, y);
+    return {x, y};
 }
 
 /*
@@ -2328,7 +2328,7 @@ QSize Agenda::sizeHint() const
     if (d->mAllDayMode) {
         return QWidget::sizeHint();
     } else {
-        return QSize(parentWidget()->width(), d->mGridSpacingY * d->mRows);
+        return {parentWidget()->width(), d->mGridSpacingY * d->mRows};
     }
 }
 

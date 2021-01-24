@@ -26,7 +26,7 @@ class JournalFrame : public QFrame
 {
     Q_OBJECT
 public:
-    typedef QList<JournalFrame *> List;
+    using List = QList<JournalFrame *>;
 
     JournalFrame(const Akonadi::Item &journal, const Akonadi::ETMCalendar::Ptr &calendar, QWidget *parent);
 
@@ -92,7 +92,7 @@ class JournalDateView : public QFrame
 {
     Q_OBJECT
 public:
-    typedef QList<JournalDateView *> List;
+    using List = QList<JournalDateView *>;
 
     JournalDateView(const Akonadi::ETMCalendar::Ptr &, QWidget *parent);
     ~JournalDateView();

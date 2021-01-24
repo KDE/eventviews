@@ -207,7 +207,7 @@ private:
     Private *const d;
 };
 
-typedef QSharedPointer<Prefs> PrefsPtr;
+using PrefsPtr = QSharedPointer<Prefs>;
 }
 
 #endif

@@ -323,7 +323,7 @@ void TimeLabels::paintEvent(QPaintEvent *)
 
 QSize TimeLabels::sizeHint() const
 {
-    return QSize(mMiniWidth, mRows * mCellHeight);
+    return {mMiniWidth, mRows * mCellHeight};
 }
 
 void TimeLabels::contextMenuEvent(QContextMenuEvent *event)

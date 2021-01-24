@@ -115,7 +115,7 @@ QColor MultiViewCalendar::resourceColor(const KCalendarCore::Incidence::Ptr &inc
     if (cal) {
         return cal->resourceColor(incidence);
     }
-    return QColor();
+    return {};
 }
 
 Akonadi::Item MultiViewCalendar::item(const KCalendarCore::Incidence::Ptr &incidence) const

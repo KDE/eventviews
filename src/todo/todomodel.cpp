@@ -827,7 +827,7 @@ Qt::ItemFlags TodoModel::flags(const QModelIndex &index) const
 QModelIndex TodoModel::mapFromSource(const QModelIndex &sourceIndex) const
 {
     if (!sourceModel() || !sourceIndex.isValid()) {
-        return QModelIndex();
+        return {};
     }
 
     Q_ASSERT(sourceIndex.internalPointer());
@@ -838,7 +838,7 @@ QModelIndex TodoModel::mapFromSource(const QModelIndex &sourceIndex) const
 QModelIndex TodoModel::mapToSource(const QModelIndex &proxyIndex) const
 {
     if (!sourceModel() || !proxyIndex.isValid()) {
-        return QModelIndex();
+        return {};
     }
 
     if (proxyIndex.column() != 0) {
@@ -878,7 +878,7 @@ QModelIndex TodoModel::index(int row, int column, const QModelIndex &parent) con
         return createIndex(row, column, index.internalPointer());
     }
 
-    return QModelIndex();
+    return {};
 }
 
 QModelIndex TodoModel::parent(const QModelIndex &child) const
@@ -896,7 +896,7 @@ QModelIndex TodoModel::parent(const QModelIndex &child) const
         return createIndex(parentIndex.row(), child.column(), parentIndex.internalPointer());
     }
 
-    return QModelIndex();
+    return {};
 }
 
 QModelIndex TodoModel::buddy(const QModelIndex &index) const

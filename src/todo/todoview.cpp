@@ -295,7 +295,7 @@ TodoView::TodoView(const EventViews::PrefsPtr &prefs, bool sidebarView, QWidget 
     auto dummyLayout = new QHBoxLayout();
     dummyLayout->setContentsMargins(0, 0, mView->frameWidth() /*right*/, 0);
     if (!mSidebarView) {
-        QFrame *f = new QFrame(this);
+        auto *f = new QFrame(this);
         f->setFrameShape(QFrame::VLine);
         f->setFrameShadow(QFrame::Sunken);
         dummyLayout->addWidget(f);
