@@ -2328,7 +2328,7 @@ QSize Agenda::sizeHint() const
     if (d->mAllDayMode) {
         return QWidget::sizeHint();
     } else {
-        return {parentWidget()->width(), d->mGridSpacingY * d->mRows};
+        return {parentWidget()->width(), static_cast<int>(d->mGridSpacingY * d->mRows)};
     }
 }
 
