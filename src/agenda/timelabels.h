@@ -12,7 +12,8 @@
 
 #include <QFrame>
 
-namespace EventViews {
+namespace EventViews
+{
 class Agenda;
 class TimeLabelsZone;
 
@@ -79,7 +80,7 @@ private:
     Agenda *mAgenda = nullptr;
     TimeLabelsZone *mTimeLabelsZone = nullptr;
 
-    QFrame *mMousePos = nullptr;  // shows a marker for the current mouse position in y direction
+    QFrame *mMousePos = nullptr; // shows a marker for the current mouse position in y direction
 };
 }
 

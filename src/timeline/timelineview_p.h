@@ -9,8 +9,8 @@
 
 #include "timelineview.h"
 
-#include <Collection>
 #include <AkonadiCore/Item>
+#include <Collection>
 
 #include <QMap>
 #include <QModelIndex>
@@ -19,11 +19,13 @@
 class QStandardItem;
 class QTreeWidget;
 
-namespace KGantt {
+namespace KGantt
+{
 class GraphicsView;
 }
 
-namespace EventViews {
+namespace EventViews
+{
 class TimelineItem;
 class RowController;
 

@@ -15,8 +15,10 @@
 #include <QDate>
 #include <QPixmap>
 
-namespace EventViews {
-namespace CalendarDecoration {
+namespace EventViews
+{
+namespace CalendarDecoration
+{
 /**
   @class Element
 

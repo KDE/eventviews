@@ -10,7 +10,8 @@
 
 class KCheckableProxyModel;
 
-namespace EventViews {
+namespace EventViews
+{
 class ConfigDialogInterface
 {
 public:

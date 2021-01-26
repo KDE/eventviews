@@ -110,6 +110,7 @@ public:
     void updateEditorGeometry(QWidget *editor, const QStyleOptionViewItem &option, const QModelIndex &index) const override;
 
     void setCalendar(const Akonadi::ETMCalendar::Ptr &cal);
+
 private:
     Akonadi::ETMCalendar::Ptr mCalendar;
 };
@@ -128,6 +129,7 @@ public:
 
     void paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const override;
     QSize sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const override;
+
 private:
     QTextDocument *m_textDoc = nullptr;
 };

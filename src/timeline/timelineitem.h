@@ -15,11 +15,12 @@
 #include <AkonadiCore/Item>
 
 #include <QDateTime>
-#include <QMap>
 #include <QList>
+#include <QMap>
 #include <QStandardItemModel>
 
-namespace EventViews {
+namespace EventViews
+{
 class TimelineSubItem;
 
 class TimelineItem : public QObject
@@ -37,7 +38,7 @@ public:
 
 private:
     Akonadi::ETMCalendar::Ptr mCalendar;
-    QMap<Akonadi::Item::Id, QList<QStandardItem *> > mItemMap;
+    QMap<Akonadi::Item::Id, QList<QStandardItem *>> mItemMap;
     QStandardItemModel *const mModel;
     QColor mColor;
     const uint mIndex;
@@ -49,7 +50,7 @@ public:
     TimelineSubItem(const Akonadi::ETMCalendar::Ptr &calendar, const Akonadi::Item &incidence, TimelineItem *parent);
     ~TimelineSubItem();
 
-    Q_REQUIRED_RESULT Akonadi::Item  incidence() const
+    Q_REQUIRED_RESULT Akonadi::Item incidence() const
     {
         return mIncidence;
     }

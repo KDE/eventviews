@@ -15,7 +15,6 @@ class IncidenceTreeModel : public QAbstractProxyModel
 {
     Q_OBJECT
 public:
-
     /**
      * Constructs a new IncidenceTreeModel.
      */

@@ -48,8 +48,7 @@ void TimelineItem::insertIncidence(const Akonadi::Item &aitem, const QDateTime &
     using ItemList = QList<QStandardItem *>;
     ItemList list = mItemMap.value(aitem.id());
     for (ItemList::ConstIterator it = list.constBegin(); it != list.constEnd(); ++it) {
-        if (static_cast<TimelineSubItem *>(*it)->startTime() == start
-            && static_cast<TimelineSubItem *>(*it)->endTime() == end) {
+        if (static_cast<TimelineSubItem *>(*it)->startTime() == start && static_cast<TimelineSubItem *>(*it)->endTime() == end) {
             return;
         }
     }
@@ -140,8 +139,9 @@ void TimelineSubItem::updateToolTip()
 
     mToolTipNeedsUpdate = false;
 
-    setData(IncidenceFormatter::toolTipStr(
-                CalendarSupport::displayName(mCalendar.data(), mIncidence.parentCollection()),
-                CalendarSupport::incidence(mIncidence),
-                originalStart().date(), true), Qt::ToolTipRole);
+    setData(IncidenceFormatter::toolTipStr(CalendarSupport::displayName(mCalendar.data(), mIncidence.parentCollection()),
+                                           CalendarSupport::incidence(mIncidence),
+                                           originalStart().date(),
+                                           true),
+            Qt::ToolTipRole);
 }

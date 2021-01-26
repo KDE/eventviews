@@ -14,11 +14,13 @@
 #include <Akonadi/Calendar/ETMCalendar>
 #include <QWidget>
 
-namespace KPIM {
+namespace KPIM
+{
 class KCheckComboBox;
 }
 
-namespace Akonadi {
+namespace Akonadi
+{
 class TagSelectionComboBox;
 }
 

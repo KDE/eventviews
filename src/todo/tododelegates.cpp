@@ -70,12 +70,10 @@ QSize TodoCompleteDelegate::sizeHint(const QStyleOptionViewItem &option, const Q
     pbOption.QStyleOption::operator=(option);
     initStyleOptionProgressBar(&pbOption, index);
 
-    return style->sizeFromContents(QStyle::CT_ProgressBar, &pbOption,
-                                   QSize(), opt.widget);
+    return style->sizeFromContents(QStyle::CT_ProgressBar, &pbOption, QSize(), opt.widget);
 }
 
-void TodoCompleteDelegate::initStyleOptionProgressBar(
-    QStyleOptionProgressBar *option, const QModelIndex &index) const
+void TodoCompleteDelegate::initStyleOptionProgressBar(QStyleOptionProgressBar *option, const QModelIndex &index) const
 {
     option->rect.adjust(0, 1, 0, -1);
     option->maximum = 100;
@@ -130,8 +128,7 @@ void TodoCompleteSlider::updateTip(int value)
 {
     QPoint p;
     p.setY(height() / 2);
-    p.setX(style()->sliderPositionFromValue(minimum(), maximum(),
-                                            value, width()));
+    p.setX(style()->sliderPositionFromValue(minimum(), maximum(), value, width()));
 
     const QString text = QStringLiteral("%1%").arg(value);
     QToolTip::showText(mapToGlobal(p), text, this);
@@ -222,8 +219,7 @@ void TodoDueDateDelegate::setModelData(QWidget *editor, QAbstractItemModel *mode
 void TodoDueDateDelegate::updateEditorGeometry(QWidget *editor, const QStyleOptionViewItem &option, const QModelIndex &index) const
 {
     Q_UNUSED(index)
-    editor->setGeometry(QStyle::alignedRect(QApplication::layoutDirection(), Qt::AlignCenter,
-                                            editor->size(), option.rect));
+    editor->setGeometry(QStyle::alignedRect(QApplication::layoutDirection(), Qt::AlignCenter, editor->size(), option.rect));
 }
 
 // ---------------- CATEGORIES DELEGATE --------------------------
@@ -285,26 +281,22 @@ void TodoRichTextDelegate::paint(QPainter *painter, const QStyleOptionViewItem &
         const QWidget *widget = opt.widget;
         QStyle *style = widget ? widget->style() : QApplication::style();
 
-        QRect textRect = style->subElementRect(QStyle::SE_ItemViewItemText,
-                                               &opt, widget);
+        QRect textRect = style->subElementRect(QStyle::SE_ItemViewItemText, &opt, widget);
 
         // draw the item without text
         opt.text.clear();
         style->drawControl(QStyle::CE_ItemViewItem, &opt, painter, widget);
 
         // draw the text (rich text)
-        QPalette::ColorGroup cg = (opt.state & QStyle::State_Enabled)
-                                  ? QPalette::Normal : QPalette::Disabled;
+        QPalette::ColorGroup cg = (opt.state & QStyle::State_Enabled) ? QPalette::Normal : QPalette::Disabled;
         if (cg == QPalette::Normal && !(opt.state & QStyle::State_Active)) {
             cg = QPalette::Inactive;
         }
 
         if (opt.state & QStyle::State_Selected) {
-            painter->setPen(
-                QPen(opt.palette.brush(cg, QPalette::HighlightedText), 0));
+            painter->setPen(QPen(opt.palette.brush(cg, QPalette::HighlightedText), 0));
         } else {
-            painter->setPen(
-                QPen(opt.palette.brush(cg, QPalette::Text), 0));
+            painter->setPen(QPen(opt.palette.brush(cg, QPalette::Text), 0));
         }
         if (opt.state & QStyle::State_Editing) {
             painter->setPen(QPen(opt.palette.brush(cg, QPalette::Text), 0));
@@ -345,7 +337,6 @@ QSize TodoRichTextDelegate::sizeHint(const QStyleOptionViewItem &option, const Q
     }
 
     // This row might not have a checkbox, so give it more height so it appears the same size as other rows.
-    const int checkboxHeight = QApplication::style()->sizeFromContents(QStyle::CT_CheckBox, &option,
-                                                                       QSize()).height();
+    const int checkboxHeight = QApplication::style()->sizeFromContents(QStyle::CT_CheckBox, &option, QSize()).height();
     return {ret.width(), qMax(ret.height(), checkboxHeight)};
 }

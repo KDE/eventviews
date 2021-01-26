@@ -14,14 +14,15 @@
 
 #include <CalendarSupport/Utils>
 
-#include <QVBoxLayout>
 #include "calendarview_debug.h"
 #include <QEvent>
 #include <QScrollArea>
+#include <QVBoxLayout>
 
 using namespace EventViews;
 
-JournalView::JournalView(QWidget *parent) : EventView(parent)
+JournalView::JournalView(QWidget *parent)
+    : EventView(parent)
 {
     auto topLayout = new QVBoxLayout(this);
     topLayout->setContentsMargins(0, 0, 0, 0);
@@ -53,23 +54,15 @@ void JournalView::appendJournal(const Akonadi::Item &journal, const QDate &dt)
         entry->setIncidenceChanger(mChanger);
         entry->show();
         connect(this, &JournalView::flushEntries, entry, &JournalDateView::flushEntries);
-        connect(this, &JournalView::setIncidenceChangerSignal,
-                entry, &JournalDateView::setIncidenceChanger);
-        connect(this, &JournalView::journalEdited,
-                entry, &JournalDateView::journalEdited);
-        connect(this, &JournalView::journalDeleted,
-                entry, &JournalDateView::journalDeleted);
+        connect(this, &JournalView::setIncidenceChangerSignal, entry, &JournalDateView::setIncidenceChanger);
+        connect(this, &JournalView::journalEdited, entry, &JournalDateView::journalEdited);
+        connect(this, &JournalView::journalDeleted, entry, &JournalDateView::journalDeleted);
 
-        connect(entry, &JournalDateView::editIncidence,
-                this, &EventView::editIncidenceSignal);
-        connect(entry, &JournalDateView::deleteIncidence,
-                this, &EventView::deleteIncidenceSignal);
-        connect(entry, &JournalDateView::newJournal,
-                this, &EventView::newJournalSignal);
-        connect(entry, &JournalDateView::incidenceSelected,
-                this, &EventView::incidenceSelected);
-        connect(entry, &JournalDateView::printJournal,
-                this, &JournalView::printJournal);
+        connect(entry, &JournalDateView::editIncidence, this, &EventView::editIncidenceSignal);
+        connect(entry, &JournalDateView::deleteIncidence, this, &EventView::deleteIncidenceSignal);
+        connect(entry, &JournalDateView::newJournal, this, &EventView::newJournalSignal);
+        connect(entry, &JournalDateView::incidenceSelected, this, &EventView::incidenceSelected);
+        connect(entry, &JournalDateView::printJournal, this, &JournalView::printJournal);
         mEntries.insert(dt, entry);
     }
 
@@ -93,7 +86,7 @@ Akonadi::Item::List JournalView::selectedIncidences() const
 
 void JournalView::clearEntries()
 {
-    //qDebug() << "JournalView::clearEntries()";
+    // qDebug() << "JournalView::clearEntries()";
     QMap<QDate, JournalDateView *>::Iterator it;
     for (it = mEntries.begin(); it != mEntries.end(); ++it) {
         delete it.value();
@@ -125,22 +118,21 @@ void JournalView::showDates(const QDate &start, const QDate &end, const QDate &)
 {
     clearEntries();
     if (end < start) {
-        qCWarning(CALENDARVIEW_LOG) << "End is smaller than start. end=" << end << "; start="
-                                    << start;
+        qCWarning(CALENDARVIEW_LOG) << "End is smaller than start. end=" << end << "; start=" << start;
         return;
     }
 
     for (QDate d = end; d >= start; d = d.addDays(-1)) {
         const KCalendarCore::Journal::List jnls = calendar()->journals(d);
-        //qCDebug(CALENDARVIEW_LOG) << "Found" << jnls.count() << "journals on date" << d;
+        // qCDebug(CALENDARVIEW_LOG) << "Found" << jnls.count() << "journals on date" << d;
         for (const KCalendarCore::Journal::Ptr &journal : jnls) {
             Akonadi::Item item = calendar()->item(journal);
             appendJournal(item, d);
         }
         if (jnls.isEmpty()) {
             // create an empty dateentry widget
-            //updateView();
-            //qCDebug(CALENDARVIEW_LOG) << "Appended null journal";
+            // updateView();
+            // qCDebug(CALENDARVIEW_LOG) << "Appended null journal";
             appendJournal(Akonadi::Item(), d);
         }
     }

@@ -18,14 +18,14 @@
 
 #include <KCalUtils/IncidenceFormatter>
 
-#include <QTextBrowser>
-#include <KLocalizedString>
 #include "calendarview_debug.h"
+#include <KLocalizedString>
+#include <QTextBrowser>
 
 #include <QEvent>
+#include <QFontDatabase>
 #include <QHBoxLayout>
 #include <QPushButton>
-#include <QFontDatabase>
 
 using namespace EventViews;
 
@@ -75,18 +75,15 @@ void JournalDateView::addJournal(const Akonadi::Item &j)
     entry->setIncidenceChanger(mChanger);
 
     mEntries.insert(j.id(), entry);
-    connect(this, &JournalDateView::setIncidenceChangerSignal,
-            entry, &JournalFrame::setIncidenceChanger);
-    connect(this, &JournalDateView::setDateSignal,
-            entry, &JournalFrame::setDate);
-    connect(entry, &JournalFrame::deleteIncidence,
-            this, &JournalDateView::deleteIncidence);
-    connect(entry, &JournalFrame::editIncidence,
-            this, &JournalDateView::editIncidence);
-    connect(entry, &JournalFrame::incidenceSelected,
-            this, &JournalDateView::incidenceSelected);
-    connect(entry, QOverload<const KCalendarCore::Journal::Ptr &, bool>::of(&JournalFrame::printJournal),
-            this, QOverload<const KCalendarCore::Journal::Ptr &, bool>::of(&JournalDateView::printJournal));
+    connect(this, &JournalDateView::setIncidenceChangerSignal, entry, &JournalFrame::setIncidenceChanger);
+    connect(this, &JournalDateView::setDateSignal, entry, &JournalFrame::setDate);
+    connect(entry, &JournalFrame::deleteIncidence, this, &JournalDateView::deleteIncidence);
+    connect(entry, &JournalFrame::editIncidence, this, &JournalDateView::editIncidence);
+    connect(entry, &JournalFrame::incidenceSelected, this, &JournalDateView::incidenceSelected);
+    connect(entry,
+            QOverload<const KCalendarCore::Journal::Ptr &, bool>::of(&JournalFrame::printJournal),
+            this,
+            QOverload<const KCalendarCore::Journal::Ptr &, bool>::of(&JournalDateView::printJournal));
 }
 
 Akonadi::Item::List JournalDateView::journals() const
@@ -188,8 +185,7 @@ JournalFrame::JournalFrame(const Akonadi::Item &j, const Akonadi::ETMCalendar::P
     mPrintPreviewButton->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
     mPrintPreviewButton->setToolTip(i18n("Print preview this journal entry"));
     buttonsLayout->addWidget(mPrintPreviewButton);
-    connect(mPrintPreviewButton, &QAbstractButton::clicked, this,
-            &JournalFrame::printPreviewJournal);
+    connect(mPrintPreviewButton, &QAbstractButton::clicked, this, &JournalFrame::printPreviewJournal);
 
     readJournal(mJournal);
     mDirty = false;
@@ -288,7 +284,7 @@ void JournalFrame::readJournal(const Akonadi::Item &j)
     cursor.movePosition(QTextCursor::Start);
 
     QTextBlockFormat bodyBlock = QTextBlockFormat(cursor.blockFormat());
-    //FIXME: Do padding
+    // FIXME: Do padding
     bodyBlock.setTextIndent(2);
     QTextCharFormat bodyFormat = QTextCharFormat(cursor.charFormat());
     if (!journal->summary().isEmpty()) {
@@ -301,8 +297,7 @@ void JournalFrame::readJournal(const Akonadi::Item &j)
     QTextCharFormat dateFormat = bodyFormat;
     dateFormat.setFontWeight(QFont::Bold);
     dateFormat.setFontPointSize(baseFontSize + 1);
-    cursor.insertText(KCalUtils::IncidenceFormatter::dateTimeToString(
-                          journal->dtStart(), journal->allDay()), dateFormat);
+    cursor.insertText(KCalUtils::IncidenceFormatter::dateTimeToString(journal->dtStart(), journal->allDay()), dateFormat);
     cursor.insertBlock();
     cursor.insertBlock();
     cursor.setBlockCharFormat(bodyFormat);

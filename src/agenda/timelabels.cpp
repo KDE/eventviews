@@ -72,9 +72,9 @@ void TimeLabels::hideMousePos()
 void TimeLabels::colorMousePos()
 {
     QPalette pal;
-    pal.setColor(QPalette::Window,  // for Oxygen
+    pal.setColor(QPalette::Window, // for Oxygen
                  mTimeLabelsZone->preferences()->agendaMarcusBainsLineLineColor());
-    pal.setColor(QPalette::WindowText,  // for Plastique
+    pal.setColor(QPalette::WindowText, // for Plastique
                  mTimeLabelsZone->preferences()->agendaMarcusBainsLineLineColor());
     mMousePos->setPalette(pal);
 }
@@ -162,11 +162,8 @@ int TimeLabels::yposToCell(const int ypos) const
     }
 
     const auto firstDay = QDateTime(datelist.first(), QTime(0, 0, 0), Qt::LocalTime).toUTC();
-    const int beginning   // the hour we start drawing with
-        = !mTimezone.isValid()
-          ? 0
-          : (mTimezone.offsetFromUtc(firstDay)
-             -mTimeLabelsZone->preferences()->timeZone().offsetFromUtc(firstDay)) / 3600;
+    const int beginning // the hour we start drawing with
+        = !mTimezone.isValid() ? 0 : (mTimezone.offsetFromUtc(firstDay) - mTimeLabelsZone->preferences()->timeZone().offsetFromUtc(firstDay)) / 3600;
 
     return static_cast<int>(ypos / mCellHeight) + beginning;
 }
@@ -198,7 +195,7 @@ int TimeLabels::cellToHour(const int cell) const
 
 QString TimeLabels::cellToSuffix(const int cell) const
 {
-    //TODO: rewrite this using QTime's time formats. "am/pm" doesn't make sense
+    // TODO: rewrite this using QTime's time formats. "am/pm" doesn't make sense
     // in some locale's
     QString suffix;
     if (use12Clock()) {
@@ -232,11 +229,8 @@ void TimeLabels::paintEvent(QPaintEvent *)
     const int cy = -y(); // y() returns a negative value.
 
     const auto firstDay = QDateTime(datelist.first(), QTime(0, 0, 0), Qt::LocalTime).toUTC();
-    const int beginning
-        = !mTimezone.isValid()
-          ? 0
-          : (mTimezone.offsetFromUtc(firstDay)
-             -mTimeLabelsZone->preferences()->timeZone().offsetFromUtc(firstDay)) / 3600;
+    const int beginning =
+        !mTimezone.isValid() ? 0 : (mTimezone.offsetFromUtc(firstDay) - mTimeLabelsZone->preferences()->timeZone().offsetFromUtc(firstDay)) / 3600;
 
     // bug:  the parameters cx and cw are the areas that need to be
     //       redrawn, not the area of the widget.  unfortunately, this
@@ -255,7 +249,7 @@ void TimeLabels::paintEvent(QPaintEvent *)
     QFont hourFont = mTimeLabelsZone->preferences()->agendaTimeLabelsFont();
     p.setFont(font());
 
-    //TODO: rewrite this using QTime's time formats. "am/pm" doesn't make sense
+    // TODO: rewrite this using QTime's time formats. "am/pm" doesn't make sense
     // in some locale's
     QString suffix;
     if (!use12Clock()) {
@@ -268,7 +262,7 @@ void TimeLabels::paintEvent(QPaintEvent *)
     if (timeHeight > mCellHeight) {
         timeHeight = static_cast<int>(mCellHeight - 1);
         int pointS = hourFont.pointSize();
-        while (pointS > 4) {   // TODO: use smallestReadableFont() when added to kdelibs
+        while (pointS > 4) { // TODO: use smallestReadableFont() when added to kdelibs
             hourFont.setPointSize(pointS);
             fm = QFontMetrics(hourFont);
             if (fm.ascent() < mCellHeight) {
@@ -279,15 +273,15 @@ void TimeLabels::paintEvent(QPaintEvent *)
         fm = QFontMetrics(hourFont);
         timeHeight = fm.ascent();
     }
-    //timeHeight -= (timeHeight/4-2);
+    // timeHeight -= (timeHeight/4-2);
     QFont suffixFont = hourFont;
     suffixFont.setPointSize(suffixFont.pointSize() / 2);
     QFontMetrics fmS(suffixFont);
     const int startW = cw - frameWidth() - 2;
     const int tw2 = fmS.boundingRect(suffix).width();
     const int divTimeHeight = (timeHeight - 1) / 2 - 1;
-    //testline
-    //p->drawLine(0,0,0,contentsHeight());
+    // testline
+    // p->drawLine(0,0,0,contentsHeight());
     while (y < cy + ch + mCellHeight) {
         QColor lineColor, textColor;
         textColor = palette().color(QPalette::WindowText);
@@ -331,13 +325,9 @@ void TimeLabels::contextMenuEvent(QContextMenuEvent *event)
     Q_UNUSED(event)
 
     QMenu popup(this);
-    QAction *editTimeZones = popup.addAction(QIcon::fromTheme(QStringLiteral("document-properties")),
-                                             i18n("&Add Timezones..."));
-    QAction *removeTimeZone = popup.addAction(QIcon::fromTheme(QStringLiteral("edit-delete")),
-                                              i18n("&Remove Timezone %1", i18n(mTimezone.id().constData())));
-    if (!mTimezone.isValid()
-        || !mTimeLabelsZone->preferences()->timeScaleTimezones().count()
-        || mTimezone == mTimeLabelsZone->preferences()->timeZone()) {
+    QAction *editTimeZones = popup.addAction(QIcon::fromTheme(QStringLiteral("document-properties")), i18n("&Add Timezones..."));
+    QAction *removeTimeZone = popup.addAction(QIcon::fromTheme(QStringLiteral("edit-delete")), i18n("&Remove Timezone %1", i18n(mTimezone.id().constData())));
+    if (!mTimezone.isValid() || !mTimeLabelsZone->preferences()->timeScaleTimezones().count() || mTimezone == mTimeLabelsZone->preferences()->timeZone()) {
         removeTimeZone->setEnabled(false);
     }
 
@@ -376,16 +366,15 @@ QString TimeLabels::headerToolTip() const
 
     toolTip += QLatin1String("<qt>");
     toolTip += i18nc("title for timezone info, the timezone id and utc offset",
-                     "<b>%1 (%2)</b>", i18n(mTimezone.id().constData()),
+                     "<b>%1 (%2)</b>",
+                     i18n(mTimezone.id().constData()),
                      KCalUtils::Stringify::tzUTCOffsetStr(mTimezone));
     toolTip += QLatin1String("<hr>");
-    toolTip += i18nc("heading for timezone display name",
-                     "<i>Name:</i> %1", mTimezone.displayName(now, QTimeZone::LongName));
+    toolTip += i18nc("heading for timezone display name", "<i>Name:</i> %1", mTimezone.displayName(now, QTimeZone::LongName));
     toolTip += QLatin1String("<br/>");
 
     if (mTimezone.country() != QLocale::AnyCountry) {
-        toolTip += i18nc("heading for timezone country",
-                         "<i>Country:</i> %1", QLocale::countryToString(mTimezone.country()));
+        toolTip += i18nc("heading for timezone country", "<i>Country:</i> %1", QLocale::countryToString(mTimezone.country()));
         toolTip += QLatin1String("<br/>");
     }
 
@@ -397,15 +386,13 @@ QString TimeLabels::headerToolTip() const
     }
     abbreviations.chop(7);
     if (!abbreviations.isEmpty()) {
-        toolTip += i18nc("heading for comma-separated list of timezone abbreviations",
-                         "<i>Abbreviations:</i>");
+        toolTip += i18nc("heading for comma-separated list of timezone abbreviations", "<i>Abbreviations:</i>");
         toolTip += abbreviations;
         toolTip += QLatin1String("<br/>");
     }
     const QString timeZoneComment(mTimezone.comment());
     if (!timeZoneComment.isEmpty()) {
-        toolTip += i18nc("heading for the timezone comment",
-                         "<i>Comment:</i> %1", timeZoneComment);
+        toolTip += i18nc("heading for the timezone comment", "<i>Comment:</i> %1", timeZoneComment);
     }
     toolTip += QLatin1String("</qt>");
 
@@ -422,7 +409,8 @@ bool TimeLabels::event(QEvent *event)
         toolTip += QLatin1String("<qt>");
         toolTip += i18nc("[hour of the day][am/pm/00] [timezone id (timezone-offset)]",
                          "%1%2<br/>%3 (%4)",
-                         cellToHour(cell), cellToSuffix(cell),
+                         cellToHour(cell),
+                         cellToSuffix(cell),
                          i18n(mTimezone.id().constData()),
                          KCalUtils::Stringify::tzUTCOffsetStr(mTimezone));
         toolTip += QLatin1String("</qt>");

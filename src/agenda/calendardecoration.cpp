@@ -53,7 +53,8 @@ QUrl Element::url()
 
 ////////////////////////////////////////////////////////////////////////////////
 
-StoredElement::StoredElement(const QString &id) : Element(id)
+StoredElement::StoredElement(const QString &id)
+    : Element(id)
 {
 }
 
@@ -142,7 +143,7 @@ Decoration::Decoration()
 
 Decoration::~Decoration()
 {
-    //Deleted by label directly.
+    // Deleted by label directly.
 #if 0
     for (Element::List lst : qAsConst(mDayElements)) {
         qDeleteAll(lst);

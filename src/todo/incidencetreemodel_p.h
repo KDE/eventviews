@@ -11,14 +11,14 @@
 
 #include <AkonadiCore/Item>
 
+#include <KCalendarCore/Incidence>
 #include <QHash>
-#include <QObject>
-#include <QVector>
 #include <QModelIndex>
+#include <QObject>
+#include <QPersistentModelIndex>
 #include <QSharedPointer>
 #include <QStringList>
-#include <QPersistentModelIndex>
-#include <KCalendarCore/Incidence>
+#include <QVector>
 
 using Uid = QString;
 using ParentUid = QString;
@@ -45,7 +45,8 @@ struct PreNode {
     QPersistentModelIndex sourceIndex;
     Akonadi::Item item;
     int depth;
-    PreNode() : depth(-1)
+    PreNode()
+        : depth(-1)
     {
     }
 };
@@ -61,13 +62,13 @@ public:
     void removeNode(const Node::Ptr &node);
     QModelIndex indexForNode(const Node::Ptr &node) const;
     int rowForNode(const Node::Ptr &node) const;
-    bool indexBeingRemoved(const QModelIndex &) const;   // Is it being removed?
+    bool indexBeingRemoved(const QModelIndex &) const; // Is it being removed?
     void dumpTree();
     void assert_and_dump(bool condition, const QString &message);
     Node::List sorted(const Node::List &nodes) const;
     PreNode::Ptr prenodeFromSourceRow(int sourceRow) const;
     void setSourceModel(QAbstractItemModel *model);
-    
+
 public:
     Node::Map m_nodeMap;
     Node::List m_toplevelNodeList;
@@ -91,6 +92,7 @@ private Q_SLOTS:
     void onModelReset();
     void onLayoutAboutToBeChanged();
     void onLayoutChanged();
+
 private:
     IncidenceTreeModel *const q;
 };

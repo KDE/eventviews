@@ -51,7 +51,6 @@ void EventViewPrivate::setUpModels()
     delete customCollectionSelection;
     customCollectionSelection = nullptr;
     if (collectionSelectionModel) {
-        customCollectionSelection = new CalendarSupport::CollectionSelection(
-            collectionSelectionModel->selectionModel());
+        customCollectionSelection = new CalendarSupport::CollectionSelection(collectionSelectionModel->selectionModel());
     }
 }

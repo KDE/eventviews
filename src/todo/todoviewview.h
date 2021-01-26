@@ -9,8 +9,8 @@
 #ifndef CALENDARVIEWS_TODOVIEWVIEW_H
 #define CALENDARVIEWS_TODOVIEWVIEW_H
 
-#include <QTreeView>
 #include <QTimer>
+#include <QTreeView>
 
 class QMenu;
 

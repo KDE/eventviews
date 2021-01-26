@@ -25,20 +25,20 @@ DecorationLabel::DecorationLabel(CalendarDecoration::Element *e, QWidget *parent
     mUrl = e->url();
     setUrl(mUrl);
 
-    connect(e, &CalendarDecoration::Element::gotNewExtensiveText,
-            this, &DecorationLabel::setExtensiveText);
-    connect(e, &CalendarDecoration::Element::gotNewLongText,
-            this, &DecorationLabel::setLongText);
-    connect(e, &CalendarDecoration::Element::gotNewPixmap,
-            this, &DecorationLabel::setPixmap);
-    connect(e, &CalendarDecoration::Element::gotNewShortText,
-            this, &DecorationLabel::setShortText);
-    connect(e, &CalendarDecoration::Element::gotNewUrl,
-            this, &DecorationLabel::setUrl);
+    connect(e, &CalendarDecoration::Element::gotNewExtensiveText, this, &DecorationLabel::setExtensiveText);
+    connect(e, &CalendarDecoration::Element::gotNewLongText, this, &DecorationLabel::setLongText);
+    connect(e, &CalendarDecoration::Element::gotNewPixmap, this, &DecorationLabel::setPixmap);
+    connect(e, &CalendarDecoration::Element::gotNewShortText, this, &DecorationLabel::setShortText);
+    connect(e, &CalendarDecoration::Element::gotNewUrl, this, &DecorationLabel::setUrl);
     squeezeContentsToLabel();
 }
 
-DecorationLabel::DecorationLabel(const QString &shortText, const QString &longText, const QString &extensiveText, const QPixmap &pixmap, const QUrl &url, QWidget *parent)
+DecorationLabel::DecorationLabel(const QString &shortText,
+                                 const QString &longText,
+                                 const QString &extensiveText,
+                                 const QPixmap &pixmap,
+                                 const QUrl &url,
+                                 QWidget *parent)
     : QLabel(parent)
     , mShortText(shortText)
     , mLongText(longText)
@@ -131,7 +131,7 @@ void DecorationLabel::setUrl(const QUrl &url)
 
 void DecorationLabel::squeezeContentsToLabel()
 {
-    if (!mAutomaticSqueeze) {   // The content type to use has been set manually
+    if (!mAutomaticSqueeze) { // The content type to use has been set manually
         return;
     }
 
@@ -157,8 +157,7 @@ void DecorationLabel::squeezeContentsToLabel()
     msh.setHeight(fontMetrics().lineSpacing());
     msh.setWidth(0);
     setMinimumSize(msh);
-    setSizePolicy(sizePolicy().horizontalPolicy(),
-                  QSizePolicy::MinimumExpanding);
+    setSizePolicy(sizePolicy().horizontalPolicy(), QSizePolicy::MinimumExpanding);
 }
 
 void DecorationLabel::useDefaultText()

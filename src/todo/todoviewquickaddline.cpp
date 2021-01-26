@@ -15,8 +15,7 @@
 TodoViewQuickAddLine::TodoViewQuickAddLine(QWidget *parent)
     : KLineEdit(parent)
 {
-    connect(this, SIGNAL(returnPressed()),
-            this, SLOT(returnPressedSlot()));
+    connect(this, SIGNAL(returnPressed()), this, SLOT(returnPressedSlot()));
 
     mClickMessage = i18n("Enter a summary to create a new to-do");
     setToolTip(mClickMessage);
@@ -43,8 +42,5 @@ void TodoViewQuickAddLine::resizeEvent(QResizeEvent *event)
 {
     KLineEdit::resizeEvent(event);
 
-    setPlaceholderText(fontMetrics().elidedText(
-                           mClickMessage,
-                           Qt::ElideRight,
-                           width() - clearButtonUsedSize().width()));
+    setPlaceholderText(fontMetrics().elidedText(mClickMessage, Qt::ElideRight, width() - clearButtonUsedSize().width()));
 }

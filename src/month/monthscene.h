@@ -16,11 +16,13 @@
 #include <QGraphicsView>
 #include <QMap>
 
-namespace Akonadi {
+namespace Akonadi
+{
 class IncidenceChanger;
 }
 
-namespace EventViews {
+namespace EventViews
+{
 class MonthCell;
 class MonthItem;
 class MonthView;
@@ -30,17 +32,10 @@ class MonthScene : public QGraphicsScene
 {
     Q_OBJECT
 
-    enum ActionType {
-        None,
-        Move,
-        Resize
-    };
+    enum ActionType { None, Move, Resize };
 
 public:
-    enum ResizeType {
-        ResizeLeft,
-        ResizeRight
-    };
+    enum ResizeType { ResizeLeft, ResizeRight };
 
     explicit MonthScene(MonthView *parent);
     ~MonthScene() override;
@@ -228,7 +223,7 @@ protected:
     /**
       Handles drag and drop events. Called from eventFilter.
     */
-//    virtual bool eventFilter_drag( QObject *, QDropEvent * );
+    //    virtual bool eventFilter_drag( QObject *, QDropEvent * );
 
     /**
       Returns true if the last item is visible in the given @p cell.

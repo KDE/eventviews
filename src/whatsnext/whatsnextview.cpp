@@ -14,7 +14,6 @@
 
 #include <KCalUtils/IncidenceFormatter>
 
-
 #include <QBoxLayout>
 
 using namespace EventViews;
@@ -54,8 +53,7 @@ int WhatsNextView::currentDateCount() const
 void WhatsNextView::createTaskRow(KIconLoader *kil)
 {
     QString ipath;
-    kil->loadIcon(QStringLiteral("view-calendar-tasks"), KIconLoader::NoGroup, 22,
-                  KIconLoader::DefaultState, QStringList(), &ipath);
+    kil->loadIcon(QStringLiteral("view-calendar-tasks"), KIconLoader::NoGroup, 22, KIconLoader::DefaultState, QStringList(), &ipath);
     mText += QLatin1String("<h2><img src=\"");
     mText += ipath;
     mText += QLatin1String(R"(" width="22" height="22">)");
@@ -67,8 +65,7 @@ void WhatsNextView::updateView()
 {
     KIconLoader *kil = KIconLoader::global();
     QString ipath;
-    kil->loadIcon(QStringLiteral("office-calendar"), KIconLoader::NoGroup, 32,
-                  KIconLoader::DefaultState, QStringList(), &ipath);
+    kil->loadIcon(QStringLiteral("office-calendar"), KIconLoader::NoGroup, 32, KIconLoader::DefaultState, QStringList(), &ipath);
 
     mText = QStringLiteral("<table width=\"100%\">\n");
     mText += QLatin1String("<tr bgcolor=\"#3679AD\"><td><h1>");
@@ -83,22 +80,17 @@ void WhatsNextView::updateView()
     if (mStartDate.daysTo(mEndDate) < 1) {
         mText += QLocale::system().toString(mStartDate);
     } else {
-        mText += i18nc(
-            "date from - to", "%1 - %2",
-            QLocale::system().toString(mStartDate),
-            QLocale::system().toString(mEndDate));
+        mText += i18nc("date from - to", "%1 - %2", QLocale::system().toString(mStartDate), QLocale::system().toString(mEndDate));
     }
     mText += QLatin1String("</h2>\n");
 
     KCalendarCore::Event::List events;
     events = calendar()->events(mStartDate, mEndDate, QTimeZone::systemTimeZone(), false);
-    events = calendar()->sortEvents(events, KCalendarCore::EventSortStartDate,
-                                    KCalendarCore::SortDirectionAscending);
+    events = calendar()->sortEvents(events, KCalendarCore::EventSortStartDate, KCalendarCore::SortDirectionAscending);
 
     if (!events.isEmpty()) {
         mText += QLatin1String("<p></p>");
-        kil->loadIcon(QStringLiteral("view-calendar-day"), KIconLoader::NoGroup, 22,
-                      KIconLoader::DefaultState, QStringList(), &ipath);
+        kil->loadIcon(QStringLiteral("view-calendar-day"), KIconLoader::NoGroup, 22, KIconLoader::DefaultState, QStringList(), &ipath);
         mText += QLatin1String("<h2><img src=\"");
         mText += ipath;
         mText += QLatin1String(R"(" width="22" height="22">)");
@@ -110,8 +102,7 @@ void WhatsNextView::updateView()
             } else {
                 KCalendarCore::Recurrence *recur = ev->recurrence();
                 int duration = ev->dtStart().secsTo(ev->dtEnd());
-                QDateTime start
-                    = recur->getPreviousDateTime(QDateTime(mStartDate, QTime(), Qt::LocalTime));
+                QDateTime start = recur->getPreviousDateTime(QDateTime(mStartDate, QTime(), Qt::LocalTime));
                 QDateTime end = start.addSecs(duration);
                 QDateTime endDate(mEndDate, QTime(23, 59, 59), Qt::LocalTime);
                 if (end.date() >= mStartDate) {
@@ -122,10 +113,10 @@ void WhatsNextView::updateView()
                 if (count > 0) {
                     int i = 0;
                     if (times[0] == start) {
-                        ++i;  // start has already been appended
+                        ++i; // start has already been appended
                     }
                     if (!times[count - 1].isValid()) {
-                        --count;  // list overflow
+                        --count; // list overflow
                     }
                     for (; i < count && times[i].date() <= mEndDate; ++i) {
                         appendEvent(ev, times[i].toLocalTime());
@@ -137,8 +128,7 @@ void WhatsNextView::updateView()
     }
 
     mTodos.clear();
-    KCalendarCore::Todo::List todos = calendar()->todos(KCalendarCore::TodoSortDueDate,
-                                                   KCalendarCore::SortDirectionAscending);
+    KCalendarCore::Todo::List todos = calendar()->todos(KCalendarCore::TodoSortDueDate, KCalendarCore::SortDirectionAscending);
     if (!todos.isEmpty()) {
         bool taskHeaderWasCreated = false;
         for (const KCalendarCore::Todo::Ptr &todo : qAsConst(todos)) {
@@ -172,21 +162,18 @@ void WhatsNextView::updateView()
 
     QStringList myEmails(CalendarSupport::KCalPrefs::instance()->allEmails());
     int replies = 0;
-    events = calendar()->events(QDate::currentDate(), QDate(2975, 12, 6),
-                                QTimeZone::systemTimeZone());
+    events = calendar()->events(QDate::currentDate(), QDate(2975, 12, 6), QTimeZone::systemTimeZone());
     for (const KCalendarCore::Event::Ptr &ev : qAsConst(events)) {
         KCalendarCore::Attendee me = ev->attendeeByMails(myEmails);
         if (!me.isNull()) {
             if (me.status() == KCalendarCore::Attendee::NeedsAction && me.RSVP()) {
                 if (replies == 0) {
                     mText += QLatin1String("<p></p>");
-                    kil->loadIcon(QStringLiteral("mail-reply-sender"), KIconLoader::NoGroup, 22,
-                                  KIconLoader::DefaultState, QStringList(), &ipath);
+                    kil->loadIcon(QStringLiteral("mail-reply-sender"), KIconLoader::NoGroup, 22, KIconLoader::DefaultState, QStringList(), &ipath);
                     mText += QLatin1String("<h2><img src=\"");
                     mText += ipath;
                     mText += QLatin1String(R"(" width="22" height="22">)");
-                    mText += i18n("Events and to-dos that need a reply:")
-                             + QLatin1String("</h2>\n");
+                    mText += i18n("Events and to-dos that need a reply:") + QLatin1String("</h2>\n");
                     mText += QLatin1String("<table>\n");
                 }
                 replies++;
@@ -201,13 +188,11 @@ void WhatsNextView::updateView()
             if (me.status() == KCalendarCore::Attendee::NeedsAction && me.RSVP()) {
                 if (replies == 0) {
                     mText += QLatin1String("<p></p>");
-                    kil->loadIcon(QStringLiteral("mail-reply-sender"), KIconLoader::NoGroup, 22,
-                                  KIconLoader::DefaultState, QStringList(), &ipath);
+                    kil->loadIcon(QStringLiteral("mail-reply-sender"), KIconLoader::NoGroup, 22, KIconLoader::DefaultState, QStringList(), &ipath);
                     mText += QLatin1String("<h2><img src=\"");
                     mText += ipath;
                     mText += QLatin1String(R"(" width="22" height="22">)");
-                    mText += i18n("Events and to-dos that need a reply:")
-                             + QLatin1String("</h2>\n");
+                    mText += i18n("Events and to-dos that need a reply:") + QLatin1String("</h2>\n");
                     mText += QLatin1String("<table>\n");
                 }
                 replies++;
@@ -257,21 +242,20 @@ void WhatsNextView::appendEvent(const KCalendarCore::Incidence::Ptr &incidence, 
 
         if (starttime.date().daysTo(endtime.date()) >= 1) {
             if (event->allDay()) {
-                mText
-                    += i18nc("date from - to", "%1 - %2",
-                             QLocale().toString(starttime.date(), QLocale::ShortFormat),
-                             QLocale().toString(endtime.date(), QLocale::ShortFormat));
+                mText += i18nc("date from - to",
+                               "%1 - %2",
+                               QLocale().toString(starttime.date(), QLocale::ShortFormat),
+                               QLocale().toString(endtime.date(), QLocale::ShortFormat));
             } else {
-                mText
-                    += i18nc("date from - to", "%1 - %2", QLocale().toString(starttime,
-                                                                             QLocale::ShortFormat),
-                             QLocale().toString(endtime, QLocale::ShortFormat));
+                mText +=
+                    i18nc("date from - to", "%1 - %2", QLocale().toString(starttime, QLocale::ShortFormat), QLocale().toString(endtime, QLocale::ShortFormat));
             }
         } else {
             if (event->allDay()) {
                 mText += QLocale().toString(starttime.date(), QLocale::ShortFormat);
             } else {
-                mText += i18nc("date, from - to", "%1, %2 - %3",
+                mText += i18nc("date, from - to",
+                               "%1, %2 - %3",
                                QLocale().toString(starttime.date(), QLocale::ShortFormat),
                                QLocale().toString(starttime.time(), QLocale::ShortFormat),
                                QLocale().toString(endtime.time(), QLocale::ShortFormat));
@@ -303,9 +287,7 @@ void WhatsNextView::appendTodo(const KCalendarCore::Incidence::Ptr &incidence)
 
     if (const KCalendarCore::Todo::Ptr todo = CalendarSupport::todo(aitem)) {
         if (todo->hasDueDate()) {
-            mText += i18nc("to-do due date", "  (Due: %1)",
-                           KCalUtils::IncidenceFormatter::dateTimeToString(
-                               todo->dtDue(), todo->allDay()));
+            mText += i18nc("to-do due date", "  (Due: %1)", KCalUtils::IncidenceFormatter::dateTimeToString(todo->dtDue(), todo->allDay()));
         }
         mText += QLatin1String("</li>\n");
     }

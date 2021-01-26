@@ -9,7 +9,8 @@
 
 #include <QLabel>
 
-namespace EventViews {
+namespace EventViews
+{
 class AlternateLabel : public QLabel
 {
     Q_OBJECT
@@ -17,11 +18,7 @@ public:
     AlternateLabel(const QString &shortlabel, const QString &longlabel, const QString &extensivelabel = QString(), QWidget *parent = nullptr);
     ~AlternateLabel() override;
 
-    enum TextType {
-        Short = 0,
-        Long = 1,
-        Extensive = 2
-    };
+    enum TextType { Short = 0, Long = 1, Extensive = 2 };
 
     Q_REQUIRED_RESULT TextType largestFittingTextType() const;
     void setFixedType(TextType type);

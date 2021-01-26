@@ -12,15 +12,20 @@
 
 #include <QLabel>
 
-namespace EventViews {
+namespace EventViews
+{
 class DecorationLabel : public QLabel
 {
     Q_OBJECT
 public:
     explicit DecorationLabel(EventViews::CalendarDecoration::Element *e, QWidget *parent = nullptr);
 
-    explicit DecorationLabel(const QString &shortText, const QString &longText = QString(), const QString &extensiveText = QString(), const QPixmap &pixmap = QPixmap(),
-                             const QUrl &url = QUrl(), QWidget *parent = nullptr);
+    explicit DecorationLabel(const QString &shortText,
+                             const QString &longText = QString(),
+                             const QString &extensiveText = QString(),
+                             const QPixmap &pixmap = QPixmap(),
+                             const QUrl &url = QUrl(),
+                             QWidget *parent = nullptr);
     ~DecorationLabel() override;
 
 public Q_SLOTS:

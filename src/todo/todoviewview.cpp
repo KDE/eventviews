@@ -29,8 +29,7 @@ TodoViewView::TodoViewView(QWidget *parent)
 
 bool TodoViewView::isEditing(const QModelIndex &index) const
 {
-    return state() & QAbstractItemView::EditingState
-           && currentIndex() == index;
+    return state() & QAbstractItemView::EditingState && currentIndex() == index;
 }
 
 bool TodoViewView::eventFilter(QObject *watched, QEvent *event)
@@ -44,8 +43,7 @@ bool TodoViewView::eventFilter(QObject *watched, QEvent *event)
             mHeaderPopup->setTitle(i18n("View Columns"));
             // First entry can't be disabled
             for (int i = 1; i < model()->columnCount(); ++i) {
-                QAction *tmp
-                    = mHeaderPopup->addAction(model()->headerData(i, Qt::Horizontal).toString());
+                QAction *tmp = mHeaderPopup->addAction(model()->headerData(i, Qt::Horizontal).toString());
                 tmp->setData(QVariant(i));
                 tmp->setCheckable(true);
                 mColumnActions << tmp;
@@ -85,11 +83,9 @@ QModelIndex TodoViewView::moveCursor(CursorAction cursorAction, Qt::KeyboardModi
     }
 
     switch (cursorAction) {
-    case MoveNext:
-    {
+    case MoveNext: {
         // try to find an editable item right of the current one
-        QModelIndex tmp = getNextEditableIndex(
-            current.sibling(current.row(), current.column() + 1), 1);
+        QModelIndex tmp = getNextEditableIndex(current.sibling(current.row(), current.column() + 1), 1);
         if (tmp.isValid()) {
             return tmp;
         }
@@ -120,11 +116,9 @@ QModelIndex TodoViewView::moveCursor(CursorAction cursorAction, Qt::KeyboardModi
         }
         return {};
     }
-    case MovePrevious:
-    {
+    case MovePrevious: {
         // try to find an editable item left of the current one
-        QModelIndex tmp = getNextEditableIndex(
-            current.sibling(current.row(), current.column() - 1), -1);
+        QModelIndex tmp = getNextEditableIndex(current.sibling(current.row(), current.column() - 1), -1);
         if (tmp.isValid()) {
             return tmp;
         }

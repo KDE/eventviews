@@ -14,7 +14,8 @@
 
 #include <QDateTime>
 
-namespace EventViews {
+namespace EventViews
+{
 /**
   This class provides a view ....
 */

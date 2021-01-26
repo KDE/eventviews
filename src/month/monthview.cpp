@@ -12,16 +12,16 @@
 #include "monthscene.h"
 #include "prefs.h"
 
-#include <CalendarSupport/CollectionSelection>
 #include <Akonadi/Calendar/ETMCalendar>
+#include <CalendarSupport/CollectionSelection>
 #include <CalendarSupport/KCalPrefs>
 #include <CalendarSupport/Utils>
 
+#include "calendarview_debug.h"
 #include <KCalendarCore/OccurrenceIterator>
 #include <KCheckableProxyModel>
 #include <KLocalizedString>
 #include <QIcon>
-#include "calendarview_debug.h"
 
 #include <QHBoxLayout>
 #include <QTimer>
@@ -30,7 +30,8 @@
 
 using namespace EventViews;
 
-namespace EventViews {
+namespace EventViews
+{
 class MonthViewPrivate : public Akonadi::ETMCalendar::CalendarObserver
 {
     MonthView *const q;
@@ -43,7 +44,7 @@ public: /// Methods
     // void setUpModels();
     void triggerDelayedReload(EventView::Change reason);
 
-public:  /// Members
+public: /// Members
     QTimer reloadTimer;
     MonthScene *scene = nullptr;
     QDate selectedItemDate;
@@ -52,15 +53,16 @@ public:  /// Members
     QToolButton *fullView = nullptr;
 
     // List of uids for QDate
-    QMap<QDate, QStringList > mBusyDays;
+    QMap<QDate, QStringList> mBusyDays;
 
 protected:
     /* reimplemented from KCalendarCore::Calendar::CalendarObserver */
     void calendarIncidenceAdded(const KCalendarCore::Incidence::Ptr &incidence) override;
     void calendarIncidenceChanged(const KCalendarCore::Incidence::Ptr &incidence) override;
     void calendarIncidenceDeleted(const KCalendarCore::Incidence::Ptr &incidence, const KCalendarCore::Calendar *calendar) override;
+
 private:
-    //quiet --overloaded-virtual warning
+    // quiet --overloaded-virtual warning
     using KCalendarCore::Calendar::CalendarObserver::calendarIncidenceDeleted;
 };
 }
@@ -79,7 +81,7 @@ MonthViewPrivate::MonthViewPrivate(MonthView *qq)
 void MonthViewPrivate::addIncidence(const Akonadi::Item &incidence)
 {
     Q_UNUSED(incidence)
-    //TODO: add some more intelligence here...
+    // TODO: add some more intelligence here...
     q->setChanges(q->changes() | EventView::IncidencesAdded);
     reloadTimer.start(50);
 }
@@ -160,57 +162,40 @@ MonthView::MonthView(NavButtonsVisibility visibility, QWidget *parent)
         d->fullView->setAutoRaise(true);
         d->fullView->setCheckable(true);
         d->fullView->setChecked(preferences()->fullViewMonth());
-        d->fullView->isChecked()
-        ? d->fullView->setToolTip(i18nc("@info:tooltip",
-                                        "Display calendar in a normal size"))
-        : d->fullView->setToolTip(i18nc("@info:tooltip",
-                                        "Display calendar in a full window"));
-        d->fullView->setWhatsThis(
-            i18nc("@info:whatsthis",
-                  "Click this button and the month view will be enlarged to fill the "
-                  "maximum available window space / or shrunk back to its normal size."));
-        connect(d->fullView, &QAbstractButton::clicked,
-                this, &MonthView::changeFullView);
+        d->fullView->isChecked() ? d->fullView->setToolTip(i18nc("@info:tooltip", "Display calendar in a normal size"))
+                                 : d->fullView->setToolTip(i18nc("@info:tooltip", "Display calendar in a full window"));
+        d->fullView->setWhatsThis(i18nc("@info:whatsthis",
+                                        "Click this button and the month view will be enlarged to fill the "
+                                        "maximum available window space / or shrunk back to its normal size."));
+        connect(d->fullView, &QAbstractButton::clicked, this, &MonthView::changeFullView);
 
         auto minusMonth = new QToolButton(this);
         minusMonth->setIcon(QIcon::fromTheme(QStringLiteral("arrow-up-double")));
         minusMonth->setAutoRaise(true);
         minusMonth->setToolTip(i18nc("@info:tooltip", "Go back one month"));
-        minusMonth->setWhatsThis(
-            i18nc("@info:whatsthis",
-                  "Click this button and the view will be scrolled back in time by 1 month."));
-        connect(minusMonth, &QAbstractButton::clicked,
-                this, &MonthView::moveBackMonth);
+        minusMonth->setWhatsThis(i18nc("@info:whatsthis", "Click this button and the view will be scrolled back in time by 1 month."));
+        connect(minusMonth, &QAbstractButton::clicked, this, &MonthView::moveBackMonth);
 
         auto minusWeek = new QToolButton(this);
         minusWeek->setIcon(QIcon::fromTheme(QStringLiteral("arrow-up")));
         minusWeek->setAutoRaise(true);
         minusWeek->setToolTip(i18nc("@info:tooltip", "Go back one week"));
-        minusWeek->setWhatsThis(
-            i18nc("@info:whatsthis",
-                  "Click this button and the view will be scrolled back in time by 1 week."));
-        connect(minusWeek, &QAbstractButton::clicked,
-                this, &MonthView::moveBackWeek);
+        minusWeek->setWhatsThis(i18nc("@info:whatsthis", "Click this button and the view will be scrolled back in time by 1 week."));
+        connect(minusWeek, &QAbstractButton::clicked, this, &MonthView::moveBackWeek);
 
         auto plusWeek = new QToolButton(this);
         plusWeek->setIcon(QIcon::fromTheme(QStringLiteral("arrow-down")));
         plusWeek->setAutoRaise(true);
         plusWeek->setToolTip(i18nc("@info:tooltip", "Go forward one week"));
-        plusWeek->setWhatsThis(
-            i18nc("@info:whatsthis",
-                  "Click this button and the view will be scrolled forward in time by 1 week."));
-        connect(plusWeek, &QAbstractButton::clicked,
-                this, &MonthView::moveFwdWeek);
+        plusWeek->setWhatsThis(i18nc("@info:whatsthis", "Click this button and the view will be scrolled forward in time by 1 week."));
+        connect(plusWeek, &QAbstractButton::clicked, this, &MonthView::moveFwdWeek);
 
         auto plusMonth = new QToolButton(this);
         plusMonth->setIcon(QIcon::fromTheme(QStringLiteral("arrow-down-double")));
         plusMonth->setAutoRaise(true);
         plusMonth->setToolTip(i18nc("@info:tooltip", "Go forward one month"));
-        plusMonth->setWhatsThis(
-            i18nc("@info:whatsthis",
-                  "Click this button and the view will be scrolled forward in time by 1 month."));
-        connect(plusMonth, &QAbstractButton::clicked,
-                this, &MonthView::moveFwdMonth);
+        plusMonth->setWhatsThis(i18nc("@info:whatsthis", "Click this button and the view will be scrolled forward in time by 1 month."));
+        connect(plusMonth, &QAbstractButton::clicked, this, &MonthView::moveFwdMonth);
 
         rightLayout->addWidget(d->fullView);
         rightLayout->addWidget(minusMonth);
@@ -223,17 +208,13 @@ MonthView::MonthView(NavButtonsVisibility visibility, QWidget *parent)
         d->view->setFrameStyle(QFrame::NoFrame);
     }
 
-    connect(d->scene, &MonthScene::showIncidencePopupSignal,
-            this, &MonthView::showIncidencePopupSignal);
+    connect(d->scene, &MonthScene::showIncidencePopupSignal, this, &MonthView::showIncidencePopupSignal);
 
-    connect(d->scene, &MonthScene::incidenceSelected,
-            this, &EventView::incidenceSelected);
+    connect(d->scene, &MonthScene::incidenceSelected, this, &EventView::incidenceSelected);
 
-    connect(d->scene, SIGNAL(newEventSignal()),
-            SIGNAL(newEventSignal()));
+    connect(d->scene, SIGNAL(newEventSignal()), SIGNAL(newEventSignal()));
 
-    connect(d->scene, &MonthScene::showNewEventPopupSignal,
-            this, &MonthView::showNewEventPopupSignal);
+    connect(d->scene, &MonthScene::showNewEventPopupSignal, this, &MonthView::showNewEventPopupSignal);
 
     connect(&d->reloadTimer, &QTimer::timeout, this, &MonthView::reloadIncidences);
     updateConfig();
@@ -330,7 +311,7 @@ void MonthView::changeIncidenceDisplay(const Akonadi::Item &incidence, int actio
     Q_UNUSED(incidence)
     Q_UNUSED(action)
 
-    //TODO: add some more intelligence here...
+    // TODO: add some more intelligence here...
 
     // don't call reloadIncidences() directly. It would delete all
     // MonthItems, but this changeIncidenceDisplay()-method was probably
@@ -391,12 +372,10 @@ void MonthView::changeFullView()
 
     if (fullView) {
         d->fullView->setIcon(QIcon::fromTheme(QStringLiteral("view-restore")));
-        d->fullView->setToolTip(i18nc("@info:tooltip",
-                                      "Display calendar in a normal size"));
+        d->fullView->setToolTip(i18nc("@info:tooltip", "Display calendar in a normal size"));
     } else {
         d->fullView->setIcon(QIcon::fromTheme(QStringLiteral("view-fullscreen")));
-        d->fullView->setToolTip(i18nc("@info:tooltip",
-                                      "Display calendar in a full window"));
+        d->fullView->setToolTip(i18nc("@info:tooltip", "Display calendar in a full window"));
     }
     preferences()->setFullViewMonth(fullView);
     preferences()->writeConfig();
@@ -486,9 +465,8 @@ void MonthView::reloadIncidences()
     d->mBusyDays.clear();
     // build monthcells hash
     int i = 0;
-    for (QDate date = actualStartDateTime().date();
-         date <= actualEndDateTime().date(); date = date.addDays(1)) {
-        d->scene->mMonthCellMap[ date ] = new MonthCell(i, date, d->scene);
+    for (QDate date = actualStartDateTime().date(); date <= actualEndDateTime().date(); date = date.addDays(1)) {
+        d->scene->mMonthCellMap[date] = new MonthCell(i, date, d->scene);
         i++;
     }
 
@@ -500,12 +478,10 @@ void MonthView::reloadIncidences()
         occurIter.next();
 
         // Remove the two checks when filtering is done through a proxyModel, when using calendar search
-        if (!preferences()->showTodosMonthView()
-            && occurIter.incidence()->type() == KCalendarCore::Incidence::TypeTodo) {
+        if (!preferences()->showTodosMonthView() && occurIter.incidence()->type() == KCalendarCore::Incidence::TypeTodo) {
             continue;
         }
-        if (!preferences()->showJournalsMonthView()
-            && occurIter.incidence()->type() == KCalendarCore::Incidence::TypeJournal) {
+        if (!preferences()->showJournalsMonthView() && occurIter.incidence()->type() == KCalendarCore::Incidence::TypeJournal) {
             continue;
         }
 
@@ -521,14 +497,9 @@ void MonthView::reloadIncidences()
         }
         Q_ASSERT(item.isValid());
         Q_ASSERT(item.hasPayload());
-        MonthItem *manager = new IncidenceMonthItem(d->scene,
-                                                    calendar(),
-                                                    item,
-                                                    occurIter.incidence(),
-                                                    occurIter.occurrenceStartDate().toLocalTime().date());
+        MonthItem *manager = new IncidenceMonthItem(d->scene, calendar(), item, occurIter.incidence(), occurIter.occurrenceStartDate().toLocalTime().date());
         d->scene->mManagerList << manager;
-        if (d->selectedItemId == item.id()
-            && manager->realStartDate() == d->selectedItemDate) {
+        if (d->selectedItemId == item.id() && manager->realStartDate() == d->selectedItemDate) {
             // only select it outside the loop because we are still creating items
             itemToReselect = manager;
         }
@@ -539,33 +510,25 @@ void MonthView::reloadIncidences()
     }
 
     // add holidays
-    const QList<QDate> workDays = CalendarSupport::workDays(actualStartDateTime().date(),
-                                                            actualEndDateTime().date());
+    const QList<QDate> workDays = CalendarSupport::workDays(actualStartDateTime().date(), actualEndDateTime().date());
 
-    for (QDate date = actualStartDateTime().date();
-         date <= actualEndDateTime().date(); date = date.addDays(1)) {
+    for (QDate date = actualStartDateTime().date(); date <= actualEndDateTime().date(); date = date.addDays(1)) {
         // Only call CalendarSupport::holiday() if it's not a workDay, saves come cpu cicles.
         if (!workDays.contains(date)) {
             QStringList holidays(CalendarSupport::holiday(date));
             if (!holidays.isEmpty()) {
-                MonthItem *holidayItem
-                    = new HolidayMonthItem(
-                          d->scene, date,
-                          holidays.join(i18nc("@item:intext delimiter for joining holiday names", ",")));
+                MonthItem *holidayItem = new HolidayMonthItem(d->scene, date, holidays.join(i18nc("@item:intext delimiter for joining holiday names", ",")));
                 d->scene->mManagerList << holidayItem;
             }
         }
     }
 
     // sort it
-    std::sort(d->scene->mManagerList.begin(),
-              d->scene->mManagerList.end(),
-              MonthItem::greaterThan);
+    std::sort(d->scene->mManagerList.begin(), d->scene->mManagerList.end(), MonthItem::greaterThan);
 
     // build each month's cell event list
     for (MonthItem *manager : qAsConst(d->scene->mManagerList)) {
-        for (QDate date = manager->startDate();
-             date <= manager->endDate(); date = date.addDays(1)) {
+        for (QDate date = manager->startDate(); date <= manager->endDate(); date = date.addDays(1)) {
             MonthCell *cell = d->scene->mMonthCellMap.value(date);
             if (cell) {
                 cell->mMonthItemList << manager;
@@ -595,8 +558,7 @@ void MonthView::calendarReset()
 
 QDate MonthView::averageDate() const
 {
-    return actualStartDateTime().date().addDays(
-        actualStartDateTime().date().daysTo(actualEndDateTime().date()) / 2);
+    return actualStartDateTime().date().addDays(actualStartDateTime().date().daysTo(actualEndDateTime().date()) / 2);
 }
 
 int MonthView::currentMonth() const

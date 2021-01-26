@@ -14,15 +14,17 @@
 
 #include <KIconLoader>
 
-#include <QUrl>
 #include <QTextBrowser>
+#include <QUrl>
 
-namespace EventViews {
+namespace EventViews
+{
 class WhatsNextTextBrowser : public QTextBrowser
 {
     Q_OBJECT
 public:
-    explicit WhatsNextTextBrowser(QWidget *parent) : QTextBrowser(parent)
+    explicit WhatsNextTextBrowser(QWidget *parent)
+        : QTextBrowser(parent)
     {
     }
 

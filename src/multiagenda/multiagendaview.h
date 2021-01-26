@@ -13,7 +13,8 @@
 
 #include <QDateTime>
 
-namespace EventViews {
+namespace EventViews
+{
 class ConfigDialogInterface;
 
 /**

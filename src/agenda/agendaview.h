@@ -10,8 +10,8 @@
 #ifndef EVENTVIEWS_AGENDAVIEW_H
 #define EVENTVIEWS_AGENDAVIEW_H
 
-#include "eventviews_export.h"
 #include "eventview.h"
+#include "eventviews_export.h"
 #include "viewcalendar.h"
 
 #include <KCalendarCore/Todo>
@@ -22,9 +22,11 @@ class KConfig;
 
 class QSplitter;
 
-namespace EventViews {
+namespace EventViews
+{
 #ifndef EVENTVIEWS_NODECOS
-namespace CalendarDecoration {
+namespace CalendarDecoration
+{
 class Decoration;
 }
 #endif
@@ -40,10 +42,7 @@ class EventIndicator : public QFrame
 {
     Q_OBJECT
 public:
-    enum Location {
-        Top,
-        Bottom
-    };
+    enum Location { Top, Bottom };
     explicit EventIndicator(Location loc = Top, QWidget *parent = nullptr);
     ~EventIndicator() override;
 
@@ -68,7 +67,12 @@ class EVENTVIEWS_EXPORT AgendaView : public EventView
 {
     Q_OBJECT
 public:
-    explicit AgendaView(const PrefsPtr &preferences, const QDate &start, const QDate &end, bool isInteractive, bool isSideBySide = false, QWidget *parent = nullptr);
+    explicit AgendaView(const PrefsPtr &preferences,
+                        const QDate &start,
+                        const QDate &end,
+                        bool isInteractive,
+                        bool isSideBySide = false,
+                        QWidget *parent = nullptr);
 
     explicit AgendaView(QDate start, QDate end, bool isInteractive, bool isSideBySide = false, QWidget *parent = nullptr);
 
@@ -240,6 +244,7 @@ private:
     friend class MultiAgendaView;
     Agenda *agenda() const;
     Agenda *allDayAgenda() const;
+
 private:
     class Private;
     Private *const d;

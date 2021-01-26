@@ -7,39 +7,40 @@
 */
 
 #include "timelineview.h"
-#include "timelineview_p.h"
-#include "timelineitem.h"
 #include "helper.h"
+#include "timelineitem.h"
+#include "timelineview_p.h"
 
-#include <KGantt/KGanttGraphicsItem>
-#include <KGantt/KGanttGraphicsView>
 #include <KGantt/KGanttAbstractRowController>
 #include <KGantt/KGanttDateTimeGrid>
+#include <KGantt/KGanttGraphicsItem>
+#include <KGantt/KGanttGraphicsView>
 #include <KGantt/KGanttItemDelegate>
 #include <KGantt/KGanttStyleOptionGanttItem>
 
 #include <Akonadi/Calendar/ETMCalendar>
+#include <Akonadi/Calendar/IncidenceChanger>
 #include <CalendarSupport/CollectionSelection>
 #include <CalendarSupport/Utils>
-#include <Akonadi/Calendar/IncidenceChanger>
 
 #include "calendarview_debug.h"
 
-#include <QApplication>
-#include <QPainter>
-#include <QStandardItemModel>
-#include <QSplitter>
-#include <QTreeWidget>
-#include <QHeaderView>
-#include <QPointer>
-#include <QVBoxLayout>
-#include <QHelpEvent>
 #include <KLocalizedString>
+#include <QApplication>
+#include <QHeaderView>
+#include <QHelpEvent>
+#include <QPainter>
+#include <QPointer>
+#include <QSplitter>
+#include <QStandardItemModel>
+#include <QTreeWidget>
+#include <QVBoxLayout>
 
 using namespace KCalendarCore;
 using namespace EventViews;
 
-namespace EventViews {
+namespace EventViews
+{
 class RowController : public KGantt::AbstractRowController
 {
 private:
@@ -120,7 +121,8 @@ private:
 class GanttHeaderView : public QHeaderView
 {
 public:
-    explicit GanttHeaderView(QWidget *parent = nullptr) : QHeaderView(Qt::Horizontal, parent)
+    explicit GanttHeaderView(QWidget *parent = nullptr)
+        : QHeaderView(Qt::Horizontal, parent)
     {
     }
 
@@ -138,6 +140,7 @@ public:
         : KGantt::ItemDelegate(parent)
     {
     }
+
 private:
     void paintGanttItem(QPainter *painter, const KGantt::StyleOptionGanttItem &opt, const QModelIndex &idx) override
     {
@@ -145,8 +148,7 @@ private:
         if (!idx.isValid()) {
             return;
         }
-        const KGantt::ItemType type = static_cast<KGantt::ItemType>(
-            idx.model()->data(idx, KGantt::ItemTypeRole).toInt());
+        const KGantt::ItemType type = static_cast<KGantt::ItemType>(idx.model()->data(idx, KGantt::ItemTypeRole).toInt());
 
         const QString txt = idx.model()->data(idx, Qt::DisplayRole).toString();
         QRectF itemRect = opt.itemRect;
@@ -156,8 +158,7 @@ private:
 
         QBrush brush = defaultBrush(type);
         if (opt.state & QStyle::State_Selected) {
-            QLinearGradient selectedGrad(0., 0., 0.,
-                                         QApplication::fontMetrics().height());
+            QLinearGradient selectedGrad(0., 0., 0., QApplication::fontMetrics().height());
             selectedGrad.setColorAt(0., Qt::red);
             selectedGrad.setColorAt(1., Qt::darkRed);
 
@@ -220,16 +221,14 @@ TimelineView::TimelineView(QWidget *parent)
     d->mGantt = new KGantt::GraphicsView(this);
     splitter->addWidget(d->mLeftView);
     splitter->addWidget(d->mGantt);
-    connect(splitter, &QSplitter::splitterMoved,
-            d, &Private::splitterMoved);
+    connect(splitter, &QSplitter::splitterMoved, d, &Private::splitterMoved);
     auto model = new QStandardItemModel(this);
 
     d->mRowController = new RowController;
 
     QStyleOptionViewItem opt;
     opt.initFrom(d->mLeftView);
-    const auto h = d->mLeftView->style()->sizeFromContents(QStyle::CT_ItemViewItem, &opt,
-                                                           QSize(), d->mLeftView).height();
+    const auto h = d->mLeftView->style()->sizeFromContents(QStyle::CT_ItemViewItem, &opt, QSize(), d->mLeftView).height();
     d->mRowController->setRowHeight(h);
 
     d->mRowController->setModel(model);
@@ -247,14 +246,11 @@ TimelineView::TimelineView(QWidget *parent)
 
     vbox->addWidget(splitter);
 
-    connect(model, &QStandardItemModel::itemChanged,
-            d, &Private::itemChanged);
+    connect(model, &QStandardItemModel::itemChanged, d, &Private::itemChanged);
 
-    connect(d->mGantt, &KGantt::GraphicsView::activated,
-            d, &Private::itemSelected);
+    connect(d->mGantt, &KGantt::GraphicsView::activated, d, &Private::itemSelected);
     d->mGantt->setContextMenuPolicy(Qt::CustomContextMenu);
-    connect(d->mGantt, &QWidget::customContextMenuRequested,
-            d, &Private::contextMenuRequested);
+    connect(d->mGantt, &QWidget::customContextMenuRequested, d, &Private::contextMenuRequested);
 }
 
 TimelineView::~TimelineView()
@@ -303,10 +299,7 @@ void TimelineView::showDates(const QDate &start, const QDate &end, const QDate &
     TimelineItem *item = nullptr;
     Akonadi::ETMCalendar::Ptr calres = calendar();
     if (!calres) {
-        item = new TimelineItem(calendar(),
-                                index++,
-                                static_cast<QStandardItemModel *>(d->mGantt->model()),
-                                d->mGantt);
+        item = new TimelineItem(calendar(), index++, static_cast<QStandardItemModel *>(d->mGantt->model()), d->mGantt);
         d->mLeftView->addTopLevelItem(new QTreeWidgetItem(QStringList() << i18n("Calendar")));
         d->mCalendarItemMap.insert(-1, item);
     } else {
@@ -315,23 +308,14 @@ void TimelineView::showDates(const QDate &start, const QDate &end, const QDate &
 
         for (const Akonadi::Collection &collection : collections) {
             if (collection.contentMimeTypes().contains(Event::eventMimeType())) {
-                item = new TimelineItem(calendar(),
-                                        index++,
-                                        static_cast<QStandardItemModel *>(d->mGantt->model()),
-                                        d->mGantt);
-                d->mLeftView->addTopLevelItem(
-                    new QTreeWidgetItem(
-                        QStringList() << CalendarSupport::displayName(
-                            calendar().data(), collection)));
+                item = new TimelineItem(calendar(), index++, static_cast<QStandardItemModel *>(d->mGantt->model()), d->mGantt);
+                d->mLeftView->addTopLevelItem(new QTreeWidgetItem(QStringList() << CalendarSupport::displayName(calendar().data(), collection)));
                 const QColor resourceColor = EventViews::resourceColor(collection, preferences());
                 if (resourceColor.isValid()) {
                     item->setColor(resourceColor);
                 }
-                qCDebug(CALENDARVIEW_LOG) << "Created item " << item
-                                          << " (" <<  CalendarSupport::displayName(
-                    calendar().data(), collection) << ") "
-                                          << "with index " <<  index - 1 << " from collection "
-                                          << collection.id();
+                qCDebug(CALENDARVIEW_LOG) << "Created item " << item << " (" << CalendarSupport::displayName(calendar().data(), collection) << ") "
+                                          << "with index " << index - 1 << " from collection " << collection.id();
                 d->mCalendarItemMap.insert(collection.id(), item);
             }
         }
@@ -349,9 +333,7 @@ void TimelineView::showDates(const QDate &start, const QDate &end, const QDate &
 
     KCalendarCore::Event::List events;
     for (QDate day = start; day <= end; day = day.addDays(1)) {
-        events = calendar()->events(day, QTimeZone::systemTimeZone(),
-                                    KCalendarCore::EventSortStartDate,
-                                    KCalendarCore::SortDirectionAscending);
+        events = calendar()->events(day, QTimeZone::systemTimeZone(), KCalendarCore::EventSortStartDate, KCalendarCore::SortDirectionAscending);
         for (const KCalendarCore::Event::Ptr &event : qAsConst(events)) {
             if (event->hasRecurrenceId()) {
                 continue;
@@ -423,12 +405,9 @@ bool TimelineView::eventFilter(QObject *object, QEvent *event)
                 auto graphicsItem = static_cast<KGantt::GraphicsItem *>(item);
                 const QModelIndex itemIndex = graphicsItem->index();
 
-                auto *itemModel
-                    = qobject_cast<QStandardItemModel *>(d->mGantt->model());
+                auto *itemModel = qobject_cast<QStandardItemModel *>(d->mGantt->model());
 
-                auto *timelineItem
-                    = dynamic_cast<TimelineSubItem *>(itemModel->item(itemIndex.row(),
-                                                                      itemIndex.column()));
+                auto *timelineItem = dynamic_cast<TimelineSubItem *>(itemModel->item(itemIndex.row(), itemIndex.column()));
 
                 if (timelineItem) {
                     timelineItem->updateToolTip();

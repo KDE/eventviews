@@ -8,14 +8,15 @@
 #ifndef EVENTVIEWS_PREFS_H
 #define EVENTVIEWS_PREFS_H
 
-#include "eventviews_export.h"
 #include "eventview.h"
+#include "eventviews_export.h"
 
 #include <KConfigSkeleton>
 
 #include <QTimeZone>
 
-namespace EventViews {
+namespace EventViews
+{
 class EVENTVIEWS_EXPORT Prefs
 {
 public:
@@ -65,7 +66,7 @@ public:
 
     void setSelectionStartsEditor(bool startEditor);
     Q_REQUIRED_RESULT bool selectionStartsEditor() const;
-    
+
     void setUseSystemColor(bool useSystemColor);
     Q_REQUIRED_RESULT bool useSystemColor() const;
 

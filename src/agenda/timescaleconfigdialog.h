@@ -10,7 +10,8 @@
 
 #include <QDialog>
 
-namespace EventViews {
+namespace EventViews
+{
 class Prefs;
 using PrefsPtr = QSharedPointer<Prefs>;
 

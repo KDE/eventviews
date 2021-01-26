@@ -9,14 +9,15 @@
 
 #include "eventviews_export.h"
 
-#include <AkonadiCore/Item>
 #include <Akonadi/Calendar/ETMCalendar>
+#include <AkonadiCore/Item>
 #include <KCalendarCore/Incidence>
 
 #include <QColor>
 #include <QList>
 
-namespace EventViews {
+namespace EventViews
+{
 class AgendaView;
 
 class EVENTVIEWS_EXPORT ViewCalendar

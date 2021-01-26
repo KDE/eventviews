@@ -6,8 +6,8 @@
 
 #include "viewcalendar.h"
 #include "agendaview.h"
-#include "helper.h"
 #include "calendarview_debug.h"
+#include "helper.h"
 
 #include <CalendarSupport/Utils>
 
@@ -165,8 +165,7 @@ Akonadi::Item AkonadiViewCalendar::item(const KCalendarCore::Incidence::Ptr &inc
 
         if (id == -1) {
             // Ok, we really don't know the ID, give up.
-            qCWarning(CALENDARVIEW_LOG) << "Item is invalid. uid = "
-                                        << incidence->instanceIdentifier();
+            qCWarning(CALENDARVIEW_LOG) << "Item is invalid. uid = " << incidence->instanceIdentifier();
             return Akonadi::Item();
         }
         return mCalendar->item(incidence->instanceIdentifier());

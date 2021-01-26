@@ -21,7 +21,7 @@ using namespace EventViews;
 ScrollIndicator::ScrollIndicator(ScrollIndicator::ArrowDirection dir)
     : mDirection(dir)
 {
-    setZValue(200);   // on top of everything
+    setZValue(200); // on top of everything
     hide();
 }
 
@@ -42,7 +42,7 @@ void ScrollIndicator::paint(QPainter *painter, const QStyleOptionGraphicsItem *o
         arrow.setPoint(0, 0, -mHeight / 2);
         arrow.setPoint(1, mWidth / 2, mHeight / 2);
         arrow.setPoint(2, -mWidth / 2, mHeight / 2);
-    } else if (mDirection == ScrollIndicator::DownArrow) {   // down
+    } else if (mDirection == ScrollIndicator::DownArrow) { // down
         arrow.setPoint(1, mWidth / 2, -mHeight / 2);
         arrow.setPoint(2, -mWidth / 2, -mHeight / 2);
         arrow.setPoint(0, 0, mHeight / 2);
@@ -96,7 +96,7 @@ int MonthCell::topMargin()
 
 void MonthCell::addMonthItem(MonthItem *manager, int height)
 {
-    mHeightHash[ height ] = manager;
+    mHeightHash[height] = manager;
 }
 
 int MonthCell::firstFreeSpace()
@@ -104,7 +104,7 @@ int MonthCell::firstFreeSpace()
     MonthItem *manager = nullptr;
     int i = 0;
     while (true) {
-        manager = mHeightHash[ i ];
+        manager = mHeightHash[i];
         if (manager == nullptr) {
             return i;
         }
@@ -159,7 +159,7 @@ QPainterPath MonthGraphicsItem::widgetPath(bool border) const
     // If border is set we won't draw all the path. Items spanning on multiple
     // rows won't have borders on their boundaries.
     // If this is the mask, we draw it one pixel bigger
-    const int x0 = (!border && !isBeginItem())? -1 : 0;
+    const int x0 = (!border && !isBeginItem()) ? -1 : 0;
     const int y0 = 0;
     const int x1 = static_cast<int>(boundingRect().width());
     const int y1 = static_cast<int>(boundingRect().height());
@@ -205,8 +205,7 @@ QPainterPath MonthGraphicsItem::widgetPath(bool border) const
 QRectF MonthGraphicsItem::boundingRect() const
 {
     // width - 2 because of the cell-dividing line with width == 1 at beginning and end
-    return QRectF(0, 0, (daySpan() + 1) * mMonthItem->monthScene()->columnWidth() - 2,
-                  mMonthItem->monthScene()->itemHeight());
+    return QRectF(0, 0, (daySpan() + 1) * mMonthItem->monthScene()->columnWidth() - 2, mMonthItem->monthScene()->itemHeight());
 }
 
 void MonthGraphicsItem::paint(QPainter *p, const QStyleOptionGraphicsItem *, QWidget *)
@@ -217,15 +216,12 @@ void MonthGraphicsItem::paint(QPainter *p, const QStyleOptionGraphicsItem *, QWi
 
     MonthScene *scene = mMonthItem->monthScene();
 
-
     int textMargin = 7;
 
     QColor bgColor = mMonthItem->bgColor();
-    bgColor = mMonthItem->selected()
-              ? bgColor.lighter(EventView::BRIGHTNESS_FACTOR) : bgColor;
+    bgColor = mMonthItem->selected() ? bgColor.lighter(EventView::BRIGHTNESS_FACTOR) : bgColor;
     QColor frameColor = mMonthItem->frameColor();
-    frameColor = mMonthItem->selected()
-                 ? frameColor.lighter(EventView::BRIGHTNESS_FACTOR) : frameColor;
+    frameColor = mMonthItem->selected() ? frameColor.lighter(EventView::BRIGHTNESS_FACTOR) : frameColor;
     QColor textColor = EventViews::getTextColor(bgColor);
 
     // make moving or resizing items translucent
@@ -238,7 +234,7 @@ void MonthGraphicsItem::paint(QPainter *p, const QStyleOptionGraphicsItem *, QWi
     p->setBrush(bgColor);
     p->setPen(Qt::NoPen);
     p->drawPath(widgetPath(false));
-    
+
     p->setRenderHint(QPainter::Antialiasing, true);
     // draw the border without fill
     const QPen pen(frameColor, ft, Qt::SolidLine, Qt::RoundCap, Qt::RoundJoin);
@@ -265,9 +261,7 @@ void MonthGraphicsItem::paint(QPainter *p, const QStyleOptionGraphicsItem *, QWi
     // Every item should set its own LayoutDirection, or eliding fails miserably
     p->setLayoutDirection(text.isRightToLeft() ? Qt::RightToLeft : Qt::LeftToRight);
 
-    QRect textRect = QRect(textMargin, 0,
-                           static_cast<int>(boundingRect().width() - 2 * textMargin),
-                           scene->itemHeight());
+    QRect textRect = QRect(textMargin, 0, static_cast<int>(boundingRect().width() - 2 * textMargin), scene->itemHeight());
 
     if (mMonthItem->monthScene()->monthView()->preferences()->enableMonthItemIcons()) {
         const QVector<QPixmap> icons = mMonthItem->icons();
@@ -357,16 +351,13 @@ void MonthGraphicsItem::updateGeometry()
     int beginX = 1 + mMonthItem->monthScene()->cellHorizontalPos(cell);
     int beginY = 1 + cell->topMargin() + mMonthItem->monthScene()->cellVerticalPos(cell);
 
-    beginY += mMonthItem->position()
-              *mMonthItem->monthScene()->itemHeightIncludingSpacing()
-              -mMonthItem->monthScene()->startHeight()
-              *mMonthItem->monthScene()->itemHeightIncludingSpacing(); // scrolling
+    beginY += mMonthItem->position() * mMonthItem->monthScene()->itemHeightIncludingSpacing()
+        - mMonthItem->monthScene()->startHeight() * mMonthItem->monthScene()->itemHeightIncludingSpacing(); // scrolling
 
     setPos(beginX, beginY);
 
     if (mMonthItem->position() < mMonthItem->monthScene()->startHeight()
-        || mMonthItem->position() - mMonthItem->monthScene()->startHeight()
-        >= mMonthItem->monthScene()->maxRowCount()) {
+        || mMonthItem->position() - mMonthItem->monthScene()->startHeight() >= mMonthItem->monthScene()->maxRowCount()) {
         hide();
     } else {
         show();

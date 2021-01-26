@@ -11,7 +11,8 @@
 #include <QColor>
 #include <QSharedPointer>
 
-namespace Akonadi {
+namespace Akonadi
+{
 class Collection;
 class Item;
 }
@@ -24,7 +25,8 @@ class QDate;
  * Namespace EventViews provides facilities for displaying incidences,
  * including events, to-dos, and journal entries.
  */
-namespace EventViews {
+namespace EventViews
+{
 class Prefs;
 using PrefsPtr = QSharedPointer<Prefs>;
 

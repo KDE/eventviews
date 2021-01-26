@@ -11,11 +11,11 @@
 
 #include "agenda/agenda.h"
 #include "agenda/agendaview.h"
+#include "calendarview_debug.h"
 #include "month/monthview.h"
 #include "multiagenda/multiagendaview.h"
-#include "timeline/timelineview.h"
 #include "prefs.h"
-#include "calendarview_debug.h"
+#include "timeline/timelineview.h"
 #include <CalendarSupport/CollectionSelection>
 
 #include <Akonadi/Calendar/IncidenceChanger>
@@ -96,8 +96,7 @@ void MainWindow::delayedInit()
     KCheckableProxyModel *checkableProxy = mCalendar->checkableProxyModel();
     QItemSelectionModel *selectionModel = checkableProxy->selectionModel();
 
-    CalendarSupport::CollectionSelection *collectionSelection
-        = new CalendarSupport::CollectionSelection(selectionModel);
+    CalendarSupport::CollectionSelection *collectionSelection = new CalendarSupport::CollectionSelection(selectionModel);
     EventViews::EventView::setGlobalCollectionSelection(collectionSelection);
 
     mIncidenceChanger = new IncidenceChanger(this);

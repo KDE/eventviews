@@ -12,7 +12,8 @@ class QHBoxLayout;
 class QScrollArea;
 class QTimeZone;
 
-namespace EventViews {
+namespace EventViews
+{
 class Agenda;
 class AgendaView;
 

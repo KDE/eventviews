@@ -13,7 +13,8 @@
 
 class QModelIndex;
 
-namespace EventViews {
+namespace EventViews
+{
 class MonthViewPrivate;
 
 /**
@@ -23,10 +24,7 @@ class EVENTVIEWS_EXPORT MonthView : public EventView
 {
     Q_OBJECT
 public:
-    enum NavButtonsVisibility {
-        Visible,
-        Hidden
-    };
+    enum NavButtonsVisibility { Visible, Hidden };
 
     explicit MonthView(NavButtonsVisibility visibility = Visible, QWidget *parent = nullptr);
     ~MonthView() override;
@@ -75,10 +73,10 @@ public Q_SLOTS:
 
     void changeIncidenceDisplay(const Akonadi::Item &, int);
     void changeFullView(); /// Display in full window mode
-    void moveBackMonth();  /// Shift the view one month back
-    void moveBackWeek();   /// Shift the view one week back
-    void moveFwdWeek();    /// Shift the view one week forward
-    void moveFwdMonth();   /// Shift the view one month forward
+    void moveBackMonth(); /// Shift the view one month back
+    void moveBackWeek(); /// Shift the view one week back
+    void moveFwdWeek(); /// Shift the view one week forward
+    void moveFwdMonth(); /// Shift the view one month forward
 
 protected Q_SLOTS:
     void calendarReset() override;
@@ -95,8 +93,7 @@ protected:
     void keyPressEvent(QKeyEvent *event) override;
     void keyReleaseEvent(QKeyEvent *event) override;
 
-    QPair<QDateTime, QDateTime> actualDateRange(
-        const QDateTime &start, const QDateTime &end, const QDate &preferredMonth = QDate()) const override;
+    QPair<QDateTime, QDateTime> actualDateRange(const QDateTime &start, const QDateTime &end, const QDate &preferredMonth = QDate()) const override;
 
     // Compute and update the whole view
     void reloadIncidences();

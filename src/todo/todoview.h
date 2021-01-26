@@ -25,11 +25,13 @@ class TodoViewQuickSearch;
 class TodoViewSortFilterProxyModel;
 class TodoViewView;
 
-namespace CalendarSupport {
+namespace CalendarSupport
+{
 class KDatePickerPopup;
 }
 
-namespace Akonadi {
+namespace Akonadi
+{
 class ETMViewStateSaver;
 }
 
@@ -39,8 +41,8 @@ class QModelIndex;
 class QToolButton;
 class QTimer;
 
-namespace EventViews {
-
+namespace EventViews
+{
 /**
  * This class provides a view for Todo items.
 

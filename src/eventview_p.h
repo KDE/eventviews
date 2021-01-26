@@ -12,7 +12,8 @@
 
 #include "eventview.h"
 
-namespace KHolidays {
+namespace KHolidays
+{
 class HolidayRegion;
 }
 
@@ -20,7 +21,8 @@ class KCheckableProxyModel;
 
 #include <QDateTime>
 
-namespace EventViews {
+namespace EventViews
+{
 class EventViewPrivate
 {
 public: /// Methods

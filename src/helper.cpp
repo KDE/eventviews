@@ -5,8 +5,8 @@
 */
 
 #include "helper.h"
-#include "prefs.h"
 #include "calendarview_debug.h"
+#include "prefs.h"
 
 #include <Collection>
 #include <Item>
@@ -38,8 +38,7 @@ void EventViews::setResourceColor(const Akonadi::Collection &coll, const QColor 
 
     // Save the color in akonadi (so the resource can even save it server-side)
     Akonadi::Collection collection = coll;
-    auto *colorAttr
-            = collection.attribute<Akonadi::CollectionColorAttribute>(Akonadi::Collection::AddIfMissing);
+    auto *colorAttr = collection.attribute<Akonadi::CollectionColorAttribute>(Akonadi::Collection::AddIfMissing);
     colorAttr->setColor(color);
     auto job = new Akonadi::CollectionModifyJob(collection, nullptr);
     QObject::connect(job, &Akonadi::CollectionModifyJob::result, [=]() {
@@ -65,8 +64,7 @@ QColor EventViews::resourceColor(const Akonadi::Collection &coll, const PrefsPtr
     }
     // Color stored in akonadi
     if (coll.hasAttribute<Akonadi::CollectionColorAttribute>()) {
-        const auto *colorAttr
-            = coll.attribute<Akonadi::CollectionColorAttribute>();
+        const auto *colorAttr = coll.attribute<Akonadi::CollectionColorAttribute>();
         if (colorAttr && colorAttr->color().isValid()) {
             return colorAttr->color();
         }

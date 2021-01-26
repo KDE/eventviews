@@ -14,8 +14,8 @@ class KConfig;
 
 class QModelIndex;
 
-namespace EventViews {
-
+namespace EventViews
+{
 /**
   This class provides a multi-column list view of events.  It can
   display events from one particular day or several days, it doesn't

@@ -10,13 +10,14 @@
 
 #include "todomodel.h"
 
-#include <Item>
 #include <Akonadi/Calendar/ETMCalendar>
+#include <Item>
 
 #include <QModelIndex>
 #include <QString>
 
-namespace Akonadi {
+namespace Akonadi
+{
 class IncidenceChanger;
 }
 
@@ -26,14 +27,14 @@ class TodoModel::Private : public QObject
 public:
     Private(const EventViews::PrefsPtr &preferences, TodoModel *qq);
 
-    //TODO: O(N) complexity, see if the profiler complains about this
+    // TODO: O(N) complexity, see if the profiler complains about this
     Akonadi::Item findItemByUid(const QString &uid, const QModelIndex &parent) const;
 
 public:
     Akonadi::ETMCalendar::Ptr m_calendar;
     Akonadi::IncidenceChanger *m_changer = nullptr;
 
-    //For adjusting persistent indexes
+    // For adjusting persistent indexes
     QList<QPersistentModelIndex> m_layoutChangePersistentIndexes;
     QModelIndexList m_persistentIndexes;
     QList<int> m_columns;

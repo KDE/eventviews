@@ -12,34 +12,35 @@
 
 #include "eventviews_export.h"
 
+#include <Akonadi/Calendar/ETMCalendar>
 #include <Collection>
 #include <Item>
-#include <Akonadi/Calendar/ETMCalendar>
 
 #include <KCalendarCore/Incidence>
 #include <KCalendarCore/Todo>
 
-#include <QWidget>
-#include <QSet>
 #include <QByteArray>
 #include <QDate>
+#include <QSet>
+#include <QWidget>
 
-namespace CalendarSupport {
+namespace CalendarSupport
+{
 class CollectionSelection;
 class KCalPrefs;
 }
 
-namespace Akonadi {
+namespace Akonadi
+{
 class IncidenceChanger;
 }
 
 class KCheckableProxyModel;
 class KConfigGroup;
 
-namespace EventViews {
-enum {
-    BUSY_BACKGROUND_ALPHA = 70
-};
+namespace EventViews
+{
+enum { BUSY_BACKGROUND_ALPHA = 70 };
 
 class EventViewPrivate;
 class Prefs;
@@ -378,18 +379,18 @@ Q_SIGNALS:
     void deleteIncidenceSignal(const Akonadi::Item &);
 
     /**
-    * instructs the receiver to cut the Incidence
-    */
+     * instructs the receiver to cut the Incidence
+     */
     void cutIncidenceSignal(const Akonadi::Item &);
 
     /**
-    * instructs the receiver to copy the incidence
-    */
+     * instructs the receiver to copy the incidence
+     */
     void copyIncidenceSignal(const Akonadi::Item &);
 
     /**
-    * instructs the receiver to paste the incidence
-    */
+     * instructs the receiver to paste the incidence
+     */
     void pasteIncidenceSignal();
 
     /**
@@ -457,8 +458,8 @@ protected:
     Akonadi::IncidenceChanger *changer() const;
 
     /**
-      * reimplement to read view-specific settings.
-      */
+     * reimplement to read view-specific settings.
+     */
     virtual void doRestoreConfig(const KConfigGroup &configGroup);
 
     /**
@@ -481,8 +482,7 @@ protected:
      * month to show when the week crosses months.  It's a QDate instead of
      * uint so it can be easily fed to KCalendarSystem's functions.
      */
-    virtual QPair<QDateTime, QDateTime> actualDateRange(
-        const QDateTime &start, const QDateTime &end, const QDate &preferredMonth = QDate()) const;
+    virtual QPair<QDateTime, QDateTime> actualDateRange(const QDateTime &start, const QDateTime &end, const QDate &preferredMonth = QDate()) const;
     /*
     virtual void incidencesAdded( const Akonadi::Item::List &incidences );
     virtual void incidencesAboutToBeRemoved( const Akonadi::Item::List &incidences );

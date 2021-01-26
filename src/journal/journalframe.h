@@ -11,8 +11,8 @@
 #ifndef CALENDARVIEWS_JOURNALFRAME_H
 #define CALENDARVIEWS_JOURNALFRAME_H
 
-#include <Akonadi/Calendar/IncidenceChanger>
 #include <Akonadi/Calendar/ETMCalendar>
+#include <Akonadi/Calendar/IncidenceChanger>
 #include <Item>
 
 #include <QDate>
@@ -21,7 +21,8 @@
 class QTextBrowser;
 class QPushButton;
 
-namespace EventViews {
+namespace EventViews
+{
 class JournalFrame : public QFrame
 {
     Q_OBJECT

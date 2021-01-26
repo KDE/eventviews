@@ -15,10 +15,11 @@
 #include <AkonadiCore/Item>
 
 #include <QDateTime>
-#include <QWidget>
 #include <QPointer>
+#include <QWidget>
 
-namespace EventViews {
+namespace EventViews
+{
 class AgendaItem;
 class EventView;
 
@@ -65,7 +66,13 @@ public:
     using QPtr = QPointer<AgendaItem>;
     using List = QList<QPtr>;
 
-    AgendaItem(EventView *eventView, const MultiViewCalendar::Ptr &calendar, const KCalendarCore::Incidence::Ptr &incidence, int itemPos, int itemCount, const QDateTime &qd, bool isSelected,
+    AgendaItem(EventView *eventView,
+               const MultiViewCalendar::Ptr &calendar,
+               const KCalendarCore::Incidence::Ptr &incidence,
+               int itemPos,
+               int itemCount,
+               const QDateTime &qd,
+               bool isSelected,
                QWidget *parent);
     ~AgendaItem() override;
 
@@ -252,7 +259,7 @@ protected:
 
     // Variables to remember start position
     MultiItemInfo *mStartMoveInfo = nullptr;
-    //Color of the resource
+    // Color of the resource
     QColor mResourceColor;
 
 private:

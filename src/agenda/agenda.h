@@ -12,8 +12,8 @@
 #ifndef EVENTVIEWS_AGENDA_H
 #define EVENTVIEWS_AGENDA_H
 
-#include "eventviews_export.h"
 #include "agendaitem.h"
+#include "eventviews_export.h"
 #include "viewcalendar.h"
 
 #include <Item>
@@ -23,11 +23,13 @@
 #include <QFrame>
 #include <QScrollArea>
 
-namespace Akonadi {
+namespace Akonadi
+{
 class IncidenceChanger;
 }
 
-namespace EventViews {
+namespace EventViews
+{
 class Agenda;
 class AgendaItem;
 class AgendaView;
@@ -106,11 +108,19 @@ public:
 
     void setStartTime(QTime startHour);
 
-    AgendaItem::QPtr insertItem(const KCalendarCore::Incidence::Ptr &incidence, const QDateTime &recurrenceId, int X, int YTop, int YBottom, int itemPos, int itemCount, bool isSelected);
+    AgendaItem::QPtr insertItem(const KCalendarCore::Incidence::Ptr &incidence,
+                                const QDateTime &recurrenceId,
+                                int X,
+                                int YTop,
+                                int YBottom,
+                                int itemPos,
+                                int itemCount,
+                                bool isSelected);
 
     AgendaItem::QPtr insertAllDayItem(const KCalendarCore::Incidence::Ptr &event, const QDateTime &recurrenceId, int XBegin, int XEnd, bool isSelected);
 
-    void insertMultiItem(const KCalendarCore::Incidence::Ptr &event, const QDateTime &recurrenceId, int XBegin, int XEnd, int YTop, int YBottom, bool isSelected);
+    void
+    insertMultiItem(const KCalendarCore::Incidence::Ptr &event, const QDateTime &recurrenceId, int XBegin, int XEnd, int YTop, int YBottom, bool isSelected);
 
     /**
       Removes an event and all its multi-items from the agenda. This function
@@ -206,17 +216,10 @@ Q_SIGNALS:
     void gridSpacingYChanged(double);
 
 private:
-    enum MouseActionType {
-        NOP,
-        MOVE,
-        SELECT,
-        RESIZETOP,
-        RESIZEBOTTOM,
-        RESIZELEFT,
-        RESIZERIGHT
-    };
+    enum MouseActionType { NOP, MOVE, SELECT, RESIZETOP, RESIZEBOTTOM, RESIZELEFT, RESIZERIGHT };
 
-    AgendaItem::QPtr createAgendaItem(const KCalendarCore::Incidence::Ptr &incidence, int itemPos, int itemCount, const QDateTime &recurrentId, bool isSelected);
+    AgendaItem::QPtr
+    createAgendaItem(const KCalendarCore::Incidence::Ptr &incidence, int itemPos, int itemCount, const QDateTime &recurrentId, bool isSelected);
 
 protected:
     /**
@@ -252,7 +255,7 @@ protected:
     */
     MouseActionType isInResizeArea(bool horizontal, const QPoint &pos, const AgendaItem::QPtr &item);
     /** Return whether the cell specified by the grid point belongs to the current select
-    */
+     */
     bool ptInSelection(const QPoint &gpos) const;
 
     /** Start selecting time span. */

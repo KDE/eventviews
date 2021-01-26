@@ -9,14 +9,15 @@
 
 #include "eventviews_export.h"
 
+#include <Akonadi/Calendar/ETMCalendar>
 #include <Item>
 #include <KCalendarCore/Incidence>
-#include <Akonadi/Calendar/ETMCalendar>
 
 #include <QDate>
 #include <QObject>
 
-namespace EventViews {
+namespace EventViews
+{
 class MonthGraphicsItem;
 class MonthScene;
 
@@ -270,7 +271,11 @@ class EVENTVIEWS_EXPORT IncidenceMonthItem : public MonthItem
     Q_OBJECT
 
 public:
-    IncidenceMonthItem(MonthScene *monthScene, const Akonadi::ETMCalendar::Ptr &calendar, const Akonadi::Item &item, const KCalendarCore::Incidence::Ptr &incidence, const QDate &recurStartDate = QDate());
+    IncidenceMonthItem(MonthScene *monthScene,
+                       const Akonadi::ETMCalendar::Ptr &calendar,
+                       const Akonadi::Item &item,
+                       const KCalendarCore::Incidence::Ptr &incidence,
+                       const QDate &recurStartDate = QDate());
 
     ~IncidenceMonthItem() override;
 

@@ -10,8 +10,8 @@
 
 #include <KLocalizedString>
 
-#include <QIcon>
 #include <QDialogButtonBox>
+#include <QIcon>
 #include <QPushButton>
 #include <QTimeZone>
 #include <QVBoxLayout>
@@ -32,18 +32,14 @@ public:
     PrefsPtr mPreferences;
 };
 
-enum {
-    TimeZoneNameRole = Qt::UserRole
-};
+enum { TimeZoneNameRole = Qt::UserRole };
 
 using TimeZoneNamePair = QPair<QString, QByteArray>;
 
 static QString tzWithUTC(const QByteArray &zoneId)
 {
     auto tz = QTimeZone(zoneId);
-    return
-        QStringLiteral("%1 (%2)").
-        arg(i18n(zoneId.constData()), KCalUtils::Stringify::tzUTCOffsetStr(tz));
+    return QStringLiteral("%1 (%2)").arg(i18n(zoneId.constData()), KCalUtils::Stringify::tzUTCOffsetStr(tz));
 }
 
 TimeScaleConfigDialog::TimeScaleConfigDialog(const PrefsPtr &preferences, QWidget *parent)
@@ -59,8 +55,7 @@ TimeScaleConfigDialog::TimeScaleConfigDialog(const PrefsPtr &preferences, QWidge
 
     mainLayout->addWidget(mainwidget);
 
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(
-        QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
     okButton->setDefault(true);
     okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
@@ -100,10 +95,8 @@ TimeScaleConfigDialog::TimeScaleConfigDialog(const PrefsPtr &preferences, QWidge
     connect(downButton, &QPushButton::clicked, this, &TimeScaleConfigDialog::down);
 
     connect(okButton, &QPushButton::clicked, this, &TimeScaleConfigDialog::okClicked);
-    connect(buttonBox->button(QDialogButtonBox::Cancel), &QPushButton::clicked,
-            this, &TimeScaleConfigDialog::reject);
-    connect(listWidget, &QListWidget::currentItemChanged,
-            this, &TimeScaleConfigDialog::slotUpdateButton);
+    connect(buttonBox->button(QDialogButtonBox::Cancel), &QPushButton::clicked, this, &TimeScaleConfigDialog::reject);
+    connect(listWidget, &QListWidget::currentItemChanged, this, &TimeScaleConfigDialog::slotUpdateButton);
 
     for (const TimeZoneNamePair &item : qAsConst(selList)) {
         auto widgetItem = new QListWidgetItem(item.first);
@@ -123,8 +116,7 @@ void TimeScaleConfigDialog::slotUpdateButton()
     removeButton->setEnabled(listWidget->currentItem());
     const bool numberElementMoreThanOneElement = (listWidget->count() > 1);
     upButton->setEnabled(numberElementMoreThanOneElement && (listWidget->currentRow() >= 1));
-    downButton->setEnabled(numberElementMoreThanOneElement
-                           && (listWidget->currentRow() < listWidget->count() - 1));
+    downButton->setEnabled(numberElementMoreThanOneElement && (listWidget->currentRow() < listWidget->count() - 1));
 }
 
 void TimeScaleConfigDialog::okClicked()
@@ -140,15 +132,13 @@ void TimeScaleConfigDialog::add()
     if (zoneCombo->currentIndex() >= 0) {
         const int numberItem(listWidget->count());
         for (int i = 0; i < numberItem; ++i) {
-            if (listWidget->item(i)->data(TimeZoneNameRole).toString()
-                == zoneCombo->itemData(zoneCombo->currentIndex(), TimeZoneNameRole).toString()) {
+            if (listWidget->item(i)->data(TimeZoneNameRole).toString() == zoneCombo->itemData(zoneCombo->currentIndex(), TimeZoneNameRole).toString()) {
                 return;
             }
         }
 
         QListWidgetItem *item = new QListWidgetItem(zoneCombo->currentText());
-        item->setData(TimeZoneNameRole,
-                      zoneCombo->itemData(zoneCombo->currentIndex(), TimeZoneNameRole).toString());
+        item->setData(TimeZoneNameRole, zoneCombo->itemData(zoneCombo->currentIndex(), TimeZoneNameRole).toString());
         listWidget->addItem(item);
         zoneCombo->removeItem(zoneCombo->currentIndex());
     }
@@ -157,9 +147,7 @@ void TimeScaleConfigDialog::add()
 
 void TimeScaleConfigDialog::remove()
 {
-    zoneCombo->insertItem(0, listWidget->currentItem()->text(),
-                          zoneCombo->itemData(zoneCombo->currentIndex(),
-                                              TimeZoneNameRole).toString());
+    zoneCombo->insertItem(0, listWidget->currentItem()->text(), zoneCombo->itemData(zoneCombo->currentIndex(), TimeZoneNameRole).toString());
     delete listWidget->takeItem(listWidget->currentRow());
     slotUpdateButton();
 }

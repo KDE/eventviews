@@ -19,7 +19,7 @@ TimeLabelsZone::TimeLabelsZone(QWidget *parent, const PrefsPtr &preferences, Age
     : QWidget(parent)
     , mAgenda(agenda)
     , mPrefs(preferences)
-    , mParent(qobject_cast<AgendaView * >(parent))
+    , mParent(qobject_cast<AgendaView *>(parent))
 {
     mTimeLabelsLayout = new QHBoxLayout(this);
     mTimeLabelsLayout->setContentsMargins(0, 0, 0, 0);
@@ -85,11 +85,9 @@ void TimeLabelsZone::setupTimeLabel(QScrollArea *area)
 {
     if (mAgenda && mAgenda->verticalScrollBar()) {
         // Scrolling the agenda will scroll the timelabel
-        connect(mAgenda->verticalScrollBar(), &QAbstractSlider::valueChanged,
-                area->verticalScrollBar(), &QAbstractSlider::setValue);
+        connect(mAgenda->verticalScrollBar(), &QAbstractSlider::valueChanged, area->verticalScrollBar(), &QAbstractSlider::setValue);
         // and vice-versa. ( this won't loop )
-        connect(area->verticalScrollBar(), &QAbstractSlider::valueChanged,
-                mAgenda->verticalScrollBar(), &QAbstractSlider::setValue);
+        connect(area->verticalScrollBar(), &QAbstractSlider::valueChanged, mAgenda->verticalScrollBar(), &QAbstractSlider::setValue);
 
         area->verticalScrollBar()->setValue(mAgenda->verticalScrollBar()->value());
     }

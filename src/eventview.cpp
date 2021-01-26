@@ -17,8 +17,8 @@
 #include <CalendarSupport/KCalPrefs>
 #include <CalendarSupport/Utils>
 
-#include <EntityDisplayAttribute>
 #include <ETMViewStateSaver>
+#include <EntityDisplayAttribute>
 
 #include <KCalendarCore/CalFilter>
 
@@ -26,13 +26,13 @@
 
 #include <KHolidays/HolidayRegion>
 
+#include "calendarview_debug.h"
 #include <KCheckableProxyModel>
 #include <KGuiItem>
 #include <KLocalizedString>
 #include <KRandom>
-#include <KViewStateMaintainer>
 #include <KRearrangeColumnsProxyModel>
-#include "calendarview_debug.h"
+#include <KViewStateMaintainer>
 
 #include <QApplication>
 #include <QKeyEvent>
@@ -58,14 +58,12 @@ EventView::EventView(QWidget *parent)
     cname.replace(':', '_');
     d_ptr->identifier = cname + '_' + KRandom::randomString(8).toLatin1();
 
-    //AKONADI_PORT review: the FocusLineEdit in the editor emits focusReceivedSignal(),
-    //which triggered finishTypeAhead.  But the global focus widget in QApplication is
-    //changed later, thus subsequent keyevents still went to this view, triggering another
-    //editor, for each keypress.
-    //Thus, listen to the global focusChanged() signal (seen in Qt 4.6-stable-patched 20091112 -Frank)
-    connect(qobject_cast<QApplication *>(QApplication::instance()),
-            &QApplication::focusChanged,
-            this, &EventView::focusChanged);
+    // AKONADI_PORT review: the FocusLineEdit in the editor emits focusReceivedSignal(),
+    // which triggered finishTypeAhead.  But the global focus widget in QApplication is
+    // changed later, thus subsequent keyevents still went to this view, triggering another
+    // editor, for each keypress.
+    // Thus, listen to the global focusChanged() signal (seen in Qt 4.6-stable-patched 20091112 -Frank)
+    connect(qobject_cast<QApplication *>(QApplication::instance()), &QApplication::focusChanged, this, &EventView::focusChanged);
 
     d_ptr->setUpModels();
 }
@@ -132,22 +130,22 @@ int EventView::showMoveRecurDialog(const Incidence::Ptr &inc, const QDate &date)
         // want the option only apply to current and future occurrences, leaving the past ones
         // provide a third choice for that ("Also future")
         if (availableOccurrences == KCalUtils::RecurrenceActions::AllOccurrences) {
-            const QString message = i18n("The item you are trying to change is a recurring item. "
-                                         "Should the changes be applied only to this single occurrence, "
-                                         "also to future items, or to all items in the recurrence?");
-            return KCalUtils::RecurrenceActions::questionSelectedFutureAllCancel(
-                message, caption, itemSelected, itemFuture, itemAll, this);
+            const QString message = i18n(
+                "The item you are trying to change is a recurring item. "
+                "Should the changes be applied only to this single occurrence, "
+                "also to future items, or to all items in the recurrence?");
+            return KCalUtils::RecurrenceActions::questionSelectedFutureAllCancel(message, caption, itemSelected, itemFuture, itemAll, this);
         }
         Q_FALLTHROUGH();
 
     default:
         Q_ASSERT(availableOccurrences & KCalUtils::RecurrenceActions::SelectedOccurrence);
         // selected occurrence and either past or future occurrences
-        const QString message = i18n("The item you are trying to change is a recurring item. "
-                                     "Should the changes be applied only to this single occurrence "
-                                     "or to all items in the recurrence?");
-        return KCalUtils::RecurrenceActions::questionSelectedAllCancel(
-            message, caption, itemSelected, itemAll, this);
+        const QString message = i18n(
+            "The item you are trying to change is a recurring item. "
+            "Should the changes be applied only to this single occurrence "
+            "or to all items in the recurrence?");
+        return KCalUtils::RecurrenceActions::questionSelectedAllCancel(message, caption, itemSelected, itemAll, this);
         break;
     }
 
@@ -168,8 +166,7 @@ void EventView::setCalendar(const Akonadi::ETMCalendar::Ptr &calendar)
                 d->collectionSelectionModel->setSourceModel(calendar->model());
             }
 
-            connect(calendar.data(), &ETMCalendar::collectionChanged,
-                    this, &EventView::onCollectionChanged);
+            connect(calendar.data(), &ETMCalendar::collectionChanged, this, &EventView::onCollectionChanged);
         }
     }
 }
@@ -359,13 +356,7 @@ bool EventView::processKeyEvent(QKeyEvent *ke)
         case Qt::Key_Alt:
             break;
         default:
-            d->mTypeAheadEvents.append(
-                new QKeyEvent(ke->type(),
-                              ke->key(),
-                              ke->modifiers(),
-                              ke->text(),
-                              ke->isAutoRepeat(),
-                              static_cast<ushort>(ke->count())));
+            d->mTypeAheadEvents.append(new QKeyEvent(ke->type(), ke->key(), ke->modifiers(), ke->text(), ke->isAutoRepeat(), static_cast<ushort>(ke->count())));
             if (!d->mTypeAhead) {
                 d->mTypeAhead = true;
                 Q_EMIT newEventSignal();
@@ -455,8 +446,7 @@ void EventView::doSaveConfig(KConfigGroup &)
 {
 }
 
-QPair<QDateTime, QDateTime> EventView::actualDateRange(const QDateTime &start, const QDateTime &end,
-                                                       const QDate &preferredMonth) const
+QPair<QDateTime, QDateTime> EventView::actualDateRange(const QDateTime &start, const QDateTime &end, const QDate &preferredMonth) const
 {
     Q_UNUSED(preferredMonth)
     return qMakePair(start, end);
@@ -539,8 +529,7 @@ void EventView::restoreConfig(const KConfigGroup &configGroup)
 
             // Only show the first column.
             auto columnFilterProxy = new KRearrangeColumnsProxyModel(this);
-            columnFilterProxy->setSourceColumns(
-                QVector<int>() << Akonadi::ETMCalendar::CollectionTitle);
+            columnFilterProxy->setSourceColumns(QVector<int>() << Akonadi::ETMCalendar::CollectionTitle);
             columnFilterProxy->setSourceModel(sortProxy);
 
             // Make the calendar model checkable.
@@ -549,8 +538,7 @@ void EventView::restoreConfig(const KConfigGroup &configGroup)
 
             d->setUpModels();
         }
-        const KConfigGroup selectionGroup
-            = configGroup.config()->group(configGroup.name() + QLatin1String("_selectionSetup"));
+        const KConfigGroup selectionGroup = configGroup.config()->group(configGroup.name() + QLatin1String("_selectionSetup"));
 
         KViewStateMaintainer<ETMViewStateSaver> maintainer(selectionGroup);
         maintainer.setSelectionModel(d->collectionSelectionModel->selectionModel());
@@ -566,8 +554,7 @@ void EventView::saveConfig(KConfigGroup &configGroup)
     configGroup.writeEntry("UseCustomCollectionSelection", d->collectionSelectionModel != nullptr);
 
     if (d->collectionSelectionModel) {
-        KConfigGroup selectionGroup
-            = configGroup.config()->group(configGroup.name() + QLatin1String("_selectionSetup"));
+        KConfigGroup selectionGroup = configGroup.config()->group(configGroup.name() + QLatin1String("_selectionSetup"));
 
         KViewStateMaintainer<ETMViewStateSaver> maintainer(selectionGroup);
         maintainer.setSelectionModel(d->collectionSelectionModel->selectionModel());
@@ -629,9 +616,7 @@ bool EventView::makesWholeDayBusy(const KCalendarCore::Incidence::Ptr &incidence
 QColor EventView::itemFrameColor(const QColor &color, bool selected)
 {
     if (color.isValid()) {
-        return selected ? QColor(85 + color.red() * 2.0 / 3,
-                                 85 + color.green() * 2.0 / 3,
-                                 85 + color.blue() * 2.0 / 3) : color.darker(115);
+        return selected ? QColor(85 + color.red() * 2.0 / 3, 85 + color.green() * 2.0 / 3, 85 + color.blue() * 2.0 / 3) : color.darker(115);
     } else {
         return Qt::black;
     }
@@ -641,8 +626,7 @@ QString EventView::iconForItem(const Akonadi::Item &item)
 {
     QString iconName;
     Akonadi::Collection collection = item.parentCollection();
-    while (collection.parentCollection().isValid()
-           && collection.parentCollection() != Akonadi::Collection::root()) {
+    while (collection.parentCollection().isValid() && collection.parentCollection() != Akonadi::Collection::root()) {
         collection = calendar()->collection(collection.parentCollection().id());
     }
 
