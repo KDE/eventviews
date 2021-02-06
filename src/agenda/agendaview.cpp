@@ -735,7 +735,7 @@ void AgendaView::init(QDate start, QDate end)
     d->mAllDayAgenda = allDayScrollArea->agenda();
 
     /* Create the main agenda widget and the related widgets */
-    auto *agendaFrame = new QWidget(d->mSplitterAgenda);
+    auto agendaFrame = new QWidget(d->mSplitterAgenda);
     auto agendaLayout = new QHBoxLayout(agendaFrame);
     agendaLayout->setContentsMargins(0, 0, 0, 0);
     agendaLayout->setSpacing(SPACING);
@@ -1191,7 +1191,7 @@ void AgendaView::createDayLabels(bool force)
                                 date.day());
         QString shortstr = QString::number(date.day());
 
-        auto *dayLabel = new AlternateLabel(shortstr, longstr, veryLongStr, topDayLabelBox);
+        auto dayLabel = new AlternateLabel(shortstr, longstr, veryLongStr, topDayLabelBox);
         topDayLabelBoxLayout->addWidget(dayLabel);
         dayLabel->useShortText(); // will be recalculated in updateDayLabelSizes() anyway
         dayLabel->setAlignment(Qt::AlignHCenter);
@@ -1206,7 +1206,7 @@ void AgendaView::createDayLabels(bool force)
         for (const QString &text : texts) {
             // Compute a small version of the holiday string for AlternateLabel
             const KWordWrap ww = KWordWrap::formatText(fm, topDayLabelBox->rect(), 0, text, -1);
-            auto *label = new AlternateLabel(ww.truncatedString(), text, text, topDayLabelBox);
+            auto label = new AlternateLabel(ww.truncatedString(), text, text, topDayLabelBox);
             topDayLabelBoxLayout->addWidget(label);
             label->setAlignment(Qt::AlignCenter);
         }
@@ -1385,7 +1385,7 @@ void AgendaView::createTimeBarHeaders()
     const auto lst = d->mTimeLabelsZone->timeLabels();
     for (QScrollArea *area : lst) {
         auto timeLabel = static_cast<TimeLabels *>(area->widget());
-        auto *label = new QLabel(timeLabel->header().replace(QLatin1Char('/'), QStringLiteral("/ ")), d->mTimeBarHeaderFrame);
+        auto label = new QLabel(timeLabel->header().replace(QLatin1Char('/'), QStringLiteral("/ ")), d->mTimeBarHeaderFrame);
         d->mTimeBarHeaderFrame->layout()->addWidget(label);
         label->setFont(labelFont);
         label->setAlignment(Qt::AlignBottom | Qt::AlignRight);

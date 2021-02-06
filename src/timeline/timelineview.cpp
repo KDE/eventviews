@@ -405,7 +405,7 @@ bool TimelineView::eventFilter(QObject *object, QEvent *event)
                 auto graphicsItem = static_cast<KGantt::GraphicsItem *>(item);
                 const QModelIndex itemIndex = graphicsItem->index();
 
-                auto *itemModel = qobject_cast<QStandardItemModel *>(d->mGantt->model());
+                auto itemModel = qobject_cast<QStandardItemModel *>(d->mGantt->model());
 
                 auto *timelineItem = dynamic_cast<TimelineSubItem *>(itemModel->item(itemIndex.row(), itemIndex.column()));
 
