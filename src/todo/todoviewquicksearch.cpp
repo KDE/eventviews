@@ -44,11 +44,11 @@ TodoViewQuickSearch::TodoViewQuickSearch(const Akonadi::ETMCalendar::Ptr &calend
 
     mCategoryCombo = new Akonadi::TagSelectionComboBox(this);
     mCategoryCombo->setCheckable(true);
-    mCategoryCombo->setToolTip(i18nc("@info:tooltip", "Filter on these categories"));
+    mCategoryCombo->setToolTip(i18nc("@info:tooltip", "Filter on these tags"));
     mCategoryCombo->setWhatsThis(i18nc("@info:whatsthis",
                                        "Use this combobox to filter the to-dos that are shown by "
-                                       "a list of selected categories."));
-    const QString defaultText = i18nc("@item:inlistbox", "Select Categories");
+                                       "a list of selected tags."));
+    const QString defaultText = i18nc("@item:inlistbox", "Select Tags");
     mCategoryCombo->lineEdit()->setPlaceholderText(defaultText);
 
     connect(mCategoryCombo, &Akonadi::TagSelectionComboBox::selectionChanged, this, [this]() {

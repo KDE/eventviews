@@ -263,7 +263,7 @@ QVariant TodoModel::data(const QModelIndex &index, int role) const
         case DueDateColumn:
             return todo->hasDueDate() ? QLocale().toString(todo->dtDue().toLocalTime().date(), QLocale::ShortFormat) : QVariant(QString());
         case CategoriesColumn: {
-            QString categories = todo->categories().join(i18nc("delimiter for joining category names", ","));
+            QString categories = todo->categories().join(i18nc("delimiter for joining category/tag names", ","));
             return QVariant(categories);
         }
         case DescriptionColumn:
@@ -579,7 +579,7 @@ QVariant TodoModel::headerData(int column, Qt::Orientation orientation, int role
         case DueDateColumn:
             return QVariant(i18n("Due Date"));
         case CategoriesColumn:
-            return QVariant(i18n("Categories"));
+            return QVariant(i18n("Tags"));
         case DescriptionColumn:
             return QVariant(i18n("Description"));
         case CalendarColumn:

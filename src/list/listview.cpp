@@ -281,7 +281,7 @@ ListView::ListView(const Akonadi::ETMCalendar::Ptr &calendar, QWidget *parent, b
     d->mTreeWidget->headerItem()->setText(Summary_Column, i18n("Summary"));
     d->mTreeWidget->headerItem()->setText(StartDateTime_Column, i18n("Start Date/Time"));
     d->mTreeWidget->headerItem()->setText(EndDateTime_Column, i18n("End Date/Time"));
-    d->mTreeWidget->headerItem()->setText(Categories_Column, i18n("Categories"));
+    d->mTreeWidget->headerItem()->setText(Categories_Column, i18n("Tags"));
 
     d->mTreeWidget->setWordWrap(true);
     d->mTreeWidget->setAllColumnsShowFocus(true);
