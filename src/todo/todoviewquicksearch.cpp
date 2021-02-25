@@ -76,7 +76,7 @@ TodoViewQuickSearch::TodoViewQuickSearch(const Akonadi::ETMCalendar::Ptr &calend
     mPriorityCombo->setWhatsThis(i18nc("@info:whatsthis",
                                        "Use this combobox to filter the to-dos that are shown by "
                                        "a list of selected priorities."));
-    mPriorityCombo->setDefaultText(i18nc("@item:inlistbox", "Select Priority"));
+    mPriorityCombo->lineEdit()->setPlaceholderText(i18nc("@item:inlistbox", "Select Priority"));
     connect(mPriorityCombo, &KPIM::KCheckComboBox::checkedItemsChanged, this, [this]() {
         Q_EMIT filterPriorityChanged(mPriorityCombo->checkedItems(Qt::UserRole));
     });
