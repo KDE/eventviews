@@ -70,9 +70,6 @@ Q_SIGNALS:
     void editIncidence(const Akonadi::Item &);
     void incidenceSelected(const Akonadi::Item &, const QDate &);
 
-protected:
-    void clearFields();
-
 private:
     Akonadi::Item mJournal;
     Akonadi::ETMCalendar::Ptr mCalendar;
