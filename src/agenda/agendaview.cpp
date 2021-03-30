@@ -399,13 +399,22 @@ void AgendaView::Private::calendarIncidenceAdded(const KCalendarCore::Incidence:
         return;
     }
 
-    if (incidence->hasRecurrenceId() && mViewCalendar->isValid(incidence)) {
-        // Reevaluate the main event instead, if it was inserted before this one
-        KCalendarCore::Incidence::Ptr mainIncidence = q->calendar2(incidence)->incidence(incidence->uid());
-        if (mainIncidence) {
+    if (incidence->hasRecurrenceId()) {
+        if (auto mainIncidence = q->calendar2(incidence)->incidence(incidence->uid())) {
+            // Reevaluate the main event instead, if it was inserted before this one.
             reevaluateIncidence(mainIncidence);
+        } else if (q->displayIncidence(incidence, false)) {
+            // Display disassociated occurrences because errors sometimes destroy
+            // the main recurring incidence.
+            mAgenda->checkScrollBoundaries();
+            q->scheduleUpdateEventIndicators();
         }
+    } else if (incidence->recurs()) {
+        // Reevaluate recurring incidences to clean up any disassociated
+        // occurrences that were inserted before it.
+        reevaluateIncidence(incidence);
     } else if (q->displayIncidence(incidence, false)) {
+        // Ordinary non-recurring non-disassociated instances.
         mAgenda->checkScrollBoundaries();
         q->scheduleUpdateEventIndicators();
     }
@@ -1735,8 +1744,16 @@ void AgendaView::fillAgenda()
 
 bool AgendaView::displayIncidence(const KCalendarCore::Incidence::Ptr &incidence, bool createSelected)
 {
-    if (!incidence || incidence->hasRecurrenceId()) {
+    if (!incidence) {
         return false;
+    }
+
+    if (incidence->hasRecurrenceId()) {
+        // Normally a disassociated instance belongs to a recurring instance that
+        // displays it.
+        if (calendar2(incidence)->incidence(incidence->uid())) {
+            return false;
+        }
     }
 
     KCalendarCore::Todo::Ptr todo = CalendarSupport::todo(incidence);
