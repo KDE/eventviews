@@ -5,8 +5,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef EVENTVIEWS_CONFIGDIALOGINTERFACE_H
-#define EVENTVIEWS_CONFIGDIALOGINTERFACE_H
+#pragma once
 
 class KCheckableProxyModel;
 
@@ -27,4 +26,3 @@ public:
 };
 }
 
-#endif

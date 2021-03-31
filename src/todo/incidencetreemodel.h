@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later WITH Qt-Commercial-exception-1.0
 */
 
-#ifndef INCIDENCE_TREEMODEL_H
-#define INCIDENCE_TREEMODEL_H
+#pragma once
 
 #include <AkonadiCore/Item>
 
@@ -80,4 +79,3 @@ private:
     Private *const d;
 };
 
-#endif

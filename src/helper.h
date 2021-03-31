@@ -3,8 +3,7 @@
 
   SPDX-License-Identifier: GPL-2.0-or-later WITH Qt-Commercial-exception-1.0
 */
-#ifndef EVENTVIEWS_HELPER_H
-#define EVENTVIEWS_HELPER_H
+#pragma once
 
 #include "eventviews_export.h"
 
@@ -87,4 +86,3 @@ Q_REQUIRED_RESULT int yearDiff(const QDate &start, const QDate &end);
 Q_REQUIRED_RESULT QPixmap cachedSmallIcon(const QString &name);
 }
 
-#endif

@@ -6,8 +6,7 @@
 
   SPDX-License-Identifier: GPL-2.0-or-later WITH Qt-Commercial-exception-1.0
 */
-#ifndef CALENDARVIEWS_JOURNALVIEW_H
-#define CALENDARVIEWS_JOURNALVIEW_H
+#pragma once
 
 #include "eventview.h"
 #include <Akonadi/Calendar/IncidenceChanger>
@@ -81,4 +80,3 @@ private:
 };
 }
 
-#endif

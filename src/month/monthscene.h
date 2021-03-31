@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later WITH Qt-Commercial-exception-1.0
 */
 
-#ifndef EVENTVIEWS_MONTHSCENE_H
-#define EVENTVIEWS_MONTHSCENE_H
+#pragma once
 
 #include <Collection>
 #include <Item>
@@ -332,4 +331,3 @@ private:
 };
 }
 
-#endif

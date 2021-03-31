@@ -9,8 +9,7 @@
 
   SPDX-License-Identifier: GPL-2.0-or-later WITH Qt-Commercial-exception-1.0
 */
-#ifndef EVENTVIEWS_AGENDA_H
-#define EVENTVIEWS_AGENDA_H
+#pragma once
 
 #include "agendaitem.h"
 #include "eventviews_export.h"
@@ -336,4 +335,3 @@ private:
 };
 }
 
-#endif

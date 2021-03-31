@@ -8,8 +8,7 @@
 
   SPDX-License-Identifier: GPL-2.0-or-later WITH Qt-Commercial-exception-1.0
 */
-#ifndef CALENDARVIEWS_TODOVIEW_H
-#define CALENDARVIEWS_TODOVIEW_H
+#pragma once
 
 #include "eventview.h"
 #include <Akonadi/Calendar/ETMCalendar>
@@ -181,4 +180,3 @@ private:
 };
 }
 
-#endif

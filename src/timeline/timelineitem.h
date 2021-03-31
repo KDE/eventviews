@@ -6,8 +6,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef EVENTVIEWS_TIMELINEITEM_H
-#define EVENTVIEWS_TIMELINEITEM_H
+#pragma once
 
 #include <KCalendarCore/Incidence>
 
@@ -87,4 +86,3 @@ private:
 };
 }
 
-#endif

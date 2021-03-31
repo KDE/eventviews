@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later WITH Qt-Commercial-exception-1.0
 */
 
-#ifndef INCIDENCE_TREEMODEL_P_H
-#define INCIDENCE_TREEMODEL_P_H
+#pragma once
 
 #include "incidencetreemodel.h"
 
@@ -97,4 +96,3 @@ private:
     IncidenceTreeModel *const q;
 };
 
-#endif

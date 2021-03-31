@@ -4,8 +4,7 @@
   SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef CREATECOLORGUI_TEST_H
-#define CREATECOLORGUI_TEST_H
+#pragma once
 
 #include <QWidget>
 class QListWidget;
@@ -21,4 +20,3 @@ private:
     QListWidget *mListWidget = nullptr;
 };
 
-#endif // CREATECOLORGUI_TEST_H

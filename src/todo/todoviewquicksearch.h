@@ -8,8 +8,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later WITH Qt-Commercial-exception-1.0
 */
 
-#ifndef CALENDARVIEWS_TODOVIEWQUICKSEARCH_H
-#define CALENDARVIEWS_TODOVIEWQUICKSEARCH_H
+#pragma once
 
 #include <Akonadi/Calendar/ETMCalendar>
 #include <QWidget>
@@ -60,4 +59,3 @@ private:
     KPIM::KCheckComboBox *mPriorityCombo = nullptr;
 };
 
-#endif

@@ -3,8 +3,7 @@
 
   SPDX-License-Identifier: GPL-2.0-or-later WITH Qt-Commercial-exception-1.0
 */
-#ifndef EVENTVIEWS_TIMESCALECONFIGDIALOG_H
-#define EVENTVIEWS_TIMESCALECONFIGDIALOG_H
+#pragma once
 
 #include "ui_timescaleedit_base.h"
 
@@ -39,4 +38,3 @@ private:
 };
 }
 
-#endif

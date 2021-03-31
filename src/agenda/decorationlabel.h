@@ -5,8 +5,7 @@
 
   SPDX-License-Identifier: GPL-2.0-or-later WITH Qt-Commercial-exception-1.0
 */
-#ifndef EVENTVIEWS_DECORATIONLABEL_H
-#define EVENTVIEWS_DECORATIONLABEL_H
+#pragma once
 
 #include "calendardecoration.h"
 
@@ -55,4 +54,3 @@ protected:
 };
 }
 
-#endif

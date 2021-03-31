@@ -8,8 +8,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later WITH Qt-Commercial-exception-1.0
 */
 
-#ifndef CALENDARVIEWS_JOURNALFRAME_H
-#define CALENDARVIEWS_JOURNALFRAME_H
+#pragma once
 
 #include <Akonadi/Calendar/ETMCalendar>
 #include <Akonadi/Calendar/IncidenceChanger>
@@ -131,4 +130,3 @@ private:
 };
 }
 
-#endif

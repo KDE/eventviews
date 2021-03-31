@@ -5,8 +5,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef MAINWINDOW_H
-#define MAINWINDOW_H
+#pragma once
 
 #include "ui_mainwindow.h"
 
@@ -53,4 +52,3 @@ private Q_SLOTS:
     void addViewTriggered(QAction *action);
 };
 
-#endif

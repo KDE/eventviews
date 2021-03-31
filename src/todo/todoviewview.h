@@ -6,8 +6,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later WITH Qt-Commercial-exception-1.0
 */
 
-#ifndef CALENDARVIEWS_TODOVIEWVIEW_H
-#define CALENDARVIEWS_TODOVIEWVIEW_H
+#pragma once
 
 #include <QTimer>
 #include <QTreeView>
@@ -47,4 +46,3 @@ private Q_SLOTS:
     void expandParent();
 };
 
-#endif

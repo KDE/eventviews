@@ -6,8 +6,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later WITH Qt-Commercial-exception-1.0
 */
 
-#ifndef EVENTVIEWS_MONTHVIEW_H
-#define EVENTVIEWS_MONTHVIEW_H
+#pragma once
 
 #include "eventview.h"
 
@@ -111,4 +110,3 @@ private:
 };
 }
 
-#endif

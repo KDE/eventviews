@@ -4,8 +4,7 @@
 
   SPDX-License-Identifier: GPL-2.0-or-later WITH Qt-Commercial-exception-1.0
 */
-#ifndef EVENTVIEWS_TIMELINEVIEW_P_H
-#define EVENTVIEWS_TIMELINEVIEW_P_H
+#pragma once
 
 #include "timelineview.h"
 
@@ -64,4 +63,3 @@ private:
 };
 } // namespace EventViews
 
-#endif

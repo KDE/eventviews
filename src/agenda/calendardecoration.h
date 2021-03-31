@@ -3,8 +3,7 @@
 
   SPDX-License-Identifier: LGPL-2.0-or-later
 */
-#ifndef EVENTVIEWS_CALENDARDECORATION_H
-#define EVENTVIEWS_CALENDARDECORATION_H
+#pragma once
 
 #include "eventviews_export.h"
 
@@ -252,4 +251,3 @@ public:
 }
 }
 
-#endif

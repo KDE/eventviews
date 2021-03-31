@@ -6,8 +6,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef EVENTVIEWS_MULTIAGENDAVIEW_H_H
-#define EVENTVIEWS_MULTIAGENDAVIEW_H_H
+#pragma once
 
 #include "eventview.h"
 
@@ -91,4 +90,3 @@ private:
 };
 }
 
-#endif

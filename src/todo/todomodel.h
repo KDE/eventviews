@@ -5,8 +5,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later WITH Qt-Commercial-exception-1.0
 */
 
-#ifndef CALENDARVIEWS_TODOMODEL_H
-#define CALENDARVIEWS_TODOMODEL_H
+#pragma once
 
 #include "prefs.h"
 
@@ -88,4 +87,3 @@ private:
     Private *const d;
 };
 
-#endif

@@ -5,8 +5,7 @@
 
   SPDX-License-Identifier: GPL-2.0-or-later WITH Qt-Commercial-exception-1.0
 */
-#ifndef EVENTVIEWS_PREFS_H
-#define EVENTVIEWS_PREFS_H
+#pragma once
 
 #include "eventview.h"
 #include "eventviews_export.h"
@@ -211,4 +210,3 @@ private:
 using PrefsPtr = QSharedPointer<Prefs>;
 }
 
-#endif

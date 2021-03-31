@@ -6,8 +6,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later WITH Qt-Commercial-exception-1.0
 */
 
-#ifndef CALENDARVIEWS_TODODELEGATES_H
-#define CALENDARVIEWS_TODODELEGATES_H
+#pragma once
 
 #include <Akonadi/Calendar/ETMCalendar>
 #include <QStyledItemDelegate>
@@ -134,4 +133,3 @@ private:
     QTextDocument *m_textDoc = nullptr;
 };
 
-#endif

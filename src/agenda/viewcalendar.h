@@ -4,8 +4,7 @@
  * SPDX-License-Identifier: GPL-2.0-or-later WITH Qt-Commercial-exception-1.0
  */
 
-#ifndef EVENTVIEWS_VIEWCALENDAR_H
-#define EVENTVIEWS_VIEWCALENDAR_H
+#pragma once
 
 #include "eventviews_export.h"
 
@@ -86,4 +85,3 @@ public:
 };
 }
 
-#endif
