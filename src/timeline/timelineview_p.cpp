@@ -175,11 +175,7 @@ void TimelineView::Private::itemChanged(QStandardItem *item)
 
     QDateTime newStart(tlit->startTime());
     if (inc->allDay()) {
-#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
-        newStart = QDateTime(newStart.date());
-#else
         newStart = QDateTime(newStart.date().startOfDay());
-#endif
     }
 
     int delta = tlit->originalStart().secsTo(newStart);

@@ -193,13 +193,8 @@ int MonthItem::daySpan() const
     if (isMoving() || isResizing()) {
         return mOverrideDaySpan;
     }
-#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
-    QDateTime start(startDate());
-    QDateTime end(endDate());
-#else
     QDateTime start(startDate().startOfDay());
     QDateTime end(endDate().startOfDay());
-#endif
 
     if (start.isValid() && end.isValid()) {
         return start.daysTo(end);

@@ -265,11 +265,7 @@ KCalendarCore::DateList MonthView::selectedIncidenceDates() const
 QDateTime MonthView::selectionStart() const
 {
     if (d->scene->selectedCell()) {
-#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
-        return QDateTime(d->scene->selectedCell()->date());
-#else
         return QDateTime(d->scene->selectedCell()->date().startOfDay());
-#endif
     } else {
         return QDateTime();
     }
@@ -413,11 +409,7 @@ void MonthView::showDates(const QDate &start, const QDate &end, const QDate &pre
 
 QPair<QDateTime, QDateTime> MonthView::actualDateRange(const QDateTime &start, const QDateTime &, const QDate &preferredMonth) const
 {
-#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
-    QDateTime dayOne = preferredMonth.isValid() ? QDateTime(preferredMonth) : start;
-#else
     QDateTime dayOne = preferredMonth.isValid() ? QDateTime(preferredMonth.startOfDay()) : start;
-#endif
 
     dayOne.setDate(QDate(dayOne.date().year(), dayOne.date().month(), 1));
     const int weekdayCol = (dayOne.date().dayOfWeek() + 7 - preferences()->firstDayOfWeek()) % 7;

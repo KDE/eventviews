@@ -897,11 +897,7 @@ void TodoView::setNewDate(const QDate &date)
 
     if (calendar()->hasRight(todoItem, Akonadi::Collection::CanChangeItem)) {
         KCalendarCore::Todo::Ptr oldTodo(todo->clone());
-#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
-        QDateTime dt(date);
-#else
         QDateTime dt(date.startOfDay());
-#endif
 
         if (!todo->allDay()) {
             dt.setTime(todo->dtDue().time());
