@@ -1168,6 +1168,13 @@ void Agenda::endItemAction()
 
         if (incidence->recurs()) {
             const int res = d->mAgendaView->showMoveRecurDialog(incidence, recurrenceId.date());
+
+            if (!d->mActionItem) {
+                qCWarning(CALENDARVIEW_LOG) << "mActionItem was reset while the 'move' dialog was active";
+                d->mItemMoved = false;
+                return;
+            }
+
             switch (res) {
             case KCalUtils::RecurrenceActions::AllOccurrences: // All occurrences
                 // Moving the whole sequence of events is handled by the itemModified below.
