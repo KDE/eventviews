@@ -205,6 +205,12 @@ private:
 };
 }
 
+TimelineView::TimelineView(const EventViews::PrefsPtr &preferences, QWidget *parent)
+    : TimelineView(parent)
+{
+    setPreferences(preferences);
+}
+
 TimelineView::TimelineView(QWidget *parent)
     : EventView(parent)
     , d(new Private(this))
