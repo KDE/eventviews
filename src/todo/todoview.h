@@ -14,7 +14,6 @@
 #include <Akonadi/Calendar/ETMCalendar>
 #include <Akonadi/Calendar/IncidenceChanger>
 
-#include <KConfig>
 #include <QPointer>
 
 class KJob;
@@ -39,7 +38,7 @@ class QMenu;
 class QModelIndex;
 class QToolButton;
 class QTimer;
-
+class KConfig;
 namespace EventViews
 {
 /**

@@ -33,6 +33,7 @@
 
 #include <KCalendarCore/CalFormat>
 
+#include <KConfig>
 #include <KJob>
 
 #include <QGridLayout>
