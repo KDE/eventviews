@@ -16,13 +16,25 @@
 namespace EventViews
 {
 /**
-  This class provides a view ....
+  This class provides a view showing which blocks of time are occupied by events
+  in the user's calendars.
 */
 class EVENTVIEWS_EXPORT TimelineView : public EventView
 {
     Q_OBJECT
 public:
+
+    /**
+     * Create a TimelineView.
+     * @param preferences Preferences object for user-configurable aspects of the view.
+     */
+    explicit TimelineView(const EventViews::PrefsPtr &preferences, QWidget *parent = nullptr);
+
+    /**
+     * @deprecated Use TimelineView(const EventViews::PrefsPtr &preferences, QWidget *parent = nullptr)
+     */
     explicit TimelineView(QWidget *parent = nullptr);
+
     ~TimelineView() override;
 
     Q_REQUIRED_RESULT Akonadi::Item::List selectedIncidences() const override;
