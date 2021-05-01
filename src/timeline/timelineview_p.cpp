@@ -41,7 +41,7 @@ void TimelineView::Private::splitterMoved()
 
 void TimelineView::Private::itemSelected(const QModelIndex &index)
 {
-    auto *tlitem = dynamic_cast<TimelineSubItem *>(static_cast<QStandardItemModel *>(mGantt->model())->item(index.row(), index.column()));
+    auto tlitem = dynamic_cast<TimelineSubItem *>(static_cast<QStandardItemModel *>(mGantt->model())->item(index.row(), index.column()));
     if (tlitem) {
         Q_EMIT q->incidenceSelected(tlitem->incidence(), tlitem->originalStart().date());
     }
@@ -49,7 +49,7 @@ void TimelineView::Private::itemSelected(const QModelIndex &index)
 
 void TimelineView::Private::itemDoubleClicked(const QModelIndex &index)
 {
-    auto *tlitem = dynamic_cast<TimelineSubItem *>(static_cast<QStandardItemModel *>(mGantt->model())->item(index.row(), index.column()));
+    auto tlitem = dynamic_cast<TimelineSubItem *>(static_cast<QStandardItemModel *>(mGantt->model())->item(index.row(), index.column()));
     if (tlitem) {
         Q_EMIT q->editIncidenceSignal(tlitem->incidence());
     }
@@ -59,7 +59,7 @@ void TimelineView::Private::contextMenuRequested(const QPoint &point)
 {
     QPersistentModelIndex index = mGantt->indexAt(point);
     // mHintDate = QDateTime( mGantt->getDateTimeForCoordX( QCursor::pos().x(), true ) );
-    auto *tlitem = dynamic_cast<TimelineSubItem *>(static_cast<QStandardItemModel *>(mGantt->model())->item(index.row(), index.column()));
+    auto tlitem = dynamic_cast<TimelineSubItem *>(static_cast<QStandardItemModel *>(mGantt->model())->item(index.row(), index.column()));
     if (!tlitem) {
         Q_EMIT q->showNewEventPopupSignal();
         mSelectedItemList = Akonadi::Item::List();
@@ -165,7 +165,7 @@ void TimelineView::Private::removeIncidence(const Akonadi::Item &incidence)
 
 void TimelineView::Private::itemChanged(QStandardItem *item)
 {
-    auto *tlit = dynamic_cast<TimelineSubItem *>(item);
+    auto tlit = dynamic_cast<TimelineSubItem *>(item);
     if (!tlit) {
         return;
     }

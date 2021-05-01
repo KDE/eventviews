@@ -409,7 +409,7 @@ bool TimelineView::eventFilter(QObject *object, QEvent *event)
 
                 auto itemModel = qobject_cast<QStandardItemModel *>(d->mGantt->model());
 
-                auto *timelineItem = dynamic_cast<TimelineSubItem *>(itemModel->item(itemIndex.row(), itemIndex.column()));
+                auto timelineItem = dynamic_cast<TimelineSubItem *>(itemModel->item(itemIndex.row(), itemIndex.column()));
 
                 if (timelineItem) {
                     timelineItem->updateToolTip();

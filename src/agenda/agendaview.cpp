@@ -1145,7 +1145,7 @@ void AgendaView::createDayLabels(bool force)
     d->mLayoutTopDayLabels->setSpacing(1);
 
     // this spacer moves the day labels over to line up with the day columns
-    auto *spacer =
+    auto spacer =
         new QSpacerItem((!d->mIsSideBySide ? d->mTimeLabelsZone->width() : 0) + SPACING + d->mAllDayAgenda->scrollArea()->frameWidth(), 1, QSizePolicy::Fixed);
 
     d->mLayoutTopDayLabels->addSpacerItem(spacer);
@@ -1980,7 +1980,7 @@ void AgendaView::slotIncidencesDropped(const KCalendarCore::Incidence::List &inc
         const bool existsInSameCollection = existingItem.isValid() && (existingItem.storageCollectionId() == collectionId() || collectionId() == -1);
 
         if (existingItem.isValid() && existsInSameCollection) {
-            KCalendarCore::Incidence::Ptr newIncidence = existingItem.payload<KCalendarCore::Incidence::Ptr>();
+            auto newIncidence = existingItem.payload<KCalendarCore::Incidence::Ptr>();
 
             if (newIncidence->dtStart() == newTime && newIncidence->allDay() == allDay) {
                 // Nothing changed

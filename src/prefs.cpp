@@ -170,8 +170,8 @@ void BaseConfig::usrRead()
 
     KConfigGroup monthViewConfig(config(), "Month View");
     KConfigGroup agendaViewConfig(config(), "Agenda View");
-    const QByteArray agendaIconArray = agendaViewConfig.readEntry<QByteArray>("agendaViewItemIcons", agendaViewIconDefaults());
-    const QByteArray monthIconArray = monthViewConfig.readEntry<QByteArray>("monthViewItemIcons", monthViewIconDefaults());
+    const auto agendaIconArray = agendaViewConfig.readEntry<QByteArray>("agendaViewItemIcons", agendaViewIconDefaults());
+    const auto monthIconArray = monthViewConfig.readEntry<QByteArray>("monthViewItemIcons", monthViewIconDefaults());
 
     mAgendaViewIcons = iconArrayToSet(agendaIconArray);
     mMonthViewIcons = iconArrayToSet(monthIconArray);
@@ -271,7 +271,7 @@ void Prefs::Private::setBool(KCoreConfigSkeleton::ItemBool *baseConfigItem, bool
 {
     KConfigSkeletonItem *appItem = appConfigItem(baseConfigItem);
     if (appItem) {
-        auto *item = dynamic_cast<KCoreConfigSkeleton::ItemBool *>(appItem);
+        auto item = dynamic_cast<KCoreConfigSkeleton::ItemBool *>(appItem);
         if (item) {
             item->setValue(value);
         } else {
@@ -286,7 +286,7 @@ bool Prefs::Private::getBool(const KCoreConfigSkeleton::ItemBool *baseConfigItem
 {
     KConfigSkeletonItem *appItem = appConfigItem(baseConfigItem);
     if (appItem) {
-        auto *item = dynamic_cast<KCoreConfigSkeleton::ItemBool *>(appItem);
+        auto item = dynamic_cast<KCoreConfigSkeleton::ItemBool *>(appItem);
         if (item) {
             return item->value();
         }
@@ -299,7 +299,7 @@ void Prefs::Private::setInt(KCoreConfigSkeleton::ItemInt *baseConfigItem, int va
 {
     KConfigSkeletonItem *appItem = appConfigItem(baseConfigItem);
     if (appItem) {
-        auto *item = dynamic_cast<KCoreConfigSkeleton::ItemInt *>(appItem);
+        auto item = dynamic_cast<KCoreConfigSkeleton::ItemInt *>(appItem);
         if (item) {
             item->setValue(value);
         } else {
@@ -314,7 +314,7 @@ int Prefs::Private::getInt(const KCoreConfigSkeleton::ItemInt *baseConfigItem) c
 {
     KConfigSkeletonItem *appItem = appConfigItem(baseConfigItem);
     if (appItem) {
-        auto *item = dynamic_cast<KCoreConfigSkeleton::ItemInt *>(appItem);
+        auto item = dynamic_cast<KCoreConfigSkeleton::ItemInt *>(appItem);
         if (item) {
             return item->value();
         }
@@ -327,7 +327,7 @@ void Prefs::Private::setString(KCoreConfigSkeleton::ItemString *baseConfigItem, 
 {
     KConfigSkeletonItem *appItem = appConfigItem(baseConfigItem);
     if (appItem) {
-        auto *item = dynamic_cast<KCoreConfigSkeleton::ItemString *>(appItem);
+        auto item = dynamic_cast<KCoreConfigSkeleton::ItemString *>(appItem);
 
         if (item) {
             item->setValue(value);
@@ -343,7 +343,7 @@ QString Prefs::Private::getString(const KCoreConfigSkeleton::ItemString *baseCon
 {
     KConfigSkeletonItem *appItem = appConfigItem(baseConfigItem);
     if (appItem) {
-        auto *item = dynamic_cast<KCoreConfigSkeleton::ItemString *>(appItem);
+        auto item = dynamic_cast<KCoreConfigSkeleton::ItemString *>(appItem);
 
         if (item) {
             return item->value();
@@ -357,7 +357,7 @@ void Prefs::Private::setDateTime(KCoreConfigSkeleton::ItemDateTime *baseConfigIt
 {
     KConfigSkeletonItem *appItem = appConfigItem(baseConfigItem);
     if (appItem) {
-        auto *item = dynamic_cast<KCoreConfigSkeleton::ItemDateTime *>(appItem);
+        auto item = dynamic_cast<KCoreConfigSkeleton::ItemDateTime *>(appItem);
 
         if (item) {
             item->setValue(value);
@@ -373,7 +373,7 @@ QDateTime Prefs::Private::getDateTime(const KCoreConfigSkeleton::ItemDateTime *b
 {
     KConfigSkeletonItem *appItem = appConfigItem(baseConfigItem);
     if (appItem) {
-        auto *item = dynamic_cast<KCoreConfigSkeleton::ItemDateTime *>(appItem);
+        auto item = dynamic_cast<KCoreConfigSkeleton::ItemDateTime *>(appItem);
 
         if (item) {
             return item->value();
@@ -387,7 +387,7 @@ void Prefs::Private::setStringList(KCoreConfigSkeleton::ItemStringList *baseConf
 {
     KConfigSkeletonItem *appItem = appConfigItem(baseConfigItem);
     if (appItem) {
-        auto *item = dynamic_cast<KCoreConfigSkeleton::ItemStringList *>(appItem);
+        auto item = dynamic_cast<KCoreConfigSkeleton::ItemStringList *>(appItem);
 
         if (item) {
             item->setValue(value);
@@ -403,7 +403,7 @@ QStringList Prefs::Private::getStringList(const KCoreConfigSkeleton::ItemStringL
 {
     KConfigSkeletonItem *appItem = appConfigItem(baseConfigItem);
     if (appItem) {
-        auto *item = dynamic_cast<KCoreConfigSkeleton::ItemStringList *>(appItem);
+        auto item = dynamic_cast<KCoreConfigSkeleton::ItemStringList *>(appItem);
 
         if (item) {
             return item->value();
@@ -417,7 +417,7 @@ void Prefs::Private::setColor(KConfigSkeleton::ItemColor *baseConfigItem, const 
 {
     KConfigSkeletonItem *appItem = appConfigItem(baseConfigItem);
     if (appItem) {
-        auto *item = dynamic_cast<KConfigSkeleton::ItemColor *>(appItem);
+        auto item = dynamic_cast<KConfigSkeleton::ItemColor *>(appItem);
         if (item) {
             item->setValue(value);
         } else {
@@ -432,7 +432,7 @@ QColor Prefs::Private::getColor(const KConfigSkeleton::ItemColor *baseConfigItem
 {
     KConfigSkeletonItem *appItem = appConfigItem(baseConfigItem);
     if (appItem) {
-        auto *item = dynamic_cast<KConfigSkeleton::ItemColor *>(appItem);
+        auto item = dynamic_cast<KConfigSkeleton::ItemColor *>(appItem);
         if (item) {
             return item->value();
         }
@@ -445,7 +445,7 @@ void Prefs::Private::setFont(KConfigSkeleton::ItemFont *baseConfigItem, const QF
 {
     KConfigSkeletonItem *appItem = appConfigItem(baseConfigItem);
     if (appItem) {
-        auto *item = dynamic_cast<KConfigSkeleton::ItemFont *>(appItem);
+        auto item = dynamic_cast<KConfigSkeleton::ItemFont *>(appItem);
         if (item) {
             item->setValue(value);
         } else {
@@ -460,7 +460,7 @@ QFont Prefs::Private::getFont(const KConfigSkeleton::ItemFont *baseConfigItem) c
 {
     KConfigSkeletonItem *appItem = appConfigItem(baseConfigItem);
     if (appItem) {
-        auto *item = dynamic_cast<KConfigSkeleton::ItemFont *>(appItem);
+        auto item = dynamic_cast<KConfigSkeleton::ItemFont *>(appItem);
         if (item) {
             return item->value();
         }

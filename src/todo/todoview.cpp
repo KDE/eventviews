@@ -643,7 +643,7 @@ void TodoView::addQuickTodo(Qt::KeyboardModifiers modifiers)
         }
         const QModelIndex idx = mProxyModel->mapToSource(selection[0]);
         mView->expand(selection[0]);
-        const Akonadi::Item parent = sModels->todoModel->data(idx, Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
+        const auto parent = sModels->todoModel->data(idx, Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
         addTodo(mQuickAdd->text(), parent, mProxyModel->categories());
     } else {
         return;
@@ -725,7 +725,7 @@ void TodoView::selectionChanged(const QItemSelection &selected, const QItemSelec
         return;
     }
 
-    const Akonadi::Item todoItem = selection[0].data(TodoModel::TodoRole).value<Akonadi::Item>();
+    const auto todoItem = selection[0].data(TodoModel::TodoRole).value<Akonadi::Item>();
 
     if (selectedIncidenceDates().isEmpty()) {
         Q_EMIT incidenceSelected(todoItem, QDate());
@@ -741,7 +741,7 @@ void TodoView::showTodo()
         return;
     }
 
-    const Akonadi::Item todoItem = selection[0].data(TodoModel::TodoRole).value<Akonadi::Item>();
+    const auto todoItem = selection[0].data(TodoModel::TodoRole).value<Akonadi::Item>();
 
     Q_EMIT showIncidenceSignal(todoItem);
 }
@@ -753,7 +753,7 @@ void TodoView::editTodo()
         return;
     }
 
-    const Akonadi::Item todoItem = selection[0].data(TodoModel::TodoRole).value<Akonadi::Item>();
+    const auto todoItem = selection[0].data(TodoModel::TodoRole).value<Akonadi::Item>();
     Q_EMIT editIncidenceSignal(todoItem);
 }
 
@@ -761,7 +761,7 @@ void TodoView::deleteTodo()
 {
     QModelIndexList selection = mView->selectionModel()->selectedRows();
     if (selection.size() == 1) {
-        const Akonadi::Item todoItem = selection[0].data(TodoModel::TodoRole).value<Akonadi::Item>();
+        const auto todoItem = selection[0].data(TodoModel::TodoRole).value<Akonadi::Item>();
 
         if (!changer()->deletedRecently(todoItem.id())) {
             Q_EMIT deleteIncidenceSignal(todoItem);
@@ -778,7 +778,7 @@ void TodoView::newSubTodo()
 {
     QModelIndexList selection = mView->selectionModel()->selectedRows();
     if (selection.size() == 1) {
-        const Akonadi::Item todoItem = selection[0].data(TodoModel::TodoRole).value<Akonadi::Item>();
+        const auto todoItem = selection[0].data(TodoModel::TodoRole).value<Akonadi::Item>();
 
         Q_EMIT newSubTodoSignal(todoItem);
     } else {
@@ -801,7 +801,7 @@ void TodoView::copyTodoToDate(const QDate &date)
     const QModelIndex origIndex = mProxyModel->mapToSource(selection[0]);
     Q_ASSERT(origIndex.isValid());
 
-    const Akonadi::Item origItem = sModels->todoModel->data(origIndex, Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
+    const auto origItem = sModels->todoModel->data(origIndex, Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
 
     const KCalendarCore::Todo::Ptr orig = CalendarSupport::todo(origItem);
     if (!orig) {
@@ -846,7 +846,7 @@ QMenu *TodoView::createCategoryPopupMenu()
         return tempMenu;
     }
 
-    const Akonadi::Item todoItem = selection[0].data(TodoModel::TodoRole).value<Akonadi::Item>();
+    const auto todoItem = selection[0].data(TodoModel::TodoRole).value<Akonadi::Item>();
     KCalendarCore::Todo::Ptr todo = CalendarSupport::todo(todoItem);
     Q_ASSERT(todo);
 
@@ -870,7 +870,7 @@ void TodoView::onTagsFetched(KJob *job)
     }
     auto fetchJob = static_cast<Akonadi::TagFetchJob *>(job);
     const QStringList checkedCategories = job->property("checkedCategories").toStringList();
-    QPointer<QMenu> menu = job->property("menu").value<QPointer<QMenu>>();
+    auto menu = job->property("menu").value<QPointer<QMenu>>();
     if (menu) {
         const auto lst = fetchJob->tags();
         for (const Akonadi::Tag &tag : lst) {
@@ -892,7 +892,7 @@ void TodoView::setNewDate(const QDate &date)
         return;
     }
 
-    const Akonadi::Item todoItem = selection[0].data(TodoModel::TodoRole).value<Akonadi::Item>();
+    const auto todoItem = selection[0].data(TodoModel::TodoRole).value<Akonadi::Item>();
     KCalendarCore::Todo::Ptr todo = CalendarSupport::todo(todoItem);
     Q_ASSERT(todo);
 
@@ -919,7 +919,7 @@ void TodoView::setNewPercentage(QAction *action)
         return;
     }
 
-    const Akonadi::Item todoItem = selection[0].data(TodoModel::TodoRole).value<Akonadi::Item>();
+    const auto todoItem = selection[0].data(TodoModel::TodoRole).value<Akonadi::Item>();
     KCalendarCore::Todo::Ptr todo = CalendarSupport::todo(todoItem);
     Q_ASSERT(todo);
 
@@ -949,7 +949,7 @@ void TodoView::setNewPriority(QAction *action)
     if (selection.size() != 1) {
         return;
     }
-    const Akonadi::Item todoItem = selection[0].data(TodoModel::TodoRole).value<Akonadi::Item>();
+    const auto todoItem = selection[0].data(TodoModel::TodoRole).value<Akonadi::Item>();
     KCalendarCore::Todo::Ptr todo = CalendarSupport::todo(todoItem);
     if (calendar()->hasRight(todoItem, Akonadi::Collection::CanChangeItem)) {
         KCalendarCore::Todo::Ptr oldTodo(todo->clone());
@@ -966,7 +966,7 @@ void TodoView::changedCategories(QAction *action)
         return;
     }
 
-    const Akonadi::Item todoItem = selection[0].data(TodoModel::TodoRole).value<Akonadi::Item>();
+    const auto todoItem = selection[0].data(TodoModel::TodoRole).value<Akonadi::Item>();
     KCalendarCore::Todo::Ptr todo = CalendarSupport::todo(todoItem);
     Q_ASSERT(todo);
     if (calendar()->hasRight(todoItem, Akonadi::Collection::CanChangeItem)) {
@@ -1039,7 +1039,7 @@ void TodoView::onRowsInserted(const QModelIndex &parent, int start, int end)
         return;
     }
 
-    Akonadi::Item item = v.value<Akonadi::Item>();
+    auto item = v.value<Akonadi::Item>();
     if (!item.isValid()) {
         return;
     }
@@ -1187,7 +1187,7 @@ void TodoView::createEvent()
         return;
     }
 
-    const Akonadi::Item todoItem = selection[0].data(TodoModel::TodoRole).value<Akonadi::Item>();
+    const auto todoItem = selection[0].data(TodoModel::TodoRole).value<Akonadi::Item>();
 
     Q_EMIT createEvent(todoItem);
 }
@@ -1199,7 +1199,7 @@ void TodoView::createNote()
         return;
     }
 
-    const Akonadi::Item todoItem = selection[0].data(TodoModel::TodoRole).value<Akonadi::Item>();
+    const auto todoItem = selection[0].data(TodoModel::TodoRole).value<Akonadi::Item>();
 
     Q_EMIT createNote(todoItem);
 }

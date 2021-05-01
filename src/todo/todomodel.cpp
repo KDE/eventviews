@@ -217,7 +217,7 @@ QVariant TodoModel::data(const QModelIndex &index, int role) const
         return QVariant();
     }
     Q_ASSERT(sourceIndex.isValid());
-    const Akonadi::Item item = sourceIndex.data(Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
+    const auto item = sourceIndex.data(Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
     if (!item.isValid()) {
         qCWarning(CALENDARVIEW_LOG) << "Invalid index: " << sourceIndex;
         // Q_ASSERT( false );
@@ -227,7 +227,7 @@ QVariant TodoModel::data(const QModelIndex &index, int role) const
     if (!todo) {
         qCCritical(CALENDARVIEW_LOG) << "item.hasPayload()" << item.hasPayload();
         if (item.hasPayload<KCalendarCore::Incidence::Ptr>()) {
-            KCalendarCore::Incidence::Ptr incidence = item.payload<KCalendarCore::Incidence::Ptr>();
+            auto incidence = item.payload<KCalendarCore::Incidence::Ptr>();
             if (incidence) {
                 qCCritical(CALENDARVIEW_LOG) << "It's actually " << incidence->type();
             }
@@ -397,7 +397,7 @@ bool TodoModel::setData(const QModelIndex &index, const QVariant &value, int rol
         return true;
     }
 
-    const Akonadi::Item item = data(index, Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
+    const auto item = data(index, Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
     const KCalendarCore::Todo::Ptr todo = CalendarSupport::todo(item);
 
     if (!item.isValid() || !todo) {
@@ -628,7 +628,7 @@ QMimeData *TodoModel::mimeData(const QModelIndexList &indexes) const
 {
     Akonadi::Item::List items;
     for (const QModelIndex &index : indexes) {
-        const Akonadi::Item item = this->data(index, Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
+        const auto item = this->data(index, Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
         if (item.isValid() && !items.contains(item)) {
             items.push_back(item);
         }
@@ -658,7 +658,7 @@ bool TodoModel::dropMimeData(const QMimeData *data, Qt::DropAction action, int r
             KCalendarCore::Todo::Ptr todo = CalendarSupport::todo(item);
             KCalendarCore::Todo::Ptr destTodo;
             if (parent.isValid()) {
-                const Akonadi::Item parentItem = this->data(parent, Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
+                const auto parentItem = this->data(parent, Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
                 if (parentItem.isValid()) {
                     destTodo = CalendarSupport::todo(parentItem);
                 }
@@ -698,7 +698,7 @@ bool TodoModel::dropMimeData(const QMimeData *data, Qt::DropAction action, int r
                 return false;
             }
 
-            const Akonadi::Item parentItem = this->data(parent, Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
+            const auto parentItem = this->data(parent, Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
             KCalendarCore::Todo::Ptr destTodo = CalendarSupport::todo(parentItem);
 
             if (data->hasText()) {
@@ -734,7 +734,7 @@ Qt::ItemFlags TodoModel::flags(const QModelIndex &index) const
 
     Qt::ItemFlags ret = QAbstractItemModel::flags(index);
 
-    const Akonadi::Item item = data(index, Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
+    const auto item = data(index, Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
 
     if (!item.isValid()) {
         Q_ASSERT(mapToSource(index).isValid());

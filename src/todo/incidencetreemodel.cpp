@@ -167,7 +167,7 @@ void IncidenceTreeModel::Private::onDataChanged(const QModelIndex &begin, const 
             Node::Ptr node = m_uidMap.value(rawNode->uid); // Looks hackish but it's safe
             Q_ASSERT(node);
             Node::Ptr oldParentNode = node->parentNode;
-            Akonadi::Item item = q->data(index, Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
+            auto item = q->data(index, Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
             Q_ASSERT(item.isValid());
             KCalendarCore::Incidence::Ptr incidence =
                 !item.hasPayload<KCalendarCore::Incidence::Ptr>() ? KCalendarCore::Incidence::Ptr() : item.payload<KCalendarCore::Incidence::Ptr>();
@@ -268,7 +268,7 @@ PreNode::Ptr IncidenceTreeModel::Private::prenodeFromSourceRow(int row) const
     node->sourceIndex = q->sourceModel()->index(row, 0, QModelIndex());
     Q_ASSERT(node->sourceIndex.isValid());
     Q_ASSERT(node->sourceIndex.model() == q->sourceModel());
-    const Akonadi::Item item = node->sourceIndex.data(EntityTreeModel::ItemRole).value<Akonadi::Item>();
+    const auto item = node->sourceIndex.data(EntityTreeModel::ItemRole).value<Akonadi::Item>();
 
     if (!item.isValid()) {
         // It's a Collection, ignore that, we only want items.

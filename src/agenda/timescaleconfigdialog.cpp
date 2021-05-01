@@ -50,12 +50,12 @@ TimeScaleConfigDialog::TimeScaleConfigDialog(const PrefsPtr &preferences, QWidge
     auto mainLayout = new QVBoxLayout(this);
     setModal(true);
 
-    QWidget *mainwidget = new QWidget(this);
+    auto mainwidget = new QWidget(this);
     setupUi(mainwidget);
 
     mainLayout->addWidget(mainwidget);
 
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
+    auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
     okButton->setDefault(true);
     okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
@@ -137,7 +137,7 @@ void TimeScaleConfigDialog::add()
             }
         }
 
-        QListWidgetItem *item = new QListWidgetItem(zoneCombo->currentText());
+        auto item = new QListWidgetItem(zoneCombo->currentText());
         item->setData(TimeZoneNameRole, zoneCombo->itemData(zoneCombo->currentIndex(), TimeZoneNameRole).toString());
         listWidget->addItem(item);
         zoneCombo->removeItem(zoneCombo->currentIndex());
