@@ -124,6 +124,7 @@ public:
     explicit GanttHeaderView(QWidget *parent = nullptr)
         : QHeaderView(Qt::Horizontal, parent)
     {
+        setSectionResizeMode(QHeaderView::Stretch);
     }
 
     QSize sizeHint() const override
@@ -218,6 +219,7 @@ TimelineView::TimelineView(QWidget *parent)
     auto vbox = new QVBoxLayout(this);
     auto splitter = new QSplitter(Qt::Horizontal, this);
     d->mLeftView = new QTreeWidget;
+    d->mLeftView->setColumnCount(1);
     d->mLeftView->setHeader(new GanttHeaderView);
     d->mLeftView->setHeaderLabel(i18n("Calendar"));
     d->mLeftView->setRootIsDecorated(false);
@@ -227,7 +229,7 @@ TimelineView::TimelineView(QWidget *parent)
     d->mGantt = new KGantt::GraphicsView(this);
     splitter->addWidget(d->mLeftView);
     splitter->addWidget(d->mGantt);
-    connect(splitter, &QSplitter::splitterMoved, d, &Private::splitterMoved);
+    splitter->setSizes({200, 600});
     auto model = new QStandardItemModel(this);
 
     d->mRowController = new RowController;
@@ -349,7 +351,6 @@ void TimelineView::showDates(const QDate &start, const QDate &end, const QDate &
         }
     }
     d->mGantt->setModel(ganttModel);
-    d->splitterMoved();
 }
 
 void TimelineView::showIncidences(const Akonadi::Item::List &incidenceList, const QDate &date)

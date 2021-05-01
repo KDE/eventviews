@@ -48,7 +48,6 @@ public Q_SLOTS:
     void itemChanged(QStandardItem *item);
     void contextMenuRequested(const QPoint &point);
     void newEventWithHint(const QDateTime &);
-    void splitterMoved();
 
 public:
     Akonadi::Item::List mSelectedItemList;
