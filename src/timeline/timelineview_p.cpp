@@ -34,11 +34,6 @@ TimelineView::Private::~Private()
 {
 }
 
-void TimelineView::Private::splitterMoved()
-{
-    mLeftView->setColumnWidth(0, mLeftView->width());
-}
-
 void TimelineView::Private::itemSelected(const QModelIndex &index)
 {
     auto tlitem = dynamic_cast<TimelineSubItem *>(static_cast<QStandardItemModel *>(mGantt->model())->item(index.row(), index.column()));
