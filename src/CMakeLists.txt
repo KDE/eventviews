@@ -113,7 +113,7 @@ target_include_directories(KF5EventViews INTERFACE "$<INSTALL_INTERFACE:${KDE_IN
 target_include_directories(KF5EventViews PUBLIC "$<BUILD_INTERFACE:${eventviews_SOURCE_DIR}/src;${eventviews_BINARY_DIR}/src;>")
 
 set_target_properties(KF5EventViews PROPERTIES
-  VERSION ${EVENTVIEWS_VERSION_STRING}
+  VERSION ${EVENTVIEWS_VERSION}
   SOVERSION ${EVENTVIEWS_SOVERSION}
   EXPORT_NAME EventViews
 )
