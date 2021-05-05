@@ -45,9 +45,14 @@ public:
     // ensure start and end are valid before calling this.
     void showDates(const QDate &, const QDate &, const QDate &preferredMonth = QDate()) override;
 
-    // FIXME: we already have startDateTime() in the base class
-    // why aren't we using it.
+    // Unused.
+    /** @deprecated Use EventView::startDateTime. */
+    [[deprecated("Use EventView::startDateTime.")]]
     Q_REQUIRED_RESULT QDate startDate() const;
+
+    // Unused.
+    /** @deprecated Use EventView::endDateTime.   */
+    [[deprecated("Use EventView::endDateTime.")]]
     Q_REQUIRED_RESULT QDate endDate() const;
 
     void showIncidences(const Akonadi::Item::List &incidenceList, const QDate &date) override;
