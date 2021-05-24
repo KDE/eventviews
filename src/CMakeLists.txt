@@ -7,7 +7,8 @@
 
 
 add_definitions(-DTRANSLATION_DOMAIN=\"libeventviews\")
-
+add_library(KF5EventViews)
+add_library(KF5::EventViews ALIAS KF5EventViews)
 if(KDEPIM_BUILD_EXAMPLES)
   add_subdirectory(viewerapp)
 endif()
@@ -20,7 +21,7 @@ endif()
 
 ########### next target ###############
 
-set(eventviews_LIB_SRCS
+target_sources(KF5EventViews PRIVATE
   eventview_p.cpp
   eventview.cpp
   helper.cpp
@@ -67,25 +68,25 @@ set(eventviews_LIB_SRCS
   whatsnext/whatsnextview.cpp
 )
 
-kconfig_add_kcfg_files(eventviews_LIB_SRCS prefs_base.kcfgc)
+kconfig_add_kcfg_files(KF5EventViews prefs_base.kcfgc)
 
-ecm_qt_declare_logging_category(eventviews_LIB_SRCS HEADER calendarview_debug.h
+ecm_qt_declare_logging_category(KF5EventViews HEADER calendarview_debug.h
         IDENTIFIER CALENDARVIEW_LOG
         CATEGORY_NAME org.kde.pim.calendarview
         OLD_CATEGORY_NAMES log_calendarview
         DESCRIPTION "kdepim (eventviews)" EXPORT EVENTVIEWS)
 
-ki18n_wrap_ui(eventviews_LIB_SRCS
+ki18n_wrap_ui(KF5EventViews
   agenda/timescaleedit_base.ui
 )
 
-add_library(KF5EventViews ${eventviews_LIB_SRCS})
+
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(KF5EventViews PROPERTIES UNITY_BUILD ON)
 endif()
 generate_export_header(KF5EventViews BASE_NAME eventviews)
 
-add_library(KF5::EventViews ALIAS KF5EventViews)
+
 
 target_link_libraries(KF5EventViews
 PUBLIC
