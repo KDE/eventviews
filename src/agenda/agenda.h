@@ -93,10 +93,10 @@ public:
 
     void paintEvent(QPaintEvent *) override;
 
-    Q_REQUIRED_RESULT QPoint contentsToGrid(const QPoint &pos) const;
-    Q_REQUIRED_RESULT QPoint gridToContents(const QPoint &gpos) const;
+    Q_REQUIRED_RESULT QPoint contentsToGrid(QPoint pos) const;
+    Q_REQUIRED_RESULT QPoint gridToContents(QPoint gpos) const;
 
-    Q_REQUIRED_RESULT int timeToY(const QTime &time) const;
+    Q_REQUIRED_RESULT int timeToY(QTime time) const;
     Q_REQUIRED_RESULT QTime gyToTime(int y) const;
 
     Q_REQUIRED_RESULT QVector<int> minContentsY() const;
@@ -252,16 +252,16 @@ protected:
         @param pos The current mouse position
         @param item The affected item
     */
-    MouseActionType isInResizeArea(bool horizontal, const QPoint &pos, const AgendaItem::QPtr &item);
+    MouseActionType isInResizeArea(bool horizontal, QPoint pos, const AgendaItem::QPtr &item);
     /** Return whether the cell specified by the grid point belongs to the current select
      */
-    bool ptInSelection(const QPoint &gpos) const;
+    bool ptInSelection(QPoint gpos) const;
 
     /** Start selecting time span. */
-    void startSelectAction(const QPoint &viewportPos);
+    void startSelectAction(QPoint viewportPos);
 
     /** Select time span. */
-    void performSelectAction(const QPoint &viewportPos);
+    void performSelectAction(QPoint viewportPos);
 
     /** Emd selecting time span. */
     void endSelectAction(const QPoint &viewportPos);
@@ -270,13 +270,13 @@ protected:
     void startItemAction(const QPoint &viewportPos);
 
     /** Move/resize agenda item */
-    void performItemAction(const QPoint &viewportPos);
+    void performItemAction(QPoint viewportPos);
 
     /** End moving/resizing agenda item */
     void endItemAction();
 
     /** Set cursor, when no item action is in progress */
-    void setNoActionCursor(const AgendaItem::QPtr &moveItem, const QPoint &viewportPos);
+    void setNoActionCursor(const AgendaItem::QPtr &moveItem, QPoint viewportPos);
     /** Sets the cursor according to the given action type.
         @param actionType The type of action for which the cursor should be set.
         @param acting If true, the corresponding action is running (e.g. the

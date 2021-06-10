@@ -651,7 +651,7 @@ void TodoView::addQuickTodo(Qt::KeyboardModifiers modifiers)
     mQuickAdd->setText(QString());
 }
 
-void TodoView::contextMenu(const QPoint &pos)
+void TodoView::contextMenu(QPoint pos)
 {
     const bool hasItem = mView->indexAt(pos).isValid();
     Incidence::Ptr incidencePtr;
@@ -787,7 +787,7 @@ void TodoView::newSubTodo()
     }
 }
 
-void TodoView::copyTodoToDate(const QDate &date)
+void TodoView::copyTodoToDate(QDate date)
 {
     if (!changer()) {
         return;
@@ -885,7 +885,7 @@ void TodoView::onTagsFetched(KJob *job)
     }
 }
 
-void TodoView::setNewDate(const QDate &date)
+void TodoView::setNewDate(QDate date)
 {
     QModelIndexList selection = mView->selectionModel()->selectedRows();
     if (selection.size() != 1) {

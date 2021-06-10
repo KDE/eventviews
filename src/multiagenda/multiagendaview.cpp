@@ -113,7 +113,7 @@ public:
     AgendaView *createView(const QString &title);
     void deleteViews();
     void setupViews();
-    void resizeScrollView(const QSize &size);
+    void resizeScrollView(QSize size);
 
     MultiAgendaView *const q;
     QList<AgendaView *> mAgendaViews;
@@ -490,7 +490,7 @@ void MultiAgendaView::resizeEvent(QResizeEvent *ev)
     EventView::resizeEvent(ev);
 }
 
-void MultiAgendaView::Private::resizeScrollView(const QSize &size)
+void MultiAgendaView::Private::resizeScrollView(QSize size)
 {
     const int widgetWidth = size.width() - mTimeLabelsZone->width() - mScrollBar->width();
 
@@ -558,7 +558,7 @@ void MultiAgendaView::resizeSplitters()
     }
 }
 
-void MultiAgendaView::zoomView(const int delta, const QPoint &pos, const Qt::Orientation ori)
+void MultiAgendaView::zoomView(const int delta, QPoint pos, const Qt::Orientation ori)
 {
     const int hourSz = preferences()->hourSize();
     if (ori == Qt::Vertical) {

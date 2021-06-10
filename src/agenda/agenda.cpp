@@ -782,7 +782,7 @@ bool Agenda::eventFilter_mouse(QObject *object, QMouseEvent *me)
     return true;
 }
 
-bool Agenda::ptInSelection(const QPoint &gpos) const
+bool Agenda::ptInSelection(QPoint gpos) const
 {
     if (!d->mHasSelection) {
         return false;
@@ -796,7 +796,7 @@ bool Agenda::ptInSelection(const QPoint &gpos) const
     return true;
 }
 
-void Agenda::startSelectAction(const QPoint &viewportPos)
+void Agenda::startSelectAction(QPoint viewportPos)
 {
     Q_EMIT newStartSelectSignal();
 
@@ -816,7 +816,7 @@ void Agenda::startSelectAction(const QPoint &viewportPos)
     //  updateContents();
 }
 
-void Agenda::performSelectAction(const QPoint &pos)
+void Agenda::performSelectAction(QPoint pos)
 {
     const QPoint gpos = contentsToGrid(pos);
 
@@ -861,7 +861,7 @@ void Agenda::endSelectAction(const QPoint &currentPos)
     }
 }
 
-Agenda::MouseActionType Agenda::isInResizeArea(bool horizontal, const QPoint &pos, const AgendaItem::QPtr &item)
+Agenda::MouseActionType Agenda::isInResizeArea(bool horizontal, QPoint pos, const AgendaItem::QPtr &item)
 {
     if (!item) {
         return NOP;
@@ -923,7 +923,7 @@ void Agenda::startItemAction(const QPoint &pos)
     setActionCursor(d->mActionType, true);
 }
 
-void Agenda::performItemAction(const QPoint &pos)
+void Agenda::performItemAction(QPoint pos)
 {
     QPoint gpos = contentsToGrid(pos);
 
@@ -1310,7 +1310,7 @@ void Agenda::setActionCursor(int actionType, bool acting)
 #endif
 }
 
-void Agenda::setNoActionCursor(const AgendaItem::QPtr &moveItem, const QPoint &pos)
+void Agenda::setNoActionCursor(const AgendaItem::QPtr &moveItem, QPoint pos)
 {
     const KCalendarCore::Incidence::Ptr item = moveItem ? moveItem->incidence() : KCalendarCore::Incidence::Ptr();
 
@@ -1645,7 +1645,7 @@ void Agenda::drawContents(QPainter *p, int cx, int cy, int cw, int ch)
 /*
   Convert srcollview contents coordinates to agenda grid coordinates.
 */
-QPoint Agenda::contentsToGrid(const QPoint &pos) const
+QPoint Agenda::contentsToGrid(QPoint pos) const
 {
     int gx = int(QApplication::isRightToLeft() ? d->mColumns - pos.x() / d->mGridSpacingX : pos.x() / d->mGridSpacingX);
     int gy = int(pos.y() / d->mGridSpacingY);
@@ -1655,7 +1655,7 @@ QPoint Agenda::contentsToGrid(const QPoint &pos) const
 /*
   Convert agenda grid coordinates to scrollview contents coordinates.
 */
-QPoint Agenda::gridToContents(const QPoint &gpos) const
+QPoint Agenda::gridToContents(QPoint gpos) const
 {
     int x = int(QApplication::isRightToLeft() ? (d->mColumns - gpos.x()) * d->mGridSpacingX : gpos.x() * d->mGridSpacingX);
     int y = int(gpos.y() * d->mGridSpacingY);
@@ -1666,7 +1666,7 @@ QPoint Agenda::gridToContents(const QPoint &gpos) const
   Return Y coordinate corresponding to time. Coordinates are rounded to
   fit into the grid.
 */
-int Agenda::timeToY(const QTime &time) const
+int Agenda::timeToY(QTime time) const
 {
     int minutesPerCell = 24 * 60 / d->mRows;
     int timeMinutes = time.hour() * 60 + time.minute();

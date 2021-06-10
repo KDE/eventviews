@@ -563,7 +563,7 @@ bool MonthView::usesFullWindow()
     return preferences()->fullViewMonth();
 }
 
-bool MonthView::isBusyDay(const QDate &day) const
+bool MonthView::isBusyDay(QDate day) const
 {
     return !d->mBusyDays[day].isEmpty();
 }

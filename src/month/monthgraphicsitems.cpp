@@ -55,7 +55,7 @@ void ScrollIndicator::paint(QPainter *painter, const QStyleOptionGraphicsItem *o
 }
 
 //-------------------------------------------------------------
-MonthCell::MonthCell(int id, const QDate &date, QGraphicsScene *scene)
+MonthCell::MonthCell(int id, QDate date, QGraphicsScene *scene)
     : mId(id)
     , mDate(date)
     , mScene(scene)

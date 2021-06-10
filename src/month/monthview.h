@@ -56,7 +56,7 @@ public:
         return false;
     }
 
-    Q_REQUIRED_RESULT bool isBusyDay(const QDate &day) const;
+    Q_REQUIRED_RESULT bool isBusyDay(QDate day) const;
 
     void setCalendar(const Akonadi::ETMCalendar::Ptr &cal) override;
 

@@ -39,7 +39,7 @@ public:
         return KCalendarCore::DateList();
     }
 
-    void appendJournal(const Akonadi::Item &journal, const QDate &dt);
+    void appendJournal(const Akonadi::Item &journal, QDate dt);
 
     /** documentation in baseview.h */
     void getHighlightMode(bool &highlightEvents, bool &highlightTodos, bool &highlightJournals);

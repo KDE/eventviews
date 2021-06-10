@@ -42,7 +42,7 @@ JournalView::~JournalView()
 {
 }
 
-void JournalView::appendJournal(const Akonadi::Item &journal, const QDate &dt)
+void JournalView::appendJournal(const Akonadi::Item &journal, QDate dt)
 {
     JournalDateView *entry = nullptr;
     if (mEntries.contains(dt)) {

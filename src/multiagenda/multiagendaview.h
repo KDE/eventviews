@@ -79,7 +79,7 @@ private Q_SLOTS:
     void slotClearTimeSpanSelection();
     void resizeSplitters();
     void setupScrollBar();
-    void zoomView(const int delta, const QPoint &pos, const Qt::Orientation ori);
+    void zoomView(const int delta, QPoint pos, const Qt::Orientation ori);
     void slotResizeScrollView();
     void recreateViews();
     void forceRecreateViews();

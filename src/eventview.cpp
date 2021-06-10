@@ -105,7 +105,7 @@ void EventView::setHolidayRegions(const QStringList &regions)
     }
 }
 
-int EventView::showMoveRecurDialog(const Incidence::Ptr &inc, const QDate &date)
+int EventView::showMoveRecurDialog(const Incidence::Ptr &inc, QDate date)
 {
     QDateTime dateTime(date, {}, Qt::LocalTime);
 

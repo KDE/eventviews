@@ -42,7 +42,7 @@ JournalDateView::~JournalDateView()
 {
 }
 
-void JournalDateView::setDate(const QDate &date)
+void JournalDateView::setDate(QDate date)
 {
     mDate = date;
     Q_EMIT setDateSignal(date);
@@ -241,7 +241,7 @@ void JournalFrame::setCalendar(const Akonadi::ETMCalendar::Ptr &calendar)
     mCalendar = calendar;
 }
 
-void JournalFrame::setDate(const QDate &date)
+void JournalFrame::setDate(QDate date)
 {
     mDate = date;
 }

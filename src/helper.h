@@ -74,7 +74,7 @@ EVENTVIEWS_EXPORT void setResourceColor(const Akonadi::Collection &collection, c
   Returns the number of years between the @p start QDate and the @p end QDate
   (i.e. the difference in the year number of both dates)
 */
-Q_REQUIRED_RESULT int yearDiff(const QDate &start, const QDate &end);
+Q_REQUIRED_RESULT int yearDiff(QDate start, QDate end);
 
 /**
    Equivalent to SmallIcon( name ), but uses QPixmapCache.

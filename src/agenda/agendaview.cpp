@@ -247,7 +247,7 @@ public:
         Returns a list of consecutive dates, starting with @p start and ending
         with @p end. If either start or end are invalid, a list with
         QDate::currentDate() is returned */
-    static QList<QDate> generateDateList(const QDate &start, const QDate &end);
+    static QList<QDate> generateDateList(QDate start, QDate end);
 
     void changeColumns(int numColumns);
 
@@ -360,7 +360,7 @@ void AgendaView::Private::changeColumns(int numColumns)
 }
 
 /** static */
-QList<QDate> AgendaView::Private::generateDateList(const QDate &start, const QDate &end)
+QList<QDate> AgendaView::Private::generateDateList(QDate start, QDate end)
 {
     QList<QDate> list;
 
@@ -696,7 +696,7 @@ AgendaView::AgendaView(QDate start, QDate end, bool isInteractive, bool isSideBy
     init(start, end);
 }
 
-AgendaView::AgendaView(const PrefsPtr &prefs, const QDate &start, const QDate &end, bool isInteractive, bool isSideBySide, QWidget *parent)
+AgendaView::AgendaView(const PrefsPtr &prefs, QDate start, QDate end, bool isInteractive, bool isSideBySide, QWidget *parent)
     : EventView(parent)
     , d(new Private(this, isInteractive, isSideBySide))
 {
@@ -896,7 +896,7 @@ void AgendaView::connectAgenda(Agenda *agenda, Agenda *otherAgenda)
             QOverload<const QList<QUrl> &, const QPoint &, bool>::of(&AgendaView::slotIncidencesDropped));
 }
 
-void AgendaView::slotIncidenceSelected(const KCalendarCore::Incidence::Ptr &incidence, const QDate &date)
+void AgendaView::slotIncidenceSelected(const KCalendarCore::Incidence::Ptr &incidence, QDate date)
 {
     Akonadi::Item item = d->mViewCalendar->item(incidence);
     if (item.isValid()) {
@@ -904,7 +904,7 @@ void AgendaView::slotIncidenceSelected(const KCalendarCore::Incidence::Ptr &inci
     }
 }
 
-void AgendaView::slotShowIncidencePopup(const KCalendarCore::Incidence::Ptr &incidence, const QDate &date)
+void AgendaView::slotShowIncidencePopup(const KCalendarCore::Incidence::Ptr &incidence, QDate date)
 {
     Akonadi::Item item = d->mViewCalendar->item(incidence);
     // qDebug() << "wanna see the popup for " << incidence->uid() << item.id();
@@ -965,7 +965,7 @@ void AgendaView::zoomOutVertically()
     }
 }
 
-void AgendaView::zoomInHorizontally(const QDate &date)
+void AgendaView::zoomInHorizontally(QDate date)
 {
     QDate begin;
     QDate newBegin;
@@ -973,7 +973,7 @@ void AgendaView::zoomInHorizontally(const QDate &date)
     int ndays, count;
 
     begin = d->mSelectedDates.first();
-    ndays = begin.daysTo(d->mSelectedDates.last());
+    ndays = begin.daysTo(d->mSelectedDates.constLast());
 
     // zoom with Action and are there a selected Incidence?, Yes, I zoom in to it.
     if (!dateToZoom.isValid()) {
@@ -998,7 +998,7 @@ void AgendaView::zoomInHorizontally(const QDate &date)
     }
 }
 
-void AgendaView::zoomOutHorizontally(const QDate &date)
+void AgendaView::zoomOutHorizontally(QDate date)
 {
     QDate begin;
     QDate newBegin;
@@ -1006,7 +1006,7 @@ void AgendaView::zoomOutHorizontally(const QDate &date)
     int ndays, count;
 
     begin = d->mSelectedDates.first();
-    ndays = begin.daysTo(d->mSelectedDates.last());
+    ndays = begin.daysTo(d->mSelectedDates.constLast());
 
     // zoom with Action and are there a selected Incidence?, Yes, I zoom out to it.
     if (!dateToZoom.isValid()) {
@@ -1029,7 +1029,7 @@ void AgendaView::zoomOutHorizontally(const QDate &date)
     }
 }
 
-void AgendaView::zoomView(const int delta, const QPoint &pos, const Qt::Orientation orient)
+void AgendaView::zoomView(const int delta, QPoint pos, const Qt::Orientation orient)
 {
     // TODO find out why this is necessary. seems to be some kind of performance hack
     static QDate zoomDate;
@@ -1097,7 +1097,7 @@ void AgendaView::placeDecorationsFrame(QFrame *frame, bool decorationsFound, boo
     }
 }
 
-void AgendaView::placeDecorations(DecorationList &decoList, const QDate &date, QWidget *labelBox, bool forWeek)
+void AgendaView::placeDecorations(DecorationList &decoList, QDate date, QWidget *labelBox, bool forWeek)
 {
     for (CalendarDecoration::Decoration *deco : qAsConst(decoList)) {
         const CalendarDecoration::Element::List elements = forWeek ? deco->weekElements(date) : deco->dayElements(date);
@@ -1936,7 +1936,7 @@ void AgendaView::slotIncidencesDropped(const QList<QUrl> &items, const QPoint &g
 #endif
 }
 
-static void setDateTime(KCalendarCore::Incidence::Ptr incidence, QDateTime dt, bool allDay)
+static void setDateTime(KCalendarCore::Incidence::Ptr incidence, const QDateTime &dt, bool allDay)
 {
     incidence->setAllDay(allDay);
 

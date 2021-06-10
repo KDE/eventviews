@@ -50,7 +50,7 @@ void TimelineView::Private::itemDoubleClicked(const QModelIndex &index)
     }
 }
 
-void TimelineView::Private::contextMenuRequested(const QPoint &point)
+void TimelineView::Private::contextMenuRequested(QPoint point)
 {
     QPersistentModelIndex index = mGantt->indexAt(point);
     // mHintDate = QDateTime( mGantt->getDateTimeForCoordX( QCursor::pos().x(), true ) );
@@ -84,7 +84,7 @@ TimelineItem *TimelineView::Private::calendarItemForIncidence(const Akonadi::Ite
     return item;
 }
 
-void TimelineView::Private::insertIncidence(const Akonadi::Item &aitem, const QDate &day)
+void TimelineView::Private::insertIncidence(const Akonadi::Item &aitem, QDate day)
 {
     const Incidence::Ptr incidence = CalendarSupport::incidence(aitem);
     // qCDebug(CALENDARVIEW_LOG) << "Item " << aitem.id() << " parentcollection: " << aitem.parentCollection().id();

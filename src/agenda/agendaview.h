@@ -66,12 +66,7 @@ class EVENTVIEWS_EXPORT AgendaView : public EventView
 {
     Q_OBJECT
 public:
-    explicit AgendaView(const PrefsPtr &preferences,
-                        const QDate &start,
-                        const QDate &end,
-                        bool isInteractive,
-                        bool isSideBySide = false,
-                        QWidget *parent = nullptr);
+    explicit AgendaView(const PrefsPtr &preferences, QDate start, QDate end, bool isInteractive, bool isSideBySide = false, QWidget *parent = nullptr);
 
     explicit AgendaView(QDate start, QDate end, bool isInteractive, bool isSideBySide = false, QWidget *parent = nullptr);
 
@@ -151,13 +146,13 @@ public:
     void enableAgendaUpdate(bool enable);
     void setIncidenceChanger(Akonadi::IncidenceChanger *changer) override;
 
-    void zoomInHorizontally(const QDate &date = QDate());
-    void zoomOutHorizontally(const QDate &date = QDate());
+    void zoomInHorizontally(QDate date = QDate());
+    void zoomOutHorizontally(QDate date = QDate());
 
     void zoomInVertically();
     void zoomOutVertically();
 
-    void zoomView(const int delta, const QPoint &pos, const Qt::Orientation orient = Qt::Horizontal);
+    void zoomView(const int delta, QPoint pos, const Qt::Orientation orient = Qt::Horizontal);
 
     void clearTimeSpanSelection();
 
@@ -220,8 +215,8 @@ protected Q_SLOTS:
     void alignAgendas();
 
 private Q_SLOTS:
-    void slotIncidenceSelected(const KCalendarCore::Incidence::Ptr &incidence, const QDate &date);
-    void slotShowIncidencePopup(const KCalendarCore::Incidence::Ptr &incidence, const QDate &date);
+    void slotIncidenceSelected(const KCalendarCore::Incidence::Ptr &incidence, QDate date);
+    void slotShowIncidencePopup(const KCalendarCore::Incidence::Ptr &incidence, QDate date);
     void slotEditIncidence(const KCalendarCore::Incidence::Ptr &incidence);
     void slotShowIncidence(const KCalendarCore::Incidence::Ptr &incidence);
     void slotDeleteIncidence(const KCalendarCore::Incidence::Ptr &incidence);
@@ -236,7 +231,7 @@ private:
     using DecorationList = QList<EventViews::CalendarDecoration::Decoration *>;
     bool loadDecorations(const QStringList &decorations, DecorationList &decoList);
     void placeDecorationsFrame(QFrame *frame, bool decorationsFound, bool isTop);
-    void placeDecorations(EventViews::AgendaView::DecorationList &decoList, const QDate &date, QWidget *labelBox, bool forWeek);
+    void placeDecorations(EventViews::AgendaView::DecorationList &decoList, QDate date, QWidget *labelBox, bool forWeek);
 #endif
 
     friend class TimeLabelsZone;

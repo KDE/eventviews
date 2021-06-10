@@ -279,7 +279,7 @@ IncidenceMonthItem::IncidenceMonthItem(MonthScene *monthScene,
                                        const Akonadi::ETMCalendar::Ptr &calendar,
                                        const Akonadi::Item &aitem,
                                        const KCalendarCore::Incidence::Ptr &incidence,
-                                       const QDate &recurStartDate)
+                                       QDate recurStartDate)
     : MonthItem(monthScene)
     , mCalendar(calendar)
     , mIncidence(incidence)
@@ -443,7 +443,7 @@ void IncidenceMonthItem::updateDates(int startOffset, int endOffset)
     }
 }
 
-void IncidenceMonthItem::updateSelection(const Akonadi::Item &incidence, const QDate &date)
+void IncidenceMonthItem::updateSelection(const Akonadi::Item &incidence, QDate date)
 {
     Q_UNUSED(date)
     setSelected(incidence == akonadiItem());
@@ -668,7 +668,7 @@ void IncidenceMonthItem::setNewDates(const KCalendarCore::Incidence::Ptr &incide
 
 //-----------------------------------------------------------------
 // HOLIDAYMONTHITEM
-HolidayMonthItem::HolidayMonthItem(MonthScene *monthScene, const QDate &date, const QString &name)
+HolidayMonthItem::HolidayMonthItem(MonthScene *monthScene, QDate date, const QString &name)
     : MonthItem(monthScene)
     , mDate(date)
     , mName(name)

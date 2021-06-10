@@ -81,7 +81,7 @@ QColor EventViews::resourceColor(const Akonadi::Item &item, const PrefsPtr &pref
     return resourceColor(item.parentCollection(), preferences);
 }
 
-int EventViews::yearDiff(const QDate &start, const QDate &end)
+int EventViews::yearDiff(QDate start, QDate end)
 {
     return end.year() - start.year();
 }

@@ -1023,7 +1023,7 @@ void AgendaItem::paintEvent(QPaintEvent *ev)
     }
 }
 
-void AgendaItem::drawRoundedRect(QPainter *p, const QRect &rect, bool selected, const QColor &bgColor, bool frame, int ft, bool roundTop, bool roundBottom)
+void AgendaItem::drawRoundedRect(QPainter *p, QRect rect, bool selected, const QColor &bgColor, bool frame, int ft, bool roundTop, bool roundBottom)
 {
     Q_UNUSED(ft)
     if (!mValid) {

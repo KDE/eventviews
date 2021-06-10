@@ -103,9 +103,9 @@ public:
     {
     }
 
-    void addIncidences(const Akonadi::ETMCalendar::Ptr &calendar, const KCalendarCore::Incidence::List &incidenceList, const QDate &date);
-    void addIncidence(const Akonadi::ETMCalendar::Ptr &calendar, const KCalendarCore::Incidence::Ptr &, const QDate &date);
-    void addIncidence(const Akonadi::ETMCalendar::Ptr &calendar, const Akonadi::Item &, const QDate &date);
+    void addIncidences(const Akonadi::ETMCalendar::Ptr &calendar, const KCalendarCore::Incidence::List &incidenceList, QDate date);
+    void addIncidence(const Akonadi::ETMCalendar::Ptr &calendar, const KCalendarCore::Incidence::Ptr &, QDate date);
+    void addIncidence(const Akonadi::ETMCalendar::Ptr &calendar, const Akonadi::Item &, QDate date);
     ListViewItem *getItemForIncidence(const Akonadi::Item &);
 
     QTreeWidget *mTreeWidget = nullptr;
@@ -375,14 +375,14 @@ void ListView::showAll()
     d->addIncidences(calendar(), calendar()->incidences(), QDate());
 }
 
-void ListView::Private::addIncidences(const Akonadi::ETMCalendar::Ptr &calendar, const KCalendarCore::Incidence::List &incidences, const QDate &date)
+void ListView::Private::addIncidences(const Akonadi::ETMCalendar::Ptr &calendar, const KCalendarCore::Incidence::List &incidences, QDate date)
 {
     for (const KCalendarCore::Incidence::Ptr &incidence : incidences) {
         addIncidence(calendar, incidence, date);
     }
 }
 
-void ListView::Private::addIncidence(const Akonadi::ETMCalendar::Ptr &calendar, const Akonadi::Item &item, const QDate &date)
+void ListView::Private::addIncidence(const Akonadi::ETMCalendar::Ptr &calendar, const Akonadi::Item &item, QDate date)
 {
     Q_ASSERT(calendar);
     if (item.isValid() && item.hasPayload<KCalendarCore::Incidence::Ptr>()) {
@@ -390,7 +390,7 @@ void ListView::Private::addIncidence(const Akonadi::ETMCalendar::Ptr &calendar, 
     }
 }
 
-void ListView::Private::addIncidence(const Akonadi::ETMCalendar::Ptr &calendar, const KCalendarCore::Incidence::Ptr &incidence, const QDate &date)
+void ListView::Private::addIncidence(const Akonadi::ETMCalendar::Ptr &calendar, const KCalendarCore::Incidence::Ptr &incidence, QDate date)
 {
     if (!incidence) {
         return;

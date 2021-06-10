@@ -46,7 +46,7 @@ private:
 class MonthCell
 {
 public:
-    MonthCell(int id, const QDate &date, QGraphicsScene *scene);
+    MonthCell(int id, QDate date, QGraphicsScene *scene);
     ~MonthCell();
 
     /**

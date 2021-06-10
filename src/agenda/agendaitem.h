@@ -267,7 +267,7 @@ private:
     // paint all visible icons
     void paintIcons(QPainter *p, int &x, int y, int ft);
 
-    void drawRoundedRect(QPainter *p, const QRect &rect, bool selected, const QColor &bgcolor, bool frame, int ft, bool roundTop, bool roundBottom);
+    void drawRoundedRect(QPainter *p, QRect rect, bool selected, const QColor &bgcolor, bool frame, int ft, bool roundTop, bool roundBottom);
 
     Q_REQUIRED_RESULT QColor getCategoryColor() const;
     Q_REQUIRED_RESULT QColor getFrameColor(const QColor &resourceColor, const QColor &categoryColor) const;

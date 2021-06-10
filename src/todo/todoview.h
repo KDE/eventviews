@@ -103,7 +103,7 @@ protected Q_SLOTS:
     void resizeEvent(QResizeEvent *) override;
     void addQuickTodo(Qt::KeyboardModifiers modifier);
 
-    void contextMenu(const QPoint &pos);
+    void contextMenu(QPoint pos);
 
     void selectionChanged(const QItemSelection &selected, const QItemSelection &deselected);
 
@@ -113,13 +113,13 @@ protected Q_SLOTS:
     void deleteTodo();
     void newTodo();
     void newSubTodo();
-    void copyTodoToDate(const QDate &date);
+    void copyTodoToDate(QDate date);
 
 private Q_SLOTS:
     void scheduleResizeColumns();
     void resizeColumns();
     void itemDoubleClicked(const QModelIndex &index);
-    void setNewDate(const QDate &date);
+    void setNewDate(QDate date);
     void setNewPercentage(QAction *action);
     void setNewPriority(QAction *action);
     void changedCategories(QAction *action);

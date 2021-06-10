@@ -274,7 +274,7 @@ public:
                        const Akonadi::ETMCalendar::Ptr &calendar,
                        const Akonadi::Item &item,
                        const KCalendarCore::Incidence::Ptr &incidence,
-                       const QDate &recurStartDate = QDate());
+                       QDate recurStartDate = QDate());
 
     ~IncidenceMonthItem() override;
 
@@ -309,7 +309,7 @@ protected Q_SLOTS:
       If will be selected if incidence is the incidence managed by this item.
       Else it will be deselected.
     */
-    void updateSelection(const Akonadi::Item &incidence, const QDate &date);
+    void updateSelection(const Akonadi::Item &incidence, QDate date);
 
 private:
     void updateDates(int startOffset, int endOffset);
@@ -333,7 +333,7 @@ class EVENTVIEWS_EXPORT HolidayMonthItem : public MonthItem
     Q_OBJECT
 
 public:
-    HolidayMonthItem(MonthScene *monthScene, const QDate &date, const QString &name);
+    HolidayMonthItem(MonthScene *monthScene, QDate date, const QString &name);
     ~HolidayMonthItem() override;
 
     bool greaterThanFallback(const MonthItem *other) const override;

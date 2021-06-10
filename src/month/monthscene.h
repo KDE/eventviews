@@ -258,7 +258,7 @@ private:
      * Given a pos in the scene coordinates,
      * returns the cell containing @p pos.
      */
-    MonthCell *getCellFromPos(const QPointF &pos);
+    MonthCell *getCellFromPos(QPointF pos);
 
     /**
        Returns true if (x, y) is in the monthgrid, false else.

@@ -249,7 +249,7 @@ public:
     Q_REQUIRED_RESULT QDateTime actualStartDateTime() const;
     Q_REQUIRED_RESULT QDateTime actualEndDateTime() const;
 
-    Q_REQUIRED_RESULT int showMoveRecurDialog(const KCalendarCore::Incidence::Ptr &incidence, const QDate &date);
+    Q_REQUIRED_RESULT int showMoveRecurDialog(const KCalendarCore::Incidence::Ptr &incidence, QDate date);
 
     /**
       Handles key events, opens the new event dialog when enter is pressed, activates type ahead.

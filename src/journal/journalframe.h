@@ -61,7 +61,7 @@ public Q_SLOTS:
         mChanger = changer;
     }
 
-    void setDate(const QDate &date);
+    void setDate(QDate date);
 
 Q_SIGNALS:
     void printJournal(const KCalendarCore::Journal::Ptr &, bool preview);
@@ -97,7 +97,7 @@ public:
     void addJournal(const Akonadi::Item &journal);
     Akonadi::Item::List journals() const;
 
-    void setDate(const QDate &date);
+    void setDate(QDate date);
     QDate date() const
     {
         return mDate;

@@ -37,7 +37,7 @@ public:
 
     TimelineItem *calendarItemForIncidence(const Akonadi::Item &incidence);
     void insertIncidence(const Akonadi::Item &incidence);
-    void insertIncidence(const Akonadi::Item &incidence, const QDate &day);
+    void insertIncidence(const Akonadi::Item &incidence, QDate day);
     void removeIncidence(const Akonadi::Item &incidence);
 
 public Q_SLOTS:
@@ -45,7 +45,7 @@ public Q_SLOTS:
     void itemSelected(const QModelIndex &index);
     void itemDoubleClicked(const QModelIndex &index);
     void itemChanged(QStandardItem *item);
-    void contextMenuRequested(const QPoint &point);
+    void contextMenuRequested(QPoint point);
     void newEventWithHint(const QDateTime &);
 
 public:

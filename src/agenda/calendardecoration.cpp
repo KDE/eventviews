@@ -259,18 +259,18 @@ Element::List Decoration::createYearElements(const QDate &)
     return Element::List();
 }
 
-QDate Decoration::weekDate(const QDate &date)
+QDate Decoration::weekDate(QDate date)
 {
     QDate result = date;
     return result.addDays(date.dayOfWeek() - 1);
 }
 
-QDate Decoration::monthDate(const QDate &date)
+QDate Decoration::monthDate(QDate date)
 {
     return {date.year(), date.month(), 1};
 }
 
-QDate Decoration::yearDate(const QDate &date)
+QDate Decoration::yearDate(QDate date)
 {
     return {date.year(), 1, 1};
 }

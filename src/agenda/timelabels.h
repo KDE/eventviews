@@ -65,7 +65,7 @@ private:
     Q_REQUIRED_RESULT QString cellToSuffix(const int cell) const;
 
     /** update the position of the marker showing the mouse position */
-    void mousePosChanged(const QPoint &pos);
+    void mousePosChanged(QPoint pos);
 
     void showMousePos();
     void hideMousePos();

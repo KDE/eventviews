@@ -48,7 +48,7 @@ TimeLabels::TimeLabels(const QTimeZone &zone, int rows, TimeLabelsZone *parent, 
     updateConfig();
 }
 
-void TimeLabels::mousePosChanged(const QPoint &pos)
+void TimeLabels::mousePosChanged(QPoint pos)
 {
     colorMousePos();
     mMousePos->move(0, pos.y());

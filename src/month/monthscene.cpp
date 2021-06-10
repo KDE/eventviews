@@ -677,7 +677,7 @@ bool MonthScene::isInMonthGrid(int x, int y) const
 
 // The function converts the coordinates to the month grid coordinates to
 // be able to locate the cell.
-MonthCell *MonthScene::getCellFromPos(const QPointF &pos)
+MonthCell *MonthScene::getCellFromPos(QPointF pos)
 {
     int y = sceneYToMonthGridY(static_cast<int>(pos.y()));
     int x = sceneXToMonthGridX(static_cast<int>(pos.x()));
