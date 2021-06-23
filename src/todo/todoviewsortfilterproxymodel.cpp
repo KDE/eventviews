@@ -285,8 +285,9 @@ int TodoViewSortFilterProxyModel::comparePriorities(const QModelIndex &left, con
         const int rightPriority = rightValue.toInt();
 
         if (leftPriority != rightPriority) {
-            // priority '5' is bigger then priroity '6'
-            return leftPriority < rightPriority ? 1 : -1;
+            // Sort in numeric order (1 < 9) rather than priority order (lowest 9 < highest 1).
+            // There are arguments either way, but this is consistent with KCalendarCore.
+            return leftPriority < rightPriority ? -1 : 1;
         } else {
             return 0;
         }
