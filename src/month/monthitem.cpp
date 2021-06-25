@@ -354,9 +354,10 @@ QDate IncidenceMonthItem::realEndDate() const
     }
 
     QDateTime dt = mIncidence->dateTime(KCalendarCore::Incidence::RoleDisplayEnd);
-    if (!mIncidence->allDay()) {
-        // If dt's time portion is 00:00, the incidence ends on the previous day.
-        dt = dt.addSecs(-1);
+    if (!mIncidence->allDay() && dt > mIncidence->dateTime(KCalendarCore::Incidence::RoleDisplayStart)) {
+        // If dt's time portion is 00:00:00, the incidence ends on the previous day
+        // unless it also starts at 00:00:00 (a duration of 0).
+        dt = dt.addMSecs(-1);
     }
     const QDate end = dt.toLocalTime().date();
 

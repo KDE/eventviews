@@ -307,6 +307,9 @@ void JournalFrame::readJournal(const Akonadi::Item &j)
     } else {
         mBrowser->insertPlainText(description);
     }
+    cursor.movePosition(QTextCursor::Start);
+    mBrowser->setTextCursor(cursor);
+    mBrowser->ensureCursorVisible();
 
     if (mCalendar) {
         mEditButton->setEnabled(mCalendar->hasRight(j, Akonadi::Collection::CanChangeItem));

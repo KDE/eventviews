@@ -563,9 +563,10 @@ void AgendaView::Private::insertIncidence(const KCalendarCore::Incidence::Ptr &i
     if (event) {
         const QDate firstVisibleDate = mSelectedDates.first();
         QDateTime dtEnd = event->dtEnd().toLocalTime();
-        if (!event->allDay()) {
-            // If dtEnd's time portion is 00:00, the event ends on the previous day.
-            dtEnd = dtEnd.addSecs(-1);
+        if (!event->allDay() && dtEnd > event->dtStart()) {
+            // If dtEnd's time portion is 00:00:00, the event ends on the previous day
+            // unless it also starts at 00:00:00 (a duration of 0).
+            dtEnd = dtEnd.addMSecs(-1);
         }
         const int duration = event->dtStart().toLocalTime().daysTo(dtEnd);
         if (insertAtDate < firstVisibleDate) {
@@ -643,8 +644,10 @@ void AgendaView::Private::insertIncidence(const KCalendarCore::Incidence::Ptr &i
             QTime endTime = startTime.addSecs(durationOfFirstOccurrence);
 
             startY = mAgenda->timeToY(startTime);
-            if (endTime == QTime(0, 0, 0)) {
-                endTime = QTime(23, 59, 59);
+            if (durationOfFirstOccurrence != 0 && endTime == QTime(0, 0, 0)) {
+                // If endTime is 00:00:00, the event ends on the previous day
+                // unless it also starts at 00:00:00 (a duration of 0).
+                endTime = endTime.addMSecs(-1);
             }
             endY = mAgenda->timeToY(endTime) - 1;
         }
