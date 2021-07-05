@@ -1215,10 +1215,10 @@ void AgendaView::createDayLabels(bool force)
         d->mDateDayLabels.append(dayLabel);
         // if a holiday region is selected, show the holiday name
         const QStringList texts = CalendarSupport::holiday(date);
+        const int columnWidth = (d->mTopDayLabelsFrame->width() - (!d->mIsSideBySide ? d->mTimeLabelsZone->width() : 0)
+            - SPACING - d->mAllDayAgenda->scrollArea()->frameWidth()) / d->mSelectedDates.count();
         for (const QString &text : texts) {
-            // Compute a small version of the holiday string for AlternateLabel
-            const KWordWrap ww = KWordWrap::formatText(fm, topDayLabelBox->rect(), 0, text, -1);
-            auto label = new AlternateLabel(ww.truncatedString(), text, text, topDayLabelBox);
+            auto label = new AlternateLabel(fm.elidedText(text, Qt::ElideRight, columnWidth), text, text, topDayLabelBox);
             topDayLabelBoxLayout->addWidget(label);
             label->setAlignment(Qt::AlignCenter);
         }
