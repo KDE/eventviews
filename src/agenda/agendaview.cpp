@@ -440,7 +440,7 @@ void AgendaView::Private::calendarIncidenceChanged(const KCalendarCore::Incidenc
         KCalendarCore::Incidence::Ptr originalIncidence = agendaItems.first()->incidence();
 
         if (datesEqual(originalIncidence, incidence)) {
-            for (const AgendaItem::QPtr &agendaItem : qAsConst(agendaItems)) {
+            for (const AgendaItem::QPtr &agendaItem : std::as_const(agendaItems)) {
                 agendaItem->setIncidence(KCalendarCore::Incidence::Ptr(incidence->clone()));
                 agendaItem->update();
             }
@@ -824,7 +824,7 @@ void AgendaView::init(QDate start, QDate end)
 
 AgendaView::~AgendaView()
 {
-    for (const ViewCalendar::Ptr &cal : qAsConst(d->mViewCalendar->mSubCalendars)) {
+    for (const ViewCalendar::Ptr &cal : std::as_const(d->mViewCalendar->mSubCalendars)) {
         if (cal->getCalendar()) {
             cal->getCalendar()->unregisterObserver(d);
         }
@@ -1102,7 +1102,7 @@ void AgendaView::placeDecorationsFrame(QFrame *frame, bool decorationsFound, boo
 
 void AgendaView::placeDecorations(DecorationList &decoList, QDate date, QWidget *labelBox, bool forWeek)
 {
-    for (CalendarDecoration::Decoration *deco : qAsConst(decoList)) {
+    for (CalendarDecoration::Decoration *deco : std::as_const(decoList)) {
         const CalendarDecoration::Element::List elements = forWeek ? deco->weekElements(date) : deco->dayElements(date);
         if (!elements.isEmpty()) {
             auto decoHBox = new QFrame(labelBox);
@@ -1182,7 +1182,7 @@ void AgendaView::createDayLabels(bool force)
     placeDecorationsFrame(d->mBottomDayLabelsFrame, loadDecorations(botStrDecos, botDecos), false);
 #endif
 
-    for (const QDate &date : qAsConst(d->mSelectedDates)) {
+    for (const QDate &date : std::as_const(d->mSelectedDates)) {
         auto topDayLabelBox = new QFrame(d->mTopDayLabels);
         auto topDayLabelBoxLayout = new QVBoxLayout(topDayLabelBox);
         topDayLabelBoxLayout->setContentsMargins(0, 0, 0, 0);
@@ -1257,7 +1257,7 @@ void AgendaView::updateDayLabelSizes()
 {
     // First, calculate the maximum text type that fits for all labels
     AlternateLabel::TextType overallType = AlternateLabel::Extensive;
-    for (AlternateLabel *label : qAsConst(d->mDateDayLabels)) {
+    for (AlternateLabel *label : std::as_const(d->mDateDayLabels)) {
         AlternateLabel::TextType type = label->largestFittingTextType();
         if (type < overallType) {
             overallType = type;
@@ -1265,7 +1265,7 @@ void AgendaView::updateDayLabelSizes()
     }
 
     // Then, set that maximum text type to all the labels
-    for (AlternateLabel *label : qAsConst(d->mDateDayLabels)) {
+    for (AlternateLabel *label : std::as_const(d->mDateDayLabels)) {
         label->setFixedType(overallType);
     }
 }
@@ -1423,7 +1423,7 @@ void AgendaView::updateTimeBarWidth()
     QFontMetrics fm(labelFont);
 
     int width = d->mTimeLabelsZone->preferedTimeLabelsWidth();
-    for (QLabel *l : qAsConst(d->mTimeBarHeaders)) {
+    for (QLabel *l : std::as_const(d->mTimeBarHeaders)) {
         const auto lst = l->text().split(QLatin1Char(' '));
         for (const QString &word : lst) {
             width = qMax(width, fm.boundingRect(word).width());

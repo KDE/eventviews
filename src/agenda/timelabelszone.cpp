@@ -30,7 +30,7 @@ TimeLabelsZone::TimeLabelsZone(QWidget *parent, const PrefsPtr &preferences, Age
 
 void TimeLabelsZone::reset()
 {
-    for (QScrollArea *label : qAsConst(mTimeLabelsList)) {
+    for (QScrollArea *label : std::as_const(mTimeLabelsList)) {
         label->hide();
         label->deleteLater();
     }
@@ -113,7 +113,7 @@ int TimeLabelsZone::preferedTimeLabelsWidth() const
 
 void TimeLabelsZone::updateAll()
 {
-    for (QScrollArea *area : qAsConst(mTimeLabelsList)) {
+    for (QScrollArea *area : std::as_const(mTimeLabelsList)) {
         auto timeLabel = static_cast<TimeLabels *>(area->widget());
         timeLabel->updateConfig();
     }
@@ -129,7 +129,7 @@ void TimeLabelsZone::setAgendaView(AgendaView *agendaView)
     mParent = agendaView;
     mAgenda = agendaView ? agendaView->agenda() : nullptr;
 
-    for (QScrollArea *timeLabel : qAsConst(mTimeLabelsList)) {
+    for (QScrollArea *timeLabel : std::as_const(mTimeLabelsList)) {
         setupTimeLabel(timeLabel);
     }
 }

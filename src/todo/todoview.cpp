@@ -82,7 +82,7 @@ public:
     {
         const QString todoMimeType = QStringLiteral("application/x-vnd.akonadi.calendar.todo");
         if (flat) {
-            for (TodoView *view : qAsConst(views)) {
+            for (TodoView *view : std::as_const(views)) {
                 // In flatview dropping confuses users and it's very easy to drop into a child item
                 view->mView->setDragDropMode(QAbstractItemView::DragOnly);
                 view->setFlatView(flat, /**propagate=*/false); // So other views update their toggle icon
@@ -103,7 +103,7 @@ public:
         } else {
             delete todoTreeModel;
             todoTreeModel = new IncidenceTreeModel(QStringList() << todoMimeType, parent);
-            for (TodoView *view : qAsConst(views)) {
+            for (TodoView *view : std::as_const(views)) {
                 QObject::connect(todoTreeModel, &IncidenceTreeModel::indexChangedParent, view, &TodoView::expandIndex);
                 QObject::connect(todoTreeModel, &IncidenceTreeModel::batchInsertionFinished, view, &TodoView::restoreViewState);
                 view->mView->setDragDropMode(QAbstractItemView::DragDrop);
@@ -115,7 +115,7 @@ public:
             todoFlatModel = nullptr;
         }
 
-        for (TodoView *view : qAsConst(views)) {
+        for (TodoView *view : std::as_const(views)) {
             view->mFlatViewButton->blockSignals(true);
             // We block signals to avoid recursion, we have two TodoViews and mFlatViewButton is synchronized
             view->mFlatViewButton->setChecked(flat);
@@ -656,7 +656,7 @@ void TodoView::contextMenu(QPoint pos)
     const bool hasItem = mView->indexAt(pos).isValid();
     Incidence::Ptr incidencePtr;
 
-    for (QAction *entry : qAsConst(mItemPopupMenuItemOnlyEntries)) {
+    for (QAction *entry : std::as_const(mItemPopupMenuItemOnlyEntries)) {
         bool enable;
 
         if (hasItem) {

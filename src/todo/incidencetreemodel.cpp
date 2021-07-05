@@ -16,7 +16,7 @@ static void calculateDepth(const Node::Ptr &node)
 {
     Q_ASSERT(node);
     node->depth = node->parentNode ? 1 + node->parentNode->depth : 0;
-    for (const Node::Ptr &child : qAsConst(node->directChilds)) {
+    for (const Node::Ptr &child : std::as_const(node->directChilds)) {
         calculateDepth(child);
     }
 }
@@ -97,7 +97,7 @@ void IncidenceTreeModel::Private::assert_and_dump(bool condition, const QString 
 
 void IncidenceTreeModel::Private::dumpTree()
 {
-    for (const Node::Ptr &node : qAsConst(m_toplevelNodeList)) {
+    for (const Node::Ptr &node : std::as_const(m_toplevelNodeList)) {
         qCDebug(CALENDARVIEW_LOG) << node;
     }
 }
@@ -422,7 +422,7 @@ Node::List IncidenceTreeModel::Private::sorted(const Node::List &nodes) const
     }
 
     // Initialize depths
-    for (const Node::Ptr &topLevelNode : qAsConst(m_toplevelNodeList)) {
+    for (const Node::Ptr &topLevelNode : std::as_const(m_toplevelNodeList)) {
         calculateDepth(topLevelNode);
     }
 
@@ -858,7 +858,7 @@ QDebug operator<<(QDebug s, const Node::Ptr &node)
     s << padding + QLatin1String("node") << node.data() << QStringLiteral(";uid=") << node->uid << QStringLiteral(";id=") << node->id
       << QStringLiteral(";parentUid=") << node->parentUid << QStringLiteral(";parentNode=") << (void *)(node->parentNode.data()) << '\n';
 
-    for (const Node::Ptr &child : qAsConst(node->directChilds)) {
+    for (const Node::Ptr &child : std::as_const(node->directChilds)) {
         s << child;
     }
 

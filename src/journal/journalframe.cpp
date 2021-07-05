@@ -90,7 +90,7 @@ Akonadi::Item::List JournalDateView::journals() const
 {
     Akonadi::Item::List l;
     l.reserve(mEntries.count());
-    for (const JournalFrame *const i : qAsConst(mEntries)) {
+    for (const JournalFrame *const i : std::as_const(mEntries)) {
         l.push_back(i->journal());
     }
     return l;

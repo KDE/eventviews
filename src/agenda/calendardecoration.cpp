@@ -145,19 +145,19 @@ Decoration::~Decoration()
 {
     // Deleted by label directly.
 #if 0
-    for (Element::List lst : qAsConst(mDayElements)) {
+    for (Element::List lst : std::as_const(mDayElements)) {
         qDeleteAll(lst);
         lst.clear();
     }
-    for (Element::List lst : qAsConst(mWeekElements)) {
+    for (Element::List lst : std::as_const(mWeekElements)) {
         qDeleteAll(lst);
         lst.clear();
     }
-    for (Element::List lst : qAsConst(mMonthElements)) {
+    for (Element::List lst : std::as_const(mMonthElements)) {
         qDeleteAll(lst);
         lst.clear();
     }
-    for (Element::List lst : qAsConst(mYearElements)) {
+    for (Element::List lst : std::as_const(mYearElements)) {
         qDeleteAll(lst);
         lst.clear();
     }

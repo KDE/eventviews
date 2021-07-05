@@ -1423,7 +1423,7 @@ void Agenda::placeSubCells(const AgendaItem::QPtr &placeItem)
 #endif
 
     QList<CalendarSupport::CellItem *> cells;
-    for (CalendarSupport::CellItem *item : qAsConst(d->mItems)) {
+    for (CalendarSupport::CellItem *item : std::as_const(d->mItems)) {
         if (item) {
             cells.append(item);
         }
@@ -1697,7 +1697,7 @@ QVector<int> Agenda::minContentsY() const
 {
     QVector<int> minArray;
     minArray.fill(timeToY(QTime(23, 59)), d->mSelectedDates.count());
-    for (const AgendaItem::QPtr &item : qAsConst(d->mItems)) {
+    for (const AgendaItem::QPtr &item : std::as_const(d->mItems)) {
         if (item) {
             int ymin = item->cellYTop();
             int index = item->cellXLeft();
@@ -1716,7 +1716,7 @@ QVector<int> Agenda::maxContentsY() const
 {
     QVector<int> maxArray;
     maxArray.fill(timeToY(QTime(0, 0)), d->mSelectedDates.count());
-    for (const AgendaItem::QPtr &item : qAsConst(d->mItems)) {
+    for (const AgendaItem::QPtr &item : std::as_const(d->mItems)) {
         if (item) {
             int ymax = item->cellYBottom();
 
@@ -2044,7 +2044,7 @@ void Agenda::resizeEvent(QResizeEvent *ev)
 void Agenda::resizeAllContents()
 {
     double subCellWidth;
-    for (const AgendaItem::QPtr &item : qAsConst(d->mItems)) {
+    for (const AgendaItem::QPtr &item : std::as_const(d->mItems)) {
         if (item) {
             subCellWidth = calcSubCellWidth(item);
             placeAgendaItem(item, subCellWidth);
@@ -2180,7 +2180,7 @@ void Agenda::deselectItem()
 
     const KCalendarCore::Incidence::Ptr selectedItem = d->mSelectedItem->incidence();
 
-    for (AgendaItem::QPtr item : qAsConst(d->mItems)) {
+    for (AgendaItem::QPtr item : std::as_const(d->mItems)) {
         if (item) {
             const KCalendarCore::Incidence::Ptr itemInc = item->incidence();
             if (itemInc && selectedItem && itemInc->uid() == selectedItem->uid()) {
@@ -2207,7 +2207,7 @@ void Agenda::selectItem(const AgendaItem::QPtr &item)
     Q_ASSERT(d->mSelectedItem->incidence());
     d->mSelectedId = d->mSelectedItem->incidence()->uid();
 
-    for (AgendaItem::QPtr item : qAsConst(d->mItems)) {
+    for (AgendaItem::QPtr item : std::as_const(d->mItems)) {
         if (item && item->incidence()->uid() == d->mSelectedId) {
             item->select();
         }
@@ -2217,7 +2217,7 @@ void Agenda::selectItem(const AgendaItem::QPtr &item)
 
 void Agenda::selectIncidenceByUid(const QString &uid)
 {
-    for (const AgendaItem::QPtr &item : qAsConst(d->mItems)) {
+    for (const AgendaItem::QPtr &item : std::as_const(d->mItems)) {
         if (item && item->incidence()->uid() == uid) {
             selectItem(item);
             break;

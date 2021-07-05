@@ -69,7 +69,7 @@ TimeScaleConfigDialog::TimeScaleConfigDialog(const PrefsPtr &preferences, QWidge
 
     QVector<TimeZoneNamePair> availList, selList;
     const auto zoneIds = QTimeZone::availableTimeZoneIds();
-    for (const auto &zoneId : qAsConst(zoneIds)) {
+    for (const auto &zoneId : std::as_const(zoneIds)) {
         // do not list timezones already shown
         if (!shownTimeZones.contains(QString::fromUtf8(zoneId))) {
             availList.append(TimeZoneNamePair(tzWithUTC(zoneId), zoneId));
@@ -79,7 +79,7 @@ TimeScaleConfigDialog::TimeScaleConfigDialog(const PrefsPtr &preferences, QWidge
     }
     std::sort(availList.begin(), availList.end());
 
-    for (const TimeZoneNamePair &item : qAsConst(availList)) {
+    for (const TimeZoneNamePair &item : std::as_const(availList)) {
         zoneCombo->addItem(item.first, item.second);
     }
     zoneCombo->setCurrentIndex(0);
@@ -98,7 +98,7 @@ TimeScaleConfigDialog::TimeScaleConfigDialog(const PrefsPtr &preferences, QWidge
     connect(buttonBox->button(QDialogButtonBox::Cancel), &QPushButton::clicked, this, &TimeScaleConfigDialog::reject);
     connect(listWidget, &QListWidget::currentItemChanged, this, &TimeScaleConfigDialog::slotUpdateButton);
 
-    for (const TimeZoneNamePair &item : qAsConst(selList)) {
+    for (const TimeZoneNamePair &item : std::as_const(selList)) {
         auto widgetItem = new QListWidgetItem(item.first);
         widgetItem->setData(TimeZoneNameRole, item.second);
         listWidget->addItem(widgetItem);

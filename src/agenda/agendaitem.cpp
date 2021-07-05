@@ -652,7 +652,7 @@ void AgendaItem::dropEvent(QDropEvent *e)
     KContacts::Addressee::List list;
 
     if (KContacts::VCardDrag::fromMimeData(md, list)) {
-        for (const KContacts::Addressee &addressee : qAsConst(list)) {
+        for (const KContacts::Addressee &addressee : std::as_const(list)) {
             QString em(addressee.fullEmail());
             if (em.isEmpty()) {
                 em = addressee.realName();

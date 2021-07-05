@@ -29,7 +29,7 @@ KCalendarCore::Calendar::Ptr MultiViewCalendar::getCalendar() const
 KCalendarCore::Incidence::List MultiViewCalendar::incidences() const
 {
     KCalendarCore::Incidence::List list;
-    for (const ViewCalendar::Ptr &cal : qAsConst(mSubCalendars)) {
+    for (const ViewCalendar::Ptr &cal : std::as_const(mSubCalendars)) {
         if (cal->getCalendar()) {
             list += cal->getCalendar()->incidences();
         }
@@ -44,7 +44,7 @@ int MultiViewCalendar::calendars() const
 
 ViewCalendar::Ptr MultiViewCalendar::findCalendar(const KCalendarCore::Incidence::Ptr &incidence) const
 {
-    for (const ViewCalendar::Ptr &cal : qAsConst(mSubCalendars)) {
+    for (const ViewCalendar::Ptr &cal : std::as_const(mSubCalendars)) {
         if (cal->isValid(incidence)) {
             return cal;
         }
@@ -54,7 +54,7 @@ ViewCalendar::Ptr MultiViewCalendar::findCalendar(const KCalendarCore::Incidence
 
 ViewCalendar::Ptr MultiViewCalendar::findCalendar(const QString &incidenceIdentifier) const
 {
-    for (const ViewCalendar::Ptr &cal : qAsConst(mSubCalendars)) {
+    for (const ViewCalendar::Ptr &cal : std::as_const(mSubCalendars)) {
         if (cal->isValid(incidenceIdentifier)) {
             return cal;
         }

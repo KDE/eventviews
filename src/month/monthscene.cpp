@@ -113,7 +113,7 @@ MonthCell *MonthScene::firstCellForMonthItem(MonthItem *manager)
 
 void MonthScene::updateGeometry()
 {
-    for (MonthItem *manager : qAsConst(mManagerList)) {
+    for (MonthItem *manager : std::as_const(mManagerList)) {
         manager->updateGeometry();
     }
 }
@@ -443,7 +443,7 @@ void MonthScene::scrollCellsDown()
     int newHeight = startHeight() + 1;
     setStartHeight(newHeight);
 
-    for (MonthItem *manager : qAsConst(mManagerList)) {
+    for (MonthItem *manager : std::as_const(mManagerList)) {
         manager->updateGeometry();
     }
 
@@ -455,7 +455,7 @@ void MonthScene::scrollCellsUp()
     int newHeight = startHeight() - 1;
     setStartHeight(newHeight);
 
-    for (MonthItem *manager : qAsConst(mManagerList)) {
+    for (MonthItem *manager : std::as_const(mManagerList)) {
         manager->updateGeometry();
     }
 
@@ -722,7 +722,7 @@ void MonthScene::selectItem(MonthItem *item)
 
 void MonthScene::removeIncidence(const QString &uid)
 {
-    for (MonthItem *manager : qAsConst(mManagerList)) {
+    for (MonthItem *manager : std::as_const(mManagerList)) {
         auto imi = qobject_cast<IncidenceMonthItem *>(manager);
         if (!imi) {
             continue;
