@@ -125,7 +125,7 @@ public:
 
     /**
      * Return calendar object for a concrete incidence.
-     * this function is able to use multiple calenders
+     * this function is able to use multiple calendars
      * TODO: replace EventsView::calendar()
      */
     virtual KCalendarCore::Calendar::Ptr calendar2(const KCalendarCore::Incidence::Ptr &incidence) const;

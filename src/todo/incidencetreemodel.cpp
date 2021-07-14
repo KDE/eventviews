@@ -43,7 +43,7 @@ static PreNode::List sortedPrenodes(const PreNode::List &nodes)
     PreNode::List remainingNodes = nodes;
 
     while (prenodeByUid.count() < count) {
-        const auto preSize = prenodeByUid.count(); // this saves us from infinit looping if the parent doesn't exist
+        const auto preSize = prenodeByUid.count(); // this saves us from infinite looping if the parent doesn't exist
         for (const PreNode::Ptr &node : nodes) {
             Q_ASSERT(node);
             const QString uid = node->incidence->instanceIdentifier();
@@ -382,11 +382,11 @@ void IncidenceTreeModel::Private::insertNode(const PreNode::Ptr &prenode, bool s
     // Are we a parent?
     if (m_waitingForParent.contains(node->uid)) {
         Q_ASSERT(m_waitingForParent.count(node->uid) > 0);
-        const QList<Node::Ptr> childs = m_waitingForParent.values(node->uid);
+        const QList<Node::Ptr> children = m_waitingForParent.values(node->uid);
         m_waitingForParent.remove(node->uid);
-        Q_ASSERT(!childs.isEmpty());
+        Q_ASSERT(!children.isEmpty());
 
-        for (const Node::Ptr &child : childs) {
+        for (const Node::Ptr &child : children) {
             const int fromRow = m_toplevelNodeList.indexOf(child);
             Q_ASSERT(fromRow != -1);
             const QModelIndex toParent = indexForNode(node);
@@ -414,7 +414,7 @@ void IncidenceTreeModel::Private::insertNode(const PreNode::Ptr &prenode, bool s
     }
 }
 
-// Sorts childs first parents last
+// Sorts children first parents last
 Node::List IncidenceTreeModel::Private::sorted(const Node::List &nodes) const
 {
     if (nodes.isEmpty()) {
@@ -458,12 +458,12 @@ void IncidenceTreeModel::Private::onRowsAboutToBeRemoved(const QModelIndex &pare
         nodesToRemove << node;
     }
 
-    // We want to remove childs first, to avoid row moving
+    // We want to remove children first, to avoid row moving
     const Node::List nodesToRemoveSorted = sorted(nodesToRemove);
 
     for (const Node::Ptr &node : nodesToRemoveSorted) {
         // Go ahead and remove it now. We don't do it in ::onRowsRemoved(), because
-        // while unparenting childs with moveRows() the view might call data() on the
+        // while unparenting children with moveRows() the view might call data() on the
         // item that is already removed from ETM.
         removeNode(node);
         // qCDebug(CALENDARVIEW_LOG) << "Just removed a node, here's the tree";
@@ -482,7 +482,7 @@ void IncidenceTreeModel::Private::removeNode(const Node::Ptr &node)
 
     // First, unparent the children
     if (!node->directChilds.isEmpty()) {
-        const Node::List childs = node->directChilds;
+        const Node::List children = node->directChilds;
         const QModelIndex fromParent = indexForNode(node);
         Q_ASSERT(fromParent.isValid());
         //    const int firstSourceRow = 0;
@@ -492,7 +492,7 @@ void IncidenceTreeModel::Private::removeNode(const Node::Ptr &node)
         //                  /**toParent is root*/QModelIndex(), toRow );
         q->beginResetModel();
         node->directChilds.clear();
-        for (const Node::Ptr &child : childs) {
+        for (const Node::Ptr &child : children) {
             // qCDebug(CALENDARVIEW_LOG) << "Dealing with child: " << child.data() << child->uid;
             m_toplevelNodeList.append(child);
             child->parentNode = Node::Ptr();

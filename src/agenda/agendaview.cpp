@@ -538,7 +538,7 @@ void AgendaView::Private::insertIncidence(const KCalendarCore::Incidence::Ptr &i
 
     const QDate insertAtDate = insertAtDateTime.date();
 
-    // In case incidence->dtStart() isn't visible (crosses bounderies)
+    // In case incidence->dtStart() isn't visible (crosses boundaries)
     const int curCol = qMax(mSelectedDates.first().daysTo(insertAtDate), qint64(0));
 
     // The date for the event is not displayed, just ignore it
@@ -1618,7 +1618,7 @@ void AgendaView::showDates(const QDate &start, const QDate &end, const QDate &pr
     }
 
     if (!start.isValid() || !end.isValid() || start > end || start.daysTo(end) > MAX_DAY_COUNT) {
-        qCWarning(CALENDARVIEW_LOG) << "got bizare parameters: " << start << end << " - aborting here";
+        qCWarning(CALENDARVIEW_LOG) << "got bizarre parameters: " << start << end << " - aborting here";
         return;
     }
 
@@ -2155,7 +2155,7 @@ void AgendaView::deleteSelectedDateTime()
 
 void AgendaView::removeIncidence(const KCalendarCore::Incidence::Ptr &incidence)
 {
-    // Don't wrap this in a if (incidence->isAllDay) because whe all day
+    // Don't wrap this in a if (incidence->isAllDay) because all day
     // property might have changed
     d->mAllDayAgenda->removeIncidence(incidence);
     d->mAgenda->removeIncidence(incidence);

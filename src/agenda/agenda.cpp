@@ -263,11 +263,11 @@ public:
     QTimer mScrollUpTimer;
     QTimer mScrollDownTimer;
 
-    // Cells to store Move and Resize coordiantes while performing the action
+    // Cells to store Move and Resize coordinates while performing the action
     QPoint mStartCell;
     QPoint mEndCell;
 
-    // Working Hour coordiantes
+    // Working Hour coordinates
     bool mWorkingHoursEnable;
     QVector<bool> *mHolidayMask = nullptr;
     int mWorkingHoursYTop;
