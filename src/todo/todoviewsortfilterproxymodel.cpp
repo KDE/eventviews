@@ -161,10 +161,10 @@ int TodoViewSortFilterProxyModel::compareStartDates(const QModelIndex &left, con
     Q_ASSERT(left.column() == TodoModel::StartDateColumn);
     Q_ASSERT(right.column() == TodoModel::StartDateColumn);
 
-    // The due date column is a QString so fetch the akonadi item
+    // The start date column is a QString, so fetch the to-do.
     // We can't compare QStrings because it won't work if the format is MM/DD/YYYY
-    const KCalendarCore::Todo::Ptr leftTodo = CalendarSupport::todo(left.data(TodoModel::TodoRole).value<Akonadi::Item>());
-    const KCalendarCore::Todo::Ptr rightTodo = CalendarSupport::todo(right.data(TodoModel::TodoRole).value<Akonadi::Item>());
+    const auto leftTodo = left.data(TodoModel::TodoPtrRole).value<KCalendarCore::Todo::Ptr>();
+    const auto rightTodo = right.data(TodoModel::TodoPtrRole).value<KCalendarCore::Todo::Ptr>();
 
     if (!leftTodo || !rightTodo) {
         return 0;
@@ -205,10 +205,12 @@ int TodoViewSortFilterProxyModel::compareDueDates(const QModelIndex &left, const
     Q_ASSERT(left.column() == TodoModel::DueDateColumn);
     Q_ASSERT(right.column() == TodoModel::DueDateColumn);
 
-    // The due date column is a QString so fetch the akonadi item
+    // The due date column is a QString, so fetch the to-do.
     // We can't compare QStrings because it won't work if the format is MM/DD/YYYY
-    const KCalendarCore::Todo::Ptr leftTodo = CalendarSupport::todo(left.data(TodoModel::TodoRole).value<Akonadi::Item>());
-    const KCalendarCore::Todo::Ptr rightTodo = CalendarSupport::todo(right.data(TodoModel::TodoRole).value<Akonadi::Item>());
+    const auto leftTodo = left.data(TodoModel::TodoPtrRole).value<KCalendarCore::Todo::Ptr>();
+    const auto rightTodo = right.data(TodoModel::TodoPtrRole).value<KCalendarCore::Todo::Ptr>();
+    Q_ASSERT(leftTodo);
+    Q_ASSERT(rightTodo);
 
     if (!leftTodo || !rightTodo) {
         return 0;
@@ -247,10 +249,11 @@ int TodoViewSortFilterProxyModel::compareCompletion(const QModelIndex &left, con
     const int rightValue = sourceModel()->data(right).toInt();
 
     if (leftValue == 100 && rightValue == 100) {
-        // Untie with the completion date
-        const KCalendarCore::Todo::Ptr leftTodo = CalendarSupport::todo(left.data(TodoModel::TodoRole).value<Akonadi::Item>());
-        const KCalendarCore::Todo::Ptr rightTodo = CalendarSupport::todo(right.data(TodoModel::TodoRole).value<Akonadi::Item>());
-
+        // Break ties with the completion date.
+        const auto leftTodo = left.data(TodoModel::TodoPtrRole).value<KCalendarCore::Todo::Ptr>();
+        const auto rightTodo = right.data(TodoModel::TodoPtrRole).value<KCalendarCore::Todo::Ptr>();
+        Q_ASSERT(leftTodo);
+        Q_ASSERT(rightTodo);
         if (!leftTodo || !rightTodo) {
             return 0;
         } else {
@@ -264,32 +267,23 @@ int TodoViewSortFilterProxyModel::compareCompletion(const QModelIndex &left, con
 /* -1 - less than
  *  0 - equal
  *  1 - bigger than
+ * Sort in numeric order (1 < 9) rather than priority order (lowest 9 < highest 1).
+ * There are arguments either way, but this is consistent with KCalendarCore.
  */
 int TodoViewSortFilterProxyModel::comparePriorities(const QModelIndex &left, const QModelIndex &right) const
 {
-    Q_ASSERT(left.column() == TodoModel::PriorityColumn);
-    Q_ASSERT(right.column() == TodoModel::PriorityColumn);
+    Q_ASSERT(left.isValid());
+    Q_ASSERT(right.isValid());
 
-    const QVariant leftValue = sourceModel()->data(left);
-    const QVariant rightValue = sourceModel()->data(right);
-
-    const bool leftIsString = sourceModel()->data(left).type() == QVariant::String;
-    const bool rightIsString = sourceModel()->data(right).type() == QVariant::String;
-
-    // unspecified priority is a low priority, so, if we don't have two QVariant:Ints
-    // we return true ("left is less, i.e. higher prio") if right is a string ("--").
-    if (leftIsString != rightIsString) {
-        return leftIsString ? -1 : 1;
+    const auto leftTodo = left.data(TodoModel::TodoPtrRole).value<KCalendarCore::Todo::Ptr>();
+    const auto rightTodo = right.data(TodoModel::TodoPtrRole).value<KCalendarCore::Todo::Ptr>();
+    Q_ASSERT(leftTodo);
+    Q_ASSERT(rightTodo);
+     if (!leftTodo || !rightTodo || leftTodo->priority() == rightTodo->priority()) {
+        return 0;
+    } else if (leftTodo->priority() < rightTodo->priority()) {
+        return -1;
     } else {
-        const int leftPriority = leftValue.toInt();
-        const int rightPriority = rightValue.toInt();
-
-        if (leftPriority != rightPriority) {
-            // Sort in numeric order (1 < 9) rather than priority order (lowest 9 < highest 1).
-            // There are arguments either way, but this is consistent with KCalendarCore.
-            return leftPriority < rightPriority ? -1 : 1;
-        } else {
-            return 0;
-        }
+        return 1;
     }
 }

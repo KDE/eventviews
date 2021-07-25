@@ -351,6 +351,10 @@ QVariant TodoModel::data(const QModelIndex &index, int role) const
         return QVariant::fromValue(item);
     }
 
+    if (role == TodoPtrRole) {
+        return QVariant::fromValue(todo);
+    }
+
     if (role == IsRichTextRole) {
         if (index.column() == SummaryColumn) {
             return QVariant(todo->summaryIsRich());
