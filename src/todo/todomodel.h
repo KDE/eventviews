@@ -40,7 +40,7 @@ public:
     };
 
     /** This enum defines the user defined roles of the items in this model */
-    enum { TodoRole = Akonadi::EntityTreeModel::UserRole + 1, IsRichTextRole };
+    enum { TodoRole = Akonadi::EntityTreeModel::UserRole + 1, IsRichTextRole, TodoPtrRole };
 
     explicit TodoModel(const EventViews::PrefsPtr &preferences, QObject *parent = nullptr);
 
