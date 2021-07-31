@@ -107,19 +107,19 @@ public:
     StoredElement(const QString &id, const QPixmap &pixmap);
 
     virtual void setShortText(const QString &t);
-    QString shortText() const override;
+    Q_REQUIRED_RESULT QString shortText() const override;
 
     virtual void setLongText(const QString &t);
-    QString longText() const override;
+    Q_REQUIRED_RESULT QString longText() const override;
 
     virtual void setExtensiveText(const QString &t);
-    QString extensiveText() const override;
+    Q_REQUIRED_RESULT QString extensiveText() const override;
 
     virtual void setPixmap(const QPixmap &p);
-    virtual QPixmap pixmap() const;
+    Q_REQUIRED_RESULT virtual QPixmap pixmap() const;
 
     virtual void setUrl(const QUrl &u);
-    QUrl url() const override;
+    Q_REQUIRED_RESULT QUrl url() const override;
 
 protected:
     QString mShortText;
