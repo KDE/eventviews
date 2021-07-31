@@ -26,17 +26,17 @@ QString Element::elementInfo() const
     return QString();
 }
 
-QString Element::shortText()
+QString Element::shortText() const
 {
     return QString();
 }
 
-QString Element::longText()
+QString Element::longText() const
 {
     return QString();
 }
 
-QString Element::extensiveText()
+QString Element::extensiveText() const
 {
     return QString();
 }
@@ -46,7 +46,7 @@ QPixmap Element::newPixmap(const QSize &)
     return QPixmap();
 }
 
-QUrl Element::url()
+QUrl Element::url() const
 {
     return QUrl();
 }
@@ -90,7 +90,7 @@ void StoredElement::setShortText(const QString &t)
     mShortText = t;
 }
 
-QString StoredElement::shortText()
+QString StoredElement::shortText() const
 {
     return mShortText;
 }
@@ -100,7 +100,7 @@ void StoredElement::setLongText(const QString &t)
     mLongText = t;
 }
 
-QString StoredElement::longText()
+QString StoredElement::longText() const
 {
     return mLongText;
 }
@@ -110,7 +110,7 @@ void StoredElement::setExtensiveText(const QString &t)
     mExtensiveText = t;
 }
 
-QString StoredElement::extensiveText()
+QString StoredElement::extensiveText() const
 {
     return mExtensiveText;
 }
@@ -120,7 +120,7 @@ void StoredElement::setPixmap(const QPixmap &p)
     mPixmap = p;
 }
 
-QPixmap StoredElement::pixmap()
+QPixmap StoredElement::pixmap() const
 {
     return mPixmap;
 }
@@ -130,7 +130,7 @@ void StoredElement::setUrl(const QUrl &u)
     mUrl = u;
 }
 
-QUrl StoredElement::url()
+QUrl StoredElement::url() const
 {
     return mUrl;
 }

@@ -52,7 +52,7 @@ public:
       Return a short text for a given date,
       usually only a few words.
     */
-    Q_REQUIRED_RESULT virtual QString shortText();
+    Q_REQUIRED_RESULT virtual QString shortText() const;
 
     /**
       Return a long text for a given date.
@@ -61,14 +61,14 @@ public:
 
       Can for example be used as a tool tip.
     */
-    Q_REQUIRED_RESULT virtual QString longText();
+    Q_REQUIRED_RESULT virtual QString longText() const;
 
     /**
       Return an extensive text for a given date.
       This text can be of any length,
       but usually it will have one or a few paragraphs.
     */
-    Q_REQUIRED_RESULT virtual QString extensiveText();
+    Q_REQUIRED_RESULT virtual QString extensiveText() const;
 
     /**
       Return a pixmap for a given date and a given size.
@@ -79,7 +79,7 @@ public:
       Return a URL pointing to more information about the content of the
       element.
      */
-    Q_REQUIRED_RESULT virtual QUrl url();
+    Q_REQUIRED_RESULT virtual QUrl url() const;
 
 Q_SIGNALS:
     void gotNewPixmap(const QPixmap &);
@@ -107,19 +107,19 @@ public:
     StoredElement(const QString &id, const QPixmap &pixmap);
 
     virtual void setShortText(const QString &t);
-    QString shortText() override;
+    QString shortText() const override;
 
     virtual void setLongText(const QString &t);
-    QString longText() override;
+    QString longText() const override;
 
     virtual void setExtensiveText(const QString &t);
-    QString extensiveText() override;
+    QString extensiveText() const override;
 
     virtual void setPixmap(const QPixmap &p);
-    virtual QPixmap pixmap();
+    virtual QPixmap pixmap() const;
 
     virtual void setUrl(const QUrl &u);
-    QUrl url() override;
+    QUrl url() const override;
 
 protected:
     QString mShortText;
