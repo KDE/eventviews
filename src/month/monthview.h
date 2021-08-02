@@ -40,7 +40,7 @@ public:
 
     Q_REQUIRED_RESULT QDateTime selectionEnd() const override;
 
-    virtual void setDateRange(const QDateTime &start, const QDateTime &end, const QDate &preferredMonth = QDate()) override;
+    void setDateRange(const QDateTime &start, const QDateTime &end, const QDate &preferredMonth = QDate()) override;
 
     Q_REQUIRED_RESULT bool eventDurationHint(QDateTime &startDt, QDateTime &endDt, bool &allDay) const override;
 
