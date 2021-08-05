@@ -6,6 +6,7 @@
 
 #pragma once
 
+#include "eventviews_export.h"
 #include <Akonadi/Item>
 
 #include <QAbstractProxyModel>
@@ -14,7 +15,7 @@
 
 class IncidenceTreeModelPrivate;
 
-class IncidenceTreeModel : public QAbstractProxyModel
+class EVENTVIEWS_EXPORT IncidenceTreeModel : public QAbstractProxyModel
 {
     Q_OBJECT
 public:

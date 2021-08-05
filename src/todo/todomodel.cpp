@@ -234,6 +234,41 @@ QVariant TodoModel::data(const QModelIndex &index, int role) const
         return QVariant();
     }
 
+    switch (role) {
+    case SummaryRole:
+        return todo->summary();
+    case RecurRole:
+        if (todo->recurs()) {
+            if (todo->hasRecurrenceId()) {
+                return i18nc("yes, an exception to a recurring to-do", "Exception");
+            } else {
+                return i18nc("yes, recurring to-do", "Yes");
+            }
+        } else {
+            return i18nc("no, not a recurring to-do", "No");
+        }
+    case PriorityRole:
+        if (todo->priority() == 0) {
+            return QStringLiteral("--");
+        }
+        return todo->priority();
+    case PercentRole:
+        return todo->percentComplete();
+    case StartDateRole:
+        return todo->hasStartDate() ? QLocale().toString(todo->dtStart().toLocalTime().date(), QLocale::ShortFormat) : QString();
+    case DueDateRole:
+        return todo->hasDueDate() ? QLocale().toString(todo->dtDue().toLocalTime().date(), QLocale::ShortFormat) : QString();
+    case CategoriesRole: {
+        return todo->categories().join(i18nc("delimiter for joining category/tag names", ","));
+    }
+    case DescriptionRole:
+        return todo->description();
+    case CalendarRole:
+        return CalendarSupport::displayName(d->m_calendar.data(), item.parentCollection());
+    default:
+        break; // column based model handling
+    }
+
     if (role == Qt::DisplayRole) {
         switch (index.column()) {
         case SummaryColumn:
@@ -858,4 +893,20 @@ QModelIndex TodoModel::buddy(const QModelIndex &index) const
     // We reimplement because the default implementation calls mapToSource() and
     // source model doesn't have the same number of columns.
     return index;
+}
+
+QHash<int, QByteArray> TodoModel::roleNames() const
+{
+    return {
+        {SummaryRole, QByteArrayLiteral("summary")},
+        {RecurRole, QByteArrayLiteral("recur")},
+        {PriorityRole, QByteArrayLiteral("priority")},
+        {PercentRole, QByteArrayLiteral("percent")},
+        {StartDateRole, QByteArrayLiteral("startDate")},
+        {DueDateRole, QByteArrayLiteral("dueDate")},
+        {CategoriesRole, QByteArrayLiteral("categories")},
+        {DescriptionRole, QByteArrayLiteral("description")},
+        {CalendarRole, QByteArrayLiteral("calendar")},
+        {Qt::CheckStateRole, QByteArrayLiteral("checked")},
+    };
 }

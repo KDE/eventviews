@@ -146,6 +146,8 @@ ecm_generate_headers(eventviews_CamelCaseagenda_HEADERS
 ecm_generate_headers(eventviews_CamelCasetodo_HEADERS
   HEADER_NAMES
   TodoView
+  TodoModel
+  IncidenceTreeModel
   REQUIRED_HEADERS eventviews_todo_HEADERS
   PREFIX EventViews
   RELATIVE todo

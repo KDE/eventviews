@@ -7,6 +7,7 @@
 
 #pragma once
 
+#include "eventviews_export.h"
 #include "prefs.h"
 
 #include <Akonadi/Calendar/ETMCalendar>
@@ -24,7 +25,7 @@ class QMimeData;
 
 class TodoModelPrivate;
 
-class TodoModel : public QAbstractProxyModel
+class EVENTVIEWS_EXPORT TodoModel : public QAbstractProxyModel
 {
     Q_OBJECT
 
@@ -45,7 +46,20 @@ public:
     };
 
     /** This enum defines the user defined roles of the items in this model */
-    enum { TodoRole = Akonadi::EntityTreeModel::UserRole + 1, IsRichTextRole, TodoPtrRole };
+    enum {
+        TodoRole = Akonadi::EntityTreeModel::UserRole + 1,
+        TodoPtrRole,
+        IsRichTextRole,
+        SummaryRole,
+        RecurRole,
+        PriorityRole,
+        PercentRole,
+        StartDateRole,
+        DueDateRole,
+        CategoriesRole,
+        DescriptionRole,
+        CalendarRole,
+    };
 
     explicit TodoModel(const EventViews::PrefsPtr &preferences, QObject *parent = nullptr);
 
@@ -86,6 +100,8 @@ public:
     Q_REQUIRED_RESULT QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const override;
 
     Q_REQUIRED_RESULT QModelIndex buddy(const QModelIndex &index) const override;
+
+    Q_REQUIRED_RESULT QHash<int, QByteArray> roleNames() const override;
 
 private:
     friend class TodoModelPrivate;
