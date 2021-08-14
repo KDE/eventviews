@@ -283,7 +283,8 @@ void TimeLabels::paintEvent(QPaintEvent *)
     // testline
     // p->drawLine(0,0,0,contentsHeight());
     while (y < cy + ch + mCellHeight) {
-        QColor lineColor, textColor;
+        QColor lineColor;
+        QColor textColor;
         textColor = palette().color(QPalette::WindowText);
         if (cell < 0 || cell >= 24) {
             textColor.setAlphaF(0.5);

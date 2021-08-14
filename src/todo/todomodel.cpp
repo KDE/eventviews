@@ -715,7 +715,9 @@ bool TodoModel::dropMimeData(const QMimeData *data, Qt::DropAction action, int r
                 } else {
                     QStringList emails = KEmailAddress::splitAddressList(text);
                     for (QStringList::ConstIterator it = emails.constBegin(); it != emails.constEnd(); ++it) {
-                        QString name, email, comment;
+                        QString name;
+                        QString email;
+                        QString comment;
                         if (KEmailAddress::splitAddress(*it, name, email, comment) == KEmailAddress::AddressOk) {
                             destTodo->addAttendee(KCalendarCore::Attendee(name, email));
                         }

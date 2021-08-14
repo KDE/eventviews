@@ -1327,7 +1327,8 @@ void Agenda::setNoActionCursor(const AgendaItem::QPtr &moveItem, QPoint pos)
  */
 double Agenda::calcSubCellWidth(const AgendaItem::QPtr &item)
 {
-    QPoint pt, pt1;
+    QPoint pt;
+    QPoint pt1;
     pt = gridToContents(QPoint(item->cellXLeft(), item->cellYTop()));
     pt1 = gridToContents(QPoint(item->cellXLeft(), item->cellYTop()) + QPoint(1, 1));
     pt1 -= pt;
@@ -1371,7 +1372,10 @@ void Agenda::placeAgendaItem(const AgendaItem::QPtr &item, double subCellWidth)
     if (subCellWidth < 0) {
         delta = -delta;
     }
-    int height, width, xpos, ypos;
+    int height;
+    int width;
+    int xpos;
+    int ypos;
     if (d->mAllDayMode) {
         width = pt1.x() - pt.x();
         height = int(subCellPos + subCellWidth + delta) - int(subCellPos);
@@ -1572,7 +1576,8 @@ void Agenda::drawContents(QPainter *p, int cx, int cy, int cw, int ch)
 
     // draw selection
     if (d->mHasSelection && d->mAgendaView->dateRangeSelectionEnabled()) {
-        QPoint pt, pt1;
+        QPoint pt;
+        QPoint pt1;
         QColor highlightColor;
         if (!d->preferences()->useSystemColor()) {
             highlightColor = d->preferences()->agendaGridHighlightColor();
@@ -1862,7 +1867,9 @@ void Agenda::insertMultiItem(const KCalendarCore::Incidence::Ptr &event,
     }
 
     d->mActionType = NOP;
-    int cellX, cellYTop, cellYBottom;
+    int cellX;
+    int cellYTop;
+    int cellYBottom;
     QString newtext;
     int width = XEnd - XBegin + 1;
     int count = 0;
@@ -1899,7 +1906,8 @@ void Agenda::insertMultiItem(const KCalendarCore::Incidence::Ptr &event,
     if (it != e) { // .first asserts if the list is empty
         AgendaItem::QPtr first = multiItems.first();
         AgendaItem::QPtr last = multiItems.last();
-        AgendaItem::QPtr prev = nullptr, next = nullptr;
+        AgendaItem::QPtr prev = nullptr;
+        AgendaItem::QPtr next = nullptr;
 
         while (it != e) {
             AgendaItem::QPtr item = *it;

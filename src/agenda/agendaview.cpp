@@ -626,7 +626,8 @@ void AgendaView::Private::insertIncidence(const KCalendarCore::Incidence::Ptr &i
             mMaxY[curCol] = mAgenda->timeToY(QTime(23, 59));
         }
     } else {
-        int startY = 0, endY = 0;
+        int startY = 0;
+        int endY = 0;
         if (event) { // Single day events fall here
             // Don't use event->dtStart().toTimeSpec(timeSpec).time().
             // If it's a UTC recurring event it should have a different time when it crosses DST,
@@ -973,7 +974,8 @@ void AgendaView::zoomInHorizontally(QDate date)
     QDate begin;
     QDate newBegin;
     QDate dateToZoom = date;
-    int ndays, count;
+    int ndays;
+    int count;
 
     begin = d->mSelectedDates.first();
     ndays = begin.daysTo(d->mSelectedDates.constLast());
@@ -1006,7 +1008,8 @@ void AgendaView::zoomOutHorizontally(QDate date)
     QDate begin;
     QDate newBegin;
     QDate dateToZoom = date;
-    int ndays, count;
+    int ndays;
+    int count;
 
     begin = d->mSelectedDates.first();
     ndays = begin.daysTo(d->mSelectedDates.constLast());
@@ -1448,7 +1451,8 @@ void AgendaView::updateEventDates(AgendaItem *item, bool addIncidence, Akonadi::
                               << "; item->lastMultiItem(): " << item->lastMultiItem() << "; item->itemPos(): " << item->itemPos()
                               << "; item->itemCount(): " << item->itemCount();
 
-    QDateTime startDt, endDt;
+    QDateTime startDt;
+    QDateTime endDt;
 
     // Start date of this incidence, calculate the offset from it
     // (so recurring and non-recurring items can be treated exactly the same,
@@ -1477,7 +1481,8 @@ void AgendaView::updateEventDates(AgendaItem *item, bool addIncidence, Akonadi::
         return;
     }
 
-    QTime startTime(0, 0, 0), endTime(0, 0, 0);
+    QTime startTime(0, 0, 0);
+    QTime endTime(0, 0, 0);
     if (incidence->allDay()) {
         daysLength = item->cellWidth() - 1;
     } else {

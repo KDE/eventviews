@@ -279,7 +279,8 @@ AgendaItem::QPtr AgendaItem::prependMoveItem(const AgendaItem::QPtr &e)
         return nullptr;
     }
 
-    AgendaItem::QPtr first = nullptr, last = nullptr;
+    AgendaItem::QPtr first = nullptr;
+    AgendaItem::QPtr last = nullptr;
     if (isMultiItem()) {
         first = mMultiItemInfo->mFirstMultiItem;
         last = mMultiItemInfo->mLastMultiItem;
@@ -320,7 +321,8 @@ AgendaItem::QPtr AgendaItem::appendMoveItem(const AgendaItem::QPtr &e)
         return nullptr;
     }
 
-    AgendaItem::QPtr first = nullptr, last = nullptr;
+    AgendaItem::QPtr first = nullptr;
+    AgendaItem::QPtr last = nullptr;
     if (isMultiItem()) {
         first = mMultiItemInfo->mFirstMultiItem;
         last = mMultiItemInfo->mLastMultiItem;
@@ -358,7 +360,8 @@ AgendaItem::QPtr AgendaItem::removeMoveItem(const AgendaItem::QPtr &e)
 {
     if (isMultiItem()) {
         AgendaItem::QPtr first = mMultiItemInfo->mFirstMultiItem;
-        AgendaItem::QPtr next, prev;
+        AgendaItem::QPtr next;
+        AgendaItem::QPtr prev;
         AgendaItem::QPtr last = mMultiItemInfo->mLastMultiItem;
         if (!first) {
             first = this;
@@ -619,7 +622,8 @@ void AgendaItem::addAttendee(const QString &newAttendee)
         return;
     }
 
-    QString name, email;
+    QString name;
+    QString email;
     KEmailAddress::extractEmailAddressAndName(newAttendee, email, name);
     if (!(name.isEmpty() && email.isEmpty())) {
         mIncidence->addAttendee(KCalendarCore::Attendee(name, email));
@@ -876,7 +880,8 @@ void AgendaItem::paintEvent(QPaintEvent *ev)
 
     // case 2: draw a single line when no more space
     if ((2 * singleLineHeight) > (height() - 2 * margin)) {
-        int x = margin, txtWidth;
+        int x = margin;
+        int txtWidth;
 
         if (mIncidence->allDay()) {
             x += visRect.left();
@@ -898,7 +903,8 @@ void AgendaItem::paintEvent(QPaintEvent *ev)
     //         Also used for the middle days in multi-events
     if (((!completelyRenderable) && ((height() - (2 * margin)) <= (5 * singleLineHeight)))
         || (isMultiItem() && mMultiItemInfo->mNextMultiItem && mMultiItemInfo->mFirstMultiItem)) {
-        int x = margin, txtWidth;
+        int x = margin;
+        int txtWidth;
 
         if (mIncidence->allDay()) {
             x += visRect.left();
@@ -922,7 +928,10 @@ void AgendaItem::paintEvent(QPaintEvent *ev)
         y += (height() - (2 * ft) - margin - hlHeight - th) / 2;
     }
 
-    int x = margin, txtWidth, hTxtWidth, eventX;
+    int x = margin;
+    int txtWidth;
+    int hTxtWidth;
+    int eventX;
 
     if (mIncidence->allDay()) {
         shortH.clear();
