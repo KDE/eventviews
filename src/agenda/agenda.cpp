@@ -38,7 +38,10 @@
 #include <QTimer>
 #include <QWheelEvent>
 
-#include <cmath> // for fabs()
+#include <chrono>
+#include <cmath>
+
+using namespace std::chrono_literals; // for fabs()
 
 using namespace EventViews;
 
@@ -173,7 +176,7 @@ void MarcusBains::updateLocationRecalc(bool recalculate)
     d->mTimeBox->raise();
 
     if (showSeconds || recalculate) {
-        d->mTimer->start(1000);
+        d->mTimer->start(1s);
     } else {
         d->mTimer->start(1000 * (60 - time.second()));
     }

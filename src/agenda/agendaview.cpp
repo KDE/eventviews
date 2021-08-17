@@ -45,7 +45,10 @@
 #include <QStyle>
 #include <QTimer>
 
+#include <chrono>
 #include <vector>
+
+using namespace std::chrono_literals;
 
 using namespace EventViews;
 
@@ -1052,7 +1055,7 @@ void AgendaView::zoomView(const int delta, QPoint pos, const Qt::Orientation ori
                 zoomDate = d->mSelectedDates[pos.x()];
             }
             t->setSingleShot(true);
-            t->start(1000);
+            t->start(1s);
         }
         if (delta > 0) {
             zoomOutHorizontally(zoomDate);
