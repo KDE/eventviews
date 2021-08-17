@@ -239,4 +239,37 @@ install(FILES
 install(FILES ${PRI_FILENAME} DESTINATION ${ECM_MKSPECS_INSTALL_DIR})
 ecm_qt_install_logging_categories(EXPORT EVENTVIEWS FILE eventviews.categories DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR})
 
+if (BUILD_QCH)
+    ecm_add_qch(
+        KF5EventViews_QCH
+        NAME KF5EventViews
+        BASE_NAME KF5EventViews
+        VERSION ${PIM_VERSION}
+        ORG_DOMAIN org.kde
+        SOURCES # using only public headers, to cover only public API
+        ${eventviews_CamelCase_HEADERS}
+        ${eventviews_agenda_HEADERS}
+        ${eventviews_todo_HEADERS}
+        ${eventviews_whatsnext_HEADERS}
+        ${eventviews_timeline_HEADERS}
+        ${eventviews_multiagenda_HEADERS}
+        ${eventviews_journal_HEADERS}
+        ${eventviews_list_HEADERS}
+        ${eventviews_month_HEADERS}
+        #MD_MAINPAGE "${CMAKE_SOURCE_DIR}/README.md"
+        #IMAGE_DIRS "${CMAKE_SOURCE_DIR}/docs/pics"
+        LINK_QCHS
+            Qt5Core_QCH
+            Qt5Gui_QCH
+            Qt5Widgets_QCH
+        INCLUDE_DIRS
+            ${CMAKE_CURRENT_BINARY_DIR}
+        BLANK_MACROS
+            EVENTVIEWS_EXPORT
+        TAGFILE_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
+        QCH_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
+        COMPONENT Devel
+    )
+endif()
+
 install(FILES agenda/calendardecoration.desktop DESTINATION ${KDE_INSTALL_KSERVICETYPES5DIR})
