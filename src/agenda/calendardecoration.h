@@ -139,6 +139,8 @@ protected:
  */
 class EVENTVIEWS_EXPORT Decoration : public CalendarSupport::Plugin
 {
+    Q_OBJECT
+
 public:
     static int interfaceVersion()
     {
@@ -152,7 +154,7 @@ public:
 
     using List = QList<Decoration *>;
 
-    Decoration();
+    Decoration(QObject *parent = nullptr, const QVariantList &args = {});
     ~Decoration() override;
 
     /**
@@ -242,12 +244,6 @@ private:
     QMap<QDate, Element::List> mYearElements;
 };
 
-class EVENTVIEWS_EXPORT DecorationFactory : public CalendarSupport::PluginFactory
-{
-    Q_OBJECT
-public:
-    Decoration *createPluginFactory() override = 0;
-};
 }
 }
 

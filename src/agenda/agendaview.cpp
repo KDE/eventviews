@@ -2270,19 +2270,13 @@ CalendarDecoration::Decoration *AgendaView::Private::loadCalendarDecoration(cons
             KService::Ptr service = *it;
             KPluginLoader loader(*service);
 
-            auto factory = loader.instance();
+            auto factory = loader.factory();
             if (!factory) {
                 qCDebug(CALENDARVIEW_LOG) << "Factory creation failed";
                 return nullptr;
             }
 
-            auto pluginFactory = qobject_cast<CalendarDecoration::DecorationFactory *>(factory);
-            if (!pluginFactory) {
-                qCDebug(CALENDARVIEW_LOG) << "Cast failed";
-                return nullptr;
-            }
-
-            return pluginFactory->createPluginFactory();
+            return factory->create<CalendarDecoration::Decoration>();
         }
     }
 

@@ -137,7 +137,8 @@ QUrl StoredElement::url() const
 
 ////////////////////////////////////////////////////////////////////////////////
 
-Decoration::Decoration()
+Decoration::Decoration(QObject *parent, const QVariantList &args)
+    : CalendarSupport::Plugin(parent, args)
 {
 }
 
