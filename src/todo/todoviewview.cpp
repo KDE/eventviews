@@ -16,6 +16,9 @@
 #include <QEvent>
 #include <QHeaderView>
 #include <QMouseEvent>
+#include <chrono>
+
+using namespace std::chrono_literals;
 
 TodoViewView::TodoViewView(QWidget *parent)
     : QTreeView(parent)
@@ -23,7 +26,7 @@ TodoViewView::TodoViewView(QWidget *parent)
     header()->installEventFilter(this);
     setAlternatingRowColors(true);
     connect(&mExpandTimer, &QTimer::timeout, this, &TodoViewView::expandParent);
-    mExpandTimer.setInterval(1000);
+    mExpandTimer.setInterval(1s);
     header()->setStretchLastSection(false);
 }
 

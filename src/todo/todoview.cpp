@@ -41,6 +41,9 @@
 #include <QIcon>
 #include <QMenu>
 #include <QToolButton>
+#include <chrono>
+
+using namespace std::chrono_literals;
 
 Q_DECLARE_METATYPE(QPointer<QMenu>)
 
@@ -166,7 +169,7 @@ TodoView::TodoView(const EventViews::PrefsPtr &prefs, bool sidebarView, QWidget 
 {
     mResizeColumnsTimer = new QTimer(this);
     connect(mResizeColumnsTimer, &QTimer::timeout, this, &TodoView::resizeColumns);
-    mResizeColumnsTimer->setInterval(100); // so we don't overdue it when user resizes window manually
+    mResizeColumnsTimer->setInterval(100ms); // so we don't overdue it when user resizes window manually
     mResizeColumnsTimer->setSingleShot(true);
 
     setPreferences(prefs);
