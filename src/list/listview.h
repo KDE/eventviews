@@ -68,6 +68,8 @@ protected Q_SLOTS:
     void processSelectionChange();
 
 private:
+    void slotSortIndicatorChanged(int logicalIndex, Qt::SortOrder order);
+
     class Private;
     Private *const d;
 };
