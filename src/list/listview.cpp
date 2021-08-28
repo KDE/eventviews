@@ -115,6 +115,8 @@ public:
     QDate mStartDate;
     QDate mEndDate;
     DateList mSelectedDates;
+    int mSortColumn = StartDateTime_Column;
+    Qt::SortOrder mSortOrder = Qt::AscendingOrder;
 
     // if it's non interactive we disable context menu, and incidence editing
     bool mIsNonInteractive;
@@ -298,6 +300,8 @@ ListView::ListView(const Akonadi::ETMCalendar::Ptr &calendar, QWidget *parent, b
                      QOverload<const QModelIndex &>::of(&ListView::defaultItemAction));
     QObject::connect(d->mTreeWidget, &QTreeWidget::customContextMenuRequested, this, &ListView::popupMenu);
     QObject::connect(d->mTreeWidget, &QTreeWidget::itemSelectionChanged, this, &ListView::processSelectionChange);
+    QObject::connect(d->mTreeWidget->header(), &QHeaderView::sortIndicatorChanged,
+                     this, &ListView::slotSortIndicatorChanged);
 
     d->mSelectedDates.append(QDate::currentDate());
 
@@ -342,7 +346,7 @@ void ListView::updateView()
     for (int col = StartDateTime_Column; col < Dummy_EOF_Column; ++col) {
         d->mTreeWidget->resizeColumnToContents(col);
     }
-    d->mTreeWidget->sortItems(StartDateTime_Column, Qt::AscendingOrder);
+    d->mTreeWidget->sortItems(d->mSortColumn, d->mSortOrder);
 }
 
 void ListView::showDates(const QDate &start, const QDate &end, const QDate &preferredMonth)
@@ -495,6 +499,12 @@ ListViewItem *ListView::Private::getItemForIncidence(const Akonadi::Item &aitem)
     return nullptr;
 }
 
+void ListView::slotSortIndicatorChanged(int logicalIndex, Qt::SortOrder order)
+{
+    d->mSortColumn = logicalIndex;
+    d->mSortOrder = order;
+}
+
 void ListView::defaultItemAction(const QModelIndex &index)
 {
     if (!d->mIsNonInteractive) {
@@ -532,6 +542,8 @@ void ListView::readSettings(KConfig *config)
     KConfigGroup cfgGroup = config->group("ListView Layout");
     const QByteArray state = cfgGroup.readEntry("ViewState", QByteArray());
     d->mTreeWidget->header()->restoreState(state);
+    d->mSortColumn = cfgGroup.readEntry("SortColumn", static_cast<int>(StartDateTime_Column));
+    d->mSortOrder = static_cast<Qt::SortOrder>(cfgGroup.readEntry("SortOrder", static_cast<int>(Qt::AscendingOrder)));
 }
 
 void ListView::writeSettings(KConfig *config)
@@ -540,6 +552,8 @@ void ListView::writeSettings(KConfig *config)
     KConfigGroup cfgGroup = config->group("ListView Layout");
 
     cfgGroup.writeEntry("ViewState", state);
+    cfgGroup.writeEntry("SortColumn", d->mSortColumn);
+    cfgGroup.writeEntry("SortOrder", static_cast<int>(d->mSortOrder));
 }
 
 void ListView::processSelectionChange()
