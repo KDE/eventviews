@@ -540,6 +540,11 @@ void ListView::popupMenu(const QPoint &point)
 void ListView::readSettings(KConfig *config)
 {
     KConfigGroup cfgGroup = config->group("ListView Layout");
+    readSettings(cfgGroup);
+}
+
+void EventViews::ListView::readSettings(const KConfigGroup &cfgGroup)
+{
     const QByteArray state = cfgGroup.readEntry("ViewState", QByteArray());
     d->mTreeWidget->header()->restoreState(state);
     d->mSortColumn = cfgGroup.readEntry("SortColumn", static_cast<int>(StartDateTime_Column));
@@ -548,9 +553,12 @@ void ListView::readSettings(KConfig *config)
 
 void ListView::writeSettings(KConfig *config)
 {
-    const QByteArray state = d->mTreeWidget->header()->saveState();
     KConfigGroup cfgGroup = config->group("ListView Layout");
+}
 
+void EventViews::ListView::writeSettings(KConfigGroup &cfgGroup)
+{
+    const QByteArray state = d->mTreeWidget->header()->saveState();
     cfgGroup.writeEntry("ViewState", state);
     cfgGroup.writeEntry("SortColumn", d->mSortColumn);
     cfgGroup.writeEntry("SortOrder", static_cast<int>(d->mSortOrder));

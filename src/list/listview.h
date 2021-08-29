@@ -38,8 +38,29 @@ public:
     // Shows all incidences of the calendar
     void showAll();
 
+    /**
+     * Read settings from the "ListView Layout" group of the configuration.
+     * @deprecated Use readSettings with a specific KConfigGroup.
+     */
     void readSettings(KConfig *config);
+
+    /**
+     * Read settings from the given configuration group.
+     * @since 5.18.1
+     */
+    void readSettings(const KConfigGroup &cfgGroup);
+
+    /**
+     * Write settings to the "ListView Layout" group of the configuration.
+     * @deprecated Use writeSettings with a specific KConfigGroup.
+     */
     void writeSettings(KConfig *config);
+
+    /**
+     * Write settings to the given configuration group.
+     * @since 5.18.1
+     */
+    void writeSettings(KConfigGroup &cfgGroup);
 
     void clear();
     QSize sizeHint() const override;
