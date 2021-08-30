@@ -894,13 +894,13 @@ void AgendaView::connectAgenda(Agenda *agenda, Agenda *otherAgenda)
 
     // rescheduling of todos by d'n'd
     connect(agenda,
-            QOverload<const KCalendarCore::Incidence::List &, const QPoint &, bool>::of(&Agenda::droppedIncidences),
+            qOverload<const KCalendarCore::Incidence::List &, const QPoint &, bool>(&Agenda::droppedIncidences),
             this,
-            QOverload<const KCalendarCore::Incidence::List &, const QPoint &, bool>::of(&AgendaView::slotIncidencesDropped));
+            qOverload<const KCalendarCore::Incidence::List &, const QPoint &, bool>(&AgendaView::slotIncidencesDropped));
     connect(agenda,
-            QOverload<const QList<QUrl> &, const QPoint &, bool>::of(&Agenda::droppedIncidences),
+            qOverload<const QList<QUrl> &, const QPoint &, bool>(&Agenda::droppedIncidences),
             this,
-            QOverload<const QList<QUrl> &, const QPoint &, bool>::of(&AgendaView::slotIncidencesDropped));
+            qOverload<const QList<QUrl> &, const QPoint &, bool>(&AgendaView::slotIncidencesDropped));
 }
 
 void AgendaView::slotIncidenceSelected(const KCalendarCore::Incidence::Ptr &incidence, QDate date)

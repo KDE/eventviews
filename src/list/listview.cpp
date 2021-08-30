@@ -295,9 +295,9 @@ ListView::ListView(const Akonadi::ETMCalendar::Ptr &calendar, QWidget *parent, b
     layoutTop->addWidget(d->mTreeWidget);
 
     QObject::connect(d->mTreeWidget,
-                     QOverload<const QModelIndex &>::of(&QTreeWidget::doubleClicked),
+                     qOverload<const QModelIndex &>(&QTreeWidget::doubleClicked),
                      this,
-                     QOverload<const QModelIndex &>::of(&ListView::defaultItemAction));
+                     qOverload<const QModelIndex &>(&ListView::defaultItemAction));
     QObject::connect(d->mTreeWidget, &QTreeWidget::customContextMenuRequested, this, &ListView::popupMenu);
     QObject::connect(d->mTreeWidget, &QTreeWidget::itemSelectionChanged, this, &ListView::processSelectionChange);
     QObject::connect(d->mTreeWidget->header(), &QHeaderView::sortIndicatorChanged,

@@ -81,9 +81,9 @@ void JournalDateView::addJournal(const Akonadi::Item &j)
     connect(entry, &JournalFrame::editIncidence, this, &JournalDateView::editIncidence);
     connect(entry, &JournalFrame::incidenceSelected, this, &JournalDateView::incidenceSelected);
     connect(entry,
-            QOverload<const KCalendarCore::Journal::Ptr &, bool>::of(&JournalFrame::printJournal),
+            qOverload<const KCalendarCore::Journal::Ptr &, bool>(&JournalFrame::printJournal),
             this,
-            QOverload<const KCalendarCore::Journal::Ptr &, bool>::of(&JournalDateView::printJournal));
+            qOverload<const KCalendarCore::Journal::Ptr &, bool>(&JournalDateView::printJournal));
 }
 
 Akonadi::Item::List JournalDateView::journals() const
@@ -176,7 +176,7 @@ JournalFrame::JournalFrame(const Akonadi::Item &j, const Akonadi::ETMCalendar::P
     mPrintButton->setToolTip(i18n("Print this journal entry"));
     mPrintButton->setWhatsThis(i18n("Opens a print dialog for this journal entry"));
     buttonsLayout->addWidget(mPrintButton);
-    connect(mPrintButton, &QPushButton::clicked, this, QOverload<>::of(&JournalFrame::printJournal));
+    connect(mPrintButton, &QPushButton::clicked, this, qOverload<>(&JournalFrame::printJournal));
 
     mPrintPreviewButton = new QPushButton(this);
     mPrintPreviewButton->setText(i18n("Print preview"));
