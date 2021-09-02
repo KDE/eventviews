@@ -276,7 +276,7 @@ private:
     int mCellXLeft, mCellXRight;
     int mCellYTop, mCellYBottom;
 
-    EventView *mEventView = nullptr;
+    EventView *const mEventView;
     MultiViewCalendar::Ptr mCalendar;
     KCalendarCore::Incidence::Ptr mIncidence;
     QDateTime mOccurrenceDateTime;

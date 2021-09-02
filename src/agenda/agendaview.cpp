@@ -94,7 +94,7 @@ public:
 
 public:
     int mColumns = 1;
-    Location mLocation;
+    const Location mLocation;
     QPixmap mPixmap;
     QVector<bool> mEnabled;
 
@@ -165,24 +165,9 @@ class AgendaView::Private : public Akonadi::ETMCalendar::CalendarObserver
 public:
     explicit Private(AgendaView *parent, bool isInteractive, bool isSideBySide)
         : q(parent)
-        , mTopDayLabels(nullptr)
-        , mLayoutTopDayLabels(nullptr)
-        , mTopDayLabelsFrame(nullptr)
-        , mLayoutBottomDayLabels(nullptr)
-        , mBottomDayLabels(nullptr)
-        , mBottomDayLabelsFrame(nullptr)
-        , mTimeBarHeaderFrame(nullptr)
-        , mAllDayAgenda(nullptr)
-        , mAgenda(nullptr)
-        , mTimeLabelsZone(nullptr)
-        , mAllowAgendaUpdate(true)
         , mUpdateItem(0)
         , mIsSideBySide(isSideBySide)
-        , mDummyAllDayLeft(nullptr)
-        , mUpdateAllDayAgenda(true)
-        , mUpdateAgenda(true)
         , mIsInteractive(isInteractive)
-        , mUpdateEventIndicatorsScheduled(false)
         , mViewCalendar(MultiViewCalendar::Ptr(new MultiViewCalendar()))
     {
         mViewCalendar->mAgendaView = q;
@@ -222,18 +207,18 @@ public:
 
     QDateTime mTimeSpanBegin;
     QDateTime mTimeSpanEnd;
-    bool mTimeSpanInAllDay;
-    bool mAllowAgendaUpdate;
+    bool mTimeSpanInAllDay = true;
+    bool mAllowAgendaUpdate = true;
 
     Akonadi::Item mUpdateItem;
 
     const bool mIsSideBySide;
 
     QWidget *mDummyAllDayLeft = nullptr;
-    bool mUpdateAllDayAgenda;
-    bool mUpdateAgenda;
+    bool mUpdateAllDayAgenda = true;
+    bool mUpdateAgenda = true;
     bool mIsInteractive;
-    bool mUpdateEventIndicatorsScheduled;
+    bool mUpdateEventIndicatorsScheduled = false;
 
     // Contains days that have at least one all-day Event with TRANSP: OPAQUE (busy)
     // that has you as organizer or attendee so we can color background with a different

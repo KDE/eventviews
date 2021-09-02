@@ -72,7 +72,7 @@ private:
 
     void setCellHeight(double height);
     void colorMousePos();
-    QTimeZone mTimezone;
+    const QTimeZone mTimezone;
     int mRows;
     double mCellHeight;
     int mMiniWidth;
