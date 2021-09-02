@@ -34,14 +34,16 @@ public:
     QWidget *parentWidget() const;
 
     /**
-      Compares two events
+      Compares two items to decide which to place in the view first.
 
       The month view displays a list of items. When loading (which occurs each
-      time there is a change), the items are sorted :
-      - smallest date
-      - bigger span
-      - floating
+      time there is a change), the items are sorted in an order intended to
+      avoid unsightly gaps:
+      - biggest durations first
+      - earliest date
       - finally, time in the day
+      Holidays are sorted before events with the same start date and length,
+      so they appear at the top of the day's box.
     */
     static bool greaterThan(const MonthItem *e1, const MonthItem *e2);
 

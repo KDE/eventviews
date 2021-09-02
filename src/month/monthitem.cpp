@@ -205,17 +205,15 @@ int MonthItem::daySpan() const
 
 bool MonthItem::greaterThan(const MonthItem *e1, const MonthItem *e2)
 {
-    const QDate leftStartDate = e1->startDate();
-    const QDate rightStartDate = e2->startDate();
-
-    if (!leftStartDate.isValid() || !rightStartDate.isValid()) {
-        return false;
-    }
-
-    if (leftStartDate == rightStartDate) {
-        const int leftDaySpan = e1->daySpan();
-        const int rightDaySpan = e2->daySpan();
-        if (leftDaySpan == rightDaySpan) {
+    const int leftDaySpan = e1->daySpan();
+    const int rightDaySpan = e2->daySpan();
+    if (leftDaySpan == rightDaySpan) {
+        const QDate leftStartDate = e1->startDate();
+        const QDate rightStartDate = e2->startDate();
+        if (!leftStartDate.isValid() || !rightStartDate.isValid()) {
+            return false;
+        }
+        if (leftStartDate == rightStartDate) {
             if (e1->allDay() && !e2->allDay()) {
                 return true;
             }
@@ -224,11 +222,10 @@ bool MonthItem::greaterThan(const MonthItem *e1, const MonthItem *e2)
             }
             return e1->greaterThanFallback(e2);
         } else {
-            return leftDaySpan > rightDaySpan;
+            return leftStartDate > rightStartDate;
         }
     }
-
-    return leftStartDate > rightStartDate;
+    return leftDaySpan > rightDaySpan;
 }
 
 bool MonthItem::greaterThanFallback(const MonthItem *other) const
@@ -683,12 +680,8 @@ HolidayMonthItem::~HolidayMonthItem()
 bool HolidayMonthItem::greaterThanFallback(const MonthItem *other) const
 {
     const auto o = qobject_cast<const HolidayMonthItem *>(other);
-    if (o) {
-        return MonthItem::greaterThanFallback(other);
-    }
-
     // always put holidays on top
-    return false;
+    return !o;
 }
 
 void HolidayMonthItem::finalizeMove(const QDate &newStartDate)
