@@ -20,6 +20,7 @@
 #include "calendarview_debug.h"
 #include <KCalendarCore/OccurrenceIterator>
 #include <KCheckableProxyModel>
+#include <KHolidays/HolidayRegion>
 #include <KLocalizedString>
 #include <QIcon>
 
@@ -435,6 +436,19 @@ Akonadi::Item::List MonthView::selectedIncidences() const
     return selected;
 }
 
+KHolidays::Holiday::List MonthView::holidays(QDate startDate, QDate endDate)
+{
+    KHolidays::Holiday::List holidays;
+    auto const regions = CalendarSupport::KCalPrefs::instance()->mHolidays;
+    for (auto const r : regions) {
+        KHolidays::HolidayRegion region(r);
+        if (region.isValid()) {
+            holidays += region.holidays(startDate, endDate);
+        }
+    }
+    return holidays;
+}
+
 void MonthView::reloadIncidences()
 {
     if (changes() == NothingChanged) {
@@ -502,16 +516,10 @@ void MonthView::reloadIncidences()
     }
 
     // add holidays
-    const QList<QDate> workDays = CalendarSupport::workDays(actualStartDateTime().date(), actualEndDateTime().date());
-
-    for (QDate date = actualStartDateTime().date(); date <= actualEndDateTime().date(); date = date.addDays(1)) {
-        // Only call CalendarSupport::holiday() if it's not a workDay, saves come cpu cicles.
-        if (!workDays.contains(date)) {
-            QStringList holidays(CalendarSupport::holiday(date));
-            if (!holidays.isEmpty()) {
-                MonthItem *holidayItem = new HolidayMonthItem(d->scene, date, holidays.join(i18nc("@item:intext delimiter for joining holiday names", ",")));
-                d->scene->mManagerList << holidayItem;
-            }
+    for (auto const h : holidays(actualStartDateTime().date(), actualEndDateTime().date())) {
+        if (h.dayType() == KHolidays::Holiday::NonWorkday) {
+            MonthItem *holidayItem = new HolidayMonthItem(d->scene, h.observedStartDate(), h.observedEndDate(), h.name());
+            d->scene->mManagerList << holidayItem;
         }
     }
 

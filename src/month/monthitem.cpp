@@ -667,8 +667,14 @@ void IncidenceMonthItem::setNewDates(const KCalendarCore::Incidence::Ptr &incide
 //-----------------------------------------------------------------
 // HOLIDAYMONTHITEM
 HolidayMonthItem::HolidayMonthItem(MonthScene *monthScene, QDate date, const QString &name)
+    : HolidayMonthItem(monthScene, date, date, name)
+{
+}
+
+HolidayMonthItem::HolidayMonthItem(MonthScene *monthScene, QDate startDate, QDate endDate, const QString &name)
     : MonthItem(monthScene)
-    , mDate(date)
+    , mStartDate(startDate)
+    , mEndDate(endDate)
     , mName(name)
 {
 }
