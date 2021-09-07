@@ -8,8 +8,8 @@
 
 #include "timelineview.h"
 
-#include <AkonadiCore/Item>
-#include <Collection>
+#include <Akonadi/Collection>
+#include <Akonadi/Item>
 
 #include <QMap>
 #include <QModelIndex>

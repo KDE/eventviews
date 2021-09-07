@@ -7,7 +7,7 @@
 #include "calendarview_debug.h"
 #include "incidencetreemodel_p.h"
 
-#include <AkonadiCore/EntityTreeModel>
+#include <Akonadi/EntityTreeModel>
 
 using namespace Akonadi;
 QDebug operator<<(QDebug s, const Node::Ptr &node);

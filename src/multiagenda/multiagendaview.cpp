@@ -14,8 +14,8 @@
 #include "configdialoginterface.h"
 #include "prefs.h"
 
-#include <AkonadiCore/EntityTreeModel>
-#include <AkonadiWidgets/ETMViewStateSaver>
+#include <Akonadi/ETMViewStateSaver>
+#include <Akonadi/EntityTreeModel>
 
 #include <CalendarSupport/CollectionSelection>
 #include <CalendarSupport/Utils>

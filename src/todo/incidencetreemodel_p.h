@@ -8,7 +8,7 @@
 
 #include "incidencetreemodel.h"
 
-#include <AkonadiCore/Item>
+#include <Akonadi/Item>
 
 #include <KCalendarCore/Incidence>
 #include <QHash>

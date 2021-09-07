@@ -15,7 +15,7 @@
 #include "eventviews_export.h"
 #include "viewcalendar.h"
 
-#include <Item>
+#include <Akonadi/Item>
 
 #include <KCalendarCore/Todo>
 

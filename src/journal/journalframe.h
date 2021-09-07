@@ -12,7 +12,7 @@
 
 #include <Akonadi/Calendar/ETMCalendar>
 #include <Akonadi/Calendar/IncidenceChanger>
-#include <Item>
+#include <Akonadi/Item>
 
 #include <QDate>
 #include <QFrame>

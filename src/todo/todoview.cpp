@@ -21,10 +21,10 @@
 #include "todoviewsortfilterproxymodel.h"
 #include "todoviewview.h"
 
-#include <AkonadiCore/EntityMimeTypeFilterModel>
-#include <AkonadiCore/TagFetchJob>
+#include <Akonadi/EntityMimeTypeFilterModel>
+#include <Akonadi/TagFetchJob>
 
-#include <AkonadiWidgets/ETMViewStateSaver>
+#include <Akonadi/ETMViewStateSaver>
 
 #include <CalendarSupport/KCalPrefs>
 #include <CalendarSupport/Utils>

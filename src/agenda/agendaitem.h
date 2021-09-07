@@ -11,7 +11,7 @@
 #include <CalendarSupport/CellItem>
 
 #include <Akonadi/Calendar/ETMCalendar>
-#include <AkonadiCore/Item>
+#include <Akonadi/Item>
 
 #include <QDateTime>
 #include <QPointer>

@@ -8,11 +8,11 @@
 #include "calendarview_debug.h"
 #include "prefs.h"
 
-#include <Collection>
-#include <Item>
+#include <Akonadi/Collection>
+#include <Akonadi/Item>
 
-#include <AkonadiCore/CollectionColorAttribute>
-#include <AkonadiCore/CollectionModifyJob>
+#include <Akonadi/CollectionColorAttribute>
+#include <Akonadi/CollectionModifyJob>
 
 #include <QIcon>
 #include <QPixmap>

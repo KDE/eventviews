@@ -11,7 +11,7 @@
 
 #include <Akonadi/Calendar/ETMCalendar>
 #include <Akonadi/Calendar/IncidenceChanger>
-#include <Item>
+#include <Akonadi/Item>
 
 #include <EntityTreeModel>
 #include <KCalendarCore/Todo>

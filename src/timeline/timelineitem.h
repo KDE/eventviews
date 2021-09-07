@@ -11,7 +11,7 @@
 #include <KCalendarCore/Incidence>
 
 #include <Akonadi/Calendar/ETMCalendar>
-#include <AkonadiCore/Item>
+#include <Akonadi/Item>
 
 #include <QDateTime>
 #include <QList>

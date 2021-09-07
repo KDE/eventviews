@@ -9,7 +9,7 @@
 #include "eventviews_export.h"
 
 #include <Akonadi/Calendar/ETMCalendar>
-#include <AkonadiCore/Item>
+#include <Akonadi/Item>
 #include <KCalendarCore/Incidence>
 
 #include <QColor>

@@ -9,7 +9,7 @@
 
 #include "eventview.h"
 
-#include <Item>
+#include <Akonadi/Item>
 
 #include <QDateTime>
 

@@ -11,8 +11,8 @@
 
 #include "calendarview_debug.h"
 
-#include <AkonadiCore/AttributeFactory>
-#include <AkonadiCore/CollectionColorAttribute>
+#include <Akonadi/AttributeFactory>
+#include <Akonadi/CollectionColorAttribute>
 
 #include <QFontDatabase>
 #include <QRandomGenerator>

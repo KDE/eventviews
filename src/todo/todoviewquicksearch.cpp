@@ -11,7 +11,7 @@
 #include "todoviewquicksearch.h"
 #include <CalendarSupport/KCalPrefs>
 
-#include <AkonadiWidgets/TagSelectionComboBox>
+#include <Akonadi/TagSelectionComboBox>
 #include <CalendarSupport/CategoryConfig>
 
 #include <Libkdepim/KCheckComboBox>

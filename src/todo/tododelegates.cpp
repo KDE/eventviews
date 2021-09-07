@@ -10,7 +10,7 @@
 #include "todomodel.h"
 #include "todoviewview.h"
 
-#include <AkonadiWidgets/TagSelectionComboBox>
+#include <Akonadi/TagSelectionComboBox>
 #include <CalendarSupport/CategoryConfig>
 #include <CalendarSupport/CategoryHierarchyReader>
 
