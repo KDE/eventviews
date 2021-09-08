@@ -21,8 +21,8 @@
 #include <Akonadi/Calendar/IncidenceChanger>
 #include <KCalendarCore/Event>
 
+#include <Akonadi/Collection>
 #include <Akonadi/ControlGui>
-#include <AkonadiCore/Collection>
 
 #include <KCheckableProxyModel>
 
