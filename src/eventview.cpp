@@ -11,14 +11,14 @@
 #include "eventview_p.h"
 #include "prefs.h"
 
-#include <EntityTreeModel>
+#include <Akonadi/EntityTreeModel>
 
 #include <CalendarSupport/CollectionSelection>
 #include <CalendarSupport/KCalPrefs>
 #include <CalendarSupport/Utils>
 
+#include <Akonadi/EntityDisplayAttribute>
 #include <ETMViewStateSaver>
-#include <EntityDisplayAttribute>
 
 #include <KCalendarCore/CalFilter>
 

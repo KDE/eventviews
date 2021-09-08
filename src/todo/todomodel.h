@@ -13,7 +13,7 @@
 #include <Akonadi/Calendar/IncidenceChanger>
 #include <Akonadi/Item>
 
-#include <EntityTreeModel>
+#include <Akonadi/EntityTreeModel>
 #include <KCalendarCore/Todo>
 #include <QAbstractItemModel>
 #include <QAbstractProxyModel>
