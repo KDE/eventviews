@@ -33,16 +33,21 @@ void MonthItemOrderTest::longerInstancesFirst()
 {
     QDate startDate(2000, 01, 01);
     IncidenceMonthItem *longEvent = eventItem(startDate, startDate.addDays(1));
+    HolidayMonthItem *longHoliday = new HolidayMonthItem(nullptr, startDate, startDate.addDays(1), QStringLiteral(""));
     for (int offset = -1; offset < 3; offset++) {
         QDate d = startDate.addDays(offset);
 
         IncidenceMonthItem *shortEvent = eventItem(d, d);
         QVERIFY(   MonthItem::greaterThan(longEvent, shortEvent));
         QVERIFY( ! MonthItem::greaterThan(shortEvent, longEvent));
+        QVERIFY(   MonthItem::greaterThan(longHoliday, shortEvent));
+        QVERIFY( ! MonthItem::greaterThan(shortEvent, longHoliday));
 
         HolidayMonthItem *shortHoliday = new HolidayMonthItem(nullptr, d, QStringLiteral(""));
         QVERIFY(   MonthItem::greaterThan(longEvent, shortHoliday));
         QVERIFY( ! MonthItem::greaterThan(shortHoliday, longEvent));
+        QVERIFY(   MonthItem::greaterThan(longHoliday, shortHoliday));
+        QVERIFY( ! MonthItem::greaterThan(shortHoliday, longHoliday));
     }
 }
 

@@ -10,6 +10,8 @@
 
 #include "eventview.h"
 
+#include <KHolidays/HolidayRegion>
+
 class QModelIndex;
 
 namespace EventViews
@@ -93,6 +95,8 @@ protected:
     void keyReleaseEvent(QKeyEvent *event) override;
 
     QPair<QDateTime, QDateTime> actualDateRange(const QDateTime &start, const QDateTime &end, const QDate &preferredMonth = QDate()) const override;
+
+    KHolidays::Holiday::List holidays(QDate startDate, QDate endDate);
 
     // Compute and update the whole view
     void reloadIncidences();

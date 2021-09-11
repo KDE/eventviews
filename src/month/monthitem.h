@@ -336,18 +336,19 @@ class EVENTVIEWS_EXPORT HolidayMonthItem : public MonthItem
 
 public:
     HolidayMonthItem(MonthScene *monthScene, QDate date, const QString &name);
+    HolidayMonthItem(MonthScene *monthScene, QDate startDate, QDate endDate, const QString &name);
     ~HolidayMonthItem() override;
 
     bool greaterThanFallback(const MonthItem *other) const override;
 
     QDate realStartDate() const override
     {
-        return mDate;
+        return mStartDate;
     }
 
     QDate realEndDate() const override
     {
-        return mDate;
+        return mEndDate;
     }
 
     bool allDay() const override
@@ -386,7 +387,8 @@ protected:
     void finalizeResize(const QDate &newStartDate, const QDate &newEndDate) override;
 
 private:
-    QDate mDate;
+    QDate mStartDate;
+    QDate mEndDate;
     QString mName;
 };
 }
