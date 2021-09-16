@@ -30,7 +30,7 @@ QColor EventViews::getTextColor(const QColor &c)
 
 void EventViews::setResourceColor(const Akonadi::Collection &coll, const QColor &color, const PrefsPtr &preferences)
 {
-    if (!coll.isValid()) {
+    if (!coll.isValid() || !color.isValid()) {
         return;
     }
 
@@ -39,13 +39,15 @@ void EventViews::setResourceColor(const Akonadi::Collection &coll, const QColor 
     // Save the color in akonadi (so the resource can even save it server-side)
     Akonadi::Collection collection = coll;
     auto colorAttr = collection.attribute<Akonadi::CollectionColorAttribute>(Akonadi::Collection::AddIfMissing);
-    colorAttr->setColor(color);
-    auto job = new Akonadi::CollectionModifyJob(collection, nullptr);
-    QObject::connect(job, &Akonadi::CollectionModifyJob::result, [=]() {
-        if (job->error()) {
-            qCWarning(CALENDARVIEW_LOG) << "Failed to set CollectionColorAttribute:" << job->errorString();
-        }
-    });
+    if (colorAttr) {
+        colorAttr->setColor(color);
+        auto job = new Akonadi::CollectionModifyJob(collection, nullptr);
+        QObject::connect(job, &Akonadi::CollectionModifyJob::result, [=]() {
+            if (job->error()) {
+                qCWarning(CALENDARVIEW_LOG) << "Failed to set CollectionColorAttribute:" << job->errorString();
+            }
+        });
+    }
 
     // Also save the color in eventviewsrc (mostly historical)
     preferences->setResourceColor(id, color);
