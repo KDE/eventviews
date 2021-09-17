@@ -1123,7 +1123,7 @@ QColor AgendaItem::getBackgroundColor(const QColor &resourceColor, const QColor 
         const QDate occurrenceDate = this->occurrenceDate();
         if (todo->isOverdue() && today >= occurrenceDate) {
             return mEventView->preferences()->todoOverdueColor();
-        } else if (dueDate == today && dueDate == occurrenceDate) {
+        } else if (dueDate == today && dueDate == occurrenceDate && !todo->isCompleted()) {
             return mEventView->preferences()->todoDueTodayColor();
         }
     }
