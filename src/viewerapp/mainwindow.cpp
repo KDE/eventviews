@@ -102,7 +102,7 @@ void MainWindow::delayedInit()
     mIncidenceChanger = new IncidenceChanger(this);
     mCalendar->setCollectionFilteringEnabled(false);
 
-    Q_FOREACH (const QString &viewName, mViewNames) {
+    for (const QString &viewName : std::as_const(mViewNames)) {
         addView(viewName);
     }
 }
