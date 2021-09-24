@@ -17,8 +17,8 @@
 #include <CalendarSupport/KCalPrefs>
 #include <CalendarSupport/Utils>
 
+#include <Akonadi/ETMViewStateSaver>
 #include <Akonadi/EntityDisplayAttribute>
-#include <ETMViewStateSaver>
 
 #include <KCalendarCore/CalFilter>
 
