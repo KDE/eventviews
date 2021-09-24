@@ -440,7 +440,7 @@ KHolidays::Holiday::List MonthView::holidays(QDate startDate, QDate endDate)
 {
     KHolidays::Holiday::List holidays;
     auto const regions = CalendarSupport::KCalPrefs::instance()->mHolidays;
-    for (auto const r : regions) {
+    for (auto const &r : regions) {
         KHolidays::HolidayRegion region(r);
         if (region.isValid()) {
             holidays += region.holidays(startDate, endDate);
@@ -516,7 +516,7 @@ void MonthView::reloadIncidences()
     }
 
     // add holidays
-    for (auto const h : holidays(actualStartDateTime().date(), actualEndDateTime().date())) {
+    for (auto const &h : holidays(actualStartDateTime().date(), actualEndDateTime().date())) {
         if (h.dayType() == KHolidays::Holiday::NonWorkday) {
             MonthItem *holidayItem = new HolidayMonthItem(d->scene, h.observedStartDate(), h.observedEndDate(), h.name());
             d->scene->mManagerList << holidayItem;
