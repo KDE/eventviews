@@ -43,6 +43,7 @@ public Q_SLOTS:
 private:
     int compareStartDates(const QModelIndex &left, const QModelIndex &right) const;
     int compareDueDates(const QModelIndex &left, const QModelIndex &right) const;
+    int compareCompletedDates(const QModelIndex &left, const QModelIndex &right) const;
     int comparePriorities(const QModelIndex &left, const QModelIndex &right) const;
     int compareCompletion(const QModelIndex &left, const QModelIndex &right) const;
     QStringList mCategories;

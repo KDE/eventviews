@@ -522,6 +522,7 @@ void TodoView::restoreLayout(KConfig *config, const QString &group, bool minimal
         mView->hideColumn(TodoModel::RecurColumn);
         mView->hideColumn(TodoModel::DescriptionColumn);
         mView->hideColumn(TodoModel::CalendarColumn);
+        mView->hideColumn(TodoModel::CompletedDateColumn);
 
         if (minimalDefaults) {
             mView->hideColumn(TodoModel::PriorityColumn);
@@ -1096,6 +1097,7 @@ void TodoView::resizeColumns()
 
     mView->resizeColumnToContents(TodoModel::StartDateColumn);
     mView->resizeColumnToContents(TodoModel::DueDateColumn);
+    mView->resizeColumnToContents(TodoModel::CompletedDateColumn);
     mView->resizeColumnToContents(TodoModel::PriorityColumn);
     mView->resizeColumnToContents(TodoModel::CalendarColumn);
     mView->resizeColumnToContents(TodoModel::RecurColumn);

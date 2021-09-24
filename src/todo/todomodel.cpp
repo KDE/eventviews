@@ -262,6 +262,8 @@ QVariant TodoModel::data(const QModelIndex &index, int role) const
             return todo->hasStartDate() ? QLocale().toString(todo->dtStart().toLocalTime().date(), QLocale::ShortFormat) : QVariant(QString());
         case DueDateColumn:
             return todo->hasDueDate() ? QLocale().toString(todo->dtDue().toLocalTime().date(), QLocale::ShortFormat) : QVariant(QString());
+        case CompletedDateColumn:
+            return todo->hasCompletedDate() ? QLocale().toString(todo->completed().toLocalTime().date(), QLocale::ShortFormat) : QVariant(QString());
         case CategoriesColumn: {
             QString categories = todo->categories().join(i18nc("delimiter for joining category/tag names", ","));
             return QVariant(categories);
@@ -288,6 +290,8 @@ QVariant TodoModel::data(const QModelIndex &index, int role) const
             return QVariant(todo->dtStart().date());
         case DueDateColumn:
             return QVariant(todo->dtDue().date());
+        case CompletedDateColumn:
+            return QVariant(todo->completed().date());
         case CategoriesColumn:
             return QVariant(todo->categories());
         case DescriptionColumn:
@@ -582,6 +586,8 @@ QVariant TodoModel::headerData(int column, Qt::Orientation orientation, int role
             return QVariant(i18n("Start Date"));
         case DueDateColumn:
             return QVariant(i18n("Due Date"));
+        case CompletedDateColumn:
+            return QVariant(i18nc("@title:column date completed", "Completed"));
         case CategoriesColumn:
             return QVariant(i18n("Tags"));
         case DescriptionColumn:

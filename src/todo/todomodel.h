@@ -36,6 +36,7 @@ public:
         CategoriesColumn,
         DescriptionColumn,
         CalendarColumn,
+        CompletedDateColumn,
         ColumnCount // Just for iteration/column count purposes. Always keep at the end of enum.
     };
 

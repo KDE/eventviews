@@ -91,6 +91,8 @@ bool TodoViewSortFilterProxyModel::lessThan(const QModelIndex &left, const QMode
         }
     } else if (right.column() == TodoModel::StartDateColumn) {
         return compareStartDates(left, right) == -1;
+    } else if (right.column() == TodoModel::CompletedDateColumn) {
+        return compareCompletedDates(left, right) == -1;
     } else if (right.column() == TodoModel::PriorityColumn) {
         const int comparison = comparePriorities(left, right);
 
@@ -186,6 +188,38 @@ int TodoViewSortFilterProxyModel::compareStartDates(const QModelIndex &left, con
             return leftDateTime < rightDateTime ? -1 : 1;
         }
     } else { // Neither has a start date
+        return 0;
+    }
+}
+
+int TodoViewSortFilterProxyModel::compareCompletedDates(const QModelIndex &left, const QModelIndex &right) const
+{
+    Q_ASSERT(left.column() == TodoModel::CompletedDateColumn);
+    Q_ASSERT(right.column() == TodoModel::CompletedDateColumn);
+
+    const auto leftTodo = left.data(TodoModel::TodoPtrRole).value<KCalendarCore::Todo::Ptr>();
+    const auto rightTodo = right.data(TodoModel::TodoPtrRole).value<KCalendarCore::Todo::Ptr>();
+
+    if (!leftTodo || !rightTodo) {
+        return 0;
+    }
+
+    const bool leftIsEmpty = !leftTodo->hasCompletedDate();
+    const bool rightIsEmpty = !rightTodo->hasCompletedDate();
+
+    if (leftIsEmpty != rightIsEmpty) { // One of them doesn't have a completed date.
+        // For sorting, no date is considered a very big date.
+        return rightIsEmpty ? -1 : 1;
+    } else if (!leftIsEmpty) { // Both have completed dates.
+        const auto leftDateTime = leftTodo->completed();
+        const auto rightDateTime = rightTodo->completed();
+
+        if (leftDateTime == rightDateTime) {
+            return 0;
+        } else {
+            return leftDateTime < rightDateTime ? -1 : 1;
+        }
+    } else { // Neither has a completed date.
         return 0;
     }
 }
