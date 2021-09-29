@@ -299,11 +299,9 @@ void TimelineView::showDates(const QDate &start, const QDate &end, const QDate &
     grid->setStartDateTime(QDateTime(start.startOfDay()));
     d->mLeftView->clear();
     uint index = 0;
-    // item for every calendar
-    TimelineItem *item = nullptr;
     Akonadi::ETMCalendar::Ptr calres = calendar();
     if (!calres) {
-        item = new TimelineItem(calendar(), index++, static_cast<QStandardItemModel *>(d->mGantt->model()), d->mGantt);
+        auto item = new TimelineItem(calendar(), index++, static_cast<QStandardItemModel *>(d->mGantt->model()), d->mGantt);
         d->mLeftView->addTopLevelItem(new QTreeWidgetItem(QStringList() << i18n("Calendar")));
         d->mCalendarItemMap.insert(-1, item);
     } else {
@@ -312,7 +310,7 @@ void TimelineView::showDates(const QDate &start, const QDate &end, const QDate &
 
         for (const Akonadi::Collection &collection : collections) {
             if (collection.contentMimeTypes().contains(Event::eventMimeType())) {
-                item = new TimelineItem(calendar(), index++, static_cast<QStandardItemModel *>(d->mGantt->model()), d->mGantt);
+                auto item = new TimelineItem(calendar(), index++, static_cast<QStandardItemModel *>(d->mGantt->model()), d->mGantt);
                 d->mLeftView->addTopLevelItem(new QTreeWidgetItem(QStringList() << CalendarSupport::displayName(calendar().data(), collection)));
                 const QColor resourceColor = EventViews::resourceColor(collection, preferences());
                 if (resourceColor.isValid()) {

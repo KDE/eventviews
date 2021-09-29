@@ -597,7 +597,6 @@ bool Agenda::eventFilter_drag(QObject *obj, QDropEvent *de)
             Q_EMIT droppedIncidences(incidences, gridPosition, d->mAllDayMode);
         }
         return true;
-        break;
     }
 
     case QEvent::DragResponse:
@@ -1151,8 +1150,8 @@ void Agenda::endItemAction()
 
     d->mItemMoved = d->mItemMoved && !(d->mStartCell.x() == d->mEndCell.x() && d->mStartCell.y() == d->mEndCell.y());
 
-    bool addIncidence = false;
     if (d->mItemMoved) {
+        bool addIncidence = false;
         bool modify = false;
 
         // get the main event and not the exception

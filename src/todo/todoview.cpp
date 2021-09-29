@@ -145,7 +145,7 @@ public:
         return todoFlatModel != nullptr;
     }
 
-    TodoModel *todoModel = nullptr;
+    TodoModel *const todoModel;
     QList<TodoView *> views;
     QObject *parent = nullptr;
 
@@ -937,11 +937,7 @@ void TodoView::setNewPercentage(QAction *action)
         } else {
             todo->setPercentComplete(percentage);
         }
-        if (todo->recurs() && percentage == 100) {
-            changer()->modifyIncidence(todoItem, oldTodo, this);
-        } else {
-            changer()->modifyIncidence(todoItem, oldTodo, this);
-        }
+        changer()->modifyIncidence(todoItem, oldTodo, this);
     } else {
         qCDebug(CALENDARVIEW_LOG) << "Item is read only";
     }

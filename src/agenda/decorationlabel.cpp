@@ -20,9 +20,9 @@ DecorationLabel::DecorationLabel(CalendarDecoration::Element *e, QWidget *parent
     , mShortText(e->shortText())
     , mLongText(e->longText())
     , mExtensiveText(e->extensiveText())
+    , mPixmap(e->newPixmap(size()))
+    , mUrl(e->url())
 {
-    mPixmap = e->newPixmap(size());
-    mUrl = e->url();
     setUrl(mUrl);
 
     connect(e, &CalendarDecoration::Element::gotNewExtensiveText, this, &DecorationLabel::setExtensiveText);

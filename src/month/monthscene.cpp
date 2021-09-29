@@ -304,7 +304,6 @@ void MonthGraphicsView::drawBackground(QPainter *p, const QRectF &rect)
         p->setPen(Qt::NoPen);
         p->drawRect(QRect(cellHeaderX, cellHeaderY, cellHeaderWidth, cellHeaderHeight));
 
-        QFont font = p->font();
         if (cell->date() == QDate::currentDate()) {
             font.setBold(true);
         } else {

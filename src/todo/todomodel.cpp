@@ -337,15 +337,12 @@ QVariant TodoModel::data(const QModelIndex &index, int role) const
     // icon for recurring todos
     // It's in the summary column so you don't accidentally click
     // the checkbox ( which increments the next occurrence date ).
+    // category colour
     if (role == Qt::DecorationRole && index.column() == SummaryColumn) {
         if (todo->recurs()) {
             return QVariant(QIcon::fromTheme(QStringLiteral("task-recurring")));
         }
-    }
-
-    // category colour
-    if (role == Qt::DecorationRole && index.column() == SummaryColumn) {
-        QStringList categories = todo->categories();
+        const QStringList categories = todo->categories();
         return categories.isEmpty() ? QVariant() : QVariant(CalendarSupport::KCalPrefs::instance()->categoryColor(categories.first()));
     } else if (role == Qt::DecorationRole) {
         return QVariant();
