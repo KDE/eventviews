@@ -217,6 +217,15 @@ void MonthGraphicsView::drawBackground(QPainter *p, const QRectF &rect)
     const QList<QDate> workDays = CalendarSupport::workDays(mMonthView->actualStartDateTime().date(), mMonthView->actualEndDateTime().date());
     QRect todayRect;
     QRect selectedRect;
+    QColor holidayBg;
+    QColor workdayBg;
+    if (mMonthView->preferences()->useSystemColor()) {
+        workdayBg = palette().color(QPalette::Base);
+        holidayBg = palette().color(QPalette::AlternateBase);
+    } else {
+        workdayBg = mMonthView->preferences()->monthGridWorkHoursBackgroundColor();
+        holidayBg = mMonthView->preferences()->monthGridBackgroundColor();
+    }
 
     for (QDate d = start; d <= end; d = d.addDays(1)) {
         const MonthCell *const cell = mScene->mMonthCellMap.value(d);
@@ -227,36 +236,18 @@ void MonthGraphicsView::drawBackground(QPainter *p, const QRectF &rect)
             return;
         }
 
-        MonthCell *cell = mScene->mMonthCellMap[d];
         const QRect cellRect(mScene->cellHorizontalPos(cell), mScene->cellVerticalPos(cell), columnWidth, rowHeight);
-
-        QColor color;
-        if (!mMonthView->preferences()->useSystemColor()) {
-            if (workDays.contains(d)) {
-                color = mMonthView->preferences()->monthGridWorkHoursBackgroundColor();
-            } else {
-                color = mMonthView->preferences()->monthGridBackgroundColor();
-            }
-        } else {
-            if (workDays.contains(d)) {
-                color = palette().color(QPalette::Base);
-            } else {
-                color = palette().color(QPalette::AlternateBase);
-            }
-        }
-
         if (cell == mScene->selectedCell()) {
             selectedRect = cellRect;
         }
-        if (cell->date() == QDate::currentDate()) {
+        if (cell->date() == todayDate) {
             todayRect = cellRect;
         }
 
         // Draw cell
         p->setPen(mMonthView->preferences()->monthGridBackgroundColor().darker(150));
-        p->setBrush(color);
+        p->setBrush(workDays.contains(d) ? workdayBg : holidayBg);
         p->drawRect(cellRect);
-
         if (mMonthView->isBusyDay(d)) {
             QColor busyColor = mMonthView->preferences()->viewBgBusyColor();
             busyColor.setAlpha(EventViews::BUSY_BACKGROUND_ALPHA);
@@ -307,23 +298,8 @@ void MonthGraphicsView::drawBackground(QPainter *p, const QRectF &rect)
         p->setPen(Qt::NoPen);
         p->drawRect(QRect(cellHeaderX, cellHeaderY, cellHeaderWidth, cellHeaderHeight));
 
-        // Draw cell header
-        int cellHeaderX = mScene->cellHorizontalPos(cell) + 1;
-        int cellHeaderY = mScene->cellVerticalPos(cell) + 1;
-        int cellHeaderWidth = columnWidth - 2;
-        int cellHeaderHeight = cell->topMargin() - 2;
-        QLinearGradient bgGradient(QPointF(cellHeaderX, cellHeaderY), QPointF(cellHeaderX + cellHeaderWidth, cellHeaderY + cellHeaderHeight));
-        const auto brush = KColorScheme(QPalette::Normal, KColorScheme::ColorSet::Header).background(KColorScheme::BackgroundRole::NormalBackground);
-        p->setBrush(brush);
-        bgGradient.setColorAt(1, brush.color());
-        p->setPen(Qt::NoPen);
-        p->drawRect(QRect(cellHeaderX, cellHeaderY, cellHeaderWidth, cellHeaderHeight));
-
-        if (cell->date() == QDate::currentDate()) {
-            font.setBold(true);
-        } else {
-            font.setBold(false);
-        }
+        QFont font = p->font();
+        font.setBold(cell->date() == todayDate);
         p->setFont(font);
 
         if (d.month() == mMonthView->currentMonth()) {
