@@ -194,7 +194,7 @@ void MonthGraphicsView::drawBackground(QPainter *p, const QRectF &rect)
     const QDate end = mMonthView->actualEndDateTime().date();
 
     for (QDate d = start; d <= start.addDays(6); d = d.addDays(1)) {
-        MonthCell *cell = mScene->mMonthCellMap.value(d);
+        const MonthCell *const cell = mScene->mMonthCellMap.value(d);
 
         if (!cell) {
             // This means drawBackground() is being called before reloadIncidences(). Can happen with some
@@ -212,13 +212,16 @@ void MonthGraphicsView::drawBackground(QPainter *p, const QRectF &rect)
     */
     int columnWidth = mScene->columnWidth();
     int rowHeight = mScene->rowHeight();
+    QDate todayDate {QDate::currentDate()};
 
     const QList<QDate> workDays = CalendarSupport::workDays(mMonthView->actualStartDateTime().date(), mMonthView->actualEndDateTime().date());
     QRect todayRect;
     QRect selectedRect;
 
     for (QDate d = start; d <= end; d = d.addDays(1)) {
-        if (!mScene->mMonthCellMap.contains(d)) {
+        const MonthCell *const cell = mScene->mMonthCellMap.value(d);
+
+        if (!cell) {
             // This means drawBackground() is being called before reloadIncidences(). Can happen with some
             // themes. Bug  #190191
             return;
@@ -276,21 +279,33 @@ void MonthGraphicsView::drawBackground(QPainter *p, const QRectF &rect)
         p->drawRect(selectedRect);
     }
 
+    /*
+     * Draw Dates
+     */
+
     font = mMonthView->preferences()->monthViewFont();
     font.setPixelSize(MonthCell::topMargin() - 4);
-
     p->setFont(font);
 
     QPen oldPen;
-    if (!mMonthView->preferences()->useSystemColor()) {
-        oldPen = mMonthView->preferences()->monthGridBackgroundColor().darker(150);
-    } else {
+    if (mMonthView->preferences()->useSystemColor()) {
         oldPen = palette().color(QPalette::WindowText).darker(150);
+    } else {
+        oldPen = mMonthView->preferences()->monthGridBackgroundColor().darker(150);
     }
 
-    // Draw dates
     for (QDate d = mMonthView->actualStartDateTime().date(); d <= mMonthView->actualEndDateTime().date(); d = d.addDays(1)) {
-        MonthCell *cell = mScene->mMonthCellMap.value(d);
+        MonthCell *const cell = mScene->mMonthCellMap.value(d);
+
+        // Draw cell header
+        int cellHeaderX = mScene->cellHorizontalPos(cell) + 1;
+        int cellHeaderY = mScene->cellVerticalPos(cell) + 1;
+        int cellHeaderWidth = columnWidth - 2;
+        int cellHeaderHeight = cell->topMargin() - 2;
+        const auto brush = KColorScheme(QPalette::Normal, KColorScheme::ColorSet::Header).background(KColorScheme::BackgroundRole::NormalBackground);
+        p->setBrush(brush);
+        p->setPen(Qt::NoPen);
+        p->drawRect(QRect(cellHeaderX, cellHeaderY, cellHeaderWidth, cellHeaderHeight));
 
         // Draw cell header
         int cellHeaderX = mScene->cellHorizontalPos(cell) + 1;
@@ -317,6 +332,21 @@ void MonthGraphicsView::drawBackground(QPainter *p, const QRectF &rect)
             p->setPen(oldPen);
         }
 
+        QString dayText;
+        // Prepend month name if d is the first or last day of month
+        if (d.day() == 1 || // d is the first day of month
+            d.addDays(1).day() == 1) { // d is the last day of month
+            dayText = i18nc("'Month day' for month view cells", "%1 %2", QLocale::system().monthName(d.month(), QLocale::ShortFormat), d.day());
+        } else {
+            dayText = QString::number(d.day());
+        }
+        p->drawText(QRect(mScene->cellHorizontalPos(cell), // top right
+                          mScene->cellVerticalPos(cell), // of the cell
+                          mScene->columnWidth() - 2,
+                          cell->topMargin()),
+                    Qt::AlignRight,
+                    dayText);
+
         /*
           Draw arrows if all items won't fit
         */
@@ -338,25 +368,7 @@ void MonthGraphicsView::drawBackground(QPainter *p, const QRectF &rect)
         } else {
             cell->downArrow()->hide();
         }
-
-        QString dayText;
-        // Prepend month name if d is the first or last day of month
-        if (d.day() == 1 || // d is the first day of month
-            d.addDays(1).day() == 1) { // d is the last day of month
-            dayText = i18nc("'Month day' for month view cells", "%1 %2", QLocale::system().monthName(d.month(), QLocale::ShortFormat), d.day());
-        } else {
-            dayText = QString::number(d.day());
-        }
-
-        p->drawText(QRect(mScene->cellHorizontalPos(cell), // top right
-                          mScene->cellVerticalPos(cell), // of the cell
-                          mScene->columnWidth() - 2,
-                          cell->topMargin()),
-                    Qt::AlignRight,
-                    dayText);
     }
-
-    // ...
 }
 
 void MonthScene::resetAll()
