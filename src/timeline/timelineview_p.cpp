@@ -20,7 +20,6 @@
 #include "calendarview_debug.h"
 
 #include <QStandardItemModel>
-#include <QTreeWidget>
 
 using namespace KCalendarCore;
 using namespace EventViews;

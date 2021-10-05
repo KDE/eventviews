@@ -32,7 +32,6 @@
 #include <KIconLoader> // for SmallIcon()
 #include <KMessageBox>
 #include <KServiceTypeTrader>
-#include <KWordWrap>
 
 #include <KLocalizedString>
 #include <QApplication>
