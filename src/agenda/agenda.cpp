@@ -95,10 +95,7 @@ MarcusBains::MarcusBains(EventView *eventView, Agenda *agenda)
     d->mTimer->start(0);
 }
 
-MarcusBains::~MarcusBains()
-{
-    delete d;
-}
+MarcusBains::~MarcusBains() = default;
 
 void MarcusBains::updateLocation()
 {
@@ -346,7 +343,6 @@ Agenda::Agenda(AgendaView *agendaView, QScrollArea *scrollArea, int columns, boo
 Agenda::~Agenda()
 {
     delete d->mMarcusBains;
-    delete d;
 }
 
 KCalendarCore::Incidence::Ptr Agenda::selectedIncidence() const

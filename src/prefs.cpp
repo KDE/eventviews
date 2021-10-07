@@ -483,10 +483,7 @@ Prefs::Prefs(KCoreConfigSkeleton *appConfig)
     Akonadi::AttributeFactory::registerAttribute<Akonadi::CollectionColorAttribute>();
 }
 
-Prefs::~Prefs()
-{
-    delete d;
-}
+Prefs::~Prefs() = default;
 
 void Prefs::readConfig()
 {

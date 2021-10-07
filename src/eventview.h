@@ -23,6 +23,8 @@
 #include <QSet>
 #include <QWidget>
 
+#include <memory>
+
 namespace CalendarSupport
 {
 class CollectionSelection;
@@ -490,7 +492,7 @@ protected:
     virtual void handleBackendError(const QString &error);
 
 private:
-    EventViewPrivate *const d_ptr;
+    std::unique_ptr<EventViewPrivate> const d_ptr;
     Q_DECLARE_PRIVATE(EventView)
 };
 }

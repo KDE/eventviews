@@ -308,10 +308,7 @@ ListView::ListView(const Akonadi::ETMCalendar::Ptr &calendar, QWidget *parent, b
     updateView();
 }
 
-ListView::~ListView()
-{
-    delete d;
-}
+ListView::~ListView() = default;
 
 int ListView::currentDateCount() const
 {

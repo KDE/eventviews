@@ -22,6 +22,8 @@
 #include <QFrame>
 #include <QScrollArea>
 
+#include <memory>
+
 namespace Akonadi
 {
 class IncidenceChanger;
@@ -46,7 +48,7 @@ public Q_SLOTS:
 
 private:
     class Private;
-    Private *const d;
+    std::unique_ptr<Private> const d;
 };
 
 class EVENTVIEWS_EXPORT Agenda : public QWidget
@@ -318,7 +320,7 @@ private:
 
 private:
     class Private;
-    Private *const d;
+    std::unique_ptr<Private> const d;
 };
 
 class AgendaScrollArea : public QScrollArea

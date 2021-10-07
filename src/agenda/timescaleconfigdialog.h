@@ -9,6 +9,8 @@
 
 #include <QDialog>
 
+#include <memory>
+
 namespace EventViews
 {
 class Prefs;
@@ -34,7 +36,7 @@ private:
 
 private:
     class Private;
-    Private *const d;
+    std::unique_ptr<Private> const d;
 };
 }
 

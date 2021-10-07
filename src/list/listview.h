@@ -9,6 +9,8 @@
 
 #include "eventview.h"
 
+#include <memory>
+
 class KConfig;
 
 class QModelIndex;
@@ -92,7 +94,7 @@ private:
     void slotSortIndicatorChanged(int logicalIndex, Qt::SortOrder order);
 
     class Private;
-    Private *const d;
+    std::unique_ptr<Private> const d;
 };
 }
 

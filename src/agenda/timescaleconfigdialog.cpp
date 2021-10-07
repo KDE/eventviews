@@ -107,10 +107,7 @@ TimeScaleConfigDialog::TimeScaleConfigDialog(const PrefsPtr &preferences, QWidge
     slotUpdateButton();
 }
 
-TimeScaleConfigDialog::~TimeScaleConfigDialog()
-{
-    delete d;
-}
+TimeScaleConfigDialog::~TimeScaleConfigDialog() = default;
 
 void TimeScaleConfigDialog::slotUpdateButton()
 {

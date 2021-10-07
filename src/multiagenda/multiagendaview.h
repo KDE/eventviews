@@ -12,6 +12,8 @@
 
 #include <QDateTime>
 
+#include <memory>
+
 namespace EventViews
 {
 class ConfigDialogInterface;
@@ -86,7 +88,7 @@ private Q_SLOTS:
 
 private:
     class Private;
-    Private *const d;
+    std::unique_ptr<Private> const d;
 };
 }
 

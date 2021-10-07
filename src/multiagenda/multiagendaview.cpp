@@ -343,10 +343,7 @@ void MultiAgendaView::Private::setupViews()
     }
 }
 
-MultiAgendaView::~MultiAgendaView()
-{
-    delete d;
-}
+MultiAgendaView::~MultiAgendaView() = default;
 
 Akonadi::Item::List MultiAgendaView::selectedIncidences() const
 {

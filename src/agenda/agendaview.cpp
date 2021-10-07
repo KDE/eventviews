@@ -110,10 +110,7 @@ EventIndicator::EventIndicator(Location loc, QWidget *parent)
     parent->installEventFilter(this);
 }
 
-EventIndicator::~EventIndicator()
-{
-    delete d;
-}
+EventIndicator::~EventIndicator() = default;
 
 void EventIndicator::paintEvent(QPaintEvent *)
 {
@@ -814,11 +811,9 @@ AgendaView::~AgendaView()
 {
     for (const ViewCalendar::Ptr &cal : std::as_const(d->mViewCalendar->mSubCalendars)) {
         if (cal->getCalendar()) {
-            cal->getCalendar()->unregisterObserver(d);
+            cal->getCalendar()->unregisterObserver(d.get());
         }
     }
-
-    delete d;
 }
 
 KCalendarCore::Calendar::Ptr AgendaView::calendar2(const KCalendarCore::Incidence::Ptr &incidence) const
@@ -834,11 +829,11 @@ KCalendarCore::Calendar::Ptr AgendaView::calendar2(const QString &incidenceIdent
 void AgendaView::setCalendar(const Akonadi::ETMCalendar::Ptr &cal)
 {
     if (calendar()) {
-        calendar()->unregisterObserver(d);
+        calendar()->unregisterObserver(d.get());
     }
     Q_ASSERT(cal);
     EventView::setCalendar(cal);
-    calendar()->registerObserver(d);
+    calendar()->registerObserver(d.get());
     d->mViewCalendar->setETMCalendar(cal);
     d->mAgenda->setCalendar(d->mViewCalendar);
     d->mAllDayAgenda->setCalendar(d->mViewCalendar);
@@ -847,7 +842,7 @@ void AgendaView::setCalendar(const Akonadi::ETMCalendar::Ptr &cal)
 void AgendaView::addCalendar(const ViewCalendar::Ptr &cal)
 {
     d->mViewCalendar->addCalendar(cal);
-    cal->getCalendar()->registerObserver(d);
+    cal->getCalendar()->registerObserver(d.get());
 }
 
 void AgendaView::connectAgenda(Agenda *agenda, Agenda *otherAgenda)

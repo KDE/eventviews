@@ -13,6 +13,8 @@
 
 #include <QDateTime>
 
+#include <memory>
+
 namespace EventViews
 {
 /**
@@ -68,7 +70,7 @@ protected:
 
 private:
     class Private;
-    Private *const d;
+    std::unique_ptr<Private> const d;
 };
 } // namespace EventViews
 

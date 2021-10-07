@@ -12,6 +12,8 @@
 
 #include <KHolidays/HolidayRegion>
 
+#include <memory>
+
 class QModelIndex;
 
 namespace EventViews
@@ -108,7 +110,7 @@ protected:
     void showDates(const QDate &start, const QDate &end, const QDate &preferedMonth = QDate()) override;
 
 private:
-    MonthViewPrivate *const d;
+    std::unique_ptr<MonthViewPrivate> const d;
     friend class MonthViewPrivate;
     friend class MonthScene;
 };

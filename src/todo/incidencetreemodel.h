@@ -10,6 +10,8 @@
 
 #include <QAbstractProxyModel>
 
+#include <memory>
+
 class IncidenceTreeModel : public QAbstractProxyModel
 {
     Q_OBJECT
@@ -76,6 +78,6 @@ Q_SIGNALS:
 
 private:
     class Private;
-    Private *const d;
+    std::unique_ptr<Private> const d;
 };
 

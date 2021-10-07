@@ -639,10 +639,7 @@ IncidenceTreeModel::IncidenceTreeModel(const QStringList &mimeTypes, QObject *pa
     setObjectName(QStringLiteral("IncidenceTreeModel"));
 }
 
-IncidenceTreeModel::~IncidenceTreeModel()
-{
-    delete d;
-}
+IncidenceTreeModel::~IncidenceTreeModel() = default;
 
 QVariant IncidenceTreeModel::data(const QModelIndex &index, int role) const
 {

@@ -227,10 +227,8 @@ MonthView::MonthView(NavButtonsVisibility visibility, QWidget *parent)
 MonthView::~MonthView()
 {
     if (calendar()) {
-        calendar()->unregisterObserver(d);
+        calendar()->unregisterObserver(d.get());
     }
-
-    delete d;
 }
 
 void MonthView::updateConfig()
@@ -581,9 +579,9 @@ void MonthView::setCalendar(const Akonadi::ETMCalendar::Ptr &cal)
     Q_ASSERT(cal);
 
     if (calendar()) {
-        calendar()->unregisterObserver(d);
+        calendar()->unregisterObserver(d.get());
     }
 
     EventView::setCalendar(cal);
-    calendar()->registerObserver(d);
+    calendar()->registerObserver(d.get());
 }

@@ -68,10 +68,7 @@ EventView::EventView(QWidget *parent)
     d_ptr->setUpModels();
 }
 
-EventView::~EventView()
-{
-    delete d_ptr;
-}
+EventView::~EventView() = default;
 
 void EventView::defaultAction(const Akonadi::Item &aitem)
 {

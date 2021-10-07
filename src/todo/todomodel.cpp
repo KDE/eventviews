@@ -200,10 +200,7 @@ TodoModel::TodoModel(const EventViews::PrefsPtr &preferences, QObject *parent)
     setObjectName(QStringLiteral("TodoModel"));
 }
 
-TodoModel::~TodoModel()
-{
-    delete d;
-}
+TodoModel::~TodoModel() = default;
 
 QVariant TodoModel::data(const QModelIndex &index, int role) const
 {
@@ -502,57 +499,60 @@ void TodoModel::setSourceModel(QAbstractItemModel *model)
     beginResetModel();
 
     if (sourceModel()) {
-        disconnect(sourceModel(), SIGNAL(dataChanged(QModelIndex, QModelIndex)), d, SLOT(onDataChanged(QModelIndex, QModelIndex)));
-        disconnect(sourceModel(), SIGNAL(headerDataChanged(Qt::Orientation, int, int)), d, SLOT(onHeaderDataChanged(Qt::Orientation, int, int)));
+        disconnect(sourceModel(), SIGNAL(dataChanged(QModelIndex, QModelIndex)), d.get(), SLOT(onDataChanged(QModelIndex, QModelIndex)));
+        disconnect(sourceModel(), SIGNAL(headerDataChanged(Qt::Orientation, int, int)), d.get(), SLOT(onHeaderDataChanged(Qt::Orientation, int, int)));
 
-        disconnect(sourceModel(), SIGNAL(rowsInserted(QModelIndex, int, int)), d, SLOT(onRowsInserted(QModelIndex, int, int)));
+        disconnect(sourceModel(), SIGNAL(rowsInserted(QModelIndex, int, int)), d.get(), SLOT(onRowsInserted(QModelIndex, int, int)));
 
-        disconnect(sourceModel(), SIGNAL(rowsRemoved(QModelIndex, int, int)), d, SLOT(onRowsRemoved(QModelIndex, int, int)));
+        disconnect(sourceModel(), SIGNAL(rowsRemoved(QModelIndex, int, int)), d.get(), SLOT(onRowsRemoved(QModelIndex, int, int)));
 
-        disconnect(sourceModel(), SIGNAL(rowsMoved(QModelIndex, int, int, QModelIndex, int)), d, SLOT(onRowsMoved(QModelIndex, int, int, QModelIndex, int)));
+        disconnect(sourceModel(),
+                   SIGNAL(rowsMoved(QModelIndex, int, int, QModelIndex, int)),
+                   d.get(),
+                   SLOT(onRowsMoved(QModelIndex, int, int, QModelIndex, int)));
 
-        disconnect(sourceModel(), SIGNAL(rowsAboutToBeInserted(QModelIndex, int, int)), d, SLOT(onRowsAboutToBeInserted(QModelIndex, int, int)));
+        disconnect(sourceModel(), SIGNAL(rowsAboutToBeInserted(QModelIndex, int, int)), d.get(), SLOT(onRowsAboutToBeInserted(QModelIndex, int, int)));
 
-        disconnect(sourceModel(), SIGNAL(rowsAboutToBeRemoved(QModelIndex, int, int)), d, SLOT(onRowsAboutToBeRemoved(QModelIndex, int, int)));
+        disconnect(sourceModel(), SIGNAL(rowsAboutToBeRemoved(QModelIndex, int, int)), d.get(), SLOT(onRowsAboutToBeRemoved(QModelIndex, int, int)));
 
-        disconnect(sourceModel(), SIGNAL(modelAboutToBeReset()), d, SLOT(onModelAboutToBeReset()));
+        disconnect(sourceModel(), SIGNAL(modelAboutToBeReset()), d.get(), SLOT(onModelAboutToBeReset()));
 
-        disconnect(sourceModel(), SIGNAL(modelReset()), d, SLOT(onModelReset()));
+        disconnect(sourceModel(), SIGNAL(modelReset()), d.get(), SLOT(onModelReset()));
 
-        disconnect(sourceModel(), SIGNAL(layoutAboutToBeChanged()), d, SLOT(onLayoutAboutToBeChanged()));
+        disconnect(sourceModel(), SIGNAL(layoutAboutToBeChanged()), d.get(), SLOT(onLayoutAboutToBeChanged()));
 
-        disconnect(sourceModel(), SIGNAL(layoutChanged()), d, SLOT(onLayoutChanged()));
+        disconnect(sourceModel(), SIGNAL(layoutChanged()), d.get(), SLOT(onLayoutChanged()));
     }
 
     QAbstractProxyModel::setSourceModel(model);
 
     if (sourceModel()) {
-        connect(sourceModel(), SIGNAL(dataChanged(QModelIndex, QModelIndex)), d, SLOT(onDataChanged(QModelIndex, QModelIndex)));
+        connect(sourceModel(), SIGNAL(dataChanged(QModelIndex, QModelIndex)), d.get(), SLOT(onDataChanged(QModelIndex, QModelIndex)));
 
-        connect(sourceModel(), SIGNAL(headerDataChanged(Qt::Orientation, int, int)), d, SLOT(onHeaderDataChanged(Qt::Orientation, int, int)));
+        connect(sourceModel(), SIGNAL(headerDataChanged(Qt::Orientation, int, int)), d.get(), SLOT(onHeaderDataChanged(Qt::Orientation, int, int)));
 
-        connect(sourceModel(), SIGNAL(rowsAboutToBeInserted(QModelIndex, int, int)), d, SLOT(onRowsAboutToBeInserted(QModelIndex, int, int)));
+        connect(sourceModel(), SIGNAL(rowsAboutToBeInserted(QModelIndex, int, int)), d.get(), SLOT(onRowsAboutToBeInserted(QModelIndex, int, int)));
 
-        connect(sourceModel(), SIGNAL(rowsInserted(QModelIndex, int, int)), d, SLOT(onRowsInserted(QModelIndex, int, int)));
+        connect(sourceModel(), SIGNAL(rowsInserted(QModelIndex, int, int)), d.get(), SLOT(onRowsInserted(QModelIndex, int, int)));
 
-        connect(sourceModel(), SIGNAL(rowsAboutToBeRemoved(QModelIndex, int, int)), d, SLOT(onRowsAboutToBeRemoved(QModelIndex, int, int)));
+        connect(sourceModel(), SIGNAL(rowsAboutToBeRemoved(QModelIndex, int, int)), d.get(), SLOT(onRowsAboutToBeRemoved(QModelIndex, int, int)));
 
-        connect(sourceModel(), SIGNAL(rowsRemoved(QModelIndex, int, int)), d, SLOT(onRowsRemoved(QModelIndex, int, int)));
+        connect(sourceModel(), SIGNAL(rowsRemoved(QModelIndex, int, int)), d.get(), SLOT(onRowsRemoved(QModelIndex, int, int)));
 
         connect(sourceModel(),
                 SIGNAL(rowsAboutToBeMoved(QModelIndex, int, int, QModelIndex, int)),
-                d,
+                d.get(),
                 SLOT(onRowsAboutToBeMoved(QModelIndex, int, int, QModelIndex, int)));
 
-        connect(sourceModel(), SIGNAL(rowsMoved(QModelIndex, int, int, QModelIndex, int)), d, SLOT(onRowsMoved(QModelIndex, int, int, QModelIndex, int)));
+        connect(sourceModel(), SIGNAL(rowsMoved(QModelIndex, int, int, QModelIndex, int)), d.get(), SLOT(onRowsMoved(QModelIndex, int, int, QModelIndex, int)));
 
-        connect(sourceModel(), SIGNAL(modelAboutToBeReset()), d, SLOT(onModelAboutToBeReset()));
+        connect(sourceModel(), SIGNAL(modelAboutToBeReset()), d.get(), SLOT(onModelAboutToBeReset()));
 
-        connect(sourceModel(), SIGNAL(modelReset()), d, SLOT(onModelReset()));
+        connect(sourceModel(), SIGNAL(modelReset()), d.get(), SLOT(onModelReset()));
 
-        connect(sourceModel(), SIGNAL(layoutAboutToBeChanged()), d, SLOT(onLayoutAboutToBeChanged()));
+        connect(sourceModel(), SIGNAL(layoutAboutToBeChanged()), d.get(), SLOT(onLayoutAboutToBeChanged()));
 
-        connect(sourceModel(), SIGNAL(layoutChanged()), d, SLOT(onLayoutChanged()));
+        connect(sourceModel(), SIGNAL(layoutChanged()), d.get(), SLOT(onLayoutChanged()));
     }
 
     endResetModel();

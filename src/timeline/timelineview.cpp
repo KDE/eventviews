@@ -254,17 +254,16 @@ TimelineView::TimelineView(QWidget *parent)
 
     vbox->addWidget(splitter);
 
-    connect(model, &QStandardItemModel::itemChanged, d, &Private::itemChanged);
+    connect(model, &QStandardItemModel::itemChanged, d.get(), &Private::itemChanged);
 
-    connect(d->mGantt, &KGantt::GraphicsView::activated, d, &Private::itemSelected);
+    connect(d->mGantt, &KGantt::GraphicsView::activated, d.get(), &Private::itemSelected);
     d->mGantt->setContextMenuPolicy(Qt::CustomContextMenu);
-    connect(d->mGantt, &QWidget::customContextMenuRequested, d, &Private::contextMenuRequested);
+    connect(d->mGantt, &QWidget::customContextMenuRequested, d.get(), &Private::contextMenuRequested);
 }
 
 TimelineView::~TimelineView()
 {
     delete d->mRowController;
-    delete d;
 }
 
 Akonadi::Item::List TimelineView::selectedIncidences() const
