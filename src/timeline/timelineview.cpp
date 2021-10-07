@@ -214,7 +214,7 @@ TimelineView::TimelineView(const EventViews::PrefsPtr &preferences, QWidget *par
 
 TimelineView::TimelineView(QWidget *parent)
     : EventView(parent)
-    , d(new Private(this))
+    , d(new TimelineViewPrivate(this))
 {
     auto vbox = new QVBoxLayout(this);
     auto splitter = new QSplitter(Qt::Horizontal, this);
@@ -254,11 +254,11 @@ TimelineView::TimelineView(QWidget *parent)
 
     vbox->addWidget(splitter);
 
-    connect(model, &QStandardItemModel::itemChanged, d.get(), &Private::itemChanged);
+    connect(model, &QStandardItemModel::itemChanged, d.get(), &TimelineViewPrivate::itemChanged);
 
-    connect(d->mGantt, &KGantt::GraphicsView::activated, d.get(), &Private::itemSelected);
+    connect(d->mGantt, &KGantt::GraphicsView::activated, d.get(), &TimelineViewPrivate::itemSelected);
     d->mGantt->setContextMenuPolicy(Qt::CustomContextMenu);
-    connect(d->mGantt, &QWidget::customContextMenuRequested, d.get(), &Private::contextMenuRequested);
+    connect(d->mGantt, &QWidget::customContextMenuRequested, d.get(), &TimelineViewPrivate::contextMenuRequested);
 }
 
 TimelineView::~TimelineView()

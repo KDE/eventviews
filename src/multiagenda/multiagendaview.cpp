@@ -77,7 +77,7 @@ static QString generateColumnLabel(int c)
     return i18n("Agenda %1", c + 1);
 }
 
-class Q_DECL_HIDDEN MultiAgendaView::Private
+class EventViews::MultiAgendaViewPrivate
 {
 private:
     class ElidedLabel : public QFrame
@@ -98,12 +98,12 @@ private:
     };
 
 public:
-    Private(MultiAgendaView *qq)
+    explicit MultiAgendaViewPrivate(MultiAgendaView *qq)
         : q(qq)
     {
     }
 
-    ~Private()
+    ~MultiAgendaViewPrivate()
     {
         qDeleteAll(mSelectionSavers);
     }
@@ -140,7 +140,7 @@ public:
 
 MultiAgendaView::MultiAgendaView(QWidget *parent)
     : EventView(parent)
-    , d(new Private(this))
+    , d(new MultiAgendaViewPrivate(this))
 {
     auto topLevelLayout = new QHBoxLayout(this);
     topLevelLayout->setSpacing(0);
@@ -285,7 +285,7 @@ void MultiAgendaView::forceRecreateViews()
     recreateViews();
 }
 
-void MultiAgendaView::Private::deleteViews()
+void MultiAgendaViewPrivate::deleteViews()
 {
     for (AgendaView *const i : std::as_const(mAgendaViews)) {
         KCheckableProxyModel *proxy = i->takeCustomCollectionSelectionProxyModel();
@@ -301,7 +301,7 @@ void MultiAgendaView::Private::deleteViews()
     mAgendaWidgets.clear();
 }
 
-void MultiAgendaView::Private::setupViews()
+void MultiAgendaViewPrivate::setupViews()
 {
     for (AgendaView *agenda : std::as_const(mAgendaViews)) {
         q->connect(agenda, SIGNAL(newEventSignal()), q, SIGNAL(newEventSignal()));
@@ -334,7 +334,10 @@ void MultiAgendaView::Private::setupViews()
     AgendaView *lastView = mAgendaViews.last();
     for (AgendaView *agenda : std::as_const(mAgendaViews)) {
         if (agenda != lastView) {
-            connect(agenda->agenda()->verticalScrollBar(), &QAbstractSlider::valueChanged, lastView->agenda()->verticalScrollBar(), &QAbstractSlider::setValue);
+            q->connect(agenda->agenda()->verticalScrollBar(),
+                       &QAbstractSlider::valueChanged,
+                       lastView->agenda()->verticalScrollBar(),
+                       &QAbstractSlider::setValue);
         }
     }
 
@@ -435,7 +438,7 @@ void MultiAgendaView::slotClearTimeSpanSelection()
     }
 }
 
-AgendaView *MultiAgendaView::Private::createView(const QString &title)
+AgendaView *MultiAgendaViewPrivate::createView(const QString &title)
 {
     auto box = new QWidget(mTopBox);
     mTopBox->layout()->addWidget(box);
@@ -469,13 +472,13 @@ AgendaView *MultiAgendaView::Private::createView(const QString &title)
     return av;
 }
 
-void MultiAgendaView::Private::addView(const Akonadi::Collection &collection)
+void MultiAgendaViewPrivate::addView(const Akonadi::Collection &collection)
 {
     AgendaView *av = createView(CalendarSupport::displayName(q->calendar().data(), collection));
     av->setCollectionId(collection.id());
 }
 
-void MultiAgendaView::Private::addView(KCheckableProxyModel *sm, const QString &title)
+void MultiAgendaViewPrivate::addView(KCheckableProxyModel *sm, const QString &title)
 {
     AgendaView *av = createView(title);
     av->setCustomCollectionSelectionProxyModel(sm);
@@ -487,7 +490,7 @@ void MultiAgendaView::resizeEvent(QResizeEvent *ev)
     EventView::resizeEvent(ev);
 }
 
-void MultiAgendaView::Private::resizeScrollView(QSize size)
+void MultiAgendaViewPrivate::resizeScrollView(QSize size)
 {
     const int widgetWidth = size.width() - mTimeLabelsZone->width() - mScrollBar->width();
 
@@ -748,7 +751,7 @@ QStringList MultiAgendaView::customColumnTitles() const
     return d->mCustomColumnTitles;
 }
 
-void MultiAgendaView::Private::ElidedLabel::paintEvent(QPaintEvent *event)
+void MultiAgendaViewPrivate::ElidedLabel::paintEvent(QPaintEvent *event)
 {
     QFrame::paintEvent(event);
     QPainter p(this);
@@ -757,7 +760,7 @@ void MultiAgendaView::Private::ElidedLabel::paintEvent(QPaintEvent *event)
     p.drawText(r, Qt::AlignHCenter | Qt::AlignVCenter, elidedText);
 }
 
-QSize MultiAgendaView::Private::ElidedLabel::minimumSizeHint() const
+QSize MultiAgendaViewPrivate::ElidedLabel::minimumSizeHint() const
 {
     const QFontMetrics &fm = fontMetrics();
     return QSize(fm.boundingRect(QStringLiteral("...")).width(), fm.height());

@@ -22,6 +22,8 @@
 
 class QMimeData;
 
+class TodoModelPrivate;
+
 class TodoModel : public QAbstractProxyModel
 {
     Q_OBJECT
@@ -86,7 +88,7 @@ public:
     Q_REQUIRED_RESULT QModelIndex buddy(const QModelIndex &index) const override;
 
 private:
-    class Private;
-    std::unique_ptr<Private> const d;
+    friend class TodoModelPrivate;
+    std::unique_ptr<TodoModelPrivate> const d;
 };
 

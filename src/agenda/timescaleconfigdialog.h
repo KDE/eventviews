@@ -16,6 +16,8 @@ namespace EventViews
 class Prefs;
 using PrefsPtr = QSharedPointer<Prefs>;
 
+class TimeScaleConfigDialogPrivate;
+
 class TimeScaleConfigDialog : public QDialog, private Ui::TimeScaleEditWidget
 {
     Q_OBJECT
@@ -35,8 +37,7 @@ private:
     QStringList zones() const;
 
 private:
-    class Private;
-    std::unique_ptr<Private> const d;
+    std::unique_ptr<TimeScaleConfigDialogPrivate> const d;
 };
 }
 

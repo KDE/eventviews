@@ -20,11 +20,11 @@ namespace Akonadi
 class IncidenceChanger;
 }
 
-class TodoModel::Private : public QObject
+class TodoModelPrivate : public QObject
 {
     Q_OBJECT
 public:
-    Private(const EventViews::PrefsPtr &preferences, TodoModel *qq);
+    TodoModelPrivate(const EventViews::PrefsPtr &preferences, TodoModel *qq);
 
     // TODO: O(N) complexity, see if the profiler complains about this
     Akonadi::Item findItemByUid(const QString &uid, const QModelIndex &parent) const;

@@ -39,6 +39,8 @@ class Agenda;
 class AgendaItem;
 class AgendaView;
 
+class EventIndicatorPrivate;
+
 class EventIndicator : public QFrame
 {
     Q_OBJECT
@@ -56,9 +58,10 @@ protected:
     bool eventFilter(QObject *, QEvent *) override;
 
 private:
-    class Private;
-    std::unique_ptr<Private> const d;
+    std::unique_ptr<EventIndicatorPrivate> const d;
 };
+
+class AgendaViewPrivate;
 
 /**
   AgendaView is the agenda-like view that displays events in a single
@@ -237,13 +240,14 @@ private:
 #endif
 
     friend class TimeLabelsZone;
+    friend class MultiAgendaViewPrivate;
     friend class MultiAgendaView;
     Agenda *agenda() const;
     Agenda *allDayAgenda() const;
 
 private:
-    class Private;
-    std::unique_ptr<Private> const d;
+    friend class AgendaViewPrivate;
+    std::unique_ptr<AgendaViewPrivate> const d;
 };
 }
 

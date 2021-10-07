@@ -210,16 +210,16 @@ bool BaseConfig::usrSave()
     return KConfigSkeleton::usrSave();
 }
 
-class Q_DECL_HIDDEN Prefs::Private
+class EventViews::PrefsPrivate
 {
 public:
-    Private(Prefs *parent)
+    explicit PrefsPrivate(Prefs *parent)
         : mAppConfig(nullptr)
         , q(parent)
     {
     }
 
-    Private(Prefs *parent, KCoreConfigSkeleton *appConfig)
+    PrefsPrivate(Prefs *parent, KCoreConfigSkeleton *appConfig)
         : mAppConfig(appConfig)
         , q(parent)
     {
@@ -256,7 +256,7 @@ private:
     Prefs *q;
 };
 
-KConfigSkeletonItem *Prefs::Private::appConfigItem(const KConfigSkeletonItem *baseConfigItem) const
+KConfigSkeletonItem *PrefsPrivate::appConfigItem(const KConfigSkeletonItem *baseConfigItem) const
 {
     Q_ASSERT(baseConfigItem);
 
@@ -267,7 +267,7 @@ KConfigSkeletonItem *Prefs::Private::appConfigItem(const KConfigSkeletonItem *ba
     return nullptr;
 }
 
-void Prefs::Private::setBool(KCoreConfigSkeleton::ItemBool *baseConfigItem, bool value)
+void PrefsPrivate::setBool(KCoreConfigSkeleton::ItemBool *baseConfigItem, bool value)
 {
     KConfigSkeletonItem *appItem = appConfigItem(baseConfigItem);
     if (appItem) {
@@ -282,7 +282,7 @@ void Prefs::Private::setBool(KCoreConfigSkeleton::ItemBool *baseConfigItem, bool
     }
 }
 
-bool Prefs::Private::getBool(const KCoreConfigSkeleton::ItemBool *baseConfigItem) const
+bool PrefsPrivate::getBool(const KCoreConfigSkeleton::ItemBool *baseConfigItem) const
 {
     KConfigSkeletonItem *appItem = appConfigItem(baseConfigItem);
     if (appItem) {
@@ -295,7 +295,7 @@ bool Prefs::Private::getBool(const KCoreConfigSkeleton::ItemBool *baseConfigItem
     return baseConfigItem->value();
 }
 
-void Prefs::Private::setInt(KCoreConfigSkeleton::ItemInt *baseConfigItem, int value)
+void PrefsPrivate::setInt(KCoreConfigSkeleton::ItemInt *baseConfigItem, int value)
 {
     KConfigSkeletonItem *appItem = appConfigItem(baseConfigItem);
     if (appItem) {
@@ -310,7 +310,7 @@ void Prefs::Private::setInt(KCoreConfigSkeleton::ItemInt *baseConfigItem, int va
     }
 }
 
-int Prefs::Private::getInt(const KCoreConfigSkeleton::ItemInt *baseConfigItem) const
+int PrefsPrivate::getInt(const KCoreConfigSkeleton::ItemInt *baseConfigItem) const
 {
     KConfigSkeletonItem *appItem = appConfigItem(baseConfigItem);
     if (appItem) {
@@ -323,7 +323,7 @@ int Prefs::Private::getInt(const KCoreConfigSkeleton::ItemInt *baseConfigItem) c
     return baseConfigItem->value();
 }
 
-void Prefs::Private::setString(KCoreConfigSkeleton::ItemString *baseConfigItem, const QString &value)
+void PrefsPrivate::setString(KCoreConfigSkeleton::ItemString *baseConfigItem, const QString &value)
 {
     KConfigSkeletonItem *appItem = appConfigItem(baseConfigItem);
     if (appItem) {
@@ -339,7 +339,7 @@ void Prefs::Private::setString(KCoreConfigSkeleton::ItemString *baseConfigItem, 
     }
 }
 
-QString Prefs::Private::getString(const KCoreConfigSkeleton::ItemString *baseConfigItem) const
+QString PrefsPrivate::getString(const KCoreConfigSkeleton::ItemString *baseConfigItem) const
 {
     KConfigSkeletonItem *appItem = appConfigItem(baseConfigItem);
     if (appItem) {
@@ -353,7 +353,7 @@ QString Prefs::Private::getString(const KCoreConfigSkeleton::ItemString *baseCon
     return baseConfigItem->value();
 }
 
-void Prefs::Private::setDateTime(KCoreConfigSkeleton::ItemDateTime *baseConfigItem, const QDateTime &value)
+void PrefsPrivate::setDateTime(KCoreConfigSkeleton::ItemDateTime *baseConfigItem, const QDateTime &value)
 {
     KConfigSkeletonItem *appItem = appConfigItem(baseConfigItem);
     if (appItem) {
@@ -369,7 +369,7 @@ void Prefs::Private::setDateTime(KCoreConfigSkeleton::ItemDateTime *baseConfigIt
     }
 }
 
-QDateTime Prefs::Private::getDateTime(const KCoreConfigSkeleton::ItemDateTime *baseConfigItem) const
+QDateTime PrefsPrivate::getDateTime(const KCoreConfigSkeleton::ItemDateTime *baseConfigItem) const
 {
     KConfigSkeletonItem *appItem = appConfigItem(baseConfigItem);
     if (appItem) {
@@ -383,7 +383,7 @@ QDateTime Prefs::Private::getDateTime(const KCoreConfigSkeleton::ItemDateTime *b
     return baseConfigItem->value();
 }
 
-void Prefs::Private::setStringList(KCoreConfigSkeleton::ItemStringList *baseConfigItem, const QStringList &value)
+void PrefsPrivate::setStringList(KCoreConfigSkeleton::ItemStringList *baseConfigItem, const QStringList &value)
 {
     KConfigSkeletonItem *appItem = appConfigItem(baseConfigItem);
     if (appItem) {
@@ -399,7 +399,7 @@ void Prefs::Private::setStringList(KCoreConfigSkeleton::ItemStringList *baseConf
     }
 }
 
-QStringList Prefs::Private::getStringList(const KCoreConfigSkeleton::ItemStringList *baseConfigItem) const
+QStringList PrefsPrivate::getStringList(const KCoreConfigSkeleton::ItemStringList *baseConfigItem) const
 {
     KConfigSkeletonItem *appItem = appConfigItem(baseConfigItem);
     if (appItem) {
@@ -413,7 +413,7 @@ QStringList Prefs::Private::getStringList(const KCoreConfigSkeleton::ItemStringL
     return baseConfigItem->value();
 }
 
-void Prefs::Private::setColor(KConfigSkeleton::ItemColor *baseConfigItem, const QColor &value)
+void PrefsPrivate::setColor(KConfigSkeleton::ItemColor *baseConfigItem, const QColor &value)
 {
     KConfigSkeletonItem *appItem = appConfigItem(baseConfigItem);
     if (appItem) {
@@ -428,7 +428,7 @@ void Prefs::Private::setColor(KConfigSkeleton::ItemColor *baseConfigItem, const 
     }
 }
 
-QColor Prefs::Private::getColor(const KConfigSkeleton::ItemColor *baseConfigItem) const
+QColor PrefsPrivate::getColor(const KConfigSkeleton::ItemColor *baseConfigItem) const
 {
     KConfigSkeletonItem *appItem = appConfigItem(baseConfigItem);
     if (appItem) {
@@ -441,7 +441,7 @@ QColor Prefs::Private::getColor(const KConfigSkeleton::ItemColor *baseConfigItem
     return baseConfigItem->value();
 }
 
-void Prefs::Private::setFont(KConfigSkeleton::ItemFont *baseConfigItem, const QFont &value)
+void PrefsPrivate::setFont(KConfigSkeleton::ItemFont *baseConfigItem, const QFont &value)
 {
     KConfigSkeletonItem *appItem = appConfigItem(baseConfigItem);
     if (appItem) {
@@ -456,7 +456,7 @@ void Prefs::Private::setFont(KConfigSkeleton::ItemFont *baseConfigItem, const QF
     }
 }
 
-QFont Prefs::Private::getFont(const KConfigSkeleton::ItemFont *baseConfigItem) const
+QFont PrefsPrivate::getFont(const KConfigSkeleton::ItemFont *baseConfigItem) const
 {
     KConfigSkeletonItem *appItem = appConfigItem(baseConfigItem);
     if (appItem) {
@@ -470,14 +470,14 @@ QFont Prefs::Private::getFont(const KConfigSkeleton::ItemFont *baseConfigItem) c
 }
 
 Prefs::Prefs()
-    : d(new Private(this))
+    : d(new PrefsPrivate(this))
 {
     // necessary to use CollectionColorAttribute in the EventViews::resourceColor and EventViews::setResourceColor
     Akonadi::AttributeFactory::registerAttribute<Akonadi::CollectionColorAttribute>();
 }
 
 Prefs::Prefs(KCoreConfigSkeleton *appConfig)
-    : d(new Private(this, appConfig))
+    : d(new PrefsPrivate(this, appConfig))
 {
     // necessary to use CollectionColorAttribute in the EventViews::resourceColor and EventViews::setResourceColor
     Akonadi::AttributeFactory::registerAttribute<Akonadi::CollectionColorAttribute>();

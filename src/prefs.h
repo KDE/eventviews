@@ -18,6 +18,8 @@
 
 namespace EventViews
 {
+class PrefsPrivate;
+
 class EVENTVIEWS_EXPORT Prefs
 {
 public:
@@ -205,8 +207,7 @@ public:
     KConfig *config() const;
 
 private:
-    class Private;
-    std::unique_ptr<Private> const d;
+    std::unique_ptr<PrefsPrivate> const d;
 };
 
 using PrefsPtr = QSharedPointer<Prefs>;

@@ -50,14 +50,14 @@ static bool isDueToday(const KCalendarCore::Todo::Ptr &todo)
     return !todo->isCompleted() && todo->dtDue().date() == QDate::currentDate();
 }
 
-TodoModel::Private::Private(const EventViews::PrefsPtr &preferences, TodoModel *qq)
+TodoModelPrivate::TodoModelPrivate(const EventViews::PrefsPtr &preferences, TodoModel *qq)
     : QObject()
     , m_preferences(preferences)
     , q(qq)
 {
 }
 
-Akonadi::Item TodoModel::Private::findItemByUid(const QString &uid, const QModelIndex &parent) const
+Akonadi::Item TodoModelPrivate::findItemByUid(const QString &uid, const QModelIndex &parent) const
 {
     Q_ASSERT(!uid.isEmpty());
     auto treeModel = qobject_cast<IncidenceTreeModel *>(q->sourceModel());
@@ -84,7 +84,7 @@ Akonadi::Item TodoModel::Private::findItemByUid(const QString &uid, const QModel
     return item;
 }
 
-void TodoModel::Private::onDataChanged(const QModelIndex &begin, const QModelIndex &end)
+void TodoModelPrivate::onDataChanged(const QModelIndex &begin, const QModelIndex &end)
 {
     Q_ASSERT(begin.isValid());
     Q_ASSERT(end.isValid());
@@ -94,12 +94,12 @@ void TodoModel::Private::onDataChanged(const QModelIndex &begin, const QModelInd
     Q_EMIT q->dataChanged(proxyBegin, proxyEnd.sibling(proxyEnd.row(), TodoModel::ColumnCount - 1));
 }
 
-void TodoModel::Private::onHeaderDataChanged(Qt::Orientation orientation, int first, int last)
+void TodoModelPrivate::onHeaderDataChanged(Qt::Orientation orientation, int first, int last)
 {
     Q_EMIT q->headerDataChanged(orientation, first, last);
 }
 
-void TodoModel::Private::onRowsAboutToBeInserted(const QModelIndex &parent, int begin, int end)
+void TodoModelPrivate::onRowsAboutToBeInserted(const QModelIndex &parent, int begin, int end)
 {
     const QModelIndex index = q->mapFromSource(parent);
     Q_ASSERT(!(parent.isValid() ^ index.isValid())); // Both must be valid, or both invalid
@@ -108,12 +108,12 @@ void TodoModel::Private::onRowsAboutToBeInserted(const QModelIndex &parent, int 
     q->beginInsertRows(index, begin, end);
 }
 
-void TodoModel::Private::onRowsInserted(const QModelIndex &, int, int)
+void TodoModelPrivate::onRowsInserted(const QModelIndex &, int, int)
 {
     q->endInsertRows();
 }
 
-void TodoModel::Private::onRowsAboutToBeRemoved(const QModelIndex &parent, int begin, int end)
+void TodoModelPrivate::onRowsAboutToBeRemoved(const QModelIndex &parent, int begin, int end)
 {
     const QModelIndex index = q->mapFromSource(parent);
     Q_ASSERT(!(parent.isValid() ^ index.isValid())); // Both must be valid, or both invalid
@@ -122,16 +122,16 @@ void TodoModel::Private::onRowsAboutToBeRemoved(const QModelIndex &parent, int b
     q->beginRemoveRows(index, begin, end);
 }
 
-void TodoModel::Private::onRowsRemoved(const QModelIndex &, int, int)
+void TodoModelPrivate::onRowsRemoved(const QModelIndex &, int, int)
 {
     q->endRemoveRows();
 }
 
-void TodoModel::Private::onRowsAboutToBeMoved(const QModelIndex &sourceParent,
-                                              int sourceStart,
-                                              int sourceEnd,
-                                              const QModelIndex &destinationParent,
-                                              int destinationRow)
+void TodoModelPrivate::onRowsAboutToBeMoved(const QModelIndex &sourceParent,
+                                            int sourceStart,
+                                            int sourceEnd,
+                                            const QModelIndex &destinationParent,
+                                            int destinationRow)
 {
     Q_UNUSED(sourceParent)
     Q_UNUSED(sourceStart)
@@ -144,22 +144,22 @@ void TodoModel::Private::onRowsAboutToBeMoved(const QModelIndex &sourceParent,
     */
 }
 
-void TodoModel::Private::onRowsMoved(const QModelIndex &, int, int, const QModelIndex &, int)
+void TodoModelPrivate::onRowsMoved(const QModelIndex &, int, int, const QModelIndex &, int)
 {
     /*q->endMoveRows();*/
 }
 
-void TodoModel::Private::onModelAboutToBeReset()
+void TodoModelPrivate::onModelAboutToBeReset()
 {
     q->beginResetModel();
 }
 
-void TodoModel::Private::onModelReset()
+void TodoModelPrivate::onModelReset()
 {
     q->endResetModel();
 }
 
-void TodoModel::Private::onLayoutAboutToBeChanged()
+void TodoModelPrivate::onLayoutAboutToBeChanged()
 {
     Q_ASSERT(m_persistentIndexes.isEmpty());
     Q_ASSERT(m_layoutChangePersistentIndexes.isEmpty());
@@ -177,7 +177,7 @@ void TodoModel::Private::onLayoutAboutToBeChanged()
     Q_EMIT q->layoutAboutToBeChanged();
 }
 
-void TodoModel::Private::onLayoutChanged()
+void TodoModelPrivate::onLayoutChanged()
 {
     for (int i = 0; i < m_persistentIndexes.size(); ++i) {
         QModelIndex newIndex_col0 = q->mapFromSource(m_layoutChangePersistentIndexes.at(i));
@@ -195,7 +195,7 @@ void TodoModel::Private::onLayoutChanged()
 
 TodoModel::TodoModel(const EventViews::PrefsPtr &preferences, QObject *parent)
     : QAbstractProxyModel(parent)
-    , d(new Private(preferences, this))
+    , d(new TodoModelPrivate(preferences, this))
 {
     setObjectName(QStringLiteral("TodoModel"));
 }

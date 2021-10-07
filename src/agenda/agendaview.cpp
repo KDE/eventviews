@@ -56,10 +56,10 @@ enum {
     SHRINKDOWN = 2 // points less for the timezone font
 };
 
-class Q_DECL_HIDDEN EventIndicator::Private
+class EventViews::EventIndicatorPrivate
 {
 public:
-    Private(EventIndicator *parent, EventIndicator::Location loc)
+    EventIndicatorPrivate(EventIndicator *parent, EventIndicator::Location loc)
         : mLocation(loc)
         , q(parent)
     {
@@ -67,7 +67,7 @@ public:
 
         QChar ch;
         // Dashed up and down arrow characters
-        ch = QChar(mLocation == Top ? 0x21e1 : 0x21e3);
+        ch = QChar(mLocation == EventIndicator::Top ? 0x21e1 : 0x21e3);
         QFont font = q->font();
         font.setPointSize(KIconLoader::global()->currentSize(KIconLoader::Dialog));
         QFontMetrics fm(font);
@@ -93,7 +93,7 @@ public:
 
 public:
     int mColumns = 1;
-    const Location mLocation;
+    const EventIndicator::Location mLocation;
     QPixmap mPixmap;
     QVector<bool> mEnabled;
 
@@ -103,7 +103,7 @@ private:
 
 EventIndicator::EventIndicator(Location loc, QWidget *parent)
     : QFrame(parent)
-    , d(new Private(this, loc))
+    , d(new EventIndicatorPrivate(this, loc))
 {
     setAttribute(Qt::WA_TransparentForMouseEvents);
     setFixedHeight(d->mPixmap.height());
@@ -154,12 +154,12 @@ void EventIndicator::enableColumn(int column, bool enable)
 ////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////
 
-class AgendaView::Private : public Akonadi::ETMCalendar::CalendarObserver
+class EventViews::AgendaViewPrivate : public Akonadi::ETMCalendar::CalendarObserver
 {
     AgendaView *const q;
 
 public:
-    explicit Private(AgendaView *parent, bool isInteractive, bool isSideBySide)
+    explicit AgendaViewPrivate(AgendaView *parent, bool isInteractive, bool isSideBySide)
         : q(parent)
         , mUpdateItem(0)
         , mIsSideBySide(isSideBySide)
@@ -264,7 +264,7 @@ private:
     using KCalendarCore::Calendar::CalendarObserver::calendarIncidenceDeleted;
 };
 
-bool AgendaView::Private::datesEqual(const KCalendarCore::Incidence::Ptr &one, const KCalendarCore::Incidence::Ptr &two) const
+bool AgendaViewPrivate::datesEqual(const KCalendarCore::Incidence::Ptr &one, const KCalendarCore::Incidence::Ptr &two) const
 {
     const auto start1 = one->dtStart();
     const auto start2 = two->dtStart();
@@ -290,13 +290,13 @@ bool AgendaView::Private::datesEqual(const KCalendarCore::Incidence::Ptr &one, c
     return true;
 }
 
-AgendaItem::List AgendaView::Private::agendaItems(const QString &uid) const
+AgendaItem::List AgendaViewPrivate::agendaItems(const QString &uid) const
 {
     AgendaItem::List allDayAgendaItems = mAllDayAgenda->agendaItems(uid);
     return allDayAgendaItems.isEmpty() ? mAgenda->agendaItems(uid) : allDayAgendaItems;
 }
 
-bool AgendaView::Private::mightBeVisible(const KCalendarCore::Incidence::Ptr &incidence) const
+bool AgendaViewPrivate::mightBeVisible(const KCalendarCore::Incidence::Ptr &incidence) const
 {
     KCalendarCore::Todo::Ptr todo = incidence.dynamicCast<KCalendarCore::Todo>();
 
@@ -332,7 +332,7 @@ bool AgendaView::Private::mightBeVisible(const KCalendarCore::Incidence::Ptr &in
     return true;
 }
 
-void AgendaView::Private::changeColumns(int numColumns)
+void AgendaViewPrivate::changeColumns(int numColumns)
 {
     // mMinY, mMaxY and mEnabled must all have the same size.
     // Make sure you preserve this order because mEventIndicatorTop->changeColumns()
@@ -344,7 +344,7 @@ void AgendaView::Private::changeColumns(int numColumns)
 }
 
 /** static */
-QList<QDate> AgendaView::Private::generateDateList(QDate start, QDate end)
+QList<QDate> AgendaViewPrivate::generateDateList(QDate start, QDate end)
 {
     QList<QDate> list;
 
@@ -362,7 +362,7 @@ QList<QDate> AgendaView::Private::generateDateList(QDate start, QDate end)
     return list;
 }
 
-void AgendaView::Private::reevaluateIncidence(const KCalendarCore::Incidence::Ptr &incidence)
+void AgendaViewPrivate::reevaluateIncidence(const KCalendarCore::Incidence::Ptr &incidence)
 {
     if (!incidence || !mViewCalendar->isValid(incidence)) {
         qCWarning(CALENDARVIEW_LOG) << "invalid incidence or item not found." << incidence;
@@ -375,10 +375,10 @@ void AgendaView::Private::reevaluateIncidence(const KCalendarCore::Incidence::Pt
     q->updateEventIndicators();
 }
 
-void AgendaView::Private::calendarIncidenceAdded(const KCalendarCore::Incidence::Ptr &incidence)
+void AgendaViewPrivate::calendarIncidenceAdded(const KCalendarCore::Incidence::Ptr &incidence)
 {
     if (!incidence || !mViewCalendar->isValid(incidence)) {
-        qCCritical(CALENDARVIEW_LOG) << "AgendaView::Private::calendarIncidenceAdded() Invalid incidence or item:" << incidence;
+        qCCritical(CALENDARVIEW_LOG) << "AgendaViewPrivate::calendarIncidenceAdded() Invalid incidence or item:" << incidence;
         Q_ASSERT(false);
         return;
     }
@@ -404,7 +404,7 @@ void AgendaView::Private::calendarIncidenceAdded(const KCalendarCore::Incidence:
     }
 }
 
-void AgendaView::Private::calendarIncidenceChanged(const KCalendarCore::Incidence::Ptr &incidence)
+void AgendaViewPrivate::calendarIncidenceChanged(const KCalendarCore::Incidence::Ptr &incidence)
 {
     if (!incidence || incidence->uid().isEmpty()) {
         qCCritical(CALENDARVIEW_LOG) << "AgendaView::calendarIncidenceChanged() Invalid incidence or empty UID. " << incidence;
@@ -444,7 +444,7 @@ void AgendaView::Private::calendarIncidenceChanged(const KCalendarCore::Incidenc
     // setChanges(q->changes() | IncidencesEdited, incidence);
 }
 
-void AgendaView::Private::calendarIncidenceDeleted(const KCalendarCore::Incidence::Ptr &incidence, const KCalendarCore::Calendar *calendar)
+void AgendaViewPrivate::calendarIncidenceDeleted(const KCalendarCore::Incidence::Ptr &incidence, const KCalendarCore::Calendar *calendar)
 {
     Q_UNUSED(calendar)
     if (!incidence || incidence->uid().isEmpty()) {
@@ -472,7 +472,7 @@ void AgendaView::Private::calendarIncidenceDeleted(const KCalendarCore::Incidenc
     }
 }
 
-void EventViews::AgendaView::Private::setChanges(EventView::Changes changes, const KCalendarCore::Incidence::Ptr &incidence)
+void EventViews::AgendaViewPrivate::setChanges(EventView::Changes changes, const KCalendarCore::Incidence::Ptr &incidence)
 {
     // We could just call EventView::setChanges(...) but we're going to do a little
     // optimization. If only an all day item was changed, only all day agenda
@@ -481,7 +481,7 @@ void EventViews::AgendaView::Private::setChanges(EventView::Changes changes, con
     // all bits = 1
     const int ones = ~0;
 
-    const int incidenceOperations = IncidencesAdded | IncidencesEdited | IncidencesDeleted;
+    const int incidenceOperations = AgendaView::IncidencesAdded | AgendaView::IncidencesEdited | AgendaView::IncidencesDeleted;
 
     // If changes has a flag turned on, other than incidence operations, then update both agendas
     if ((ones ^ incidenceOperations) & changes) {
@@ -495,7 +495,7 @@ void EventViews::AgendaView::Private::setChanges(EventView::Changes changes, con
     q->EventView::setChanges(changes);
 }
 
-void AgendaView::Private::clearView()
+void AgendaViewPrivate::clearView()
 {
     if (mUpdateAllDayAgenda) {
         mAllDayAgenda->clear();
@@ -508,10 +508,10 @@ void AgendaView::Private::clearView()
     mBusyDays.clear();
 }
 
-void AgendaView::Private::insertIncidence(const KCalendarCore::Incidence::Ptr &incidence,
-                                          const QDateTime &recurrenceId,
-                                          const QDateTime &insertAtDateTime,
-                                          bool createSelected)
+void AgendaViewPrivate::insertIncidence(const KCalendarCore::Incidence::Ptr &incidence,
+                                        const QDateTime &recurrenceId,
+                                        const QDateTime &insertAtDateTime,
+                                        bool createSelected)
 {
     if (!q->filterByCollectionSelection(incidence)) {
         return;
@@ -679,14 +679,14 @@ void AgendaView::Private::insertIncidence(const KCalendarCore::Incidence::Ptr &i
 
 AgendaView::AgendaView(QDate start, QDate end, bool isInteractive, bool isSideBySide, QWidget *parent)
     : EventView(parent)
-    , d(new Private(this, isInteractive, isSideBySide))
+    , d(new AgendaViewPrivate(this, isInteractive, isSideBySide))
 {
     init(start, end);
 }
 
 AgendaView::AgendaView(const PrefsPtr &prefs, QDate start, QDate end, bool isInteractive, bool isSideBySide, QWidget *parent)
     : EventView(parent)
-    , d(new Private(this, isInteractive, isSideBySide))
+    , d(new AgendaViewPrivate(this, isInteractive, isSideBySide))
 {
     setPreferences(prefs);
     init(start, end);
@@ -694,7 +694,7 @@ AgendaView::AgendaView(const PrefsPtr &prefs, QDate start, QDate end, bool isInt
 
 void AgendaView::init(QDate start, QDate end)
 {
-    d->mSelectedDates = Private::generateDateList(start, end);
+    d->mSelectedDates = AgendaViewPrivate::generateDateList(start, end);
 
     d->mGridLayout = new QGridLayout(this);
     d->mGridLayout->setContentsMargins(0, 0, 0, 0);
@@ -2231,7 +2231,7 @@ void AgendaView::alignAgendas()
     createDayLabels(true);
 }
 
-CalendarDecoration::Decoration *AgendaView::Private::loadCalendarDecoration(const QString &name)
+CalendarDecoration::Decoration *AgendaViewPrivate::loadCalendarDecoration(const QString &name)
 {
     const QString type = CalendarSupport::Plugin::serviceType();
     const int version = CalendarSupport::Plugin::interfaceVersion();

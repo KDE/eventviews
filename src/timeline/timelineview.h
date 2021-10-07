@@ -17,6 +17,8 @@
 
 namespace EventViews
 {
+class TimelineViewPrivate;
+
 /**
   This class provides a view showing which blocks of time are occupied by events
   in the user's calendars.
@@ -69,8 +71,7 @@ protected:
     bool eventFilter(QObject *object, QEvent *event) override;
 
 private:
-    class Private;
-    std::unique_ptr<Private> const d;
+    std::unique_ptr<TimelineViewPrivate> const d;
 };
 } // namespace EventViews
 

@@ -46,10 +46,10 @@ using namespace std::chrono_literals; // for fabs()
 using namespace EventViews;
 
 ///////////////////////////////////////////////////////////////////////////////
-class Q_DECL_HIDDEN MarcusBains::Private
+class EventViews::MarcusBainsPrivate
 {
 public:
-    Private(EventView *eventView, Agenda *agenda)
+    MarcusBainsPrivate(EventView *eventView, Agenda *agenda)
         : mEventView(eventView)
         , mAgenda(agenda)
     {
@@ -66,7 +66,7 @@ public:
     int mOldTodayCol = -1;
 };
 
-int MarcusBains::Private::todayColumn() const
+int MarcusBainsPrivate::todayColumn() const
 {
     const QDate currentDate = QDate::currentDate();
 
@@ -84,7 +84,7 @@ int MarcusBains::Private::todayColumn() const
 
 MarcusBains::MarcusBains(EventView *eventView, Agenda *agenda)
     : QFrame(agenda)
-    , d(new Private(eventView, agenda))
+    , d(new MarcusBainsPrivate(eventView, agenda))
 {
     d->mTimeBox = new QLabel(d->mAgenda);
     d->mTimeBox->setAlignment(Qt::AlignRight | Qt::AlignBottom);
@@ -181,10 +181,10 @@ void MarcusBains::updateLocationRecalc(bool recalculate)
 
 ////////////////////////////////////////////////////////////////////////////
 
-class Q_DECL_HIDDEN Agenda::Private
+class EventViews::AgendaPrivate
 {
 public:
-    Private(AgendaView *agendaView, QScrollArea *scrollArea, int columns, int rows, int rowSize, bool isInteractive)
+    AgendaPrivate(AgendaView *agendaView, QScrollArea *scrollArea, int columns, int rows, int rowSize, bool isInteractive)
         : mAgendaView(agendaView)
         , mScrollArea(scrollArea)
         , mAllDayMode(false)
@@ -298,7 +298,7 @@ public:
     // The Marcus Bains Line widget.
     MarcusBains *mMarcusBains = nullptr;
 
-    MouseActionType mActionType;
+    Agenda::MouseActionType mActionType;
 
     bool mItemMoved;
 
@@ -320,7 +320,7 @@ public:
 */
 Agenda::Agenda(AgendaView *agendaView, QScrollArea *scrollArea, int columns, int rows, int rowSize, bool isInteractive)
     : QWidget(scrollArea)
-    , d(new Private(agendaView, scrollArea, columns, rows, rowSize, isInteractive))
+    , d(new AgendaPrivate(agendaView, scrollArea, columns, rows, rowSize, isInteractive))
 {
     setMouseTracking(true);
 
@@ -333,7 +333,7 @@ Agenda::Agenda(AgendaView *agendaView, QScrollArea *scrollArea, int columns, int
 */
 Agenda::Agenda(AgendaView *agendaView, QScrollArea *scrollArea, int columns, bool isInteractive)
     : QWidget(scrollArea)
-    , d(new Private(agendaView, scrollArea, columns, 1, 24, isInteractive))
+    , d(new AgendaPrivate(agendaView, scrollArea, columns, 1, 24, isInteractive))
 {
     d->mAllDayMode = true;
 

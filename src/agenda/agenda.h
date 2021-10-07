@@ -35,6 +35,8 @@ class Agenda;
 class AgendaItem;
 class AgendaView;
 
+class MarcusBainsPrivate;
+
 class MarcusBains : public QFrame
 {
     Q_OBJECT
@@ -47,9 +49,10 @@ public Q_SLOTS:
     void updateLocation();
 
 private:
-    class Private;
-    std::unique_ptr<Private> const d;
+    std::unique_ptr<MarcusBainsPrivate> const d;
 };
+
+class AgendaPrivate;
 
 class EVENTVIEWS_EXPORT Agenda : public QWidget
 {
@@ -319,8 +322,8 @@ private:
     void marcus_bains();
 
 private:
-    class Private;
-    std::unique_ptr<Private> const d;
+    friend class AgendaPrivate;
+    std::unique_ptr<AgendaPrivate> const d;
 };
 
 class AgendaScrollArea : public QScrollArea

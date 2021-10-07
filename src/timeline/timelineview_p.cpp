@@ -24,16 +24,16 @@
 using namespace KCalendarCore;
 using namespace EventViews;
 
-TimelineView::Private::Private(TimelineView *parent)
+TimelineViewPrivate::TimelineViewPrivate(TimelineView *parent)
     : q(parent)
 {
 }
 
-TimelineView::Private::~Private()
+TimelineViewPrivate::~TimelineViewPrivate()
 {
 }
 
-void TimelineView::Private::itemSelected(const QModelIndex &index)
+void TimelineViewPrivate::itemSelected(const QModelIndex &index)
 {
     auto tlitem = dynamic_cast<TimelineSubItem *>(static_cast<QStandardItemModel *>(mGantt->model())->item(index.row(), index.column()));
     if (tlitem) {
@@ -41,7 +41,7 @@ void TimelineView::Private::itemSelected(const QModelIndex &index)
     }
 }
 
-void TimelineView::Private::itemDoubleClicked(const QModelIndex &index)
+void TimelineViewPrivate::itemDoubleClicked(const QModelIndex &index)
 {
     auto tlitem = dynamic_cast<TimelineSubItem *>(static_cast<QStandardItemModel *>(mGantt->model())->item(index.row(), index.column()));
     if (tlitem) {
@@ -49,7 +49,7 @@ void TimelineView::Private::itemDoubleClicked(const QModelIndex &index)
     }
 }
 
-void TimelineView::Private::contextMenuRequested(QPoint point)
+void TimelineViewPrivate::contextMenuRequested(QPoint point)
 {
     QPersistentModelIndex index = mGantt->indexAt(point);
     // mHintDate = QDateTime( mGantt->getDateTimeForCoordX( QCursor::pos().x(), true ) );
@@ -65,13 +65,13 @@ void TimelineView::Private::contextMenuRequested(QPoint point)
 }
 
 // slot
-void TimelineView::Private::newEventWithHint(const QDateTime &dt)
+void TimelineViewPrivate::newEventWithHint(const QDateTime &dt)
 {
     mHintDate = dt;
     Q_EMIT q->newEventSignal(dt);
 }
 
-TimelineItem *TimelineView::Private::calendarItemForIncidence(const Akonadi::Item &incidence)
+TimelineItem *TimelineViewPrivate::calendarItemForIncidence(const Akonadi::Item &incidence)
 {
     Akonadi::ETMCalendar::Ptr calres = q->calendar();
     TimelineItem *item = nullptr;
@@ -83,7 +83,7 @@ TimelineItem *TimelineView::Private::calendarItemForIncidence(const Akonadi::Ite
     return item;
 }
 
-void TimelineView::Private::insertIncidence(const Akonadi::Item &aitem, QDate day)
+void TimelineViewPrivate::insertIncidence(const Akonadi::Item &aitem, QDate day)
 {
     const Incidence::Ptr incidence = CalendarSupport::incidence(aitem);
     // qCDebug(CALENDARVIEW_LOG) << "Item " << aitem.id() << " parentcollection: " << aitem.parentCollection().id();
@@ -109,7 +109,7 @@ void TimelineView::Private::insertIncidence(const Akonadi::Item &aitem, QDate da
     }
 }
 
-void TimelineView::Private::insertIncidence(const Akonadi::Item &incidence)
+void TimelineViewPrivate::insertIncidence(const Akonadi::Item &incidence)
 {
     const Event::Ptr event = CalendarSupport::event(incidence);
     if (!event) {
@@ -134,7 +134,7 @@ void TimelineView::Private::insertIncidence(const Akonadi::Item &incidence)
     }
 }
 
-void TimelineView::Private::removeIncidence(const Akonadi::Item &incidence)
+void TimelineViewPrivate::removeIncidence(const Akonadi::Item &incidence)
 {
     TimelineItem *item = calendarItemForIncidence(incidence);
     if (item) {
@@ -157,7 +157,7 @@ void TimelineView::Private::removeIncidence(const Akonadi::Item &incidence)
     }
 }
 
-void TimelineView::Private::itemChanged(QStandardItem *item)
+void TimelineViewPrivate::itemChanged(QStandardItem *item)
 {
     auto tlit = dynamic_cast<TimelineSubItem *>(item);
     if (!tlit) {

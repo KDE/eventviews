@@ -92,14 +92,14 @@ bool ListViewItem::operator<(const QTreeWidgetItem &other) const
     }
 }
 
-class Q_DECL_HIDDEN ListView::Private
+class EventViews::ListViewPrivate
 {
 public:
-    Private()
+    ListViewPrivate()
     {
     }
 
-    ~Private()
+    ~ListViewPrivate()
     {
     }
 
@@ -127,7 +127,7 @@ public:
   This class provides the initialization of a ListViewItem for calendar
   components using the Incidence::Visitor.
 */
-class ListView::Private::ListItemVisitor : public KCalendarCore::Visitor
+class ListViewPrivate::ListItemVisitor : public KCalendarCore::Visitor
 {
 public:
     ListItemVisitor(ListViewItem *item, QDate dt)
@@ -154,7 +154,7 @@ private:
     QDate mStartDate;
 };
 
-bool ListView::Private::ListItemVisitor::visit(const Event::Ptr &e)
+bool ListViewPrivate::ListItemVisitor::visit(const Event::Ptr &e)
 {
     QIcon eventPxmp;
     if (e->customProperty("KABC", "ANNIVERSARY") == QLatin1String("YES")) {
@@ -196,7 +196,7 @@ bool ListView::Private::ListItemVisitor::visit(const Event::Ptr &e)
     return true;
 }
 
-bool ListView::Private::ListItemVisitor::visit(const Todo::Ptr &t)
+bool ListViewPrivate::ListItemVisitor::visit(const Todo::Ptr &t)
 {
     mItem->setIcon(Summary_Column, QIcon::fromTheme(t->iconName()));
 
@@ -245,7 +245,7 @@ bool ListView::Private::ListItemVisitor::visit(const Todo::Ptr &t)
     return true;
 }
 
-bool ListView::Private::ListItemVisitor::visit(const Journal::Ptr &j)
+bool ListViewPrivate::ListItemVisitor::visit(const Journal::Ptr &j)
 {
     mItem->setIcon(Summary_Column, QIcon::fromTheme(j->iconName()));
 
@@ -271,7 +271,7 @@ bool ListView::Private::ListItemVisitor::visit(const Journal::Ptr &j)
 
 ListView::ListView(const Akonadi::ETMCalendar::Ptr &calendar, QWidget *parent, bool nonInteractive)
     : EventView(parent)
-    , d(new Private())
+    , d(new ListViewPrivate())
 {
     setCalendar(calendar);
     d->mActiveItem = nullptr;
@@ -376,14 +376,14 @@ void ListView::showAll()
     d->addIncidences(calendar(), calendar()->incidences(), QDate());
 }
 
-void ListView::Private::addIncidences(const Akonadi::ETMCalendar::Ptr &calendar, const KCalendarCore::Incidence::List &incidences, QDate date)
+void ListViewPrivate::addIncidences(const Akonadi::ETMCalendar::Ptr &calendar, const KCalendarCore::Incidence::List &incidences, QDate date)
 {
     for (const KCalendarCore::Incidence::Ptr &incidence : incidences) {
         addIncidence(calendar, incidence, date);
     }
 }
 
-void ListView::Private::addIncidence(const Akonadi::ETMCalendar::Ptr &calendar, const Akonadi::Item &item, QDate date)
+void ListViewPrivate::addIncidence(const Akonadi::ETMCalendar::Ptr &calendar, const Akonadi::Item &item, QDate date)
 {
     Q_ASSERT(calendar);
     if (item.isValid() && item.hasPayload<KCalendarCore::Incidence::Ptr>()) {
@@ -391,7 +391,7 @@ void ListView::Private::addIncidence(const Akonadi::ETMCalendar::Ptr &calendar, 
     }
 }
 
-void ListView::Private::addIncidence(const Akonadi::ETMCalendar::Ptr &calendar, const KCalendarCore::Incidence::Ptr &incidence, QDate date)
+void ListViewPrivate::addIncidence(const Akonadi::ETMCalendar::Ptr &calendar, const KCalendarCore::Incidence::Ptr &incidence, QDate date)
 {
     if (!incidence) {
         return;
@@ -482,7 +482,7 @@ void ListView::changeIncidenceDisplay(const Akonadi::Item &aitem, int action)
     }
 }
 
-ListViewItem *ListView::Private::getItemForIncidence(const Akonadi::Item &aitem)
+ListViewItem *ListViewPrivate::getItemForIncidence(const Akonadi::Item &aitem)
 {
     int index = 0;
     while (QTreeWidgetItem *it = mTreeWidget->topLevelItem(index)) {

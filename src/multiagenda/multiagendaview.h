@@ -17,6 +17,7 @@
 namespace EventViews
 {
 class ConfigDialogInterface;
+class MultiAgendaViewPrivate;
 
 /**
   Shows one agenda for every resource side-by-side.
@@ -87,8 +88,8 @@ private Q_SLOTS:
     void forceRecreateViews();
 
 private:
-    class Private;
-    std::unique_ptr<Private> const d;
+    friend class MultiAgendaViewPrivate;
+    std::unique_ptr<MultiAgendaViewPrivate> const d;
 };
 }
 

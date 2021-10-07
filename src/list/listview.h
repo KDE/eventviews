@@ -17,6 +17,8 @@ class QModelIndex;
 
 namespace EventViews
 {
+class ListViewPrivate;
+
 /**
   This class provides a multi-column list view of events.  It can
   display events from one particular day or several days, it doesn't
@@ -93,8 +95,7 @@ protected Q_SLOTS:
 private:
     void slotSortIndicatorChanged(int logicalIndex, Qt::SortOrder order);
 
-    class Private;
-    std::unique_ptr<Private> const d;
+    std::unique_ptr<ListViewPrivate> const d;
 };
 }
 

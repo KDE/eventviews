@@ -18,10 +18,10 @@
 
 using namespace EventViews;
 
-class Q_DECL_HIDDEN TimeScaleConfigDialog::Private
+class EventViews::TimeScaleConfigDialogPrivate
 {
 public:
-    Private(TimeScaleConfigDialog *parent, const PrefsPtr &preferences)
+    TimeScaleConfigDialogPrivate(TimeScaleConfigDialog *parent, const PrefsPtr &preferences)
         : q(parent)
         , mPreferences(preferences)
     {
@@ -44,7 +44,7 @@ static QString tzWithUTC(const QByteArray &zoneId)
 
 TimeScaleConfigDialog::TimeScaleConfigDialog(const PrefsPtr &preferences, QWidget *parent)
     : QDialog(parent)
-    , d(new Private(this, preferences))
+    , d(new TimeScaleConfigDialogPrivate(this, preferences))
 {
     setWindowTitle(i18nc("@title:window", "Timezone"));
     auto mainLayout = new QVBoxLayout(this);

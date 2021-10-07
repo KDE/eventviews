@@ -12,6 +12,8 @@
 
 #include <memory>
 
+class IncidenceTreeModelPrivate;
+
 class IncidenceTreeModel : public QAbstractProxyModel
 {
     Q_OBJECT
@@ -77,7 +79,7 @@ Q_SIGNALS:
     void batchInsertionFinished();
 
 private:
-    class Private;
-    std::unique_ptr<Private> const d;
+    friend class IncidenceTreeModelPrivate;
+    std::unique_ptr<IncidenceTreeModelPrivate> const d;
 };
 

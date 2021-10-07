@@ -28,12 +28,12 @@ namespace EventViews
 class TimelineItem;
 class RowController;
 
-class TimelineView::Private : public QObject
+class TimelineViewPrivate : public QObject
 {
     Q_OBJECT
 public:
-    explicit Private(TimelineView *parent = nullptr);
-    ~Private();
+    explicit TimelineViewPrivate(TimelineView *parent = nullptr);
+    ~TimelineViewPrivate();
 
     TimelineItem *calendarItemForIncidence(const Akonadi::Item &incidence);
     void insertIncidence(const Akonadi::Item &incidence);
