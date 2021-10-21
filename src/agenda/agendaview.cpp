@@ -1054,8 +1054,6 @@ void AgendaView::zoomView(const int delta, QPoint pos, const Qt::Orientation ori
     }
 }
 
-#ifndef EVENTVIEWS_NODECOS
-
 bool AgendaView::loadDecorations(const QStringList &decorations, DecorationList &decoList)
 {
     for (const QString &decoName : decorations) {
@@ -1108,8 +1106,6 @@ void AgendaView::placeDecorations(DecorationList &decoList, QDate date, QWidget 
     }
 }
 
-#endif
-
 void AgendaView::createDayLabels(bool force)
 {
     // Check if mSelectedDates has changed, if not just return
@@ -1157,7 +1153,6 @@ void AgendaView::createDayLabels(bool force)
     bottomWeekLabelBoxLayout->setSpacing(0);
     d->mLayoutBottomDayLabels->addWidget(bottomWeekLabelBox);
 
-#ifndef EVENTVIEWS_NODECOS
     QList<CalendarDecoration::Decoration *> topDecos;
     QStringList topStrDecos = preferences()->decorationsAtAgendaViewTop();
     placeDecorationsFrame(d->mTopDayLabelsFrame, loadDecorations(topStrDecos, topDecos), true);
@@ -1165,7 +1160,6 @@ void AgendaView::createDayLabels(bool force)
     QList<CalendarDecoration::Decoration *> botDecos;
     QStringList botStrDecos = preferences()->decorationsAtAgendaViewBottom();
     placeDecorationsFrame(d->mBottomDayLabelsFrame, loadDecorations(botStrDecos, botDecos), false);
-#endif
 
     for (const QDate &date : std::as_const(d->mSelectedDates)) {
         auto topDayLabelBox = new QFrame(d->mTopDayLabels);
@@ -1208,21 +1202,17 @@ void AgendaView::createDayLabels(bool force)
             label->setAlignment(Qt::AlignCenter);
         }
 
-#ifndef EVENTVIEWS_NODECOS
         // Day decoration labels
         placeDecorations(topDecos, date, topDayLabelBox, false);
         placeDecorations(botDecos, date, bottomDayLabelBox, false);
-#endif
     }
 
     auto rightSpacer = new QSpacerItem(d->mAllDayAgenda->scrollArea()->frameWidth(), 1, QSizePolicy::Fixed);
     d->mLayoutTopDayLabels->addSpacerItem(rightSpacer);
 
-#ifndef EVENTVIEWS_NODECOS
     // Week decoration labels
     placeDecorations(topDecos, d->mSelectedDates.first(), topWeekLabelBox, true);
     placeDecorations(botDecos, d->mSelectedDates.first(), bottomWeekLabelBox, true);
-#endif
 
     if (!d->mIsSideBySide) {
         d->mLayoutTopDayLabels->addSpacing(d->mAgenda->verticalScrollBar()->width());

@@ -1,22 +1,8 @@
-# The following macros can be defined to alter behavior.
-# (if desired, use add_definitions() to define them)
-#
-# EVENTVIEWS_NODECOS - turns-off decoration plugins in views.
-#                No idea why you would want to define this, perhaps to save
-#                screen real estate? But there are a config options for that.
-
-
 add_definitions(-DTRANSLATION_DOMAIN=\"libeventviews\")
 add_library(KF5EventViews)
 add_library(KF5::EventViews ALIAS KF5EventViews)
 if(KDEPIM_BUILD_EXAMPLES)
   add_subdirectory(viewerapp)
-endif()
-
-option(EVENTVIEWS_NODECOS "Turn-off decoration plugins in views." FALSE)
-
-if(EVENTVIEWS_NODECOS)
-  add_definitions(-DEVENTVIEWS_NODECOS)
 endif()
 
 ########### next target ###############

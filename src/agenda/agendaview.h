@@ -25,12 +25,10 @@ class QSplitter;
 
 namespace EventViews
 {
-#ifndef EVENTVIEWS_NODECOS
 namespace CalendarDecoration
 {
 class Decoration;
 }
-#endif
 
 class TimeLabels;
 class TimeLabelsZone;
@@ -232,12 +230,10 @@ private:
     void setupTimeLabel(TimeLabels *timeLabel);
     bool displayIncidence(const KCalendarCore::Incidence::Ptr &incidence, bool createSelected);
 
-#ifndef EVENTVIEWS_NODECOS
     using DecorationList = QList<EventViews::CalendarDecoration::Decoration *>;
     bool loadDecorations(const QStringList &decorations, DecorationList &decoList);
     void placeDecorationsFrame(QFrame *frame, bool decorationsFound, bool isTop);
     void placeDecorations(EventViews::AgendaView::DecorationList &decoList, QDate date, QWidget *labelBox, bool forWeek);
-#endif
 
     friend class TimeLabelsZone;
     friend class MultiAgendaViewPrivate;
