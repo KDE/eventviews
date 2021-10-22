@@ -19,7 +19,7 @@ class TimeLabelsZone;
 class Prefs;
 using PrefsPtr = QSharedPointer<Prefs>;
 
-class TimeLabels : public QFrame
+class TimeLabels : public QWidget
 {
     Q_OBJECT
 public:

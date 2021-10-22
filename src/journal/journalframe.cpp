@@ -30,7 +30,7 @@
 using namespace EventViews;
 
 JournalDateView::JournalDateView(const Akonadi::ETMCalendar::Ptr &calendar, QWidget *parent)
-    : QFrame(parent)
+    : QWidget(parent)
     , mCalendar(calendar)
 {
     auto layout = new QVBoxLayout(this);

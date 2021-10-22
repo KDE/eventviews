@@ -25,7 +25,7 @@
 using namespace EventViews;
 
 TimeLabels::TimeLabels(const QTimeZone &zone, int rows, TimeLabelsZone *parent, Qt::WindowFlags f)
-    : QFrame(parent, f)
+    : QWidget(parent, f)
     , mTimezone(zone)
 {
     mTimeLabelsZone = parent;
@@ -89,7 +89,7 @@ void TimeLabels::setCellHeight(double height)
 
 QSize TimeLabels::minimumSizeHint() const
 {
-    QSize sh = QFrame::sizeHint();
+    QSize sh = QWidget::sizeHint();
     sh.setWidth(mMiniWidth);
     return sh;
 }
@@ -120,7 +120,7 @@ void TimeLabels::updateConfig()
     QFont sFont = font();
     sFont.setPointSize(sFont.pointSize() / 2);
     QFontMetrics fmS(sFont);
-    mMiniWidth += fmS.boundingRect(test).width() + frameWidth() * 2 + 4;
+    mMiniWidth += fmS.boundingRect(test).width() + 4;
 
     /** Can happen if all resources are disabled */
     if (!mAgenda) {
@@ -237,7 +237,7 @@ void TimeLabels::paintEvent(QPaintEvent *)
     //       code assumes the latter...
 
     // now, for a workaround...
-    const int cx = frameWidth() * 2;
+    const int cx = 0;
     const int cw = width();
     // end of workaround
 
@@ -277,7 +277,7 @@ void TimeLabels::paintEvent(QPaintEvent *)
     QFont suffixFont = hourFont;
     suffixFont.setPointSize(suffixFont.pointSize() / 2);
     QFontMetrics fmS(suffixFont);
-    const int startW = cw - frameWidth() - 2;
+    const int startW = cw - 2;
     const int tw2 = fmS.boundingRect(suffix).width();
     const int divTimeHeight = (timeHeight - 1) / 2 - 1;
     // testline

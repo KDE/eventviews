@@ -85,7 +85,7 @@ private:
     Akonadi::IncidenceChanger *mChanger = nullptr;
 };
 
-class JournalDateView : public QFrame
+class JournalDateView : public QWidget
 {
     Q_OBJECT
 public:

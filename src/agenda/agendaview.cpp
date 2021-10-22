@@ -102,7 +102,7 @@ private:
 };
 
 EventIndicator::EventIndicator(Location loc, QWidget *parent)
-    : QFrame(parent)
+    : QWidget(parent)
     , d(new EventIndicatorPrivate(this, loc))
 {
     setAttribute(Qt::WA_TransparentForMouseEvents);
@@ -173,14 +173,14 @@ public:
 public:
     // view widgets
     QGridLayout *mGridLayout = nullptr;
-    QFrame *mTopDayLabels = nullptr;
+    QWidget *mTopDayLabels = nullptr;
     QBoxLayout *mLayoutTopDayLabels = nullptr;
-    QFrame *mTopDayLabelsFrame = nullptr;
+    QWidget *mTopDayLabelsFrame = nullptr;
     QList<AlternateLabel *> mDateDayLabels;
     QBoxLayout *mLayoutBottomDayLabels = nullptr;
-    QFrame *mBottomDayLabels = nullptr;
-    QFrame *mBottomDayLabelsFrame = nullptr;
-    QFrame *mAllDayFrame = nullptr;
+    QWidget *mBottomDayLabels = nullptr;
+    QWidget *mBottomDayLabelsFrame = nullptr;
+    QWidget *mAllDayFrame = nullptr;
     QWidget *mTimeBarHeaderFrame = nullptr;
     QSplitter *mSplitterAgenda = nullptr;
     QList<QLabel *> mTimeBarHeaders;
@@ -704,20 +704,20 @@ void AgendaView::init(QDate start, QDate end)
     d->mGridLayout->addWidget(d->mSplitterAgenda, 1, 0);
 
     /* Create day name labels for agenda columns */
-    d->mTopDayLabelsFrame = new QFrame(d->mSplitterAgenda);
+    d->mTopDayLabelsFrame = new QWidget(d->mSplitterAgenda);
     auto layout = new QHBoxLayout(d->mTopDayLabelsFrame);
     layout->setContentsMargins(0, 0, 0, 0);
     layout->setSpacing(SPACING);
 
     /* Create all-day agenda widget */
-    d->mAllDayFrame = new QFrame(d->mSplitterAgenda);
+    d->mAllDayFrame = new QWidget(d->mSplitterAgenda);
     auto allDayFrameLayout = new QHBoxLayout(d->mAllDayFrame);
     allDayFrameLayout->setContentsMargins(0, 0, 0, 0);
     allDayFrameLayout->setSpacing(SPACING);
 
     // Alignment and description widgets
     if (!d->mIsSideBySide) {
-        d->mTimeBarHeaderFrame = new QFrame(d->mAllDayFrame);
+        d->mTimeBarHeaderFrame = new QWidget(d->mAllDayFrame);
         allDayFrameLayout->addWidget(d->mTimeBarHeaderFrame);
         auto timeBarHeaderFrameLayout = new QHBoxLayout(d->mTimeBarHeaderFrame);
         timeBarHeaderFrameLayout->setContentsMargins(0, 0, 0, 0);
@@ -771,7 +771,7 @@ void AgendaView::init(QDate start, QDate end)
     }
 
     /* Create a frame at the bottom which may be used by decorations */
-    d->mBottomDayLabelsFrame = new QFrame(d->mSplitterAgenda);
+    d->mBottomDayLabelsFrame = new QWidget(d->mSplitterAgenda);
     layout = new QHBoxLayout(d->mBottomDayLabelsFrame);
     layout->setContentsMargins(0, 0, 0, 0);
     layout->setSpacing(SPACING);
@@ -1067,7 +1067,7 @@ bool AgendaView::loadDecorations(const QStringList &decorations, DecorationList 
     return !decoList.isEmpty();
 }
 
-void AgendaView::placeDecorationsFrame(QFrame *frame, bool decorationsFound, bool isTop)
+void AgendaView::placeDecorationsFrame(QWidget *frame, bool decorationsFound, bool isTop)
 {
     if (decorationsFound) {
         if (isTop) {
@@ -1120,7 +1120,7 @@ void AgendaView::createDayLabels(bool force)
 
     QFontMetrics fm = fontMetrics();
 
-    d->mTopDayLabels = new QFrame(d->mTopDayLabelsFrame);
+    d->mTopDayLabels = new QWidget(d->mTopDayLabelsFrame);
     d->mTopDayLabelsFrame->layout()->addWidget(d->mTopDayLabels);
     static_cast<QBoxLayout *>(d->mTopDayLabelsFrame->layout())->setStretchFactor(d->mTopDayLabels, 1);
     d->mLayoutTopDayLabels = new QHBoxLayout(d->mTopDayLabels);
@@ -1132,7 +1132,7 @@ void AgendaView::createDayLabels(bool force)
         new QSpacerItem((!d->mIsSideBySide ? d->mTimeLabelsZone->width() : 0) + SPACING + d->mAllDayAgenda->scrollArea()->frameWidth(), 1, QSizePolicy::Fixed);
 
     d->mLayoutTopDayLabels->addSpacerItem(spacer);
-    auto topWeekLabelBox = new QFrame(d->mTopDayLabels);
+    auto topWeekLabelBox = new QWidget(d->mTopDayLabels);
     auto topWeekLabelBoxLayout = new QVBoxLayout(topWeekLabelBox);
     topWeekLabelBoxLayout->setContentsMargins(0, 0, 0, 0);
     topWeekLabelBoxLayout->setSpacing(0);
@@ -1141,12 +1141,12 @@ void AgendaView::createDayLabels(bool force)
         topWeekLabelBox->hide();
     }
 
-    d->mBottomDayLabels = new QFrame(d->mBottomDayLabelsFrame);
+    d->mBottomDayLabels = new QWidget(d->mBottomDayLabelsFrame);
     d->mBottomDayLabelsFrame->layout()->addWidget(d->mBottomDayLabels);
     static_cast<QBoxLayout *>(d->mBottomDayLabelsFrame->layout())->setStretchFactor(d->mBottomDayLabels, 1);
     d->mLayoutBottomDayLabels = new QHBoxLayout(d->mBottomDayLabels);
     d->mLayoutBottomDayLabels->setContentsMargins(0, 0, 0, 0);
-    auto bottomWeekLabelBox = new QFrame(d->mBottomDayLabels);
+    auto bottomWeekLabelBox = new QWidget(d->mBottomDayLabels);
     auto bottomWeekLabelBoxLayout = new QVBoxLayout(bottomWeekLabelBox);
     bottomWeekLabelBoxLayout->setContentsMargins(0, 0, 0, 0);
     bottomWeekLabelBoxLayout->setSpacing(0);
@@ -1161,12 +1161,12 @@ void AgendaView::createDayLabels(bool force)
     placeDecorationsFrame(d->mBottomDayLabelsFrame, loadDecorations(botStrDecos, botDecos), false);
 
     for (const QDate &date : std::as_const(d->mSelectedDates)) {
-        auto topDayLabelBox = new QFrame(d->mTopDayLabels);
+        auto topDayLabelBox = new QWidget(d->mTopDayLabels);
         auto topDayLabelBoxLayout = new QVBoxLayout(topDayLabelBox);
         topDayLabelBoxLayout->setContentsMargins(0, 0, 0, 0);
         topDayLabelBoxLayout->setSpacing(0);
         d->mLayoutTopDayLabels->addWidget(topDayLabelBox);
-        auto bottomDayLabelBox = new QFrame(d->mBottomDayLabels);
+        auto bottomDayLabelBox = new QWidget(d->mBottomDayLabels);
         auto bottomDayLabelBoxLayout = new QVBoxLayout(bottomDayLabelBox);
         bottomDayLabelBoxLayout->setContentsMargins(0, 0, 0, 0);
         bottomDayLabelBoxLayout->setSpacing(0);

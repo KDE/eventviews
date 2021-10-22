@@ -15,8 +15,6 @@
 
 #include <KCalendarCore/Todo>
 
-#include <QFrame>
-
 #include <memory>
 
 class KConfig;
@@ -39,7 +37,7 @@ class AgendaView;
 
 class EventIndicatorPrivate;
 
-class EventIndicator : public QFrame
+class EventIndicator : public QWidget
 {
     Q_OBJECT
 public:
@@ -232,7 +230,7 @@ private:
 
     using DecorationList = QList<EventViews::CalendarDecoration::Decoration *>;
     bool loadDecorations(const QStringList &decorations, DecorationList &decoList);
-    void placeDecorationsFrame(QFrame *frame, bool decorationsFound, bool isTop);
+    void placeDecorationsFrame(QWidget *frame, bool decorationsFound, bool isTop);
     void placeDecorations(EventViews::AgendaView::DecorationList &decoList, QDate date, QWidget *labelBox, bool forWeek);
 
     friend class TimeLabelsZone;
