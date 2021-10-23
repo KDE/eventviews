@@ -1088,12 +1088,11 @@ void AgendaView::placeDecorations(DecorationList &decoList, QDate date, QWidget 
     for (CalendarDecoration::Decoration *deco : std::as_const(decoList)) {
         const CalendarDecoration::Element::List elements = forWeek ? deco->weekElements(date) : deco->dayElements(date);
         if (!elements.isEmpty()) {
-            auto decoHBox = new QFrame(labelBox);
+            auto decoHBox = new QWidget(labelBox);
             labelBox->layout()->addWidget(decoHBox);
             auto layout = new QHBoxLayout(decoHBox);
             layout->setSpacing(0);
             layout->setContentsMargins(0, 0, 0, 0);
-            decoHBox->setFrameShape(QFrame::StyledPanel);
             decoHBox->setMinimumWidth(1);
 
             for (CalendarDecoration::Element *it : elements) {
