@@ -118,7 +118,7 @@ public:
     using List = QList<MonthGraphicsItem *>;
 
     explicit MonthGraphicsItem(MonthItem *manager);
-    ~MonthGraphicsItem();
+    ~MonthGraphicsItem() override;
 
     /**
       Change QGraphicsItem pos and boundingRect in the scene

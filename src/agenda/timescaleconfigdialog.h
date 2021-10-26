@@ -24,7 +24,7 @@ class TimeScaleConfigDialog : public QDialog, private Ui::TimeScaleEditWidget
 
 public:
     TimeScaleConfigDialog(const PrefsPtr &preferences, QWidget *parent);
-    ~TimeScaleConfigDialog();
+    ~TimeScaleConfigDialog() override;
 
 private:
     void add();

@@ -47,7 +47,7 @@ class TimelineSubItem : public QStandardItem
 {
 public:
     TimelineSubItem(const Akonadi::ETMCalendar::Ptr &calendar, const Akonadi::Item &incidence, TimelineItem *parent);
-    ~TimelineSubItem();
+    ~TimelineSubItem() override;
 
     Q_REQUIRED_RESULT Akonadi::Item incidence() const
     {

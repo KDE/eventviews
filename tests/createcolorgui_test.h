@@ -13,7 +13,7 @@ class CreateColorGui_test : public QWidget
     Q_OBJECT
 public:
     explicit CreateColorGui_test(QWidget *parent = nullptr);
-    ~CreateColorGui_test();
+    ~CreateColorGui_test() override;
 
 private:
     void createListWidgetItem();

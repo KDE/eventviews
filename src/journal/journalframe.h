@@ -92,7 +92,7 @@ public:
     using List = QList<JournalDateView *>;
 
     JournalDateView(const Akonadi::ETMCalendar::Ptr &, QWidget *parent);
-    ~JournalDateView();
+    ~JournalDateView() override;
 
     void addJournal(const Akonadi::Item &journal);
     Akonadi::Item::List journals() const;
