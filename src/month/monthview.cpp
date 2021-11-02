@@ -20,7 +20,6 @@
 #include "calendarview_debug.h"
 #include <KCalendarCore/OccurrenceIterator>
 #include <KCheckableProxyModel>
-#include <KHolidays/HolidayRegion>
 #include <KLocalizedString>
 #include <QIcon>
 
