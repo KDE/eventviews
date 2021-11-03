@@ -2,6 +2,7 @@
   SPDX-FileCopyrightText: 2001 Cornelius Schumacher <schumacher@kde.org>
   SPDX-FileCopyrightText: 2003-2004 Reinhold Kainhofer <reinhold@kainhofer.com>
   SPDX-FileCopyrightText: 2010 Klarälvdalens Datakonsult AB, a KDAB Group company <info@kdab.net>
+  SPDX-FileCopyrightText: 2021 Friedrich W. H. Kossebau <kossebau@kde.org>
   SPDX-FileContributor: Kevin Krammer <krake@kdab.com>
   SPDX-FileContributor: Sergio Martins <sergio@kdab.com>
 
@@ -32,6 +33,7 @@
 #include <KIconLoader> // for SmallIcon()
 #include <KMessageBox>
 #include <KServiceTypeTrader>
+#include <KSqueezedTextLabel>
 
 #include <KLocalizedString>
 #include <QApplication>
@@ -55,6 +57,399 @@ enum { SPACING = 2 };
 enum {
     SHRINKDOWN = 2 // points less for the timezone font
 };
+
+// Layout which places the widgets in equally sized columns,
+// matching the calculcation of the columns in the agenda.
+class AgendaHeaderLayout : public QLayout
+{
+public:
+    explicit AgendaHeaderLayout(QWidget *parent);
+    ~AgendaHeaderLayout() override;
+
+public: // QLayout API
+    int count() const override;
+    QLayoutItem *itemAt(int index) const override;
+
+    void addItem(QLayoutItem *item) override;
+    QLayoutItem *takeAt(int index) override;
+
+public: // QLayoutItem API
+    QSize sizeHint() const override;
+    QSize minimumSize() const override;
+
+    void invalidate() override;
+    void setGeometry(const QRect &rect) override;
+
+private:
+    void updateCache() const;
+
+private:
+    QList<QLayoutItem *> mItems;
+
+    mutable bool mIsDirty = false;
+    mutable QSize mSizeHint;
+    mutable QSize mMinSize;
+};
+
+AgendaHeaderLayout::AgendaHeaderLayout(QWidget *parent)
+    : QLayout(parent)
+{
+}
+
+AgendaHeaderLayout::~AgendaHeaderLayout()
+{
+    while (!mItems.isEmpty()) {
+        delete mItems.takeFirst();
+    }
+}
+
+void AgendaHeaderLayout::addItem(QLayoutItem *item)
+{
+    mItems.append(item);
+    invalidate();
+}
+
+int AgendaHeaderLayout::count() const
+{
+    return mItems.size();
+}
+
+QLayoutItem *AgendaHeaderLayout::itemAt(int index) const
+{
+    return mItems.value(index);
+}
+
+QLayoutItem *AgendaHeaderLayout::takeAt(int index)
+{
+    if (index < 0 || index >= mItems.size()) {
+        return nullptr;
+    }
+
+    auto item = mItems.takeAt(index);
+    if (item) {
+        invalidate();
+    }
+    return item;
+}
+
+void AgendaHeaderLayout::invalidate()
+{
+    QLayout::invalidate();
+    mIsDirty = true;
+}
+
+void AgendaHeaderLayout::setGeometry(const QRect &rect)
+{
+    QLayout::setGeometry(rect);
+
+    if (mItems.isEmpty()) {
+        return;
+    }
+
+    const QMargins margins = contentsMargins();
+
+    // same logic as Agenda uses to distribute the width
+    const int contentWidth = rect.width() - margins.left() - margins.right();
+    const double agendaGridSpacingX = static_cast<double>(contentWidth) / mItems.size();
+    int x = margins.left();
+    const int contentHeight = rect.height() - margins.top() - margins.bottom();
+    const int y = rect.y() + margins.top();
+    for (int i = 0; i < mItems.size(); ++i) {
+        auto item = mItems.at(i);
+        const int nextX = margins.left() + static_cast<int>((i + 1) * agendaGridSpacingX);
+        const int width = nextX - x;
+        item->setGeometry(QRect(x, y, width, contentHeight));
+        x = nextX;
+    }
+}
+
+QSize AgendaHeaderLayout::sizeHint() const
+{
+    if (mIsDirty) {
+        updateCache();
+    }
+    return mSizeHint;
+}
+
+QSize AgendaHeaderLayout::minimumSize() const
+{
+    if (mIsDirty) {
+        updateCache();
+    }
+    return mMinSize;
+}
+
+void AgendaHeaderLayout::updateCache() const
+{
+    QSize maxItemSizeHint(0, 0);
+    QSize maxItemMinSize(0, 0);
+    for (auto &item : mItems) {
+        maxItemSizeHint = maxItemSizeHint.expandedTo(item->sizeHint());
+        maxItemMinSize = maxItemMinSize.expandedTo(item->minimumSize());
+    }
+    const QMargins margins = contentsMargins();
+    const int horizontalMargins = margins.left() + margins.right();
+    const int verticalMargins = margins.top() + margins.bottom();
+    mSizeHint = QSize(maxItemSizeHint.width() * mItems.size() + horizontalMargins, maxItemSizeHint.height() + verticalMargins);
+    mMinSize = QSize(maxItemMinSize.width() * mItems.size() + horizontalMargins, maxItemMinSize.height() + verticalMargins);
+    mIsDirty = false;
+}
+
+// Header (or footer) for the agenda.
+// Optionally has an additional week header, if isSideBySide is set
+class AgendaHeader : public QWidget
+{
+    Q_OBJECT
+public:
+    explicit AgendaHeader(bool isSideBySide, QWidget *parent);
+
+    using DecorationList = QList<EventViews::CalendarDecoration::Decoration *>;
+
+public:
+    void setAgenda(Agenda *agenda);
+    bool createDayLabels(const KCalendarCore::DateList &dates, bool withDayLabel, const QStringList &decos, const QStringList &enabledDecos);
+    void setWeekWidth(int width);
+    void updateDayLabelSizes();
+    void updateMargins();
+
+protected:
+    void resizeEvent(QResizeEvent *resizeEvent) override;
+
+private:
+    static CalendarDecoration::Decoration *loadCalendarDecoration(const QString &name);
+
+    void addDay(const DecorationList &decoList, QDate date, bool withDayLabel);
+    void clear();
+    void placeDecorations(const DecorationList &decoList, QDate date, QWidget *labelBox, bool forWeek);
+    void loadDecorations(const QStringList &decorations, const QStringList &whiteList, DecorationList &decoList);
+
+private:
+    const bool mIsSideBySide;
+
+    Agenda *mAgenda = nullptr;
+    QWidget *mDayLabels = nullptr;
+    AgendaHeaderLayout *mDayLabelsLayout = nullptr;
+    QWidget *mWeekLabelBox = nullptr;
+
+    QList<AlternateLabel *> mDateDayLabels;
+};
+
+AgendaHeader::AgendaHeader(bool isSideBySide, QWidget *parent)
+    : QWidget(parent)
+    , mIsSideBySide(isSideBySide)
+{
+    auto layout = new QHBoxLayout(this);
+    layout->setContentsMargins(0, 0, 0, 0);
+    layout->setSpacing(SPACING);
+
+    if (!mIsSideBySide) {
+        mWeekLabelBox = new QWidget(this);
+        auto weekLabelBoxLayout = new QVBoxLayout(mWeekLabelBox);
+        weekLabelBoxLayout->setContentsMargins(0, 0, 0, 0);
+        weekLabelBoxLayout->setSpacing(0);
+        layout->addWidget(mWeekLabelBox);
+    }
+
+    mDayLabels = new QWidget(this);
+    mDayLabelsLayout = new AgendaHeaderLayout(mDayLabels);
+    mDayLabelsLayout->setContentsMargins(0, 0, 0, 0);
+    layout->addWidget(mDayLabels);
+    layout->setStretchFactor(mDayLabels, 1);
+}
+
+void AgendaHeader::setAgenda(Agenda *agenda)
+{
+    mAgenda = agenda;
+}
+
+void AgendaHeader::updateMargins()
+{
+    const int frameWidth = mAgenda ? mAgenda->scrollArea()->frameWidth() : 0;
+    const int scrollBarWidth = (mIsSideBySide || !mAgenda) ? 0 : mAgenda->verticalScrollBar()->width();
+
+    const bool isLTR = (layoutDirection() == Qt::LeftToRight);
+    const int leftSpacing = SPACING + frameWidth;
+    const int rightSpacing = scrollBarWidth + frameWidth;
+    mDayLabelsLayout->setContentsMargins(isLTR ? leftSpacing : rightSpacing, 0, isLTR ? rightSpacing : leftSpacing, 0);
+}
+
+void AgendaHeader::updateDayLabelSizes()
+{
+    if (mDateDayLabels.isEmpty()) {
+        return;
+    }
+    // First, calculate the maximum text type that fits for all labels
+    AlternateLabel::TextType overallType = AlternateLabel::Extensive;
+    for (auto label : std::as_const(mDateDayLabels)) {
+        AlternateLabel::TextType type = label->largestFittingTextType();
+        if (type < overallType) {
+            overallType = type;
+        }
+    }
+
+    // Then, set that maximum text type to all the labels
+    for (auto label : std::as_const(mDateDayLabels)) {
+        label->setFixedType(overallType);
+    }
+}
+
+void AgendaHeader::resizeEvent(QResizeEvent *resizeEvent)
+{
+    QWidget::resizeEvent(resizeEvent);
+    updateDayLabelSizes();
+}
+
+void AgendaHeader::setWeekWidth(int width)
+{
+    if (!mWeekLabelBox) {
+        return;
+    }
+
+    mWeekLabelBox->setFixedWidth(width);
+}
+
+void AgendaHeader::clear()
+{
+    auto childWidgets = mDayLabels->findChildren<QWidget *>(QString(), Qt::FindDirectChildrenOnly);
+    qDeleteAll(childWidgets);
+    if (mWeekLabelBox) {
+        childWidgets = mWeekLabelBox->findChildren<QWidget *>(QString(), Qt::FindDirectChildrenOnly);
+        qDeleteAll(childWidgets);
+    }
+    mDateDayLabels.clear();
+}
+
+bool AgendaHeader::createDayLabels(const KCalendarCore::DateList &dates, bool withDayLabel, const QStringList &decoNames, const QStringList &enabledPlugins)
+{
+    clear();
+
+    QList<CalendarDecoration::Decoration *> decos;
+    loadDecorations(decoNames, enabledPlugins, decos);
+    const bool hasDecos = !decos.isEmpty();
+
+    for (const QDate &date : dates) {
+        addDay(decos, date, withDayLabel);
+    }
+
+    // Week decoration labels
+    if (mWeekLabelBox) {
+        placeDecorations(decos, dates.first(), mWeekLabelBox, true);
+    }
+
+    qDeleteAll(decos);
+
+    // trigger an update after all layout has been done and the final sizes are known
+    QTimer::singleShot(0, this, &AgendaHeader::updateDayLabelSizes);
+
+    return hasDecos;
+}
+
+void AgendaHeader::addDay(const DecorationList &decoList, QDate date, bool withDayLabel)
+{
+    auto topDayLabelBox = new QWidget(mDayLabels);
+    auto topDayLabelBoxLayout = new QVBoxLayout(topDayLabelBox);
+    topDayLabelBoxLayout->setContentsMargins(0, 0, 0, 0);
+    topDayLabelBoxLayout->setSpacing(0);
+
+    mDayLabelsLayout->addWidget(topDayLabelBox);
+
+    if (withDayLabel) {
+        int dW = date.dayOfWeek();
+        QString veryLongStr = QLocale::system().toString(date, QLocale::LongFormat);
+        QString longstr = i18nc("short_weekday short_monthname date (e.g. Mon Aug 13)",
+                                "%1 %2 %3",
+                                QLocale::system().dayName(dW, QLocale::ShortFormat),
+                                QLocale::system().monthName(date.month(), QLocale::ShortFormat),
+                                date.day());
+        const QString shortstr = QString::number(date.day());
+
+        auto dayLabel = new AlternateLabel(shortstr, longstr, veryLongStr, topDayLabelBox);
+        topDayLabelBoxLayout->addWidget(dayLabel);
+        dayLabel->setAlignment(Qt::AlignHCenter);
+        if (date == QDate::currentDate()) {
+            QFont font = dayLabel->font();
+            font.setBold(true);
+            dayLabel->setFont(font);
+        }
+        mDateDayLabels.append(dayLabel);
+
+        // if a holiday region is selected, show the holiday name
+        const QStringList texts = CalendarSupport::holiday(date);
+        for (const QString &text : texts) {
+            auto label = new KSqueezedTextLabel(text, topDayLabelBox);
+            label->setTextElideMode(Qt::ElideRight);
+            topDayLabelBoxLayout->addWidget(label);
+            label->setAlignment(Qt::AlignCenter);
+        }
+    }
+
+    placeDecorations(decoList, date, topDayLabelBox, false);
+}
+
+void AgendaHeader::placeDecorations(const DecorationList &decoList, QDate date, QWidget *labelBox, bool forWeek)
+{
+    for (CalendarDecoration::Decoration *deco : std::as_const(decoList)) {
+        const CalendarDecoration::Element::List elements = forWeek ? deco->weekElements(date) : deco->dayElements(date);
+        if (!elements.isEmpty()) {
+            auto decoHBox = new QWidget(labelBox);
+            labelBox->layout()->addWidget(decoHBox);
+            auto layout = new QHBoxLayout(decoHBox);
+            layout->setSpacing(0);
+            layout->setContentsMargins(0, 0, 0, 0);
+            decoHBox->setMinimumWidth(1);
+
+            for (CalendarDecoration::Element *it : elements) {
+                auto label = new DecorationLabel(it, decoHBox);
+                label->setAlignment(Qt::AlignBottom);
+                label->setMinimumWidth(1);
+                layout->addWidget(label);
+            }
+        }
+    }
+}
+
+void AgendaHeader::loadDecorations(const QStringList &decorations, const QStringList &whiteList, DecorationList &decoList)
+{
+    for (const QString &decoName : decorations) {
+        if (whiteList.contains(decoName)) {
+            CalendarDecoration::Decoration *deco = loadCalendarDecoration(decoName);
+            if (deco != nullptr) {
+                decoList << deco;
+            }
+        }
+    }
+}
+
+CalendarDecoration::Decoration *AgendaHeader::loadCalendarDecoration(const QString &name)
+{
+    const QString type = CalendarSupport::Plugin::serviceType();
+    const int version = CalendarSupport::Plugin::interfaceVersion();
+
+    QString constraint;
+    if (version >= 0) {
+        constraint = QStringLiteral("[X-KDE-PluginInterfaceVersion] == %1").arg(QString::number(version));
+    }
+
+    KService::List list = KServiceTypeTrader::self()->query(type, constraint);
+
+    KService::List::ConstIterator it;
+    for (it = list.constBegin(); it != list.constEnd(); ++it) {
+        if ((*it)->desktopEntryName() == name) {
+            KService::Ptr service = *it;
+            KPluginLoader loader(*service);
+
+            auto factory = loader.factory();
+            if (!factory) {
+                qCDebug(CALENDARVIEW_LOG) << "Factory creation failed";
+                return nullptr;
+            }
+
+            return factory->create<CalendarDecoration::Decoration>();
+        }
+    }
+
+    return nullptr;
+}
 
 class EventViews::EventIndicatorPrivate
 {
@@ -172,14 +567,9 @@ public:
 
 public:
     // view widgets
-    QGridLayout *mGridLayout = nullptr;
-    QWidget *mTopDayLabels = nullptr;
-    QBoxLayout *mLayoutTopDayLabels = nullptr;
-    QWidget *mTopDayLabelsFrame = nullptr;
-    QList<AlternateLabel *> mDateDayLabels;
-    QBoxLayout *mLayoutBottomDayLabels = nullptr;
-    QWidget *mBottomDayLabels = nullptr;
-    QWidget *mBottomDayLabelsFrame = nullptr;
+    QVBoxLayout *mMainLayout = nullptr;
+    AgendaHeader *mTopDayLabelsFrame = nullptr;
+    AgendaHeader *mBottomDayLabelsFrame = nullptr;
     QWidget *mAllDayFrame = nullptr;
     QWidget *mTimeBarHeaderFrame = nullptr;
     QSplitter *mSplitterAgenda = nullptr;
@@ -223,7 +613,6 @@ public:
 
     EventViews::MultiViewCalendar::Ptr mViewCalendar;
     bool makesWholeDayBusy(const KCalendarCore::Incidence::Ptr &incidence) const;
-    CalendarDecoration::Decoration *loadCalendarDecoration(const QString &name);
     void clearView();
     void setChanges(EventView::Changes changes, const KCalendarCore::Incidence::Ptr &incidence = KCalendarCore::Incidence::Ptr());
 
@@ -696,18 +1085,16 @@ void AgendaView::init(QDate start, QDate end)
 {
     d->mSelectedDates = AgendaViewPrivate::generateDateList(start, end);
 
-    d->mGridLayout = new QGridLayout(this);
-    d->mGridLayout->setContentsMargins(0, 0, 0, 0);
+    d->mMainLayout = new QVBoxLayout(this);
+    d->mMainLayout->setContentsMargins(0, 0, 0, 0);
+
+    /* Create day name labels for agenda columns */
+    d->mTopDayLabelsFrame = new AgendaHeader(d->mIsSideBySide, this);
+    d->mMainLayout->addWidget(d->mTopDayLabelsFrame);
 
     /* Create agenda splitter */
     d->mSplitterAgenda = new QSplitter(Qt::Vertical, this);
-    d->mGridLayout->addWidget(d->mSplitterAgenda, 1, 0);
-
-    /* Create day name labels for agenda columns */
-    d->mTopDayLabelsFrame = new QWidget(d->mSplitterAgenda);
-    auto layout = new QHBoxLayout(d->mTopDayLabelsFrame);
-    layout->setContentsMargins(0, 0, 0, 0);
-    layout->setSpacing(SPACING);
+    d->mMainLayout->addWidget(d->mSplitterAgenda, 1);
 
     /* Create all-day agenda widget */
     d->mAllDayFrame = new QWidget(d->mSplitterAgenda);
@@ -771,10 +1158,11 @@ void AgendaView::init(QDate start, QDate end)
     }
 
     /* Create a frame at the bottom which may be used by decorations */
-    d->mBottomDayLabelsFrame = new QWidget(d->mSplitterAgenda);
-    layout = new QHBoxLayout(d->mBottomDayLabelsFrame);
-    layout->setContentsMargins(0, 0, 0, 0);
-    layout->setSpacing(SPACING);
+    d->mBottomDayLabelsFrame = new AgendaHeader(d->mIsSideBySide, this);
+    d->mBottomDayLabelsFrame->hide();
+
+    d->mTopDayLabelsFrame->setAgenda(d->mAgenda);
+    d->mBottomDayLabelsFrame->setAgenda(d->mAgenda);
 
     if (!d->mIsSideBySide) {
         /* Make the all-day and normal agendas line up with each other */
@@ -814,6 +1202,15 @@ AgendaView::~AgendaView()
             cal->getCalendar()->unregisterObserver(d.get());
         }
     }
+}
+
+void AgendaView::showEvent(QShowEvent *showEvent)
+{
+    EventView::showEvent(showEvent);
+
+    // agenda scrollbar width only set now, so redo margin calculation
+    d->mTopDayLabelsFrame->updateMargins();
+    d->mBottomDayLabelsFrame->updateMargins();
 }
 
 KCalendarCore::Calendar::Ptr AgendaView::calendar2(const KCalendarCore::Incidence::Ptr &incidence) const
@@ -1054,57 +1451,6 @@ void AgendaView::zoomView(const int delta, QPoint pos, const Qt::Orientation ori
     }
 }
 
-bool AgendaView::loadDecorations(const QStringList &decorations, DecorationList &decoList)
-{
-    for (const QString &decoName : decorations) {
-        if (preferences()->selectedPlugins().contains(decoName)) {
-            CalendarDecoration::Decoration *deco = d->loadCalendarDecoration(decoName);
-            if (deco != nullptr) {
-                decoList << deco;
-            }
-        }
-    }
-    return !decoList.isEmpty();
-}
-
-void AgendaView::placeDecorationsFrame(QWidget *frame, bool decorationsFound, bool isTop)
-{
-    if (decorationsFound) {
-        if (isTop) {
-            // inserts in the first position
-            d->mSplitterAgenda->insertWidget(0, frame);
-        } else {
-            // inserts in the last position
-            frame->setParent(d->mSplitterAgenda);
-        }
-    } else {
-        frame->setParent(this);
-        d->mGridLayout->addWidget(frame, 0, 0);
-    }
-}
-
-void AgendaView::placeDecorations(DecorationList &decoList, QDate date, QWidget *labelBox, bool forWeek)
-{
-    for (CalendarDecoration::Decoration *deco : std::as_const(decoList)) {
-        const CalendarDecoration::Element::List elements = forWeek ? deco->weekElements(date) : deco->dayElements(date);
-        if (!elements.isEmpty()) {
-            auto decoHBox = new QWidget(labelBox);
-            labelBox->layout()->addWidget(decoHBox);
-            auto layout = new QHBoxLayout(decoHBox);
-            layout->setSpacing(0);
-            layout->setContentsMargins(0, 0, 0, 0);
-            decoHBox->setMinimumWidth(1);
-
-            for (CalendarDecoration::Element *it : elements) {
-                auto label = new DecorationLabel(it, decoHBox);
-                label->setAlignment(Qt::AlignBottom);
-                label->setMinimumWidth(1);
-                layout->addWidget(label);
-            }
-        }
-    }
-}
-
 void AgendaView::createDayLabels(bool force)
 {
     // Check if mSelectedDates has changed, if not just return
@@ -1114,140 +1460,30 @@ void AgendaView::createDayLabels(bool force)
     }
     d->mSaveSelectedDates = d->mSelectedDates;
 
-    delete d->mTopDayLabels;
-    delete d->mBottomDayLabels;
-    d->mDateDayLabels.clear();
+    const QStringList topStrDecos = preferences()->decorationsAtAgendaViewTop();
+    const QStringList botStrDecos = preferences()->decorationsAtAgendaViewBottom();
+    const QStringList selectedPlugins = preferences()->selectedPlugins();
 
-    QFontMetrics fm = fontMetrics();
+    const bool hasTopDecos = d->mTopDayLabelsFrame->createDayLabels(d->mSelectedDates, true, topStrDecos, selectedPlugins);
+    const bool hasBottomDecos = d->mBottomDayLabelsFrame->createDayLabels(d->mSelectedDates, false, botStrDecos, selectedPlugins);
 
-    d->mTopDayLabels = new QWidget(d->mTopDayLabelsFrame);
-    d->mTopDayLabelsFrame->layout()->addWidget(d->mTopDayLabels);
-    static_cast<QBoxLayout *>(d->mTopDayLabelsFrame->layout())->setStretchFactor(d->mTopDayLabels, 1);
-    d->mLayoutTopDayLabels = new QHBoxLayout(d->mTopDayLabels);
-    d->mLayoutTopDayLabels->setContentsMargins(0, 0, 0, 0);
-    d->mLayoutTopDayLabels->setSpacing(1);
-
-    // this spacer moves the day labels over to line up with the day columns
-    auto spacer =
-        new QSpacerItem((!d->mIsSideBySide ? d->mTimeLabelsZone->width() : 0) + SPACING + d->mAllDayAgenda->scrollArea()->frameWidth(), 1, QSizePolicy::Fixed);
-
-    d->mLayoutTopDayLabels->addSpacerItem(spacer);
-    auto topWeekLabelBox = new QWidget(d->mTopDayLabels);
-    auto topWeekLabelBoxLayout = new QVBoxLayout(topWeekLabelBox);
-    topWeekLabelBoxLayout->setContentsMargins(0, 0, 0, 0);
-    topWeekLabelBoxLayout->setSpacing(0);
-    d->mLayoutTopDayLabels->addWidget(topWeekLabelBox);
-    if (d->mIsSideBySide) {
-        topWeekLabelBox->hide();
+    // no splitter handle if no top deco elements, so something which needs resizing
+    if (hasTopDecos) {
+        // inserts in the first position, takes ownership
+        d->mSplitterAgenda->insertWidget(0, d->mTopDayLabelsFrame);
+    } else {
+        d->mTopDayLabelsFrame->setParent(this);
+        d->mMainLayout->insertWidget(0, d->mTopDayLabelsFrame);
     }
-
-    d->mBottomDayLabels = new QWidget(d->mBottomDayLabelsFrame);
-    d->mBottomDayLabelsFrame->layout()->addWidget(d->mBottomDayLabels);
-    static_cast<QBoxLayout *>(d->mBottomDayLabelsFrame->layout())->setStretchFactor(d->mBottomDayLabels, 1);
-    d->mLayoutBottomDayLabels = new QHBoxLayout(d->mBottomDayLabels);
-    d->mLayoutBottomDayLabels->setContentsMargins(0, 0, 0, 0);
-    auto bottomWeekLabelBox = new QWidget(d->mBottomDayLabels);
-    auto bottomWeekLabelBoxLayout = new QVBoxLayout(bottomWeekLabelBox);
-    bottomWeekLabelBoxLayout->setContentsMargins(0, 0, 0, 0);
-    bottomWeekLabelBoxLayout->setSpacing(0);
-    d->mLayoutBottomDayLabels->addWidget(bottomWeekLabelBox);
-
-    QList<CalendarDecoration::Decoration *> topDecos;
-    QStringList topStrDecos = preferences()->decorationsAtAgendaViewTop();
-    placeDecorationsFrame(d->mTopDayLabelsFrame, loadDecorations(topStrDecos, topDecos), true);
-
-    QList<CalendarDecoration::Decoration *> botDecos;
-    QStringList botStrDecos = preferences()->decorationsAtAgendaViewBottom();
-    placeDecorationsFrame(d->mBottomDayLabelsFrame, loadDecorations(botStrDecos, botDecos), false);
-
-    for (const QDate &date : std::as_const(d->mSelectedDates)) {
-        auto topDayLabelBox = new QWidget(d->mTopDayLabels);
-        auto topDayLabelBoxLayout = new QVBoxLayout(topDayLabelBox);
-        topDayLabelBoxLayout->setContentsMargins(0, 0, 0, 0);
-        topDayLabelBoxLayout->setSpacing(0);
-        d->mLayoutTopDayLabels->addWidget(topDayLabelBox);
-        auto bottomDayLabelBox = new QWidget(d->mBottomDayLabels);
-        auto bottomDayLabelBoxLayout = new QVBoxLayout(bottomDayLabelBox);
-        bottomDayLabelBoxLayout->setContentsMargins(0, 0, 0, 0);
-        bottomDayLabelBoxLayout->setSpacing(0);
-        d->mLayoutBottomDayLabels->addWidget(bottomDayLabelBox);
-
-        int dW = date.dayOfWeek();
-        QString veryLongStr = QLocale::system().toString(date, QLocale::LongFormat);
-        QString longstr = i18nc("short_weekday short_monthname date (e.g. Mon Aug 13)",
-                                "%1 %2 %3",
-                                QLocale::system().dayName(dW, QLocale::ShortFormat),
-                                QLocale::system().monthName(date.month(), QLocale::ShortFormat),
-                                date.day());
-        QString shortstr = QString::number(date.day());
-
-        auto dayLabel = new AlternateLabel(shortstr, longstr, veryLongStr, topDayLabelBox);
-        topDayLabelBoxLayout->addWidget(dayLabel);
-        dayLabel->useShortText(); // will be recalculated in updateDayLabelSizes() anyway
-        dayLabel->setAlignment(Qt::AlignHCenter);
-        if (date == QDate::currentDate()) {
-            QFont font = dayLabel->font();
-            font.setBold(true);
-            dayLabel->setFont(font);
-        }
-        d->mDateDayLabels.append(dayLabel);
-        // if a holiday region is selected, show the holiday name
-        const QStringList texts = CalendarSupport::holiday(date);
-        const int columnWidth = (d->mTopDayLabelsFrame->width() - (!d->mIsSideBySide ? d->mTimeLabelsZone->width() : 0)
-            - SPACING - d->mAllDayAgenda->scrollArea()->frameWidth()) / d->mSelectedDates.count();
-        for (const QString &text : texts) {
-            auto label = new AlternateLabel(fm.elidedText(text, Qt::ElideRight, columnWidth), text, text, topDayLabelBox);
-            topDayLabelBoxLayout->addWidget(label);
-            label->setAlignment(Qt::AlignCenter);
-        }
-
-        // Day decoration labels
-        placeDecorations(topDecos, date, topDayLabelBox, false);
-        placeDecorations(botDecos, date, bottomDayLabelBox, false);
+    // avoid splitter handle if no bottom labels, so something which needs resizing
+    if (hasBottomDecos) {
+        // inserts in the last position
+        d->mBottomDayLabelsFrame->setParent(d->mSplitterAgenda);
+        d->mBottomDayLabelsFrame->show();
+    } else {
+        d->mBottomDayLabelsFrame->setParent(this);
+        d->mBottomDayLabelsFrame->hide();
     }
-
-    auto rightSpacer = new QSpacerItem(d->mAllDayAgenda->scrollArea()->frameWidth(), 1, QSizePolicy::Fixed);
-    d->mLayoutTopDayLabels->addSpacerItem(rightSpacer);
-
-    // Week decoration labels
-    placeDecorations(topDecos, d->mSelectedDates.first(), topWeekLabelBox, true);
-    placeDecorations(botDecos, d->mSelectedDates.first(), bottomWeekLabelBox, true);
-
-    if (!d->mIsSideBySide) {
-        d->mLayoutTopDayLabels->addSpacing(d->mAgenda->verticalScrollBar()->width());
-        d->mLayoutBottomDayLabels->addSpacing(d->mAgenda->verticalScrollBar()->width());
-    }
-    d->mTopDayLabels->show();
-    d->mBottomDayLabels->show();
-
-    // Update the labels now and after a single event loop run. Now to avoid flicker, and
-    // delayed so that the delayed layouting size is taken into account.
-    updateDayLabelSizes();
-    qDeleteAll(topDecos);
-    qDeleteAll(botDecos);
-}
-
-void AgendaView::updateDayLabelSizes()
-{
-    // First, calculate the maximum text type that fits for all labels
-    AlternateLabel::TextType overallType = AlternateLabel::Extensive;
-    for (AlternateLabel *label : std::as_const(d->mDateDayLabels)) {
-        AlternateLabel::TextType type = label->largestFittingTextType();
-        if (type < overallType) {
-            overallType = type;
-        }
-    }
-
-    // Then, set that maximum text type to all the labels
-    for (AlternateLabel *label : std::as_const(d->mDateDayLabels)) {
-        label->setFixedType(overallType);
-    }
-}
-
-void AgendaView::resizeEvent(QResizeEvent *resizeEvent)
-{
-    updateDayLabelSizes();
-    EventView::resizeEvent(resizeEvent);
 }
 
 void AgendaView::enableAgendaUpdate(bool enable)
@@ -1414,6 +1650,9 @@ void AgendaView::updateTimeBarWidth()
     if (d->mDummyAllDayLeft) {
         d->mDummyAllDayLeft->setFixedWidth(0);
     }
+
+    d->mTopDayLabelsFrame->setWeekWidth(timeBarWidth);
+    d->mBottomDayLabelsFrame->setWeekWidth(timeBarWidth);
 }
 
 void AgendaView::updateEventDates(AgendaItem *item, bool addIncidence, Akonadi::Collection::Id collectionId)
@@ -2220,37 +2459,6 @@ void AgendaView::alignAgendas()
     createDayLabels(true);
 }
 
-CalendarDecoration::Decoration *AgendaViewPrivate::loadCalendarDecoration(const QString &name)
-{
-    const QString type = CalendarSupport::Plugin::serviceType();
-    const int version = CalendarSupport::Plugin::interfaceVersion();
-
-    QString constraint;
-    if (version >= 0) {
-        constraint = QStringLiteral("[X-KDE-PluginInterfaceVersion] == %1").arg(QString::number(version));
-    }
-
-    KService::List list = KServiceTypeTrader::self()->query(type, constraint);
-
-    KService::List::ConstIterator it;
-    for (it = list.constBegin(); it != list.constEnd(); ++it) {
-        if ((*it)->desktopEntryName() == name) {
-            KService::Ptr service = *it;
-            KPluginLoader loader(*service);
-
-            auto factory = loader.factory();
-            if (!factory) {
-                qCDebug(CALENDARVIEW_LOG) << "Factory creation failed";
-                return nullptr;
-            }
-
-            return factory->create<CalendarDecoration::Decoration>();
-        }
-    }
-
-    return nullptr;
-}
-
 void AgendaView::setChanges(EventView::Changes changes)
 {
     d->setChanges(changes);
@@ -2263,3 +2471,5 @@ void AgendaView::scheduleUpdateEventIndicators()
         QTimer::singleShot(0, this, &AgendaView::updateEventIndicators);
     }
 }
+
+#include "agendaview.moc"

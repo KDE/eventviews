@@ -186,8 +186,6 @@ protected:
 
     void removeIncidence(const KCalendarCore::Incidence::Ptr &inc);
 
-    void resizeEvent(QResizeEvent *resizeEvent) override;
-
 public Q_SLOTS:
     void updateView() override;
     void updateConfig() override;
@@ -211,9 +209,11 @@ protected Q_SLOTS:
     */
     void updateEventIndicators();
     void scheduleUpdateEventIndicators();
-    void updateDayLabelSizes();
 
     void alignAgendas();
+
+protected:
+    void showEvent(QShowEvent *showEvent) override;
 
 private Q_SLOTS:
     void slotIncidenceSelected(const KCalendarCore::Incidence::Ptr &incidence, QDate date);
@@ -227,11 +227,6 @@ private:
     bool filterByCollectionSelection(const KCalendarCore::Incidence::Ptr &incidence);
     void setupTimeLabel(TimeLabels *timeLabel);
     bool displayIncidence(const KCalendarCore::Incidence::Ptr &incidence, bool createSelected);
-
-    using DecorationList = QList<EventViews::CalendarDecoration::Decoration *>;
-    bool loadDecorations(const QStringList &decorations, DecorationList &decoList);
-    void placeDecorationsFrame(QWidget *frame, bool decorationsFound, bool isTop);
-    void placeDecorations(EventViews::AgendaView::DecorationList &decoList, QDate date, QWidget *labelBox, bool forWeek);
 
     friend class TimeLabelsZone;
     friend class MultiAgendaViewPrivate;
