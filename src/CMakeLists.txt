@@ -52,6 +52,45 @@ target_sources(KF5EventViews PRIVATE
   timeline/timelineview_p.cpp
 
   whatsnext/whatsnextview.cpp
+
+  eventview_p.h
+  journal/journalframe.h
+  journal/journalview.h
+  list/listview.h
+  eventview.h
+  whatsnext/whatsnextview.h
+  timeline/timelineview_p.h
+  timeline/timelineview.h
+  timeline/timelineitem.h
+  todo/todoviewsortfilterproxymodel.h
+  todo/todoviewview.h
+  todo/todomodel.h
+  todo/todoviewquicksearch.h
+  todo/incidencetreemodel_p.h
+  todo/tododelegates.h
+  todo/todomodel_p.h
+  todo/todoview.h
+  todo/incidencetreemodel.h
+  todo/todoviewquickaddline.h
+  multiagenda/multiagendaview.h
+  multiagenda/configdialoginterface.h
+  agenda/timelabelszone.h
+  agenda/agendaview.h
+  agenda/timescaleconfigdialog.h
+  agenda/alternatelabel.h
+  agenda/agendaitem.h
+  agenda/timelabels.h
+  agenda/calendardecoration.h
+  agenda/decorationlabel.h
+  agenda/viewcalendar.h
+  agenda/agenda.h
+  month/monthview.h
+  month/monthscene.h
+  month/monthgraphicsitems.h
+  month/monthitem.h
+  helper.h
+  prefs.h
+
 )
 
 kconfig_add_kcfg_files(KF5EventViews prefs_base.kcfgc)
