@@ -833,7 +833,7 @@ void AgendaItem::paintEvent(QPaintEvent *ev)
     const bool roundTop = !prevMultiItem();
     const bool roundBottom = !nextMultiItem();
 
-    drawRoundedRect(&p, QRect(fmargin, fmargin, width() - fmargin * 2, height() - fmargin * 2), mSelected, bgColor, true, ft, roundTop, roundBottom);
+    drawRoundedRect(&p, QRect(fmargin, fmargin, width() - fmargin * 2, height() - fmargin * 2), mSelected, bgColor, frameColor, true, ft, roundTop, roundBottom);
 
     // calculate the height of the full version (case 4) to test whether it is
     // possible
@@ -950,6 +950,7 @@ void AgendaItem::paintEvent(QPaintEvent *ev)
                                 QRect(fmargin, fmargin, width() - fmargin * 2, -fmargin * 2 + margin + hlHeight),
                                 mSelected,
                                 frameColor,
+                                frameColor,
                                 false,
                                 ft,
                                 roundTop,
@@ -961,6 +962,7 @@ void AgendaItem::paintEvent(QPaintEvent *ev)
                 drawRoundedRect(&p,
                                 QRect(fmargin, fmargin, width() - fmargin * 2, -fmargin * 2 + margin + hlHeight),
                                 mSelected,
+                                frameColor,
                                 frameColor,
                                 false,
                                 ft,
@@ -974,6 +976,7 @@ void AgendaItem::paintEvent(QPaintEvent *ev)
             drawRoundedRect(&p,
                             QRect(fmargin, fmargin, width() - fmargin * 2, -fmargin * 2 + margin + hlHeight),
                             mSelected,
+                            frameColor,
                             frameColor,
                             false,
                             ft,
@@ -991,6 +994,7 @@ void AgendaItem::paintEvent(QPaintEvent *ev)
         drawRoundedRect(&p,
                         QRect(fmargin, fmargin, width() - fmargin * 2, -fmargin * 2 + margin + hlHeight),
                         mSelected,
+                        frameColor,
                         frameColor,
                         false,
                         ft,
@@ -1032,7 +1036,7 @@ void AgendaItem::paintEvent(QPaintEvent *ev)
     }
 }
 
-void AgendaItem::drawRoundedRect(QPainter *p, QRect rect, bool selected, const QColor &bgColor, bool frame, int ft, bool roundTop, bool roundBottom)
+void AgendaItem::drawRoundedRect(QPainter *p, QRect rect, bool selected, const QColor &bgColor, const QColor &frameColor, bool frame, int ft, bool roundTop, bool roundBottom)
 {
     Q_UNUSED(ft)
     if (!mValid) {
@@ -1076,7 +1080,7 @@ void AgendaItem::drawRoundedRect(QPainter *p, QRect rect, bool selected, const Q
     path.closeSubpath();
     p->save();
     p->setRenderHint(QPainter::Antialiasing, false);
-    const QPen border(QBrush(QColor(200, 200, 200, 255)), 1.0, Qt::SolidLine, Qt::RoundCap, Qt::RoundJoin);
+    const QPen border(frameColor, 1.0, Qt::SolidLine, Qt::RoundCap, Qt::RoundJoin);
     p->setPen(border);
 
     // header
