@@ -75,7 +75,7 @@ public:
 
     KGantt::Span rowGeometry(const QModelIndex &idx) const override
     {
-        return {idx.row() * mRowHeight, mRowHeight};
+        return KGantt::Span(idx.row() * mRowHeight, mRowHeight);
     }
 
     int maximumItemHeight() const override
