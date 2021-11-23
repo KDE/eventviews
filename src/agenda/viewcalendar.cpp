@@ -13,17 +13,13 @@
 
 using namespace EventViews;
 
-ViewCalendar::~ViewCalendar()
-{
-}
+ViewCalendar::~ViewCalendar() = default;
 
-MultiViewCalendar::~MultiViewCalendar()
-{
-}
+MultiViewCalendar::~MultiViewCalendar() = default;
 
 KCalendarCore::Calendar::Ptr MultiViewCalendar::getCalendar() const
 {
-    return KCalendarCore::Calendar::Ptr();
+    return {};
 }
 
 KCalendarCore::Incidence::List MultiViewCalendar::incidences() const
@@ -49,7 +45,7 @@ ViewCalendar::Ptr MultiViewCalendar::findCalendar(const KCalendarCore::Incidence
             return cal;
         }
     }
-    return ViewCalendar::Ptr();
+    return {};
 }
 
 ViewCalendar::Ptr MultiViewCalendar::findCalendar(const QString &incidenceIdentifier) const
@@ -59,7 +55,7 @@ ViewCalendar::Ptr MultiViewCalendar::findCalendar(const QString &incidenceIdenti
             return cal;
         }
     }
-    return ViewCalendar::Ptr();
+    return {};
 }
 
 void MultiViewCalendar::addCalendar(const ViewCalendar::Ptr &calendar)
@@ -85,7 +81,7 @@ QString MultiViewCalendar::displayName(const KCalendarCore::Incidence::Ptr &inci
     if (cal) {
         return cal->displayName(incidence);
     }
-    return QString();
+    return {};
 }
 
 QString MultiViewCalendar::iconForIncidence(const KCalendarCore::Incidence::Ptr &incidence) const
@@ -94,7 +90,7 @@ QString MultiViewCalendar::iconForIncidence(const KCalendarCore::Incidence::Ptr 
     if (cal) {
         return cal->iconForIncidence(incidence);
     }
-    return QString();
+    return {};
 }
 
 bool MultiViewCalendar::isValid(const KCalendarCore::Incidence::Ptr &incidence) const
@@ -124,12 +120,10 @@ Akonadi::Item MultiViewCalendar::item(const KCalendarCore::Incidence::Ptr &incid
         return mETMCalendar->item(incidence);
     }
 
-    return Akonadi::Item();
+    return {};
 }
 
-AkonadiViewCalendar::~AkonadiViewCalendar()
-{
-}
+AkonadiViewCalendar::~AkonadiViewCalendar() = default;
 
 bool AkonadiViewCalendar::isValid(const KCalendarCore::Incidence::Ptr &incidence) const
 {
@@ -155,7 +149,7 @@ bool AkonadiViewCalendar::isValid(const QString &incidenceIdentifier) const
 Akonadi::Item AkonadiViewCalendar::item(const KCalendarCore::Incidence::Ptr &incidence) const
 {
     if (!mCalendar || !incidence) {
-        return Akonadi::Item();
+        return {};
     }
     bool ok = false;
     Akonadi::Item::Id id = incidence->customProperty("VOLATILE", "AKONADI-ID").toLongLong(&ok);
@@ -166,7 +160,7 @@ Akonadi::Item AkonadiViewCalendar::item(const KCalendarCore::Incidence::Ptr &inc
         if (id == -1) {
             // Ok, we really don't know the ID, give up.
             qCWarning(CALENDARVIEW_LOG) << "Item is invalid. uid = " << incidence->instanceIdentifier();
-            return Akonadi::Item();
+            return {};
         }
         return mCalendar->item(incidence->instanceIdentifier());
     }

@@ -29,9 +29,7 @@ TimelineViewPrivate::TimelineViewPrivate(TimelineView *parent)
 {
 }
 
-TimelineViewPrivate::~TimelineViewPrivate()
-{
-}
+TimelineViewPrivate::~TimelineViewPrivate() = default;
 
 void TimelineViewPrivate::itemSelected(const QModelIndex &index)
 {

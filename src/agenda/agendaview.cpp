@@ -2281,7 +2281,7 @@ void AgendaView::writeSettings(KConfig *config)
 QVector<bool> AgendaView::busyDayMask() const
 {
     if (d->mSelectedDates.isEmpty() || !d->mSelectedDates[0].isValid()) {
-        return QVector<bool>();
+        return {};
     }
 
     QVector<bool> busyDayMask;

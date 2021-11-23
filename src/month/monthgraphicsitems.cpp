@@ -126,9 +126,7 @@ MonthGraphicsItem::MonthGraphicsItem(MonthItem *manager)
     setTransform(transform);
 }
 
-MonthGraphicsItem::~MonthGraphicsItem()
-{
-}
+MonthGraphicsItem::~MonthGraphicsItem() = default;
 
 bool MonthGraphicsItem::isMoving() const
 {
@@ -205,7 +203,7 @@ QPainterPath MonthGraphicsItem::widgetPath(bool border) const
 QRectF MonthGraphicsItem::boundingRect() const
 {
     // width - 2 because of the cell-dividing line with width == 1 at beginning and end
-    return QRectF(0, 0, (daySpan() + 1) * mMonthItem->monthScene()->columnWidth() - 2, mMonthItem->monthScene()->itemHeight());
+    return {0, 0, (daySpan() + 1) * mMonthItem->monthScene()->columnWidth() - 2, mMonthItem->monthScene()->itemHeight()};
 }
 
 void MonthGraphicsItem::paint(QPainter *p, const QStyleOptionGraphicsItem *, QWidget *)

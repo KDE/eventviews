@@ -265,7 +265,7 @@ QDateTime MonthView::selectionStart() const
     if (d->scene->selectedCell()) {
         return QDateTime(d->scene->selectedCell()->date().startOfDay());
     } else {
-        return QDateTime();
+        return {};
     }
 }
 

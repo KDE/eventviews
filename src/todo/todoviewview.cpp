@@ -154,7 +154,7 @@ QModelIndex TodoViewView::moveCursor(CursorAction cursorAction, Qt::KeyboardModi
 QModelIndex TodoViewView::getNextEditableIndex(const QModelIndex &cur, int inc)
 {
     if (!cur.isValid()) {
-        return QModelIndex();
+        return {};
     }
 
     QModelIndex tmp;

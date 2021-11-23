@@ -238,12 +238,12 @@ void EventView::updateConfig()
 
 QDateTime EventView::selectionStart() const
 {
-    return QDateTime();
+    return {};
 }
 
 QDateTime EventView::selectionEnd() const
 {
-    return QDateTime();
+    return {};
 }
 
 bool EventView::dateRangeSelectionEnabled() const

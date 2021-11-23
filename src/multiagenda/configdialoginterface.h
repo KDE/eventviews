@@ -14,9 +14,7 @@ namespace EventViews
 class ConfigDialogInterface
 {
 public:
-    virtual ~ConfigDialogInterface()
-    {
-    }
+    virtual ~ConfigDialogInterface() = default;
 
     virtual int numberOfColumns() const = 0;
     virtual bool useCustomColumns() const = 0;

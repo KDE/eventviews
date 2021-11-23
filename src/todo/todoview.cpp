@@ -471,7 +471,7 @@ DateList TodoView::selectedIncidenceDates() const
     // return something about the selected todo here, because it has got
     // a couple of dates (creation, due date, completion date), and the
     // caller could not figure out what he gets. So just return an empty list.
-    return DateList();
+    return {};
 }
 
 void TodoView::saveLayout(KConfig *config, const QString &group) const

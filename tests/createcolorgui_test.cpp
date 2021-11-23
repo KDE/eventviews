@@ -24,9 +24,7 @@ CreateColorGui_test::CreateColorGui_test(QWidget *parent)
     createListWidgetItem();
 }
 
-CreateColorGui_test::~CreateColorGui_test()
-{
-}
+CreateColorGui_test::~CreateColorGui_test() = default;
 
 void CreateColorGui_test::createListWidgetItem()
 {

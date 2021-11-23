@@ -38,9 +38,7 @@ JournalView::JournalView(QWidget *parent)
     installEventFilter(this);
 }
 
-JournalView::~JournalView()
-{
-}
+JournalView::~JournalView() = default;
 
 void JournalView::appendJournal(const Akonadi::Item &journal, QDate dt)
 {

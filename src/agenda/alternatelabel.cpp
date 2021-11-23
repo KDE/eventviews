@@ -26,9 +26,7 @@ AlternateLabel::AlternateLabel(const QString &shortlabel, const QString &longlab
     squeezeTextToLabel();
 }
 
-AlternateLabel::~AlternateLabel()
-{
-}
+AlternateLabel::~AlternateLabel() = default;
 
 void AlternateLabel::useShortText()
 {

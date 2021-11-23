@@ -38,9 +38,7 @@ JournalDateView::JournalDateView(const Akonadi::ETMCalendar::Ptr &calendar, QWid
     layout->setSpacing(0);
 }
 
-JournalDateView::~JournalDateView()
-{
-}
+JournalDateView::~JournalDateView() = default;
 
 void JournalDateView::setDate(QDate date)
 {
@@ -195,9 +193,7 @@ JournalFrame::JournalFrame(const Akonadi::Item &j, const Akonadi::ETMCalendar::P
     mBrowser->setStyleSheet(QStringLiteral("QFrame { border: 0px solid white } "));
 }
 
-JournalFrame::~JournalFrame()
-{
-}
+JournalFrame::~JournalFrame() = default;
 
 bool JournalFrame::eventFilter(QObject *object, QEvent *event)
 {

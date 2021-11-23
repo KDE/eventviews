@@ -206,19 +206,19 @@ QVariant TodoModel::data(const QModelIndex &index, int role) const
 {
     Q_ASSERT(index.isValid());
     if (!index.isValid() || !d->m_calendar) {
-        return QVariant();
+        return {};
     }
 
     const QModelIndex sourceIndex = mapToSource(index.sibling(index.row(), 0));
     if (!sourceIndex.isValid()) {
-        return QVariant();
+        return {};
     }
     Q_ASSERT(sourceIndex.isValid());
     const auto item = sourceIndex.data(Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
     if (!item.isValid()) {
         qCWarning(CALENDARVIEW_LOG) << "Invalid index: " << sourceIndex;
         // Q_ASSERT( false );
-        return QVariant();
+        return {};
     }
     const KCalendarCore::Todo::Ptr todo = CalendarSupport::todo(item);
     if (!todo) {
@@ -231,7 +231,7 @@ QVariant TodoModel::data(const QModelIndex &index, int role) const
         }
 
         Q_ASSERT(!"There's no to-do.");
-        return QVariant();
+        return {};
     }
 
     switch (role) {
@@ -287,9 +287,9 @@ QVariant TodoModel::data(const QModelIndex &index, int role) const
             if (todo->priority() == 0) {
                 return QVariant(QStringLiteral("--"));
             }
-            return QVariant(todo->priority());
+            return {todo->priority()};
         case PercentColumn:
-            return QVariant(todo->percentComplete());
+            return {todo->percentComplete()};
         case StartDateColumn:
             return todo->hasStartDate() ? QLocale().toString(todo->dtStart().toLocalTime().date(), QLocale::ShortFormat) : QVariant(QString());
         case DueDateColumn:
@@ -305,7 +305,7 @@ QVariant TodoModel::data(const QModelIndex &index, int role) const
         case CalendarColumn:
             return QVariant(CalendarSupport::displayName(d->m_calendar.data(), item.parentCollection()));
         }
-        return QVariant();
+        return {};
     }
 
     if (role == Qt::EditRole) {
@@ -313,11 +313,11 @@ QVariant TodoModel::data(const QModelIndex &index, int role) const
         case SummaryColumn:
             return QVariant(todo->summary());
         case RecurColumn:
-            return QVariant(todo->recurs());
+            return {todo->recurs()};
         case PriorityColumn:
-            return QVariant(todo->priority());
+            return {todo->priority()};
         case PercentColumn:
-            return QVariant(todo->percentComplete());
+            return {todo->percentComplete()};
         case StartDateColumn:
             return QVariant(todo->dtStart().date());
         case DueDateColumn:
@@ -331,7 +331,7 @@ QVariant TodoModel::data(const QModelIndex &index, int role) const
         case CalendarColumn:
             return QVariant(CalendarSupport::displayName(d->m_calendar.data(), item.parentCollection()));
         }
-        return QVariant();
+        return {};
     }
 
     // set the tooltip for every item
@@ -340,7 +340,7 @@ QVariant TodoModel::data(const QModelIndex &index, int role) const
             return QVariant(
                 KCalUtils::IncidenceFormatter::toolTipStr(CalendarSupport::displayName(d->m_calendar.data(), item.parentCollection()), todo, QDate(), true));
         } else {
-            return QVariant();
+            return {};
         }
     }
 
@@ -356,13 +356,13 @@ QVariant TodoModel::data(const QModelIndex &index, int role) const
     // indicate if a row is checked (=completed) only in the first column
     if (role == Qt::CheckStateRole && index.column() == 0) {
         if (hasChildren(index) && !index.parent().isValid()) {
-            return QVariant();
+            return {};
         }
 
         if (todo->isCompleted()) {
-            return QVariant(Qt::Checked);
+            return {Qt::Checked};
         } else {
-            return QVariant(Qt::Unchecked);
+            return {Qt::Unchecked};
         }
     }
 
@@ -377,7 +377,7 @@ QVariant TodoModel::data(const QModelIndex &index, int role) const
         const QStringList categories = todo->categories();
         return categories.isEmpty() ? QVariant() : QVariant(CalendarSupport::KCalPrefs::instance()->categoryColor(categories.first()));
     } else if (role == Qt::DecorationRole) {
-        return QVariant();
+        return {};
     }
 
     if (role == TodoRole) {
@@ -390,11 +390,11 @@ QVariant TodoModel::data(const QModelIndex &index, int role) const
 
     if (role == IsRichTextRole) {
         if (index.column() == SummaryColumn) {
-            return QVariant(todo->summaryIsRich());
+            return {todo->summaryIsRich()};
         } else if (index.column() == DescriptionColumn) {
-            return QVariant(todo->descriptionIsRich());
+            return {todo->descriptionIsRich()};
         } else {
-            return QVariant();
+            return {};
         }
     }
 
@@ -408,16 +408,16 @@ QVariant TodoModel::data(const QModelIndex &index, int role) const
         case DueDateColumn:
         case CategoriesColumn:
         case CalendarColumn:
-            return QVariant(Qt::AlignHCenter | Qt::AlignVCenter);
+            return {Qt::AlignHCenter | Qt::AlignVCenter};
         }
-        return QVariant(Qt::AlignLeft | Qt::AlignVCenter);
+        return {Qt::AlignLeft | Qt::AlignVCenter};
     }
 
     if (sourceModel()) {
         return sourceModel()->data(mapToSource(index.sibling(index.row(), 0)), role);
     }
 
-    return QVariant();
+    return {};
 }
 
 bool TodoModel::setData(const QModelIndex &index, const QVariant &value, int role)
@@ -601,7 +601,7 @@ void TodoModel::setIncidenceChanger(Akonadi::IncidenceChanger *changer)
 QVariant TodoModel::headerData(int column, Qt::Orientation orientation, int role) const
 {
     if (orientation != Qt::Horizontal) {
-        return QVariant();
+        return {};
     }
 
     if (role == Qt::DisplayRole) {
@@ -639,11 +639,11 @@ QVariant TodoModel::headerData(int column, Qt::Orientation orientation, int role
         case DueDateColumn:
         case CategoriesColumn:
         case CalendarColumn:
-            return QVariant(Qt::AlignHCenter);
+            return {Qt::AlignHCenter};
         }
-        return QVariant();
+        return {};
     }
-    return QVariant();
+    return {};
 }
 
 void TodoModel::setCalendar(const Akonadi::ETMCalendar::Ptr &calendar)
@@ -852,7 +852,7 @@ QModelIndex TodoModel::mapToSource(const QModelIndex &proxyIndex) const
 QModelIndex TodoModel::index(int row, int column, const QModelIndex &parent) const
 {
     if (!sourceModel()) {
-        return QModelIndex();
+        return {};
     }
 
     Q_ASSERT(!parent.isValid() || parent.internalPointer());
@@ -873,7 +873,7 @@ QModelIndex TodoModel::index(int row, int column, const QModelIndex &parent) con
 QModelIndex TodoModel::parent(const QModelIndex &child) const
 {
     if (!sourceModel() || !child.isValid()) {
-        return QModelIndex();
+        return {};
     }
 
     Q_ASSERT(child.internalPointer());

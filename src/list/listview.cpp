@@ -95,13 +95,9 @@ bool ListViewItem::operator<(const QTreeWidgetItem &other) const
 class EventViews::ListViewPrivate
 {
 public:
-    ListViewPrivate()
-    {
-    }
+    ListViewPrivate() = default;
 
-    ~ListViewPrivate()
-    {
-    }
+    ~ListViewPrivate() = default;
 
     void addIncidences(const Akonadi::ETMCalendar::Ptr &calendar, const KCalendarCore::Incidence::List &incidenceList, QDate date);
     void addIncidence(const Akonadi::ETMCalendar::Ptr &calendar, const KCalendarCore::Incidence::Ptr &, QDate date);
@@ -136,9 +132,7 @@ public:
     {
     }
 
-    ~ListItemVisitor() override
-    {
-    }
+    ~ListItemVisitor() override = default;
 
     bool visit(const Event::Ptr &) override;
     bool visit(const Todo::Ptr &) override;

@@ -109,9 +109,7 @@ AgendaItem::AgendaItem(EventView *eventView,
     setAcceptDrops(true);
 }
 
-AgendaItem::~AgendaItem()
-{
-}
+AgendaItem::~AgendaItem() = default;
 
 void AgendaItem::updateIcons()
 {

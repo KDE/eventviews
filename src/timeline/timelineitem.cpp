@@ -107,9 +107,7 @@ TimelineSubItem::TimelineSubItem(const Akonadi::ETMCalendar::Ptr &calendar, cons
     }
 }
 
-TimelineSubItem::~TimelineSubItem()
-{
-}
+TimelineSubItem::~TimelineSubItem() = default;
 
 void TimelineSubItem::setStartTime(const QDateTime &dt)
 {

@@ -36,7 +36,7 @@ public:
     Q_REQUIRED_RESULT Akonadi::Item::List selectedIncidences() const override;
     Q_REQUIRED_RESULT KCalendarCore::DateList selectedIncidenceDates() const override
     {
-        return KCalendarCore::DateList();
+        return {};
     }
 
     void appendJournal(const Akonadi::Item &journal, QDate dt);

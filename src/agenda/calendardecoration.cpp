@@ -12,9 +12,7 @@ Element::Element(const QString &id)
 {
 }
 
-Element::~Element()
-{
-}
+Element::~Element() = default;
 
 QString Element::id() const
 {
@@ -23,32 +21,32 @@ QString Element::id() const
 
 QString Element::elementInfo() const
 {
-    return QString();
+    return {};
 }
 
 QString Element::shortText() const
 {
-    return QString();
+    return {};
 }
 
 QString Element::longText() const
 {
-    return QString();
+    return {};
 }
 
 QString Element::extensiveText() const
 {
-    return QString();
+    return {};
 }
 
 QPixmap Element::newPixmap(const QSize &)
 {
-    return QPixmap();
+    return {};
 }
 
 QUrl Element::url() const
 {
-    return QUrl();
+    return {};
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -242,22 +240,22 @@ Element::List Decoration::registerYearElements(const Element::List &e, const QDa
 
 Element::List Decoration::createDayElements(const QDate &)
 {
-    return Element::List();
+    return {};
 }
 
 Element::List Decoration::createWeekElements(const QDate &)
 {
-    return Element::List();
+    return {};
 }
 
 Element::List Decoration::createMonthElements(const QDate &)
 {
-    return Element::List();
+    return {};
 }
 
 Element::List Decoration::createYearElements(const QDate &)
 {
-    return Element::List();
+    return {};
 }
 
 QDate Decoration::weekDate(QDate date)

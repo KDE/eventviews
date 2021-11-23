@@ -33,7 +33,7 @@ void MonthItemOrderTest::longerInstancesFirst()
 {
     QDate startDate(2000, 01, 01);
     IncidenceMonthItem *longEvent = eventItem(startDate, startDate.addDays(1));
-    HolidayMonthItem *longHoliday = new HolidayMonthItem(nullptr, startDate, startDate.addDays(1), QStringLiteral(""));
+    auto *longHoliday = new HolidayMonthItem(nullptr, startDate, startDate.addDays(1), QStringLiteral(""));
     for (int offset = -1; offset < 3; offset++) {
         QDate d = startDate.addDays(offset);
 
@@ -43,7 +43,7 @@ void MonthItemOrderTest::longerInstancesFirst()
         QVERIFY(   MonthItem::greaterThan(longHoliday, shortEvent));
         QVERIFY( ! MonthItem::greaterThan(shortEvent, longHoliday));
 
-        HolidayMonthItem *shortHoliday = new HolidayMonthItem(nullptr, d, QStringLiteral(""));
+        auto *shortHoliday = new HolidayMonthItem(nullptr, d, QStringLiteral(""));
         QVERIFY(   MonthItem::greaterThan(longEvent, shortHoliday));
         QVERIFY( ! MonthItem::greaterThan(shortHoliday, longEvent));
         QVERIFY(   MonthItem::greaterThan(longHoliday, shortHoliday));
@@ -58,7 +58,7 @@ void MonthItemOrderTest::holidaysFirst()
 {
     QDate startDate(2000, 01, 01);
     IncidenceMonthItem *event = eventItem(startDate, startDate);
-    HolidayMonthItem *holiday = new HolidayMonthItem(nullptr, startDate, QStringLiteral(""));
+    auto *holiday = new HolidayMonthItem(nullptr, startDate, QStringLiteral(""));
     QVERIFY( ! MonthItem::greaterThan(event, holiday));
     QVERIFY(   MonthItem::greaterThan(holiday, event));
 }
@@ -71,8 +71,8 @@ void MonthItemOrderTest::stableOrder()
 {
     QDate startDate(2000, 01, 01);
 
-    HolidayMonthItem *holiday = new HolidayMonthItem(nullptr, startDate, QStringLiteral(""));
-    HolidayMonthItem *otherHoliday = new HolidayMonthItem(nullptr, startDate, QStringLiteral(""));
+    auto *holiday = new HolidayMonthItem(nullptr, startDate, QStringLiteral(""));
+    auto *otherHoliday = new HolidayMonthItem(nullptr, startDate, QStringLiteral(""));
     QVERIFY( ! (MonthItem::greaterThan(otherHoliday, holiday) && MonthItem::greaterThan(holiday, otherHoliday)));
 
     IncidenceMonthItem *event = eventItem(startDate, startDate);
@@ -82,7 +82,7 @@ void MonthItemOrderTest::stableOrder()
 
 IncidenceMonthItem *MonthItemOrderTest::eventItem(QDate start, QDate end)
 {
-    KCalendarCore::Event *e = new KCalendarCore::Event;
+    auto *e = new KCalendarCore::Event;
     e->setDtStart(QDateTime(start, QTime(00, 00, 00)));
     e->setDtEnd(QDateTime(end, QTime(00, 00, 00)));
     e->setAllDay(true);

@@ -1763,7 +1763,7 @@ AgendaItem::QPtr Agenda::insertItem(const KCalendarCore::Incidence::Ptr &inciden
 
     AgendaItem::QPtr agendaItem = createAgendaItem(incidence, itemPos, itemCount, recurrenceId, isSelected);
     if (!agendaItem) {
-        return AgendaItem::QPtr();
+        return {};
     }
 
     if (YTop >= d->mRows) {
@@ -1808,7 +1808,7 @@ AgendaItem::QPtr Agenda::insertAllDayItem(const KCalendarCore::Incidence::Ptr &i
 
     AgendaItem::QPtr agendaItem = createAgendaItem(incidence, 1, 1, recurrenceId, isSelected);
     if (!agendaItem) {
-        return AgendaItem::QPtr();
+        return {};
     }
 
     agendaItem->setCellXY(XBegin, 0, 0);
@@ -1836,7 +1836,7 @@ Agenda::createAgendaItem(const KCalendarCore::Incidence::Ptr &incidence, int ite
 {
     if (!incidence) {
         qCWarning(CALENDARVIEW_LOG) << "Agenda::createAgendaItem() item is invalid.";
-        return AgendaItem::QPtr();
+        return {};
     }
 
     AgendaItem::QPtr agendaItem = new AgendaItem(d->mAgendaView, d->mCalendar, incidence, itemPos, itemCount, recurrenceId, isSelected, this);
@@ -2338,9 +2338,7 @@ AgendaScrollArea::AgendaScrollArea(bool isAllDay, AgendaView *agendaView, bool i
     mAgenda->setStartTime(agendaView->preferences()->dayBegins().time());
 }
 
-AgendaScrollArea::~AgendaScrollArea()
-{
-}
+AgendaScrollArea::~AgendaScrollArea() = default;
 
 Agenda *AgendaScrollArea::agenda() const
 {

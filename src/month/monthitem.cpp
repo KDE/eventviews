@@ -308,9 +308,7 @@ IncidenceMonthItem::IncidenceMonthItem(MonthScene *monthScene,
     }
 }
 
-IncidenceMonthItem::~IncidenceMonthItem()
-{
-}
+IncidenceMonthItem::~IncidenceMonthItem() = default;
 
 bool IncidenceMonthItem::greaterThanFallback(const MonthItem *other) const
 {
@@ -613,7 +611,7 @@ Akonadi::Item IncidenceMonthItem::akonadiItem() const
     if (mIncidence) {
         return monthScene()->mMonthView->calendar()->item(mIncidence);
     } else {
-        return Akonadi::Item();
+        return {};
     }
 }
 
@@ -679,9 +677,7 @@ HolidayMonthItem::HolidayMonthItem(MonthScene *monthScene, QDate startDate, QDat
 {
 }
 
-HolidayMonthItem::~HolidayMonthItem()
-{
-}
+HolidayMonthItem::~HolidayMonthItem() = default;
 
 bool HolidayMonthItem::greaterThanFallback(const MonthItem *other) const
 {

@@ -272,7 +272,7 @@ PreNode::Ptr IncidenceTreeModelPrivate::prenodeFromSourceRow(int row) const
 
     if (!item.isValid()) {
         // It's a Collection, ignore that, we only want items.
-        return PreNode::Ptr();
+        return {};
     }
 
     node->item = item;
@@ -645,7 +645,7 @@ QVariant IncidenceTreeModel::data(const QModelIndex &index, int role) const
 {
     Q_ASSERT(index.isValid());
     if (!index.isValid() || !sourceModel()) {
-        return QVariant();
+        return {};
     }
 
     QModelIndex sourceIndex = mapToSource(index);
@@ -694,14 +694,14 @@ QModelIndex IncidenceTreeModel::mapFromSource(const QModelIndex &sourceIndex) co
     }
 
     if (!sourceModel()) {
-        return QModelIndex();
+        return {};
     }
     Q_ASSERT(sourceIndex.column() < sourceModel()->columnCount());
     Q_ASSERT(sourceModel() == sourceIndex.model());
     const Akonadi::Item::Id id = sourceIndex.data(Akonadi::EntityTreeModel::ItemIdRole).toLongLong();
 
     if (id == -1 || !d->m_nodeMap.contains(id)) {
-        return QModelIndex();
+        return {};
     }
 
     const Node::Ptr node = d->m_nodeMap.value(id);
@@ -738,7 +738,7 @@ QModelIndex IncidenceTreeModel::mapToSource(const QModelIndex &proxyIndex) const
     if (!index.isValid()) {
         qCWarning(CALENDARVIEW_LOG) << "IncidenceTreeModel::mapToSource(): sourceModelIndex is invalid";
         Q_ASSERT(false);
-        return QModelIndex();
+        return {};
     }
     Q_ASSERT(index.model() == sourceModel());
 
@@ -758,11 +758,11 @@ QModelIndex IncidenceTreeModel::parent(const QModelIndex &child) const
     Node *childNode = reinterpret_cast<Node *>(child.internalPointer());
     if (d->m_removedNodes.contains(childNode)) {
         qCWarning(CALENDARVIEW_LOG) << "IncidenceTreeModel::parent() Node already removed.";
-        return QModelIndex();
+        return {};
     }
 
     if (!childNode->parentNode) {
-        return QModelIndex();
+        return {};
     }
 
     const QModelIndex parentIndex = d->indexForNode(childNode->parentNode);
@@ -770,7 +770,7 @@ QModelIndex IncidenceTreeModel::parent(const QModelIndex &child) const
     if (!parentIndex.isValid()) {
         qCWarning(CALENDARVIEW_LOG) << "IncidenceTreeModel::parent(): proxyModelIndex is invalid.";
         Q_ASSERT(false);
-        return QModelIndex();
+        return {};
     }
 
     Q_ASSERT(parentIndex.model() == this);
@@ -802,7 +802,7 @@ QModelIndex IncidenceTreeModel::index(int row, int column, const QModelIndex &pa
         if (row >= parentNode->directChilds.count()) {
             qCCritical(CALENDARVIEW_LOG) << "IncidenceTreeModel::index() row=" << row << "; column=" << column;
             Q_ASSERT(false);
-            return QModelIndex();
+            return {};
         }
 
         return createIndex(row, column, parentNode->directChilds.at(row).data());

@@ -75,7 +75,7 @@ public:
 
     KGantt::Span rowGeometry(const QModelIndex &idx) const override
     {
-        return KGantt::Span(idx.row() * mRowHeight, mRowHeight);
+        return {idx.row() * mRowHeight, mRowHeight};
     }
 
     int maximumItemHeight() const override
@@ -273,7 +273,7 @@ Akonadi::Item::List TimelineView::selectedIncidences() const
 
 KCalendarCore::DateList TimelineView::selectedIncidenceDates() const
 {
-    return KCalendarCore::DateList();
+    return {};
 }
 
 int TimelineView::currentDateCount() const

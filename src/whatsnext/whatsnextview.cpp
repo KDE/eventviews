@@ -41,9 +41,7 @@ WhatsNextView::WhatsNextView(QWidget *parent)
     topLayout->addWidget(mView);
 }
 
-WhatsNextView::~WhatsNextView()
-{
-}
+WhatsNextView::~WhatsNextView() = default;
 
 int WhatsNextView::currentDateCount() const
 {
