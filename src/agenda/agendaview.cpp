@@ -265,8 +265,7 @@ void AgendaHeader::setAgenda(Agenda *agenda)
 void AgendaHeader::updateMargins()
 {
     const int frameWidth = mAgenda ? mAgenda->scrollArea()->frameWidth() : 0;
-    const int scrollBarWidth = (mIsSideBySide || !mAgenda) ? 0 : mAgenda->verticalScrollBar()->width();
-
+    const int scrollBarWidth = (mIsSideBySide || !mAgenda || !mAgenda->verticalScrollBar()->isVisible()) ? 0 : mAgenda->verticalScrollBar()->width();
     const bool isLTR = (layoutDirection() == Qt::LeftToRight);
     const int leftSpacing = SPACING + frameWidth;
     const int rightSpacing = scrollBarWidth + frameWidth;
@@ -571,6 +570,7 @@ public:
     AgendaHeader *mTopDayLabelsFrame = nullptr;
     AgendaHeader *mBottomDayLabelsFrame = nullptr;
     QWidget *mAllDayFrame = nullptr;
+    QSpacerItem *mAllDayRightSpacer = nullptr;
     QWidget *mTimeBarHeaderFrame = nullptr;
     QSplitter *mSplitterAgenda = nullptr;
     QList<QLabel *> mTimeBarHeaders;
@@ -641,6 +641,8 @@ public:
      * that might be viisble
      */
     bool mightBeVisible(const KCalendarCore::Incidence::Ptr &incidence) const;
+
+    void updateAllDayRightSpacer();
 
 protected:
     /* reimplemented from KCalendarCore::Calendar::CalendarObserver */
@@ -1064,6 +1066,23 @@ void AgendaViewPrivate::insertIncidence(const KCalendarCore::Incidence::Ptr &inc
     }
 }
 
+void AgendaViewPrivate::updateAllDayRightSpacer()
+{
+    if (!mAllDayRightSpacer) {
+        return;
+    }
+
+    // Make the all-day and normal agendas line up with each other
+    auto verticalAgendaScrollBar = mAgenda->verticalScrollBar();
+    int margin = verticalAgendaScrollBar->isVisible() ? verticalAgendaScrollBar->width() : 0;
+    if (q->style()->styleHint(QStyle::SH_ScrollView_FrameOnlyAroundContents)) {
+        // Needed for some styles. Oxygen needs it, Plastique does not.
+        margin -= mAgenda->scrollArea()->frameWidth();
+    }
+    mAllDayRightSpacer->changeSize(margin, 0, QSizePolicy::Fixed);
+    mAllDayFrame->layout()->invalidate(); // needed to pick up change of space size
+}
+
 ////////////////////////////////////////////////////////////////////////////
 
 AgendaView::AgendaView(QDate start, QDate end, bool isInteractive, bool isSideBySide, QWidget *parent)
@@ -1127,6 +1146,7 @@ void AgendaView::init(QDate start, QDate end)
     // Create agenda
     auto scrollArea = new AgendaScrollArea(false, this, d->mIsInteractive, agendaFrame);
     d->mAgenda = scrollArea->agenda();
+    d->mAgenda->verticalScrollBar()->installEventFilter(this);
 
     // Create event indicator bars
     d->mEventIndicatorTop = new EventIndicator(EventIndicator::Top, scrollArea->viewport());
@@ -1165,13 +1185,8 @@ void AgendaView::init(QDate start, QDate end)
     d->mBottomDayLabelsFrame->setAgenda(d->mAgenda);
 
     if (!d->mIsSideBySide) {
-        /* Make the all-day and normal agendas line up with each other */
-        int margin = style()->pixelMetric(QStyle::PM_ScrollBarExtent);
-        if (style()->styleHint(QStyle::SH_ScrollView_FrameOnlyAroundContents)) {
-            // Needed for some styles. Oxygen needs it, Plastique does not.
-            margin -= scrollArea->frameWidth();
-        }
-        d->mAllDayFrame->layout()->addItem(new QSpacerItem(margin, 0));
+        d->mAllDayRightSpacer = new QSpacerItem(0, 0);
+        d->mAllDayFrame->layout()->addItem(d->mAllDayRightSpacer);
     }
 
     updateTimeBarWidth();
@@ -1211,6 +1226,17 @@ void AgendaView::showEvent(QShowEvent *showEvent)
     // agenda scrollbar width only set now, so redo margin calculation
     d->mTopDayLabelsFrame->updateMargins();
     d->mBottomDayLabelsFrame->updateMargins();
+    d->updateAllDayRightSpacer();
+}
+
+bool AgendaView::eventFilter(QObject *object, QEvent *event)
+{
+    if ((object == d->mAgenda->verticalScrollBar()) && ((event->type() == QEvent::Show) || (event->type() == QEvent::Hide))) {
+        d->mTopDayLabelsFrame->updateMargins();
+        d->mBottomDayLabelsFrame->updateMargins();
+        d->updateAllDayRightSpacer();
+    }
+    return false;
 }
 
 KCalendarCore::Calendar::Ptr AgendaView::calendar2(const KCalendarCore::Incidence::Ptr &incidence) const

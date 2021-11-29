@@ -214,6 +214,7 @@ protected Q_SLOTS:
 
 protected:
     void showEvent(QShowEvent *showEvent) override;
+    bool eventFilter(QObject *object, QEvent *event) override;
 
 private Q_SLOTS:
     void slotIncidenceSelected(const KCalendarCore::Incidence::Ptr &incidence, QDate date);
