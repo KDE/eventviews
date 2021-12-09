@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: CC0-1.0
+# SPDX-FileCopyrightText: none
 set(createcolorgui_test createcolorgui_test.cpp)
 add_executable(createcolorgui_test ${createcolorgui_test})
 ecm_mark_as_test(createcolorgui_test)

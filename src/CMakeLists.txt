@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: CC0-1.0
+# SPDX-FileCopyrightText: none
 add_definitions(-DTRANSLATION_DOMAIN=\"libeventviews\")
 add_library(KF5EventViews)
 add_library(KF5::EventViews ALIAS KF5EventViews)

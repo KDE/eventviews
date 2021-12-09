@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: none
+# SPDX-License-Identifier: BSD-3-Clause
 @PACKAGE_INIT@
 include(CMakeFindDependencyMacro)
 find_dependency(KF5Akonadi "@AKONADI_LIB_VERSION@")
