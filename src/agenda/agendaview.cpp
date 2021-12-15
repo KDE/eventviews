@@ -435,9 +435,7 @@ CalendarDecoration::Decoration *AgendaHeader::loadCalendarDecoration(const QStri
     for (it = list.constBegin(); it != list.constEnd(); ++it) {
         if ((*it)->desktopEntryName() == name) {
             KService::Ptr service = *it;
-            KPluginLoader loader(*service);
-
-            auto factory = loader.factory();
+            KPluginFactory *factory = KPluginFactory::loadFactory(KPluginMetaData(service->library())).plugin;
             if (!factory) {
                 qCDebug(CALENDARVIEW_LOG) << "Factory creation failed";
                 return nullptr;
