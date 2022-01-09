@@ -137,7 +137,7 @@ PRIVATE
   KF5::Contacts
 )
 
-target_include_directories(KF5EventViews INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF5}/EventViews/;${KDE_INSTALL_INCLUDEDIR_KF5}/eventviews>")
+target_include_directories(KF5EventViews INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/EventViews/;${KDE_INSTALL_INCLUDEDIR_KF}/eventviews>")
 target_include_directories(KF5EventViews PUBLIC "$<BUILD_INTERFACE:${eventviews_SOURCE_DIR}/src;${eventviews_BINARY_DIR}/src;>")
 
 set_target_properties(KF5EventViews PROPERTIES
@@ -232,7 +232,7 @@ ecm_generate_headers(eventviews_CamelCasewhatsnext_HEADERS
 ecm_generate_pri_file(BASE_NAME EventViews
   LIB_NAME KF5EventViews
   DEPS "KMime AkonadiCalendar" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR
-  ${KDE_INSTALL_INCLUDEDIR_KF5}/EventViews
+  ${KDE_INSTALL_INCLUDEDIR_KF}/EventViews
 )
 
 install(FILES
@@ -245,7 +245,7 @@ install(FILES
   ${eventviews_CamelCasejournal_HEADERS}
   ${eventviews_CamelCaselist_HEADERS}
   ${eventviews_CamelCasemonth_HEADERS}
-  DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/EventViews
+  DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/EventViews
   COMPONENT Devel
 )
 
@@ -261,7 +261,7 @@ install(FILES
   ${eventviews_journal_HEADERS}
   ${eventviews_list_HEADERS}
   ${eventviews_month_HEADERS}
-  DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/eventviews
+  DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/eventviews
   COMPONENT Devel
 )
 
