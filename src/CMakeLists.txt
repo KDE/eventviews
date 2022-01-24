@@ -137,7 +137,7 @@ PRIVATE
   KF5::Contacts
 )
 
-target_include_directories(KF5EventViews INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/EventViews/;${KDE_INSTALL_INCLUDEDIR_KF}/eventviews>")
+target_include_directories(KF5EventViews INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/EventViews/>")
 target_include_directories(KF5EventViews PUBLIC "$<BUILD_INTERFACE:${eventviews_SOURCE_DIR}/src;${eventviews_BINARY_DIR}/src;>")
 
 set_target_properties(KF5EventViews PROPERTIES
@@ -245,7 +245,7 @@ install(FILES
   ${eventviews_CamelCasejournal_HEADERS}
   ${eventviews_CamelCaselist_HEADERS}
   ${eventviews_CamelCasemonth_HEADERS}
-  DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/EventViews
+  DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/EventViews/EventViews
   COMPONENT Devel
 )
 
@@ -261,7 +261,7 @@ install(FILES
   ${eventviews_journal_HEADERS}
   ${eventviews_list_HEADERS}
   ${eventviews_month_HEADERS}
-  DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/eventviews
+  DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/EventViews/eventviews
   COMPONENT Devel
 )
 
