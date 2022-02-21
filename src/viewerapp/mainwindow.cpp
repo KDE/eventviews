@@ -18,7 +18,7 @@
 #include "timeline/timelineview.h"
 #include <CalendarSupport/CollectionSelection>
 
-#include <Akonadi/Calendar/IncidenceChanger>
+#include <Akonadi/IncidenceChanger>
 #include <KCalendarCore/Event>
 
 #include <Akonadi/Collection>

@@ -10,7 +10,7 @@
 
 #include <KCalendarCore/Incidence>
 
-#include <Akonadi/Calendar/ETMCalendar>
+#include <Akonadi/ETMCalendar>
 #include <Akonadi/Item>
 
 #include <QDateTime>

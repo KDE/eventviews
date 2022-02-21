@@ -15,8 +15,8 @@
 
 #include <CalendarSupport/Utils>
 
-#include <Akonadi/Calendar/ETMCalendar>
-#include <Akonadi/Calendar/IncidenceChanger>
+#include <Akonadi/ETMCalendar>
+#include <Akonadi/IncidenceChanger>
 
 #include <KCalUtils/IncidenceFormatter>
 #include <KCalendarCore/Visitor>

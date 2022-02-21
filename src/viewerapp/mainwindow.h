@@ -9,7 +9,7 @@
 
 #include "ui_mainwindow.h"
 
-#include <Akonadi/Calendar/ETMCalendar>
+#include <Akonadi/ETMCalendar>
 #include <QMainWindow>
 
 namespace Akonadi

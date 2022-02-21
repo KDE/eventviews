@@ -8,7 +8,7 @@
 
 #include "whatsnextview.h"
 
-#include <Akonadi/Calendar/ETMCalendar>
+#include <Akonadi/ETMCalendar>
 #include <CalendarSupport/KCalPrefs>
 #include <CalendarSupport/Utils>
 

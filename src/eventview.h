@@ -11,8 +11,8 @@
 
 #include "eventviews_export.h"
 
-#include <Akonadi/Calendar/ETMCalendar>
 #include <Akonadi/Collection>
+#include <Akonadi/ETMCalendar>
 #include <Akonadi/Item>
 
 #include <KCalendarCore/Incidence>

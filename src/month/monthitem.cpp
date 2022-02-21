@@ -12,7 +12,7 @@
 #include "prefs.h"
 #include "prefs_base.h" // Ugly, but needed for the Enums
 
-#include <Akonadi/Calendar/IncidenceChanger>
+#include <Akonadi/IncidenceChanger>
 #include <CalendarSupport/KCalPrefs>
 #include <CalendarSupport/Utils>
 

@@ -9,7 +9,7 @@
 #pragma once
 
 #include "eventview.h"
-#include <Akonadi/Calendar/IncidenceChanger>
+#include <Akonadi/IncidenceChanger>
 #include <KCalendarCore/Journal>
 
 class QScrollArea;

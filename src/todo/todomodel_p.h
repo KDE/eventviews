@@ -9,7 +9,7 @@
 
 #include "todomodel.h"
 
-#include <Akonadi/Calendar/ETMCalendar>
+#include <Akonadi/ETMCalendar>
 #include <Akonadi/Item>
 
 #include <QModelIndex>

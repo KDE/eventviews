@@ -10,8 +10,8 @@
 #include "eventviews_export.h"
 #include "prefs.h"
 
-#include <Akonadi/Calendar/ETMCalendar>
-#include <Akonadi/Calendar/IncidenceChanger>
+#include <Akonadi/ETMCalendar>
+#include <Akonadi/IncidenceChanger>
 #include <Akonadi/Item>
 
 #include <Akonadi/EntityTreeModel>

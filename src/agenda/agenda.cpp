@@ -14,8 +14,8 @@
 #include "agendaview.h"
 #include "prefs.h"
 
-#include <Akonadi/Calendar/ETMCalendar>
-#include <Akonadi/Calendar/IncidenceChanger>
+#include <Akonadi/ETMCalendar>
+#include <Akonadi/IncidenceChanger>
 #include <CalendarSupport/Utils>
 
 #include <KCalendarCore/Incidence>

@@ -11,8 +11,8 @@
 #pragma once
 
 #include "eventview.h"
-#include <Akonadi/Calendar/ETMCalendar>
-#include <Akonadi/Calendar/IncidenceChanger>
+#include <Akonadi/ETMCalendar>
+#include <Akonadi/IncidenceChanger>
 
 #include <QPointer>
 

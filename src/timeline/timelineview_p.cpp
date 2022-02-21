@@ -11,8 +11,8 @@
 
 #include <KGantt/KGanttGraphicsView>
 
-#include <Akonadi/Calendar/ETMCalendar>
-#include <Akonadi/Calendar/IncidenceChanger>
+#include <Akonadi/ETMCalendar>
+#include <Akonadi/IncidenceChanger>
 #include <CalendarSupport/CollectionSelection>
 #include <CalendarSupport/Utils>
 #include <KCalendarCore/OccurrenceIterator>

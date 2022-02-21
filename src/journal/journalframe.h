@@ -10,8 +10,8 @@
 
 #pragma once
 
-#include <Akonadi/Calendar/ETMCalendar>
-#include <Akonadi/Calendar/IncidenceChanger>
+#include <Akonadi/ETMCalendar>
+#include <Akonadi/IncidenceChanger>
 #include <Akonadi/Item>
 
 #include <QDate>
