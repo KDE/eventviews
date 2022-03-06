@@ -8,8 +8,8 @@
 #include "agendaview.h"
 #include "calendarview_debug.h"
 #include "helper.h"
-
 #include <CalendarSupport/Utils>
+#include <QSharedPointer>
 
 using namespace EventViews;
 
@@ -96,13 +96,13 @@ QString MultiViewCalendar::iconForIncidence(const KCalendarCore::Incidence::Ptr 
 bool MultiViewCalendar::isValid(const KCalendarCore::Incidence::Ptr &incidence) const
 {
     ViewCalendar::Ptr cal = findCalendar(incidence);
-    return cal;
+    return !cal.isNull();
 }
 
 bool MultiViewCalendar::isValid(const QString &incidenceIdentifier) const
 {
     ViewCalendar::Ptr cal = findCalendar(incidenceIdentifier);
-    return cal;
+    return !cal.isNull();
 }
 
 QColor MultiViewCalendar::resourceColor(const KCalendarCore::Incidence::Ptr &incidence) const

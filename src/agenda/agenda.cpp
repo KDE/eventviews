@@ -203,7 +203,7 @@ public:
         , mWorkingHoursYTop(0)
         , mWorkingHoursYBottom(0)
         , mHasSelection(false)
-        , mSelectedId(-1)
+        , mSelectedId(QChar(-1))
         , mMarcusBains(nullptr)
         , mActionType(Agenda::NOP)
         , mItemMoved(false)
@@ -406,7 +406,7 @@ void Agenda::init()
     d->mItemMoved = false;
 
     d->mSelectedItem = nullptr;
-    d->mSelectedId = -1;
+    d->mSelectedId = QChar(-1);
 
     setAcceptDrops(true);
     installEventFilter(this);

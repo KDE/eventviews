@@ -28,7 +28,11 @@ public:
     }
 
     /** Reimplemented from QTextBrowser to handle links. */
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     void setSource(const QUrl &name) override;
+#else
+    void doSetSource(const QUrl &name, QTextDocument::ResourceType type = QTextDocument::UnknownResource) override;
+#endif
 
 Q_SIGNALS:
     void showIncidence(const QString &uid);
