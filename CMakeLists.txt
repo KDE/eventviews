@@ -6,7 +6,7 @@ set(PIM_VERSION "5.19.80")
 project(eventviews VERSION ${PIM_VERSION})
 
 # ECM setup
-set(KF5_MIN_VERSION "5.91.0")
+set(KF5_MIN_VERSION "5.92.0")
 
 find_package(ECM ${KF5_MIN_VERSION} CONFIG REQUIRED)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
