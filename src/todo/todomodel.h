@@ -16,8 +16,8 @@
 
 #include <Akonadi/EntityTreeModel>
 #include <KCalendarCore/Todo>
-#include <QAbstractItemModel>
-#include <QAbstractProxyModel>
+
+#include <KExtraColumnsProxyModel>
 
 #include <memory>
 
@@ -25,7 +25,8 @@ class QMimeData;
 
 class TodoModelPrivate;
 
-class EVENTVIEWS_EXPORT TodoModel : public QAbstractProxyModel
+/** Expands an IncidenceTreeModel by additional columns for showing todos. */
+class EVENTVIEWS_EXPORT TodoModel : public KExtraColumnsProxyModel
 {
     Q_OBJECT
 
@@ -65,13 +66,12 @@ public:
 
     ~TodoModel() override;
 
-    Q_REQUIRED_RESULT int rowCount(const QModelIndex &parent = QModelIndex()) const override;
-
     Q_REQUIRED_RESULT int columnCount(const QModelIndex &parent = QModelIndex()) const override;
 
     void setSourceModel(QAbstractItemModel *sourceModel) override;
 
     Q_REQUIRED_RESULT QVariant data(const QModelIndex &index, int role) const override;
+    QVariant extraColumnData(const QModelIndex &parent, int row, int extraColumn, int role = Qt::DisplayRole) const override;
 
     Q_REQUIRED_RESULT bool setData(const QModelIndex &index, const QVariant &value, int role) override;
 
@@ -90,16 +90,6 @@ public:
     Q_REQUIRED_RESULT Qt::DropActions supportedDropActions() const override;
 
     Q_REQUIRED_RESULT Qt::ItemFlags flags(const QModelIndex &index) const override;
-
-    Q_REQUIRED_RESULT QModelIndex parent(const QModelIndex &child) const override;
-
-    Q_REQUIRED_RESULT QModelIndex mapFromSource(const QModelIndex &sourceIndex) const override;
-
-    Q_REQUIRED_RESULT QModelIndex mapToSource(const QModelIndex &proxyIndex) const override;
-
-    Q_REQUIRED_RESULT QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const override;
-
-    Q_REQUIRED_RESULT QModelIndex buddy(const QModelIndex &index) const override;
 
     Q_REQUIRED_RESULT QHash<int, QByteArray> roleNames() const override;
 

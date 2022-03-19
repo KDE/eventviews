@@ -32,28 +32,10 @@ public:
 public:
     Akonadi::ETMCalendar::Ptr m_calendar;
     Akonadi::IncidenceChanger *m_changer = nullptr;
-
-    // For adjusting persistent indexes
-    QList<QPersistentModelIndex> m_layoutChangePersistentIndexes;
-    QModelIndexList m_persistentIndexes;
-    QList<int> m_columns;
     EventViews::PrefsPtr m_preferences;
 
 private Q_SLOTS:
     void onDataChanged(const QModelIndex &begin, const QModelIndex &end);
-    void onHeaderDataChanged(Qt::Orientation orientation, int first, int last);
-
-    void onRowsAboutToBeInserted(const QModelIndex &parent, int begin, int end);
-    void onRowsInserted(const QModelIndex &parent, int begin, int end);
-    void onRowsAboutToBeRemoved(const QModelIndex &parent, int begin, int end);
-    void onRowsRemoved(const QModelIndex &parent, int begin, int end);
-    void onRowsAboutToBeMoved(const QModelIndex &sourceParent, int sourceStart, int sourceEnd, const QModelIndex &destinationParent, int destinationRow);
-    void onRowsMoved(const QModelIndex &, int, int, const QModelIndex &, int);
-
-    void onModelAboutToBeReset();
-    void onModelReset();
-    void onLayoutAboutToBeChanged();
-    void onLayoutChanged();
 
 private:
     TodoModel *const q;

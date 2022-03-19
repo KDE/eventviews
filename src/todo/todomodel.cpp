@@ -27,25 +27,6 @@
 #include <QIcon>
 #include <QMimeData>
 
-struct SourceModelIndex {
-    SourceModelIndex(int _r, int _c, void *_p, QAbstractItemModel *_m)
-        : r(_r)
-        , c(_c)
-        , p(_p)
-        , m(_m)
-    {
-    }
-
-    operator QModelIndex()
-    {
-        return reinterpret_cast<QModelIndex &>(*this);
-    }
-
-    int r, c;
-    void *p;
-    const QAbstractItemModel *m = nullptr;
-};
-
 static bool isDueToday(const KCalendarCore::Todo::Ptr &todo)
 {
     return !todo->isCompleted() && todo->dtDue().date() == QDate::currentDate();
@@ -95,107 +76,8 @@ void TodoModelPrivate::onDataChanged(const QModelIndex &begin, const QModelIndex
     Q_EMIT q->dataChanged(proxyBegin, proxyEnd.sibling(proxyEnd.row(), TodoModel::ColumnCount - 1));
 }
 
-void TodoModelPrivate::onHeaderDataChanged(Qt::Orientation orientation, int first, int last)
-{
-    Q_EMIT q->headerDataChanged(orientation, first, last);
-}
-
-void TodoModelPrivate::onRowsAboutToBeInserted(const QModelIndex &parent, int begin, int end)
-{
-    const QModelIndex index = q->mapFromSource(parent);
-    Q_ASSERT(!(parent.isValid() ^ index.isValid())); // Both must be valid, or both invalid
-    Q_ASSERT(!(index.isValid() && index.model() != q));
-
-    q->beginInsertRows(index, begin, end);
-}
-
-void TodoModelPrivate::onRowsInserted(const QModelIndex &, int, int)
-{
-    q->endInsertRows();
-}
-
-void TodoModelPrivate::onRowsAboutToBeRemoved(const QModelIndex &parent, int begin, int end)
-{
-    const QModelIndex index = q->mapFromSource(parent);
-    Q_ASSERT(!(parent.isValid() ^ index.isValid())); // Both must be valid, or both invalid
-    Q_ASSERT(!(index.isValid() && index.model() != q));
-
-    q->beginRemoveRows(index, begin, end);
-}
-
-void TodoModelPrivate::onRowsRemoved(const QModelIndex &, int, int)
-{
-    q->endRemoveRows();
-}
-
-void TodoModelPrivate::onRowsAboutToBeMoved(const QModelIndex &sourceParent,
-                                            int sourceStart,
-                                            int sourceEnd,
-                                            const QModelIndex &destinationParent,
-                                            int destinationRow)
-{
-    Q_UNUSED(sourceParent)
-    Q_UNUSED(sourceStart)
-    Q_UNUSED(sourceEnd)
-    Q_UNUSED(destinationParent)
-    Q_UNUSED(destinationRow)
-    /* Disabled for now, layoutAboutToBeChanged() is emitted
-    q->beginMoveRows( q->mapFromSource( sourceParent ), sourceStart, sourceEnd,
-                      q->mapFromSource( destinationParent ), destinationRow );
-    */
-}
-
-void TodoModelPrivate::onRowsMoved(const QModelIndex &, int, int, const QModelIndex &, int)
-{
-    /*q->endMoveRows();*/
-}
-
-void TodoModelPrivate::onModelAboutToBeReset()
-{
-    q->beginResetModel();
-}
-
-void TodoModelPrivate::onModelReset()
-{
-    q->endResetModel();
-}
-
-void TodoModelPrivate::onLayoutAboutToBeChanged()
-{
-    Q_ASSERT(m_persistentIndexes.isEmpty());
-    Q_ASSERT(m_layoutChangePersistentIndexes.isEmpty());
-    Q_ASSERT(m_columns.isEmpty());
-    const QModelIndexList persistentIndexes = q->persistentIndexList();
-    for (const QModelIndex &persistentIndex : persistentIndexes) {
-        m_persistentIndexes << persistentIndex; // Stuff we have to update onLayoutChanged
-        Q_ASSERT(persistentIndex.isValid());
-        QModelIndex index_col0 = q->createIndex(persistentIndex.row(), 0, persistentIndex.internalPointer());
-        const QPersistentModelIndex srcPersistentIndex = q->mapToSource(index_col0);
-        Q_ASSERT(srcPersistentIndex.isValid());
-        m_layoutChangePersistentIndexes << srcPersistentIndex;
-        m_columns << persistentIndex.column();
-    }
-    Q_EMIT q->layoutAboutToBeChanged();
-}
-
-void TodoModelPrivate::onLayoutChanged()
-{
-    for (int i = 0; i < m_persistentIndexes.size(); ++i) {
-        QModelIndex newIndex_col0 = q->mapFromSource(m_layoutChangePersistentIndexes.at(i));
-        Q_ASSERT(newIndex_col0.isValid());
-        const int column = m_columns.at(i);
-        QModelIndex newIndex = column == 0 ? newIndex_col0 : q->createIndex(newIndex_col0.row(), column, newIndex_col0.internalPointer());
-        q->changePersistentIndex(m_persistentIndexes.at(i), newIndex);
-    }
-
-    m_layoutChangePersistentIndexes.clear();
-    m_persistentIndexes.clear();
-    m_columns.clear();
-    Q_EMIT q->layoutChanged();
-}
-
 TodoModel::TodoModel(const EventViews::PrefsPtr &preferences, QObject *parent)
-    : QAbstractProxyModel(parent)
+    : KExtraColumnsProxyModel(parent)
     , d(new TodoModelPrivate(preferences, this))
 {
     setObjectName(QStringLiteral("TodoModel"));
@@ -421,6 +303,16 @@ QVariant TodoModel::data(const QModelIndex &index, int role) const
     return {};
 }
 
+QVariant TodoModel::extraColumnData(const QModelIndex &parent, int row, int extraColumn, int role) const
+{
+    // we customize all columns, not just the extra ones, and thus do all that in ::data()
+    Q_UNUSED(parent);
+    Q_UNUSED(row);
+    Q_UNUSED(extraColumn);
+    Q_UNUSED(role);
+    return {};
+}
+
 bool TodoModel::setData(const QModelIndex &index, const QVariant &value, int role)
 {
     Q_ASSERT(index.isValid());
@@ -508,19 +400,6 @@ bool TodoModel::setData(const QModelIndex &index, const QVariant &value, int rol
     }
 }
 
-int TodoModel::rowCount(const QModelIndex &parent) const
-{
-    if (sourceModel()) {
-        if (parent.isValid()) {
-            QModelIndex parent_col0 = createIndex(parent.row(), 0, parent.internalPointer());
-            return sourceModel()->rowCount(mapToSource(parent_col0));
-        } else {
-            return sourceModel()->rowCount();
-        }
-    }
-    return 0;
-}
-
 int TodoModel::columnCount(const QModelIndex &) const
 {
     return ColumnCount;
@@ -536,59 +415,12 @@ void TodoModel::setSourceModel(QAbstractItemModel *model)
 
     if (sourceModel()) {
         disconnect(sourceModel(), SIGNAL(dataChanged(QModelIndex, QModelIndex)), d.get(), SLOT(onDataChanged(QModelIndex, QModelIndex)));
-        disconnect(sourceModel(), SIGNAL(headerDataChanged(Qt::Orientation, int, int)), d.get(), SLOT(onHeaderDataChanged(Qt::Orientation, int, int)));
-
-        disconnect(sourceModel(), SIGNAL(rowsInserted(QModelIndex, int, int)), d.get(), SLOT(onRowsInserted(QModelIndex, int, int)));
-
-        disconnect(sourceModel(), SIGNAL(rowsRemoved(QModelIndex, int, int)), d.get(), SLOT(onRowsRemoved(QModelIndex, int, int)));
-
-        disconnect(sourceModel(),
-                   SIGNAL(rowsMoved(QModelIndex, int, int, QModelIndex, int)),
-                   d.get(),
-                   SLOT(onRowsMoved(QModelIndex, int, int, QModelIndex, int)));
-
-        disconnect(sourceModel(), SIGNAL(rowsAboutToBeInserted(QModelIndex, int, int)), d.get(), SLOT(onRowsAboutToBeInserted(QModelIndex, int, int)));
-
-        disconnect(sourceModel(), SIGNAL(rowsAboutToBeRemoved(QModelIndex, int, int)), d.get(), SLOT(onRowsAboutToBeRemoved(QModelIndex, int, int)));
-
-        disconnect(sourceModel(), SIGNAL(modelAboutToBeReset()), d.get(), SLOT(onModelAboutToBeReset()));
-
-        disconnect(sourceModel(), SIGNAL(modelReset()), d.get(), SLOT(onModelReset()));
-
-        disconnect(sourceModel(), SIGNAL(layoutAboutToBeChanged()), d.get(), SLOT(onLayoutAboutToBeChanged()));
-
-        disconnect(sourceModel(), SIGNAL(layoutChanged()), d.get(), SLOT(onLayoutChanged()));
     }
 
-    QAbstractProxyModel::setSourceModel(model);
+    KExtraColumnsProxyModel::setSourceModel(model);
 
     if (sourceModel()) {
         connect(sourceModel(), SIGNAL(dataChanged(QModelIndex, QModelIndex)), d.get(), SLOT(onDataChanged(QModelIndex, QModelIndex)));
-
-        connect(sourceModel(), SIGNAL(headerDataChanged(Qt::Orientation, int, int)), d.get(), SLOT(onHeaderDataChanged(Qt::Orientation, int, int)));
-
-        connect(sourceModel(), SIGNAL(rowsAboutToBeInserted(QModelIndex, int, int)), d.get(), SLOT(onRowsAboutToBeInserted(QModelIndex, int, int)));
-
-        connect(sourceModel(), SIGNAL(rowsInserted(QModelIndex, int, int)), d.get(), SLOT(onRowsInserted(QModelIndex, int, int)));
-
-        connect(sourceModel(), SIGNAL(rowsAboutToBeRemoved(QModelIndex, int, int)), d.get(), SLOT(onRowsAboutToBeRemoved(QModelIndex, int, int)));
-
-        connect(sourceModel(), SIGNAL(rowsRemoved(QModelIndex, int, int)), d.get(), SLOT(onRowsRemoved(QModelIndex, int, int)));
-
-        connect(sourceModel(),
-                SIGNAL(rowsAboutToBeMoved(QModelIndex, int, int, QModelIndex, int)),
-                d.get(),
-                SLOT(onRowsAboutToBeMoved(QModelIndex, int, int, QModelIndex, int)));
-
-        connect(sourceModel(), SIGNAL(rowsMoved(QModelIndex, int, int, QModelIndex, int)), d.get(), SLOT(onRowsMoved(QModelIndex, int, int, QModelIndex, int)));
-
-        connect(sourceModel(), SIGNAL(modelAboutToBeReset()), d.get(), SLOT(onModelAboutToBeReset()));
-
-        connect(sourceModel(), SIGNAL(modelReset()), d.get(), SLOT(onModelReset()));
-
-        connect(sourceModel(), SIGNAL(layoutAboutToBeChanged()), d.get(), SLOT(onLayoutAboutToBeChanged()));
-
-        connect(sourceModel(), SIGNAL(layoutChanged()), d.get(), SLOT(onLayoutChanged()));
     }
 
     endResetModel();
@@ -777,7 +609,7 @@ Qt::ItemFlags TodoModel::flags(const QModelIndex &index) const
         return Qt::NoItemFlags;
     }
 
-    Qt::ItemFlags ret = QAbstractItemModel::flags(index);
+    Qt::ItemFlags ret = KExtraColumnsProxyModel::flags(index);
 
     const auto item = data(index, Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
 
@@ -818,82 +650,6 @@ Qt::ItemFlags TodoModel::flags(const QModelIndex &index) const
         ret |= Qt::ItemIsUserCheckable | Qt::ItemIsDropEnabled;
     }
     return ret;
-}
-
-QModelIndex TodoModel::mapFromSource(const QModelIndex &sourceIndex) const
-{
-    if (!sourceModel() || !sourceIndex.isValid()) {
-        return {};
-    }
-
-    Q_ASSERT(sourceIndex.internalPointer());
-
-    return createIndex(sourceIndex.row(), 0, sourceIndex.internalPointer());
-}
-
-QModelIndex TodoModel::mapToSource(const QModelIndex &proxyIndex) const
-{
-    if (!sourceModel() || !proxyIndex.isValid()) {
-        return {};
-    }
-
-    if (proxyIndex.column() != 0) {
-        qCCritical(CALENDARVIEW_LOG) << "Map to source called with column>0, but source model only has 1 column";
-        Q_ASSERT(false);
-    }
-
-    Q_ASSERT(proxyIndex.internalPointer());
-
-    // we convert to column 0
-    const QModelIndex sourceIndex = SourceModelIndex(proxyIndex.row(), 0, proxyIndex.internalPointer(), sourceModel());
-
-    return sourceIndex;
-}
-
-QModelIndex TodoModel::index(int row, int column, const QModelIndex &parent) const
-{
-    if (!sourceModel()) {
-        return {};
-    }
-
-    Q_ASSERT(!parent.isValid() || parent.internalPointer());
-    QModelIndex parent_col0 = parent.isValid() ? createIndex(parent.row(), 0, parent.internalPointer()) : QModelIndex();
-
-    // Lets preserve the original internalPointer
-    const QModelIndex index = mapFromSource(sourceModel()->index(row, 0, mapToSource(parent_col0)));
-
-    Q_ASSERT(!index.isValid() || index.internalPointer());
-
-    if (index.isValid()) {
-        return createIndex(row, column, index.internalPointer());
-    }
-
-    return {};
-}
-
-QModelIndex TodoModel::parent(const QModelIndex &child) const
-{
-    if (!sourceModel() || !child.isValid()) {
-        return {};
-    }
-
-    Q_ASSERT(child.internalPointer());
-    const QModelIndex child_col0 = createIndex(child.row(), 0, child.internalPointer());
-    QModelIndex parentIndex = mapFromSource(sourceModel()->parent(mapToSource(child_col0)));
-
-    Q_ASSERT(!parentIndex.isValid() || parentIndex.internalPointer());
-    if (parentIndex.isValid()) { // preserve original column
-        return createIndex(parentIndex.row(), child.column(), parentIndex.internalPointer());
-    }
-
-    return {};
-}
-
-QModelIndex TodoModel::buddy(const QModelIndex &index) const
-{
-    // We reimplement because the default implementation calls mapToSource() and
-    // source model doesn't have the same number of columns.
-    return index;
 }
 
 QHash<int, QByteArray> TodoModel::roleNames() const

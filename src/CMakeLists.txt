@@ -120,6 +120,7 @@ PUBLIC
   KF5::CalendarCore
   KF5::CalendarUtils
   KF5::AkonadiCalendar
+  KF5::ItemModels
 PRIVATE
   KF5::Holidays
   KF5::Completion
