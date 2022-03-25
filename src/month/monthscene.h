@@ -330,4 +330,3 @@ private:
     MonthView *mMonthView = nullptr;
 };
 }
-

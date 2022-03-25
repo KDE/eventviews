@@ -85,4 +85,3 @@ Q_REQUIRED_RESULT int yearDiff(QDate start, QDate end);
 */
 Q_REQUIRED_RESULT QPixmap cachedSmallIcon(const QString &name);
 }
-

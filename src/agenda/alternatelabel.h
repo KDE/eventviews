@@ -40,4 +40,3 @@ private:
     int getIndent() const;
 };
 }
-

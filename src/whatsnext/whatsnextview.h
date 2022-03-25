@@ -88,4 +88,3 @@ private:
     Akonadi::Item::List mTodos;
 };
 }
-

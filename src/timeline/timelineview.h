@@ -27,7 +27,6 @@ class EVENTVIEWS_EXPORT TimelineView : public EventView
 {
     Q_OBJECT
 public:
-
     /**
      * Create a TimelineView.
      * @param preferences Preferences object for user-configurable aspects of the view.
@@ -50,13 +49,11 @@ public:
 
     // Unused.
     /** @deprecated Use EventView::startDateTime. */
-    [[deprecated("Use EventView::startDateTime.")]]
-    Q_REQUIRED_RESULT QDate startDate() const;
+    [[deprecated("Use EventView::startDateTime.")]] Q_REQUIRED_RESULT QDate startDate() const;
 
     // Unused.
     /** @deprecated Use EventView::endDateTime.   */
-    [[deprecated("Use EventView::endDateTime.")]]
-    Q_REQUIRED_RESULT QDate endDate() const;
+    [[deprecated("Use EventView::endDateTime.")]] Q_REQUIRED_RESULT QDate endDate() const;
 
     void showIncidences(const Akonadi::Item::List &incidenceList, const QDate &date) override;
     void updateView() override;
@@ -74,4 +71,3 @@ private:
     std::unique_ptr<TimelineViewPrivate> const d;
 };
 } // namespace EventViews
-

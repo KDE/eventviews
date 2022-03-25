@@ -212,7 +212,7 @@ void MonthGraphicsView::drawBackground(QPainter *p, const QRectF &rect)
     */
     int columnWidth = mScene->columnWidth();
     int rowHeight = mScene->rowHeight();
-    QDate todayDate {QDate::currentDate()};
+    QDate todayDate{QDate::currentDate()};
 
     const QList<QDate> workDays = CalendarSupport::workDays(mMonthView->actualStartDateTime().date(), mMonthView->actualEndDateTime().date());
     QRect todayRect;

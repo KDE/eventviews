@@ -83,4 +83,3 @@ private:
     friend class IncidenceTreeModelPrivate;
     std::unique_ptr<IncidenceTreeModelPrivate> const d;
 };
-

@@ -51,4 +51,3 @@ private Q_SLOTS:
     void delayedInit();
     void addViewTriggered(QAction *action);
 };
-

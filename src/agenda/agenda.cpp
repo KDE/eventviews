@@ -1767,7 +1767,7 @@ AgendaItem::QPtr Agenda::insertItem(const KCalendarCore::Incidence::Ptr &inciden
     }
 
     if (YTop >= d->mRows) {
-        YBottom -= YTop - (d->mRows - 1);  // Slide the item up into view.
+        YBottom -= YTop - (d->mRows - 1); // Slide the item up into view.
         YTop = d->mRows - 1;
     }
     if (YBottom <= YTop) {

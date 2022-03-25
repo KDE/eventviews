@@ -58,4 +58,3 @@ private Q_SLOTS:
 private:
     TodoModel *const q;
 };
-

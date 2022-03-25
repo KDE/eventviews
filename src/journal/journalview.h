@@ -79,4 +79,3 @@ private:
     //    DateList mSelectedDates;  // List of dates to be displayed
 };
 }
-

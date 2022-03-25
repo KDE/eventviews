@@ -240,4 +240,3 @@ private:
     std::unique_ptr<AgendaViewPrivate> const d;
 };
 }
-

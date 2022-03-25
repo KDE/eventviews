@@ -68,4 +68,3 @@ public: /// Members
     Akonadi::Collection::Id mCollectionId;
 };
 } // EventViews
-

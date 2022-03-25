@@ -32,4 +32,3 @@ private:
     Qt::KeyboardModifiers mModifiers;
     QString mClickMessage;
 };
-

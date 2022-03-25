@@ -20,9 +20,7 @@ private Q_SLOTS:
     void stableOrder();
 
 public:
-
     IncidenceMonthItem *eventItem(QDate start, QDate end);
-
 };
 
 /**
@@ -38,16 +36,16 @@ void MonthItemOrderTest::longerInstancesFirst()
         QDate d = startDate.addDays(offset);
 
         IncidenceMonthItem *shortEvent = eventItem(d, d);
-        QVERIFY(   MonthItem::greaterThan(longEvent, shortEvent));
-        QVERIFY( ! MonthItem::greaterThan(shortEvent, longEvent));
-        QVERIFY(   MonthItem::greaterThan(longHoliday, shortEvent));
-        QVERIFY( ! MonthItem::greaterThan(shortEvent, longHoliday));
+        QVERIFY(MonthItem::greaterThan(longEvent, shortEvent));
+        QVERIFY(!MonthItem::greaterThan(shortEvent, longEvent));
+        QVERIFY(MonthItem::greaterThan(longHoliday, shortEvent));
+        QVERIFY(!MonthItem::greaterThan(shortEvent, longHoliday));
 
         auto *shortHoliday = new HolidayMonthItem(nullptr, d, QStringLiteral(""));
-        QVERIFY(   MonthItem::greaterThan(longEvent, shortHoliday));
-        QVERIFY( ! MonthItem::greaterThan(shortHoliday, longEvent));
-        QVERIFY(   MonthItem::greaterThan(longHoliday, shortHoliday));
-        QVERIFY( ! MonthItem::greaterThan(shortHoliday, longHoliday));
+        QVERIFY(MonthItem::greaterThan(longEvent, shortHoliday));
+        QVERIFY(!MonthItem::greaterThan(shortHoliday, longEvent));
+        QVERIFY(MonthItem::greaterThan(longHoliday, shortHoliday));
+        QVERIFY(!MonthItem::greaterThan(shortHoliday, longHoliday));
     }
 }
 
@@ -59,8 +57,8 @@ void MonthItemOrderTest::holidaysFirst()
     QDate startDate(2000, 01, 01);
     IncidenceMonthItem *event = eventItem(startDate, startDate);
     auto *holiday = new HolidayMonthItem(nullptr, startDate, QStringLiteral(""));
-    QVERIFY( ! MonthItem::greaterThan(event, holiday));
-    QVERIFY(   MonthItem::greaterThan(holiday, event));
+    QVERIFY(!MonthItem::greaterThan(event, holiday));
+    QVERIFY(MonthItem::greaterThan(holiday, event));
 }
 
 /**
@@ -73,11 +71,11 @@ void MonthItemOrderTest::stableOrder()
 
     auto *holiday = new HolidayMonthItem(nullptr, startDate, QStringLiteral(""));
     auto *otherHoliday = new HolidayMonthItem(nullptr, startDate, QStringLiteral(""));
-    QVERIFY( ! (MonthItem::greaterThan(otherHoliday, holiday) && MonthItem::greaterThan(holiday, otherHoliday)));
+    QVERIFY(!(MonthItem::greaterThan(otherHoliday, holiday) && MonthItem::greaterThan(holiday, otherHoliday)));
 
     IncidenceMonthItem *event = eventItem(startDate, startDate);
     IncidenceMonthItem *otherEvent = eventItem(startDate, startDate);
-    QVERIFY( ! (MonthItem::greaterThan(otherEvent, event) && MonthItem::greaterThan(event, otherEvent)));
+    QVERIFY(!(MonthItem::greaterThan(otherEvent, event) && MonthItem::greaterThan(event, otherEvent)));
 }
 
 IncidenceMonthItem *MonthItemOrderTest::eventItem(QDate start, QDate end)

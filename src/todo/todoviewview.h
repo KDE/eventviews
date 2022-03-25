@@ -45,4 +45,3 @@ private Q_SLOTS:
     void toggleColumnHidden(QAction *action);
     void expandParent();
 };
-

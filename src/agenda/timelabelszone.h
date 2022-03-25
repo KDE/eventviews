@@ -60,4 +60,3 @@ private:
     QList<QScrollArea *> mTimeLabelsList;
 };
 }
-

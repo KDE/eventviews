@@ -129,4 +129,3 @@ private:
     Akonadi::IncidenceChanger *mChanger = nullptr;
 };
 }
-

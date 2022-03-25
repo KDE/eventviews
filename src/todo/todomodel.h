@@ -107,4 +107,3 @@ private:
     friend class TodoModelPrivate;
     std::unique_ptr<TodoModelPrivate> const d;
 };
-

@@ -212,4 +212,3 @@ private:
 
 using PrefsPtr = QSharedPointer<Prefs>;
 }
-

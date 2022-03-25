@@ -178,4 +178,3 @@ private:
     QTimer *mResizeColumnsTimer = nullptr;
 };
 }
-

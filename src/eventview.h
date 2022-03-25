@@ -496,4 +496,3 @@ private:
     Q_DECLARE_PRIVATE(EventView)
 };
 }
-

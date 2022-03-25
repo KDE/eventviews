@@ -132,4 +132,3 @@ public:
 private:
     QTextDocument *m_textDoc = nullptr;
 };
-

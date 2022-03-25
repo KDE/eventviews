@@ -58,4 +58,3 @@ private:
     Akonadi::TagSelectionComboBox *mCategoryCombo = nullptr;
     KPIM::KCheckComboBox *mPriorityCombo = nullptr;
 };
-

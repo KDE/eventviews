@@ -19,4 +19,3 @@ private:
     void createListWidgetItem();
     QListWidget *mListWidget = nullptr;
 };
-

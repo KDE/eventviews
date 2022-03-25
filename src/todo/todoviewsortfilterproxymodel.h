@@ -51,4 +51,3 @@ private:
     Qt::SortOrder mSortOrder = Qt::AscendingOrder;
     EventViews::PrefsPtr mPreferences;
 };
-

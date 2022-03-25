@@ -82,4 +82,3 @@ private:
     QFrame *mMousePos = nullptr; // shows a marker for the current mouse position in y direction
 };
 }
-

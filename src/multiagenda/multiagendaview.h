@@ -92,4 +92,3 @@ private:
     std::unique_ptr<MultiAgendaViewPrivate> const d;
 };
 }
-

@@ -40,4 +40,3 @@ private:
     std::unique_ptr<TimeScaleConfigDialogPrivate> const d;
 };
 }
-

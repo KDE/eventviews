@@ -392,4 +392,3 @@ private:
     QString mName;
 };
 }
-

@@ -339,4 +339,3 @@ private:
     Agenda *mAgenda = nullptr;
 };
 }
-

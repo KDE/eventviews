@@ -61,4 +61,3 @@ private:
     TimelineView *const q;
 };
 } // namespace EventViews
-
