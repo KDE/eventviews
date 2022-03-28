@@ -12,7 +12,6 @@
 #include <CalendarSupport/KCalPrefs>
 
 #include <Akonadi/TagSelectionComboBox>
-#include <CalendarSupport/CategoryConfig>
 
 #include <Libkdepim/KCheckComboBox>
 

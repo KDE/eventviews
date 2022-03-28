@@ -11,7 +11,6 @@
 #include "todoviewview.h"
 
 #include <Akonadi/TagSelectionComboBox>
-#include <CalendarSupport/CategoryConfig>
 #include <CalendarSupport/CategoryHierarchyReader>
 
 #include <KCalendarCore/CalFilter>
