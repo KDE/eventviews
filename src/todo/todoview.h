@@ -23,11 +23,6 @@ class TodoViewQuickSearch;
 class TodoViewSortFilterProxyModel;
 class TodoViewView;
 
-namespace CalendarSupport
-{
-class KDatePickerPopup;
-}
-
 namespace Akonadi
 {
 class ETMViewStateSaver;
@@ -39,6 +34,7 @@ class QModelIndex;
 class QToolButton;
 class QTimer;
 class KConfig;
+class KDatePickerPopup;
 namespace EventViews
 {
 /**
@@ -160,8 +156,8 @@ private:
     QToolButton *mFlatViewButton = nullptr;
 
     QMenu *mItemPopupMenu = nullptr;
-    CalendarSupport::KDatePickerPopup *mCopyPopupMenu = nullptr;
-    CalendarSupport::KDatePickerPopup *mMovePopupMenu = nullptr;
+    KDatePickerPopup *mCopyPopupMenu = nullptr;
+    KDatePickerPopup *mMovePopupMenu = nullptr;
     QMenu *mPriorityPopupMenu = nullptr;
     QMenu *mPercentageCompletedPopupMenu = nullptr;
     QList<QAction *> mItemPopupMenuItemOnlyEntries;

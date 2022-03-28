@@ -28,11 +28,11 @@
 #include <Akonadi/IncidenceTreeModel>
 
 #include <CalendarSupport/KCalPrefs>
-#include <CalendarSupport/KDatePickerPopup>
 
 #include <KCalendarCore/CalFormat>
 
 #include <KConfig>
+#include <KDatePickerPopup>
 #include <KJob>
 #include <KMessageBox>
 
@@ -373,26 +373,20 @@ TodoView::TodoView(const EventViews::PrefsPtr &prefs, bool sidebarView, QWidget 
 
     mItemPopupMenu->addSeparator();
 
-    mCopyPopupMenu = new CalendarSupport::KDatePickerPopup(CalendarSupport::KDatePickerPopup::NoDate | CalendarSupport::KDatePickerPopup::DatePicker
-                                                               | CalendarSupport::KDatePickerPopup::Words,
-                                                           QDate::currentDate(),
-                                                           this);
+    mCopyPopupMenu = new KDatePickerPopup(KDatePickerPopup::NoDate | KDatePickerPopup::DatePicker | KDatePickerPopup::Words, QDate::currentDate(), this);
     mCopyPopupMenu->setTitle(i18nc("@title:menu", "&Copy To"));
 
-    connect(mCopyPopupMenu, &CalendarSupport::KDatePickerPopup::dateChanged, this, &TodoView::copyTodoToDate);
+    connect(mCopyPopupMenu, &KDatePickerPopup::dateChanged, this, &TodoView::copyTodoToDate);
 
-    connect(mCopyPopupMenu, &CalendarSupport::KDatePickerPopup::dateChanged, mItemPopupMenu, &QMenu::hide);
+    connect(mCopyPopupMenu, &KDatePickerPopup::dateChanged, mItemPopupMenu, &QMenu::hide);
 
-    mMovePopupMenu = new CalendarSupport::KDatePickerPopup(CalendarSupport::KDatePickerPopup::NoDate | CalendarSupport::KDatePickerPopup::DatePicker
-                                                               | CalendarSupport::KDatePickerPopup::Words,
-                                                           QDate::currentDate(),
-                                                           this);
+    mMovePopupMenu = new KDatePickerPopup(KDatePickerPopup::NoDate | KDatePickerPopup::DatePicker | KDatePickerPopup::Words, QDate::currentDate(), this);
     mMovePopupMenu->setTitle(i18nc("@title:menu", "&Move To"));
 
-    connect(mMovePopupMenu, &CalendarSupport::KDatePickerPopup::dateChanged, this, &TodoView::setNewDate);
-    connect(mView->startPopupMenu(), &CalendarSupport::KDatePickerPopup::dateChanged, this, &TodoView::setStartDate);
+    connect(mMovePopupMenu, &KDatePickerPopup::dateChanged, this, &TodoView::setNewDate);
+    connect(mView->startPopupMenu(), &KDatePickerPopup::dateChanged, this, &TodoView::setStartDate);
 
-    connect(mMovePopupMenu, &CalendarSupport::KDatePickerPopup::dateChanged, mItemPopupMenu, &QMenu::hide);
+    connect(mMovePopupMenu, &KDatePickerPopup::dateChanged, mItemPopupMenu, &QMenu::hide);
 
     mItemPopupMenu->insertMenu(nullptr, mCopyPopupMenu);
     mItemPopupMenu->insertMenu(nullptr, mMovePopupMenu);
