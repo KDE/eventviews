@@ -82,6 +82,7 @@ void TodoCompleteDelegate::initStyleOptionProgressBar(QStyleOptionProgressBar *o
     option->text = index.data().toString() + QChar::fromLatin1('%');
     option->textAlignment = Qt::AlignCenter;
     option->textVisible = true;
+    option->state |= QStyle::State_Horizontal;
 }
 
 QWidget *TodoCompleteDelegate::createEditor(QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index) const
