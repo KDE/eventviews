@@ -5,7 +5,6 @@
   SPDX-License-Identifier: GPL-2.0-or-later WITH Qt-Commercial-exception-1.0
 */
 
-#include "incidencetreemodel.h"
 #include "todomodel_p.h"
 
 #include <CalendarSupport/KCalPrefs>
@@ -15,6 +14,8 @@
 #include <KCalendarCore/Event>
 #include <KEmailAddress>
 #include <KLocalizedString>
+
+#include <Akonadi/IncidenceTreeModel>
 
 #include <KCalUtils/DndFactory>
 #include <KCalUtils/ICalDrag>
@@ -60,7 +61,7 @@ TodoModelPrivate::TodoModelPrivate(const EventViews::PrefsPtr &preferences, Todo
 Akonadi::Item TodoModelPrivate::findItemByUid(const QString &uid, const QModelIndex &parent) const
 {
     Q_ASSERT(!uid.isEmpty());
-    auto treeModel = qobject_cast<IncidenceTreeModel *>(q->sourceModel());
+    auto treeModel = qobject_cast<Akonadi::IncidenceTreeModel *>(q->sourceModel());
     if (treeModel) { // O(1) Shortcut
         return treeModel->item(uid);
     }

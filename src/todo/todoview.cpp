@@ -13,7 +13,6 @@
 #include "todoview.h"
 
 #include "calendarview_debug.h"
-#include "incidencetreemodel.h"
 #include "tododelegates.h"
 #include "todomodel.h"
 #include "todoviewquickaddline.h"
@@ -25,6 +24,7 @@
 #include <Akonadi/TagFetchJob>
 
 #include <Akonadi/ETMViewStateSaver>
+#include <Akonadi/IncidenceTreeModel>
 
 #include <CalendarSupport/KCalPrefs>
 #include <CalendarSupport/Utils>
@@ -105,10 +105,10 @@ public:
             todoTreeModel = nullptr;
         } else {
             delete todoTreeModel;
-            todoTreeModel = new IncidenceTreeModel(QStringList() << todoMimeType, parent);
+            todoTreeModel = new Akonadi::IncidenceTreeModel(QStringList() << todoMimeType, parent);
             for (TodoView *view : std::as_const(views)) {
-                QObject::connect(todoTreeModel, &IncidenceTreeModel::indexChangedParent, view, &TodoView::expandIndex);
-                QObject::connect(todoTreeModel, &IncidenceTreeModel::batchInsertionFinished, view, &TodoView::restoreViewState);
+                QObject::connect(todoTreeModel, &Akonadi::IncidenceTreeModel::indexChangedParent, view, &TodoView::expandIndex);
+                QObject::connect(todoTreeModel, &Akonadi::IncidenceTreeModel::batchInsertionFinished, view, &TodoView::restoreViewState);
                 view->mView->setDragDropMode(QAbstractItemView::DragDrop);
                 view->setFlatView(flat, /**propagate=*/false); // So other views update their toggle icon
             }
@@ -150,7 +150,7 @@ public:
     QObject *parent = nullptr;
 
     Akonadi::ETMCalendar::Ptr calendar;
-    IncidenceTreeModel *todoTreeModel = nullptr;
+    Akonadi::IncidenceTreeModel *todoTreeModel = nullptr;
     Akonadi::EntityMimeTypeFilterModel *todoFlatModel = nullptr;
     EventViews::PrefsPtr prefs;
 };

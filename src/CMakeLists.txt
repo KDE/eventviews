@@ -41,7 +41,6 @@ target_sources(KF5EventViews PRIVATE
 
   todo/tododelegates.cpp
   todo/todomodel.cpp
-  todo/incidencetreemodel.cpp
 
   todo/todoviewquickaddline.cpp
   todo/todoviewquicksearch.cpp
@@ -68,11 +67,9 @@ target_sources(KF5EventViews PRIVATE
   todo/todoviewview.h
   todo/todomodel.h
   todo/todoviewquicksearch.h
-  todo/incidencetreemodel_p.h
   todo/tododelegates.h
   todo/todomodel_p.h
   todo/todoview.h
-  todo/incidencetreemodel.h
   todo/todoviewquickaddline.h
   multiagenda/multiagendaview.h
   multiagenda/configdialoginterface.h
@@ -174,7 +171,6 @@ ecm_generate_headers(eventviews_CamelCasetodo_HEADERS
   HEADER_NAMES
   TodoView
   TodoModel
-  IncidenceTreeModel
   REQUIRED_HEADERS eventviews_todo_HEADERS
   PREFIX EventViews
   RELATIVE todo
