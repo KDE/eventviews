@@ -59,7 +59,7 @@ enum {
 };
 
 // Layout which places the widgets in equally sized columns,
-// matching the calculcation of the columns in the agenda.
+// matching the calculation of the columns in the agenda.
 class AgendaHeaderLayout : public QLayout
 {
 public:
