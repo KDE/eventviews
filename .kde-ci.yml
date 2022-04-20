@@ -16,4 +16,5 @@ Dependencies:
     'pim/libkdepim' : '@same'
 
 Options:
+  cmake-options: '-DKDEPIM_BUILD_EXAMPLES=ON'
   require-passing-tests-on: [ 'Linux', 'FreeBSD', 'Windows' ]
