@@ -35,6 +35,7 @@
 
 #include <KConfig>
 #include <KJob>
+#include <KMessageBox>
 
 #include <QGridLayout>
 #include <QHeaderView>
@@ -175,6 +176,12 @@ TodoView::TodoView(const EventViews::PrefsPtr &prefs, bool sidebarView, QWidget 
     setPreferences(prefs);
     if (!sModels) {
         sModels = new ModelStack(prefs, parent);
+        connect(sModels->todoModel, &TodoModel::dropOnSelfRejected, this, []() {
+            KMessageBox::information(nullptr,
+                                     i18n("Cannot move to-do to itself or a child of itself."),
+                                     i18n("Drop To-do"),
+                                     QStringLiteral("NoDropTodoOntoItself"));
+        });
     }
     sModels->registerView(this);
 

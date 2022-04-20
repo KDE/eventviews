@@ -93,6 +93,12 @@ public:
 
     Q_REQUIRED_RESULT QHash<int, QByteArray> roleNames() const override;
 
+Q_SIGNALS:
+    /** Emitted when dropMimeData() rejected a drop
+     *  on the same item or any of its children.
+     */
+    void dropOnSelfRejected();
+
 private:
     friend class TodoModelPrivate;
     std::unique_ptr<TodoModelPrivate> const d;
