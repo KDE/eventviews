@@ -422,31 +422,14 @@ void AgendaHeader::loadDecorations(const QStringList &decorations, const QString
 
 CalendarDecoration::Decoration *AgendaHeader::loadCalendarDecoration(const QString &name)
 {
-    const QString type = CalendarSupport::Plugin::serviceType();
-    const int version = CalendarSupport::Plugin::interfaceVersion();
+    auto result = KPluginFactory::instantiatePlugin<CalendarDecoration::Decoration>(KPluginMetaData(QLatin1String("korganizer/") + name));
 
-    QString constraint;
-    if (version >= 0) {
-        constraint = QStringLiteral("[X-KDE-PluginInterfaceVersion] == %1").arg(QString::number(version));
+    if (result) {
+        return result.plugin;
+    } else {
+        qCDebug(CALENDARVIEW_LOG) << "Factory creation failed" << result.errorString;
+        return nullptr;
     }
-
-    KService::List list = KServiceTypeTrader::self()->query(type, constraint);
-
-    KService::List::ConstIterator it;
-    for (it = list.constBegin(); it != list.constEnd(); ++it) {
-        if ((*it)->desktopEntryName() == name) {
-            KService::Ptr service = *it;
-            KPluginFactory *factory = KPluginFactory::loadFactory(KPluginMetaData(service->library())).plugin;
-            if (!factory) {
-                qCDebug(CALENDARVIEW_LOG) << "Factory creation failed";
-                return nullptr;
-            }
-
-            return factory->create<CalendarDecoration::Decoration>();
-        }
-    }
-
-    return nullptr;
 }
 
 class EventViews::EventIndicatorPrivate
