@@ -14,6 +14,7 @@
 #include "agendaview.h"
 #include "prefs.h"
 
+#include <Akonadi/CalendarUtils>
 #include <Akonadi/ETMCalendar>
 #include <Akonadi/IncidenceChanger>
 #include <CalendarSupport/Utils>
@@ -2233,7 +2234,7 @@ void Agenda::selectIncidenceByUid(const QString &uid)
 
 void Agenda::selectItem(const Akonadi::Item &item)
 {
-    selectIncidenceByUid(CalendarSupport::incidence(item)->uid());
+    selectIncidenceByUid(Akonadi::CalendarUtils::incidence(item)->uid());
 }
 
 // This function seems never be called.

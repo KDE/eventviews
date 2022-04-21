@@ -15,6 +15,7 @@
 #include <KEmailAddress>
 #include <KLocalizedString>
 
+#include <Akonadi/CalendarUtils>
 #include <Akonadi/IncidenceTreeModel>
 
 #include <KCalUtils/DndFactory>
@@ -102,7 +103,7 @@ QVariant TodoModel::data(const QModelIndex &index, int role) const
         // Q_ASSERT( false );
         return {};
     }
-    const KCalendarCore::Todo::Ptr todo = CalendarSupport::todo(item);
+    const KCalendarCore::Todo::Ptr todo = Akonadi::CalendarUtils::todo(item);
     if (!todo) {
         qCCritical(CALENDARVIEW_LOG) << "item.hasPayload()" << item.hasPayload();
         if (item.hasPayload<KCalendarCore::Incidence::Ptr>()) {
@@ -327,7 +328,7 @@ bool TodoModel::setData(const QModelIndex &index, const QVariant &value, int rol
     }
 
     const auto item = data(index, Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
-    const KCalendarCore::Todo::Ptr todo = CalendarSupport::todo(item);
+    const KCalendarCore::Todo::Ptr todo = Akonadi::CalendarUtils::todo(item);
 
     if (!item.isValid() || !todo) {
         qCWarning(CALENDARVIEW_LOG) << "TodoModel::setData() called, bug item is invalid or doesn't have payload";
@@ -529,12 +530,12 @@ bool TodoModel::dropMimeData(const QMimeData *data, Qt::DropAction action, int r
             // we don't want to change the created todo, but the one which is already
             // stored in our calendar / tree
             const Akonadi::Item item = d->findItemByUid(t->uid(), QModelIndex());
-            KCalendarCore::Todo::Ptr todo = CalendarSupport::todo(item);
+            KCalendarCore::Todo::Ptr todo = Akonadi::CalendarUtils::todo(item);
             KCalendarCore::Todo::Ptr destTodo;
             if (parent.isValid()) {
                 const auto parentItem = this->data(parent, Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
                 if (parentItem.isValid()) {
-                    destTodo = CalendarSupport::todo(parentItem);
+                    destTodo = Akonadi::CalendarUtils::todo(parentItem);
                 }
             }
 
@@ -545,7 +546,7 @@ bool TodoModel::dropMimeData(const QMimeData *data, Qt::DropAction action, int r
                     return false;
                 }
                 const QString parentUid = tmp->relatedTo();
-                tmp = CalendarSupport::incidence(d->m_calendar->item(parentUid));
+                tmp = Akonadi::CalendarUtils::incidence(d->m_calendar->item(parentUid));
             }
 
             if (!destTodo || !destTodo->hasRecurrenceId()) {
@@ -570,7 +571,7 @@ bool TodoModel::dropMimeData(const QMimeData *data, Qt::DropAction action, int r
             }
 
             const auto parentItem = this->data(parent, Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
-            KCalendarCore::Todo::Ptr destTodo = CalendarSupport::todo(parentItem);
+            KCalendarCore::Todo::Ptr destTodo = Akonadi::CalendarUtils::todo(parentItem);
 
             if (data->hasText()) {
                 QString text = data->text();
@@ -618,7 +619,7 @@ Qt::ItemFlags TodoModel::flags(const QModelIndex &index) const
 
     ret |= Qt::ItemIsDragEnabled;
 
-    const KCalendarCore::Todo::Ptr todo = CalendarSupport::todo(item);
+    const KCalendarCore::Todo::Ptr todo = Akonadi::CalendarUtils::todo(item);
 
     if (d->m_calendar->hasRight(item, Akonadi::Collection::CanChangeItem)) {
         // the following columns are editable:

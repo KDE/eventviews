@@ -11,10 +11,10 @@
 
 #include <KGantt/KGanttGraphicsView>
 
+#include <Akonadi/CalendarUtils>
 #include <Akonadi/ETMCalendar>
 #include <Akonadi/IncidenceChanger>
 #include <CalendarSupport/CollectionSelection>
-#include <CalendarSupport/Utils>
 #include <KCalendarCore/OccurrenceIterator>
 
 #include "calendarview_debug.h"
@@ -56,7 +56,7 @@ void TimelineViewPrivate::contextMenuRequested(QPoint point)
         Q_EMIT q->showNewEventPopupSignal();
         mSelectedItemList = Akonadi::Item::List();
     } else {
-        Q_EMIT q->showIncidencePopupSignal(tlitem->incidence(), CalendarSupport::incidence(tlitem->incidence())->dtStart().date());
+        Q_EMIT q->showIncidencePopupSignal(tlitem->incidence(), Akonadi::CalendarUtils::incidence(tlitem->incidence())->dtStart().date());
 
         mSelectedItemList << tlitem->incidence();
     }
@@ -83,7 +83,7 @@ TimelineItem *TimelineViewPrivate::calendarItemForIncidence(const Akonadi::Item 
 
 void TimelineViewPrivate::insertIncidence(const Akonadi::Item &aitem, QDate day)
 {
-    const Incidence::Ptr incidence = CalendarSupport::incidence(aitem);
+    const Incidence::Ptr incidence = Akonadi::CalendarUtils::incidence(aitem);
     // qCDebug(CALENDARVIEW_LOG) << "Item " << aitem.id() << " parentcollection: " << aitem.parentCollection().id();
     TimelineItem *item = calendarItemForIncidence(aitem);
     if (!item) {
@@ -109,7 +109,7 @@ void TimelineViewPrivate::insertIncidence(const Akonadi::Item &aitem, QDate day)
 
 void TimelineViewPrivate::insertIncidence(const Akonadi::Item &incidence)
 {
-    const Event::Ptr event = CalendarSupport::event(incidence);
+    const Event::Ptr event = Akonadi::CalendarUtils::event(incidence);
     if (!event) {
         return;
     }
@@ -163,7 +163,7 @@ void TimelineViewPrivate::itemChanged(QStandardItem *item)
     }
 
     const Akonadi::Item i = tlit->incidence();
-    const Incidence::Ptr inc = CalendarSupport::incidence(i);
+    const Incidence::Ptr inc = Akonadi::CalendarUtils::incidence(i);
 
     QDateTime newStart(tlit->startTime());
     if (inc->allDay()) {

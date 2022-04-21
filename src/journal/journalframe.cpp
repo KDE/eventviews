@@ -12,6 +12,7 @@
 
 #include "journalframe.h"
 
+#include <Akonadi/CalendarUtils>
 #include <CalendarSupport/Utils>
 
 #include <KCalendarCore/Journal>
@@ -262,19 +263,19 @@ void JournalFrame::setDirty()
 
 void JournalFrame::printJournal()
 {
-    Q_EMIT printJournal(CalendarSupport::journal(mJournal), false);
+    Q_EMIT printJournal(Akonadi::CalendarUtils::journal(mJournal), false);
 }
 
 void JournalFrame::printPreviewJournal()
 {
-    Q_EMIT printJournal(CalendarSupport::journal(mJournal), true);
+    Q_EMIT printJournal(Akonadi::CalendarUtils::journal(mJournal), true);
 }
 
 void JournalFrame::readJournal(const Akonadi::Item &j)
 {
     int baseFontSize = QFontDatabase::systemFont(QFontDatabase::GeneralFont).pointSize();
     mJournal = j;
-    const KCalendarCore::Journal::Ptr journal = CalendarSupport::journal(j);
+    const KCalendarCore::Journal::Ptr journal = Akonadi::CalendarUtils::journal(j);
     mBrowser->clear();
     QTextCursor cursor = QTextCursor(mBrowser->textCursor());
     cursor.movePosition(QTextCursor::Start);

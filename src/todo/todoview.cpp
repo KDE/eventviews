@@ -20,6 +20,7 @@
 #include "todoviewsortfilterproxymodel.h"
 #include "todoviewview.h"
 
+#include <Akonadi/CalendarUtils>
 #include <Akonadi/EntityMimeTypeFilterModel>
 #include <Akonadi/TagFetchJob>
 
@@ -27,8 +28,6 @@
 #include <Akonadi/IncidenceTreeModel>
 
 #include <CalendarSupport/KCalPrefs>
-#include <CalendarSupport/Utils>
-
 #include <CalendarSupport/KDatePickerPopup>
 
 #include <KCalendarCore/CalFormat>
@@ -621,7 +620,7 @@ void TodoView::addTodo(const QString &summary, const Akonadi::Item &parentItem, 
         return;
     }
 
-    KCalendarCore::Todo::Ptr parent = CalendarSupport::todo(parentItem);
+    KCalendarCore::Todo::Ptr parent = Akonadi::CalendarUtils::todo(parentItem);
 
     KCalendarCore::Todo::Ptr todo(new KCalendarCore::Todo);
     todo->setSummary(summaryTrimmed);
@@ -680,7 +679,7 @@ void TodoView::contextMenu(QPoint pos)
                 enable = false;
             } else {
                 Akonadi::Item item = incidences.first();
-                incidencePtr = CalendarSupport::incidence(item);
+                incidencePtr = Akonadi::CalendarUtils::incidence(item);
 
                 // Action isn't RO, it can change the incidence, "Edit" for example.
                 const bool actionIsRw = mItemPopupMenuReadWriteEntries.contains(entry);
@@ -817,7 +816,7 @@ void TodoView::copyTodoToDate(QDate date)
 
     const auto origItem = sModels->todoModel->data(origIndex, Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
 
-    const KCalendarCore::Todo::Ptr orig = CalendarSupport::todo(origItem);
+    const KCalendarCore::Todo::Ptr orig = Akonadi::CalendarUtils::todo(origItem);
     if (!orig) {
         return;
     }
@@ -861,7 +860,7 @@ QMenu *TodoView::createCategoryPopupMenu()
     }
 
     const auto todoItem = selection[0].data(TodoModel::TodoRole).value<Akonadi::Item>();
-    KCalendarCore::Todo::Ptr todo = CalendarSupport::todo(todoItem);
+    KCalendarCore::Todo::Ptr todo = Akonadi::CalendarUtils::todo(todoItem);
     Q_ASSERT(todo);
 
     const QStringList checkedCategories = todo->categories();
@@ -907,7 +906,7 @@ void TodoView::setNewDate(QDate date)
     }
 
     const auto todoItem = selection[0].data(TodoModel::TodoRole).value<Akonadi::Item>();
-    KCalendarCore::Todo::Ptr todo = CalendarSupport::todo(todoItem);
+    KCalendarCore::Todo::Ptr todo = Akonadi::CalendarUtils::todo(todoItem);
     Q_ASSERT(todo);
 
     if (calendar()->hasRight(todoItem, Akonadi::Collection::CanChangeItem)) {
@@ -934,7 +933,7 @@ void TodoView::setNewPercentage(QAction *action)
     }
 
     const auto todoItem = selection[0].data(TodoModel::TodoRole).value<Akonadi::Item>();
-    KCalendarCore::Todo::Ptr todo = CalendarSupport::todo(todoItem);
+    KCalendarCore::Todo::Ptr todo = Akonadi::CalendarUtils::todo(todoItem);
     Q_ASSERT(todo);
 
     if (calendar()->hasRight(todoItem, Akonadi::Collection::CanChangeItem)) {
@@ -960,7 +959,7 @@ void TodoView::setNewPriority(QAction *action)
         return;
     }
     const auto todoItem = selection[0].data(TodoModel::TodoRole).value<Akonadi::Item>();
-    KCalendarCore::Todo::Ptr todo = CalendarSupport::todo(todoItem);
+    KCalendarCore::Todo::Ptr todo = Akonadi::CalendarUtils::todo(todoItem);
     if (calendar()->hasRight(todoItem, Akonadi::Collection::CanChangeItem)) {
         KCalendarCore::Todo::Ptr oldTodo(todo->clone());
         todo->setPriority(mPriority[action]);
@@ -977,7 +976,7 @@ void TodoView::changedCategories(QAction *action)
     }
 
     const auto todoItem = selection[0].data(TodoModel::TodoRole).value<Akonadi::Item>();
-    KCalendarCore::Todo::Ptr todo = CalendarSupport::todo(todoItem);
+    KCalendarCore::Todo::Ptr todo = Akonadi::CalendarUtils::todo(todoItem);
     Q_ASSERT(todo);
     if (calendar()->hasRight(todoItem, Akonadi::Collection::CanChangeItem)) {
         KCalendarCore::Todo::Ptr oldTodo(todo->clone());

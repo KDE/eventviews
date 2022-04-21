@@ -8,6 +8,8 @@
 
 #include "timelineitem.h"
 
+#include <Akonadi/CalendarUtils>
+
 #include <KGantt/KGanttGlobal>
 
 #include <CalendarSupport/Utils>
@@ -32,7 +34,7 @@ TimelineItem::TimelineItem(const Akonadi::ETMCalendar::Ptr &calendar, uint index
 
 void TimelineItem::insertIncidence(const Akonadi::Item &aitem, const QDateTime &_start, const QDateTime &_end)
 {
-    const Incidence::Ptr incidence = CalendarSupport::incidence(aitem);
+    const Incidence::Ptr incidence = Akonadi::CalendarUtils::incidence(aitem);
     QDateTime start(_start);
     QDateTime end(_end);
     if (!start.isValid()) {
@@ -102,7 +104,7 @@ TimelineSubItem::TimelineSubItem(const Akonadi::ETMCalendar::Ptr &calendar, cons
     , mToolTipNeedsUpdate(true)
 {
     setData(KGantt::TypeTask, KGantt::ItemTypeRole);
-    if (!CalendarSupport::incidence(incidence)->isReadOnly()) {
+    if (!Akonadi::CalendarUtils::incidence(incidence)->isReadOnly()) {
         setFlags(Qt::ItemIsSelectable);
     }
 }
@@ -138,7 +140,7 @@ void TimelineSubItem::updateToolTip()
     mToolTipNeedsUpdate = false;
 
     setData(IncidenceFormatter::toolTipStr(CalendarSupport::displayName(mCalendar.data(), mIncidence.parentCollection()),
-                                           CalendarSupport::incidence(mIncidence),
+                                           Akonadi::CalendarUtils::incidence(mIncidence),
                                            originalStart().date(),
                                            true),
             Qt::ToolTipRole);

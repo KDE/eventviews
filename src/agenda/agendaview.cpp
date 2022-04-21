@@ -20,6 +20,7 @@
 
 #include "calendarview_debug.h"
 
+#include <Akonadi/CalendarUtils>
 #include <Akonadi/ETMCalendar>
 #include <Akonadi/IncidenceChanger>
 #include <CalendarSupport/CollectionSelection>
@@ -1804,7 +1805,7 @@ void AgendaView::updateEventDates(AgendaItem *item, bool addIncidence, Akonadi::
         Akonadi::Collection collection = calendar()->collection(collectionId);
         result = changer()->createIncidence(incidence, collection, this) != -1;
     } else {
-        KCalendarCore::Incidence::Ptr oldIncidence(CalendarSupport::incidence(aitem));
+        KCalendarCore::Incidence::Ptr oldIncidence(Akonadi::CalendarUtils::incidence(aitem));
         aitem.setPayload<KCalendarCore::Incidence::Ptr>(incidence);
         result = changer()->modifyIncidence(aitem, oldIncidence, this) != -1;
     }
@@ -1883,7 +1884,7 @@ void AgendaView::showIncidences(const Akonadi::Item::List &incidences, const QDa
     bool wehaveall = true;
     if (filter) {
         for (const Akonadi::Item &aitem : incidences) {
-            if (!(wehaveall = filter->filterIncidence(CalendarSupport::incidence(aitem)))) {
+            if (!(wehaveall = filter->filterIncidence(Akonadi::CalendarUtils::incidence(aitem)))) {
                 break;
             }
         }
@@ -1893,15 +1894,15 @@ void AgendaView::showIncidences(const Akonadi::Item::List &incidences, const QDa
         calendar()->setFilter(nullptr);
     }
 
-    QDateTime start = CalendarSupport::incidence(incidences.first())->dtStart().toLocalTime();
-    QDateTime end = CalendarSupport::incidence(incidences.first())->dateTime(KCalendarCore::Incidence::RoleEnd).toLocalTime();
+    QDateTime start = Akonadi::CalendarUtils::incidence(incidences.first())->dtStart().toLocalTime();
+    QDateTime end = Akonadi::CalendarUtils::incidence(incidences.first())->dateTime(KCalendarCore::Incidence::RoleEnd).toLocalTime();
     Akonadi::Item first = incidences.first();
     for (const Akonadi::Item &aitem : incidences) {
-        if (CalendarSupport::incidence(aitem)->dtStart().toLocalTime() < start) {
+        if (Akonadi::CalendarUtils::incidence(aitem)->dtStart().toLocalTime() < start) {
             first = aitem;
         }
-        start = qMin(start, CalendarSupport::incidence(aitem)->dtStart().toLocalTime());
-        end = qMax(start, CalendarSupport::incidence(aitem)->dateTime(KCalendarCore::Incidence::RoleEnd).toLocalTime());
+        start = qMin(start, Akonadi::CalendarUtils::incidence(aitem)->dtStart().toLocalTime());
+        end = qMax(start, Akonadi::CalendarUtils::incidence(aitem)->dateTime(KCalendarCore::Incidence::RoleEnd).toLocalTime());
     }
 
     end.toTimeZone(start.timeZone()); // allow direct comparison of dates
@@ -2148,11 +2149,11 @@ void AgendaView::slotIncidencesDropped(const QList<QUrl> &items, const QPoint &g
     KDateTime newTime(day, time, preferences()->timeSpec());
     newTime.setDateOnly(allDay);
 
-    Todo::Ptr todo = CalendarSupport::todo(todoItem);
+    Todo::Ptr todo = Akonadi::CalendarUtils4::todo(todoItem);
     if (todo && dynamic_cast<Akonadi::ETMCalendar *>(calendar())) {
         const Akonadi::Item existingTodoItem = calendar()->itemForIncidence(calendar()->todo(todo->uid()));
 
-        if (Todo::Ptr existingTodo = CalendarSupport::todo(existingTodoItem)) {
+        if (Todo::Ptr existingTodo = Akonadi::CalendarUtils::todo(existingTodoItem)) {
             qCDebug(CALENDARVIEW_LOG) << "Drop existing Todo";
             Todo::Ptr oldTodo(existingTodo->clone());
             if (changer()) {

@@ -8,6 +8,7 @@
 
 #include "whatsnextview.h"
 
+#include <Akonadi/CalendarUtils>
 #include <Akonadi/ETMCalendar>
 #include <CalendarSupport/KCalPrefs>
 #include <CalendarSupport/Utils>
@@ -286,7 +287,7 @@ void WhatsNextView::appendTodo(const KCalendarCore::Incidence::Ptr &incidence)
     mText += incidence->summary();
     mText += QLatin1String("</a>");
 
-    if (const KCalendarCore::Todo::Ptr todo = CalendarSupport::todo(aitem)) {
+    if (const KCalendarCore::Todo::Ptr todo = Akonadi::CalendarUtils::todo(aitem)) {
         if (todo->hasDueDate()) {
             mText += i18nc("to-do due date", "  (Due: %1)", KCalUtils::IncidenceFormatter::dateTimeToString(todo->dtDue(), todo->allDay()));
         }

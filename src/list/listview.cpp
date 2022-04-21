@@ -15,6 +15,7 @@
 
 #include <CalendarSupport/Utils>
 
+#include <Akonadi/CalendarUtils>
 #include <Akonadi/ETMCalendar>
 #include <Akonadi/IncidenceChanger>
 
@@ -437,14 +438,14 @@ void ListView::showIncidences(const Akonadi::Item::List &itemList, const QDate &
 
 void ListView::changeIncidenceDisplay(const Akonadi::Item &aitem, int action)
 {
-    const Incidence::Ptr incidence = CalendarSupport::incidence(aitem);
+    const Incidence::Ptr incidence = Akonadi::CalendarUtils::incidence(aitem);
     ListViewItem *item = nullptr;
     const QDate f = d->mSelectedDates.constFirst();
     const QDate l = d->mSelectedDates.constLast();
 
     QDate date;
     if (CalendarSupport::hasTodo(aitem)) {
-        date = CalendarSupport::todo(aitem)->dtDue().toLocalTime().date();
+        date = Akonadi::CalendarUtils::todo(aitem)->dtDue().toLocalTime().date();
     } else {
         date = incidence->dtStart().toLocalTime().date();
     }
@@ -521,7 +522,7 @@ void ListView::popupMenu(const QPoint &point)
         // FIXME: For recurring incidences we don't know the date of this
         // occurrence, there's no reference to it at all!
 
-        Q_EMIT showIncidencePopupSignal(aitem, CalendarSupport::incidence(aitem)->dtStart().date());
+        Q_EMIT showIncidencePopupSignal(aitem, Akonadi::CalendarUtils::incidence(aitem)->dtStart().date());
     } else {
         Q_EMIT showNewEventPopupSignal();
     }

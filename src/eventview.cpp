@@ -11,14 +11,14 @@
 #include "eventview_p.h"
 #include "prefs.h"
 
-#include <Akonadi/EntityTreeModel>
 
 #include <CalendarSupport/CollectionSelection>
 #include <CalendarSupport/KCalPrefs>
-#include <CalendarSupport/Utils>
 
+#include <Akonadi/CalendarUtils>
 #include <Akonadi/ETMViewStateSaver>
 #include <Akonadi/EntityDisplayAttribute>
+#include <Akonadi/EntityTreeModel>
 
 #include <KCalendarCore/CalFilter>
 
@@ -73,7 +73,7 @@ EventView::~EventView() = default;
 void EventView::defaultAction(const Akonadi::Item &aitem)
 {
     qCDebug(CALENDARVIEW_LOG);
-    const Incidence::Ptr incidence = CalendarSupport::incidence(aitem);
+    const Incidence::Ptr incidence = Akonadi::CalendarUtils::incidence(aitem);
     if (!incidence) {
         return;
     }

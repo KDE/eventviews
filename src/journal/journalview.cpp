@@ -12,6 +12,7 @@
 #include "journalview.h"
 #include "journalframe.h"
 
+#include <Akonadi/CalendarUtils>
 #include <CalendarSupport/Utils>
 
 #include "calendarview_debug.h"
@@ -141,7 +142,7 @@ void JournalView::showIncidences(const Akonadi::Item::List &incidences, const QD
     Q_UNUSED(date)
     clearEntries();
     for (const Akonadi::Item &i : incidences) {
-        if (const KCalendarCore::Journal::Ptr j = CalendarSupport::journal(i)) {
+        if (const KCalendarCore::Journal::Ptr j = Akonadi::CalendarUtils::journal(i)) {
             appendJournal(i, j->dtStart().date());
         }
     }
@@ -149,7 +150,7 @@ void JournalView::showIncidences(const Akonadi::Item::List &incidences, const QD
 
 void JournalView::changeIncidenceDisplay(const Akonadi::Item &incidence, Akonadi::IncidenceChanger::ChangeType changeType)
 {
-    if (KCalendarCore::Journal::Ptr journal = CalendarSupport::journal(incidence)) {
+    if (KCalendarCore::Journal::Ptr journal = Akonadi::CalendarUtils::journal(incidence)) {
         switch (changeType) {
         case Akonadi::IncidenceChanger::ChangeTypeCreate:
             appendJournal(incidence, journal->dtStart().date());

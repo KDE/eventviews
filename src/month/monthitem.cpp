@@ -12,6 +12,7 @@
 #include "prefs.h"
 #include "prefs_base.h" // Ugly, but needed for the Enums
 
+#include <Akonadi/CalendarUtils>
 #include <Akonadi/IncidenceChanger>
 #include <CalendarSupport/KCalPrefs>
 #include <CalendarSupport/Utils>
@@ -575,7 +576,7 @@ QColor IncidenceMonthItem::bgColor() const
     const auto &prefs = monthScene()->monthView()->preferences();
 
     if (!prefs->todosUseCategoryColors() && mIsTodo) {
-        Todo::Ptr todo = CalendarSupport::todo(akonadiItem());
+        Todo::Ptr todo = Akonadi::CalendarUtils::todo(akonadiItem());
         Q_ASSERT(todo);
         if (todo) {
             // this is dtDue if there's no dtRecurrence
