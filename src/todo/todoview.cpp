@@ -911,6 +911,9 @@ void TodoView::setNewDate(QDate date)
             dt.setTime(todo->dtDue().time());
         }
 
+        if (todo->hasStartDate() && dt < todo->dtStart()) {
+            todo->setDtStart(dt);
+        }
         todo->setDtDue(dt);
 
         changer()->modifyIncidence(todoItem, oldTodo, this);
