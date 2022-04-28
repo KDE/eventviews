@@ -7,12 +7,12 @@
 
 #include "eventviews_export.h"
 
-#include <CalendarSupport/Plugin>
-
 #include <QUrl>
 
 #include <QDate>
+#include <QMap>
 #include <QPixmap>
+#include <QVariant>
 
 namespace EventViews
 {
@@ -137,21 +137,11 @@ protected:
   The decoration is made of various decoration elements,
   which show a defined text/picture/widget for a given date.
  */
-class EVENTVIEWS_EXPORT Decoration : public CalendarSupport::Plugin
+class EVENTVIEWS_EXPORT Decoration : public QObject
 {
     Q_OBJECT
 
 public:
-    static int interfaceVersion()
-    {
-        return 2;
-    }
-
-    static QString serviceType()
-    {
-        return QStringLiteral("Calendar/Decoration");
-    }
-
     using List = QList<Decoration *>;
 
     Decoration(QObject *parent = nullptr, const QVariantList &args = {});
@@ -176,6 +166,10 @@ public:
       Return all elements for the year the given date belongs to.
     */
     virtual Element::List yearElements(const QDate &d);
+
+    virtual void configure(QWidget *);
+
+    virtual QString info() const = 0;
 
 protected:
     /**

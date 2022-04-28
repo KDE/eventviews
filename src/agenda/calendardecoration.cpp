@@ -136,8 +136,9 @@ QUrl StoredElement::url() const
 ////////////////////////////////////////////////////////////////////////////////
 
 Decoration::Decoration(QObject *parent, const QVariantList &args)
-    : CalendarSupport::Plugin(parent, args)
+    : QObject(parent)
 {
+    Q_UNUSED(args)
 }
 
 Decoration::~Decoration()
@@ -256,6 +257,10 @@ Element::List Decoration::createMonthElements(const QDate &)
 Element::List Decoration::createYearElements(const QDate &)
 {
     return {};
+}
+
+void Decoration::configure(QWidget *)
+{
 }
 
 QDate Decoration::weekDate(QDate date)
