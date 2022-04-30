@@ -39,7 +39,7 @@ public:
     QList<int> m_columns;
     EventViews::PrefsPtr m_preferences;
 
-private Q_SLOTS:
+public Q_SLOTS:
     void onDataChanged(const QModelIndex &begin, const QModelIndex &end);
     void onHeaderDataChanged(Qt::Orientation orientation, int first, int last);
 

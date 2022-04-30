@@ -534,60 +534,34 @@ void TodoModel::setSourceModel(QAbstractItemModel *model)
     beginResetModel();
 
     if (sourceModel()) {
-        disconnect(sourceModel(), SIGNAL(dataChanged(QModelIndex, QModelIndex)), d.get(), SLOT(onDataChanged(QModelIndex, QModelIndex)));
-        disconnect(sourceModel(), SIGNAL(headerDataChanged(Qt::Orientation, int, int)), d.get(), SLOT(onHeaderDataChanged(Qt::Orientation, int, int)));
-
-        disconnect(sourceModel(), SIGNAL(rowsInserted(QModelIndex, int, int)), d.get(), SLOT(onRowsInserted(QModelIndex, int, int)));
-
-        disconnect(sourceModel(), SIGNAL(rowsRemoved(QModelIndex, int, int)), d.get(), SLOT(onRowsRemoved(QModelIndex, int, int)));
-
-        disconnect(sourceModel(),
-                   SIGNAL(rowsMoved(QModelIndex, int, int, QModelIndex, int)),
-                   d.get(),
-                   SLOT(onRowsMoved(QModelIndex, int, int, QModelIndex, int)));
-
-        disconnect(sourceModel(), SIGNAL(rowsAboutToBeInserted(QModelIndex, int, int)), d.get(), SLOT(onRowsAboutToBeInserted(QModelIndex, int, int)));
-
-        disconnect(sourceModel(), SIGNAL(rowsAboutToBeRemoved(QModelIndex, int, int)), d.get(), SLOT(onRowsAboutToBeRemoved(QModelIndex, int, int)));
-
-        disconnect(sourceModel(), SIGNAL(modelAboutToBeReset()), d.get(), SLOT(onModelAboutToBeReset()));
-
-        disconnect(sourceModel(), SIGNAL(modelReset()), d.get(), SLOT(onModelReset()));
-
-        disconnect(sourceModel(), SIGNAL(layoutAboutToBeChanged()), d.get(), SLOT(onLayoutAboutToBeChanged()));
-
-        disconnect(sourceModel(), SIGNAL(layoutChanged()), d.get(), SLOT(onLayoutChanged()));
+        disconnect(sourceModel(), &QAbstractItemModel::dataChanged, d.get(), &TodoModelPrivate::onDataChanged);
+        disconnect(sourceModel(), &QAbstractItemModel::headerDataChanged, d.get(), &TodoModelPrivate::onHeaderDataChanged);
+        disconnect(sourceModel(), &QAbstractItemModel::rowsInserted, d.get(), &TodoModelPrivate::onRowsInserted);
+        disconnect(sourceModel(), &QAbstractItemModel::rowsRemoved, d.get(), &TodoModelPrivate::onRowsRemoved);
+        disconnect(sourceModel(), &QAbstractItemModel::rowsMoved, d.get(), &TodoModelPrivate::onRowsMoved);
+        disconnect(sourceModel(), &QAbstractItemModel::rowsAboutToBeInserted, d.get(), &TodoModelPrivate::onRowsAboutToBeInserted);
+        disconnect(sourceModel(), &QAbstractItemModel::rowsAboutToBeRemoved, d.get(), &TodoModelPrivate::onRowsAboutToBeRemoved);
+        disconnect(sourceModel(), &QAbstractItemModel::modelAboutToBeReset, d.get(), &TodoModelPrivate::onModelAboutToBeReset);
+        disconnect(sourceModel(), &QAbstractItemModel::modelReset, d.get(), &TodoModelPrivate::onModelReset);
+        disconnect(sourceModel(), &QAbstractItemModel::layoutAboutToBeChanged, d.get(), &TodoModelPrivate::onLayoutAboutToBeChanged);
+        disconnect(sourceModel(), &QAbstractItemModel::layoutChanged, d.get(), &TodoModelPrivate::onLayoutChanged);
     }
 
     QAbstractProxyModel::setSourceModel(model);
 
     if (sourceModel()) {
-        connect(sourceModel(), SIGNAL(dataChanged(QModelIndex, QModelIndex)), d.get(), SLOT(onDataChanged(QModelIndex, QModelIndex)));
-
-        connect(sourceModel(), SIGNAL(headerDataChanged(Qt::Orientation, int, int)), d.get(), SLOT(onHeaderDataChanged(Qt::Orientation, int, int)));
-
-        connect(sourceModel(), SIGNAL(rowsAboutToBeInserted(QModelIndex, int, int)), d.get(), SLOT(onRowsAboutToBeInserted(QModelIndex, int, int)));
-
-        connect(sourceModel(), SIGNAL(rowsInserted(QModelIndex, int, int)), d.get(), SLOT(onRowsInserted(QModelIndex, int, int)));
-
-        connect(sourceModel(), SIGNAL(rowsAboutToBeRemoved(QModelIndex, int, int)), d.get(), SLOT(onRowsAboutToBeRemoved(QModelIndex, int, int)));
-
-        connect(sourceModel(), SIGNAL(rowsRemoved(QModelIndex, int, int)), d.get(), SLOT(onRowsRemoved(QModelIndex, int, int)));
-
-        connect(sourceModel(),
-                SIGNAL(rowsAboutToBeMoved(QModelIndex, int, int, QModelIndex, int)),
-                d.get(),
-                SLOT(onRowsAboutToBeMoved(QModelIndex, int, int, QModelIndex, int)));
-
-        connect(sourceModel(), SIGNAL(rowsMoved(QModelIndex, int, int, QModelIndex, int)), d.get(), SLOT(onRowsMoved(QModelIndex, int, int, QModelIndex, int)));
-
-        connect(sourceModel(), SIGNAL(modelAboutToBeReset()), d.get(), SLOT(onModelAboutToBeReset()));
-
-        connect(sourceModel(), SIGNAL(modelReset()), d.get(), SLOT(onModelReset()));
-
-        connect(sourceModel(), SIGNAL(layoutAboutToBeChanged()), d.get(), SLOT(onLayoutAboutToBeChanged()));
-
-        connect(sourceModel(), SIGNAL(layoutChanged()), d.get(), SLOT(onLayoutChanged()));
+        connect(sourceModel(), &QAbstractItemModel::dataChanged, d.get(), &TodoModelPrivate::onDataChanged);
+        connect(sourceModel(), &QAbstractItemModel::headerDataChanged, d.get(), &TodoModelPrivate::onHeaderDataChanged);
+        connect(sourceModel(), &QAbstractItemModel::rowsAboutToBeInserted, d.get(), &TodoModelPrivate::onRowsAboutToBeInserted);
+        connect(sourceModel(), &QAbstractItemModel::rowsInserted, d.get(), &TodoModelPrivate::onRowsInserted);
+        connect(sourceModel(), &QAbstractItemModel::rowsAboutToBeRemoved, d.get(), &TodoModelPrivate::onRowsAboutToBeRemoved);
+        connect(sourceModel(), &QAbstractItemModel::rowsRemoved, d.get(), &TodoModelPrivate::onRowsRemoved);
+        connect(sourceModel(), &QAbstractItemModel::rowsAboutToBeMoved, d.get(), &TodoModelPrivate::onRowsAboutToBeMoved);
+        connect(sourceModel(), &QAbstractItemModel::rowsMoved, d.get(), &TodoModelPrivate::onRowsMoved);
+        connect(sourceModel(), &QAbstractItemModel::modelAboutToBeReset, d.get(), &TodoModelPrivate::onModelAboutToBeReset);
+        connect(sourceModel(), &QAbstractItemModel::modelReset, d.get(), &TodoModelPrivate::onModelReset);
+        connect(sourceModel(), &QAbstractItemModel::layoutAboutToBeChanged, d.get(), &TodoModelPrivate::onLayoutAboutToBeChanged);
+        connect(sourceModel(), &QAbstractItemModel::layoutChanged, d.get(), &TodoModelPrivate::onLayoutChanged);
     }
 
     endResetModel();
