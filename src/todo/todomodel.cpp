@@ -147,7 +147,7 @@ QVariant TodoModel::data(const QModelIndex &index, int role) const
     case DescriptionRole:
         return todo->description();
     case CalendarRole:
-        return CalendarSupport::displayName(d->m_calendar.data(), item.parentCollection());
+        return Akonadi::CalendarUtils::displayName(d->m_calendar.data(), item.parentCollection());
     default:
         break; // column based model handling
     }
@@ -186,7 +186,7 @@ QVariant TodoModel::data(const QModelIndex &index, int role) const
         case DescriptionColumn:
             return QVariant(todo->description());
         case CalendarColumn:
-            return QVariant(CalendarSupport::displayName(d->m_calendar.data(), item.parentCollection()));
+            return QVariant(Akonadi::CalendarUtils::displayName(d->m_calendar.data(), item.parentCollection()));
         }
         return {};
     }
@@ -212,7 +212,7 @@ QVariant TodoModel::data(const QModelIndex &index, int role) const
         case DescriptionColumn:
             return QVariant(todo->description());
         case CalendarColumn:
-            return QVariant(CalendarSupport::displayName(d->m_calendar.data(), item.parentCollection()));
+            return QVariant(Akonadi::CalendarUtils::displayName(d->m_calendar.data(), item.parentCollection()));
         }
         return {};
     }
@@ -220,8 +220,10 @@ QVariant TodoModel::data(const QModelIndex &index, int role) const
     // set the tooltip for every item
     if (role == Qt::ToolTipRole) {
         if (d->m_preferences->enableToolTips()) {
-            return QVariant(
-                KCalUtils::IncidenceFormatter::toolTipStr(CalendarSupport::displayName(d->m_calendar.data(), item.parentCollection()), todo, QDate(), true));
+            return QVariant(KCalUtils::IncidenceFormatter::toolTipStr(Akonadi::CalendarUtils::displayName(d->m_calendar.data(), item.parentCollection()),
+                                                                      todo,
+                                                                      QDate(),
+                                                                      true));
         } else {
             return {};
         }

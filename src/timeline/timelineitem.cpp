@@ -12,8 +12,6 @@
 
 #include <KGantt/KGanttGlobal>
 
-#include <CalendarSupport/Utils>
-
 #include <KCalUtils/IncidenceFormatter>
 
 using namespace KCalendarCore;
@@ -139,7 +137,7 @@ void TimelineSubItem::updateToolTip()
 
     mToolTipNeedsUpdate = false;
 
-    setData(IncidenceFormatter::toolTipStr(CalendarSupport::displayName(mCalendar.data(), mIncidence.parentCollection()),
+    setData(IncidenceFormatter::toolTipStr(Akonadi::CalendarUtils::displayName(mCalendar.data(), mIncidence.parentCollection()),
                                            Akonadi::CalendarUtils::incidence(mIncidence),
                                            originalStart().date(),
                                            true),

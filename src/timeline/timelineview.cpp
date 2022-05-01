@@ -18,10 +18,10 @@
 #include <KGantt/KGanttItemDelegate>
 #include <KGantt/KGanttStyleOptionGanttItem>
 
+#include <Akonadi/CalendarUtils>
 #include <Akonadi/ETMCalendar>
 #include <Akonadi/IncidenceChanger>
 #include <CalendarSupport/CollectionSelection>
-#include <CalendarSupport/Utils>
 
 #include "calendarview_debug.h"
 
@@ -310,12 +310,12 @@ void TimelineView::showDates(const QDate &start, const QDate &end, const QDate &
         for (const Akonadi::Collection &collection : collections) {
             if (collection.contentMimeTypes().contains(Event::eventMimeType())) {
                 auto item = new TimelineItem(calendar(), index++, static_cast<QStandardItemModel *>(d->mGantt->model()), d->mGantt);
-                d->mLeftView->addTopLevelItem(new QTreeWidgetItem(QStringList() << CalendarSupport::displayName(calendar().data(), collection)));
+                d->mLeftView->addTopLevelItem(new QTreeWidgetItem(QStringList() << Akonadi::CalendarUtils::displayName(calendar().data(), collection)));
                 const QColor resourceColor = EventViews::resourceColor(collection, preferences());
                 if (resourceColor.isValid()) {
                     item->setColor(resourceColor);
                 }
-                qCDebug(CALENDARVIEW_LOG) << "Created item " << item << " (" << CalendarSupport::displayName(calendar().data(), collection) << ") "
+                qCDebug(CALENDARVIEW_LOG) << "Created item " << item << " (" << Akonadi::CalendarUtils::displayName(calendar().data(), collection) << ") "
                                           << "with index " << index - 1 << " from collection " << collection.id();
                 d->mCalendarItemMap.insert(collection.id(), item);
             }

@@ -8,7 +8,9 @@
 #include "agendaview.h"
 #include "calendarview_debug.h"
 #include "helper.h"
-#include <CalendarSupport/Utils>
+
+#include <Akonadi/CalendarUtils>
+
 #include <QSharedPointer>
 
 using namespace EventViews;
@@ -169,7 +171,7 @@ Akonadi::Item AkonadiViewCalendar::item(const KCalendarCore::Incidence::Ptr &inc
 
 QString AkonadiViewCalendar::displayName(const KCalendarCore::Incidence::Ptr &incidence) const
 {
-    return CalendarSupport::displayName(mCalendar.data(), item(incidence).parentCollection());
+    return Akonadi::CalendarUtils::displayName(mCalendar.data(), item(incidence).parentCollection());
 }
 
 QColor AkonadiViewCalendar::resourceColor(const KCalendarCore::Incidence::Ptr &incidence) const

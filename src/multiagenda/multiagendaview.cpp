@@ -14,11 +14,11 @@
 #include "configdialoginterface.h"
 #include "prefs.h"
 
+#include <Akonadi/CalendarUtils>
 #include <Akonadi/ETMViewStateSaver>
 #include <Akonadi/EntityTreeModel>
 
 #include <CalendarSupport/CollectionSelection>
-#include <CalendarSupport/Utils>
 
 #include <KCheckableProxyModel>
 #include <KLocalizedString>
@@ -474,7 +474,7 @@ AgendaView *MultiAgendaViewPrivate::createView(const QString &title)
 
 void MultiAgendaViewPrivate::addView(const Akonadi::Collection &collection)
 {
-    AgendaView *av = createView(CalendarSupport::displayName(q->calendar().data(), collection));
+    AgendaView *av = createView(Akonadi::CalendarUtils::displayName(q->calendar().data(), collection));
     av->setCollectionId(collection.id());
 }
 

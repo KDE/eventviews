@@ -414,7 +414,7 @@ void ListViewPrivate::addIncidence(const Akonadi::ETMCalendar::Ptr &calendar, co
 
     // set tooltips
     for (int col = 0; col < Dummy_EOF_Column; ++col) {
-        item->setToolTip(col, IncidenceFormatter::toolTipStr(CalendarSupport::displayName(calendar.data(), aitem.parentCollection()), incidence));
+        item->setToolTip(col, IncidenceFormatter::toolTipStr(Akonadi::CalendarUtils::displayName(calendar.data(), aitem.parentCollection()), incidence));
     }
 
     ListItemVisitor v(item, mStartDate);
