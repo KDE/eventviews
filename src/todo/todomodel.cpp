@@ -414,13 +414,13 @@ void TodoModel::setSourceModel(QAbstractItemModel *model)
     beginResetModel();
 
     if (sourceModel()) {
-        disconnect(sourceModel(), SIGNAL(dataChanged(QModelIndex, QModelIndex)), d.get(), SLOT(onDataChanged(QModelIndex, QModelIndex)));
+        disconnect(sourceModel(), &QAbstractItemModel::dataChanged, d.get(), &TodoModelPrivate::onDataChanged);
     }
 
     KExtraColumnsProxyModel::setSourceModel(model);
 
     if (sourceModel()) {
-        connect(sourceModel(), SIGNAL(dataChanged(QModelIndex, QModelIndex)), d.get(), SLOT(onDataChanged(QModelIndex, QModelIndex)));
+        connect(sourceModel(), &QAbstractItemModel::dataChanged, d.get(), &TodoModelPrivate::onDataChanged);
     }
 
     endResetModel();

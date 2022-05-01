@@ -34,7 +34,7 @@ public:
     Akonadi::IncidenceChanger *m_changer = nullptr;
     EventViews::PrefsPtr m_preferences;
 
-private Q_SLOTS:
+public Q_SLOTS:
     void onDataChanged(const QModelIndex &begin, const QModelIndex &end);
 
 private:

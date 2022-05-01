@@ -249,7 +249,7 @@ TodoView::TodoView(const EventViews::PrefsPtr &prefs, bool sidebarView, QWidget 
     mQuickAdd = new TodoViewQuickAddLine(this);
     mQuickAdd->setClearButtonEnabled(true);
     mQuickAdd->setVisible(preferences()->enableQuickTodo());
-    connect(mQuickAdd, SIGNAL(returnPressed(Qt::KeyboardModifiers)), this, SLOT(addQuickTodo(Qt::KeyboardModifiers)));
+    connect(mQuickAdd, &TodoViewQuickAddLine::returnPressed, this, &TodoView::addQuickTodo);
 
     mFullViewButton = nullptr;
     if (!mSidebarView) {
@@ -269,7 +269,7 @@ TodoView::TodoView(const EventViews::PrefsPtr &prefs, bool sidebarView, QWidget 
                                         "flat list instead of a hierarchical tree; the parental "
                                         "relationships are removed in the display."));
 
-    connect(mFlatViewButton, SIGNAL(toggled(bool)), SLOT(setFlatView(bool)));
+    connect(mFlatViewButton, &QToolButton::toggled, this, [=](bool flatView) {setFlatView(flatView, true);});
     if (mFullViewButton) {
         connect(mFullViewButton, &QToolButton::toggled, this, &TodoView::setFullView);
     }
@@ -358,7 +358,7 @@ TodoView::TodoView(const EventViews::PrefsPtr &prefs, bool sidebarView, QWidget 
     a = mItemPopupMenu->addAction(QIcon::fromTheme(QStringLiteral("appointment-new")),
                                   i18nc("@action:inmenu", "Create Event from To-do"),
                                   this,
-                                  SLOT(createEvent()));
+                                  qOverload<>(&TodoView::createEvent));
     a->setObjectName(QStringLiteral("createevent"));
     mItemPopupMenuReadWriteEntries << a;
     mItemPopupMenuItemOnlyEntries << a;
@@ -366,7 +366,7 @@ TodoView::TodoView(const EventViews::PrefsPtr &prefs, bool sidebarView, QWidget 
     a = mItemPopupMenu->addAction(QIcon::fromTheme(QStringLiteral("view-pim-notes")),
                                   i18nc("@action:inmenu", "Create Note for To-do"),
                                   this,
-                                  SLOT(createNote()));
+                                  qOverload<>(&TodoView::createNote));
     a->setObjectName(QStringLiteral("createnote"));
     mItemPopupMenuReadWriteEntries << a;
     mItemPopupMenuItemOnlyEntries << a;
