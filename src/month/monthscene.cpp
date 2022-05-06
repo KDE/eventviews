@@ -180,12 +180,15 @@ void MonthGraphicsView::drawBackground(QPainter *p, const QRectF &rect)
     font.setPointSize(15);
     p->setFont(font);
     const int dayLabelsHeight = 20;
+    const auto dayInMonth = mMonthView->averageDate();
     p->drawText(QRect(0,
                       0, // top right
                       static_cast<int>(mScene->sceneRect().width()),
                       static_cast<int>(mScene->headerHeight() - dayLabelsHeight)),
                 Qt::AlignCenter,
-                mMonthView->averageDate().toString(QStringLiteral("MMMM yyyy")));
+                QStringLiteral("%1 %2")
+                    .arg(QLocale().standaloneMonthName(dayInMonth.month(), QLocale::LongFormat))
+                    .arg(dayInMonth.year()));
 
     font.setPointSize(dayLabelsHeight - 10);
     p->setFont(font);
