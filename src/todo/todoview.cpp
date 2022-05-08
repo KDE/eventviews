@@ -939,7 +939,7 @@ void TodoView::setStartDate(QDate date)
     }
 
     const auto todoItem = selection[0].data(TodoModel::TodoRole).value<Akonadi::Item>();
-    KCalendarCore::Todo::Ptr todo = CalendarSupport::todo(todoItem);
+    KCalendarCore::Todo::Ptr todo = Akonadi::CalendarUtils::todo(todoItem);
     Q_ASSERT(todo);
 
     if (calendar()->hasRight(todoItem, Akonadi::Collection::CanChangeItem)) {
