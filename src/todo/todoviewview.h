@@ -13,6 +13,11 @@
 
 class QMenu;
 
+namespace CalendarSupport
+{
+    class KDatePickerPopup;
+}
+
 class TodoViewView : public QTreeView
 {
     Q_OBJECT
@@ -23,6 +28,7 @@ public:
     Q_REQUIRED_RESULT bool isEditing(const QModelIndex &index) const;
 
     Q_REQUIRED_RESULT bool eventFilter(QObject *watched, QEvent *event) override;
+    Q_REQUIRED_RESULT CalendarSupport::KDatePickerPopup *startPopupMenu();
 
 protected:
     QModelIndex moveCursor(CursorAction cursorAction, Qt::KeyboardModifiers modifiers) override;
@@ -37,6 +43,9 @@ private:
     QList<QAction *> mColumnActions;
     QTimer mExpandTimer;
     bool mIgnoreNextMouseRelease = false;
+
+    // TODO KF6: move this next to TodoView::mMovePopupMenu.
+    CalendarSupport::KDatePickerPopup *mStartPopupMenu = nullptr;
 
 Q_SIGNALS:
     void visibleColumnCountChanged();

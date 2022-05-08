@@ -384,6 +384,7 @@ TodoView::TodoView(const EventViews::PrefsPtr &prefs, bool sidebarView, QWidget 
     mMovePopupMenu->setTitle(i18nc("@title:menu", "&Move To"));
 
     connect(mMovePopupMenu, &CalendarSupport::KDatePickerPopup::dateChanged, this, &TodoView::setNewDate);
+    connect(mView->startPopupMenu(), &CalendarSupport::KDatePickerPopup::dateChanged, this, &TodoView::setStartDate);
 
     connect(mMovePopupMenu, &CalendarSupport::KDatePickerPopup::dateChanged, mItemPopupMenu, &QMenu::hide);
 
@@ -708,6 +709,8 @@ void TodoView::contextMenu(QPoint pos)
             mPercentageCompletedPopupMenu->popup(mView->viewport()->mapToGlobal(pos));
             break;
         case TodoModel::StartDateColumn:
+            mView->startPopupMenu()->popup(mView->viewport()->mapToGlobal(pos));
+            break;
         case TodoModel::DueDateColumn:
             mMovePopupMenu->popup(mView->viewport()->mapToGlobal(pos));
             break;
@@ -921,6 +924,37 @@ void TodoView::setNewDate(QDate date)
         qCDebug(CALENDARVIEW_LOG) << "Item is readOnly";
     }
 }
+
+void TodoView::setStartDate(QDate date)
+{
+    QModelIndexList selection = mView->selectionModel()->selectedRows();
+    if (selection.size() != 1) {
+        return;
+    }
+
+    const auto todoItem = selection[0].data(TodoModel::TodoRole).value<Akonadi::Item>();
+    KCalendarCore::Todo::Ptr todo = CalendarSupport::todo(todoItem);
+    Q_ASSERT(todo);
+
+    if (calendar()->hasRight(todoItem, Akonadi::Collection::CanChangeItem)) {
+        KCalendarCore::Todo::Ptr oldTodo(todo->clone());
+        QDateTime dt(date.startOfDay());
+
+        if (!todo->allDay()) {
+            dt.setTime(todo->dtStart().time());
+        }
+
+        if (todo->hasDueDate() && dt > todo->dtDue()) {
+            todo->setDtDue(dt);
+        }
+        todo->setDtStart(dt);
+
+        changer()->modifyIncidence(todoItem, oldTodo, this);
+    } else {
+        qCDebug(CALENDARVIEW_LOG) << "Item is readOnly";
+    }
+}
+
 
 void TodoView::setNewPercentage(QAction *action)
 {
