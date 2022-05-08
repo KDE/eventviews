@@ -8,6 +8,8 @@
 
 #include "todoviewview.h"
 
+#include <CalendarSupport/KDatePickerPopup>
+
 #include <KLocalizedString>
 #include <QMenu>
 
@@ -28,6 +30,9 @@ TodoViewView::TodoViewView(QWidget *parent)
     connect(&mExpandTimer, &QTimer::timeout, this, &TodoViewView::expandParent);
     mExpandTimer.setInterval(1s);
     header()->setStretchLastSection(false);
+    mStartPopupMenu = new CalendarSupport::KDatePickerPopup(
+        CalendarSupport::KDatePickerPopup::NoDate | CalendarSupport::KDatePickerPopup::DatePicker | CalendarSupport::KDatePickerPopup::Words,
+        QDate::currentDate(), this);
 }
 
 bool TodoViewView::isEditing(const QModelIndex &index) const
@@ -65,6 +70,11 @@ bool TodoViewView::eventFilter(QObject *watched, QEvent *event)
     }
 
     return false;
+}
+
+CalendarSupport::KDatePickerPopup *TodoViewView::startPopupMenu()
+{
+    return mStartPopupMenu;
 }
 
 void TodoViewView::toggleColumnHidden(QAction *action)

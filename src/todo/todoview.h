@@ -120,6 +120,7 @@ private Q_SLOTS:
     void resizeColumns();
     void itemDoubleClicked(const QModelIndex &index);
     void setNewDate(QDate date);
+    void setStartDate(QDate date);
     void setNewPercentage(QAction *action);
     void setNewPriority(QAction *action);
     void changedCategories(QAction *action);
