@@ -5,7 +5,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later WITH Qt-Commercial-exception-1.0
 */
 
-#include "todomodel_p.h"
+#include "todomodel.h"
 
 #include <CalendarSupport/KCalPrefs>
 #include <CalendarSupport/Utils>
@@ -27,14 +27,30 @@
 #include <QIcon>
 #include <QMimeData>
 
+class TodoModelPrivate
+{
+public:
+    TodoModelPrivate(const EventViews::PrefsPtr &preferences, TodoModel *qq);
+
+    // TODO: O(N) complexity, see if the profiler complains about this
+    Akonadi::Item findItemByUid(const QString &uid, const QModelIndex &parent) const;
+
+    Akonadi::ETMCalendar::Ptr m_calendar;
+    Akonadi::IncidenceChanger *m_changer = nullptr;
+    EventViews::PrefsPtr m_preferences;
+
+    void onDataChanged(const QModelIndex &begin, const QModelIndex &end);
+
+    TodoModel *const q;
+};
+
 static bool isDueToday(const KCalendarCore::Todo::Ptr &todo)
 {
     return !todo->isCompleted() && todo->dtDue().date() == QDate::currentDate();
 }
 
 TodoModelPrivate::TodoModelPrivate(const EventViews::PrefsPtr &preferences, TodoModel *qq)
-    : QObject()
-    , m_preferences(preferences)
+    : m_preferences(preferences)
     , q(qq)
 {
 }
@@ -416,13 +432,15 @@ void TodoModel::setSourceModel(QAbstractItemModel *model)
     beginResetModel();
 
     if (sourceModel()) {
-        disconnect(sourceModel(), &QAbstractItemModel::dataChanged, d.get(), &TodoModelPrivate::onDataChanged);
+        disconnect(sourceModel(), &QAbstractItemModel::dataChanged, this, nullptr);
     }
 
     KExtraColumnsProxyModel::setSourceModel(model);
 
     if (sourceModel()) {
-        connect(sourceModel(), &QAbstractItemModel::dataChanged, d.get(), &TodoModelPrivate::onDataChanged);
+        connect(sourceModel(), &QAbstractItemModel::dataChanged, this, [this](const auto &begin, const auto &end) {
+            d->onDataChanged(begin, end);
+        });
     }
 
     endResetModel();

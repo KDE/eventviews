@@ -68,7 +68,6 @@ target_sources(KF5EventViews PRIVATE
   todo/todomodel.h
   todo/todoviewquicksearch.h
   todo/tododelegates.h
-  todo/todomodel_p.h
   todo/todoview.h
   todo/todoviewquickaddline.h
   multiagenda/multiagendaview.h
