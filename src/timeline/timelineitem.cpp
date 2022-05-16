@@ -10,7 +10,11 @@
 
 #include <Akonadi/CalendarUtils>
 
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
 #include <KGantt/KGanttGlobal>
+#else
+#include <KGanttGlobal>
+#endif
 
 #include <KCalUtils/IncidenceFormatter>
 

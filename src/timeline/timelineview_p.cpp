@@ -9,7 +9,12 @@
 #include "timelineview_p.h"
 #include "timelineitem.h"
 
+// FIXME
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
 #include <KGantt/KGanttGraphicsView>
+#else
+#include <KGanttGraphicsView>
+#endif
 
 #include <Akonadi/CalendarUtils>
 #include <Akonadi/ETMCalendar>
