@@ -8,7 +8,7 @@
 
 #include "whatsnextview.h"
 
-#include <kcalcore_version.h>
+#include <kcalendarcore_version.h>
 
 #include <Akonadi/CalendarUtils>
 #include <Akonadi/ETMCalendar>
@@ -91,7 +91,7 @@ void WhatsNextView::updateView()
     KCalendarCore::Event::List events;
     events = calendar()->events(mStartDate, mEndDate, QTimeZone::systemTimeZone(), false);
 
-#if KCALCORE_VERSION < QT_VERSION_CHECK(5, 95, 0)
+#if KCALENDARCORE_VERSION < QT_VERSION_CHECK(5, 95, 0)
     events = calendar()->sortEvents(events, KCalendarCore::EventSortStartDate, KCalendarCore::SortDirectionAscending);
 #else
     events = calendar()->sortEvents(std::move(events), KCalendarCore::EventSortStartDate, KCalendarCore::SortDirectionAscending);
