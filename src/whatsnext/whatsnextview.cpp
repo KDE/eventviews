@@ -26,6 +26,9 @@ void WhatsNextTextBrowser::setSource(const QUrl &name)
 void WhatsNextTextBrowser::doSetSource(const QUrl &name, QTextDocument::ResourceType type)
 #endif
 {
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+    Q_UNUSED(type);
+#endif
     const QString uri = name.toString();
     if (uri.startsWith(QLatin1String("event:"))) {
         Q_EMIT showIncidence(uri);
