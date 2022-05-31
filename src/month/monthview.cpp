@@ -213,7 +213,7 @@ MonthView::MonthView(NavButtonsVisibility visibility, QWidget *parent)
 
     connect(d->scene, &MonthScene::incidenceSelected, this, &EventView::incidenceSelected);
 
-    connect(d->scene, SIGNAL(newEventSignal()), SIGNAL(newEventSignal()));
+    connect(d->scene, &MonthScene::newEventSignal, this, qOverload<>(&EventView::newEventSignal));
 
     connect(d->scene, &MonthScene::showNewEventPopupSignal, this, &MonthView::showNewEventPopupSignal);
 

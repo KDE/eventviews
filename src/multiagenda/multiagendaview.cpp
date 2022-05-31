@@ -136,6 +136,7 @@ public:
     QLabel *mLabel = nullptr;
     QWidget *mRightDummyWidget = nullptr;
     QHash<QString, KViewStateMaintainer<ETMViewStateSaver> *> mSelectionSavers;
+    QMetaObject::Connection m_selectionChangeConn;
 };
 
 MultiAgendaView::MultiAgendaView(QWidget *parent)
@@ -230,9 +231,9 @@ void MultiAgendaView::setCalendar(const Akonadi::ETMCalendar::Ptr &calendar)
         proxy->setSourceModel(calendar->entityTreeModel());
     }
 
-    disconnect(nullptr, SIGNAL(selectionChanged(Akonadi::Collection::List, Akonadi::Collection::List)), this, SLOT(forceRecreateViews()));
-
-    connect(collectionSelection(), &CalendarSupport::CollectionSelection::selectionChanged, this, &MultiAgendaView::forceRecreateViews);
+    disconnect(d->m_selectionChangeConn);
+    d->m_selectionChangeConn =
+        connect(collectionSelection(), &CalendarSupport::CollectionSelection::selectionChanged, this, &MultiAgendaView::forceRecreateViews);
 
     recreateViews();
 }
@@ -304,10 +305,13 @@ void MultiAgendaViewPrivate::deleteViews()
 void MultiAgendaViewPrivate::setupViews()
 {
     for (AgendaView *agendaView : std::as_const(mAgendaViews)) {
-        q->connect(agendaView, SIGNAL(newEventSignal()), q, SIGNAL(newEventSignal()));
-        q->connect(agendaView, SIGNAL(newEventSignal(QDate)), q, SIGNAL(newEventSignal(QDate)));
-        q->connect(agendaView, SIGNAL(newEventSignal(QDateTime)), q, SIGNAL(newEventSignal(QDateTime)));
-        q->connect(agendaView, SIGNAL(newEventSignal(QDateTime, QDateTime)), q, SIGNAL(newEventSignal(QDateTime, QDateTime)));
+        q->connect(agendaView, qOverload<>(&EventView::newEventSignal), q, qOverload<>(&EventView::newEventSignal));
+        q->connect(agendaView, qOverload<const QDate &>(&EventView::newEventSignal), q, qOverload<const QDate &>(&EventView::newEventSignal));
+        q->connect(agendaView, qOverload<const QDateTime &>(&EventView::newEventSignal), q, qOverload<const QDateTime &>(&EventView::newEventSignal));
+        q->connect(agendaView,
+                   qOverload<const QDateTime &, const QDateTime &>(&EventView::newEventSignal),
+                   q,
+                   qOverload<const QDateTime &>(&EventView::newEventSignal));
 
         q->connect(agendaView, &EventView::editIncidenceSignal, q, &EventView::editIncidenceSignal);
         q->connect(agendaView, &EventView::showIncidenceSignal, q, &EventView::showIncidenceSignal);
@@ -327,7 +331,7 @@ void MultiAgendaViewPrivate::setupViews()
 
         q->connect(agendaView, &AgendaView::timeSpanSelectionChanged, q, &MultiAgendaView::slotClearTimeSpanSelection);
 
-        q->disconnect(agendaView->agenda(), SIGNAL(zoomView(int, QPoint, Qt::Orientation)), agendaView, nullptr);
+        q->disconnect(agendaView->agenda(), &Agenda::zoomView, agendaView, nullptr);
         q->connect(agendaView->agenda(), &Agenda::zoomView, q, &MultiAgendaView::zoomView);
     }
 

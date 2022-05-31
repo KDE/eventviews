@@ -420,7 +420,7 @@ void Agenda::init()
 
     calculateWorkingHours();
 
-    connect(verticalScrollBar(), SIGNAL(valueChanged(int)), SLOT(checkScrollBoundaries(int)));
+    connect(verticalScrollBar(), &QScrollBar::valueChanged, this, qOverload<int>(&Agenda::checkScrollBoundaries));
 
     // Create the Marcus Bains line.
     if (d->mAllDayMode) {

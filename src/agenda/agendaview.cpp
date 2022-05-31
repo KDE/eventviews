@@ -1259,7 +1259,7 @@ void AgendaView::connectAgenda(Agenda *agenda, Agenda *otherAgenda)
 
     agenda->setCalendar(d->mViewCalendar);
 
-    connect(agenda, SIGNAL(newEventSignal()), SIGNAL(newEventSignal()));
+    connect(agenda, &Agenda::newEventSignal, this, qOverload<>(&EventView::newEventSignal));
 
     connect(agenda, &Agenda::newStartSelectSignal, otherAgenda, &Agenda::clearSelection);
     connect(agenda, &Agenda::newStartSelectSignal, this, &AgendaView::timeSpanSelectionChanged);
