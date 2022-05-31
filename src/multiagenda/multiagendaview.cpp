@@ -303,38 +303,38 @@ void MultiAgendaViewPrivate::deleteViews()
 
 void MultiAgendaViewPrivate::setupViews()
 {
-    for (AgendaView *agenda : std::as_const(mAgendaViews)) {
-        q->connect(agenda, SIGNAL(newEventSignal()), q, SIGNAL(newEventSignal()));
-        q->connect(agenda, SIGNAL(newEventSignal(QDate)), q, SIGNAL(newEventSignal(QDate)));
-        q->connect(agenda, SIGNAL(newEventSignal(QDateTime)), q, SIGNAL(newEventSignal(QDateTime)));
-        q->connect(agenda, SIGNAL(newEventSignal(QDateTime, QDateTime)), q, SIGNAL(newEventSignal(QDateTime, QDateTime)));
+    for (AgendaView *agendaView : std::as_const(mAgendaViews)) {
+        q->connect(agendaView, SIGNAL(newEventSignal()), q, SIGNAL(newEventSignal()));
+        q->connect(agendaView, SIGNAL(newEventSignal(QDate)), q, SIGNAL(newEventSignal(QDate)));
+        q->connect(agendaView, SIGNAL(newEventSignal(QDateTime)), q, SIGNAL(newEventSignal(QDateTime)));
+        q->connect(agendaView, SIGNAL(newEventSignal(QDateTime, QDateTime)), q, SIGNAL(newEventSignal(QDateTime, QDateTime)));
 
-        q->connect(agenda, &EventView::editIncidenceSignal, q, &EventView::editIncidenceSignal);
-        q->connect(agenda, &EventView::showIncidenceSignal, q, &EventView::showIncidenceSignal);
-        q->connect(agenda, &EventView::deleteIncidenceSignal, q, &EventView::deleteIncidenceSignal);
+        q->connect(agendaView, &EventView::editIncidenceSignal, q, &EventView::editIncidenceSignal);
+        q->connect(agendaView, &EventView::showIncidenceSignal, q, &EventView::showIncidenceSignal);
+        q->connect(agendaView, &EventView::deleteIncidenceSignal, q, &EventView::deleteIncidenceSignal);
 
-        q->connect(agenda, &EventView::incidenceSelected, q, &EventView::incidenceSelected);
+        q->connect(agendaView, &EventView::incidenceSelected, q, &EventView::incidenceSelected);
 
-        q->connect(agenda, &EventView::cutIncidenceSignal, q, &EventView::cutIncidenceSignal);
-        q->connect(agenda, &EventView::copyIncidenceSignal, q, &EventView::copyIncidenceSignal);
-        q->connect(agenda, &EventView::pasteIncidenceSignal, q, &EventView::pasteIncidenceSignal);
-        q->connect(agenda, &EventView::toggleAlarmSignal, q, &EventView::toggleAlarmSignal);
-        q->connect(agenda, &EventView::dissociateOccurrencesSignal, q, &EventView::dissociateOccurrencesSignal);
+        q->connect(agendaView, &EventView::cutIncidenceSignal, q, &EventView::cutIncidenceSignal);
+        q->connect(agendaView, &EventView::copyIncidenceSignal, q, &EventView::copyIncidenceSignal);
+        q->connect(agendaView, &EventView::pasteIncidenceSignal, q, &EventView::pasteIncidenceSignal);
+        q->connect(agendaView, &EventView::toggleAlarmSignal, q, &EventView::toggleAlarmSignal);
+        q->connect(agendaView, &EventView::dissociateOccurrencesSignal, q, &EventView::dissociateOccurrencesSignal);
 
-        q->connect(agenda, &EventView::newTodoSignal, q, &EventView::newTodoSignal);
+        q->connect(agendaView, &EventView::newTodoSignal, q, &EventView::newTodoSignal);
 
-        q->connect(agenda, &EventView::incidenceSelected, q, &MultiAgendaView::slotSelectionChanged);
+        q->connect(agendaView, &EventView::incidenceSelected, q, &MultiAgendaView::slotSelectionChanged);
 
-        q->connect(agenda, &AgendaView::timeSpanSelectionChanged, q, &MultiAgendaView::slotClearTimeSpanSelection);
+        q->connect(agendaView, &AgendaView::timeSpanSelectionChanged, q, &MultiAgendaView::slotClearTimeSpanSelection);
 
-        q->disconnect(agenda->agenda(), SIGNAL(zoomView(int, QPoint, Qt::Orientation)), agenda, nullptr);
-        q->connect(agenda->agenda(), &Agenda::zoomView, q, &MultiAgendaView::zoomView);
+        q->disconnect(agendaView->agenda(), SIGNAL(zoomView(int, QPoint, Qt::Orientation)), agendaView, nullptr);
+        q->connect(agendaView->agenda(), &Agenda::zoomView, q, &MultiAgendaView::zoomView);
     }
 
     AgendaView *lastView = mAgendaViews.last();
-    for (AgendaView *agenda : std::as_const(mAgendaViews)) {
-        if (agenda != lastView) {
-            q->connect(agenda->agenda()->verticalScrollBar(),
+    for (AgendaView *agendaView : std::as_const(mAgendaViews)) {
+        if (agendaView != lastView) {
+            q->connect(agendaView->agenda()->verticalScrollBar(),
                        &QAbstractSlider::valueChanged,
                        lastView->agenda()->verticalScrollBar(),
                        &QAbstractSlider::setValue);
