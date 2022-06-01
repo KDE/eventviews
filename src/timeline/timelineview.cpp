@@ -11,21 +11,12 @@
 #include "timelineitem.h"
 #include "timelineview_p.h"
 
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-#include <KGantt/KGanttAbstractRowController>
-#include <KGantt/KGanttDateTimeGrid>
-#include <KGantt/KGanttGraphicsItem>
-#include <KGantt/KGanttGraphicsView>
-#include <KGantt/KGanttItemDelegate>
-#include <KGantt/KGanttStyleOptionGanttItem>
-#else
 #include <KGanttAbstractRowController>
 #include <KGanttDateTimeGrid>
 #include <KGanttGraphicsItem>
 #include <KGanttGraphicsView>
 #include <KGanttItemDelegate>
 #include <KGanttStyleOptionGanttItem>
-#endif
 
 #include <Akonadi/CalendarUtils>
 #include <Akonadi/ETMCalendar>
