@@ -422,7 +422,8 @@ void AgendaHeader::loadDecorations(const QStringList &decorations, const QString
 
 CalendarDecoration::Decoration *AgendaHeader::loadCalendarDecoration(const QString &name)
 {
-    auto result = KPluginFactory::instantiatePlugin<CalendarDecoration::Decoration>(KPluginMetaData(QLatin1String("korganizer/") + name));
+    auto result = KPluginFactory::instantiatePlugin<CalendarDecoration::Decoration>(
+        KPluginMetaData(QStringLiteral("pim" QT_STRINGIFY(QT_VERSION_MAJOR)) + QStringLiteral("/korganizer/") + name));
 
     if (result) {
         return result.plugin;
