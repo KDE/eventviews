@@ -2145,7 +2145,7 @@ void AgendaView::slotIncidencesDropped(const QList<QUrl> &items, const QPoint &g
                 existingTodo->setAllDay(allDay);
                 changer()->modifyIncidence(existingTodoItem, oldTodo, this);
             } else {
-                KMessageBox::sorry(this,
+                KMessageBox::error(this,
                                    i18n("Unable to modify this to-do, "
                                         "because it cannot be locked."));
             }
@@ -2154,7 +2154,7 @@ void AgendaView::slotIncidencesDropped(const QList<QUrl> &items, const QPoint &g
             todo->setDtDue(newTime);
             todo->setAllDay(allDay);
             if (!changer()->addIncidence(todo, this)) {
-                KMessageBox::sorry(this, i18n("Unable to save %1 \"%2\".", i18n(todo->type()), todo->summary()));
+                KMessageBox::error(this, i18n("Unable to save %1 \"%2\".", i18n(todo->type()), todo->summary()));
             }
         }
     }

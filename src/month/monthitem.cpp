@@ -425,7 +425,7 @@ void IncidenceMonthItem::updateDates(int startOffset, int endOffset)
                 changer->createIncidence(newIncidence, item.parentCollection(), parentWidget());
                 changer->endAtomicOperation();
             } else {
-                KMessageBox::sorry(parentWidget(),
+                KMessageBox::error(parentWidget(),
                                    i18n("Unable to add the exception item to the calendar. "
                                         "No change will be done."),
                                    i18n("Error Occurred"));

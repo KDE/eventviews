@@ -1205,7 +1205,7 @@ void Agenda::endItemAction()
 
                     d->mAgendaView->enableAgendaUpdate(true);
                 } else {
-                    KMessageBox::sorry(this,
+                    KMessageBox::error(this,
                                        i18n("Unable to add the exception item to the calendar. "
                                             "No change will be done."),
                                        i18n("Error Occurred"));
