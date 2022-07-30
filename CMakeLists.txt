@@ -83,7 +83,7 @@ endif()
 
 
 ecm_set_disabled_deprecation_versions(QT 5.15.2
-    KF 5.96.0
+    KF 5.97.0
 )
 
 
