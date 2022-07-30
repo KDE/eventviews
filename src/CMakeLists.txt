@@ -297,8 +297,6 @@ if (BUILD_QCH)
     )
 endif()
 
-install(FILES agenda/calendardecoration.desktop DESTINATION ${KDE_INSTALL_KSERVICETYPESDIR})
-
 if(BUILD_TESTING)
     add_subdirectory(month/autotests)
 endif()
