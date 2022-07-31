@@ -14,6 +14,7 @@
 
 #include <Akonadi/CalendarUtils>
 #include <Akonadi/IncidenceChanger>
+#include <Akonadi/TagCache>
 #include <CalendarSupport/KCalPrefs>
 #include <CalendarSupport/Utils>
 
@@ -564,14 +565,14 @@ QColor IncidenceMonthItem::catColor() const
     const auto &prefs = monthScene()->monthView()->preferences();
 
     const auto &categories = mIncidence->categories();
-    if (categories.isEmpty() || !CalendarSupport::KCalPrefs::instance()->hasCategoryColor(categories.first())) {
+    if (categories.isEmpty() || !Akonadi::TagCache::instance()->tagColor(categories.first()).isValid()) {
         const auto &colorPreference = prefs->monthViewColors();
         if (colorPreference == PrefsBase::CategoryOnly) {
             return CalendarSupport::KCalPrefs::instance()->unsetCategoryColor();
         }
         return EventViews::resourceColor(akonadiItem(), prefs);
     }
-    return CalendarSupport::KCalPrefs::instance()->categoryColor(categories.first());
+    return Akonadi::TagCache::instance()->tagColor(categories.first());
 }
 
 QColor IncidenceMonthItem::bgColor() const

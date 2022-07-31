@@ -7,7 +7,6 @@
 
 #include "todomodel.h"
 
-#include <CalendarSupport/KCalPrefs>
 #include <CalendarSupport/Utils>
 #include <KCalUtils/IncidenceFormatter>
 #include <KCalendarCore/Attachment>
@@ -17,6 +16,7 @@
 
 #include <Akonadi/CalendarUtils>
 #include <Akonadi/IncidenceTreeModel>
+#include <Akonadi/TagCache>
 
 #include <KCalUtils/DndFactory>
 #include <KCalUtils/ICalDrag>
@@ -276,7 +276,7 @@ QVariant TodoModel::data(const QModelIndex &index, int role) const
             return QVariant(QIcon::fromTheme(QStringLiteral("task-recurring")));
         }
         const QStringList categories = todo->categories();
-        return categories.isEmpty() ? QVariant() : QVariant(CalendarSupport::KCalPrefs::instance()->categoryColor(categories.first()));
+        return categories.isEmpty() ? QVariant() : QVariant(Akonadi::TagCache::instance()->tagColor(categories.first()));
     } else if (role == Qt::DecorationRole) {
         return {};
     }

@@ -14,6 +14,8 @@
 #include <CalendarSupport/KCalPrefs>
 #include <CalendarSupport/Utils>
 
+#include <Akonadi/TagCache>
+
 #include <KContacts/VCardDrag>
 
 #include <KCalUtils/ICalDrag>
@@ -1127,14 +1129,14 @@ void AgendaItem::drawRoundedRect(QPainter *p,
 QColor AgendaItem::getCategoryColor() const
 {
     const QStringList &categories = mIncidence->categories();
-    if (categories.isEmpty() || !CalendarSupport::KCalPrefs::instance()->hasCategoryColor(categories.first())) {
+    if (categories.isEmpty() || !Akonadi::TagCache::instance()->tagColor(categories.first()).isValid()) {
         const auto colorPreference = mEventView->preferences()->agendaViewColors();
         if (colorPreference == PrefsBase::CategoryOnly || !mResourceColor.isValid()) {
             return CalendarSupport::KCalPrefs::instance()->unsetCategoryColor();
         }
         return mResourceColor;
     }
-    return CalendarSupport::KCalPrefs::instance()->categoryColor(categories.first());
+    return Akonadi::TagCache::instance()->tagColor(categories.first());
 }
 
 QColor AgendaItem::getFrameColor(const QColor &resourceColor, const QColor &categoryColor) const
