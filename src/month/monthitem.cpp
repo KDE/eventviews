@@ -23,6 +23,8 @@
 #include "calendarview_debug.h"
 #include <KMessageBox>
 
+#include <QDrag>
+
 using namespace EventViews;
 using namespace KCalendarCore;
 
@@ -157,6 +159,12 @@ void MonthItem::moveBy(int offsetToPreviousDate)
     updateMonthGraphicsItems();
 }
 
+void MonthItem::moveTo(QDate date)
+{
+    mOverrideStartDate = date;
+    updateMonthGraphicsItems();
+}
+
 void MonthItem::updateGeometry()
 {
     for (MonthGraphicsItem *item : std::as_const(mMonthGraphicsItemList)) {
@@ -173,7 +181,7 @@ void MonthItem::setZValue(qreal z)
 
 QDate MonthItem::startDate() const
 {
-    if (isMoving() || isResizing()) {
+    if ((isMoving() || isResizing()) && mOverrideStartDate.isValid()) {
         return mOverrideStartDate;
     }
 
@@ -182,7 +190,7 @@ QDate MonthItem::startDate() const
 
 QDate MonthItem::endDate() const
 {
-    if (isMoving() || isResizing()) {
+    if ((isMoving() || isResizing()) && mOverrideStartDate.isValid()) {
         return mOverrideStartDate.addDays(mOverrideDaySpan);
     }
 
@@ -379,8 +387,14 @@ void IncidenceMonthItem::finalizeMove(const QDate &newStartDate)
 {
     Q_ASSERT(isMoveable());
 
-    if (startDate().isValid() && newStartDate.isValid()) {
-        updateDates(startDate().daysTo(newStartDate), startDate().daysTo(newStartDate));
+    if (startDate().isValid()) {
+        if (newStartDate.isValid()) {
+            updateDates(startDate().daysTo(newStartDate), startDate().daysTo(newStartDate));
+        } else {
+            if (QDrag *drag = CalendarSupport::createDrag(akonadiItem(), this)) {
+                drag->exec();
+            }
+        }
     }
 }
 

@@ -150,6 +150,12 @@ public:
     void moveBy(int offsetFromPreviousDate);
 
     /**
+     * Called during a drag to move the item to a particular date.
+     * An invalid date indicates a drag outside the month grid.
+     */
+    void moveTo(QDate date);
+
+    /**
       Called during resize to resize the item a bit, relative to the previous
       resize step.
     */

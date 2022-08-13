@@ -521,8 +521,6 @@ void MonthScene::mouseMoveEvent(QGraphicsSceneMouseEvent *mouseEvent)
 
     // If an item was selected during the click, we maybe have an item to move !
     if (mActionItem) {
-        MonthCell *currentCell = getCellFromPos(pos);
-
         // Initiate action if not already done
         if (!mActionInitiated && mActionType != None) {
             if (mActionType == Move) {
@@ -535,18 +533,29 @@ void MonthScene::mouseMoveEvent(QGraphicsSceneMouseEvent *mouseEvent)
         view->setActionCursor(mActionType);
 
         // Move or resize action
-        if (currentCell && currentCell != mPreviousCell) {
+        MonthCell * const currentCell = getCellFromPos(pos);
+        if (currentCell != mPreviousCell) {
             bool ok = true;
             if (mActionType == Move) {
-                mActionItem->moveBy(mPreviousCell->date().daysTo(currentCell->date()));
+                if (currentCell) {
+                    mActionItem->moveTo(currentCell->date());
+                    mActionItem->updateGeometry();
+                } else {
+                    mActionItem->moveTo(QDate());
+                    mActionItem->updateGeometry();
+                    mActionItem->endMove();
+                    mActionItem = nullptr;
+                    mActionType = None;
+                    mStartCell = nullptr;
+                }
             } else if (mActionType == Resize) {
                 ok = mActionItem->resizeBy(mPreviousCell->date().daysTo(currentCell->date()));
+                mActionItem->updateGeometry();
             }
 
             if (ok) {
                 mPreviousCell = currentCell;
             }
-            mActionItem->updateGeometry();
             update();
         }
         mouseEvent->accept();
