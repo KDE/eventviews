@@ -8,8 +8,6 @@
 
 #include "whatsnextview.h"
 
-#include <kcalendarcore_version.h>
-
 #include <Akonadi/CalendarUtils>
 #include <Akonadi/ETMCalendar>
 #include <CalendarSupport/KCalPrefs>
@@ -94,11 +92,7 @@ void WhatsNextView::updateView()
     KCalendarCore::Event::List events;
     events = calendar()->events(mStartDate, mEndDate, QTimeZone::systemTimeZone(), false);
 
-#if KCALENDARCORE_VERSION < QT_VERSION_CHECK(5, 95, 0)
-    events = calendar()->sortEvents(events, KCalendarCore::EventSortStartDate, KCalendarCore::SortDirectionAscending);
-#else
     events = calendar()->sortEvents(std::move(events), KCalendarCore::EventSortStartDate, KCalendarCore::SortDirectionAscending);
-#endif
     if (!events.isEmpty()) {
         mText += QLatin1String("<p></p>");
         kil->loadIcon(QStringLiteral("view-calendar-day"), KIconLoader::NoGroup, 22, KIconLoader::DefaultState, QStringList(), &ipath);

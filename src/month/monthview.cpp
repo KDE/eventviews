@@ -16,7 +16,6 @@
 #include <CalendarSupport/CollectionSelection>
 #include <CalendarSupport/KCalPrefs>
 #include <CalendarSupport/Utils>
-#include <kholidays_version.h>
 
 #include "calendarview_debug.h"
 #include <KCalendarCore/OccurrenceIterator>
@@ -441,11 +440,7 @@ KHolidays::Holiday::List MonthView::holidays(QDate startDate, QDate endDate)
     for (auto const &r : regions) {
         KHolidays::HolidayRegion region(r);
         if (region.isValid()) {
-#if KHOLIDAYS_VERSION < QT_VERSION_CHECK(5, 95, 0)
-            holidays += region.holidays(startDate, endDate);
-#else
             holidays += region.rawHolidaysWithAstroSeasons(startDate, endDate);
-#endif
         }
     }
     return holidays;
