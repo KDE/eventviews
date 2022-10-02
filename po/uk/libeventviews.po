@@ -1,0 +1,2643 @@
+# Translation of libeventviews.po to Ukrainian
+# Copyright (C) 2010-2021 This_file_is_part_of_KDE
+# This file is distributed under the license LGPL version 2.1 or
+# version 3 or later versions approved by the membership of KDE e.V.
+#
+# Yuri Chornoivan <yurchor@ukr.net>, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: libeventviews\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-25 00:45+0000\n"
+"PO-Revision-Date: 2021-09-30 09:17+0300\n"
+"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
+"Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Lokalize 20.12.0\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Vladimir Kobal,Eugene Onischenko,Іван Петрущак,Юрій Чорноіван"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+"vlad@prokk.net,oneugene@ukr.net,ivanpetrouchtchak@yahoo.com,yurchor@ukr.net"
+
+#: agenda/agenda.cpp:969
+#, kde-format
+msgid "Unable to lock item for modification. You cannot make any changes."
+msgstr ""
+"Не вдається заблокувати запис для зміни. Ви не зможете внести ніяких змін."
+
+#: agenda/agenda.cpp:971
+#, kde-format
+msgid "Locking Failed"
+msgstr "Блокування зазнало невдачі"
+
+#: agenda/agenda.cpp:1187
+#, kde-format
+msgid "Dissociate event from recurrence"
+msgstr "Відділити як подію, що не повторюється"
+
+#: agenda/agenda.cpp:1209 month/monthitem.cpp:444
+#, kde-format
+msgid ""
+"Unable to add the exception item to the calendar. No change will be done."
+msgstr "Не вдається додати виняток в календар. Залишиться без змін."
+
+#: agenda/agenda.cpp:1211 month/monthitem.cpp:446
+#, kde-format
+msgid "Error Occurred"
+msgstr "Сталась помилка"
+
+#: agenda/agendaitem.cpp:81 list/listview.cpp:409
+#, kde-format
+msgid "%2 (1 year)"
+msgid_plural "%2 (%1 years)"
+msgstr[0] "%2 (%1 рік)"
+msgstr[1] "%2 (%1 роки)"
+msgstr[2] "%2 (%1 років)"
+msgstr[3] "%2 (%1 рік)"
+
+#: agenda/agendaitem.cpp:631
+#, kde-format
+msgid "Attendee \"%1\" added to the calendar item \"%2\""
+msgstr "Учасника «%1» додано до календарного пункту «%2»"
+
+#: agenda/agendaitem.cpp:632
+#, kde-format
+msgid "Attendee added"
+msgstr "Учасника додано"
+
+#: agenda/agendaitem.cpp:856 agenda/agendaitem.cpp:951
+#, kde-format
+msgid "%1 - %2"
+msgstr "%1 — %2"
+
+#: agenda/agendaitem.cpp:865
+#, kde-format
+msgid "- %1"
+msgstr "— %1"
+
+#: agenda/agendaview.cpp:360
+#, kde-format
+msgctxt "short_weekday short_monthname date (e.g. Mon Aug 13)"
+msgid "%1 %2 %3"
+msgstr "%1, %3 %2"
+
+#: agenda/agendaview.cpp:2149
+#, kde-format
+msgid "Unable to modify this to-do, because it cannot be locked."
+msgstr "Не вдається змінити це завдання, тому що неможливо його заблокувати."
+
+#: agenda/agendaview.cpp:2157
+#, kde-format
+msgid "Unable to save %1 \"%2\"."
+msgstr "Не вдалося зберегти %1 «%2»."
+
+#: agenda/timelabels.cpp:329
+#, kde-format
+msgid "&Add Timezones..."
+msgstr "&Додати часові пояси..."
+
+#: agenda/timelabels.cpp:330
+#, kde-format
+msgid "&Remove Timezone %1"
+msgstr "&Вилучити часовий пояс %1"
+
+#: agenda/timelabels.cpp:370
+#, kde-format
+msgctxt "title for timezone info, the timezone id and utc offset"
+msgid "<b>%1 (%2)</b>"
+msgstr "<b>%1 (%2)</b>"
+
+#: agenda/timelabels.cpp:374
+#, kde-format
+msgctxt "heading for timezone display name"
+msgid "<i>Name:</i> %1"
+msgstr "<i>Назва:</i> %1"
+
+#: agenda/timelabels.cpp:378
+#, kde-format
+msgctxt "heading for timezone country"
+msgid "<i>Country:</i> %1"
+msgstr "<i>Країна:</i> %1"
+
+#: agenda/timelabels.cpp:390
+#, kde-format
+msgctxt "heading for comma-separated list of timezone abbreviations"
+msgid "<i>Abbreviations:</i>"
+msgstr "<i>Скорочення:</i>"
+
+#: agenda/timelabels.cpp:396
+#, kde-format
+msgctxt "heading for the timezone comment"
+msgid "<i>Comment:</i> %1"
+msgstr "<i>Коментар:</i> %1"
+
+#: agenda/timelabels.cpp:412
+#, kde-format
+msgctxt "[hour of the day][am/pm/00] [timezone id (timezone-offset)]"
+msgid "%1%2<br/>%3 (%4)"
+msgstr "%1%2<br/>%3 (%4)"
+
+#: agenda/timescaleconfigdialog.cpp:49
+#, kde-format
+msgctxt "@title:window"
+msgid "Timezone"
+msgstr "Часовий пояс"
+
+#: eventview.cpp:111
+#, kde-format
+msgctxt "@title:window"
+msgid "Changing Recurring Item"
+msgstr "Зміна періодичної події"
+
+#: eventview.cpp:112
+#, kde-format
+msgid "Also &Future Items"
+msgstr "Також і &майбутні пункти"
+
+#: eventview.cpp:113
+#, kde-format
+msgid "Only &This Item"
+msgstr "Тільки &цей пункт"
+
+#: eventview.cpp:114
+#, kde-format
+msgid "&All Occurrences"
+msgstr "&Всі випадки"
+
+#: eventview.cpp:131
+#, kde-format
+msgid ""
+"The item you are trying to change is a recurring item. Should the changes be "
+"applied only to this single occurrence, also to future items, or to all "
+"items in the recurrence?"
+msgstr ""
+"Ви намагаєтесь змінити пункт, який повторюється. Хочете, щоб зміни були "
+"застосовані тільки до цього одного повторення, до всіх наступних, чи до всіх "
+"пунктів у цьому повторенні?"
+
+#: eventview.cpp:142
+#, kde-format
+msgid ""
+"The item you are trying to change is a recurring item. Should the changes be "
+"applied only to this single occurrence or to all items in the recurrence?"
+msgstr ""
+"Ви намагаєтесь змінити пункт, який повторюється. Хочете, щоб зміни були "
+"застосовані тільки до цього одного повторення чи до всіх пунктів повторено "
+"цього повторення?"
+
+#. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (Personal Settings)
+#: eventviews.kcfg:15
+#, kde-format
+msgid "Default Email Attachment Method"
+msgstr "Типовий спосіб долучення адрес ел.пошти"
+
+#. i18n: ectx: whatsthis, entry (DefaultEmailAttachMethod), group (Personal Settings)
+#: eventviews.kcfg:16
+#, kde-format
+msgid "The default way of attaching dropped emails to an event"
+msgstr "Типовий спосіб долучення скинутих адрес ел. пошти до події"
+
+#. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (Personal Settings)
+#. i18n: ectx: label, entry (DefaultTodoAttachMethod), group (Hidden Options)
+#: eventviews.kcfg:19 eventviews.kcfg:469
+#, kde-format
+msgid "Always ask"
+msgstr "Завжди питати"
+
+#. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (Personal Settings)
+#. i18n: ectx: label, entry (DefaultTodoAttachMethod), group (Hidden Options)
+#: eventviews.kcfg:22 eventviews.kcfg:472
+#, kde-format
+msgid "Only attach link to message"
+msgstr "Долучити до повідомлення лише посилання"
+
+#. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (Personal Settings)
+#. i18n: ectx: label, entry (DefaultTodoAttachMethod), group (Hidden Options)
+#: eventviews.kcfg:25 eventviews.kcfg:475
+#, kde-format
+msgid "Attach complete message"
+msgstr "Долучити все повідомлення"
+
+#. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (Personal Settings)
+#: eventviews.kcfg:28
+#, kde-format
+msgid "Attach message without attachments"
+msgstr "Приєднати повідомлення без долучень"
+
+#. i18n: ectx: label, entry, group (Save Settings)
+#: eventviews.kcfg:38
+#, kde-format
+msgid "Export to HTML with every save"
+msgstr "Експорт у HTML при кожному збереженні"
+
+#. i18n: ectx: whatsthis, entry, group (Save Settings)
+#: eventviews.kcfg:39
+#, kde-format
+msgid ""
+"Check this box to export the calendar to a HTML-file every time you save it. "
+"By default, this file will be called calendar.html and placed in the user "
+"home folder."
+msgstr ""
+"Позначте це поле, щоб експортувати календар у HTML-файл під час кожного "
+"збереження. Типово цей файл буде названо calendar.html і розміщено в "
+"домашній теці користувача."
+
+#. i18n: ectx: label, entry, group (Save Settings)
+#: eventviews.kcfg:44
+#, kde-format
+msgid "Enable automatic saving of manually opened calendar files"
+msgstr "Увімкнути автоматичне збереження файлів календаря, відкритих вручну"
+
+#. i18n: ectx: whatsthis, entry, group (Save Settings)
+#: eventviews.kcfg:45
+#, kde-format
+msgid ""
+"Check this box to save your calendar file automatically when you exit "
+"KOrganizer without asking and periodically, as you work. This setting does "
+"not affect the automatic saving of the standard calendar, which is "
+"automatically saved after each change."
+msgstr ""
+"Увімкніть, щоб без запитів зберігати файл вашого календаря автоматично, коли "
+"ви закриваєте KOrganizer, а також періодично зберігати під час роботи. Цей "
+"параметр не впливає на автоматичне збереження стандартного календаря, який "
+"автоматично зберігається після кожної зміни."
+
+#. i18n: ectx: label, entry, group (Save Settings)
+#: eventviews.kcfg:50
+#, kde-format
+msgid "Save &interval in minutes"
+msgstr "Інтервал збереження у &хвилинах"
+
+#. i18n: ectx: whatsthis, entry, group (Save Settings)
+#: eventviews.kcfg:51
+#, kde-format
+msgid ""
+"Set the interval between automatic saving of calendar events in minutes "
+"here. This setting only applies to files that are opened manually. The "
+"standard KDE-wide calendar is automatically saved after each change."
+msgstr ""
+"Вкажіть тут інтервал між автоматичними збереженнями календарних подій в "
+"хвилинах. Цей параметр стосується тільки до файлів, які відкрито вручну. "
+"Стандартний KDE календар зберігається після кожної зміни."
+
+#. i18n: ectx: label, entry (Confirm), group (Save Settings)
+#: eventviews.kcfg:57
+#, kde-format
+msgid "Confirm deletes"
+msgstr "Підтверджувати вилучення"
+
+#. i18n: ectx: whatsthis, entry (Confirm), group (Save Settings)
+#: eventviews.kcfg:58
+#, kde-format
+msgid "Check this box to display a confirmation dialog when deleting items."
+msgstr ""
+"Позначте цей пункт, щоб програма просила у вас підтвердження вилучення "
+"пунктів."
+
+#. i18n: ectx: label, entry (Destination), group (Save Settings)
+#: eventviews.kcfg:63
+#, kde-format
+msgid "New Events, To-dos and Journal Entries Should"
+msgstr "Нові події, завдання і журнальні записи повинні"
+
+#. i18n: ectx: label, entry (Destination), group (Save Settings)
+#: eventviews.kcfg:66
+#, kde-format
+msgid "Be added to the standard calendar"
+msgstr "додаватися до стандартного календаря"
+
+#. i18n: ectx: whatsthis, entry (Destination), group (Save Settings)
+#: eventviews.kcfg:67
+#, kde-format
+msgid ""
+"Select this option to always record new events, to-dos and journal entries "
+"using the standard calendar."
+msgstr ""
+"Позначте цей пункт, щоб завжди записувати нові події, завдання і журнальні "
+"записи, у стандартний календар."
+
+#. i18n: ectx: label, entry (Destination), group (Save Settings)
+#: eventviews.kcfg:70
+#, kde-format
+msgid "Be asked which calendar to use"
+msgstr "запитувати, який календар використовувати"
+
+#. i18n: ectx: whatsthis, entry (Destination), group (Save Settings)
+#: eventviews.kcfg:71
+#, kde-format
+msgid ""
+"Select this option to choose the calendar to be used to record the item each "
+"time you create a new event, to-do or journal entry. This choice is "
+"recommended if you intend to use the shared folders functionality of the "
+"Kolab server or have to manage multiple accounts using Kontact as a KDE "
+"Kolab client. "
+msgstr ""
+"Позначте цей пункт, щоб вибрати календар, який буде використано для запису "
+"пункту під час кожного створення нової події, завдання або журнального "
+"запису. Рекомендується увімкнути цей параметр, якщо ви маєте намір "
+"використовувати функціональність спільних тек сервера Kolab або керувати "
+"багатьма обліковими записами, використовуючи Kontact як клієнт KDE для "
+"Kolab. "
+
+#. i18n: ectx: label, entry, group (System Tray)
+#: eventviews.kcfg:81
+#, kde-format
+msgid "Show Reminder Daemon in the System Tray"
+msgstr "Показувати службу нагадувань у системному лотку"
+
+#. i18n: ectx: whatsthis, entry, group (System Tray)
+#: eventviews.kcfg:82
+#, kde-format
+msgid ""
+"Check this box to show the KOrganizer reminder daemon in the system tray."
+msgstr ""
+"Позначте, щоб показувати піктограму фонової служби нагадування KOrganizer у "
+"системному лотку."
+
+#. i18n: ectx: whatsthis, entry (TimeZoneId), group (Time &amp; Date)
+#: eventviews.kcfg:90
+#, kde-format
+msgid ""
+"Select your timezone from the list of locations in this drop down box. If "
+"your city is not listed, select one which shares the same timezone. "
+"KOrganizer will automatically adjust for daylight savings."
+msgstr ""
+"Виберіть ваш часовий пояс зі списку місцевостей. Якщо вашого міста немає в "
+"списку, виберіть якесь інше з того самого часового поясу. KOrganizer "
+"автоматично налаштує літній/зимовий час."
+
+#. i18n: ectx: label, entry (DayBegins), group (Time &amp; Date)
+#: eventviews.kcfg:94
+#, kde-format
+msgid "Day begins at"
+msgstr "День починається о"
+
+#. i18n: ectx: whatsthis, entry (DayBegins), group (Time &amp; Date)
+#: eventviews.kcfg:95
+#, kde-format
+msgid ""
+"Enter the start time for events here. This time should be the earliest time "
+"that you use for events, as it will be displayed at the top."
+msgstr ""
+"Тут введіть час початку подій. Цей час мусить бути найближчим часом, який ви "
+"використовуватимете для подій, оскільки його буде показано угорі."
+
+#. i18n: ectx: label, entry (WorkingHoursStart), group (Time &amp; Date)
+#: eventviews.kcfg:100
+#, kde-format
+msgid "Daily starting hour"
+msgstr "Початок дня"
+
+#. i18n: ectx: whatsthis, entry (WorkingHoursStart), group (Time &amp; Date)
+#: eventviews.kcfg:101
+#, kde-format
+msgid ""
+"Enter the start time for the working hours here. The working hours will be "
+"marked with color by KOrganizer."
+msgstr ""
+"Введіть початок робочих годин дня. Робочі години KOrganizer позначить "
+"кольором."
+
+#. i18n: ectx: label, entry (WorkingHoursEnd), group (Time &amp; Date)
+#: eventviews.kcfg:106
+#, kde-format
+msgid "Daily ending hour"
+msgstr "Кінець дня"
+
+#. i18n: ectx: whatsthis, entry (WorkingHoursEnd), group (Time &amp; Date)
+#: eventviews.kcfg:107
+#, kde-format
+msgid ""
+"Enter the ending time for the working hours here. The working hours will be "
+"marked with color by KOrganizer."
+msgstr ""
+"Введіть кінець робочих годин дня. Робочі години KOrganizer позначить "
+"кольором."
+
+#. i18n: ectx: label, entry (WeekStartDay), group (Time &amp; Date)
+#: eventviews.kcfg:112
+#, kde-format
+msgid "Weekly start day:"
+msgstr "Перший день тижня:"
+
+#. i18n: ectx: tooltip, entry (WeekStartDay), group (Time &amp; Date)
+#: eventviews.kcfg:113
+#, kde-format
+msgid "Select the first day of each week"
+msgstr "Виберіть перший день тижня"
+
+#. i18n: ectx: whatsthis, entry (WeekStartDay), group (Time &amp; Date)
+#: eventviews.kcfg:114
+#, kde-format
+msgid ""
+"Select the first day of each week. Normally, you can ignore this since it is "
+"set in your locale."
+msgstr ""
+"Вибір першого дня тижня. Зазвичай, цей пункт можна ігнорувати, оскільки "
+"перший день тижня визначається вибраною вами локаллю."
+
+#. i18n: ectx: label, entry, group (General View)
+#: eventviews.kcfg:122 viewerapp/settings.kcfg:15
+#, kde-format
+msgid "Enable tooltips for displaying summaries"
+msgstr "Увімкнути підказки для показу резюме"
+
+#. i18n: ectx: whatsthis, entry, group (General View)
+#: eventviews.kcfg:123 viewerapp/settings.kcfg:16
+#, kde-format
+msgid ""
+"Check this box to display summary tooltips when hovering the mouse over an "
+"event or a to-do."
+msgstr ""
+"Позначте цей пункт, щоб під час руху вказівника миші на подіями або "
+"завданнями було показано підказки з резюме."
+
+#. i18n: ectx: label, entry, group (General View)
+#: eventviews.kcfg:128
+#, kde-format
+msgid "To-dos use category colors"
+msgstr "Робочі плани використовують кольори категорії"
+
+#. i18n: ectx: whatsthis, entry, group (General View)
+#: eventviews.kcfg:129
+#, kde-format
+msgid ""
+"Check this box so that to-dos will use category colors and not colors "
+"specific to their due, due today or overdue state"
+msgstr ""
+"Позначте це поле, щоб поле запланованого використовувало кольори категорій, "
+"а не кольори, що відповідають їхньому строку, сьогоднішньому дню або стану "
+"простроченості"
+
+#. i18n: ectx: label, entry, group (General View)
+#: eventviews.kcfg:134
+#, kde-format
+msgid "Next x days"
+msgstr "Наступні X дні"
+
+#. i18n: ectx: whatsthis, entry, group (General View)
+#: eventviews.kcfg:135
+#, kde-format
+msgid ""
+"Select the number of \"x\" days to be displayed in the next days view. To "
+"access the next \"x\" days view, choose the \"Next X Days\" menu item from "
+"the \"View\" menu."
+msgstr ""
+"Тут ви можете вибрати кількість днів, «x», для перегляду наступних днів. Для "
+"доступу до перегляду наступних «x» днів, виберіть у меню «Перегляд» пункт "
+"«Наступні X днів»."
+
+#. i18n: ectx: tooltip, entry, group (General View)
+#: eventviews.kcfg:136
+#, kde-format
+msgid "Show this many days at a time in the Next \"x\" days view"
+msgstr "Показувати цю кількість днів у перегляді «Наступні x днів»"
+
+#. i18n: ectx: label, entry (DailyRecur), group (General View)
+#: eventviews.kcfg:141
+#, kde-format
+msgid "Show items that recur daily"
+msgstr "Показувати записи, які повторюються щоденно"
+
+#. i18n: ectx: whatsthis, entry (DailyRecur), group (General View)
+#: eventviews.kcfg:142
+#, kde-format
+msgid ""
+"Check this box to show the days containing daily recurring events in bold "
+"typeface in the Date Navigator, or uncheck it to give more prominence to "
+"other (non daily recurring) events."
+msgstr ""
+"Позначте, щоб у навігаторі датами дні, на які призначено події, які "
+"відбуваються щодня, було позначено жирним шрифтом, або зніміть позначку, щоб "
+"надати перевагу іншим подіям (тим, що відбуваються не щодня)."
+
+#. i18n: ectx: label, entry (WeeklyRecur), group (General View)
+#: eventviews.kcfg:147
+#, kde-format
+msgid "Show items that recur weekly"
+msgstr "Показувати записи, які повторюються щотижнево"
+
+#. i18n: ectx: whatsthis, entry (WeeklyRecur), group (General View)
+#: eventviews.kcfg:148
+#, kde-format
+msgid ""
+"Check this box to show the days containing weekly recurring events in bold "
+"typeface in the Date Navigator, or uncheck it to give more prominence to "
+"other (non weekly recurring) events."
+msgstr ""
+"Позначте, щоб у навігаторі датами дні, на які призначено події, які "
+"відбуваються щотижня, було позначено жирним шрифтом, або зніміть позначку, "
+"щоб надати перевагу іншим подіям (тим, що відбуваються не щотижня)."
+
+#. i18n: ectx: label, entry (HighlightTodos), group (General View)
+#: eventviews.kcfg:153
+#, kde-format
+msgid "Show to-dos instead of events when in Todo View"
+msgstr "Показувати завдання замість подій у перегляді завдань"
+
+#. i18n: ectx: whatsthis, entry (HighlightTodos), group (General View)
+#: eventviews.kcfg:154
+#, kde-format
+msgid ""
+"Check this box to show the days containing to-dos in bold typeface in the "
+"Date Navigator when in to-do view."
+msgstr ""
+"Позначте цей пункт, щоб програма показувала позначки днів, для яких існують "
+"записи завдань, жирним шрифтом у навігаторі датами перегляду завдань."
+
+#. i18n: ectx: label, entry (HighlightJournals), group (General View)
+#: eventviews.kcfg:159
+#, kde-format
+msgid "Show journals instead of events when in Journal View"
+msgstr "Показувати журнали подій у перегляді журналу"
+
+#. i18n: ectx: whatsthis, entry (HighlightJournals), group (General View)
+#: eventviews.kcfg:160
+#, kde-format
+msgid ""
+"Check this box to show the days containing journals in bold typeface in the "
+"Date Navigator when in journal view."
+msgstr ""
+"Позначте цей пункт, щоб програма показувала позначки днів, для яких існують "
+"записи журналу, жирним шрифтом у навігаторі датами перегляду журналу."
+
+#. i18n: ectx: label, entry (WeekNumbersShowWork), group (General View)
+#: eventviews.kcfg:165
+#, kde-format
+msgid "Week numbers select a work week when in work week mode"
+msgstr ""
+"Вибір тижня призводить до вибору робочого тижня у режимі робочого тижня"
+
+#. i18n: ectx: whatsthis, entry (WeekNumbersShowWork), group (General View)
+#: eventviews.kcfg:166
+#, kde-format
+msgid ""
+"Check this box to select a working week when clicking on the Date "
+"Navigator's week numbers, or uncheck it to choose the whole week."
+msgstr ""
+"Позначте цей пункт, якщо у відповідь на клацання на номері тижня у "
+"навігаторі датами слід позначати робочий тиждень. Якщо пункт не буде "
+"позначено, програма позначатиме цілий тиждень."
+
+#. i18n: ectx: label, entry, group (Agenda View)
+#: eventviews.kcfg:174 viewerapp/settings.kcfg:24
+#, kde-format
+msgid "Hour size"
+msgstr "Розмір поля годин"
+
+#. i18n: ectx: whatsthis, entry, group (Agenda View)
+#: eventviews.kcfg:175 viewerapp/settings.kcfg:25
+#, kde-format
+msgid ""
+"Select the height of the hour rows in the agenda grid, in pixels. Increasing "
+"this value will make each row in the agenda grid taller."
+msgstr ""
+"Оберіть висоту рядків годин у сітці розкладу, у пікселях. Збільшення цього "
+"значення зробить вищим кожен з рядків у сітці порядку денного."
+
+#. i18n: ectx: tooltip, entry, group (Agenda View)
+#: eventviews.kcfg:176 viewerapp/settings.kcfg:26
+#, kde-format
+msgid "Set the height (in pixels) for an hour in the agenda grid"
+msgstr "Встановіть висоту (у пікселях) для годин у сітці порядку денного"
+
+#. i18n: ectx: label, entry (EnableAgendaItemIcons), group (Agenda View)
+#: eventviews.kcfg:183 viewerapp/settings.kcfg:33
+#, kde-format
+msgid "Show icons in agenda view items"
+msgstr "Показувати піктограми у перегляді пунктів порядку денного"
+
+#. i18n: ectx: whatsthis, entry (EnableAgendaItemIcons), group (Agenda View)
+#: eventviews.kcfg:184 viewerapp/settings.kcfg:34
+#, kde-format
+msgid ""
+"Check this box to display icons (alarm, recursion, etc.) in agenda view "
+"items."
+msgstr ""
+"Позначте цей пункт, щоб для пунктів перегляду порядку денного було показано "
+"піктограми (нагадування, повторення та інші)."
+
+#. i18n: ectx: tooltip, entry (EnableAgendaItemIcons), group (Agenda View)
+#: eventviews.kcfg:185 viewerapp/settings.kcfg:35
+#, kde-format
+msgid "Display icons in agenda view items"
+msgstr "Показувати піктограми для пунктів перегляду порядку денного"
+
+#. i18n: ectx: label, entry (ShowTodosAgendaView), group (Agenda View)
+#. i18n: ectx: label, entry (ShowTodosMonthView), group (Month View)
+#: eventviews.kcfg:190 eventviews.kcfg:294 viewerapp/settings.kcfg:40
+#: viewerapp/settings.kcfg:133
+#, kde-format
+msgid "Show to-dos"
+msgstr "Показати завдання"
+
+#. i18n: ectx: whatsthis, entry (ShowTodosAgendaView), group (Agenda View)
+#: eventviews.kcfg:191 viewerapp/settings.kcfg:41
+#, kde-format
+msgid "Check this box to display to-dos in the agenda view."
+msgstr ""
+"Позначте цей пункт, щоб програма показувала завдання у перегляді порядку "
+"денного."
+
+#. i18n: ectx: tooltip, entry (ShowTodosAgendaView), group (Agenda View)
+#: eventviews.kcfg:192 viewerapp/settings.kcfg:42
+#, kde-format
+msgid "Display to-dos in the agenda view"
+msgstr "Показувати завдання у перегляді порядку денного"
+
+#. i18n: ectx: label, entry (MarcusBainsEnabled), group (Agenda View)
+#: eventviews.kcfg:197 viewerapp/settings.kcfg:47
+#, kde-format
+msgid "Show current-time (Marcus Bains) line"
+msgstr "Показувати лінію поточного часу (Маркуса Бейнса)"
+
+#. i18n: ectx: whatsthis, entry (MarcusBainsEnabled), group (Agenda View)
+#: eventviews.kcfg:198 viewerapp/settings.kcfg:48
+#, kde-format
+msgid ""
+"Check this box to display a line in the day or week view indicating the "
+"current-time line (Marcus Bains line)."
+msgstr ""
+"Позначте цей пункт, щоб в режимі перегляду дня або тижня з'являлася лінія, "
+"яка показуватиме лінію поточного часу (лінія Маркуса Бейнса)."
+
+#. i18n: ectx: tooltip, entry (MarcusBainsEnabled), group (Agenda View)
+#: eventviews.kcfg:199 viewerapp/settings.kcfg:49
+#, kde-format
+msgid "Display the current-time indicator"
+msgstr "Показати індикатор поточного часу"
+
+#. i18n: ectx: label, entry (MarcusBainsShowSeconds), group (Agenda View)
+#: eventviews.kcfg:204 viewerapp/settings.kcfg:54
+#, kde-format
+msgid "Show seconds on the current-time (Marcus Bains) line"
+msgstr "Показувати секунди на лінії поточного часу (Маркуса Бейнса)"
+
+#. i18n: ectx: whatsthis, entry (MarcusBainsShowSeconds), group (Agenda View)
+#: eventviews.kcfg:205 viewerapp/settings.kcfg:55
+#, kde-format
+msgid "Check this box if you want to show seconds on the current-time line."
+msgstr ""
+"Позначте цей пункт, якщо ви хочете, щоб було видно секунди на лінії "
+"поточного часу."
+
+#. i18n: ectx: tooltip, entry (MarcusBainsShowSeconds), group (Agenda View)
+#: eventviews.kcfg:206 viewerapp/settings.kcfg:56
+#, kde-format
+msgid "Display seconds with the current-time indicator"
+msgstr "Показувати секунди з індикатором поточного часу"
+
+#. i18n: ectx: label, entry (SelectionStartsEditor), group (Agenda View)
+#: eventviews.kcfg:211 viewerapp/settings.kcfg:61
+#, kde-format
+msgid "Time range selection in agenda view starts event editor"
+msgstr ""
+"Вибір діапазону дат у перегляді порядку денного відкриває редактор подій"
+
+#. i18n: ectx: whatsthis, entry (SelectionStartsEditor), group (Agenda View)
+#: eventviews.kcfg:212 viewerapp/settings.kcfg:62
+#, kde-format
+msgid ""
+"Check this box to start the event editor automatically when you select a "
+"time range in the daily and weekly view. To select a time range, drag the "
+"mouse from the start time to the end time of the event you are about to plan."
+msgstr ""
+"Позначте, щоб при виборі періоду в календарі відкривався редактор подій. Для "
+"вибору періоду перетягніть мишку з часу початку події, що планується, до "
+"часу її закінчення."
+
+#. i18n: ectx: tooltip, entry (SelectionStartsEditor), group (Agenda View)
+#: eventviews.kcfg:213 viewerapp/settings.kcfg:63
+#, kde-format
+msgid "Enable automatic event editor with time range selection"
+msgstr "Увімкнути автоматичний редактор подій з вибором діапазону часу"
+
+#. i18n: ectx: label, entry, group (Agenda View)
+#. i18n: ectx: label, entry, group (Month View)
+#: eventviews.kcfg:218 eventviews.kcfg:314 viewerapp/settings.kcfg:68
+#: viewerapp/settings.kcfg:153
+#, kde-format
+msgid "Color Usage"
+msgstr "Використання кольорів"
+
+#. i18n: ectx: label, entry, group (Agenda View)
+#. i18n: ectx: label, entry, group (Month View)
+#: eventviews.kcfg:221 eventviews.kcfg:317 viewerapp/settings.kcfg:71
+#: viewerapp/settings.kcfg:156
+#, kde-format
+msgid "Category inside, calendar outside"
+msgstr "Категорія всередині, календар ззовні"
+
+#. i18n: ectx: whatsthis, entry, group (Agenda View)
+#: eventviews.kcfg:222 viewerapp/settings.kcfg:72
+#, kde-format
+msgid ""
+"Select the \"Category inside, calendar outside\" option if you would like to "
+"draw calendar items in their associated category color, with the item's "
+"border drawn in the color of its calendar. Please use the Colors and Fonts "
+"configuration page for setting these colors."
+msgstr ""
+"Позначте пункт «Категорія всередині, календар ззовні», якщо ви бажаєте, щоб "
+"програма показувала пункти календаря кольором категорії, до якої ці пункти "
+"належать, а рамку пункту було показано кольором календаря. Для налаштування "
+"цих кольорів, будь ласка, скористайтеся сторінкою налаштувань «Кольори і "
+"шрифти»."
+
+#. i18n: ectx: tooltip, entry, group (Agenda View)
+#: eventviews.kcfg:223 viewerapp/settings.kcfg:73
+#, kde-format
+msgid ""
+"Draw agenda items in their category color inside and calendar color for "
+"their border"
+msgstr ""
+"Малювати пункти порядку денного кольором їхні категорії, для рамки ж "
+"використати колір календаря"
+
+#. i18n: ectx: label, entry, group (Agenda View)
+#. i18n: ectx: label, entry, group (Month View)
+#: eventviews.kcfg:226 eventviews.kcfg:322 viewerapp/settings.kcfg:76
+#: viewerapp/settings.kcfg:161
+#, kde-format
+msgid "Calendar inside, category outside"
+msgstr "Календар всередині, категорія ззовні"
+
+#. i18n: ectx: whatsthis, entry, group (Agenda View)
+#: eventviews.kcfg:227 viewerapp/settings.kcfg:77
+#, kde-format
+msgid ""
+"Select the \"Calendar inside, category outside\" option if you would like to "
+"draw calendar items in their associated calendar color, with the item's "
+"border drawn in the color of its category. Please use the Colors and Fonts "
+"configuration page for setting these colors."
+msgstr ""
+"Позначте пункт «Календар всередині, категорія ззовні», якщо ви бажаєте, щоб "
+"програма показувала пункти календаря кольором календаря, до якого ці пункти "
+"належать, а рамку пункту було показано кольором його категорії. Для "
+"налаштування цих кольорів, будь ласка, скористайтеся сторінкою налаштувань "
+"«Кольори і шрифти»."
+
+#. i18n: ectx: tooltip, entry, group (Agenda View)
+#: eventviews.kcfg:228 viewerapp/settings.kcfg:78
+#, kde-format
+msgid ""
+"Draw agenda items in their calendar color inside and category color for "
+"their border"
+msgstr ""
+"Малювати пункти порядку денного кольором їхнього календаря, для рамки ж "
+"використати колір категорії календаря"
+
+#. i18n: ectx: label, entry, group (Agenda View)
+#. i18n: ectx: label, entry, group (Month View)
+#: eventviews.kcfg:231 eventviews.kcfg:327 viewerapp/settings.kcfg:81
+#: viewerapp/settings.kcfg:166
+#, kde-format
+msgid "Only category"
+msgstr "Лише категорія"
+
+#. i18n: ectx: whatsthis, entry, group (Agenda View)
+#: eventviews.kcfg:232 viewerapp/settings.kcfg:82
+#, kde-format
+msgid ""
+"Select the \"Only category\" option if you would like to draw calendar items "
+"(both inside and border) in the color of their associated category. Please "
+"use the Colors and Fonts configuration page for setting these colors."
+msgstr ""
+"Позначте пункт «Лише категорія», якщо ви бажаєте, щоб пункти календаря "
+"(всередині і рамка) було показано кольором відповідної категорії. Для "
+"налаштування цих кольорів, будь ласка, скористайтеся сторінкою налаштувань "
+"«Кольори і шрифти»."
+
+#. i18n: ectx: tooltip, entry, group (Agenda View)
+#: eventviews.kcfg:233 viewerapp/settings.kcfg:83
+#, kde-format
+msgid "Draw agenda items using their category color for the inside and border"
+msgstr ""
+"Показувати пункти порядку денного кольором їхньої категорії (всередині і "
+"рамка)"
+
+#. i18n: ectx: label, entry, group (Agenda View)
+#. i18n: ectx: label, entry, group (Month View)
+#: eventviews.kcfg:236 eventviews.kcfg:332 viewerapp/settings.kcfg:86
+#: viewerapp/settings.kcfg:171
+#, kde-format
+msgid "Only calendar"
+msgstr "Лише календар"
+
+#. i18n: ectx: whatsthis, entry, group (Agenda View)
+#: eventviews.kcfg:237 viewerapp/settings.kcfg:87
+#, kde-format
+msgid ""
+"Select the \"Only calendar\" option if you would like to draw calendar items "
+"(both inside and border) in the color of their calendar. Please use the "
+"Colors and Fonts configuration page for setting these colors."
+msgstr ""
+"Позначте пункт «Лише календар», якщо ви бажаєте, щоб пункти календаря "
+"(всередині і рамка) було показано кольором календаря. Для налаштування цих "
+"кольорів, будь ласка, скористайтеся сторінкою налаштувань «Кольори і шрифти»."
+
+#. i18n: ectx: tooltip, entry, group (Agenda View)
+#: eventviews.kcfg:238 viewerapp/settings.kcfg:88
+#, kde-format
+msgid "Draw agenda items using their calendar color for the inside and border"
+msgstr ""
+"Показувати пункти порядку денного кольором їхнього календаря (всередині і "
+"рамка)"
+
+#. i18n: ectx: label, entry (ColorBusyDaysEnabled), group (Agenda View)
+#. i18n: ectx: label, entry (ColorMonthBusyDaysEnabled), group (Month View)
+#: eventviews.kcfg:244 eventviews.kcfg:341
+#, kde-format
+msgid "Color busy days with a different background color"
+msgstr "Позначати зайняті дні іншим кольором тла"
+
+#. i18n: ectx: whatsthis, entry (ColorBusyDaysEnabled), group (Agenda View)
+#: eventviews.kcfg:245
+#, kde-format
+msgid ""
+"Check this box if you want agenda's background to be filled with a different "
+"color on days which have at least one all day event marked as busy. Also, "
+"you can change the background color used for this option on the Colors "
+"configuration page. Look for the \"Busy days background color\" setting."
+msgstr ""
+"Позначте цей пункт, якщо ви бажаєте, щоб тло порядку денного було змінено "
+"для пунктів днів, на які призначено хоча б одну подію протягом всього дня, "
+"позначеного як зайнятий. Крім того, ви можете змінити колір тла, "
+"використаного для пунктів таких зайнятих днів на сторінці налаштування "
+"кольорів. Просто знайдіть на цій сторінці пункт «Колір тла зайнятих днів»."
+
+#. i18n: ectx: label, entry (AgendaViewCalendarDisplay), group (Agenda View)
+#: eventviews.kcfg:249 viewerapp/settings.kcfg:95
+#, kde-format
+msgid "Multiple Calendar Display"
+msgstr "Показ декількох календарів"
+
+#. i18n: ectx: label, entry (AgendaViewCalendarDisplay), group (Agenda View)
+#: eventviews.kcfg:252 viewerapp/settings.kcfg:98
+#, kde-format
+msgid "Merge all calendars into one view"
+msgstr "Об’єднати всі календарі у одному вікні перегляду"
+
+#. i18n: ectx: whatsthis, entry (AgendaViewCalendarDisplay), group (Agenda View)
+#: eventviews.kcfg:253 viewerapp/settings.kcfg:99
+#, kde-format
+msgid ""
+"Select the \"Merge all calendars into one view\" option if you would like "
+"all your calendars to be shown together in one agenda view."
+msgstr ""
+"Позначте пункт «Об’єднати всі календарі до одного перегляду», якщо ви "
+"бажаєте, щоб всі календарі було показано у одному перегляді порядку денного."
+
+#. i18n: ectx: tooltip, entry (AgendaViewCalendarDisplay), group (Agenda View)
+#: eventviews.kcfg:254 viewerapp/settings.kcfg:100
+#, kde-format
+msgid "Show all calendars merged together"
+msgstr "Показувати всі об’єднані календарі"
+
+#. i18n: ectx: label, entry (AgendaViewCalendarDisplay), group (Agenda View)
+#: eventviews.kcfg:257 viewerapp/settings.kcfg:103
+#, kde-format
+msgid "Show calendars side by side"
+msgstr "Показувати календарі поряд один з одним"
+
+#. i18n: ectx: whatsthis, entry (AgendaViewCalendarDisplay), group (Agenda View)
+#: eventviews.kcfg:258 viewerapp/settings.kcfg:104
+#, kde-format
+msgid ""
+"Select the \"Show calendars side by side\" option if you would like to see "
+"two calendars at once, in a side-by-side view."
+msgstr ""
+"Позначте пункт «Показувати два календарі поруч», якщо ви бажаєте бачити "
+"одночасно два календарі, поруч один з одним."
+
+#. i18n: ectx: tooltip, entry (AgendaViewCalendarDisplay), group (Agenda View)
+#: eventviews.kcfg:259 viewerapp/settings.kcfg:105
+#, kde-format
+msgid "Show two calendars side-by-side"
+msgstr "Показувати два календарі поруч"
+
+#. i18n: ectx: label, entry (AgendaViewCalendarDisplay), group (Agenda View)
+#: eventviews.kcfg:262 viewerapp/settings.kcfg:108
+#, kde-format
+msgid "Switch between views with tabs"
+msgstr "Перемикатися між переглядами за допомогою табуляції"
+
+#. i18n: ectx: whatsthis, entry (AgendaViewCalendarDisplay), group (Agenda View)
+#: eventviews.kcfg:263 viewerapp/settings.kcfg:109
+#, kde-format
+msgid ""
+"Select \"Switch between views with tabs\" if you would like to alternate "
+"between calendars using the tab key."
+msgstr ""
+"Позначте пункт «Перемикатися між переглядами за допомогою табуляції», якщо "
+"ви бажаєте перемикатися між календарями за допомогою клавіші табуляції."
+
+#. i18n: ectx: tooltip, entry (AgendaViewCalendarDisplay), group (Agenda View)
+#: eventviews.kcfg:264 viewerapp/settings.kcfg:110
+#, kde-format
+msgid "Tab through calendars"
+msgstr "Пересуватися календарями"
+
+#. i18n: ectx: label, entry (EnableMonthScroll), group (Month View)
+#: eventviews.kcfg:274 viewerapp/settings.kcfg:120
+#, kde-format
+msgid "Enable scrollbars in month view cells"
+msgstr "Ввімкнути гортання у комірках перегляду місяця"
+
+#. i18n: ectx: whatsthis, entry (EnableMonthScroll), group (Month View)
+#: eventviews.kcfg:275 viewerapp/settings.kcfg:121
+#, kde-format
+msgid ""
+"Check this box to display scrollbars when clicking on a cell in the month "
+"view; they will only appear when needed though."
+msgstr ""
+"Позначте цей пункт, щоб під час клацання на комірку в перегляді місяця "
+"з'являлися смужки гортання. Вони будуть з'являтись, лише якщо у цьому є "
+"потреба."
+
+#. i18n: ectx: label, entry (EnableMonthItemIcons), group (Month View)
+#: eventviews.kcfg:280 viewerapp/settings.kcfg:126
+#, kde-format
+msgid "Show icons in month view items"
+msgstr "Показувати піктограми для пунктів у перегляді місяця"
+
+#. i18n: ectx: whatsthis, entry (EnableMonthItemIcons), group (Month View)
+#: eventviews.kcfg:281 viewerapp/settings.kcfg:127
+#, kde-format
+msgid ""
+"Check this box to display icons (alarm, recursion, etc.) in month view items."
+msgstr ""
+"Позначте цей параметр, щоб для пунктів перегляду місяця було показано "
+"піктограми (нагадування, повторення та інші)."
+
+#. i18n: ectx: tooltip, entry (EnableMonthItemIcons), group (Month View)
+#: eventviews.kcfg:282 viewerapp/settings.kcfg:128
+#, kde-format
+msgid "Display icons in month view items"
+msgstr "Показувати піктограми для пунктів перегляду місяця"
+
+#. i18n: ectx: label, entry (ShowTimeInMonthView), group (Month View)
+#: eventviews.kcfg:287
+#, kde-format
+msgid "Show time in month view items"
+msgstr "Показувати час для пунктів у перегляді місяця"
+
+#. i18n: ectx: whatsthis, entry (ShowTimeInMonthView), group (Month View)
+#: eventviews.kcfg:288
+#, kde-format
+msgid "Check this box to display the time in month view items."
+msgstr ""
+"Позначте цей параметр, щоб для пунктів перегляду місяця було показано час."
+
+#. i18n: ectx: tooltip, entry (ShowTimeInMonthView), group (Month View)
+#: eventviews.kcfg:289
+#, kde-format
+msgid "Display time in month view items"
+msgstr "Показувати час для пунктів перегляду місяця"
+
+#. i18n: ectx: whatsthis, entry (ShowTodosMonthView), group (Month View)
+#: eventviews.kcfg:295 viewerapp/settings.kcfg:134
+#, kde-format
+msgid "Check this box to display to-dos in the month view."
+msgstr ""
+"Позначте цей пункт, щоб програма показувала завдання у перегляді місяця."
+
+#. i18n: ectx: tooltip, entry (ShowTodosMonthView), group (Month View)
+#: eventviews.kcfg:296 viewerapp/settings.kcfg:135
+#, kde-format
+msgid "Display to-dos in the month view"
+msgstr "Показувати завдання у перегляді місяця"
+
+#. i18n: ectx: label, entry (ShowJournalsMonthView), group (Month View)
+#: eventviews.kcfg:301 viewerapp/settings.kcfg:140
+#, kde-format
+msgid "Show journals"
+msgstr "Показ журналів"
+
+#. i18n: ectx: whatsthis, entry (ShowJournalsMonthView), group (Month View)
+#: eventviews.kcfg:302 viewerapp/settings.kcfg:141
+#, kde-format
+msgid "Check this box to display journals in the month view."
+msgstr ""
+"Позначте цей пункт, щоб програма показувала журнали у перегляді місяця."
+
+#. i18n: ectx: tooltip, entry (ShowJournalsMonthView), group (Month View)
+#: eventviews.kcfg:303 viewerapp/settings.kcfg:142
+#, kde-format
+msgid "Display journals in the month view"
+msgstr "Показувати журнали у перегляді місяця"
+
+#. i18n: ectx: label, entry, group (Month View)
+#: eventviews.kcfg:308 viewerapp/settings.kcfg:147
+#, kde-format
+msgid "Month view uses full window"
+msgstr "Перегляд місяця — на повне вікно"
+
+#. i18n: ectx: whatsthis, entry, group (Month View)
+#: eventviews.kcfg:309 viewerapp/settings.kcfg:148
+#, kde-format
+msgid ""
+"Check this box to use the full KOrganizer window when displaying the month "
+"view. If this box is checked, you will gain some space for the monthly view, "
+"but other widgets, such as the date navigator, the item details and the "
+"calendars list, will not be displayed."
+msgstr ""
+"Ввімкніть для використання всього вікна KOrganizer для показу перегляду "
+"місяця. Якщо цей параметр буде позначено, перегляд місяця буде мати більше "
+"вільного простору, але інші елементи графічного інтерфейсу (навігатор "
+"датами, список календарів, детальна інформація) не будуть показані."
+
+#. i18n: ectx: whatsthis, entry, group (Month View)
+#: eventviews.kcfg:318 viewerapp/settings.kcfg:157
+#, kde-format
+msgid ""
+"Select the \"Category inside, calendar outside\" option if you would like to "
+"draw calendar items in their associated category color, with the item's "
+"border drawn in the color of its calendar.  Please use the Colors and Fonts "
+"configuration page for setting these colors."
+msgstr ""
+"Позначте пункт «Категорія всередині, календар ззовні», якщо ви бажаєте, щоб "
+"програма показувала пункти календаря кольором категорії, до якої ці пункти "
+"належать, а рамку пункту було показано кольором календаря. Для налаштування "
+"цих кольорів, будь ласка, скористайтеся сторінкою налаштувань «Кольори і "
+"шрифти»."
+
+#. i18n: ectx: tooltip, entry, group (Month View)
+#: eventviews.kcfg:319 viewerapp/settings.kcfg:158
+#, kde-format
+msgid ""
+"Draw month items in their category color inside and calendar color for their "
+"border"
+msgstr ""
+"Малювати пункти місяця кольором їхнього календаря, для рамки ж використати "
+"колір ресурсу календаря"
+
+#. i18n: ectx: whatsthis, entry, group (Month View)
+#: eventviews.kcfg:323 viewerapp/settings.kcfg:162
+#, kde-format
+msgid ""
+"Select the \"Calendar inside, category outside\" option if you would like to "
+"draw calendar items in their associated calendar color, with the item's "
+"border drawn in the color of its category.  Please use the Colors and Fonts "
+"configuration page for setting these colors."
+msgstr ""
+"Позначте пункт «Календар всередині, категорія ззовні», якщо ви бажаєте, щоб "
+"програма показувала пункти календаря кольором календаря, до якого ці пункти "
+"належать, а рамку пункту було показано кольором його категорії. Для "
+"налаштування цих кольорів, будь ласка, скористайтеся сторінкою налаштувань "
+"«Кольори і шрифти»."
+
+#. i18n: ectx: tooltip, entry, group (Month View)
+#: eventviews.kcfg:324 viewerapp/settings.kcfg:163
+#, kde-format
+msgid ""
+"Draw month items in their calendar color inside and category color for their "
+"border"
+msgstr ""
+"Малювати пункти місяця кольором їхнього календаря, для рамки ж використати "
+"колір категорії календаря"
+
+#. i18n: ectx: whatsthis, entry, group (Month View)
+#: eventviews.kcfg:328 viewerapp/settings.kcfg:167
+#, kde-format
+msgid ""
+"Select the \"Only category\" option if you would like to draw calendar items "
+"(both inside and border) in the color of their associated category.  Please "
+"use the Colors and Fonts configuration page for setting these colors."
+msgstr ""
+"Позначте пункт «Лише категорія», якщо ви бажаєте, щоб пункти календаря "
+"(всередині і рамка) було показано кольором відповідної категорії. Для "
+"налаштування цих кольорів, будь ласка, скористайтеся сторінкою налаштувань "
+"«Кольори і шрифти»."
+
+#. i18n: ectx: tooltip, entry, group (Month View)
+#: eventviews.kcfg:329 viewerapp/settings.kcfg:168
+#, kde-format
+msgid "Draw month items using their category color for the inside and border"
+msgstr "Показувати пункти місяця кольором їхньої категорії (всередині і рамка)"
+
+#. i18n: ectx: whatsthis, entry, group (Month View)
+#: eventviews.kcfg:333 viewerapp/settings.kcfg:172
+#, kde-format
+msgid ""
+"Select the \"Only calendar\" option if you would like to draw calendar items "
+"(both inside and border) in the color of their calendar.  Please use the "
+"Colors and Fonts configuration page for setting these colors."
+msgstr ""
+"Позначте пункт «Лише календар», якщо ви бажаєте, щоб пункти календаря "
+"(всередині і рамка) було показано кольором календаря. Для налаштування цих "
+"кольорів, будь ласка, скористайтеся сторінкою налаштувань «Кольори і шрифти»."
+
+#. i18n: ectx: tooltip, entry, group (Month View)
+#: eventviews.kcfg:334 viewerapp/settings.kcfg:173
+#, kde-format
+msgid "Draw month items using their calendar color for the inside and border"
+msgstr ""
+"Показувати пункти місяця кольором їхнього календаря (всередині і рамка)"
+
+#. i18n: ectx: whatsthis, entry (ColorMonthBusyDaysEnabled), group (Month View)
+#: eventviews.kcfg:342
+#, kde-format
+msgid ""
+"Check this box if you want month view's background to be filled with a "
+"different color on days which have at least one all day event marked as "
+"busy. Also, you can change the background color used for this option on the "
+"Colors configuration page. Look for the \"Busy days background color\" "
+"setting."
+msgstr ""
+"Позначте цей пункт, якщо ви бажаєте, щоб тло перегляду місяця було змінено "
+"для пунктів днів, на які призначено хоча б одну подію протягом всього дня, "
+"позначеного як зайнятий. Крім того, ви можете змінити колір тла, "
+"використаного для пунктів таких зайнятих днів на сторінці налаштування "
+"кольорів. Просто знайдіть на цій сторінці пункт «Колір тла зайнятих днів»."
+
+#. i18n: ectx: label, entry, group (Todo View)
+#: eventviews.kcfg:350 viewerapp/settings.kcfg:183
+#, kde-format
+msgid "Always display completed to-dos at the bottom of the list"
+msgstr "Завжди показувати виконані завдання внизу списку"
+
+#. i18n: ectx: whatsthis, entry, group (Todo View)
+#: eventviews.kcfg:351 viewerapp/settings.kcfg:184
+#, kde-format
+msgid ""
+"Check this box if you want all completed to-dos to be always grouped at the "
+"bottom of the to-do list."
+msgstr ""
+"Позначте це поле, якщо ви бажаєте, щоб всі виконані завдання було завжди "
+"згруповано внизу списку завдань."
+
+#. i18n: ectx: label, entry, group (Todo View)
+#: eventviews.kcfg:356 viewerapp/settings.kcfg:189
+#, kde-format
+msgid "To-do list view uses full window"
+msgstr "Перегляд списку завдань використовує все вікно"
+
+#. i18n: ectx: whatsthis, entry, group (Todo View)
+#: eventviews.kcfg:357 viewerapp/settings.kcfg:190
+#, kde-format
+msgid ""
+"Check this box to use the full KOrganizer window when displaying the to-do "
+"list view. If this box is checked, you will gain some space for the to-do "
+"list view, but other widgets, such as the date navigator, the to-do details "
+"and the calendars list, will not be displayed."
+msgstr ""
+"Ввімкніть для використання всього вікна KOrganizer для показу списку "
+"завдань. Якщо цей пункт позначено, перегляд списку завдань буде мати більше "
+"вільного простору, але інші елементи графічного інтерфейсу (навігатор "
+"датами, список календарів, детальна інформація) не будуть показані."
+
+#. i18n: ectx: label, entry, group (Todo View)
+#: eventviews.kcfg:362
+#, kde-format
+msgid "Display to-dos in a flat list"
+msgstr "Показати плоский список завдань"
+
+#. i18n: ectx: tooltip, entry, group (Todo View)
+#: eventviews.kcfg:363
+#, kde-format
+msgid "Display to-dos as a flat list instead of a hierarchical tree"
+msgstr "Показати плоский список завдань замість ієрархічного"
+
+#. i18n: ectx: whatsthis, entry, group (Todo View)
+#: eventviews.kcfg:364
+#, kde-format
+msgid ""
+"Check this box if you want to see all your to-dos in a flat list instead of "
+"being arranged in a hierarchical tree."
+msgstr ""
+"Позначте цей пункт, якщо ви хочете побачити плоский список завдань замість "
+"його впорядковування у ієрархію."
+
+#. i18n: ectx: label, entry, group (Todo View)
+#: eventviews.kcfg:369 viewerapp/settings.kcfg:195
+#, kde-format
+msgid "Record completed to-dos in journal entries"
+msgstr "Записувати виконані завдання в журнал"
+
+#. i18n: ectx: whatsthis, entry, group (Todo View)
+#: eventviews.kcfg:370 viewerapp/settings.kcfg:196
+#, kde-format
+msgid ""
+"Check this box to record the completion of a to-do in a new entry of your "
+"journal automatically."
+msgstr ""
+"Позначте, щоб записувати закінчення завдання в новому записі вашого журналу "
+"автоматично."
+
+#. i18n: ectx: label, entry, group (Colors)
+#. i18n: ectx: label, entry, group (Theming)
+#. i18n: ectx: label, entry, group (Theme/Month view)
+#: eventviews.kcfg:379 eventviews.kcfg:604 eventviews.kcfg:708
+#: viewerapp/settings.kcfg:204
+#, kde-format
+msgid "Holiday color"
+msgstr "Колір вихідних"
+
+#. i18n: ectx: whatsthis, entry, group (Colors)
+#. i18n: ectx: whatsthis, entry, group (Theming)
+#. i18n: ectx: whatsthis, entry, group (Theme/Month view)
+#: eventviews.kcfg:380 eventviews.kcfg:605 eventviews.kcfg:709
+#: viewerapp/settings.kcfg:205
+#, kde-format
+msgid ""
+"Select the holiday color here. The holiday color will be used for the "
+"holiday name in the month view and the holiday number in the date navigator."
+msgstr ""
+"Виберіть тут колір вихідних. Колір вихідних використовується для показу "
+"вихідних та свят у перегляді місяця і числа вихідного у навігаторі датами."
+
+#. i18n: ectx: label, entry (AgendaBgColor), group (Colors)
+#. i18n: ectx: label, entry, group (Theming)
+#: eventviews.kcfg:385 eventviews.kcfg:516 viewerapp/settings.kcfg:210
+#, kde-format
+msgid "Agenda view background color"
+msgstr "Колір для перегляду порядку денного"
+
+#. i18n: ectx: whatsthis, entry (AgendaBgColor), group (Colors)
+#. i18n: ectx: whatsthis, entry, group (Theming)
+#: eventviews.kcfg:386 eventviews.kcfg:517 viewerapp/settings.kcfg:211
+#, kde-format
+msgid "Select the agenda view background color here."
+msgstr "Виберіть тут колір тла для перегляду порядку денного."
+
+#. i18n: ectx: label, entry (ViewBgBusyColor), group (Colors)
+#: eventviews.kcfg:391
+#, kde-format
+msgid "Agenda/Month view background busy color"
+msgstr "Колір тла зайнятого дня порядку денного або перегляду місяця"
+
+#. i18n: ectx: whatsthis, entry (ViewBgBusyColor), group (Colors)
+#: eventviews.kcfg:392
+#, kde-format
+msgid ""
+"When you have an all day event marked as busy, you can have a different "
+"agenda or month view background color for that day. Select the color here."
+msgstr ""
+"Якщо протягом всього дня ви будете зайняті, ви можете наказати програмі "
+"змінити колір тла для такого дня у перегляді порядку денного або перегляді "
+"подій місяця. Тут ви можете вказати колір."
+
+#. i18n: ectx: label, entry, group (Colors)
+#: eventviews.kcfg:397 viewerapp/settings.kcfg:216
+#, kde-format
+msgid "Agenda view current-time line color"
+msgstr "Колір лінії поточного часу у перегляді порядку денного"
+
+#. i18n: ectx: whatsthis, entry, group (Colors)
+#: eventviews.kcfg:398 viewerapp/settings.kcfg:217
+#, kde-format
+msgid "Select a color to use for the current-time (Marcus Bains) line."
+msgstr ""
+"Оберіть колір, який буде використано для показу лінії поточного часу "
+"(Маркуса Бейнса)."
+
+#. i18n: ectx: tooltip, entry, group (Colors)
+#: eventviews.kcfg:399 viewerapp/settings.kcfg:218
+#, kde-format
+msgid "Use this color for the Agenda View current-time (Marcus Bains) line"
+msgstr ""
+"Використовувати цей колір для лінії поточного часу (Маркуса Бейнса) у "
+"перегляді порядку денного"
+
+#. i18n: ectx: label, entry, group (Colors)
+#. i18n: ectx: label, entry, group (Theming)
+#. i18n: ectx: label, entry, group (Theme/Month view)
+#: eventviews.kcfg:404 eventviews.kcfg:528 eventviews.kcfg:628
+#: viewerapp/settings.kcfg:223
+#, kde-format
+msgid "Working hours color"
+msgstr "Колір робочих годин"
+
+#. i18n: ectx: whatsthis, entry, group (Colors)
+#: eventviews.kcfg:405 viewerapp/settings.kcfg:224
+#, kde-format
+msgid "Select the working hours color for the agenda view here."
+msgstr "Виберіть тут колір для робочих годин в перегляді порядку денного."
+
+#. i18n: ectx: label, entry (TodoDueTodayColor), group (Colors)
+#. i18n: ectx: label, entry, group (Theming)
+#. i18n: ectx: label, entry, group (Theme/Month view)
+#: eventviews.kcfg:410 eventviews.kcfg:575 eventviews.kcfg:679
+#: viewerapp/settings.kcfg:229
+#, kde-format
+msgid "To-do due today color"
+msgstr "Колір для завдань, які слід виконати сьогодні"
+
+#. i18n: ectx: whatsthis, entry (TodoDueTodayColor), group (Colors)
+#. i18n: ectx: whatsthis, entry, group (Theming)
+#. i18n: ectx: whatsthis, entry, group (Theme/Month view)
+#: eventviews.kcfg:411 eventviews.kcfg:576 eventviews.kcfg:680
+#: viewerapp/settings.kcfg:230
+#, kde-format
+msgid "Select the to-do due today color here."
+msgstr "Виберіть тут колір для завдань, які слід виконати сьогодні."
+
+#. i18n: ectx: label, entry (TodoOverdueColor), group (Colors)
+#. i18n: ectx: label, entry, group (Theming)
+#. i18n: ectx: label, entry, group (Theme/Month view)
+#: eventviews.kcfg:416 eventviews.kcfg:589 eventviews.kcfg:693
+#: viewerapp/settings.kcfg:235
+#, kde-format
+msgid "To-do overdue color"
+msgstr "Колір для завдань, які вчасно не виконані"
+
+#. i18n: ectx: whatsthis, entry (TodoOverdueColor), group (Colors)
+#. i18n: ectx: whatsthis, entry, group (Theming)
+#. i18n: ectx: whatsthis, entry, group (Theme/Month view)
+#: eventviews.kcfg:417 eventviews.kcfg:590 eventviews.kcfg:694
+#: viewerapp/settings.kcfg:236
+#, kde-format
+msgid "Select the to-do overdue color here."
+msgstr "Виберіть тут колір для завдань, які вчасно не виконані."
+
+#. i18n: ectx: label, entry, group (Fonts)
+#: eventviews.kcfg:425 viewerapp/settings.kcfg:251
+#, kde-format
+msgid "Time bar"
+msgstr "Смужка часу"
+
+#. i18n: ectx: whatsthis, entry, group (Fonts)
+#: eventviews.kcfg:426 viewerapp/settings.kcfg:252
+#, kde-format
+msgid ""
+"Press this button to configure the time bar font. The time bar is the widget "
+"that shows the hours in the agenda view. This button will open the \"Select "
+"Font\" dialog, allowing you to choose the hour font for the time bar."
+msgstr ""
+"Натисніть цю кнопку, щоб вибрати шрифт для смужки часу. Смужка часу — це "
+"віджет, який відображає години у перегляді порядку денного. Натискання "
+"кнопки відкриє вікно для вибору шрифтів, де ви зможете вибрати шрифт."
+
+#. i18n: ectx: label, entry, group (Fonts)
+#: eventviews.kcfg:430 viewerapp/settings.kcfg:256
+#, kde-format
+msgid "Month view"
+msgstr "Перегляд місяця"
+
+#. i18n: ectx: whatsthis, entry, group (Fonts)
+#: eventviews.kcfg:431 viewerapp/settings.kcfg:257
+#, kde-format
+msgid ""
+"Press this button to configure the month view font. This button will open "
+"the \"Select Font\" dialog, allowing you to choose the font for the items in "
+"the month view."
+msgstr ""
+"Натисніть цю кнопку для вибору шрифту для перегляду місяця. Натискання "
+"кнопки відкриє вікно «Вибір шрифтів», де ви матимете змогу вибрати шрифт для "
+"показу подій у перегляді місяця."
+
+#. i18n: ectx: label, entry, group (Fonts)
+#: eventviews.kcfg:435 viewerapp/settings.kcfg:261
+#, kde-format
+msgid "Agenda view"
+msgstr "Перегляд порядку денного"
+
+#. i18n: ectx: whatsthis, entry, group (Fonts)
+#: eventviews.kcfg:436 viewerapp/settings.kcfg:262
+#, kde-format
+msgid ""
+"Press this button to configure the agenda view font. This button will open "
+"the \"Select Font\" dialog, allowing you to choose the font for the events "
+"in the agenda view."
+msgstr ""
+"Натисніть цю кнопку для вибору шрифту для перегляду порядку денного. "
+"Натискання кнопки відкриє вікно «Вибір шрифтів», де ви матимете змогу "
+"вибрати шрифт для показу подій в порядку денному."
+
+#. i18n: ectx: label, entry, group (Fonts)
+#: eventviews.kcfg:440 viewerapp/settings.kcfg:266
+#, kde-format
+msgid "Current-time line"
+msgstr "Лінія поточного часу"
+
+#. i18n: ectx: whatsthis, entry, group (Fonts)
+#: eventviews.kcfg:441 viewerapp/settings.kcfg:267
+#, kde-format
+msgid ""
+"Press this button to configure the current-time line font. This button will "
+"open the \"Select Font\" dialog, allowing you to choose the font for the "
+"current-time line in the agenda view."
+msgstr ""
+"Натисніть цю кнопку для вибору шрифту поточної шкали часу. Ця дія відкриє "
+"вікно «Вибір шрифтів», яке надасть вам змогу вибрати шрифт для переглядів "
+"лінії поточного часу і порядку денного."
+
+#. i18n: ectx: label, entry (DefaultTodoAttachMethod), group (Hidden Options)
+#: eventviews.kcfg:465
+#, kde-format
+msgid "Default todo attachment method"
+msgstr "Типовий спосіб долучення планів"
+
+#. i18n: ectx: whatsthis, entry (DefaultTodoAttachMethod), group (Hidden Options)
+#: eventviews.kcfg:466
+#, kde-format
+msgid "The default way of attaching dropped emails to a task"
+msgstr "Типовий спосіб долучення скинутих адрес ел.пошти до завдання"
+
+#. i18n: ectx: label, entry, group (Theming)
+#. i18n: ectx: label, entry, group (Theme/Month view)
+#: eventviews.kcfg:523 eventviews.kcfg:623
+#, kde-format
+msgid "Highlight color"
+msgstr "Колір підсвічування"
+
+#. i18n: ectx: whatsthis, entry, group (Theming)
+#: eventviews.kcfg:524
+#, kde-format
+msgid ""
+"Select the highlight color here. The highlight color will be used for "
+"marking the currently selected area in your agenda and in the date navigator."
+msgstr ""
+"Виберіть тут колір підсвічування. Колір підсвічування використовується для "
+"вибраної ділянки у порядку денному та навігаторі датами."
+
+#. i18n: ectx: whatsthis, entry, group (Theming)
+#: eventviews.kcfg:529
+#, kde-format
+msgid "Select the working hours background color for the agenda view here."
+msgstr "Виберіть тут колір тла для робочих годин в перегляді порядку денного."
+
+#. i18n: ectx: label, entry, group (Theme/Month view)
+#: eventviews.kcfg:616
+#, kde-format
+msgid "Month view background color"
+msgstr "Колір тла для перегляду місяця"
+
+#. i18n: ectx: whatsthis, entry, group (Theme/Month view)
+#: eventviews.kcfg:617
+#, kde-format
+msgid "Select the Month view background color here."
+msgstr "Виберіть тут колір тла для перегляду місяця."
+
+#. i18n: ectx: whatsthis, entry, group (Theme/Month view)
+#: eventviews.kcfg:624
+#, kde-format
+msgid ""
+"Select the highlight color here. The highlight color will be used for "
+"marking the currently selected area in your Month and in the date navigator."
+msgstr ""
+"Виберіть тут колір позначення. Колір позначення використовується для "
+"вибраної ділянки у перегляді місяця та у навігаторі датами."
+
+#. i18n: ectx: whatsthis, entry, group (Theme/Month view)
+#: eventviews.kcfg:629
+#, kde-format
+msgid "Select the working hours background color for the Month view here."
+msgstr "Виберіть тут колір тла для робочих годин в перегляді місяця."
+
+#. i18n: ectx: label, entry, group (Theme/Month view)
+#: eventviews.kcfg:651
+#, kde-format
+msgid "Default event color"
+msgstr "Типовий колір подій"
+
+#. i18n: ectx: whatsthis, entry, group (Theme/Month view)
+#: eventviews.kcfg:652
+#, kde-format
+msgid ""
+"Select the default event color here. The default event color will be used "
+"for events categories in your Month. Note that you can specify a separate "
+"color for each event category below."
+msgstr ""
+"Виберіть тут типовий колір для подій. Цей колір буде типовим для "
+"відображення всіх категорій подій у перегляді місяця. Зауважте, що нижче ви "
+"можете встановити окремий колір для кожної з категорій подій."
+
+#. i18n: ectx: label, entry, group (Theme/Month view)
+#: eventviews.kcfg:717
+#, kde-format
+msgid "Use system color"
+msgstr "Використовувати колір системи"
+
+#. i18n: ectx: whatsthis, entry, group (Theme/Month view)
+#: eventviews.kcfg:718
+#, kde-format
+msgid "Use system color. If enabled will ignore all other color settings"
+msgstr ""
+"Використовувати загальносистемний колір. Якщо позначено, ігнорувати усі інші "
+"параметри кольорів."
+
+#: journal/journalframe.cpp:152
+#, kde-format
+msgid "&Edit"
+msgstr "З&міни"
+
+#: journal/journalframe.cpp:155
+#, kde-format
+msgid "Edit this journal entry"
+msgstr "Редагувати цей журнальний запис"
+
+#: journal/journalframe.cpp:156
+#, kde-format
+msgid "Opens an editor dialog for this journal entry"
+msgstr "Відкриває вікно редактора для цього журнального запису"
+
+#: journal/journalframe.cpp:162
+#, kde-format
+msgid "&Delete"
+msgstr "&Вилучити"
+
+#: journal/journalframe.cpp:165 journal/journalframe.cpp:166
+#, kde-format
+msgid "Delete this journal entry"
+msgstr "Вилучити цей журнальний запис"
+
+#: journal/journalframe.cpp:171
+#, kde-format
+msgid "&Print"
+msgstr "&Надрукувати"
+
+#: journal/journalframe.cpp:175
+#, kde-format
+msgid "Print this journal entry"
+msgstr "Друкувати цей журнальний запис"
+
+#: journal/journalframe.cpp:176
+#, kde-format
+msgid "Opens a print dialog for this journal entry"
+msgstr "Відкриває вікно друку для цього журнального запису"
+
+#: journal/journalframe.cpp:181
+#, kde-format
+msgid "Print preview"
+msgstr "Перегляд друку"
+
+#: journal/journalframe.cpp:185
+#, kde-format
+msgid "Print preview this journal entry"
+msgstr "Перегляд зображення надрукованого запису журналу"
+
+#: list/listview.cpp:57
+#, kde-format
+msgctxt "%1 is an item summary. %2 is the date when this item reoccurs"
+msgid "%1 (next: %2)"
+msgstr "%1 (наступна дата: %2)"
+
+#: list/listview.cpp:278 todo/todomodel.cpp:463
+#, kde-format
+msgid "Summary"
+msgstr "Резюме"
+
+#: list/listview.cpp:279
+#, kde-format
+msgid "Start Date/Time"
+msgstr "Дата/Час початку"
+
+#: list/listview.cpp:280
+#, kde-format
+msgid "End Date/Time"
+msgstr "Дата/Час завершення"
+
+#: list/listview.cpp:281 todo/todomodel.cpp:477
+#, kde-format
+msgid "Tags"
+msgstr "Мітки"
+
+#: list/listview.cpp:354
+#, kde-format
+msgid "Summary [%1 - %2]"
+msgstr "Резюме [%1 — %2]"
+
+#: month/monthitem.cpp:305
+#, kde-format
+msgid "Age:"
+msgstr "Вік:"
+
+#: month/monthitem.cpp:305
+#, kde-format
+msgid "%2 1 year"
+msgid_plural "%2 %1 years"
+msgstr[0] "%2 %1 рік"
+msgstr[1] "%2 %1 роки"
+msgstr[2] "%2 %1 років"
+msgstr[3] "%2 1 рік"
+
+#: month/monthitem.cpp:438
+#, kde-format
+msgid "Move occurrence(s)"
+msgstr "Пересунути екземпляри"
+
+#: month/monthscene.cpp:189
+#, kde-format
+msgctxt "monthname year"
+msgid "%1 %2"
+msgstr "%1 %2"
+
+#: month/monthscene.cpp:318
+#, kde-format
+msgctxt "'Month day' for month view cells"
+msgid "%1 %2"
+msgstr "%2, %1"
+
+#: month/monthview.cpp:165 month/monthview.cpp:369
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Display calendar in a normal size"
+msgstr "Показати календар у звичайному розмірі"
+
+#: month/monthview.cpp:166 month/monthview.cpp:372
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Display calendar in a full window"
+msgstr "Показати календар на все вікно"
+
+#: month/monthview.cpp:168
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Click this button and the month view will be enlarged to fill the maximum "
+"available window space / or shrunk back to its normal size."
+msgstr ""
+"Натисніть цю кнопку, щоб перегляд місяця було розгорнуто на все вікно або "
+"стиснуто до звичайного розміру."
+
+#: month/monthview.cpp:175
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Go back one month"
+msgstr "Назад на місяць"
+
+#: month/monthview.cpp:176
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Click this button and the view will be scrolled back in time by 1 month."
+msgstr "Натисніть цю кнопку, щоб прогорнути перегляд на один місяць назад."
+
+#: month/monthview.cpp:182
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Go back one week"
+msgstr "Назад на тиждень"
+
+#: month/monthview.cpp:183
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Click this button and the view will be scrolled back in time by 1 week."
+msgstr "Натисніть цю кнопку, щоб прогорнути перегляд на один тиждень назад."
+
+#: month/monthview.cpp:189
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Go forward one week"
+msgstr "Вперед на тиждень"
+
+#: month/monthview.cpp:190
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Click this button and the view will be scrolled forward in time by 1 week."
+msgstr "Натисніть цю кнопку, щоб прогорнути перегляд на один тиждень вперед."
+
+#: month/monthview.cpp:196
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Go forward one month"
+msgstr "Вперед на місяць"
+
+#: month/monthview.cpp:197
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Click this button and the view will be scrolled forward in time by 1 month."
+msgstr "Натисніть цю кнопку, щоб прогорнути перегляд на один місяць вперед."
+
+#: multiagenda/multiagendaview.cpp:77
+#, kde-format
+msgid "Agenda %1"
+msgstr "Порядок денний %1"
+
+#: multiagenda/multiagendaview.cpp:164
+#, kde-format
+msgid "All Day"
+msgstr "Цілий день"
+
+#: timeline/timelineview.cpp:224 timeline/timelineview.cpp:304
+#: todo/todomodel.cpp:481
+#, kde-format
+msgid "Calendar"
+msgstr "Календар"
+
+#: todo/tododelegates.cpp:152
+#, kde-format
+msgctxt "@action:inmenu Unspecified priority"
+msgid "unspecified"
+msgstr "не вказано"
+
+#: todo/tododelegates.cpp:153 todo/todoview.cpp:399
+#, kde-format
+msgctxt "@action:inmenu highest priority"
+msgid "1 (highest)"
+msgstr "1 (найвищий)"
+
+#: todo/tododelegates.cpp:154
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "2"
+msgstr "2"
+
+#: todo/tododelegates.cpp:155
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "3"
+msgstr "3"
+
+#: todo/tododelegates.cpp:156
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "4"
+msgstr "4"
+
+#: todo/tododelegates.cpp:157 todo/todoview.cpp:403
+#, kde-format
+msgctxt "@action:inmenu medium priority"
+msgid "5 (medium)"
+msgstr "5 (середній)"
+
+#: todo/tododelegates.cpp:158
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "6"
+msgstr "6"
+
+#: todo/tododelegates.cpp:159
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "7"
+msgstr "7"
+
+#: todo/tododelegates.cpp:160
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "8"
+msgstr "8"
+
+#: todo/tododelegates.cpp:161 todo/todoview.cpp:407
+#, kde-format
+msgctxt "@action:inmenu lowest priority"
+msgid "9 (lowest)"
+msgstr "9 (найнижчий)"
+
+#: todo/todomodel.cpp:142 todo/todomodel.cpp:178
+#, kde-format
+msgctxt "yes, an exception to a recurring to-do"
+msgid "Exception"
+msgstr "Виняток"
+
+#: todo/todomodel.cpp:144 todo/todomodel.cpp:180
+#, kde-format
+msgctxt "yes, recurring to-do"
+msgid "Yes"
+msgstr "Так"
+
+#: todo/todomodel.cpp:147 todo/todomodel.cpp:183
+#, kde-format
+msgctxt "no, not a recurring to-do"
+msgid "No"
+msgstr "Ні"
+
+#: todo/todomodel.cpp:161 todo/todomodel.cpp:199
+#, kde-format
+msgctxt "delimiter for joining category/tag names"
+msgid ","
+msgstr ","
+
+#: todo/todomodel.cpp:465
+#, kde-format
+msgid "Recurs"
+msgstr "Повторюється"
+
+#: todo/todomodel.cpp:467
+#, kde-format
+msgid "Priority"
+msgstr "Пріоритет"
+
+#: todo/todomodel.cpp:469
+#, kde-format
+msgctxt "@title:column percent complete"
+msgid "Complete"
+msgstr "Виконано"
+
+#: todo/todomodel.cpp:471
+#, kde-format
+msgid "Start Date"
+msgstr "Дата початку"
+
+#: todo/todomodel.cpp:473
+#, kde-format
+msgid "Due Date"
+msgstr "Дата призначення"
+
+#: todo/todomodel.cpp:475
+#, kde-format
+msgctxt "@title:column date completed"
+msgid "Completed"
+msgstr "Завершено"
+
+#: todo/todomodel.cpp:479
+#, kde-format
+msgid "Description"
+msgstr "Опис"
+
+#: todo/todoview.cpp:180
+#, kde-format
+msgid "Cannot move to-do to itself or a child of itself."
+msgstr "Неможливо пересунути завдання до самого себе або до своїх нащадків."
+
+#: todo/todoview.cpp:181
+#, kde-format
+msgid "Drop To-do"
+msgstr "Викинути завдання"
+
+#: todo/todoview.cpp:260
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Display to-do list in a full window"
+msgstr "Показати список завдань на все вікно"
+
+#: todo/todoview.cpp:261
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Checking this option will cause the to-do view to use the full window."
+msgstr ""
+"Якщо буде позначено цей пункт, панель завдань буде розгорнуто на все вікно."
+
+#: todo/todoview.cpp:266
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Display to-dos in flat list instead of a tree"
+msgstr "Показувати завдання як простий список"
+
+#: todo/todoview.cpp:268
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Checking this option will cause the to-dos to be displayed as a flat list "
+"instead of a hierarchical tree; the parental relationships are removed in "
+"the display."
+msgstr ""
+"Позначення цього пункту призведе до того, що завдання буде показано у "
+"простому списку замість деревоподібного ієрархічного списку, під час показу "
+"зв’язки підлеглості буде вилучено."
+
+#: todo/todoview.cpp:305
+#, kde-format
+msgctxt "@action:inmenu show the to-do"
+msgid "&Show"
+msgstr "&Показати"
+
+#: todo/todoview.cpp:310
+#, kde-format
+msgctxt "@action:inmenu edit the to-do"
+msgid "&Edit..."
+msgstr "&Редагувати…"
+
+#: todo/todoview.cpp:317
+#, kde-format
+msgctxt "@action:inmenu delete the to-do"
+msgid "&Delete"
+msgstr "&Вилучити"
+
+#: todo/todoview.cpp:326
+#, kde-format
+msgctxt "@action:inmenu print the to-do"
+msgid "&Print..."
+msgstr "На&друкувати…"
+
+#: todo/todoview.cpp:331
+#, kde-format
+msgctxt "@action:inmenu print preview the to-do"
+msgid "Print Previe&w..."
+msgstr "Перег&ляд друку…"
+
+#: todo/todoview.cpp:338
+#, kde-format
+msgctxt "@action:inmenu create a new to-do"
+msgid "New &To-do..."
+msgstr "Нове &завдання…"
+
+#: todo/todoview.cpp:342
+#, kde-format
+msgctxt "@action:inmenu create a new sub-to-do"
+msgid "New Su&b-to-do..."
+msgstr "Нове п&ідзавдання…"
+
+#: todo/todoview.cpp:346
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "&Make this To-do Independent"
+msgstr "З&робити це завдання незалежним"
+
+#: todo/todoview.cpp:348
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Make all Sub-to-dos &Independent"
+msgstr "Зробити всі &підзавдання незалежними"
+
+#: todo/todoview.cpp:359
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Create Event from To-do"
+msgstr "Створити з завдання запис події"
+
+#: todo/todoview.cpp:367
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Create Note for To-do"
+msgstr "Створити нотатку для завдання"
+
+#: todo/todoview.cpp:377
+#, kde-format
+msgctxt "@title:menu"
+msgid "&Copy To"
+msgstr "&Копіювати до"
+
+#: todo/todoview.cpp:384
+#, kde-format
+msgctxt "@title:menu"
+msgid "&Move To"
+msgstr "&Пересунути до"
+
+#: todo/todoview.cpp:395
+#, kde-format
+msgctxt "@action:inmenu delete completed to-dos"
+msgid "Pur&ge Completed"
+msgstr "Вил&учати завершені"
+
+#: todo/todoview.cpp:398
+#, kde-format
+msgctxt "@action:inmenu unspecified priority"
+msgid "unspecified"
+msgstr "не вказано"
+
+#: todo/todoview.cpp:400
+#, kde-format
+msgctxt "@action:inmenu priority value=2"
+msgid "2"
+msgstr "2"
+
+#: todo/todoview.cpp:401
+#, kde-format
+msgctxt "@action:inmenu priority value=3"
+msgid "3"
+msgstr "3"
+
+#: todo/todoview.cpp:402
+#, kde-format
+msgctxt "@action:inmenu priority value=4"
+msgid "4"
+msgstr "4"
+
+#: todo/todoview.cpp:404
+#, kde-format
+msgctxt "@action:inmenu priority value=6"
+msgid "6"
+msgstr "6"
+
+#: todo/todoview.cpp:405
+#, kde-format
+msgctxt "@action:inmenu priority value=7"
+msgid "7"
+msgstr "7"
+
+#: todo/todoview.cpp:406
+#, kde-format
+msgctxt "@action:inmenu priority value=8"
+msgid "8"
+msgstr "8"
+
+#: todo/todoviewquickaddline.cpp:20
+#, kde-format
+msgid "Enter a summary to create a new to-do"
+msgstr "Вкажіть резюме для створення нового завдання"
+
+#: todo/todoviewquicksearch.cpp:36
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Filter on matching summaries"
+msgstr "Фільтрування за відповідністю резюме"
+
+#: todo/todoviewquicksearch.cpp:37
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Enter text here to filter the to-dos that are shown by matching summaries."
+msgstr "Введіть сюди ключові слова для фільтрування списку завдань за резюме."
+
+#: todo/todoviewquicksearch.cpp:38
+#, kde-format
+msgctxt "@label in QuickSearchLine"
+msgid "Search Summaries..."
+msgstr "Шукати за резюме…"
+
+#: todo/todoviewquicksearch.cpp:46
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Filter on these tags"
+msgstr "Фільтрувати за цими мітками"
+
+#: todo/todoviewquicksearch.cpp:48
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Use this combobox to filter the to-dos that are shown by a list of selected "
+"tags."
+msgstr ""
+"Скористайтеся цим полем для фільтрування списку завдань за списком вибраних "
+"міток."
+
+#: todo/todoviewquicksearch.cpp:50
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Select Tags"
+msgstr "Вибрати мітки"
+
+#: todo/todoviewquicksearch.cpp:74
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Filter on these priorities"
+msgstr "Фільтрувати за цими пріоритетами"
+
+#: todo/todoviewquicksearch.cpp:76
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Use this combobox to filter the to-dos that are shown by a list of selected "
+"priorities."
+msgstr ""
+"Скористайтеся цим полем для фільтрування списку завдань за списком вибраних "
+"пріоритетів."
+
+#: todo/todoviewquicksearch.cpp:78
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Select Priority"
+msgstr "Виберіть пріоритет"
+
+#: todo/todoviewquicksearch.cpp:104
+#, kde-format
+msgctxt "@action:inmenu priority is unspecified"
+msgid "unspecified"
+msgstr "не вказано"
+
+#: todo/todoviewquicksearch.cpp:105
+#, kde-format
+msgctxt "@action:inmenu highest priority"
+msgid "%1 (highest)"
+msgstr "%1 (найвищий)"
+
+#: todo/todoviewquicksearch.cpp:108
+#, kde-format
+msgctxt "@action:inmenu medium priority"
+msgid "%1 (medium)"
+msgstr "%1 (середній)"
+
+#: todo/todoviewquicksearch.cpp:110
+#, kde-format
+msgctxt "@action:inmenu lowest priority"
+msgid "%1 (lowest)"
+msgstr "%1 (найнижчий)"
+
+#: todo/todoviewquicksearch.cpp:112
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "%1"
+msgstr "%1"
+
+#: todo/todoviewsortfilterproxymodel.cpp:146
+#, kde-format
+msgctxt "priority is unspecified"
+msgid "unspecified"
+msgstr "не вказано"
+
+#: todo/todoviewsortfilterproxymodel.cpp:147
+#: todo/todoviewsortfilterproxymodel.cpp:149
+#: todo/todoviewsortfilterproxymodel.cpp:151
+#: todo/todoviewsortfilterproxymodel.cpp:153
+#, kde-format
+msgid "%1"
+msgstr "%1"
+
+#: todo/todoviewsortfilterproxymodel.cpp:148
+#, kde-format
+msgctxt "highest priority"
+msgid "%1 (highest)"
+msgstr "%1 (найвищий)"
+
+#: todo/todoviewsortfilterproxymodel.cpp:150
+#, kde-format
+msgctxt "medium priority"
+msgid "%1 (medium)"
+msgstr "%1 (середній)"
+
+#: todo/todoviewsortfilterproxymodel.cpp:152
+#, kde-format
+msgctxt "lowest priority"
+msgid "%1 (lowest)"
+msgstr "%1 (найнижчий)"
+
+#: todo/todoviewview.cpp:48
+#, kde-format
+msgid "View Columns"
+msgstr "Перегляд стовпчиками"
+
+#: viewerapp/main.cpp:19
+#, kde-format
+msgid "ViewerApp"
+msgstr "ViewerApp"
+
+#: viewerapp/main.cpp:21
+#, kde-format
+msgid "A test app for embedding calendarviews"
+msgstr "Тестова програма для вбудовування панелей календаря"
+
+#: viewerapp/main.cpp:23
+#, kde-format
+msgid ""
+"Copyright (C) 2010 Klarälvdalens Datakonsult AB, a KDAB Group company, "
+"info@kdab.net"
+msgstr ""
+"© Klarälvdalens Datakonsult AB, a KDAB Group company, info@kdab.net, 2010"
+
+#: viewerapp/main.cpp:24
+#, kde-format
+msgid "Kevin Krammer"
+msgstr "Kevin Krammer"
+
+#: viewerapp/main.cpp:33
+#, kde-format
+msgid "Optional list of view names to instantiate"
+msgstr "Необов’язковий список назв панелей перегляду для створення"
+
+#. i18n: ectx: property (windowTitle), widget (QMainWindow, MainWindow)
+#: viewerapp/mainwindow.ui:14
+#, kde-format
+msgid "CalendarViews Viewer"
+msgstr "Переглядач панелей перегляду календаря"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab)
+#: viewerapp/mainwindow.ui:25
+#, kde-format
+msgid "Tab 1"
+msgstr "Вкладка 1"
+
+#. i18n: ectx: property (title), widget (QMenu, addViewMenu)
+#: viewerapp/mainwindow.ui:43
+#, kde-format
+msgid "Add View"
+msgstr "Додавання панелі перегляду"
+
+#. i18n: ectx: property (text), widget (QStatusBar, statusbar)
+#: viewerapp/mainwindow.ui:55
+#, kde-format
+msgid "Agenda"
+msgstr "Порядок денний"
+
+#. i18n: ectx: property (text), widget (QStatusBar, statusbar)
+#: viewerapp/mainwindow.ui:60
+#, kde-format
+msgid "MultiAgenda"
+msgstr "Мульти-порядок денний"
+
+#. i18n: ectx: property (text), widget (QStatusBar, statusbar)
+#: viewerapp/mainwindow.ui:65
+#, kde-format
+msgid "Month"
+msgstr "Місяць"
+
+#. i18n: ectx: property (text), widget (QStatusBar, statusbar)
+#: viewerapp/mainwindow.ui:70
+#, kde-format
+msgid "Timeline"
+msgstr "Розклад"
+
+#. i18n: ectx: label, entry, group (Colors)
+#: viewerapp/settings.kcfg:241
+#, kde-format
+msgid "\"No category\" color (for \"Only category\" drawing schemes)"
+msgstr "Колір «Без категорії» (для схем «Лише категорія»)"
+
+#. i18n: ectx: whatsthis, entry, group (Colors)
+#: viewerapp/settings.kcfg:242
+#, kde-format
+msgid ""
+"Select a color to use for the \"no category\" or \"unset category\" "
+"situation, when an item does not belong to any category. This color is used "
+"when drawing items in the agenda or month views using the \"Only category\" "
+"scheme."
+msgstr ""
+"Встановіть колір, який буде використано для випадків «без категорії» і «не "
+"вказана категорія», якщо пункт не належить до жодної з категорій. Цей колір "
+"буде використано під час малювання пунктів у переглядах порядку денного або "
+"місяця у разі використання схеми «Лише категорія»."
+
+#. i18n: ectx: tooltip, entry, group (Colors)
+#: viewerapp/settings.kcfg:243
+#, kde-format
+msgid "Use this color when drawing items without a category"
+msgstr "Використовувати цей колір для малювання пунктів без категорії"
+
+#. i18n: ectx: label, entry, group (Group Scheduling)
+#: viewerapp/settings.kcfg:274
+#, kde-format
+msgid "Use Groupware communication"
+msgstr "Використовувати зв'язок групової роботи"
+
+#. i18n: ectx: whatsthis, entry, group (Group Scheduling)
+#: viewerapp/settings.kcfg:275
+#, kde-format
+msgid ""
+"Check this box to enable automatic generation of mails when creating, "
+"updating or deleting events (or to-dos) involving other attendees. You "
+"should check this box if you want to use the groupware functionality (e.g. "
+"Configuring Kontact as a KDE Kolab client)."
+msgstr ""
+"Ввімкніть для автоматичного генерування листів при створенні, оновленні та "
+"вилученні подій (або завдань), що стосуються інших учасників. Цей параметр "
+"потрібно ввімкнути, якщо використовуються функції групової роботи "
+"(наприклад, Kontact, який налаштовано, як клієнт до сервера KDE Kolab)."
+
+#: whatsnext/whatsnextview.cpp:65
+#, kde-format
+msgid "To-dos:"
+msgstr "Завдання:"
+
+#: whatsnext/whatsnextview.cpp:81
+#, kde-format
+msgid "What's Next?"
+msgstr "Що наступне?"
+
+#: whatsnext/whatsnextview.cpp:88 whatsnext/whatsnextview.cpp:251
+#: whatsnext/whatsnextview.cpp:256
+#, kde-format
+msgctxt "date from - to"
+msgid "%1 - %2"
+msgstr "%1 - %2"
+
+#: whatsnext/whatsnextview.cpp:102
+#, kde-format
+msgid "Events:"
+msgstr "Події:"
+
+#: whatsnext/whatsnextview.cpp:181 whatsnext/whatsnextview.cpp:200
+#, kde-format
+msgid "Events and to-dos that need a reply:"
+msgstr "Події та завдання, на які потрібно відповісти:"
+
+#: whatsnext/whatsnextview.cpp:263
+#, kde-format
+msgctxt "date, from - to"
+msgid "%1, %2 - %3"
+msgstr "%1, %2 - %3"
+
+#: whatsnext/whatsnextview.cpp:295
+#, kde-format
+msgctxt "to-do due date"
+msgid "  (Due: %1)"
+msgstr "  (завершення: %1)"
+
+#~ msgctxt "@item:intext delimiter for joining holiday names"
+#~ msgid ","
+#~ msgstr ","
+
+#~ msgid "Categories"
+#~ msgstr "Категорії"
+
+#~ msgctxt "delimiter for joining category names"
+#~ msgid ","
+#~ msgstr ","
+
+#~ msgctxt "@item:intext delimiter for joining category names"
+#~ msgid ","
+#~ msgstr ","
+
+#~ msgid "Click to add a new to-do"
+#~ msgstr "Клацніть, щоб додати нове завдання"
+
+#~ msgid "Timezone:"
+#~ msgstr "Часовий пояс:"
+
+#~ msgid "Time Tracker"
+#~ msgstr "Часова шкала"
+
+#~ msgctxt "Date from - to"
+#~ msgid "%1 - %2"
+#~ msgstr "%1 - %2"
+
+#~ msgid "No category"
+#~ msgstr "Без категорії"
+
+#~ msgctxt "number of hours spent"
+#~ msgid "%1 hour"
+#~ msgid_plural "%1 hours"
+#~ msgstr[0] "%1 година"
+#~ msgstr[1] "%1 години"
+#~ msgstr[2] "%1 годин"
+#~ msgstr[3] "%1 година"
+
+#~ msgctxt "percent of hours spent"
+#~ msgid " (%1%)"
+#~ msgstr " (%1%)"
+
+#~ msgctxt "short_weekday date (e.g. Mon 13)"
+#~ msgid "%1 %2"
+#~ msgstr "%2, %1"
+
+#~ msgid "Test creating color"
+#~ msgstr "Тестування створення кольору"
+
+#~ msgid "<placeholder>undefined</placeholder>"
+#~ msgstr "<placeholder>не визначено</placeholder>"
+
+#~ msgctxt "@label an ellipsis"
+#~ msgid "..."
+#~ msgstr "…"
+
+#~ msgid "Split future recurrences"
+#~ msgstr "Відділити майбутні повторення"
+
+#~ msgid ""
+#~ "Unable to add the future items to the calendar. No change will be done."
+#~ msgstr "Не вдається додати майбутні пункти в календар. Залишиться без змін."
+
+#~ msgid "Move single occurrence"
+#~ msgstr "Пересунути окремий екземпляр"
+
+#~ msgid "Reminder"
+#~ msgstr "Нагадування"
+
+#~ msgid "Timezone: %1"
+#~ msgstr "Часовий пояс: %1"
+
+#~ msgid "Use email settings from System Settings"
+#~ msgstr "Використовувати параметри пошти з «Системних параметрів»"
+
+#~ msgid ""
+#~ "Check this box to use the KDE-wide e-mail settings, which are defined "
+#~ "using the System Settings \"About Me\" Module. Uncheck this box to be "
+#~ "able to specify your full name and e-mail."
+#~ msgstr ""
+#~ "Позначте, щоб використовувати загальні параметри KDE для електронної "
+#~ "пошти, які вказано у Системних параметрах KDE, модулі «Про мене». Зніміть "
+#~ "позначку, щоб мати змогу напряму вказати ваше повне ім'я і адресу "
+#~ "електронної пошти."
+
+#~ msgid "Use holiday region:"
+#~ msgstr "Використовувати свята регіону:"
+
+#~ msgid ""
+#~ "Select from which region you want to use the holidays here. Defined "
+#~ "holidays are shown as non-working days in the date navigator, the agenda "
+#~ "view, etc."
+#~ msgstr ""
+#~ "Виберіть, з якого регіону ви хочете використовувати вихідні. Визначені "
+#~ "вихідні показано в навігаторі датами, перегляді порядку денного тощо, як "
+#~ "неробочі дні."
+
+#~ msgid "Exclude holidays"
+#~ msgstr "Виключити свята"
+
+#~ msgid ""
+#~ "Check this box to prevent KOrganizer from marking the working hours on "
+#~ "holidays."
+#~ msgstr ""
+#~ "Увімкніть, щоб програма KOrganizer не позначала робочі години в свята та "
+#~ "вихідні."
+
+#~ msgid "Default appointment time"
+#~ msgstr "Типовий час зустрічі"
+
+#~ msgid ""
+#~ "Enter the default time for events here. The default is used if you do not "
+#~ "supply a start time."
+#~ msgstr ""
+#~ "Тут можна вказати типовий час подій, який буде використовуватися, якщо ви "
+#~ "не вкажете дату початку."
+
+#~ msgid "Default duration of new appointment (HH:MM)"
+#~ msgstr "Типова тривалість нової зустрічі (гг:хх)"
+
+#~ msgid ""
+#~ "Enter default duration for events here. The default is used if you do not "
+#~ "supply an end time."
+#~ msgstr ""
+#~ "Тут можна вказати типову тривалість подій, яка буде використовуватися, "
+#~ "якщо ви не вкажете дату закінчення."
+
+#~ msgid "Enable reminders for new Events"
+#~ msgstr "Увімкнути нагадування для нових подій"
+
+#~ msgid ""
+#~ "Check this box if you want to enable reminders for all newly created "
+#~ "Events. You can always turn-off the reminders in the Event editor dialog."
+#~ msgstr ""
+#~ "Позначте цей пункт, якщо бажаєте, щоб програма вмикала нагадування для "
+#~ "всіх створених вами записів подій. Згодом ви завжди зможете вимкнути "
+#~ "нагадування за допомогою діалогового вікна редактора подій."
+
+#~ msgid "By default, enable reminders for new events"
+#~ msgstr "Типово, увімкнути нагадування для нових подій"
+
+#~ msgid "Enable reminders for new To-dos"
+#~ msgstr "Увімкнути нагадування для нових завдань"
+
+#~ msgid ""
+#~ "Check this box if you want to enable reminders for all newly created To-"
+#~ "dos. You can always turn-off the reminders in the To-do editor dialog."
+#~ msgstr ""
+#~ "Позначте цей пункт, якщо бажаєте, щоб програма вмикала нагадування для "
+#~ "всіх створених вами записів завдань. Згодом ви завжди зможете вимкнути "
+#~ "нагадування за допомогою діалогового вікна редактора завдань."
+
+#~ msgid "By default, enable reminders for new to-dos"
+#~ msgstr "Типово, увімкнути нагадування для нових завдань"
+
+#~ msgid "Default reminder time"
+#~ msgstr "Типовий час нагадування"
+
+#~ msgid ""
+#~ "Enter the default reminder time for all newly created items. The time "
+#~ "unit is specified in the adjacent combobox."
+#~ msgstr ""
+#~ "Введіть типовий час випередження нагадування для всіх записів, які ви "
+#~ "створюватимете надалі. Одиницю часу можна вказати у сусідньому спадному "
+#~ "списку."
+
+#~ msgid "Default time for reminders"
+#~ msgstr "Типовий час для нагадувань:"
+
+#~ msgid ""
+#~ "Enter the default reminder time units for all newly created items. The "
+#~ "time is specified in the adjacent spinbox."
+#~ msgstr ""
+#~ "Введіть типову одиницю часу випередження нагадування для всіх записів, "
+#~ "які ви створюватимете надалі. Час час можна вказати у сусідньому полі "
+#~ "лічильника."
+
+#~ msgid "Default time unit for reminders"
+#~ msgstr "Типові одиниці часу для нагадувань"
+
+#~ msgid "Send copy to owner when mailing events"
+#~ msgstr "Надсилати копію власнику при надсиланні подій"
+
+#~ msgid ""
+#~ "Check this box to get a copy of all e-mail messages that KOrganizer sends "
+#~ "at your request to event attendees."
+#~ msgstr ""
+#~ "Увімкніть, щоб отримувати копію всіх повідомлень електронної пошти, які "
+#~ "програма KOrganizer надсилає на ваш запит до учасників події."
+
+#~ msgid "Free/Busy Publish URL"
+#~ msgstr "URL публікування вільного/зайнятого часу"
+
+#~ msgid "URL for publishing free/busy information"
+#~ msgstr "URL для публікування інформації про вільний/зайнятий час"
+
+#~ msgid "Free/Busy Publish Username"
+#~ msgstr "Користувач оприлюднення вільного/зайнятого часу"
+
+#~ msgid "Username for publishing free/busy information"
+#~ msgstr "Користувач для публікування інформації про вільний/зайнятий час"
+
+#~ msgid "Free/Busy Publish Password"
+#~ msgstr "Пароль публікування вільного/зайнятого часу"
+
+#~ msgid "Password for publishing free/busy information"
+#~ msgstr "Пароль для публікування інформації про вільний/зайнятий час"
+
+#~ msgid "Enable Automatic Free/Busy Retrieval"
+#~ msgstr "Ввімкнути автоматичне отримання інформації про вільний/зайнятий час"
+
+#~ msgid "Use full email address for retrieval"
+#~ msgstr "Для отримання даних використовувати повну адресу електронної пошти"
+
+#~ msgid ""
+#~ "With this setting, you can change the filename that will be fetched from "
+#~ "the server. With this checked, it will download a free/busy file called "
+#~ "user@domain.ifb, for example nn@kde.org.ifb. Without this set, it will "
+#~ "download user.ifb, for example nn.ifb."
+#~ msgstr ""
+#~ "Тут можна змінити назву файла, який буде отриманий з сервера. Якщо пункт "
+#~ "буде позначено, буде отримуватись файл вільного/зайнятого часу з назвою "
+#~ "на зразок user@domain.ifb, наприклад, nn@kde.org.ifb. Якщо пункт не буде "
+#~ "позначено, буде отримано файл user.ifb, наприклад, nn.ifb."
+
+#~ msgid "Free/Busy Retrieval URL"
+#~ msgstr "URL отримання вільного/зайнятого часу"
+
+#~ msgid "Free/Busy Retrieval Username"
+#~ msgstr "Користувач отримання вільного/зайнятого часу"
+
+#~ msgid "Free/Busy Retrieval Password"
+#~ msgstr "Пароль отримання вільного/зайнятого часу"
+
+#~ msgid "Password for retrieving free/busy information"
+#~ msgstr "Пароль для отримання інформації про вільний/зайнятий час"
+
+#~ msgid "Regularly archive events"
+#~ msgstr "Регулярно архівувати події"
+
+#~ msgid ""
+#~ "If auto-archiving is enabled, events older than this amount will be "
+#~ "archived. The unit of this value is specified in another field."
+#~ msgstr ""
+#~ "Якщо ввімкнене автоархівування, то події, давніші ніж це значення, будуть "
+#~ "архівовані. Одиниця виміру цього значення вказується в іншому полі."
+
+#~ msgid "The unit in which the expiry time is expressed."
+#~ msgstr "Одиниця часу, в якій вказується термін давності."
+
+#~ msgid "In days"
+#~ msgstr "За днями"
+
+#~ msgid "In weeks"
+#~ msgstr "За тижнями"
+
+#~ msgid "In months"
+#~ msgstr "За місяцями"
+
+#~ msgid "URL of the file where old events should be archived"
+#~ msgstr "Адреса URL файла, де давні події мають бути архівовані"
+
+#~ msgid "Archive events"
+#~ msgstr "Архівувати події"
+
+#~ msgid "Archive to-dos"
+#~ msgstr "Архівувати завдання"
+
+#~ msgid "What to do when archiving"
+#~ msgstr "Що робити при архівуванні"
+
+#~ msgid "Delete old events"
+#~ msgstr "Вилучити старі події"
+
+#~ msgid "Archive old events to a separate file"
+#~ msgstr "Архівувати старі події в окремий файл"
+
+#~ msgid "Show timezone selectors in the event and todo editor dialog."
+#~ msgstr ""
+#~ "Показувати інструменти вибору часових поясів у вікні редакторів подій і "
+#~ "завдань."
+
+#~ msgid "Send Outlook-like pseudo counter proposals"
+#~ msgstr "Надсилати подібні до Outlook псевдопропозиції"
+
+#~ msgid "Check whether hostname and retrieval email address match"
+#~ msgstr ""
+#~ "Позначте, чи мають відповідати одна одній назва вузла і адреса отримувача "
+#~ "електронної пошти"
+
+#~ msgid ""
+#~ "With this setting you can configure whether the domain part of the free/"
+#~ "busy URL has to match the domain part of the user ID you are looking for. "
+#~ "For example, if this option is 'true', then looking for the free/busy "
+#~ "data of joe@mydomain.com on the server www.yourdomain.com will fail."
+#~ msgstr ""
+#~ "За допомогою цього параметра ви можете визначити, чи має доменна частина "
+#~ "адреси url вільного/зайнятого учасника відповідати доменній частині "
+#~ "ідентифікатора користувача, якого ви шукаєте. Наприклад, якщо цей "
+#~ "параметр має значення «true», пошук даних про вільність/зайнятість "
+#~ "joe@мій_домен.com на сервері www.ваш_домен.com зазнає невдачі."
+
+#~ msgid ""
+#~ "Enter your full name here. This name will be displayed as \"Organizer\" "
+#~ "in to-dos and events you create."
+#~ msgstr ""
+#~ "Введіть ваше повне ім'я. Це ім'я буде показано в надписі «Організатор» в "
+#~ "завданнях і подіях, які ви створите."
+
+#~ msgid "E&mail address"
+#~ msgstr "Адреса е&л. пошти"
+
+#~ msgid ""
+#~ "Enter here your e-mail address. This e-mail address will be used to "
+#~ "identify the owner of the calendar, and displayed in events and to-dos "
+#~ "you create."
+#~ msgstr ""
+#~ "Сюди введіть вашу адресу електронної пошти. Ця адреса електронної пошти "
+#~ "буде використовуватись для ідентифікації власника календаря і буде "
+#~ "показана в подіях і завданнях, які ви створюватимете."
+
+#~ msgctxt "@option:check calendar items before a certain date"
+#~ msgid "Items before %1"
+#~ msgstr "Пункти до %1"
+
+#~ msgctxt "@option:check calendar items after a certain date"
+#~ msgid "Items after %1"
+#~ msgstr "Пункти після %1"
+
+#~ msgctxt "Default export file"
+#~ msgid "calendar.html"
+#~ msgstr "calendar.html"

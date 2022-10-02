@@ -1,0 +1,2088 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: libeventviews\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-25 00:45+0000\n"
+"PO-Revision-Date: 2010-05-08 12:40-0700\n"
+"Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
+"Language-Team: Japanese <kde-jp@kde.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr ""
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+
+#: agenda/agenda.cpp:969
+#, kde-format
+msgid "Unable to lock item for modification. You cannot make any changes."
+msgstr ""
+
+#: agenda/agenda.cpp:971
+#, kde-format
+msgid "Locking Failed"
+msgstr ""
+
+#: agenda/agenda.cpp:1187
+#, kde-format
+msgid "Dissociate event from recurrence"
+msgstr ""
+
+#: agenda/agenda.cpp:1209 month/monthitem.cpp:444
+#, kde-format
+msgid ""
+"Unable to add the exception item to the calendar. No change will be done."
+msgstr ""
+
+#: agenda/agenda.cpp:1211 month/monthitem.cpp:446
+#, kde-format
+msgid "Error Occurred"
+msgstr ""
+
+#: agenda/agendaitem.cpp:81 list/listview.cpp:409
+#, kde-format
+msgid "%2 (1 year)"
+msgid_plural "%2 (%1 years)"
+msgstr[0] ""
+msgstr[1] ""
+
+#: agenda/agendaitem.cpp:631
+#, kde-format
+msgid "Attendee \"%1\" added to the calendar item \"%2\""
+msgstr ""
+
+#: agenda/agendaitem.cpp:632
+#, kde-format
+msgid "Attendee added"
+msgstr ""
+
+#: agenda/agendaitem.cpp:856 agenda/agendaitem.cpp:951
+#, kde-format
+msgid "%1 - %2"
+msgstr ""
+
+#: agenda/agendaitem.cpp:865
+#, kde-format
+msgid "- %1"
+msgstr ""
+
+#: agenda/agendaview.cpp:360
+#, kde-format
+msgctxt "short_weekday short_monthname date (e.g. Mon Aug 13)"
+msgid "%1 %2 %3"
+msgstr ""
+
+#: agenda/agendaview.cpp:2149
+#, kde-format
+msgid "Unable to modify this to-do, because it cannot be locked."
+msgstr ""
+
+#: agenda/agendaview.cpp:2157
+#, kde-format
+msgid "Unable to save %1 \"%2\"."
+msgstr ""
+
+#: agenda/timelabels.cpp:329
+#, kde-format
+msgid "&Add Timezones..."
+msgstr ""
+
+#: agenda/timelabels.cpp:330
+#, kde-format
+msgid "&Remove Timezone %1"
+msgstr ""
+
+#: agenda/timelabels.cpp:370
+#, kde-format
+msgctxt "title for timezone info, the timezone id and utc offset"
+msgid "<b>%1 (%2)</b>"
+msgstr ""
+
+#: agenda/timelabels.cpp:374
+#, kde-format
+msgctxt "heading for timezone display name"
+msgid "<i>Name:</i> %1"
+msgstr ""
+
+#: agenda/timelabels.cpp:378
+#, kde-format
+msgctxt "heading for timezone country"
+msgid "<i>Country:</i> %1"
+msgstr ""
+
+#: agenda/timelabels.cpp:390
+#, kde-format
+msgctxt "heading for comma-separated list of timezone abbreviations"
+msgid "<i>Abbreviations:</i>"
+msgstr ""
+
+#: agenda/timelabels.cpp:396
+#, kde-format
+msgctxt "heading for the timezone comment"
+msgid "<i>Comment:</i> %1"
+msgstr ""
+
+#: agenda/timelabels.cpp:412
+#, kde-format
+msgctxt "[hour of the day][am/pm/00] [timezone id (timezone-offset)]"
+msgid "%1%2<br/>%3 (%4)"
+msgstr ""
+
+#: agenda/timescaleconfigdialog.cpp:49
+#, kde-format
+msgctxt "@title:window"
+msgid "Timezone"
+msgstr ""
+
+#: eventview.cpp:111
+#, kde-format
+msgctxt "@title:window"
+msgid "Changing Recurring Item"
+msgstr ""
+
+#: eventview.cpp:112
+#, kde-format
+msgid "Also &Future Items"
+msgstr ""
+
+#: eventview.cpp:113
+#, kde-format
+msgid "Only &This Item"
+msgstr ""
+
+#: eventview.cpp:114
+#, kde-format
+msgid "&All Occurrences"
+msgstr ""
+
+#: eventview.cpp:131
+#, kde-format
+msgid ""
+"The item you are trying to change is a recurring item. Should the changes be "
+"applied only to this single occurrence, also to future items, or to all "
+"items in the recurrence?"
+msgstr ""
+
+#: eventview.cpp:142
+#, kde-format
+msgid ""
+"The item you are trying to change is a recurring item. Should the changes be "
+"applied only to this single occurrence or to all items in the recurrence?"
+msgstr ""
+
+#. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (Personal Settings)
+#: eventviews.kcfg:15
+#, kde-format
+msgid "Default Email Attachment Method"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry (DefaultEmailAttachMethod), group (Personal Settings)
+#: eventviews.kcfg:16
+#, kde-format
+msgid "The default way of attaching dropped emails to an event"
+msgstr ""
+
+#. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (Personal Settings)
+#. i18n: ectx: label, entry (DefaultTodoAttachMethod), group (Hidden Options)
+#: eventviews.kcfg:19 eventviews.kcfg:469
+#, kde-format
+msgid "Always ask"
+msgstr ""
+
+#. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (Personal Settings)
+#. i18n: ectx: label, entry (DefaultTodoAttachMethod), group (Hidden Options)
+#: eventviews.kcfg:22 eventviews.kcfg:472
+#, kde-format
+msgid "Only attach link to message"
+msgstr ""
+
+#. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (Personal Settings)
+#. i18n: ectx: label, entry (DefaultTodoAttachMethod), group (Hidden Options)
+#: eventviews.kcfg:25 eventviews.kcfg:475
+#, kde-format
+msgid "Attach complete message"
+msgstr ""
+
+#. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (Personal Settings)
+#: eventviews.kcfg:28
+#, kde-format
+msgid "Attach message without attachments"
+msgstr ""
+
+#. i18n: ectx: label, entry, group (Save Settings)
+#: eventviews.kcfg:38
+#, kde-format
+msgid "Export to HTML with every save"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry, group (Save Settings)
+#: eventviews.kcfg:39
+#, kde-format
+msgid ""
+"Check this box to export the calendar to a HTML-file every time you save it. "
+"By default, this file will be called calendar.html and placed in the user "
+"home folder."
+msgstr ""
+
+#. i18n: ectx: label, entry, group (Save Settings)
+#: eventviews.kcfg:44
+#, kde-format
+msgid "Enable automatic saving of manually opened calendar files"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry, group (Save Settings)
+#: eventviews.kcfg:45
+#, kde-format
+msgid ""
+"Check this box to save your calendar file automatically when you exit "
+"KOrganizer without asking and periodically, as you work. This setting does "
+"not affect the automatic saving of the standard calendar, which is "
+"automatically saved after each change."
+msgstr ""
+
+#. i18n: ectx: label, entry, group (Save Settings)
+#: eventviews.kcfg:50
+#, kde-format
+msgid "Save &interval in minutes"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry, group (Save Settings)
+#: eventviews.kcfg:51
+#, kde-format
+msgid ""
+"Set the interval between automatic saving of calendar events in minutes "
+"here. This setting only applies to files that are opened manually. The "
+"standard KDE-wide calendar is automatically saved after each change."
+msgstr ""
+
+#. i18n: ectx: label, entry (Confirm), group (Save Settings)
+#: eventviews.kcfg:57
+#, kde-format
+msgid "Confirm deletes"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry (Confirm), group (Save Settings)
+#: eventviews.kcfg:58
+#, kde-format
+msgid "Check this box to display a confirmation dialog when deleting items."
+msgstr ""
+
+#. i18n: ectx: label, entry (Destination), group (Save Settings)
+#: eventviews.kcfg:63
+#, kde-format
+msgid "New Events, To-dos and Journal Entries Should"
+msgstr ""
+
+#. i18n: ectx: label, entry (Destination), group (Save Settings)
+#: eventviews.kcfg:66
+#, kde-format
+msgid "Be added to the standard calendar"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry (Destination), group (Save Settings)
+#: eventviews.kcfg:67
+#, kde-format
+msgid ""
+"Select this option to always record new events, to-dos and journal entries "
+"using the standard calendar."
+msgstr ""
+
+#. i18n: ectx: label, entry (Destination), group (Save Settings)
+#: eventviews.kcfg:70
+#, kde-format
+msgid "Be asked which calendar to use"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry (Destination), group (Save Settings)
+#: eventviews.kcfg:71
+#, kde-format
+msgid ""
+"Select this option to choose the calendar to be used to record the item each "
+"time you create a new event, to-do or journal entry. This choice is "
+"recommended if you intend to use the shared folders functionality of the "
+"Kolab server or have to manage multiple accounts using Kontact as a KDE "
+"Kolab client. "
+msgstr ""
+
+#. i18n: ectx: label, entry, group (System Tray)
+#: eventviews.kcfg:81
+#, kde-format
+msgid "Show Reminder Daemon in the System Tray"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry, group (System Tray)
+#: eventviews.kcfg:82
+#, kde-format
+msgid ""
+"Check this box to show the KOrganizer reminder daemon in the system tray."
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry (TimeZoneId), group (Time &amp; Date)
+#: eventviews.kcfg:90
+#, kde-format
+msgid ""
+"Select your timezone from the list of locations in this drop down box. If "
+"your city is not listed, select one which shares the same timezone. "
+"KOrganizer will automatically adjust for daylight savings."
+msgstr ""
+
+#. i18n: ectx: label, entry (DayBegins), group (Time &amp; Date)
+#: eventviews.kcfg:94
+#, kde-format
+msgid "Day begins at"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry (DayBegins), group (Time &amp; Date)
+#: eventviews.kcfg:95
+#, kde-format
+msgid ""
+"Enter the start time for events here. This time should be the earliest time "
+"that you use for events, as it will be displayed at the top."
+msgstr ""
+
+#. i18n: ectx: label, entry (WorkingHoursStart), group (Time &amp; Date)
+#: eventviews.kcfg:100
+#, kde-format
+msgid "Daily starting hour"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry (WorkingHoursStart), group (Time &amp; Date)
+#: eventviews.kcfg:101
+#, kde-format
+msgid ""
+"Enter the start time for the working hours here. The working hours will be "
+"marked with color by KOrganizer."
+msgstr ""
+
+#. i18n: ectx: label, entry (WorkingHoursEnd), group (Time &amp; Date)
+#: eventviews.kcfg:106
+#, kde-format
+msgid "Daily ending hour"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry (WorkingHoursEnd), group (Time &amp; Date)
+#: eventviews.kcfg:107
+#, kde-format
+msgid ""
+"Enter the ending time for the working hours here. The working hours will be "
+"marked with color by KOrganizer."
+msgstr ""
+
+#. i18n: ectx: label, entry (WeekStartDay), group (Time &amp; Date)
+#: eventviews.kcfg:112
+#, kde-format
+msgid "Weekly start day:"
+msgstr ""
+
+#. i18n: ectx: tooltip, entry (WeekStartDay), group (Time &amp; Date)
+#: eventviews.kcfg:113
+#, kde-format
+msgid "Select the first day of each week"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry (WeekStartDay), group (Time &amp; Date)
+#: eventviews.kcfg:114
+#, kde-format
+msgid ""
+"Select the first day of each week. Normally, you can ignore this since it is "
+"set in your locale."
+msgstr ""
+
+#. i18n: ectx: label, entry, group (General View)
+#: eventviews.kcfg:122 viewerapp/settings.kcfg:15
+#, kde-format
+msgid "Enable tooltips for displaying summaries"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry, group (General View)
+#: eventviews.kcfg:123 viewerapp/settings.kcfg:16
+#, kde-format
+msgid ""
+"Check this box to display summary tooltips when hovering the mouse over an "
+"event or a to-do."
+msgstr ""
+
+#. i18n: ectx: label, entry, group (General View)
+#: eventviews.kcfg:128
+#, kde-format
+msgid "To-dos use category colors"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry, group (General View)
+#: eventviews.kcfg:129
+#, kde-format
+msgid ""
+"Check this box so that to-dos will use category colors and not colors "
+"specific to their due, due today or overdue state"
+msgstr ""
+
+#. i18n: ectx: label, entry, group (General View)
+#: eventviews.kcfg:134
+#, kde-format
+msgid "Next x days"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry, group (General View)
+#: eventviews.kcfg:135
+#, kde-format
+msgid ""
+"Select the number of \"x\" days to be displayed in the next days view. To "
+"access the next \"x\" days view, choose the \"Next X Days\" menu item from "
+"the \"View\" menu."
+msgstr ""
+
+#. i18n: ectx: tooltip, entry, group (General View)
+#: eventviews.kcfg:136
+#, kde-format
+msgid "Show this many days at a time in the Next \"x\" days view"
+msgstr ""
+
+#. i18n: ectx: label, entry (DailyRecur), group (General View)
+#: eventviews.kcfg:141
+#, kde-format
+msgid "Show items that recur daily"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry (DailyRecur), group (General View)
+#: eventviews.kcfg:142
+#, kde-format
+msgid ""
+"Check this box to show the days containing daily recurring events in bold "
+"typeface in the Date Navigator, or uncheck it to give more prominence to "
+"other (non daily recurring) events."
+msgstr ""
+
+#. i18n: ectx: label, entry (WeeklyRecur), group (General View)
+#: eventviews.kcfg:147
+#, kde-format
+msgid "Show items that recur weekly"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry (WeeklyRecur), group (General View)
+#: eventviews.kcfg:148
+#, kde-format
+msgid ""
+"Check this box to show the days containing weekly recurring events in bold "
+"typeface in the Date Navigator, or uncheck it to give more prominence to "
+"other (non weekly recurring) events."
+msgstr ""
+
+#. i18n: ectx: label, entry (HighlightTodos), group (General View)
+#: eventviews.kcfg:153
+#, kde-format
+msgid "Show to-dos instead of events when in Todo View"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry (HighlightTodos), group (General View)
+#: eventviews.kcfg:154
+#, kde-format
+msgid ""
+"Check this box to show the days containing to-dos in bold typeface in the "
+"Date Navigator when in to-do view."
+msgstr ""
+
+#. i18n: ectx: label, entry (HighlightJournals), group (General View)
+#: eventviews.kcfg:159
+#, kde-format
+msgid "Show journals instead of events when in Journal View"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry (HighlightJournals), group (General View)
+#: eventviews.kcfg:160
+#, kde-format
+msgid ""
+"Check this box to show the days containing journals in bold typeface in the "
+"Date Navigator when in journal view."
+msgstr ""
+
+#. i18n: ectx: label, entry (WeekNumbersShowWork), group (General View)
+#: eventviews.kcfg:165
+#, kde-format
+msgid "Week numbers select a work week when in work week mode"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry (WeekNumbersShowWork), group (General View)
+#: eventviews.kcfg:166
+#, kde-format
+msgid ""
+"Check this box to select a working week when clicking on the Date "
+"Navigator's week numbers, or uncheck it to choose the whole week."
+msgstr ""
+
+#. i18n: ectx: label, entry, group (Agenda View)
+#: eventviews.kcfg:174 viewerapp/settings.kcfg:24
+#, kde-format
+msgid "Hour size"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry, group (Agenda View)
+#: eventviews.kcfg:175 viewerapp/settings.kcfg:25
+#, kde-format
+msgid ""
+"Select the height of the hour rows in the agenda grid, in pixels. Increasing "
+"this value will make each row in the agenda grid taller."
+msgstr ""
+
+#. i18n: ectx: tooltip, entry, group (Agenda View)
+#: eventviews.kcfg:176 viewerapp/settings.kcfg:26
+#, kde-format
+msgid "Set the height (in pixels) for an hour in the agenda grid"
+msgstr ""
+
+#. i18n: ectx: label, entry (EnableAgendaItemIcons), group (Agenda View)
+#: eventviews.kcfg:183 viewerapp/settings.kcfg:33
+#, kde-format
+msgid "Show icons in agenda view items"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry (EnableAgendaItemIcons), group (Agenda View)
+#: eventviews.kcfg:184 viewerapp/settings.kcfg:34
+#, kde-format
+msgid ""
+"Check this box to display icons (alarm, recursion, etc.) in agenda view "
+"items."
+msgstr ""
+
+#. i18n: ectx: tooltip, entry (EnableAgendaItemIcons), group (Agenda View)
+#: eventviews.kcfg:185 viewerapp/settings.kcfg:35
+#, kde-format
+msgid "Display icons in agenda view items"
+msgstr ""
+
+#. i18n: ectx: label, entry (ShowTodosAgendaView), group (Agenda View)
+#. i18n: ectx: label, entry (ShowTodosMonthView), group (Month View)
+#: eventviews.kcfg:190 eventviews.kcfg:294 viewerapp/settings.kcfg:40
+#: viewerapp/settings.kcfg:133
+#, kde-format
+msgid "Show to-dos"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry (ShowTodosAgendaView), group (Agenda View)
+#: eventviews.kcfg:191 viewerapp/settings.kcfg:41
+#, kde-format
+msgid "Check this box to display to-dos in the agenda view."
+msgstr ""
+
+#. i18n: ectx: tooltip, entry (ShowTodosAgendaView), group (Agenda View)
+#: eventviews.kcfg:192 viewerapp/settings.kcfg:42
+#, kde-format
+msgid "Display to-dos in the agenda view"
+msgstr ""
+
+#. i18n: ectx: label, entry (MarcusBainsEnabled), group (Agenda View)
+#: eventviews.kcfg:197 viewerapp/settings.kcfg:47
+#, kde-format
+msgid "Show current-time (Marcus Bains) line"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry (MarcusBainsEnabled), group (Agenda View)
+#: eventviews.kcfg:198 viewerapp/settings.kcfg:48
+#, kde-format
+msgid ""
+"Check this box to display a line in the day or week view indicating the "
+"current-time line (Marcus Bains line)."
+msgstr ""
+
+#. i18n: ectx: tooltip, entry (MarcusBainsEnabled), group (Agenda View)
+#: eventviews.kcfg:199 viewerapp/settings.kcfg:49
+#, kde-format
+msgid "Display the current-time indicator"
+msgstr ""
+
+#. i18n: ectx: label, entry (MarcusBainsShowSeconds), group (Agenda View)
+#: eventviews.kcfg:204 viewerapp/settings.kcfg:54
+#, kde-format
+msgid "Show seconds on the current-time (Marcus Bains) line"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry (MarcusBainsShowSeconds), group (Agenda View)
+#: eventviews.kcfg:205 viewerapp/settings.kcfg:55
+#, kde-format
+msgid "Check this box if you want to show seconds on the current-time line."
+msgstr ""
+
+#. i18n: ectx: tooltip, entry (MarcusBainsShowSeconds), group (Agenda View)
+#: eventviews.kcfg:206 viewerapp/settings.kcfg:56
+#, kde-format
+msgid "Display seconds with the current-time indicator"
+msgstr ""
+
+#. i18n: ectx: label, entry (SelectionStartsEditor), group (Agenda View)
+#: eventviews.kcfg:211 viewerapp/settings.kcfg:61
+#, kde-format
+msgid "Time range selection in agenda view starts event editor"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry (SelectionStartsEditor), group (Agenda View)
+#: eventviews.kcfg:212 viewerapp/settings.kcfg:62
+#, kde-format
+msgid ""
+"Check this box to start the event editor automatically when you select a "
+"time range in the daily and weekly view. To select a time range, drag the "
+"mouse from the start time to the end time of the event you are about to plan."
+msgstr ""
+
+#. i18n: ectx: tooltip, entry (SelectionStartsEditor), group (Agenda View)
+#: eventviews.kcfg:213 viewerapp/settings.kcfg:63
+#, kde-format
+msgid "Enable automatic event editor with time range selection"
+msgstr ""
+
+#. i18n: ectx: label, entry, group (Agenda View)
+#. i18n: ectx: label, entry, group (Month View)
+#: eventviews.kcfg:218 eventviews.kcfg:314 viewerapp/settings.kcfg:68
+#: viewerapp/settings.kcfg:153
+#, kde-format
+msgid "Color Usage"
+msgstr ""
+
+#. i18n: ectx: label, entry, group (Agenda View)
+#. i18n: ectx: label, entry, group (Month View)
+#: eventviews.kcfg:221 eventviews.kcfg:317 viewerapp/settings.kcfg:71
+#: viewerapp/settings.kcfg:156
+#, kde-format
+msgid "Category inside, calendar outside"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry, group (Agenda View)
+#: eventviews.kcfg:222 viewerapp/settings.kcfg:72
+#, kde-format
+msgid ""
+"Select the \"Category inside, calendar outside\" option if you would like to "
+"draw calendar items in their associated category color, with the item's "
+"border drawn in the color of its calendar. Please use the Colors and Fonts "
+"configuration page for setting these colors."
+msgstr ""
+
+#. i18n: ectx: tooltip, entry, group (Agenda View)
+#: eventviews.kcfg:223 viewerapp/settings.kcfg:73
+#, kde-format
+msgid ""
+"Draw agenda items in their category color inside and calendar color for "
+"their border"
+msgstr ""
+
+#. i18n: ectx: label, entry, group (Agenda View)
+#. i18n: ectx: label, entry, group (Month View)
+#: eventviews.kcfg:226 eventviews.kcfg:322 viewerapp/settings.kcfg:76
+#: viewerapp/settings.kcfg:161
+#, kde-format
+msgid "Calendar inside, category outside"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry, group (Agenda View)
+#: eventviews.kcfg:227 viewerapp/settings.kcfg:77
+#, kde-format
+msgid ""
+"Select the \"Calendar inside, category outside\" option if you would like to "
+"draw calendar items in their associated calendar color, with the item's "
+"border drawn in the color of its category. Please use the Colors and Fonts "
+"configuration page for setting these colors."
+msgstr ""
+
+#. i18n: ectx: tooltip, entry, group (Agenda View)
+#: eventviews.kcfg:228 viewerapp/settings.kcfg:78
+#, kde-format
+msgid ""
+"Draw agenda items in their calendar color inside and category color for "
+"their border"
+msgstr ""
+
+#. i18n: ectx: label, entry, group (Agenda View)
+#. i18n: ectx: label, entry, group (Month View)
+#: eventviews.kcfg:231 eventviews.kcfg:327 viewerapp/settings.kcfg:81
+#: viewerapp/settings.kcfg:166
+#, kde-format
+msgid "Only category"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry, group (Agenda View)
+#: eventviews.kcfg:232 viewerapp/settings.kcfg:82
+#, kde-format
+msgid ""
+"Select the \"Only category\" option if you would like to draw calendar items "
+"(both inside and border) in the color of their associated category. Please "
+"use the Colors and Fonts configuration page for setting these colors."
+msgstr ""
+
+#. i18n: ectx: tooltip, entry, group (Agenda View)
+#: eventviews.kcfg:233 viewerapp/settings.kcfg:83
+#, kde-format
+msgid "Draw agenda items using their category color for the inside and border"
+msgstr ""
+
+#. i18n: ectx: label, entry, group (Agenda View)
+#. i18n: ectx: label, entry, group (Month View)
+#: eventviews.kcfg:236 eventviews.kcfg:332 viewerapp/settings.kcfg:86
+#: viewerapp/settings.kcfg:171
+#, kde-format
+msgid "Only calendar"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry, group (Agenda View)
+#: eventviews.kcfg:237 viewerapp/settings.kcfg:87
+#, kde-format
+msgid ""
+"Select the \"Only calendar\" option if you would like to draw calendar items "
+"(both inside and border) in the color of their calendar. Please use the "
+"Colors and Fonts configuration page for setting these colors."
+msgstr ""
+
+#. i18n: ectx: tooltip, entry, group (Agenda View)
+#: eventviews.kcfg:238 viewerapp/settings.kcfg:88
+#, kde-format
+msgid "Draw agenda items using their calendar color for the inside and border"
+msgstr ""
+
+#. i18n: ectx: label, entry (ColorBusyDaysEnabled), group (Agenda View)
+#. i18n: ectx: label, entry (ColorMonthBusyDaysEnabled), group (Month View)
+#: eventviews.kcfg:244 eventviews.kcfg:341
+#, kde-format
+msgid "Color busy days with a different background color"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry (ColorBusyDaysEnabled), group (Agenda View)
+#: eventviews.kcfg:245
+#, kde-format
+msgid ""
+"Check this box if you want agenda's background to be filled with a different "
+"color on days which have at least one all day event marked as busy. Also, "
+"you can change the background color used for this option on the Colors "
+"configuration page. Look for the \"Busy days background color\" setting."
+msgstr ""
+
+#. i18n: ectx: label, entry (AgendaViewCalendarDisplay), group (Agenda View)
+#: eventviews.kcfg:249 viewerapp/settings.kcfg:95
+#, kde-format
+msgid "Multiple Calendar Display"
+msgstr ""
+
+#. i18n: ectx: label, entry (AgendaViewCalendarDisplay), group (Agenda View)
+#: eventviews.kcfg:252 viewerapp/settings.kcfg:98
+#, kde-format
+msgid "Merge all calendars into one view"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry (AgendaViewCalendarDisplay), group (Agenda View)
+#: eventviews.kcfg:253 viewerapp/settings.kcfg:99
+#, kde-format
+msgid ""
+"Select the \"Merge all calendars into one view\" option if you would like "
+"all your calendars to be shown together in one agenda view."
+msgstr ""
+
+#. i18n: ectx: tooltip, entry (AgendaViewCalendarDisplay), group (Agenda View)
+#: eventviews.kcfg:254 viewerapp/settings.kcfg:100
+#, kde-format
+msgid "Show all calendars merged together"
+msgstr ""
+
+#. i18n: ectx: label, entry (AgendaViewCalendarDisplay), group (Agenda View)
+#: eventviews.kcfg:257 viewerapp/settings.kcfg:103
+#, kde-format
+msgid "Show calendars side by side"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry (AgendaViewCalendarDisplay), group (Agenda View)
+#: eventviews.kcfg:258 viewerapp/settings.kcfg:104
+#, kde-format
+msgid ""
+"Select the \"Show calendars side by side\" option if you would like to see "
+"two calendars at once, in a side-by-side view."
+msgstr ""
+
+#. i18n: ectx: tooltip, entry (AgendaViewCalendarDisplay), group (Agenda View)
+#: eventviews.kcfg:259 viewerapp/settings.kcfg:105
+#, kde-format
+msgid "Show two calendars side-by-side"
+msgstr ""
+
+#. i18n: ectx: label, entry (AgendaViewCalendarDisplay), group (Agenda View)
+#: eventviews.kcfg:262 viewerapp/settings.kcfg:108
+#, kde-format
+msgid "Switch between views with tabs"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry (AgendaViewCalendarDisplay), group (Agenda View)
+#: eventviews.kcfg:263 viewerapp/settings.kcfg:109
+#, kde-format
+msgid ""
+"Select \"Switch between views with tabs\" if you would like to alternate "
+"between calendars using the tab key."
+msgstr ""
+
+#. i18n: ectx: tooltip, entry (AgendaViewCalendarDisplay), group (Agenda View)
+#: eventviews.kcfg:264 viewerapp/settings.kcfg:110
+#, kde-format
+msgid "Tab through calendars"
+msgstr ""
+
+#. i18n: ectx: label, entry (EnableMonthScroll), group (Month View)
+#: eventviews.kcfg:274 viewerapp/settings.kcfg:120
+#, kde-format
+msgid "Enable scrollbars in month view cells"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry (EnableMonthScroll), group (Month View)
+#: eventviews.kcfg:275 viewerapp/settings.kcfg:121
+#, kde-format
+msgid ""
+"Check this box to display scrollbars when clicking on a cell in the month "
+"view; they will only appear when needed though."
+msgstr ""
+
+#. i18n: ectx: label, entry (EnableMonthItemIcons), group (Month View)
+#: eventviews.kcfg:280 viewerapp/settings.kcfg:126
+#, kde-format
+msgid "Show icons in month view items"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry (EnableMonthItemIcons), group (Month View)
+#: eventviews.kcfg:281 viewerapp/settings.kcfg:127
+#, kde-format
+msgid ""
+"Check this box to display icons (alarm, recursion, etc.) in month view items."
+msgstr ""
+
+#. i18n: ectx: tooltip, entry (EnableMonthItemIcons), group (Month View)
+#: eventviews.kcfg:282 viewerapp/settings.kcfg:128
+#, kde-format
+msgid "Display icons in month view items"
+msgstr ""
+
+#. i18n: ectx: label, entry (ShowTimeInMonthView), group (Month View)
+#: eventviews.kcfg:287
+#, kde-format
+msgid "Show time in month view items"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry (ShowTimeInMonthView), group (Month View)
+#: eventviews.kcfg:288
+#, kde-format
+msgid "Check this box to display the time in month view items."
+msgstr ""
+
+#. i18n: ectx: tooltip, entry (ShowTimeInMonthView), group (Month View)
+#: eventviews.kcfg:289
+#, kde-format
+msgid "Display time in month view items"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry (ShowTodosMonthView), group (Month View)
+#: eventviews.kcfg:295 viewerapp/settings.kcfg:134
+#, kde-format
+msgid "Check this box to display to-dos in the month view."
+msgstr ""
+
+#. i18n: ectx: tooltip, entry (ShowTodosMonthView), group (Month View)
+#: eventviews.kcfg:296 viewerapp/settings.kcfg:135
+#, kde-format
+msgid "Display to-dos in the month view"
+msgstr ""
+
+#. i18n: ectx: label, entry (ShowJournalsMonthView), group (Month View)
+#: eventviews.kcfg:301 viewerapp/settings.kcfg:140
+#, kde-format
+msgid "Show journals"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry (ShowJournalsMonthView), group (Month View)
+#: eventviews.kcfg:302 viewerapp/settings.kcfg:141
+#, kde-format
+msgid "Check this box to display journals in the month view."
+msgstr ""
+
+#. i18n: ectx: tooltip, entry (ShowJournalsMonthView), group (Month View)
+#: eventviews.kcfg:303 viewerapp/settings.kcfg:142
+#, kde-format
+msgid "Display journals in the month view"
+msgstr ""
+
+#. i18n: ectx: label, entry, group (Month View)
+#: eventviews.kcfg:308 viewerapp/settings.kcfg:147
+#, kde-format
+msgid "Month view uses full window"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry, group (Month View)
+#: eventviews.kcfg:309 viewerapp/settings.kcfg:148
+#, kde-format
+msgid ""
+"Check this box to use the full KOrganizer window when displaying the month "
+"view. If this box is checked, you will gain some space for the monthly view, "
+"but other widgets, such as the date navigator, the item details and the "
+"calendars list, will not be displayed."
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry, group (Month View)
+#: eventviews.kcfg:318 viewerapp/settings.kcfg:157
+#, kde-format
+msgid ""
+"Select the \"Category inside, calendar outside\" option if you would like to "
+"draw calendar items in their associated category color, with the item's "
+"border drawn in the color of its calendar.  Please use the Colors and Fonts "
+"configuration page for setting these colors."
+msgstr ""
+
+#. i18n: ectx: tooltip, entry, group (Month View)
+#: eventviews.kcfg:319 viewerapp/settings.kcfg:158
+#, kde-format
+msgid ""
+"Draw month items in their category color inside and calendar color for their "
+"border"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry, group (Month View)
+#: eventviews.kcfg:323 viewerapp/settings.kcfg:162
+#, kde-format
+msgid ""
+"Select the \"Calendar inside, category outside\" option if you would like to "
+"draw calendar items in their associated calendar color, with the item's "
+"border drawn in the color of its category.  Please use the Colors and Fonts "
+"configuration page for setting these colors."
+msgstr ""
+
+#. i18n: ectx: tooltip, entry, group (Month View)
+#: eventviews.kcfg:324 viewerapp/settings.kcfg:163
+#, kde-format
+msgid ""
+"Draw month items in their calendar color inside and category color for their "
+"border"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry, group (Month View)
+#: eventviews.kcfg:328 viewerapp/settings.kcfg:167
+#, kde-format
+msgid ""
+"Select the \"Only category\" option if you would like to draw calendar items "
+"(both inside and border) in the color of their associated category.  Please "
+"use the Colors and Fonts configuration page for setting these colors."
+msgstr ""
+
+#. i18n: ectx: tooltip, entry, group (Month View)
+#: eventviews.kcfg:329 viewerapp/settings.kcfg:168
+#, kde-format
+msgid "Draw month items using their category color for the inside and border"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry, group (Month View)
+#: eventviews.kcfg:333 viewerapp/settings.kcfg:172
+#, kde-format
+msgid ""
+"Select the \"Only calendar\" option if you would like to draw calendar items "
+"(both inside and border) in the color of their calendar.  Please use the "
+"Colors and Fonts configuration page for setting these colors."
+msgstr ""
+
+#. i18n: ectx: tooltip, entry, group (Month View)
+#: eventviews.kcfg:334 viewerapp/settings.kcfg:173
+#, kde-format
+msgid "Draw month items using their calendar color for the inside and border"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry (ColorMonthBusyDaysEnabled), group (Month View)
+#: eventviews.kcfg:342
+#, kde-format
+msgid ""
+"Check this box if you want month view's background to be filled with a "
+"different color on days which have at least one all day event marked as "
+"busy. Also, you can change the background color used for this option on the "
+"Colors configuration page. Look for the \"Busy days background color\" "
+"setting."
+msgstr ""
+
+#. i18n: ectx: label, entry, group (Todo View)
+#: eventviews.kcfg:350 viewerapp/settings.kcfg:183
+#, kde-format
+msgid "Always display completed to-dos at the bottom of the list"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry, group (Todo View)
+#: eventviews.kcfg:351 viewerapp/settings.kcfg:184
+#, kde-format
+msgid ""
+"Check this box if you want all completed to-dos to be always grouped at the "
+"bottom of the to-do list."
+msgstr ""
+
+#. i18n: ectx: label, entry, group (Todo View)
+#: eventviews.kcfg:356 viewerapp/settings.kcfg:189
+#, kde-format
+msgid "To-do list view uses full window"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry, group (Todo View)
+#: eventviews.kcfg:357 viewerapp/settings.kcfg:190
+#, kde-format
+msgid ""
+"Check this box to use the full KOrganizer window when displaying the to-do "
+"list view. If this box is checked, you will gain some space for the to-do "
+"list view, but other widgets, such as the date navigator, the to-do details "
+"and the calendars list, will not be displayed."
+msgstr ""
+
+#. i18n: ectx: label, entry, group (Todo View)
+#: eventviews.kcfg:362
+#, kde-format
+msgid "Display to-dos in a flat list"
+msgstr ""
+
+#. i18n: ectx: tooltip, entry, group (Todo View)
+#: eventviews.kcfg:363
+#, kde-format
+msgid "Display to-dos as a flat list instead of a hierarchical tree"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry, group (Todo View)
+#: eventviews.kcfg:364
+#, kde-format
+msgid ""
+"Check this box if you want to see all your to-dos in a flat list instead of "
+"being arranged in a hierarchical tree."
+msgstr ""
+
+#. i18n: ectx: label, entry, group (Todo View)
+#: eventviews.kcfg:369 viewerapp/settings.kcfg:195
+#, kde-format
+msgid "Record completed to-dos in journal entries"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry, group (Todo View)
+#: eventviews.kcfg:370 viewerapp/settings.kcfg:196
+#, kde-format
+msgid ""
+"Check this box to record the completion of a to-do in a new entry of your "
+"journal automatically."
+msgstr ""
+
+#. i18n: ectx: label, entry, group (Colors)
+#. i18n: ectx: label, entry, group (Theming)
+#. i18n: ectx: label, entry, group (Theme/Month view)
+#: eventviews.kcfg:379 eventviews.kcfg:604 eventviews.kcfg:708
+#: viewerapp/settings.kcfg:204
+#, kde-format
+msgid "Holiday color"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry, group (Colors)
+#. i18n: ectx: whatsthis, entry, group (Theming)
+#. i18n: ectx: whatsthis, entry, group (Theme/Month view)
+#: eventviews.kcfg:380 eventviews.kcfg:605 eventviews.kcfg:709
+#: viewerapp/settings.kcfg:205
+#, kde-format
+msgid ""
+"Select the holiday color here. The holiday color will be used for the "
+"holiday name in the month view and the holiday number in the date navigator."
+msgstr ""
+
+#. i18n: ectx: label, entry (AgendaBgColor), group (Colors)
+#. i18n: ectx: label, entry, group (Theming)
+#: eventviews.kcfg:385 eventviews.kcfg:516 viewerapp/settings.kcfg:210
+#, kde-format
+msgid "Agenda view background color"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry (AgendaBgColor), group (Colors)
+#. i18n: ectx: whatsthis, entry, group (Theming)
+#: eventviews.kcfg:386 eventviews.kcfg:517 viewerapp/settings.kcfg:211
+#, kde-format
+msgid "Select the agenda view background color here."
+msgstr ""
+
+#. i18n: ectx: label, entry (ViewBgBusyColor), group (Colors)
+#: eventviews.kcfg:391
+#, kde-format
+msgid "Agenda/Month view background busy color"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry (ViewBgBusyColor), group (Colors)
+#: eventviews.kcfg:392
+#, kde-format
+msgid ""
+"When you have an all day event marked as busy, you can have a different "
+"agenda or month view background color for that day. Select the color here."
+msgstr ""
+
+#. i18n: ectx: label, entry, group (Colors)
+#: eventviews.kcfg:397 viewerapp/settings.kcfg:216
+#, kde-format
+msgid "Agenda view current-time line color"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry, group (Colors)
+#: eventviews.kcfg:398 viewerapp/settings.kcfg:217
+#, kde-format
+msgid "Select a color to use for the current-time (Marcus Bains) line."
+msgstr ""
+
+#. i18n: ectx: tooltip, entry, group (Colors)
+#: eventviews.kcfg:399 viewerapp/settings.kcfg:218
+#, kde-format
+msgid "Use this color for the Agenda View current-time (Marcus Bains) line"
+msgstr ""
+
+#. i18n: ectx: label, entry, group (Colors)
+#. i18n: ectx: label, entry, group (Theming)
+#. i18n: ectx: label, entry, group (Theme/Month view)
+#: eventviews.kcfg:404 eventviews.kcfg:528 eventviews.kcfg:628
+#: viewerapp/settings.kcfg:223
+#, kde-format
+msgid "Working hours color"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry, group (Colors)
+#: eventviews.kcfg:405 viewerapp/settings.kcfg:224
+#, kde-format
+msgid "Select the working hours color for the agenda view here."
+msgstr ""
+
+#. i18n: ectx: label, entry (TodoDueTodayColor), group (Colors)
+#. i18n: ectx: label, entry, group (Theming)
+#. i18n: ectx: label, entry, group (Theme/Month view)
+#: eventviews.kcfg:410 eventviews.kcfg:575 eventviews.kcfg:679
+#: viewerapp/settings.kcfg:229
+#, kde-format
+msgid "To-do due today color"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry (TodoDueTodayColor), group (Colors)
+#. i18n: ectx: whatsthis, entry, group (Theming)
+#. i18n: ectx: whatsthis, entry, group (Theme/Month view)
+#: eventviews.kcfg:411 eventviews.kcfg:576 eventviews.kcfg:680
+#: viewerapp/settings.kcfg:230
+#, kde-format
+msgid "Select the to-do due today color here."
+msgstr ""
+
+#. i18n: ectx: label, entry (TodoOverdueColor), group (Colors)
+#. i18n: ectx: label, entry, group (Theming)
+#. i18n: ectx: label, entry, group (Theme/Month view)
+#: eventviews.kcfg:416 eventviews.kcfg:589 eventviews.kcfg:693
+#: viewerapp/settings.kcfg:235
+#, kde-format
+msgid "To-do overdue color"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry (TodoOverdueColor), group (Colors)
+#. i18n: ectx: whatsthis, entry, group (Theming)
+#. i18n: ectx: whatsthis, entry, group (Theme/Month view)
+#: eventviews.kcfg:417 eventviews.kcfg:590 eventviews.kcfg:694
+#: viewerapp/settings.kcfg:236
+#, kde-format
+msgid "Select the to-do overdue color here."
+msgstr ""
+
+#. i18n: ectx: label, entry, group (Fonts)
+#: eventviews.kcfg:425 viewerapp/settings.kcfg:251
+#, kde-format
+msgid "Time bar"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry, group (Fonts)
+#: eventviews.kcfg:426 viewerapp/settings.kcfg:252
+#, kde-format
+msgid ""
+"Press this button to configure the time bar font. The time bar is the widget "
+"that shows the hours in the agenda view. This button will open the \"Select "
+"Font\" dialog, allowing you to choose the hour font for the time bar."
+msgstr ""
+
+#. i18n: ectx: label, entry, group (Fonts)
+#: eventviews.kcfg:430 viewerapp/settings.kcfg:256
+#, kde-format
+msgid "Month view"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry, group (Fonts)
+#: eventviews.kcfg:431 viewerapp/settings.kcfg:257
+#, kde-format
+msgid ""
+"Press this button to configure the month view font. This button will open "
+"the \"Select Font\" dialog, allowing you to choose the font for the items in "
+"the month view."
+msgstr ""
+
+#. i18n: ectx: label, entry, group (Fonts)
+#: eventviews.kcfg:435 viewerapp/settings.kcfg:261
+#, kde-format
+msgid "Agenda view"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry, group (Fonts)
+#: eventviews.kcfg:436 viewerapp/settings.kcfg:262
+#, kde-format
+msgid ""
+"Press this button to configure the agenda view font. This button will open "
+"the \"Select Font\" dialog, allowing you to choose the font for the events "
+"in the agenda view."
+msgstr ""
+
+#. i18n: ectx: label, entry, group (Fonts)
+#: eventviews.kcfg:440 viewerapp/settings.kcfg:266
+#, kde-format
+msgid "Current-time line"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry, group (Fonts)
+#: eventviews.kcfg:441 viewerapp/settings.kcfg:267
+#, kde-format
+msgid ""
+"Press this button to configure the current-time line font. This button will "
+"open the \"Select Font\" dialog, allowing you to choose the font for the "
+"current-time line in the agenda view."
+msgstr ""
+
+#. i18n: ectx: label, entry (DefaultTodoAttachMethod), group (Hidden Options)
+#: eventviews.kcfg:465
+#, kde-format
+msgid "Default todo attachment method"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry (DefaultTodoAttachMethod), group (Hidden Options)
+#: eventviews.kcfg:466
+#, kde-format
+msgid "The default way of attaching dropped emails to a task"
+msgstr ""
+
+#. i18n: ectx: label, entry, group (Theming)
+#. i18n: ectx: label, entry, group (Theme/Month view)
+#: eventviews.kcfg:523 eventviews.kcfg:623
+#, kde-format
+msgid "Highlight color"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry, group (Theming)
+#: eventviews.kcfg:524
+#, kde-format
+msgid ""
+"Select the highlight color here. The highlight color will be used for "
+"marking the currently selected area in your agenda and in the date navigator."
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry, group (Theming)
+#: eventviews.kcfg:529
+#, kde-format
+msgid "Select the working hours background color for the agenda view here."
+msgstr ""
+
+#. i18n: ectx: label, entry, group (Theme/Month view)
+#: eventviews.kcfg:616
+#, kde-format
+msgid "Month view background color"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry, group (Theme/Month view)
+#: eventviews.kcfg:617
+#, kde-format
+msgid "Select the Month view background color here."
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry, group (Theme/Month view)
+#: eventviews.kcfg:624
+#, kde-format
+msgid ""
+"Select the highlight color here. The highlight color will be used for "
+"marking the currently selected area in your Month and in the date navigator."
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry, group (Theme/Month view)
+#: eventviews.kcfg:629
+#, kde-format
+msgid "Select the working hours background color for the Month view here."
+msgstr ""
+
+#. i18n: ectx: label, entry, group (Theme/Month view)
+#: eventviews.kcfg:651
+#, kde-format
+msgid "Default event color"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry, group (Theme/Month view)
+#: eventviews.kcfg:652
+#, kde-format
+msgid ""
+"Select the default event color here. The default event color will be used "
+"for events categories in your Month. Note that you can specify a separate "
+"color for each event category below."
+msgstr ""
+
+#. i18n: ectx: label, entry, group (Theme/Month view)
+#: eventviews.kcfg:717
+#, kde-format
+msgid "Use system color"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry, group (Theme/Month view)
+#: eventviews.kcfg:718
+#, kde-format
+msgid "Use system color. If enabled will ignore all other color settings"
+msgstr ""
+
+#: journal/journalframe.cpp:152
+#, kde-format
+msgid "&Edit"
+msgstr ""
+
+#: journal/journalframe.cpp:155
+#, kde-format
+msgid "Edit this journal entry"
+msgstr ""
+
+#: journal/journalframe.cpp:156
+#, kde-format
+msgid "Opens an editor dialog for this journal entry"
+msgstr ""
+
+#: journal/journalframe.cpp:162
+#, kde-format
+msgid "&Delete"
+msgstr ""
+
+#: journal/journalframe.cpp:165 journal/journalframe.cpp:166
+#, kde-format
+msgid "Delete this journal entry"
+msgstr ""
+
+#: journal/journalframe.cpp:171
+#, kde-format
+msgid "&Print"
+msgstr ""
+
+#: journal/journalframe.cpp:175
+#, kde-format
+msgid "Print this journal entry"
+msgstr ""
+
+#: journal/journalframe.cpp:176
+#, kde-format
+msgid "Opens a print dialog for this journal entry"
+msgstr ""
+
+#: journal/journalframe.cpp:181
+#, kde-format
+msgid "Print preview"
+msgstr ""
+
+#: journal/journalframe.cpp:185
+#, kde-format
+msgid "Print preview this journal entry"
+msgstr ""
+
+#: list/listview.cpp:57
+#, kde-format
+msgctxt "%1 is an item summary. %2 is the date when this item reoccurs"
+msgid "%1 (next: %2)"
+msgstr ""
+
+#: list/listview.cpp:278 todo/todomodel.cpp:463
+#, kde-format
+msgid "Summary"
+msgstr ""
+
+#: list/listview.cpp:279
+#, kde-format
+msgid "Start Date/Time"
+msgstr ""
+
+#: list/listview.cpp:280
+#, kde-format
+msgid "End Date/Time"
+msgstr ""
+
+#: list/listview.cpp:281 todo/todomodel.cpp:477
+#, kde-format
+msgid "Tags"
+msgstr ""
+
+#: list/listview.cpp:354
+#, kde-format
+msgid "Summary [%1 - %2]"
+msgstr ""
+
+#: month/monthitem.cpp:305
+#, kde-format
+msgid "Age:"
+msgstr ""
+
+#: month/monthitem.cpp:305
+#, kde-format
+msgid "%2 1 year"
+msgid_plural "%2 %1 years"
+msgstr[0] ""
+msgstr[1] ""
+
+#: month/monthitem.cpp:438
+#, kde-format
+msgid "Move occurrence(s)"
+msgstr ""
+
+#: month/monthscene.cpp:189
+#, kde-format
+msgctxt "monthname year"
+msgid "%1 %2"
+msgstr ""
+
+#: month/monthscene.cpp:318
+#, kde-format
+msgctxt "'Month day' for month view cells"
+msgid "%1 %2"
+msgstr ""
+
+#: month/monthview.cpp:165 month/monthview.cpp:369
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Display calendar in a normal size"
+msgstr ""
+
+#: month/monthview.cpp:166 month/monthview.cpp:372
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Display calendar in a full window"
+msgstr ""
+
+#: month/monthview.cpp:168
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Click this button and the month view will be enlarged to fill the maximum "
+"available window space / or shrunk back to its normal size."
+msgstr ""
+
+#: month/monthview.cpp:175
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Go back one month"
+msgstr ""
+
+#: month/monthview.cpp:176
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Click this button and the view will be scrolled back in time by 1 month."
+msgstr ""
+
+#: month/monthview.cpp:182
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Go back one week"
+msgstr ""
+
+#: month/monthview.cpp:183
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Click this button and the view will be scrolled back in time by 1 week."
+msgstr ""
+
+#: month/monthview.cpp:189
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Go forward one week"
+msgstr ""
+
+#: month/monthview.cpp:190
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Click this button and the view will be scrolled forward in time by 1 week."
+msgstr ""
+
+#: month/monthview.cpp:196
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Go forward one month"
+msgstr ""
+
+#: month/monthview.cpp:197
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Click this button and the view will be scrolled forward in time by 1 month."
+msgstr ""
+
+#: multiagenda/multiagendaview.cpp:77
+#, kde-format
+msgid "Agenda %1"
+msgstr ""
+
+#: multiagenda/multiagendaview.cpp:164
+#, kde-format
+msgid "All Day"
+msgstr ""
+
+#: timeline/timelineview.cpp:224 timeline/timelineview.cpp:304
+#: todo/todomodel.cpp:481
+#, kde-format
+msgid "Calendar"
+msgstr ""
+
+#: todo/tododelegates.cpp:152
+#, kde-format
+msgctxt "@action:inmenu Unspecified priority"
+msgid "unspecified"
+msgstr ""
+
+#: todo/tododelegates.cpp:153 todo/todoview.cpp:399
+#, kde-format
+msgctxt "@action:inmenu highest priority"
+msgid "1 (highest)"
+msgstr ""
+
+#: todo/tododelegates.cpp:154
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "2"
+msgstr ""
+
+#: todo/tododelegates.cpp:155
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "3"
+msgstr ""
+
+#: todo/tododelegates.cpp:156
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "4"
+msgstr ""
+
+#: todo/tododelegates.cpp:157 todo/todoview.cpp:403
+#, kde-format
+msgctxt "@action:inmenu medium priority"
+msgid "5 (medium)"
+msgstr ""
+
+#: todo/tododelegates.cpp:158
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "6"
+msgstr ""
+
+#: todo/tododelegates.cpp:159
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "7"
+msgstr ""
+
+#: todo/tododelegates.cpp:160
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "8"
+msgstr ""
+
+#: todo/tododelegates.cpp:161 todo/todoview.cpp:407
+#, kde-format
+msgctxt "@action:inmenu lowest priority"
+msgid "9 (lowest)"
+msgstr ""
+
+#: todo/todomodel.cpp:142 todo/todomodel.cpp:178
+#, kde-format
+msgctxt "yes, an exception to a recurring to-do"
+msgid "Exception"
+msgstr ""
+
+#: todo/todomodel.cpp:144 todo/todomodel.cpp:180
+#, kde-format
+msgctxt "yes, recurring to-do"
+msgid "Yes"
+msgstr ""
+
+#: todo/todomodel.cpp:147 todo/todomodel.cpp:183
+#, kde-format
+msgctxt "no, not a recurring to-do"
+msgid "No"
+msgstr ""
+
+#: todo/todomodel.cpp:161 todo/todomodel.cpp:199
+#, kde-format
+msgctxt "delimiter for joining category/tag names"
+msgid ","
+msgstr ""
+
+#: todo/todomodel.cpp:465
+#, kde-format
+msgid "Recurs"
+msgstr ""
+
+#: todo/todomodel.cpp:467
+#, kde-format
+msgid "Priority"
+msgstr ""
+
+#: todo/todomodel.cpp:469
+#, kde-format
+msgctxt "@title:column percent complete"
+msgid "Complete"
+msgstr ""
+
+#: todo/todomodel.cpp:471
+#, kde-format
+msgid "Start Date"
+msgstr ""
+
+#: todo/todomodel.cpp:473
+#, kde-format
+msgid "Due Date"
+msgstr ""
+
+#: todo/todomodel.cpp:475
+#, kde-format
+msgctxt "@title:column date completed"
+msgid "Completed"
+msgstr ""
+
+#: todo/todomodel.cpp:479
+#, kde-format
+msgid "Description"
+msgstr ""
+
+#: todo/todoview.cpp:180
+#, kde-format
+msgid "Cannot move to-do to itself or a child of itself."
+msgstr ""
+
+#: todo/todoview.cpp:181
+#, kde-format
+msgid "Drop To-do"
+msgstr ""
+
+#: todo/todoview.cpp:260
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Display to-do list in a full window"
+msgstr ""
+
+#: todo/todoview.cpp:261
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Checking this option will cause the to-do view to use the full window."
+msgstr ""
+
+#: todo/todoview.cpp:266
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Display to-dos in flat list instead of a tree"
+msgstr ""
+
+#: todo/todoview.cpp:268
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Checking this option will cause the to-dos to be displayed as a flat list "
+"instead of a hierarchical tree; the parental relationships are removed in "
+"the display."
+msgstr ""
+
+#: todo/todoview.cpp:305
+#, kde-format
+msgctxt "@action:inmenu show the to-do"
+msgid "&Show"
+msgstr ""
+
+#: todo/todoview.cpp:310
+#, kde-format
+msgctxt "@action:inmenu edit the to-do"
+msgid "&Edit..."
+msgstr ""
+
+#: todo/todoview.cpp:317
+#, kde-format
+msgctxt "@action:inmenu delete the to-do"
+msgid "&Delete"
+msgstr ""
+
+#: todo/todoview.cpp:326
+#, kde-format
+msgctxt "@action:inmenu print the to-do"
+msgid "&Print..."
+msgstr ""
+
+#: todo/todoview.cpp:331
+#, kde-format
+msgctxt "@action:inmenu print preview the to-do"
+msgid "Print Previe&w..."
+msgstr ""
+
+#: todo/todoview.cpp:338
+#, kde-format
+msgctxt "@action:inmenu create a new to-do"
+msgid "New &To-do..."
+msgstr ""
+
+#: todo/todoview.cpp:342
+#, kde-format
+msgctxt "@action:inmenu create a new sub-to-do"
+msgid "New Su&b-to-do..."
+msgstr ""
+
+#: todo/todoview.cpp:346
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "&Make this To-do Independent"
+msgstr ""
+
+#: todo/todoview.cpp:348
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Make all Sub-to-dos &Independent"
+msgstr ""
+
+#: todo/todoview.cpp:359
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Create Event from To-do"
+msgstr ""
+
+#: todo/todoview.cpp:367
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Create Note for To-do"
+msgstr ""
+
+#: todo/todoview.cpp:377
+#, kde-format
+msgctxt "@title:menu"
+msgid "&Copy To"
+msgstr ""
+
+#: todo/todoview.cpp:384
+#, kde-format
+msgctxt "@title:menu"
+msgid "&Move To"
+msgstr ""
+
+#: todo/todoview.cpp:395
+#, kde-format
+msgctxt "@action:inmenu delete completed to-dos"
+msgid "Pur&ge Completed"
+msgstr ""
+
+#: todo/todoview.cpp:398
+#, kde-format
+msgctxt "@action:inmenu unspecified priority"
+msgid "unspecified"
+msgstr ""
+
+#: todo/todoview.cpp:400
+#, kde-format
+msgctxt "@action:inmenu priority value=2"
+msgid "2"
+msgstr ""
+
+#: todo/todoview.cpp:401
+#, kde-format
+msgctxt "@action:inmenu priority value=3"
+msgid "3"
+msgstr ""
+
+#: todo/todoview.cpp:402
+#, kde-format
+msgctxt "@action:inmenu priority value=4"
+msgid "4"
+msgstr ""
+
+#: todo/todoview.cpp:404
+#, kde-format
+msgctxt "@action:inmenu priority value=6"
+msgid "6"
+msgstr ""
+
+#: todo/todoview.cpp:405
+#, kde-format
+msgctxt "@action:inmenu priority value=7"
+msgid "7"
+msgstr ""
+
+#: todo/todoview.cpp:406
+#, kde-format
+msgctxt "@action:inmenu priority value=8"
+msgid "8"
+msgstr ""
+
+#: todo/todoviewquickaddline.cpp:20
+#, kde-format
+msgid "Enter a summary to create a new to-do"
+msgstr ""
+
+#: todo/todoviewquicksearch.cpp:36
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Filter on matching summaries"
+msgstr ""
+
+#: todo/todoviewquicksearch.cpp:37
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Enter text here to filter the to-dos that are shown by matching summaries."
+msgstr ""
+
+#: todo/todoviewquicksearch.cpp:38
+#, kde-format
+msgctxt "@label in QuickSearchLine"
+msgid "Search Summaries..."
+msgstr ""
+
+#: todo/todoviewquicksearch.cpp:46
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Filter on these tags"
+msgstr ""
+
+#: todo/todoviewquicksearch.cpp:48
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Use this combobox to filter the to-dos that are shown by a list of selected "
+"tags."
+msgstr ""
+
+#: todo/todoviewquicksearch.cpp:50
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Select Tags"
+msgstr ""
+
+#: todo/todoviewquicksearch.cpp:74
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Filter on these priorities"
+msgstr ""
+
+#: todo/todoviewquicksearch.cpp:76
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Use this combobox to filter the to-dos that are shown by a list of selected "
+"priorities."
+msgstr ""
+
+#: todo/todoviewquicksearch.cpp:78
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Select Priority"
+msgstr ""
+
+#: todo/todoviewquicksearch.cpp:104
+#, kde-format
+msgctxt "@action:inmenu priority is unspecified"
+msgid "unspecified"
+msgstr ""
+
+#: todo/todoviewquicksearch.cpp:105
+#, kde-format
+msgctxt "@action:inmenu highest priority"
+msgid "%1 (highest)"
+msgstr ""
+
+#: todo/todoviewquicksearch.cpp:108
+#, kde-format
+msgctxt "@action:inmenu medium priority"
+msgid "%1 (medium)"
+msgstr ""
+
+#: todo/todoviewquicksearch.cpp:110
+#, kde-format
+msgctxt "@action:inmenu lowest priority"
+msgid "%1 (lowest)"
+msgstr ""
+
+#: todo/todoviewquicksearch.cpp:112
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "%1"
+msgstr ""
+
+#: todo/todoviewsortfilterproxymodel.cpp:146
+#, kde-format
+msgctxt "priority is unspecified"
+msgid "unspecified"
+msgstr ""
+
+#: todo/todoviewsortfilterproxymodel.cpp:147
+#: todo/todoviewsortfilterproxymodel.cpp:149
+#: todo/todoviewsortfilterproxymodel.cpp:151
+#: todo/todoviewsortfilterproxymodel.cpp:153
+#, kde-format
+msgid "%1"
+msgstr ""
+
+#: todo/todoviewsortfilterproxymodel.cpp:148
+#, kde-format
+msgctxt "highest priority"
+msgid "%1 (highest)"
+msgstr ""
+
+#: todo/todoviewsortfilterproxymodel.cpp:150
+#, kde-format
+msgctxt "medium priority"
+msgid "%1 (medium)"
+msgstr ""
+
+#: todo/todoviewsortfilterproxymodel.cpp:152
+#, kde-format
+msgctxt "lowest priority"
+msgid "%1 (lowest)"
+msgstr ""
+
+#: todo/todoviewview.cpp:48
+#, kde-format
+msgid "View Columns"
+msgstr ""
+
+#: viewerapp/main.cpp:19
+#, kde-format
+msgid "ViewerApp"
+msgstr ""
+
+#: viewerapp/main.cpp:21
+#, kde-format
+msgid "A test app for embedding calendarviews"
+msgstr ""
+
+#: viewerapp/main.cpp:23
+#, kde-format
+msgid ""
+"Copyright (C) 2010 Klarälvdalens Datakonsult AB, a KDAB Group company, "
+"info@kdab.net"
+msgstr ""
+
+#: viewerapp/main.cpp:24
+#, kde-format
+msgid "Kevin Krammer"
+msgstr ""
+
+#: viewerapp/main.cpp:33
+#, kde-format
+msgid "Optional list of view names to instantiate"
+msgstr ""
+
+#. i18n: ectx: property (windowTitle), widget (QMainWindow, MainWindow)
+#: viewerapp/mainwindow.ui:14
+#, kde-format
+msgid "CalendarViews Viewer"
+msgstr ""
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab)
+#: viewerapp/mainwindow.ui:25
+#, kde-format
+msgid "Tab 1"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QMenu, addViewMenu)
+#: viewerapp/mainwindow.ui:43
+#, kde-format
+msgid "Add View"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QStatusBar, statusbar)
+#: viewerapp/mainwindow.ui:55
+#, kde-format
+msgid "Agenda"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QStatusBar, statusbar)
+#: viewerapp/mainwindow.ui:60
+#, kde-format
+msgid "MultiAgenda"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QStatusBar, statusbar)
+#: viewerapp/mainwindow.ui:65
+#, kde-format
+msgid "Month"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QStatusBar, statusbar)
+#: viewerapp/mainwindow.ui:70
+#, kde-format
+msgid "Timeline"
+msgstr ""
+
+#. i18n: ectx: label, entry, group (Colors)
+#: viewerapp/settings.kcfg:241
+#, kde-format
+msgid "\"No category\" color (for \"Only category\" drawing schemes)"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry, group (Colors)
+#: viewerapp/settings.kcfg:242
+#, kde-format
+msgid ""
+"Select a color to use for the \"no category\" or \"unset category\" "
+"situation, when an item does not belong to any category. This color is used "
+"when drawing items in the agenda or month views using the \"Only category\" "
+"scheme."
+msgstr ""
+
+#. i18n: ectx: tooltip, entry, group (Colors)
+#: viewerapp/settings.kcfg:243
+#, kde-format
+msgid "Use this color when drawing items without a category"
+msgstr ""
+
+#. i18n: ectx: label, entry, group (Group Scheduling)
+#: viewerapp/settings.kcfg:274
+#, kde-format
+msgid "Use Groupware communication"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry, group (Group Scheduling)
+#: viewerapp/settings.kcfg:275
+#, kde-format
+msgid ""
+"Check this box to enable automatic generation of mails when creating, "
+"updating or deleting events (or to-dos) involving other attendees. You "
+"should check this box if you want to use the groupware functionality (e.g. "
+"Configuring Kontact as a KDE Kolab client)."
+msgstr ""
+
+#: whatsnext/whatsnextview.cpp:65
+#, kde-format
+msgid "To-dos:"
+msgstr ""
+
+#: whatsnext/whatsnextview.cpp:81
+#, kde-format
+msgid "What's Next?"
+msgstr ""
+
+#: whatsnext/whatsnextview.cpp:88 whatsnext/whatsnextview.cpp:251
+#: whatsnext/whatsnextview.cpp:256
+#, kde-format
+msgctxt "date from - to"
+msgid "%1 - %2"
+msgstr ""
+
+#: whatsnext/whatsnextview.cpp:102
+#, kde-format
+msgid "Events:"
+msgstr ""
+
+#: whatsnext/whatsnextview.cpp:181 whatsnext/whatsnextview.cpp:200
+#, kde-format
+msgid "Events and to-dos that need a reply:"
+msgstr ""
+
+#: whatsnext/whatsnextview.cpp:263
+#, kde-format
+msgctxt "date, from - to"
+msgid "%1, %2 - %3"
+msgstr ""
+
+#: whatsnext/whatsnextview.cpp:295
+#, kde-format
+msgctxt "to-do due date"
+msgid "  (Due: %1)"
+msgstr ""
