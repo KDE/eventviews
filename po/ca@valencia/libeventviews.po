@@ -106,7 +106,7 @@ msgstr "No s'ha pogut guardar %1 «%2»."
 #: agenda/timelabels.cpp:329
 #, kde-format
 msgid "&Add Timezones..."
-msgstr "&Afig zones horàries..."
+msgstr "Afi&g zones horàries..."
 
 #: agenda/timelabels.cpp:330
 #, kde-format
@@ -1584,7 +1584,7 @@ msgstr "Suprimix esta entrada de diari"
 #: journal/journalframe.cpp:171
 #, kde-format
 msgid "&Print"
-msgstr "&Imprimix"
+msgstr "Im&primix"
 
 #: journal/journalframe.cpp:175
 #, kde-format
@@ -1940,7 +1940,7 @@ msgstr "Sup&rimix"
 #, kde-format
 msgctxt "@action:inmenu print the to-do"
 msgid "&Print..."
-msgstr "&Imprimix..."
+msgstr "Im&primix..."
 
 #: todo/todoview.cpp:331
 #, kde-format
