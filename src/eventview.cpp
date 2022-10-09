@@ -11,7 +11,6 @@
 #include "eventview_p.h"
 #include "prefs.h"
 
-
 #include <CalendarSupport/CollectionSelection>
 #include <CalendarSupport/KCalPrefs>
 

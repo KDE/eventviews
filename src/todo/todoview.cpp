@@ -269,7 +269,9 @@ TodoView::TodoView(const EventViews::PrefsPtr &prefs, bool sidebarView, QWidget 
                                         "flat list instead of a hierarchical tree; the parental "
                                         "relationships are removed in the display."));
 
-    connect(mFlatViewButton, &QToolButton::toggled, this, [=](bool flatView) {setFlatView(flatView, true);});
+    connect(mFlatViewButton, &QToolButton::toggled, this, [=](bool flatView) {
+        setFlatView(flatView, true);
+    });
     if (mFullViewButton) {
         connect(mFullViewButton, &QToolButton::toggled, this, &TodoView::setFullView);
     }
@@ -954,7 +956,6 @@ void TodoView::setStartDate(QDate date)
         qCDebug(CALENDARVIEW_LOG) << "Item is readOnly";
     }
 }
-
 
 void TodoView::setNewPercentage(QAction *action)
 {

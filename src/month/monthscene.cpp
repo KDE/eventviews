@@ -186,9 +186,7 @@ void MonthGraphicsView::drawBackground(QPainter *p, const QRectF &rect)
                       static_cast<int>(mScene->sceneRect().width()),
                       static_cast<int>(mScene->headerHeight() - dayLabelsHeight)),
                 Qt::AlignCenter,
-                i18nc("monthname year", "%1 %2",
-                    QLocale().standaloneMonthName(dayInMonth.month(), QLocale::LongFormat),
-                    QString::number(dayInMonth.year())));
+                i18nc("monthname year", "%1 %2", QLocale().standaloneMonthName(dayInMonth.month(), QLocale::LongFormat), QString::number(dayInMonth.year())));
 
     font.setPointSize(dayLabelsHeight - 10);
     p->setFont(font);
@@ -533,7 +531,7 @@ void MonthScene::mouseMoveEvent(QGraphicsSceneMouseEvent *mouseEvent)
         view->setActionCursor(mActionType);
 
         // Move or resize action
-        MonthCell * const currentCell = getCellFromPos(pos);
+        MonthCell *const currentCell = getCellFromPos(pos);
         if (currentCell != mPreviousCell) {
             bool ok = true;
             if (mActionType == Move) {
