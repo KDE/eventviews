@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-25 00:45+0000\n"
+"POT-Creation-Date: 2022-10-10 00:46+0000\n"
 "PO-Revision-Date: 2013-09-16 04:39+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -155,28 +155,28 @@ msgctxt "@title:window"
 msgid "Timezone"
 msgstr "Уақыт белдеуі"
 
-#: eventview.cpp:111
+#: eventview.cpp:110
 #, kde-format
 msgctxt "@title:window"
 msgid "Changing Recurring Item"
 msgstr "Қайталанатынды өзгерту"
 
-#: eventview.cpp:112
+#: eventview.cpp:111
 #, kde-format
 msgid "Also &Future Items"
 msgstr "&Болашақтағыларын да қоса"
 
-#: eventview.cpp:113
+#: eventview.cpp:112
 #, kde-format
 msgid "Only &This Item"
 msgstr "Тек &осы кезін"
 
-#: eventview.cpp:114
+#: eventview.cpp:113
 #, kde-format
 msgid "&All Occurrences"
 msgstr "&Бүкіл кездерін"
 
-#: eventview.cpp:131
+#: eventview.cpp:130
 #, kde-format
 msgid ""
 "The item you are trying to change is a recurring item. Should the changes be "
@@ -186,7 +186,7 @@ msgstr ""
 "Өзгертетініңіз қайталанатын екен. Өзгертетініңіз осы жалғыз кезі ме,  "
 "болашақ кездерімен қоса ма, әлде барлық қайталанатын кездері ме?"
 
-#: eventview.cpp:142
+#: eventview.cpp:141
 #, kde-format
 msgid ""
 "The item you are trying to change is a recurring item. Should the changes be "
@@ -1584,7 +1584,7 @@ msgctxt "monthname year"
 msgid "%1 %2"
 msgstr "%1 %2"
 
-#: month/monthscene.cpp:318
+#: month/monthscene.cpp:316
 #, kde-format
 msgctxt "'Month day' for month view cells"
 msgid "%1 %2"
@@ -1685,7 +1685,7 @@ msgctxt "@action:inmenu Unspecified priority"
 msgid "unspecified"
 msgstr "келтірілмеген"
 
-#: todo/tododelegates.cpp:153 todo/todoview.cpp:399
+#: todo/tododelegates.cpp:153 todo/todoview.cpp:401
 #, kde-format
 msgctxt "@action:inmenu highest priority"
 msgid "1 (highest)"
@@ -1709,7 +1709,7 @@ msgctxt "@action:inmenu"
 msgid "4"
 msgstr "4"
 
-#: todo/tododelegates.cpp:157 todo/todoview.cpp:403
+#: todo/tododelegates.cpp:157 todo/todoview.cpp:405
 #, kde-format
 msgctxt "@action:inmenu medium priority"
 msgid "5 (medium)"
@@ -1733,7 +1733,7 @@ msgctxt "@action:inmenu"
 msgid "8"
 msgstr "8"
 
-#: todo/tododelegates.cpp:161 todo/todoview.cpp:407
+#: todo/tododelegates.cpp:161 todo/todoview.cpp:409
 #, kde-format
 msgctxt "@action:inmenu lowest priority"
 msgid "9 (lowest)"
@@ -1843,127 +1843,127 @@ msgstr ""
 "Бұл параметрды таңдаса, істер бұтақ түрінің орнына жәй тізімде, еншілестігі "
 "көрінбей, көрсетіледі."
 
-#: todo/todoview.cpp:305
+#: todo/todoview.cpp:307
 #, kde-format
 msgctxt "@action:inmenu show the to-do"
 msgid "&Show"
 msgstr "&Көрсету"
 
-#: todo/todoview.cpp:310
+#: todo/todoview.cpp:312
 #, kde-format
 msgctxt "@action:inmenu edit the to-do"
 msgid "&Edit..."
 msgstr "Өңд&еу..."
 
-#: todo/todoview.cpp:317
+#: todo/todoview.cpp:319
 #, kde-format
 msgctxt "@action:inmenu delete the to-do"
 msgid "&Delete"
 msgstr "Ө&шіру"
 
-#: todo/todoview.cpp:326
+#: todo/todoview.cpp:328
 #, kde-format
 msgctxt "@action:inmenu print the to-do"
 msgid "&Print..."
 msgstr "&Басып шығару..."
 
-#: todo/todoview.cpp:331
+#: todo/todoview.cpp:333
 #, kde-format
 msgctxt "@action:inmenu print preview the to-do"
 msgid "Print Previe&w..."
 msgstr "Басатынды қа&рап-шығу..."
 
-#: todo/todoview.cpp:338
+#: todo/todoview.cpp:340
 #, kde-format
 msgctxt "@action:inmenu create a new to-do"
 msgid "New &To-do..."
 msgstr "Жаңа &іс..."
 
-#: todo/todoview.cpp:342
+#: todo/todoview.cpp:344
 #, kde-format
 msgctxt "@action:inmenu create a new sub-to-do"
 msgid "New Su&b-to-do..."
 msgstr "Жаңа іс &тармағы..."
 
-#: todo/todoview.cpp:346
+#: todo/todoview.cpp:348
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Make this To-do Independent"
 msgstr "Істі бөліп &алу"
 
-#: todo/todoview.cpp:348
+#: todo/todoview.cpp:350
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Make all Sub-to-dos &Independent"
 msgstr "Бүкіл істер тармақтарын &бөліп алу"
 
-#: todo/todoview.cpp:359
+#: todo/todoview.cpp:361
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Create Event from To-do"
 msgstr ""
 
-#: todo/todoview.cpp:367
+#: todo/todoview.cpp:369
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Create Note for To-do"
 msgstr ""
 
-#: todo/todoview.cpp:377
+#: todo/todoview.cpp:379
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Copy To"
 msgstr "Мынаған &көшіріп алу"
 
-#: todo/todoview.cpp:384
+#: todo/todoview.cpp:386
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Move To"
 msgstr "&Мынаған жылжыту"
 
-#: todo/todoview.cpp:395
+#: todo/todoview.cpp:397
 #, kde-format
 msgctxt "@action:inmenu delete completed to-dos"
 msgid "Pur&ge Completed"
 msgstr "Біткенден та&залау"
 
-#: todo/todoview.cpp:398
+#: todo/todoview.cpp:400
 #, kde-format
 msgctxt "@action:inmenu unspecified priority"
 msgid "unspecified"
 msgstr "келтірілмеген"
 
-#: todo/todoview.cpp:400
+#: todo/todoview.cpp:402
 #, kde-format
 msgctxt "@action:inmenu priority value=2"
 msgid "2"
 msgstr "2"
 
-#: todo/todoview.cpp:401
+#: todo/todoview.cpp:403
 #, kde-format
 msgctxt "@action:inmenu priority value=3"
 msgid "3"
 msgstr "3"
 
-#: todo/todoview.cpp:402
+#: todo/todoview.cpp:404
 #, kde-format
 msgctxt "@action:inmenu priority value=4"
 msgid "4"
 msgstr "4"
 
-#: todo/todoview.cpp:404
+#: todo/todoview.cpp:406
 #, kde-format
 msgctxt "@action:inmenu priority value=6"
 msgid "6"
 msgstr "6"
 
-#: todo/todoview.cpp:405
+#: todo/todoview.cpp:407
 #, kde-format
 msgctxt "@action:inmenu priority value=7"
 msgid "7"
 msgstr "7"
 
-#: todo/todoview.cpp:406
+#: todo/todoview.cpp:408
 #, kde-format
 msgctxt "@action:inmenu priority value=8"
 msgid "8"
