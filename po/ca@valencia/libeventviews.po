@@ -596,7 +596,7 @@ msgid ""
 "Check this box to select a working week when clicking on the Date "
 "Navigator's week numbers, or uncheck it to choose the whole week."
 msgstr ""
-"Marqueu esta casella per a seleccionar una setmana laboral en clicar als "
+"Marqueu esta casella per a seleccionar una setmana laboral clicant en els "
 "números de la setmana del navegador de dates, o desmarqueu-la per a "
 "seleccionar la setmana sencera."
 
@@ -975,7 +975,7 @@ msgid ""
 "Check this box to display scrollbars when clicking on a cell in the month "
 "view; they will only appear when needed though."
 msgstr ""
-"Marqueu esta casella per a mostrar barres de desplaçament en clicar a una "
+"Marqueu esta casella per a mostrar barres de desplaçament clicant en una "
 "cel·la en la vista mensual. Només apareixeran quan calga."
 
 #. i18n: ectx: label, entry (EnableMonthItemIcons), group (Month View)
