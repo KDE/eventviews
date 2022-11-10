@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kdepim-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-10 00:46+0000\n"
-"PO-Revision-Date: 2022-10-18 05:44+0300\n"
+"PO-Revision-Date: 2022-11-09 13:18+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.08.1\n"
+"X-Generator: Lokalize 22.08.2\n"
 "(http: //www.transifex.com/projects/p/kdepim-k-tr/language/tr/)\n"
 "X-POOTLE-MTIME: 1413132207.000000\n"
 
@@ -946,7 +946,7 @@ msgstr "Takvimler arasında sekme"
 #: eventviews.kcfg:274 viewerapp/settings.kcfg:120
 #, kde-format
 msgid "Enable scrollbars in month view cells"
-msgstr "Ay görünümü hücrelerinde kaydırma çubuklarını etkinleştir"
+msgstr "Ay görünümü hücrelerinde sarma çubuklarını etkinleştir"
 
 #. i18n: ectx: whatsthis, entry (EnableMonthScroll), group (Month View)
 #: eventviews.kcfg:275 viewerapp/settings.kcfg:121
@@ -955,7 +955,7 @@ msgid ""
 "Check this box to display scrollbars when clicking on a cell in the month "
 "view; they will only appear when needed though."
 msgstr ""
-"Ay görünümünde kaydırma çubuklarını görüntülemek için bu kutuyu işaretleyin; "
+"Ay görünümünde sarma çubuklarını görüntülemek için bu kutuyu işaretleyin; "
 "yalnızca gerektiğinde görüntülenirler."
 
 #. i18n: ectx: label, entry (EnableMonthItemIcons), group (Month View)
@@ -1659,7 +1659,7 @@ msgstr "Bir ay geri git"
 msgctxt "@info:whatsthis"
 msgid ""
 "Click this button and the view will be scrolled back in time by 1 month."
-msgstr "Bu düğmeyi tıkladığınızda görünüm 1 ay geriye kaydırılacaktır."
+msgstr "Bu düğmeyi tıkladığınızda görünüm 1 ay geri sarılacaktır."
 
 #: month/monthview.cpp:182
 #, kde-format
@@ -1671,7 +1671,7 @@ msgstr "Bir hafta geri git"
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Click this button and the view will be scrolled back in time by 1 week."
-msgstr "Bu düğmeyi tıkladığınızda görünüm 1 hafta geriye kaydırılacaktır."
+msgstr "Bu düğmeyi tıkladığınızda görünüm 1 hafta geri sarılacaktır."
 
 #: month/monthview.cpp:189
 #, kde-format
@@ -1684,7 +1684,7 @@ msgstr "Bir hafta ileri git"
 msgctxt "@info:whatsthis"
 msgid ""
 "Click this button and the view will be scrolled forward in time by 1 week."
-msgstr "Bu düğmeye tıkladığınızda görünüm 1 hafta ileriye kaydırılacaktır."
+msgstr "Bu düğmeye tıkladığınızda görünüm 1 hafta ileri sarılacaktır."
 
 #: month/monthview.cpp:196
 #, kde-format
@@ -1697,7 +1697,7 @@ msgstr "Bir ay ileri git"
 msgctxt "@info:whatsthis"
 msgid ""
 "Click this button and the view will be scrolled forward in time by 1 month."
-msgstr "Bu düğmeye tıkladığınızda görünüm 1 ay ileriye kaydırılacaktır."
+msgstr "Bu düğmeye tıkladığınızda görünüm 1 ay ileri sarılacaktır."
 
 #: multiagenda/multiagendaview.cpp:77
 #, kde-format
