@@ -499,7 +499,7 @@ msgid ""
 "the \"View\" menu."
 msgstr ""
 "Seleccioneu el nombre «x» de dies que es mostraran en la vista de dies "
-"pròxims. Per accedir a la vista dels «x» dies pròxims, trieu l'element de "
+"pròxims. Per a accedir a la vista dels «x» dies pròxims, trieu l'element de "
 "menú «Pròxims x dies» des del menú «Visualitza»."
 
 #. i18n: ectx: tooltip, entry, group (General View)
