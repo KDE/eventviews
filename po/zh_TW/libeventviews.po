@@ -4,20 +4,21 @@
 # Franklin Weng <franklin@goodhorse.idv.tw>, 2010, 2011, 2012, 2013, 2015.
 # Frank Weng (a.k.a. Franklin) <franklin at goodhorse dot idv dot tw>, 2010.
 # Jeff Huang <s8321414@gmail.com>, 2020.
+# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-10 00:46+0000\n"
-"PO-Revision-Date: 2020-09-17 14:36+0800\n"
-"Last-Translator: Jeff Huang <s8321414@gmail.com>\n"
-"Language-Team: Chinese <zh-l10n@linux.org.tw>\n"
+"PO-Revision-Date: 2022-12-30 18:52+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 19.08.3\n"
+"X-Generator: Lokalize 22.12.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -1476,7 +1477,7 @@ msgstr "結束日期與時間"
 #: list/listview.cpp:281 todo/todomodel.cpp:477
 #, kde-format
 msgid "Tags"
-msgstr ""
+msgstr "標籤"
 
 #: list/listview.cpp:354
 #, kde-format
@@ -1677,12 +1678,10 @@ msgid "No"
 msgstr "否"
 
 #: todo/todomodel.cpp:161 todo/todomodel.cpp:199
-#, fuzzy, kde-format
-#| msgctxt "@item:intext delimiter for joining holiday names"
-#| msgid ","
+#, kde-format
 msgctxt "delimiter for joining category/tag names"
 msgid ","
-msgstr ","
+msgstr "、"
 
 #: todo/todomodel.cpp:465
 #, kde-format
@@ -1711,12 +1710,10 @@ msgid "Due Date"
 msgstr "到期日期"
 
 #: todo/todomodel.cpp:475
-#, fuzzy, kde-format
-#| msgctxt "@title:column percent complete"
-#| msgid "Complete"
+#, kde-format
 msgctxt "@title:column date completed"
 msgid "Completed"
-msgstr "完成"
+msgstr "已完成"
 
 #: todo/todomodel.cpp:479
 #, kde-format
@@ -1815,20 +1812,16 @@ msgid "Make all Sub-to-dos &Independent"
 msgstr "將所有的子待辦事項獨立出來(&I)"
 
 #: todo/todoview.cpp:361
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Create Event"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Create Event from To-do"
-msgstr "建立事件"
+msgstr "從待辦事項建立事件"
 
 #: todo/todoview.cpp:369
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Create Note"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Create Note for To-do"
-msgstr "建立便條"
+msgstr "為待辦事項建立便條"
 
 #: todo/todoview.cpp:379
 #, kde-format
@@ -1915,32 +1908,24 @@ msgid "Search Summaries..."
 msgstr "搜尋摘要……"
 
 #: todo/todoviewquicksearch.cpp:46
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Filter on these categories"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Filter on these tags"
-msgstr "過濾這些類別"
+msgstr "過濾這些標籤"
 
 #: todo/todoviewquicksearch.cpp:48
-#, fuzzy, kde-format
-#| msgctxt "@info:whatsthis"
-#| msgid ""
-#| "Use this combobox to filter the to-dos that are shown by a list of "
-#| "selected categories."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Use this combobox to filter the to-dos that are shown by a list of selected "
 "tags."
-msgstr "使用此下拉式選單來過濾選取類別的待辦事項。"
+msgstr "使用此下拉式選單來過濾選取標籤的待辦事項。"
 
 #: todo/todoviewquicksearch.cpp:50
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox"
-#| msgid "Select Categories"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Select Tags"
-msgstr "選擇分類"
+msgstr "選擇標籤"
 
 #: todo/todoviewquicksearch.cpp:74
 #, kde-format
