@@ -1,13 +1,16 @@
 # Translation of libeventviews into esperanto.
+# Copyright (C) 2010 Free Software Foundation, Inc.
+# This file is distributed under the same license as the "eventviews" package.
 # Axel Rousseau <axel@esperanto-jeunes.org>, 2010.
+# Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-10 00:46+0000\n"
-"PO-Revision-Date: 2010-06-20 20:01+0200\n"
-"Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
+"PO-Revision-Date: 2023-01-06 22:00+0100\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
@@ -19,27 +22,27 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "Axel Rousseau, Oliver Kellogg"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "axel.rousseau@esperanto-france.org, okellogg@users.sourceforge.net"
 
 #: agenda/agenda.cpp:969
 #, kde-format
 msgid "Unable to lock item for modification. You cannot make any changes."
-msgstr ""
+msgstr "Ne eblas ŝlosi eron por modifo. Vi ne povas fari iujn ŝanĝojn."
 
 #: agenda/agenda.cpp:971
 #, kde-format
 msgid "Locking Failed"
-msgstr ""
+msgstr "Ŝlosado Malsukcesis"
 
 #: agenda/agenda.cpp:1187
 #, kde-format
 msgid "Dissociate event from recurrence"
-msgstr ""
+msgstr "Malasociigi eventon de reapero"
 
 #: agenda/agenda.cpp:1209 month/monthitem.cpp:444
 #, kde-format
@@ -50,7 +53,7 @@ msgstr ""
 #: agenda/agenda.cpp:1211 month/monthitem.cpp:446
 #, kde-format
 msgid "Error Occurred"
-msgstr ""
+msgstr "Eraro Okazis"
 
 #: agenda/agendaitem.cpp:81 list/listview.cpp:409
 #, kde-format
@@ -62,12 +65,12 @@ msgstr[1] ""
 #: agenda/agendaitem.cpp:631
 #, kde-format
 msgid "Attendee \"%1\" added to the calendar item \"%2\""
-msgstr ""
+msgstr "Ĉeestanto \"%1\" aldonata al la kalendara ero \"%2\""
 
 #: agenda/agendaitem.cpp:632
 #, kde-format
 msgid "Attendee added"
-msgstr ""
+msgstr "Ĉeestanto aldonata"
 
 #: agenda/agendaitem.cpp:856 agenda/agendaitem.cpp:951
 #, kde-format
@@ -80,12 +83,10 @@ msgid "- %1"
 msgstr "- %1"
 
 #: agenda/agendaview.cpp:360
-#, fuzzy, kde-format
-#| msgctxt "date, from - to"
-#| msgid "%1, %2 - %3"
+#, kde-format
 msgctxt "short_weekday short_monthname date (e.g. Mon Aug 13)"
 msgid "%1 %2 %3"
-msgstr "%1, %2 - %3"
+msgstr "%1 %2 %3"
 
 #: agenda/agendaview.cpp:2149
 #, kde-format
@@ -1609,9 +1610,7 @@ msgid "No"
 msgstr ""
 
 #: todo/todomodel.cpp:161 todo/todomodel.cpp:199
-#, fuzzy, kde-format
-#| msgctxt "@item:intext delimiter for joining holiday names"
-#| msgid ","
+#, kde-format
 msgctxt "delimiter for joining category/tag names"
 msgid ","
 msgstr ","
@@ -1914,7 +1913,7 @@ msgstr "%1"
 #, kde-format
 msgctxt "priority is unspecified"
 msgid "unspecified"
-msgstr ""
+msgstr "nespecifita"
 
 #: todo/todoviewsortfilterproxymodel.cpp:147
 #: todo/todoviewsortfilterproxymodel.cpp:149
@@ -1928,24 +1927,24 @@ msgstr "%1"
 #, kde-format
 msgctxt "highest priority"
 msgid "%1 (highest)"
-msgstr ""
+msgstr "%1 (plej alta)"
 
 #: todo/todoviewsortfilterproxymodel.cpp:150
 #, kde-format
 msgctxt "medium priority"
 msgid "%1 (medium)"
-msgstr ""
+msgstr "%1 (meza)"
 
 #: todo/todoviewsortfilterproxymodel.cpp:152
 #, kde-format
 msgctxt "lowest priority"
 msgid "%1 (lowest)"
-msgstr ""
+msgstr "%1 (malplej alta)"
 
 #: todo/todoviewview.cpp:48
 #, kde-format
 msgid "View Columns"
-msgstr ""
+msgstr "Montri Kolumnojn"
 
 #: viewerapp/main.cpp:19
 #, kde-format
@@ -1972,49 +1971,49 @@ msgstr ""
 #: viewerapp/main.cpp:33
 #, kde-format
 msgid "Optional list of view names to instantiate"
-msgstr ""
+msgstr "Nedeviga listo de vidnomoj instanciigendaj"
 
 #. i18n: ectx: property (windowTitle), widget (QMainWindow, MainWindow)
 #: viewerapp/mainwindow.ui:14
 #, kde-format
 msgid "CalendarViews Viewer"
-msgstr ""
+msgstr "CalendarViews Montrilo"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab)
 #: viewerapp/mainwindow.ui:25
 #, kde-format
 msgid "Tab 1"
-msgstr ""
+msgstr "Langeto 1"
 
 #. i18n: ectx: property (title), widget (QMenu, addViewMenu)
 #: viewerapp/mainwindow.ui:43
 #, kde-format
 msgid "Add View"
-msgstr ""
+msgstr "Aldoni Vidon"
 
 #. i18n: ectx: property (text), widget (QStatusBar, statusbar)
 #: viewerapp/mainwindow.ui:55
 #, kde-format
 msgid "Agenda"
-msgstr ""
+msgstr "Tagordo"
 
 #. i18n: ectx: property (text), widget (QStatusBar, statusbar)
 #: viewerapp/mainwindow.ui:60
 #, kde-format
 msgid "MultiAgenda"
-msgstr ""
+msgstr "MultiAgenda"
 
 #. i18n: ectx: property (text), widget (QStatusBar, statusbar)
 #: viewerapp/mainwindow.ui:65
 #, kde-format
 msgid "Month"
-msgstr ""
+msgstr "Monato"
 
 #. i18n: ectx: property (text), widget (QStatusBar, statusbar)
 #: viewerapp/mainwindow.ui:70
 #, kde-format
 msgid "Timeline"
-msgstr ""
+msgstr "Templinio"
 
 #. i18n: ectx: label, entry, group (Colors)
 #: viewerapp/settings.kcfg:241
@@ -2057,12 +2056,12 @@ msgstr ""
 #: whatsnext/whatsnextview.cpp:65
 #, kde-format
 msgid "To-dos:"
-msgstr ""
+msgstr "Farendaĵoj:"
 
 #: whatsnext/whatsnextview.cpp:81
 #, kde-format
 msgid "What's Next?"
-msgstr ""
+msgstr "Kio Sekvu?"
 
 #: whatsnext/whatsnextview.cpp:88 whatsnext/whatsnextview.cpp:251
 #: whatsnext/whatsnextview.cpp:256
@@ -2074,12 +2073,12 @@ msgstr "%1 - %2"
 #: whatsnext/whatsnextview.cpp:102
 #, kde-format
 msgid "Events:"
-msgstr ""
+msgstr "Eventoj:"
 
 #: whatsnext/whatsnextview.cpp:181 whatsnext/whatsnextview.cpp:200
 #, kde-format
 msgid "Events and to-dos that need a reply:"
-msgstr ""
+msgstr "Eventoj kaj farendaĵoj kiuj bezonas respondon:"
 
 #: whatsnext/whatsnextview.cpp:263
 #, kde-format
@@ -2091,28 +2090,4 @@ msgstr "%1, %2 - %3"
 #, kde-format
 msgctxt "to-do due date"
 msgid "  (Due: %1)"
-msgstr ""
-
-#~ msgctxt "@item:intext delimiter for joining holiday names"
-#~ msgid ","
-#~ msgstr ","
-
-#~ msgctxt "delimiter for joining category names"
-#~ msgid ","
-#~ msgstr ","
-
-#~ msgctxt "@item:intext delimiter for joining category names"
-#~ msgid ","
-#~ msgstr ","
-
-#~ msgctxt "Date from - to"
-#~ msgid "%1 - %2"
-#~ msgstr "%1 - %2"
-
-#~ msgctxt "percent of hours spent"
-#~ msgid " (%1%)"
-#~ msgstr " (%1%)"
-
-#~ msgctxt "short_weekday date (e.g. Mon 13)"
-#~ msgid "%1 %2"
-#~ msgstr "%1 %2"
+msgstr " (Ligdato: %1)"
