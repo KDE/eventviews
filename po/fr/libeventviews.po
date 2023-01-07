@@ -7,20 +7,21 @@
 # Vincent Pinon <vpinon@kde.org>, 2017, 2018.
 # Simon Depiets <sdepiets@gmail.com>, 2018, 2019, 2020.
 #
+# Xavier BESNARD <xavier.besnard]neuf.fr>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-10 00:46+0000\n"
-"PO-Revision-Date: 2021-10-01 08:55+0200\n"
-"Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
-"Language-Team: French <kde-francophone@kde.org>\n"
+"PO-Revision-Date: 2023-01-06 13:58+0100\n"
+"Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
+"Language-Team: fr\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 21.08.1\n"
+"X-Generator: Lokalize 22.12.0\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -258,9 +259,9 @@ msgid ""
 "By default, this file will be called calendar.html and placed in the user "
 "home folder."
 msgstr ""
-"Cochez cette case pour exporter le calendrier sous forme d'un fichier HTML "
-"chaque fois que vous l'enregistrerez. Par défaut, ce fichier sera nommé "
-"calendar.html et placé dans le dossier personnel de l'utilisateur."
+"Cochez cette case pour exporter le calendrier sous forme d'un fichier "
+"« HTML » chaque fois que vous l'enregistrerez. Par défaut, ce fichier sera "
+"nommé « calendar.html » et placé dans le dossier personnel de l'utilisateur."
 
 #. i18n: ectx: label, entry, group (Save Settings)
 #: eventviews.kcfg:44
@@ -2254,7 +2255,7 @@ msgstr "Agenda"
 #: viewerapp/mainwindow.ui:60
 #, kde-format
 msgid "MultiAgenda"
-msgstr "MultiAgenda"
+msgstr "Agendas multiples"
 
 #. i18n: ectx: property (text), widget (QStatusBar, statusbar)
 #: viewerapp/mainwindow.ui:65
