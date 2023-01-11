@@ -6,13 +6,13 @@
 # H. İbrahim Güngör <ibrahim@pardus.org.tr>, 2011.
 # Volkan Gezer <volkangezer@gmail.com>, 2013-2014, 2015, 2017.
 # Kaan Ozdincer <kaanozdincer@gmail.com>, 2014.
-# Emir SARI <emir_sari@icloud.com>, 2022.
+# Emir SARI <emir_sari@icloud.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-10 00:46+0000\n"
-"PO-Revision-Date: 2022-11-24 16:59+0300\n"
+"PO-Revision-Date: 2023-01-10 21:54+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.08.3\n"
+"X-Generator: Lokalize 22.12.0\n"
 "(http: //www.transifex.com/projects/p/kdepim-k-tr/language/tr/)\n"
 "X-POOTLE-MTIME: 1413132207.000000\n"
 
@@ -271,7 +271,7 @@ msgid ""
 "not affect the automatic saving of the standard calendar, which is "
 "automatically saved after each change."
 msgstr ""
-"KOrganizer'dan çıktığınızda size sormadan ve düzenli olarak takvim "
+"K Organizatör'den çıktığınızda size sormadan ve düzenli olarak takvim "
 "dosyanızın kaydedilmesini istiyorsanız bu kutuyu işaretleyin. Bu ayar her "
 "değişiklikte yeniden kaydedilen standart takvimin otomatik kaydedilmesini "
 "etkilemez."
@@ -348,7 +348,7 @@ msgstr ""
 "Yeni bir etkinlik, yapılacak veya günlük girdisi oluşturduğunuz her kerede "
 "kullanılacak takvimi seçmek için bu seçeneği seçin. Kolab sunucusunun "
 "paylaşılan klasör işlevini kullanmayı düşünüyorsanız veya bir KDE Kolab "
-"istemcisi olarak Kontact kullanarak birden çok hesabı idare etmek zorunda "
+"istemcisi olarak Kontak kullanarak birden çok hesabı idare etmek zorunda "
 "iseniz bu seçimi yapmanız önerilir. "
 
 #. i18n: ectx: label, entry, group (System Tray)
@@ -363,8 +363,8 @@ msgstr "Anımsatıcı Yardımcısını Sistem Tepsisi'nde göster"
 msgid ""
 "Check this box to show the KOrganizer reminder daemon in the system tray."
 msgstr ""
-"Sistem tepsisinde KOrganizer anımsatıcı ardalan sürecini göstermek için bu "
-"kutuyu işaretleyin."
+"Sistem tepsisinde K Organizatör anımsatıcı ardalan sürecini göstermek için "
+"bu kutuyu işaretleyin."
 
 #. i18n: ectx: whatsthis, entry (TimeZoneId), group (Time &amp; Date)
 #: eventviews.kcfg:90
@@ -376,7 +376,7 @@ msgid ""
 msgstr ""
 "Zaman bölgenizi aşağı açılan kutudaki konum listesinden seçin. Bulunduğunuz "
 "şehir liste içerisinde yoksa, aynı zaman bölgesini paylaşan başka bir şehri "
-"seçin. KOrganizer yaz saati için otomatik olarak düzenleyecektir."
+"seçin. K Organizatör yaz saati için otomatik olarak düzenleyecektir."
 
 #. i18n: ectx: label, entry (DayBegins), group (Time &amp; Date)
 #: eventviews.kcfg:94
@@ -407,8 +407,8 @@ msgid ""
 "Enter the start time for the working hours here. The working hours will be "
 "marked with color by KOrganizer."
 msgstr ""
-"Çalışma saatleri için başlangıç zamanını buraya girin. Çalışma saatleri "
-"KOrganizer tarafından renkli olarak işaretlenecektir."
+"Çalışma saatleri için başlangıç zamanını buraya girin. Çalışma saatleri K "
+"Organizatör tarafından renkli olarak işaretlenecektir."
 
 #. i18n: ectx: label, entry (WorkingHoursEnd), group (Time &amp; Date)
 #: eventviews.kcfg:106
@@ -423,8 +423,8 @@ msgid ""
 "Enter the ending time for the working hours here. The working hours will be "
 "marked with color by KOrganizer."
 msgstr ""
-"Buraya çalışma saatleri için sonlanma zamanını girin. Çalışma saatleri "
-"KOrganizer tarafından sağlanan renkli olarak işaretlenecek."
+"Buraya çalışma saatleri için sonlanma zamanını girin. Çalışma saatleri K "
+"Organizatör tarafından sağlanan renkli olarak işaretlenecek."
 
 #. i18n: ectx: label, entry (WeekStartDay), group (Time &amp; Date)
 #: eventviews.kcfg:112
@@ -1042,7 +1042,7 @@ msgid ""
 "but other widgets, such as the date navigator, the item details and the "
 "calendars list, will not be displayed."
 msgstr ""
-"Ay görünümünde iken tam KOrganizer penceresini kullanmak için bu kutuyu "
+"Ay görünümünde iken tam K Organizatör penceresini kullanmak için bu kutuyu "
 "işaretleyin. Bu kutu işaretliyse aylık görünümde bir miktar yer "
 "kazanırsınız; ancak tarih gezgini, ögeye ait ayrıntılar ve takvim listesi "
 "gibi diğer özellikler görüntülenmez."
@@ -1182,10 +1182,11 @@ msgid ""
 "list view, but other widgets, such as the date navigator, the to-do details "
 "and the calendars list, will not be displayed."
 msgstr ""
-"Yapılacaklar listesi görünümünde iken tam KOrganizer penceresini kullanmak "
-"için bu kutuyu işaretleyin. Bu kutu işaretliyse yapılacaklar listesi "
-"görünümünde bir miktar yer kazanırsınız; ancak tarih gezgini, yapılacak işe "
-"ait ayrıntılar ve takvim listesi gibi diğer özellikler görüntülenmez."
+"Yapılacaklar listesi görünümünde iken tam K Organizatör penceresini "
+"kullanmak için bu kutuyu işaretleyin. Bu kutu işaretliyse yapılacaklar "
+"listesi görünümünde bir miktar yer kazanırsınız; ancak tarih gezgini, "
+"yapılacak işe ait ayrıntılar ve takvim listesi gibi diğer özellikler "
+"görüntülenmez."
 
 #. i18n: ectx: label, entry, group (Todo View)
 #: eventviews.kcfg:362
@@ -1850,7 +1851,7 @@ msgstr "Yapılacak İşi Sil"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display to-do list in a full window"
-msgstr "Yapılacakları tam KOrganizer penceresinde görüntüle"
+msgstr "Yapılacaklar listesini tam bir pencerede görüntüle"
 
 #: todo/todoview.cpp:261
 #, kde-format
@@ -2257,7 +2258,7 @@ msgstr ""
 "Başka katılımcıları ilgilendiren etkinlikler (veya yapılacaklar) "
 "oluştururken, güncellerken veya silerken otomatik posta oluşturmayı "
 "etkinleştirmek için bu kutuyu işaretleyin. Groupware işlevselliğini "
-"kullanmak istiyorsanız bu kutu işaretli olmalıdır (örn. Kontact'ı bir KDE "
+"kullanmak istiyorsanız bu kutu işaretli olmalıdır (örn. Kontak'ı bir KDE "
 "Kolab istemcisi olarak ayarlamak istiyorsanız)."
 
 #: whatsnext/whatsnextview.cpp:65
