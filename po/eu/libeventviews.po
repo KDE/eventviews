@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-10 00:46+0000\n"
+"POT-Creation-Date: 2023-01-12 00:55+0000\n"
 "PO-Revision-Date: 2022-08-26 07:28+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -30,30 +30,30 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "xalba@ni.eus"
 
-#: agenda/agenda.cpp:969
+#: agenda/agenda.cpp:967
 #, kde-format
 msgid "Unable to lock item for modification. You cannot make any changes."
 msgstr ""
 "Ez da elementua aldatzeko hura giltzatzeko gai. Ezin duzu aldaketarik egin."
 
-#: agenda/agenda.cpp:971
+#: agenda/agenda.cpp:969
 #, kde-format
 msgid "Locking Failed"
 msgstr "Giltzatzea huts egin du"
 
-#: agenda/agenda.cpp:1187
+#: agenda/agenda.cpp:1185
 #, kde-format
 msgid "Dissociate event from recurrence"
 msgstr "Bereizi ekitaldia errepikatzetik"
 
-#: agenda/agenda.cpp:1209 month/monthitem.cpp:444
+#: agenda/agenda.cpp:1207 month/monthitem.cpp:444
 #, kde-format
 msgid ""
 "Unable to add the exception item to the calendar. No change will be done."
 msgstr ""
 "Ez da salbuespen elementua egutegian gehitzeko gai. Ez da aldaketarik egingo."
 
-#: agenda/agenda.cpp:1211 month/monthitem.cpp:446
+#: agenda/agenda.cpp:1209 month/monthitem.cpp:446
 #, kde-format
 msgid "Error Occurred"
 msgstr "Errorea gertatu da"

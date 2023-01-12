@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-10 00:46+0000\n"
+"POT-Creation-Date: 2023-01-12 00:55+0000\n"
 "PO-Revision-Date: 2020-07-27 22:01+0200\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -27,23 +27,23 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "mschlander@opensuse.org"
 
-#: agenda/agenda.cpp:969
+#: agenda/agenda.cpp:967
 #, kde-format
 msgid "Unable to lock item for modification. You cannot make any changes."
 msgstr ""
 "Kan ikke låse elementet til ændring. Du kan ikke foretage nogen ændringer."
 
-#: agenda/agenda.cpp:971
+#: agenda/agenda.cpp:969
 #, kde-format
 msgid "Locking Failed"
 msgstr "Låsning mislykkedes"
 
-#: agenda/agenda.cpp:1187
+#: agenda/agenda.cpp:1185
 #, kde-format
 msgid "Dissociate event from recurrence"
 msgstr "Dissociér begivenhed fra gentagelsen"
 
-#: agenda/agenda.cpp:1209 month/monthitem.cpp:444
+#: agenda/agenda.cpp:1207 month/monthitem.cpp:444
 #, kde-format
 msgid ""
 "Unable to add the exception item to the calendar. No change will be done."
@@ -51,7 +51,7 @@ msgstr ""
 "Kan ikke føje undtagelseselement til kalenderen. Ingen ændring vil blive "
 "udført."
 
-#: agenda/agenda.cpp:1211 month/monthitem.cpp:446
+#: agenda/agenda.cpp:1209 month/monthitem.cpp:446
 #, kde-format
 msgid "Error Occurred"
 msgstr "En fejl opstod"

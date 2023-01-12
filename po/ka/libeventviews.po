@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-10 00:46+0000\n"
-"PO-Revision-Date: 2022-10-01 16:27+0200\n"
+"POT-Creation-Date: 2023-01-12 00:55+0000\n"
+"PO-Revision-Date: 2023-01-11 16:59+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
-"Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -28,28 +28,28 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "Temuri.doghonadze@gmail.com"
 
-#: agenda/agenda.cpp:969
+#: agenda/agenda.cpp:967
 #, kde-format
 msgid "Unable to lock item for modification. You cannot make any changes."
 msgstr ""
 
-#: agenda/agenda.cpp:971
+#: agenda/agenda.cpp:969
 #, kde-format
 msgid "Locking Failed"
 msgstr "დაბლოკვის შეცდომა"
 
-#: agenda/agenda.cpp:1187
+#: agenda/agenda.cpp:1185
 #, kde-format
 msgid "Dissociate event from recurrence"
 msgstr ""
 
-#: agenda/agenda.cpp:1209 month/monthitem.cpp:444
+#: agenda/agenda.cpp:1207 month/monthitem.cpp:444
 #, kde-format
 msgid ""
 "Unable to add the exception item to the calendar. No change will be done."
-msgstr ""
+msgstr "კალენდარში გამონაკლისის ჩამატების შეცდომა. ცვლილებები არ შეტანილა."
 
-#: agenda/agenda.cpp:1211 month/monthitem.cpp:446
+#: agenda/agenda.cpp:1209 month/monthitem.cpp:446
 #, kde-format
 msgid "Error Occurred"
 msgstr "შეცდომა"
@@ -95,7 +95,7 @@ msgstr ""
 #: agenda/agendaview.cpp:2157
 #, kde-format
 msgid "Unable to save %1 \"%2\"."
-msgstr ""
+msgstr "%1-ის შენახვის შეცდომა \"%2\"."
 
 #: agenda/timelabels.cpp:329
 #, kde-format
@@ -158,17 +158,17 @@ msgstr ""
 #: eventview.cpp:111
 #, kde-format
 msgid "Also &Future Items"
-msgstr ""
+msgstr "მომავალი &ჩანაწერებიც"
 
 #: eventview.cpp:112
 #, kde-format
 msgid "Only &This Item"
-msgstr ""
+msgstr "&მხოლოდ ეს ჩანაწერი"
 
 #: eventview.cpp:113
 #, kde-format
 msgid "&All Occurrences"
-msgstr ""
+msgstr "&ყველა შემთხვევა"
 
 #: eventview.cpp:130
 #, kde-format
@@ -189,7 +189,7 @@ msgstr ""
 #: eventviews.kcfg:15
 #, kde-format
 msgid "Default Email Attachment Method"
-msgstr ""
+msgstr "ელფოსტაზე ფაილის მიმაგრების ნაგულისხმები მეთოდი"
 
 #. i18n: ectx: whatsthis, entry (DefaultEmailAttachMethod), group (Personal Settings)
 #: eventviews.kcfg:16
@@ -209,26 +209,26 @@ msgstr "ყოველთვის კითხვა"
 #: eventviews.kcfg:22 eventviews.kcfg:472
 #, kde-format
 msgid "Only attach link to message"
-msgstr ""
+msgstr "შეტყობინების მხოლოდ ბმულის მიმაგრება"
 
 #. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (Personal Settings)
 #. i18n: ectx: label, entry (DefaultTodoAttachMethod), group (Hidden Options)
 #: eventviews.kcfg:25 eventviews.kcfg:475
 #, kde-format
 msgid "Attach complete message"
-msgstr ""
+msgstr "მთლიანი შეტყობინების მიმაგრება"
 
 #. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (Personal Settings)
 #: eventviews.kcfg:28
 #, kde-format
 msgid "Attach message without attachments"
-msgstr ""
+msgstr "მიმაგრების გარეშე მყოფი შეტყობინებების მიმაგრება"
 
 #. i18n: ectx: label, entry, group (Save Settings)
 #: eventviews.kcfg:38
 #, kde-format
 msgid "Export to HTML with every save"
-msgstr ""
+msgstr "ყოველი შენახვისას HTML-ში გატანა"
 
 #. i18n: ectx: whatsthis, entry, group (Save Settings)
 #: eventviews.kcfg:39
@@ -259,7 +259,7 @@ msgstr ""
 #: eventviews.kcfg:50
 #, kde-format
 msgid "Save &interval in minutes"
-msgstr ""
+msgstr "შენახვის &ინტერვალი, წუთებში"
 
 #. i18n: ectx: whatsthis, entry, group (Save Settings)
 #: eventviews.kcfg:51
@@ -292,7 +292,7 @@ msgstr ""
 #: eventviews.kcfg:66
 #, kde-format
 msgid "Be added to the standard calendar"
-msgstr ""
+msgstr "დაემატება სტანდარტულ კალენდარში"
 
 #. i18n: ectx: whatsthis, entry (Destination), group (Save Settings)
 #: eventviews.kcfg:67
@@ -306,7 +306,7 @@ msgstr ""
 #: eventviews.kcfg:70
 #, kde-format
 msgid "Be asked which calendar to use"
-msgstr ""
+msgstr "გკითხავენ, რომელი კალენდარი გამოიყენოს"
 
 #. i18n: ectx: whatsthis, entry (Destination), group (Save Settings)
 #: eventviews.kcfg:71
@@ -323,7 +323,7 @@ msgstr ""
 #: eventviews.kcfg:81
 #, kde-format
 msgid "Show Reminder Daemon in the System Tray"
-msgstr ""
+msgstr "სისტემის კუთხეში შეხსენების დემონის ჩვენება"
 
 #. i18n: ectx: whatsthis, entry, group (System Tray)
 #: eventviews.kcfg:82
@@ -393,7 +393,7 @@ msgstr "კვირის დასაწყისი დღე:"
 #: eventviews.kcfg:113
 #, kde-format
 msgid "Select the first day of each week"
-msgstr ""
+msgstr "აირჩიეთ ყოველი კვირის პირველი დღე"
 
 #. i18n: ectx: whatsthis, entry (WeekStartDay), group (Time &amp; Date)
 #: eventviews.kcfg:114
@@ -407,7 +407,7 @@ msgstr ""
 #: eventviews.kcfg:122 viewerapp/settings.kcfg:15
 #, kde-format
 msgid "Enable tooltips for displaying summaries"
-msgstr ""
+msgstr "შეჯამებების საჩვენებლად მინიშნებების ჩვენება"
 
 #. i18n: ectx: whatsthis, entry, group (General View)
 #: eventviews.kcfg:123 viewerapp/settings.kcfg:16
@@ -421,7 +421,7 @@ msgstr ""
 #: eventviews.kcfg:128
 #, kde-format
 msgid "To-dos use category colors"
-msgstr ""
+msgstr "განრიგი კატეგორიის ფერებს იყენებს"
 
 #. i18n: ectx: whatsthis, entry, group (General View)
 #: eventviews.kcfg:129
@@ -570,7 +570,7 @@ msgstr ""
 #: viewerapp/settings.kcfg:133
 #, kde-format
 msgid "Show to-dos"
-msgstr ""
+msgstr "განრიგის ჩვენება"
 
 #. i18n: ectx: whatsthis, entry (ShowTodosAgendaView), group (Agenda View)
 #: eventviews.kcfg:191 viewerapp/settings.kcfg:41
@@ -1077,7 +1077,7 @@ msgstr ""
 #: viewerapp/settings.kcfg:204
 #, kde-format
 msgid "Holiday color"
-msgstr ""
+msgstr "დასვენების ფერი"
 
 #. i18n: ectx: whatsthis, entry, group (Colors)
 #. i18n: ectx: whatsthis, entry, group (Theming)
@@ -1429,7 +1429,7 @@ msgstr[1] "%2 %1 წელი"
 #: month/monthitem.cpp:438
 #, kde-format
 msgid "Move occurrence(s)"
-msgstr ""
+msgstr "აღმოჩენების გადაადგილება"
 
 #: month/monthscene.cpp:189
 #, kde-format
@@ -1722,13 +1722,13 @@ msgstr "&დასაბეჭდის გადახედვა..."
 #, kde-format
 msgctxt "@action:inmenu create a new to-do"
 msgid "New &To-do..."
-msgstr ""
+msgstr "&ახალი განრიგი..."
 
 #: todo/todoview.cpp:344
 #, kde-format
 msgctxt "@action:inmenu create a new sub-to-do"
 msgid "New Su&b-to-do..."
-msgstr ""
+msgstr "ახალი &ქვეგანრიგი..."
 
 #: todo/todoview.cpp:348
 #, kde-format
@@ -2040,7 +2040,7 @@ msgstr ""
 #: viewerapp/settings.kcfg:274
 #, kde-format
 msgid "Use Groupware communication"
-msgstr ""
+msgstr "Groupware communication-ის გამოყენება"
 
 #. i18n: ectx: whatsthis, entry, group (Group Scheduling)
 #: viewerapp/settings.kcfg:275

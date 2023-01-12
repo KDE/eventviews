@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-10 00:46+0000\n"
+"POT-Creation-Date: 2023-01-12 00:55+0000\n"
 "PO-Revision-Date: 2021-10-04 08:50+0300\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -29,24 +29,24 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "dglent@free.fr"
 
-#: agenda/agenda.cpp:969
+#: agenda/agenda.cpp:967
 #, kde-format
 msgid "Unable to lock item for modification. You cannot make any changes."
 msgstr ""
 "Αδυναμία κλειδώματος αντικειμένου για τροποποίηση. Δεν μπορείτε να κάνετε "
 "αλλαγές."
 
-#: agenda/agenda.cpp:971
+#: agenda/agenda.cpp:969
 #, kde-format
 msgid "Locking Failed"
 msgstr "Το κλείδωμα απέτυχε"
 
-#: agenda/agenda.cpp:1187
+#: agenda/agenda.cpp:1185
 #, kde-format
 msgid "Dissociate event from recurrence"
 msgstr "Να διαχωριστεί το γεγονός από την επανεμφάνιση"
 
-#: agenda/agenda.cpp:1209 month/monthitem.cpp:444
+#: agenda/agenda.cpp:1207 month/monthitem.cpp:444
 #, kde-format
 msgid ""
 "Unable to add the exception item to the calendar. No change will be done."
@@ -54,7 +54,7 @@ msgstr ""
 "Αδυναμία προσθήκης αντικειμένου εξαίρεσης στο ημερολόγιο. Δεν θα γίνει καμιά "
 "αλλαγή."
 
-#: agenda/agenda.cpp:1211 month/monthitem.cpp:446
+#: agenda/agenda.cpp:1209 month/monthitem.cpp:446
 #, kde-format
 msgid "Error Occurred"
 msgstr "Παρουσιάστηκε σφάλμα"
