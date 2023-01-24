@@ -18,9 +18,9 @@ target_link_libraries(viewerapp
   KF5::CalendarSupport
   KF5::EventViews
   KF5::AkonadiWidgets
-  KF5::CalendarCore
+  KF${KF_MAJOR_VERSION}::CalendarCore
   KF5::AkonadiCalendar
-  KF5::Holidays
+  KF${KF_MAJOR_VERSION}::Holidays
 )
 
 ########### install files ###############

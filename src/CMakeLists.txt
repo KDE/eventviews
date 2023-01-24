@@ -116,22 +116,22 @@ PUBLIC
   KF5::AkonadiCore
   KF5::CalendarSupport
 
-  KF5::CalendarCore
+  KF${KF_MAJOR_VERSION}::CalendarCore
   KF5::CalendarUtils
   KF5::AkonadiCalendar
-  KF5::ItemModels
+  KF${KF_MAJOR_VERSION}::ItemModels
 PRIVATE
-  KF5::Holidays
-  KF5::Completion
-  KF5::Service
-  KF5::IconThemes
-  KF5::GuiAddons
-  KF5::I18n
+  KF${KF_MAJOR_VERSION}::Holidays
+  KF${KF_MAJOR_VERSION}::Completion
+  KF${KF_MAJOR_VERSION}::Service
+  KF${KF_MAJOR_VERSION}::IconThemes
+  KF${KF_MAJOR_VERSION}::GuiAddons
+  KF${KF_MAJOR_VERSION}::I18n
   KF5::Libkdepim
-  KF5::Codecs
+  KF${KF_MAJOR_VERSION}::Codecs
   KGantt
   KF5::AkonadiWidgets
-  KF5::Contacts
+  KF${KF_MAJOR_VERSION}::Contacts
 )
 
 target_include_directories(KF5EventViews INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/EventViews/>")
