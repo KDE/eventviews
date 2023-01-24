@@ -21,9 +21,9 @@ using namespace EventViews;
 QSet<EventViews::EventView::ItemIcon> iconArrayToSet(const QByteArray &array)
 {
     QSet<EventViews::EventView::ItemIcon> set;
-    for (int i = 0; i < array.count(); ++i) {
+    for (int i = 0; i < array.size(); ++i) {
         if (i >= EventViews::EventView::IconCount) {
-            qCWarning(CALENDARVIEW_LOG) << "Icon array is too big: " << array.count();
+            qCWarning(CALENDARVIEW_LOG) << "Icon array is too big: " << array.size();
             return set;
         }
         if (array[i] != 0) {
