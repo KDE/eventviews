@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-10 00:46+0000\n"
-"PO-Revision-Date: 2023-01-14 04:10+0100\n"
+"PO-Revision-Date: 2023-01-23 08:49+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -31,7 +31,7 @@ msgstr "Temuri.doghonadze@gmail.com"
 #: agenda/agenda.cpp:969
 #, kde-format
 msgid "Unable to lock item for modification. You cannot make any changes."
-msgstr ""
+msgstr "ელემენტის შესაცვლელად დაბლოკვა შეუძლებელია. ცვლილებებს ვერ შეიტანთ."
 
 #: agenda/agenda.cpp:971
 #, kde-format
@@ -41,7 +41,7 @@ msgstr "დაბლოკვის შეცდომა"
 #: agenda/agenda.cpp:1187
 #, kde-format
 msgid "Dissociate event from recurrence"
-msgstr ""
+msgstr "მოვლენის განმეორებიდან ამოღება"
 
 #: agenda/agenda.cpp:1209 month/monthitem.cpp:444
 #, kde-format
@@ -153,7 +153,7 @@ msgstr "დროის სარტყელი"
 #, kde-format
 msgctxt "@title:window"
 msgid "Changing Recurring Item"
-msgstr ""
+msgstr "განმეორებადი მოვლენის შეცვლა"
 
 #: eventview.cpp:111
 #, kde-format
@@ -456,7 +456,7 @@ msgstr ""
 #: eventviews.kcfg:141
 #, kde-format
 msgid "Show items that recur daily"
-msgstr ""
+msgstr "დღიურად განმეორებადი ელემენტების ჩვენება"
 
 #. i18n: ectx: whatsthis, entry (DailyRecur), group (General View)
 #: eventviews.kcfg:142
@@ -471,7 +471,7 @@ msgstr ""
 #: eventviews.kcfg:147
 #, kde-format
 msgid "Show items that recur weekly"
-msgstr ""
+msgstr "კვირაში ერთხელ განმეორებადი ელემენტების ჩვენება"
 
 #. i18n: ectx: whatsthis, entry (WeeklyRecur), group (General View)
 #: eventviews.kcfg:148
@@ -1143,7 +1143,7 @@ msgstr ""
 #: viewerapp/settings.kcfg:223
 #, kde-format
 msgid "Working hours color"
-msgstr ""
+msgstr "სამუშაო საათების ფერი"
 
 #. i18n: ectx: whatsthis, entry, group (Colors)
 #: eventviews.kcfg:405 viewerapp/settings.kcfg:224
@@ -1158,7 +1158,7 @@ msgstr ""
 #: viewerapp/settings.kcfg:229
 #, kde-format
 msgid "To-do due today color"
-msgstr ""
+msgstr "დღეს დაგეგმილის ფერი"
 
 #. i18n: ectx: whatsthis, entry (TodoDueTodayColor), group (Colors)
 #. i18n: ectx: whatsthis, entry, group (Theming)
@@ -1176,7 +1176,7 @@ msgstr ""
 #: viewerapp/settings.kcfg:235
 #, kde-format
 msgid "To-do overdue color"
-msgstr ""
+msgstr "გადაცილებული გეგმის ფერი"
 
 #. i18n: ectx: whatsthis, entry (TodoOverdueColor), group (Colors)
 #. i18n: ectx: whatsthis, entry, group (Theming)
@@ -1236,7 +1236,7 @@ msgstr ""
 #: eventviews.kcfg:440 viewerapp/settings.kcfg:266
 #, kde-format
 msgid "Current-time line"
-msgstr ""
+msgstr "მიმდინარე დროის ხაზი"
 
 #. i18n: ectx: whatsthis, entry, group (Fonts)
 #: eventviews.kcfg:441 viewerapp/settings.kcfg:267
@@ -1251,7 +1251,7 @@ msgstr ""
 #: eventviews.kcfg:465
 #, kde-format
 msgid "Default todo attachment method"
-msgstr ""
+msgstr "გეგმაზე მიმაგრების ნაგულისხმები მეთოდი"
 
 #. i18n: ectx: whatsthis, entry (DefaultTodoAttachMethod), group (Hidden Options)
 #: eventviews.kcfg:466
@@ -1381,7 +1381,7 @@ msgstr "დასაბეჭდის გადახედვა"
 #: journal/journalframe.cpp:185
 #, kde-format
 msgid "Print preview this journal entry"
-msgstr ""
+msgstr "ჟურნალის ამ ჩანაწერის დაბეჭდვის გადახედვა"
 
 #: list/listview.cpp:57
 #, kde-format
@@ -1447,13 +1447,13 @@ msgstr "%1 %2"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display calendar in a normal size"
-msgstr ""
+msgstr "კალენდარის ნორმალური ზომით ჩვენება"
 
 #: month/monthview.cpp:166 month/monthview.cpp:372
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display calendar in a full window"
-msgstr ""
+msgstr "კალენდარის მთელ ფანჯარაში ჩვენება"
 
 #: month/monthview.cpp:168
 #, kde-format
@@ -1659,7 +1659,7 @@ msgstr ""
 #: todo/todoview.cpp:181
 #, kde-format
 msgid "Drop To-do"
-msgstr ""
+msgstr "გეგმის მოცილება"
 
 #: todo/todoview.cpp:260
 #, kde-format
@@ -1836,13 +1836,13 @@ msgstr ""
 #, kde-format
 msgctxt "@label in QuickSearchLine"
 msgid "Search Summaries..."
-msgstr ""
+msgstr "შეჯამებების მოძებნა..."
 
 #: todo/todoviewquicksearch.cpp:46
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Filter on these tags"
-msgstr ""
+msgstr "ჭდეებით გაფილტვრა"
 
 #: todo/todoviewquicksearch.cpp:48
 #, kde-format
@@ -1862,7 +1862,7 @@ msgstr "აირჩიეთ ჭდეები"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Filter on these priorities"
-msgstr ""
+msgstr "პრიორიტეტით გაფილტვრა"
 
 #: todo/todoviewquicksearch.cpp:76
 #, kde-format
@@ -1876,7 +1876,7 @@ msgstr ""
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Select Priority"
-msgstr ""
+msgstr "აირჩიეთ პრიორიტეტი"
 
 #: todo/todoviewquicksearch.cpp:104
 #, kde-format
@@ -1976,7 +1976,7 @@ msgstr ""
 #: viewerapp/mainwindow.ui:14
 #, kde-format
 msgid "CalendarViews Viewer"
-msgstr ""
+msgstr "კალენდარების ხედი"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab)
 #: viewerapp/mainwindow.ui:25
@@ -2055,7 +2055,7 @@ msgstr ""
 #: whatsnext/whatsnextview.cpp:65
 #, kde-format
 msgid "To-dos:"
-msgstr ""
+msgstr "გეგმები:"
 
 #: whatsnext/whatsnextview.cpp:81
 #, kde-format
