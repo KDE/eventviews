@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-12 00:55+0000\n"
+"POT-Creation-Date: 2023-01-25 00:58+0000\n"
 "PO-Revision-Date: 2021-09-30 18:23+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -28,22 +28,22 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "stefan.asserhall@bredband.net"
 
-#: agenda/agenda.cpp:967
+#: agenda/agenda.cpp:971
 #, kde-format
 msgid "Unable to lock item for modification. You cannot make any changes."
 msgstr "Kan inte låsa objekt för ändring. Du kan inte göra några ändringar."
 
-#: agenda/agenda.cpp:969
+#: agenda/agenda.cpp:973
 #, kde-format
 msgid "Locking Failed"
 msgstr "Låsning misslyckades"
 
-#: agenda/agenda.cpp:1185
+#: agenda/agenda.cpp:1189
 #, kde-format
 msgid "Dissociate event from recurrence"
 msgstr "Koppla bort händelse från upprepning"
 
-#: agenda/agenda.cpp:1207 month/monthitem.cpp:444
+#: agenda/agenda.cpp:1211 month/monthitem.cpp:444
 #, kde-format
 msgid ""
 "Unable to add the exception item to the calendar. No change will be done."
@@ -51,7 +51,7 @@ msgstr ""
 "Kan inte lägga till undantagsposten i kalendern. Ingen ändring kommer att "
 "göras."
 
-#: agenda/agenda.cpp:1209 month/monthitem.cpp:446
+#: agenda/agenda.cpp:1213 month/monthitem.cpp:446
 #, kde-format
 msgid "Error Occurred"
 msgstr "Fel inträffade"

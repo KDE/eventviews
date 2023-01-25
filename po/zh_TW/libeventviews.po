@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-12 00:55+0000\n"
+"POT-Creation-Date: 2023-01-25 00:58+0000\n"
 "PO-Revision-Date: 2022-12-30 18:52+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -30,28 +30,28 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "franklin@goodhorse.idv.tw, s8321414@gmail.com"
 
-#: agenda/agenda.cpp:967
+#: agenda/agenda.cpp:971
 #, kde-format
 msgid "Unable to lock item for modification. You cannot make any changes."
 msgstr "無法鎖定要變更的項目。您無法做任何變更。"
 
-#: agenda/agenda.cpp:969
+#: agenda/agenda.cpp:973
 #, kde-format
 msgid "Locking Failed"
 msgstr "鎖定失敗"
 
-#: agenda/agenda.cpp:1185
+#: agenda/agenda.cpp:1189
 #, kde-format
 msgid "Dissociate event from recurrence"
 msgstr "將此事件從循環中分離出來"
 
-#: agenda/agenda.cpp:1207 month/monthitem.cpp:444
+#: agenda/agenda.cpp:1211 month/monthitem.cpp:444
 #, kde-format
 msgid ""
 "Unable to add the exception item to the calendar. No change will be done."
 msgstr "無法將例外的項目加入行事曆。將不做任何變更。"
 
-#: agenda/agenda.cpp:1209 month/monthitem.cpp:446
+#: agenda/agenda.cpp:1213 month/monthitem.cpp:446
 #, kde-format
 msgid "Error Occurred"
 msgstr "發生錯誤"
