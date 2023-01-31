@@ -90,7 +90,7 @@ endif()
 ########### Targets ###########
 
 
-ecm_set_disabled_deprecation_versions(QT 5.15.2
+ecm_set_disabled_deprecation_versions(QT 6.4
      KF 5.102.0
 )
 

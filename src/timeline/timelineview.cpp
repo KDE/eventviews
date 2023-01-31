@@ -159,7 +159,11 @@ private:
 
         QBrush brush = defaultBrush(type);
         if (opt.state & QStyle::State_Selected) {
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
             QLinearGradient selectedGrad(0., 0., 0., QApplication::fontMetrics().height());
+#else
+            QLinearGradient selectedGrad(0., 0., 0., QFontMetricsF(painter->font()).height());
+#endif
             selectedGrad.setColorAt(0., Qt::red);
             selectedGrad.setColorAt(1., Qt::darkRed);
 
