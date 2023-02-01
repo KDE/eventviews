@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-25 00:58+0000\n"
+"POT-Creation-Date: 2023-02-01 00:57+0000\n"
 "PO-Revision-Date: 2019-12-18 19:39+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -1678,7 +1678,7 @@ msgstr "Päevakava %1"
 msgid "All Day"
 msgstr "Kogu päev"
 
-#: timeline/timelineview.cpp:224 timeline/timelineview.cpp:304
+#: timeline/timelineview.cpp:228 timeline/timelineview.cpp:308
 #: todo/todomodel.cpp:481
 #, kde-format
 msgid "Calendar"

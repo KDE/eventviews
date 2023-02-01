@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-25 00:58+0000\n"
+"POT-Creation-Date: 2023-02-01 00:57+0000\n"
 "PO-Revision-Date: 2023-01-06 13:58+0100\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
 "Language-Team: fr\n"
@@ -1764,7 +1764,7 @@ msgstr "Agenda %1"
 msgid "All Day"
 msgstr "Toute la journée"
 
-#: timeline/timelineview.cpp:224 timeline/timelineview.cpp:304
+#: timeline/timelineview.cpp:228 timeline/timelineview.cpp:308
 #: todo/todomodel.cpp:481
 #, kde-format
 msgid "Calendar"

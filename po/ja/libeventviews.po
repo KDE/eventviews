@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-25 00:58+0000\n"
+"POT-Creation-Date: 2023-02-01 00:57+0000\n"
 "PO-Revision-Date: 2010-05-08 12:40-0700\n"
 "Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -1520,7 +1520,7 @@ msgstr ""
 msgid "All Day"
 msgstr ""
 
-#: timeline/timelineview.cpp:224 timeline/timelineview.cpp:304
+#: timeline/timelineview.cpp:228 timeline/timelineview.cpp:308
 #: todo/todomodel.cpp:481
 #, kde-format
 msgid "Calendar"
