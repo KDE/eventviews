@@ -17,4 +17,4 @@ if (@EVENTVIEWS_KF5_COMPAT@)
                     "***********************************************\n")
 endif()
 
-include("${CMAKE_CURRENT_LIST_DIR}/KF@KF_MAJOR_VERSION@EventViewsTargets.cmake")
+include("${CMAKE_CURRENT_LIST_DIR}/KPim@KF_MAJOR_VERSION@EventViewsTargets.cmake")
