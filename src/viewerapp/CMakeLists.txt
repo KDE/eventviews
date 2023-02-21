@@ -16,7 +16,7 @@ add_executable(viewerapp ${viewerapp_SRCS})
 
 target_link_libraries(viewerapp
   KF5::CalendarSupport
-  KF5::EventViews
+  KPim${KF_MAJOR_VERSION}::EventViews
   KF5::AkonadiWidgets
   KF${KF_MAJOR_VERSION}::CalendarCore
   KF5::AkonadiCalendar
