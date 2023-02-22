@@ -119,7 +119,7 @@ PUBLIC
   KF5::CalendarSupport
 
   KF${KF_MAJOR_VERSION}::CalendarCore
-  KF5::CalendarUtils
+  KPim${KF_MAJOR_VERSION}::CalendarUtils
   KF5::AkonadiCalendar
   KF${KF_MAJOR_VERSION}::ItemModels
 PRIVATE
@@ -129,7 +129,7 @@ PRIVATE
   KF${KF_MAJOR_VERSION}::IconThemes
   KF${KF_MAJOR_VERSION}::GuiAddons
   KF${KF_MAJOR_VERSION}::I18n
-  KF5::Libkdepim
+  KPim${KF_MAJOR_VERSION}::Libkdepim
   KF${KF_MAJOR_VERSION}::Codecs
   KGantt
   KF5::AkonadiWidgets
