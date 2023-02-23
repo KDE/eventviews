@@ -116,11 +116,11 @@ generate_export_header(KPim${KF_MAJOR_VERSION}EventViews BASE_NAME eventviews)
 target_link_libraries(KPim${KF_MAJOR_VERSION}EventViews
 PUBLIC
   KF5::AkonadiCore
-  KF5::CalendarSupport
+  KPim${KF_MAJOR_VERSION}::CalendarSupport
 
   KF${KF_MAJOR_VERSION}::CalendarCore
   KPim${KF_MAJOR_VERSION}::CalendarUtils
-  KF5::AkonadiCalendar
+  KPim${KF_MAJOR_VERSION}::AkonadiCalendar
   KF${KF_MAJOR_VERSION}::ItemModels
 PRIVATE
   KF${KF_MAJOR_VERSION}::Holidays

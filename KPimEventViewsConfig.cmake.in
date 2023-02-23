@@ -3,10 +3,10 @@
 @PACKAGE_INIT@
 include(CMakeFindDependencyMacro)
 find_dependency(KF5Akonadi "@AKONADI_LIB_VERSION@")
-find_dependency(KF5CalendarSupport "@CALENDARSUPPORT_LIB_VERSION@")
+find_dependency(KPim@KF_MAJOR_VERSION@CalendarSupport "@CALENDARSUPPORT_LIB_VERSION@")
 find_dependency(KF@KF_MAJOR_VERSION@CalendarCore "@KF_MIN_VERSION@")
 find_dependency(KPim@KF_MAJOR_VERSION@CalendarUtils "@CALENDARUTILS_LIB_VERSION@")
-find_dependency(KF5AkonadiCalendar "@AKONADICALENDAR_LIB_VERSION@")
+find_dependency(KPim@KF_MAJOR_VERSION@AkonadiCalendar "@AKONADICALENDAR_LIB_VERSION@")
 
 if (@EVENTVIEWS_KF5_COMPAT@)
     message(WARNING "\n"

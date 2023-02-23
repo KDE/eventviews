@@ -15,11 +15,11 @@ ki18n_wrap_ui(viewerapp_SRCS
 add_executable(viewerapp ${viewerapp_SRCS})
 
 target_link_libraries(viewerapp
-  KF5::CalendarSupport
+  KPim${KF_MAJOR_VERSION}::CalendarSupport
   KPim${KF_MAJOR_VERSION}::EventViews
   KF5::AkonadiWidgets
   KF${KF_MAJOR_VERSION}::CalendarCore
-  KF5::AkonadiCalendar
+  KPim${KF_MAJOR_VERSION}::AkonadiCalendar
   KF${KF_MAJOR_VERSION}::Holidays
 )
 
