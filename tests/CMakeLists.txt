@@ -5,7 +5,7 @@ ecm_mark_as_test(createcolorgui_test)
 target_link_libraries(createcolorgui_test
   Qt::Core
   Qt::Gui
-  KF5::EventViews
+  KPim${KF_MAJOR_VERSION}::EventViews
   KF${KF_MAJOR_VERSION}::I18n
 )
 
