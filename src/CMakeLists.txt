@@ -115,7 +115,7 @@ generate_export_header(KPim${KF_MAJOR_VERSION}EventViews BASE_NAME eventviews)
 
 target_link_libraries(KPim${KF_MAJOR_VERSION}EventViews
 PUBLIC
-  KF5::AkonadiCore
+  KPim${KF_MAJOR_VERSION}::AkonadiCore
   KPim${KF_MAJOR_VERSION}::CalendarSupport
 
   KF${KF_MAJOR_VERSION}::CalendarCore
@@ -132,7 +132,7 @@ PRIVATE
   KPim${KF_MAJOR_VERSION}::Libkdepim
   KF${KF_MAJOR_VERSION}::Codecs
   KGantt
-  KF5::AkonadiWidgets
+  KPim${KF_MAJOR_VERSION}::AkonadiWidgets
   KF${KF_MAJOR_VERSION}::Contacts
 )
 
