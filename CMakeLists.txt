@@ -31,7 +31,7 @@ include(ECMAddTests)
 include(ECMAddQch)
 option(BUILD_QCH "Build API documentation in QCH format (for e.g. Qt Assistant, Qt Creator & KDevelop)" OFF)
 add_feature_info(QCH ${BUILD_QCH} "API documentation in QCH format (for e.g. Qt Assistant, Qt Creator & KDevelop)")
-
+option(BUILD_WITH_COMPAT_LIBS "Generate compat cmake file (Set at false will allow to co-install lib)" ON)
 
 set(EVENTVIEW_LIB_VERSION ${PIM_VERSION})
 set(CALENDARUTILS_LIB_VERSION "5.22.40")
@@ -124,7 +124,7 @@ if(BUILD_TESTING)
   find_package(Qt${QT_MAJOR_VERSION} ${QT_REQUIRED_VERSION} CONFIG REQUIRED Test)
   add_subdirectory(tests)
 endif()
-
+if (BUILD_WITH_COMPAT_LIBS)
 ##
 # TODO: Backwards compatiblity. Remove in next major version
 ##
@@ -152,6 +152,7 @@ install(EXPORT KPim${KF_MAJOR_VERSION}EventViewsTargets
     FILE KPim${KF_MAJOR_VERSION}EventViewsTargets.cmake
     NAMESPACE KF5::
 )
+endif()
 
 kde_configure_git_pre_commit_hook(CHECKS CLANG_FORMAT)
 ki18n_install(po)
