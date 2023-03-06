@@ -91,7 +91,7 @@ endif()
 
 
 ecm_set_disabled_deprecation_versions(QT 6.4
-     KF 5.103.0
+     KF 5.104.0
 )
 
 
