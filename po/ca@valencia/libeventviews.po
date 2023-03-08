@@ -241,7 +241,7 @@ msgstr "Adjunta el missatge sense fitxers adjunts"
 #: eventviews.kcfg:38
 #, kde-format
 msgid "Export to HTML with every save"
-msgstr "Exporta a HTML cada vegada que es guarde"
+msgstr "Exporta cap a HTML cada vegada que es guarde"
 
 #. i18n: ectx: whatsthis, entry, group (Save Settings)
 #: eventviews.kcfg:39
