@@ -14,10 +14,10 @@
 
 TodoViewQuickAddLine::TodoViewQuickAddLine(QWidget *parent)
     : KLineEdit(parent)
+    , mClickMessage(i18n("Enter a summary to create a new to-do"))
 {
     connect(this, &QLineEdit::returnPressed, this, &TodoViewQuickAddLine::returnPressedSlot);
 
-    mClickMessage = i18n("Enter a summary to create a new to-do");
     setToolTip(mClickMessage);
 }
 

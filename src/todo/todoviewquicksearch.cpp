@@ -27,12 +27,14 @@
 TodoViewQuickSearch::TodoViewQuickSearch(const Akonadi::ETMCalendar::Ptr &calendar, QWidget *parent)
     : QWidget(parent)
     , mCalendar(calendar)
+    , mSearchLine(new QLineEdit(this))
+    , mCategoryCombo(new Akonadi::TagSelectionComboBox(this))
+    , mPriorityCombo(new KPIM::KCheckComboBox(this))
 {
     auto layout = new QHBoxLayout(this);
     // no special margin because it is added by the view
     layout->setContentsMargins(0, 0, 0, 0);
 
-    mSearchLine = new QLineEdit(this);
     mSearchLine->setToolTip(i18nc("@info:tooltip", "Filter on matching summaries"));
     mSearchLine->setWhatsThis(i18nc("@info:whatsthis", "Enter text here to filter the to-dos that are shown by matching summaries."));
     mSearchLine->setPlaceholderText(i18nc("@label in QuickSearchLine", "Search Summaries..."));
@@ -41,7 +43,6 @@ TodoViewQuickSearch::TodoViewQuickSearch(const Akonadi::ETMCalendar::Ptr &calend
 
     layout->addWidget(mSearchLine, 3);
 
-    mCategoryCombo = new Akonadi::TagSelectionComboBox(this);
     mCategoryCombo->setCheckable(true);
     mCategoryCombo->setToolTip(i18nc("@info:tooltip", "Filter on these tags"));
     mCategoryCombo->setWhatsThis(i18nc("@info:whatsthis",
@@ -70,7 +71,6 @@ TodoViewQuickSearch::TodoViewQuickSearch(const Akonadi::ETMCalendar::Ptr &calend
         mCategoryCombo->setMinimumWidth(mCategoryCombo->width() + pixelsToAdd);
     }
 
-    mPriorityCombo = new KPIM::KCheckComboBox(this);
     mPriorityCombo->setToolTip(i18nc("@info:tooltip", "Filter on these priorities"));
     mPriorityCombo->setWhatsThis(i18nc("@info:whatsthis",
                                        "Use this combobox to filter the to-dos that are shown by "

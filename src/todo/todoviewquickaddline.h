@@ -30,5 +30,5 @@ private Q_SLOTS:
 
 private:
     Qt::KeyboardModifiers mModifiers;
-    QString mClickMessage;
+    const QString mClickMessage;
 };

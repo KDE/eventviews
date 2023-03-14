@@ -39,8 +39,8 @@ void WhatsNextTextBrowser::doSetSource(const QUrl &name, QTextDocument::Resource
 
 WhatsNextView::WhatsNextView(QWidget *parent)
     : EventView(parent)
+    , mView(new WhatsNextTextBrowser(this))
 {
-    mView = new WhatsNextTextBrowser(this);
     connect(mView, &WhatsNextTextBrowser::showIncidence, this, &WhatsNextView::showIncidence);
 
     QBoxLayout *topLayout = new QVBoxLayout(this);
