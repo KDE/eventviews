@@ -147,7 +147,7 @@ set_target_properties(KPim${KF_MAJOR_VERSION}EventViews PROPERTIES
 
 install(TARGETS
   KPim${KF_MAJOR_VERSION}EventViews
-  EXPORT KPim${KF_MAJOR_VERSION}EventViewsTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS}
+  EXPORT KPim${KF_MAJOR_VERSION}EventViewsTargets ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
 )
 
 ecm_generate_headers(eventviews_CamelCase_HEADERS
