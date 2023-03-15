@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-01 00:57+0000\n"
+"POT-Creation-Date: 2023-03-15 00:47+0000\n"
 "PO-Revision-Date: 2020-07-27 22:01+0200\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -1997,18 +1997,18 @@ msgctxt "@action:inmenu priority value=8"
 msgid "8"
 msgstr "8"
 
-#: todo/todoviewquickaddline.cpp:20
+#: todo/todoviewquickaddline.cpp:17
 #, kde-format
 msgid "Enter a summary to create a new to-do"
 msgstr "Angiv resumé for at oprette et nyt gøremål"
 
-#: todo/todoviewquicksearch.cpp:36
+#: todo/todoviewquicksearch.cpp:38
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Filter on matching summaries"
 msgstr "Filtrér ved matchende resuméer"
 
-#: todo/todoviewquicksearch.cpp:37
+#: todo/todoviewquicksearch.cpp:39
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -2017,13 +2017,13 @@ msgstr ""
 "Angiv den tekst som skal bruges til at filtrere de gøremål der vises ved "
 "matchende resuméer her."
 
-#: todo/todoviewquicksearch.cpp:38
+#: todo/todoviewquicksearch.cpp:40
 #, kde-format
 msgctxt "@label in QuickSearchLine"
 msgid "Search Summaries..."
 msgstr "Søg i resuméer..."
 
-#: todo/todoviewquicksearch.cpp:46
+#: todo/todoviewquicksearch.cpp:47
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Filter on these categories"
@@ -2031,7 +2031,7 @@ msgctxt "@info:tooltip"
 msgid "Filter on these tags"
 msgstr "Filtrér ud fra disse kategorier"
 
-#: todo/todoviewquicksearch.cpp:48
+#: todo/todoviewquicksearch.cpp:49
 #, fuzzy, kde-format
 #| msgctxt "@info:whatsthis"
 #| msgid ""
@@ -2045,7 +2045,7 @@ msgstr ""
 "Brug dette kombinationsfelt til at filtrere de gøremål der vises efter en "
 "liste over udvalgte kategorier."
 
-#: todo/todoviewquicksearch.cpp:50
+#: todo/todoviewquicksearch.cpp:51
 #, fuzzy, kde-format
 #| msgctxt "@item:inlistbox"
 #| msgid "Select Categories"

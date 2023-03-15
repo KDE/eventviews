@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-01 00:57+0000\n"
+"POT-Creation-Date: 2023-03-15 00:47+0000\n"
 "PO-Revision-Date: 2023-01-06 13:58+0100\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
 "Language-Team: fr\n"
@@ -2061,18 +2061,18 @@ msgctxt "@action:inmenu priority value=8"
 msgid "8"
 msgstr "8"
 
-#: todo/todoviewquickaddline.cpp:20
+#: todo/todoviewquickaddline.cpp:17
 #, kde-format
 msgid "Enter a summary to create a new to-do"
 msgstr "Saisissez un résumé pour créer une nouvelle tâche"
 
-#: todo/todoviewquicksearch.cpp:36
+#: todo/todoviewquicksearch.cpp:38
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Filter on matching summaries"
 msgstr "Filtrer sur des résumés qui correspondent"
 
-#: todo/todoviewquicksearch.cpp:37
+#: todo/todoviewquicksearch.cpp:39
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -2081,19 +2081,19 @@ msgstr ""
 "Saisissez le teste ici pour filtrer les tâches qui sont affichés par résumés "
 "correspondants."
 
-#: todo/todoviewquicksearch.cpp:38
+#: todo/todoviewquicksearch.cpp:40
 #, kde-format
 msgctxt "@label in QuickSearchLine"
 msgid "Search Summaries..."
 msgstr "Rechercher des résumés..."
 
-#: todo/todoviewquicksearch.cpp:46
+#: todo/todoviewquicksearch.cpp:47
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Filter on these tags"
 msgstr "Filtrer selon ces étiquettes"
 
-#: todo/todoviewquicksearch.cpp:48
+#: todo/todoviewquicksearch.cpp:49
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -2103,7 +2103,7 @@ msgstr ""
 "Utilisez cette liste déroulante pour filtrer les tâches à faire, affichée "
 "selon la liste de étiquettes sélectionnées."
 
-#: todo/todoviewquicksearch.cpp:50
+#: todo/todoviewquicksearch.cpp:51
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Select Tags"

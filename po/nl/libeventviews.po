@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-01 00:57+0000\n"
+"POT-Creation-Date: 2023-03-15 00:47+0000\n"
 "PO-Revision-Date: 2022-08-03 14:44+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -2023,18 +2023,18 @@ msgctxt "@action:inmenu priority value=8"
 msgid "8"
 msgstr "8"
 
-#: todo/todoviewquickaddline.cpp:20
+#: todo/todoviewquickaddline.cpp:17
 #, kde-format
 msgid "Enter a summary to create a new to-do"
 msgstr "Een samenvatting invoeren om een nieuwe te-doen aan te maken"
 
-#: todo/todoviewquicksearch.cpp:36
+#: todo/todoviewquicksearch.cpp:38
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Filter on matching summaries"
 msgstr "Filteren op overeenkomende samenvattingen"
 
-#: todo/todoviewquicksearch.cpp:37
+#: todo/todoviewquicksearch.cpp:39
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -2043,19 +2043,19 @@ msgstr ""
 "Voer hier tekst in waarop uw taken volgens hun samenvattingen worden "
 "gefilterd."
 
-#: todo/todoviewquicksearch.cpp:38
+#: todo/todoviewquicksearch.cpp:40
 #, kde-format
 msgctxt "@label in QuickSearchLine"
 msgid "Search Summaries..."
 msgstr "In samenvattingen zoeken..."
 
-#: todo/todoviewquicksearch.cpp:46
+#: todo/todoviewquicksearch.cpp:47
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Filter on these tags"
 msgstr "Op deze tags filteren"
 
-#: todo/todoviewquicksearch.cpp:48
+#: todo/todoviewquicksearch.cpp:49
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -2065,7 +2065,7 @@ msgstr ""
 "Gebruik deze keuzelijst voor het filteren van taken die in een lijst van "
 "geselecteerde tags worden getoond"
 
-#: todo/todoviewquicksearch.cpp:50
+#: todo/todoviewquicksearch.cpp:51
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Select Tags"

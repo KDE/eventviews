@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-01 00:57+0000\n"
+"POT-Creation-Date: 2023-03-15 00:47+0000\n"
 "PO-Revision-Date: 2022-04-16 22:43+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -1927,37 +1927,37 @@ msgctxt "@action:inmenu priority value=8"
 msgid "8"
 msgstr "8"
 
-#: todo/todoviewquickaddline.cpp:20
+#: todo/todoviewquickaddline.cpp:17
 #, kde-format
 msgid "Enter a summary to create a new to-do"
 msgstr "새 할 일을 만들려면 요약을 입력하십시오"
 
-#: todo/todoviewquicksearch.cpp:36
+#: todo/todoviewquicksearch.cpp:38
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Filter on matching summaries"
 msgstr "일치하는 요약을 필터"
 
-#: todo/todoviewquicksearch.cpp:37
+#: todo/todoviewquicksearch.cpp:39
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Enter text here to filter the to-dos that are shown by matching summaries."
 msgstr "문자열을 입력하면 요약이 일치하는 기존 할 일을 표시합니다."
 
-#: todo/todoviewquicksearch.cpp:38
+#: todo/todoviewquicksearch.cpp:40
 #, kde-format
 msgctxt "@label in QuickSearchLine"
 msgid "Search Summaries..."
 msgstr "검색 요약..."
 
-#: todo/todoviewquicksearch.cpp:46
+#: todo/todoviewquicksearch.cpp:47
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Filter on these tags"
 msgstr "다음 태그만 표시"
 
-#: todo/todoviewquicksearch.cpp:48
+#: todo/todoviewquicksearch.cpp:49
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1965,7 +1965,7 @@ msgid ""
 "tags."
 msgstr "선택한 태그의 할 일만 표시하려면 이 콤보 상자에서 선택하십시오."
 
-#: todo/todoviewquicksearch.cpp:50
+#: todo/todoviewquicksearch.cpp:51
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Select Tags"
