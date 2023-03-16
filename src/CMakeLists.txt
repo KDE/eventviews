@@ -3,7 +3,6 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"libeventviews\")
 add_library(KPim${KF_MAJOR_VERSION}EventViews)
 add_library(KPim${KF_MAJOR_VERSION}::EventViews ALIAS KPim${KF_MAJOR_VERSION}EventViews)
-add_library(KF5::EventViews ALIAS KPim${KF_MAJOR_VERSION}EventViews)
 
 if(KDEPIM_BUILD_EXAMPLES)
   add_subdirectory(viewerapp)
