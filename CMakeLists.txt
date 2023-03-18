@@ -87,15 +87,32 @@ endif()
 
 ########### Targets ###########
 
+if(BUILD_TESTING)
+  add_definitions(-DBUILD_TESTING)
+endif()
 
 ecm_set_disabled_deprecation_versions(QT 6.4
      KF 5.104.0
 )
+add_subdirectory(src)
+if(BUILD_TESTING)
+  find_package(Qt${QT_MAJOR_VERSION} ${QT_REQUIRED_VERSION} CONFIG REQUIRED Test)
+  add_subdirectory(tests)
+endif()
 
 
 ########### CMake Config Files ###########
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KPim${KF_MAJOR_VERSION}EventViews")
-set(EVENTVIEWS_KF5_COMPAT FALSE)
+if (BUILD_QCH)
+    ecm_install_qch_export(
+        TARGETS KPim${KF_MAJOR_VERSION}EventViews_QCH
+        FILE KPim${KF_MAJOR_VERSION}EventViewsQchTargets.cmake
+        DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
+        COMPONENT Devel
+    )
+    set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KPim${KF_MAJOR_VERSION}EventViewsQchTargets.cmake\")")
+endif()
+
 configure_package_config_file(
   "${CMAKE_CURRENT_SOURCE_DIR}/KPimEventViewsConfig.cmake.in"
   "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}EventViewsConfig.cmake"
@@ -117,20 +134,6 @@ install(FILES
   DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/EventViews COMPONENT Devel
 )
 
-add_subdirectory(src)
-if(BUILD_TESTING)
-  find_package(Qt${QT_MAJOR_VERSION} ${QT_REQUIRED_VERSION} CONFIG REQUIRED Test)
-  add_subdirectory(tests)
-endif()
 kde_configure_git_pre_commit_hook(CHECKS CLANG_FORMAT)
 ki18n_install(po)
-if (BUILD_QCH)
-    ecm_install_qch_export(
-        TARGETS KPim${KF_MAJOR_VERSION}EventViews_QCH
-        FILE KPim${KF_MAJOR_VERSION}EventViewsQchTargets.cmake
-        DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
-        COMPONENT Devel
-    )
-    set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KPim${KF_MAJOR_VERSION}EventViewsQchTargets.cmake\")")
-endif()
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
