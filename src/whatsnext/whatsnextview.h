@@ -76,10 +76,10 @@ protected:
     void appendTodo(const KCalendarCore::Incidence::Ptr &);
 
 private Q_SLOTS:
-    void showIncidence(const QString &);
+    EVENTVIEWS_NO_EXPORT void showIncidence(const QString &);
 
 private:
-    void createTaskRow(KIconLoader *kil);
+    EVENTVIEWS_NO_EXPORT void createTaskRow(KIconLoader *kil);
     WhatsNextTextBrowser *const mView;
     QString mText;
     QDate mStartDate;

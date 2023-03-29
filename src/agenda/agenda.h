@@ -318,8 +318,8 @@ protected Q_SLOTS:
     void resizeAllContents();
 
 private:
-    void init();
-    void marcus_bains();
+    EVENTVIEWS_NO_EXPORT void init();
+    EVENTVIEWS_NO_EXPORT void marcus_bains();
 
 private:
     friend class AgendaPrivate;

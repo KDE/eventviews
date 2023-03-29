@@ -78,14 +78,14 @@ protected Q_SLOTS:
     void collectionSelectionChanged();
 
 private Q_SLOTS:
-    void slotSelectionChanged();
-    void slotClearTimeSpanSelection();
-    void resizeSplitters();
-    void setupScrollBar();
-    void zoomView(const int delta, QPoint pos, const Qt::Orientation ori);
-    void slotResizeScrollView();
-    void recreateViews();
-    void forceRecreateViews();
+    EVENTVIEWS_NO_EXPORT void slotSelectionChanged();
+    EVENTVIEWS_NO_EXPORT void slotClearTimeSpanSelection();
+    EVENTVIEWS_NO_EXPORT void resizeSplitters();
+    EVENTVIEWS_NO_EXPORT void setupScrollBar();
+    EVENTVIEWS_NO_EXPORT void zoomView(const int delta, QPoint pos, const Qt::Orientation ori);
+    EVENTVIEWS_NO_EXPORT void slotResizeScrollView();
+    EVENTVIEWS_NO_EXPORT void recreateViews();
+    EVENTVIEWS_NO_EXPORT void forceRecreateViews();
 
 private:
     friend class MultiAgendaViewPrivate;

@@ -93,7 +93,7 @@ protected Q_SLOTS:
     void processSelectionChange();
 
 private:
-    void slotSortIndicatorChanged(int logicalIndex, Qt::SortOrder order);
+    EVENTVIEWS_NO_EXPORT void slotSortIndicatorChanged(int logicalIndex, Qt::SortOrder order);
 
     std::unique_ptr<ListViewPrivate> const d;
 };

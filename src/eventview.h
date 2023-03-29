@@ -452,7 +452,7 @@ protected Q_SLOTS:
     virtual void calendarReset();
 
 private:
-    void onCollectionChanged(const Akonadi::Collection &, const QSet<QByteArray> &);
+    EVENTVIEWS_NO_EXPORT void onCollectionChanged(const Akonadi::Collection &, const QSet<QByteArray> &);
 
 protected:
     bool makesWholeDayBusy(const KCalendarCore::Incidence::Ptr &incidence) const;

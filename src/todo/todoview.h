@@ -112,20 +112,20 @@ protected Q_SLOTS:
     void copyTodoToDate(QDate date);
 
 private Q_SLOTS:
-    void scheduleResizeColumns();
-    void resizeColumns();
-    void itemDoubleClicked(const QModelIndex &index);
-    void setNewDate(QDate date);
-    void setStartDate(QDate date);
-    void setNewPercentage(QAction *action);
-    void setNewPriority(QAction *action);
-    void changedCategories(QAction *action);
-    void setFullView(bool fullView);
+    EVENTVIEWS_NO_EXPORT void scheduleResizeColumns();
+    EVENTVIEWS_NO_EXPORT void resizeColumns();
+    EVENTVIEWS_NO_EXPORT void itemDoubleClicked(const QModelIndex &index);
+    EVENTVIEWS_NO_EXPORT void setNewDate(QDate date);
+    EVENTVIEWS_NO_EXPORT void setStartDate(QDate date);
+    EVENTVIEWS_NO_EXPORT void setNewPercentage(QAction *action);
+    EVENTVIEWS_NO_EXPORT void setNewPriority(QAction *action);
+    EVENTVIEWS_NO_EXPORT void changedCategories(QAction *action);
+    EVENTVIEWS_NO_EXPORT void setFullView(bool fullView);
 
-    void setFlatView(bool flatView, bool notifyOtherViews = true);
+    EVENTVIEWS_NO_EXPORT void setFlatView(bool flatView, bool notifyOtherViews = true);
 
-    void onRowsInserted(const QModelIndex &parent, int start, int end);
-    void onTagsFetched(KJob *);
+    EVENTVIEWS_NO_EXPORT void onRowsInserted(const QModelIndex &parent, int start, int end);
+    EVENTVIEWS_NO_EXPORT void onTagsFetched(KJob *);
 
 Q_SIGNALS:
     void purgeCompletedSignal();
@@ -140,8 +140,8 @@ Q_SIGNALS:
     void createEvent(const Akonadi::Item &item);
 
 private:
-    QMenu *createCategoryPopupMenu();
-    QString stateSaverGroup() const;
+    EVENTVIEWS_NO_EXPORT QMenu *createCategoryPopupMenu();
+    EVENTVIEWS_NO_EXPORT QString stateSaverGroup() const;
 
     /** Creates a new todo with the given text as summary under the given parent */
     void addTodo(const QString &summary, const Akonadi::Item &parentItem, const QStringList &categories = QStringList());

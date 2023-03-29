@@ -258,7 +258,7 @@ private:
     /**
       Sets the value of all MonthGraphicsItem to @param z.
     */
-    void setZValue(qreal z);
+    EVENTVIEWS_NO_EXPORT void setZValue(qreal z);
 
     QList<MonthGraphicsItem *> mMonthGraphicsItemList;
 
@@ -320,9 +320,9 @@ protected Q_SLOTS:
     void updateSelection(const Akonadi::Item &incidence, QDate date);
 
 private:
-    void updateDates(int startOffset, int endOffset);
+    EVENTVIEWS_NO_EXPORT void updateDates(int startOffset, int endOffset);
 
-    void setNewDates(const KCalendarCore::Incidence::Ptr &incidence, int startOffset, int endOffset);
+    EVENTVIEWS_NO_EXPORT void setNewDates(const KCalendarCore::Incidence::Ptr &incidence, int startOffset, int endOffset);
 
     /**
       Returns the category color for this incidence.
