@@ -7,8 +7,6 @@
 
 #include "todomodel.h"
 
-#include <CalendarSupport/Utils>
-#include <KCalUtils/IncidenceFormatter>
 #include <KCalendarCore/Attachment>
 #include <KCalendarCore/Event>
 #include <KEmailAddress>
@@ -20,6 +18,7 @@
 
 #include <KCalUtils/DndFactory>
 #include <KCalUtils/ICalDrag>
+#include <KCalUtils/IncidenceFormatter>
 #include <KCalUtils/VCalDrag>
 
 #include "calendarview_debug.h"
@@ -516,7 +515,7 @@ QMimeData *TodoModel::mimeData(const QModelIndexList &indexes) const
             items.push_back(item);
         }
     }
-    return CalendarSupport::createMimeData(items);
+    return Akonadi::CalendarUtils::createMimeData(items);
 }
 
 bool TodoModel::dropMimeData(const QMimeData *data, Qt::DropAction action, int row, int column, const QModelIndex &parent)
