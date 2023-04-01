@@ -233,18 +233,6 @@ QVariant TodoModel::data(const QModelIndex &index, int role) const
         return {};
     }
 
-    // set the tooltip for every item
-    if (role == Qt::ToolTipRole) {
-        if (d->m_preferences->enableToolTips()) {
-            return QVariant(KCalUtils::IncidenceFormatter::toolTipStr(Akonadi::CalendarUtils::displayName(d->m_calendar.data(), item.parentCollection()),
-                                                                      todo,
-                                                                      QDate(),
-                                                                      true));
-        } else {
-            return {};
-        }
-    }
-
     // background colour for todos due today or overdue todos
     if (role == Qt::BackgroundRole) {
         if (todo->isOverdue()) {
