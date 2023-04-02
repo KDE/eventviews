@@ -42,6 +42,7 @@ target_sources(KPim${KF_MAJOR_VERSION}EventViews PRIVATE
 
   todo/tododelegates.cpp
   todo/todomodel.cpp
+  todo/coloredtodoproxymodel.cpp
 
   todo/todoviewquickaddline.cpp
   todo/todoviewquicksearch.cpp
