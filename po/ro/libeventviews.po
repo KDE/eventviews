@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-15 00:47+0000\n"
+"POT-Creation-Date: 2023-04-02 00:48+0000\n"
 "PO-Revision-Date: 2020-09-08 19:18+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian\n"
@@ -1431,7 +1431,7 @@ msgctxt "%1 is an item summary. %2 is the date when this item reoccurs"
 msgid "%1 (next: %2)"
 msgstr ""
 
-#: list/listview.cpp:278 todo/todomodel.cpp:463
+#: list/listview.cpp:278 todo/todomodel.cpp:451
 #, kde-format
 msgid "Summary"
 msgstr "Sumar"
@@ -1446,7 +1446,7 @@ msgstr "Data și ora de început"
 msgid "End Date/Time"
 msgstr "Data și ora de sfârșit"
 
-#: list/listview.cpp:281 todo/todomodel.cpp:477
+#: list/listview.cpp:281 todo/todomodel.cpp:465
 #, kde-format
 msgid "Tags"
 msgstr ""
@@ -1575,7 +1575,7 @@ msgid "All Day"
 msgstr "Toată ziua"
 
 #: timeline/timelineview.cpp:228 timeline/timelineview.cpp:308
-#: todo/todomodel.cpp:481
+#: todo/todomodel.cpp:469
 #, kde-format
 msgid "Calendar"
 msgstr "Calendar"
@@ -1666,43 +1666,43 @@ msgctxt "delimiter for joining category/tag names"
 msgid ","
 msgstr ","
 
-#: todo/todomodel.cpp:465
+#: todo/todomodel.cpp:453
 #, kde-format
 msgid "Recurs"
 msgstr ""
 
-#: todo/todomodel.cpp:467
+#: todo/todomodel.cpp:455
 #, kde-format
 msgid "Priority"
 msgstr ""
 
-#: todo/todomodel.cpp:469
+#: todo/todomodel.cpp:457
 #, fuzzy, kde-format
 #| msgid "Confirm deletes"
 msgctxt "@title:column percent complete"
 msgid "Complete"
 msgstr "Confirmă ștergerile"
 
-#: todo/todomodel.cpp:471
+#: todo/todomodel.cpp:459
 #, fuzzy, kde-format
 #| msgid "Start Date/Time"
 msgid "Start Date"
 msgstr "Data și ora de început"
 
-#: todo/todomodel.cpp:473
+#: todo/todomodel.cpp:461
 #, fuzzy, kde-format
 #| msgid "End Date/Time"
 msgid "Due Date"
 msgstr "Data și ora de sfârșit"
 
-#: todo/todomodel.cpp:475
+#: todo/todomodel.cpp:463
 #, fuzzy, kde-format
 #| msgid "Confirm deletes"
 msgctxt "@title:column date completed"
 msgid "Completed"
 msgstr "Confirmă ștergerile"
 
-#: todo/todomodel.cpp:479
+#: todo/todomodel.cpp:467
 #, kde-format
 msgid "Description"
 msgstr ""

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-15 00:47+0000\n"
+"POT-Creation-Date: 2023-04-02 00:48+0000\n"
 "PO-Revision-Date: 2022-05-08 15:24+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -1393,7 +1393,7 @@ msgctxt "%1 is an item summary. %2 is the date when this item reoccurs"
 msgid "%1 (next: %2)"
 msgstr "%1 (அடுத்த‍து: %2)"
 
-#: list/listview.cpp:278 todo/todomodel.cpp:463
+#: list/listview.cpp:278 todo/todomodel.cpp:451
 #, kde-format
 msgid "Summary"
 msgstr "விவரணம்"
@@ -1408,7 +1408,7 @@ msgstr "துவக்க தேதி/நேரம்"
 msgid "End Date/Time"
 msgstr "முடியும் தேதி/நேரம்"
 
-#: list/listview.cpp:281 todo/todomodel.cpp:477
+#: list/listview.cpp:281 todo/todomodel.cpp:465
 #, kde-format
 msgid "Tags"
 msgstr "குறிச்சொற்கள்"
@@ -1531,7 +1531,7 @@ msgid "All Day"
 msgstr "முழு நாளும்"
 
 #: timeline/timelineview.cpp:228 timeline/timelineview.cpp:308
-#: todo/todomodel.cpp:481
+#: todo/todomodel.cpp:469
 #, kde-format
 msgid "Calendar"
 msgstr "நாள்காட்டி"
@@ -1620,39 +1620,39 @@ msgctxt "delimiter for joining category/tag names"
 msgid ","
 msgstr ","
 
-#: todo/todomodel.cpp:465
+#: todo/todomodel.cpp:453
 #, kde-format
 msgid "Recurs"
 msgstr "மீளநிகழ்வதா"
 
-#: todo/todomodel.cpp:467
+#: todo/todomodel.cpp:455
 #, kde-format
 msgid "Priority"
 msgstr "முக்கியத்துவம்"
 
-#: todo/todomodel.cpp:469
+#: todo/todomodel.cpp:457
 #, kde-format
 msgctxt "@title:column percent complete"
 msgid "Complete"
 msgstr "முடிந்த‍து"
 
-#: todo/todomodel.cpp:471
+#: todo/todomodel.cpp:459
 #, kde-format
 msgid "Start Date"
 msgstr "துவக்க தேதி"
 
-#: todo/todomodel.cpp:473
+#: todo/todomodel.cpp:461
 #, kde-format
 msgid "Due Date"
 msgstr "உரிய தேதி"
 
-#: todo/todomodel.cpp:475
+#: todo/todomodel.cpp:463
 #, kde-format
 msgctxt "@title:column date completed"
 msgid "Completed"
 msgstr "முடித்த‍து"
 
-#: todo/todomodel.cpp:479
+#: todo/todomodel.cpp:467
 #, kde-format
 msgid "Description"
 msgstr "விவரணம்"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-15 00:47+0000\n"
+"POT-Creation-Date: 2023-04-02 00:48+0000\n"
 "PO-Revision-Date: 2023-01-06 22:00+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -1390,7 +1390,7 @@ msgctxt "%1 is an item summary. %2 is the date when this item reoccurs"
 msgid "%1 (next: %2)"
 msgstr ""
 
-#: list/listview.cpp:278 todo/todomodel.cpp:463
+#: list/listview.cpp:278 todo/todomodel.cpp:451
 #, kde-format
 msgid "Summary"
 msgstr ""
@@ -1405,7 +1405,7 @@ msgstr ""
 msgid "End Date/Time"
 msgstr ""
 
-#: list/listview.cpp:281 todo/todomodel.cpp:477
+#: list/listview.cpp:281 todo/todomodel.cpp:465
 #, kde-format
 msgid "Tags"
 msgstr ""
@@ -1526,7 +1526,7 @@ msgid "All Day"
 msgstr ""
 
 #: timeline/timelineview.cpp:228 timeline/timelineview.cpp:308
-#: todo/todomodel.cpp:481
+#: todo/todomodel.cpp:469
 #, kde-format
 msgid "Calendar"
 msgstr ""
@@ -1615,39 +1615,39 @@ msgctxt "delimiter for joining category/tag names"
 msgid ","
 msgstr ","
 
-#: todo/todomodel.cpp:465
+#: todo/todomodel.cpp:453
 #, kde-format
 msgid "Recurs"
 msgstr ""
 
-#: todo/todomodel.cpp:467
+#: todo/todomodel.cpp:455
 #, kde-format
 msgid "Priority"
 msgstr ""
 
-#: todo/todomodel.cpp:469
+#: todo/todomodel.cpp:457
 #, kde-format
 msgctxt "@title:column percent complete"
 msgid "Complete"
 msgstr ""
 
-#: todo/todomodel.cpp:471
+#: todo/todomodel.cpp:459
 #, kde-format
 msgid "Start Date"
 msgstr ""
 
-#: todo/todomodel.cpp:473
+#: todo/todomodel.cpp:461
 #, kde-format
 msgid "Due Date"
 msgstr ""
 
-#: todo/todomodel.cpp:475
+#: todo/todomodel.cpp:463
 #, kde-format
 msgctxt "@title:column date completed"
 msgid "Completed"
 msgstr ""
 
-#: todo/todomodel.cpp:479
+#: todo/todomodel.cpp:467
 #, kde-format
 msgid "Description"
 msgstr ""

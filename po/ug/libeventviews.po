@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-15 00:47+0000\n"
+"POT-Creation-Date: 2023-04-02 00:48+0000\n"
 "PO-Revision-Date: 2013-09-08 07:05+0900\n"
 "Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -1393,7 +1393,7 @@ msgctxt "%1 is an item summary. %2 is the date when this item reoccurs"
 msgid "%1 (next: %2)"
 msgstr ""
 
-#: list/listview.cpp:278 todo/todomodel.cpp:463
+#: list/listview.cpp:278 todo/todomodel.cpp:451
 #, kde-format
 msgid "Summary"
 msgstr "ئۈزۈندى"
@@ -1408,7 +1408,7 @@ msgstr ""
 msgid "End Date/Time"
 msgstr ""
 
-#: list/listview.cpp:281 todo/todomodel.cpp:477
+#: list/listview.cpp:281 todo/todomodel.cpp:465
 #, kde-format
 msgid "Tags"
 msgstr ""
@@ -1528,7 +1528,7 @@ msgid "All Day"
 msgstr "كۈن بويى"
 
 #: timeline/timelineview.cpp:228 timeline/timelineview.cpp:308
-#: todo/todomodel.cpp:481
+#: todo/todomodel.cpp:469
 #, kde-format
 msgid "Calendar"
 msgstr "يىلنامە"
@@ -1619,33 +1619,33 @@ msgctxt "delimiter for joining category/tag names"
 msgid ","
 msgstr "،"
 
-#: todo/todomodel.cpp:465
+#: todo/todomodel.cpp:453
 #, kde-format
 msgid "Recurs"
 msgstr "تەكرارلاش"
 
-#: todo/todomodel.cpp:467
+#: todo/todomodel.cpp:455
 #, kde-format
 msgid "Priority"
 msgstr "مەرتىۋە"
 
-#: todo/todomodel.cpp:469
+#: todo/todomodel.cpp:457
 #, kde-format
 msgctxt "@title:column percent complete"
 msgid "Complete"
 msgstr "تولۇق"
 
-#: todo/todomodel.cpp:471
+#: todo/todomodel.cpp:459
 #, kde-format
 msgid "Start Date"
 msgstr ""
 
-#: todo/todomodel.cpp:473
+#: todo/todomodel.cpp:461
 #, kde-format
 msgid "Due Date"
 msgstr ""
 
-#: todo/todomodel.cpp:475
+#: todo/todomodel.cpp:463
 #, fuzzy, kde-format
 #| msgctxt "@title:column percent complete"
 #| msgid "Complete"
@@ -1653,7 +1653,7 @@ msgctxt "@title:column date completed"
 msgid "Completed"
 msgstr "تولۇق"
 
-#: todo/todomodel.cpp:479
+#: todo/todomodel.cpp:467
 #, kde-format
 msgid "Description"
 msgstr "چۈشەندۈرۈش"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-15 00:47+0000\n"
+"POT-Creation-Date: 2023-04-02 00:48+0000\n"
 "PO-Revision-Date: 2014-01-10 19:09+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: bs <bs@kde.org>\n"
@@ -1574,7 +1574,7 @@ msgctxt "%1 is an item summary. %2 is the date when this item reoccurs"
 msgid "%1 (next: %2)"
 msgstr "%1 (sljedeće: %2)"
 
-#: list/listview.cpp:278 todo/todomodel.cpp:463
+#: list/listview.cpp:278 todo/todomodel.cpp:451
 #, kde-format
 msgid "Summary"
 msgstr "Sažetak"
@@ -1589,7 +1589,7 @@ msgstr "Početni datum/vrijeme"
 msgid "End Date/Time"
 msgstr "Završni datum/vrijeme"
 
-#: list/listview.cpp:281 todo/todomodel.cpp:477
+#: list/listview.cpp:281 todo/todomodel.cpp:465
 #, kde-format
 msgid "Tags"
 msgstr ""
@@ -1719,7 +1719,7 @@ msgid "All Day"
 msgstr "Cijeli dan"
 
 #: timeline/timelineview.cpp:228 timeline/timelineview.cpp:308
-#: todo/todomodel.cpp:481
+#: todo/todomodel.cpp:469
 #, kde-format
 msgid "Calendar"
 msgstr "Kalendar"
@@ -1810,33 +1810,33 @@ msgctxt "delimiter for joining category/tag names"
 msgid ","
 msgstr ","
 
-#: todo/todomodel.cpp:465
+#: todo/todomodel.cpp:453
 #, kde-format
 msgid "Recurs"
 msgstr "Ponavlja se"
 
-#: todo/todomodel.cpp:467
+#: todo/todomodel.cpp:455
 #, kde-format
 msgid "Priority"
 msgstr "Prioritet"
 
-#: todo/todomodel.cpp:469
+#: todo/todomodel.cpp:457
 #, kde-format
 msgctxt "@title:column percent complete"
 msgid "Complete"
 msgstr "Završeno"
 
-#: todo/todomodel.cpp:471
+#: todo/todomodel.cpp:459
 #, kde-format
 msgid "Start Date"
 msgstr "Početni Datum"
 
-#: todo/todomodel.cpp:473
+#: todo/todomodel.cpp:461
 #, kde-format
 msgid "Due Date"
 msgstr "Krajnji Rok"
 
-#: todo/todomodel.cpp:475
+#: todo/todomodel.cpp:463
 #, fuzzy, kde-format
 #| msgctxt "@title:column percent complete"
 #| msgid "Complete"
@@ -1844,7 +1844,7 @@ msgctxt "@title:column date completed"
 msgid "Completed"
 msgstr "Završeno"
 
-#: todo/todomodel.cpp:479
+#: todo/todomodel.cpp:467
 #, kde-format
 msgid "Description"
 msgstr "Opis"
