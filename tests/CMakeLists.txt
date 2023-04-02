@@ -7,5 +7,6 @@ target_link_libraries(createcolorgui_test
   Qt::Gui
   KPim${KF_MAJOR_VERSION}::EventViews
   KF${KF_MAJOR_VERSION}::I18n
+  KF${KF_MAJOR_VERSION}::ConfigGui
 )
 
