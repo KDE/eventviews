@@ -62,7 +62,7 @@ public:
         CalendarRole,
     };
 
-    explicit TodoModel(const EventViews::PrefsPtr &preferences, QObject *parent = nullptr);
+    explicit TodoModel(QObject *parent = nullptr);
 
     ~TodoModel() override;
 

@@ -29,28 +29,21 @@
 class TodoModelPrivate
 {
 public:
-    TodoModelPrivate(const EventViews::PrefsPtr &preferences, TodoModel *qq);
+    TodoModelPrivate(TodoModel *qq);
 
     // TODO: O(N) complexity, see if the profiler complains about this
     Akonadi::Item findItemByUid(const QString &uid, const QModelIndex &parent) const;
 
     Akonadi::ETMCalendar::Ptr m_calendar;
     Akonadi::IncidenceChanger *m_changer = nullptr;
-    EventViews::PrefsPtr m_preferences;
 
     void onDataChanged(const QModelIndex &begin, const QModelIndex &end);
 
     TodoModel *const q;
 };
 
-static bool isDueToday(const KCalendarCore::Todo::Ptr &todo)
-{
-    return !todo->isCompleted() && todo->dtDue().date() == QDate::currentDate();
-}
-
-TodoModelPrivate::TodoModelPrivate(const EventViews::PrefsPtr &preferences, TodoModel *qq)
-    : m_preferences(preferences)
-    , q(qq)
+TodoModelPrivate::TodoModelPrivate(TodoModel *qq)
+    : q(qq)
 {
 }
 
@@ -91,9 +84,9 @@ void TodoModelPrivate::onDataChanged(const QModelIndex &begin, const QModelIndex
     Q_EMIT q->dataChanged(proxyBegin, proxyEnd.sibling(proxyEnd.row(), TodoModel::ColumnCount - 1));
 }
 
-TodoModel::TodoModel(const EventViews::PrefsPtr &preferences, QObject *parent)
+TodoModel::TodoModel(QObject *parent)
     : KExtraColumnsProxyModel(parent)
-    , d(new TodoModelPrivate(preferences, this))
+    , d(new TodoModelPrivate(this))
 {
     setObjectName(QStringLiteral("TodoModel"));
 }
@@ -230,15 +223,6 @@ QVariant TodoModel::data(const QModelIndex &index, int role) const
             return QVariant(Akonadi::CalendarUtils::displayName(d->m_calendar.data(), item.parentCollection()));
         }
         return {};
-    }
-
-    // background colour for todos due today or overdue todos
-    if (role == Qt::BackgroundRole) {
-        if (todo->isOverdue()) {
-            return QVariant(QBrush(d->m_preferences->todoOverdueColor()));
-        } else if (isDueToday(todo)) {
-            return QVariant(QBrush(d->m_preferences->todoDueTodayColor()));
-        }
     }
 
     // indicate if a row is checked (=completed) only in the first column

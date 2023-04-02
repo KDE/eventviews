@@ -13,6 +13,7 @@
 #include "todoview.h"
 
 #include "calendarview_debug.h"
+#include "coloredtodoproxymodel.h"
 #include "tododelegates.h"
 #include "todomodel.h"
 #include "todoviewquickaddline.h"
@@ -57,15 +58,18 @@ class ModelStack
 {
 public:
     ModelStack(const EventViews::PrefsPtr &preferences, QObject *parent_)
-        : todoModel(new TodoModel(preferences))
+        : todoModel(new TodoModel())
+        , coloredTodoModel(new ColoredTodoProxyModel(preferences))
         , parent(parent_)
         , calendar(nullptr)
         , prefs(preferences)
     {
+        coloredTodoModel->setSourceModel(todoModel);
     }
 
     ~ModelStack()
     {
+        delete coloredTodoModel;
         delete todoModel;
         delete todoTreeModel;
         delete todoFlatModel;
@@ -146,6 +150,7 @@ public:
     }
 
     TodoModel *const todoModel;
+    ColoredTodoProxyModel *const coloredTodoModel;
     QList<TodoView *> views;
     QObject *parent = nullptr;
 
@@ -185,7 +190,7 @@ TodoView::TodoView(const EventViews::PrefsPtr &prefs, bool sidebarView, QWidget 
     sModels->registerView(this);
 
     mProxyModel = new TodoViewSortFilterProxyModel(preferences(), this);
-    mProxyModel->setSourceModel(sModels->todoModel);
+    mProxyModel->setSourceModel(sModels->coloredTodoModel);
     mProxyModel->setDynamicSortFilter(true);
     mProxyModel->setFilterKeyColumn(TodoModel::SummaryColumn);
     mProxyModel->setFilterCaseSensitivity(Qt::CaseInsensitive);
@@ -440,7 +445,9 @@ void TodoView::expandIndex(const QModelIndex &index)
 {
     QModelIndex todoModelIndex = sModels->todoModel->mapFromSource(index);
     Q_ASSERT(todoModelIndex.isValid());
-    QModelIndex realIndex = mProxyModel->mapFromSource(todoModelIndex);
+    const auto coloredIndex = sModels->coloredTodoModel->mapFromSource(todoModelIndex);
+    Q_ASSERT(coloredIndex.isValid());
+    QModelIndex realIndex = mProxyModel->mapFromSource(coloredIndex);
     Q_ASSERT(realIndex.isValid());
     while (realIndex.isValid()) {
         mView->expand(realIndex);
@@ -653,7 +660,7 @@ void TodoView::addQuickTodo(Qt::KeyboardModifiers modifiers)
         }
         const QModelIndex idx = mProxyModel->mapToSource(selection[0]);
         mView->expand(selection[0]);
-        const auto parent = sModels->todoModel->data(idx, Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
+        const auto parent = sModels->coloredTodoModel->data(idx, Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
         addTodo(mQuickAdd->text(), parent, mProxyModel->categories());
     } else {
         return;
@@ -813,7 +820,7 @@ void TodoView::copyTodoToDate(QDate date)
     const QModelIndex origIndex = mProxyModel->mapToSource(selection[0]);
     Q_ASSERT(origIndex.isValid());
 
-    const auto origItem = sModels->todoModel->data(origIndex, Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
+    const auto origItem = sModels->coloredTodoModel->data(origIndex, Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
 
     const KCalendarCore::Todo::Ptr orig = Akonadi::CalendarUtils::todo(origItem);
     if (!orig) {
