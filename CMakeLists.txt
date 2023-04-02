@@ -92,7 +92,7 @@ if(BUILD_TESTING)
 endif()
 
 ecm_set_disabled_deprecation_versions(QT 6.4
-     KF 5.104.0
+     KF 5.105.0
 )
 add_subdirectory(src)
 if(BUILD_TESTING)
