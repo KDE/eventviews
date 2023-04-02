@@ -7,10 +7,10 @@
 */
 
 #include "tododelegates.h"
-#include "todomodel.h"
 #include "todoviewview.h"
 
 #include <Akonadi/TagSelectionComboBox>
+#include <Akonadi/TodoModel>
 #include <CalendarSupport/CategoryHierarchyReader>
 
 #include <KCalendarCore/CalFilter>
@@ -274,7 +274,7 @@ TodoRichTextDelegate::TodoRichTextDelegate(QObject *parent)
 
 void TodoRichTextDelegate::paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const
 {
-    if (index.data(TodoModel::IsRichTextRole).toBool()) {
+    if (index.data(Akonadi::TodoModel::IsRichTextRole).toBool()) {
         QStyleOptionViewItem opt = option;
         initStyleOption(&opt, index);
 
@@ -326,7 +326,7 @@ void TodoRichTextDelegate::paint(QPainter *painter, const QStyleOptionViewItem &
 QSize TodoRichTextDelegate::sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const
 {
     QSize ret = QStyledItemDelegate::sizeHint(option, index);
-    if (index.data(TodoModel::IsRichTextRole).toBool()) {
+    if (index.data(Akonadi::TodoModel::IsRichTextRole).toBool()) {
         m_textDoc->setHtml(index.data().toString());
         ret = ret.expandedTo(m_textDoc->size().toSize());
     }
