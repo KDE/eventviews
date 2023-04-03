@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-02 00:48+0000\n"
+"POT-Creation-Date: 2023-04-03 00:46+0000\n"
 "PO-Revision-Date: 2022-08-03 14:44+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -1588,7 +1588,7 @@ msgctxt "%1 is an item summary. %2 is the date when this item reoccurs"
 msgid "%1 (next: %2)"
 msgstr "%1 (volgende: %2)"
 
-#: list/listview.cpp:278 todo/todomodel.cpp:451
+#: list/listview.cpp:278 todo/todomodel.cpp:434
 #, kde-format
 msgid "Summary"
 msgstr "Samenvatting"
@@ -1603,7 +1603,7 @@ msgstr "Startdatum/tijd"
 msgid "End Date/Time"
 msgstr "Einddatum/tijd"
 
-#: list/listview.cpp:281 todo/todomodel.cpp:465
+#: list/listview.cpp:281 todo/todomodel.cpp:448
 #, kde-format
 msgid "Tags"
 msgstr "Tags"
@@ -1730,7 +1730,7 @@ msgid "All Day"
 msgstr "Hele dag"
 
 #: timeline/timelineview.cpp:228 timeline/timelineview.cpp:308
-#: todo/todomodel.cpp:469
+#: todo/todomodel.cpp:452
 #, kde-format
 msgid "Calendar"
 msgstr "Agenda"
@@ -1741,7 +1741,7 @@ msgctxt "@action:inmenu Unspecified priority"
 msgid "unspecified"
 msgstr "niet gespecificeerd"
 
-#: todo/tododelegates.cpp:153 todo/todoview.cpp:401
+#: todo/tododelegates.cpp:153 todo/todoview.cpp:406
 #, kde-format
 msgctxt "@action:inmenu highest priority"
 msgid "1 (highest)"
@@ -1765,7 +1765,7 @@ msgctxt "@action:inmenu"
 msgid "4"
 msgstr "4"
 
-#: todo/tododelegates.cpp:157 todo/todoview.cpp:405
+#: todo/tododelegates.cpp:157 todo/todoview.cpp:410
 #, kde-format
 msgctxt "@action:inmenu medium priority"
 msgid "5 (medium)"
@@ -1789,103 +1789,103 @@ msgctxt "@action:inmenu"
 msgid "8"
 msgstr "8"
 
-#: todo/tododelegates.cpp:161 todo/todoview.cpp:409
+#: todo/tododelegates.cpp:161 todo/todoview.cpp:414
 #, kde-format
 msgctxt "@action:inmenu lowest priority"
 msgid "9 (lowest)"
 msgstr "9 (laagst)"
 
-#: todo/todomodel.cpp:142 todo/todomodel.cpp:178
+#: todo/todomodel.cpp:134 todo/todomodel.cpp:170
 #, kde-format
 msgctxt "yes, an exception to a recurring to-do"
 msgid "Exception"
 msgstr "Uitzondering"
 
-#: todo/todomodel.cpp:144 todo/todomodel.cpp:180
+#: todo/todomodel.cpp:136 todo/todomodel.cpp:172
 #, kde-format
 msgctxt "yes, recurring to-do"
 msgid "Yes"
 msgstr "Ja"
 
-#: todo/todomodel.cpp:147 todo/todomodel.cpp:183
+#: todo/todomodel.cpp:139 todo/todomodel.cpp:175
 #, kde-format
 msgctxt "no, not a recurring to-do"
 msgid "No"
 msgstr "Nee"
 
-#: todo/todomodel.cpp:161 todo/todomodel.cpp:199
+#: todo/todomodel.cpp:153 todo/todomodel.cpp:191
 #, kde-format
 msgctxt "delimiter for joining category/tag names"
 msgid ","
 msgstr ","
 
-#: todo/todomodel.cpp:453
+#: todo/todomodel.cpp:436
 #, kde-format
 msgid "Recurs"
 msgstr "Wordt herhaald"
 
-#: todo/todomodel.cpp:455
+#: todo/todomodel.cpp:438
 #, kde-format
 msgid "Priority"
 msgstr "Prioriteit"
 
-#: todo/todomodel.cpp:457
+#: todo/todomodel.cpp:440
 #, kde-format
 msgctxt "@title:column percent complete"
 msgid "Complete"
 msgstr "Voltooid"
 
-#: todo/todomodel.cpp:459
+#: todo/todomodel.cpp:442
 #, kde-format
 msgid "Start Date"
 msgstr "Startdatum"
 
-#: todo/todomodel.cpp:461
+#: todo/todomodel.cpp:444
 #, kde-format
 msgid "Due Date"
 msgstr "Datum gereed"
 
-#: todo/todomodel.cpp:463
+#: todo/todomodel.cpp:446
 #, kde-format
 msgctxt "@title:column date completed"
 msgid "Completed"
 msgstr "Voltooid"
 
-#: todo/todomodel.cpp:467
+#: todo/todomodel.cpp:450
 #, kde-format
 msgid "Description"
 msgstr "Beschrijving"
 
-#: todo/todoview.cpp:180
+#: todo/todoview.cpp:185
 #, kde-format
 msgid "Cannot move to-do to itself or a child of itself."
 msgstr ""
 "Kan de taak niet naar zichzelf of naar een afhankelijke taak verplaatsen."
 
-#: todo/todoview.cpp:181
+#: todo/todoview.cpp:186
 #, kde-format
 msgid "Drop To-do"
 msgstr "Taak neerzetten"
 
-#: todo/todoview.cpp:260
+#: todo/todoview.cpp:265
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display to-do list in a full window"
 msgstr "Takenlijst in volledig venster tonen"
 
-#: todo/todoview.cpp:261
+#: todo/todoview.cpp:266
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Checking this option will cause the to-do view to use the full window."
 msgstr "Met deze optie wordt uw takenlijst in een volledig venster getoond."
 
-#: todo/todoview.cpp:266
+#: todo/todoview.cpp:271
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display to-dos in flat list instead of a tree"
 msgstr "Taken in een platte lijst tonen in plaats van in een boomstructuur"
 
-#: todo/todoview.cpp:268
+#: todo/todoview.cpp:273
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1897,127 +1897,127 @@ msgstr ""
 "niet in een hiërarchische boomstructuur; in deze weergave gaat de onderlinge "
 "hiërarchische samenhang verloren."
 
-#: todo/todoview.cpp:307
+#: todo/todoview.cpp:312
 #, kde-format
 msgctxt "@action:inmenu show the to-do"
 msgid "&Show"
 msgstr "&Tonen"
 
-#: todo/todoview.cpp:312
+#: todo/todoview.cpp:317
 #, kde-format
 msgctxt "@action:inmenu edit the to-do"
 msgid "&Edit..."
 msgstr "B&ewerken..."
 
-#: todo/todoview.cpp:319
+#: todo/todoview.cpp:324
 #, kde-format
 msgctxt "@action:inmenu delete the to-do"
 msgid "&Delete"
 msgstr "Verwij&deren"
 
-#: todo/todoview.cpp:328
+#: todo/todoview.cpp:333
 #, kde-format
 msgctxt "@action:inmenu print the to-do"
 msgid "&Print..."
 msgstr "A&fdrukken..."
 
-#: todo/todoview.cpp:333
+#: todo/todoview.cpp:338
 #, kde-format
 msgctxt "@action:inmenu print preview the to-do"
 msgid "Print Previe&w..."
 msgstr "Afdruk&voorbeeld..."
 
-#: todo/todoview.cpp:340
+#: todo/todoview.cpp:345
 #, kde-format
 msgctxt "@action:inmenu create a new to-do"
 msgid "New &To-do..."
 msgstr "Nieuwe &taak..."
 
-#: todo/todoview.cpp:344
+#: todo/todoview.cpp:349
 #, kde-format
 msgctxt "@action:inmenu create a new sub-to-do"
 msgid "New Su&b-to-do..."
 msgstr "Nieuwe su&btaak..."
 
-#: todo/todoview.cpp:348
+#: todo/todoview.cpp:353
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Make this To-do Independent"
 msgstr "Deze taak zelfstandig &maken"
 
-#: todo/todoview.cpp:350
+#: todo/todoview.cpp:355
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Make all Sub-to-dos &Independent"
 msgstr "Alle su&btaken zelfstandig maken"
 
-#: todo/todoview.cpp:361
+#: todo/todoview.cpp:366
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Create Event from To-do"
 msgstr "Gebeurtenis aanmaken uit te-doen"
 
-#: todo/todoview.cpp:369
+#: todo/todoview.cpp:374
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Create Note for To-do"
 msgstr "Notitie aanmaken voor te-doen"
 
-#: todo/todoview.cpp:379
+#: todo/todoview.cpp:384
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Copy To"
 msgstr "&Kopiëren naar"
 
-#: todo/todoview.cpp:386
+#: todo/todoview.cpp:391
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Move To"
 msgstr "Verplaat&sen naar"
 
-#: todo/todoview.cpp:397
+#: todo/todoview.cpp:402
 #, kde-format
 msgctxt "@action:inmenu delete completed to-dos"
 msgid "Pur&ge Completed"
 msgstr "&Voltooide taken verwijderen"
 
-#: todo/todoview.cpp:400
+#: todo/todoview.cpp:405
 #, kde-format
 msgctxt "@action:inmenu unspecified priority"
 msgid "unspecified"
 msgstr "niet gespecificeerd"
 
-#: todo/todoview.cpp:402
+#: todo/todoview.cpp:407
 #, kde-format
 msgctxt "@action:inmenu priority value=2"
 msgid "2"
 msgstr "2"
 
-#: todo/todoview.cpp:403
+#: todo/todoview.cpp:408
 #, kde-format
 msgctxt "@action:inmenu priority value=3"
 msgid "3"
 msgstr "3"
 
-#: todo/todoview.cpp:404
+#: todo/todoview.cpp:409
 #, kde-format
 msgctxt "@action:inmenu priority value=4"
 msgid "4"
 msgstr "4"
 
-#: todo/todoview.cpp:406
+#: todo/todoview.cpp:411
 #, kde-format
 msgctxt "@action:inmenu priority value=6"
 msgid "6"
 msgstr "6"
 
-#: todo/todoview.cpp:407
+#: todo/todoview.cpp:412
 #, kde-format
 msgctxt "@action:inmenu priority value=7"
 msgid "7"
 msgstr "7"
 
-#: todo/todoview.cpp:408
+#: todo/todoview.cpp:413
 #, kde-format
 msgctxt "@action:inmenu priority value=8"
 msgid "8"
