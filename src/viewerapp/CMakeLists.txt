@@ -15,12 +15,12 @@ ki18n_wrap_ui(viewerapp_SRCS
 add_executable(viewerapp ${viewerapp_SRCS})
 
 target_link_libraries(viewerapp
-  KPim${KF_MAJOR_VERSION}::CalendarSupport
-  KPim${KF_MAJOR_VERSION}::EventViews
-  KPim${KF_MAJOR_VERSION}::AkonadiWidgets
-  KF${KF_MAJOR_VERSION}::CalendarCore
-  KPim${KF_MAJOR_VERSION}::AkonadiCalendar
-  KF${KF_MAJOR_VERSION}::Holidays
+  KPim6::CalendarSupport
+  KPim6::EventViews
+  KPim6::AkonadiWidgets
+  KF6::CalendarCore
+  KPim6::AkonadiCalendar
+  KF6::Holidays
 )
 
 ########### install files ###############

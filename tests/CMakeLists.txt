@@ -5,8 +5,8 @@ ecm_mark_as_test(createcolorgui_test)
 target_link_libraries(createcolorgui_test
   Qt::Core
   Qt::Gui
-  KPim${KF_MAJOR_VERSION}::EventViews
-  KF${KF_MAJOR_VERSION}::I18n
-  KF${KF_MAJOR_VERSION}::ConfigGui
+  KPim6::EventViews
+  KF6::I18n
+  KF6::ConfigGui
 )
 

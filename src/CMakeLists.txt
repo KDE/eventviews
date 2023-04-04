@@ -1,8 +1,8 @@
 # SPDX-License-Identifier: CC0-1.0
 # SPDX-FileCopyrightText: none
 add_definitions(-DTRANSLATION_DOMAIN=\"libeventviews\")
-add_library(KPim${KF_MAJOR_VERSION}EventViews)
-add_library(KPim${KF_MAJOR_VERSION}::EventViews ALIAS KPim${KF_MAJOR_VERSION}EventViews)
+add_library(KPim6EventViews)
+add_library(KPim6::EventViews ALIAS KPim6EventViews)
 
 if(KDEPIM_BUILD_EXAMPLES)
   add_subdirectory(viewerapp)
@@ -10,7 +10,7 @@ endif()
 
 ########### next target ###############
 
-target_sources(KPim${KF_MAJOR_VERSION}EventViews PRIVATE
+target_sources(KPim6EventViews PRIVATE
   eventview_p.cpp
   eventview.cpp
   helper.cpp
@@ -93,61 +93,61 @@ target_sources(KPim${KF_MAJOR_VERSION}EventViews PRIVATE
 
 )
 
-kconfig_add_kcfg_files(KPim${KF_MAJOR_VERSION}EventViews prefs_base.kcfgc)
+kconfig_add_kcfg_files(KPim6EventViews prefs_base.kcfgc)
 
-ecm_qt_declare_logging_category(KPim${KF_MAJOR_VERSION}EventViews HEADER calendarview_debug.h
+ecm_qt_declare_logging_category(KPim6EventViews HEADER calendarview_debug.h
         IDENTIFIER CALENDARVIEW_LOG
         CATEGORY_NAME org.kde.pim.calendarview
         OLD_CATEGORY_NAMES log_calendarview
         DESCRIPTION "kdepim (eventviews)" EXPORT EVENTVIEWS)
 
-ki18n_wrap_ui(KPim${KF_MAJOR_VERSION}EventViews
+ki18n_wrap_ui(KPim6EventViews
   agenda/timescaleedit_base.ui
 )
 
 
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
-    set_target_properties(KPim${KF_MAJOR_VERSION}EventViews PROPERTIES UNITY_BUILD ON)
+    set_target_properties(KPim6EventViews PROPERTIES UNITY_BUILD ON)
 endif()
-generate_export_header(KPim${KF_MAJOR_VERSION}EventViews BASE_NAME eventviews)
+generate_export_header(KPim6EventViews BASE_NAME eventviews)
 
 
 
-target_link_libraries(KPim${KF_MAJOR_VERSION}EventViews
+target_link_libraries(KPim6EventViews
 PUBLIC
-  KPim${KF_MAJOR_VERSION}::AkonadiCore
-  KPim${KF_MAJOR_VERSION}::CalendarSupport
+  KPim6::AkonadiCore
+  KPim6::CalendarSupport
 
-  KF${KF_MAJOR_VERSION}::CalendarCore
-  KPim${KF_MAJOR_VERSION}::CalendarUtils
-  KPim${KF_MAJOR_VERSION}::AkonadiCalendar
-  KF${KF_MAJOR_VERSION}::ItemModels
+  KF6::CalendarCore
+  KPim6::CalendarUtils
+  KPim6::AkonadiCalendar
+  KF6::ItemModels
 PRIVATE
-  KF${KF_MAJOR_VERSION}::Holidays
-  KF${KF_MAJOR_VERSION}::Completion
-  KF${KF_MAJOR_VERSION}::Service
-  KF${KF_MAJOR_VERSION}::IconThemes
-  KF${KF_MAJOR_VERSION}::GuiAddons
-  KF${KF_MAJOR_VERSION}::I18n
-  KPim${KF_MAJOR_VERSION}::Libkdepim
-  KF${KF_MAJOR_VERSION}::Codecs
+  KF6::Holidays
+  KF6::Completion
+  KF6::Service
+  KF6::IconThemes
+  KF6::GuiAddons
+  KF6::I18n
+  KPim6::Libkdepim
+  KF6::Codecs
   KGantt
-  KPim${KF_MAJOR_VERSION}::AkonadiWidgets
-  KF${KF_MAJOR_VERSION}::Contacts
+  KPim6::AkonadiWidgets
+  KF6::Contacts
 )
 
-target_include_directories(KPim${KF_MAJOR_VERSION}EventViews INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/EventViews/>")
-target_include_directories(KPim${KF_MAJOR_VERSION}EventViews PUBLIC "$<BUILD_INTERFACE:${eventviews_SOURCE_DIR}/src;${eventviews_BINARY_DIR}/src;>")
+target_include_directories(KPim6EventViews INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR}/KPim6/EventViews/>")
+target_include_directories(KPim6EventViews PUBLIC "$<BUILD_INTERFACE:${eventviews_SOURCE_DIR}/src;${eventviews_BINARY_DIR}/src;>")
 
-set_target_properties(KPim${KF_MAJOR_VERSION}EventViews PROPERTIES
+set_target_properties(KPim6EventViews PROPERTIES
   VERSION ${EVENTVIEWS_VERSION}
   SOVERSION ${EVENTVIEWS_SOVERSION}
   EXPORT_NAME EventViews
 )
 
 install(TARGETS
-  KPim${KF_MAJOR_VERSION}EventViews
-  EXPORT KPim${KF_MAJOR_VERSION}EventViewsTargets ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
+  KPim6EventViews
+  EXPORT KPim6EventViewsTargets ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
 )
 
 ecm_generate_headers(eventviews_CamelCase_HEADERS
@@ -228,9 +228,9 @@ ecm_generate_headers(eventviews_CamelCasewhatsnext_HEADERS
 )
 
 ecm_generate_pri_file(BASE_NAME EventViews
-  LIB_NAME KPim${KF_MAJOR_VERSION}EventViews
+  LIB_NAME KPim6EventViews
   DEPS "KMime AkonadiCalendar" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR
-  ${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/EventViews
+  ${KDE_INSTALL_INCLUDEDIR}/KPim6/EventViews
 )
 
 install(FILES
@@ -243,7 +243,7 @@ install(FILES
   ${eventviews_CamelCasejournal_HEADERS}
   ${eventviews_CamelCaselist_HEADERS}
   ${eventviews_CamelCasemonth_HEADERS}
-  DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/EventViews/EventViews
+  DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/EventViews/EventViews
   COMPONENT Devel
 )
 
@@ -259,7 +259,7 @@ install(FILES
   ${eventviews_journal_HEADERS}
   ${eventviews_list_HEADERS}
   ${eventviews_month_HEADERS}
-  DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/EventViews/eventviews
+  DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/EventViews/eventviews
   COMPONENT Devel
 )
 
@@ -268,9 +268,9 @@ ecm_qt_install_logging_categories(EXPORT EVENTVIEWS FILE eventviews.categories D
 
 if (BUILD_QCH)
     ecm_add_qch(
-        KPim${KF_MAJOR_VERSION}EventViews_QCH
-        NAME KPim${KF_MAJOR_VERSION}EventViews
-        BASE_NAME KPim${KF_MAJOR_VERSION}EventViews
+        KPim6EventViews_QCH
+        NAME KPim6EventViews
+        BASE_NAME KPim6EventViews
         VERSION ${PIM_VERSION}
         ORG_DOMAIN org.kde
         SOURCES # using only public headers, to cover only public API
@@ -286,9 +286,9 @@ if (BUILD_QCH)
         #MD_MAINPAGE "${CMAKE_SOURCE_DIR}/README.md"
         #IMAGE_DIRS "${CMAKE_SOURCE_DIR}/docs/pics"
         LINK_QCHS
-            Qt${QT_MAJOR_VERSION}Core_QCH
-            Qt${QT_MAJOR_VERSION}Gui_QCH
-            Qt${QT_MAJOR_VERSION}Widgets_QCH
+            Qt6Core_QCH
+            Qt6Gui_QCH
+            Qt6Widgets_QCH
         INCLUDE_DIRS
             ${CMAKE_CURRENT_BINARY_DIR}
         BLANK_MACROS
