@@ -262,7 +262,7 @@ void MonthGraphicsItem::paint(QPainter *p, const QStyleOptionGraphicsItem *, QWi
     QRect textRect = QRect(textMargin, 0, static_cast<int>(boundingRect().width() - 2 * textMargin), scene->itemHeight());
 
     if (mMonthItem->monthScene()->monthView()->preferences()->enableMonthItemIcons()) {
-        const QVector<QPixmap> icons = mMonthItem->icons();
+        const QList<QPixmap> icons = mMonthItem->icons();
         int iconWidths = 0;
 
         for (const QPixmap &icon : icons) {

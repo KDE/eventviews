@@ -525,7 +525,7 @@ void EventView::restoreConfig(const KConfigGroup &configGroup)
 
             // Only show the first column.
             auto columnFilterProxy = new KRearrangeColumnsProxyModel(this);
-            columnFilterProxy->setSourceColumns(QVector<int>() << Akonadi::ETMCalendar::CollectionTitle);
+            columnFilterProxy->setSourceColumns(QList<int>() << Akonadi::ETMCalendar::CollectionTitle);
             columnFilterProxy->setSourceModel(sortProxy);
 
             // Make the calendar model checkable.

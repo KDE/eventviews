@@ -269,7 +269,7 @@ public:
 
     // Working Hour coordinates
     bool mWorkingHoursEnable;
-    QVector<bool> *mHolidayMask = nullptr;
+    QList<bool> *mHolidayMask = nullptr;
     int mWorkingHoursYTop;
     int mWorkingHoursYBottom;
 
@@ -1494,7 +1494,7 @@ void Agenda::drawContents(QPainter *p, int cx, int cy, int cw, int ch)
     // If busy day, use busy color
     // if work and busy day, mix both, and busy color has alpha
 
-    const QVector<bool> busyDayMask = d->mAgendaView->busyDayMask();
+    const QList<bool> busyDayMask = d->mAgendaView->busyDayMask();
 
     // Highlight working hours
     if (d->mWorkingHoursEnable && d->mHolidayMask) {
@@ -1695,9 +1695,9 @@ QTime Agenda::gyToTime(int gy) const
     return time;
 }
 
-QVector<int> Agenda::minContentsY() const
+QList<int> Agenda::minContentsY() const
 {
-    QVector<int> minArray;
+    QList<int> minArray;
     minArray.fill(timeToY(QTime(23, 59)), d->mSelectedDates.count());
     for (const AgendaItem::QPtr &item : std::as_const(d->mItems)) {
         if (item) {
@@ -1714,9 +1714,9 @@ QVector<int> Agenda::minContentsY() const
     return minArray;
 }
 
-QVector<int> Agenda::maxContentsY() const
+QList<int> Agenda::maxContentsY() const
 {
-    QVector<int> maxArray;
+    QList<int> maxArray;
     maxArray.fill(timeToY(QTime(0, 0)), d->mSelectedDates.count());
     for (const AgendaItem::QPtr &item : std::as_const(d->mItems)) {
         if (item) {
@@ -2286,7 +2286,7 @@ void Agenda::setIncidenceChanger(Akonadi::IncidenceChanger *changer)
     d->mChanger = changer;
 }
 
-void Agenda::setHolidayMask(QVector<bool> *mask)
+void Agenda::setHolidayMask(QList<bool> *mask)
 {
     d->mHolidayMask = mask;
 }

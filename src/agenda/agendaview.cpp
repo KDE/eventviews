@@ -471,7 +471,7 @@ public:
     int mColumns = 1;
     const EventIndicator::Location mLocation;
     QPixmap mPixmap;
-    QVector<bool> mEnabled;
+    QList<bool> mEnabled;
 
 private:
     EventIndicator *const q;
@@ -568,10 +568,10 @@ public:
     EventIndicator *mEventIndicatorTop = nullptr;
     EventIndicator *mEventIndicatorBottom = nullptr;
 
-    QVector<int> mMinY;
-    QVector<int> mMaxY;
+    QList<int> mMinY;
+    QList<int> mMaxY;
 
-    QVector<bool> mHolidayMask;
+    QList<bool> mHolidayMask;
 
     QDateTime mTimeSpanBegin;
     QDateTime mTimeSpanEnd;
@@ -2286,13 +2286,13 @@ void AgendaView::writeSettings(KConfig *config)
     group.writeEntry("Separator AgendaView", list);
 }
 
-QVector<bool> AgendaView::busyDayMask() const
+QList<bool> AgendaView::busyDayMask() const
 {
     if (d->mSelectedDates.isEmpty() || !d->mSelectedDates[0].isValid()) {
         return {};
     }
 
-    QVector<bool> busyDayMask;
+    QList<bool> busyDayMask;
     busyDayMask.resize(d->mSelectedDates.count());
 
     for (int i = 0; i < d->mSelectedDates.count(); ++i) {

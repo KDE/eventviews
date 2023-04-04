@@ -122,7 +122,7 @@ public:
     */
     void updateEventDates(AgendaItem *item, bool addIncidence, Akonadi::Collection::Id collectionId);
 
-    Q_REQUIRED_RESULT QVector<bool> busyDayMask() const;
+    Q_REQUIRED_RESULT QList<bool> busyDayMask() const;
 
     /**
      * Return calendar object for a concrete incidence.

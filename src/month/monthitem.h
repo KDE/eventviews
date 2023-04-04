@@ -239,7 +239,7 @@ public:
     /**
       Returns a list of pixmaps to draw next to the items.
     */
-    virtual QVector<QPixmap> icons() const = 0;
+    virtual QList<QPixmap> icons() const = 0;
 
     QList<MonthGraphicsItem *> monthGraphicsItems() const;
 
@@ -305,7 +305,7 @@ public:
     QColor bgColor() const override;
     QColor frameColor() const override;
 
-    QVector<QPixmap> icons() const override;
+    QList<QPixmap> icons() const override;
 
 protected:
     void finalizeMove(const QDate &newStartDate) override;
@@ -386,7 +386,7 @@ public:
     QColor bgColor() const override;
     QColor frameColor() const override;
 
-    QVector<QPixmap> icons() const override;
+    QList<QPixmap> icons() const override;
 
 protected:
     void finalizeMove(const QDate &newStartDate) override;

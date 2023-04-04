@@ -45,7 +45,7 @@ public:
     Q_REQUIRED_RESULT bool customColumnSetupUsed() const;
     Q_REQUIRED_RESULT int customNumberOfColumns() const;
     Q_REQUIRED_RESULT QStringList customColumnTitles() const;
-    Q_REQUIRED_RESULT QVector<KCheckableProxyModel *> collectionSelectionModels() const;
+    Q_REQUIRED_RESULT QList<KCheckableProxyModel *> collectionSelectionModels() const;
 
     void setPreferences(const PrefsPtr &prefs) override;
 

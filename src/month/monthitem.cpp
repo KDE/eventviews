@@ -505,9 +505,9 @@ QString IncidenceMonthItem::toolTipText(const QDate &date) const
                                                      true);
 }
 
-QVector<QPixmap> IncidenceMonthItem::icons() const
+QList<QPixmap> IncidenceMonthItem::icons() const
 {
-    QVector<QPixmap> ret;
+    QList<QPixmap> ret;
 
     if (!mIncidence) {
         return ret;
@@ -717,9 +717,9 @@ void HolidayMonthItem::finalizeResize(const QDate &newStartDate, const QDate &ne
     Q_ASSERT(false);
 }
 
-QVector<QPixmap> HolidayMonthItem::icons() const
+QList<QPixmap> HolidayMonthItem::icons() const
 {
-    QVector<QPixmap> ret;
+    QList<QPixmap> ret;
     ret << monthScene()->holidayPixmap();
 
     return ret;

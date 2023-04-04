@@ -104,8 +104,8 @@ public:
     Q_REQUIRED_RESULT int timeToY(QTime time) const;
     Q_REQUIRED_RESULT QTime gyToTime(int y) const;
 
-    Q_REQUIRED_RESULT QVector<int> minContentsY() const;
-    Q_REQUIRED_RESULT QVector<int> maxContentsY() const;
+    Q_REQUIRED_RESULT QList<int> minContentsY() const;
+    Q_REQUIRED_RESULT QList<int> maxContentsY() const;
 
     Q_REQUIRED_RESULT int visibleContentsYMin() const;
     Q_REQUIRED_RESULT int visibleContentsYMax() const;
@@ -150,7 +150,7 @@ public:
 
     void checkScrollBoundaries();
 
-    void setHolidayMask(QVector<bool> *);
+    void setHolidayMask(QList<bool> *);
 
     void setDateList(const KCalendarCore::DateList &selectedDates);
     Q_REQUIRED_RESULT KCalendarCore::DateList dateList() const;

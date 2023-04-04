@@ -130,7 +130,7 @@ public:
     bool mUpdateOnShow = true;
     bool mPendingChanges = true;
     bool mCustomColumnSetupUsed = false;
-    QVector<KCheckableProxyModel *> mCollectionSelectionModels;
+    QList<KCheckableProxyModel *> mCollectionSelectionModels;
     QStringList mCustomColumnTitles;
     int mCustomNumberOfColumns = 2;
     QLabel *mLabel = nullptr;
@@ -651,7 +651,7 @@ void MultiAgendaView::doRestoreConfig(const KConfigGroup &configGroup)
         }
     }
 
-    QVector<KCheckableProxyModel *> oldModels = d->mCollectionSelectionModels;
+    QList<KCheckableProxyModel *> oldModels = d->mCollectionSelectionModels;
     d->mCollectionSelectionModels.clear();
 
     if (d->mCustomColumnSetupUsed) {
@@ -665,7 +665,7 @@ void MultiAgendaView::doRestoreConfig(const KConfigGroup &configGroup)
 
             // Only show the first column
             auto columnFilterProxy = new KRearrangeColumnsProxyModel(this);
-            columnFilterProxy->setSourceColumns(QVector<int>() << Akonadi::ETMCalendar::CollectionTitle);
+            columnFilterProxy->setSourceColumns(QList<int>() << Akonadi::ETMCalendar::CollectionTitle);
             columnFilterProxy->setSourceModel(sortProxy);
 
             // Keep track of selection.
@@ -722,7 +722,7 @@ void MultiAgendaView::customCollectionsChanged(ConfigDialogInterface *dlg)
 
     d->mCustomColumnSetupUsed = dlg->useCustomColumns();
     d->mCustomNumberOfColumns = dlg->numberOfColumns();
-    QVector<KCheckableProxyModel *> newModels;
+    QList<KCheckableProxyModel *> newModels;
     newModels.resize(d->mCustomNumberOfColumns);
     d->mCustomColumnTitles.clear();
     d->mCustomColumnTitles.reserve(d->mCustomNumberOfColumns);
@@ -745,7 +745,7 @@ int MultiAgendaView::customNumberOfColumns() const
     return d->mCustomNumberOfColumns;
 }
 
-QVector<KCheckableProxyModel *> MultiAgendaView::collectionSelectionModels() const
+QList<KCheckableProxyModel *> MultiAgendaView::collectionSelectionModels() const
 {
     return d->mCollectionSelectionModels;
 }
