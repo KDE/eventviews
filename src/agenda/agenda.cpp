@@ -580,11 +580,7 @@ bool Agenda::eventFilter_drag(QObject *obj, QDropEvent *de)
         de->setDropAction(Qt::MoveAction);
 
         QWidget *dropTarget = qobject_cast<QWidget *>(obj);
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-        QPoint dropPosition = de->pos();
-#else
         QPoint dropPosition = de->position().toPoint();
-#endif
         if (dropTarget && dropTarget != this) {
             dropPosition = dropTarget->mapTo(this, dropPosition);
         }
