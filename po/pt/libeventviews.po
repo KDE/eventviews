@@ -1808,7 +1808,7 @@ msgstr "Não"
 #, kde-format
 msgctxt "delimiter for joining category/tag names"
 msgid ","
-msgstr ","
+msgstr ", "
 
 #: todo/todomodel.cpp:436
 #, kde-format
@@ -1829,7 +1829,7 @@ msgstr "Completa"
 #: todo/todomodel.cpp:442
 #, kde-format
 msgid "Start Date"
-msgstr "Data Inicial"
+msgstr "Data de Início"
 
 #: todo/todomodel.cpp:444
 #, kde-format
@@ -1840,7 +1840,7 @@ msgstr "Data-Limite"
 #, kde-format
 msgctxt "@title:column date completed"
 msgid "Completed"
-msgstr "Completa"
+msgstr "Completo a"
 
 #: todo/todomodel.cpp:450
 #, kde-format
