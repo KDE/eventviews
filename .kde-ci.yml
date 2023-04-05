@@ -15,19 +15,6 @@ Dependencies:
     'pim/kmime' : '@same'
     'pim/libkdepim' : '@same'
 
-- 'on': ['Linux/Qt6', 'FreeBSD/Qt6', 'Windows/Qt6', 'macOS/Qt6']
-  'require':
-    'frameworks/extra-cmake-modules': '@latest-kf6'
-    'frameworks/kcalendarcore' : '@latest-kf6'
-    'frameworks/kconfigwidgets' : '@latest-kf6'
-    'graphics/kdiagram' : '@latest-kf6'
-    'pim/akonadi' : '@latest-kf6'
-    'pim/akonadi-calendar' : '@latest-kf6'
-    'pim/calendarsupport' : '@latest-kf6'
-    'pim/kcalutils' : '@latest-kf6'
-    'pim/kmime' : '@latest-kf6'
-    'pim/libkdepim' : '@latest-kf6'
-
 Options:
   cmake-options: '-DKDEPIM_BUILD_EXAMPLES=ON'
   require-passing-tests-on: [ 'Linux', 'FreeBSD', 'Windows' ]
