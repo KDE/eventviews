@@ -109,9 +109,12 @@ ki18n_wrap_ui(KPim6EventViews
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(KPim6EventViews PROPERTIES UNITY_BUILD ON)
 endif()
-generate_export_header(KPim6EventViews BASE_NAME eventviews)
-
-
+ecm_generate_export_header(KPim6EventViews
+    BASE_NAME eventviews
+    VERSION ${EVENTVIEWS_VERSION}
+    DEPRECATED_BASE_VERSION 0
+    USE_VERSION_HEADER
+)
 
 target_link_libraries(KPim6EventViews
 PUBLIC
