@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kdepim-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-03 00:46+0000\n"
-"PO-Revision-Date: 2023-03-29 21:01+0300\n"
+"PO-Revision-Date: 2023-04-20 15:08+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.03.70\n"
 "(http: //www.transifex.com/projects/p/kdepim-k-tr/language/tr/)\n"
 "X-POOTLE-MTIME: 1413132207.000000\n"
 
@@ -2022,8 +2022,7 @@ msgctxt "@info:whatsthis"
 msgid ""
 "Enter text here to filter the to-dos that are shown by matching summaries."
 msgstr ""
-"Eşleşen özetlerle görüntülenen yapılacakları filtrelemek için buraya metin "
-"girin."
+"Eşleşen özetlerle görüntülenen yapılacakları süzmek için buraya metin girin."
 
 #: todo/todoviewquicksearch.cpp:40
 #, kde-format
@@ -2045,7 +2044,7 @@ msgid ""
 "tags."
 msgstr ""
 "Seçilen etiketlerin listesi tarafından görüntülenen yapılacakları süzmek "
-"için bu açılan kutuyu kullanın."
+"için bu çoklu kutuyu kullanın."
 
 #: todo/todoviewquicksearch.cpp:51
 #, kde-format
@@ -2057,7 +2056,7 @@ msgstr "Etiketler Seç"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Filter on these priorities"
-msgstr "Bu öncelikler üzerinde filtre"
+msgstr "Bu öncelikleri süz"
 
 #: todo/todoviewquicksearch.cpp:76
 #, kde-format
@@ -2066,8 +2065,8 @@ msgid ""
 "Use this combobox to filter the to-dos that are shown by a list of selected "
 "priorities."
 msgstr ""
-"Bu açılır kutuyu seçilen önceliklerin bir listesiyle gösterilen "
-"yapılacakları filtrelemek için kullanın."
+"Bu çoklu kutuyu seçilen önceliklerin bir listesiyle gösterilen yapılacakları "
+"süzmek için kullanın."
 
 #: todo/todoviewquicksearch.cpp:78
 #, kde-format
