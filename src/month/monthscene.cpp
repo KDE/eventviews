@@ -532,7 +532,7 @@ void MonthScene::mouseMoveEvent(QGraphicsSceneMouseEvent *mouseEvent)
 
         // Move or resize action
         MonthCell *const currentCell = getCellFromPos(pos);
-        if (currentCell != mPreviousCell) {
+        if (currentCell && currentCell != mPreviousCell) {
             bool ok = true;
             if (mActionType == Move) {
                 if (currentCell) {
