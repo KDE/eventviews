@@ -84,7 +84,7 @@ if(BUILD_TESTING)
   add_definitions(-DBUILD_TESTING)
 endif()
 
-ecm_set_disabled_deprecation_versions(QT 6.4
+ecm_set_disabled_deprecation_versions(QT 6.5
      KF 5.240.0
 )
 add_subdirectory(src)
