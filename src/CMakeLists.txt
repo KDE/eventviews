@@ -41,7 +41,6 @@ target_sources(KPim6EventViews PRIVATE
   multiagenda/multiagendaview.cpp
 
   todo/tododelegates.cpp
-  todo/todomodel.cpp
   todo/coloredtodoproxymodel.cpp
 
   todo/todoviewquickaddline.cpp
@@ -67,7 +66,6 @@ target_sources(KPim6EventViews PRIVATE
   timeline/timelineitem.h
   todo/todoviewsortfilterproxymodel.h
   todo/todoviewview.h
-  todo/todomodel.h
   todo/todoviewquicksearch.h
   todo/tododelegates.h
   todo/todoview.h
@@ -175,7 +173,6 @@ ecm_generate_headers(eventviews_CamelCaseagenda_HEADERS
 ecm_generate_headers(eventviews_CamelCasetodo_HEADERS
   HEADER_NAMES
   TodoView
-  TodoModel
   REQUIRED_HEADERS eventviews_todo_HEADERS
   PREFIX EventViews
   RELATIVE todo

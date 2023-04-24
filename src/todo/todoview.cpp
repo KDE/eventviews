@@ -15,7 +15,6 @@
 #include "calendarview_debug.h"
 #include "coloredtodoproxymodel.h"
 #include "tododelegates.h"
-#include "todomodel.h"
 #include "todoviewquickaddline.h"
 #include "todoviewquicksearch.h"
 #include "todoviewsortfilterproxymodel.h"
@@ -27,6 +26,7 @@
 
 #include <Akonadi/ETMViewStateSaver>
 #include <Akonadi/IncidenceTreeModel>
+#include <Akonadi/TodoModel>
 
 #include <CalendarSupport/KCalPrefs>
 
@@ -58,7 +58,7 @@ class ModelStack
 {
 public:
     ModelStack(const EventViews::PrefsPtr &preferences, QObject *parent_)
-        : todoModel(new TodoModel())
+        : todoModel(new Akonadi::TodoModel())
         , coloredTodoModel(new ColoredTodoProxyModel(preferences))
         , parent(parent_)
         , calendar(nullptr)
@@ -149,7 +149,7 @@ public:
         return todoFlatModel != nullptr;
     }
 
-    TodoModel *const todoModel;
+    Akonadi::TodoModel *const todoModel;
     ColoredTodoProxyModel *const coloredTodoModel;
     QList<TodoView *> views;
     QObject *parent = nullptr;
@@ -180,7 +180,7 @@ TodoView::TodoView(const EventViews::PrefsPtr &prefs, bool sidebarView, QWidget 
     setPreferences(prefs);
     if (!sModels) {
         sModels = new ModelStack(prefs, parent);
-        connect(sModels->todoModel, &TodoModel::dropOnSelfRejected, this, []() {
+        connect(sModels->todoModel, &Akonadi::TodoModel::dropOnSelfRejected, this, []() {
             KMessageBox::information(nullptr,
                                      i18n("Cannot move to-do to itself or a child of itself."),
                                      i18n("Drop To-do"),
@@ -192,7 +192,7 @@ TodoView::TodoView(const EventViews::PrefsPtr &prefs, bool sidebarView, QWidget 
     mProxyModel = new TodoViewSortFilterProxyModel(preferences(), this);
     mProxyModel->setSourceModel(sModels->coloredTodoModel);
     mProxyModel->setDynamicSortFilter(true);
-    mProxyModel->setFilterKeyColumn(TodoModel::SummaryColumn);
+    mProxyModel->setFilterKeyColumn(Akonadi::TodoModel::SummaryColumn);
     mProxyModel->setFilterCaseSensitivity(Qt::CaseInsensitive);
     mProxyModel->setSortRole(Qt::EditRole);
     connect(mProxyModel, &TodoViewSortFilterProxyModel::rowsInserted, this, &TodoView::onRowsInserted);
@@ -228,23 +228,23 @@ TodoView::TodoView(const EventViews::PrefsPtr &prefs, bool sidebarView, QWidget 
     connect(mView, &TodoViewView::visibleColumnCountChanged, this, &TodoView::resizeColumns);
 
     auto richTextDelegate = new TodoRichTextDelegate(mView);
-    mView->setItemDelegateForColumn(TodoModel::SummaryColumn, richTextDelegate);
-    mView->setItemDelegateForColumn(TodoModel::DescriptionColumn, richTextDelegate);
+    mView->setItemDelegateForColumn(Akonadi::TodoModel::SummaryColumn, richTextDelegate);
+    mView->setItemDelegateForColumn(Akonadi::TodoModel::DescriptionColumn, richTextDelegate);
 
     auto priorityDelegate = new TodoPriorityDelegate(mView);
-    mView->setItemDelegateForColumn(TodoModel::PriorityColumn, priorityDelegate);
+    mView->setItemDelegateForColumn(Akonadi::TodoModel::PriorityColumn, priorityDelegate);
 
     auto startDateDelegate = new TodoDueDateDelegate(mView);
-    mView->setItemDelegateForColumn(TodoModel::StartDateColumn, startDateDelegate);
+    mView->setItemDelegateForColumn(Akonadi::TodoModel::StartDateColumn, startDateDelegate);
 
     auto dueDateDelegate = new TodoDueDateDelegate(mView);
-    mView->setItemDelegateForColumn(TodoModel::DueDateColumn, dueDateDelegate);
+    mView->setItemDelegateForColumn(Akonadi::TodoModel::DueDateColumn, dueDateDelegate);
 
     auto completeDelegate = new TodoCompleteDelegate(mView);
-    mView->setItemDelegateForColumn(TodoModel::PercentColumn, completeDelegate);
+    mView->setItemDelegateForColumn(Akonadi::TodoModel::PercentColumn, completeDelegate);
 
     mCategoriesDelegate = new TodoCategoriesDelegate(mView);
-    mView->setItemDelegateForColumn(TodoModel::CategoriesColumn, mCategoriesDelegate);
+    mView->setItemDelegateForColumn(Akonadi::TodoModel::CategoriesColumn, mCategoriesDelegate);
 
     connect(mView, &TodoViewView::customContextMenuRequested, this, &TodoView::contextMenu);
     connect(mView, &TodoViewView::doubleClicked, this, &TodoView::itemDoubleClicked);
@@ -473,7 +473,7 @@ Akonadi::Item::List TodoView::selectedIncidences() const
     const QModelIndexList selection = mView->selectionModel()->selectedRows();
     ret.reserve(selection.count());
     for (const QModelIndex &mi : selection) {
-        ret << mi.data(TodoModel::TodoRole).value<Akonadi::Item>();
+        ret << mi.data(Akonadi::TodoModel::TodoRole).value<Akonadi::Item>();
     }
     return ret;
 }
@@ -532,16 +532,16 @@ void TodoView::restoreLayout(KConfig *config, const QString &group, bool minimal
 
     if (columnVisibility.isEmpty()) {
         // if config is empty then use default settings
-        mView->hideColumn(TodoModel::RecurColumn);
-        mView->hideColumn(TodoModel::DescriptionColumn);
-        mView->hideColumn(TodoModel::CalendarColumn);
-        mView->hideColumn(TodoModel::CompletedDateColumn);
+        mView->hideColumn(Akonadi::TodoModel::RecurColumn);
+        mView->hideColumn(Akonadi::TodoModel::DescriptionColumn);
+        mView->hideColumn(Akonadi::TodoModel::CalendarColumn);
+        mView->hideColumn(Akonadi::TodoModel::CompletedDateColumn);
 
         if (minimalDefaults) {
-            mView->hideColumn(TodoModel::PriorityColumn);
-            mView->hideColumn(TodoModel::PercentColumn);
-            mView->hideColumn(TodoModel::DescriptionColumn);
-            mView->hideColumn(TodoModel::CategoriesColumn);
+            mView->hideColumn(Akonadi::TodoModel::PriorityColumn);
+            mView->hideColumn(Akonadi::TodoModel::PercentColumn);
+            mView->hideColumn(Akonadi::TodoModel::DescriptionColumn);
+            mView->hideColumn(Akonadi::TodoModel::CategoriesColumn);
         }
 
         // We don't have any incidences (content) yet, so we delay resizing
@@ -711,19 +711,19 @@ void TodoView::contextMenu(QPoint pos)
         }
 
         switch (mView->indexAt(pos).column()) {
-        case TodoModel::PriorityColumn:
+        case Akonadi::TodoModel::PriorityColumn:
             mPriorityPopupMenu->popup(mView->viewport()->mapToGlobal(pos));
             break;
-        case TodoModel::PercentColumn:
+        case Akonadi::TodoModel::PercentColumn:
             mPercentageCompletedPopupMenu->popup(mView->viewport()->mapToGlobal(pos));
             break;
-        case TodoModel::StartDateColumn:
+        case Akonadi::TodoModel::StartDateColumn:
             mView->startPopupMenu()->popup(mView->viewport()->mapToGlobal(pos));
             break;
-        case TodoModel::DueDateColumn:
+        case Akonadi::TodoModel::DueDateColumn:
             mMovePopupMenu->popup(mView->viewport()->mapToGlobal(pos));
             break;
-        case TodoModel::CategoriesColumn:
+            case Akonadi::TodoModel::CategoriesColumn:
             createCategoryPopupMenu()->popup(mView->viewport()->mapToGlobal(pos));
             break;
         default:
@@ -744,7 +744,7 @@ void TodoView::selectionChanged(const QItemSelection &selected, const QItemSelec
         return;
     }
 
-    const auto todoItem = selection[0].data(TodoModel::TodoRole).value<Akonadi::Item>();
+    const auto todoItem = selection[0].data(Akonadi::TodoModel::TodoRole).value<Akonadi::Item>();
 
     if (selectedIncidenceDates().isEmpty()) {
         Q_EMIT incidenceSelected(todoItem, QDate());
@@ -760,7 +760,7 @@ void TodoView::showTodo()
         return;
     }
 
-    const auto todoItem = selection[0].data(TodoModel::TodoRole).value<Akonadi::Item>();
+    const auto todoItem = selection[0].data(Akonadi::TodoModel::TodoRole).value<Akonadi::Item>();
 
     Q_EMIT showIncidenceSignal(todoItem);
 }
@@ -772,7 +772,7 @@ void TodoView::editTodo()
         return;
     }
 
-    const auto todoItem = selection[0].data(TodoModel::TodoRole).value<Akonadi::Item>();
+    const auto todoItem = selection[0].data(Akonadi::TodoModel::TodoRole).value<Akonadi::Item>();
     Q_EMIT editIncidenceSignal(todoItem);
 }
 
@@ -780,7 +780,7 @@ void TodoView::deleteTodo()
 {
     QModelIndexList selection = mView->selectionModel()->selectedRows();
     if (selection.size() == 1) {
-        const auto todoItem = selection[0].data(TodoModel::TodoRole).value<Akonadi::Item>();
+        const auto todoItem = selection[0].data(Akonadi::TodoModel::TodoRole).value<Akonadi::Item>();
 
         if (!changer()->deletedRecently(todoItem.id())) {
             Q_EMIT deleteIncidenceSignal(todoItem);
@@ -797,7 +797,7 @@ void TodoView::newSubTodo()
 {
     QModelIndexList selection = mView->selectionModel()->selectedRows();
     if (selection.size() == 1) {
-        const auto todoItem = selection[0].data(TodoModel::TodoRole).value<Akonadi::Item>();
+        const auto todoItem = selection[0].data(Akonadi::TodoModel::TodoRole).value<Akonadi::Item>();
 
         Q_EMIT newSubTodoSignal(todoItem);
     } else {
@@ -847,7 +847,7 @@ void TodoView::scheduleResizeColumns()
 void TodoView::itemDoubleClicked(const QModelIndex &index)
 {
     if (index.isValid()) {
-        QModelIndex summary = index.sibling(index.row(), TodoModel::SummaryColumn);
+        QModelIndex summary = index.sibling(index.row(), Akonadi::TodoModel::SummaryColumn);
         if (summary.flags() & Qt::ItemIsEditable) {
             editTodo();
         } else {
@@ -865,7 +865,7 @@ QMenu *TodoView::createCategoryPopupMenu()
         return tempMenu;
     }
 
-    const auto todoItem = selection[0].data(TodoModel::TodoRole).value<Akonadi::Item>();
+    const auto todoItem = selection[0].data(Akonadi::TodoModel::TodoRole).value<Akonadi::Item>();
     KCalendarCore::Todo::Ptr todo = Akonadi::CalendarUtils::todo(todoItem);
     Q_ASSERT(todo);
 
@@ -911,7 +911,7 @@ void TodoView::setNewDate(QDate date)
         return;
     }
 
-    const auto todoItem = selection[0].data(TodoModel::TodoRole).value<Akonadi::Item>();
+    const auto todoItem = selection[0].data(Akonadi::TodoModel::TodoRole).value<Akonadi::Item>();
     KCalendarCore::Todo::Ptr todo = Akonadi::CalendarUtils::todo(todoItem);
     Q_ASSERT(todo);
 
@@ -941,7 +941,7 @@ void TodoView::setStartDate(QDate date)
         return;
     }
 
-    const auto todoItem = selection[0].data(TodoModel::TodoRole).value<Akonadi::Item>();
+    const auto todoItem = selection[0].data(Akonadi::TodoModel::TodoRole).value<Akonadi::Item>();
     KCalendarCore::Todo::Ptr todo = Akonadi::CalendarUtils::todo(todoItem);
     Q_ASSERT(todo);
 
@@ -971,7 +971,7 @@ void TodoView::setNewPercentage(QAction *action)
         return;
     }
 
-    const auto todoItem = selection[0].data(TodoModel::TodoRole).value<Akonadi::Item>();
+    const auto todoItem = selection[0].data(Akonadi::TodoModel::TodoRole).value<Akonadi::Item>();
     KCalendarCore::Todo::Ptr todo = Akonadi::CalendarUtils::todo(todoItem);
     Q_ASSERT(todo);
 
@@ -997,7 +997,7 @@ void TodoView::setNewPriority(QAction *action)
     if (selection.size() != 1) {
         return;
     }
-    const auto todoItem = selection[0].data(TodoModel::TodoRole).value<Akonadi::Item>();
+    const auto todoItem = selection[0].data(Akonadi::TodoModel::TodoRole).value<Akonadi::Item>();
     KCalendarCore::Todo::Ptr todo = Akonadi::CalendarUtils::todo(todoItem);
     if (calendar()->hasRight(todoItem, Akonadi::Collection::CanChangeItem)) {
         KCalendarCore::Todo::Ptr oldTodo(todo->clone());
@@ -1014,7 +1014,7 @@ void TodoView::changedCategories(QAction *action)
         return;
     }
 
-    const auto todoItem = selection[0].data(TodoModel::TodoRole).value<Akonadi::Item>();
+    const auto todoItem = selection[0].data(Akonadi::TodoModel::TodoRole).value<Akonadi::Item>();
     KCalendarCore::Todo::Ptr todo = Akonadi::CalendarUtils::todo(todoItem);
     Q_ASSERT(todo);
     if (calendar()->hasRight(todoItem, Akonadi::Collection::CanChangeItem)) {
@@ -1103,7 +1103,7 @@ void TodoView::onRowsInserted(const QModelIndex &parent, int start, int end)
         if (selection.size() <= 1) {
             // don't destroy complex selections, not applicable now (only single
             // selection allowed), but for the future...
-            int colCount = static_cast<int>(TodoModel::ColumnCount);
+            int colCount = static_cast<int>(Akonadi::TodoModel::ColumnCount);
             mView->selectionModel()->select(QItemSelection(idx, mView->model()->index(start, colCount - 1)),
                                             QItemSelectionModel::ClearAndSelect | QItemSelectionModel::Rows);
         }
@@ -1139,23 +1139,23 @@ void TodoView::resizeColumns()
 {
     mResizeColumnsScheduled = false;
 
-    mView->resizeColumnToContents(TodoModel::StartDateColumn);
-    mView->resizeColumnToContents(TodoModel::DueDateColumn);
-    mView->resizeColumnToContents(TodoModel::CompletedDateColumn);
-    mView->resizeColumnToContents(TodoModel::PriorityColumn);
-    mView->resizeColumnToContents(TodoModel::CalendarColumn);
-    mView->resizeColumnToContents(TodoModel::RecurColumn);
-    mView->resizeColumnToContents(TodoModel::PercentColumn);
+    mView->resizeColumnToContents(Akonadi::TodoModel::StartDateColumn);
+    mView->resizeColumnToContents(Akonadi::TodoModel::DueDateColumn);
+    mView->resizeColumnToContents(Akonadi::TodoModel::CompletedDateColumn);
+    mView->resizeColumnToContents(Akonadi::TodoModel::PriorityColumn);
+    mView->resizeColumnToContents(Akonadi::TodoModel::CalendarColumn);
+    mView->resizeColumnToContents(Akonadi::TodoModel::RecurColumn);
+    mView->resizeColumnToContents(Akonadi::TodoModel::PercentColumn);
 
     // We have 3 columns that should stretch: summary, description and categories.
     // Summary is always visible.
-    const bool descriptionVisible = !mView->isColumnHidden(TodoModel::DescriptionColumn);
-    const bool categoriesVisible = !mView->isColumnHidden(TodoModel::CategoriesColumn);
+    const bool descriptionVisible = !mView->isColumnHidden(Akonadi::TodoModel::DescriptionColumn);
+    const bool categoriesVisible = !mView->isColumnHidden(Akonadi::TodoModel::CategoriesColumn);
 
     // Calculate size of non-stretchable columns:
     int size = 0;
-    for (int i = 0; i < TodoModel::ColumnCount; ++i) {
-        if (!mView->isColumnHidden(i) && i != TodoModel::SummaryColumn && i != TodoModel::DescriptionColumn && i != TodoModel::CategoriesColumn) {
+    for (int i = 0; i < Akonadi::TodoModel::ColumnCount; ++i) {
+        if (!mView->isColumnHidden(i) && i != Akonadi::TodoModel::SummaryColumn && i != Akonadi::TodoModel::DescriptionColumn && i != Akonadi::TodoModel::CategoriesColumn) {
             size += mView->columnWidth(i);
         }
     }
@@ -1168,19 +1168,19 @@ void TodoView::resizeColumns()
 
     if (categoriesVisible) {
         const int categorySize = 100;
-        mView->setColumnWidth(TodoModel::CategoriesColumn, categorySize);
+        mView->setColumnWidth(Akonadi::TodoModel::CategoriesColumn, categorySize);
         remainingSize -= categorySize;
     }
 
     if (remainingSize < requiredSize) {
         // Too little size, so let's use a horizontal scrollbar
-        mView->resizeColumnToContents(TodoModel::SummaryColumn);
-        mView->resizeColumnToContents(TodoModel::DescriptionColumn);
+        mView->resizeColumnToContents(Akonadi::TodoModel::SummaryColumn);
+        mView->resizeColumnToContents(Akonadi::TodoModel::DescriptionColumn);
     } else if (descriptionVisible) {
-        mView->setColumnWidth(TodoModel::SummaryColumn, remainingSize / 2);
-        mView->setColumnWidth(TodoModel::DescriptionColumn, remainingSize / 2);
+        mView->setColumnWidth(Akonadi::TodoModel::SummaryColumn, remainingSize / 2);
+        mView->setColumnWidth(Akonadi::TodoModel::DescriptionColumn, remainingSize / 2);
     } else {
-        mView->setColumnWidth(TodoModel::SummaryColumn, remainingSize);
+        mView->setColumnWidth(Akonadi::TodoModel::SummaryColumn, remainingSize);
     }
 }
 
@@ -1236,7 +1236,7 @@ void TodoView::createEvent()
         return;
     }
 
-    const auto todoItem = selection[0].data(TodoModel::TodoRole).value<Akonadi::Item>();
+    const auto todoItem = selection[0].data(Akonadi::TodoModel::TodoRole).value<Akonadi::Item>();
 
     Q_EMIT createEvent(todoItem);
 }
@@ -1248,7 +1248,7 @@ void TodoView::createNote()
         return;
     }
 
-    const auto todoItem = selection[0].data(TodoModel::TodoRole).value<Akonadi::Item>();
+    const auto todoItem = selection[0].data(Akonadi::TodoModel::TodoRole).value<Akonadi::Item>();
 
     Q_EMIT createNote(todoItem);
 }

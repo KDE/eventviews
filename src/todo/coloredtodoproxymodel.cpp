@@ -6,7 +6,7 @@
 
 #include "coloredtodoproxymodel.h"
 
-#include "todomodel.h"
+#include <Akonadi/TodoModel>
 
 class ColoredTodoProxyModelPrivate
 {
@@ -36,7 +36,7 @@ QVariant ColoredTodoProxyModel::data(const QModelIndex &index, int role) const
 {
     if (role == Qt::BackgroundRole) {
         const auto todo
-            = QIdentityProxyModel::data(index, TodoModel::TodoPtrRole).value<KCalendarCore::Todo::Ptr>();
+            = QIdentityProxyModel::data(index, Akonadi::TodoModel::TodoPtrRole).value<KCalendarCore::Todo::Ptr>();
         if (!todo) {
             return {};
         }
