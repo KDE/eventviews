@@ -1581,12 +1581,12 @@ msgstr "Aperi un dialogo de imprimer pro iste entrata de jornal"
 #: journal/journalframe.cpp:181
 #, kde-format
 msgid "Print preview"
-msgstr "Imprime vista preliminari"
+msgstr "Imprime vista preliminar"
 
 #: journal/journalframe.cpp:185
 #, kde-format
 msgid "Print preview this journal entry"
-msgstr "Imprime vista preliminari de iste entrata de jornal"
+msgstr "Imprime vista preliminar de iste entrata de jornal"
 
 #: list/listview.cpp:57
 #, kde-format
@@ -1934,7 +1934,7 @@ msgstr "Im&prime..."
 #, kde-format
 msgctxt "@action:inmenu print preview the to-do"
 msgid "Print Previe&w..."
-msgstr "Imprime &vista preliminari..."
+msgstr "Imprime &vista preliminar..."
 
 #: todo/todoview.cpp:345
 #, kde-format
