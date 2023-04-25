@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-03 00:46+0000\n"
+"POT-Creation-Date: 2023-04-25 00:52+0000\n"
 "PO-Revision-Date: 2010-12-26 08:43+0530\n"
 "Last-Translator: A S Alam <aalam@users.sf.net>\n"
 "Language-Team: Punjabi/Panjabi <punjabi-users@lists.sf.net>\n"
@@ -1395,7 +1395,7 @@ msgctxt "%1 is an item summary. %2 is the date when this item reoccurs"
 msgid "%1 (next: %2)"
 msgstr ""
 
-#: list/listview.cpp:278 todo/todomodel.cpp:434
+#: list/listview.cpp:278
 #, kde-format
 msgid "Summary"
 msgstr "ਸੰਖੇਪ"
@@ -1410,7 +1410,7 @@ msgstr "ਮਿਤੀ/ਸਮਾਂ ਸ਼ੁਰੂ"
 msgid "End Date/Time"
 msgstr "ਅੰਤ ਮਿਤੀ/ਸਮਾਂ"
 
-#: list/listview.cpp:281 todo/todomodel.cpp:448
+#: list/listview.cpp:281
 #, kde-format
 msgid "Tags"
 msgstr ""
@@ -1534,7 +1534,6 @@ msgid "All Day"
 msgstr "ਸਭ ਦਿਨ"
 
 #: timeline/timelineview.cpp:228 timeline/timelineview.cpp:308
-#: todo/todomodel.cpp:452
 #, kde-format
 msgid "Calendar"
 msgstr "ਕੈਲੰਡਰ"
@@ -1597,73 +1596,6 @@ msgstr ""
 #, kde-format
 msgctxt "@action:inmenu lowest priority"
 msgid "9 (lowest)"
-msgstr ""
-
-#: todo/todomodel.cpp:134 todo/todomodel.cpp:170
-#, kde-format
-msgctxt "yes, an exception to a recurring to-do"
-msgid "Exception"
-msgstr ""
-
-#: todo/todomodel.cpp:136 todo/todomodel.cpp:172
-#, kde-format
-msgctxt "yes, recurring to-do"
-msgid "Yes"
-msgstr ""
-
-#: todo/todomodel.cpp:139 todo/todomodel.cpp:175
-#, kde-format
-msgctxt "no, not a recurring to-do"
-msgid "No"
-msgstr ""
-
-#: todo/todomodel.cpp:153 todo/todomodel.cpp:191
-#, fuzzy, kde-format
-#| msgctxt "delimiter for joining holiday names"
-#| msgid ","
-msgctxt "delimiter for joining category/tag names"
-msgid ","
-msgstr ","
-
-#: todo/todomodel.cpp:436
-#, kde-format
-msgid "Recurs"
-msgstr ""
-
-#: todo/todomodel.cpp:438
-#, kde-format
-msgid "Priority"
-msgstr ""
-
-#: todo/todomodel.cpp:440
-#, fuzzy, kde-format
-#| msgid "Confirm deletes"
-msgctxt "@title:column percent complete"
-msgid "Complete"
-msgstr "ਹਟਾਉਣ ਪੁਸ਼ਟੀ"
-
-#: todo/todomodel.cpp:442
-#, fuzzy, kde-format
-#| msgid "Start Date/Time"
-msgid "Start Date"
-msgstr "ਮਿਤੀ/ਸਮਾਂ ਸ਼ੁਰੂ"
-
-#: todo/todomodel.cpp:444
-#, fuzzy, kde-format
-#| msgid "End Date/Time"
-msgid "Due Date"
-msgstr "ਅੰਤ ਮਿਤੀ/ਸਮਾਂ"
-
-#: todo/todomodel.cpp:446
-#, fuzzy, kde-format
-#| msgid "Confirm deletes"
-msgctxt "@title:column date completed"
-msgid "Completed"
-msgstr "ਹਟਾਉਣ ਪੁਸ਼ਟੀ"
-
-#: todo/todomodel.cpp:450
-#, kde-format
-msgid "Description"
 msgstr ""
 
 #: todo/todoview.cpp:185
@@ -2113,6 +2045,35 @@ msgstr "%1 - %2"
 msgctxt "to-do due date"
 msgid "  (Due: %1)"
 msgstr ""
+
+#, fuzzy
+#~| msgctxt "delimiter for joining holiday names"
+#~| msgid ","
+#~ msgctxt "delimiter for joining category/tag names"
+#~ msgid ","
+#~ msgstr ","
+
+#, fuzzy
+#~| msgid "Confirm deletes"
+#~ msgctxt "@title:column percent complete"
+#~ msgid "Complete"
+#~ msgstr "ਹਟਾਉਣ ਪੁਸ਼ਟੀ"
+
+#, fuzzy
+#~| msgid "Start Date/Time"
+#~ msgid "Start Date"
+#~ msgstr "ਮਿਤੀ/ਸਮਾਂ ਸ਼ੁਰੂ"
+
+#, fuzzy
+#~| msgid "End Date/Time"
+#~ msgid "Due Date"
+#~ msgstr "ਅੰਤ ਮਿਤੀ/ਸਮਾਂ"
+
+#, fuzzy
+#~| msgid "Confirm deletes"
+#~ msgctxt "@title:column date completed"
+#~ msgid "Completed"
+#~ msgstr "ਹਟਾਉਣ ਪੁਸ਼ਟੀ"
 
 #, fuzzy
 #~| msgctxt "delimiter for joining holiday names"
