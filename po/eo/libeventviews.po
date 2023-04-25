@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-03 00:46+0000\n"
+"POT-Creation-Date: 2023-04-25 00:52+0000\n"
 "PO-Revision-Date: 2023-01-06 22:00+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -1390,7 +1390,7 @@ msgctxt "%1 is an item summary. %2 is the date when this item reoccurs"
 msgid "%1 (next: %2)"
 msgstr ""
 
-#: list/listview.cpp:278 todo/todomodel.cpp:434
+#: list/listview.cpp:278
 #, kde-format
 msgid "Summary"
 msgstr ""
@@ -1405,7 +1405,7 @@ msgstr ""
 msgid "End Date/Time"
 msgstr ""
 
-#: list/listview.cpp:281 todo/todomodel.cpp:448
+#: list/listview.cpp:281
 #, kde-format
 msgid "Tags"
 msgstr ""
@@ -1526,7 +1526,6 @@ msgid "All Day"
 msgstr ""
 
 #: timeline/timelineview.cpp:228 timeline/timelineview.cpp:308
-#: todo/todomodel.cpp:452
 #, kde-format
 msgid "Calendar"
 msgstr ""
@@ -1589,67 +1588,6 @@ msgstr "8"
 #, kde-format
 msgctxt "@action:inmenu lowest priority"
 msgid "9 (lowest)"
-msgstr ""
-
-#: todo/todomodel.cpp:134 todo/todomodel.cpp:170
-#, kde-format
-msgctxt "yes, an exception to a recurring to-do"
-msgid "Exception"
-msgstr ""
-
-#: todo/todomodel.cpp:136 todo/todomodel.cpp:172
-#, kde-format
-msgctxt "yes, recurring to-do"
-msgid "Yes"
-msgstr ""
-
-#: todo/todomodel.cpp:139 todo/todomodel.cpp:175
-#, kde-format
-msgctxt "no, not a recurring to-do"
-msgid "No"
-msgstr ""
-
-#: todo/todomodel.cpp:153 todo/todomodel.cpp:191
-#, kde-format
-msgctxt "delimiter for joining category/tag names"
-msgid ","
-msgstr ","
-
-#: todo/todomodel.cpp:436
-#, kde-format
-msgid "Recurs"
-msgstr ""
-
-#: todo/todomodel.cpp:438
-#, kde-format
-msgid "Priority"
-msgstr ""
-
-#: todo/todomodel.cpp:440
-#, kde-format
-msgctxt "@title:column percent complete"
-msgid "Complete"
-msgstr ""
-
-#: todo/todomodel.cpp:442
-#, kde-format
-msgid "Start Date"
-msgstr ""
-
-#: todo/todomodel.cpp:444
-#, kde-format
-msgid "Due Date"
-msgstr ""
-
-#: todo/todomodel.cpp:446
-#, kde-format
-msgctxt "@title:column date completed"
-msgid "Completed"
-msgstr ""
-
-#: todo/todomodel.cpp:450
-#, kde-format
-msgid "Description"
 msgstr ""
 
 #: todo/todoview.cpp:185
@@ -2091,3 +2029,7 @@ msgstr "%1, %2 - %3"
 msgctxt "to-do due date"
 msgid "  (Due: %1)"
 msgstr " (Ligdato: %1)"
+
+#~ msgctxt "delimiter for joining category/tag names"
+#~ msgid ","
+#~ msgstr ","
