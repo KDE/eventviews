@@ -3,14 +3,14 @@
 # Xosé <xosecalvo@gmail.com>, 2011, 2012, 2013.
 # Adrian Chaves Fernandez <adriyetichaves@gmail.com>, 2013, 2015, 2016, 2017.
 # Marce Villarino <mvillarino@kde-espana.org>, 2013, 2014.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019, 2020.
+# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019, 2020, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-25 00:52+0000\n"
-"PO-Revision-Date: 2020-01-05 19:14+0100\n"
+"PO-Revision-Date: 2023-04-30 12:09+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 19.08.3\n"
+"X-Generator: Lokalize 23.04.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -149,11 +149,10 @@ msgid "%1%2<br/>%3 (%4)"
 msgstr "%1%2<br/>%3 (%4)"
 
 #: agenda/timescaleconfigdialog.cpp:49
-#, fuzzy, kde-format
-#| msgid "Timezone"
+#, kde-format
 msgctxt "@title:window"
 msgid "Timezone"
-msgstr "Zona horaria"
+msgstr "Fuso horario"
 
 #: eventview.cpp:110
 #, kde-format
@@ -1591,7 +1590,7 @@ msgstr "Data e hora de remate"
 #: list/listview.cpp:281
 #, kde-format
 msgid "Tags"
-msgstr ""
+msgstr "Etiquetas"
 
 #: list/listview.cpp:354
 #, kde-format
@@ -1869,20 +1868,16 @@ msgid "Make all Sub-to-dos &Independent"
 msgstr "Tornar todas as subtarefas &independentes"
 
 #: todo/todoview.cpp:366
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Create Event"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Create Event from To-do"
-msgstr "Crear un evento"
+msgstr "Crear un evento dunha tarefa"
 
 #: todo/todoview.cpp:374
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Create Note"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Create Note for To-do"
-msgstr "Crear unha nota"
+msgstr "Crear unha nota para unha tarefa"
 
 #: todo/todoview.cpp:384
 #, kde-format
@@ -1969,34 +1964,26 @@ msgid "Search Summaries..."
 msgstr "Buscar nos resumos…"
 
 #: todo/todoviewquicksearch.cpp:47
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Filter on these categories"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Filter on these tags"
-msgstr "Filtrar por estas categorías"
+msgstr "Filtrar por estas etiquetas"
 
 #: todo/todoviewquicksearch.cpp:49
-#, fuzzy, kde-format
-#| msgctxt "@info:whatsthis"
-#| msgid ""
-#| "Use this combobox to filter the to-dos that are shown by a list of "
-#| "selected categories."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Use this combobox to filter the to-dos that are shown by a list of selected "
 "tags."
 msgstr ""
-"Empregue esta lista de opcións para filtrar as tarefas que aparecen por unha "
-"lista de categorías escollidas."
+"Use esta lista despregábel para filtrar as tarefas que se mostran por unha "
+"lista de etiquetas seleccionadas."
 
 #: todo/todoviewquicksearch.cpp:51
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox"
-#| msgid "Select Categories"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Select Tags"
-msgstr "Seleccionar categorías"
+msgstr "Selecciona etiquetas"
 
 #: todo/todoviewquicksearch.cpp:74
 #, kde-format
@@ -2144,7 +2131,7 @@ msgstr "Axenda"
 #: viewerapp/mainwindow.ui:60
 #, kde-format
 msgid "MultiAgenda"
-msgstr "MultiAxenda"
+msgstr "Axenda múltiple"
 
 #. i18n: ectx: property (text), widget (QStatusBar, statusbar)
 #: viewerapp/mainwindow.ui:65
