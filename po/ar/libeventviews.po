@@ -1574,55 +1574,55 @@ msgstr "غير محدّدة"
 #, kde-format
 msgctxt "@action:inmenu highest priority"
 msgid "1 (highest)"
-msgstr "١ (عالية)"
+msgstr "1 (عالية)"
 
 #: todo/tododelegates.cpp:154
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "2"
-msgstr "٢"
+msgstr "2"
 
 #: todo/tododelegates.cpp:155
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "3"
-msgstr "٣"
+msgstr "3"
 
 #: todo/tododelegates.cpp:156
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "4"
-msgstr "٤"
+msgstr "4"
 
 #: todo/tododelegates.cpp:157 todo/todoview.cpp:405
 #, kde-format
 msgctxt "@action:inmenu medium priority"
 msgid "5 (medium)"
-msgstr "٥ (متوسّطة)"
+msgstr "5 (متوسّطة)"
 
 #: todo/tododelegates.cpp:158
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "6"
-msgstr "٦"
+msgstr "6"
 
 #: todo/tododelegates.cpp:159
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "7"
-msgstr "٧"
+msgstr "7"
 
 #: todo/tododelegates.cpp:160
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "8"
-msgstr "٨"
+msgstr "8"
 
 #: todo/tododelegates.cpp:161 todo/todoview.cpp:409
 #, kde-format
 msgctxt "@action:inmenu lowest priority"
 msgid "9 (lowest)"
-msgstr "٩ (منخفضة)"
+msgstr "9 (منخفضة)"
 
 #: todo/todomodel.cpp:142 todo/todomodel.cpp:178
 #, kde-format
@@ -1824,37 +1824,37 @@ msgstr "غير محدّدة"
 #, kde-format
 msgctxt "@action:inmenu priority value=2"
 msgid "2"
-msgstr "٢"
+msgstr "2"
 
 #: todo/todoview.cpp:403
 #, kde-format
 msgctxt "@action:inmenu priority value=3"
 msgid "3"
-msgstr "٣"
+msgstr "3"
 
 #: todo/todoview.cpp:404
 #, kde-format
 msgctxt "@action:inmenu priority value=4"
 msgid "4"
-msgstr "٤"
+msgstr "4"
 
 #: todo/todoview.cpp:406
 #, kde-format
 msgctxt "@action:inmenu priority value=6"
 msgid "6"
-msgstr "٦"
+msgstr "6"
 
 #: todo/todoview.cpp:407
 #, kde-format
 msgctxt "@action:inmenu priority value=7"
 msgid "7"
-msgstr "٧"
+msgstr "7"
 
 #: todo/todoview.cpp:408
 #, kde-format
 msgctxt "@action:inmenu priority value=8"
 msgid "8"
-msgstr "٨"
+msgstr "8"
 
 #: todo/todoviewquickaddline.cpp:20
 #, kde-format
@@ -2010,7 +2010,7 @@ msgid ""
 "Copyright (C) 2010 Klarälvdalens Datakonsult AB, a KDAB Group company, "
 "info@kdab.net"
 msgstr ""
-"الحقوق محفوظة © ٢٠١٠ لِ‍ Klarälvdalens Datakonsult AB، شركة في مجموعة KDAB، ‏"
+"الحقوق محفوظة © 2010 لِ‍ Klarälvdalens Datakonsult AB، شركة في مجموعة KDAB، ‏"
 "info@kdab.net"
 
 #: viewerapp/main.cpp:24
@@ -2033,7 +2033,7 @@ msgstr "عارض مناظير التقويم"
 #: viewerapp/mainwindow.ui:25
 #, kde-format
 msgid "Tab 1"
-msgstr "لسان ١"
+msgstr "لسان 1"
 
 #. i18n: ectx: property (title), widget (QMenu, addViewMenu)
 #: viewerapp/mainwindow.ui:43
