@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kdepim-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-01 00:57+0000\n"
-"PO-Revision-Date: 2023-04-20 15:08+0300\n"
+"PO-Revision-Date: 2023-05-15 21:52+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -203,7 +203,7 @@ msgstr ""
 #: eventviews.kcfg:15
 #, kde-format
 msgid "Default Email Attachment Method"
-msgstr "Öntanımlı E-posta Eklenti Yöntemi"
+msgstr "Öntanımlı E-posta Ek Yöntemi"
 
 #. i18n: ectx: whatsthis, entry (DefaultEmailAttachMethod), group (Personal Settings)
 #: eventviews.kcfg:16
@@ -223,20 +223,20 @@ msgstr "Daima sor"
 #: eventviews.kcfg:22 eventviews.kcfg:472
 #, kde-format
 msgid "Only attach link to message"
-msgstr "İletiye yalnızca bağlantıyı ekle"
+msgstr "İletiye yalnızca bağlantıyı iliştir"
 
 #. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (Personal Settings)
 #. i18n: ectx: label, entry (DefaultTodoAttachMethod), group (Hidden Options)
 #: eventviews.kcfg:25 eventviews.kcfg:475
 #, kde-format
 msgid "Attach complete message"
-msgstr "Tüm iletiyi ekle"
+msgstr "Tüm iletiyi iliştir"
 
 #. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (Personal Settings)
 #: eventviews.kcfg:28
 #, kde-format
 msgid "Attach message without attachments"
-msgstr "İletiyi eklentileri olmadan ekle"
+msgstr "İletiyi ekler olmadan iliştir"
 
 #. i18n: ectx: label, entry, group (Save Settings)
 #: eventviews.kcfg:38
@@ -1427,7 +1427,7 @@ msgstr ""
 #: eventviews.kcfg:465
 #, kde-format
 msgid "Default todo attachment method"
-msgstr "Öntanımlı yapılacak eklentisi yöntemi"
+msgstr "Öntanımlı yapılacak ekleme yöntemi"
 
 #. i18n: ectx: whatsthis, entry (DefaultTodoAttachMethod), group (Hidden Options)
 #: eventviews.kcfg:466
