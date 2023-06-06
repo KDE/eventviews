@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-01 00:57+0000\n"
-"PO-Revision-Date: 2023-04-30 12:09+0200\n"
+"PO-Revision-Date: 2023-06-05 13:12+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.0\n"
+"X-Generator: Lokalize 23.04.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -270,9 +270,9 @@ msgid ""
 "automatically saved after each change."
 msgstr ""
 "Marque isto para gardar o seu ficheiro de calendario automaticamente cando "
-"saia de KOrganizer sen se lle preguntar periodicamente, ao mesmo tempo que "
-"traballa. Esta opción non afecta ao gardado automático do calendario "
-"estándar, que se garda automaticamente despois de cada cambio."
+"saia de KOrganizer sen se lle preguntar periodicamente, mentres traballa. "
+"Esta opción non afecta ao gardado automático do calendario estándar, que se "
+"garda automaticamente despois de cada cambio."
 
 #. i18n: ectx: label, entry, group (Save Settings)
 #: eventviews.kcfg:50
@@ -1448,7 +1448,7 @@ msgid ""
 "marking the currently selected area in your agenda and in the date navigator."
 msgstr ""
 "Escolla aquí a cor de realzado. A cor de realzado emprégase para marcar a "
-"area actualmente seleccionada na axenda a no navegador de datas."
+"area seleccionada na axenda a no navegador de datas."
 
 #. i18n: ectx: whatsthis, entry, group (Theming)
 #: eventviews.kcfg:529
@@ -1476,7 +1476,7 @@ msgid ""
 "marking the currently selected area in your Month and in the date navigator."
 msgstr ""
 "Escolla aquí a cor de realzado. A cor de realzado emprégase para marcar a "
-"área actualmente seleccionada na axenda a no navegador de datas."
+"área seleccionada na axenda a no navegador de datas."
 
 #. i18n: ectx: whatsthis, entry, group (Theme/Month view)
 #: eventviews.kcfg:629
