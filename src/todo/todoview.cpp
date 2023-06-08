@@ -609,6 +609,10 @@ void TodoView::updateConfig()
         mQuickAdd->setVisible(preferences()->enableQuickTodo());
     }
 
+    if (mProxyModel) {
+        mProxyModel->invalidate();
+    }
+
     updateView();
 }
 
