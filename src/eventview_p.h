@@ -11,6 +11,9 @@
 
 #include "eventview.h"
 
+#include <memory>
+#include <vector>
+
 namespace KHolidays
 {
 class HolidayRegion;
@@ -39,7 +42,7 @@ public: // virtual functions
 
 public: /// Members
     Akonadi::ETMCalendar::Ptr calendar;
-    CalendarSupport::CollectionSelection *customCollectionSelection = nullptr;
+    std::unique_ptr<CalendarSupport::CollectionSelection> customCollectionSelection;
     KCheckableProxyModel *collectionSelectionModel = nullptr;
 
     QByteArray identifier;
@@ -59,12 +62,12 @@ public: /// Members
     QList<QEvent *> mTypeAheadEvents;
     static CalendarSupport::CollectionSelection *sGlobalCollectionSelection;
 
-    QList<KHolidays::HolidayRegion *> mHolidayRegions;
+    std::vector<std::unique_ptr<KHolidays::HolidayRegion>> mHolidayRegions;
     PrefsPtr mPrefs;
     KCalPrefsPtr mKCalPrefs;
 
     Akonadi::IncidenceChanger *mChanger = nullptr;
-    EventView::Changes mChanges;
-    Akonadi::Collection::Id mCollectionId;
+    EventView::Changes mChanges = EventView::DatesChanged;
+    Akonadi::Collection::Id mCollectionId = -1;
 };
 } // EventViews

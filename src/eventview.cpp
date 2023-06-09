@@ -89,14 +89,11 @@ void EventView::defaultAction(const Akonadi::Item &aitem)
 void EventView::setHolidayRegions(const QStringList &regions)
 {
     Q_D(EventView);
-    qDeleteAll(d->mHolidayRegions);
     d->mHolidayRegions.clear();
     for (const QString &regionStr : regions) {
-        auto region = new KHolidays::HolidayRegion(regionStr);
+        auto region = std::make_unique<KHolidays::HolidayRegion>(regionStr);
         if (region->isValid()) {
-            d->mHolidayRegions.append(region);
-        } else {
-            delete region;
+            d->mHolidayRegions.push_back(std::move(region));
         }
     }
 }
@@ -380,7 +377,7 @@ void EventView::focusChanged(QWidget *, QWidget *now)
 CalendarSupport::CollectionSelection *EventView::collectionSelection() const
 {
     Q_D(const EventView);
-    return d->customCollectionSelection ? d->customCollectionSelection : globalCollectionSelection();
+    return d->customCollectionSelection ? d->customCollectionSelection.get() : globalCollectionSelection();
 }
 
 void EventView::setCustomCollectionSelectionProxyModel(KCheckableProxyModel *model)
@@ -413,7 +410,7 @@ KCheckableProxyModel *EventView::takeCustomCollectionSelectionProxyModel()
 CalendarSupport::CollectionSelection *EventView::customCollectionSelection() const
 {
     Q_D(const EventView);
-    return d->customCollectionSelection;
+    return d->customCollectionSelection.get();
 }
 
 void EventView::clearSelection()

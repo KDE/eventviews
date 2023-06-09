@@ -14,6 +14,8 @@
 #include <CalendarSupport/CollectionSelection>
 #include <CalendarSupport/KCalPrefs>
 
+#include <KHolidays/HolidayRegion>
+
 #include <KCheckableProxyModel>
 
 #include <QApplication>
@@ -21,18 +23,12 @@
 using namespace EventViews;
 
 EventViewPrivate::EventViewPrivate()
-    : calendar(nullptr)
-    , mPrefs(new Prefs())
-    , mKCalPrefs(new CalendarSupport::KCalPrefs())
-    , mChanges(EventView::DatesChanged)
-    , mCollectionId(-1)
+    : mPrefs(QSharedPointer<Prefs>::create())
+    , mKCalPrefs(QSharedPointer<CalendarSupport::KCalPrefs>::create())
 {
 }
 
-EventViewPrivate::~EventViewPrivate()
-{
-    delete collectionSelectionModel;
-}
+EventViewPrivate::~EventViewPrivate() = default;
 
 void EventViewPrivate::finishTypeAhead()
 {
@@ -48,9 +44,8 @@ void EventViewPrivate::finishTypeAhead()
 
 void EventViewPrivate::setUpModels()
 {
-    delete customCollectionSelection;
-    customCollectionSelection = nullptr;
+    customCollectionSelection.reset();
     if (collectionSelectionModel) {
-        customCollectionSelection = new CalendarSupport::CollectionSelection(collectionSelectionModel->selectionModel());
+        customCollectionSelection = std::make_unique<CalendarSupport::CollectionSelection>(collectionSelectionModel->selectionModel());
     }
 }
