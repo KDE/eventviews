@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-01 00:57+0000\n"
-"PO-Revision-Date: 2023-06-05 13:12+0200\n"
+"PO-Revision-Date: 2023-06-17 16:11+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.1\n"
+"X-Generator: Lokalize 23.04.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -518,8 +518,8 @@ msgid ""
 "other (non daily recurring) events."
 msgstr ""
 "Marque isto para mostrar os días contendo as repeticións diarias de eventos "
-"en formato recalcado no navegador de datas, ou desactive isto para darlle "
-"máis relevancia a outros eventos (de repetición non diaria)."
+"en formato recalcado no navegador de datas, ou desmarque para darlle máis "
+"relevancia a outros eventos (de repetición non diaria)."
 
 #. i18n: ectx: label, entry (WeeklyRecur), group (General View)
 #: eventviews.kcfg:147
@@ -537,7 +537,7 @@ msgid ""
 msgstr ""
 "Marque esta opción para que se mostren os días que conteñan eventos de "
 "repetición semanal en tipografía resaltada no Navegador de Datas, ou "
-"desactívea para fornecer de máis relevancia a outros eventos (de repetición "
+"desmárquea para fornecer de máis relevancia a outros eventos (de repetición "
 "non semanal)."
 
 #. i18n: ectx: label, entry (HighlightTodos), group (General View)
@@ -1529,7 +1529,7 @@ msgstr "Editar esta entrada do diario"
 #: journal/journalframe.cpp:156
 #, kde-format
 msgid "Opens an editor dialog for this journal entry"
-msgstr "Abre un diálogo de edición para esta entrada do diario"
+msgstr "Abre un diálogo de editor para esta entrada do diario"
 
 #: journal/journalframe.cpp:162
 #, kde-format
