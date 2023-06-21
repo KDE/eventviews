@@ -13,6 +13,8 @@
 
 #include <QSharedPointer>
 
+#include <ranges>
+
 using namespace EventViews;
 
 ViewCalendar::~ViewCalendar() = default;
@@ -35,9 +37,29 @@ KCalendarCore::Incidence::List MultiViewCalendar::incidences() const
     return list;
 }
 
-int MultiViewCalendar::calendars() const
+int MultiViewCalendar::calendarCount() const
 {
     return mSubCalendars.size();
+}
+
+Akonadi::CollectionCalendar::Ptr MultiViewCalendar::calendarForCollection(const Akonadi::Collection &collection) const
+{
+    return calendarForCollection(collection.id());
+}
+
+Akonadi::CollectionCalendar::Ptr MultiViewCalendar::calendarForCollection(Akonadi::Collection::Id collectionId) const
+{
+    const auto cal = std::find_if(mSubCalendars.begin(), mSubCalendars.end(), [collectionId](const auto &calendar) {
+        if (const auto &akonadiCal = qSharedPointerDynamicCast<AkonadiViewCalendar>(calendar); akonadiCal) {
+            return akonadiCal->mCalendar->collection().id() == collectionId;
+        }
+        return false;
+    });
+    if (cal == mSubCalendars.end()) {
+        return {};
+    }
+
+    return qSharedPointerCast<AkonadiViewCalendar>(*cal)->mCalendar;
 }
 
 ViewCalendar::Ptr MultiViewCalendar::findCalendar(const KCalendarCore::Incidence::Ptr &incidence) const
@@ -67,14 +89,9 @@ void MultiViewCalendar::addCalendar(const ViewCalendar::Ptr &calendar)
     }
 }
 
-void MultiViewCalendar::setETMCalendar(const Akonadi::ETMCalendar::Ptr &calendar)
+void MultiViewCalendar::removeCalendar(const ViewCalendar::Ptr &calendar)
 {
-    if (!mETMCalendar) {
-        mETMCalendar = AkonadiViewCalendar::Ptr(new AkonadiViewCalendar);
-        mETMCalendar->mAgendaView = mAgendaView;
-    }
-    mETMCalendar->mCalendar = calendar;
-    addCalendar(mETMCalendar);
+    mSubCalendars.removeOne(calendar);
 }
 
 QString MultiViewCalendar::displayName(const KCalendarCore::Incidence::Ptr &incidence) const
@@ -118,10 +135,15 @@ QColor MultiViewCalendar::resourceColor(const KCalendarCore::Incidence::Ptr &inc
 
 Akonadi::Item MultiViewCalendar::item(const KCalendarCore::Incidence::Ptr &incidence) const
 {
-    if (mETMCalendar->isValid(incidence)) {
-        return mETMCalendar->item(incidence);
+    for (auto &cal : mSubCalendars) {
+        const auto &akonadiCal = qSharedPointerDynamicCast<AkonadiViewCalendar>(cal);
+        if (!akonadiCal) {
+            continue;
+        }
+        if (const auto &item = akonadiCal->item(incidence); item.isValid()) {
+            return item;
+        }
     }
-
     return {};
 }
 
@@ -171,7 +193,7 @@ Akonadi::Item AkonadiViewCalendar::item(const KCalendarCore::Incidence::Ptr &inc
 
 QString AkonadiViewCalendar::displayName(const KCalendarCore::Incidence::Ptr &incidence) const
 {
-    return Akonadi::CalendarUtils::displayName(mCalendar.data(), item(incidence).parentCollection());
+    return Akonadi::CalendarUtils::displayName(mAgendaView->model(), item(incidence).parentCollection());
 }
 
 QColor AkonadiViewCalendar::resourceColor(const KCalendarCore::Incidence::Ptr &incidence) const

@@ -10,7 +10,7 @@
 
 #pragma once
 
-#include <Akonadi/ETMCalendar>
+#include <Akonadi/CollectionCalendar>
 #include <Akonadi/IncidenceChanger>
 #include <Akonadi/Item>
 
@@ -28,7 +28,7 @@ class JournalFrame : public QFrame
 public:
     using List = QList<JournalFrame *>;
 
-    JournalFrame(const Akonadi::Item &journal, const Akonadi::ETMCalendar::Ptr &calendar, QWidget *parent);
+    JournalFrame(const Akonadi::Item &journal, const Akonadi::CollectionCalendar::Ptr &calendar, QWidget *parent);
 
     ~JournalFrame() override;
     bool eventFilter(QObject *, QEvent *) override;
@@ -39,7 +39,7 @@ public:
         return mJournal;
     }
 
-    void setCalendar(const Akonadi::ETMCalendar::Ptr &);
+    void setCalendar(const Akonadi::CollectionCalendar::Ptr &);
     Q_REQUIRED_RESULT QDate date() const
     {
         return mDate;
@@ -71,7 +71,7 @@ Q_SIGNALS:
 
 private:
     Akonadi::Item mJournal;
-    Akonadi::ETMCalendar::Ptr mCalendar;
+    Akonadi::CollectionCalendar::Ptr mCalendar;
     QDate mDate;
 
     QTextBrowser *mBrowser = nullptr;
@@ -91,7 +91,7 @@ class JournalDateView : public QWidget
 public:
     using List = QList<JournalDateView *>;
 
-    JournalDateView(const Akonadi::ETMCalendar::Ptr &, QWidget *parent);
+    JournalDateView(const Akonadi::CollectionCalendar::Ptr &, QWidget *parent);
     ~JournalDateView() override;
 
     void addJournal(const Akonadi::Item &journal);
@@ -122,7 +122,7 @@ public Q_SLOTS:
     void journalDeleted(const Akonadi::Item &);
 
 private:
-    Akonadi::ETMCalendar::Ptr mCalendar;
+    Akonadi::CollectionCalendar::Ptr mCalendar;
     QDate mDate;
     QMap<Akonadi::Item::Id, JournalFrame *> mEntries;
 

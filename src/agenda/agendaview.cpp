@@ -21,7 +21,7 @@
 #include "calendarview_debug.h"
 
 #include <Akonadi/CalendarUtils>
-#include <Akonadi/ETMCalendar>
+#include <Akonadi/EntityTreeModel>
 #include <Akonadi/IncidenceChanger>
 #include <CalendarSupport/CollectionSelection>
 #include <CalendarSupport/KCalPrefs>
@@ -531,7 +531,7 @@ void EventIndicator::enableColumn(int column, bool enable)
 ////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////
 
-class EventViews::AgendaViewPrivate : public Akonadi::ETMCalendar::CalendarObserver
+class EventViews::AgendaViewPrivate : public KCalendarCore::Calendar::CalendarObserver
 {
     AgendaView *const q;
 
@@ -544,7 +544,6 @@ public:
         , mViewCalendar(MultiViewCalendar::Ptr(new MultiViewCalendar()))
     {
         mViewCalendar->mAgendaView = q;
-        mViewCalendar->setETMCalendar(q->calendar());
     }
 
 public:
@@ -1139,6 +1138,9 @@ void AgendaView::init(QDate start, QDate end)
     auto scrollArea = new AgendaScrollArea(false, this, d->mIsInteractive, agendaFrame);
     d->mAgenda = scrollArea->agenda();
     d->mAgenda->verticalScrollBar()->installEventFilter(this);
+    d->mAgenda->setCalendar(d->mViewCalendar);
+
+    d->mAllDayAgenda->setCalendar(d->mViewCalendar);
 
     // Create event indicator bars
     d->mEventIndicatorTop = new EventIndicator(EventIndicator::Top, scrollArea->viewport());
@@ -1211,6 +1213,39 @@ AgendaView::~AgendaView()
     }
 }
 
+void AgendaView::addCalendar(const Akonadi::CollectionCalendar::Ptr &calendar)
+{
+    EventView::addCalendar(calendar);
+
+    if (!d->mViewCalendar->calendarForCollection(calendar->collection()).isNull()) {
+        return;
+    }
+
+    auto view = AkonadiViewCalendar::Ptr::create();
+    view->mCalendar = calendar;
+    view->mAgendaView = this;
+    addCalendar(view);
+}
+
+void AgendaView::removeCalendar(const Akonadi::CollectionCalendar::Ptr &calendar)
+{
+    EventView::removeCalendar(calendar);
+
+    auto cal = std::find_if(d->mViewCalendar->mSubCalendars.cbegin(), d->mViewCalendar->mSubCalendars.cend(), [calendar](const auto &subcal) {
+        if (auto akonadiCal = qSharedPointerDynamicCast<AkonadiViewCalendar>(subcal); akonadiCal) {
+            // TODO: FIXME: the pointer-based comparision MUST succeed here, not collection-based comparison!!!
+            return akonadiCal->mCalendar->collection() == calendar->collection();
+        }
+        return false;
+    });
+
+    if (cal != d->mViewCalendar->mSubCalendars.end()) {
+        calendar->unregisterObserver(d.get());
+        d->mViewCalendar->removeCalendar(*cal);
+        setChanges(EventViews::EventView::ResourcesChanged);
+        updateView();
+    }
+}
 void AgendaView::showEvent(QShowEvent *showEvent)
 {
     EventView::showEvent(showEvent);
@@ -1249,23 +1284,13 @@ KCalendarCore::Calendar::Ptr AgendaView::calendar2(const QString &incidenceIdent
     return {};
 }
 
-void AgendaView::setCalendar(const Akonadi::ETMCalendar::Ptr &cal)
-{
-    if (calendar()) {
-        calendar()->unregisterObserver(d.get());
-    }
-    Q_ASSERT(cal);
-    EventView::setCalendar(cal);
-    calendar()->registerObserver(d.get());
-    d->mViewCalendar->setETMCalendar(cal);
-    d->mAgenda->setCalendar(d->mViewCalendar);
-    d->mAllDayAgenda->setCalendar(d->mViewCalendar);
-}
-
 void AgendaView::addCalendar(const ViewCalendar::Ptr &cal)
 {
     d->mViewCalendar->addCalendar(cal);
     cal->getCalendar()->registerObserver(d.get());
+
+    setChanges(EventViews::EventView::ResourcesChanged);
+    updateView();
 }
 
 void AgendaView::connectAgenda(Agenda *agenda, Agenda *otherAgenda)
@@ -1803,7 +1828,7 @@ void AgendaView::updateEventDates(AgendaItem *item, bool addIncidence, Akonadi::
 
     bool result;
     if (addIncidence) {
-        Akonadi::Collection collection = calendar()->collection(collectionId);
+        auto collection = Akonadi::EntityTreeModel::updatedCollection(model(), collectionId);
         result = changer()->createIncidence(incidence, collection, this) != -1;
     } else {
         KCalendarCore::Incidence::Ptr oldIncidence(Akonadi::CalendarUtils::incidence(aitem));
@@ -1875,30 +1900,19 @@ void AgendaView::showIncidences(const Akonadi::Item::List &incidences, const QDa
 {
     Q_UNUSED(date)
 
-    if (!calendar()) {
-        qCCritical(CALENDARVIEW_LOG) << "No Calendar set";
-        return;
-    }
-
-    // we must check if they are not filtered; if they are, remove the filter
-    KCalendarCore::CalFilter *filter = calendar()->filter();
-    bool wehaveall = true;
-    if (filter) {
-        for (const Akonadi::Item &aitem : incidences) {
-            if (!(wehaveall = filter->filterIncidence(Akonadi::CalendarUtils::incidence(aitem)))) {
-                break;
-            }
-        }
-    }
-
-    if (!wehaveall) {
-        calendar()->setFilter(nullptr);
-    }
-
     QDateTime start = Akonadi::CalendarUtils::incidence(incidences.first())->dtStart().toLocalTime();
     QDateTime end = Akonadi::CalendarUtils::incidence(incidences.first())->dateTime(KCalendarCore::Incidence::RoleEnd).toLocalTime();
     Akonadi::Item first = incidences.first();
     for (const Akonadi::Item &aitem : incidences) {
+        // we must check if they are not filtered; if they are, remove the filter
+        const auto &cal = d->mViewCalendar->calendarForCollection(aitem.storageCollectionId());
+        if (cal && cal->filter()) {
+            const bool filtered = !cal->filter()->filterIncidence(Akonadi::CalendarUtils::incidence(aitem));
+            if (filtered) {
+                cal->setFilter(nullptr);
+            }
+        }
+
         if (Akonadi::CalendarUtils::incidence(aitem)->dtStart().toLocalTime() < start) {
             first = aitem;
         }
@@ -1922,7 +1936,7 @@ void AgendaView::fillAgenda()
         return;
     }
 
-    if (d->mViewCalendar->calendars() == 0) {
+    if (d->mViewCalendar->calendarCount() == 0) {
         qCWarning(CALENDARVIEW_LOG) << "No calendar is set";
         return;
     }
@@ -2036,7 +2050,7 @@ bool AgendaView::displayIncidence(const KCalendarCore::Incidence::Ptr &incidence
         // the range
         const QDateTime startDateTimeWithOffset = firstVisibleDateTime.addDays(-eventDuration);
 
-        KCalendarCore::OccurrenceIterator rIt(*calendar(), incidence, startDateTimeWithOffset, lastVisibleDateTime);
+        KCalendarCore::OccurrenceIterator rIt(*calendar2(incidence), incidence, startDateTimeWithOffset, lastVisibleDateTime);
         while (rIt.hasNext()) {
             rIt.next();
             auto occurrenceDate = rIt.occurrenceStartDate().toLocalTime();
@@ -2221,7 +2235,7 @@ void AgendaView::slotIncidencesDropped(const KCalendarCore::Incidence::List &inc
     QDateTime newTime(day, time, Qt::LocalTime);
 
     for (const KCalendarCore::Incidence::Ptr &incidence : incidences) {
-        const Akonadi::Item existingItem = calendar()->item(incidence);
+        const Akonadi::Item existingItem = d->mViewCalendar->item(incidence);
         const bool existsInSameCollection = existingItem.isValid() && (existingItem.storageCollectionId() == collectionId() || collectionId() == -1);
 
         if (existingItem.isValid() && existsInSameCollection) {
@@ -2255,11 +2269,6 @@ void AgendaView::slotIncidencesDropped(const KCalendarCore::Incidence::List &inc
 
 void AgendaView::startDrag(const KCalendarCore::Incidence::Ptr &incidence)
 {
-    if (!calendar()) {
-        qCCritical(CALENDARVIEW_LOG) << "No Calendar set";
-        return;
-    }
-
     const Akonadi::Item item = d->mViewCalendar->item(incidence);
     if (item.isValid()) {
         startDrag(item);
@@ -2268,10 +2277,6 @@ void AgendaView::startDrag(const KCalendarCore::Incidence::Ptr &incidence)
 
 void AgendaView::startDrag(const Akonadi::Item &incidence)
 {
-    if (!calendar()) {
-        qCCritical(CALENDARVIEW_LOG) << "No Calendar set";
-        return;
-    }
     if (QDrag *drag = CalendarSupport::createDrag(incidence, this)) {
         drag->exec();
     }

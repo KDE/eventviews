@@ -39,7 +39,7 @@ public:
         return {};
     }
 
-    void appendJournal(const Akonadi::Item &journal, QDate dt);
+    void appendJournal(const Akonadi::Item &journal, const Akonadi::CollectionCalendar::Ptr &calendar, QDate dt);
 
     /** documentation in baseview.h */
     void getHighlightMode(bool &highlightEvents, bool &highlightTodos, bool &highlightJournals);
@@ -72,6 +72,8 @@ protected:
     void clearEntries();
 
 private:
+    Akonadi::CollectionCalendar::Ptr findCalendar(const KCalendarCore::Journal::Ptr &journal) const;
+
     QScrollArea *mSA = nullptr;
     QWidget *mCurrentWidget = nullptr;
     QMap<QDate, EventViews::JournalDateView *> mEntries;
