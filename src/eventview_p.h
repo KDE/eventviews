@@ -11,8 +11,9 @@
 
 #include "eventview.h"
 
+#include <Akonadi/CollectionCalendar>
+
 #include <memory>
-#include <vector>
 
 namespace KHolidays
 {
@@ -25,10 +26,12 @@ class KCheckableProxyModel;
 
 namespace EventViews
 {
+class EventView;
+
 class EventViewPrivate
 {
 public: /// Methods
-    EventViewPrivate();
+    EventViewPrivate(EventView *qq);
     ~EventViewPrivate();
 
     /**
@@ -40,8 +43,12 @@ public: /// Methods
 public: // virtual functions
     void setUpModels();
 
+private:
+    EventView *const q;
+
 public: /// Members
     Akonadi::ETMCalendar::Ptr calendar;
+    Akonadi::EntityTreeModel *etm = nullptr;
     std::unique_ptr<CalendarSupport::CollectionSelection> customCollectionSelection;
     KCheckableProxyModel *collectionSelectionModel = nullptr;
 
@@ -61,6 +68,7 @@ public: /// Members
     QObject *mTypeAheadReceiver = nullptr;
     QList<QEvent *> mTypeAheadEvents;
     static CalendarSupport::CollectionSelection *sGlobalCollectionSelection;
+    QVector<Akonadi::CollectionCalendar::Ptr> mCalendars;
 
     std::vector<std::unique_ptr<KHolidays::HolidayRegion>> mHolidayRegions;
     PrefsPtr mPrefs;

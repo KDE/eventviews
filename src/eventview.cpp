@@ -51,7 +51,7 @@ void EventView::setGlobalCollectionSelection(CalendarSupport::CollectionSelectio
 
 EventView::EventView(QWidget *parent)
     : QWidget(parent)
-    , d_ptr(new EventViewPrivate())
+    , d_ptr(new EventViewPrivate(this))
 {
     QByteArray cname = metaObject()->className();
     cname.replace(':', '_');
@@ -148,26 +148,72 @@ int EventView::showMoveRecurDialog(const Incidence::Ptr &inc, QDate date)
 void EventView::setCalendar(const Akonadi::ETMCalendar::Ptr &calendar)
 {
     Q_D(EventView);
-    if (d->calendar != calendar) {
-        if (d->calendar) {
-            disconnect(d->calendar.data());
-        }
-
-        d->calendar = calendar;
-        if (calendar) {
-            if (d->collectionSelectionModel) {
-                d->collectionSelectionModel->setSourceModel(calendar->model());
-            }
-
-            connect(calendar.data(), &ETMCalendar::collectionChanged, this, &EventView::onCollectionChanged);
-        }
-    }
+    d->calendar = calendar;
+    setModel(qobject_cast<Akonadi::EntityTreeModel *>(calendar->model()));
 }
 
 Akonadi::ETMCalendar::Ptr EventView::calendar() const
 {
     Q_D(const EventView);
     return d->calendar;
+}
+
+static auto isForCollection(const Akonadi::Collection &collection)
+{
+    return [collection](const Akonadi::CollectionCalendar::Ptr &calendar) {
+        return calendar->collection() == collection;
+    };
+}
+
+void EventView::addCalendar(const Akonadi::CollectionCalendar::Ptr &calendar)
+{
+    Q_D(EventView);
+    d->mCalendars.push_back(calendar);
+}
+
+void EventView::removeCalendar(const Akonadi::CollectionCalendar::Ptr &calendar)
+{
+    Q_D(EventView);
+    d->mCalendars.removeOne(calendar);
+}
+
+void EventView::setModel(Akonadi::EntityTreeModel *etm)
+{
+    Q_D(EventView);
+    if (d->etm != etm) {
+        // TODO
+        if (d->calendar) {
+            disconnect(d->calendar.data());
+        }
+
+        d->etm = etm;
+        if (etm) {
+            if (d->collectionSelectionModel) {
+                d->collectionSelectionModel->setSourceModel(etm);
+            }
+
+            d->setUpModels();
+
+            connect(d->etm, &Akonadi::EntityTreeModel::dataChanged, this, [this](const QModelIndex &topLeft, const QModelIndex &bottomRight) {
+                Q_D(EventView);
+
+                for (int i = topLeft.row(); i <= bottomRight.row(); ++i) {
+                    const auto index = topLeft.siblingAtRow(i);
+                    const auto col = d->etm->data(index, Akonadi::EntityTreeModel::CollectionRole).value<Akonadi::Collection>();
+                    if (col.isValid()) {
+                        // TODO: we have no way of knowing what has actually changed in the model :(
+                        onCollectionChanged(col, {"AccessRights"});
+                    }
+                }
+            });
+        }
+    }
+}
+
+Akonadi::EntityTreeModel *EventView::model() const
+{
+    Q_D(const EventView);
+    return d->etm;
 }
 
 void EventView::setPreferences(const PrefsPtr &preferences)
@@ -617,10 +663,15 @@ QColor EventView::itemFrameColor(const QColor &color, bool selected)
 
 QString EventView::iconForItem(const Akonadi::Item &item)
 {
+    Q_D(EventView);
     QString iconName;
     Akonadi::Collection collection = item.parentCollection();
     while (collection.parentCollection().isValid() && collection.parentCollection() != Akonadi::Collection::root()) {
-        collection = calendar()->collection(collection.parentCollection().id());
+        if (d->etm) {
+            collection = Akonadi::EntityTreeModel::updatedCollection(d->etm, collection.parentCollection());
+        } else {
+            collection = calendar()->collection(collection.parentCollection().id());
+        }
     }
 
     if (collection.isValid() && collection.hasAttribute<Akonadi::EntityDisplayAttribute>()) {
@@ -637,4 +688,32 @@ void EventView::onCollectionChanged(const Akonadi::Collection &collection, const
         setChanges(changes() | EventViews::EventView::ResourcesChanged);
         updateView();
     }
+}
+
+QVector<Akonadi::CollectionCalendar::Ptr> EventView::calendars() const
+{
+    Q_D(const EventView);
+    return d->mCalendars;
+}
+
+static auto hasCollectionId(Akonadi::Collection::Id collectionId)
+{
+    return [collectionId](const Akonadi::CollectionCalendar::Ptr &calendar) {
+        return calendar->collection().id() == collectionId;
+    };
+}
+
+Akonadi::CollectionCalendar::Ptr EventView::calendar3(const Akonadi::Item &item) const
+{
+    Q_D(const EventView);
+    const auto cal = std::find_if(d->mCalendars.cbegin(), d->mCalendars.cend(), hasCollectionId(item.storageCollectionId()));
+    return cal != d->mCalendars.cend() ? *cal : Akonadi::CollectionCalendar::Ptr{};
+}
+
+Akonadi::CollectionCalendar::Ptr EventView::calendar3(const KCalendarCore::Incidence::Ptr &incidence) const
+{
+    Q_D(const EventView);
+    const auto collectionId = incidence->customProperty("VOLATILE", "COLLECTION-ID").toLongLong();
+    const auto cal = std::find_if(d->mCalendars.cbegin(), d->mCalendars.cend(), hasCollectionId(collectionId));
+    return cal != d->mCalendars.cend() ? *cal : Akonadi::CollectionCalendar::Ptr{};
 }

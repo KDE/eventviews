@@ -9,6 +9,8 @@
 */
 
 #include "eventview_p.h"
+#include "calendarview_debug.h"
+#include "eventview.h"
 #include "prefs.h"
 
 #include <CalendarSupport/CollectionSelection>
@@ -20,10 +22,13 @@
 
 #include <QApplication>
 
+#include <ranges>
+
 using namespace EventViews;
 
-EventViewPrivate::EventViewPrivate()
-    : mPrefs(QSharedPointer<Prefs>::create())
+EventViewPrivate::EventViewPrivate(EventView *qq)
+    : q(qq)
+    , mPrefs(QSharedPointer<Prefs>::create())
     , mKCalPrefs(QSharedPointer<CalendarSupport::KCalPrefs>::create())
 {
 }
@@ -44,6 +49,8 @@ void EventViewPrivate::finishTypeAhead()
 
 void EventViewPrivate::setUpModels()
 {
+    q->collectionSelection()->disconnect(q);
+
     customCollectionSelection.reset();
     if (collectionSelectionModel) {
         customCollectionSelection = std::make_unique<CalendarSupport::CollectionSelection>(collectionSelectionModel->selectionModel());

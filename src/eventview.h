@@ -12,6 +12,7 @@
 #include "eventviews_export.h"
 
 #include <Akonadi/Collection>
+#include <Akonadi/CollectionCalendar>
 #include <Akonadi/ETMCalendar>
 #include <Akonadi/Item>
 
@@ -110,7 +111,7 @@ public:
      */
     ~EventView() override;
 
-    virtual void setCalendar(const Akonadi::ETMCalendar::Ptr &cal);
+    Q_DECL_DEPRECATED virtual void setCalendar(const Akonadi::ETMCalendar::Ptr &cal);
 
     /**
       Return calendar object of this view.
@@ -118,7 +119,14 @@ public:
             can be used in different environments.
             see agendaview for example calendar2(incidence)
     */
-    virtual Akonadi::ETMCalendar::Ptr calendar() const;
+    Q_DECL_DEPRECATED virtual Akonadi::ETMCalendar::Ptr calendar() const;
+
+    virtual void addCalendar(const Akonadi::CollectionCalendar::Ptr &calendar);
+    virtual void removeCalendar(const Akonadi::CollectionCalendar::Ptr &calendar);
+
+    virtual void setModel(Akonadi::EntityTreeModel *etm);
+
+    Akonadi::EntityTreeModel *model() const;
 
     /*
       update config is called after prefs are set.
@@ -447,7 +455,6 @@ Q_SIGNALS:
     void newSubTodoSignal(const Akonadi::Item &);
 
     void newJournalSignal(const QDate &);
-
 protected Q_SLOTS:
     virtual void calendarReset();
 
@@ -455,6 +462,10 @@ private:
     EVENTVIEWS_NO_EXPORT void onCollectionChanged(const Akonadi::Collection &, const QSet<QByteArray> &);
 
 protected:
+    QVector<Akonadi::CollectionCalendar::Ptr> calendars() const;
+    Akonadi::CollectionCalendar::Ptr calendar3(const Akonadi::Item &item) const;
+    Akonadi::CollectionCalendar::Ptr calendar3(const KCalendarCore::Incidence::Ptr &incidence) const;
+
     bool makesWholeDayBusy(const KCalendarCore::Incidence::Ptr &incidence) const;
     Akonadi::IncidenceChanger *changer() const;
 
