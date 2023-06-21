@@ -288,7 +288,6 @@ int TimelineView::currentDateCount() const
 void TimelineView::showDates(const QDate &start, const QDate &end, const QDate &preferredMonth)
 {
     Q_UNUSED(preferredMonth)
-    Q_ASSERT_X(calendar(), "showDates()", "set a Akonadi::ETMCalendar");
     Q_ASSERT_X(start.isValid(), "showDates()", "start date must be valid");
     Q_ASSERT_X(end.isValid(), "showDates()", "end date must be valid");
 
@@ -301,29 +300,21 @@ void TimelineView::showDates(const QDate &start, const QDate &end, const QDate &
     auto grid = static_cast<KGantt::DateTimeGrid *>(d->mGantt->grid());
     grid->setStartDateTime(QDateTime(start.startOfDay()));
     d->mLeftView->clear();
-    uint index = 0;
-    Akonadi::ETMCalendar::Ptr calres = calendar();
-    if (!calres) {
-        auto item = new TimelineItem(calendar(), index++, static_cast<QStandardItemModel *>(d->mGantt->model()), d->mGantt);
-        d->mLeftView->addTopLevelItem(new QTreeWidgetItem(QStringList() << i18n("Calendar")));
-        d->mCalendarItemMap.insert(-1, item);
-    } else {
-        const CalendarSupport::CollectionSelection *colSel = collectionSelection();
-        const Akonadi::Collection::List collections = colSel->selectedCollections();
+    qDeleteAll(d->mCalendarItemMap);
+    d->mCalendarItemMap.clear();
 
-        for (const Akonadi::Collection &collection : collections) {
-            if (collection.contentMimeTypes().contains(Event::eventMimeType())) {
-                auto item = new TimelineItem(calendar(), index++, static_cast<QStandardItemModel *>(d->mGantt->model()), d->mGantt);
-                d->mLeftView->addTopLevelItem(new QTreeWidgetItem(QStringList() << Akonadi::CalendarUtils::displayName(calendar().data(), collection)));
-                const QColor resourceColor = EventViews::resourceColor(collection, preferences());
-                if (resourceColor.isValid()) {
-                    item->setColor(resourceColor);
-                }
-                qCDebug(CALENDARVIEW_LOG) << "Created item " << item << " (" << Akonadi::CalendarUtils::displayName(calendar().data(), collection) << ") "
-                                          << "with index " << index - 1 << " from collection " << collection.id();
-                d->mCalendarItemMap.insert(collection.id(), item);
-            }
+    uint index = 0;
+    for (const auto &calendar : calendars()) {
+        auto item = new TimelineItem(calendar, index++, static_cast<QStandardItemModel *>(d->mGantt->model()), d->mGantt);
+        const auto name = Akonadi::CalendarUtils::displayName(calendar->model(), calendar->collection());
+        d->mLeftView->addTopLevelItem(new QTreeWidgetItem(QStringList{name}));
+        const QColor resourceColor = EventViews::resourceColor(calendar->collection(), preferences());
+        if (resourceColor.isValid()) {
+            item->setColor(resourceColor);
         }
+        qCDebug(CALENDARVIEW_LOG) << "Created item " << item << " (" << name << ")"
+                                  << "with index " << index - 1 << " from collection " << calendar->collection().id();
+        d->mCalendarItemMap.insert(calendar->collection().id(), item);
     }
 
     // add incidences
@@ -336,15 +327,16 @@ void TimelineView::showDates(const QDate &start, const QDate &end, const QDate &
     QAbstractItemModel *ganttModel = d->mGantt->model();
     d->mGantt->setModel(nullptr);
 
-    KCalendarCore::Event::List events;
-    for (QDate day = start; day <= end; day = day.addDays(1)) {
-        events = calendar()->events(day, QTimeZone::systemTimeZone(), KCalendarCore::EventSortStartDate, KCalendarCore::SortDirectionAscending);
-        for (const KCalendarCore::Event::Ptr &event : std::as_const(events)) {
-            if (event->hasRecurrenceId()) {
-                continue;
+    for (const auto &calendar : calendars()) {
+        for (QDate day = d->mStartDate; day <= d->mEndDate; day = day.addDays(1)) {
+            const auto events = calendar->events(day, QTimeZone::systemTimeZone(), KCalendarCore::EventSortStartDate, KCalendarCore::SortDirectionAscending);
+            for (const KCalendarCore::Event::Ptr &event : std::as_const(events)) {
+                if (event->hasRecurrenceId()) {
+                    continue;
+                }
+                Akonadi::Item item = calendar->item(event);
+                d->insertIncidence(calendar, item, day);
             }
-            Akonadi::Item item = calendar()->item(event);
-            d->insertIncidence(item, day);
         }
     }
     d->mGantt->setModel(ganttModel);
@@ -365,13 +357,14 @@ void TimelineView::updateView()
 
 void TimelineView::changeIncidenceDisplay(const Akonadi::Item &incidence, int mode)
 {
+    const auto cal = calendar3(incidence);
     switch (mode) {
     case Akonadi::IncidenceChanger::ChangeTypeCreate:
-        d->insertIncidence(incidence);
+        d->insertIncidence(cal, incidence);
         break;
     case Akonadi::IncidenceChanger::ChangeTypeModify:
         d->removeIncidence(incidence);
-        d->insertIncidence(incidence);
+        d->insertIncidence(cal, incidence);
         break;
     case Akonadi::IncidenceChanger::ChangeTypeDelete:
         d->removeIncidence(incidence);

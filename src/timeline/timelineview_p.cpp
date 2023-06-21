@@ -69,19 +69,17 @@ void TimelineViewPrivate::newEventWithHint(const QDateTime &dt)
     Q_EMIT q->newEventSignal(dt);
 }
 
-TimelineItem *TimelineViewPrivate::calendarItemForIncidence(const Akonadi::Item &incidence)
+TimelineItem *TimelineViewPrivate::calendarItemForIncidence(const Akonadi::Item &incidence) const
 {
-    Akonadi::ETMCalendar::Ptr calres = q->calendar();
-    TimelineItem *item = nullptr;
-    if (!calres) {
-        item = mCalendarItemMap.value(-1);
-    } else {
-        item = mCalendarItemMap.value(incidence.parentCollection().id());
+    auto item = mCalendarItemMap.constFind(incidence.parentCollection().id());
+    if (item == mCalendarItemMap.cend()) {
+        return mCalendarItemMap.value(-1);
     }
-    return item;
+
+    return *item;
 }
 
-void TimelineViewPrivate::insertIncidence(const Akonadi::Item &aitem, QDate day)
+void TimelineViewPrivate::insertIncidence(const Akonadi::CollectionCalendar::Ptr &calendar, const Akonadi::Item &aitem, QDate day)
 {
     const Incidence::Ptr incidence = Akonadi::CalendarUtils::incidence(aitem);
     // qCDebug(CALENDARVIEW_LOG) << "Item " << aitem.id() << " parentcollection: " << aitem.parentCollection().id();
@@ -92,10 +90,10 @@ void TimelineViewPrivate::insertIncidence(const Akonadi::Item &aitem, QDate day)
     }
 
     if (incidence->recurs()) {
-        KCalendarCore::OccurrenceIterator occurIter(*(q->calendar()), incidence, QDateTime(day, QTime(0, 0, 0)), QDateTime(day, QTime(23, 59, 59)));
+        KCalendarCore::OccurrenceIterator occurIter(*calendar, incidence, QDateTime(day, QTime(0, 0, 0)), QDateTime(day, QTime(23, 59, 59)));
         while (occurIter.hasNext()) {
             occurIter.next();
-            const Akonadi::Item akonadiItem = q->calendar()->item(occurIter.incidence());
+            const Akonadi::Item akonadiItem = calendar->item(occurIter.incidence());
             const QDateTime startOfOccurrence = occurIter.occurrenceStartDate();
             const QDateTime endOfOccurrence = occurIter.incidence()->endDateForStart(startOfOccurrence);
             item->insertIncidence(akonadiItem, startOfOccurrence.toLocalTime(), endOfOccurrence.toLocalTime());
@@ -107,7 +105,7 @@ void TimelineViewPrivate::insertIncidence(const Akonadi::Item &aitem, QDate day)
     }
 }
 
-void TimelineViewPrivate::insertIncidence(const Akonadi::Item &incidence)
+void TimelineViewPrivate::insertIncidence(const Akonadi::CollectionCalendar::Ptr &calendar, const Akonadi::Item &incidence)
 {
     const Event::Ptr event = Akonadi::CalendarUtils::event(incidence);
     if (!event) {
@@ -115,18 +113,17 @@ void TimelineViewPrivate::insertIncidence(const Akonadi::Item &incidence)
     }
 
     if (event->recurs()) {
-        insertIncidence(incidence, QDate());
+        insertIncidence(calendar, incidence, QDate());
     }
 
     for (QDate day = mStartDate; day <= mEndDate; day = day.addDays(1)) {
-        const KCalendarCore::Event::List events =
-            q->calendar()->events(day, QTimeZone::systemTimeZone(), KCalendarCore::EventSortStartDate, KCalendarCore::SortDirectionAscending);
+        const auto events = calendar->events(day, QTimeZone::systemTimeZone(), KCalendarCore::EventSortStartDate, KCalendarCore::SortDirectionAscending);
         if (events.contains(event)) {
             // PENDING(AKONADI_PORT) check if correct. also check the original if,
             // was inside the for loop (unnecessarily)
             for (const KCalendarCore::Event::Ptr &i : events) {
-                Akonadi::Item item = q->calendar()->item(i);
-                insertIncidence(item, day);
+                Akonadi::Item item = calendar->item(i);
+                insertIncidence(calendar, item, day);
             }
         }
     }

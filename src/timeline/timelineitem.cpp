@@ -18,7 +18,7 @@ using namespace KCalendarCore;
 using namespace KCalUtils;
 using namespace EventViews;
 
-TimelineItem::TimelineItem(const Akonadi::ETMCalendar::Ptr &calendar, uint index, QStandardItemModel *model, QObject *parent)
+TimelineItem::TimelineItem(const Akonadi::CollectionCalendar::Ptr &calendar, uint index, QStandardItemModel *model, QObject *parent)
     : QObject(parent)
     , mCalendar(calendar)
     , mModel(model)
@@ -28,6 +28,11 @@ TimelineItem::TimelineItem(const Akonadi::ETMCalendar::Ptr &calendar, uint index
     auto dummyItem = new QStandardItem;
     dummyItem->setData(KGantt::TypeTask, KGantt::ItemTypeRole);
     mModel->insertRow(mIndex, dummyItem);
+}
+
+TimelineItem::~TimelineItem()
+{
+    mModel->removeRow(mIndex);
 }
 
 void TimelineItem::insertIncidence(const Akonadi::Item &aitem, const QDateTime &_start, const QDateTime &_end)
@@ -94,7 +99,7 @@ void TimelineItem::setColor(const QColor &color)
     mColor = color;
 }
 
-TimelineSubItem::TimelineSubItem(const Akonadi::ETMCalendar::Ptr &calendar, const Akonadi::Item &incidence, TimelineItem *parent)
+TimelineSubItem::TimelineSubItem(const Akonadi::CollectionCalendar::Ptr &calendar, const Akonadi::Item &incidence, TimelineItem *parent)
     : QStandardItem()
     , mCalendar(calendar)
     , mIncidence(incidence)
@@ -137,9 +142,6 @@ void TimelineSubItem::updateToolTip()
 
     mToolTipNeedsUpdate = false;
 
-    setData(IncidenceFormatter::toolTipStr(Akonadi::CalendarUtils::displayName(mCalendar.data(), mIncidence.parentCollection()),
-                                           Akonadi::CalendarUtils::incidence(mIncidence),
-                                           originalStart().date(),
-                                           true),
-            Qt::ToolTipRole);
+    const auto name = Akonadi::CalendarUtils::displayName(mCalendar->model(), mIncidence.parentCollection());
+    setData(IncidenceFormatter::toolTipStr(name, Akonadi::CalendarUtils::incidence(mIncidence), originalStart().date(), true), Qt::ToolTipRole);
 }
