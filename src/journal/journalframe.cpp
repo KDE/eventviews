@@ -313,3 +313,5 @@ void JournalFrame::readJournal(const Akonadi::Item &j)
         mDeleteButton->setEnabled(mCalendar->hasRight(j, Akonadi::Collection::CanDeleteItem));
     }
 }
+
+#include "moc_journalframe.cpp"

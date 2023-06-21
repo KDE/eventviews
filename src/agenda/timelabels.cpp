@@ -422,3 +422,5 @@ bool TimeLabels::event(QEvent *event)
     }
     return QWidget::event(event);
 }
+
+#include "moc_timelabels.cpp"

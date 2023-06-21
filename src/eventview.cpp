@@ -641,3 +641,5 @@ void EventView::onCollectionChanged(const Akonadi::Collection &collection, const
         updateView();
     }
 }
+
+#include "moc_eventview.cpp"

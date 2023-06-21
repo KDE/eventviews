@@ -161,3 +161,5 @@ void TimeLabelsZone::setPreferences(const PrefsPtr &prefs)
         mPrefs = prefs;
     }
 }
+
+#include "moc_timelabelszone.cpp"

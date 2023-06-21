@@ -115,3 +115,5 @@ void TodoViewQuickSearch::fillPriorities()
     // TODO: Using the same method as for categories to fill mPriorityCombo
     CalendarSupport::CategoryHierarchyReaderQComboBox(mPriorityCombo).read(priorityValues);
 }
+
+#include "moc_todoviewquicksearch.cpp"

@@ -143,3 +143,5 @@ void TimelineSubItem::updateToolTip()
                                            true),
             Qt::ToolTipRole);
 }
+
+#include "moc_timelineitem.cpp"

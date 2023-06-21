@@ -193,3 +193,5 @@ void DecorationLabel::useShortText(bool allowAutomaticSqueeze)
     QLabel::setText(mShortText);
     setToolTip(mExtensiveText.isEmpty() ? mLongText : mExtensiveText);
 }
+
+#include "moc_decorationlabel.cpp"

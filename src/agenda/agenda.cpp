@@ -2343,3 +2343,5 @@ Agenda *AgendaScrollArea::agenda() const
 {
     return mAgenda;
 }
+
+#include "moc_agenda.cpp"

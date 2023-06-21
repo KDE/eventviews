@@ -113,3 +113,5 @@ void MainWindow::addViewTriggered(QAction *action)
     viewName.remove(QLatin1Char('&'));
     addView(viewName);
 }
+
+#include "moc_mainwindow.cpp"

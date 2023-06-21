@@ -367,3 +367,5 @@ QString MonthGraphicsItem::getToolTip() const
 {
     return mMonthItem->toolTipText(mStartDate);
 }
+
+#include "moc_monthgraphicsitems.cpp"

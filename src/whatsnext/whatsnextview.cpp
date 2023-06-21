@@ -311,3 +311,5 @@ void WhatsNextView::showIncidence(const QString &uid)
         Q_EMIT showIncidenceSignal(item);
     }
 }
+
+#include "moc_whatsnextview.cpp"

@@ -591,3 +591,5 @@ QSize ListView::sizeHint() const
     const QSize s = EventView::sizeHint();
     return {s.width() + style()->pixelMetric(QStyle::PM_ScrollBarExtent) + 1, s.height()};
 }
+
+#include "moc_listview.cpp"

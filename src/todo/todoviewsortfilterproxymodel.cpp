@@ -321,3 +321,5 @@ int TodoViewSortFilterProxyModel::comparePriorities(const QModelIndex &left, con
         return 1;
     }
 }
+
+#include "moc_todoviewsortfilterproxymodel.cpp"

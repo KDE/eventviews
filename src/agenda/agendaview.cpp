@@ -2481,3 +2481,5 @@ void AgendaView::scheduleUpdateEventIndicators()
 }
 
 #include "agendaview.moc"
+
+#include "moc_agendaview.cpp"

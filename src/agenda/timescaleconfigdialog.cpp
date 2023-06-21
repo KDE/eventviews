@@ -176,3 +176,5 @@ QStringList TimeScaleConfigDialog::zones() const
     }
     return list;
 }
+
+#include "moc_timescaleconfigdialog.cpp"

@@ -220,3 +220,5 @@ void TodoViewView::expandParent()
         QTreeView::keyPressEvent(&keyEvent);
     }
 }
+
+#include "moc_todoviewview.cpp"

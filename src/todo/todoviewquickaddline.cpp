@@ -44,3 +44,5 @@ void TodoViewQuickAddLine::resizeEvent(QResizeEvent *event)
 
     setPlaceholderText(fontMetrics().elidedText(mClickMessage, Qt::ElideRight, width() - clearButtonUsedSize().width()));
 }
+
+#include "moc_todoviewquickaddline.cpp"

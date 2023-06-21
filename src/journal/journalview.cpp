@@ -189,3 +189,5 @@ bool JournalView::eventFilter(QObject *object, QEvent *event)
         return false;
     }
 }
+
+#include "moc_journalview.cpp"

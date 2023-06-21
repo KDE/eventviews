@@ -278,3 +278,5 @@ QDate Decoration::yearDate(QDate date)
 {
     return {date.year(), 1, 1};
 }
+
+#include "moc_calendardecoration.cpp"

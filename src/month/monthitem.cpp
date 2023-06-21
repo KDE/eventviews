@@ -737,3 +737,5 @@ QColor HolidayMonthItem::frameColor() const
 {
     return Qt::black;
 }
+
+#include "moc_monthitem.cpp"

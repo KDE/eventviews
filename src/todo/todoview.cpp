@@ -1256,3 +1256,5 @@ void TodoView::createNote()
 
     Q_EMIT createNote(todoItem);
 }
+
+#include "moc_todoview.cpp"

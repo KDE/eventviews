@@ -769,3 +769,5 @@ QSize MultiAgendaViewPrivate::ElidedLabel::minimumSizeHint() const
     const QFontMetrics &fm = fontMetrics();
     return QSize(fm.boundingRect(QStringLiteral("...")).width(), fm.height());
 }
+
+#include "moc_multiagendaview.cpp"

@@ -116,3 +116,5 @@ int AlternateLabel::getIndent() const
 {
     return indent() == -1 ? fontMetrics().boundingRect(QStringLiteral("x")).width() / 2 : indent();
 }
+
+#include "moc_alternatelabel.cpp"

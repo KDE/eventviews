@@ -1185,3 +1185,5 @@ bool AgendaItem::event(QEvent *event)
     }
     return QWidget::event(event);
 }
+
+#include "moc_agendaitem.cpp"
