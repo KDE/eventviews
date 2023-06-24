@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-01 00:57+0000\n"
-"PO-Revision-Date: 2023-06-17 16:11+0200\n"
+"PO-Revision-Date: 2023-06-23 22:19+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -391,7 +391,7 @@ msgid ""
 "that you use for events, as it will be displayed at the top."
 msgstr ""
 "Insira aquí a hora de comezo dos eventos. Esta hora debería ser a máis cedo "
-"que use para os eventos, xa que se mostra na parte superior."
+"que use para os eventos, xa que se amosa na parte superior."
 
 #. i18n: ectx: label, entry (WorkingHoursStart), group (Time &amp; Date)
 #: eventviews.kcfg:100
@@ -494,8 +494,8 @@ msgid ""
 "the \"View\" menu."
 msgstr ""
 "Seleccione o número de «x» días que quere que se amosen na vista de "
-"vindeiros días, Para acceder á vista dos vindeiros «x» días, escolla o "
-"elemento do menú «Vindeiros X Días» no menú «Vista»."
+"vindeiros días. Para acceder á vista dos vindeiros «x» días, escolla a "
+"entrada de menú «Vindeiros X Días» no menú «Vista»."
 
 #. i18n: ectx: tooltip, entry, group (General View)
 #: eventviews.kcfg:136
@@ -955,7 +955,7 @@ msgid ""
 "Check this box to display scrollbars when clicking on a cell in the month "
 "view; they will only appear when needed though."
 msgstr ""
-"Se marca esta opción, as barras de desprazamento mostraranse cando se prema "
+"Se marca esta opción, as barras de desprazamento amosaranse cando se prema "
 "nunha cela na vista do mes; aínda así só se amosarán cando sexa preciso."
 
 #. i18n: ectx: label, entry (EnableMonthItemIcons), group (Month View)
@@ -1333,7 +1333,7 @@ msgstr "Escolla a cor das tarefas que vencen hoxe."
 #: viewerapp/settings.kcfg:235
 #, kde-format
 msgid "To-do overdue color"
-msgstr "Cor das tarefas adiadas:"
+msgstr "Cor das tarefas adiadas"
 
 #. i18n: ectx: whatsthis, entry (TodoOverdueColor), group (Colors)
 #. i18n: ectx: whatsthis, entry, group (Theming)
@@ -1359,7 +1359,7 @@ msgid ""
 "Font\" dialog, allowing you to choose the hour font for the time bar."
 msgstr ""
 "Prema este botón para configurar a fonte da barra do tempo. A barra do tempo "
-"é o trebello que mostra as horas na vista da axenda. Este botón abre o "
+"é o trebello que amosa as horas na vista da axenda. Este botón abre o "
 "diálogo «Seleccionar a fonte», que permite escoller a fonte da hora na barra "
 "do tempo."
 
@@ -1496,7 +1496,7 @@ msgid ""
 msgstr ""
 "Escolla aquí a cor predeterminada para os eventos. A cor predeterminada para "
 "os eventos úsase para as categorías de eventos no seu Mes. Teña en conta que "
-"pode especificar unha cor por separado para cada categoría de eventos aquí "
+"pode indicar unha cor por separado para cada categoría de eventos aquí "
 "embaixo."
 
 #. i18n: ectx: label, entry, group (Theme/Month view)
@@ -1648,7 +1648,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Go back one month"
-msgstr "Retroceder un mes"
+msgstr "Retroceder un mes."
 
 #: month/monthview.cpp:176
 #, kde-format
@@ -1661,7 +1661,7 @@ msgstr "Prema o botón para que a vista retroceda un mes."
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Go back one week"
-msgstr "Retroceder unha semana"
+msgstr "Retroceder unha semana."
 
 #: month/monthview.cpp:183
 #, kde-format
@@ -1673,7 +1673,7 @@ msgstr "Prema o botón para que a vista retroceda unha semana."
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Go forward one week"
-msgstr "Avanzar unha semana"
+msgstr "Avanzar unha semana."
 
 #: month/monthview.cpp:190
 #, kde-format
@@ -1686,7 +1686,7 @@ msgstr "Prema o botón para que a vista avance unha semana."
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Go forward one month"
-msgstr "Avanzar un mes"
+msgstr "Avanzar un mes."
 
 #: month/monthview.cpp:197
 #, kde-format
@@ -1715,7 +1715,7 @@ msgstr "Calendario"
 #, kde-format
 msgctxt "@action:inmenu Unspecified priority"
 msgid "unspecified"
-msgstr "sen especificar"
+msgstr "sen indicar"
 
 #: todo/tododelegates.cpp:153 todo/todoview.cpp:401
 #, kde-format
@@ -1858,7 +1858,7 @@ msgstr "Marcar esta opción fai que a vista de tarefas ocupe a xanela completa."
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display to-dos in flat list instead of a tree"
-msgstr "Amosar as tarefas nunha lista no canto de nunha árbore"
+msgstr "Amosar as tarefas nunha lista no canto de nunha árbore."
 
 #: todo/todoview.cpp:268
 #, kde-format
@@ -1875,7 +1875,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:inmenu show the to-do"
 msgid "&Show"
-msgstr "Mo&strar"
+msgstr "Amo&sar"
 
 #: todo/todoview.cpp:312
 #, kde-format
@@ -1959,7 +1959,7 @@ msgstr "Purgar as &completadas"
 #, kde-format
 msgctxt "@action:inmenu unspecified priority"
 msgid "unspecified"
-msgstr "sen especificar"
+msgstr "sen indicar"
 
 #: todo/todoview.cpp:402
 #, kde-format
@@ -2006,7 +2006,7 @@ msgstr "Introduza un resumo para crear unha nova tarefa"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Filter on matching summaries"
-msgstr "Filtrar polos resumos correspondentes"
+msgstr "Filtrar polos resumos correspondentes."
 
 #: todo/todoviewquicksearch.cpp:37
 #, kde-format
@@ -2025,7 +2025,7 @@ msgstr "Buscar nos resumos…"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Filter on these tags"
-msgstr "Filtrar por estas etiquetas"
+msgstr "Filtrar por estas etiquetas."
 
 #: todo/todoviewquicksearch.cpp:48
 #, kde-format
@@ -2047,7 +2047,7 @@ msgstr "Selecciona etiquetas"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Filter on these priorities"
-msgstr "Filtrar por estas prioridades"
+msgstr "Filtrar por estas prioridades."
 
 #: todo/todoviewquicksearch.cpp:76
 #, kde-format
@@ -2069,7 +2069,7 @@ msgstr "Seleccionar a prioridade"
 #, kde-format
 msgctxt "@action:inmenu priority is unspecified"
 msgid "unspecified"
-msgstr "sen especificar"
+msgstr "sen indicar"
 
 #: todo/todoviewquicksearch.cpp:105
 #, kde-format
@@ -2099,7 +2099,7 @@ msgstr "%1"
 #, kde-format
 msgctxt "priority is unspecified"
 msgid "unspecified"
-msgstr "sen especificar"
+msgstr "sen indicar"
 
 #: todo/todoviewsortfilterproxymodel.cpp:147
 #: todo/todoviewsortfilterproxymodel.cpp:149
@@ -2140,7 +2140,7 @@ msgstr "ViewerApp"
 #: viewerapp/main.cpp:21
 #, kde-format
 msgid "A test app for embedding calendarviews"
-msgstr "Un aplicativo de probas para incorporar vistas de calendario"
+msgstr "Unha aplicación de probas para incorporar vistas de calendario"
 
 #: viewerapp/main.cpp:23
 #, kde-format
