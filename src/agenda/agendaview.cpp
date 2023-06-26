@@ -1343,7 +1343,8 @@ void AgendaView::slotShowIncidencePopup(const KCalendarCore::Incidence::Ptr &inc
     Akonadi::Item item = d->mViewCalendar->item(incidence);
     // qDebug() << "wanna see the popup for " << incidence->uid() << item.id();
     if (item.isValid()) {
-        Q_EMIT showIncidencePopupSignal(item, date);
+        const auto calendar = calendar3(item);
+        Q_EMIT showIncidencePopupSignal(calendar, item, date);
     }
 }
 

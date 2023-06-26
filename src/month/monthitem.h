@@ -289,6 +289,7 @@ public:
     KCalendarCore::Incidence::Ptr incidence() const;
     Akonadi::Item akonadiItem() const;
     Akonadi::Item::Id akonadiItemId() const;
+    Akonadi::CollectionCalendar::Ptr calendar() const;
 
     bool greaterThanFallback(const MonthItem *other) const override;
 

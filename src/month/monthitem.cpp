@@ -644,6 +644,11 @@ Akonadi::Item::Id IncidenceMonthItem::akonadiItemId() const
     return mAkonadiItemId;
 }
 
+Akonadi::CollectionCalendar::Ptr IncidenceMonthItem::calendar() const
+{
+    return mCalendar;
+}
+
 void IncidenceMonthItem::setNewDates(const KCalendarCore::Incidence::Ptr &incidence, int startOffset, int endOffset)
 {
     if (mIsTodo) {

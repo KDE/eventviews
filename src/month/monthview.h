@@ -66,7 +66,7 @@ public:
     Q_REQUIRED_RESULT bool isBusyDay(QDate day) const;
 
 Q_SIGNALS:
-    void showIncidencePopupSignal(const Akonadi::Item &item, const QDate &date);
+    void showIncidencePopupSignal(const Akonadi::CollectionCalendar::Ptr &calendar, const Akonadi::Item &item, const QDate &date);
     void showNewEventPopupSignal();
     void fullViewChanged(bool enabled);
 

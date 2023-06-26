@@ -170,7 +170,7 @@ public:
 
 Q_SIGNALS:
     void showNewEventPopupSignal();
-    void showIncidencePopupSignal(const Akonadi::Item &, const QDate &);
+    void showIncidencePopupSignal(const Akonadi::CollectionCalendar::Ptr &, const Akonadi::Item &, const QDate &);
     void zoomViewHorizontally(const QDate &, int count);
 
     void timeSpanSelectionChanged();

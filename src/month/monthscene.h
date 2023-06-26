@@ -7,6 +7,7 @@
 #pragma once
 
 #include <Akonadi/Collection>
+#include <Akonadi/CollectionCalendar>
 #include <Akonadi/Item>
 
 #include <QBasicTimer>
@@ -191,7 +192,7 @@ public:
 
 Q_SIGNALS:
     void incidenceSelected(const Akonadi::Item &incidence, const QDate &);
-    void showIncidencePopupSignal(const Akonadi::Item &, const QDate &);
+    void showIncidencePopupSignal(const Akonadi::CollectionCalendar::Ptr &, const Akonadi::Item &, const QDate &);
     void newEventSignal();
     void showNewEventPopupSignal();
 
