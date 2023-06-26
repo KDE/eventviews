@@ -36,7 +36,8 @@ public:
 
     Q_REQUIRED_RESULT bool eventDurationHint(QDateTime &startDt, QDateTime &endDt, bool &allDay) const override;
 
-    void setCalendar(const Akonadi::ETMCalendar::Ptr &cal) override;
+    void addCalendar(const Akonadi::CollectionCalendar::Ptr &calendar) override;
+    void removeCalendar(const Akonadi::CollectionCalendar::Ptr &calendar) override;
 
     Q_REQUIRED_RESULT bool hasConfigurationDialog() const override;
 
