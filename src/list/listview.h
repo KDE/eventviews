@@ -32,7 +32,7 @@ class EVENTVIEWS_EXPORT ListView : public EventView
 {
     Q_OBJECT
 public:
-    explicit ListView(const Akonadi::ETMCalendar::Ptr &calendar, QWidget *parent = nullptr, bool nonInteractive = false);
+    explicit ListView(QWidget *parent = nullptr, bool nonInteractive = false);
     ~ListView() override;
 
     Q_REQUIRED_RESULT int currentDateCount() const override;
@@ -87,7 +87,7 @@ public Q_SLOTS:
 
 Q_SIGNALS:
     void showNewEventPopupSignal();
-    void showIncidencePopupSignal(const Akonadi::Item &, const QDate &);
+    void showIncidencePopupSignal(const Akonadi::CollectionCalendar::Ptr &, const Akonadi::Item &, const QDate &);
 
 protected Q_SLOTS:
     void processSelectionChange();
