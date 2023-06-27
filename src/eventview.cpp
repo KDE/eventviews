@@ -603,20 +603,6 @@ void EventView::saveConfig(KConfigGroup &configGroup)
     doSaveConfig(configGroup);
 }
 
-void EventView::setCollectionId(Akonadi::Collection::Id id)
-{
-    Q_D(EventView);
-    if (d->mCollectionId != id) {
-        d->mCollectionId = id;
-    }
-}
-
-Akonadi::Collection::Id EventView::collectionId() const
-{
-    Q_D(const EventView);
-    return d->mCollectionId;
-}
-
 bool EventView::makesWholeDayBusy(const KCalendarCore::Incidence::Ptr &incidence) const
 {
     // Must be event

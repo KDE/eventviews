@@ -220,14 +220,6 @@ public:
      */
     void saveConfig(KConfigGroup &configGroup);
 
-    /**
-      Makes the eventview display only items of collection @p id.
-      Useful for example in multi-agendaview (side-by-side) where
-      each AgendaView displays only one collection.
-    */
-    void setCollectionId(Akonadi::Collection::Id id);
-    Q_REQUIRED_RESULT Akonadi::Collection::Id collectionId() const;
-
     //----------------------------------------------------------------------------
     KCheckableProxyModel *takeCustomCollectionSelectionProxyModel();
     KCheckableProxyModel *customCollectionSelectionProxyModel() const;

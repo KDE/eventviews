@@ -442,8 +442,6 @@ void MultiAgendaView::slotClearTimeSpanSelection()
     for (AgendaView *agenda : std::as_const(d->mAgendaViews)) {
         if (agenda != sender()) {
             agenda->clearTimeSpanSelection();
-        } else {
-            setCollectionId(agenda->collectionId());
         }
     }
 }

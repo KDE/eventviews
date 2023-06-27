@@ -2237,7 +2237,7 @@ void AgendaView::slotIncidencesDropped(const KCalendarCore::Incidence::List &inc
 
     for (const KCalendarCore::Incidence::Ptr &incidence : incidences) {
         const Akonadi::Item existingItem = d->mViewCalendar->item(incidence);
-        const bool existsInSameCollection = existingItem.isValid() && (existingItem.storageCollectionId() == collectionId() || collectionId() == -1);
+        const bool existsInSameCollection = existingItem.isValid();
 
         if (existingItem.isValid() && existsInSameCollection) {
             auto newIncidence = existingItem.payload<KCalendarCore::Incidence::Ptr>();
@@ -2255,8 +2255,8 @@ void AgendaView::slotIncidencesDropped(const KCalendarCore::Incidence::List &inc
             // The drop came from another application.  Create a new incidence.
             setDateTime(incidence, newTime, allDay);
             incidence->setUid(KCalendarCore::CalFormat::createUniqueId());
-            Akonadi::Collection collection(collectionId());
-            const bool added = -1 != changer()->createIncidence(incidence, collection, this);
+            // Drop into the default collection
+            const bool added = -1 != changer()->createIncidence(incidence, Akonadi::Collection(), this);
 
             if (added) {
                 // TODO: make async
@@ -2477,11 +2477,7 @@ bool AgendaView::filterByCollectionSelection(const KCalendarCore::Incidence::Ptr
         return customCollectionSelection()->contains(item.parentCollection().id());
     }
 
-    if (collectionId() < 0) {
-        return true;
-    } else {
-        return collectionId() == item.storageCollectionId();
-    }
+    return true;
 }
 
 void AgendaView::alignAgendas()

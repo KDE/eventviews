@@ -76,6 +76,5 @@ public: /// Members
 
     Akonadi::IncidenceChanger *mChanger = nullptr;
     EventView::Changes mChanges = EventView::DatesChanged;
-    Akonadi::Collection::Id mCollectionId = -1;
 };
 } // EventViews
