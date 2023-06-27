@@ -58,7 +58,7 @@ void TimelineItem::insertIncidence(const Akonadi::Item &aitem, const QDateTime &
         }
     }
 
-    auto item = new TimelineSubItem(mCalendar, aitem, this);
+    auto item = new TimelineSubItem(aitem, this);
 
     item->setStartTime(start);
     item->setOriginalStart(start);
@@ -99,9 +99,13 @@ void TimelineItem::setColor(const QColor &color)
     mColor = color;
 }
 
-TimelineSubItem::TimelineSubItem(const Akonadi::CollectionCalendar::Ptr &calendar, const Akonadi::Item &incidence, TimelineItem *parent)
+Akonadi::CollectionCalendar::Ptr TimelineItem::calendar() const
+{
+    return mCalendar;
+}
+
+TimelineSubItem::TimelineSubItem(const Akonadi::Item &incidence, TimelineItem *parent)
     : QStandardItem()
-    , mCalendar(calendar)
     , mIncidence(incidence)
     , mParent(parent)
     , mToolTipNeedsUpdate(true)
@@ -142,6 +146,6 @@ void TimelineSubItem::updateToolTip()
 
     mToolTipNeedsUpdate = false;
 
-    const auto name = Akonadi::CalendarUtils::displayName(mCalendar->model(), mIncidence.parentCollection());
+    const auto name = Akonadi::CalendarUtils::displayName(mParent->calendar()->model(), mIncidence.parentCollection());
     setData(IncidenceFormatter::toolTipStr(name, Akonadi::CalendarUtils::incidence(mIncidence), originalStart().date(), true), Qt::ToolTipRole);
 }

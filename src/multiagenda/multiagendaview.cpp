@@ -662,7 +662,7 @@ void MultiAgendaView::doRestoreConfig(const KConfigGroup &configGroup)
             auto sortProxy = new QSortFilterProxyModel(this);
             sortProxy->setDynamicSortFilter(true);
 
-            sortProxy->setSourceModel(calendar()->entityTreeModel());
+            sortProxy->setSourceModel(model());
 
             // Only show the first column
             auto columnFilterProxy = new KRearrangeColumnsProxyModel(this);

@@ -145,26 +145,6 @@ int EventView::showMoveRecurDialog(const Incidence::Ptr &inc, QDate date)
     return KCalUtils::RecurrenceActions::NoOccurrence;
 }
 
-void EventView::setCalendar(const Akonadi::ETMCalendar::Ptr &calendar)
-{
-    Q_D(EventView);
-    d->calendar = calendar;
-    setModel(qobject_cast<Akonadi::EntityTreeModel *>(calendar->model()));
-}
-
-Akonadi::ETMCalendar::Ptr EventView::calendar() const
-{
-    Q_D(const EventView);
-    return d->calendar;
-}
-
-static auto isForCollection(const Akonadi::Collection &collection)
-{
-    return [collection](const Akonadi::CollectionCalendar::Ptr &calendar) {
-        return calendar->collection() == collection;
-    };
-}
-
 void EventView::addCalendar(const Akonadi::CollectionCalendar::Ptr &calendar)
 {
     Q_D(EventView);
@@ -181,11 +161,6 @@ void EventView::setModel(Akonadi::EntityTreeModel *etm)
 {
     Q_D(EventView);
     if (d->etm != etm) {
-        // TODO
-        if (d->calendar) {
-            disconnect(d->calendar.data());
-        }
-
         d->etm = etm;
         if (etm) {
             if (d->collectionSelectionModel) {
@@ -561,10 +536,7 @@ void EventView::restoreConfig(const KConfigGroup &configGroup)
             auto sortProxy = new QSortFilterProxyModel(this);
             sortProxy->setDynamicSortFilter(true);
             sortProxy->setSortCaseSensitivity(Qt::CaseInsensitive);
-
-            if (d->calendar) {
-                sortProxy->setSourceModel(d->calendar->entityTreeModel());
-            }
+            sortProxy->setSourceModel(d->etm);
 
             // Only show the first column.
             auto columnFilterProxy = new KRearrangeColumnsProxyModel(this);
@@ -653,11 +625,7 @@ QString EventView::iconForItem(const Akonadi::Item &item)
     QString iconName;
     Akonadi::Collection collection = item.parentCollection();
     while (collection.parentCollection().isValid() && collection.parentCollection() != Akonadi::Collection::root()) {
-        if (d->etm) {
-            collection = Akonadi::EntityTreeModel::updatedCollection(d->etm, collection.parentCollection());
-        } else {
-            collection = calendar()->collection(collection.parentCollection().id());
-        }
+        collection = Akonadi::EntityTreeModel::updatedCollection(d->etm, collection.parentCollection());
     }
 
     if (collection.isValid() && collection.hasAttribute<Akonadi::EntityDisplayAttribute>()) {

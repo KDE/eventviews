@@ -99,11 +99,12 @@ void JournalView::updateView()
     while (it != mEntries.begin()) {
         --it;
         it.value()->clear();
-        const KCalendarCore::Journal::List journals = calendar()->journals(it.key());
-        qCDebug(CALENDARVIEW_LOG) << "updateview found" << journals.count();
-        for (const KCalendarCore::Journal::Ptr &journal : journals) {
-            Akonadi::Item item = calendar()->item(journal);
-            it.value()->addJournal(item);
+        for (const auto &calendar : calendars()) {
+            const auto journals = calendar->journals(it.key());
+            qCDebug(CALENDARVIEW_LOG) << "updateview found" << journals.count() << " in calendar " << calendar->name();
+            for (const auto &journal : journals) {
+                it.value()->addJournal(calendar->item(journal));
+            }
         }
     }
 }

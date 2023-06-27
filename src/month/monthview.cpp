@@ -273,9 +273,6 @@ MonthView::~MonthView()
     for (auto &calendar : calendars()) {
         calendar->unregisterObserver(d.get());
     }
-    if (calendar()) {
-        calendar()->unregisterObserver(d.get());
-    }
 }
 
 void MonthView::addCalendar(const Akonadi::CollectionCalendar::Ptr &calendar)

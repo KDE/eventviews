@@ -111,21 +111,10 @@ public:
      */
     ~EventView() override;
 
-    Q_DECL_DEPRECATED virtual void setCalendar(const Akonadi::ETMCalendar::Ptr &cal);
-
-    /**
-      Return calendar object of this view.
-      TODO: replace with a version that returns a KCalendarCore::Calendar so it
-            can be used in different environments.
-            see agendaview for example calendar2(incidence)
-    */
-    Q_DECL_DEPRECATED virtual Akonadi::ETMCalendar::Ptr calendar() const;
-
     virtual void addCalendar(const Akonadi::CollectionCalendar::Ptr &calendar);
     virtual void removeCalendar(const Akonadi::CollectionCalendar::Ptr &calendar);
 
     virtual void setModel(Akonadi::EntityTreeModel *etm);
-
     Akonadi::EntityTreeModel *model() const;
 
     /*
@@ -447,6 +436,7 @@ Q_SIGNALS:
     void newSubTodoSignal(const Akonadi::Item &);
 
     void newJournalSignal(const QDate &);
+
 protected Q_SLOTS:
     virtual void calendarReset();
 

@@ -36,6 +36,8 @@ public:
 
     void setColor(const QColor &color);
 
+    Q_REQUIRED_RESULT Akonadi::CollectionCalendar::Ptr calendar() const;
+
 private:
     Akonadi::CollectionCalendar::Ptr mCalendar;
     QMap<Akonadi::Item::Id, QList<QStandardItem *>> mItemMap;
@@ -47,7 +49,7 @@ private:
 class TimelineSubItem : public QStandardItem
 {
 public:
-    TimelineSubItem(const Akonadi::CollectionCalendar::Ptr &calendar, const Akonadi::Item &incidence, TimelineItem *parent);
+    TimelineSubItem(const Akonadi::Item &incidence, TimelineItem *parent);
     ~TimelineSubItem() override;
 
     Q_REQUIRED_RESULT Akonadi::Item incidence() const
@@ -79,10 +81,9 @@ public:
     void updateToolTip();
 
 private:
-    Akonadi::CollectionCalendar::Ptr mCalendar;
     Akonadi::Item mIncidence;
     QDateTime mStart;
-    TimelineItem *mParent = nullptr;
+    TimelineItem *const mParent = nullptr;
     bool mToolTipNeedsUpdate;
 };
 }

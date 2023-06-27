@@ -47,7 +47,6 @@ private:
     EventView *const q;
 
 public: /// Members
-    Akonadi::ETMCalendar::Ptr calendar;
     Akonadi::EntityTreeModel *etm = nullptr;
     std::unique_ptr<CalendarSupport::CollectionSelection> customCollectionSelection;
     KCheckableProxyModel *collectionSelectionModel = nullptr;

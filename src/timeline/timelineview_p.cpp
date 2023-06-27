@@ -56,8 +56,9 @@ void TimelineViewPrivate::contextMenuRequested(QPoint point)
         Q_EMIT q->showNewEventPopupSignal();
         mSelectedItemList = Akonadi::Item::List();
     } else {
-#pragma warn "Port me"
-        Q_EMIT q->showIncidencePopupSignal({}, tlitem->incidence(), Akonadi::CalendarUtils::incidence(tlitem->incidence())->dtStart().date());
+        if (const auto calendar = tlitem->parent()->calendar(); calendar) {
+            Q_EMIT q->showIncidencePopupSignal(calendar, tlitem->incidence(), Akonadi::CalendarUtils::incidence(tlitem->incidence())->dtStart().date());
+        }
 
         mSelectedItemList << tlitem->incidence();
     }
