@@ -465,6 +465,8 @@ protected:
     QVector<Akonadi::CollectionCalendar::Ptr> calendars() const;
     Akonadi::CollectionCalendar::Ptr calendar3(const Akonadi::Item &item) const;
     Akonadi::CollectionCalendar::Ptr calendar3(const KCalendarCore::Incidence::Ptr &incidence) const;
+    Akonadi::CollectionCalendar::Ptr calendarForCollection(const Akonadi::Collection &collection) const;
+    Akonadi::CollectionCalendar::Ptr calendarForCollection(Akonadi::Collection::Id collectionId) const;
 
     bool makesWholeDayBusy(const KCalendarCore::Incidence::Ptr &incidence) const;
     Akonadi::IncidenceChanger *changer() const;

@@ -717,3 +717,15 @@ Akonadi::CollectionCalendar::Ptr EventView::calendar3(const KCalendarCore::Incid
     const auto cal = std::find_if(d->mCalendars.cbegin(), d->mCalendars.cend(), hasCollectionId(collectionId));
     return cal != d->mCalendars.cend() ? *cal : Akonadi::CollectionCalendar::Ptr{};
 }
+
+Akonadi::CollectionCalendar::Ptr EventView::calendarForCollection(Akonadi::Collection::Id collectionId) const
+{
+    Q_D(const EventView);
+    const auto cal = std::find_if(d->mCalendars.cbegin(), d->mCalendars.cend(), hasCollectionId(collectionId));
+    return cal != d->mCalendars.cend() ? *cal : Akonadi::CollectionCalendar::Ptr{};
+}
+
+Akonadi::CollectionCalendar::Ptr EventView::calendarForCollection(const Akonadi::Collection &collection) const
+{
+    return calendarForCollection(collection.id());
+}
