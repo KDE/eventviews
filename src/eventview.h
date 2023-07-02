@@ -114,8 +114,9 @@ public:
     virtual void addCalendar(const Akonadi::CollectionCalendar::Ptr &calendar);
     virtual void removeCalendar(const Akonadi::CollectionCalendar::Ptr &calendar);
 
-    virtual void setModel(Akonadi::EntityTreeModel *etm);
-    Akonadi::EntityTreeModel *model() const;
+    virtual void setModel(QAbstractItemModel *model);
+    QAbstractItemModel *model() const;
+    Akonadi::EntityTreeModel *entityTreeModel() const;
 
     /*
       update config is called after prefs are set.

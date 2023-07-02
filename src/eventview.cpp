@@ -157,24 +157,25 @@ void EventView::removeCalendar(const Akonadi::CollectionCalendar::Ptr &calendar)
     d->mCalendars.removeOne(calendar);
 }
 
-void EventView::setModel(Akonadi::EntityTreeModel *etm)
+void EventView::setModel(QAbstractItemModel *model)
 {
     Q_D(EventView);
-    if (d->etm != etm) {
-        d->etm = etm;
-        if (etm) {
+    if (d->model != model) {
+        d->model = model;
+        if (d->model) {
             if (d->collectionSelectionModel) {
-                d->collectionSelectionModel->setSourceModel(etm);
+                d->collectionSelectionModel->setSourceModel(d->model);
             }
 
+            d->setEtm(d->model);
             d->setUpModels();
 
-            connect(d->etm, &Akonadi::EntityTreeModel::dataChanged, this, [this](const QModelIndex &topLeft, const QModelIndex &bottomRight) {
+            connect(d->model, &QAbstractItemModel::dataChanged, this, [this](const QModelIndex &topLeft, const QModelIndex &bottomRight) {
                 Q_D(EventView);
 
                 for (int i = topLeft.row(); i <= bottomRight.row(); ++i) {
                     const auto index = topLeft.siblingAtRow(i);
-                    const auto col = d->etm->data(index, Akonadi::EntityTreeModel::CollectionRole).value<Akonadi::Collection>();
+                    const auto col = d->model->data(index, Akonadi::EntityTreeModel::CollectionRole).value<Akonadi::Collection>();
                     if (col.isValid()) {
                         // TODO: we have no way of knowing what has actually changed in the model :(
                         onCollectionChanged(col, {"AccessRights"});
@@ -185,7 +186,13 @@ void EventView::setModel(Akonadi::EntityTreeModel *etm)
     }
 }
 
-Akonadi::EntityTreeModel *EventView::model() const
+QAbstractItemModel *EventView::model() const
+{
+    Q_D(const EventView);
+    return d->model;
+}
+
+Akonadi::EntityTreeModel *EventView::entityTreeModel() const
 {
     Q_D(const EventView);
     return d->etm;
@@ -536,7 +543,7 @@ void EventView::restoreConfig(const KConfigGroup &configGroup)
             auto sortProxy = new QSortFilterProxyModel(this);
             sortProxy->setDynamicSortFilter(true);
             sortProxy->setSortCaseSensitivity(Qt::CaseInsensitive);
-            sortProxy->setSourceModel(d->etm);
+            sortProxy->setSourceModel(d->model);
 
             // Only show the first column.
             auto columnFilterProxy = new KRearrangeColumnsProxyModel(this);
@@ -625,7 +632,7 @@ QString EventView::iconForItem(const Akonadi::Item &item)
     QString iconName;
     Akonadi::Collection collection = item.parentCollection();
     while (collection.parentCollection().isValid() && collection.parentCollection() != Akonadi::Collection::root()) {
-        collection = Akonadi::EntityTreeModel::updatedCollection(d->etm, collection.parentCollection());
+        collection = Akonadi::EntityTreeModel::updatedCollection(d->model, collection.parentCollection());
     }
 
     if (collection.isValid() && collection.hasAttribute<Akonadi::EntityDisplayAttribute>()) {

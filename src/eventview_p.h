@@ -40,6 +40,8 @@ public: /// Methods
      */
     void finishTypeAhead();
 
+    void setEtm(QAbstractItemModel *model);
+
 public: // virtual functions
     void setUpModels();
 
@@ -47,6 +49,7 @@ private:
     EventView *const q;
 
 public: /// Members
+    QAbstractItemModel *model = nullptr;
     Akonadi::EntityTreeModel *etm = nullptr;
     std::unique_ptr<CalendarSupport::CollectionSelection> customCollectionSelection;
     KCheckableProxyModel *collectionSelectionModel = nullptr;

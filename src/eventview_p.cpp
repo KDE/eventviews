@@ -16,10 +16,13 @@
 #include <CalendarSupport/CollectionSelection>
 #include <CalendarSupport/KCalPrefs>
 
+#include <Akonadi/EntityTreeModel>
+
 #include <KHolidays/HolidayRegion>
 
 #include <KCheckableProxyModel>
 
+#include <QAbstractProxyModel>
 #include <QApplication>
 
 #include <ranges>
@@ -55,4 +58,20 @@ void EventViewPrivate::setUpModels()
     if (collectionSelectionModel) {
         customCollectionSelection = std::make_unique<CalendarSupport::CollectionSelection>(collectionSelectionModel->selectionModel());
     }
+}
+
+void EventViewPrivate::setEtm(QAbstractItemModel *model)
+{
+    while (model) {
+        if (const auto *proxy = qobject_cast<QAbstractProxyModel *>(model); proxy != nullptr) {
+            model = proxy->sourceModel();
+        } else if (auto *etm = qobject_cast<Akonadi::EntityTreeModel *>(model); etm != nullptr) {
+            this->etm = etm;
+            break;
+        } else {
+            model = nullptr;
+        }
+    }
+
+    Q_ASSERT_X(this->etm != nullptr, "EventView", "Model is not ETM, ETM-derived or a proxy chain on top of an ETM or an ETM-derived model");
 }
