@@ -8,7 +8,6 @@
 
 #pragma once
 
-#include <Akonadi/ETMCalendar>
 #include <QStyledItemDelegate>
 
 class QPainter;
@@ -107,11 +106,6 @@ public:
     void setEditorData(QWidget *editor, const QModelIndex &index) const override;
     void setModelData(QWidget *editor, QAbstractItemModel *model, const QModelIndex &index) const override;
     void updateEditorGeometry(QWidget *editor, const QStyleOptionViewItem &option, const QModelIndex &index) const override;
-
-    void setCalendar(const Akonadi::ETMCalendar::Ptr &cal);
-
-private:
-    Akonadi::ETMCalendar::Ptr mCalendar;
 };
 
 /**

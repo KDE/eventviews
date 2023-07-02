@@ -198,7 +198,7 @@ TodoView::TodoView(const EventViews::PrefsPtr &prefs, bool sidebarView, QWidget 
     connect(mProxyModel, &TodoViewSortFilterProxyModel::rowsInserted, this, &TodoView::onRowsInserted);
 
     if (!mSidebarView) {
-        mQuickSearch = new TodoViewQuickSearch(calendar(), this);
+        mQuickSearch = new TodoViewQuickSearch(this);
         mQuickSearch->setVisible(prefs->enableTodoQuickSearch());
         connect(mQuickSearch,
                 &TodoViewQuickSearch::searchTextChanged,
@@ -459,10 +459,6 @@ void TodoView::setCalendar(const Akonadi::ETMCalendar::Ptr &calendar)
 {
     EventView::setCalendar(calendar);
 
-    if (!mSidebarView) {
-        mQuickSearch->setCalendar(calendar);
-    }
-    mCategoriesDelegate->setCalendar(calendar);
     sModels->setCalendar(calendar);
     restoreViewState();
 }

@@ -10,7 +10,6 @@
 
 #pragma once
 
-#include <Akonadi/ETMCalendar>
 #include <QWidget>
 
 namespace KPIM
@@ -29,9 +28,7 @@ class TodoViewQuickSearch : public QWidget
 {
     Q_OBJECT
 public:
-    TodoViewQuickSearch(const Akonadi::ETMCalendar::Ptr &calendar, QWidget *parent);
-
-    void setCalendar(const Akonadi::ETMCalendar::Ptr &calendar);
+    TodoViewQuickSearch(QWidget *parent);
 
 Q_SIGNALS:
     void searchTextChanged(const QString &);
@@ -51,8 +48,6 @@ public Q_SLOTS:
 private:
     /** Helper method for the filling of the priority combo. */
     void fillPriorities();
-
-    Akonadi::ETMCalendar::Ptr mCalendar;
 
     QLineEdit *const mSearchLine;
     Akonadi::TagSelectionComboBox *const mCategoryCombo;
