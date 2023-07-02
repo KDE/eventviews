@@ -10,7 +10,9 @@
 #include "helper.h"
 
 #include <Akonadi/CalendarUtils>
+#include <Akonadi/EntityTreeModel>
 
+#include <QAbstractProxyModel>
 #include <QSharedPointer>
 
 #include <ranges>
@@ -193,7 +195,22 @@ Akonadi::Item AkonadiViewCalendar::item(const KCalendarCore::Incidence::Ptr &inc
 
 QString AkonadiViewCalendar::displayName(const KCalendarCore::Incidence::Ptr &incidence) const
 {
-    return Akonadi::CalendarUtils::displayName(mAgendaView->model(), item(incidence).parentCollection());
+    auto *model = mAgendaView->model();
+    Akonadi::EntityTreeModel *etm = nullptr;
+    while (model) {
+        if (const auto *proxy = qobject_cast<QAbstractProxyModel *>(model); proxy != nullptr) {
+            model = proxy->sourceModel();
+        } else if (etm = qobject_cast<Akonadi::EntityTreeModel *>(model); etm != nullptr) {
+            break;
+        } else {
+            model = nullptr;
+        }
+    }
+    if (etm) {
+        return Akonadi::CalendarUtils::displayName(etm, item(incidence).parentCollection());
+    }
+
+    return {};
 }
 
 QColor AkonadiViewCalendar::resourceColor(const KCalendarCore::Incidence::Ptr &incidence) const
