@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kdepim-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-25 00:52+0000\n"
-"PO-Revision-Date: 2023-05-24 01:44+0300\n"
+"PO-Revision-Date: 2023-07-13 23:50+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -2112,7 +2112,7 @@ msgstr "İsimleri görüntülemek için isteğe bağlı liste"
 #: viewerapp/mainwindow.ui:14
 #, kde-format
 msgid "CalendarViews Viewer"
-msgstr "TakvimGörünümleri Görüntüleyici"
+msgstr "Takvim Görünümleri Görüntüleyicisi"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab)
 #: viewerapp/mainwindow.ui:25
