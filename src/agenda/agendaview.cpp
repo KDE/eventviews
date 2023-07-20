@@ -757,14 +757,17 @@ void AgendaViewPrivate::calendarIncidenceAdded(const KCalendarCore::Incidence::P
     }
 
     if (incidence->hasRecurrenceId()) {
-        if (auto mainIncidence = q->calendar2(incidence)->incidence(incidence->uid())) {
-            // Reevaluate the main event instead, if it was inserted before this one.
-            reevaluateIncidence(mainIncidence);
-        } else if (q->displayIncidence(incidence, false)) {
-            // Display disassociated occurrences because errors sometimes destroy
-            // the main recurring incidence.
-            mAgenda->checkScrollBoundaries();
-            q->scheduleUpdateEventIndicators();
+        const auto cal = q->calendar2(incidence);
+        if (cal) {
+            if (auto mainIncidence = cal->incidence(incidence->uid())) {
+                // Reevaluate the main event instead, if it was inserted before this one.
+                reevaluateIncidence(mainIncidence);
+            } else if (q->displayIncidence(incidence, false)) {
+                // Display disassociated occurrences because errors sometimes destroy
+                // the main recurring incidence.
+                mAgenda->checkScrollBoundaries();
+                q->scheduleUpdateEventIndicators();
+            }
         }
     } else if (incidence->recurs()) {
         // Reevaluate recurring incidences to clean up any disassociated
@@ -807,8 +810,11 @@ void AgendaViewPrivate::calendarIncidenceChanged(const KCalendarCore::Incidence:
 
     if (incidence->hasRecurrenceId() && mViewCalendar->isValid(incidence)) {
         // Reevaluate the main event instead, if it exists
-        KCalendarCore::Incidence::Ptr mainIncidence = q->calendar2(incidence)->incidence(incidence->uid());
-        reevaluateIncidence(mainIncidence ? mainIncidence : incidence);
+        const auto cal = q->calendar2(incidence);
+        if (cal) {
+            KCalendarCore::Incidence::Ptr mainIncidence = cal->incidence(incidence->uid());
+            reevaluateIncidence(mainIncidence ? mainIncidence : incidence);
+        }
     } else {
         reevaluateIncidence(incidence);
     }
@@ -832,9 +838,12 @@ void AgendaViewPrivate::calendarIncidenceDeleted(const KCalendarCore::Incidence:
         // Reevaluate the main event, if it exists. The exception was removed so the main recurrent series
         // will no be bigger.
         if (mViewCalendar->isValid(incidence->uid())) {
-            KCalendarCore::Incidence::Ptr mainIncidence = q->calendar2(incidence->uid())->incidence(incidence->uid());
-            if (mainIncidence) {
-                reevaluateIncidence(mainIncidence);
+            const auto cal = q->calendar2(incidence->uid());
+            if (cal) {
+                KCalendarCore::Incidence::Ptr mainIncidence = cal->incidence(incidence->uid());
+                if (mainIncidence) {
+                    reevaluateIncidence(mainIncidence);
+                }
             }
         }
     } else if (mightBeVisible(incidence)) {
@@ -1223,12 +1232,20 @@ bool AgendaView::eventFilter(QObject *object, QEvent *event)
 
 KCalendarCore::Calendar::Ptr AgendaView::calendar2(const KCalendarCore::Incidence::Ptr &incidence) const
 {
-    return d->mViewCalendar->findCalendar(incidence)->getCalendar();
+    const auto cal = d->mViewCalendar->findCalendar(incidence);
+    if (cal) {
+        return cal->getCalendar();
+    }
+    return {};
 }
 
 KCalendarCore::Calendar::Ptr AgendaView::calendar2(const QString &incidenceIdentifier) const
 {
-    return d->mViewCalendar->findCalendar(incidenceIdentifier)->getCalendar();
+    const auto cal = d->mViewCalendar->findCalendar(incidenceIdentifier);
+    if (cal) {
+        return cal->getCalendar();
+    }
+    return {};
 }
 
 void AgendaView::setCalendar(const Akonadi::ETMCalendar::Ptr &cal)
@@ -1977,7 +1994,8 @@ bool AgendaView::displayIncidence(const KCalendarCore::Incidence::Ptr &incidence
     if (incidence->hasRecurrenceId()) {
         // Normally a disassociated instance belongs to a recurring instance that
         // displays it.
-        if (calendar2(incidence)->incidence(incidence->uid())) {
+        const auto cal = calendar2(incidence);
+        if (cal && cal->incidence(incidence->uid())) {
             return false;
         }
     }
@@ -2386,12 +2404,15 @@ void AgendaView::removeIncidence(const KCalendarCore::Incidence::Ptr &incidence)
     if (!incidence->hasRecurrenceId() && d->mViewCalendar->isValid(incidence->uid())) {
         // Deleted incidence is an main incidence
         // Delete all exceptions as well
-        const KCalendarCore::Incidence::List exceptions = calendar2(incidence->uid())->instances(incidence);
-        for (const KCalendarCore::Incidence::Ptr &exception : exceptions) {
-            if (exception->allDay()) {
-                d->mAllDayAgenda->removeIncidence(exception);
-            } else {
-                d->mAgenda->removeIncidence(exception);
+        const auto cal = calendar2(incidence->uid());
+        if (cal) {
+            const KCalendarCore::Incidence::List exceptions = cal->instances(incidence);
+            for (const KCalendarCore::Incidence::Ptr &exception : exceptions) {
+                if (exception->allDay()) {
+                    d->mAllDayAgenda->removeIncidence(exception);
+                } else {
+                    d->mAgenda->removeIncidence(exception);
+                }
             }
         }
     }
