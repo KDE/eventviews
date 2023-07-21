@@ -374,7 +374,7 @@ QString TimeLabels::headerToolTip() const
     toolTip += i18nc("heading for timezone display name", "<i>Name:</i> %1", mTimezone.displayName(now, QTimeZone::LongName));
     toolTip += QLatin1String("<br/>");
 
-    if (mTimezone.country() != QLocale::AnyCountry) {
+    if (mTimezone.territory() != QLocale::AnyCountry) {
         toolTip += i18nc("heading for timezone country", "<i>Country:</i> %1", QLocale::territoryToString(mTimezone.territory()));
         toolTip += QLatin1String("<br/>");
     }
