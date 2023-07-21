@@ -41,7 +41,7 @@ void MonthItemOrderTest::longerInstancesFirst()
         QVERIFY(MonthItem::greaterThan(longHoliday, shortEvent));
         QVERIFY(!MonthItem::greaterThan(shortEvent, longHoliday));
 
-        auto *shortHoliday = new HolidayMonthItem(nullptr, d, QStringLiteral(""));
+        auto shortHoliday = new HolidayMonthItem(nullptr, d, QStringLiteral(""));
         QVERIFY(MonthItem::greaterThan(longEvent, shortHoliday));
         QVERIFY(!MonthItem::greaterThan(shortHoliday, longEvent));
         QVERIFY(MonthItem::greaterThan(longHoliday, shortHoliday));
