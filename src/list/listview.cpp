@@ -16,7 +16,6 @@
 #include <CalendarSupport/Utils>
 
 #include <Akonadi/CalendarUtils>
-#include <Akonadi/ETMCalendar>
 #include <Akonadi/IncidenceChanger>
 
 #include <KCalUtils/IncidenceFormatter>

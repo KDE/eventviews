@@ -10,7 +10,6 @@
 
 #include <CalendarSupport/CellItem>
 
-#include <Akonadi/ETMCalendar>
 #include <Akonadi/Item>
 
 #include <QDateTime>

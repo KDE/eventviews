@@ -666,7 +666,7 @@ void MultiAgendaView::doRestoreConfig(const KConfigGroup &configGroup)
 
             // Only show the first column
             auto columnFilterProxy = new KRearrangeColumnsProxyModel(this);
-            columnFilterProxy->setSourceColumns(QVector<int>() << Akonadi::ETMCalendar::CollectionTitle);
+            columnFilterProxy->setSourceColumns(QVector<int>() << 0);
             columnFilterProxy->setSourceModel(sortProxy);
 
             // Keep track of selection.

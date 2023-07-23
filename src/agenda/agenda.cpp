@@ -15,7 +15,6 @@
 #include "prefs.h"
 
 #include <Akonadi/CalendarUtils>
-#include <Akonadi/ETMCalendar>
 #include <Akonadi/IncidenceChanger>
 #include <CalendarSupport/Utils>
 

@@ -13,7 +13,6 @@
 
 #include <Akonadi/Collection>
 #include <Akonadi/CollectionCalendar>
-#include <Akonadi/ETMCalendar>
 #include <Akonadi/Item>
 
 #include <KCalendarCore/Incidence>
@@ -25,6 +24,8 @@
 #include <QWidget>
 
 #include <memory>
+
+class QAbstractItemModel;
 
 namespace CalendarSupport
 {
