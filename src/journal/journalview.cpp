@@ -101,7 +101,6 @@ void JournalView::updateView()
         it.value()->clear();
         for (const auto &calendar : calendars()) {
             const auto journals = calendar->journals(it.key());
-            qCDebug(CALENDARVIEW_LOG) << "updateview found" << journals.count() << " in calendar " << calendar->name();
             for (const auto &journal : journals) {
                 it.value()->addJournal(calendar->item(journal));
             }
@@ -121,15 +120,11 @@ void JournalView::showDates(const QDate &start, const QDate &end, const QDate &)
         qCWarning(CALENDARVIEW_LOG) << "End is smaller than start. end=" << end << "; start=" << start;
         return;
     }
-    qDebug() << "===========  SHOWDATES" << start << end;
 
     const auto cals = calendars();
-    qDebug() << "===== HAS" << cals.size() << "calendars";
     for (QDate d = end; d >= start; d = d.addDays(-1)) {
         for (const auto &calendar : cals) {
             const KCalendarCore::Journal::List jnls = calendar->journals(d);
-            qDebug() << "===== "
-                     << "Cal" << calendar->collection().id() << "has" << jnls.size() << " journals";
             // qCDebug(CALENDARVIEW_LOG) << "Found" << jnls.count() << "journals on date" << d;
             for (const KCalendarCore::Journal::Ptr &journal : jnls) {
                 Akonadi::Item item = calendar->item(journal);
