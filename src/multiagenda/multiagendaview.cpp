@@ -109,8 +109,8 @@ public:
     }
 
     void addView(const Akonadi::CollectionCalendar::Ptr &calendar);
-    // void addView(KCheckableProxyModel *selectionProxy, const QString &title);
-    AgendaView *createView(const Akonadi::CollectionCalendar::Ptr &calendar);
+    void addView(KCheckableProxyModel *selectionProxy, const QString &title);
+    AgendaView *createView(const QString &calendar);
     void deleteViews();
     void setupViews();
     void resizeScrollView(QSize size);
@@ -247,23 +247,15 @@ void MultiAgendaView::recreateViews()
 
     d->deleteViews();
 
-    /*
-        if (d->mCustomColumnSetupUsed) {
-            Q_ASSERT(d->mCollectionSelectionModels.size() == d->mCustomNumberOfColumns);
-            for (int i = 0; i < d->mCustomNumberOfColumns; ++i) {
-                d->addView(d->mCollectionSelectionModels[i], d->mCustomColumnTitles[i]);
-            }
-        } else {
-            const auto lst = collectionSelection()->selectedCollections();
-            for (const Akonadi::Collection &i : lst) {
-                if (i.contentMimeTypes().contains(KCalendarCore::Event::eventMimeType())) {
-                    d->addView(i);
-                }
-            }
+    if (d->mCustomColumnSetupUsed) {
+        Q_ASSERT(d->mCollectionSelectionModels.size() == d->mCustomNumberOfColumns);
+        for (int i = 0; i < d->mCustomNumberOfColumns; ++i) {
+            d->addView(d->mCollectionSelectionModels[i], d->mCustomColumnTitles[i]);
         }
-    */
-    for (const auto &calendar : calendars()) {
-        d->addView(calendar);
+    } else {
+        for (const auto &calendar : calendars()) {
+            d->addView(calendar);
+        }
     }
 
     // no resources activated, so stop here to avoid crashing somewhere down the line
@@ -446,17 +438,15 @@ void MultiAgendaView::slotClearTimeSpanSelection()
     }
 }
 
-AgendaView *MultiAgendaViewPrivate::createView(const Akonadi::CollectionCalendar::Ptr &calendar)
+AgendaView *MultiAgendaViewPrivate::createView(const QString &title)
 {
     auto box = new QWidget(mTopBox);
     mTopBox->layout()->addWidget(box);
     auto layout = new QVBoxLayout(box);
     layout->setContentsMargins(0, 0, 0, 0);
-    const auto title = Akonadi::CalendarUtils::displayName(calendar->model(), calendar->collection());
     layout->addWidget(new ElidedLabel(title));
     auto av = new AgendaView(q->preferences(), q->startDateTime().date(), q->endDateTime().date(), true, true, q);
     layout->addWidget(av);
-    av->addCalendar(calendar);
     av->setIncidenceChanger(q->changer());
     av->agenda()->scrollArea()->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     mAgendaViews.append(av);
@@ -483,8 +473,20 @@ AgendaView *MultiAgendaViewPrivate::createView(const Akonadi::CollectionCalendar
 
 void MultiAgendaViewPrivate::addView(const Akonadi::CollectionCalendar::Ptr &calendar)
 {
-    createView(calendar);
-    // av->setCustomCollectionSelectionProxyModel(sm);
+    const auto title = Akonadi::CalendarUtils::displayName(calendar->model(), calendar->collection());
+    auto *view = createView(title);
+    view->addCalendar(calendar);
+}
+
+void MultiAgendaViewPrivate::addView(KCheckableProxyModel *sm, const QString &title)
+{
+    auto *view = createView(title);
+    qDebug() << "==== ADD VIEW " << title << sm;
+    CalendarSupport::CollectionSelection selection(sm->selectionModel());
+    for (const auto &collection : selection.selectedCollections()) {
+        qDebug() << "Adding calendar for" << collection.displayName() << "  to view " << title;
+        view->addCalendar(Akonadi::CollectionCalendar::Ptr::create(q->entityTreeModel(), collection));
+    }
 }
 
 void MultiAgendaView::resizeEvent(QResizeEvent *ev)

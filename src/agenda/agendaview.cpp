@@ -1286,10 +1286,17 @@ KCalendarCore::Calendar::Ptr AgendaView::calendar2(const QString &incidenceIdent
 
 void AgendaView::addCalendar(const ViewCalendar::Ptr &cal)
 {
+    const bool isFirstCalendar = d->mViewCalendar->calendarCount() == 0;
+
     d->mViewCalendar->addCalendar(cal);
     cal->getCalendar()->registerObserver(d.get());
 
-    setChanges(EventViews::EventView::ResourcesChanged);
+    EventView::Changes changes = EventView::ResourcesChanged;
+    if (isFirstCalendar) {
+        changes |= EventView::DatesChanged; // we need to initialize the columns as well
+    }
+
+    setChanges(changes);
     updateView();
 }
 
@@ -2467,6 +2474,8 @@ QSplitter *AgendaView::splitter() const
 
 bool AgendaView::filterByCollectionSelection(const KCalendarCore::Incidence::Ptr &incidence)
 {
+    return true;
+    /*
     const Akonadi::Item item = d->mViewCalendar->item(incidence);
 
     if (!item.isValid()) {
@@ -2478,6 +2487,7 @@ bool AgendaView::filterByCollectionSelection(const KCalendarCore::Incidence::Ptr
     }
 
     return true;
+    */
 }
 
 void AgendaView::alignAgendas()
