@@ -790,7 +790,8 @@ void AgendaViewPrivate::calendarIncidenceChanged(const KCalendarCore::Incidence:
 
     AgendaItem::List agendaItems = this->agendaItems(incidence->uid());
     if (agendaItems.isEmpty()) {
-        qCWarning(CALENDARVIEW_LOG) << "AgendaView::calendarIncidenceChanged() Invalid agendaItem for incidence " << incidence->uid();
+        // Don't warn - it's possible the incidence has been changed in another calendar that we do not display.
+        // qCWarning(CALENDARVIEW_LOG) << "AgendaView::calendarIncidenceChanged() Invalid agendaItem for incidence " << incidence->uid();
         return;
     }
 
@@ -1945,7 +1946,6 @@ void AgendaView::fillAgenda()
     }
 
     if (d->mViewCalendar->calendarCount() == 0) {
-        qCWarning(CALENDARVIEW_LOG) << "No calendar is set";
         return;
     }
 

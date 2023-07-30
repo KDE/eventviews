@@ -280,6 +280,9 @@ public:
 
     Q_REQUIRED_RESULT QString iconForItem(const Akonadi::Item &);
 
+    Q_REQUIRED_RESULT Akonadi::CollectionCalendar::Ptr calendarForCollection(const Akonadi::Collection &collection) const;
+    Q_REQUIRED_RESULT Akonadi::CollectionCalendar::Ptr calendarForCollection(Akonadi::Collection::Id collectionId) const;
+
 public Q_SLOTS:
     /**
       Shows given incidences. Depending on the actual view it might not
@@ -449,8 +452,6 @@ protected:
     QVector<Akonadi::CollectionCalendar::Ptr> calendars() const;
     Akonadi::CollectionCalendar::Ptr calendar3(const Akonadi::Item &item) const;
     Akonadi::CollectionCalendar::Ptr calendar3(const KCalendarCore::Incidence::Ptr &incidence) const;
-    Akonadi::CollectionCalendar::Ptr calendarForCollection(const Akonadi::Collection &collection) const;
-    Akonadi::CollectionCalendar::Ptr calendarForCollection(Akonadi::Collection::Id collectionId) const;
 
     bool makesWholeDayBusy(const KCalendarCore::Incidence::Ptr &incidence) const;
     Akonadi::IncidenceChanger *changer() const;

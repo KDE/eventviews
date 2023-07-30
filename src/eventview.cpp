@@ -657,32 +657,27 @@ QVector<Akonadi::CollectionCalendar::Ptr> EventView::calendars() const
     return d->mCalendars;
 }
 
-static auto hasCollectionId(Akonadi::Collection::Id collectionId)
-{
-    return [collectionId](const Akonadi::CollectionCalendar::Ptr &calendar) {
-        return calendar->collection().id() == collectionId;
-    };
-}
-
 Akonadi::CollectionCalendar::Ptr EventView::calendar3(const Akonadi::Item &item) const
 {
     Q_D(const EventView);
-    const auto cal = std::find_if(d->mCalendars.cbegin(), d->mCalendars.cend(), hasCollectionId(item.storageCollectionId()));
-    return cal != d->mCalendars.cend() ? *cal : Akonadi::CollectionCalendar::Ptr{};
+    return calendarForCollection(item.storageCollectionId());
 }
 
 Akonadi::CollectionCalendar::Ptr EventView::calendar3(const KCalendarCore::Incidence::Ptr &incidence) const
 {
     Q_D(const EventView);
     const auto collectionId = incidence->customProperty("VOLATILE", "COLLECTION-ID").toLongLong();
-    const auto cal = std::find_if(d->mCalendars.cbegin(), d->mCalendars.cend(), hasCollectionId(collectionId));
-    return cal != d->mCalendars.cend() ? *cal : Akonadi::CollectionCalendar::Ptr{};
+    return calendarForCollection(collectionId);
 }
 
 Akonadi::CollectionCalendar::Ptr EventView::calendarForCollection(Akonadi::Collection::Id collectionId) const
 {
+    const auto hasCollectionId = [collectionId](const Akonadi::CollectionCalendar::Ptr &calendar) {
+        return calendar->collection().id() == collectionId;
+    };
+
     Q_D(const EventView);
-    const auto cal = std::find_if(d->mCalendars.cbegin(), d->mCalendars.cend(), hasCollectionId(collectionId));
+    const auto cal = std::find_if(d->mCalendars.cbegin(), d->mCalendars.cend(), hasCollectionId);
     return cal != d->mCalendars.cend() ? *cal : Akonadi::CollectionCalendar::Ptr{};
 }
 

@@ -72,6 +72,25 @@ static void printObject( QObject *o, int level = 0 )
 }
 */
 
+class DefaultCalendarFactory : public MultiAgendaView::CalendarFactory
+{
+public:
+    using Ptr = QSharedPointer<DefaultCalendarFactory>;
+
+    explicit DefaultCalendarFactory(MultiAgendaView *view)
+        : mView(view)
+    {
+    }
+
+    Akonadi::CollectionCalendar::Ptr calendarForCollection(const Akonadi::Collection &collection) override
+    {
+        return Akonadi::CollectionCalendar::Ptr::create(mView->entityTreeModel(), collection);
+    }
+
+private:
+    MultiAgendaView *mView;
+};
+
 static QString generateColumnLabel(int c)
 {
     return i18n("Agenda %1", c + 1);
@@ -98,8 +117,9 @@ private:
     };
 
 public:
-    explicit MultiAgendaViewPrivate(MultiAgendaView *qq)
+    explicit MultiAgendaViewPrivate(const MultiAgendaView::CalendarFactory::Ptr &factory, MultiAgendaView *qq)
         : q(qq)
+        , mCalendarFactory(factory)
     {
     }
 
@@ -137,11 +157,17 @@ public:
     QWidget *mRightDummyWidget = nullptr;
     QHash<QString, KViewStateMaintainer<ETMViewStateSaver> *> mSelectionSavers;
     QMetaObject::Connection m_selectionChangeConn;
+    MultiAgendaView::CalendarFactory::Ptr mCalendarFactory;
 };
 
 MultiAgendaView::MultiAgendaView(QWidget *parent)
+    : MultiAgendaView(DefaultCalendarFactory::Ptr::create(this), parent)
+{
+}
+
+MultiAgendaView::MultiAgendaView(const CalendarFactory::Ptr &factory, QWidget *parent)
     : EventView(parent)
-    , d(new MultiAgendaViewPrivate(this))
+    , d(new MultiAgendaViewPrivate(factory, this))
 {
     auto topLevelLayout = new QHBoxLayout(this);
     topLevelLayout->setSpacing(0);
@@ -236,6 +262,26 @@ void MultiAgendaView::removeCalendar(const Akonadi::CollectionCalendar::Ptr &cal
     EventView::removeCalendar(calendar);
     d->mPendingChanges = true;
     recreateViews();
+}
+
+void MultiAgendaView::setModel(QAbstractItemModel *model)
+{
+    EventView::setModel(model);
+    // Workaround: when we create the multiagendaview with custom columns too early
+    // during start, when Collections in ETM are not fully loaded yet, then
+    // the KCheckableProxyModels are restored from config with incomplete selections.
+    // But when the Collections are finally loaded into ETM, there's nothing to update
+    // the selections, so we end up with some calendars not displayed in the individual
+    // AgendaViews. Thus, we force-recreate everything once collection tree is fetched.
+    connect(
+        entityTreeModel(),
+        &Akonadi::EntityTreeModel::collectionTreeFetched,
+        this,
+        [this]() {
+            d->mPendingChanges = true;
+            recreateViews();
+        },
+        Qt::QueuedConnection);
 }
 
 void MultiAgendaView::recreateViews()
@@ -478,15 +524,41 @@ void MultiAgendaViewPrivate::addView(const Akonadi::CollectionCalendar::Ptr &cal
     view->addCalendar(calendar);
 }
 
+static void updateViewFromSelection(AgendaView *view,
+                                    const QItemSelection &selected,
+                                    const QItemSelection &deselected,
+                                    const MultiAgendaView::CalendarFactory::Ptr &factory)
+{
+    for (const auto index : selected.indexes()) {
+        if (const auto col = index.data(Akonadi::EntityTreeModel::CollectionRole).value<Akonadi::Collection>(); col.isValid()) {
+            const auto calendar = factory->calendarForCollection(col);
+            view->addCalendar(calendar);
+        }
+    }
+    for (const auto index : deselected.indexes()) {
+        if (const auto col = index.data(Akonadi::EntityTreeModel::CollectionRole).value<Akonadi::Collection>(); col.isValid()) {
+            if (const auto calendar = view->calendarForCollection(col); calendar) {
+                view->removeCalendar(calendar);
+            }
+        }
+    }
+}
+
 void MultiAgendaViewPrivate::addView(KCheckableProxyModel *sm, const QString &title)
 {
     auto *view = createView(title);
-    qDebug() << "==== ADD VIEW " << title << sm;
-    CalendarSupport::CollectionSelection selection(sm->selectionModel());
-    for (const auto &collection : selection.selectedCollections()) {
-        qDebug() << "Adding calendar for" << collection.displayName() << "  to view " << title;
-        view->addCalendar(Akonadi::CollectionCalendar::Ptr::create(q->entityTreeModel(), collection));
-    }
+    // During launch the underlying ETM doesn't have the entire Collection tree populated,
+    // so the "sm" contains an icomplete selection - we must listen for changes and upated
+    // the view later on
+    QObject::connect(sm->selectionModel(),
+                     &QItemSelectionModel::selectionChanged,
+                     view,
+                     [this, view](const QItemSelection &selected, const QItemSelection &deselected) {
+                         updateViewFromSelection(view, selected, deselected, mCalendarFactory);
+                     });
+
+    // Initial update
+    updateViewFromSelection(view, sm->selectionModel()->selection(), QItemSelection{}, mCalendarFactory);
 }
 
 void MultiAgendaView::resizeEvent(QResizeEvent *ev)
@@ -663,7 +735,6 @@ void MultiAgendaView::doRestoreConfig(const KConfigGroup &configGroup)
             // Sort the calanders by name
             auto sortProxy = new QSortFilterProxyModel(this);
             sortProxy->setDynamicSortFilter(true);
-
             sortProxy->setSourceModel(model());
 
             // Only show the first column
