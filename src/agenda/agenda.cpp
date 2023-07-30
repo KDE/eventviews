@@ -1162,8 +1162,7 @@ void Agenda::endItemAction()
         }
 
         Akonadi::Item item = d->mCalendar->item(incidence);
-
-        if (incidence->recurs()) {
+        if (incidence && incidence->recurs()) {
             const int res = d->mAgendaView->showMoveRecurDialog(incidence, recurrenceId.date());
 
             if (!d->mActionItem) {
