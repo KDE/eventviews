@@ -70,6 +70,7 @@ public:
 Q_SIGNALS:
     void showNewEventPopupSignal();
     void showIncidencePopupSignal(const Akonadi::CollectionCalendar::Ptr &calendar, const Akonadi::Item &, const QDate &);
+    void activeCalendarChanged(const Akonadi::CollectionCalendar::Ptr &calendar);
 
 public Q_SLOTS:
 

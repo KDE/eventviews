@@ -134,6 +134,7 @@ public:
     void deleteViews();
     void setupViews();
     void resizeScrollView(QSize size);
+    void setActiveAgenda(AgendaView *view);
 
     MultiAgendaView *const q;
     QList<AgendaView *> mAgendaViews;
@@ -475,13 +476,36 @@ bool MultiAgendaView::eventDurationHint(QDateTime &startDt, QDateTime &endDt, bo
     return false;
 }
 
+// Invoked when user selects a cell or a span of cells in agendaview
 void MultiAgendaView::slotClearTimeSpanSelection()
 {
     for (AgendaView *agenda : std::as_const(d->mAgendaViews)) {
         if (agenda != sender()) {
             agenda->clearTimeSpanSelection();
+        } else if (!d->mCustomColumnSetupUsed) {
+            d->setActiveAgenda(agenda);
         }
     }
+}
+
+void MultiAgendaViewPrivate::setActiveAgenda(AgendaView *view)
+{
+    // Only makes sense in the one-agenda-per-calendar set up
+    if (mCustomColumnSetupUsed) {
+        return;
+    }
+
+    if (!view) {
+        return;
+    }
+
+    auto calendars = view->calendars();
+    if (calendars.empty()) {
+        return;
+    }
+    Q_ASSERT(calendars.size() == 1);
+
+    Q_EMIT q->activeCalendarChanged(calendars.at(0));
 }
 
 AgendaView *MultiAgendaViewPrivate::createView(const QString &title)
