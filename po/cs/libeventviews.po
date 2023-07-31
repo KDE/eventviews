@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-21 02:54+0000\n"
+"POT-Creation-Date: 2023-07-31 03:13+0000\n"
 "PO-Revision-Date: 2023-02-22 16:48+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -41,18 +41,18 @@ msgstr ""
 msgid "Locking Failed"
 msgstr "Uzamknutí selhalo"
 
-#: agenda/agenda.cpp:1189
+#: agenda/agenda.cpp:1188
 #, kde-format
 msgid "Dissociate event from recurrence"
 msgstr "Vyjmout událost z opakování"
 
-#: agenda/agenda.cpp:1211 month/monthitem.cpp:444
+#: agenda/agenda.cpp:1210 month/monthitem.cpp:444
 #, kde-format
 msgid ""
 "Unable to add the exception item to the calendar. No change will be done."
 msgstr "Nelze přidat výjimku do kalendáře. Nebude provedena žádná změna."
 
-#: agenda/agenda.cpp:1213 month/monthitem.cpp:446
+#: agenda/agenda.cpp:1212 month/monthitem.cpp:446
 #, kde-format
 msgid "Error Occurred"
 msgstr "Nastala chyba"

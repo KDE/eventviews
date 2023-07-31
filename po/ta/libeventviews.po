@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-21 02:54+0000\n"
+"POT-Creation-Date: 2023-07-31 03:13+0000\n"
 "PO-Revision-Date: 2022-05-08 15:24+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -37,18 +37,18 @@ msgstr "மாற்றுமாறு உருப்படியை பூட�
 msgid "Locking Failed"
 msgstr "பூட்டல் தோல்வியடைந்த‍து"
 
-#: agenda/agenda.cpp:1189
+#: agenda/agenda.cpp:1188
 #, kde-format
 msgid "Dissociate event from recurrence"
 msgstr "மறுநிகழ்விலிருந்து நிகழ்வை பிரிப்பது"
 
-#: agenda/agenda.cpp:1211 month/monthitem.cpp:444
+#: agenda/agenda.cpp:1210 month/monthitem.cpp:444
 #, kde-format
 msgid ""
 "Unable to add the exception item to the calendar. No change will be done."
 msgstr "விதிவிலக்கை நாள்காட்டியில் சேர்க்க முடியவில்லை. எம்மாற்றமும் மேற்கொள்ளப்படாது."
 
-#: agenda/agenda.cpp:1213 month/monthitem.cpp:446
+#: agenda/agenda.cpp:1212 month/monthitem.cpp:446
 #, kde-format
 msgid "Error Occurred"
 msgstr "சிக்கல் ஏற்பட்டது"

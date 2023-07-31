@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-21 02:54+0000\n"
+"POT-Creation-Date: 2023-07-31 03:13+0000\n"
 "PO-Revision-Date: 2022-06-10 00:18+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -46,12 +46,12 @@ msgstr ""
 msgid "Locking Failed"
 msgstr "Kein exklusiver Zugriff möglich"
 
-#: agenda/agenda.cpp:1189
+#: agenda/agenda.cpp:1188
 #, kde-format
 msgid "Dissociate event from recurrence"
 msgstr "Diesen Termin aus der Wiederholungsliste herauslösen"
 
-#: agenda/agenda.cpp:1211 month/monthitem.cpp:444
+#: agenda/agenda.cpp:1210 month/monthitem.cpp:444
 #, kde-format
 msgid ""
 "Unable to add the exception item to the calendar. No change will be done."
@@ -59,7 +59,7 @@ msgstr ""
 "Es ist nicht möglich, diese Ausnahme in den Kalender aufzunehmen. Es werden "
 "keine Änderungen durchgeführt."
 
-#: agenda/agenda.cpp:1213 month/monthitem.cpp:446
+#: agenda/agenda.cpp:1212 month/monthitem.cpp:446
 #, kde-format
 msgid "Error Occurred"
 msgstr "Fehler aufgetreten"

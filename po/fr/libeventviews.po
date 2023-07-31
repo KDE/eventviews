@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-21 02:54+0000\n"
+"POT-Creation-Date: 2023-07-31 03:13+0000\n"
 "PO-Revision-Date: 2023-01-06 13:58+0100\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
 "Language-Team: fr\n"
@@ -48,12 +48,12 @@ msgstr ""
 msgid "Locking Failed"
 msgstr "Échec de verrouillage"
 
-#: agenda/agenda.cpp:1189
+#: agenda/agenda.cpp:1188
 #, kde-format
 msgid "Dissociate event from recurrence"
 msgstr "Dissocier l'évènement de la récurrence"
 
-#: agenda/agenda.cpp:1211 month/monthitem.cpp:444
+#: agenda/agenda.cpp:1210 month/monthitem.cpp:444
 #, kde-format
 msgid ""
 "Unable to add the exception item to the calendar. No change will be done."
@@ -61,7 +61,7 @@ msgstr ""
 "Impossible d'ajouter un élément d'exception au calendrier. Aucun changement "
 "ne sera fait."
 
-#: agenda/agenda.cpp:1213 month/monthitem.cpp:446
+#: agenda/agenda.cpp:1212 month/monthitem.cpp:446
 #, kde-format
 msgid "Error Occurred"
 msgstr "Erreur survenue"
