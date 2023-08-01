@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-21 02:54+0000\n"
+"POT-Creation-Date: 2023-07-31 03:13+0000\n"
 "PO-Revision-Date: 2013-09-27 17:58+0200\n"
 "Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -40,12 +40,12 @@ msgstr ""
 msgid "Locking Failed"
 msgstr "Låsing mislyktes"
 
-#: agenda/agenda.cpp:1189
+#: agenda/agenda.cpp:1188
 #, kde-format
 msgid "Dissociate event from recurrence"
 msgstr "Fjern en hendelse fra gjentakelsen"
 
-#: agenda/agenda.cpp:1211 month/monthitem.cpp:444
+#: agenda/agenda.cpp:1210 month/monthitem.cpp:444
 #, kde-format
 msgid ""
 "Unable to add the exception item to the calendar. No change will be done."
@@ -53,7 +53,7 @@ msgstr ""
 "Klarte ikke å legge til unntakselementet i kalenderen. Ingen endringer er "
 "gjort."
 
-#: agenda/agenda.cpp:1213 month/monthitem.cpp:446
+#: agenda/agenda.cpp:1212 month/monthitem.cpp:446
 #, kde-format
 msgid "Error Occurred"
 msgstr "En feil oppsto"
