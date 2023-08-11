@@ -33,9 +33,9 @@ using namespace EventViews;
 MainWindow::MainWindow(const QStringList &viewNames)
     : QMainWindow()
     , mViewNames(viewNames)
-    , mIncidenceChanger(0)
-    , mSettings(0)
-    , mViewPreferences(0)
+    , mIncidenceChanger(nullptr)
+    , mSettings(nullptr)
+    , mViewPreferences(nullptr)
 {
     mUi.setupUi(this);
     mUi.tabWidget->clear();
@@ -56,7 +56,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::addView(const QString &viewName)
 {
-    EventView *eventView = 0;
+    EventView *eventView = nullptr;
 
     const auto start = QDateTime::currentDateTime().addDays(-1);
     const auto end = QDateTime::currentDateTime().addDays(1);
@@ -73,11 +73,16 @@ void MainWindow::addView(const QString &viewName)
 
     if (eventView) {
         eventView->setPreferences(*mViewPreferences);
-        eventView->setCalendar(mCalendar);
         eventView->setIncidenceChanger(mIncidenceChanger);
         eventView->setDateRange(start, end);
         eventView->updateConfig();
+
+        for (const auto &calendar : mCalendars) {
+            eventView->addCalendar(calendar);
+        }
+
         mUi.tabWidget->addTab(eventView, viewName);
+        mEventViews.push_back(eventView);
     } else {
         qCCritical(CALENDARVIEW_LOG) << "Cannot create view" << viewName;
     }
@@ -99,6 +104,13 @@ void MainWindow::delayedInit()
     CalendarSupport::CollectionSelection *collectionSelection = new CalendarSupport::CollectionSelection(selectionModel);
     EventViews::EventView::setGlobalCollectionSelection(collectionSelection);
 
+    connect(collectionSelection, &CalendarSupport::CollectionSelection::collectionSelected, this, &MainWindow::collectionSelected);
+    connect(collectionSelection, &CalendarSupport::CollectionSelection::collectionDeselected, this, &MainWindow::collectionDeselected);
+
+    for (const auto &collection : collectionSelection->selectedCollections()) {
+        collectionSelected(collection);
+    }
+
     mIncidenceChanger = new IncidenceChanger(this);
     mCalendar->setCollectionFilteringEnabled(false);
 
@@ -112,4 +124,30 @@ void MainWindow::addViewTriggered(QAction *action)
     QString viewName = action->text().toLower();
     viewName.remove(QLatin1Char('&'));
     addView(viewName);
+}
+
+void MainWindow::collectionSelected(const Akonadi::Collection &col)
+{
+    auto calendar = Akonadi::CollectionCalendar::Ptr::create(mCalendar->entityTreeModel(), col);
+    mCalendars.push_back(calendar);
+
+    for (auto view : mEventViews) {
+        view->addCalendar(calendar);
+    }
+}
+
+void MainWindow::collectionDeselected(const Akonadi::Collection &col)
+{
+    auto calendar = std::find_if(mCalendars.begin(), mCalendars.end(), [col](const auto &cal) {
+        return cal->collection() == col;
+    });
+    if (calendar == mCalendars.cend()) {
+        return;
+    }
+
+    for (auto view : mEventViews) {
+        view->removeCalendar(*calendar);
+    }
+
+    mCalendars.erase(calendar);
 }
