@@ -1945,6 +1945,12 @@ void AgendaView::fillAgenda()
         return;
     }
 
+    const QString selectedAgendaId = d->mAgenda->lastSelectedItemUid();
+    const QString selectedAllDayAgendaId = d->mAllDayAgenda->lastSelectedItemUid();
+
+    enableAgendaUpdate(true);
+    d->clearView();
+
     if (d->mViewCalendar->calendarCount() == 0) {
         return;
     }
@@ -1956,12 +1962,6 @@ void AgendaView::fillAgenda()
 
     /* Remember the item Ids of the selected items. In case one of the
      * items was deleted and re-added, we want to reselect it. */
-    const QString selectedAgendaId = d->mAgenda->lastSelectedItemUid();
-    const QString selectedAllDayAgendaId = d->mAllDayAgenda->lastSelectedItemUid();
-
-    enableAgendaUpdate(true);
-    d->clearView();
-
     if (changes().testFlag(DatesChanged)) {
         d->mAllDayAgenda->changeColumns(d->mSelectedDates.count());
         d->mAgenda->changeColumns(d->mSelectedDates.count());
