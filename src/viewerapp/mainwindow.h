@@ -10,7 +10,6 @@
 #include "ui_mainwindow.h"
 
 #include <Akonadi/CollectionCalendar>
-#include <Akonadi/ETMCalendar>
 
 #include <QMainWindow>
 #include <QVector>
@@ -19,6 +18,8 @@ namespace Akonadi
 {
 class IncidenceChanger;
 class Collection;
+class EntityTeeModel;
+class Monitor;
 }
 
 namespace EventViews
@@ -48,7 +49,8 @@ private:
 
     Ui_MainWindow mUi;
 
-    Akonadi::ETMCalendar::Ptr mCalendar;
+    Akonadi::Monitor *mMonitor;
+    Akonadi::EntityTreeModel *mEtm;
     Akonadi::IncidenceChanger *mIncidenceChanger = nullptr;
     Settings *mSettings = nullptr;
     EventViews::PrefsPtr *mViewPreferences = nullptr;
