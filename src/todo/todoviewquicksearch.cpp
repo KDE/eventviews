@@ -24,9 +24,8 @@
 
 #include <QHBoxLayout>
 
-TodoViewQuickSearch::TodoViewQuickSearch(const Akonadi::ETMCalendar::Ptr &calendar, QWidget *parent)
+TodoViewQuickSearch::TodoViewQuickSearch(QWidget *parent)
     : QWidget(parent)
-    , mCalendar(calendar)
     , mSearchLine(new QLineEdit(this))
     , mCategoryCombo(new Akonadi::TagSelectionComboBox(this))
     , mPriorityCombo(new KPIM::KCheckComboBox(this))
@@ -82,13 +81,6 @@ TodoViewQuickSearch::TodoViewQuickSearch(const Akonadi::ETMCalendar::Ptr &calend
 
     layout->addWidget(mPriorityCombo, 1);
     fillPriorities();
-}
-
-void TodoViewQuickSearch::setCalendar(const Akonadi::ETMCalendar::Ptr &calendar)
-{
-    if (calendar != mCalendar) {
-        mCalendar = calendar;
-    }
 }
 
 void TodoViewQuickSearch::reset()

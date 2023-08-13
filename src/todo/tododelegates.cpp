@@ -227,7 +227,6 @@ void TodoDueDateDelegate::updateEditorGeometry(QWidget *editor, const QStyleOpti
 
 TodoCategoriesDelegate::TodoCategoriesDelegate(QObject *parent)
     : QStyledItemDelegate(parent)
-    , mCalendar(nullptr)
 {
 }
 
@@ -256,11 +255,6 @@ void TodoCategoriesDelegate::updateEditorGeometry(QWidget *editor, const QStyleO
     Q_UNUSED(index)
 
     editor->setGeometry(option.rect);
-}
-
-void TodoCategoriesDelegate::setCalendar(const Akonadi::ETMCalendar::Ptr &cal)
-{
-    mCalendar = cal;
 }
 
 // ---------------- RICH TEXT DELEGATE ---------------------------

@@ -13,6 +13,7 @@
 #include "prefs_base.h" // Ugly, but needed for the Enums
 
 #include <Akonadi/CalendarUtils>
+#include <Akonadi/EntityTreeModel>
 #include <Akonadi/IncidenceChanger>
 #include <Akonadi/TagCache>
 #include <CalendarSupport/KCalPrefs>
@@ -283,7 +284,7 @@ QList<MonthGraphicsItem *> EventViews::MonthItem::monthGraphicsItems() const
 //-----------------------------------------------------------------
 // INCIDENCEMONTHITEM
 IncidenceMonthItem::IncidenceMonthItem(MonthScene *monthScene,
-                                       const Akonadi::ETMCalendar::Ptr &calendar,
+                                       const Akonadi::CollectionCalendar::Ptr &calendar,
                                        const Akonadi::Item &aitem,
                                        const KCalendarCore::Incidence::Ptr &incidence,
                                        QDate recurStartDate)
@@ -376,12 +377,12 @@ bool IncidenceMonthItem::allDay() const
 
 bool IncidenceMonthItem::isMoveable() const
 {
-    return monthScene()->mMonthView->calendar()->hasRight(akonadiItem(), Akonadi::Collection::CanChangeItem);
+    return mCalendar->hasRight(Akonadi::Collection::CanChangeItem);
 }
 
 bool IncidenceMonthItem::isResizable() const
 {
-    return mIsEvent && monthScene()->mMonthView->calendar()->hasRight(akonadiItem(), Akonadi::Collection::CanChangeItem);
+    return mCalendar->hasRight(Akonadi::Collection::CanChangeItem);
 }
 
 void IncidenceMonthItem::finalizeMove(const QDate &newStartDate)
@@ -499,7 +500,7 @@ QString IncidenceMonthItem::text(bool end) const
 
 QString IncidenceMonthItem::toolTipText(const QDate &date) const
 {
-    return KCalUtils::IncidenceFormatter::toolTipStr(Akonadi::CalendarUtils::displayName(mCalendar.data(), akonadiItem().parentCollection()),
+    return KCalUtils::IncidenceFormatter::toolTipStr(Akonadi::CalendarUtils::displayName(mCalendar->model(), akonadiItem().parentCollection()),
                                                      mIncidence,
                                                      date,
                                                      true);
@@ -555,7 +556,7 @@ QList<QPixmap> IncidenceMonthItem::icons() const
         }
     }
 
-    if (icons.contains(EventView::ReadOnlyIcon) && !monthScene()->mMonthView->calendar()->hasRight(item, Akonadi::Collection::CanChangeItem) && !specialEvent) {
+    if (icons.contains(EventView::ReadOnlyIcon) && !mCalendar->hasRight(Akonadi::Collection::CanChangeItem) && !specialEvent) {
         ret << monthScene()->readonlyPixmap();
     }
 
@@ -627,7 +628,7 @@ QColor IncidenceMonthItem::frameColor() const
 Akonadi::Item IncidenceMonthItem::akonadiItem() const
 {
     if (mIncidence) {
-        return monthScene()->mMonthView->calendar()->item(mIncidence);
+        return mCalendar->item(mIncidence);
     } else {
         return {};
     }
@@ -641,6 +642,11 @@ KCalendarCore::Incidence::Ptr IncidenceMonthItem::incidence() const
 Akonadi::Item::Id IncidenceMonthItem::akonadiItemId() const
 {
     return mAkonadiItemId;
+}
+
+Akonadi::CollectionCalendar::Ptr IncidenceMonthItem::calendar() const
+{
+    return mCalendar;
 }
 
 void IncidenceMonthItem::setNewDates(const KCalendarCore::Incidence::Ptr &incidence, int startOffset, int endOffset)

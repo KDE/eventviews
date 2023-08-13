@@ -11,6 +11,10 @@
 
 #include "eventview.h"
 
+#include <Akonadi/CollectionCalendar>
+
+#include <memory>
+
 namespace KHolidays
 {
 class HolidayRegion;
@@ -22,10 +26,12 @@ class KCheckableProxyModel;
 
 namespace EventViews
 {
+class EventView;
+
 class EventViewPrivate
 {
 public: /// Methods
-    EventViewPrivate();
+    EventViewPrivate(EventView *qq);
     ~EventViewPrivate();
 
     /**
@@ -34,12 +40,18 @@ public: /// Methods
      */
     void finishTypeAhead();
 
+    void setEtm(QAbstractItemModel *model);
+
 public: // virtual functions
     void setUpModels();
 
+private:
+    EventView *const q;
+
 public: /// Members
-    Akonadi::ETMCalendar::Ptr calendar;
-    CalendarSupport::CollectionSelection *customCollectionSelection = nullptr;
+    QAbstractItemModel *model = nullptr;
+    Akonadi::EntityTreeModel *etm = nullptr;
+    std::unique_ptr<CalendarSupport::CollectionSelection> customCollectionSelection;
     KCheckableProxyModel *collectionSelectionModel = nullptr;
 
     QByteArray identifier;
@@ -58,13 +70,13 @@ public: /// Members
     QObject *mTypeAheadReceiver = nullptr;
     QList<QEvent *> mTypeAheadEvents;
     static CalendarSupport::CollectionSelection *sGlobalCollectionSelection;
+    QVector<Akonadi::CollectionCalendar::Ptr> mCalendars;
 
-    QList<KHolidays::HolidayRegion *> mHolidayRegions;
+    std::vector<std::unique_ptr<KHolidays::HolidayRegion>> mHolidayRegions;
     PrefsPtr mPrefs;
     KCalPrefsPtr mKCalPrefs;
 
     Akonadi::IncidenceChanger *mChanger = nullptr;
-    EventView::Changes mChanges;
-    Akonadi::Collection::Id mCollectionId;
+    EventView::Changes mChanges = EventView::DatesChanged;
 };
 } // EventViews

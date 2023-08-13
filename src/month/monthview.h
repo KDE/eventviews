@@ -32,6 +32,9 @@ public:
     explicit MonthView(NavButtonsVisibility visibility = Visible, QWidget *parent = nullptr);
     ~MonthView() override;
 
+    void addCalendar(const Akonadi::CollectionCalendar::Ptr &calendar) override;
+    void removeCalendar(const Akonadi::CollectionCalendar::Ptr &calendar) override;
+
     Q_REQUIRED_RESULT int currentDateCount() const override;
     Q_REQUIRED_RESULT int currentMonth() const;
 
@@ -62,10 +65,8 @@ public:
 
     Q_REQUIRED_RESULT bool isBusyDay(QDate day) const;
 
-    void setCalendar(const Akonadi::ETMCalendar::Ptr &cal) override;
-
 Q_SIGNALS:
-    void showIncidencePopupSignal(const Akonadi::Item &item, const QDate &date);
+    void showIncidencePopupSignal(const Akonadi::CollectionCalendar::Ptr &calendar, const Akonadi::Item &item, const QDate &date);
     void showNewEventPopupSignal();
     void fullViewChanged(bool enabled);
 

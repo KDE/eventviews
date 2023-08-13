@@ -31,7 +31,7 @@ public:
     void doSetSource(const QUrl &name, QTextDocument::ResourceType type = QTextDocument::UnknownResource) override;
 
 Q_SIGNALS:
-    void showIncidence(const QString &uid);
+    void showIncidence(const QUrl &url);
 };
 
 /**
@@ -68,11 +68,14 @@ public Q_SLOTS:
     void changeIncidenceDisplay(const Akonadi::Item &, Akonadi::IncidenceChanger::ChangeType);
 
 protected:
-    void appendEvent(const KCalendarCore::Incidence::Ptr &, const QDateTime &start = QDateTime(), const QDateTime &end = QDateTime());
-    void appendTodo(const KCalendarCore::Incidence::Ptr &);
+    void appendEvent(const Akonadi::CollectionCalendar::Ptr &,
+                     const KCalendarCore::Incidence::Ptr &,
+                     const QDateTime &start = QDateTime(),
+                     const QDateTime &end = QDateTime());
+    void appendTodo(const Akonadi::CollectionCalendar::Ptr &, const KCalendarCore::Incidence::Ptr &);
 
 private Q_SLOTS:
-    EVENTVIEWS_NO_EXPORT void showIncidence(const QString &);
+    EVENTVIEWS_NO_EXPORT void showIncidence(const QUrl &);
 
 private:
     EVENTVIEWS_NO_EXPORT void createTaskRow(KIconLoader *kil);

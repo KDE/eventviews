@@ -12,7 +12,7 @@
 #include "monthscene.h"
 #include "prefs.h"
 
-#include <Akonadi/ETMCalendar>
+#include <Akonadi/CalendarBase>
 #include <CalendarSupport/CollectionSelection>
 #include <CalendarSupport/KCalPrefs>
 #include <CalendarSupport/Utils>
@@ -28,16 +28,20 @@
 #include <QToolButton>
 #include <QWheelEvent>
 
+#include <ranges>
+
 using namespace EventViews;
 
 namespace EventViews
 {
-class MonthViewPrivate : public Akonadi::ETMCalendar::CalendarObserver
+class MonthViewPrivate : public KCalendarCore::Calendar::CalendarObserver
 {
     MonthView *const q;
 
 public: /// Methods
     explicit MonthViewPrivate(MonthView *qq);
+
+    MonthItem *loadCalendarIncidences(const Akonadi::CollectionCalendar::Ptr &calendar, const QDateTime &startDt, const QDateTime &endDt);
 
     void addIncidence(const Akonadi::Item &incidence);
     void moveStartDate(int weeks, int months);
@@ -76,6 +80,47 @@ MonthViewPrivate::MonthViewPrivate(MonthView *qq)
 {
     reloadTimer.setSingleShot(true);
     view->setScene(scene);
+}
+
+MonthItem *MonthViewPrivate::loadCalendarIncidences(const Akonadi::CollectionCalendar::Ptr &calendar, const QDateTime &startDt, const QDateTime &endDt)
+{
+    MonthItem *itemToReselect = nullptr;
+
+    const bool colorMonthBusyDays = q->preferences()->colorMonthBusyDays();
+
+    KCalendarCore::OccurrenceIterator occurIter(*calendar, startDt, endDt);
+    while (occurIter.hasNext()) {
+        occurIter.next();
+
+        // Remove the two checks when filtering is done through a proxyModel, when using calendar search
+        if (!q->preferences()->showTodosMonthView() && occurIter.incidence()->type() == KCalendarCore::Incidence::TypeTodo) {
+            continue;
+        }
+        if (!q->preferences()->showJournalsMonthView() && occurIter.incidence()->type() == KCalendarCore::Incidence::TypeJournal) {
+            continue;
+        }
+
+        const bool busyDay = colorMonthBusyDays && q->makesWholeDayBusy(occurIter.incidence());
+        if (busyDay) {
+            QStringList &list = mBusyDays[occurIter.occurrenceStartDate().date()];
+            list.append(occurIter.incidence()->uid());
+        }
+
+        const Akonadi::Item item = calendar->item(occurIter.incidence());
+        if (!item.isValid()) {
+            continue;
+        }
+        Q_ASSERT(item.isValid());
+        Q_ASSERT(item.hasPayload());
+        MonthItem *manager = new IncidenceMonthItem(scene, calendar, item, occurIter.incidence(), occurIter.occurrenceStartDate().toLocalTime().date());
+        scene->mManagerList.push_back(manager);
+        if (selectedItemId == item.id() && manager->realStartDate() == selectedItemDate) {
+            // only select it outside the loop because we are still creating items
+            itemToReselect = manager;
+        }
+    }
+
+    return itemToReselect;
 }
 
 void MonthViewPrivate::addIncidence(const Akonadi::Item &incidence)
@@ -225,9 +270,25 @@ MonthView::MonthView(NavButtonsVisibility visibility, QWidget *parent)
 
 MonthView::~MonthView()
 {
-    if (calendar()) {
-        calendar()->unregisterObserver(d.get());
+    for (auto &calendar : calendars()) {
+        calendar->unregisterObserver(d.get());
     }
+}
+
+void MonthView::addCalendar(const Akonadi::CollectionCalendar::Ptr &calendar)
+{
+    EventView::addCalendar(calendar);
+    calendar->registerObserver(d.get());
+    setChanges(changes() | ResourcesChanged);
+    d->reloadTimer.start(50);
+}
+
+void MonthView::removeCalendar(const Akonadi::CollectionCalendar::Ptr &calendar)
+{
+    EventView::removeCalendar(calendar);
+    calendar->unregisterObserver(d.get());
+    setChanges(changes() | ResourcesChanged);
+    d->reloadTimer.start(50);
 }
 
 void MonthView::updateConfig()
@@ -474,37 +535,10 @@ void MonthView::reloadIncidences()
     }
 
     // build global event list
-    const bool colorMonthBusyDays = preferences()->colorMonthBusyDays();
-
-    KCalendarCore::OccurrenceIterator occurIter(*calendar(), actualStartDateTime(), actualEndDateTime());
-    while (occurIter.hasNext()) {
-        occurIter.next();
-
-        // Remove the two checks when filtering is done through a proxyModel, when using calendar search
-        if (!preferences()->showTodosMonthView() && occurIter.incidence()->type() == KCalendarCore::Incidence::TypeTodo) {
-            continue;
-        }
-        if (!preferences()->showJournalsMonthView() && occurIter.incidence()->type() == KCalendarCore::Incidence::TypeJournal) {
-            continue;
-        }
-
-        const bool busyDay = colorMonthBusyDays && makesWholeDayBusy(occurIter.incidence());
-        if (busyDay) {
-            QStringList &list = d->mBusyDays[occurIter.occurrenceStartDate().date()];
-            list.append(occurIter.incidence()->uid());
-        }
-
-        const Akonadi::Item item = calendar()->item(occurIter.incidence());
-        if (!item.isValid()) {
-            continue;
-        }
-        Q_ASSERT(item.isValid());
-        Q_ASSERT(item.hasPayload());
-        MonthItem *manager = new IncidenceMonthItem(d->scene, calendar(), item, occurIter.incidence(), occurIter.occurrenceStartDate().toLocalTime().date());
-        d->scene->mManagerList << manager;
-        if (d->selectedItemId == item.id() && manager->realStartDate() == d->selectedItemDate) {
-            // only select it outside the loop because we are still creating items
-            itemToReselect = manager;
+    for (const auto &calendar : calendars()) {
+        auto *newItemToReselect = d->loadCalendarIncidences(calendar, actualStartDateTime(), actualEndDateTime());
+        if (itemToReselect == nullptr) {
+            itemToReselect = newItemToReselect;
         }
     }
 

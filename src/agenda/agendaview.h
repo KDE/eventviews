@@ -77,6 +77,9 @@ public:
         MAX_DAY_COUNT = 42 // (6 * 7)
     };
 
+    void addCalendar(const Akonadi::CollectionCalendar::Ptr &calendar) override;
+    void removeCalendar(const Akonadi::CollectionCalendar::Ptr &calendar) override;
+
     /** Returns number of currently shown dates. */
     Q_REQUIRED_RESULT int currentDateCount() const override;
 
@@ -105,7 +108,6 @@ public:
     Q_REQUIRED_RESULT bool selectedIsSingleCell() const;
 
     /* reimp from EventView */
-    void setCalendar(const Akonadi::ETMCalendar::Ptr &cal) override;
     virtual void addCalendar(const ViewCalendar::Ptr &cal);
 
     QSplitter *splitter() const;
@@ -168,7 +170,7 @@ public:
 
 Q_SIGNALS:
     void showNewEventPopupSignal();
-    void showIncidencePopupSignal(const Akonadi::Item &, const QDate &);
+    void showIncidencePopupSignal(const Akonadi::CollectionCalendar::Ptr &, const Akonadi::Item &, const QDate &);
     void zoomViewHorizontally(const QDate &, int count);
 
     void timeSpanSelectionChanged();

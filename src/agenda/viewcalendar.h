@@ -8,7 +8,7 @@
 
 #include "eventviews_export.h"
 
-#include <Akonadi/ETMCalendar>
+#include <Akonadi/CollectionCalendar>
 #include <Akonadi/Item>
 #include <KCalendarCore/Incidence>
 
@@ -52,7 +52,7 @@ public:
 
     KCalendarCore::Calendar::Ptr getCalendar() const override;
 
-    Akonadi::ETMCalendar::Ptr mCalendar;
+    Akonadi::CollectionCalendar::Ptr mCalendar;
     AgendaView *mAgendaView = nullptr;
 };
 
@@ -74,13 +74,16 @@ public:
     Q_REQUIRED_RESULT Akonadi::Item item(const KCalendarCore::Incidence::Ptr &incidence) const;
 
     void addCalendar(const ViewCalendar::Ptr &calendar);
-    void setETMCalendar(const Akonadi::ETMCalendar::Ptr &calendar);
-    int calendars() const;
+    void removeCalendar(const ViewCalendar::Ptr &calendar);
+    Q_REQUIRED_RESULT int calendarCount() const;
+
+    Q_REQUIRED_RESULT Akonadi::CollectionCalendar::Ptr calendarForCollection(const Akonadi::Collection &col) const;
+    Q_REQUIRED_RESULT Akonadi::CollectionCalendar::Ptr calendarForCollection(Akonadi::Collection::Id id) const;
+
     Q_REQUIRED_RESULT KCalendarCore::Calendar::Ptr getCalendar() const override;
     Q_REQUIRED_RESULT KCalendarCore::Incidence::List incidences() const;
 
     AgendaView *mAgendaView = nullptr;
-    AkonadiViewCalendar::Ptr mETMCalendar;
-    QList<ViewCalendar::Ptr> mSubCalendars;
+    QVector<ViewCalendar::Ptr> mSubCalendars;
 };
 }

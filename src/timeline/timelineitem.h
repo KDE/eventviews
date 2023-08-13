@@ -10,7 +10,7 @@
 
 #include <KCalendarCore/Incidence>
 
-#include <Akonadi/ETMCalendar>
+#include <Akonadi/CollectionCalendar>
 #include <Akonadi/Item>
 
 #include <QDateTime>
@@ -26,7 +26,8 @@ class TimelineItem : public QObject
 {
     Q_OBJECT
 public:
-    TimelineItem(const Akonadi::ETMCalendar::Ptr &calendar, uint index, QStandardItemModel *model, QObject *parent);
+    TimelineItem(const Akonadi::CollectionCalendar::Ptr &calendar, uint index, QStandardItemModel *model, QObject *parent);
+    ~TimelineItem() override;
 
     void insertIncidence(const Akonadi::Item &incidence, const QDateTime &start = QDateTime(), const QDateTime &end = QDateTime());
     void removeIncidence(const Akonadi::Item &incidence);
@@ -35,8 +36,10 @@ public:
 
     void setColor(const QColor &color);
 
+    Q_REQUIRED_RESULT Akonadi::CollectionCalendar::Ptr calendar() const;
+
 private:
-    Akonadi::ETMCalendar::Ptr mCalendar;
+    Akonadi::CollectionCalendar::Ptr mCalendar;
     QMap<Akonadi::Item::Id, QList<QStandardItem *>> mItemMap;
     QStandardItemModel *const mModel;
     QColor mColor;
@@ -46,7 +49,7 @@ private:
 class TimelineSubItem : public QStandardItem
 {
 public:
-    TimelineSubItem(const Akonadi::ETMCalendar::Ptr &calendar, const Akonadi::Item &incidence, TimelineItem *parent);
+    TimelineSubItem(const Akonadi::Item &incidence, TimelineItem *parent);
     ~TimelineSubItem() override;
 
     Q_REQUIRED_RESULT Akonadi::Item incidence() const
@@ -78,10 +81,9 @@ public:
     void updateToolTip();
 
 private:
-    Akonadi::ETMCalendar::Ptr mCalendar;
     Akonadi::Item mIncidence;
     QDateTime mStart;
-    TimelineItem *mParent = nullptr;
+    TimelineItem *const mParent = nullptr;
     bool mToolTipNeedsUpdate;
 };
 }

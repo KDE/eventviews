@@ -16,7 +16,6 @@
 #include <CalendarSupport/Utils>
 
 #include <Akonadi/CalendarUtils>
-#include <Akonadi/ETMCalendar>
 #include <Akonadi/IncidenceChanger>
 
 #include <KCalUtils/IncidenceFormatter>
@@ -100,9 +99,9 @@ public:
 
     ~ListViewPrivate() = default;
 
-    void addIncidences(const Akonadi::ETMCalendar::Ptr &calendar, const KCalendarCore::Incidence::List &incidenceList, QDate date);
-    void addIncidence(const Akonadi::ETMCalendar::Ptr &calendar, const KCalendarCore::Incidence::Ptr &, QDate date);
-    void addIncidence(const Akonadi::ETMCalendar::Ptr &calendar, const Akonadi::Item &, QDate date);
+    void addIncidences(const Akonadi::CollectionCalendar::Ptr &calendar, const KCalendarCore::Incidence::List &incidenceList, QDate date);
+    void addIncidence(const Akonadi::CollectionCalendar::Ptr &calendar, const KCalendarCore::Incidence::Ptr &, QDate date);
+    void addIncidence(const Akonadi::CollectionCalendar::Ptr &calendar, const Akonadi::Item &, QDate date);
     ListViewItem *getItemForIncidence(const Akonadi::Item &);
 
     QTreeWidget *mTreeWidget = nullptr;
@@ -264,11 +263,10 @@ bool ListViewPrivate::ListItemVisitor::visit(const Journal::Ptr &j)
     return true;
 }
 
-ListView::ListView(const Akonadi::ETMCalendar::Ptr &calendar, QWidget *parent, bool nonInteractive)
+ListView::ListView(QWidget *parent, bool nonInteractive)
     : EventView(parent)
-    , d(new ListViewPrivate())
+    , d(std::make_unique<ListViewPrivate>())
 {
-    setCalendar(calendar);
     d->mActiveItem = nullptr;
     d->mIsNonInteractive = nonInteractive;
 
@@ -355,7 +353,9 @@ void ListView::showDates(const QDate &start, const QDate &end, const QDate &pref
 
     QDate date = start;
     while (date <= end) {
-        d->addIncidences(calendar(), calendar()->incidences(date), date);
+        for (const auto &calendar : calendars()) {
+            d->addIncidences(calendar, calendar->incidences(date), date);
+        }
         d->mSelectedDates.append(date);
         date = date.addDays(1);
     }
@@ -367,17 +367,19 @@ void ListView::showDates(const QDate &start, const QDate &end, const QDate &pref
 
 void ListView::showAll()
 {
-    d->addIncidences(calendar(), calendar()->incidences(), QDate());
+    for (const auto &calendar : calendars()) {
+        d->addIncidences(calendar, calendar->incidences(), QDate());
+    }
 }
 
-void ListViewPrivate::addIncidences(const Akonadi::ETMCalendar::Ptr &calendar, const KCalendarCore::Incidence::List &incidences, QDate date)
+void ListViewPrivate::addIncidences(const Akonadi::CollectionCalendar::Ptr &calendar, const KCalendarCore::Incidence::List &incidences, QDate date)
 {
     for (const KCalendarCore::Incidence::Ptr &incidence : incidences) {
         addIncidence(calendar, incidence, date);
     }
 }
 
-void ListViewPrivate::addIncidence(const Akonadi::ETMCalendar::Ptr &calendar, const Akonadi::Item &item, QDate date)
+void ListViewPrivate::addIncidence(const Akonadi::CollectionCalendar::Ptr &calendar, const Akonadi::Item &item, QDate date)
 {
     Q_ASSERT(calendar);
     if (item.isValid() && item.hasPayload<KCalendarCore::Incidence::Ptr>()) {
@@ -385,7 +387,7 @@ void ListViewPrivate::addIncidence(const Akonadi::ETMCalendar::Ptr &calendar, co
     }
 }
 
-void ListViewPrivate::addIncidence(const Akonadi::ETMCalendar::Ptr &calendar, const KCalendarCore::Incidence::Ptr &incidence, QDate date)
+void ListViewPrivate::addIncidence(const Akonadi::CollectionCalendar::Ptr &calendar, const KCalendarCore::Incidence::Ptr &incidence, QDate date)
 {
     if (!incidence) {
         return;
@@ -414,7 +416,7 @@ void ListViewPrivate::addIncidence(const Akonadi::ETMCalendar::Ptr &calendar, co
 
     // set tooltips
     for (int col = 0; col < Dummy_EOF_Column; ++col) {
-        item->setToolTip(col, IncidenceFormatter::toolTipStr(Akonadi::CalendarUtils::displayName(calendar.data(), aitem.parentCollection()), incidence));
+        item->setToolTip(col, IncidenceFormatter::toolTipStr(Akonadi::CalendarUtils::displayName(calendar->model(), aitem.parentCollection()), incidence));
     }
 
     ListItemVisitor v(item, mStartDate);
@@ -429,7 +431,12 @@ void ListViewPrivate::addIncidence(const Akonadi::ETMCalendar::Ptr &calendar, co
 void ListView::showIncidences(const Akonadi::Item::List &itemList, const QDate &date)
 {
     clear();
-    d->addIncidences(calendar(), CalendarSupport::incidencesFromItems(itemList), date);
+    for (const auto &item : itemList) {
+        const auto calendar = calendar3(item);
+        if (calendar) {
+            d->addIncidence(calendar, Akonadi::CalendarUtils::incidence(item), date);
+        }
+    }
     updateView();
 
     // After new creation of list view no events are selected.
@@ -439,6 +446,8 @@ void ListView::showIncidences(const Akonadi::Item::List &itemList, const QDate &
 void ListView::changeIncidenceDisplay(const Akonadi::Item &aitem, int action)
 {
     const Incidence::Ptr incidence = Akonadi::CalendarUtils::incidence(aitem);
+    const auto calendar = calendar3(aitem);
+
     ListViewItem *item = nullptr;
     const QDate f = d->mSelectedDates.constFirst();
     const QDate l = d->mSelectedDates.constLast();
@@ -453,7 +462,7 @@ void ListView::changeIncidenceDisplay(const Akonadi::Item &aitem, int action)
     switch (action) {
     case Akonadi::IncidenceChanger::ChangeTypeCreate:
         if (date >= f && date <= l) {
-            d->addIncidence(calendar(), aitem, date);
+            d->addIncidence(calendar, aitem, date);
         }
         break;
     case Akonadi::IncidenceChanger::ChangeTypeModify:
@@ -464,7 +473,7 @@ void ListView::changeIncidenceDisplay(const Akonadi::Item &aitem, int action)
             d->mDateList.remove(aitem.id());
         }
         if (date >= f && date <= l) {
-            d->addIncidence(calendar(), aitem, date);
+            d->addIncidence(calendar, aitem, date);
         }
         break;
     case Akonadi::IncidenceChanger::ChangeTypeDelete:
@@ -519,10 +528,11 @@ void ListView::popupMenu(const QPoint &point)
 
     if (d->mActiveItem && !d->mIsNonInteractive) {
         const Akonadi::Item aitem = d->mActiveItem->mIncidence;
+        const auto calendar = calendar3(aitem);
         // FIXME: For recurring incidences we don't know the date of this
         // occurrence, there's no reference to it at all!
 
-        Q_EMIT showIncidencePopupSignal(aitem, Akonadi::CalendarUtils::incidence(aitem)->dtStart().date());
+        Q_EMIT showIncidencePopupSignal(calendar, aitem, Akonadi::CalendarUtils::incidence(aitem)->dtStart().date());
     } else {
         Q_EMIT showNewEventPopupSignal();
     }

@@ -41,13 +41,13 @@ JournalView::JournalView(QWidget *parent)
 
 JournalView::~JournalView() = default;
 
-void JournalView::appendJournal(const Akonadi::Item &journal, QDate dt)
+void JournalView::appendJournal(const Akonadi::Item &journal, const Akonadi::CollectionCalendar::Ptr &calendar, QDate dt)
 {
     JournalDateView *entry = nullptr;
     if (mEntries.contains(dt)) {
         entry = mEntries[dt];
     } else {
-        entry = new JournalDateView(calendar(), mCurrentWidget);
+        entry = new JournalDateView(calendar, mCurrentWidget);
         mCurrentWidget->layout()->addWidget(entry);
         entry->setDate(dt);
         entry->setIncidenceChanger(mChanger);
@@ -99,11 +99,11 @@ void JournalView::updateView()
     while (it != mEntries.begin()) {
         --it;
         it.value()->clear();
-        const KCalendarCore::Journal::List journals = calendar()->journals(it.key());
-        qCDebug(CALENDARVIEW_LOG) << "updateview found" << journals.count();
-        for (const KCalendarCore::Journal::Ptr &journal : journals) {
-            Akonadi::Item item = calendar()->item(journal);
-            it.value()->addJournal(item);
+        for (const auto &calendar : calendars()) {
+            const auto journals = calendar->journals(it.key());
+            for (const auto &journal : journals) {
+                it.value()->addJournal(calendar->item(journal));
+            }
         }
     }
 }
@@ -121,18 +121,21 @@ void JournalView::showDates(const QDate &start, const QDate &end, const QDate &)
         return;
     }
 
+    const auto cals = calendars();
     for (QDate d = end; d >= start; d = d.addDays(-1)) {
-        const KCalendarCore::Journal::List jnls = calendar()->journals(d);
-        // qCDebug(CALENDARVIEW_LOG) << "Found" << jnls.count() << "journals on date" << d;
-        for (const KCalendarCore::Journal::Ptr &journal : jnls) {
-            Akonadi::Item item = calendar()->item(journal);
-            appendJournal(item, d);
-        }
-        if (jnls.isEmpty()) {
-            // create an empty dateentry widget
-            // updateView();
-            // qCDebug(CALENDARVIEW_LOG) << "Appended null journal";
-            appendJournal(Akonadi::Item(), d);
+        for (const auto &calendar : cals) {
+            const KCalendarCore::Journal::List jnls = calendar->journals(d);
+            // qCDebug(CALENDARVIEW_LOG) << "Found" << jnls.count() << "journals on date" << d;
+            for (const KCalendarCore::Journal::Ptr &journal : jnls) {
+                Akonadi::Item item = calendar->item(journal);
+                appendJournal(item, calendar, d);
+            }
+            if (jnls.isEmpty()) {
+                // create an empty dateentry widget
+                // updateView();
+                // qCDebug(CALENDARVIEW_LOG) << "Appended null journal";
+                appendJournal(Akonadi::Item(), calendar, d);
+            }
         }
     }
 }
@@ -143,7 +146,7 @@ void JournalView::showIncidences(const Akonadi::Item::List &incidences, const QD
     clearEntries();
     for (const Akonadi::Item &i : incidences) {
         if (const KCalendarCore::Journal::Ptr j = Akonadi::CalendarUtils::journal(i)) {
-            appendJournal(i, j->dtStart().date());
+            appendJournal(i, calendar3(j), j->dtStart().date());
         }
     }
 }
@@ -153,7 +156,7 @@ void JournalView::changeIncidenceDisplay(const Akonadi::Item &incidence, Akonadi
     if (KCalendarCore::Journal::Ptr journal = Akonadi::CalendarUtils::journal(incidence)) {
         switch (changeType) {
         case Akonadi::IncidenceChanger::ChangeTypeCreate:
-            appendJournal(incidence, journal->dtStart().date());
+            appendJournal(incidence, calendar3(incidence), journal->dtStart().date());
             break;
         case Akonadi::IncidenceChanger::ChangeTypeModify:
             Q_EMIT journalEdited(incidence);

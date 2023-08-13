@@ -62,7 +62,7 @@ public:
 
 Q_SIGNALS:
     void showNewEventPopupSignal();
-    void showIncidencePopupSignal(const Akonadi::Item &, const QDate &);
+    void showIncidencePopupSignal(const Akonadi::CollectionCalendar::Ptr &, const Akonadi::Item &, const QDate &);
 
 protected:
     bool eventFilter(QObject *object, QEvent *event) override;

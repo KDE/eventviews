@@ -8,7 +8,7 @@
 
 #include "eventviews_export.h"
 
-#include <Akonadi/ETMCalendar>
+#include <Akonadi/CollectionCalendar>
 #include <Akonadi/Item>
 #include <KCalendarCore/Incidence>
 
@@ -279,7 +279,7 @@ class EVENTVIEWS_EXPORT IncidenceMonthItem : public MonthItem
 
 public:
     IncidenceMonthItem(MonthScene *monthScene,
-                       const Akonadi::ETMCalendar::Ptr &calendar,
+                       const Akonadi::CollectionCalendar::Ptr &calendar,
                        const Akonadi::Item &item,
                        const KCalendarCore::Incidence::Ptr &incidence,
                        QDate recurStartDate = QDate());
@@ -289,6 +289,7 @@ public:
     KCalendarCore::Incidence::Ptr incidence() const;
     Akonadi::Item akonadiItem() const;
     Akonadi::Item::Id akonadiItemId() const;
+    Akonadi::CollectionCalendar::Ptr calendar() const;
 
     bool greaterThanFallback(const MonthItem *other) const override;
 
@@ -329,7 +330,7 @@ private:
     */
     QColor catColor() const;
 
-    Akonadi::ETMCalendar::Ptr mCalendar;
+    Akonadi::CollectionCalendar::Ptr mCalendar;
     KCalendarCore::Incidence::Ptr mIncidence;
     Akonadi::Item::Id mAkonadiItemId;
     int mRecurDayOffset;

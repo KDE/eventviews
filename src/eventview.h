@@ -12,7 +12,7 @@
 #include "eventviews_export.h"
 
 #include <Akonadi/Collection>
-#include <Akonadi/ETMCalendar>
+#include <Akonadi/CollectionCalendar>
 #include <Akonadi/Item>
 
 #include <KCalendarCore/Incidence>
@@ -24,6 +24,8 @@
 #include <QWidget>
 
 #include <memory>
+
+class QAbstractItemModel;
 
 namespace CalendarSupport
 {
@@ -110,15 +112,12 @@ public:
      */
     ~EventView() override;
 
-    virtual void setCalendar(const Akonadi::ETMCalendar::Ptr &cal);
+    virtual void addCalendar(const Akonadi::CollectionCalendar::Ptr &calendar);
+    virtual void removeCalendar(const Akonadi::CollectionCalendar::Ptr &calendar);
 
-    /**
-      Return calendar object of this view.
-      TODO: replace with a version that returns a KCalendarCore::Calendar so it
-            can be used in different environments.
-            see agendaview for example calendar2(incidence)
-    */
-    virtual Akonadi::ETMCalendar::Ptr calendar() const;
+    virtual void setModel(QAbstractItemModel *model);
+    QAbstractItemModel *model() const;
+    Akonadi::EntityTreeModel *entityTreeModel() const;
 
     /*
       update config is called after prefs are set.
@@ -212,14 +211,6 @@ public:
      */
     void saveConfig(KConfigGroup &configGroup);
 
-    /**
-      Makes the eventview display only items of collection @p id.
-      Useful for example in multi-agendaview (side-by-side) where
-      each AgendaView displays only one collection.
-    */
-    void setCollectionId(Akonadi::Collection::Id id);
-    Q_REQUIRED_RESULT Akonadi::Collection::Id collectionId() const;
-
     //----------------------------------------------------------------------------
     KCheckableProxyModel *takeCustomCollectionSelectionProxyModel();
     KCheckableProxyModel *customCollectionSelectionProxyModel() const;
@@ -288,6 +279,9 @@ public:
     Q_REQUIRED_RESULT static QColor itemFrameColor(const QColor &color, bool selected);
 
     Q_REQUIRED_RESULT QString iconForItem(const Akonadi::Item &);
+
+    Q_REQUIRED_RESULT Akonadi::CollectionCalendar::Ptr calendarForCollection(const Akonadi::Collection &collection) const;
+    Q_REQUIRED_RESULT Akonadi::CollectionCalendar::Ptr calendarForCollection(Akonadi::Collection::Id collectionId) const;
 
 public Q_SLOTS:
     /**
@@ -455,6 +449,10 @@ private:
     EVENTVIEWS_NO_EXPORT void onCollectionChanged(const Akonadi::Collection &, const QSet<QByteArray> &);
 
 protected:
+    QVector<Akonadi::CollectionCalendar::Ptr> calendars() const;
+    Akonadi::CollectionCalendar::Ptr calendar3(const Akonadi::Item &item) const;
+    Akonadi::CollectionCalendar::Ptr calendar3(const KCalendarCore::Incidence::Ptr &incidence) const;
+
     bool makesWholeDayBusy(const KCalendarCore::Incidence::Ptr &incidence) const;
     Akonadi::IncidenceChanger *changer() const;
 

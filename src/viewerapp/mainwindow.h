@@ -9,16 +9,22 @@
 
 #include "ui_mainwindow.h"
 
-#include <Akonadi/ETMCalendar>
+#include <Akonadi/CollectionCalendar>
+
 #include <QMainWindow>
+#include <QVector>
 
 namespace Akonadi
 {
 class IncidenceChanger;
+class Collection;
+class EntityTeeModel;
+class Monitor;
 }
 
 namespace EventViews
 {
+class EventView;
 class Prefs;
 typedef QSharedPointer<Prefs> PrefsPtr;
 }
@@ -34,15 +40,22 @@ public:
 
     ~MainWindow();
 
+private Q_SLOTS:
+    void collectionSelected(const Akonadi::Collection &col);
+    void collectionDeselected(const Akonadi::Collection &col);
+
 private:
     const QStringList mViewNames;
 
     Ui_MainWindow mUi;
 
-    Akonadi::ETMCalendar::Ptr mCalendar;
+    Akonadi::Monitor *mMonitor;
+    Akonadi::EntityTreeModel *mEtm;
     Akonadi::IncidenceChanger *mIncidenceChanger = nullptr;
     Settings *mSettings = nullptr;
     EventViews::PrefsPtr *mViewPreferences = nullptr;
+    QVector<EventViews::EventView *> mEventViews;
+    QVector<Akonadi::CollectionCalendar::Ptr> mCalendars;
 
 private:
     void addView(const QString &viewName);
@@ -50,4 +63,6 @@ private:
 private Q_SLOTS:
     void delayedInit();
     void addViewTriggered(QAction *action);
+
+private:
 };

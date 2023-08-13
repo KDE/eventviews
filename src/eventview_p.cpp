@@ -9,30 +9,34 @@
 */
 
 #include "eventview_p.h"
+#include "calendarview_debug.h"
+#include "eventview.h"
 #include "prefs.h"
 
 #include <CalendarSupport/CollectionSelection>
 #include <CalendarSupport/KCalPrefs>
 
+#include <Akonadi/EntityTreeModel>
+
+#include <KHolidays/HolidayRegion>
+
 #include <KCheckableProxyModel>
 
+#include <QAbstractProxyModel>
 #include <QApplication>
+
+#include <ranges>
 
 using namespace EventViews;
 
-EventViewPrivate::EventViewPrivate()
-    : calendar(nullptr)
-    , mPrefs(new Prefs())
-    , mKCalPrefs(new CalendarSupport::KCalPrefs())
-    , mChanges(EventView::DatesChanged)
-    , mCollectionId(-1)
+EventViewPrivate::EventViewPrivate(EventView *qq)
+    : q(qq)
+    , mPrefs(QSharedPointer<Prefs>::create())
+    , mKCalPrefs(QSharedPointer<CalendarSupport::KCalPrefs>::create())
 {
 }
 
-EventViewPrivate::~EventViewPrivate()
-{
-    delete collectionSelectionModel;
-}
+EventViewPrivate::~EventViewPrivate() = default;
 
 void EventViewPrivate::finishTypeAhead()
 {
@@ -48,9 +52,26 @@ void EventViewPrivate::finishTypeAhead()
 
 void EventViewPrivate::setUpModels()
 {
-    delete customCollectionSelection;
-    customCollectionSelection = nullptr;
+    q->collectionSelection()->disconnect(q);
+
+    customCollectionSelection.reset();
     if (collectionSelectionModel) {
-        customCollectionSelection = new CalendarSupport::CollectionSelection(collectionSelectionModel->selectionModel());
+        customCollectionSelection = std::make_unique<CalendarSupport::CollectionSelection>(collectionSelectionModel->selectionModel());
     }
+}
+
+void EventViewPrivate::setEtm(QAbstractItemModel *model)
+{
+    while (model) {
+        if (const auto *proxy = qobject_cast<QAbstractProxyModel *>(model); proxy != nullptr) {
+            model = proxy->sourceModel();
+        } else if (auto *etm = qobject_cast<Akonadi::EntityTreeModel *>(model); etm != nullptr) {
+            this->etm = etm;
+            break;
+        } else {
+            model = nullptr;
+        }
+    }
+
+    Q_ASSERT_X(this->etm != nullptr, "EventView", "Model is not ETM, ETM-derived or a proxy chain on top of an ETM or an ETM-derived model");
 }

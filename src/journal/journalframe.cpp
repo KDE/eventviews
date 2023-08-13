@@ -13,6 +13,7 @@
 #include "journalframe.h"
 
 #include <Akonadi/CalendarUtils>
+#include <Akonadi/CollectionCalendar>
 #include <CalendarSupport/Utils>
 
 #include <KCalendarCore/Journal>
@@ -30,7 +31,7 @@
 
 using namespace EventViews;
 
-JournalDateView::JournalDateView(const Akonadi::ETMCalendar::Ptr &calendar, QWidget *parent)
+JournalDateView::JournalDateView(const Akonadi::CollectionCalendar::Ptr &calendar, QWidget *parent)
     : QWidget(parent)
     , mCalendar(calendar)
 {
@@ -127,7 +128,7 @@ void JournalDateView::journalDeleted(const Akonadi::Item &journal)
     mEntries.remove(journal.id());
 }
 
-JournalFrame::JournalFrame(const Akonadi::Item &j, const Akonadi::ETMCalendar::Ptr &calendar, QWidget *parent)
+JournalFrame::JournalFrame(const Akonadi::Item &j, const Akonadi::CollectionCalendar::Ptr &calendar, QWidget *parent)
     : QFrame(parent)
     , mJournal(j)
     , mCalendar(calendar)
@@ -233,7 +234,7 @@ void JournalFrame::editItem()
     }
 }
 
-void JournalFrame::setCalendar(const Akonadi::ETMCalendar::Ptr &calendar)
+void JournalFrame::setCalendar(const Akonadi::CollectionCalendar::Ptr &calendar)
 {
     mCalendar = calendar;
 }
@@ -309,8 +310,8 @@ void JournalFrame::readJournal(const Akonadi::Item &j)
     mBrowser->ensureCursorVisible();
 
     if (mCalendar) {
-        mEditButton->setEnabled(mCalendar->hasRight(j, Akonadi::Collection::CanChangeItem));
-        mDeleteButton->setEnabled(mCalendar->hasRight(j, Akonadi::Collection::CanDeleteItem));
+        mEditButton->setEnabled(mCalendar->hasRight(Akonadi::Collection::CanChangeItem));
+        mDeleteButton->setEnabled(mCalendar->hasRight(Akonadi::Collection::CanDeleteItem));
     }
 }
 

@@ -575,7 +575,7 @@ void MonthScene::mousePressEvent(QGraphicsSceneMouseEvent *mouseEvent)
         if (mouseEvent->button() == Qt::RightButton) {
             auto tmp = qobject_cast<IncidenceMonthItem *>(mClickedItem);
             if (tmp) {
-                Q_EMIT showIncidencePopupSignal(tmp->akonadiItem(), tmp->realStartDate());
+                Q_EMIT showIncidencePopupSignal(tmp->calendar(), tmp->akonadiItem(), tmp->realStartDate());
             }
         }
 

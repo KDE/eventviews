@@ -11,7 +11,6 @@
 #pragma once
 
 #include "eventview.h"
-#include <Akonadi/ETMCalendar>
 #include <Akonadi/IncidenceChanger>
 
 #include <QPointer>
@@ -53,7 +52,7 @@ public:
     TodoView(const EventViews::PrefsPtr &preferences, bool sidebarView, QWidget *parent);
     ~TodoView() override;
 
-    void setCalendar(const Akonadi::ETMCalendar::Ptr &) override;
+    void setModel(QAbstractItemModel *model) override;
 
     Q_REQUIRED_RESULT Akonadi::Item::List selectedIncidences() const override;
     Q_REQUIRED_RESULT KCalendarCore::DateList selectedIncidenceDates() const override;

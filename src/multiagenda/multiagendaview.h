@@ -19,6 +19,8 @@ namespace EventViews
 class ConfigDialogInterface;
 class MultiAgendaViewPrivate;
 
+;
+
 /**
   Shows one agenda for every resource side-by-side.
 */
@@ -26,8 +28,23 @@ class EVENTVIEWS_EXPORT MultiAgendaView : public EventView
 {
     Q_OBJECT
 public:
+    class CalendarFactory
+    {
+    public:
+        using Ptr = QSharedPointer<CalendarFactory>;
+
+        explicit CalendarFactory() = default;
+        virtual ~CalendarFactory() = default;
+
+        virtual Akonadi::CollectionCalendar::Ptr calendarForCollection(const Akonadi::Collection &collection) = 0;
+    };
+
     explicit MultiAgendaView(QWidget *parent = nullptr);
+    explicit MultiAgendaView(const CalendarFactory::Ptr &calendarFactory, QWidget *parent = nullptr);
+
     ~MultiAgendaView() override;
+
+    void setModel(QAbstractItemModel *model) override;
 
     Q_REQUIRED_RESULT Akonadi::Item::List selectedIncidences() const override;
     Q_REQUIRED_RESULT KCalendarCore::DateList selectedIncidenceDates() const override;
@@ -36,7 +53,8 @@ public:
 
     Q_REQUIRED_RESULT bool eventDurationHint(QDateTime &startDt, QDateTime &endDt, bool &allDay) const override;
 
-    void setCalendar(const Akonadi::ETMCalendar::Ptr &cal) override;
+    void addCalendar(const Akonadi::CollectionCalendar::Ptr &calendar) override;
+    void removeCalendar(const Akonadi::CollectionCalendar::Ptr &calendar) override;
 
     Q_REQUIRED_RESULT bool hasConfigurationDialog() const override;
 
@@ -51,7 +69,8 @@ public:
 
 Q_SIGNALS:
     void showNewEventPopupSignal();
-    void showIncidencePopupSignal(const Akonadi::Item &, const QDate &);
+    void showIncidencePopupSignal(const Akonadi::CollectionCalendar::Ptr &calendar, const Akonadi::Item &, const QDate &);
+    void activeCalendarChanged(const Akonadi::CollectionCalendar::Ptr &calendar);
 
 public Q_SLOTS:
 

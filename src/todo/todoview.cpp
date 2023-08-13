@@ -22,6 +22,7 @@
 
 #include <Akonadi/CalendarUtils>
 #include <Akonadi/EntityMimeTypeFilterModel>
+#include <Akonadi/EntityTreeModel>
 #include <Akonadi/TagFetchJob>
 
 #include <Akonadi/ETMViewStateSaver>
@@ -61,7 +62,6 @@ public:
         : todoModel(new Akonadi::TodoModel())
         , coloredTodoModel(new ColoredTodoProxyModel(preferences))
         , parent(parent_)
-        , calendar(nullptr)
         , prefs(preferences)
     {
         coloredTodoModel->setSourceModel(todoModel);
@@ -102,7 +102,7 @@ public:
             delete todoFlatModel;
             todoFlatModel = new Akonadi::EntityMimeTypeFilterModel(parent);
             todoFlatModel->addMimeTypeInclusionFilter(todoMimeType);
-            todoFlatModel->setSourceModel(calendar ? calendar->model() : nullptr);
+            todoFlatModel->setSourceModel(model);
             todoModel->setSourceModel(todoFlatModel);
 
             delete todoTreeModel;
@@ -116,7 +116,7 @@ public:
                 view->mView->setDragDropMode(QAbstractItemView::DragDrop);
                 view->setFlatView(flat, /**propagate=*/false); // So other views update their toggle icon
             }
-            todoTreeModel->setSourceModel(calendar ? calendar->model() : nullptr);
+            todoTreeModel->setSourceModel(model);
             todoModel->setSourceModel(todoTreeModel);
             delete todoFlatModel;
             todoFlatModel = nullptr;
@@ -135,12 +135,11 @@ public:
         prefs->writeConfig();
     }
 
-    void setCalendar(const Akonadi::ETMCalendar::Ptr &newCalendar)
+    void setModel(QAbstractItemModel *model)
     {
-        calendar = newCalendar;
-        todoModel->setCalendar(calendar);
+        this->model = model;
         if (todoTreeModel) {
-            todoTreeModel->setSourceModel(calendar ? calendar->model() : nullptr);
+            todoTreeModel->setSourceModel(this->model);
         }
     }
 
@@ -154,7 +153,7 @@ public:
     QList<TodoView *> views;
     QObject *parent = nullptr;
 
-    Akonadi::ETMCalendar::Ptr calendar;
+    QAbstractItemModel *model = nullptr;
     Akonadi::IncidenceTreeModel *todoTreeModel = nullptr;
     Akonadi::EntityMimeTypeFilterModel *todoFlatModel = nullptr;
     EventViews::PrefsPtr prefs;
@@ -198,7 +197,7 @@ TodoView::TodoView(const EventViews::PrefsPtr &prefs, bool sidebarView, QWidget 
     connect(mProxyModel, &TodoViewSortFilterProxyModel::rowsInserted, this, &TodoView::onRowsInserted);
 
     if (!mSidebarView) {
-        mQuickSearch = new TodoViewQuickSearch(calendar(), this);
+        mQuickSearch = new TodoViewQuickSearch(this);
         mQuickSearch->setVisible(prefs->enableTodoQuickSearch());
         connect(mQuickSearch,
                 &TodoViewQuickSearch::searchTextChanged,
@@ -455,15 +454,11 @@ void TodoView::expandIndex(const QModelIndex &index)
     }
 }
 
-void TodoView::setCalendar(const Akonadi::ETMCalendar::Ptr &calendar)
+void TodoView::setModel(QAbstractItemModel *model)
 {
-    EventView::setCalendar(calendar);
+    EventView::setModel(model);
 
-    if (!mSidebarView) {
-        mQuickSearch->setCalendar(calendar);
-    }
-    mCategoriesDelegate->setCalendar(calendar);
-    sModels->setCalendar(calendar);
+    sModels->setModel(model);
     restoreViewState();
 }
 
@@ -645,7 +640,7 @@ void TodoView::addTodo(const QString &summary, const Akonadi::Item &parentItem, 
     // Use the same collection of the parent.
     if (parentItem.isValid()) {
         // Don't use parentColection() since it might be a virtual collection
-        collection = calendar()->collection(parentItem.storageCollectionId());
+        collection = Akonadi::EntityTreeModel::updatedCollection(model(), parentItem.storageCollectionId());
     }
 
     changer()->createIncidence(todo, collection, this);
@@ -692,7 +687,8 @@ void TodoView::contextMenu(QPoint pos)
                 // Action isn't RO, it can change the incidence, "Edit" for example.
                 const bool actionIsRw = mItemPopupMenuReadWriteEntries.contains(entry);
 
-                const bool incidenceIsRO = !calendar()->hasRight(item, Akonadi::Collection::CanChangeItem);
+                const auto collection = Akonadi::EntityTreeModel::updatedCollection(model(), item.storageCollectionId());
+                const bool incidenceIsRO = collection.rights() & Akonadi::Collection::CanChangeItem;
 
                 enable = hasItem && (!actionIsRw || !incidenceIsRO);
             }
@@ -708,9 +704,9 @@ void TodoView::contextMenu(QPoint pos)
     if (hasItem) {
         if (incidencePtr) {
             const bool hasRecId = incidencePtr->hasRecurrenceId();
-            if (calendar()) {
-                mMakeSubtodosIndependent->setEnabled(!hasRecId && !calendar()->childItems(incidencePtr->uid()).isEmpty());
-            }
+            const bool hasSubtodos = mView->model()->hasChildren(mView->indexAt(pos));
+
+            mMakeSubtodosIndependent->setEnabled(!hasRecId && hasSubtodos);
             mMakeTodoIndependent->setEnabled(!hasRecId && !incidencePtr->relatedTo().isEmpty());
         }
 
@@ -919,7 +915,8 @@ void TodoView::setNewDate(QDate date)
     KCalendarCore::Todo::Ptr todo = Akonadi::CalendarUtils::todo(todoItem);
     Q_ASSERT(todo);
 
-    if (calendar()->hasRight(todoItem, Akonadi::Collection::CanChangeItem)) {
+    const auto collection = Akonadi::EntityTreeModel::updatedCollection(model(), todoItem.storageCollectionId());
+    if (collection.rights() & Akonadi::Collection::CanChangeItem) {
         KCalendarCore::Todo::Ptr oldTodo(todo->clone());
         QDateTime dt(date.startOfDay());
 
@@ -949,7 +946,8 @@ void TodoView::setStartDate(QDate date)
     KCalendarCore::Todo::Ptr todo = Akonadi::CalendarUtils::todo(todoItem);
     Q_ASSERT(todo);
 
-    if (calendar()->hasRight(todoItem, Akonadi::Collection::CanChangeItem)) {
+    const auto collection = Akonadi::EntityTreeModel::updatedCollection(model(), todoItem.storageCollectionId());
+    if (collection.rights() & Akonadi::Collection::CanChangeItem) {
         KCalendarCore::Todo::Ptr oldTodo(todo->clone());
         QDateTime dt(date.startOfDay());
 
@@ -979,7 +977,8 @@ void TodoView::setNewPercentage(QAction *action)
     KCalendarCore::Todo::Ptr todo = Akonadi::CalendarUtils::todo(todoItem);
     Q_ASSERT(todo);
 
-    if (calendar()->hasRight(todoItem, Akonadi::Collection::CanChangeItem)) {
+    const auto collection = Akonadi::EntityTreeModel::updatedCollection(model(), todoItem.storageCollectionId());
+    if (collection.rights() & Akonadi::Collection::CanChangeItem) {
         KCalendarCore::Todo::Ptr oldTodo(todo->clone());
 
         int percentage = mPercentage.value(action);
@@ -1003,7 +1002,8 @@ void TodoView::setNewPriority(QAction *action)
     }
     const auto todoItem = selection[0].data(Akonadi::TodoModel::TodoRole).value<Akonadi::Item>();
     KCalendarCore::Todo::Ptr todo = Akonadi::CalendarUtils::todo(todoItem);
-    if (calendar()->hasRight(todoItem, Akonadi::Collection::CanChangeItem)) {
+    const auto collection = Akonadi::EntityTreeModel::updatedCollection(model(), todoItem.storageCollectionId());
+    if (collection.rights() & Akonadi::Collection::CanChangeItem) {
         KCalendarCore::Todo::Ptr oldTodo(todo->clone());
         todo->setPriority(mPriority[action]);
 
@@ -1021,7 +1021,8 @@ void TodoView::changedCategories(QAction *action)
     const auto todoItem = selection[0].data(Akonadi::TodoModel::TodoRole).value<Akonadi::Item>();
     KCalendarCore::Todo::Ptr todo = Akonadi::CalendarUtils::todo(todoItem);
     Q_ASSERT(todo);
-    if (calendar()->hasRight(todoItem, Akonadi::Collection::CanChangeItem)) {
+    const auto collection = Akonadi::EntityTreeModel::updatedCollection(model(), todoItem.storageCollectionId());
+    if (collection.rights() & Akonadi::Collection::CanChangeItem) {
         KCalendarCore::Todo::Ptr oldTodo(todo->clone());
 
         const QString cat = action->data().toString();
@@ -1079,7 +1080,7 @@ void TodoView::setFlatView(bool flatView, bool notifyOtherViews)
 
 void TodoView::onRowsInserted(const QModelIndex &parent, int start, int end)
 {
-    if (start != end || !calendar() || !calendar()->entityTreeModel()) {
+    if (start != end || !entityTreeModel()) {
         return;
     }
 
@@ -1096,7 +1097,7 @@ void TodoView::onRowsInserted(const QModelIndex &parent, int start, int end)
         return;
     }
 
-    const bool isPopulated = calendar()->entityTreeModel()->isCollectionPopulated(item.storageCollectionId());
+    const bool isPopulated = entityTreeModel()->isCollectionPopulated(item.storageCollectionId());
     if (!isPopulated) {
         return;
     }
