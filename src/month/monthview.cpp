@@ -607,16 +607,4 @@ bool MonthView::isBusyDay(QDate day) const
     return !d->mBusyDays[day].isEmpty();
 }
 
-void MonthView::setCalendar(const Akonadi::ETMCalendar::Ptr &cal)
-{
-    Q_ASSERT(cal);
-
-    if (calendar()) {
-        calendar()->unregisterObserver(d.get());
-    }
-
-    EventView::setCalendar(cal);
-    calendar()->registerObserver(d.get());
-}
-
 #include "moc_monthview.cpp"
