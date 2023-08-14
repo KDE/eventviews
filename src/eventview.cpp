@@ -685,3 +685,5 @@ Akonadi::CollectionCalendar::Ptr EventView::calendarForCollection(const Akonadi:
 {
     return calendarForCollection(collection.id());
 }
+
+#include "moc_eventview.cpp"
