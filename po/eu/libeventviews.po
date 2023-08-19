@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-31 00:47+0000\n"
+"POT-Creation-Date: 2023-08-14 00:47+0000\n"
 "PO-Revision-Date: 2022-08-26 07:28+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -30,35 +30,35 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "xalba@ni.eus"
 
-#: agenda/agenda.cpp:971
+#: agenda/agenda.cpp:970
 #, kde-format
 msgid "Unable to lock item for modification. You cannot make any changes."
 msgstr ""
 "Ez da elementua aldatzeko hura giltzatzeko gai. Ezin duzu aldaketarik egin."
 
-#: agenda/agenda.cpp:973
+#: agenda/agenda.cpp:972
 #, kde-format
 msgid "Locking Failed"
 msgstr "Giltzatzea huts egin du"
 
-#: agenda/agenda.cpp:1188
+#: agenda/agenda.cpp:1187
 #, kde-format
 msgid "Dissociate event from recurrence"
 msgstr "Bereizi ekitaldia errepikatzetik"
 
-#: agenda/agenda.cpp:1210 month/monthitem.cpp:444
+#: agenda/agenda.cpp:1209 month/monthitem.cpp:445
 #, kde-format
 msgid ""
 "Unable to add the exception item to the calendar. No change will be done."
 msgstr ""
 "Ez da salbuespen elementua egutegian gehitzeko gai. Ez da aldaketarik egingo."
 
-#: agenda/agenda.cpp:1212 month/monthitem.cpp:446
+#: agenda/agenda.cpp:1211 month/monthitem.cpp:447
 #, kde-format
 msgid "Error Occurred"
 msgstr "Errorea gertatu da"
 
-#: agenda/agendaitem.cpp:81 list/listview.cpp:409
+#: agenda/agendaitem.cpp:81 list/listview.cpp:411
 #, kde-format
 msgid "%2 (1 year)"
 msgid_plural "%2 (%1 years)"
@@ -91,12 +91,12 @@ msgctxt "short_weekday short_monthname date (e.g. Mon Aug 13)"
 msgid "%1 %2 %3"
 msgstr "%2 %3 %1"
 
-#: agenda/agendaview.cpp:2167
+#: agenda/agendaview.cpp:2189
 #, kde-format
 msgid "Unable to modify this to-do, because it cannot be locked."
 msgstr "Ez da zeregin hau aldatzeko gai, ezin delako giltzatu."
 
-#: agenda/agendaview.cpp:2175
+#: agenda/agendaview.cpp:2197
 #, kde-format
 msgid "Unable to save %1 \"%2\"."
 msgstr "Ezin da  gorde %1 \"%2\"."
@@ -153,28 +153,28 @@ msgctxt "@title:window"
 msgid "Timezone"
 msgstr "Ordu-eremua"
 
-#: eventview.cpp:110
+#: eventview.cpp:107
 #, kde-format
 msgctxt "@title:window"
 msgid "Changing Recurring Item"
 msgstr "Elementu errepikakorra aldatzen"
 
-#: eventview.cpp:111
+#: eventview.cpp:108
 #, kde-format
 msgid "Also &Future Items"
 msgstr "Baita e&torkizuneko elementuak ere"
 
-#: eventview.cpp:112
+#: eventview.cpp:109
 #, kde-format
 msgid "Only &This Item"
 msgstr "Elementu &hau bakarrik"
 
-#: eventview.cpp:113
+#: eventview.cpp:110
 #, kde-format
 msgid "&All Occurrences"
 msgstr "Agerraldi guzti&ak"
 
-#: eventview.cpp:130
+#: eventview.cpp:127
 #, kde-format
 msgid ""
 "The item you are trying to change is a recurring item. Should the changes be "
@@ -185,7 +185,7 @@ msgstr ""
 "bakar honi ezarri beharko litzaizkioke, baita etorkizuneko elementuei, edo "
 "errepikapeneko elementu guztiei?"
 
-#: eventview.cpp:141
+#: eventview.cpp:138
 #, kde-format
 msgid ""
 "The item you are trying to change is a recurring item. Should the changes be "
@@ -1522,103 +1522,103 @@ msgstr ""
 "Erabili sistemaren kolorea. Gaitzen bada beste kolore ezarpen guztiak "
 "baztertuko ditu"
 
-#: journal/journalframe.cpp:152
+#: journal/journalframe.cpp:153
 #, kde-format
 msgid "&Edit"
 msgstr "&Editatu"
 
-#: journal/journalframe.cpp:155
+#: journal/journalframe.cpp:156
 #, kde-format
 msgid "Edit this journal entry"
 msgstr "Editatu eguneroko-sarrera hau"
 
-#: journal/journalframe.cpp:156
+#: journal/journalframe.cpp:157
 #, kde-format
 msgid "Opens an editor dialog for this journal entry"
 msgstr ""
 "Eguneroko-sarrera honetarako editore elkarrizketa-koadro bat irekitzen du"
 
-#: journal/journalframe.cpp:162
+#: journal/journalframe.cpp:163
 #, kde-format
 msgid "&Delete"
 msgstr "Eza&batu"
 
-#: journal/journalframe.cpp:165 journal/journalframe.cpp:166
+#: journal/journalframe.cpp:166 journal/journalframe.cpp:167
 #, kde-format
 msgid "Delete this journal entry"
 msgstr "Ezabatu eguneroko-sarrera hau"
 
-#: journal/journalframe.cpp:171
+#: journal/journalframe.cpp:172
 #, kde-format
 msgid "&Print"
 msgstr "In&primatu"
 
-#: journal/journalframe.cpp:175
+#: journal/journalframe.cpp:176
 #, kde-format
 msgid "Print this journal entry"
 msgstr "Inprimatu eguneroko-sarrera hau"
 
-#: journal/journalframe.cpp:176
+#: journal/journalframe.cpp:177
 #, kde-format
 msgid "Opens a print dialog for this journal entry"
 msgstr ""
 "Eguneroko-sarrera honetarako inprimatzeko elkarrizketa-koadro bat irekitzen "
 "du"
 
-#: journal/journalframe.cpp:181
+#: journal/journalframe.cpp:182
 #, kde-format
 msgid "Print preview"
 msgstr "Inprimatze aurreikuspegia"
 
-#: journal/journalframe.cpp:185
+#: journal/journalframe.cpp:186
 #, kde-format
 msgid "Print preview this journal entry"
 msgstr "Eguneroko-sarrera honen inprimatze aurreikuspegia"
 
-#: list/listview.cpp:57
+#: list/listview.cpp:56
 #, kde-format
 msgctxt "%1 is an item summary. %2 is the date when this item reoccurs"
 msgid "%1 (next: %2)"
 msgstr "%1 (Hurrengoa: %2)"
 
-#: list/listview.cpp:278
+#: list/listview.cpp:276
 #, kde-format
 msgid "Summary"
 msgstr "Laburpena"
 
-#: list/listview.cpp:279
+#: list/listview.cpp:277
 #, kde-format
 msgid "Start Date/Time"
 msgstr "Hasierako data/ordua"
 
-#: list/listview.cpp:280
+#: list/listview.cpp:278
 #, kde-format
 msgid "End Date/Time"
 msgstr "Amaierako data/ordua"
 
-#: list/listview.cpp:281
+#: list/listview.cpp:279
 #, kde-format
 msgid "Tags"
 msgstr "Etiketak"
 
-#: list/listview.cpp:354
+#: list/listview.cpp:352
 #, kde-format
 msgid "Summary [%1 - %2]"
 msgstr "Laburpena [%1 - %2]"
 
-#: month/monthitem.cpp:305
+#: month/monthitem.cpp:306
 #, kde-format
 msgid "Age:"
 msgstr "Adina:"
 
-#: month/monthitem.cpp:305
+#: month/monthitem.cpp:306
 #, kde-format
 msgid "%2 1 year"
 msgid_plural "%2 %1 years"
 msgstr[0] "%2 urte 1"
 msgstr[1] "%2 %1 urte"
 
-#: month/monthitem.cpp:438
+#: month/monthitem.cpp:439
 #, kde-format
 msgid "Move occurrence(s)"
 msgstr "Mugitu agerraldia(k)"
@@ -1635,19 +1635,19 @@ msgctxt "'Month day' for month view cells"
 msgid "%1 %2"
 msgstr "%1 %2"
 
-#: month/monthview.cpp:165 month/monthview.cpp:369
+#: month/monthview.cpp:210 month/monthview.cpp:430
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display calendar in a normal size"
 msgstr "Azaldu egutegia neurri arruntean"
 
-#: month/monthview.cpp:166 month/monthview.cpp:372
+#: month/monthview.cpp:211 month/monthview.cpp:433
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display calendar in a full window"
 msgstr "Azaldu egutegia leiho osoan"
 
-#: month/monthview.cpp:168
+#: month/monthview.cpp:213
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1658,13 +1658,13 @@ msgstr ""
 "erabilgarri dagoen lekua handiena betetzeko / edo bere neurri arruntera "
 "txikiagotu."
 
-#: month/monthview.cpp:175
+#: month/monthview.cpp:220
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Go back one month"
 msgstr "Joan atzerantz hilabete"
 
-#: month/monthview.cpp:176
+#: month/monthview.cpp:221
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1673,13 +1673,13 @@ msgstr ""
 "Egin klik botoi horri eta ikuspegia denboran atzerantz hilabetez kiribilduko "
 "da."
 
-#: month/monthview.cpp:182
+#: month/monthview.cpp:227
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Go back one week"
 msgstr "Joan atzerantz astebetez"
 
-#: month/monthview.cpp:183
+#: month/monthview.cpp:228
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Click this button and the view will be scrolled back in time by 1 week."
@@ -1687,13 +1687,13 @@ msgstr ""
 "Egin klik botoi horri eta ikuspegia denboran atzerantz astebetez kiribilduko "
 "da."
 
-#: month/monthview.cpp:189
+#: month/monthview.cpp:234
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Go forward one week"
 msgstr "Joan aurrerantz astebete"
 
-#: month/monthview.cpp:190
+#: month/monthview.cpp:235
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1702,13 +1702,13 @@ msgstr ""
 "Egin klik botoi horri eta ikuspegia denboran aurrerantz astebetez "
 "kiribilduko da."
 
-#: month/monthview.cpp:196
+#: month/monthview.cpp:241
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Go forward one month"
 msgstr "Joan aurrerantz hilabete"
 
-#: month/monthview.cpp:197
+#: month/monthview.cpp:242
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1717,17 +1717,17 @@ msgstr ""
 "Egin klik botoi horri eta ikuspegia denboran aurrerantz hilabetez "
 "kiribilduko da."
 
-#: multiagenda/multiagendaview.cpp:77
+#: multiagenda/multiagendaview.cpp:96
 #, kde-format
 msgid "Agenda %1"
 msgstr "%1 agenda"
 
-#: multiagenda/multiagendaview.cpp:164
+#: multiagenda/multiagendaview.cpp:191
 #, kde-format
 msgid "All Day"
 msgstr "Egun osokoa"
 
-#: timeline/timelineview.cpp:228 timeline/timelineview.cpp:308
+#: timeline/timelineview.cpp:227
 #, kde-format
 msgid "Calendar"
 msgstr "Egutegia"
@@ -1738,7 +1738,7 @@ msgctxt "@action:inmenu Unspecified priority"
 msgid "unspecified"
 msgstr "Zehaztu gabea"
 
-#: todo/tododelegates.cpp:153 todo/todoview.cpp:406
+#: todo/tododelegates.cpp:153 todo/todoview.cpp:405
 #, kde-format
 msgctxt "@action:inmenu highest priority"
 msgid "1 (highest)"
@@ -1762,7 +1762,7 @@ msgctxt "@action:inmenu"
 msgid "4"
 msgstr "4"
 
-#: todo/tododelegates.cpp:157 todo/todoview.cpp:410
+#: todo/tododelegates.cpp:157 todo/todoview.cpp:409
 #, kde-format
 msgctxt "@action:inmenu medium priority"
 msgid "5 (medium)"
@@ -1786,42 +1786,42 @@ msgctxt "@action:inmenu"
 msgid "8"
 msgstr "8"
 
-#: todo/tododelegates.cpp:161 todo/todoview.cpp:414
+#: todo/tododelegates.cpp:161 todo/todoview.cpp:413
 #, kde-format
 msgctxt "@action:inmenu lowest priority"
 msgid "9 (lowest)"
 msgstr "9 (apalena)"
 
-#: todo/todoview.cpp:185
+#: todo/todoview.cpp:184
 #, kde-format
 msgid "Cannot move to-do to itself or a child of itself."
 msgstr "Ezin du mugitu zeregina bere burura edo bere haur batera."
 
-#: todo/todoview.cpp:186
+#: todo/todoview.cpp:185
 #, kde-format
 msgid "Drop To-do"
 msgstr "Jaregin zeregina"
 
-#: todo/todoview.cpp:265
+#: todo/todoview.cpp:264
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display to-do list in a full window"
 msgstr "Azaldu zereginen zerrenda leiho osoan"
 
-#: todo/todoview.cpp:266
+#: todo/todoview.cpp:265
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Checking this option will cause the to-do view to use the full window."
 msgstr ""
 "Aukera hau markatzeak zereginen ikuspegiak leiho osoa erabiltzea eragingo du."
 
-#: todo/todoview.cpp:271
+#: todo/todoview.cpp:270
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display to-dos in flat list instead of a tree"
 msgstr "Azaldu zereginak zerrenda lauan zuhaitzean egin ordez"
 
-#: todo/todoview.cpp:273
+#: todo/todoview.cpp:272
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1832,127 +1832,127 @@ msgstr ""
 "Aukera hau markatzeak zereginak zerrenda lau gisa azaltzea eragingo du "
 "hierarkia-zuhaitz batean egin ordez."
 
-#: todo/todoview.cpp:312
+#: todo/todoview.cpp:311
 #, kde-format
 msgctxt "@action:inmenu show the to-do"
 msgid "&Show"
 msgstr "Erakut&si"
 
-#: todo/todoview.cpp:317
+#: todo/todoview.cpp:316
 #, kde-format
 msgctxt "@action:inmenu edit the to-do"
 msgid "&Edit..."
 msgstr "&Editatu..."
 
-#: todo/todoview.cpp:324
+#: todo/todoview.cpp:323
 #, kde-format
 msgctxt "@action:inmenu delete the to-do"
 msgid "&Delete"
 msgstr "Eza&batu"
 
-#: todo/todoview.cpp:333
+#: todo/todoview.cpp:332
 #, kde-format
 msgctxt "@action:inmenu print the to-do"
 msgid "&Print..."
 msgstr "In&primatu..."
 
-#: todo/todoview.cpp:338
+#: todo/todoview.cpp:337
 #, kde-format
 msgctxt "@action:inmenu print preview the to-do"
 msgid "Print Previe&w..."
 msgstr "Inprimatze aurrei&kuspegia..."
 
-#: todo/todoview.cpp:345
+#: todo/todoview.cpp:344
 #, kde-format
 msgctxt "@action:inmenu create a new to-do"
 msgid "New &To-do..."
 msgstr "&Zeregin berria..."
 
-#: todo/todoview.cpp:349
+#: todo/todoview.cpp:348
 #, kde-format
 msgctxt "@action:inmenu create a new sub-to-do"
 msgid "New Su&b-to-do..."
 msgstr "Az&pi-zeregin berria..."
 
-#: todo/todoview.cpp:353
+#: todo/todoview.cpp:352
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Make this To-do Independent"
 msgstr "Egi&n zeregin hau independente"
 
-#: todo/todoview.cpp:355
+#: todo/todoview.cpp:354
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Make all Sub-to-dos &Independent"
 msgstr "Egin azpi-zeregin denak &independente"
 
-#: todo/todoview.cpp:366
+#: todo/todoview.cpp:365
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Create Event from To-do"
 msgstr "Sortu ekitaldia zereginetik"
 
-#: todo/todoview.cpp:374
+#: todo/todoview.cpp:373
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Create Note for To-do"
 msgstr "Sortu zereginaren oharra"
 
-#: todo/todoview.cpp:384
+#: todo/todoview.cpp:383
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Copy To"
 msgstr "&Kopiatu hona"
 
-#: todo/todoview.cpp:391
+#: todo/todoview.cpp:390
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Move To"
 msgstr "Era&man hona"
 
-#: todo/todoview.cpp:402
+#: todo/todoview.cpp:401
 #, kde-format
 msgctxt "@action:inmenu delete completed to-dos"
 msgid "Pur&ge Completed"
 msgstr "Erabat ken&du osatutakoa"
 
-#: todo/todoview.cpp:405
+#: todo/todoview.cpp:404
 #, kde-format
 msgctxt "@action:inmenu unspecified priority"
 msgid "unspecified"
 msgstr "Zehaztu gabea"
 
-#: todo/todoview.cpp:407
+#: todo/todoview.cpp:406
 #, kde-format
 msgctxt "@action:inmenu priority value=2"
 msgid "2"
 msgstr "2"
 
-#: todo/todoview.cpp:408
+#: todo/todoview.cpp:407
 #, kde-format
 msgctxt "@action:inmenu priority value=3"
 msgid "3"
 msgstr "3"
 
-#: todo/todoview.cpp:409
+#: todo/todoview.cpp:408
 #, kde-format
 msgctxt "@action:inmenu priority value=4"
 msgid "4"
 msgstr "4"
 
-#: todo/todoview.cpp:411
+#: todo/todoview.cpp:410
 #, kde-format
 msgctxt "@action:inmenu priority value=6"
 msgid "6"
 msgstr "6"
 
-#: todo/todoview.cpp:412
+#: todo/todoview.cpp:411
 #, kde-format
 msgctxt "@action:inmenu priority value=7"
 msgid "7"
 msgstr "7"
 
-#: todo/todoview.cpp:413
+#: todo/todoview.cpp:412
 #, kde-format
 msgctxt "@action:inmenu priority value=8"
 msgid "8"
@@ -1963,13 +1963,13 @@ msgstr "8"
 msgid "Enter a summary to create a new to-do"
 msgstr "Sartu laburpen bat zeregin berri bat sortzeko"
 
-#: todo/todoviewquicksearch.cpp:38
+#: todo/todoviewquicksearch.cpp:37
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Filter on matching summaries"
 msgstr "Iragazi bat datozen laburpenetan"
 
-#: todo/todoviewquicksearch.cpp:39
+#: todo/todoviewquicksearch.cpp:38
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1978,19 +1978,19 @@ msgstr ""
 "Sartu testua hemen, bat datozen laburpenetan erakusten diren zereginak "
 "iragazteko."
 
-#: todo/todoviewquicksearch.cpp:40
+#: todo/todoviewquicksearch.cpp:39
 #, kde-format
 msgctxt "@label in QuickSearchLine"
 msgid "Search Summaries..."
 msgstr "Bilatu laburpenetan..."
 
-#: todo/todoviewquicksearch.cpp:47
+#: todo/todoviewquicksearch.cpp:46
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Filter on these tags"
 msgstr "Iragazi etiketa hauen arabera"
 
-#: todo/todoviewquicksearch.cpp:49
+#: todo/todoviewquicksearch.cpp:48
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -2000,19 +2000,19 @@ msgstr ""
 "Erabili lauki-konbinatu hori, erakusten diren zereginak hautatutako etiketa-"
 "zerrenda baten arabera iragazteko."
 
-#: todo/todoviewquicksearch.cpp:51
+#: todo/todoviewquicksearch.cpp:50
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Select Tags"
 msgstr "Hautatu etiketak"
 
-#: todo/todoviewquicksearch.cpp:74
+#: todo/todoviewquicksearch.cpp:73
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Filter on these priorities"
 msgstr "Iragazi lehentasun hauen arabera"
 
-#: todo/todoviewquicksearch.cpp:76
+#: todo/todoviewquicksearch.cpp:75
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -2022,37 +2022,37 @@ msgstr ""
 "Erabili lauki-konbinatu hori, erakusten diren zereginak hautatutako "
 "lehentasun-zerrenda baten arabera iragazteko."
 
-#: todo/todoviewquicksearch.cpp:78
+#: todo/todoviewquicksearch.cpp:77
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Select Priority"
 msgstr "Hautatu lehentasuna"
 
-#: todo/todoviewquicksearch.cpp:104
+#: todo/todoviewquicksearch.cpp:96
 #, kde-format
 msgctxt "@action:inmenu priority is unspecified"
 msgid "unspecified"
 msgstr "zehaztu gabea"
 
-#: todo/todoviewquicksearch.cpp:105
+#: todo/todoviewquicksearch.cpp:97
 #, kde-format
 msgctxt "@action:inmenu highest priority"
 msgid "%1 (highest)"
 msgstr "%1 (altuena)"
 
-#: todo/todoviewquicksearch.cpp:108
+#: todo/todoviewquicksearch.cpp:100
 #, kde-format
 msgctxt "@action:inmenu medium priority"
 msgid "%1 (medium)"
 msgstr "%1 (ertaina)"
 
-#: todo/todoviewquicksearch.cpp:110
+#: todo/todoviewquicksearch.cpp:102
 #, kde-format
 msgctxt "@action:inmenu lowest priority"
 msgid "%1 (lowest)"
 msgstr "%1 (apalena)"
 
-#: todo/todoviewquicksearch.cpp:112
+#: todo/todoviewquicksearch.cpp:104
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "%1"
@@ -2131,37 +2131,37 @@ msgid "CalendarViews Viewer"
 msgstr "Egutegi-ikuspegien erakuslea"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab)
-#: viewerapp/mainwindow.ui:25
+#: viewerapp/mainwindow.ui:55
 #, kde-format
 msgid "Tab 1"
 msgstr "1. fitxa"
 
 #. i18n: ectx: property (title), widget (QMenu, addViewMenu)
-#: viewerapp/mainwindow.ui:43
+#: viewerapp/mainwindow.ui:74
 #, kde-format
 msgid "Add View"
 msgstr "Gehitu ikuspegia"
 
 #. i18n: ectx: property (text), widget (QStatusBar, statusbar)
-#: viewerapp/mainwindow.ui:55
+#: viewerapp/mainwindow.ui:86
 #, kde-format
 msgid "Agenda"
 msgstr "Agenda"
 
 #. i18n: ectx: property (text), widget (QStatusBar, statusbar)
-#: viewerapp/mainwindow.ui:60
+#: viewerapp/mainwindow.ui:91
 #, kde-format
 msgid "MultiAgenda"
 msgstr "MultiAgenda"
 
 #. i18n: ectx: property (text), widget (QStatusBar, statusbar)
-#: viewerapp/mainwindow.ui:65
+#: viewerapp/mainwindow.ui:96
 #, kde-format
 msgid "Month"
 msgstr "Hilabetea"
 
 #. i18n: ectx: property (text), widget (QStatusBar, statusbar)
-#: viewerapp/mainwindow.ui:70
+#: viewerapp/mainwindow.ui:101
 #, kde-format
 msgid "Timeline"
 msgstr "Denbora-lerroa"
@@ -2214,40 +2214,40 @@ msgstr ""
 "gaitzeko. Lauki hau markatu beharko zenuke talde-laneko funtzionaltasunak "
 "erabili nahi badituzu (adib. Kontact, KDE Kolab bezero gisa konfiguratzea)."
 
-#: whatsnext/whatsnextview.cpp:65
+#: whatsnext/whatsnextview.cpp:67
 #, kde-format
 msgid "To-dos:"
 msgstr "Zereginak:"
 
-#: whatsnext/whatsnextview.cpp:81
+#: whatsnext/whatsnextview.cpp:83
 #, kde-format
 msgid "What's Next?"
 msgstr "Zer da hurrengoa?"
 
-#: whatsnext/whatsnextview.cpp:88 whatsnext/whatsnextview.cpp:251
-#: whatsnext/whatsnextview.cpp:256
+#: whatsnext/whatsnextview.cpp:90 whatsnext/whatsnextview.cpp:273
+#: whatsnext/whatsnextview.cpp:278
 #, kde-format
 msgctxt "date from - to"
 msgid "%1 - %2"
 msgstr "%1 - %2"
 
-#: whatsnext/whatsnextview.cpp:102
+#: whatsnext/whatsnextview.cpp:106
 #, kde-format
 msgid "Events:"
 msgstr "Ekitaldiak:"
 
-#: whatsnext/whatsnextview.cpp:181 whatsnext/whatsnextview.cpp:200
+#: whatsnext/whatsnextview.cpp:195 whatsnext/whatsnextview.cpp:219
 #, kde-format
 msgid "Events and to-dos that need a reply:"
 msgstr "Erantzun bat behar duten ekitaldiak eta zereginak:"
 
-#: whatsnext/whatsnextview.cpp:263
+#: whatsnext/whatsnextview.cpp:285
 #, kde-format
 msgctxt "date, from - to"
 msgid "%1, %2 - %3"
 msgstr "%1, %2 - %3"
 
-#: whatsnext/whatsnextview.cpp:295
+#: whatsnext/whatsnextview.cpp:314
 #, kde-format
 msgctxt "to-do due date"
 msgid "  (Due: %1)"
