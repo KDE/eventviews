@@ -1735,6 +1735,24 @@ void AgendaView::updateTimeBarWidth()
     d->mBottomDayLabelsFrame->setWeekWidth(timeBarWidth);
 }
 
+// By deafult QDateTime::toTimeSpec() will turn Qt::TimeZone to Qt::LocalTime,
+// which would turn the event's timezone into "floating". This code actually
+// preserves the timezone, if the spec is Qt::TimeZone.
+static QDateTime copyTimeSpec(QDateTime dt, const QDateTime &source)
+{
+    switch (source.timeSpec()) {
+    case Qt::TimeZone:
+        return dt.toTimeZone(source.timeZone());
+    case Qt::LocalTime:
+    case Qt::UTC:
+        return dt.toTimeSpec(source.timeSpec());
+    case Qt::OffsetFromUTC:
+        return dt.toOffsetFromUtc(source.offsetFromUtc());
+    }
+
+    Q_UNREACHABLE();
+}
+
 void AgendaView::updateEventDates(AgendaItem *item, bool addIncidence, Akonadi::Collection::Id collectionId)
 {
     qCDebug(CALENDARVIEW_LOG) << item->text() << "; item->cellXLeft(): " << item->cellXLeft() << "; item->cellYTop(): " << item->cellYTop()
@@ -1828,8 +1846,8 @@ void AgendaView::updateEventDates(AgendaItem *item, bool addIncidence, Akonadi::
          *
          * TODO: We need a better hashing mechanism for CalendarLocal.
          */
-        ev->setDtEnd(endDt.toTimeSpec(incidence->dateTime(KCalendarCore::Incidence::RoleEnd).timeSpec()));
-        incidence->setDtStart(startDt.toTimeSpec(incidence->dtStart().timeSpec()));
+        ev->setDtEnd(copyTimeSpec(endDt, incidence->dateTime(KCalendarCore::Incidence::RoleEnd)));
+        incidence->setDtStart(copyTimeSpec(startDt, incidence->dtStart()));
     } else if (const KCalendarCore::Todo::Ptr td = CalendarSupport::todo(incidence)) {
         endDt = td->dtDue(true).toLocalTime().addDays(daysOffset);
         endDt.setTime(td->allDay() ? QTime(00, 00, 00) : endTime);
@@ -1843,12 +1861,12 @@ void AgendaView::updateEventDates(AgendaItem *item, bool addIncidence, Akonadi::
         const auto shift = td->dtDue(true).secsTo(endDt);
         startDt = td->dtStart(true).addSecs(shift);
         if (td->hasStartDate()) {
-            td->setDtStart(startDt.toTimeSpec(incidence->dtStart().timeSpec()));
+            td->setDtStart(copyTimeSpec(startDt, incidence->dtStart()));
         }
         if (td->recurs()) {
             td->setDtRecurrence(td->dtRecurrence().addSecs(shift));
         }
-        td->setDtDue(endDt.toTimeSpec(td->dtDue().timeSpec()), true);
+        td->setDtDue(copyTimeSpec(endDt, td->dtDue()), true);
     }
 
     if (!incidence->hasRecurrenceId()) {
