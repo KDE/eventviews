@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-31 03:13+0000\n"
+"POT-Creation-Date: 2023-08-25 02:27+0000\n"
 "PO-Revision-Date: 2022-08-03 14:44+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -89,12 +89,12 @@ msgctxt "short_weekday short_monthname date (e.g. Mon Aug 13)"
 msgid "%1 %2 %3"
 msgstr "%1 %2 %3"
 
-#: agenda/agendaview.cpp:2167
+#: agenda/agendaview.cpp:2185
 #, kde-format
 msgid "Unable to modify this to-do, because it cannot be locked."
 msgstr "Kon deze taak niet bewerken omdat die niet kan worden vergrendeld."
 
-#: agenda/agendaview.cpp:2175
+#: agenda/agendaview.cpp:2193
 #, kde-format
 msgid "Unable to save %1 \"%2\"."
 msgstr "Kon %1 niet opslaan \"%2\"."
