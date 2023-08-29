@@ -449,7 +449,7 @@ private:
     EVENTVIEWS_NO_EXPORT void onCollectionChanged(const Akonadi::Collection &, const QSet<QByteArray> &);
 
 protected:
-    QVector<Akonadi::CollectionCalendar::Ptr> calendars() const;
+    QList<Akonadi::CollectionCalendar::Ptr> calendars() const;
     Akonadi::CollectionCalendar::Ptr calendar3(const Akonadi::Item &item) const;
     Akonadi::CollectionCalendar::Ptr calendar3(const KCalendarCore::Incidence::Ptr &incidence) const;
 

@@ -70,7 +70,7 @@ public: /// Members
     QObject *mTypeAheadReceiver = nullptr;
     QList<QEvent *> mTypeAheadEvents;
     static CalendarSupport::CollectionSelection *sGlobalCollectionSelection;
-    QVector<Akonadi::CollectionCalendar::Ptr> mCalendars;
+    QList<Akonadi::CollectionCalendar::Ptr> mCalendars;
 
     std::vector<std::unique_ptr<KHolidays::HolidayRegion>> mHolidayRegions;
     PrefsPtr mPrefs;

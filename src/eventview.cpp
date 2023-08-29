@@ -651,7 +651,7 @@ void EventView::onCollectionChanged(const Akonadi::Collection &collection, const
     }
 }
 
-QVector<Akonadi::CollectionCalendar::Ptr> EventView::calendars() const
+QList<Akonadi::CollectionCalendar::Ptr> EventView::calendars() const
 {
     Q_D(const EventView);
     return d->mCalendars;

@@ -11,8 +11,8 @@
 
 #include <Akonadi/CollectionCalendar>
 
+#include <QList>
 #include <QMainWindow>
-#include <QVector>
 
 namespace Akonadi
 {
@@ -54,8 +54,8 @@ private:
     Akonadi::IncidenceChanger *mIncidenceChanger = nullptr;
     Settings *mSettings = nullptr;
     EventViews::PrefsPtr *mViewPreferences = nullptr;
-    QVector<EventViews::EventView *> mEventViews;
-    QVector<Akonadi::CollectionCalendar::Ptr> mCalendars;
+    QList<EventViews::EventView *> mEventViews;
+    QList<Akonadi::CollectionCalendar::Ptr> mCalendars;
 
 private:
     void addView(const QString &viewName);

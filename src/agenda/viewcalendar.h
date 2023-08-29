@@ -84,6 +84,6 @@ public:
     Q_REQUIRED_RESULT KCalendarCore::Incidence::List incidences() const;
 
     AgendaView *mAgendaView = nullptr;
-    QVector<ViewCalendar::Ptr> mSubCalendars;
+    QList<ViewCalendar::Ptr> mSubCalendars;
 };
 }
