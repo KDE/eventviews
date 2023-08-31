@@ -168,6 +168,8 @@ public:
 
     void setChanges(EventView::Changes) override;
 
+    void setTitle(const QString &title);
+
 Q_SIGNALS:
     void showNewEventPopupSignal();
     void showIncidencePopupSignal(const Akonadi::CollectionCalendar::Ptr &, const Akonadi::Item &, const QDate &);
