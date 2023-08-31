@@ -520,6 +520,8 @@ AgendaView *MultiAgendaViewPrivate::createView(const QString &title)
     q->connect(mScrollBar, &QAbstractSlider::valueChanged, av->agenda()->verticalScrollBar(), &QAbstractSlider::setValue);
 
     q->connect(av->splitter(), &QSplitter::splitterMoved, q, &MultiAgendaView::resizeSplitters);
+    // The change in all-day and regular agenda height ratio affects scrollbars as well
+    q->connect(av->splitter(), &QSplitter::splitterMoved, q, &MultiAgendaView::setupScrollBar);
     q->connect(av, &AgendaView::showIncidencePopupSignal, q, &MultiAgendaView::showIncidencePopupSignal);
 
     q->connect(av, &AgendaView::showNewEventPopupSignal, q, &MultiAgendaView::showNewEventPopupSignal);
@@ -582,6 +584,7 @@ void MultiAgendaView::resizeEvent(QResizeEvent *ev)
 {
     d->resizeScrollView(ev->size());
     EventView::resizeEvent(ev);
+    setupScrollBar();
 }
 
 void MultiAgendaViewPrivate::resizeScrollView(QSize size)
