@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-14 00:47+0000\n"
+"POT-Creation-Date: 2023-09-01 00:46+0000\n"
 "PO-Revision-Date: 2022-01-24 14:00+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -57,7 +57,7 @@ msgstr ""
 msgid "Error Occurred"
 msgstr "Il occurreva un error"
 
-#: agenda/agendaitem.cpp:81 list/listview.cpp:411
+#: agenda/agendaitem.cpp:81 list/listview.cpp:425
 #, kde-format
 msgid "%2 (1 year)"
 msgid_plural "%2 (%1 years)"
@@ -84,20 +84,20 @@ msgstr "%1 - %2"
 msgid "- %1"
 msgstr "- %1"
 
-#: agenda/agendaview.cpp:360
+#: agenda/agendaview.cpp:381
 #, kde-format
 msgctxt "short_weekday short_monthname date (e.g. Mon Aug 13)"
 msgid "%1 %2 %3"
 msgstr "%1 , %2  %3"
 
-#: agenda/agendaview.cpp:2189
+#: agenda/agendaview.cpp:2210
 #, kde-format
 msgid "Unable to modify this to-do, because it cannot be locked."
 msgstr ""
 "Incapace de modificar iste elemento de facer, proque il non pote esser  "
 "blocate."
 
-#: agenda/agendaview.cpp:2197
+#: agenda/agendaview.cpp:2218
 #, kde-format
 msgid "Unable to save %1 \"%2\"."
 msgstr "Incapace de salveguardar %1 \"%2\"."
@@ -1594,27 +1594,27 @@ msgctxt "%1 is an item summary. %2 is the date when this item reoccurs"
 msgid "%1 (next: %2)"
 msgstr "%1 (proxime: %2)"
 
-#: list/listview.cpp:276
+#: list/listview.cpp:290
 #, kde-format
 msgid "Summary"
 msgstr "Summario"
 
-#: list/listview.cpp:277
+#: list/listview.cpp:291
 #, kde-format
 msgid "Start Date/Time"
 msgstr "Data e Tempore de Initio"
 
-#: list/listview.cpp:278
+#: list/listview.cpp:292
 #, kde-format
 msgid "End Date/Time"
 msgstr "Data e Tempore de Fin"
 
-#: list/listview.cpp:279
+#: list/listview.cpp:293
 #, kde-format
 msgid "Tags"
 msgstr "Etiquettas"
 
-#: list/listview.cpp:352
+#: list/listview.cpp:366
 #, kde-format
 msgid "Summary [%1 - %2]"
 msgstr "Summario [%1 - %2]"
@@ -1730,7 +1730,7 @@ msgstr ""
 msgid "Agenda %1"
 msgstr "Agenda %1"
 
-#: multiagenda/multiagendaview.cpp:191
+#: multiagenda/multiagendaview.cpp:178
 #, kde-format
 msgid "All Day"
 msgstr "Tote die"
