@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-14 00:47+0000\n"
+"POT-Creation-Date: 2023-09-01 00:46+0000\n"
 "PO-Revision-Date: 2022-02-21 11:04+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -55,7 +55,7 @@ msgstr "Nem sikerült hozzáadni a kivételt a naptárhoz. Nem történik módos
 msgid "Error Occurred"
 msgstr "Hiba történt"
 
-#: agenda/agendaitem.cpp:81 list/listview.cpp:411
+#: agenda/agendaitem.cpp:81 list/listview.cpp:425
 #, kde-format
 msgid "%2 (1 year)"
 msgid_plural "%2 (%1 years)"
@@ -82,18 +82,18 @@ msgstr "%1 - %2"
 msgid "- %1"
 msgstr "- %1"
 
-#: agenda/agendaview.cpp:360
+#: agenda/agendaview.cpp:381
 #, kde-format
 msgctxt "short_weekday short_monthname date (e.g. Mon Aug 13)"
 msgid "%1 %2 %3"
 msgstr "%2 %3, %1"
 
-#: agenda/agendaview.cpp:2189
+#: agenda/agendaview.cpp:2210
 #, kde-format
 msgid "Unable to modify this to-do, because it cannot be locked."
 msgstr "A feladatot nem sikerült módosítani, mert nem lehetett zárolni."
 
-#: agenda/agendaview.cpp:2197
+#: agenda/agendaview.cpp:2218
 #, kde-format
 msgid "Unable to save %1 \"%2\"."
 msgstr "Nem sikerült elmenteni: %1 „%2”."
@@ -1568,27 +1568,27 @@ msgctxt "%1 is an item summary. %2 is the date when this item reoccurs"
 msgid "%1 (next: %2)"
 msgstr "%1 (következő: %2)"
 
-#: list/listview.cpp:276
+#: list/listview.cpp:290
 #, kde-format
 msgid "Summary"
 msgstr "Összegzés"
 
-#: list/listview.cpp:277
+#: list/listview.cpp:291
 #, kde-format
 msgid "Start Date/Time"
 msgstr "Kezdési dátum/idő"
 
-#: list/listview.cpp:278
+#: list/listview.cpp:292
 #, kde-format
 msgid "End Date/Time"
 msgstr "Befejezési dátum/idő"
 
-#: list/listview.cpp:279
+#: list/listview.cpp:293
 #, kde-format
 msgid "Tags"
 msgstr "Címkék"
 
-#: list/listview.cpp:352
+#: list/listview.cpp:366
 #, kde-format
 msgid "Summary [%1 - %2]"
 msgstr "Összegzés [%1 - %2]"
@@ -1700,7 +1700,7 @@ msgstr "Kattintson erre a gombra és a nézet előregördül az időben 1 hónap
 msgid "Agenda %1"
 msgstr "Áttekintő nézet %1"
 
-#: multiagenda/multiagendaview.cpp:191
+#: multiagenda/multiagendaview.cpp:178
 #, kde-format
 msgid "All Day"
 msgstr "Egész nap"

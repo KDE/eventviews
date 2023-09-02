@@ -207,6 +207,7 @@ public:
     using DecorationList = QList<EventViews::CalendarDecoration::Decoration *>;
 
 public:
+    void setCalendarName(const QString &calendarName);
     void setAgenda(Agenda *agenda);
     bool createDayLabels(const KCalendarCore::DateList &dates, bool withDayLabel, const QStringList &decos, const QStringList &enabledDecos);
     void setWeekWidth(int width);
@@ -228,6 +229,7 @@ private:
     const bool mIsSideBySide;
 
     Agenda *mAgenda = nullptr;
+    KSqueezedTextLabel *mCalendarNameLabel = nullptr;
     QWidget *mDayLabels = nullptr;
     AgendaHeaderLayout *mDayLabelsLayout = nullptr;
     QWidget *mWeekLabelBox = nullptr;
@@ -239,28 +241,47 @@ AgendaHeader::AgendaHeader(bool isSideBySide, QWidget *parent)
     : QWidget(parent)
     , mIsSideBySide(isSideBySide)
 {
-    auto layout = new QHBoxLayout(this);
+    auto layout = new QVBoxLayout(this);
     layout->setContentsMargins(0, 0, 0, 0);
-    layout->setSpacing(SPACING);
+
+    if (mIsSideBySide) {
+        mCalendarNameLabel = new KSqueezedTextLabel(this);
+        mCalendarNameLabel->setAlignment(Qt::AlignCenter);
+        layout->addWidget(mCalendarNameLabel);
+    }
+
+    auto *daysWidget = new QWidget(this);
+    layout->addWidget(daysWidget);
+
+    auto daysLayout = new QHBoxLayout(daysWidget);
+    daysLayout->setContentsMargins(0, 0, 0, 0);
+    daysLayout->setSpacing(SPACING);
 
     if (!mIsSideBySide) {
-        mWeekLabelBox = new QWidget(this);
+        mWeekLabelBox = new QWidget(daysWidget);
         auto weekLabelBoxLayout = new QVBoxLayout(mWeekLabelBox);
         weekLabelBoxLayout->setContentsMargins(0, 0, 0, 0);
         weekLabelBoxLayout->setSpacing(0);
-        layout->addWidget(mWeekLabelBox);
+        daysLayout->addWidget(mWeekLabelBox);
     }
 
-    mDayLabels = new QWidget(this);
+    mDayLabels = new QWidget(daysWidget);
     mDayLabelsLayout = new AgendaHeaderLayout(mDayLabels);
     mDayLabelsLayout->setContentsMargins(0, 0, 0, 0);
-    layout->addWidget(mDayLabels);
-    layout->setStretchFactor(mDayLabels, 1);
+    daysLayout->addWidget(mDayLabels);
+    daysLayout->setStretchFactor(mDayLabels, 1);
 }
 
 void AgendaHeader::setAgenda(Agenda *agenda)
 {
     mAgenda = agenda;
+}
+
+void AgendaHeader::setCalendarName(const QString &calendarName)
+{
+    if (mCalendarNameLabel) {
+        mCalendarNameLabel->setText(calendarName);
+    }
 }
 
 void AgendaHeader::updateMargins()
@@ -2503,6 +2524,11 @@ void AgendaView::alignAgendas()
 void AgendaView::setChanges(EventView::Changes changes)
 {
     d->setChanges(changes);
+}
+
+void AgendaView::setTitle(const QString &title)
+{
+    d->mTopDayLabelsFrame->setCalendarName(title);
 }
 
 void AgendaView::scheduleUpdateEventIndicators()

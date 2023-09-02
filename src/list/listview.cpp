@@ -61,11 +61,24 @@ static QString cleanSummary(const QString &summary, const QDateTime &next)
 class ListViewItem : public QTreeWidgetItem
 {
 public:
-    ListViewItem(const Akonadi::Item &incidence, QTreeWidget *parent)
+    ListViewItem(const Akonadi::Item &incidence, const Akonadi::CollectionCalendar::Ptr &calendar, QTreeWidget *parent)
         : QTreeWidgetItem(parent)
         , mTreeWidget(parent)
         , mIncidence(incidence)
+        , mCalendar(calendar)
     {
+    }
+
+    QVariant data(int column, int role) const override
+    {
+        if (role == Qt::ToolTipRole) {
+            const auto incidence = mIncidence.payload<KCalendarCore::Incidence::Ptr>();
+            return IncidenceFormatter::toolTipStr(Akonadi::CalendarUtils::displayName(mCalendar->model(), mIncidence.parentCollection()),
+                                                  incidence,
+                                                  start.date());
+        }
+
+        return QTreeWidgetItem::data(column, role);
     }
 
     bool operator<(const QTreeWidgetItem &other) const override;
@@ -74,6 +87,7 @@ public:
     const Akonadi::Item mIncidence;
     QDateTime start;
     QDateTime end;
+    Akonadi::CollectionCalendar::Ptr mCalendar;
 };
 
 bool ListViewItem::operator<(const QTreeWidgetItem &other) const
@@ -412,12 +426,7 @@ void ListViewPrivate::addIncidence(const Akonadi::CollectionCalendar::Ptr &calen
             tinc->setReadOnly(true);
         }
     }
-    auto item = new ListViewItem(aitem, mTreeWidget);
-
-    // set tooltips
-    for (int col = 0; col < Dummy_EOF_Column; ++col) {
-        item->setToolTip(col, IncidenceFormatter::toolTipStr(Akonadi::CalendarUtils::displayName(calendar->model(), aitem.parentCollection()), incidence));
-    }
+    auto item = new ListViewItem(aitem, calendar, mTreeWidget);
 
     ListItemVisitor v(item, mStartDate);
     if (!tinc->accept(v, tinc)) {

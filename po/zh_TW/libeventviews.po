@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-14 00:47+0000\n"
+"POT-Creation-Date: 2023-09-01 00:46+0000\n"
 "PO-Revision-Date: 2022-12-30 18:52+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -56,7 +56,7 @@ msgstr "無法將例外的項目加入行事曆。將不做任何變更。"
 msgid "Error Occurred"
 msgstr "發生錯誤"
 
-#: agenda/agendaitem.cpp:81 list/listview.cpp:411
+#: agenda/agendaitem.cpp:81 list/listview.cpp:425
 #, kde-format
 msgid "%2 (1 year)"
 msgid_plural "%2 (%1 years)"
@@ -82,18 +82,18 @@ msgstr "%1 - %2"
 msgid "- %1"
 msgstr "- %1"
 
-#: agenda/agendaview.cpp:360
+#: agenda/agendaview.cpp:381
 #, kde-format
 msgctxt "short_weekday short_monthname date (e.g. Mon Aug 13)"
 msgid "%1 %2 %3"
 msgstr "%1 %2 %3"
 
-#: agenda/agendaview.cpp:2189
+#: agenda/agendaview.cpp:2210
 #, kde-format
 msgid "Unable to modify this to-do, because it cannot be locked."
 msgstr "無法變更此待辦事項，因為無法鎖定。"
 
-#: agenda/agendaview.cpp:2197
+#: agenda/agendaview.cpp:2218
 #, kde-format
 msgid "Unable to save %1 \"%2\"."
 msgstr "無法儲存 %1 \"%2\""
@@ -1459,27 +1459,27 @@ msgctxt "%1 is an item summary. %2 is the date when this item reoccurs"
 msgid "%1 (next: %2)"
 msgstr "%1 (下一個：%2)"
 
-#: list/listview.cpp:276
+#: list/listview.cpp:290
 #, kde-format
 msgid "Summary"
 msgstr "摘要"
 
-#: list/listview.cpp:277
+#: list/listview.cpp:291
 #, kde-format
 msgid "Start Date/Time"
 msgstr "開始日期與時間"
 
-#: list/listview.cpp:278
+#: list/listview.cpp:292
 #, kde-format
 msgid "End Date/Time"
 msgstr "結束日期與時間"
 
-#: list/listview.cpp:279
+#: list/listview.cpp:293
 #, kde-format
 msgid "Tags"
 msgstr "標籤"
 
-#: list/listview.cpp:352
+#: list/listview.cpp:366
 #, kde-format
 msgid "Summary [%1 - %2]"
 msgstr "摘要 [%1 - %2]"
@@ -1588,7 +1588,7 @@ msgstr "點擊此按鍵會往後捲動一個月。"
 msgid "Agenda %1"
 msgstr "行程 %1"
 
-#: multiagenda/multiagendaview.cpp:191
+#: multiagenda/multiagendaview.cpp:178
 #, kde-format
 msgid "All Day"
 msgstr "整天"

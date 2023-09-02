@@ -98,24 +98,6 @@ static QString generateColumnLabel(int c)
 
 class EventViews::MultiAgendaViewPrivate
 {
-private:
-    class ElidedLabel : public QFrame
-    {
-    public:
-        ElidedLabel(const QString &text)
-            : mText(text)
-        {
-        }
-
-        QSize minimumSizeHint() const override;
-
-    protected:
-        void paintEvent(QPaintEvent *event) override;
-
-    private:
-        const QString mText;
-    };
-
 public:
     explicit MultiAgendaViewPrivate(const MultiAgendaView::CalendarFactory::Ptr &factory, MultiAgendaView *qq)
         : q(qq)
@@ -174,81 +156,87 @@ MultiAgendaView::MultiAgendaView(const CalendarFactory::Ptr &factory, QWidget *p
     topLevelLayout->setSpacing(0);
     topLevelLayout->setContentsMargins(0, 0, 0, 0);
 
-    QFontMetrics fm(font());
-    int topLabelHeight = 2 * fm.height() + fm.lineSpacing();
+    // agendaheader is a VBox layout with default spacing containing two labels,
+    // so the height is 2 * default font height + 2 * default vertical layout spacing
+    // (that's vertical spacing between the labels and spacing between the header and the
+    // top of the agenda grid)
+    const auto spacing = style()->pixelMetric(QStyle::PM_LayoutVerticalSpacing, nullptr, this);
+    const int agendeHeaderHeight = 2 * QFontMetrics(font()).height() + 2 * spacing;
 
-    auto topSideBox = new QWidget(this);
-    auto topSideBoxVBoxLayout = new QVBoxLayout(topSideBox);
-    topSideBoxVBoxLayout->setContentsMargins(0, 0, 0, 0);
+    // Left sidebox
+    {
+        auto sideBox = new QWidget(this);
+        auto sideBoxLayout = new QVBoxLayout(sideBox);
+        sideBoxLayout->setSpacing(0);
+        sideBoxLayout->setContentsMargins(0, agendeHeaderHeight, 0, 0);
 
-    auto topSideSpacer = new QWidget(topSideBox);
-    topSideBoxVBoxLayout->addWidget(topSideSpacer);
-    topSideSpacer->setFixedHeight(topLabelHeight);
+        // Splitter for full-day and regular agenda views
+        d->mLeftSplitter = new QSplitter(Qt::Vertical, sideBox);
+        sideBoxLayout->addWidget(d->mLeftSplitter, 1);
 
-    d->mLeftSplitter = new QSplitter(Qt::Vertical, topSideBox);
-    topSideBoxVBoxLayout->addWidget(d->mLeftSplitter);
+        // Label for all-day view
+        d->mLabel = new QLabel(i18n("All Day"), d->mLeftSplitter);
+        d->mLabel->setAlignment(Qt::AlignRight | Qt::AlignVCenter);
+        d->mLabel->setWordWrap(true);
 
-    d->mLabel = new QLabel(i18n("All Day"), d->mLeftSplitter);
-    d->mLabel->setAlignment(Qt::AlignRight | Qt::AlignVCenter);
-    d->mLabel->setWordWrap(true);
+        auto timeLabelsBox = new QWidget(d->mLeftSplitter);
+        auto timeLabelsBoxLayout = new QVBoxLayout(timeLabelsBox);
+        timeLabelsBoxLayout->setSpacing(0);
+        timeLabelsBoxLayout->setContentsMargins(0, 0, 0, 0);
 
-    auto sideBox = new QWidget(d->mLeftSplitter);
-    auto sideBoxVBoxLayout = new QVBoxLayout(sideBox);
-    sideBoxVBoxLayout->setContentsMargins(0, 0, 0, 0);
+        d->mTimeLabelsZone = new TimeLabelsZone(timeLabelsBox, PrefsPtr(new Prefs()));
+        timeLabelsBoxLayout->addWidget(d->mTimeLabelsZone);
 
-    // compensate for the frame the agenda views but not the timelabels have
-    auto timeLabelTopAlignmentSpacer = new QWidget(sideBox);
-    sideBoxVBoxLayout->addWidget(timeLabelTopAlignmentSpacer);
+        // Compensate for horizontal scrollbars, if needed
+        d->mLeftBottomSpacer = new QWidget(timeLabelsBox);
+        timeLabelsBoxLayout->addWidget(d->mLeftBottomSpacer);
 
-    d->mTimeLabelsZone = new TimeLabelsZone(sideBox, PrefsPtr(new Prefs()));
+        topLevelLayout->addWidget(sideBox);
+    }
 
-    auto timeLabelBotAlignmentSpacer = new QWidget(sideBox);
-    sideBoxVBoxLayout->addWidget(timeLabelBotAlignmentSpacer);
+    // Central area
+    {
+        d->mScrollArea = new QScrollArea(this);
+        d->mScrollArea->setWidgetResizable(true);
 
-    d->mLeftBottomSpacer = new QWidget(topSideBox);
-    topSideBoxVBoxLayout->addWidget(d->mLeftBottomSpacer);
+        d->mScrollArea->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        d->mScrollArea->setFrameShape(QFrame::NoFrame);
 
-    topLevelLayout->addWidget(topSideBox);
+        d->mTopBox = new QWidget(d->mScrollArea->viewport());
+        auto mTopBoxHBoxLayout = new QHBoxLayout(d->mTopBox);
+        mTopBoxHBoxLayout->setContentsMargins(0, 0, 0, 0);
+        d->mScrollArea->setWidget(d->mTopBox);
 
-    d->mScrollArea = new QScrollArea(this);
-    d->mScrollArea->setWidgetResizable(true);
+        topLevelLayout->addWidget(d->mScrollArea, 100);
+    }
 
-    d->mScrollArea->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+    // Right side box (scrollbar)
+    {
+        auto sideBox = new QWidget(this);
+        auto sideBoxLayout = new QVBoxLayout(sideBox);
+        sideBoxLayout->setSpacing(0);
+        sideBoxLayout->setContentsMargins(0, agendeHeaderHeight, 0, 0);
 
-    // BUG: timelabels aren't aligned with the agenda's grid, 2 or 3 pixels of offset.
-    // asymmetric since the timelabels
-    timeLabelTopAlignmentSpacer->setFixedHeight(d->mScrollArea->frameWidth() - 1);
-    // have 25 horizontal lines
-    timeLabelBotAlignmentSpacer->setFixedHeight(d->mScrollArea->frameWidth() - 2);
+        d->mRightSplitter = new QSplitter(Qt::Vertical, sideBox);
+        sideBoxLayout->addWidget(d->mRightSplitter);
 
-    d->mScrollArea->setFrameShape(QFrame::NoFrame);
-    topLevelLayout->addWidget(d->mScrollArea, 100);
-    d->mTopBox = new QWidget(d->mScrollArea->viewport());
-    auto mTopBoxHBoxLayout = new QHBoxLayout(d->mTopBox);
-    mTopBoxHBoxLayout->setContentsMargins(0, 0, 0, 0);
-    d->mScrollArea->setWidget(d->mTopBox);
+        // Empty widget, equivalent to mLabel in the left box
+        d->mRightDummyWidget = new QWidget(d->mRightSplitter);
 
-    topSideBox = new QWidget(this);
-    topSideBoxVBoxLayout = new QVBoxLayout(topSideBox);
-    topSideBoxVBoxLayout->setContentsMargins(0, 0, 0, 0);
+        d->mScrollBar = new QScrollBar(Qt::Vertical, d->mRightSplitter);
 
-    topSideSpacer = new QWidget(topSideBox);
-    topSideBoxVBoxLayout->addWidget(topSideSpacer);
-    topSideSpacer->setFixedHeight(topLabelHeight);
+        // Compensate for horizontal scrollbar, if needed
+        d->mRightBottomSpacer = new QWidget(sideBox);
+        sideBoxLayout->addWidget(d->mRightBottomSpacer);
 
-    d->mRightSplitter = new QSplitter(Qt::Vertical, topSideBox);
-    topSideBoxVBoxLayout->addWidget(d->mRightSplitter);
+        topLevelLayout->addWidget(sideBox);
+    }
+
+    // BUG: compensate for agenda view's frames to make sure time labels are aligned
+    d->mTimeLabelsZone->setContentsMargins(0, d->mScrollArea->frameWidth(), 0, d->mScrollArea->frameWidth());
 
     connect(d->mLeftSplitter, &QSplitter::splitterMoved, this, &MultiAgendaView::resizeSplitters);
     connect(d->mRightSplitter, &QSplitter::splitterMoved, this, &MultiAgendaView::resizeSplitters);
-
-    d->mRightDummyWidget = new QWidget(d->mRightSplitter);
-
-    d->mScrollBar = new QScrollBar(Qt::Vertical, d->mRightSplitter);
-
-    d->mRightBottomSpacer = new QWidget(topSideBox);
-    topSideBoxVBoxLayout->addWidget(d->mRightBottomSpacer);
-    topLevelLayout->addWidget(topSideBox);
 }
 
 void MultiAgendaView::addCalendar(const Akonadi::CollectionCalendar::Ptr &calendar)
@@ -319,6 +307,11 @@ void MultiAgendaView::recreateViews()
     connect(timeLabel->verticalScrollBar(), &QAbstractSlider::valueChanged, d->mScrollBar, &QAbstractSlider::setValue);
     connect(d->mScrollBar, &QAbstractSlider::valueChanged, timeLabel->verticalScrollBar(), &QAbstractSlider::setValue);
 
+    // On initial view, sync our splitter sizes with the agenda
+    if (d->mAgendaViews.size() == 1) {
+        d->mLeftSplitter->setSizes(d->mAgendaViews[0]->splitter()->sizes());
+        d->mRightSplitter->setSizes(d->mAgendaViews[0]->splitter()->sizes());
+    }
     resizeSplitters();
     QTimer::singleShot(0, this, &MultiAgendaView::setupScrollBar);
 
@@ -514,10 +507,10 @@ AgendaView *MultiAgendaViewPrivate::createView(const QString &title)
     mTopBox->layout()->addWidget(box);
     auto layout = new QVBoxLayout(box);
     layout->setContentsMargins(0, 0, 0, 0);
-    layout->addWidget(new ElidedLabel(title));
     auto av = new AgendaView(q->preferences(), q->startDateTime().date(), q->endDateTime().date(), true, true, q);
     layout->addWidget(av);
     av->setIncidenceChanger(q->changer());
+    av->setTitle(title);
     av->agenda()->scrollArea()->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     mAgendaViews.append(av);
     mAgendaWidgets.append(box);
@@ -527,6 +520,8 @@ AgendaView *MultiAgendaViewPrivate::createView(const QString &title)
     q->connect(mScrollBar, &QAbstractSlider::valueChanged, av->agenda()->verticalScrollBar(), &QAbstractSlider::setValue);
 
     q->connect(av->splitter(), &QSplitter::splitterMoved, q, &MultiAgendaView::resizeSplitters);
+    // The change in all-day and regular agenda height ratio affects scrollbars as well
+    q->connect(av->splitter(), &QSplitter::splitterMoved, q, &MultiAgendaView::setupScrollBar);
     q->connect(av, &AgendaView::showIncidencePopupSignal, q, &MultiAgendaView::showIncidencePopupSignal);
 
     q->connect(av, &AgendaView::showNewEventPopupSignal, q, &MultiAgendaView::showNewEventPopupSignal);
@@ -589,6 +584,7 @@ void MultiAgendaView::resizeEvent(QResizeEvent *ev)
 {
     d->resizeScrollView(ev->size());
     EventView::resizeEvent(ev);
+    setupScrollBar();
 }
 
 void MultiAgendaViewPrivate::resizeScrollView(QSize size)
@@ -851,21 +847,6 @@ QList<KCheckableProxyModel *> MultiAgendaView::collectionSelectionModels() const
 QStringList MultiAgendaView::customColumnTitles() const
 {
     return d->mCustomColumnTitles;
-}
-
-void MultiAgendaViewPrivate::ElidedLabel::paintEvent(QPaintEvent *event)
-{
-    QFrame::paintEvent(event);
-    QPainter p(this);
-    QRect r = contentsRect();
-    const QString elidedText = fontMetrics().elidedText(mText, Qt::ElideMiddle, r.width());
-    p.drawText(r, Qt::AlignHCenter | Qt::AlignVCenter, elidedText);
-}
-
-QSize MultiAgendaViewPrivate::ElidedLabel::minimumSizeHint() const
-{
-    const QFontMetrics &fm = fontMetrics();
-    return QSize(fm.boundingRect(QStringLiteral("...")).width(), fm.height());
 }
 
 #include "moc_multiagendaview.cpp"
