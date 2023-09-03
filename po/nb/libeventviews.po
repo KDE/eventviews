@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-14 00:47+0000\n"
+"POT-Creation-Date: 2023-09-01 00:46+0000\n"
 "PO-Revision-Date: 2013-09-27 17:58+0200\n"
 "Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -58,7 +58,7 @@ msgstr ""
 msgid "Error Occurred"
 msgstr "En feil oppsto"
 
-#: agenda/agendaitem.cpp:81 list/listview.cpp:411
+#: agenda/agendaitem.cpp:81 list/listview.cpp:425
 #, kde-format
 msgid "%2 (1 year)"
 msgid_plural "%2 (%1 years)"
@@ -85,18 +85,18 @@ msgstr "%1 – %2"
 msgid "- %1"
 msgstr "- %1"
 
-#: agenda/agendaview.cpp:360
+#: agenda/agendaview.cpp:381
 #, kde-format
 msgctxt "short_weekday short_monthname date (e.g. Mon Aug 13)"
 msgid "%1 %2 %3"
 msgstr ""
 
-#: agenda/agendaview.cpp:2189
+#: agenda/agendaview.cpp:2210
 #, kde-format
 msgid "Unable to modify this to-do, because it cannot be locked."
 msgstr "Klarte ikke endre dette gjøremålet fordi det ikke kan låses."
 
-#: agenda/agendaview.cpp:2197
+#: agenda/agendaview.cpp:2218
 #, kde-format
 msgid "Unable to save %1 \"%2\"."
 msgstr "Klarte ikke lagre %1 «%2»."
@@ -1548,27 +1548,27 @@ msgctxt "%1 is an item summary. %2 is the date when this item reoccurs"
 msgid "%1 (next: %2)"
 msgstr "%1 (neste: %2)"
 
-#: list/listview.cpp:276
+#: list/listview.cpp:290
 #, kde-format
 msgid "Summary"
 msgstr "Sammendrag"
 
-#: list/listview.cpp:277
+#: list/listview.cpp:291
 #, kde-format
 msgid "Start Date/Time"
 msgstr "Startdato og -tidspunkt"
 
-#: list/listview.cpp:278
+#: list/listview.cpp:292
 #, kde-format
 msgid "End Date/Time"
 msgstr "Sluttdato og -tidspunkt"
 
-#: list/listview.cpp:279
+#: list/listview.cpp:293
 #, kde-format
 msgid "Tags"
 msgstr ""
 
-#: list/listview.cpp:352
+#: list/listview.cpp:366
 #, kde-format
 msgid "Summary [%1 - %2]"
 msgstr "Sammendrag [%1 – %2]"
@@ -1681,7 +1681,7 @@ msgstr "Trykk denne knappen, så blir visningen rullet fram i tid med én måned
 msgid "Agenda %1"
 msgstr "Dagsorden %1"
 
-#: multiagenda/multiagendaview.cpp:191
+#: multiagenda/multiagendaview.cpp:178
 #, kde-format
 msgid "All Day"
 msgstr "Hele dagen"
