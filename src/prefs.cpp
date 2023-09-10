@@ -934,7 +934,7 @@ QColor Prefs::resourceColor(const QString &cal)
         const int seed = d->getInt(d->mBaseConfig.defaultResourceColorSeedItem());
         const QStringList colors = d->getStringList(d->mBaseConfig.defaultResourceColorsItem());
         if (seed > 0 && seed - 1 < colors.size()) {
-            color.setNamedColor(colors[seed - 1]);
+            color = QColor::fromString(colors[seed - 1]);
         } else {
             color.setRgb(QRandomGenerator::global()->bounded(256), QRandomGenerator::global()->bounded(256), QRandomGenerator::global()->bounded(256));
         }
