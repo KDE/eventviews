@@ -8,12 +8,12 @@ Dependencies:
     'frameworks/kcalendarcore' : '@latest-kf6'
     'frameworks/kconfigwidgets' : '@latest-kf6'
     'graphics/kdiagram' : '@latest-kf6'
-    'pim/akonadi' : '@latest-kf6'
-    'pim/akonadi-calendar' : '@latest-kf6'
-    'pim/calendarsupport' : '@latest-kf6'
-    'pim/kcalutils' : '@latest-kf6'
-    'pim/kmime' : '@latest-kf6'
-    'pim/libkdepim' : '@latest-kf6'
+    'pim/akonadi' : '@same'
+    'pim/akonadi-calendar' : '@same'
+    'pim/calendarsupport' : '@same'
+    'pim/kcalutils' : '@same'
+    'pim/kmime' : '@same'
+    'pim/libkdepim' : '@same'
 
 Options:
   cmake-options: '-DKDEPIM_BUILD_EXAMPLES=ON'
