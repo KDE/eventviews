@@ -2235,8 +2235,8 @@ msgstr ""
 "Marqueu esta casella per a habilitar la generació automàtica de correus en "
 "crear, actualitzar o suprimir esdeveniments (o tasques pendents) amb altres "
 "assistents implicats. Hauríeu de marcar esta casella si voleu utilitzar la "
-"funcionalitat de treball en grup (p. ex. configurar Kontact com a client KDE "
-"de Kolab)."
+"funcionalitat de treball en grup (p. ex., configurar Kontact com a client "
+"KDE de Kolab)."
 
 #: whatsnext/whatsnextview.cpp:67
 #, kde-format
@@ -2276,42 +2276,3 @@ msgstr "%1, %2 - %3"
 msgctxt "to-do due date"
 msgid "  (Due: %1)"
 msgstr "  (Venciment: %1)"
-
-#~ msgctxt "yes, an exception to a recurring to-do"
-#~ msgid "Exception"
-#~ msgstr "Excepció"
-
-#~ msgctxt "yes, recurring to-do"
-#~ msgid "Yes"
-#~ msgstr "Sí"
-
-#~ msgctxt "no, not a recurring to-do"
-#~ msgid "No"
-#~ msgstr "No"
-
-#~ msgctxt "delimiter for joining category/tag names"
-#~ msgid ","
-#~ msgstr ","
-
-#~ msgid "Recurs"
-#~ msgstr "Repetix"
-
-#~ msgid "Priority"
-#~ msgstr "Prioritat"
-
-#~ msgctxt "@title:column percent complete"
-#~ msgid "Complete"
-#~ msgstr "Finalitzat"
-
-#~ msgid "Start Date"
-#~ msgstr "Data d'inici"
-
-#~ msgid "Due Date"
-#~ msgstr "Data de venciment"
-
-#~ msgctxt "@title:column date completed"
-#~ msgid "Completed"
-#~ msgstr "Finalitzat"
-
-#~ msgid "Description"
-#~ msgstr "Descripció"
