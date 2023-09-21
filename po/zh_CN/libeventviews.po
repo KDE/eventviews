@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-01 00:46+0000\n"
+"POT-Creation-Date: 2023-09-21 00:45+0000\n"
 "PO-Revision-Date: 2023-09-16 10:08\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -27,28 +27,28 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kde-china@kde.org"
 
-#: agenda/agenda.cpp:970
+#: agenda/agenda.cpp:966
 #, kde-format
 msgid "Unable to lock item for modification. You cannot make any changes."
 msgstr "无法锁定对项目的修改。您无法进行任何更改。"
 
-#: agenda/agenda.cpp:972
+#: agenda/agenda.cpp:968
 #, kde-format
 msgid "Locking Failed"
 msgstr "锁定失败"
 
-#: agenda/agenda.cpp:1187
+#: agenda/agenda.cpp:1183
 #, kde-format
 msgid "Dissociate event from recurrence"
 msgstr "从重现中分离事件"
 
-#: agenda/agenda.cpp:1209 month/monthitem.cpp:445
+#: agenda/agenda.cpp:1205 month/monthitem.cpp:445
 #, kde-format
 msgid ""
 "Unable to add the exception item to the calendar. No change will be done."
 msgstr "无法将例外项目添加到日历。未更改。"
 
-#: agenda/agenda.cpp:1211 month/monthitem.cpp:447
+#: agenda/agenda.cpp:1207 month/monthitem.cpp:447
 #, kde-format
 msgid "Error Occurred"
 msgstr "发生了错误"
@@ -85,12 +85,12 @@ msgctxt "short_weekday short_monthname date (e.g. Mon Aug 13)"
 msgid "%1 %2 %3"
 msgstr "%1 %2 %3"
 
-#: agenda/agendaview.cpp:2210
+#: agenda/agendaview.cpp:2209
 #, kde-format
 msgid "Unable to modify this to-do, because it cannot be locked."
 msgstr "无法修改此待办事项，因为无法锁定它。"
 
-#: agenda/agendaview.cpp:2218
+#: agenda/agendaview.cpp:2217
 #, kde-format
 msgid "Unable to save %1 \"%2\"."
 msgstr "无法保存 %1“%2”。"
@@ -1588,7 +1588,7 @@ msgstr "日程 %1"
 msgid "All Day"
 msgstr "全天"
 
-#: timeline/timelineview.cpp:227
+#: timeline/timelineview.cpp:223
 #, kde-format
 msgid "Calendar"
 msgstr "日历"
@@ -2062,40 +2062,40 @@ msgstr ""
 "件。如果您想要使用群件功能(如将 Kontact 配置为 KDE Kolab 客户端)，请选中此"
 "项。"
 
-#: whatsnext/whatsnextview.cpp:67
+#: whatsnext/whatsnextview.cpp:61
 #, kde-format
 msgid "To-dos:"
 msgstr "待办事项："
 
-#: whatsnext/whatsnextview.cpp:83
+#: whatsnext/whatsnextview.cpp:77
 #, kde-format
 msgid "What's Next?"
 msgstr "接下来干什么？"
 
-#: whatsnext/whatsnextview.cpp:90 whatsnext/whatsnextview.cpp:273
-#: whatsnext/whatsnextview.cpp:278
+#: whatsnext/whatsnextview.cpp:84 whatsnext/whatsnextview.cpp:267
+#: whatsnext/whatsnextview.cpp:272
 #, kde-format
 msgctxt "date from - to"
 msgid "%1 - %2"
 msgstr "%1 - %2"
 
-#: whatsnext/whatsnextview.cpp:106
+#: whatsnext/whatsnextview.cpp:100
 #, kde-format
 msgid "Events:"
 msgstr "事件："
 
-#: whatsnext/whatsnextview.cpp:195 whatsnext/whatsnextview.cpp:219
+#: whatsnext/whatsnextview.cpp:189 whatsnext/whatsnextview.cpp:213
 #, kde-format
 msgid "Events and to-dos that need a reply:"
 msgstr "需要答复的事件或待办："
 
-#: whatsnext/whatsnextview.cpp:285
+#: whatsnext/whatsnextview.cpp:279
 #, kde-format
 msgctxt "date, from - to"
 msgid "%1, %2 - %3"
 msgstr "%1， %2 - %3"
 
-#: whatsnext/whatsnextview.cpp:314
+#: whatsnext/whatsnextview.cpp:308
 #, kde-format
 msgctxt "to-do due date"
 msgid "  (Due: %1)"

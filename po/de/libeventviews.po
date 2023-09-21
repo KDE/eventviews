@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-01 00:46+0000\n"
+"POT-Creation-Date: 2023-09-21 00:45+0000\n"
 "PO-Revision-Date: 2022-06-10 00:18+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -34,24 +34,24 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "swinter@kde.org"
 
-#: agenda/agenda.cpp:970
+#: agenda/agenda.cpp:966
 #, kde-format
 msgid "Unable to lock item for modification. You cannot make any changes."
 msgstr ""
 "Kein exklusiver Zugriff auf den Eintrag möglich. Sie können keine Änderungen "
 "vornehmen."
 
-#: agenda/agenda.cpp:972
+#: agenda/agenda.cpp:968
 #, kde-format
 msgid "Locking Failed"
 msgstr "Kein exklusiver Zugriff möglich"
 
-#: agenda/agenda.cpp:1187
+#: agenda/agenda.cpp:1183
 #, kde-format
 msgid "Dissociate event from recurrence"
 msgstr "Diesen Termin aus der Wiederholungsliste herauslösen"
 
-#: agenda/agenda.cpp:1209 month/monthitem.cpp:445
+#: agenda/agenda.cpp:1205 month/monthitem.cpp:445
 #, kde-format
 msgid ""
 "Unable to add the exception item to the calendar. No change will be done."
@@ -59,7 +59,7 @@ msgstr ""
 "Es ist nicht möglich, diese Ausnahme in den Kalender aufzunehmen. Es werden "
 "keine Änderungen durchgeführt."
 
-#: agenda/agenda.cpp:1211 month/monthitem.cpp:447
+#: agenda/agenda.cpp:1207 month/monthitem.cpp:447
 #, kde-format
 msgid "Error Occurred"
 msgstr "Fehler aufgetreten"
@@ -97,14 +97,14 @@ msgctxt "short_weekday short_monthname date (e.g. Mon Aug 13)"
 msgid "%1 %2 %3"
 msgstr "%1 %2 %3"
 
-#: agenda/agendaview.cpp:2210
+#: agenda/agendaview.cpp:2209
 #, kde-format
 msgid "Unable to modify this to-do, because it cannot be locked."
 msgstr ""
 "Diese Aufgabe kann nicht verändert werden, da kein exklusiver Zugriff darauf "
 "möglich ist."
 
-#: agenda/agendaview.cpp:2218
+#: agenda/agendaview.cpp:2217
 #, kde-format
 msgid "Unable to save %1 \"%2\"."
 msgstr "Speichern von %1 „%2“ nicht möglich."
@@ -1760,7 +1760,7 @@ msgstr "Tagesansicht %1"
 msgid "All Day"
 msgstr "Ganzer Tag"
 
-#: timeline/timelineview.cpp:227
+#: timeline/timelineview.cpp:223
 #, kde-format
 msgid "Calendar"
 msgstr "Kalender"
@@ -2251,40 +2251,40 @@ msgstr ""
 "aktivieren, wenn Sie die Groupware-Funktionalität verwenden möchten (um z. "
 "B. Kontact als KDE Kolab-Client zu verwenden)."
 
-#: whatsnext/whatsnextview.cpp:67
+#: whatsnext/whatsnextview.cpp:61
 #, kde-format
 msgid "To-dos:"
 msgstr "Aufgaben:"
 
-#: whatsnext/whatsnextview.cpp:83
+#: whatsnext/whatsnextview.cpp:77
 #, kde-format
 msgid "What's Next?"
 msgstr "Was kommt als Nächstes?"
 
-#: whatsnext/whatsnextview.cpp:90 whatsnext/whatsnextview.cpp:273
-#: whatsnext/whatsnextview.cpp:278
+#: whatsnext/whatsnextview.cpp:84 whatsnext/whatsnextview.cpp:267
+#: whatsnext/whatsnextview.cpp:272
 #, kde-format
 msgctxt "date from - to"
 msgid "%1 - %2"
 msgstr "%1 – %2"
 
-#: whatsnext/whatsnextview.cpp:106
+#: whatsnext/whatsnextview.cpp:100
 #, kde-format
 msgid "Events:"
 msgstr "Termine:"
 
-#: whatsnext/whatsnextview.cpp:195 whatsnext/whatsnextview.cpp:219
+#: whatsnext/whatsnextview.cpp:189 whatsnext/whatsnextview.cpp:213
 #, kde-format
 msgid "Events and to-dos that need a reply:"
 msgstr "Aufgaben und Termine, die eine Antwort erfordern:"
 
-#: whatsnext/whatsnextview.cpp:285
+#: whatsnext/whatsnextview.cpp:279
 #, kde-format
 msgctxt "date, from - to"
 msgid "%1, %2 - %3"
 msgstr "%1, %2 – %3"
 
-#: whatsnext/whatsnextview.cpp:314
+#: whatsnext/whatsnextview.cpp:308
 #, kde-format
 msgctxt "to-do due date"
 msgid "  (Due: %1)"

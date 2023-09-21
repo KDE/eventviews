@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-01 00:46+0000\n"
+"POT-Creation-Date: 2023-09-21 00:45+0000\n"
 "PO-Revision-Date: 2014-04-06 20:54+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -29,29 +29,29 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "s_dibbern@web.de"
 
-#: agenda/agenda.cpp:970
+#: agenda/agenda.cpp:966
 #, kde-format
 msgid "Unable to lock item for modification. You cannot make any changes."
 msgstr ""
 "Indrag laat sik nich för't Ännern afsluten. Du kannst keen Ännern dörföhren."
 
-#: agenda/agenda.cpp:972
+#: agenda/agenda.cpp:968
 #, kde-format
 msgid "Locking Failed"
 msgstr "Afsluten fehlslaan"
 
-#: agenda/agenda.cpp:1187
+#: agenda/agenda.cpp:1183
 #, kde-format
 msgid "Dissociate event from recurrence"
 msgstr "Begeefnis ut Wedderhalen rutlösen"
 
-#: agenda/agenda.cpp:1209 month/monthitem.cpp:445
+#: agenda/agenda.cpp:1205 month/monthitem.cpp:445
 #, kde-format
 msgid ""
 "Unable to add the exception item to the calendar. No change will be done."
 msgstr "De Utnahm lett sik den Kalenner nich tofögen. Nix wöör ännert."
 
-#: agenda/agenda.cpp:1211 month/monthitem.cpp:447
+#: agenda/agenda.cpp:1207 month/monthitem.cpp:447
 #, kde-format
 msgid "Error Occurred"
 msgstr "Fehler"
@@ -91,12 +91,12 @@ msgctxt "short_weekday short_monthname date (e.g. Mon Aug 13)"
 msgid "%1 %2 %3"
 msgstr "%1, %2 - %3"
 
-#: agenda/agendaview.cpp:2210
+#: agenda/agendaview.cpp:2209
 #, kde-format
 msgid "Unable to modify this to-do, because it cannot be locked."
 msgstr "Opgaav lett sik nich ännern, se lett sik nich afsluten."
 
-#: agenda/agendaview.cpp:2218
+#: agenda/agendaview.cpp:2217
 #, kde-format
 msgid "Unable to save %1 \"%2\"."
 msgstr "%1 \"%2\" lett sik nich sekern."
@@ -1711,7 +1711,7 @@ msgstr "Dagansicht %1"
 msgid "All Day"
 msgstr "Heel Dag"
 
-#: timeline/timelineview.cpp:227
+#: timeline/timelineview.cpp:223
 #, kde-format
 msgid "Calendar"
 msgstr "Kalenner"
@@ -2206,40 +2206,40 @@ msgstr ""
 "Deelnehmers angaht. Maak dat an, wenn Du de Arbeitkoppel-Funkschonen bruken "
 "wullt (a.B. för den Bruuk vun Kontact as Kolab-Client för KDE)."
 
-#: whatsnext/whatsnextview.cpp:67
+#: whatsnext/whatsnextview.cpp:61
 #, kde-format
 msgid "To-dos:"
 msgstr "Opgaven:"
 
-#: whatsnext/whatsnextview.cpp:83
+#: whatsnext/whatsnextview.cpp:77
 #, kde-format
 msgid "What's Next?"
 msgstr "Wat kummt neegst?"
 
-#: whatsnext/whatsnextview.cpp:90 whatsnext/whatsnextview.cpp:273
-#: whatsnext/whatsnextview.cpp:278
+#: whatsnext/whatsnextview.cpp:84 whatsnext/whatsnextview.cpp:267
+#: whatsnext/whatsnextview.cpp:272
 #, kde-format
 msgctxt "date from - to"
 msgid "%1 - %2"
 msgstr "%1 - %2"
 
-#: whatsnext/whatsnextview.cpp:106
+#: whatsnext/whatsnextview.cpp:100
 #, kde-format
 msgid "Events:"
 msgstr "Begeefnissen:"
 
-#: whatsnext/whatsnextview.cpp:195 whatsnext/whatsnextview.cpp:219
+#: whatsnext/whatsnextview.cpp:189 whatsnext/whatsnextview.cpp:213
 #, kde-format
 msgid "Events and to-dos that need a reply:"
 msgstr "Begeefnissen un Opgaven, bi de Du noch en Antwoort utsteiht:"
 
-#: whatsnext/whatsnextview.cpp:285
+#: whatsnext/whatsnextview.cpp:279
 #, kde-format
 msgctxt "date, from - to"
 msgid "%1, %2 - %3"
 msgstr "%1, %2 - %3"
 
-#: whatsnext/whatsnextview.cpp:314
+#: whatsnext/whatsnextview.cpp:308
 #, kde-format
 msgctxt "to-do due date"
 msgid "  (Due: %1)"

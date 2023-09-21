@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-01 00:46+0000\n"
+"POT-Creation-Date: 2023-09-21 00:45+0000\n"
 "PO-Revision-Date: 2022-05-08 15:24+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -27,28 +27,28 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "Kde-l10n-ta@kde.org"
 
-#: agenda/agenda.cpp:970
+#: agenda/agenda.cpp:966
 #, kde-format
 msgid "Unable to lock item for modification. You cannot make any changes."
 msgstr "மாற்றுமாறு உருப்படியை பூட்ட முடியவில்லை. உங்களால் எதையும் மாற்ற முடியாது."
 
-#: agenda/agenda.cpp:972
+#: agenda/agenda.cpp:968
 #, kde-format
 msgid "Locking Failed"
 msgstr "பூட்டல் தோல்வியடைந்த‍து"
 
-#: agenda/agenda.cpp:1187
+#: agenda/agenda.cpp:1183
 #, kde-format
 msgid "Dissociate event from recurrence"
 msgstr "மறுநிகழ்விலிருந்து நிகழ்வை பிரிப்பது"
 
-#: agenda/agenda.cpp:1209 month/monthitem.cpp:445
+#: agenda/agenda.cpp:1205 month/monthitem.cpp:445
 #, kde-format
 msgid ""
 "Unable to add the exception item to the calendar. No change will be done."
 msgstr "விதிவிலக்கை நாள்காட்டியில் சேர்க்க முடியவில்லை. எம்மாற்றமும் மேற்கொள்ளப்படாது."
 
-#: agenda/agenda.cpp:1211 month/monthitem.cpp:447
+#: agenda/agenda.cpp:1207 month/monthitem.cpp:447
 #, kde-format
 msgid "Error Occurred"
 msgstr "சிக்கல் ஏற்பட்டது"
@@ -86,12 +86,12 @@ msgctxt "short_weekday short_monthname date (e.g. Mon Aug 13)"
 msgid "%1 %2 %3"
 msgstr "%1 %2 %3"
 
-#: agenda/agendaview.cpp:2210
+#: agenda/agendaview.cpp:2209
 #, kde-format
 msgid "Unable to modify this to-do, because it cannot be locked."
 msgstr "இச்செய்யவேண்டியதை பூட்ட முடியாத‍தால் இதை மாற்ற முடியாது."
 
-#: agenda/agendaview.cpp:2218
+#: agenda/agendaview.cpp:2217
 #, kde-format
 msgid "Unable to save %1 \"%2\"."
 msgstr "\"%2\" என்ற %1 தனை சேமிக்க முடியவில்லை."
@@ -1530,7 +1530,7 @@ msgstr "நிகழ்ச்சிநிரல் %1"
 msgid "All Day"
 msgstr "முழு நாளும்"
 
-#: timeline/timelineview.cpp:227
+#: timeline/timelineview.cpp:223
 #, kde-format
 msgid "Calendar"
 msgstr "நாள்காட்டி"
@@ -2005,40 +2005,40 @@ msgid ""
 "Configuring Kontact as a KDE Kolab client)."
 msgstr ""
 
-#: whatsnext/whatsnextview.cpp:67
+#: whatsnext/whatsnextview.cpp:61
 #, kde-format
 msgid "To-dos:"
 msgstr "செய்யவேண்டியவை:"
 
-#: whatsnext/whatsnextview.cpp:83
+#: whatsnext/whatsnextview.cpp:77
 #, kde-format
 msgid "What's Next?"
 msgstr "அடுத்த‍து என்ன?"
 
-#: whatsnext/whatsnextview.cpp:90 whatsnext/whatsnextview.cpp:273
-#: whatsnext/whatsnextview.cpp:278
+#: whatsnext/whatsnextview.cpp:84 whatsnext/whatsnextview.cpp:267
+#: whatsnext/whatsnextview.cpp:272
 #, kde-format
 msgctxt "date from - to"
 msgid "%1 - %2"
 msgstr "%1 - %2"
 
-#: whatsnext/whatsnextview.cpp:106
+#: whatsnext/whatsnextview.cpp:100
 #, kde-format
 msgid "Events:"
 msgstr "நிகழ்வுகள்:"
 
-#: whatsnext/whatsnextview.cpp:195 whatsnext/whatsnextview.cpp:219
+#: whatsnext/whatsnextview.cpp:189 whatsnext/whatsnextview.cpp:213
 #, kde-format
 msgid "Events and to-dos that need a reply:"
 msgstr "பதிலளிக்க வேண்டிய நிகழ்வுகளும் செய்யவேண்டியவையும்:"
 
-#: whatsnext/whatsnextview.cpp:285
+#: whatsnext/whatsnextview.cpp:279
 #, kde-format
 msgctxt "date, from - to"
 msgid "%1, %2 - %3"
 msgstr "%1, %2 - %3"
 
-#: whatsnext/whatsnextview.cpp:314
+#: whatsnext/whatsnextview.cpp:308
 #, kde-format
 msgctxt "to-do due date"
 msgid "  (Due: %1)"
