@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-21 00:45+0000\n"
-"PO-Revision-Date: 2023-01-25 06:46+0100\n"
+"PO-Revision-Date: 2023-09-22 20:52+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -64,7 +64,7 @@ msgstr[1] "%2 (%1 წელი)"
 #: agenda/agendaitem.cpp:631
 #, kde-format
 msgid "Attendee \"%1\" added to the calendar item \"%2\""
-msgstr ""
+msgstr "დამსწრემ \"%1\" დამატებულია კალენდრის ელემენტში \"%2\""
 
 #: agenda/agendaitem.cpp:632
 #, kde-format
@@ -90,7 +90,7 @@ msgstr "%1 %2 %3"
 #: agenda/agendaview.cpp:2209
 #, kde-format
 msgid "Unable to modify this to-do, because it cannot be locked."
-msgstr ""
+msgstr "ამ დაგეგმილის ჩასწორება შეუძლებელია, რადგან მას ვერ დაბლოკავთ."
 
 #: agenda/agendaview.cpp:2217
 #, kde-format
@@ -177,6 +177,8 @@ msgid ""
 "applied only to this single occurrence, also to future items, or to all "
 "items in the recurrence?"
 msgstr ""
+"ჩანაწერი, რომლის შეცვლასაც ცდილობთ, განმეორებადია. გნებავთ, რომ თქვენი "
+"ცვლილებები გადატარდეს მხოლოდ ერთ გამოჩენაზე, თუ მომავალშიც?"
 
 #: eventview.cpp:138
 #, kde-format
@@ -195,7 +197,7 @@ msgstr "ელფოსტაზე ფაილის მიმაგრებ�
 #: eventviews.kcfg:16
 #, kde-format
 msgid "The default way of attaching dropped emails to an event"
-msgstr ""
+msgstr "მოვლენისთვის წაშლილი ელფოსტების მიმაგრების ნაგულისხმევი გზა"
 
 #. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (Personal Settings)
 #. i18n: ectx: label, entry (DefaultTodoAttachMethod), group (Hidden Options)
@@ -243,7 +245,7 @@ msgstr ""
 #: eventviews.kcfg:44
 #, kde-format
 msgid "Enable automatic saving of manually opened calendar files"
-msgstr ""
+msgstr "ხელით გახსნილი კალენდრის ფაილების ავტომატური შენახვის ჩართვა"
 
 #. i18n: ectx: whatsthis, entry, group (Save Settings)
 #: eventviews.kcfg:45
@@ -280,13 +282,13 @@ msgstr "წაშლის დადასტურება"
 #: eventviews.kcfg:58
 #, kde-format
 msgid "Check this box to display a confirmation dialog when deleting items."
-msgstr ""
+msgstr "ჩართეთ ეს ელემენტების წაშლისას დამახსოვრების დიალოგის გამოსატანად."
 
 #. i18n: ectx: label, entry (Destination), group (Save Settings)
 #: eventviews.kcfg:63
 #, kde-format
 msgid "New Events, To-dos and Journal Entries Should"
-msgstr ""
+msgstr "ახალი მოვლენები, დაგეგმილები და ჟურნალის ჩანაწერები უნდა"
 
 #. i18n: ectx: label, entry (Destination), group (Save Settings)
 #: eventviews.kcfg:66
@@ -657,7 +659,7 @@ msgstr "ფერის გამოყენება"
 #: viewerapp/settings.kcfg:156
 #, kde-format
 msgid "Category inside, calendar outside"
-msgstr ""
+msgstr "კატეგორია შიგნით, კალენდარი გარეთ"
 
 #. i18n: ectx: whatsthis, entry, group (Agenda View)
 #: eventviews.kcfg:222 viewerapp/settings.kcfg:72
@@ -683,7 +685,7 @@ msgstr ""
 #: viewerapp/settings.kcfg:161
 #, kde-format
 msgid "Calendar inside, category outside"
-msgstr ""
+msgstr "კალენდარი შიგნით, კატეგორია გარეთ"
 
 #. i18n: ectx: whatsthis, entry, group (Agenda View)
 #: eventviews.kcfg:227 viewerapp/settings.kcfg:77
@@ -1284,7 +1286,7 @@ msgstr ""
 #: eventviews.kcfg:616
 #, kde-format
 msgid "Month view background color"
-msgstr ""
+msgstr "თვის ხედის ფონის ფერი"
 
 #. i18n: ectx: whatsthis, entry, group (Theme/Month view)
 #: eventviews.kcfg:617
@@ -2027,7 +2029,7 @@ msgstr "%1, %2 - %3"
 #, kde-format
 msgctxt "to-do due date"
 msgid "  (Due: %1)"
-msgstr ""
+msgstr "  (მოსალოდნელი დრო: %1)"
 
 #~ msgctxt "yes, an exception to a recurring to-do"
 #~ msgid "Exception"
