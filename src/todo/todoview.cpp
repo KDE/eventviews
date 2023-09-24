@@ -182,7 +182,7 @@ TodoView::TodoView(const EventViews::PrefsPtr &prefs, bool sidebarView, QWidget 
         connect(sModels->todoModel, &Akonadi::TodoModel::dropOnSelfRejected, this, []() {
             KMessageBox::information(nullptr,
                                      i18n("Cannot move to-do to itself or a child of itself."),
-                                     i18n("Drop To-do"),
+                                     i18nc("@title:window", "Drop To-do"),
                                      QStringLiteral("NoDropTodoOntoItself"));
         });
     }

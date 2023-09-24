@@ -444,7 +444,7 @@ void IncidenceMonthItem::updateDates(int startOffset, int endOffset)
                 KMessageBox::error(parentWidget(),
                                    i18n("Unable to add the exception item to the calendar. "
                                         "No change will be done."),
-                                   i18n("Error Occurred"));
+                                   i18nc("@title:window", "Error Occurred"));
             }
             break;
         }

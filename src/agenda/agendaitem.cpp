@@ -629,7 +629,7 @@ void AgendaItem::addAttendee(const QString &newAttendee)
         mIncidence->addAttendee(KCalendarCore::Attendee(name, email));
         KMessageBox::information(this,
                                  i18n("Attendee \"%1\" added to the calendar item \"%2\"", KEmailAddress::normalizedAddress(name, email, QString()), text()),
-                                 i18n("Attendee added"),
+                                 i18nc("@title:window", "Attendee added"),
                                  QStringLiteral("AttendeeDroppedAdded"));
     }
 }

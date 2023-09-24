@@ -965,7 +965,7 @@ void Agenda::performItemAction(QPoint pos)
                 KMessageBox::information(this,
                                          i18n("Unable to lock item for modification. "
                                               "You cannot make any changes."),
-                                         i18n("Locking Failed"),
+                                         i18nc("@title:window", "Locking Failed"),
                                          QStringLiteral("AgendaLockingFailed"));
                 d->mScrollUpTimer.stop();
                 d->mScrollDownTimer.stop();
@@ -1204,7 +1204,7 @@ void Agenda::endItemAction()
                     KMessageBox::error(this,
                                        i18n("Unable to add the exception item to the calendar. "
                                             "No change will be done."),
-                                       i18n("Error Occurred"));
+                                       i18nc("@title:window", "Error Occurred"));
                 }
                 break;
             }
