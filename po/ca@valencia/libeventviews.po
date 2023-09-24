@@ -1,18 +1,18 @@
 # Translation of libeventviews.po to Catalan (Valencian)
-# Copyright (C) 2010-2022 This_file_is_part_of_KDE
+# Copyright (C) 2010-2023 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
 # Manuel Tortosa <manutortosa@chakra-project.org>, 2010, 2011.
-# Josep M. Ferrer <txemaq@gmail.com>, 2010, 2011, 2012, 2013, 2014, 2015, 2017, 2018, 2019, 2020, 2021, 2022.
+# Josep M. Ferrer <txemaq@gmail.com>, 2010, 2011, 2012, 2013, 2014, 2015, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-21 00:45+0000\n"
-"PO-Revision-Date: 2022-09-20 23:03+0200\n"
-"Last-Translator: Antoni Bella Pérez <antonibella5@yahoo.com>\n"
+"PO-Revision-Date: 2023-09-22 11:15+0200\n"
+"Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
 "MIME-Version: 1.0\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
-"X-Generator: Lokalize 22.08.1\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -765,8 +765,7 @@ msgstr ""
 "Seleccioneu l'opció «Categoria a dins, calendari a fora» si voleu dibuixar "
 "els elements del calendari en el color de la seua categoria associada, amb "
 "la vora de l'element dibuixada en el color del seu calendari. Utilitzeu la "
-"pàgina de configuració de colors i tipus de lletra per a establir estos "
-"colors."
+"pàgina de configuració de colors i lletres per a establir estos colors."
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
 #: eventviews.kcfg:223 viewerapp/settings.kcfg:73
@@ -798,7 +797,7 @@ msgstr ""
 "Seleccioneu l'opció «Calendari a dins, categoria a fora» si voleu dibuixar "
 "els elements del calendari en el color del calendari associat, amb la vora "
 "de l'element dibuixada en el color de la seua categoria. Utilitzeu la pàgina "
-"de configuració de colors i tipus de lletra per a establir estos colors."
+"de configuració de colors i lletres per a establir estos colors."
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
 #: eventviews.kcfg:228 viewerapp/settings.kcfg:78
@@ -828,8 +827,8 @@ msgid ""
 msgstr ""
 "Seleccioneu l'opció «Només la categoria» si voleu dibuixar els elements del "
 "calendari en el color de la seua categoria associada (a dins i a les vores). "
-"Utilitzeu la pàgina de configuració de colors i tipus de lletra per a "
-"establir estos colors."
+"Utilitzeu la pàgina de configuració de colors i lletres per a establir estos "
+"colors."
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
 #: eventviews.kcfg:233 viewerapp/settings.kcfg:83
@@ -857,8 +856,7 @@ msgid ""
 msgstr ""
 "Seleccioneu l'opció «Només el calendari» si voleu dibuixar els elements del "
 "calendari en el color del calendari (a dins i a les vores). Utilitzeu la "
-"pàgina de configuració de colors i tipus de lletra per a establir estos "
-"colors."
+"pàgina de configuració de colors i lletres per a establir estos colors."
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
 #: eventviews.kcfg:238 viewerapp/settings.kcfg:88
@@ -1082,8 +1080,7 @@ msgstr ""
 "Seleccioneu l'opció «Categoria a dins, calendari a fora» si voleu dibuixar "
 "els elements del calendari en el color de la seua categoria associada, amb "
 "la vora de l'element dibuixada en el color del seu calendari. Utilitzeu la "
-"pàgina de configuració de colors i tipus de lletra per a establir estos "
-"colors."
+"pàgina de configuració de colors i lletres per a establir estos colors."
 
 #. i18n: ectx: tooltip, entry, group (Month View)
 #: eventviews.kcfg:319 viewerapp/settings.kcfg:158
@@ -1107,7 +1104,7 @@ msgstr ""
 "Seleccioneu l'opció «Calendari a dins, categoria a fora» si voleu dibuixar "
 "els elements del calendari en el color del calendari associat, amb la vora "
 "de l'element dibuixada en el color de la seua categoria. Utilitzeu la pàgina "
-"de configuració de colors i tipus de lletra per a establir estos colors."
+"de configuració de colors i lletres per a establir estos colors."
 
 #. i18n: ectx: tooltip, entry, group (Month View)
 #: eventviews.kcfg:324 viewerapp/settings.kcfg:163
@@ -1129,8 +1126,8 @@ msgid ""
 msgstr ""
 "Seleccioneu l'opció «Només la categoria» si voleu dibuixar els elements del "
 "calendari en el color de la seua categoria associada (a dins i a les vores). "
-"Utilitzeu la pàgina de configuració de colors i tipus de lletra per a "
-"establir estos colors."
+"Utilitzeu la pàgina de configuració de colors i lletres per a establir estos "
+"colors."
 
 #. i18n: ectx: tooltip, entry, group (Month View)
 #: eventviews.kcfg:329 viewerapp/settings.kcfg:168
@@ -1150,8 +1147,7 @@ msgid ""
 msgstr ""
 "Seleccioneu l'opció «Només el calendari» si voleu dibuixar els elements del "
 "calendari en el color del calendari (a dins i a les vores) Utilitzeu la "
-"pàgina de configuració de colors i tipus de lletra per a establir estos "
-"colors."
+"pàgina de configuració de colors i lletres per a establir estos colors."
 
 #. i18n: ectx: tooltip, entry, group (Month View)
 #: eventviews.kcfg:334 viewerapp/settings.kcfg:173
@@ -1397,10 +1393,10 @@ msgid ""
 "that shows the hours in the agenda view. This button will open the \"Select "
 "Font\" dialog, allowing you to choose the hour font for the time bar."
 msgstr ""
-"Premeu este botó per a configurar el tipus de lletra de la barra de temps. "
-"La barra de temps és el giny que mostra les hores en la vista d'agenda. Este "
-"botó obrirà el diàleg «Tria un tipus de lletra», permetent-vos triar el "
-"tipus de lletra de l'hora per a la barra de temps."
+"Premeu este botó per a configurar la lletra de la barra de temps. La barra "
+"de temps és el giny que mostra les hores en la vista d'agenda. Este botó "
+"obrirà el diàleg «Tria una lletra», permetent-vos triar la lletra de l'hora "
+"per a la barra de temps."
 
 #. i18n: ectx: label, entry, group (Fonts)
 #: eventviews.kcfg:430 viewerapp/settings.kcfg:256
@@ -1416,9 +1412,9 @@ msgid ""
 "the \"Select Font\" dialog, allowing you to choose the font for the items in "
 "the month view."
 msgstr ""
-"Premeu este botó per a configurar el tipus de lletra de la vista mensual. "
-"Este botó obrirà el diàleg «Tria un tipus de lletra», permetent-vos triar el "
-"tipus de lletra per als elements en la vista mensual."
+"Premeu este botó per a configurar la lletra de la vista mensual. Este botó "
+"obrirà el diàleg «Tria una lletra», permetent-vos triar la lletra per als "
+"elements en la vista mensual."
 
 #. i18n: ectx: label, entry, group (Fonts)
 #: eventviews.kcfg:435 viewerapp/settings.kcfg:261
@@ -1434,9 +1430,9 @@ msgid ""
 "the \"Select Font\" dialog, allowing you to choose the font for the events "
 "in the agenda view."
 msgstr ""
-"Premeu este botó per a configurar el tipus de lletra per a la vista "
-"d'agenda. Este botó obrirà el diàleg «Tria un tipus de lletra», permetent-"
-"vos triar el tipus de lletra per als esdeveniments en la vista d'agenda."
+"Premeu este botó per a configurar la lletra per a la vista d'agenda. Este "
+"botó obrirà el diàleg «Tria una lletra», permetent-vos triar la lletra per "
+"als esdeveniments en la vista d'agenda."
 
 #. i18n: ectx: label, entry, group (Fonts)
 #: eventviews.kcfg:440 viewerapp/settings.kcfg:266
@@ -1452,9 +1448,9 @@ msgid ""
 "open the \"Select Font\" dialog, allowing you to choose the font for the "
 "current-time line in the agenda view."
 msgstr ""
-"Premeu este botó per a configurar el tipus de lletra de la línia de temps "
-"actual. Este botó obrirà el diàleg «Tria un tipus de lletra», permetent-vos "
-"triar el tipus de lletra per a la línia de temps actual en la vista d'agenda."
+"Premeu este botó per a configurar la lletra de la línia de temps actual. "
+"Este botó obrirà el diàleg «Tria una lletra», permetent-vos triar la lletra "
+"per a la línia de temps actual en la vista d'agenda."
 
 #. i18n: ectx: label, entry (DefaultTodoAttachMethod), group (Hidden Options)
 #: eventviews.kcfg:465
