@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2023-09-25 01:40+0000\n"
 "PO-Revision-Date: 2021-11-23 23:23+0100\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -43,7 +43,9 @@ msgstr ""
 "Impossibile bloccare la voce per la modifica. Non puoi fare alcuna modifica."
 
 #: agenda/agenda.cpp:968
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Locking Failed"
+msgctxt "@title:window"
 msgid "Locking Failed"
 msgstr "Blocco non riuscito"
 
@@ -61,7 +63,9 @@ msgstr ""
 "nessun cambiamento."
 
 #: agenda/agenda.cpp:1207 month/monthitem.cpp:447
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Error Occurred"
+msgctxt "@title:window"
 msgid "Error Occurred"
 msgstr "Si è verificato un errore"
 
@@ -78,7 +82,9 @@ msgid "Attendee \"%1\" added to the calendar item \"%2\""
 msgstr "Partecipante «%1» aggiunto alla voce di calendario «%2»"
 
 #: agenda/agendaitem.cpp:632
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Attendee added"
+msgctxt "@title:window"
 msgid "Attendee added"
 msgstr "Partecipante aggiunto"
 
@@ -1811,7 +1817,9 @@ msgstr ""
 "discendente."
 
 #: todo/todoview.cpp:185
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Drop To-do"
+msgctxt "@title:window"
 msgid "Drop To-do"
 msgstr "Elimina cosa da fare"
 

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2023-09-25 01:40+0000\n"
 "PO-Revision-Date: 2022-04-16 22:43+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -33,7 +33,9 @@ msgid "Unable to lock item for modification. You cannot make any changes."
 msgstr "항목을 수정할 수 있도록 잠글 수 없습니다. 변경할 수 없습니다."
 
 #: agenda/agenda.cpp:968
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Locking Failed"
+msgctxt "@title:window"
 msgid "Locking Failed"
 msgstr "잠금 실패"
 
@@ -49,7 +51,9 @@ msgid ""
 msgstr "예외 항목을 캘린더에 추가할 수 없습니다. 변경된 항목이 없습니다."
 
 #: agenda/agenda.cpp:1207 month/monthitem.cpp:447
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Error Occurred"
+msgctxt "@title:window"
 msgid "Error Occurred"
 msgstr "오류가 발생함"
 
@@ -65,7 +69,9 @@ msgid "Attendee \"%1\" added to the calendar item \"%2\""
 msgstr "\"%2\" 캘린더 항목에 \"%1\" 참석자를 추가함"
 
 #: agenda/agendaitem.cpp:632
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Attendee added"
+msgctxt "@title:window"
 msgid "Attendee added"
 msgstr "참석자 추가됨"
 
@@ -1706,7 +1712,9 @@ msgstr ""
 "할 일 항목을 자기 자신이나 자기 자신의 자식 항목으로 이동할 수 없습니다."
 
 #: todo/todoview.cpp:185
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Drop To-do"
+msgctxt "@title:window"
 msgid "Drop To-do"
 msgstr "할 일 드롭"
 

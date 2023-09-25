@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2023-09-25 01:40+0000\n"
 "PO-Revision-Date: 2021-09-30 09:17+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -38,7 +38,9 @@ msgstr ""
 "Не вдається заблокувати запис для зміни. Ви не зможете внести ніяких змін."
 
 #: agenda/agenda.cpp:968
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Locking Failed"
+msgctxt "@title:window"
 msgid "Locking Failed"
 msgstr "Блокування зазнало невдачі"
 
@@ -54,7 +56,9 @@ msgid ""
 msgstr "Не вдається додати виняток в календар. Залишиться без змін."
 
 #: agenda/agenda.cpp:1207 month/monthitem.cpp:447
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Error Occurred"
+msgctxt "@title:window"
 msgid "Error Occurred"
 msgstr "Сталась помилка"
 
@@ -73,7 +77,9 @@ msgid "Attendee \"%1\" added to the calendar item \"%2\""
 msgstr "Учасника «%1» додано до календарного пункту «%2»"
 
 #: agenda/agendaitem.cpp:632
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Attendee added"
+msgctxt "@title:window"
 msgid "Attendee added"
 msgstr "Учасника додано"
 
@@ -1795,7 +1801,9 @@ msgid "Cannot move to-do to itself or a child of itself."
 msgstr "Неможливо пересунути завдання до самого себе або до своїх нащадків."
 
 #: todo/todoview.cpp:185
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Drop To-do"
+msgctxt "@title:window"
 msgid "Drop To-do"
 msgstr "Викинути завдання"
 

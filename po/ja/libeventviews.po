@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2023-09-25 01:40+0000\n"
 "PO-Revision-Date: 2010-05-08 12:40-0700\n"
 "Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -31,6 +31,7 @@ msgstr ""
 
 #: agenda/agenda.cpp:968
 #, kde-format
+msgctxt "@title:window"
 msgid "Locking Failed"
 msgstr ""
 
@@ -47,6 +48,7 @@ msgstr ""
 
 #: agenda/agenda.cpp:1207 month/monthitem.cpp:447
 #, kde-format
+msgctxt "@title:window"
 msgid "Error Occurred"
 msgstr ""
 
@@ -63,6 +65,7 @@ msgstr ""
 
 #: agenda/agendaitem.cpp:632
 #, kde-format
+msgctxt "@title:window"
 msgid "Attendee added"
 msgstr ""
 
@@ -1590,6 +1593,7 @@ msgstr ""
 
 #: todo/todoview.cpp:185
 #, kde-format
+msgctxt "@title:window"
 msgid "Drop To-do"
 msgstr ""
 

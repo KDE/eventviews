@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2023-09-25 01:40+0000\n"
 "PO-Revision-Date: 2023-01-21 20:10+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -34,7 +34,9 @@ msgstr ""
 "Не може да се заключи елемент за промяна. Не можете да правите промени."
 
 #: agenda/agenda.cpp:968
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Locking Failed"
+msgctxt "@title:window"
 msgid "Locking Failed"
 msgstr "Неуспешно заключване"
 
@@ -52,7 +54,9 @@ msgstr ""
 "промяна."
 
 #: agenda/agenda.cpp:1207 month/monthitem.cpp:447
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Error Occurred"
+msgctxt "@title:window"
 msgid "Error Occurred"
 msgstr "Възникна грешка"
 
@@ -69,7 +73,9 @@ msgid "Attendee \"%1\" added to the calendar item \"%2\""
 msgstr "Участникът \" %1 \"е добавен към елемента на календара \" %2 \""
 
 #: agenda/agendaitem.cpp:632
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Attendee added"
+msgctxt "@title:window"
 msgid "Attendee added"
 msgstr "Участникът е добавен"
 
@@ -1813,7 +1819,9 @@ msgid "Cannot move to-do to itself or a child of itself."
 msgstr "Задача или подзадача не могат да бъдат преместени в себе си."
 
 #: todo/todoview.cpp:185
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Drop To-do"
+msgctxt "@title:window"
 msgid "Drop To-do"
 msgstr "Завлечете задача"
 

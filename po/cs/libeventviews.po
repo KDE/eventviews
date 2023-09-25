@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2023-09-25 01:40+0000\n"
 "PO-Revision-Date: 2023-02-22 16:48+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -37,7 +37,9 @@ msgstr ""
 "Nelze zamknout položku pro její úpravu. Nebude možné provést žádné změny."
 
 #: agenda/agenda.cpp:968
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Locking Failed"
+msgctxt "@title:window"
 msgid "Locking Failed"
 msgstr "Uzamknutí selhalo"
 
@@ -53,7 +55,9 @@ msgid ""
 msgstr "Nelze přidat výjimku do kalendáře. Nebude provedena žádná změna."
 
 #: agenda/agenda.cpp:1207 month/monthitem.cpp:447
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Error Occurred"
+msgctxt "@title:window"
 msgid "Error Occurred"
 msgstr "Nastala chyba"
 
@@ -71,7 +75,9 @@ msgid "Attendee \"%1\" added to the calendar item \"%2\""
 msgstr "Účastník \"%1\" přidal do kalendáře položku \"%2\""
 
 #: agenda/agendaitem.cpp:632
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Attendee added"
+msgctxt "@title:window"
 msgid "Attendee added"
 msgstr "Účastník přidán"
 
@@ -1650,7 +1656,9 @@ msgid "Cannot move to-do to itself or a child of itself."
 msgstr "Úlohu nelze přesunout do sebe sama nebo do svého potomka."
 
 #: todo/todoview.cpp:185
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Drop To-do"
+msgctxt "@title:window"
 msgid "Drop To-do"
 msgstr "Zrušit úlohu"
 

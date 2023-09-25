@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2023-09-25 01:40+0000\n"
 "PO-Revision-Date: 2023-01-06 22:00+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -35,7 +35,9 @@ msgid "Unable to lock item for modification. You cannot make any changes."
 msgstr "Ne eblas ŝlosi eron por modifo. Vi ne povas fari iujn ŝanĝojn."
 
 #: agenda/agenda.cpp:968
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Locking Failed"
+msgctxt "@title:window"
 msgid "Locking Failed"
 msgstr "Ŝlosado Malsukcesis"
 
@@ -51,7 +53,9 @@ msgid ""
 msgstr ""
 
 #: agenda/agenda.cpp:1207 month/monthitem.cpp:447
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Error Occurred"
+msgctxt "@title:window"
 msgid "Error Occurred"
 msgstr "Eraro Okazis"
 
@@ -68,7 +72,9 @@ msgid "Attendee \"%1\" added to the calendar item \"%2\""
 msgstr "Ĉeestanto \"%1\" aldonata al la kalendara ero \"%2\""
 
 #: agenda/agendaitem.cpp:632
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Attendee added"
+msgctxt "@title:window"
 msgid "Attendee added"
 msgstr "Ĉeestanto aldonata"
 
@@ -1597,6 +1603,7 @@ msgstr ""
 
 #: todo/todoview.cpp:185
 #, kde-format
+msgctxt "@title:window"
 msgid "Drop To-do"
 msgstr ""
 

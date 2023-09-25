@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2023-09-25 01:40+0000\n"
 "PO-Revision-Date: 2014-01-10 19:09+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: bs <bs@kde.org>\n"
@@ -38,7 +38,9 @@ msgstr ""
 "izmjenu."
 
 #: agenda/agenda.cpp:968
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Locking Failed"
+msgctxt "@title:window"
 msgid "Locking Failed"
 msgstr "Zaključavanje nije uspjelo"
 
@@ -54,7 +56,9 @@ msgid ""
 msgstr "Nije moguće dodati izuzete stavke u kalendar. Izmjene su poništene."
 
 #: agenda/agenda.cpp:1207 month/monthitem.cpp:447
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Error Occurred"
+msgctxt "@title:window"
 msgid "Error Occurred"
 msgstr "Došlo je do greške"
 
@@ -72,7 +76,9 @@ msgid "Attendee \"%1\" added to the calendar item \"%2\""
 msgstr "Prisutni „%1“ dodat u kalendarsku stavku „%2“"
 
 #: agenda/agendaitem.cpp:632
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Attendee added"
+msgctxt "@title:window"
 msgid "Attendee added"
 msgstr "Prisutni dodat"
 
@@ -1789,7 +1795,9 @@ msgid "Cannot move to-do to itself or a child of itself."
 msgstr "Zadatak ne može da se premesti na samog sebe ili na svoj podzadatak."
 
 #: todo/todoview.cpp:185
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Drop To-do"
+msgctxt "@title:window"
 msgid "Drop To-do"
 msgstr "Odustani od zadatka"
 

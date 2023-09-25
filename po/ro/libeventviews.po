@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2023-09-25 01:40+0000\n"
 "PO-Revision-Date: 2020-09-08 19:18+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian\n"
@@ -35,7 +35,9 @@ msgstr ""
 "Elementul nu poate fi blocat pentru modificare. Nu puteți face schimbări."
 
 #: agenda/agenda.cpp:968
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Locking Failed"
+msgctxt "@title:window"
 msgid "Locking Failed"
 msgstr "Blocare eșuată"
 
@@ -51,7 +53,9 @@ msgid ""
 msgstr ""
 
 #: agenda/agenda.cpp:1207 month/monthitem.cpp:447
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Error Occurred"
+msgctxt "@title:window"
 msgid "Error Occurred"
 msgstr "A intervenit o eroare"
 
@@ -69,7 +73,9 @@ msgid "Attendee \"%1\" added to the calendar item \"%2\""
 msgstr "Participant „%1” adăugat la elementul de calendar „%2”"
 
 #: agenda/agendaitem.cpp:632
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Attendee added"
+msgctxt "@title:window"
 msgid "Attendee added"
 msgstr "Participant adăugat"
 
@@ -1646,6 +1652,7 @@ msgstr ""
 
 #: todo/todoview.cpp:185
 #, kde-format
+msgctxt "@title:window"
 msgid "Drop To-do"
 msgstr ""
 

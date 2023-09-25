@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2023-09-25 01:40+0000\n"
 "PO-Revision-Date: 2022-05-08 15:24+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -33,7 +33,9 @@ msgid "Unable to lock item for modification. You cannot make any changes."
 msgstr "மாற்றுமாறு உருப்படியை பூட்ட முடியவில்லை. உங்களால் எதையும் மாற்ற முடியாது."
 
 #: agenda/agenda.cpp:968
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Locking Failed"
+msgctxt "@title:window"
 msgid "Locking Failed"
 msgstr "பூட்டல் தோல்வியடைந்த‍து"
 
@@ -49,7 +51,9 @@ msgid ""
 msgstr "விதிவிலக்கை நாள்காட்டியில் சேர்க்க முடியவில்லை. எம்மாற்றமும் மேற்கொள்ளப்படாது."
 
 #: agenda/agenda.cpp:1207 month/monthitem.cpp:447
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Error Occurred"
+msgctxt "@title:window"
 msgid "Error Occurred"
 msgstr "சிக்கல் ஏற்பட்டது"
 
@@ -66,7 +70,9 @@ msgid "Attendee \"%1\" added to the calendar item \"%2\""
 msgstr "\"%2\" என்ற நாள்காட்டிப்பதிவிற்கு \"%1\" பங்கேற்பவராக சேர்க்கப்பட்டார்"
 
 #: agenda/agendaitem.cpp:632
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Attendee added"
+msgctxt "@title:window"
 msgid "Attendee added"
 msgstr "பங்கேற்பவர் சேர்க்கப்பட்டார்"
 
@@ -1601,7 +1607,9 @@ msgid "Cannot move to-do to itself or a child of itself."
 msgstr "செய்யவேண்டியதை தனக்குள்ளோ தன்னை சார்ந்த‍தனுள்ளோ நகரத்த முடியாது."
 
 #: todo/todoview.cpp:185
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Drop To-do"
+msgctxt "@title:window"
 msgid "Drop To-do"
 msgstr "செய்யவேண்டியதை இழுத்துப்போடுவது"
 

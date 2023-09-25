@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2023-09-25 01:40+0000\n"
 "PO-Revision-Date: 2022-08-26 07:28+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -37,7 +37,9 @@ msgstr ""
 "Ez da elementua aldatzeko hura giltzatzeko gai. Ezin duzu aldaketarik egin."
 
 #: agenda/agenda.cpp:968
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Locking Failed"
+msgctxt "@title:window"
 msgid "Locking Failed"
 msgstr "Giltzatzea huts egin du"
 
@@ -54,7 +56,9 @@ msgstr ""
 "Ez da salbuespen elementua egutegian gehitzeko gai. Ez da aldaketarik egingo."
 
 #: agenda/agenda.cpp:1207 month/monthitem.cpp:447
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Error Occurred"
+msgctxt "@title:window"
 msgid "Error Occurred"
 msgstr "Errorea gertatu da"
 
@@ -71,7 +75,9 @@ msgid "Attendee \"%1\" added to the calendar item \"%2\""
 msgstr "\"%1\" partaideak egutegiko \"%2\" elementuan gehitu du"
 
 #: agenda/agendaitem.cpp:632
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Attendee added"
+msgctxt "@title:window"
 msgid "Attendee added"
 msgstr "Partaidea gehitu da"
 
@@ -1798,7 +1804,9 @@ msgid "Cannot move to-do to itself or a child of itself."
 msgstr "Ezin du mugitu zeregina bere burura edo bere haur batera."
 
 #: todo/todoview.cpp:185
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Drop To-do"
+msgctxt "@title:window"
 msgid "Drop To-do"
 msgstr "Jaregin zeregina"
 

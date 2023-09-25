@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2023-09-25 01:40+0000\n"
 "PO-Revision-Date: 2022-07-06 12:31+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -33,7 +33,9 @@ msgstr ""
 "quaisquer modificações."
 
 #: agenda/agenda.cpp:968
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Locking Failed"
+msgctxt "@title:window"
 msgid "Locking Failed"
 msgstr "O Bloqueio Falhou"
 
@@ -51,7 +53,9 @@ msgstr ""
 "nenhuma alteração."
 
 #: agenda/agenda.cpp:1207 month/monthitem.cpp:447
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Error Occurred"
+msgctxt "@title:window"
 msgid "Error Occurred"
 msgstr "Ocorreu um Erro"
 
@@ -68,7 +72,9 @@ msgid "Attendee \"%1\" added to the calendar item \"%2\""
 msgstr "O participante \"%1\" foi adicionado ao item \"%2\" do calendário"
 
 #: agenda/agendaitem.cpp:632
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Attendee added"
+msgctxt "@title:window"
 msgid "Attendee added"
 msgstr "Participante adicionado"
 
@@ -1792,7 +1798,9 @@ msgstr ""
 "Não é possível mover o item por-fazer para si próprio ou para um filho deste."
 
 #: todo/todoview.cpp:185
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Drop To-do"
+msgctxt "@title:window"
 msgid "Drop To-do"
 msgstr "Largar o Item Por-Fazer"
 

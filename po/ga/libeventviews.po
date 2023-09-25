@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2023-09-25 01:40+0000\n"
 "PO-Revision-Date: 2011-12-28 12:28-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -33,7 +33,9 @@ msgid "Unable to lock item for modification. You cannot make any changes."
 msgstr ""
 
 #: agenda/agenda.cpp:968
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Locking Failed"
+msgctxt "@title:window"
 msgid "Locking Failed"
 msgstr "Theip ar Chur Faoi Ghlas"
 
@@ -49,7 +51,9 @@ msgid ""
 msgstr ""
 
 #: agenda/agenda.cpp:1207 month/monthitem.cpp:447
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Error Occurred"
+msgctxt "@title:window"
 msgid "Error Occurred"
 msgstr "Tharla Earráid"
 
@@ -70,6 +74,7 @@ msgstr ""
 
 #: agenda/agendaitem.cpp:632
 #, kde-format
+msgctxt "@title:window"
 msgid "Attendee added"
 msgstr ""
 
@@ -1604,6 +1609,7 @@ msgstr ""
 
 #: todo/todoview.cpp:185
 #, kde-format
+msgctxt "@title:window"
 msgid "Drop To-do"
 msgstr ""
 

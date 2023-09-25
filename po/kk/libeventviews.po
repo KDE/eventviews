@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2023-09-25 01:40+0000\n"
 "PO-Revision-Date: 2013-09-16 04:39+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -33,7 +33,9 @@ msgid "Unable to lock item for modification. You cannot make any changes."
 msgstr "Аталым өзгерту үшін бұғатталмады. Ешбір өзгеріс жасай алмайсыз."
 
 #: agenda/agenda.cpp:968
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Locking Failed"
+msgctxt "@title:window"
 msgid "Locking Failed"
 msgstr "Бұғаттау жаңылысы"
 
@@ -49,7 +51,9 @@ msgid ""
 msgstr "Ерекшелік күнтізбеге енгізілмеді. Өзгеріс жасалмады."
 
 #: agenda/agenda.cpp:1207 month/monthitem.cpp:447
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Error Occurred"
+msgctxt "@title:window"
 msgid "Error Occurred"
 msgstr "Қате орын алды"
 
@@ -65,7 +69,9 @@ msgid "Attendee \"%1\" added to the calendar item \"%2\""
 msgstr "\"%1\" қатысушысы күнтізбенің \"%2\" дегеніне қосылды"
 
 #: agenda/agendaitem.cpp:632
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Attendee added"
+msgctxt "@title:window"
 msgid "Attendee added"
 msgstr "Қатысушысы қосылды"
 
@@ -1744,7 +1750,9 @@ msgid "Cannot move to-do to itself or a child of itself."
 msgstr "Іс өз-өзіне не еншілесіне кіргізілмейді."
 
 #: todo/todoview.cpp:185
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Drop To-do"
+msgctxt "@title:window"
 msgid "Drop To-do"
 msgstr "Істі тастау"
 

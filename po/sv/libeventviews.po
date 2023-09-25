@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2023-09-25 01:40+0000\n"
 "PO-Revision-Date: 2021-09-30 18:23+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -34,7 +34,9 @@ msgid "Unable to lock item for modification. You cannot make any changes."
 msgstr "Kan inte låsa objekt för ändring. Du kan inte göra några ändringar."
 
 #: agenda/agenda.cpp:968
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Locking Failed"
+msgctxt "@title:window"
 msgid "Locking Failed"
 msgstr "Låsning misslyckades"
 
@@ -52,7 +54,9 @@ msgstr ""
 "göras."
 
 #: agenda/agenda.cpp:1207 month/monthitem.cpp:447
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Error Occurred"
+msgctxt "@title:window"
 msgid "Error Occurred"
 msgstr "Fel inträffade"
 
@@ -69,7 +73,9 @@ msgid "Attendee \"%1\" added to the calendar item \"%2\""
 msgstr "Deltagare \"%1\" tillagd i kalenderobjektet \"%2\""
 
 #: agenda/agendaitem.cpp:632
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Attendee added"
+msgctxt "@title:window"
 msgid "Attendee added"
 msgstr "Deltagare tillagda"
 
@@ -1757,7 +1763,9 @@ msgid "Cannot move to-do to itself or a child of itself."
 msgstr "Kan inte flytta uppgift till sig själv eller sin eget deluppgift."
 
 #: todo/todoview.cpp:185
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Drop To-do"
+msgctxt "@title:window"
 msgid "Drop To-do"
 msgstr "Släpp uppgift"
 

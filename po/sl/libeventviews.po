@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2023-09-25 01:40+0000\n"
 "PO-Revision-Date: 2023-04-03 09:08+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -43,7 +43,9 @@ msgstr ""
 "spremembe."
 
 #: agenda/agenda.cpp:968
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Locking Failed"
+msgctxt "@title:window"
 msgid "Locking Failed"
 msgstr "Zaklep ni uspel"
 
@@ -59,7 +61,9 @@ msgid ""
 msgstr "Predmeta izjeme ni mogoče dodati v koledar. Nič ne bo spremenjeno."
 
 #: agenda/agenda.cpp:1207 month/monthitem.cpp:447
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Error Occurred"
+msgctxt "@title:window"
 msgid "Error Occurred"
 msgstr "Prišlo je do napake"
 
@@ -78,7 +82,9 @@ msgid "Attendee \"%1\" added to the calendar item \"%2\""
 msgstr "Udeleženec »%1« je dodan k »%2« v koledarju"
 
 #: agenda/agendaitem.cpp:632
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Attendee added"
+msgctxt "@title:window"
 msgid "Attendee added"
 msgstr "Udeleženec je dodan"
 
@@ -1779,7 +1785,9 @@ msgstr ""
 "Opravila ni mogoče premakniti na samega sebe ali na podrejeno opravilo."
 
 #: todo/todoview.cpp:185
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Drop To-do"
+msgctxt "@title:window"
 msgid "Drop To-do"
 msgstr "Opusti opravilo"
 

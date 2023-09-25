@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2023-09-25 01:40+0000\n"
 "PO-Revision-Date: 2022-12-30 18:52+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -36,7 +36,9 @@ msgid "Unable to lock item for modification. You cannot make any changes."
 msgstr "無法鎖定要變更的項目。您無法做任何變更。"
 
 #: agenda/agenda.cpp:968
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Locking Failed"
+msgctxt "@title:window"
 msgid "Locking Failed"
 msgstr "鎖定失敗"
 
@@ -52,7 +54,9 @@ msgid ""
 msgstr "無法將例外的項目加入行事曆。將不做任何變更。"
 
 #: agenda/agenda.cpp:1207 month/monthitem.cpp:447
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Error Occurred"
+msgctxt "@title:window"
 msgid "Error Occurred"
 msgstr "發生錯誤"
 
@@ -68,7 +72,9 @@ msgid "Attendee \"%1\" added to the calendar item \"%2\""
 msgstr "參加者 %1 已加入行事曆項目 %2 中"
 
 #: agenda/agendaitem.cpp:632
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Attendee added"
+msgctxt "@title:window"
 msgid "Attendee added"
 msgstr "參加者已加入"
 
@@ -1664,7 +1670,9 @@ msgid "Cannot move to-do to itself or a child of itself."
 msgstr "無法將待辦事項移到它自己或它的子事項身上。"
 
 #: todo/todoview.cpp:185
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Drop To-do"
+msgctxt "@title:window"
 msgid "Drop To-do"
 msgstr "丟棄待辦事項"
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2023-09-25 01:40+0000\n"
 "PO-Revision-Date: 2021-10-04 08:50+0300\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -37,7 +37,9 @@ msgstr ""
 "αλλαγές."
 
 #: agenda/agenda.cpp:968
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Locking Failed"
+msgctxt "@title:window"
 msgid "Locking Failed"
 msgstr "Το κλείδωμα απέτυχε"
 
@@ -55,7 +57,9 @@ msgstr ""
 "αλλαγή."
 
 #: agenda/agenda.cpp:1207 month/monthitem.cpp:447
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Error Occurred"
+msgctxt "@title:window"
 msgid "Error Occurred"
 msgstr "Παρουσιάστηκε σφάλμα"
 
@@ -72,7 +76,9 @@ msgid "Attendee \"%1\" added to the calendar item \"%2\""
 msgstr "Ο συμμετέχων \"%1\" προστέθηκε στο αντικείμενο ημερολογίου \"%2\""
 
 #: agenda/agendaitem.cpp:632
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Attendee added"
+msgctxt "@title:window"
 msgid "Attendee added"
 msgstr "Ο συμμετέχων προστέθηκε"
 
@@ -1841,7 +1847,9 @@ msgid "Cannot move to-do to itself or a child of itself."
 msgstr "Αδύνατη η μετακίνηση μιας εργασίας ή απογόνου στον εαυτό του."
 
 #: todo/todoview.cpp:185
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Drop To-do"
+msgctxt "@title:window"
 msgid "Drop To-do"
 msgstr "Διαγραφή της εργασίας"
 

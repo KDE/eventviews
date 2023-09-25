@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
-"PO-Revision-Date: 2023-09-23 08:57+0200\n"
+"POT-Creation-Date: 2023-09-25 01:40+0000\n"
+"PO-Revision-Date: 2023-09-24 16:38+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -34,7 +34,9 @@ msgid "Unable to lock item for modification. You cannot make any changes."
 msgstr "ელემენტის შესაცვლელად დაბლოკვა შეუძლებელია. ცვლილებებს ვერ შეიტანთ."
 
 #: agenda/agenda.cpp:968
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Locking Failed"
+msgctxt "@title:window"
 msgid "Locking Failed"
 msgstr "დაბლოკვის შეცდომა"
 
@@ -50,7 +52,9 @@ msgid ""
 msgstr "კალენდარში გამონაკლისის ჩამატების შეცდომა. ცვლილებები არ შეტანილა."
 
 #: agenda/agenda.cpp:1207 month/monthitem.cpp:447
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Error Occurred"
+msgctxt "@title:window"
 msgid "Error Occurred"
 msgstr "შეცდომა"
 
@@ -67,7 +71,9 @@ msgid "Attendee \"%1\" added to the calendar item \"%2\""
 msgstr "დამსწრემ \"%1\" დამატებულია კალენდრის ელემენტში \"%2\""
 
 #: agenda/agendaitem.cpp:632
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Attendee added"
+msgctxt "@title:window"
 msgid "Attendee added"
 msgstr "დამსწრე დამატებულია"
 
@@ -557,7 +563,7 @@ msgstr ""
 #: eventviews.kcfg:183 viewerapp/settings.kcfg:33
 #, kde-format
 msgid "Show icons in agenda view items"
-msgstr ""
+msgstr "დღის წესრიგის ხედის ელემენტებში ხატულების ჩვენება"
 
 #. i18n: ectx: whatsthis, entry (EnableAgendaItemIcons), group (Agenda View)
 #: eventviews.kcfg:184 viewerapp/settings.kcfg:34
@@ -571,7 +577,7 @@ msgstr ""
 #: eventviews.kcfg:185 viewerapp/settings.kcfg:35
 #, kde-format
 msgid "Display icons in agenda view items"
-msgstr ""
+msgstr "დღის წესრიგის ხედის ელემენტებში ხატულების ჩვენება"
 
 #. i18n: ectx: label, entry (ShowTodosAgendaView), group (Agenda View)
 #. i18n: ectx: label, entry (ShowTodosMonthView), group (Month View)
@@ -585,19 +591,19 @@ msgstr "განრიგის ჩვენება"
 #: eventviews.kcfg:191 viewerapp/settings.kcfg:41
 #, kde-format
 msgid "Check this box to display to-dos in the agenda view."
-msgstr ""
+msgstr "ჩართეთ ეს თოლია დღის წესრიგის ხედში გასაკეთებლების საჩვენებლად."
 
 #. i18n: ectx: tooltip, entry (ShowTodosAgendaView), group (Agenda View)
 #: eventviews.kcfg:192 viewerapp/settings.kcfg:42
 #, kde-format
 msgid "Display to-dos in the agenda view"
-msgstr ""
+msgstr "დღის წესრიგის ხედში გასაკეთებლების ჩვენება"
 
 #. i18n: ectx: label, entry (MarcusBainsEnabled), group (Agenda View)
 #: eventviews.kcfg:197 viewerapp/settings.kcfg:47
 #, kde-format
 msgid "Show current-time (Marcus Bains) line"
-msgstr ""
+msgstr "მიმდინარე დროის (მარკუს ბეინსის) ხაზის ჩვენება"
 
 #. i18n: ectx: whatsthis, entry (MarcusBainsEnabled), group (Agenda View)
 #: eventviews.kcfg:198 viewerapp/settings.kcfg:48
@@ -617,7 +623,7 @@ msgstr "მიმდინარე დროის მაჩვენებლ�
 #: eventviews.kcfg:204 viewerapp/settings.kcfg:54
 #, kde-format
 msgid "Show seconds on the current-time (Marcus Bains) line"
-msgstr ""
+msgstr "მიმდინარე დროის (მარკუს ბეინსის) ხაზზე წამების ჩვენება"
 
 #. i18n: ectx: whatsthis, entry (MarcusBainsShowSeconds), group (Agenda View)
 #: eventviews.kcfg:205 viewerapp/settings.kcfg:55
@@ -1106,20 +1112,20 @@ msgstr ""
 #: eventviews.kcfg:385 eventviews.kcfg:516 viewerapp/settings.kcfg:210
 #, kde-format
 msgid "Agenda view background color"
-msgstr ""
+msgstr "დღის წესრიგის ხედის ფონის ფერი"
 
 #. i18n: ectx: whatsthis, entry (AgendaBgColor), group (Colors)
 #. i18n: ectx: whatsthis, entry, group (Theming)
 #: eventviews.kcfg:386 eventviews.kcfg:517 viewerapp/settings.kcfg:211
 #, kde-format
 msgid "Select the agenda view background color here."
-msgstr ""
+msgstr "აირჩიეთ დღის წესრიგის ხედის ფონის ფერი."
 
 #. i18n: ectx: label, entry (ViewBgBusyColor), group (Colors)
 #: eventviews.kcfg:391
 #, kde-format
 msgid "Agenda/Month view background busy color"
-msgstr ""
+msgstr "დღის წესრიგის/თვის ხედის ფონის დაკავებულობის ფერი"
 
 #. i18n: ectx: whatsthis, entry (ViewBgBusyColor), group (Colors)
 #: eventviews.kcfg:392
@@ -1133,19 +1139,19 @@ msgstr ""
 #: eventviews.kcfg:397 viewerapp/settings.kcfg:216
 #, kde-format
 msgid "Agenda view current-time line color"
-msgstr ""
+msgstr "დღის წესრიგის ხედის მიმდინარე დროის ხაზის ფერი"
 
 #. i18n: ectx: whatsthis, entry, group (Colors)
 #: eventviews.kcfg:398 viewerapp/settings.kcfg:217
 #, kde-format
 msgid "Select a color to use for the current-time (Marcus Bains) line."
-msgstr ""
+msgstr "აირჩიეთ ფერი მიმდინარე დრის (მარკუს ბეინსის) ხაზისთვის."
 
 #. i18n: ectx: tooltip, entry, group (Colors)
 #: eventviews.kcfg:399 viewerapp/settings.kcfg:218
 #, kde-format
 msgid "Use this color for the Agenda View current-time (Marcus Bains) line"
-msgstr ""
+msgstr "ამ ფერის გამოყენება მიმდინარე დრის (მარკუს ბეინსის) ხაზისთვის"
 
 #. i18n: ectx: label, entry, group (Colors)
 #. i18n: ectx: label, entry, group (Theming)
@@ -1160,7 +1166,7 @@ msgstr "სამუშაო საათების ფერი"
 #: eventviews.kcfg:405 viewerapp/settings.kcfg:224
 #, kde-format
 msgid "Select the working hours color for the agenda view here."
-msgstr ""
+msgstr "აირჩიეთ სამუშაო საათები ამ დღის წესრიგის ხედისთვის."
 
 #. i18n: ectx: label, entry (TodoDueTodayColor), group (Colors)
 #. i18n: ectx: label, entry, group (Theming)
@@ -1608,7 +1614,9 @@ msgid "Cannot move to-do to itself or a child of itself."
 msgstr "გასაკეთებლის თავისივე შვილში გადატანა შეუძლებელია."
 
 #: todo/todoview.cpp:185
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Drop To-do"
+msgctxt "@title:window"
 msgid "Drop To-do"
 msgstr "გეგმის მოცილება"
 
@@ -1904,7 +1912,7 @@ msgstr "დამთვალიერებელიაპი"
 #: viewerapp/main.cpp:21
 #, kde-format
 msgid "A test app for embedding calendarviews"
-msgstr ""
+msgstr "სატესტო აპი ჩაშენებული calendarviews-სთვის"
 
 #: viewerapp/main.cpp:23
 #, kde-format

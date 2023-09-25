@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2023-09-25 01:40+0000\n"
 "PO-Revision-Date: 2022-08-03 14:44+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -35,7 +35,9 @@ msgstr ""
 "aanbrengen."
 
 #: agenda/agenda.cpp:968
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Locking Failed"
+msgctxt "@title:window"
 msgid "Locking Failed"
 msgstr "Vergrendelen mislukt"
 
@@ -52,7 +54,9 @@ msgstr ""
 "Kon de uitzondering niet toevoegen aan de agenda. Er wordt niets gewijzigd."
 
 #: agenda/agenda.cpp:1207 month/monthitem.cpp:447
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Error Occurred"
+msgctxt "@title:window"
 msgid "Error Occurred"
 msgstr "Er deed zich een fout voor"
 
@@ -69,7 +73,9 @@ msgid "Attendee \"%1\" added to the calendar item \"%2\""
 msgstr "Deelnemer \"%1\" toegevoegd aan agendaitem \"%2\""
 
 #: agenda/agendaitem.cpp:632
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Attendee added"
+msgctxt "@title:window"
 msgid "Attendee added"
 msgstr "Deelnemer toegevoegd"
 
@@ -1801,7 +1807,9 @@ msgstr ""
 "Kan de taak niet naar zichzelf of naar een afhankelijke taak verplaatsen."
 
 #: todo/todoview.cpp:185
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Drop To-do"
+msgctxt "@title:window"
 msgid "Drop To-do"
 msgstr "Taak neerzetten"
 
