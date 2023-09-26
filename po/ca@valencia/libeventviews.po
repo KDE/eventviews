@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-25 01:40+0000\n"
-"PO-Revision-Date: 2023-09-22 11:15+0200\n"
+"PO-Revision-Date: 2023-09-25 09:29+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -39,8 +39,7 @@ msgstr ""
 "No s'ha pogut bloquejar l'element per a modificar-lo. No podeu fer cap canvi."
 
 #: agenda/agenda.cpp:968
-#, fuzzy, kde-format
-#| msgid "Locking Failed"
+#, kde-format
 msgctxt "@title:window"
 msgid "Locking Failed"
 msgstr "Ha fallat el bloqueig"
@@ -58,8 +57,7 @@ msgstr ""
 "No s'ha pogut afegir l'element d'excepció al calendari. No es farà cap canvi."
 
 #: agenda/agenda.cpp:1207 month/monthitem.cpp:447
-#, fuzzy, kde-format
-#| msgid "Error Occurred"
+#, kde-format
 msgctxt "@title:window"
 msgid "Error Occurred"
 msgstr "S'ha produït un error"
@@ -77,8 +75,7 @@ msgid "Attendee \"%1\" added to the calendar item \"%2\""
 msgstr "L'assistent «%1» s'ha afegit a l'element «%2» del calendari"
 
 #: agenda/agendaitem.cpp:632
-#, fuzzy, kde-format
-#| msgid "Attendee added"
+#, kde-format
 msgctxt "@title:window"
 msgid "Attendee added"
 msgstr "S'ha afegit l'assistent"
@@ -1822,8 +1819,7 @@ msgid "Cannot move to-do to itself or a child of itself."
 msgstr "No es pot moure la tasca pendent a ella mateixa o a un fill seu."
 
 #: todo/todoview.cpp:185
-#, fuzzy, kde-format
-#| msgid "Drop To-do"
+#, kde-format
 msgctxt "@title:window"
 msgid "Drop To-do"
 msgstr "Mou la tasca pendent"

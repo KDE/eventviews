@@ -10,17 +10,17 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-25 01:40+0000\n"
-"PO-Revision-Date: 2023-04-03 09:08+0200\n"
+"PO-Revision-Date: 2023-09-25 10:55+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
-"%100==4 ? 3 : 0);\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100>=3 && n"
+"%100<=4 ? 2 : 3);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -43,8 +43,7 @@ msgstr ""
 "spremembe."
 
 #: agenda/agenda.cpp:968
-#, fuzzy, kde-format
-#| msgid "Locking Failed"
+#, kde-format
 msgctxt "@title:window"
 msgid "Locking Failed"
 msgstr "Zaklep ni uspel"
@@ -61,8 +60,7 @@ msgid ""
 msgstr "Predmeta izjeme ni mogoče dodati v koledar. Nič ne bo spremenjeno."
 
 #: agenda/agenda.cpp:1207 month/monthitem.cpp:447
-#, fuzzy, kde-format
-#| msgid "Error Occurred"
+#, kde-format
 msgctxt "@title:window"
 msgid "Error Occurred"
 msgstr "Prišlo je do napake"
@@ -82,11 +80,10 @@ msgid "Attendee \"%1\" added to the calendar item \"%2\""
 msgstr "Udeleženec »%1« je dodan k »%2« v koledarju"
 
 #: agenda/agendaitem.cpp:632
-#, fuzzy, kde-format
-#| msgid "Attendee added"
+#, kde-format
 msgctxt "@title:window"
 msgid "Attendee added"
-msgstr "Udeleženec je dodan"
+msgstr "Udeleženec dodan"
 
 #: agenda/agendaitem.cpp:856 agenda/agendaitem.cpp:951
 #, kde-format
@@ -1785,8 +1782,7 @@ msgstr ""
 "Opravila ni mogoče premakniti na samega sebe ali na podrejeno opravilo."
 
 #: todo/todoview.cpp:185
-#, fuzzy, kde-format
-#| msgid "Drop To-do"
+#, kde-format
 msgctxt "@title:window"
 msgid "Drop To-do"
 msgstr "Opusti opravilo"

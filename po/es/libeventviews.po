@@ -3,13 +3,13 @@
 #
 # Javier Vinal <fjvinalgmail.com>, 2010, 2011, 2012, 2017.
 # Javier Viñal <fjvinal@gmail.com>, 2012, 2013, 2014, 2015, 2016, 2018, 2019.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2019, 2020, 2021.
+# SPDX-FileCopyrightText: 2019, 2020, 2021, 2023 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-25 01:40+0000\n"
-"PO-Revision-Date: 2021-09-30 18:54+0200\n"
+"PO-Revision-Date: 2023-09-25 11:48+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.08.1\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -37,8 +37,7 @@ msgstr ""
 "cambio."
 
 #: agenda/agenda.cpp:968
-#, fuzzy, kde-format
-#| msgid "Locking Failed"
+#, kde-format
 msgctxt "@title:window"
 msgid "Locking Failed"
 msgstr "El bloqueo ha fallado"
@@ -57,11 +56,10 @@ msgstr ""
 "ningún cambio."
 
 #: agenda/agenda.cpp:1207 month/monthitem.cpp:447
-#, fuzzy, kde-format
-#| msgid "Error Occurred"
+#, kde-format
 msgctxt "@title:window"
 msgid "Error Occurred"
-msgstr "Ocurrió un error"
+msgstr "Ha ocurrido un error"
 
 #: agenda/agendaitem.cpp:81 list/listview.cpp:425
 #, kde-format
@@ -76,8 +74,7 @@ msgid "Attendee \"%1\" added to the calendar item \"%2\""
 msgstr "Asistente «%1» añadido al elemento de calendario «%2»"
 
 #: agenda/agendaitem.cpp:632
-#, fuzzy, kde-format
-#| msgid "Attendee added"
+#, kde-format
 msgctxt "@title:window"
 msgid "Attendee added"
 msgstr "Asistente añadido"
@@ -455,8 +452,8 @@ msgid ""
 "Select the first day of each week. Normally, you can ignore this since it is "
 "set in your locale."
 msgstr ""
-"Seleccione el primer día de cada semana. Normalmente, usted puede ignorar "
-"esto dado que se establece en su configuración regional."
+"Seleccione el primer día de cada semana. Normalmente, puede ignorar esto "
+"dado que se establece en su configuración regional."
 
 #. i18n: ectx: label, entry, group (General View)
 #: eventviews.kcfg:122 viewerapp/settings.kcfg:15
@@ -772,9 +769,8 @@ msgid ""
 msgstr ""
 "Seleccione la opción «Categoría dentro, calendario fuera» si le gustaría "
 "pintar elementos de calendario en el color asociado a su categoría, con el "
-"borde de elemento pintado en el color de su calendario. Por favor, utilice "
-"la página de configuración de colores y tipos de letra para configurar estos "
-"colores."
+"borde de elemento pintado en el color de su calendario. Utilice la página de "
+"configuración de colores y tipos de letra para configurar estos colores."
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
 #: eventviews.kcfg:223 viewerapp/settings.kcfg:73
@@ -805,9 +801,8 @@ msgid ""
 msgstr ""
 "Seleccione la opción «Calendario dentro, categoría fuera» si le gustaría "
 "pintar elementos de calendario en el color asociado a su calendario, con el "
-"borde de elemento pintado en el color de su categoría. Por favor, utilice la "
-"página de configuración de colores y tipos de letra para configurar estos "
-"colores."
+"borde de elemento pintado en el color de su categoría. Utilice la página de "
+"configuración de colores y tipos de letra para configurar estos colores."
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
 #: eventviews.kcfg:228 viewerapp/settings.kcfg:78
@@ -837,8 +832,8 @@ msgid ""
 msgstr ""
 "Seleccione la opción «Solo categoría» si desea dibujar los elementos del "
 "calendario (tanto su interior como su borde) con el color de su categoría "
-"asociada. Por favor, use la página de configuración de colores y tipos de "
-"letra para definir estos colores."
+"asociada. Use la página de configuración de colores y tipos de letra para "
+"definir estos colores."
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
 #: eventviews.kcfg:233 viewerapp/settings.kcfg:83
@@ -866,8 +861,8 @@ msgid ""
 msgstr ""
 "Seleccione la opción «Solo calendario» si desea dibujar los elementos del "
 "calendario (tanto su interior como su borde) con el color de su calendario. "
-"Por favor, use la página de configuración de colores y tipos de letra para "
-"definir estos colores."
+"Use la página de configuración de colores y tipos de letra para definir "
+"estos colores."
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
 #: eventviews.kcfg:238 viewerapp/settings.kcfg:88
@@ -893,10 +888,10 @@ msgid ""
 "you can change the background color used for this option on the Colors "
 "configuration page. Look for the \"Busy days background color\" setting."
 msgstr ""
-"Marque esta casilla si usted quiere que el fondo de la agenda se rellene con "
-"un color diferente en los días que tienen al menos un evento marcado como "
-"ocupado. Además, usted puede cambiar el color de fondo que se usa en esta "
-"opción en la página de configuración de colores. Busque la configuración de "
+"Marque esta casilla si quiere que el fondo de la agenda se rellene con un "
+"color diferente en los días que tienen al menos un evento marcado como "
+"ocupado. Además, puede cambiar el color de fondo que se usa en esta opción "
+"en la página de configuración de colores. Busque la configuración de "
 "«Mostrar color de fondo para días ocupados»."
 
 #. i18n: ectx: label, entry (AgendaViewCalendarDisplay), group (Agenda View)
@@ -1091,9 +1086,8 @@ msgid ""
 msgstr ""
 "Seleccione la opción «Categoría dentro, calendario fuera» si le gustaría "
 "pintar elementos de calendario en el color asociado a su categoría, con el "
-"borde de elemento pintado en el color de su calendario. Por favor, utilice "
-"la página de configuración de colores y tipos de letra para configurar estos "
-"colores."
+"borde de elemento pintado en el color de su calendario. Use la página de "
+"configuración de colores y tipos de letra para configurar estos colores."
 
 #. i18n: ectx: tooltip, entry, group (Month View)
 #: eventviews.kcfg:319 viewerapp/settings.kcfg:158
@@ -1116,9 +1110,8 @@ msgid ""
 msgstr ""
 "Seleccione la opción «Calendario dentro, categoría fuera» si le gustaría "
 "pintar elementos de calendario en el color asociado a su calendario, con el "
-"borde de elemento pintado en el color de su categoría. Por favor, utilice la "
-"página de configuración de colores y tipos de letra para configurar estos "
-"colores."
+"borde de elemento pintado en el color de su categoría. Use la página de "
+"configuración de colores y tipos de letra para configurar estos colores."
 
 #. i18n: ectx: tooltip, entry, group (Month View)
 #: eventviews.kcfg:324 viewerapp/settings.kcfg:163
@@ -1182,11 +1175,11 @@ msgid ""
 "Colors configuration page. Look for the \"Busy days background color\" "
 "setting."
 msgstr ""
-"Marque esta casilla si usted quiere que el fondo de la vista de mes se "
-"rellene con un color diferente en los días que tienen al menos un evento "
-"marcado como ocupado. Además, usted puede cambiar el color de fondo que se "
-"usa en esta opción en la página de configuración de colores. Busque la "
-"configuración de «Mostrar color de fondo para ocupado en la vista de mes»."
+"Marque esta casilla si quiere que el fondo de la vista de mes se rellene con "
+"un color diferente en los días que tienen al menos un evento marcado como "
+"ocupado. Además, puede cambiar el color de fondo que se usa en esta opción "
+"en la página de configuración de colores. Busque la configuración de "
+"«Mostrar color de fondo para ocupado en la vista de mes»."
 
 #. i18n: ectx: label, entry, group (Todo View)
 #: eventviews.kcfg:350 viewerapp/settings.kcfg:183
@@ -1314,9 +1307,9 @@ msgid ""
 "When you have an all day event marked as busy, you can have a different "
 "agenda or month view background color for that day. Select the color here."
 msgstr ""
-"Cuando usted tenga todo un día marcado con eventos ocupados, usted puede "
-"tener un color de fondo diferente de agenda o vista de mes para este día. "
-"Seleccione el color aquí."
+"Cuando tenga todo un día marcado con eventos ocupados, puede tener un color "
+"de fondo diferente de agenda o vista de mes para este día. Seleccione el "
+"color aquí."
 
 #. i18n: ectx: label, entry, group (Colors)
 #: eventviews.kcfg:397 viewerapp/settings.kcfg:216
@@ -1828,8 +1821,7 @@ msgstr ""
 "No se puede mover la tarea pendiente de sí misma o de un hijo de sí misma."
 
 #: todo/todoview.cpp:185
-#, fuzzy, kde-format
-#| msgid "Drop To-do"
+#, kde-format
 msgctxt "@title:window"
 msgid "Drop To-do"
 msgstr "Soltar tarea pendiente"
@@ -2243,7 +2235,7 @@ msgid ""
 msgstr ""
 "Marque esta casilla para activar la generación automática de correos al "
 "crear, actualizar o borrar eventos (o tareas pendientes) que involucren a "
-"otros asistentes. Usted debería marcar esta casilla si quiere usar la "
+"otros asistentes. Debería marcar esta casilla si quiere usar la "
 "funcionalidad de colaboración (p. ej. la configuración de Kontact como un "
 "cliente de KDE Kolab)."
 

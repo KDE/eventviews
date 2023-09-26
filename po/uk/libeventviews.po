@@ -3,13 +3,13 @@
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Yuri Chornoivan <yurchor@ukr.net>, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021.
+# Yuri Chornoivan <yurchor@ukr.net>, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-25 01:40+0000\n"
-"PO-Revision-Date: 2021-09-30 09:17+0300\n"
+"PO-Revision-Date: 2023-09-25 08:58+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -38,8 +38,7 @@ msgstr ""
 "Не вдається заблокувати запис для зміни. Ви не зможете внести ніяких змін."
 
 #: agenda/agenda.cpp:968
-#, fuzzy, kde-format
-#| msgid "Locking Failed"
+#, kde-format
 msgctxt "@title:window"
 msgid "Locking Failed"
 msgstr "Блокування зазнало невдачі"
@@ -56,8 +55,7 @@ msgid ""
 msgstr "Не вдається додати виняток в календар. Залишиться без змін."
 
 #: agenda/agenda.cpp:1207 month/monthitem.cpp:447
-#, fuzzy, kde-format
-#| msgid "Error Occurred"
+#, kde-format
 msgctxt "@title:window"
 msgid "Error Occurred"
 msgstr "Сталась помилка"
@@ -77,8 +75,7 @@ msgid "Attendee \"%1\" added to the calendar item \"%2\""
 msgstr "Учасника «%1» додано до календарного пункту «%2»"
 
 #: agenda/agendaitem.cpp:632
-#, fuzzy, kde-format
-#| msgid "Attendee added"
+#, kde-format
 msgctxt "@title:window"
 msgid "Attendee added"
 msgstr "Учасника додано"
@@ -1801,11 +1798,10 @@ msgid "Cannot move to-do to itself or a child of itself."
 msgstr "Неможливо пересунути завдання до самого себе або до своїх нащадків."
 
 #: todo/todoview.cpp:185
-#, fuzzy, kde-format
-#| msgid "Drop To-do"
+#, kde-format
 msgctxt "@title:window"
 msgid "Drop To-do"
-msgstr "Викинути завдання"
+msgstr "Відкидання завдання"
 
 #: todo/todoview.cpp:264
 #, kde-format

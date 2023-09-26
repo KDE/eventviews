@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-25 01:40+0000\n"
-"PO-Revision-Date: 2023-01-06 22:00+0100\n"
+"PO-Revision-Date: 2023-09-25 23:06+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -35,8 +35,7 @@ msgid "Unable to lock item for modification. You cannot make any changes."
 msgstr "Ne eblas ŝlosi eron por modifo. Vi ne povas fari iujn ŝanĝojn."
 
 #: agenda/agenda.cpp:968
-#, fuzzy, kde-format
-#| msgid "Locking Failed"
+#, kde-format
 msgctxt "@title:window"
 msgid "Locking Failed"
 msgstr "Ŝlosado Malsukcesis"
@@ -53,8 +52,7 @@ msgid ""
 msgstr ""
 
 #: agenda/agenda.cpp:1207 month/monthitem.cpp:447
-#, fuzzy, kde-format
-#| msgid "Error Occurred"
+#, kde-format
 msgctxt "@title:window"
 msgid "Error Occurred"
 msgstr "Eraro Okazis"
@@ -63,8 +61,8 @@ msgstr "Eraro Okazis"
 #, kde-format
 msgid "%2 (1 year)"
 msgid_plural "%2 (%1 years)"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%2 (1 jaro)"
+msgstr[1] "%2 (%1 jaroj)"
 
 #: agenda/agendaitem.cpp:631
 #, kde-format
@@ -72,8 +70,7 @@ msgid "Attendee \"%1\" added to the calendar item \"%2\""
 msgstr "Ĉeestanto \"%1\" aldonata al la kalendara ero \"%2\""
 
 #: agenda/agendaitem.cpp:632
-#, fuzzy, kde-format
-#| msgid "Attendee added"
+#, kde-format
 msgctxt "@title:window"
 msgid "Attendee added"
 msgstr "Ĉeestanto aldonata"
@@ -2035,8 +2032,4 @@ msgstr "%1, %2 - %3"
 #, kde-format
 msgctxt "to-do due date"
 msgid "  (Due: %1)"
-msgstr " (Ligdato: %1)"
-
-#~ msgctxt "delimiter for joining category/tag names"
-#~ msgid ","
-#~ msgstr ","
+msgstr " (Limdato: %1)"
