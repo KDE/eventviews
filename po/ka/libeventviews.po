@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-25 01:40+0000\n"
-"PO-Revision-Date: 2023-09-24 16:38+0200\n"
+"PO-Revision-Date: 2023-09-26 05:36+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -34,8 +34,7 @@ msgid "Unable to lock item for modification. You cannot make any changes."
 msgstr "ელემენტის შესაცვლელად დაბლოკვა შეუძლებელია. ცვლილებებს ვერ შეიტანთ."
 
 #: agenda/agenda.cpp:968
-#, fuzzy, kde-format
-#| msgid "Locking Failed"
+#, kde-format
 msgctxt "@title:window"
 msgid "Locking Failed"
 msgstr "დაბლოკვის შეცდომა"
@@ -52,8 +51,7 @@ msgid ""
 msgstr "კალენდარში გამონაკლისის ჩამატების შეცდომა. ცვლილებები არ შეტანილა."
 
 #: agenda/agenda.cpp:1207 month/monthitem.cpp:447
-#, fuzzy, kde-format
-#| msgid "Error Occurred"
+#, kde-format
 msgctxt "@title:window"
 msgid "Error Occurred"
 msgstr "შეცდომა"
@@ -71,8 +69,7 @@ msgid "Attendee \"%1\" added to the calendar item \"%2\""
 msgstr "დამსწრემ \"%1\" დამატებულია კალენდრის ელემენტში \"%2\""
 
 #: agenda/agendaitem.cpp:632
-#, fuzzy, kde-format
-#| msgid "Attendee added"
+#, kde-format
 msgctxt "@title:window"
 msgid "Attendee added"
 msgstr "დამსწრე დამატებულია"
@@ -1614,11 +1611,10 @@ msgid "Cannot move to-do to itself or a child of itself."
 msgstr "გასაკეთებლის თავისივე შვილში გადატანა შეუძლებელია."
 
 #: todo/todoview.cpp:185
-#, fuzzy, kde-format
-#| msgid "Drop To-do"
+#, kde-format
 msgctxt "@title:window"
 msgid "Drop To-do"
-msgstr "გეგმის მოცილება"
+msgstr "გასაკეთებლის მოცილება"
 
 #: todo/todoview.cpp:264
 #, kde-format
@@ -2014,7 +2010,7 @@ msgstr ""
 #: whatsnext/whatsnextview.cpp:61
 #, kde-format
 msgid "To-dos:"
-msgstr "გეგმები:"
+msgstr "გასაკეთებლები:"
 
 #: whatsnext/whatsnextview.cpp:77
 #, kde-format
