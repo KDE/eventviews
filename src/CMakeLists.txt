@@ -227,12 +227,6 @@ ecm_generate_headers(eventviews_CamelCasewhatsnext_HEADERS
   RELATIVE whatsnext
 )
 
-ecm_generate_pri_file(BASE_NAME EventViews
-  LIB_NAME KPim6EventViews
-  DEPS "KMime AkonadiCalendar" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR
-  ${KDE_INSTALL_INCLUDEDIR}/KPim6/EventViews
-)
-
 install(FILES
   ${eventviews_CamelCase_HEADERS}
   ${eventviews_CamelCaseagenda_HEADERS}
@@ -263,7 +257,6 @@ install(FILES
   COMPONENT Devel
 )
 
-install(FILES ${PRI_FILENAME} DESTINATION ${ECM_MKSPECS_INSTALL_DIR})
 ecm_qt_install_logging_categories(EXPORT EVENTVIEWS FILE eventviews.categories DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR})
 
 if (BUILD_QCH)
