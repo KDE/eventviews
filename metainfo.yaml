@@ -7,8 +7,7 @@ portingAid: false
 deprecated: false
 release: false
 libraries:
- - qmake: EventViews
-   cmake: "KPim6::EventViews"
+ - cmake: "KPim6::EventViews"
 cmakename: KPim6EventViews
 group: kdepim
 public_lib: true
