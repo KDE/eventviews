@@ -35,6 +35,7 @@
 
 #include <KConfig>
 #include <KDatePickerPopup>
+#include <KDescendantsProxyModel>
 #include <KJob>
 #include <KMessageBox>
 
@@ -42,7 +43,9 @@
 #include <QHeaderView>
 #include <QIcon>
 #include <QMenu>
+#include <QSortFilterProxyModel>
 #include <QToolButton>
+
 #include <chrono>
 
 using namespace std::chrono_literals;
@@ -54,6 +57,51 @@ using namespace KCalendarCore;
 
 namespace EventViews
 {
+
+class CalendarFilterModel : public QSortFilterProxyModel
+{
+    Q_OBJECT
+public:
+    explicit CalendarFilterModel(QObject *parent = nullptr)
+        : QSortFilterProxyModel(parent)
+    {
+        mDescendantsProxy.setDisplayAncestorData(false);
+        QSortFilterProxyModel::setSourceModel(&mDescendantsProxy);
+    }
+
+    void setSourceModel(QAbstractItemModel *model) override
+    {
+        mDescendantsProxy.setSourceModel(model);
+    }
+
+    bool filterAcceptsRow(int source_row, const QModelIndex &source_parent) const override
+    {
+        const auto source_index = sourceModel()->index(source_row, 0, source_parent);
+        const auto item = sourceModel()->data(source_index, Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
+
+        if (!item.isValid()) {
+            return false;
+        }
+        return mEnabledCalendars.contains(item.parentCollection().id());
+    }
+
+    void addCalendar(const Akonadi::CollectionCalendar::Ptr &calendar)
+    {
+        mEnabledCalendars.insert(calendar->collection().id());
+        invalidateFilter();
+    }
+
+    void removeCalendar(const Akonadi::CollectionCalendar::Ptr &calendar)
+    {
+        mEnabledCalendars.remove(calendar->collection().id());
+        invalidateFilter();
+    }
+
+private:
+    KDescendantsProxyModel mDescendantsProxy;
+    QSet<Akonadi::Collection::Id> mEnabledCalendars;
+};
+
 // We share this struct between all views, for performance and memory purposes
 class ModelStack
 {
@@ -165,6 +213,7 @@ static ModelStack *sModels = nullptr;
 
 TodoView::TodoView(const EventViews::PrefsPtr &prefs, bool sidebarView, QWidget *parent)
     : EventView(parent)
+    , mCalendarFilterModel(std::make_unique<CalendarFilterModel>())
     , mQuickSearch(nullptr)
     , mQuickAdd(nullptr)
     , mTreeStateRestorer(nullptr)
@@ -187,6 +236,7 @@ TodoView::TodoView(const EventViews::PrefsPtr &prefs, bool sidebarView, QWidget 
         });
     }
     sModels->registerView(this);
+    sModels->setModel(mCalendarFilterModel.get());
 
     mProxyModel = new TodoViewSortFilterProxyModel(preferences(), this);
     mProxyModel->setSourceModel(sModels->coloredTodoModel);
@@ -458,8 +508,20 @@ void TodoView::setModel(QAbstractItemModel *model)
 {
     EventView::setModel(model);
 
-    sModels->setModel(model);
+    mCalendarFilterModel->setSourceModel(model);
     restoreViewState();
+}
+
+void TodoView::addCalendar(const Akonadi::CollectionCalendar::Ptr &calendar)
+{
+    EventView::addCalendar(calendar);
+    mCalendarFilterModel->addCalendar(calendar);
+}
+
+void TodoView::removeCalendar(const Akonadi::CollectionCalendar::Ptr &calendar)
+{
+    mCalendarFilterModel->removeCalendar(calendar);
+    EventView::removeCalendar(calendar);
 }
 
 Akonadi::Item::List TodoView::selectedIncidences() const
@@ -1258,4 +1320,4 @@ void TodoView::createNote()
     Q_EMIT createNote(todoItem);
 }
 
-#include "moc_todoview.cpp"
+#include "todoview.moc"

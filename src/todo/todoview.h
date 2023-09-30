@@ -14,6 +14,7 @@
 #include <Akonadi/IncidenceChanger>
 
 #include <QPointer>
+#include <akonadi/collectioncalendar.h>
 
 class KJob;
 class TodoCategoriesDelegate;
@@ -36,6 +37,9 @@ class KConfig;
 class KDatePickerPopup;
 namespace EventViews
 {
+
+class CalendarFilterModel;
+
 /**
  * This class provides a view for Todo items.
 
@@ -53,6 +57,8 @@ public:
     ~TodoView() override;
 
     void setModel(QAbstractItemModel *model) override;
+    void addCalendar(const Akonadi::CollectionCalendar::Ptr &calendar) override;
+    void removeCalendar(const Akonadi::CollectionCalendar::Ptr &calendar) override;
 
     Q_REQUIRED_RESULT Akonadi::Item::List selectedIncidences() const override;
     Q_REQUIRED_RESULT KCalendarCore::DateList selectedIncidenceDates() const override;
@@ -148,6 +154,7 @@ private:
     TodoViewView *mView = nullptr;
     TodoViewSortFilterProxyModel *mProxyModel = nullptr;
     TodoCategoriesDelegate *mCategoriesDelegate = nullptr;
+    std::unique_ptr<CalendarFilterModel> mCalendarFilterModel;
 
     TodoViewQuickSearch *mQuickSearch = nullptr;
     TodoViewQuickAddLine *mQuickAdd = nullptr;
