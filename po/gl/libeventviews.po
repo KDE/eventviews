@@ -3,14 +3,14 @@
 # Xosé <xosecalvo@gmail.com>, 2011, 2012, 2013.
 # Adrian Chaves Fernandez <adriyetichaves@gmail.com>, 2013, 2015, 2016, 2017.
 # Marce Villarino <mvillarino@kde-espana.org>, 2013, 2014.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019, 2020, 2023.
+# SPDX-FileCopyrightText: 2023 Adrián Chaves (Gallaecio)
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-25 01:40+0000\n"
-"PO-Revision-Date: 2023-06-23 22:19+0200\n"
+"POT-Creation-Date: 2023-10-01 01:55+0000\n"
+"PO-Revision-Date: 2023-09-30 12:55+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.2\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -34,14 +34,14 @@ msgstr "mvillarino@users.sourceforge.net, xosecalvo@gmail.com"
 #, kde-format
 msgid "Unable to lock item for modification. You cannot make any changes."
 msgstr ""
-"Non se pode bloquear o elemento para modificación. Non pode realizar cambios."
+"Non é posíbel bloquear o elemento para modificación. Non pode realizar "
+"cambios."
 
 #: agenda/agenda.cpp:968
-#, fuzzy, kde-format
-#| msgid "Locking Failed"
+#, kde-format
 msgctxt "@title:window"
 msgid "Locking Failed"
-msgstr "Fallou o bloqueo"
+msgstr "Produciuse un erro ao bloquear"
 
 #: agenda/agenda.cpp:1183
 #, kde-format
@@ -53,12 +53,11 @@ msgstr "Desasociar o evento da repetición"
 msgid ""
 "Unable to add the exception item to the calendar. No change will be done."
 msgstr ""
-"Non se pode engadir o elemento de excepción ao calendario. Non se aplicará "
+"Non é posíbel engadir o elemento de excepción ao calendario. Non se aplicará "
 "ningún cambio."
 
 #: agenda/agenda.cpp:1207 month/monthitem.cpp:447
-#, fuzzy, kde-format
-#| msgid "Error Occurred"
+#, kde-format
 msgctxt "@title:window"
 msgid "Error Occurred"
 msgstr "Produciuse un erro"
@@ -76,16 +75,15 @@ msgid "Attendee \"%1\" added to the calendar item \"%2\""
 msgstr "Engadiuse o asistente «%1» ao elemento do calendario «%2»"
 
 #: agenda/agendaitem.cpp:632
-#, fuzzy, kde-format
-#| msgid "Attendee added"
+#, kde-format
 msgctxt "@title:window"
 msgid "Attendee added"
-msgstr "Asistente engadido/a"
+msgstr "Engadiuse unha persoa asistente"
 
 #: agenda/agendaitem.cpp:856 agenda/agendaitem.cpp:951
 #, kde-format
 msgid "%1 - %2"
-msgstr "%1 - %2"
+msgstr "%1 — %2"
 
 #: agenda/agendaitem.cpp:865
 #, kde-format
@@ -101,12 +99,12 @@ msgstr "%1 %2 %3"
 #: agenda/agendaview.cpp:2209
 #, kde-format
 msgid "Unable to modify this to-do, because it cannot be locked."
-msgstr "Non se pode modificar esta tarefa, xa que non se pode bloquear."
+msgstr "Non é posíbel modificar esta tarefa, xa que non se pode bloquear."
 
 #: agenda/agendaview.cpp:2217
 #, kde-format
 msgid "Unable to save %1 \"%2\"."
-msgstr "Non se pode gardar %1 «%2»."
+msgstr "Non é posíbel gardar %1 «%2»."
 
 #: agenda/timelabels.cpp:329
 #, kde-format
@@ -212,7 +210,8 @@ msgstr "Método predeterminado de tratamento dos anexos de correo electrónico"
 #, kde-format
 msgid "The default way of attaching dropped emails to an event"
 msgstr ""
-"O xeito predeterminado de anexar mensaxes de correo electrónico a un evento"
+"O xeito predeterminado de anexar a un evento as mensaxes de correo "
+"electrónico soltadas."
 
 #. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (Personal Settings)
 #. i18n: ectx: label, entry (DefaultTodoAttachMethod), group (Hidden Options)
@@ -257,7 +256,7 @@ msgid ""
 msgstr ""
 "Marque isto para exportar o calendario a un ficheiro HTML cada vez que o "
 "garde. De maneira predeterminada, este ficheiro chamarase calendario.html e "
-"colocarase no cartafol persoal do usuario."
+"colocarase no cartafol persoal da persoa usuaria."
 
 #. i18n: ectx: label, entry, group (Save Settings)
 #: eventviews.kcfg:44
@@ -360,7 +359,7 @@ msgstr ""
 #: eventviews.kcfg:81
 #, kde-format
 msgid "Show Reminder Daemon in the System Tray"
-msgstr "Amosar o demo de lembranzas na bandexa do sistema"
+msgstr "Amosar o servizo de lembranzas na área de notificación."
 
 #. i18n: ectx: whatsthis, entry, group (System Tray)
 #: eventviews.kcfg:82
@@ -368,8 +367,8 @@ msgstr "Amosar o demo de lembranzas na bandexa do sistema"
 msgid ""
 "Check this box to show the KOrganizer reminder daemon in the system tray."
 msgstr ""
-"Marque esta opción para amosar o demo de lembranzas de KOrganizer na bandexa "
-"do sistema."
+"Marque esta opción para amosar o servizo de lembranzas de KOrganizer na área "
+"de notificación."
 
 #. i18n: ectx: whatsthis, entry (TimeZoneId), group (Time &amp; Date)
 #: eventviews.kcfg:90
@@ -457,7 +456,7 @@ msgstr ""
 #: eventviews.kcfg:122 viewerapp/settings.kcfg:15
 #, kde-format
 msgid "Enable tooltips for displaying summaries"
-msgstr "Activar mensaxes de aviso que amosen os resumos das actividades"
+msgstr "Activar indicacións emerxentes que amosen os resumos das actividades"
 
 #. i18n: ectx: whatsthis, entry, group (General View)
 #: eventviews.kcfg:123 viewerapp/settings.kcfg:16
@@ -466,8 +465,8 @@ msgid ""
 "Check this box to display summary tooltips when hovering the mouse over an "
 "event or a to-do."
 msgstr ""
-"Marque isto cando queira que se amose unha descrición cun resumo cando se "
-"poña o rato enriba dun evento."
+"Marque isto cando queira que se amosen indicacións emerxentes de resumo "
+"cando se poña o rato enriba dun evento."
 
 #. i18n: ectx: label, entry, group (General View)
 #: eventviews.kcfg:128
@@ -482,8 +481,8 @@ msgid ""
 "Check this box so that to-dos will use category colors and not colors "
 "specific to their due, due today or overdue state"
 msgstr ""
-"Marque isto para que as tarefas utilicen cores de categoría e non as cores "
-"específicas do seu estado de vencidas, vencen hoxe ou pasadas"
+"Marque isto para que as tarefas usen cores de categoría e non as cores "
+"específicas do seu estado de vencidas, vencen hoxe ou pasadas."
 
 #. i18n: ectx: label, entry, group (General View)
 #: eventviews.kcfg:134
@@ -543,8 +542,8 @@ msgid ""
 msgstr ""
 "Marque esta opción para que se amosen os días que conteñan eventos de "
 "repetición semanal en tipografía resaltada no Navegador de Datas, ou "
-"desmárquea para fornecer de máis relevancia a outros eventos (de repetición "
-"non semanal)."
+"desmárquea para dar máis relevancia a outros eventos (de repetición non "
+"semanal)."
 
 #. i18n: ectx: label, entry (HighlightTodos), group (General View)
 #: eventviews.kcfg:153
@@ -676,7 +675,7 @@ msgid ""
 "current-time line (Marcus Bains line)."
 msgstr ""
 "Marque isto para amosar unha liña na vista do día da semana indicando a liña "
-"da hora actual (liña de Marcus Bains)."
+"deste intre (liña de Marcus Bains)."
 
 #. i18n: ectx: tooltip, entry (MarcusBainsEnabled), group (Agenda View)
 #: eventviews.kcfg:199 viewerapp/settings.kcfg:49
@@ -694,7 +693,7 @@ msgstr "Amosar os segundos na liña da hora actual (Marcus Bains)"
 #: eventviews.kcfg:205 viewerapp/settings.kcfg:55
 #, kde-format
 msgid "Check this box if you want to show seconds on the current-time line."
-msgstr "Marque isto se quere amosar os segundos na liña da hora actual."
+msgstr "Marque isto se quere amosar os segundos na liña deste intre."
 
 #. i18n: ectx: tooltip, entry (MarcusBainsShowSeconds), group (Agenda View)
 #: eventviews.kcfg:206 viewerapp/settings.kcfg:56
@@ -756,9 +755,9 @@ msgid ""
 "configuration page for setting these colors."
 msgstr ""
 "Seleccione a opción «Categoría dentro, calendario fóra» se quere que os "
-"elementos do calendario aparezan coa cor da categoría asociada, co bordo do "
-"elemento da cor do calendario. Use a páxina de configuración das cores e da "
-"fonte para axustar estas cores."
+"elementos do calendario se debuxen coa cor da categoría asociada, co bordo "
+"do elemento da cor do calendario. Use a páxina de configuración das cores e "
+"da fonte para axustar estas cores."
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
 #: eventviews.kcfg:223 viewerapp/settings.kcfg:73
@@ -819,7 +818,7 @@ msgid ""
 "use the Colors and Fonts configuration page for setting these colors."
 msgstr ""
 "Seleccione a opción «Só a categoría» se quere que os elementos do calendario "
-"aparezan (tanto dentro como no bordo) na cor da categoría asociada. Use a "
+"se debuxen (tanto dentro como no bordo) coa cor da categoría asociada. Use a "
 "páxina de configuración das cores e da fonte para axustar estas cores."
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
@@ -845,8 +844,8 @@ msgid ""
 "Colors and Fonts configuration page for setting these colors."
 msgstr ""
 "Seleccione a opción «Só o calendario» se quere que os elementos do "
-"calendario aparezan (tanto dentro como o bordo) na cor do calendario. Use a "
-"páxina de configuración das cores e da fonte para axustar estas cores."
+"calendario se debuxen (tanto dentro como o bordo) coa cor do calendario. Use "
+"a páxina de configuración das cores e da fonte para axustar estas cores."
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
 #: eventviews.kcfg:238 viewerapp/settings.kcfg:88
@@ -930,7 +929,7 @@ msgstr "Amosar os calendarios un a par do outro"
 #: eventviews.kcfg:262 viewerapp/settings.kcfg:108
 #, kde-format
 msgid "Switch between views with tabs"
-msgstr "Alternar entre as vistas co tabulador"
+msgstr "Alternar entre as vistas con Tab"
 
 #. i18n: ectx: whatsthis, entry (AgendaViewCalendarDisplay), group (Agenda View)
 #: eventviews.kcfg:263 viewerapp/settings.kcfg:109
@@ -946,7 +945,7 @@ msgstr ""
 #: eventviews.kcfg:264 viewerapp/settings.kcfg:110
 #, kde-format
 msgid "Tab through calendars"
-msgstr "Alternar entre calendarios co tabulador"
+msgstr "Alternar entre calendarios con Tab"
 
 #. i18n: ectx: label, entry (EnableMonthScroll), group (Month View)
 #: eventviews.kcfg:274 viewerapp/settings.kcfg:120
@@ -983,7 +982,7 @@ msgstr ""
 #: eventviews.kcfg:282 viewerapp/settings.kcfg:128
 #, kde-format
 msgid "Display icons in month view items"
-msgstr "Activar as iconas dos elementos da vista mensual"
+msgstr "Amosar as iconas dos elementos da vista mensual"
 
 #. i18n: ectx: label, entry (ShowTimeInMonthView), group (Month View)
 #: eventviews.kcfg:287
@@ -1049,9 +1048,9 @@ msgid ""
 "calendars list, will not be displayed."
 msgstr ""
 "Marque esta opción para usar a xanela completa de KOrganizer cando se amose "
-"a vista mensual. Se se activa isto, gañará algún espazo na vista mensual, "
-"pero outros trebellos, como o navegador de datas, os detalles dos elementos "
-"e a lista de calendarios, non aparecerán."
+"a vista mensual. Se marca isto, gañará algún espazo na vista mensual, pero "
+"outros trebellos, como o navegador de datas, os detalles dos elementos e a "
+"lista de calendarios, non aparecerán."
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
 #: eventviews.kcfg:318 viewerapp/settings.kcfg:157
@@ -1063,9 +1062,9 @@ msgid ""
 "configuration page for setting these colors."
 msgstr ""
 "Seleccione a opción «Categoría dentro, calendario fóra» se quere que os "
-"elementos do calendario aparezan coa cor da categoría asociada, co bordo do "
-"elemento da cor do calendario. Use a páxina de configuración das cores e da "
-"fonte para axustar estas cores."
+"elementos do calendario se debuxen coa cor da categoría asociada, co bordo "
+"do elemento da cor do calendario. Use a páxina de configuración das cores e "
+"da fonte para axustar estas cores."
 
 #. i18n: ectx: tooltip, entry, group (Month View)
 #: eventviews.kcfg:319 viewerapp/settings.kcfg:158
@@ -1110,7 +1109,7 @@ msgid ""
 "use the Colors and Fonts configuration page for setting these colors."
 msgstr ""
 "Seleccione a opción «Só a categoría» se quere que os elementos do calendario "
-"aparezan (tanto dentro como no bordo) na cor da categoría asociada. Use a "
+"se debuxen (tanto dentro como no bordo) coa cor da categoría asociada. Use a "
 "páxina de configuración das cores e da fonte para axustar estas cores."
 
 #. i18n: ectx: tooltip, entry, group (Month View)
@@ -1128,8 +1127,8 @@ msgid ""
 "Colors and Fonts configuration page for setting these colors."
 msgstr ""
 "Seleccione a opción «Só o calendario» se quere que os elementos do "
-"calendario aparezan (tanto dentro como o bordo) na cor do calendario. Use a "
-"páxina de configuración das cores e da fonte para axustar estas cores."
+"calendario se debuxen (tanto dentro como o bordo) coa cor do calendario. Use "
+"a páxina de configuración das cores e da fonte para axustar estas cores."
 
 #. i18n: ectx: tooltip, entry, group (Month View)
 #: eventviews.kcfg:334 viewerapp/settings.kcfg:173
@@ -1184,9 +1183,9 @@ msgid ""
 "and the calendars list, will not be displayed."
 msgstr ""
 "Marque esta opción para usar a xanela completa de KOrganizer cando se amose "
-"a lista de tarefas. Se se activa isto, gañará algo de espazo na vista da "
-"lista de tarefas, pero outros trebellos, como o navegador de datas, os "
-"detalles das tarefas e a lista de calendarios, non se amosarán."
+"a lista de tarefas. Se marca isto, gañará algo de espazo na vista da lista "
+"de tarefas, pero outros trebellos, como o navegador de datas, os detalles "
+"das tarefas e a lista de calendarios, non se amosarán."
 
 #. i18n: ectx: label, entry, group (Todo View)
 #: eventviews.kcfg:362
@@ -1283,7 +1282,7 @@ msgstr ""
 #: eventviews.kcfg:397 viewerapp/settings.kcfg:216
 #, kde-format
 msgid "Agenda view current-time line color"
-msgstr "Cor da liña da hora actual na vista da axenda"
+msgstr "Cor da liña deste intre na vista da axenda"
 
 #. i18n: ectx: whatsthis, entry, group (Colors)
 #: eventviews.kcfg:398 viewerapp/settings.kcfg:217
@@ -1409,7 +1408,7 @@ msgstr ""
 #: eventviews.kcfg:440 viewerapp/settings.kcfg:266
 #, kde-format
 msgid "Current-time line"
-msgstr "Liña de hora actual"
+msgstr "Liña deste intre"
 
 #. i18n: ectx: whatsthis, entry, group (Fonts)
 #: eventviews.kcfg:441 viewerapp/settings.kcfg:267
@@ -1419,9 +1418,9 @@ msgid ""
 "open the \"Select Font\" dialog, allowing you to choose the font for the "
 "current-time line in the agenda view."
 msgstr ""
-"Prema este botón para configurar a fonte da liña do momento actual. Este "
-"botón abre o diálogo «Seleccionar a fonte», que permite escoller a fonte "
-"para as actividades na vista da axenda."
+"Prema este botón para configurar a fonte da liña deste intre. Este botón "
+"abre o diálogo «Seleccionar a fonte», que permite escoller a fonte para as "
+"actividades na vista da axenda."
 
 #. i18n: ectx: label, entry (DefaultTodoAttachMethod), group (Hidden Options)
 #: eventviews.kcfg:465
@@ -1516,7 +1515,8 @@ msgstr "Usar a cor do sistema"
 #, kde-format
 msgid "Use system color. If enabled will ignore all other color settings"
 msgstr ""
-"Usar a cor do sistema. Se está activa ignoraranse o resto de opcións de cores"
+"Usar a cor do sistema. Se escolle esta opción ignoraranse o resto de opcións "
+"de cores."
 
 #: journal/journalframe.cpp:153
 #, kde-format
@@ -1561,7 +1561,7 @@ msgstr "Abre un diálogo de impresión para esta entrada do diario"
 #: journal/journalframe.cpp:182
 #, kde-format
 msgid "Print preview"
-msgstr "Vista previa de impresión"
+msgstr "Vista de impresión"
 
 #: journal/journalframe.cpp:186
 #, kde-format
@@ -1597,7 +1597,7 @@ msgstr "Etiquetas"
 #: list/listview.cpp:366
 #, kde-format
 msgid "Summary [%1 - %2]"
-msgstr "Resumo [%1 - %2]"
+msgstr "Resumo (%1 — %2)"
 
 #: month/monthitem.cpp:306
 #, kde-format
@@ -1722,7 +1722,7 @@ msgctxt "@action:inmenu Unspecified priority"
 msgid "unspecified"
 msgstr "sen indicar"
 
-#: todo/tododelegates.cpp:153 todo/todoview.cpp:405
+#: todo/tododelegates.cpp:153 todo/todoview.cpp:455
 #, kde-format
 msgctxt "@action:inmenu highest priority"
 msgid "1 (highest)"
@@ -1746,7 +1746,7 @@ msgctxt "@action:inmenu"
 msgid "4"
 msgstr "4"
 
-#: todo/tododelegates.cpp:157 todo/todoview.cpp:409
+#: todo/tododelegates.cpp:157 todo/todoview.cpp:459
 #, kde-format
 msgctxt "@action:inmenu medium priority"
 msgid "5 (medium)"
@@ -1770,43 +1770,42 @@ msgctxt "@action:inmenu"
 msgid "8"
 msgstr "8"
 
-#: todo/tododelegates.cpp:161 todo/todoview.cpp:413
+#: todo/tododelegates.cpp:161 todo/todoview.cpp:463
 #, kde-format
 msgctxt "@action:inmenu lowest priority"
 msgid "9 (lowest)"
 msgstr "9 (a máis baixa)"
 
-#: todo/todoview.cpp:184
+#: todo/todoview.cpp:233
 #, kde-format
 msgid "Cannot move to-do to itself or a child of itself."
-msgstr "Non se pode mover a tarefa a si mesma ou a un fillo da mesma."
+msgstr "Non é posíbel mover a tarefa a si mesma ou a un fillo da mesma."
 
-#: todo/todoview.cpp:185
-#, fuzzy, kde-format
-#| msgid "Drop To-do"
+#: todo/todoview.cpp:234
+#, kde-format
 msgctxt "@title:window"
 msgid "Drop To-do"
-msgstr "Soltar a tarefa"
+msgstr "Cancelar a tarefa"
 
-#: todo/todoview.cpp:264
+#: todo/todoview.cpp:314
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display to-do list in a full window"
 msgstr "Amosar a lista de tarefas nunha xanela completa."
 
-#: todo/todoview.cpp:265
+#: todo/todoview.cpp:315
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Checking this option will cause the to-do view to use the full window."
 msgstr "Marcar esta opción fai que a vista de tarefas ocupe a xanela completa."
 
-#: todo/todoview.cpp:270
+#: todo/todoview.cpp:320
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display to-dos in flat list instead of a tree"
 msgstr "Amosar as tarefas nunha lista no canto de nunha árbore."
 
-#: todo/todoview.cpp:272
+#: todo/todoview.cpp:322
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1817,127 +1816,127 @@ msgstr ""
 "Ao marcar esta opción as tarefas aparecen como lista simple no canto de "
 "árbore xerárquica; as relacións de parentesco retíranse da pantalla."
 
-#: todo/todoview.cpp:311
+#: todo/todoview.cpp:361
 #, kde-format
 msgctxt "@action:inmenu show the to-do"
 msgid "&Show"
 msgstr "Amo&sar"
 
-#: todo/todoview.cpp:316
+#: todo/todoview.cpp:366
 #, kde-format
 msgctxt "@action:inmenu edit the to-do"
 msgid "&Edit..."
 msgstr "&Editar…"
 
-#: todo/todoview.cpp:323
+#: todo/todoview.cpp:373
 #, kde-format
 msgctxt "@action:inmenu delete the to-do"
 msgid "&Delete"
 msgstr "Elimina&r"
 
-#: todo/todoview.cpp:332
+#: todo/todoview.cpp:382
 #, kde-format
 msgctxt "@action:inmenu print the to-do"
 msgid "&Print..."
 msgstr "Im&primir…"
 
-#: todo/todoview.cpp:337
+#: todo/todoview.cpp:387
 #, kde-format
 msgctxt "@action:inmenu print preview the to-do"
 msgid "Print Previe&w..."
-msgstr "&Vista previa do impreso…"
+msgstr "&Vista de impresión…"
 
-#: todo/todoview.cpp:344
+#: todo/todoview.cpp:394
 #, kde-format
 msgctxt "@action:inmenu create a new to-do"
 msgid "New &To-do..."
 msgstr "Nova &tarefa…"
 
-#: todo/todoview.cpp:348
+#: todo/todoview.cpp:398
 #, kde-format
 msgctxt "@action:inmenu create a new sub-to-do"
 msgid "New Su&b-to-do..."
 msgstr "Nova su&btarefa…"
 
-#: todo/todoview.cpp:352
+#: todo/todoview.cpp:402
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Make this To-do Independent"
 msgstr "&Tornar esta tarefa independente"
 
-#: todo/todoview.cpp:354
+#: todo/todoview.cpp:404
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Make all Sub-to-dos &Independent"
 msgstr "Tornar todas as subtarefas &independentes"
 
-#: todo/todoview.cpp:365
+#: todo/todoview.cpp:415
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Create Event from To-do"
 msgstr "Crear un evento dunha tarefa"
 
-#: todo/todoview.cpp:373
+#: todo/todoview.cpp:423
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Create Note for To-do"
 msgstr "Crear unha nota para unha tarefa"
 
-#: todo/todoview.cpp:383
+#: todo/todoview.cpp:433
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Copy To"
 msgstr "&Copiar en"
 
-#: todo/todoview.cpp:390
+#: todo/todoview.cpp:440
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Move To"
 msgstr "&Mover para"
 
-#: todo/todoview.cpp:401
+#: todo/todoview.cpp:451
 #, kde-format
 msgctxt "@action:inmenu delete completed to-dos"
 msgid "Pur&ge Completed"
 msgstr "Purgar as &completadas"
 
-#: todo/todoview.cpp:404
+#: todo/todoview.cpp:454
 #, kde-format
 msgctxt "@action:inmenu unspecified priority"
 msgid "unspecified"
 msgstr "sen indicar"
 
-#: todo/todoview.cpp:406
+#: todo/todoview.cpp:456
 #, kde-format
 msgctxt "@action:inmenu priority value=2"
 msgid "2"
 msgstr "2"
 
-#: todo/todoview.cpp:407
+#: todo/todoview.cpp:457
 #, kde-format
 msgctxt "@action:inmenu priority value=3"
 msgid "3"
 msgstr "3"
 
-#: todo/todoview.cpp:408
+#: todo/todoview.cpp:458
 #, kde-format
 msgctxt "@action:inmenu priority value=4"
 msgid "4"
 msgstr "4"
 
-#: todo/todoview.cpp:410
+#: todo/todoview.cpp:460
 #, kde-format
 msgctxt "@action:inmenu priority value=6"
 msgid "6"
 msgstr "6"
 
-#: todo/todoview.cpp:411
+#: todo/todoview.cpp:461
 #, kde-format
 msgctxt "@action:inmenu priority value=7"
 msgid "7"
 msgstr "7"
 
-#: todo/todoview.cpp:412
+#: todo/todoview.cpp:462
 #, kde-format
 msgctxt "@action:inmenu priority value=8"
 msgid "8"
@@ -2117,7 +2116,7 @@ msgstr "Visor de vistas de calendario"
 #: viewerapp/mainwindow.ui:55
 #, kde-format
 msgid "Tab 1"
-msgstr "Separador 1"
+msgstr "Lapela 1"
 
 #. i18n: ectx: property (title), widget (QMenu, addViewMenu)
 #: viewerapp/mainwindow.ui:74
@@ -2153,7 +2152,7 @@ msgstr "Cronoloxía"
 #: viewerapp/settings.kcfg:241
 #, kde-format
 msgid "\"No category\" color (for \"Only category\" drawing schemes)"
-msgstr "Cor para «sen categoría» (para os esquemas de deseño «Só a categoría»)"
+msgstr "Cor para «sen categoría» (para os esquemas de debuxo «Só a categoría»)"
 
 #. i18n: ectx: whatsthis, entry, group (Colors)
 #: viewerapp/settings.kcfg:242
@@ -2210,7 +2209,7 @@ msgstr "Que vén agora?"
 #, kde-format
 msgctxt "date from - to"
 msgid "%1 - %2"
-msgstr "%1 - %2"
+msgstr "%1 — %2"
 
 #: whatsnext/whatsnextview.cpp:100
 #, kde-format
@@ -2226,7 +2225,7 @@ msgstr "Eventos e as tarefas que precisan resposta:"
 #, kde-format
 msgctxt "date, from - to"
 msgid "%1, %2 - %3"
-msgstr "%1, %2 - %3"
+msgstr "%1, %2 — %3"
 
 #: whatsnext/whatsnextview.cpp:308
 #, kde-format

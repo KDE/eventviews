@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-25 01:40+0000\n"
-"PO-Revision-Date: 2023-09-28 16:47+0200\n"
+"POT-Creation-Date: 2023-10-01 01:55+0000\n"
+"PO-Revision-Date: 2023-09-30 09:43+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -700,6 +700,10 @@ msgid ""
 "time range in the daily and weekly view. To select a time range, drag the "
 "mouse from the start time to the end time of the event you are about to plan."
 msgstr ""
+"დასვით ეს თოლია მოვლენების რედაქტორის ავტომატურად გასაშვებად, როცა დროის "
+"დღის ან კვირის ხედში დროის შუალედს გაუშვებთ. იმისათვის, რომ დროის შუალედი "
+"მონიშნოთ, გადაათრიეთ თაგუნა საწყისი დროიდან საბოლოო დრომდე მოვლენისთვის, "
+"რომლის დაგეგმვასაც აპირებთ."
 
 #. i18n: ectx: tooltip, entry (SelectionStartsEditor), group (Agenda View)
 #: eventviews.kcfg:213 viewerapp/settings.kcfg:63
@@ -732,6 +736,10 @@ msgid ""
 "border drawn in the color of its calendar. Please use the Colors and Fonts "
 "configuration page for setting these colors."
 msgstr ""
+"აირჩიეთ პარამეტრი \"კატეგორია შიგნით, კალენდარი გარეთ\", თუ გნებავთ, "
+"კალენდრის ელემენტები მათთვის ასოცირებულ კატეგორიის ფერში დახატოთ, ელემენტის "
+"საზღვარი კი მისი კალენდრის ფერის იქნება. ამ ფერების დასაყენებლად ფერებისა და "
+"ფონტების ფანჯარა გამოიყენეთ."
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
 #: eventviews.kcfg:223 viewerapp/settings.kcfg:73
@@ -740,6 +748,8 @@ msgid ""
 "Draw agenda items in their category color inside and calendar color for "
 "their border"
 msgstr ""
+"დღის წესრიგის ელემენტების დახატვა მათი კატეგორიის ფერით შიგნიდან და "
+"კალენდრის ფერით მათი საზღვრისთვის"
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
@@ -758,6 +768,10 @@ msgid ""
 "border drawn in the color of its category. Please use the Colors and Fonts "
 "configuration page for setting these colors."
 msgstr ""
+"აირჩიეთ პარამეტრი \"კალენდარი შიგნით, კატეგორია გარეთ\", თუ გნებავთ, "
+"კალენდრის ელემენტები მათთვის ასოცირებულ კალენდრის ფერში დახატოთ, ელემენტის "
+"საზღვარი კი მისი კატეგორიის ფერის იქნება. ამ ფერების დასაყენებლად ფერებისა "
+"და ფონტების ფანჯარა გამოიყენეთ."
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
 #: eventviews.kcfg:228 viewerapp/settings.kcfg:78
@@ -766,6 +780,8 @@ msgid ""
 "Draw agenda items in their calendar color inside and category color for "
 "their border"
 msgstr ""
+"დღის წესრიგის ელემენტების დახატვა მათი კალენდრის ფერით შიგნიდან და "
+"კატეგორიის ფერით მათი საზღვრისთვის"
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
@@ -783,12 +799,18 @@ msgid ""
 "(both inside and border) in the color of their associated category. Please "
 "use the Colors and Fonts configuration page for setting these colors."
 msgstr ""
+"აირჩეთ პარამეტრი \"მხოლოდ კატეგორია\", თუ გნებავთ, კალენდრის ელემენტები "
+"(ორივე, შიგნიდან და საზღვარი) ასოცირებული კატეგორიის ფერით დაიხატოს. ამ "
+"ფერების დასაყენებლად შეგიძლიათ მორგების ფანჯრის ფერებისა და ფონტების არჩევის "
+"გვერდი გამოიყენოთ."
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
 #: eventviews.kcfg:233 viewerapp/settings.kcfg:83
 #, kde-format
 msgid "Draw agenda items using their category color for the inside and border"
 msgstr ""
+"დღის წესრიგის ელემენტების დახატვა მათი კატეგორიის ფერში შიგნიდან და "
+"საზღვრისთვის"
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
@@ -806,12 +828,18 @@ msgid ""
 "(both inside and border) in the color of their calendar. Please use the "
 "Colors and Fonts configuration page for setting these colors."
 msgstr ""
+"აირჩეთ პარამეტრი \"მხოლოდ კალენდარი\", თუ გნებავთ, კალენდრის ელემენტები "
+"(ორივე, შიგნიდან და საზღვარი) ასოცირებული კალენდრის ფერით დაიხატოს. ამ "
+"ფერების დასაყენებლად შეგიძლიათ მორგების ფანჯრის ფერებისა და ფონტების არჩევის "
+"გვერდი გამოიყენოთ."
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
 #: eventviews.kcfg:238 viewerapp/settings.kcfg:88
 #, kde-format
 msgid "Draw agenda items using their calendar color for the inside and border"
 msgstr ""
+"დღის წესრიგის ელემენტების დახატვა მათი კალენდრის ფერში შიგნიდან და "
+"საზღვრისთვის"
 
 #. i18n: ectx: label, entry (ColorBusyDaysEnabled), group (Agenda View)
 #. i18n: ectx: label, entry (ColorMonthBusyDaysEnabled), group (Month View)
@@ -829,6 +857,10 @@ msgid ""
 "you can change the background color used for this option on the Colors "
 "configuration page. Look for the \"Busy days background color\" setting."
 msgstr ""
+"დასვით ეს თოლია, თუ გნებავთ, დღის წესრიგის ფონის ფერი სხვა ფერით იყოს "
+"შეღებილი დღეებში, რომელსაც ერთი სრულდღიანი მოვლენა მაინც, როგორც დაკავებულია "
+"მონიშნული. ფონის ფერი ასევე ფერების მორგების გვერდზეც შეგიძლიათ, შეცვალოთ. "
+"იპოვეთ პარამეტრი \"დაკავებული დღეების ფონის ფერი\"."
 
 #. i18n: ectx: label, entry (AgendaViewCalendarDisplay), group (Agenda View)
 #: eventviews.kcfg:249 viewerapp/settings.kcfg:95
@@ -849,6 +881,8 @@ msgid ""
 "Select the \"Merge all calendars into one view\" option if you would like "
 "all your calendars to be shown together in one agenda view."
 msgstr ""
+"აირჩიეთ პარამეტრი \"ყველა კალენდრის ერთ ხედში შერწყმა\", თუ გნებავთ, ყველა "
+"კალენდარი ერთ დღის წესრიგის ხედში იხილოთ."
 
 #. i18n: ectx: tooltip, entry (AgendaViewCalendarDisplay), group (Agenda View)
 #: eventviews.kcfg:254 viewerapp/settings.kcfg:100
@@ -869,6 +903,8 @@ msgid ""
 "Select the \"Show calendars side by side\" option if you would like to see "
 "two calendars at once, in a side-by-side view."
 msgstr ""
+"არჩიეთ პარამეტრი \"კალენდრების გვერდიგვერდ ჩვენება\", თუ ორი კალენდრის "
+"გვერდიგვერდ ხედში ნახვა გნებავთ."
 
 #. i18n: ectx: tooltip, entry (AgendaViewCalendarDisplay), group (Agenda View)
 #: eventviews.kcfg:259 viewerapp/settings.kcfg:105
@@ -889,6 +925,8 @@ msgid ""
 "Select \"Switch between views with tabs\" if you would like to alternate "
 "between calendars using the tab key."
 msgstr ""
+"აირჩიეთ პარამეტრი \"ხედებს შორის ტაბით გადართვა\", თუ გნებავთ, ღილაკმა Tab "
+"კალენდრებს შორის გადაგიყვანოთ."
 
 #. i18n: ectx: tooltip, entry (AgendaViewCalendarDisplay), group (Agenda View)
 #: eventviews.kcfg:264 viewerapp/settings.kcfg:110
@@ -909,6 +947,8 @@ msgid ""
 "Check this box to display scrollbars when clicking on a cell in the month "
 "view; they will only appear when needed though."
 msgstr ""
+"დასვით ეს თოლია თვის ხედში დაწკაპუნებისას ჩოჩიების საჩვენებლად. ისინი მხოლოდ "
+"მაშინ გამოჩნდება, როცა საჭიროა."
 
 #. i18n: ectx: label, entry (EnableMonthItemIcons), group (Month View)
 #: eventviews.kcfg:280 viewerapp/settings.kcfg:126
@@ -994,6 +1034,10 @@ msgid ""
 "but other widgets, such as the date navigator, the item details and the "
 "calendars list, will not be displayed."
 msgstr ""
+"დასვით ეს თოლია თვის ხედის ჩვენებისას KOrganizer-ის სრული ფანჯრის "
+"საჩვენებლად. თუ ეს თოლია დასმულია, თვის ხედისთვის მეტ ადგილს მიიღებთ, მაგრამ "
+"სხვა ვიჯეტები, როგორიცაა თარიღის ნავიგატორი, ელემენტის დეტალები და "
+"კალენდრების სია, ნაჩვენები არ იქნება."
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
 #: eventviews.kcfg:318 viewerapp/settings.kcfg:157
@@ -1004,6 +1048,10 @@ msgid ""
 "border drawn in the color of its calendar.  Please use the Colors and Fonts "
 "configuration page for setting these colors."
 msgstr ""
+"აირჩიეთ პარამეტრი \"კატეგორია შიგნით, კალენდარი გარეთ\", თუ გნებავთ, "
+"კალენდრის ელემენტები მათთვის ასოცირებულ კატეგორიის ფერში დახატოთ, ელემენტის "
+"საზღვარი კი მისი კალენდრის ფერის იქნება.   ამ ფერების დასაყენებლად ფერებისა "
+"და ფონტების ფანჯარა გამოიყენეთ."
 
 #. i18n: ectx: tooltip, entry, group (Month View)
 #: eventviews.kcfg:319 viewerapp/settings.kcfg:158
@@ -1012,6 +1060,8 @@ msgid ""
 "Draw month items in their category color inside and calendar color for their "
 "border"
 msgstr ""
+"თვის ელემენტების დახატვა მათი კატეგორიის ფერით შიგნიდან და კალენდრის ფერით "
+"მათი საზღვრისთვის"
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
 #: eventviews.kcfg:323 viewerapp/settings.kcfg:162
@@ -1022,6 +1072,10 @@ msgid ""
 "border drawn in the color of its category.  Please use the Colors and Fonts "
 "configuration page for setting these colors."
 msgstr ""
+"აირჩიეთ პარამეტრი \"კალენდარი შიგნით, კატეგორია გარეთ\", თუ გნებავთ, "
+"კალენდრის ელემენტები მათთვის ასოცირებულ კალენდრის ფერში დახატოთ, ელემენტის "
+"საზღვარი კი მისი კატეგორიის ფერის იქნება.   ამ ფერების დასაყენებლად ფერებისა "
+"და ფონტების ფანჯარა გამოიყენეთ."
 
 #. i18n: ectx: tooltip, entry, group (Month View)
 #: eventviews.kcfg:324 viewerapp/settings.kcfg:163
@@ -1030,6 +1084,8 @@ msgid ""
 "Draw month items in their calendar color inside and category color for their "
 "border"
 msgstr ""
+"თვის ელემენტების დახატვა მათი კალენდრის ფერით შიგნიდან და კატეგორიის ფერით "
+"მათი საზღვრისთვის"
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
 #: eventviews.kcfg:328 viewerapp/settings.kcfg:167
@@ -1039,12 +1095,17 @@ msgid ""
 "(both inside and border) in the color of their associated category.  Please "
 "use the Colors and Fonts configuration page for setting these colors."
 msgstr ""
+"აირჩეთ პარამეტრი \"მხოლოდ კატეგორია\", თუ გნებავთ, კალენდრის ელემენტები "
+"(ორივე, შიგნიდან და საზღვარი) ასოცირებული კატეგორიის ფერით დაიხატოს.   ამ "
+"ფერების დასაყენებლად შეგიძლიათ მორგების ფანჯრის ფერებისა და ფონტების არჩევის "
+"გვერდი გამოიყენოთ."
 
 #. i18n: ectx: tooltip, entry, group (Month View)
 #: eventviews.kcfg:329 viewerapp/settings.kcfg:168
 #, kde-format
 msgid "Draw month items using their category color for the inside and border"
 msgstr ""
+"თვის ელემენტების დახატვა მათი კატეგორიის ფერში შიგნიდან და საზღვრისთვის"
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
 #: eventviews.kcfg:333 viewerapp/settings.kcfg:172
@@ -1054,12 +1115,16 @@ msgid ""
 "(both inside and border) in the color of their calendar.  Please use the "
 "Colors and Fonts configuration page for setting these colors."
 msgstr ""
+"აირჩეთ პარამეტრი \"მხოლოდ კალენდარი\", თუ გნებავთ, კალენდრის ელემენტები "
+"(ორივე, შიგნიდან და საზღვარი) ასოცირებული კალენდრის ფერით დაიხატოს.   ამ "
+"ფერების დასაყენებლად შეგიძლიათ მორგების ფანჯრის ფერებისა და ფონტების არჩევის "
+"გვერდი გამოიყენოთ."
 
 #. i18n: ectx: tooltip, entry, group (Month View)
 #: eventviews.kcfg:334 viewerapp/settings.kcfg:173
 #, kde-format
 msgid "Draw month items using their calendar color for the inside and border"
-msgstr ""
+msgstr "თვის ელემენტების დახატვა მათი კალენდრის ფერში შიგნიდან და საზღვრისთვის"
 
 #. i18n: ectx: whatsthis, entry (ColorMonthBusyDaysEnabled), group (Month View)
 #: eventviews.kcfg:342
@@ -1071,6 +1136,10 @@ msgid ""
 "Colors configuration page. Look for the \"Busy days background color\" "
 "setting."
 msgstr ""
+"დასვით ეს თოლია, თუ გნებავთ, თვის ხედის ფონის ფერი სხვა ფერით იყოს შეღებილი "
+"დღეებში, რომელსაც ერთი სრულდღიანი მოვლენა მაინც, როგორც დაკავებულია "
+"მონიშნული. ფონის ფერი ასევე ფერების მორგების გვერდზეც შეგიძლიათ, შეცვალოთ. "
+"იპოვეთ პარამეტრი \"დაკავებული დღეების ფონის ფერი\"."
 
 #. i18n: ectx: label, entry, group (Todo View)
 #: eventviews.kcfg:350 viewerapp/settings.kcfg:183
@@ -1085,6 +1154,8 @@ msgid ""
 "Check this box if you want all completed to-dos to be always grouped at the "
 "bottom of the to-do list."
 msgstr ""
+"დასვით ეს თოლია, თუ გნებავთ, დასრულებული გასაკეთებლები სიის ბოლოში, "
+"დაჯგუფებულად გამოჩნდეს."
 
 #. i18n: ectx: label, entry, group (Todo View)
 #: eventviews.kcfg:356 viewerapp/settings.kcfg:189
@@ -1101,6 +1172,10 @@ msgid ""
 "list view, but other widgets, such as the date navigator, the to-do details "
 "and the calendars list, will not be displayed."
 msgstr ""
+"დასვით ეს თოლია გასაკეთებლების სიის ხედის ჩვენებისას KOrganizer-ის სრული "
+"ფანჯრის საჩვენებლად. თუ ეს თოლია დასმულია, გასაკეთებლების სიის ხედისთვის მეტ "
+"ადგილს მიიღებთ, მაგრამ სხვა ვიჯეტები, როგორიცაა თარიღის ნავიგატორი, "
+"გასაკეთებლის დეტალები და კალენდრების სია, ნაჩვენები არ იქნება."
 
 #. i18n: ectx: label, entry, group (Todo View)
 #: eventviews.kcfg:362
@@ -1121,6 +1196,8 @@ msgid ""
 "Check this box if you want to see all your to-dos in a flat list instead of "
 "being arranged in a hierarchical tree."
 msgstr ""
+"დასვით ეს თოლია, თუ გნებავთ, ყველა თქვენი გასაკეთებელი იერარქიული ხის მაგიერ "
+"ბრტყელი სიის სახით დაინახოთ."
 
 #. i18n: ectx: label, entry, group (Todo View)
 #: eventviews.kcfg:369 viewerapp/settings.kcfg:195
@@ -1135,6 +1212,8 @@ msgid ""
 "Check this box to record the completion of a to-do in a new entry of your "
 "journal automatically."
 msgstr ""
+"დასვით ეს თოლია გასაკეთებლის დასრულების შესახებ ჟურნალში ახალი ჩანაწერის "
+"ავტომატურად გასაკეთებლად."
 
 #. i18n: ectx: label, entry, group (Colors)
 #. i18n: ectx: label, entry, group (Theming)
@@ -1155,6 +1234,9 @@ msgid ""
 "Select the holiday color here. The holiday color will be used for the "
 "holiday name in the month view and the holiday number in the date navigator."
 msgstr ""
+"აირჩიეთ აქ დასვენების დღის ფერები. დასვენების დღის ფერი გამოყენებული იქნება "
+"დასვენების სახელებზე თვის ხედში და დასვენების დღის ნომერზე თარიღის "
+"ნავიგატორში."
 
 #. i18n: ectx: label, entry (AgendaBgColor), group (Colors)
 #. i18n: ectx: label, entry, group (Theming)
@@ -1183,6 +1265,8 @@ msgid ""
 "When you have an all day event marked as busy, you can have a different "
 "agenda or month view background color for that day. Select the color here."
 msgstr ""
+"როცა თქვენ მთელი დღე, როგორც დაკავებული, გაქვთ მონიშნული, შეგიძლიათ, ამ დღეს "
+"დღის განრიგში ან თვის ხედში სხვა ფერი ჰქონდეს. ამ ფერს აქედან აყენებთ."
 
 #. i18n: ectx: label, entry, group (Colors)
 #: eventviews.kcfg:397 viewerapp/settings.kcfg:216
@@ -1267,6 +1351,10 @@ msgid ""
 "that shows the hours in the agenda view. This button will open the \"Select "
 "Font\" dialog, allowing you to choose the hour font for the time bar."
 msgstr ""
+"დააწექით ამ ღილაკს დროის პანელის ფონტის მოსარგებად. დროის პანელი ვიჯეტია, "
+"რომელიც დღის წესრიგის ხედში საათებს აჩვენებს. ეს ღილაკი გახსნის ფონტის "
+"არჩევნის ფანჯარას, რითიც საშუალებას გაძლევთ, დროის პანელზე საათის "
+"საჩვენებელი ფონტი აირჩიოთ."
 
 #. i18n: ectx: label, entry, group (Fonts)
 #: eventviews.kcfg:430 viewerapp/settings.kcfg:256
@@ -1282,6 +1370,9 @@ msgid ""
 "the \"Select Font\" dialog, allowing you to choose the font for the items in "
 "the month view."
 msgstr ""
+"დააწექით ამ ღილაკს თვის ხედის ფონტის მოსარგებად. ეს ღილაკი გასნის ფონტის "
+"არჩევის ფანჯარას, რითიც საშუალებას მოგცემთ, აირჩიოთ ფონტი, რომლითაც თვის "
+"ხედის ელემენტები გამოჩნდება."
 
 #. i18n: ectx: label, entry, group (Fonts)
 #: eventviews.kcfg:435 viewerapp/settings.kcfg:261
@@ -1297,6 +1388,9 @@ msgid ""
 "the \"Select Font\" dialog, allowing you to choose the font for the events "
 "in the agenda view."
 msgstr ""
+"დააწექით ამ ღილაკს დღის წესრიგის ფონტის მოსარგებად. ეს ღილაკი გასნის ფონტის "
+"არჩევის ფანჯარას, რითიც საშუალებას მოგცემთ, აირჩიოთ ფონტი, რომლითაც დღის "
+"წესრიგის ელემენტები გამოჩნდება."
 
 #. i18n: ectx: label, entry, group (Fonts)
 #: eventviews.kcfg:440 viewerapp/settings.kcfg:266
@@ -1312,6 +1406,9 @@ msgid ""
 "open the \"Select Font\" dialog, allowing you to choose the font for the "
 "current-time line in the agenda view."
 msgstr ""
+"დააწექით ამ ღილაკს მიმდინარე დროის ხაზის ფონტის მოსარგებად. ეს ღილაკი გასნის "
+"ფონტის არჩევის ფანჯარას, რითიც საშუალებას მოგცემთ, აირჩიოთ ფონტი, რომლითაც "
+"მიმდინარე დროის ხაზის ელემენტები გამოჩნდება."
 
 #. i18n: ectx: label, entry (DefaultTodoAttachMethod), group (Hidden Options)
 #: eventviews.kcfg:465
@@ -1323,7 +1420,7 @@ msgstr "გეგმაზე მიმაგრების ნაგული�
 #: eventviews.kcfg:466
 #, kde-format
 msgid "The default way of attaching dropped emails to a task"
-msgstr ""
+msgstr "დაყრილი ელფოსტების ამოცანაზე მიმაგრების ნაგულისხმევი გზა"
 
 #. i18n: ectx: label, entry, group (Theming)
 #. i18n: ectx: label, entry, group (Theme/Month view)
@@ -1339,12 +1436,15 @@ msgid ""
 "Select the highlight color here. The highlight color will be used for "
 "marking the currently selected area in your agenda and in the date navigator."
 msgstr ""
+"აირჩიეთ გამოკვეთის ფერი. გამოკვეთის ფერი დღის წესრიგში და თარიღის "
+"ნავიგატორში ამჟამად მონიშნული ადგილის გამოსაკვეთად გამოიყენება."
 
 #. i18n: ectx: whatsthis, entry, group (Theming)
 #: eventviews.kcfg:529
 #, kde-format
 msgid "Select the working hours background color for the agenda view here."
 msgstr ""
+"აქ შეგიძლიათ დღის განრიგის ხედისთვის სამუშაო საათების ფონის ფერი აირჩიოთ."
 
 #. i18n: ectx: label, entry, group (Theme/Month view)
 #: eventviews.kcfg:616
@@ -1365,12 +1465,14 @@ msgid ""
 "Select the highlight color here. The highlight color will be used for "
 "marking the currently selected area in your Month and in the date navigator."
 msgstr ""
+"აირჩიეთ გამოკვეთის ფერი. გამოკვეთის ფერი თვის ხედში და თარიღის ნავიგატორში "
+"ამჟამად მონიშნული ადგილის გამოსაკვეთად გამოიყენება."
 
 #. i18n: ectx: whatsthis, entry, group (Theme/Month view)
 #: eventviews.kcfg:629
 #, kde-format
 msgid "Select the working hours background color for the Month view here."
-msgstr ""
+msgstr "აქ შეგიძლიათ თვის ხედისთვის სამუშაო საათების ფონის ფერი აირჩიოთ."
 
 #. i18n: ectx: label, entry, group (Theme/Month view)
 #: eventviews.kcfg:651
@@ -1386,6 +1488,9 @@ msgid ""
 "for events categories in your Month. Note that you can specify a separate "
 "color for each event category below."
 msgstr ""
+"აირჩიეთ ნაგულისხმევი მოვლენის ფერი. ნაგულისხმევი მოვლენინს ფერი თქვენს თვის "
+"ხედში მოვლენების კატეგორიებში გამოიყენება. დაიმახსოვრეთ, რომ ქვემოთ თითოეული "
+"მოვლენის კატეგორიისთვის ფერები ცალ-ცალკე შეგიძლიათ, აირჩიოთ."
 
 #. i18n: ectx: label, entry, group (Theme/Month view)
 #: eventviews.kcfg:717
@@ -1530,6 +1635,8 @@ msgid ""
 "Click this button and the month view will be enlarged to fill the maximum "
 "available window space / or shrunk back to its normal size."
 msgstr ""
+"დააწკაპუნეთ ამ ღილაკზე და თვის ფერი გადიდდება და ფანჯრისთვის ხელმისაწვდომ "
+"სივრცეს შეავსებს / თავის ნორმალურ ზომას დაუბრუნდება."
 
 #: month/monthview.cpp:220
 #, kde-format
@@ -1542,7 +1649,7 @@ msgstr "ერთი თვით უკან გადასვლა"
 msgctxt "@info:whatsthis"
 msgid ""
 "Click this button and the view will be scrolled back in time by 1 month."
-msgstr ""
+msgstr "დააწკაპუნეთ ამ ღილაკზე და ხედი 1 თვით უკან გადაიხვევა."
 
 #: month/monthview.cpp:227
 #, kde-format
@@ -1554,7 +1661,7 @@ msgstr "ერთი კვირით უკან გადასვლა"
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Click this button and the view will be scrolled back in time by 1 week."
-msgstr ""
+msgstr "დააწკაპუნეთ ამ ღილაკზე და ხედი 1 კვირით უკან გადაიხვევა."
 
 #: month/monthview.cpp:234
 #, kde-format
@@ -1567,7 +1674,7 @@ msgstr "ერთი კვირით წინ გადასვლა"
 msgctxt "@info:whatsthis"
 msgid ""
 "Click this button and the view will be scrolled forward in time by 1 week."
-msgstr ""
+msgstr "დააწკაპუნეთ ამ ღილაკზე და ხედი 1 კვირით წინ გადაიხვევა."
 
 #: month/monthview.cpp:241
 #, kde-format
@@ -1580,7 +1687,7 @@ msgstr "ერთი თვით წინ გადასვლა"
 msgctxt "@info:whatsthis"
 msgid ""
 "Click this button and the view will be scrolled forward in time by 1 month."
-msgstr ""
+msgstr "დააწკაპუნეთ ამ ღილაკზე და ხედი 1 თვით წინ გადაიხვევა."
 
 #: multiagenda/multiagendaview.cpp:96
 #, kde-format
@@ -1603,7 +1710,7 @@ msgctxt "@action:inmenu Unspecified priority"
 msgid "unspecified"
 msgstr "მიუთითებელი"
 
-#: todo/tododelegates.cpp:153 todo/todoview.cpp:405
+#: todo/tododelegates.cpp:153 todo/todoview.cpp:455
 #, kde-format
 msgctxt "@action:inmenu highest priority"
 msgid "1 (highest)"
@@ -1627,7 +1734,7 @@ msgctxt "@action:inmenu"
 msgid "4"
 msgstr "4"
 
-#: todo/tododelegates.cpp:157 todo/todoview.cpp:409
+#: todo/tododelegates.cpp:157 todo/todoview.cpp:459
 #, kde-format
 msgctxt "@action:inmenu medium priority"
 msgid "5 (medium)"
@@ -1651,42 +1758,42 @@ msgctxt "@action:inmenu"
 msgid "8"
 msgstr "8"
 
-#: todo/tododelegates.cpp:161 todo/todoview.cpp:413
+#: todo/tododelegates.cpp:161 todo/todoview.cpp:463
 #, kde-format
 msgctxt "@action:inmenu lowest priority"
 msgid "9 (lowest)"
 msgstr "9 (უმდაბლესი)"
 
-#: todo/todoview.cpp:184
+#: todo/todoview.cpp:233
 #, kde-format
 msgid "Cannot move to-do to itself or a child of itself."
 msgstr "გასაკეთებლის თავისივე შვილში გადატანა შეუძლებელია."
 
-#: todo/todoview.cpp:185
+#: todo/todoview.cpp:234
 #, kde-format
 msgctxt "@title:window"
 msgid "Drop To-do"
 msgstr "გასაკეთებლის მოცილება"
 
-#: todo/todoview.cpp:264
+#: todo/todoview.cpp:314
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display to-do list in a full window"
 msgstr "გასაკეთებლების სიის სრულ ფანჯარაში ჩვენება"
 
-#: todo/todoview.cpp:265
+#: todo/todoview.cpp:315
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Checking this option will cause the to-do view to use the full window."
-msgstr ""
+msgstr "ამ პარამეტრის ჩართვა გასაკეთებლის ხედს სრულ ფანჯარაში გაუშვებს."
 
-#: todo/todoview.cpp:270
+#: todo/todoview.cpp:320
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display to-dos in flat list instead of a tree"
 msgstr "გასაკეთებლების ხის მაგიერ ბრტყელ სიაში ჩვენება"
 
-#: todo/todoview.cpp:272
+#: todo/todoview.cpp:322
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1694,128 +1801,130 @@ msgid ""
 "instead of a hierarchical tree; the parental relationships are removed in "
 "the display."
 msgstr ""
+"ამ პარამეტრის ჩართვა გასაკეთებლების იერარქიული ხის მაგიერ ბრტყელი სიის სახით "
+"გამოტანას გამოიწვევს. ჩვენებისას მშობლებთან ურთიერთობები წაიშლება."
 
-#: todo/todoview.cpp:311
+#: todo/todoview.cpp:361
 #, kde-format
 msgctxt "@action:inmenu show the to-do"
 msgid "&Show"
 msgstr "&ჩვენება"
 
-#: todo/todoview.cpp:316
+#: todo/todoview.cpp:366
 #, kde-format
 msgctxt "@action:inmenu edit the to-do"
 msgid "&Edit..."
 msgstr "&ჩასწორება..."
 
-#: todo/todoview.cpp:323
+#: todo/todoview.cpp:373
 #, kde-format
 msgctxt "@action:inmenu delete the to-do"
 msgid "&Delete"
 msgstr "&წაშლა"
 
-#: todo/todoview.cpp:332
+#: todo/todoview.cpp:382
 #, kde-format
 msgctxt "@action:inmenu print the to-do"
 msgid "&Print..."
 msgstr "&ამობეჭდვა..."
 
-#: todo/todoview.cpp:337
+#: todo/todoview.cpp:387
 #, kde-format
 msgctxt "@action:inmenu print preview the to-do"
 msgid "Print Previe&w..."
 msgstr "&დასაბეჭდის გადახედვა..."
 
-#: todo/todoview.cpp:344
+#: todo/todoview.cpp:394
 #, kde-format
 msgctxt "@action:inmenu create a new to-do"
 msgid "New &To-do..."
 msgstr "&ახალი განრიგი..."
 
-#: todo/todoview.cpp:348
+#: todo/todoview.cpp:398
 #, kde-format
 msgctxt "@action:inmenu create a new sub-to-do"
 msgid "New Su&b-to-do..."
 msgstr "ახალი &ქვეგანრიგი..."
 
-#: todo/todoview.cpp:352
+#: todo/todoview.cpp:402
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Make this To-do Independent"
 msgstr "ამ გასაკეთებლის დამოუკიდებლად &გადაკეთება"
 
-#: todo/todoview.cpp:354
+#: todo/todoview.cpp:404
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Make all Sub-to-dos &Independent"
 msgstr "ყველა ქვეგასაკეთებლის &დამოუკიდებლად გადაკეთება"
 
-#: todo/todoview.cpp:365
+#: todo/todoview.cpp:415
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Create Event from To-do"
 msgstr "გასაკეთებლიდან მოვლენის შექმნა"
 
-#: todo/todoview.cpp:373
+#: todo/todoview.cpp:423
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Create Note for To-do"
 msgstr "გასაკეთებლისთვის შენიშვნის შექმნა"
 
-#: todo/todoview.cpp:383
+#: todo/todoview.cpp:433
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Copy To"
 msgstr "&გადაკოპირება"
 
-#: todo/todoview.cpp:390
+#: todo/todoview.cpp:440
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Move To"
 msgstr "&გადატანა"
 
-#: todo/todoview.cpp:401
+#: todo/todoview.cpp:451
 #, kde-format
 msgctxt "@action:inmenu delete completed to-dos"
 msgid "Pur&ge Completed"
-msgstr ""
+msgstr "&წაშლა დასრულდა"
 
-#: todo/todoview.cpp:404
+#: todo/todoview.cpp:454
 #, kde-format
 msgctxt "@action:inmenu unspecified priority"
 msgid "unspecified"
 msgstr "მიუთითებელი"
 
-#: todo/todoview.cpp:406
+#: todo/todoview.cpp:456
 #, kde-format
 msgctxt "@action:inmenu priority value=2"
 msgid "2"
 msgstr "2"
 
-#: todo/todoview.cpp:407
+#: todo/todoview.cpp:457
 #, kde-format
 msgctxt "@action:inmenu priority value=3"
 msgid "3"
 msgstr "3"
 
-#: todo/todoview.cpp:408
+#: todo/todoview.cpp:458
 #, kde-format
 msgctxt "@action:inmenu priority value=4"
 msgid "4"
 msgstr "4"
 
-#: todo/todoview.cpp:410
+#: todo/todoview.cpp:460
 #, kde-format
 msgctxt "@action:inmenu priority value=6"
 msgid "6"
 msgstr "6"
 
-#: todo/todoview.cpp:411
+#: todo/todoview.cpp:461
 #, kde-format
 msgctxt "@action:inmenu priority value=7"
 msgid "7"
 msgstr "7"
 
-#: todo/todoview.cpp:412
+#: todo/todoview.cpp:462
 #, kde-format
 msgctxt "@action:inmenu priority value=8"
 msgid "8"
@@ -1838,6 +1947,7 @@ msgctxt "@info:whatsthis"
 msgid ""
 "Enter text here to filter the to-dos that are shown by matching summaries."
 msgstr ""
+"აქ შეიყვანეთ ტექსტი ნაჩვენები გასაკეთებლების შესაბამისი აღწერით გასაფილტრად."
 
 #: todo/todoviewquicksearch.cpp:39
 #, kde-format
@@ -1858,6 +1968,7 @@ msgid ""
 "Use this combobox to filter the to-dos that are shown by a list of selected "
 "tags."
 msgstr ""
+"გამოიყენეთ ეს სამუშაო სია, რათა გასაკეთებლები მონიშნული ჭდეებით გაფილტროთ."
 
 #: todo/todoviewquicksearch.cpp:50
 #, kde-format
@@ -1878,6 +1989,8 @@ msgid ""
 "Use this combobox to filter the to-dos that are shown by a list of selected "
 "priorities."
 msgstr ""
+"გამოიყენეთ ეს სამუშაო სია, რათა გასაკეთებლები მონიშნული პრიორიტეტებით "
+"გაფილტროთ."
 
 #: todo/todoviewquicksearch.cpp:77
 #, kde-format
@@ -1968,6 +2081,8 @@ msgid ""
 "Copyright (C) 2010 Klarälvdalens Datakonsult AB, a KDAB Group company, "
 "info@kdab.net"
 msgstr ""
+"Copyright (C) 2010 Klarälvdalens Datakonsult AB, a KDAB Group company, "
+"info@kdab.net"
 
 #: viewerapp/main.cpp:24
 #, kde-format
@@ -1977,7 +2092,7 @@ msgstr "Kevin Krammer"
 #: viewerapp/main.cpp:33
 #, kde-format
 msgid "Optional list of view names to instantiate"
-msgstr ""
+msgstr "შესაქმნელი ხედების არასავალდებულო სია"
 
 #. i18n: ectx: property (windowTitle), widget (QMainWindow, MainWindow)
 #: viewerapp/mainwindow.ui:14
@@ -2025,7 +2140,7 @@ msgstr "თაიმლაინი"
 #: viewerapp/settings.kcfg:241
 #, kde-format
 msgid "\"No category\" color (for \"Only category\" drawing schemes)"
-msgstr ""
+msgstr "ფერი \"კატეგორიის გარეშე\" (\"ერთი კატეგორიის\" დახატვის სქემებისთვის"
 
 #. i18n: ectx: whatsthis, entry, group (Colors)
 #: viewerapp/settings.kcfg:242
@@ -2036,12 +2151,16 @@ msgid ""
 "when drawing items in the agenda or month views using the \"Only category\" "
 "scheme."
 msgstr ""
+"აირჩიეთ ფერი, რომელიც გამოყენებული იქნება \"კატეგორიის გარეშე\" ან "
+"\"კატეგორიამოხსნილი\" სიტუაციისას, როცა ელემენტი არც ერთ კატეგორიას არ "
+"მიეკუთვნება. ეს ფერი გამოყენებული იქნება ელემენტების დახატვისას დღის "
+"განრიგში ან თვის ხედში, რომლებიც \"მხოლოდ კატეგორების\" სქემას იყენებენ."
 
 #. i18n: ectx: tooltip, entry, group (Colors)
 #: viewerapp/settings.kcfg:243
 #, kde-format
 msgid "Use this color when drawing items without a category"
-msgstr ""
+msgstr "ამ ფერის გამოყენება კატეგორიის გარეშე არსებული ელემენტების დახატვისას"
 
 #. i18n: ectx: label, entry, group (Group Scheduling)
 #: viewerapp/settings.kcfg:274
@@ -2088,7 +2207,7 @@ msgstr "მოვლენები:"
 #: whatsnext/whatsnextview.cpp:189 whatsnext/whatsnextview.cpp:213
 #, kde-format
 msgid "Events and to-dos that need a reply:"
-msgstr ""
+msgstr "მოვლენები და გასაკეთებლები, რომლებსაც პასუხი სჭირდებათ:"
 
 #: whatsnext/whatsnextview.cpp:279
 #, kde-format
