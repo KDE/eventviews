@@ -23,7 +23,7 @@ public:
     explicit ColoredTodoProxyModel(const EventViews::PrefsPtr &preferences, QObject *parent = nullptr);
     ~ColoredTodoProxyModel() override;
 
-    Q_REQUIRED_RESULT QVariant data(const QModelIndex &index, int role) const override;
+    [[nodiscard]] QVariant data(const QModelIndex &index, int role) const override;
 
 private:
     std::unique_ptr<ColoredTodoProxyModelPrivate> const d;

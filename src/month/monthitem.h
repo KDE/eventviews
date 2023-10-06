@@ -57,18 +57,18 @@ public:
       The start date of the incidence, generally realStartDate. But it
       reflect changes, even during move.
     */
-    Q_REQUIRED_RESULT QDate startDate() const;
+    [[nodiscard]] QDate startDate() const;
 
     /**
       The end date of the incidence, generally realEndDate. But it
       reflect changes, even during move.
      */
-    Q_REQUIRED_RESULT QDate endDate() const;
+    [[nodiscard]] QDate endDate() const;
 
     /**
       The number of days this item spans.
     */
-    Q_REQUIRED_RESULT int daySpan() const;
+    [[nodiscard]] int daySpan() const;
 
     /**
       This is the real start date, usually the start date of the incidence.
@@ -102,7 +102,7 @@ public:
     /**
       Returns true if this item is selected.
     */
-    Q_REQUIRED_RESULT bool selected() const
+    [[nodiscard]] bool selected() const
     {
         return mSelected;
     }
@@ -110,7 +110,7 @@ public:
     /**
       Returns the position of the item ( > 0 ).
     */
-    Q_REQUIRED_RESULT int position() const
+    [[nodiscard]] int position() const
     {
         return mPosition;
     }
@@ -164,7 +164,7 @@ public:
     /**
       Returns true if the item is being moved.
     */
-    Q_REQUIRED_RESULT bool isMoving() const
+    [[nodiscard]] bool isMoving() const
     {
         return mMoving;
     }
@@ -172,7 +172,7 @@ public:
     /**
       Returns true if the item is being resized.
     */
-    Q_REQUIRED_RESULT bool isResizing() const
+    [[nodiscard]] bool isResizing() const
     {
         return mResizing;
     }
@@ -229,12 +229,12 @@ public:
     /**
       Returns the background color of the item.
     */
-    Q_REQUIRED_RESULT virtual QColor bgColor() const = 0;
+    [[nodiscard]] virtual QColor bgColor() const = 0;
 
     /**
       Returns the frame color of the item.
     */
-    Q_REQUIRED_RESULT virtual QColor frameColor() const = 0;
+    [[nodiscard]] virtual QColor frameColor() const = 0;
 
     /**
       Returns a list of pixmaps to draw next to the items.

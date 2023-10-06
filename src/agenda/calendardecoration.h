@@ -41,18 +41,18 @@ public:
       This will be used for example for internal configuration (position, etc.),
       so don't i18n it and make it unique for your decoration.
     */
-    Q_REQUIRED_RESULT virtual QString id() const;
+    [[nodiscard]] virtual QString id() const;
 
     /**
       Description of element.
     */
-    Q_REQUIRED_RESULT virtual QString elementInfo() const;
+    [[nodiscard]] virtual QString elementInfo() const;
 
     /**
       Return a short text for a given date,
       usually only a few words.
     */
-    Q_REQUIRED_RESULT virtual QString shortText() const;
+    [[nodiscard]] virtual QString shortText() const;
 
     /**
       Return a long text for a given date.
@@ -61,25 +61,25 @@ public:
 
       Can for example be used as a tool tip.
     */
-    Q_REQUIRED_RESULT virtual QString longText() const;
+    [[nodiscard]] virtual QString longText() const;
 
     /**
       Return an extensive text for a given date.
       This text can be of any length,
       but usually it will have one or a few paragraphs.
     */
-    Q_REQUIRED_RESULT virtual QString extensiveText() const;
+    [[nodiscard]] virtual QString extensiveText() const;
 
     /**
       Return a pixmap for a given date and a given size.
     */
-    Q_REQUIRED_RESULT virtual QPixmap newPixmap(const QSize &);
+    [[nodiscard]] virtual QPixmap newPixmap(const QSize &);
 
     /**
       Return a URL pointing to more information about the content of the
       element.
      */
-    Q_REQUIRED_RESULT virtual QUrl url() const;
+    [[nodiscard]] virtual QUrl url() const;
 
 Q_SIGNALS:
     void gotNewPixmap(const QPixmap &);
@@ -107,19 +107,19 @@ public:
     StoredElement(const QString &id, const QPixmap &pixmap);
 
     virtual void setShortText(const QString &t);
-    Q_REQUIRED_RESULT QString shortText() const override;
+    [[nodiscard]] QString shortText() const override;
 
     virtual void setLongText(const QString &t);
-    Q_REQUIRED_RESULT QString longText() const override;
+    [[nodiscard]] QString longText() const override;
 
     virtual void setExtensiveText(const QString &t);
-    Q_REQUIRED_RESULT QString extensiveText() const override;
+    [[nodiscard]] QString extensiveText() const override;
 
     virtual void setPixmap(const QPixmap &p);
-    Q_REQUIRED_RESULT virtual QPixmap pixmap() const;
+    [[nodiscard]] virtual QPixmap pixmap() const;
 
     virtual void setUrl(const QUrl &u);
-    Q_REQUIRED_RESULT QUrl url() const override;
+    [[nodiscard]] QUrl url() const override;
 
 protected:
     QString mShortText;

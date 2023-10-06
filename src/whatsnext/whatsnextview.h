@@ -44,18 +44,18 @@ public:
     explicit WhatsNextView(QWidget *parent = nullptr);
     ~WhatsNextView() override;
 
-    Q_REQUIRED_RESULT int currentDateCount() const override;
-    Q_REQUIRED_RESULT Akonadi::Item::List selectedIncidences() const override
+    [[nodiscard]] int currentDateCount() const override;
+    [[nodiscard]] Akonadi::Item::List selectedIncidences() const override
     {
         return {};
     }
 
-    Q_REQUIRED_RESULT KCalendarCore::DateList selectedIncidenceDates() const override
+    [[nodiscard]] KCalendarCore::DateList selectedIncidenceDates() const override
     {
         return {};
     }
 
-    Q_REQUIRED_RESULT bool supportsDateNavigation() const
+    [[nodiscard]] bool supportsDateNavigation() const
     {
         return true;
     }

@@ -22,12 +22,12 @@ public:
 
     void sort(int column, Qt::SortOrder order = Qt::AscendingOrder) override;
 
-    Q_REQUIRED_RESULT const QStringList &categories() const
+    [[nodiscard]] const QStringList &categories() const
     {
         return mCategories;
     }
 
-    Q_REQUIRED_RESULT const QStringList &priorities() const
+    [[nodiscard]] const QStringList &priorities() const
     {
         return mPriorities;
     }

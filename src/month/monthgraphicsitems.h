@@ -25,10 +25,10 @@ public:
 
     explicit ScrollIndicator(ArrowDirection direction);
 
-    Q_REQUIRED_RESULT QRectF boundingRect() const override;
+    [[nodiscard]] QRectF boundingRect() const override;
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) override;
 
-    Q_REQUIRED_RESULT ArrowDirection direction() const
+    [[nodiscard]] ArrowDirection direction() const
     {
         return mDirection;
     }

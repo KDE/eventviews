@@ -81,31 +81,31 @@ public:
     void removeCalendar(const Akonadi::CollectionCalendar::Ptr &calendar) override;
 
     /** Returns number of currently shown dates. */
-    Q_REQUIRED_RESULT int currentDateCount() const override;
+    [[nodiscard]] int currentDateCount() const override;
 
     /** returns the currently selected events */
-    Q_REQUIRED_RESULT Akonadi::Item::List selectedIncidences() const override;
+    [[nodiscard]] Akonadi::Item::List selectedIncidences() const override;
 
     /** returns the currently selected incidence's dates */
-    Q_REQUIRED_RESULT KCalendarCore::DateList selectedIncidenceDates() const override;
+    [[nodiscard]] KCalendarCore::DateList selectedIncidenceDates() const override;
 
     /** return the default start/end date/time for new events   */
     bool eventDurationHint(QDateTime &startDt, QDateTime &endDt, bool &allDay) const override;
 
     /** start-datetime of selection */
-    Q_REQUIRED_RESULT QDateTime selectionStart() const override;
+    [[nodiscard]] QDateTime selectionStart() const override;
 
     /** end-datetime of selection */
-    Q_REQUIRED_RESULT QDateTime selectionEnd() const override;
+    [[nodiscard]] QDateTime selectionEnd() const override;
 
     /** returns true if selection is for whole day */
-    Q_REQUIRED_RESULT bool selectedIsAllDay() const;
+    [[nodiscard]] bool selectedIsAllDay() const;
 
     /** make selected start/end invalid */
     void deleteSelectedDateTime();
 
     /** returns if only a single cell is selected, or a range of cells */
-    Q_REQUIRED_RESULT bool selectedIsSingleCell() const;
+    [[nodiscard]] bool selectedIsSingleCell() const;
 
     /* reimp from EventView */
     virtual void addCalendar(const ViewCalendar::Ptr &cal);
@@ -115,16 +115,16 @@ public:
     // FIXME: we already have startDateTime() and endDateTime() in the base class
 
     /** First shown day */
-    Q_REQUIRED_RESULT QDate startDate() const;
+    [[nodiscard]] QDate startDate() const;
     /** Last shown day */
-    Q_REQUIRED_RESULT QDate endDate() const;
+    [[nodiscard]] QDate endDate() const;
 
     /** Update event belonging to agenda item
         If the incidence is multi-day, item is the first one
     */
     void updateEventDates(AgendaItem *item, bool addIncidence, Akonadi::Collection::Id collectionId);
 
-    Q_REQUIRED_RESULT QList<bool> busyDayMask() const;
+    [[nodiscard]] QList<bool> busyDayMask() const;
 
     /**
      * Return calendar object for a concrete incidence.

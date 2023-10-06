@@ -74,35 +74,35 @@ public:
                QWidget *parent);
     ~AgendaItem() override;
 
-    Q_REQUIRED_RESULT int cellXLeft() const
+    [[nodiscard]] int cellXLeft() const
     {
         return mCellXLeft;
     }
 
-    Q_REQUIRED_RESULT int cellXRight() const
+    [[nodiscard]] int cellXRight() const
     {
         return mCellXRight;
     }
 
-    Q_REQUIRED_RESULT int cellYTop() const
+    [[nodiscard]] int cellYTop() const
     {
         return mCellYTop;
     }
 
-    Q_REQUIRED_RESULT int cellYBottom() const
+    [[nodiscard]] int cellYBottom() const
     {
         return mCellYBottom;
     }
 
-    Q_REQUIRED_RESULT int cellHeight() const;
-    Q_REQUIRED_RESULT int cellWidth() const;
+    [[nodiscard]] int cellHeight() const;
+    [[nodiscard]] int cellWidth() const;
 
-    Q_REQUIRED_RESULT int itemPos() const
+    [[nodiscard]] int itemPos() const
     {
         return mItemPos;
     }
 
-    Q_REQUIRED_RESULT int itemCount() const
+    [[nodiscard]] int itemCount() const
     {
         return mItemCount;
     }
@@ -139,7 +139,7 @@ public:
     void expandLeft(int dx);
     void expandRight(int dx);
 
-    Q_REQUIRED_RESULT bool isMultiItem() const;
+    [[nodiscard]] bool isMultiItem() const;
 
     AgendaItem::QPtr prevMoveItem() const
     {
@@ -184,7 +184,7 @@ public:
         return (mMultiItemInfo) ? (mMultiItemInfo->mLastMultiItem) : nullptr;
     }
 
-    Q_REQUIRED_RESULT bool dissociateFromMultiItem();
+    [[nodiscard]] bool dissociateFromMultiItem();
 
     void setIncidence(const KCalendarCore::Incidence::Ptr &incidence);
 
@@ -193,12 +193,12 @@ public:
         return mIncidence;
     }
 
-    Q_REQUIRED_RESULT QDateTime occurrenceDateTime() const
+    [[nodiscard]] QDateTime occurrenceDateTime() const
     {
         return mOccurrenceDateTime;
     }
 
-    Q_REQUIRED_RESULT QDate occurrenceDate() const;
+    [[nodiscard]] QDate occurrenceDate() const;
 
     // /** Update the date of this item's occurrence (not in the event) */
     void setOccurrenceDateTime(const QDateTime &qd);
@@ -208,7 +208,7 @@ public:
         mLabelText = text;
     }
 
-    Q_REQUIRED_RESULT QString text() const
+    [[nodiscard]] QString text() const
     {
         return mLabelText;
     }
@@ -227,7 +227,7 @@ public:
         mResourceColor = color;
     }
 
-    Q_REQUIRED_RESULT QColor resourceColor() const
+    [[nodiscard]] QColor resourceColor() const
     {
         return mResourceColor;
     }
@@ -276,9 +276,9 @@ private:
                          bool roundTop,
                          bool roundBottom);
 
-    Q_REQUIRED_RESULT QColor getCategoryColor() const;
-    Q_REQUIRED_RESULT QColor getFrameColor(const QColor &resourceColor, const QColor &categoryColor) const;
-    Q_REQUIRED_RESULT QColor getBackgroundColor(const QColor &resourceColor, const QColor &categoryColor) const;
+    [[nodiscard]] QColor getCategoryColor() const;
+    [[nodiscard]] QColor getFrameColor(const QColor &resourceColor, const QColor &categoryColor) const;
+    [[nodiscard]] QColor getBackgroundColor(const QColor &resourceColor, const QColor &categoryColor) const;
 
     int mCellXLeft, mCellXRight;
     int mCellYTop, mCellYBottom;

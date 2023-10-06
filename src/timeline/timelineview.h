@@ -40,25 +40,25 @@ public:
 
     ~TimelineView() override;
 
-    Q_REQUIRED_RESULT Akonadi::Item::List selectedIncidences() const override;
-    Q_REQUIRED_RESULT KCalendarCore::DateList selectedIncidenceDates() const override;
-    Q_REQUIRED_RESULT int currentDateCount() const override;
+    [[nodiscard]] Akonadi::Item::List selectedIncidences() const override;
+    [[nodiscard]] KCalendarCore::DateList selectedIncidenceDates() const override;
+    [[nodiscard]] int currentDateCount() const override;
 
     // ensure start and end are valid before calling this.
     void showDates(const QDate &, const QDate &, const QDate &preferredMonth = QDate()) override;
 
     // Unused.
     /** @deprecated Use EventView::startDateTime. */
-    [[deprecated("Use EventView::startDateTime.")]] Q_REQUIRED_RESULT QDate startDate() const;
+    [[deprecated("Use EventView::startDateTime.")]] [[nodiscard]] QDate startDate() const;
 
     // Unused.
     /** @deprecated Use EventView::endDateTime.   */
-    [[deprecated("Use EventView::endDateTime.")]] Q_REQUIRED_RESULT QDate endDate() const;
+    [[deprecated("Use EventView::endDateTime.")]] [[nodiscard]] QDate endDate() const;
 
     void showIncidences(const Akonadi::Item::List &incidenceList, const QDate &date) override;
     void updateView() override;
     virtual void changeIncidenceDisplay(const Akonadi::Item &incidence, int mode);
-    Q_REQUIRED_RESULT bool eventDurationHint(QDateTime &startDt, QDateTime &endDt, bool &allDay) const override;
+    [[nodiscard]] bool eventDurationHint(QDateTime &startDt, QDateTime &endDt, bool &allDay) const override;
 
 Q_SIGNALS:
     void showNewEventPopupSignal();

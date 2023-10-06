@@ -64,19 +64,19 @@ public:
 
     ~Agenda() override;
 
-    Q_REQUIRED_RESULT KCalendarCore::Incidence::Ptr selectedIncidence() const;
-    Q_REQUIRED_RESULT QDate selectedIncidenceDate() const;
+    [[nodiscard]] KCalendarCore::Incidence::Ptr selectedIncidence() const;
+    [[nodiscard]] QDate selectedIncidenceDate() const;
     QSize sizeHint() const override;
     QSize minimumSizeHint() const override;
     QSize minimumSize() const;
     int minimumHeight() const;
     // QSizePolicy sizePolicy() const;
-    Q_REQUIRED_RESULT int contentsY() const
+    [[nodiscard]] int contentsY() const
     {
         return -y();
     }
 
-    Q_REQUIRED_RESULT int contentsX() const
+    [[nodiscard]] int contentsX() const
     {
         return x();
     }
@@ -85,30 +85,30 @@ public:
 
     QScrollArea *scrollArea() const;
 
-    Q_REQUIRED_RESULT AgendaItem::List agendaItems(const QString &uid) const;
+    [[nodiscard]] AgendaItem::List agendaItems(const QString &uid) const;
 
     /**
       Returns the uid of the last incidence that was selected. This
       persists across reloads and clear, so that if the same uid
       reappears, it can be reselected.
     */
-    Q_REQUIRED_RESULT QString lastSelectedItemUid() const;
+    [[nodiscard]] QString lastSelectedItemUid() const;
 
     bool eventFilter(QObject *, QEvent *) override;
 
     void paintEvent(QPaintEvent *) override;
 
-    Q_REQUIRED_RESULT QPoint contentsToGrid(QPoint pos) const;
-    Q_REQUIRED_RESULT QPoint gridToContents(QPoint gpos) const;
+    [[nodiscard]] QPoint contentsToGrid(QPoint pos) const;
+    [[nodiscard]] QPoint gridToContents(QPoint gpos) const;
 
-    Q_REQUIRED_RESULT int timeToY(QTime time) const;
-    Q_REQUIRED_RESULT QTime gyToTime(int y) const;
+    [[nodiscard]] int timeToY(QTime time) const;
+    [[nodiscard]] QTime gyToTime(int y) const;
 
-    Q_REQUIRED_RESULT QList<int> minContentsY() const;
-    Q_REQUIRED_RESULT QList<int> maxContentsY() const;
+    [[nodiscard]] QList<int> minContentsY() const;
+    [[nodiscard]] QList<int> maxContentsY() const;
 
-    Q_REQUIRED_RESULT int visibleContentsYMin() const;
-    Q_REQUIRED_RESULT int visibleContentsYMax() const;
+    [[nodiscard]] int visibleContentsYMin() const;
+    [[nodiscard]] int visibleContentsYMax() const;
 
     void setStartTime(QTime startHour);
 
@@ -137,11 +137,11 @@ public:
 
     void changeColumns(int columns);
 
-    Q_REQUIRED_RESULT int columns() const;
-    Q_REQUIRED_RESULT int rows() const;
+    [[nodiscard]] int columns() const;
+    [[nodiscard]] int rows() const;
 
-    Q_REQUIRED_RESULT double gridSpacingX() const;
-    Q_REQUIRED_RESULT double gridSpacingY() const;
+    [[nodiscard]] double gridSpacingX() const;
+    [[nodiscard]] double gridSpacingY() const;
 
     void clear();
 
@@ -153,7 +153,7 @@ public:
     void setHolidayMask(QList<bool> *);
 
     void setDateList(const KCalendarCore::DateList &selectedDates);
-    Q_REQUIRED_RESULT KCalendarCore::DateList dateList() const;
+    [[nodiscard]] KCalendarCore::DateList dateList() const;
 
     void setCalendar(const EventViews::MultiViewCalendar::Ptr &cal);
 

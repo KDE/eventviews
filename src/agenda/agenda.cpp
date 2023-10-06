@@ -55,7 +55,7 @@ public:
     {
     }
 
-    Q_REQUIRED_RESULT int todayColumn() const;
+    [[nodiscard]] int todayColumn() const;
 
 public:
     EventView *const mEventView;

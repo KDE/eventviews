@@ -32,7 +32,7 @@ using PrefsPtr = QSharedPointer<Prefs>;
 /**
  Returns a nice QColor for text, give the input color &c.
 */
-Q_REQUIRED_RESULT QColor getTextColor(const QColor &c);
+[[nodiscard]] QColor getTextColor(const QColor &c);
 
 /**
  * Determines if the @p color is "dark" or "light" by looking at its luminance.
@@ -41,7 +41,7 @@ Q_REQUIRED_RESULT QColor getTextColor(const QColor &c);
  *
  * @return true if the specified color is closer to black than white.
  */
-Q_REQUIRED_RESULT bool isColorDark(const QColor &color);
+[[nodiscard]] bool isColorDark(const QColor &color);
 
 /**
   This method returns the proper resource / subresource color for the view.
@@ -56,9 +56,9 @@ Q_REQUIRED_RESULT bool isColorDark(const QColor &color);
   @param incidence the incidence for which the color is needed (to
                    determine which  subresource needs to be used)
 */
-Q_REQUIRED_RESULT EVENTVIEWS_EXPORT QColor resourceColor(const Akonadi::Item &incidence, const PrefsPtr &preferences);
+[[nodiscard]] EVENTVIEWS_EXPORT QColor resourceColor(const Akonadi::Item &incidence, const PrefsPtr &preferences);
 
-Q_REQUIRED_RESULT EVENTVIEWS_EXPORT QColor resourceColor(const Akonadi::Collection &collection, const PrefsPtr &preferences);
+[[nodiscard]] EVENTVIEWS_EXPORT QColor resourceColor(const Akonadi::Collection &collection, const PrefsPtr &preferences);
 
 /**
   This method sets the resource color as an Akonadi collection attribute and
@@ -74,7 +74,7 @@ EVENTVIEWS_EXPORT void setResourceColor(const Akonadi::Collection &collection, c
   Returns the number of years between the @p start QDate and the @p end QDate
   (i.e. the difference in the year number of both dates)
 */
-Q_REQUIRED_RESULT int yearDiff(QDate start, QDate end);
+[[nodiscard]] int yearDiff(QDate start, QDate end);
 
 /**
    Equivalent to SmallIcon( name ), but uses QPixmapCache.
@@ -83,5 +83,5 @@ Q_REQUIRED_RESULT int yearDiff(QDate start, QDate end);
    @return A new pixmap if it isn't yet in cache, otherwise returns the
            cached one.
 */
-Q_REQUIRED_RESULT QPixmap cachedSmallIcon(const QString &name);
+[[nodiscard]] QPixmap cachedSmallIcon(const QString &name);
 }

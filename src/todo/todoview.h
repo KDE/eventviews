@@ -60,9 +60,9 @@ public:
     void addCalendar(const Akonadi::CollectionCalendar::Ptr &calendar) override;
     void removeCalendar(const Akonadi::CollectionCalendar::Ptr &calendar) override;
 
-    Q_REQUIRED_RESULT Akonadi::Item::List selectedIncidences() const override;
-    Q_REQUIRED_RESULT KCalendarCore::DateList selectedIncidenceDates() const override;
-    Q_REQUIRED_RESULT int currentDateCount() const override
+    [[nodiscard]] Akonadi::Item::List selectedIncidences() const override;
+    [[nodiscard]] KCalendarCore::DateList selectedIncidenceDates() const override;
+    [[nodiscard]] int currentDateCount() const override
     {
         return 0;
     }
@@ -78,9 +78,9 @@ public:
     /** documentation in baseview.h */
     void getHighlightMode(bool &highlightEvents, bool &highlightTodos, bool &highlightJournals);
 
-    Q_REQUIRED_RESULT bool usesFullWindow();
+    [[nodiscard]] bool usesFullWindow();
 
-    Q_REQUIRED_RESULT bool supportsDateRangeSelection() const
+    [[nodiscard]] bool supportsDateRangeSelection() const
     {
         return false;
     }

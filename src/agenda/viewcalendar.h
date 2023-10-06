@@ -64,24 +64,24 @@ public:
     ~MultiViewCalendar() override;
     ViewCalendar::Ptr findCalendar(const KCalendarCore::Incidence::Ptr &incidence) const;
     ViewCalendar::Ptr findCalendar(const QString &incidenceIdentifier) const;
-    Q_REQUIRED_RESULT bool isValid(const KCalendarCore::Incidence::Ptr &incidence) const override;
-    Q_REQUIRED_RESULT bool isValid(const QString &incidenceIdentifier) const override;
-    Q_REQUIRED_RESULT QString displayName(const KCalendarCore::Incidence::Ptr &incidence) const override;
+    [[nodiscard]] bool isValid(const KCalendarCore::Incidence::Ptr &incidence) const override;
+    [[nodiscard]] bool isValid(const QString &incidenceIdentifier) const override;
+    [[nodiscard]] QString displayName(const KCalendarCore::Incidence::Ptr &incidence) const override;
 
-    Q_REQUIRED_RESULT QColor resourceColor(const KCalendarCore::Incidence::Ptr &incidence) const override;
-    Q_REQUIRED_RESULT QString iconForIncidence(const KCalendarCore::Incidence::Ptr &incidence) const override;
+    [[nodiscard]] QColor resourceColor(const KCalendarCore::Incidence::Ptr &incidence) const override;
+    [[nodiscard]] QString iconForIncidence(const KCalendarCore::Incidence::Ptr &incidence) const override;
 
-    Q_REQUIRED_RESULT Akonadi::Item item(const KCalendarCore::Incidence::Ptr &incidence) const;
+    [[nodiscard]] Akonadi::Item item(const KCalendarCore::Incidence::Ptr &incidence) const;
 
     void addCalendar(const ViewCalendar::Ptr &calendar);
     void removeCalendar(const ViewCalendar::Ptr &calendar);
-    Q_REQUIRED_RESULT int calendarCount() const;
+    [[nodiscard]] int calendarCount() const;
 
-    Q_REQUIRED_RESULT Akonadi::CollectionCalendar::Ptr calendarForCollection(const Akonadi::Collection &col) const;
-    Q_REQUIRED_RESULT Akonadi::CollectionCalendar::Ptr calendarForCollection(Akonadi::Collection::Id id) const;
+    [[nodiscard]] Akonadi::CollectionCalendar::Ptr calendarForCollection(const Akonadi::Collection &col) const;
+    [[nodiscard]] Akonadi::CollectionCalendar::Ptr calendarForCollection(Akonadi::Collection::Id id) const;
 
-    Q_REQUIRED_RESULT KCalendarCore::Calendar::Ptr getCalendar() const override;
-    Q_REQUIRED_RESULT KCalendarCore::Incidence::List incidences() const;
+    [[nodiscard]] KCalendarCore::Calendar::Ptr getCalendar() const override;
+    [[nodiscard]] KCalendarCore::Incidence::List incidences() const;
 
     AgendaView *mAgendaView = nullptr;
     QList<ViewCalendar::Ptr> mSubCalendars;

@@ -19,7 +19,7 @@ public:
 
     enum TextType { Short = 0, Long = 1, Extensive = 2 };
 
-    Q_REQUIRED_RESULT TextType largestFittingTextType() const;
+    [[nodiscard]] TextType largestFittingTextType() const;
     void setFixedType(TextType type);
 
 public Q_SLOTS:

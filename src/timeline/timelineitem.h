@@ -36,7 +36,7 @@ public:
 
     void setColor(const QColor &color);
 
-    Q_REQUIRED_RESULT Akonadi::CollectionCalendar::Ptr calendar() const;
+    [[nodiscard]] Akonadi::CollectionCalendar::Ptr calendar() const;
 
 private:
     Akonadi::CollectionCalendar::Ptr mCalendar;
@@ -52,12 +52,12 @@ public:
     TimelineSubItem(const Akonadi::Item &incidence, TimelineItem *parent);
     ~TimelineSubItem() override;
 
-    Q_REQUIRED_RESULT Akonadi::Item incidence() const
+    [[nodiscard]] Akonadi::Item incidence() const
     {
         return mIncidence;
     }
 
-    Q_REQUIRED_RESULT QDateTime originalStart() const
+    [[nodiscard]] QDateTime originalStart() const
     {
         return mStart;
     }
@@ -68,12 +68,12 @@ public:
     }
 
     void setStartTime(const QDateTime &dt);
-    Q_REQUIRED_RESULT QDateTime startTime() const;
+    [[nodiscard]] QDateTime startTime() const;
 
     void setEndTime(const QDateTime &dt);
-    Q_REQUIRED_RESULT QDateTime endTime() const;
+    [[nodiscard]] QDateTime endTime() const;
 
-    Q_REQUIRED_RESULT TimelineItem *parent() const
+    [[nodiscard]] TimelineItem *parent() const
     {
         return mParent;
     }

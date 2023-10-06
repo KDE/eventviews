@@ -35,35 +35,35 @@ public:
     void addCalendar(const Akonadi::CollectionCalendar::Ptr &calendar) override;
     void removeCalendar(const Akonadi::CollectionCalendar::Ptr &calendar) override;
 
-    Q_REQUIRED_RESULT int currentDateCount() const override;
-    Q_REQUIRED_RESULT int currentMonth() const;
+    [[nodiscard]] int currentDateCount() const override;
+    [[nodiscard]] int currentMonth() const;
 
-    Q_REQUIRED_RESULT Akonadi::Item::List selectedIncidences() const override;
+    [[nodiscard]] Akonadi::Item::List selectedIncidences() const override;
 
     /** Returns dates of the currently selected events */
-    Q_REQUIRED_RESULT KCalendarCore::DateList selectedIncidenceDates() const override;
+    [[nodiscard]] KCalendarCore::DateList selectedIncidenceDates() const override;
 
-    Q_REQUIRED_RESULT QDateTime selectionStart() const override;
+    [[nodiscard]] QDateTime selectionStart() const override;
 
-    Q_REQUIRED_RESULT QDateTime selectionEnd() const override;
+    [[nodiscard]] QDateTime selectionEnd() const override;
 
     void setDateRange(const QDateTime &start, const QDateTime &end, const QDate &preferredMonth = QDate()) override;
 
-    Q_REQUIRED_RESULT bool eventDurationHint(QDateTime &startDt, QDateTime &endDt, bool &allDay) const override;
+    [[nodiscard]] bool eventDurationHint(QDateTime &startDt, QDateTime &endDt, bool &allDay) const override;
 
     /**
      * Returns the average date in the view
      */
-    Q_REQUIRED_RESULT QDate averageDate() const;
+    [[nodiscard]] QDate averageDate() const;
 
-    Q_REQUIRED_RESULT bool usesFullWindow();
+    [[nodiscard]] bool usesFullWindow();
 
-    Q_REQUIRED_RESULT bool supportsDateRangeSelection() const
+    [[nodiscard]] bool supportsDateRangeSelection() const
     {
         return false;
     }
 
-    Q_REQUIRED_RESULT bool isBusyDay(QDate day) const;
+    [[nodiscard]] bool isBusyDay(QDate day) const;
 
 Q_SIGNALS:
     void showIncidencePopupSignal(const Akonadi::CollectionCalendar::Ptr &calendar, const Akonadi::Item &item, const QDate &date);

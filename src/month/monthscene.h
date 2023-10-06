@@ -40,13 +40,13 @@ public:
     explicit MonthScene(MonthView *parent);
     ~MonthScene() override;
 
-    Q_REQUIRED_RESULT int columnWidth() const;
-    Q_REQUIRED_RESULT int rowHeight() const;
+    [[nodiscard]] int columnWidth() const;
+    [[nodiscard]] int rowHeight() const;
 
     MonthCell *firstCellForMonthItem(MonthItem *manager);
-    Q_REQUIRED_RESULT int height(MonthItem *manager);
-    Q_REQUIRED_RESULT int itemHeight();
-    Q_REQUIRED_RESULT int itemHeightIncludingSpacing();
+    [[nodiscard]] int height(MonthItem *manager);
+    [[nodiscard]] int itemHeight();
+    [[nodiscard]] int itemHeightIncludingSpacing();
     QList<MonthItem *> mManagerList;
     MonthView *mMonthView = nullptr;
 
@@ -57,7 +57,7 @@ public:
 
     QMap<QDate, MonthCell *> mMonthCellMap;
 
-    Q_REQUIRED_RESULT bool initialized() const
+    [[nodiscard]] bool initialized() const
     {
         return mInitialized;
     }
@@ -76,12 +76,12 @@ public:
      * Returns the vertical position where the top of the cell should be
      * painted taking in account margins, rowHeight
      */
-    Q_REQUIRED_RESULT int cellVerticalPos(const MonthCell *cell) const;
+    [[nodiscard]] int cellVerticalPos(const MonthCell *cell) const;
 
     /**
      * Idem, for the horizontal position
      */
-    Q_REQUIRED_RESULT int cellHorizontalPos(const MonthCell *cell) const;
+    [[nodiscard]] int cellHorizontalPos(const MonthCell *cell) const;
 
     /**
       Select item. If the argument is 0, the currently selected item gets
@@ -89,7 +89,7 @@ public:
       about selection/deselection of events.
     */
     void selectItem(MonthItem *);
-    Q_REQUIRED_RESULT int maxRowCount();
+    [[nodiscard]] int maxRowCount();
 
     MonthCell *selectedCell() const;
     MonthCell *previousCell() const;
@@ -97,17 +97,17 @@ public:
     /**
       Get the space on the right of the cell associated to the date @p date.
     */
-    Q_REQUIRED_RESULT int getRightSpan(QDate date) const;
+    [[nodiscard]] int getRightSpan(QDate date) const;
 
     /**
       Get the space on the left of the cell associated to the date @p date.
     */
-    Q_REQUIRED_RESULT int getLeftSpan(QDate date) const;
+    [[nodiscard]] int getLeftSpan(QDate date) const;
 
     /**
       Returns the date in the first column of the row given by @p row.
     */
-    Q_REQUIRED_RESULT QDate firstDateOnRow(int row) const;
+    [[nodiscard]] QDate firstDateOnRow(int row) const;
 
     /**
       Calls updateGeometry() on each MonthItem
@@ -119,7 +119,7 @@ public:
 
       @see MonthItem::height()
     */
-    Q_REQUIRED_RESULT int startHeight() const
+    [[nodiscard]] int startHeight() const
     {
         return mStartHeight;
     }
@@ -137,7 +137,7 @@ public:
     /**
       Returns the resize type.
     */
-    Q_REQUIRED_RESULT ResizeType resizeType() const
+    [[nodiscard]] ResizeType resizeType() const
     {
         return mResizeType;
     }
@@ -150,37 +150,37 @@ public:
         return mSelectedItem;
     }
 
-    Q_REQUIRED_RESULT QPixmap birthdayPixmap() const
+    [[nodiscard]] QPixmap birthdayPixmap() const
     {
         return mBirthdayPixmap;
     }
 
-    Q_REQUIRED_RESULT QPixmap anniversaryPixmap() const
+    [[nodiscard]] QPixmap anniversaryPixmap() const
     {
         return mAnniversaryPixmap;
     }
 
-    Q_REQUIRED_RESULT QPixmap alarmPixmap() const
+    [[nodiscard]] QPixmap alarmPixmap() const
     {
         return mAlarmPixmap;
     }
 
-    Q_REQUIRED_RESULT QPixmap recurPixmap() const
+    [[nodiscard]] QPixmap recurPixmap() const
     {
         return mRecurPixmap;
     }
 
-    Q_REQUIRED_RESULT QPixmap readonlyPixmap() const
+    [[nodiscard]] QPixmap readonlyPixmap() const
     {
         return mReadonlyPixmap;
     }
 
-    Q_REQUIRED_RESULT QPixmap replyPixmap() const
+    [[nodiscard]] QPixmap replyPixmap() const
     {
         return mReplyPixmap;
     }
 
-    Q_REQUIRED_RESULT QPixmap holidayPixmap() const
+    [[nodiscard]] QPixmap holidayPixmap() const
     {
         return mHolidayPixmap;
     }

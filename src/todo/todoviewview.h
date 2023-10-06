@@ -21,10 +21,10 @@ class TodoViewView : public QTreeView
 public:
     explicit TodoViewView(QWidget *parent = nullptr);
 
-    Q_REQUIRED_RESULT bool isEditing(const QModelIndex &index) const;
+    [[nodiscard]] bool isEditing(const QModelIndex &index) const;
 
-    Q_REQUIRED_RESULT bool eventFilter(QObject *watched, QEvent *event) override;
-    Q_REQUIRED_RESULT KDatePickerPopup *startPopupMenu();
+    [[nodiscard]] bool eventFilter(QObject *watched, QEvent *event) override;
+    [[nodiscard]] KDatePickerPopup *startPopupMenu();
 
 protected:
     QModelIndex moveCursor(CursorAction cursorAction, Qt::KeyboardModifiers modifiers) override;

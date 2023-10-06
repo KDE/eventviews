@@ -34,13 +34,13 @@ public:
     bool eventFilter(QObject *, QEvent *) override;
 
     void setJournal(const Akonadi::Item &journal);
-    Q_REQUIRED_RESULT Akonadi::Item journal() const
+    [[nodiscard]] Akonadi::Item journal() const
     {
         return mJournal;
     }
 
     void setCalendar(const Akonadi::CollectionCalendar::Ptr &);
-    Q_REQUIRED_RESULT QDate date() const
+    [[nodiscard]] QDate date() const
     {
         return mDate;
     }

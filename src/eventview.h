@@ -123,10 +123,10 @@ public:
       update config is called after prefs are set.
     */
     virtual void setPreferences(const PrefsPtr &preferences);
-    Q_REQUIRED_RESULT PrefsPtr preferences() const;
+    [[nodiscard]] PrefsPtr preferences() const;
 
     virtual void setKCalPreferences(const KCalPrefsPtr &preferences);
-    Q_REQUIRED_RESULT KCalPrefsPtr kcalPreferences() const;
+    [[nodiscard]] KCalPrefsPtr kcalPreferences() const;
 
     /**
       @return a list of selected events. Most views can probably only
@@ -166,7 +166,7 @@ public:
       @see selectionStart()
       @see selectionEnd()
      */
-    Q_REQUIRED_RESULT bool dateRangeSelectionEnabled() const;
+    [[nodiscard]] bool dateRangeSelectionEnabled() const;
 
     /**
       Enable or disable date range selection.
@@ -190,7 +190,7 @@ public:
 
     virtual void showConfigurationDialog(QWidget *parent);
 
-    Q_REQUIRED_RESULT QByteArray identifier() const;
+    [[nodiscard]] QByteArray identifier() const;
     void setIdentifier(const QByteArray &identifier);
 
     /**
@@ -236,18 +236,18 @@ public:
      */
     virtual void setDateRange(const QDateTime &start, const QDateTime &end, const QDate &preferredMonth = QDate());
 
-    Q_REQUIRED_RESULT QDateTime startDateTime() const;
-    Q_REQUIRED_RESULT QDateTime endDateTime() const;
+    [[nodiscard]] QDateTime startDateTime() const;
+    [[nodiscard]] QDateTime endDateTime() const;
 
-    Q_REQUIRED_RESULT QDateTime actualStartDateTime() const;
-    Q_REQUIRED_RESULT QDateTime actualEndDateTime() const;
+    [[nodiscard]] QDateTime actualStartDateTime() const;
+    [[nodiscard]] QDateTime actualEndDateTime() const;
 
-    Q_REQUIRED_RESULT int showMoveRecurDialog(const KCalendarCore::Incidence::Ptr &incidence, QDate date);
+    [[nodiscard]] int showMoveRecurDialog(const KCalendarCore::Incidence::Ptr &incidence, QDate date);
 
     /**
       Handles key events, opens the new event dialog when enter is pressed, activates type ahead.
     */
-    Q_REQUIRED_RESULT bool processKeyEvent(QKeyEvent *);
+    [[nodiscard]] bool processKeyEvent(QKeyEvent *);
 
     /*
      * Sets the QObject that will receive key events that were made
@@ -270,18 +270,18 @@ public:
     /**
       Returns if there are pending changes and a redraw is needed.
     */
-    Q_REQUIRED_RESULT Changes changes() const;
+    [[nodiscard]] Changes changes() const;
 
     /**
      * Returns a variation of @p color that will be used for the border
      * of an agenda or month item.
      */
-    Q_REQUIRED_RESULT static QColor itemFrameColor(const QColor &color, bool selected);
+    [[nodiscard]] static QColor itemFrameColor(const QColor &color, bool selected);
 
-    Q_REQUIRED_RESULT QString iconForItem(const Akonadi::Item &);
+    [[nodiscard]] QString iconForItem(const Akonadi::Item &);
 
-    Q_REQUIRED_RESULT Akonadi::CollectionCalendar::Ptr calendarForCollection(const Akonadi::Collection &collection) const;
-    Q_REQUIRED_RESULT Akonadi::CollectionCalendar::Ptr calendarForCollection(Akonadi::Collection::Id collectionId) const;
+    [[nodiscard]] Akonadi::CollectionCalendar::Ptr calendarForCollection(const Akonadi::Collection &collection) const;
+    [[nodiscard]] Akonadi::CollectionCalendar::Ptr calendarForCollection(Akonadi::Collection::Id collectionId) const;
 
 public Q_SLOTS:
     /**

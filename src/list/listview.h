@@ -35,9 +35,9 @@ public:
     explicit ListView(QWidget *parent = nullptr, bool nonInteractive = false);
     ~ListView() override;
 
-    Q_REQUIRED_RESULT int currentDateCount() const override;
-    Q_REQUIRED_RESULT Akonadi::Item::List selectedIncidences() const override;
-    Q_REQUIRED_RESULT KCalendarCore::DateList selectedIncidenceDates() const override;
+    [[nodiscard]] int currentDateCount() const override;
+    [[nodiscard]] Akonadi::Item::List selectedIncidences() const override;
+    [[nodiscard]] KCalendarCore::DateList selectedIncidenceDates() const override;
 
     // Shows all incidences of the calendar
     void showAll();

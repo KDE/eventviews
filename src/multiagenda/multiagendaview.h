@@ -46,24 +46,24 @@ public:
 
     void setModel(QAbstractItemModel *model) override;
 
-    Q_REQUIRED_RESULT Akonadi::Item::List selectedIncidences() const override;
-    Q_REQUIRED_RESULT KCalendarCore::DateList selectedIncidenceDates() const override;
-    Q_REQUIRED_RESULT int currentDateCount() const override;
-    Q_REQUIRED_RESULT int maxDatesHint() const;
+    [[nodiscard]] Akonadi::Item::List selectedIncidences() const override;
+    [[nodiscard]] KCalendarCore::DateList selectedIncidenceDates() const override;
+    [[nodiscard]] int currentDateCount() const override;
+    [[nodiscard]] int maxDatesHint() const;
 
-    Q_REQUIRED_RESULT bool eventDurationHint(QDateTime &startDt, QDateTime &endDt, bool &allDay) const override;
+    [[nodiscard]] bool eventDurationHint(QDateTime &startDt, QDateTime &endDt, bool &allDay) const override;
 
     void addCalendar(const Akonadi::CollectionCalendar::Ptr &calendar) override;
     void removeCalendar(const Akonadi::CollectionCalendar::Ptr &calendar) override;
 
-    Q_REQUIRED_RESULT bool hasConfigurationDialog() const override;
+    [[nodiscard]] bool hasConfigurationDialog() const override;
 
     void setChanges(Changes changes) override;
 
-    Q_REQUIRED_RESULT bool customColumnSetupUsed() const;
-    Q_REQUIRED_RESULT int customNumberOfColumns() const;
-    Q_REQUIRED_RESULT QStringList customColumnTitles() const;
-    Q_REQUIRED_RESULT QList<KCheckableProxyModel *> collectionSelectionModels() const;
+    [[nodiscard]] bool customColumnSetupUsed() const;
+    [[nodiscard]] int customNumberOfColumns() const;
+    [[nodiscard]] QStringList customColumnTitles() const;
+    [[nodiscard]] QList<KCheckableProxyModel *> collectionSelectionModels() const;
 
     void setPreferences(const PrefsPtr &prefs) override;
 
