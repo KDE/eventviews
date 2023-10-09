@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-25 02:27+0000\n"
-"PO-Revision-Date: 2023-10-04 18:40+0200\n"
+"PO-Revision-Date: 2023-10-08 06:01+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -2088,7 +2088,7 @@ msgstr "Kevin Krammer"
 #: viewerapp/main.cpp:33
 #, kde-format
 msgid "Optional list of view names to instantiate"
-msgstr ""
+msgstr "შესაქმნელი ხედების არასავალდებულო სია"
 
 #. i18n: ectx: property (windowTitle), widget (QMainWindow, MainWindow)
 #: viewerapp/mainwindow.ui:14
