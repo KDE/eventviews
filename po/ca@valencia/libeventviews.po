@@ -562,7 +562,7 @@ msgid ""
 "Date Navigator when in to-do view."
 msgstr ""
 "Marqueu esta casella per a mostrar en negreta els dies que contenen tasques "
-"pendents en el navegador de dates quan esteu a la vista de les tasques "
+"pendents en el navegador de dates quan esteu en la vista de les tasques "
 "pendents."
 
 #. i18n: ectx: label, entry (HighlightJournals), group (General View)
@@ -579,7 +579,7 @@ msgid ""
 "Date Navigator when in journal view."
 msgstr ""
 "Marqueu esta casella per a mostrar en negreta els dies que contenen diaris "
-"en el navegador de dates quan esteu a la vista de diari."
+"en el navegador de dates quan esteu en la vista de diari."
 
 #. i18n: ectx: label, entry (WeekNumbersShowWork), group (General View)
 #: eventviews.kcfg:165
