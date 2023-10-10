@@ -129,7 +129,7 @@ int EventView::showMoveRecurDialog(const Incidence::Ptr &inc, QDate date)
                 "also to future items, or to all items in the recurrence?");
             return KCalUtils::RecurrenceActions::questionSelectedFutureAllCancel(message, caption, itemSelected, itemFuture, itemAll, this);
         }
-        Q_FALLTHROUGH();
+        [[fallthrough]];
 
     default:
         Q_ASSERT(availableOccurrences & KCalUtils::RecurrenceActions::SelectedOccurrence);
