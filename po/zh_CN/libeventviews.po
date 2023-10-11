@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-01 01:55+0000\n"
-"PO-Revision-Date: 2023-09-16 10:08\n"
+"PO-Revision-Date: 2023-10-10 14:25\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -14,8 +14,8 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf5-trunk/messages/eventviews/libeventviews.pot\n"
-"X-Crowdin-File-ID: 3962\n"
+"X-Crowdin-File: /kf6-trunk/messages/eventviews/libeventviews.pot\n"
+"X-Crowdin-File-ID: 45221\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -33,8 +33,7 @@ msgid "Unable to lock item for modification. You cannot make any changes."
 msgstr "无法锁定对项目的修改。您无法进行任何更改。"
 
 #: agenda/agenda.cpp:968
-#, fuzzy, kde-format
-#| msgid "Locking Failed"
+#, kde-format
 msgctxt "@title:window"
 msgid "Locking Failed"
 msgstr "锁定失败"
@@ -51,8 +50,7 @@ msgid ""
 msgstr "无法将例外项目添加到日历。未更改。"
 
 #: agenda/agenda.cpp:1207 month/monthitem.cpp:447
-#, fuzzy, kde-format
-#| msgid "Error Occurred"
+#, kde-format
 msgctxt "@title:window"
 msgid "Error Occurred"
 msgstr "发生了错误"
@@ -69,8 +67,7 @@ msgid "Attendee \"%1\" added to the calendar item \"%2\""
 msgstr "参与者“%1”已被添加到日历项目“%2”"
 
 #: agenda/agendaitem.cpp:632
-#, fuzzy, kde-format
-#| msgid "Attendee added"
+#, kde-format
 msgctxt "@title:window"
 msgid "Attendee added"
 msgstr "参与者已添加"
@@ -1665,8 +1662,7 @@ msgid "Cannot move to-do to itself or a child of itself."
 msgstr "无法移动待办事项到其自身或者其子项。"
 
 #: todo/todoview.cpp:234
-#, fuzzy, kde-format
-#| msgid "Drop To-do"
+#, kde-format
 msgctxt "@title:window"
 msgid "Drop To-do"
 msgstr "删除待办事项"
