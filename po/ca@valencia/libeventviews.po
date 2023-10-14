@@ -1816,7 +1816,8 @@ msgstr "9 (la més baixa)"
 #: todo/todoview.cpp:233
 #, kde-format
 msgid "Cannot move to-do to itself or a child of itself."
-msgstr "No es pot moure la tasca pendent a ella mateixa o a un fill seu."
+msgstr ""
+"No es pot moure la tasca pendent cap a ella mateixa o cap a un fill seu."
 
 #: todo/todoview.cpp:234
 #, kde-format
@@ -1932,7 +1933,7 @@ msgstr "&Copia a"
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Move To"
-msgstr "&Mou a"
+msgstr "&Mou cap a"
 
 #: todo/todoview.cpp:451
 #, kde-format
