@@ -6,13 +6,13 @@
 # H. İbrahim Güngör <ibrahim@pardus.org.tr>, 2011.
 # Volkan Gezer <volkangezer@gmail.com>, 2013-2014, 2015, 2017.
 # Kaan Ozdincer <kaanozdincer@gmail.com>, 2014.
-# Emir SARI <emir_sari@icloud.com>, 2022, 2023.
+# SPDX-FileCopyrightText: 2022, 2023 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-25 02:27+0000\n"
-"PO-Revision-Date: 2023-08-01 00:42+0300\n"
+"PO-Revision-Date: 2023-11-02 13:13+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.11.70\n"
+"X-Generator: Lokalize 23.08.2\n"
 "(http: //www.transifex.com/projects/p/kdepim-k-tr/language/tr/)\n"
 "X-POOTLE-MTIME: 1413132207.000000\n"
 
@@ -311,7 +311,7 @@ msgstr "Ögeleri silerken size sorulmasını istiyorsanız bu kutuyu işaretleyi
 #: eventviews.kcfg:63
 #, kde-format
 msgid "New Events, To-dos and Journal Entries Should"
-msgstr "Yeni Etkinlikler, Yapılacaklar ve Günlük Girdileri"
+msgstr "Yeni Etkinlikler, Yapılacaklar ve Günce Girdileri"
 
 #. i18n: ectx: label, entry (Destination), group (Save Settings)
 #: eventviews.kcfg:66
@@ -326,7 +326,7 @@ msgid ""
 "Select this option to always record new events, to-dos and journal entries "
 "using the standard calendar."
 msgstr ""
-"Yeni etkinlikleri, yapılacakları ve günlük girdilerini her zaman öntanımlı "
+"Yeni etkinlikleri, yapılacakları ve günce girdilerini her zaman öntanımlı "
 "takvim kullanarak kaydetmek için bu seçeneği seçin."
 
 #. i18n: ectx: label, entry (Destination), group (Save Settings)
@@ -345,7 +345,7 @@ msgid ""
 "Kolab server or have to manage multiple accounts using Kontact as a KDE "
 "Kolab client. "
 msgstr ""
-"Yeni bir etkinlik, yapılacak veya günlük girdisi oluşturduğunuz her kerede "
+"Yeni bir etkinlik, yapılacak veya günce girdisi oluşturduğunuz her kerede "
 "kullanılacak takvimi seçmek için bu seçeneği seçin. Kolab sunucusunun "
 "paylaşılan klasör işlevini kullanmayı düşünüyorsanız veya bir KDE Kolab "
 "istemcisi olarak Kontak kullanarak birden çok hesabı idare etmek zorunda "
@@ -561,7 +561,7 @@ msgstr ""
 #: eventviews.kcfg:159
 #, kde-format
 msgid "Show journals instead of events when in Journal View"
-msgstr "Günlük Görünümünde etkinlikler yerine günlükleri göster"
+msgstr "Günce Görünümünde etkinlikler yerine günceleri göster"
 
 #. i18n: ectx: whatsthis, entry (HighlightJournals), group (General View)
 #: eventviews.kcfg:160
@@ -570,7 +570,7 @@ msgid ""
 "Check this box to show the days containing journals in bold typeface in the "
 "Date Navigator when in journal view."
 msgstr ""
-"Günlük görünümünde, günlük girdisi içeren günleri Tarih Gezgini'nde kalın "
+"Günce görünümünde, günce girdisi içeren günleri Tarih Gezgini'nde kalın "
 "yazıyüzü ile göstermek için bu kutuyu işaretleyin."
 
 #. i18n: ectx: label, entry (WeekNumbersShowWork), group (General View)
@@ -1013,19 +1013,19 @@ msgstr "Ay görünümünde yapılacakları göster"
 #: eventviews.kcfg:301 viewerapp/settings.kcfg:140
 #, kde-format
 msgid "Show journals"
-msgstr "Günlükleri göster"
+msgstr "Günceleri göster"
 
 #. i18n: ectx: whatsthis, entry (ShowJournalsMonthView), group (Month View)
 #: eventviews.kcfg:302 viewerapp/settings.kcfg:141
 #, kde-format
 msgid "Check this box to display journals in the month view."
-msgstr "Ay görünümünde günlükleri görüntülemek için bu kutuyu işaretleyin."
+msgstr "Ay görünümünde günceleri görüntülemek için bu kutuyu işaretleyin."
 
 #. i18n: ectx: tooltip, entry (ShowJournalsMonthView), group (Month View)
 #: eventviews.kcfg:303 viewerapp/settings.kcfg:142
 #, kde-format
 msgid "Display journals in the month view"
-msgstr "Ay görünümünde günlükleri göster"
+msgstr "Ay görünümünde günceleri göster"
 
 #. i18n: ectx: label, entry, group (Month View)
 #: eventviews.kcfg:308 viewerapp/settings.kcfg:147
@@ -1214,7 +1214,7 @@ msgstr ""
 #: eventviews.kcfg:369 viewerapp/settings.kcfg:195
 #, kde-format
 msgid "Record completed to-dos in journal entries"
-msgstr "Tamamlanmış yapılacakları günlük girdilerine kaydet"
+msgstr "Tamamlanmış yapılacakları günce girdilerine kaydet"
 
 #. i18n: ectx: whatsthis, entry, group (Todo View)
 #: eventviews.kcfg:370 viewerapp/settings.kcfg:196
@@ -1223,7 +1223,7 @@ msgid ""
 "Check this box to record the completion of a to-do in a new entry of your "
 "journal automatically."
 msgstr ""
-"Bir yapılacak tamamlandığında onu kendiliğinden yeni bir günlük girdisinde "
+"Bir yapılacak tamamlandığında onu kendiliğinden yeni bir günce girdisine "
 "kaydetmek için bu kutuyu işaretleyin."
 
 #. i18n: ectx: label, entry, group (Colors)
@@ -1525,12 +1525,12 @@ msgstr "Dü&zenle"
 #: journal/journalframe.cpp:155
 #, kde-format
 msgid "Edit this journal entry"
-msgstr "Bu günlük girdisini düzenle"
+msgstr "Bu günce girdisini düzenle"
 
 #: journal/journalframe.cpp:156
 #, kde-format
 msgid "Opens an editor dialog for this journal entry"
-msgstr "Bu günlük girdisi için bir düzenleyici penceresi açar"
+msgstr "Bu günce girdisi için bir düzenleyici iletişim kutusu açar"
 
 #: journal/journalframe.cpp:162
 #, kde-format
@@ -1540,7 +1540,7 @@ msgstr "&Sil"
 #: journal/journalframe.cpp:165 journal/journalframe.cpp:166
 #, kde-format
 msgid "Delete this journal entry"
-msgstr "Bu günlük girdisini sil"
+msgstr "Bu günce girdisini sil"
 
 #: journal/journalframe.cpp:171
 #, kde-format
@@ -1550,12 +1550,12 @@ msgstr "&Yazdır"
 #: journal/journalframe.cpp:175
 #, kde-format
 msgid "Print this journal entry"
-msgstr "Bu günlük girdisini yazdır"
+msgstr "Bu günce girdisini yazdır"
 
 #: journal/journalframe.cpp:176
 #, kde-format
 msgid "Opens a print dialog for this journal entry"
-msgstr "Bu günlük girdisi için yazdırma penceresi açar"
+msgstr "Bu günce girdisi için bir yazdırma iletişim kutusu açar"
 
 #: journal/journalframe.cpp:181
 #, kde-format
@@ -1565,7 +1565,7 @@ msgstr "Yazdırma önizleme"
 #: journal/journalframe.cpp:185
 #, kde-format
 msgid "Print preview this journal entry"
-msgstr "Bu günlük girdisinin yazdırma ön izlemesi"
+msgstr "Bu günce girdisinin yazdırma önizlemesi"
 
 #: list/listview.cpp:57
 #, kde-format
