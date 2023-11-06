@@ -549,7 +549,7 @@ void ListView::popupMenu(const QPoint &point)
 
 void ListView::readSettings(KConfig *config)
 {
-    KConfigGroup cfgGroup = config->group("ListView Layout");
+    KConfigGroup cfgGroup = config->group(QLatin1String("ListView Layout"));
     readSettings(cfgGroup);
 }
 
@@ -563,7 +563,7 @@ void EventViews::ListView::readSettings(const KConfigGroup &cfgGroup)
 
 void ListView::writeSettings(KConfig *config)
 {
-    KConfigGroup cfgGroup = config->group("ListView Layout");
+    KConfigGroup cfgGroup = config->group(QLatin1String("ListView Layout"));
 }
 
 void EventViews::ListView::writeSettings(KConfigGroup &cfgGroup)

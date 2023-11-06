@@ -2318,7 +2318,7 @@ void AgendaView::readSettings()
 
 void AgendaView::readSettings(const KConfig *config)
 {
-    const KConfigGroup group = config->group("Views");
+    const KConfigGroup group = config->group(QLatin1String("Views"));
 
     const QList<int> sizes = group.readEntry("Separator AgendaView", QList<int>());
 
@@ -2332,7 +2332,7 @@ void AgendaView::readSettings(const KConfig *config)
 
 void AgendaView::writeSettings(KConfig *config)
 {
-    KConfigGroup group = config->group("Views");
+    KConfigGroup group = config->group(QLatin1String("Views"));
 
     QList<int> list = d->mSplitterAgenda->sizes();
     group.writeEntry("Separator AgendaView", list);

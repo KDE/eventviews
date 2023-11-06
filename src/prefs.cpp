@@ -148,7 +148,7 @@ void BaseConfig::usrSetDefaults()
 
 void BaseConfig::usrRead()
 {
-    KConfigGroup rColorsConfig(config(), "Resources Colors");
+    KConfigGroup rColorsConfig(config(), QLatin1String("Resources Colors"));
     const QStringList colorKeyList = rColorsConfig.keyList();
 
     for (const QString &key : colorKeyList) {
@@ -165,11 +165,11 @@ void BaseConfig::usrRead()
     }
 #endif
 
-    KConfigGroup timeScaleConfig(config(), "Timescale");
+    KConfigGroup timeScaleConfig(config(), QLatin1String("Timescale"));
     setTimeScaleTimezones(timeScaleConfig.readEntry("Timescale Timezones", QStringList()));
 
-    KConfigGroup monthViewConfig(config(), "Month View");
-    KConfigGroup agendaViewConfig(config(), "Agenda View");
+    KConfigGroup monthViewConfig(config(), QLatin1String("Month View"));
+    KConfigGroup agendaViewConfig(config(), QLatin1String("Agenda View"));
     const auto agendaIconArray = agendaViewConfig.readEntry<QByteArray>("agendaViewItemIcons", agendaViewIconDefaults());
     const auto monthIconArray = monthViewConfig.readEntry<QByteArray>("monthViewItemIcons", monthViewIconDefaults());
 
@@ -181,7 +181,7 @@ void BaseConfig::usrRead()
 
 bool BaseConfig::usrSave()
 {
-    KConfigGroup rColorsConfig(config(), "Resources Colors");
+    KConfigGroup rColorsConfig(config(), QLatin1String("Resources Colors"));
     for (auto it = mResourceColors.constBegin(); it != mResourceColors.constEnd(); ++it) {
         rColorsConfig.writeEntry(it.key(), it.value());
     }
@@ -195,11 +195,11 @@ bool BaseConfig::usrSave()
     }
 #endif
 
-    KConfigGroup timeScaleConfig(config(), "Timescale");
+    KConfigGroup timeScaleConfig(config(), QLatin1String("Timescale"));
     timeScaleConfig.writeEntry("Timescale Timezones", timeScaleTimezones());
 
-    KConfigGroup monthViewConfig(config(), "Month View");
-    KConfigGroup agendaViewConfig(config(), "Agenda View");
+    KConfigGroup monthViewConfig(config(), QLatin1String("Month View"));
+    KConfigGroup agendaViewConfig(config(), QLatin1String("Agenda View"));
 
     const QByteArray agendaIconArray = iconSetToArray(mAgendaViewIcons);
     const QByteArray monthIconArray = iconSetToArray(mMonthViewIcons);
