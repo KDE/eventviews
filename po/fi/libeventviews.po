@@ -1,6 +1,6 @@
 # Copyright © 2011 This_file_is_part_of_KDE
 # This file is distributed under the same license as the kdepim package.
-# Tommi Nieminen <translator@legisign.org>, 2011, 2013, 2017, 2018, 2019, 2020, 2021, 2022.
+# Tommi Nieminen <translator@legisign.org>, 2011, 2013, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
 # Lasse Liehu <lasse.liehu@gmail.com>, 2012, 2013, 2014, 2015, 2016.
 #
 # KDE Finnish translation sprint participants:
@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-01 01:55+0000\n"
-"PO-Revision-Date: 2022-07-29 13:23+0300\n"
+"PO-Revision-Date: 2023-10-12 18:07+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-POT-Import-Date: 2012-12-01 22:25:08+0000\n"
-"X-Generator: Lokalize 20.12.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -38,8 +38,7 @@ msgstr ""
 "Merkintää ei saatu lukituksi muuttamista varten: et voi tehdä muutoksia."
 
 #: agenda/agenda.cpp:968
-#, fuzzy, kde-format
-#| msgid "Locking Failed"
+#, kde-format
 msgctxt "@title:window"
 msgid "Locking Failed"
 msgstr "Lukitus epäonnistui"
@@ -56,8 +55,7 @@ msgid ""
 msgstr "Poikkeusmerkintää ei voi lisätä kalenteriin. Muutoksia ei tehdä."
 
 #: agenda/agenda.cpp:1207 month/monthitem.cpp:447
-#, fuzzy, kde-format
-#| msgid "Error Occurred"
+#, kde-format
 msgctxt "@title:window"
 msgid "Error Occurred"
 msgstr "Tapahtui virhe"
@@ -75,8 +73,7 @@ msgid "Attendee \"%1\" added to the calendar item \"%2\""
 msgstr "Osallistuja ”%1” lisättiin kalenterin merkintään ”%2”"
 
 #: agenda/agendaitem.cpp:632
-#, fuzzy, kde-format
-#| msgid "Attendee added"
+#, kde-format
 msgctxt "@title:window"
 msgid "Attendee added"
 msgstr "Osallistuja lisätty"
@@ -1766,8 +1763,7 @@ msgid "Cannot move to-do to itself or a child of itself."
 msgstr "Ei voida siirtää tehtävää itseensä tai alitehtävää itseensä"
 
 #: todo/todoview.cpp:234
-#, fuzzy, kde-format
-#| msgid "Drop To-do"
+#, kde-format
 msgctxt "@title:window"
 msgid "Drop To-do"
 msgstr "Pudota tehtävä"
