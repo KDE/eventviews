@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Vít Pelčák <vit@pelcak.org>, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020.
+# SPDX-FileCopyrightText: 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2023 Vít Pelčák <vit@pelcak.org>
 # Lukáš Tinkl <ltinkl@redhat.com>, 2010, 2011.
 # Tomáš Chvátal <tomas.chvatal@gmail.com>, 2012, 2013.
 # Vit Pelcak <vit@pelcak.org>, 2021, 2023.
@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-01 01:55+0000\n"
-"PO-Revision-Date: 2023-02-22 16:48+0100\n"
+"PO-Revision-Date: 2023-11-02 13:49+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 23.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -40,7 +40,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Locking Failed"
-msgstr ""
+msgstr "Uzamknutí selhalo"
 
 #: agenda/agenda.cpp:1183
 #, kde-format
@@ -57,7 +57,7 @@ msgstr "Nelze přidat výjimku do kalendáře. Nebude provedena žádná změna.
 #, kde-format
 msgctxt "@title:window"
 msgid "Error Occurred"
-msgstr ""
+msgstr "Nastala chyba"
 
 #: agenda/agendaitem.cpp:81 list/listview.cpp:425
 #, kde-format
@@ -76,7 +76,7 @@ msgstr "Účastník \"%1\" přidal do kalendáře položku \"%2\""
 #, kde-format
 msgctxt "@title:window"
 msgid "Attendee added"
-msgstr ""
+msgstr "Účastník přidán"
 
 #: agenda/agendaitem.cpp:856 agenda/agendaitem.cpp:951
 #, kde-format
@@ -1656,7 +1656,7 @@ msgstr "Úlohu nelze přesunout do sebe sama nebo do svého potomka."
 #, kde-format
 msgctxt "@title:window"
 msgid "Drop To-do"
-msgstr ""
+msgstr "Zrušit úlohu"
 
 #: todo/todoview.cpp:314
 #, kde-format
