@@ -2,17 +2,18 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
+# SPDX-FileCopyrightText: 2022, 2023 Emir SARI <emir_sari@icloud.com>
 # zeugma <sunder67@hotmail.com>, 2013.
 # H. İbrahim Güngör <ibrahim@pardus.org.tr>, 2011.
 # Volkan Gezer <volkangezer@gmail.com>, 2013-2014, 2015, 2017.
 # Kaan Ozdincer <kaanozdincer@gmail.com>, 2014.
-# SPDX-FileCopyrightText: 2022, 2023 Emir SARI <emir_sari@icloud.com>
+# Emir SARI <emir_sari@icloud.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-01 01:55+0000\n"
-"PO-Revision-Date: 2023-11-02 13:13+0300\n"
+"PO-Revision-Date: 2023-11-11 23:31+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -20,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.08.2\n"
+"X-Generator: Lokalize 23.11.70\n"
 "(http: //www.transifex.com/projects/p/kdepim-k-tr/language/tr/)\n"
 "X-POOTLE-MTIME: 1413132207.000000\n"
 
@@ -263,7 +264,7 @@ msgstr ""
 #: eventviews.kcfg:44
 #, kde-format
 msgid "Enable automatic saving of manually opened calendar files"
-msgstr "Elle açılan takvim dosyalarını otomatik olarak kaydetmeyi etkileştir"
+msgstr "Elle açılan takvim dosyalarını kendiliğinden kaydetmeyi etkileştir"
 
 #. i18n: ectx: whatsthis, entry, group (Save Settings)
 #: eventviews.kcfg:45
@@ -295,7 +296,7 @@ msgid ""
 msgstr ""
 "Takvim etkinliklerinin hangi sıklıkla otomatik kaydedileceğini dakika "
 "türünden ayarlayın. Bu ayar yalnızca elle açılan dosyalar için uygulanır. "
-"Standart KDE genelindeki takvim her değişiklikten sonra otomatik olarak "
+"Standart KDE genelindeki takvim her değişiklikten sonra kendiliğinden "
 "kaydedilmektedir."
 
 #. i18n: ectx: label, entry (Confirm), group (Save Settings)
@@ -379,7 +380,7 @@ msgid ""
 msgstr ""
 "Zaman bölgenizi aşağı açılan kutudaki konum listesinden seçin. Bulunduğunuz "
 "şehir liste içerisinde yoksa, aynı zaman bölgesini paylaşan başka bir şehri "
-"seçin. K Organizatör yaz saati için otomatik olarak düzenleyecektir."
+"seçin. K Organizatör yaz saati için kendiliğinden düzenleyecektir."
 
 #. i18n: ectx: label, entry (DayBegins), group (Time &amp; Date)
 #: eventviews.kcfg:94
@@ -713,9 +714,9 @@ msgid ""
 "mouse from the start time to the end time of the event you are about to plan."
 msgstr ""
 "Günlük ve haftalık görünümde bir tarih aralığı seçtiğinizde etkinlik "
-"düzenleyiciyi otomatik olarak başlatmak için bu kutuyu işaretleyin. Bir "
-"zaman aralığı seçmek için fareyi başlangıç zamanından tasarladığınız "
-"etkinliğin bitiş zamanına dek sürükleyin."
+"düzenleyiciyi kendiliğinden başlatmak için bu kutuyu işaretleyin. Bir zaman "
+"aralığı seçmek için fareyi başlangıç zamanından tasarladığınız etkinliğin "
+"bitiş zamanına dek sürükleyin."
 
 #. i18n: ectx: tooltip, entry (SelectionStartsEditor), group (Agenda View)
 #: eventviews.kcfg:213 viewerapp/settings.kcfg:63
