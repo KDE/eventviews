@@ -1321,3 +1321,5 @@ void TodoView::createNote()
 }
 
 #include "todoview.moc"
+
+#include "moc_todoview.cpp"
