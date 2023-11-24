@@ -132,7 +132,7 @@ PRIVATE
   KF6::I18n
   KPim6::Libkdepim
   KF6::Codecs
-  KGantt
+  KGantt6
   KPim6::AkonadiWidgets
   KF6::Contacts
 )
