@@ -323,7 +323,7 @@ TodoView::TodoView(const EventViews::PrefsPtr &prefs, bool sidebarView, QWidget 
                                         "flat list instead of a hierarchical tree; the parental "
                                         "relationships are removed in the display."));
 
-    connect(mFlatViewButton, &QToolButton::toggled, this, [=](bool flatView) {
+    connect(mFlatViewButton, &QToolButton::toggled, this, [this](bool flatView) {
         setFlatView(flatView, true);
     });
     if (mFullViewButton) {
