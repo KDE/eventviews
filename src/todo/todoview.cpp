@@ -415,7 +415,7 @@ TodoView::TodoView(const EventViews::PrefsPtr &prefs, bool sidebarView, QWidget 
                                   i18nc("@action:inmenu", "Create Event from To-do"),
                                   this,
                                   qOverload<>(&TodoView::createEvent));
-    a->setObjectName(QStringLiteral("createevent"));
+    a->setObjectName(QLatin1StringView("createevent"));
     mItemPopupMenuReadWriteEntries << a;
     mItemPopupMenuItemOnlyEntries << a;
 
@@ -423,7 +423,7 @@ TodoView::TodoView(const EventViews::PrefsPtr &prefs, bool sidebarView, QWidget 
                                   i18nc("@action:inmenu", "Create Note for To-do"),
                                   this,
                                   qOverload<>(&TodoView::createNote));
-    a->setObjectName(QStringLiteral("createnote"));
+    a->setObjectName(QLatin1StringView("createnote"));
     mItemPopupMenuReadWriteEntries << a;
     mItemPopupMenuItemOnlyEntries << a;
 

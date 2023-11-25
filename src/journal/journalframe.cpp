@@ -149,7 +149,7 @@ JournalFrame::JournalFrame(const Akonadi::Item &j, const Akonadi::CollectionCale
     buttonsLayout->addStretch();
 
     mEditButton = new QPushButton(this);
-    mEditButton->setObjectName(QStringLiteral("editButton"));
+    mEditButton->setObjectName(QLatin1StringView("editButton"));
     mEditButton->setText(i18n("&Edit"));
     mEditButton->setIcon(QIcon::fromTheme(QStringLiteral("document-properties")));
     mEditButton->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
@@ -159,7 +159,7 @@ JournalFrame::JournalFrame(const Akonadi::Item &j, const Akonadi::CollectionCale
     connect(mEditButton, &QPushButton::clicked, this, &JournalFrame::editItem);
 
     mDeleteButton = new QPushButton(this);
-    mDeleteButton->setObjectName(QStringLiteral("deleteButton"));
+    mDeleteButton->setObjectName(QLatin1StringView("deleteButton"));
     mDeleteButton->setText(i18n("&Delete"));
     mDeleteButton->setIcon(QIcon::fromTheme(QStringLiteral("edit-delete")));
     mDeleteButton->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
@@ -170,7 +170,7 @@ JournalFrame::JournalFrame(const Akonadi::Item &j, const Akonadi::CollectionCale
 
     mPrintButton = new QPushButton(this);
     mPrintButton->setText(i18n("&Print"));
-    mPrintButton->setObjectName(QStringLiteral("printButton"));
+    mPrintButton->setObjectName(QLatin1StringView("printButton"));
     mPrintButton->setIcon(QIcon::fromTheme(QStringLiteral("document-print")));
     mPrintButton->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
     mPrintButton->setToolTip(i18n("Print this journal entry"));
@@ -180,7 +180,7 @@ JournalFrame::JournalFrame(const Akonadi::Item &j, const Akonadi::CollectionCale
 
     mPrintPreviewButton = new QPushButton(this);
     mPrintPreviewButton->setText(i18n("Print preview"));
-    mPrintPreviewButton->setObjectName(QStringLiteral("printButton"));
+    mPrintPreviewButton->setObjectName(QLatin1StringView("printButton"));
     mPrintPreviewButton->setIcon(QIcon::fromTheme(QStringLiteral("document-print-preview")));
     mPrintPreviewButton->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
     mPrintPreviewButton->setToolTip(i18n("Print preview this journal entry"));
