@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: CC0-1.0
 # SPDX-FileCopyrightText: none
-add_definitions(-DTRANSLATION_DOMAIN=\"libeventviews\")
+add_definitions(-DTRANSLATION_DOMAIN=\"libeventviews6\")
 add_library(KPim6EventViews)
 add_library(KPim6::EventViews ALIAS KPim6EventViews)
 
