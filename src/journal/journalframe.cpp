@@ -13,7 +13,6 @@
 #include "journalframe.h"
 
 #include <Akonadi/CalendarUtils>
-#include <Akonadi/CollectionCalendar>
 #include <CalendarSupport/Utils>
 
 #include <KCalendarCore/Journal>

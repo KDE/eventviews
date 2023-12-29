@@ -10,7 +10,6 @@
 
 #include "eventview_p.h"
 #include "calendarview_debug.h"
-#include "eventview.h"
 #include "prefs.h"
 
 #include <CalendarSupport/CollectionSelection>
