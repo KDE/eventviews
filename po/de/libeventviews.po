@@ -22,7 +22,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.12.2\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -44,7 +44,7 @@ msgstr ""
 #: agenda/agenda.cpp:973
 #, kde-format
 msgid "Locking Failed"
-msgstr "Kein exklusiver Zugriff möglich"
+msgstr "Es ist kein exklusiver Zugriff möglich"
 
 #: agenda/agenda.cpp:1188
 #, kde-format
