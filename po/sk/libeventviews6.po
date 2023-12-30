@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-01 01:55+0000\n"
+"POT-Creation-Date: 2023-12-30 01:38+0000\n"
 "PO-Revision-Date: 2023-12-10 15:07+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -1499,52 +1499,52 @@ msgstr ""
 "Použite farbu systému. Ak je povolená, bude ignorovať všetky ostatné "
 "nastavenia farieb"
 
-#: journal/journalframe.cpp:153
+#: journal/journalframe.cpp:152
 #, kde-format
 msgid "&Edit"
 msgstr "&Upraviť"
 
-#: journal/journalframe.cpp:156
+#: journal/journalframe.cpp:155
 #, kde-format
 msgid "Edit this journal entry"
 msgstr "Upraviť tento zápis v denníku"
 
-#: journal/journalframe.cpp:157
+#: journal/journalframe.cpp:156
 #, kde-format
 msgid "Opens an editor dialog for this journal entry"
 msgstr "Otvorí editor pre tento zápis v denníku"
 
-#: journal/journalframe.cpp:163
+#: journal/journalframe.cpp:162
 #, kde-format
 msgid "&Delete"
 msgstr "Vymazať"
 
-#: journal/journalframe.cpp:166 journal/journalframe.cpp:167
+#: journal/journalframe.cpp:165 journal/journalframe.cpp:166
 #, kde-format
 msgid "Delete this journal entry"
 msgstr "Odstrániť tento zápis v denníku"
 
-#: journal/journalframe.cpp:172
+#: journal/journalframe.cpp:171
 #, kde-format
 msgid "&Print"
 msgstr "&Tlačiť"
 
-#: journal/journalframe.cpp:176
+#: journal/journalframe.cpp:175
 #, kde-format
 msgid "Print this journal entry"
 msgstr "Vytlačiť tento zápis v denníku"
 
-#: journal/journalframe.cpp:177
+#: journal/journalframe.cpp:176
 #, kde-format
 msgid "Opens a print dialog for this journal entry"
 msgstr "Otvorí tlačový dialóg pre túto položku denníka"
 
-#: journal/journalframe.cpp:182
+#: journal/journalframe.cpp:181
 #, kde-format
 msgid "Print preview"
 msgstr "Náhľad tlače"
 
-#: journal/journalframe.cpp:186
+#: journal/journalframe.cpp:185
 #, kde-format
 msgid "Print preview this journal entry"
 msgstr "Zobraziť náhľad tlače tejto položky denníka"

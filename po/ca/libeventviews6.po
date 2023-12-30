@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-01 01:55+0000\n"
+"POT-Creation-Date: 2023-12-30 01:38+0000\n"
 "PO-Revision-Date: 2023-09-25 09:29+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -1560,52 +1560,52 @@ msgstr ""
 "Usa el color del sistema. Si està activat, s'ignorarà qualsevol configuració "
 "del color"
 
-#: journal/journalframe.cpp:153
+#: journal/journalframe.cpp:152
 #, kde-format
 msgid "&Edit"
 msgstr "&Edita"
 
-#: journal/journalframe.cpp:156
+#: journal/journalframe.cpp:155
 #, kde-format
 msgid "Edit this journal entry"
 msgstr "Edita aquesta entrada de diari"
 
-#: journal/journalframe.cpp:157
+#: journal/journalframe.cpp:156
 #, kde-format
 msgid "Opens an editor dialog for this journal entry"
 msgstr "Obre un diàleg d'editor per a aquesta entrada de diari"
 
-#: journal/journalframe.cpp:163
+#: journal/journalframe.cpp:162
 #, kde-format
 msgid "&Delete"
 msgstr "Su&primeix"
 
-#: journal/journalframe.cpp:166 journal/journalframe.cpp:167
+#: journal/journalframe.cpp:165 journal/journalframe.cpp:166
 #, kde-format
 msgid "Delete this journal entry"
 msgstr "Suprimeix aquesta entrada de diari"
 
-#: journal/journalframe.cpp:172
+#: journal/journalframe.cpp:171
 #, kde-format
 msgid "&Print"
 msgstr "&Imprimeix"
 
-#: journal/journalframe.cpp:176
+#: journal/journalframe.cpp:175
 #, kde-format
 msgid "Print this journal entry"
 msgstr "Imprimeix aquesta entrada de diari"
 
-#: journal/journalframe.cpp:177
+#: journal/journalframe.cpp:176
 #, kde-format
 msgid "Opens a print dialog for this journal entry"
 msgstr "Obre un diàleg d'impressió per a aquesta entrada de diari"
 
-#: journal/journalframe.cpp:182
+#: journal/journalframe.cpp:181
 #, kde-format
 msgid "Print preview"
 msgstr "Vista prèvia d'impressió"
 
-#: journal/journalframe.cpp:186
+#: journal/journalframe.cpp:185
 #, kde-format
 msgid "Print preview this journal entry"
 msgstr "Vista prèvia d'impressió d'aquesta entrada de diari"

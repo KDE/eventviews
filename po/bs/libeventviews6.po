@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-01 01:55+0000\n"
+"POT-Creation-Date: 2023-12-30 01:38+0000\n"
 "PO-Revision-Date: 2014-01-10 19:09+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: bs <bs@kde.org>\n"
@@ -1521,54 +1521,54 @@ msgstr ""
 msgid "Use system color. If enabled will ignore all other color settings"
 msgstr ""
 
-#: journal/journalframe.cpp:153
+#: journal/journalframe.cpp:152
 #, kde-format
 msgid "&Edit"
 msgstr "&Izmijeni..."
 
-#: journal/journalframe.cpp:156
+#: journal/journalframe.cpp:155
 #, kde-format
 msgid "Edit this journal entry"
 msgstr "Izmijeni ovaj unos u dnevniku"
 
-#: journal/journalframe.cpp:157
+#: journal/journalframe.cpp:156
 #, kde-format
 msgid "Opens an editor dialog for this journal entry"
 msgstr "Otvara dijalog uređivanja za ovaj unos dnevnika"
 
-#: journal/journalframe.cpp:163
+#: journal/journalframe.cpp:162
 #, kde-format
 msgid "&Delete"
 msgstr "&Obriši"
 
-#: journal/journalframe.cpp:166 journal/journalframe.cpp:167
+#: journal/journalframe.cpp:165 journal/journalframe.cpp:166
 #, kde-format
 msgid "Delete this journal entry"
 msgstr "Obriši ovaj unos dnevnika"
 
-#: journal/journalframe.cpp:172
+#: journal/journalframe.cpp:171
 #, kde-format
 msgid "&Print"
 msgstr "&Štampaj"
 
-#: journal/journalframe.cpp:176
+#: journal/journalframe.cpp:175
 #, kde-format
 msgid "Print this journal entry"
 msgstr "Odštampaj ovaj unos dnevnika"
 
-#: journal/journalframe.cpp:177
+#: journal/journalframe.cpp:176
 #, kde-format
 msgid "Opens a print dialog for this journal entry"
 msgstr "Otvara prozor za štampanje za ovaj unos dnevnika"
 
-#: journal/journalframe.cpp:182
+#: journal/journalframe.cpp:181
 #, fuzzy, kde-format
 #| msgctxt "@action:inmenu print preview the to-do"
 #| msgid "Print Previe&w..."
 msgid "Print preview"
 msgstr "Pregled prije štampanja"
 
-#: journal/journalframe.cpp:186
+#: journal/journalframe.cpp:185
 #, fuzzy, kde-format
 #| msgid "Print this journal entry"
 msgid "Print preview this journal entry"

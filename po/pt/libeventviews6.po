@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-01 01:55+0000\n"
+"POT-Creation-Date: 2023-12-30 01:38+0000\n"
 "PO-Revision-Date: 2022-07-06 12:31+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -1533,52 +1533,52 @@ msgstr ""
 "Usar a cor do sistema. Se estiver activa, irá ignorar todas as outras "
 "configurações de cores"
 
-#: journal/journalframe.cpp:153
+#: journal/journalframe.cpp:152
 #, kde-format
 msgid "&Edit"
 msgstr "&Editar"
 
-#: journal/journalframe.cpp:156
+#: journal/journalframe.cpp:155
 #, kde-format
 msgid "Edit this journal entry"
 msgstr "Editar este item do diário"
 
-#: journal/journalframe.cpp:157
+#: journal/journalframe.cpp:156
 #, kde-format
 msgid "Opens an editor dialog for this journal entry"
 msgstr "Abre uma janela de edição deste item do diário"
 
-#: journal/journalframe.cpp:163
+#: journal/journalframe.cpp:162
 #, kde-format
 msgid "&Delete"
 msgstr "&Apagar"
 
-#: journal/journalframe.cpp:166 journal/journalframe.cpp:167
+#: journal/journalframe.cpp:165 journal/journalframe.cpp:166
 #, kde-format
 msgid "Delete this journal entry"
 msgstr "Apagar este item do diário"
 
-#: journal/journalframe.cpp:172
+#: journal/journalframe.cpp:171
 #, kde-format
 msgid "&Print"
 msgstr "Im&primir"
 
-#: journal/journalframe.cpp:176
+#: journal/journalframe.cpp:175
 #, kde-format
 msgid "Print this journal entry"
 msgstr "Imprimir este item do diário"
 
-#: journal/journalframe.cpp:177
+#: journal/journalframe.cpp:176
 #, kde-format
 msgid "Opens a print dialog for this journal entry"
 msgstr "Abre uma janela de impressão para este item do diário"
 
-#: journal/journalframe.cpp:182
+#: journal/journalframe.cpp:181
 #, kde-format
 msgid "Print preview"
 msgstr "Antevisão da impressão"
 
-#: journal/journalframe.cpp:186
+#: journal/journalframe.cpp:185
 #, kde-format
 msgid "Print preview this journal entry"
 msgstr "Antevisão da impressão deste item do diário"

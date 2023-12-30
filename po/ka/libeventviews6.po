@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-01 01:55+0000\n"
+"POT-Creation-Date: 2023-12-30 01:38+0000\n"
 "PO-Revision-Date: 2023-09-30 09:43+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -1506,52 +1506,52 @@ msgstr ""
 "სისტემის ფერის გამოყენება. თუ ჩართულია, ყველა დანარჩენი ფერის პარამეტრი "
 "გამოტოვებული იქნება"
 
-#: journal/journalframe.cpp:153
+#: journal/journalframe.cpp:152
 #, kde-format
 msgid "&Edit"
 msgstr "&ჩასწორება"
 
-#: journal/journalframe.cpp:156
+#: journal/journalframe.cpp:155
 #, kde-format
 msgid "Edit this journal entry"
 msgstr "ჟურნალის ამ ჩანაწერის ჩასწორება"
 
-#: journal/journalframe.cpp:157
+#: journal/journalframe.cpp:156
 #, kde-format
 msgid "Opens an editor dialog for this journal entry"
 msgstr "ამ ჟურნალის ჩანაწერისთვის რედაქტორის დიალოგის გახსნა"
 
-#: journal/journalframe.cpp:163
+#: journal/journalframe.cpp:162
 #, kde-format
 msgid "&Delete"
 msgstr "&წაშლა"
 
-#: journal/journalframe.cpp:166 journal/journalframe.cpp:167
+#: journal/journalframe.cpp:165 journal/journalframe.cpp:166
 #, kde-format
 msgid "Delete this journal entry"
 msgstr "ჟურნალის ამ ჩანაწერის წაშლა"
 
-#: journal/journalframe.cpp:172
+#: journal/journalframe.cpp:171
 #, kde-format
 msgid "&Print"
 msgstr "&ბეჭდვა"
 
-#: journal/journalframe.cpp:176
+#: journal/journalframe.cpp:175
 #, kde-format
 msgid "Print this journal entry"
 msgstr "ჟურნალის ამ ჩანაწერის დაბეჭდვა"
 
-#: journal/journalframe.cpp:177
+#: journal/journalframe.cpp:176
 #, kde-format
 msgid "Opens a print dialog for this journal entry"
 msgstr "ამ ჟურნალის ჩანაწერის ბეჭდვის ფანჯრის გახსნა"
 
-#: journal/journalframe.cpp:182
+#: journal/journalframe.cpp:181
 #, kde-format
 msgid "Print preview"
 msgstr "დასაბეჭდის გადახედვა"
 
-#: journal/journalframe.cpp:186
+#: journal/journalframe.cpp:185
 #, kde-format
 msgid "Print preview this journal entry"
 msgstr "ჟურნალის ამ ჩანაწერის დაბეჭდვის გადახედვა"

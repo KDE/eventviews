@@ -9,14 +9,13 @@
 # Panagiotis Papadopoulos <pano_90@gmx.net>, 2010.
 # Torbjörn Klatt <torbjoern@torbjoern-klatt.de>, 2011.
 # Intevation GmbH, 2010.
-# Johannes Obermayr <johannesobermayr@gmx.de>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-01 01:55+0000\n"
-"PO-Revision-Date: 2023-12-18 19:08+0100\n"
-"Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
+"POT-Creation-Date: 2023-12-30 01:38+0000\n"
+"PO-Revision-Date: 2022-06-10 00:18+0200\n"
+"Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
@@ -46,7 +45,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Locking Failed"
-msgstr "Exklusivzugriff fehlgeschlagen"
+msgstr "Exklusivzugriff nicht möglich"
 
 #: agenda/agenda.cpp:1183
 #, kde-format
@@ -1562,52 +1561,52 @@ msgstr "Systemfarben benutzen"
 msgid "Use system color. If enabled will ignore all other color settings"
 msgstr "Ist dies aktiviert, werden alle anderen Farbeinstellungen ignoriert"
 
-#: journal/journalframe.cpp:153
+#: journal/journalframe.cpp:152
 #, kde-format
 msgid "&Edit"
 msgstr "&Bearbeiten"
 
-#: journal/journalframe.cpp:156
+#: journal/journalframe.cpp:155
 #, kde-format
 msgid "Edit this journal entry"
 msgstr "Diesen Journaleintrag bearbeiten"
 
-#: journal/journalframe.cpp:157
+#: journal/journalframe.cpp:156
 #, kde-format
 msgid "Opens an editor dialog for this journal entry"
 msgstr "Öffnen einen Dialog zum Bearbeiten dieses Journaleintrags"
 
-#: journal/journalframe.cpp:163
+#: journal/journalframe.cpp:162
 #, kde-format
 msgid "&Delete"
 msgstr "&Löschen"
 
-#: journal/journalframe.cpp:166 journal/journalframe.cpp:167
+#: journal/journalframe.cpp:165 journal/journalframe.cpp:166
 #, kde-format
 msgid "Delete this journal entry"
 msgstr "Diesen Journaleintrag löschen"
 
-#: journal/journalframe.cpp:172
+#: journal/journalframe.cpp:171
 #, kde-format
 msgid "&Print"
 msgstr "&Drucken"
 
-#: journal/journalframe.cpp:176
+#: journal/journalframe.cpp:175
 #, kde-format
 msgid "Print this journal entry"
 msgstr "Diesen Journaleintrag bearbeiten"
 
-#: journal/journalframe.cpp:177
+#: journal/journalframe.cpp:176
 #, kde-format
 msgid "Opens a print dialog for this journal entry"
 msgstr "Öffnen einen Druck-Dialog für diesen Journaleintrag"
 
-#: journal/journalframe.cpp:182
+#: journal/journalframe.cpp:181
 #, kde-format
 msgid "Print preview"
 msgstr "Druckvorschau"
 
-#: journal/journalframe.cpp:186
+#: journal/journalframe.cpp:185
 #, kde-format
 msgid "Print preview this journal entry"
 msgstr "Vorschau für diesen Journaleintrag drucken"

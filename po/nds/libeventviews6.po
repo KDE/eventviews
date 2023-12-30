@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-01 01:55+0000\n"
+"POT-Creation-Date: 2023-12-30 01:38+0000\n"
 "PO-Revision-Date: 2014-04-06 20:54+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -1521,54 +1521,54 @@ msgstr ""
 msgid "Use system color. If enabled will ignore all other color settings"
 msgstr ""
 
-#: journal/journalframe.cpp:153
+#: journal/journalframe.cpp:152
 #, kde-format
 msgid "&Edit"
 msgstr "&Bewerken"
 
-#: journal/journalframe.cpp:156
+#: journal/journalframe.cpp:155
 #, kde-format
 msgid "Edit this journal entry"
 msgstr "Dissen Daagbookindrag bewerken"
 
-#: journal/journalframe.cpp:157
+#: journal/journalframe.cpp:156
 #, kde-format
 msgid "Opens an editor dialog for this journal entry"
 msgstr "Maakt en Editordialoog för dissen Indrag op"
 
-#: journal/journalframe.cpp:163
+#: journal/journalframe.cpp:162
 #, kde-format
 msgid "&Delete"
 msgstr "&Wegdoon"
 
-#: journal/journalframe.cpp:166 journal/journalframe.cpp:167
+#: journal/journalframe.cpp:165 journal/journalframe.cpp:166
 #, kde-format
 msgid "Delete this journal entry"
 msgstr "Dissen Daagbookindrag wegdoon"
 
-#: journal/journalframe.cpp:172
+#: journal/journalframe.cpp:171
 #, kde-format
 msgid "&Print"
 msgstr "&Drucken"
 
-#: journal/journalframe.cpp:176
+#: journal/journalframe.cpp:175
 #, kde-format
 msgid "Print this journal entry"
 msgstr "Dissen Daagbookindrag drucken"
 
-#: journal/journalframe.cpp:177
+#: journal/journalframe.cpp:176
 #, kde-format
 msgid "Opens a print dialog for this journal entry"
 msgstr "Maakt en Druckdialoog för dissen Indrag op"
 
-#: journal/journalframe.cpp:182
+#: journal/journalframe.cpp:181
 #, fuzzy, kde-format
 #| msgctxt "@action:inmenu print preview the to-do"
 #| msgid "Print Previe&w..."
 msgid "Print preview"
 msgstr "Druck&vöransicht..."
 
-#: journal/journalframe.cpp:186
+#: journal/journalframe.cpp:185
 #, fuzzy, kde-format
 #| msgid "Print this journal entry"
 msgid "Print preview this journal entry"
