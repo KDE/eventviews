@@ -4,13 +4,13 @@
 # Alexander Potashev <aspotashev@gmail.com>, 2011, 2014, 2015, 2016.
 # Julia Dronova <juliette.tux@gmail.com>, 2012.
 # Alexander Lakhin <exclusion@gmail.com>, 2013.
-# Alexander Yavorsky <kekcuha@gmail.com>, 2018, 2019, 2020, 2021, 2022.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2018, 2019, 2020, 2021, 2022, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-30 01:38+0000\n"
-"PO-Revision-Date: 2022-02-25 12:02+0300\n"
+"POT-Creation-Date: 2024-01-13 00:38+0000\n"
+"PO-Revision-Date: 2024-01-11 10:23+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -42,8 +42,7 @@ msgstr ""
 "невозможно."
 
 #: agenda/agenda.cpp:968
-#, fuzzy, kde-format
-#| msgid "Locking Failed"
+#, kde-format
 msgctxt "@title:window"
 msgid "Locking Failed"
 msgstr "Ошибка блокировки"
@@ -62,11 +61,10 @@ msgstr ""
 "выполнены."
 
 #: agenda/agenda.cpp:1207 month/monthitem.cpp:447
-#, fuzzy, kde-format
-#| msgid "Error Occurred"
+#, kde-format
 msgctxt "@title:window"
 msgid "Error Occurred"
-msgstr "Произошла ошибка"
+msgstr "Ошибка"
 
 #: agenda/agendaitem.cpp:81 list/listview.cpp:425
 #, kde-format
@@ -83,11 +81,10 @@ msgid "Attendee \"%1\" added to the calendar item \"%2\""
 msgstr "Участник «%1» добавлен в элемент календаря «%2»"
 
 #: agenda/agendaitem.cpp:632
-#, fuzzy, kde-format
-#| msgid "Attendee added"
+#, kde-format
 msgctxt "@title:window"
 msgid "Attendee added"
-msgstr "Участник добавлен"
+msgstr "Добавление участника"
 
 #: agenda/agendaitem.cpp:856 agenda/agendaitem.cpp:951
 #, kde-format
@@ -105,13 +102,13 @@ msgctxt "short_weekday short_monthname date (e.g. Mon Aug 13)"
 msgid "%1 %2 %3"
 msgstr "%1 %2 %3"
 
-#: agenda/agendaview.cpp:2209
+#: agenda/agendaview.cpp:2227
 #, kde-format
 msgid "Unable to modify this to-do, because it cannot be locked."
 msgstr ""
 "Невозможно изменить эту задачу, потому что её не удалось заблокировать."
 
-#: agenda/agendaview.cpp:2217
+#: agenda/agendaview.cpp:2235
 #, kde-format
 msgid "Unable to save %1 \"%2\"."
 msgstr "Не удалось сохранить %1 «%2»."
@@ -1778,8 +1775,7 @@ msgid "Cannot move to-do to itself or a child of itself."
 msgstr "Невозможно переместить задачу или подзадачу в неё же."
 
 #: todo/todoview.cpp:234
-#, fuzzy, kde-format
-#| msgid "Drop To-do"
+#, kde-format
 msgctxt "@title:window"
 msgid "Drop To-do"
 msgstr "Перемещение задачи"
