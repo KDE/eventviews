@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-30 01:38+0000\n"
+"POT-Creation-Date: 2024-01-14 03:08+0000\n"
 "PO-Revision-Date: 2021-10-04 08:50+0300\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -98,14 +98,14 @@ msgctxt "short_weekday short_monthname date (e.g. Mon Aug 13)"
 msgid "%1 %2 %3"
 msgstr "%1 %2 %3"
 
-#: agenda/agendaview.cpp:2209
+#: agenda/agendaview.cpp:2227
 #, kde-format
 msgid "Unable to modify this to-do, because it cannot be locked."
 msgstr ""
 "Αδυναμία τροποποίησης αυτής της λίστας με τις προγραμματισμένες εργασίες, "
 "εξαιτίας αδυναμίας κλειδώματος."
 
-#: agenda/agendaview.cpp:2217
+#: agenda/agendaview.cpp:2235
 #, kde-format
 msgid "Unable to save %1 \"%2\"."
 msgstr "Αδυναμία αποθήκευσης %1 \"%2\"."
