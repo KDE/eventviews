@@ -2408,7 +2408,7 @@ void AgendaView::newTimeSpanSelectedAllDay(const QPoint &start, const QPoint &en
 
 void AgendaView::newTimeSpanSelected(const QPoint &start, const QPoint &end)
 {
-    if (!d->mSelectedDates.count()) {
+    if (d->mSelectedDates.isEmpty()) {
         return;
     }
 
