@@ -74,7 +74,8 @@ AgendaItem::AgendaItem(EventView *eventView,
     }
 
     mIncidence = Incidence::Ptr(mIncidence->clone());
-    if (mIncidence->customProperty("KABC", "BIRTHDAY") == QLatin1String("YES") || mIncidence->customProperty("KABC", "ANNIVERSARY") == QLatin1String("YES")) {
+    if (mIncidence->customProperty("KABC", "BIRTHDAY") == QLatin1StringView("YES")
+        || mIncidence->customProperty("KABC", "ANNIVERSARY") == QLatin1String("YES")) {
         const int years = EventViews::yearDiff(mIncidence->dtStart().date(), qd.toLocalTime().date());
         if (years > 0) {
             mIncidence->setReadOnly(false);
@@ -648,7 +649,7 @@ void AgendaItem::dropEvent(QDropEvent *e)
 
     bool decoded = md->hasText();
     QString text = md->text();
-    if (decoded && text.startsWith(QLatin1String("file:"))) {
+    if (decoded && text.startsWith(QLatin1StringView("file:"))) {
         mIncidence->addAttachment(KCalendarCore::Attachment(text));
         return;
     }
@@ -715,10 +716,10 @@ static void conditionalPaint(QPainter *p, bool condition, int &x, int y, int ft,
 void AgendaItem::paintIcon(QPainter *p, int &x, int y, int ft)
 {
     QString iconName;
-    if (mIncidence->customProperty("KABC", "ANNIVERSARY") == QLatin1String("YES")) {
+    if (mIncidence->customProperty("KABC", "ANNIVERSARY") == QLatin1StringView("YES")) {
         mSpecialEvent = true;
         iconName = QStringLiteral("view-calendar-wedding-anniversary");
-    } else if (mIncidence->customProperty("KABC", "BIRTHDAY") == QLatin1String("YES")) {
+    } else if (mIncidence->customProperty("KABC", "BIRTHDAY") == QLatin1StringView("YES")) {
         mSpecialEvent = true;
         // We don't draw icon. The icon is drawn already, because it's the Akonadi::Collection's icon
     }
@@ -738,7 +739,7 @@ void AgendaItem::paintIcons(QPainter *p, int &x, int y, int ft)
 
     if (icons.contains(EventViews::EventView::CalendarCustomIcon)) {
         const QString iconName = mCalendar->iconForIncidence(mIncidence);
-        if (!iconName.isEmpty() && iconName != QLatin1String("view-calendar") && iconName != QLatin1String("office-calendar")) {
+        if (!iconName.isEmpty() && iconName != QLatin1StringView("view-calendar") && iconName != QLatin1String("office-calendar")) {
             conditionalPaint(p, true, x, y, ft, QIcon::fromTheme(iconName).pixmap(16, 16));
         }
     }

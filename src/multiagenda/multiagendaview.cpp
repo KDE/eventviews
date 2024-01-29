@@ -769,7 +769,7 @@ void MultiAgendaView::doRestoreConfig(const KConfigGroup &configGroup)
             auto checkableProxy = new KCheckableProxyModel(this);
             checkableProxy->setSourceModel(columnFilterProxy);
             checkableProxy->setSelectionModel(qsm);
-            const QString groupName = configGroup.name() + QLatin1String("_subView_") + QString::number(i);
+            const QString groupName = configGroup.name() + QLatin1StringView("_subView_") + QString::number(i);
             const KConfigGroup group = configGroup.config()->group(groupName);
 
             if (!d->mSelectionSavers.contains(groupName)) {
@@ -794,7 +794,7 @@ void MultiAgendaView::doSaveConfig(KConfigGroup &configGroup)
     configGroup.writeEntry("ColumnTitles", d->mCustomColumnTitles);
     int idx = 0;
     for (KCheckableProxyModel *checkableProxyModel : std::as_const(d->mCollectionSelectionModels)) {
-        const QString groupName = configGroup.name() + QLatin1String("_subView_") + QString::number(idx);
+        const QString groupName = configGroup.name() + QLatin1StringView("_subView_") + QString::number(idx);
         KConfigGroup group = configGroup.config()->group(groupName);
         ++idx;
         // TODO never used ?

@@ -365,37 +365,37 @@ QString TimeLabels::headerToolTip() const
     QDateTime now = QDateTime::currentDateTime();
     QString toolTip;
 
-    toolTip += QLatin1String("<qt>");
+    toolTip += QLatin1StringView("<qt>");
     toolTip += i18nc("title for timezone info, the timezone id and utc offset",
                      "<b>%1 (%2)</b>",
                      i18n(mTimezone.id().constData()),
                      KCalUtils::Stringify::tzUTCOffsetStr(mTimezone));
-    toolTip += QLatin1String("<hr>");
+    toolTip += QLatin1StringView("<hr>");
     toolTip += i18nc("heading for timezone display name", "<i>Name:</i> %1", mTimezone.displayName(now, QTimeZone::LongName));
-    toolTip += QLatin1String("<br/>");
+    toolTip += QLatin1StringView("<br/>");
 
     if (mTimezone.territory() != QLocale::AnyCountry) {
         toolTip += i18nc("heading for timezone country", "<i>Country:</i> %1", QLocale::territoryToString(mTimezone.territory()));
-        toolTip += QLatin1String("<br/>");
+        toolTip += QLatin1StringView("<br/>");
     }
 
     auto abbreviations = QStringLiteral("&nbsp;");
     const auto lst = mTimezone.transitions(now, now.addYears(1));
     for (const auto &transition : lst) {
         abbreviations += transition.abbreviation;
-        abbreviations += QLatin1String(",&nbsp;");
+        abbreviations += QLatin1StringView(",&nbsp;");
     }
     abbreviations.chop(7);
     if (!abbreviations.isEmpty()) {
         toolTip += i18nc("heading for comma-separated list of timezone abbreviations", "<i>Abbreviations:</i>");
         toolTip += abbreviations;
-        toolTip += QLatin1String("<br/>");
+        toolTip += QLatin1StringView("<br/>");
     }
     const QString timeZoneComment(mTimezone.comment());
     if (!timeZoneComment.isEmpty()) {
         toolTip += i18nc("heading for the timezone comment", "<i>Comment:</i> %1", timeZoneComment);
     }
-    toolTip += QLatin1String("</qt>");
+    toolTip += QLatin1StringView("</qt>");
 
     return toolTip;
 }
@@ -407,14 +407,14 @@ bool TimeLabels::event(QEvent *event)
         const int cell = yposToCell(helpEvent->pos().y());
 
         QString toolTip;
-        toolTip += QLatin1String("<qt>");
+        toolTip += QLatin1StringView("<qt>");
         toolTip += i18nc("[hour of the day][am/pm/00] [timezone id (timezone-offset)]",
                          "%1%2<br/>%3 (%4)",
                          cellToHour(cell),
                          cellToSuffix(cell),
                          i18n(mTimezone.id().constData()),
                          KCalUtils::Stringify::tzUTCOffsetStr(mTimezone));
-        toolTip += QLatin1String("</qt>");
+        toolTip += QLatin1StringView("</qt>");
 
         QToolTip::showText(helpEvent->globalPos(), toolTip, this);
 

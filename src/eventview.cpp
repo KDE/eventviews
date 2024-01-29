@@ -556,7 +556,7 @@ void EventView::restoreConfig(const KConfigGroup &configGroup)
 
             d->setUpModels();
         }
-        const KConfigGroup selectionGroup = configGroup.config()->group(configGroup.name() + QLatin1String("_selectionSetup"));
+        const KConfigGroup selectionGroup = configGroup.config()->group(configGroup.name() + QLatin1StringView("_selectionSetup"));
 
         KViewStateMaintainer<ETMViewStateSaver> maintainer(selectionGroup);
         maintainer.setSelectionModel(d->collectionSelectionModel->selectionModel());
@@ -572,7 +572,7 @@ void EventView::saveConfig(KConfigGroup &configGroup)
     configGroup.writeEntry("UseCustomCollectionSelection", d->collectionSelectionModel != nullptr);
 
     if (d->collectionSelectionModel) {
-        KConfigGroup selectionGroup = configGroup.config()->group(configGroup.name() + QLatin1String("_selectionSetup"));
+        KConfigGroup selectionGroup = configGroup.config()->group(configGroup.name() + QLatin1StringView("_selectionSetup"));
 
         KViewStateMaintainer<ETMViewStateSaver> maintainer(selectionGroup);
         maintainer.setSelectionModel(d->collectionSelectionModel->selectionModel());

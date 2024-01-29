@@ -298,7 +298,7 @@ IncidenceMonthItem::IncidenceMonthItem(MonthScene *monthScene,
     mIsTodo = CalendarSupport::hasTodo(aitem);
 
     KCalendarCore::Incidence::Ptr inc = mIncidence;
-    if (inc->customProperty("KABC", "BIRTHDAY") == QLatin1String("YES") || inc->customProperty("KABC", "ANNIVERSARY") == QLatin1String("YES")) {
+    if (inc->customProperty("KABC", "BIRTHDAY") == QLatin1StringView("YES") || inc->customProperty("KABC", "ANNIVERSARY") == QLatin1String("YES")) {
         const int years = EventViews::yearDiff(inc->dtStart().date(), recurStartDate);
         if (years > 0) {
             inc = KCalendarCore::Incidence::Ptr(inc->clone());
@@ -522,17 +522,17 @@ QList<QPixmap> IncidenceMonthItem::icons() const
     QString customIconName;
     if (icons.contains(EventViews::EventView::CalendarCustomIcon)) {
         const QString iconName = monthScene()->monthView()->iconForItem(item);
-        if (!iconName.isEmpty() && iconName != QLatin1String("view-calendar") && iconName != QLatin1String("office-calendar")) {
+        if (!iconName.isEmpty() && iconName != QLatin1StringView("view-calendar") && iconName != QLatin1String("office-calendar")) {
             customIconName = iconName;
             ret << QPixmap(cachedSmallIcon(iconName));
         }
     }
 
     if (mIsEvent) {
-        if (mIncidence->customProperty("KABC", "ANNIVERSARY") == QLatin1String("YES")) {
+        if (mIncidence->customProperty("KABC", "ANNIVERSARY") == QLatin1StringView("YES")) {
             specialEvent = true;
             ret << monthScene()->anniversaryPixmap();
-        } else if (mIncidence->customProperty("KABC", "BIRTHDAY") == QLatin1String("YES")) {
+        } else if (mIncidence->customProperty("KABC", "BIRTHDAY") == QLatin1StringView("YES")) {
             specialEvent = true;
             // Disabling birthday icon because it's the birthday agent's icon
             // and we allow to display the agent's icon now.

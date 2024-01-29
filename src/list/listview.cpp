@@ -165,9 +165,9 @@ private:
 bool ListViewPrivate::ListItemVisitor::visit(const Event::Ptr &e)
 {
     QIcon eventPxmp;
-    if (e->customProperty("KABC", "ANNIVERSARY") == QLatin1String("YES")) {
+    if (e->customProperty("KABC", "ANNIVERSARY") == QLatin1StringView("YES")) {
         eventPxmp = QIcon::fromTheme(QStringLiteral("view-calendar-wedding-anniversary"));
-    } else if (e->customProperty("KABC", "BIRTHDAY") == QLatin1String("YES")) {
+    } else if (e->customProperty("KABC", "BIRTHDAY") == QLatin1StringView("YES")) {
         eventPxmp = QIcon::fromTheme(QStringLiteral("view-calendar-birthday"));
     } else {
         eventPxmp = QIcon::fromTheme(e->iconName());
@@ -417,7 +417,7 @@ void ListViewPrivate::addIncidence(const Akonadi::CollectionCalendar::Ptr &calen
     mItems.insert(aitem.id(), aitem);
     Incidence::Ptr tinc = incidence;
 
-    if (tinc->customProperty("KABC", "BIRTHDAY") == QLatin1String("YES") || tinc->customProperty("KABC", "ANNIVERSARY") == QLatin1String("YES")) {
+    if (tinc->customProperty("KABC", "BIRTHDAY") == QLatin1StringView("YES") || tinc->customProperty("KABC", "ANNIVERSARY") == QLatin1String("YES")) {
         const int years = EventViews::yearDiff(tinc->dtStart().date(), mEndDate);
         if (years > 0) {
             tinc = Incidence::Ptr(incidence->clone());
