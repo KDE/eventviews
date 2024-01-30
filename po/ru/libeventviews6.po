@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-13 00:38+0000\n"
+"POT-Creation-Date: 2024-01-30 00:37+0000\n"
 "PO-Revision-Date: 2024-01-11 10:23+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -66,7 +66,7 @@ msgctxt "@title:window"
 msgid "Error Occurred"
 msgstr "Ошибка"
 
-#: agenda/agendaitem.cpp:81 list/listview.cpp:425
+#: agenda/agendaitem.cpp:82 list/listview.cpp:425
 #, kde-format
 msgid "%2 (1 year)"
 msgid_plural "%2 (%1 years)"
@@ -75,23 +75,23 @@ msgstr[1] "%2 (%1 года)"
 msgstr[2] "%2 (%1 лет)"
 msgstr[3] "%2 (1 год)"
 
-#: agenda/agendaitem.cpp:631
+#: agenda/agendaitem.cpp:632
 #, kde-format
 msgid "Attendee \"%1\" added to the calendar item \"%2\""
 msgstr "Участник «%1» добавлен в элемент календаря «%2»"
 
-#: agenda/agendaitem.cpp:632
+#: agenda/agendaitem.cpp:633
 #, kde-format
 msgctxt "@title:window"
 msgid "Attendee added"
 msgstr "Добавление участника"
 
-#: agenda/agendaitem.cpp:856 agenda/agendaitem.cpp:951
+#: agenda/agendaitem.cpp:857 agenda/agendaitem.cpp:952
 #, kde-format
 msgid "%1 - %2"
 msgstr "%1 — %2"
 
-#: agenda/agendaitem.cpp:865
+#: agenda/agendaitem.cpp:866
 #, kde-format
 msgid "- %1"
 msgstr "— %1"

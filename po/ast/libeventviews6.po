@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-13 00:38+0000\n"
+"POT-Creation-Date: 2024-01-30 00:37+0000\n"
 "PO-Revision-Date: 2023-11-07 21:26+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
@@ -55,30 +55,30 @@ msgctxt "@title:window"
 msgid "Error Occurred"
 msgstr ""
 
-#: agenda/agendaitem.cpp:81 list/listview.cpp:425
+#: agenda/agendaitem.cpp:82 list/listview.cpp:425
 #, kde-format
 msgid "%2 (1 year)"
 msgid_plural "%2 (%1 years)"
 msgstr[0] ""
 msgstr[1] ""
 
-#: agenda/agendaitem.cpp:631
+#: agenda/agendaitem.cpp:632
 #, kde-format
 msgid "Attendee \"%1\" added to the calendar item \"%2\""
 msgstr ""
 
-#: agenda/agendaitem.cpp:632
+#: agenda/agendaitem.cpp:633
 #, kde-format
 msgctxt "@title:window"
 msgid "Attendee added"
 msgstr ""
 
-#: agenda/agendaitem.cpp:856 agenda/agendaitem.cpp:951
+#: agenda/agendaitem.cpp:857 agenda/agendaitem.cpp:952
 #, kde-format
 msgid "%1 - %2"
 msgstr ""
 
-#: agenda/agendaitem.cpp:865
+#: agenda/agendaitem.cpp:866
 #, kde-format
 msgid "- %1"
 msgstr ""
