@@ -298,7 +298,7 @@ IncidenceMonthItem::IncidenceMonthItem(MonthScene *monthScene,
     mIsTodo = CalendarSupport::hasTodo(aitem);
 
     KCalendarCore::Incidence::Ptr inc = mIncidence;
-    if (inc->customProperty("KABC", "BIRTHDAY") == QLatin1StringView("YES") || inc->customProperty("KABC", "ANNIVERSARY") == QLatin1String("YES")) {
+    if (inc->customProperty("KABC", "BIRTHDAY") == QLatin1StringView("YES") || inc->customProperty("KABC", "ANNIVERSARY") == QLatin1StringView("YES")) {
         const int years = EventViews::yearDiff(inc->dtStart().date(), recurStartDate);
         if (years > 0) {
             inc = KCalendarCore::Incidence::Ptr(inc->clone());
@@ -522,7 +522,7 @@ QList<QPixmap> IncidenceMonthItem::icons() const
     QString customIconName;
     if (icons.contains(EventViews::EventView::CalendarCustomIcon)) {
         const QString iconName = monthScene()->monthView()->iconForItem(item);
-        if (!iconName.isEmpty() && iconName != QLatin1StringView("view-calendar") && iconName != QLatin1String("office-calendar")) {
+        if (!iconName.isEmpty() && iconName != QLatin1StringView("view-calendar") && iconName != QLatin1StringView("office-calendar")) {
             customIconName = iconName;
             ret << QPixmap(cachedSmallIcon(iconName));
         }

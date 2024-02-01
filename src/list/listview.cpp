@@ -417,7 +417,7 @@ void ListViewPrivate::addIncidence(const Akonadi::CollectionCalendar::Ptr &calen
     mItems.insert(aitem.id(), aitem);
     Incidence::Ptr tinc = incidence;
 
-    if (tinc->customProperty("KABC", "BIRTHDAY") == QLatin1StringView("YES") || tinc->customProperty("KABC", "ANNIVERSARY") == QLatin1String("YES")) {
+    if (tinc->customProperty("KABC", "BIRTHDAY") == QLatin1StringView("YES") || tinc->customProperty("KABC", "ANNIVERSARY") == QLatin1StringView("YES")) {
         const int years = EventViews::yearDiff(tinc->dtStart().date(), mEndDate);
         if (years > 0) {
             tinc = Incidence::Ptr(incidence->clone());

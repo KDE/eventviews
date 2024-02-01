@@ -75,7 +75,7 @@ AgendaItem::AgendaItem(EventView *eventView,
 
     mIncidence = Incidence::Ptr(mIncidence->clone());
     if (mIncidence->customProperty("KABC", "BIRTHDAY") == QLatin1StringView("YES")
-        || mIncidence->customProperty("KABC", "ANNIVERSARY") == QLatin1String("YES")) {
+        || mIncidence->customProperty("KABC", "ANNIVERSARY") == QLatin1StringView("YES")) {
         const int years = EventViews::yearDiff(mIncidence->dtStart().date(), qd.toLocalTime().date());
         if (years > 0) {
             mIncidence->setReadOnly(false);
@@ -739,7 +739,7 @@ void AgendaItem::paintIcons(QPainter *p, int &x, int y, int ft)
 
     if (icons.contains(EventViews::EventView::CalendarCustomIcon)) {
         const QString iconName = mCalendar->iconForIncidence(mIncidence);
-        if (!iconName.isEmpty() && iconName != QLatin1StringView("view-calendar") && iconName != QLatin1String("office-calendar")) {
+        if (!iconName.isEmpty() && iconName != QLatin1StringView("view-calendar") && iconName != QLatin1StringView("office-calendar")) {
             conditionalPaint(p, true, x, y, ft, QIcon::fromTheme(iconName).pixmap(16, 16));
         }
     }
