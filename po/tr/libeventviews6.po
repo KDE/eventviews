@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
-# SPDX-FileCopyrightText: 2022, 2023 Emir SARI <emir_sari@icloud.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Emir SARI <emir_sari@icloud.com>
 # zeugma <sunder67@hotmail.com>, 2013.
 # H. İbrahim Güngör <ibrahim@pardus.org.tr>, 2011.
 # Volkan Gezer <volkangezer@gmail.com>, 2013-2014, 2015, 2017.
@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kdepim-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-30 00:37+0000\n"
-"PO-Revision-Date: 2023-11-11 23:31+0300\n"
+"PO-Revision-Date: 2024-02-09 17:45+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.11.70\n"
+"X-Generator: Lokalize 24.01.95\n"
 "(http: //www.transifex.com/projects/p/kdepim-k-tr/language/tr/)\n"
 "X-POOTLE-MTIME: 1413132207.000000\n"
 
@@ -275,7 +275,7 @@ msgid ""
 "not affect the automatic saving of the standard calendar, which is "
 "automatically saved after each change."
 msgstr ""
-"K Organizatör'den çıktığınızda size sormadan ve düzenli olarak takvim "
+"K Organizatör’den çıktığınızda size sormadan ve düzenli olarak takvim "
 "dosyanızın kaydedilmesini istiyorsanız bu kutuyu işaretleyin. Bu ayar her "
 "değişiklikte yeniden kaydedilen standart takvimin otomatik kaydedilmesini "
 "etkilemez."
@@ -359,7 +359,7 @@ msgstr ""
 #: eventviews.kcfg:81
 #, kde-format
 msgid "Show Reminder Daemon in the System Tray"
-msgstr "Anımsatıcı ardalan sürecini Sistem Tepsisi'nde göster"
+msgstr "Anımsatıcı ardalan sürecini Sistem Tepsisi’nde göster"
 
 #. i18n: ectx: whatsthis, entry, group (System Tray)
 #: eventviews.kcfg:82
@@ -523,7 +523,7 @@ msgid ""
 "typeface in the Date Navigator, or uncheck it to give more prominence to "
 "other (non daily recurring) events."
 msgstr ""
-"Günlük yinelenen etkinlikleri Tarih Gezgini'nde kalın yazıyüzü ile göstermek "
+"Günlük yinelenen etkinlikleri Tarih Gezgini’nde kalın yazıyüzü ile göstermek "
 "için bu kutuyu işaretleyin veya başka etkinliklere (günlük yinelenmeyen) "
 "daha çok önem vermek için işareti kaldırın."
 
@@ -541,7 +541,7 @@ msgid ""
 "typeface in the Date Navigator, or uncheck it to give more prominence to "
 "other (non weekly recurring) events."
 msgstr ""
-"Haftalık yinelenen etkinlikler içeren günleri Tarih Gezgini'nde kalın "
+"Haftalık yinelenen etkinlikler içeren günleri Tarih Gezgini’nde kalın "
 "yazıyüzü ile göstermek için bu kutuyu işaretleyin veya başka etkinliklere "
 "(haftalık yinelenmeyen) daha çok önem vermek için işareti kaldırın."
 
@@ -549,7 +549,7 @@ msgstr ""
 #: eventviews.kcfg:153
 #, kde-format
 msgid "Show to-dos instead of events when in Todo View"
-msgstr "Yapılacaklar Görünümü'nde etkinlikler yerine yapılacakları göster"
+msgstr "Yapılacaklar Görünümü’nde etkinlikler yerine yapılacakları göster"
 
 #. i18n: ectx: whatsthis, entry (HighlightTodos), group (General View)
 #: eventviews.kcfg:154
@@ -558,7 +558,7 @@ msgid ""
 "Check this box to show the days containing to-dos in bold typeface in the "
 "Date Navigator when in to-do view."
 msgstr ""
-"Yapılacak görünümünde, yapılacak içeren günleri Tarih Gezgini'nde kalın "
+"Yapılacak görünümünde, yapılacak içeren günleri Tarih Gezgini’nde kalın "
 "yazıyüzü ile göstermek için bu kutuyu işaretleyin."
 
 #. i18n: ectx: label, entry (HighlightJournals), group (General View)
@@ -574,7 +574,7 @@ msgid ""
 "Check this box to show the days containing journals in bold typeface in the "
 "Date Navigator when in journal view."
 msgstr ""
-"Günce görünümünde, günce girdisi içeren günleri Tarih Gezgini'nde kalın "
+"Günce görünümünde, günce girdisi içeren günleri Tarih Gezgini’nde kalın "
 "yazıyüzü ile göstermek için bu kutuyu işaretleyin."
 
 #. i18n: ectx: label, entry (WeekNumbersShowWork), group (General View)
@@ -590,7 +590,7 @@ msgid ""
 "Check this box to select a working week when clicking on the Date "
 "Navigator's week numbers, or uncheck it to choose the whole week."
 msgstr ""
-"Tarih Gezgini'nin hafta numarasına tıklandığında bir çalışma haftası seçmek "
+"Tarih Gezgini’nin hafta numarasına tıklandığında bir çalışma haftası seçmek "
 "için bu kutuyu işaretleyin veya tüm haftayı seçmek için işareti kaldırın."
 
 #. i18n: ectx: label, entry, group (Agenda View)
@@ -1788,7 +1788,7 @@ msgstr "Bir yapılacak iş kendisine veya bir alt işine taşınamaz."
 #, kde-format
 msgctxt "@title:window"
 msgid "Drop To-do"
-msgstr "Yapılacak'ı Bırak"
+msgstr "Yapılacak’ı Bırak"
 
 #: todo/todoview.cpp:314
 #, kde-format
@@ -2200,7 +2200,7 @@ msgstr ""
 "Başka katılımcıları ilgilendiren etkinlikler (veya yapılacaklar) "
 "oluştururken, güncellerken veya silerken otomatik posta oluşturmayı "
 "etkinleştirmek için bu kutuyu işaretleyin. Groupware işlevselliğini "
-"kullanmak istiyorsanız bu kutu işaretli olmalıdır (örn. Kontak'ı bir KDE "
+"kullanmak istiyorsanız bu kutu işaretli olmalıdır (örn. Kontak’ı bir KDE "
 "Kolab istemcisi olarak ayarlamak istiyorsanız)."
 
 #: whatsnext/whatsnextview.cpp:61
