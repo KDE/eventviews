@@ -35,8 +35,7 @@ ColoredTodoProxyModel::~ColoredTodoProxyModel() = default;
 QVariant ColoredTodoProxyModel::data(const QModelIndex &index, int role) const
 {
     if (role == Qt::BackgroundRole) {
-        const auto todo
-            = QIdentityProxyModel::data(index, Akonadi::TodoModel::TodoPtrRole).value<KCalendarCore::Todo::Ptr>();
+        const auto todo = QIdentityProxyModel::data(index, Akonadi::TodoModel::TodoPtrRole).value<KCalendarCore::Todo::Ptr>();
         if (!todo) {
             return {};
         }

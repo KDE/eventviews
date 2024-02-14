@@ -18,7 +18,8 @@ class ColoredTodoProxyModelPrivate;
 /**
  * ProxyModel adding background color for overdue and due today items in a TodoModel
  */
-class ColoredTodoProxyModel : public QIdentityProxyModel {
+class ColoredTodoProxyModel : public QIdentityProxyModel
+{
 public:
     explicit ColoredTodoProxyModel(const EventViews::PrefsPtr &preferences, QObject *parent = nullptr);
     ~ColoredTodoProxyModel() override;

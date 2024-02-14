@@ -785,7 +785,7 @@ void TodoView::contextMenu(QPoint pos)
         case Akonadi::TodoModel::DueDateColumn:
             mMovePopupMenu->popup(mView->viewport()->mapToGlobal(pos));
             break;
-            case Akonadi::TodoModel::CategoriesColumn:
+        case Akonadi::TodoModel::CategoriesColumn:
             createCategoryPopupMenu()->popup(mView->viewport()->mapToGlobal(pos));
             break;
         default:
@@ -1222,7 +1222,8 @@ void TodoView::resizeColumns()
     // Calculate size of non-stretchable columns:
     int size = 0;
     for (int i = 0; i < Akonadi::TodoModel::ColumnCount; ++i) {
-        if (!mView->isColumnHidden(i) && i != Akonadi::TodoModel::SummaryColumn && i != Akonadi::TodoModel::DescriptionColumn && i != Akonadi::TodoModel::CategoriesColumn) {
+        if (!mView->isColumnHidden(i) && i != Akonadi::TodoModel::SummaryColumn && i != Akonadi::TodoModel::DescriptionColumn
+            && i != Akonadi::TodoModel::CategoriesColumn) {
             size += mView->columnWidth(i);
         }
     }
