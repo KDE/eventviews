@@ -56,8 +56,6 @@ using PrefsPtr = QSharedPointer<Prefs>;
   @param incidence the incidence for which the color is needed (to
                    determine which  subresource needs to be used)
 */
-[[nodiscard]] EVENTVIEWS_EXPORT QColor resourceColor(const Akonadi::Item &incidence, const PrefsPtr &preferences);
-
 [[nodiscard]] EVENTVIEWS_EXPORT QColor resourceColor(const Akonadi::Collection &collection, const PrefsPtr &preferences);
 
 /**

@@ -75,14 +75,6 @@ QColor EventViews::resourceColor(const Akonadi::Collection &coll, const PrefsPtr
     return preferences->resourceColor(id);
 }
 
-QColor EventViews::resourceColor(const Akonadi::Item &item, const PrefsPtr &preferences)
-{
-    if (!item.isValid()) {
-        return {};
-    }
-    return resourceColor(item.parentCollection(), preferences);
-}
-
 int EventViews::yearDiff(QDate start, QDate end)
 {
     return end.year() - start.year();
