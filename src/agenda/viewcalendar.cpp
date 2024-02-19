@@ -215,7 +215,8 @@ QString AkonadiViewCalendar::displayName(const KCalendarCore::Incidence::Ptr &in
 
 QColor AkonadiViewCalendar::resourceColor(const KCalendarCore::Incidence::Ptr &incidence) const
 {
-    return EventViews::resourceColor(item(incidence), mAgendaView->preferences());
+    Q_UNUSED(incidence);
+    return EventViews::resourceColor(mCalendar->collection(), mAgendaView->preferences());
 }
 
 QString AkonadiViewCalendar::iconForIncidence(const KCalendarCore::Incidence::Ptr &incidence) const
