@@ -584,7 +584,7 @@ QColor IncidenceMonthItem::catColor() const
         if (colorPreference == PrefsBase::CategoryOnly) {
             return CalendarSupport::KCalPrefs::instance()->unsetCategoryColor();
         }
-        return EventViews::resourceColor(akonadiItem(), prefs);
+        return EventViews::resourceColor(mCalendar->collection(), prefs);
     }
     return Akonadi::TagCache::instance()->tagColor(categories.first());
 }
@@ -613,7 +613,7 @@ QColor IncidenceMonthItem::bgColor() const
 
     const auto &colorPreference = prefs->monthViewColors();
     const auto bgDisplaysResource = colorPreference == PrefsBase::MonthItemResourceInsideCategoryOutside || colorPreference == PrefsBase::MonthItemResourceOnly;
-    return bgDisplaysResource ? EventViews::resourceColor(akonadiItem(), prefs) : catColor();
+    return bgDisplaysResource ? EventViews::resourceColor(mCalendar->collection(), prefs) : catColor();
 }
 
 QColor IncidenceMonthItem::frameColor() const
@@ -621,7 +621,7 @@ QColor IncidenceMonthItem::frameColor() const
     const auto &prefs = monthScene()->monthView()->preferences();
     const auto frameDisplaysResource =
         (prefs->monthViewColors() == PrefsBase::MonthItemResourceOnly || prefs->monthViewColors() == PrefsBase::MonthItemCategoryInsideResourceOutside);
-    const auto frameColor = frameDisplaysResource ? EventViews::resourceColor(akonadiItem(), prefs) : catColor();
+    const auto frameColor = frameDisplaysResource ? EventViews::resourceColor(mCalendar->collection(), prefs) : catColor();
     return EventView::itemFrameColor(frameColor, selected());
 }
 
