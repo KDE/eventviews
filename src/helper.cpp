@@ -58,18 +58,18 @@ QColor EventViews::resourceColor(const Akonadi::Collection &coll, const PrefsPtr
     if (!coll.isValid()) {
         return {};
     }
+
+    // Color stored in akonadi
+    const auto colorAttr = coll.attribute<Akonadi::CollectionColorAttribute>();
+    if (colorAttr != nullptr && colorAttr->color().isValid()) {
+        return colorAttr->color();
+    }
+
     const QString id = QString::number(coll.id());
     // Color stored in eventviewsrc (and in memory)
     QColor color = preferences->resourceColorKnown(id);
     if (color.isValid()) {
         return color;
-    }
-    // Color stored in akonadi
-    if (coll.hasAttribute<Akonadi::CollectionColorAttribute>()) {
-        const auto colorAttr = coll.attribute<Akonadi::CollectionColorAttribute>();
-        if (colorAttr && colorAttr->color().isValid()) {
-            return colorAttr->color();
-        }
     }
     // Generate new color and store it in eventsviewsrc (and in memory)
     return preferences->resourceColor(id);
