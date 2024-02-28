@@ -28,7 +28,7 @@ class TodoViewQuickSearch : public QWidget
 {
     Q_OBJECT
 public:
-    TodoViewQuickSearch(QWidget *parent);
+    explicit TodoViewQuickSearch(QWidget *parent);
 
 Q_SIGNALS:
     void searchTextChanged(const QString &);
