@@ -482,11 +482,6 @@ protected:
      * uint so it can be easily fed to KCalendarSystem's functions.
      */
     virtual QPair<QDateTime, QDateTime> actualDateRange(const QDateTime &start, const QDateTime &end, const QDate &preferredMonth = QDate()) const;
-    /*
-    virtual void incidencesAdded( const Akonadi::Item::List &incidences );
-    virtual void incidencesAboutToBeRemoved( const Akonadi::Item::List &incidences );
-    virtual void incidencesChanged( const Akonadi::Item::List &incidences );
-    */
     virtual void handleBackendError(const QString &error);
 
 private:

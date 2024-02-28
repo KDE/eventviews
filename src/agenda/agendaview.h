@@ -220,14 +220,13 @@ protected:
     void showEvent(QShowEvent *showEvent) override;
     bool eventFilter(QObject *object, QEvent *event) override;
 
-private Q_SLOTS:
+private:
     void slotIncidenceSelected(const KCalendarCore::Incidence::Ptr &incidence, QDate date);
     void slotShowIncidencePopup(const KCalendarCore::Incidence::Ptr &incidence, QDate date);
     void slotEditIncidence(const KCalendarCore::Incidence::Ptr &incidence);
     void slotShowIncidence(const KCalendarCore::Incidence::Ptr &incidence);
     void slotDeleteIncidence(const KCalendarCore::Incidence::Ptr &incidence);
 
-private:
     void init(QDate start, QDate end);
     bool filterByCollectionSelection(const KCalendarCore::Incidence::Ptr &incidence);
     void setupTimeLabel(TimeLabels *timeLabel);
@@ -239,7 +238,6 @@ private:
     Agenda *agenda() const;
     Agenda *allDayAgenda() const;
 
-private:
     friend class AgendaViewPrivate;
     std::unique_ptr<AgendaViewPrivate> const d;
 };

@@ -25,10 +25,8 @@ protected:
 Q_SIGNALS:
     void returnPressed(Qt::KeyboardModifiers modifiers);
 
-private Q_SLOTS:
-    void returnPressedSlot();
-
 private:
+    void returnPressedSlot();
     Qt::KeyboardModifiers mModifiers;
     const QString mClickMessage;
 };

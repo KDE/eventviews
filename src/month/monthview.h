@@ -85,11 +85,6 @@ public Q_SLOTS:
 protected Q_SLOTS:
     void calendarReset() override;
 
-private Q_SLOTS:
-    // void dataChanged( const QModelIndex &topLeft, const QModelIndex &bottomRight );
-    // void rowsInserted( const QModelIndex &parent, int start, int end );
-    // void rowsAboutToBeRemoved( const QModelIndex &parent, int start, int end );
-
 protected:
 #ifndef QT_NO_WHEELEVENT
     void wheelEvent(QWheelEvent *event) override;

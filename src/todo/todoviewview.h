@@ -47,8 +47,4 @@ private:
 
 Q_SIGNALS:
     void visibleColumnCountChanged();
-
-private Q_SLOTS:
-    void toggleColumnHidden(QAction *action);
-    void expandParent();
 };
