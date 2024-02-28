@@ -57,25 +57,25 @@ public:
 
     QHash<int, MonthItem *> mHeightHash;
 
-    int firstFreeSpace();
+    [[nodiscard]] int firstFreeSpace();
     void addMonthItem(MonthItem *manager, int height);
 
-    int id() const
+    [[nodiscard]] int id() const
     {
         return mId;
     }
 
-    QDate date() const
+    [[nodiscard]] QDate date() const
     {
         return mDate;
     }
 
-    int x() const
+    [[nodiscard]] int x() const
     {
         return mId % 7;
     }
 
-    int y() const
+    [[nodiscard]] int y() const
     {
         return mId / 7;
     }
@@ -137,18 +137,18 @@ public:
     /**
       Returns the starting date of this item.
     */
-    QDate startDate() const;
+    [[nodiscard]] QDate startDate() const;
 
     /**
       Returns the number of day this item spans on minus one
       to be compatible with QDate::addDays().
     */
-    int daySpan() const;
+    [[nodiscard]] int daySpan() const;
 
     /**
       Computed from startDate() and daySpan().
     */
-    QDate endDate() const;
+    [[nodiscard]] QDate endDate() const;
 
     void setStartDate(QDate d);
     void setDaySpan(int span);
@@ -157,25 +157,25 @@ public:
       Returns true if this item is currently being moved (ie. the
       associated MonthItem is being moved).
     */
-    bool isMoving() const;
+    [[nodiscard]] bool isMoving() const;
 
     /**
       Returns true if this item is currently being resized (ie. the
       associated MonthItem is being moved).
     */
-    bool isResizing() const;
+    [[nodiscard]] bool isResizing() const;
 
     /**
       Returns true if this MonthGraphicsItem is the first one of the
       MonthItem ones.
     */
-    bool isBeginItem() const;
+    [[nodiscard]] bool isBeginItem() const;
 
     /**
       Returns true if this MonthGraphicsItem is the last one of the
       MonthItem ones.
     */
-    bool isEndItem() const;
+    [[nodiscard]] bool isEndItem() const;
 
     /**
       Reimplemented from QGraphicsItem
@@ -184,11 +184,11 @@ public:
     void paint(QPainter *, const QStyleOptionGraphicsItem *, QWidget *) override;
     QPainterPath shape() const override;
 
-    QString getToolTip() const;
+    [[nodiscard]] QString getToolTip() const;
 
 private:
     // Shape of the item, see shape()
-    QPainterPath widgetPath(bool border) const;
+    [[nodiscard]] QPainterPath widgetPath(bool border) const;
 
     // See startDate()
     QDate mStartDate;

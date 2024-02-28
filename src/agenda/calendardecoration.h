@@ -219,17 +219,17 @@ protected:
     /**
       Map all dates of the same week to a single date.
     */
-    QDate weekDate(QDate date);
+    [[nodiscard]] QDate weekDate(QDate date);
 
     /**
       Map all dates of the same month to a single date.
     */
-    QDate monthDate(QDate date);
+    [[nodiscard]] QDate monthDate(QDate date);
 
     /**
       Map all dates of the same year to a single date.
     */
-    QDate yearDate(QDate date);
+    [[nodiscard]] QDate yearDate(QDate date);
 
 private:
     QMap<QDate, Element::List> mDayElements;

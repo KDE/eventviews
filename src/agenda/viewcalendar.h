@@ -43,12 +43,12 @@ public:
     ~AkonadiViewCalendar() override;
     bool isValid(const KCalendarCore::Incidence::Ptr &incidence) const override;
     bool isValid(const QString &incidenceIdentifier) const override;
-    QString displayName(const KCalendarCore::Incidence::Ptr &incidence) const override;
+    [[nodiscard]] QString displayName(const KCalendarCore::Incidence::Ptr &incidence) const override;
 
-    QColor resourceColor(const KCalendarCore::Incidence::Ptr &incidence) const override;
-    QString iconForIncidence(const KCalendarCore::Incidence::Ptr &incidence) const override;
+    [[nodiscard]] QColor resourceColor(const KCalendarCore::Incidence::Ptr &incidence) const override;
+    [[nodiscard]] QString iconForIncidence(const KCalendarCore::Incidence::Ptr &incidence) const override;
 
-    Akonadi::Item item(const KCalendarCore::Incidence::Ptr &incidence) const;
+    [[nodiscard]] Akonadi::Item item(const KCalendarCore::Incidence::Ptr &incidence) const;
 
     KCalendarCore::Calendar::Ptr getCalendar() const override;
 

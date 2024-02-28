@@ -95,10 +95,10 @@ public:
     ~JournalDateView() override;
 
     void addJournal(const Akonadi::Item &journal);
-    Akonadi::Item::List journals() const;
+    [[nodiscard]] Akonadi::Item::List journals() const;
 
     void setDate(QDate date);
-    QDate date() const
+    [[nodiscard]] QDate date() const
     {
         return mDate;
     }

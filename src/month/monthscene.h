@@ -50,7 +50,7 @@ public:
     QList<MonthItem *> mManagerList;
     MonthView *mMonthView = nullptr;
 
-    MonthView *monthView() const
+    [[nodiscard]] MonthView *monthView() const
     {
         return mMonthView;
     }
@@ -70,7 +70,7 @@ public:
     void resetAll();
     Akonadi::IncidenceChanger *incidenceChanger() const;
 
-    int totalHeight();
+    [[nodiscard]] int totalHeight();
 
     /**
      * Returns the vertical position where the top of the cell should be
@@ -234,20 +234,20 @@ private:
     /**
      * Returns the height of the header of the view
      */
-    int headerHeight() const;
+    [[nodiscard]] int headerHeight() const;
 
-    int availableWidth() const;
+    [[nodiscard]] int availableWidth() const;
 
     /**
      * Height available to draw the cells. Doesn't include header.
      */
-    int availableHeight() const;
+    [[nodiscard]] int availableHeight() const;
 
     /**
      * Removes all the margins, frames, etc. to give the
      * X coordinate in the MonthGrid.
      */
-    int sceneXToMonthGridX(int xScene);
+    [[nodiscard]] int sceneXToMonthGridX(int xScene);
 
     /**
      * Removes all the margins, frames, headers etc. to give the

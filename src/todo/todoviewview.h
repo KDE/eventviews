@@ -33,7 +33,9 @@ protected:
     void mouseMoveEvent(QMouseEvent *) override;
 
 private:
-    QModelIndex getNextEditableIndex(const QModelIndex &cur, int inc);
+    void toggleColumnHidden(QAction *action);
+    void expandParent();
+    [[nodiscard]] QModelIndex getNextEditableIndex(const QModelIndex &cur, int inc);
 
     QMenu *mHeaderPopup = nullptr;
     QList<QAction *> mColumnActions;

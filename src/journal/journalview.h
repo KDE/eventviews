@@ -72,7 +72,7 @@ protected:
     void clearEntries();
 
 private:
-    Akonadi::CollectionCalendar::Ptr findCalendar(const KCalendarCore::Journal::Ptr &journal) const;
+    [[nodiscard]] Akonadi::CollectionCalendar::Ptr findCalendar(const KCalendarCore::Journal::Ptr &journal) const;
 
     QScrollArea *mSA = nullptr;
     QWidget *mCurrentWidget = nullptr;

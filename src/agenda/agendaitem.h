@@ -217,7 +217,7 @@ public:
     void setConflictItems(const QList<AgendaItem::QPtr> &);
     void addConflictItem(const AgendaItem::QPtr &ci);
 
-    QString label() const override;
+    [[nodiscard]] QString label() const override;
 
     /** Tells whether this item overlaps item @p o */
     bool overlaps(CellItem *o) const override;

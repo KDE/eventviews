@@ -81,9 +81,9 @@ public:
         return x();
     }
 
-    QScrollBar *verticalScrollBar() const;
+    [[nodiscard]] QScrollBar *verticalScrollBar() const;
 
-    QScrollArea *scrollArea() const;
+    [[nodiscard]] QScrollArea *scrollArea() const;
 
     [[nodiscard]] AgendaItem::List agendaItems(const QString &uid) const;
 
@@ -260,7 +260,7 @@ protected:
     MouseActionType isInResizeArea(bool horizontal, QPoint pos, const AgendaItem::QPtr &item);
     /** Return whether the cell specified by the grid point belongs to the current select
      */
-    bool ptInSelection(QPoint gpos) const;
+    [[nodiscard]] bool ptInSelection(QPoint gpos) const;
 
     /** Start selecting time span. */
     void startSelectAction(QPoint viewportPos);

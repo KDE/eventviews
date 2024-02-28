@@ -31,7 +31,7 @@ public:
     explicit MonthItem(MonthScene *monthWidget);
     ~MonthItem() override;
 
-    QWidget *parentWidget() const;
+    [[nodiscard]] QWidget *parentWidget() const;
 
     /**
       Compares two items to decide which to place in the view first.
@@ -118,7 +118,7 @@ public:
     /**
       Returns the associated month scene to this item.
     */
-    MonthScene *monthScene() const
+    [[nodiscard]] MonthScene *monthScene() const
     {
         return mMonthScene;
     }

@@ -37,6 +37,6 @@ protected:
     QString mExtensiveText;
 
 private:
-    int getIndent() const;
+    [[nodiscard]] int getIndent() const;
 };
 }
