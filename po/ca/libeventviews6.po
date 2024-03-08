@@ -1,17 +1,17 @@
 # Translation of libeventviews6.po to Catalan
-# Copyright (C) 2010-2023 This_file_is_part_of_KDE
+# Copyright (C) 2010-2024 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
 # Manuel Tortosa <manutortosa@chakra-project.org>, 2010, 2011.
-# Josep M. Ferrer <txemaq@gmail.com>, 2010, 2011, 2012, 2013, 2014, 2015, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
+# Josep M. Ferrer <txemaq@gmail.com>, 2010, 2011, 2012, 2013, 2014, 2015, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024.
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-30 00:37+0000\n"
-"PO-Revision-Date: 2023-09-25 09:29+0200\n"
+"PO-Revision-Date: 2024-03-06 16:02+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -255,8 +255,8 @@ msgid ""
 "home folder."
 msgstr ""
 "Activeu aquesta casella per a exportar el calendari a un fitxer HTML cada "
-"vegada que el deseu. Per omissió aquest fitxer s'anomenarà calendari.html i "
-"s'emplaçarà a la carpeta d'inici de l'usuari."
+"vegada que el deseu. De manera predeterminada, aquest fitxer s'anomenarà "
+"calendari.html i s'emplaçarà en la carpeta d'inici de l'usuari."
 
 #. i18n: ectx: label, entry, group (Save Settings)
 #: eventviews.kcfg:44
