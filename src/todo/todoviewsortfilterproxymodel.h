@@ -13,6 +13,11 @@
 #include <QSortFilterProxyModel>
 #include <QStringList>
 
+namespace KCalendarCore
+{
+class CalFilter;
+}
+
 class TodoViewSortFilterProxyModel : public QSortFilterProxyModel
 {
     Q_OBJECT
@@ -32,11 +37,17 @@ public:
         return mPriorities;
     }
 
+    [[nodiscard]] KCalendarCore::CalFilter *calFilter() const
+    {
+        return mCalFilter;
+    }
+
 protected:
     bool filterAcceptsRow(int source_row, const QModelIndex &source_parent) const override;
     bool lessThan(const QModelIndex &left, const QModelIndex &right) const override;
 
 public Q_SLOTS:
+    void setCalFilter(KCalendarCore::CalFilter *filter);
     void setCategoryFilter(const QStringList &categories);
     void setPriorityFilter(const QStringList &priorities);
 
@@ -48,6 +59,7 @@ private:
     int compareCompletion(const QModelIndex &left, const QModelIndex &right) const;
     QStringList mCategories;
     QStringList mPriorities;
+    KCalendarCore::CalFilter *mCalFilter = nullptr;
     Qt::SortOrder mSortOrder = Qt::AscendingOrder;
     EventViews::PrefsPtr mPreferences;
 };
