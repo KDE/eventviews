@@ -10,6 +10,7 @@
 
 #include <Akonadi/TodoModel>
 #include <CalendarSupport/Utils>
+#include <KCalendarCore/CalFilter>
 
 #include <KLocalizedString>
 
@@ -28,6 +29,16 @@ void TodoViewSortFilterProxyModel::sort(int column, Qt::SortOrder order)
 bool TodoViewSortFilterProxyModel::filterAcceptsRow(int source_row, const QModelIndex &source_parent) const
 {
     bool ret = QSortFilterProxyModel::filterAcceptsRow(source_row, source_parent);
+
+    if (ret && mCalFilter) {
+        const auto incidence = sourceModel()
+                                   ->index(source_row, Akonadi::TodoModel::SummaryColumn, source_parent)
+                                   .data(Akonadi::TodoModel::TodoPtrRole)
+                                   .value<KCalendarCore::Todo::Ptr>();
+        if (!mCalFilter->filterIncidence(incidence)) {
+            return false;
+        }
+    }
 
     bool returnValue = true;
     if (ret && !mPriorities.isEmpty()) {
@@ -226,8 +237,18 @@ int TodoViewSortFilterProxyModel::compareCompletedDates(const QModelIndex &left,
 
 void TodoViewSortFilterProxyModel::setCategoryFilter(const QStringList &categories)
 {
-    mCategories = categories;
-    invalidateFilter();
+    if (mCategories != categories) {
+        mCategories = categories;
+        invalidateFilter();
+    }
+}
+
+void TodoViewSortFilterProxyModel::setCalFilter(KCalendarCore::CalFilter *filter)
+{
+    if (mCalFilter != filter) {
+        mCalFilter = filter;
+        invalidateFilter();
+    }
 }
 
 /* -1 - less than

@@ -516,6 +516,9 @@ void TodoView::addCalendar(const Akonadi::CollectionCalendar::Ptr &calendar)
 {
     EventView::addCalendar(calendar);
     mCalendarFilterModel->addCalendar(calendar);
+    if (calendars().size() == 1) {
+        mProxyModel->setCalFilter(calendar->filter());
+    }
 }
 
 void TodoView::removeCalendar(const Akonadi::CollectionCalendar::Ptr &calendar)
@@ -647,7 +650,12 @@ void TodoView::showIncidences(const Akonadi::Item::List &incidenceList, const QD
 
 void TodoView::updateView()
 {
-    // View is always updated, it's connected to ETM.
+    if (calendars().empty()) {
+        return;
+    }
+
+    auto calendar = calendars().first();
+    mProxyModel->setCalFilter(calendar->filter());
 }
 
 void TodoView::changeIncidenceDisplay(const Akonadi::Item &, Akonadi::IncidenceChanger::ChangeType)
