@@ -1630,6 +1630,15 @@ bool AgendaView::eventDurationHint(QDateTime &startDt, QDateTime &endDt, bool &a
         allDay = selectedIsAllDay();
         return true;
     }
+
+    // When creating an event from the side-pane view, we have no selection in the agenda
+    // view, so make sure the event has the default duration as well
+    if (startDt == endDt) {
+        QTime defaultDuration(CalendarSupport::KCalPrefs::instance()->defaultDuration().time());
+        endDt = endDt.addDuration(std::chrono::hours(defaultDuration.hour()) + std::chrono::minutes(defaultDuration.minute()));
+        return true;
+    }
+
     return false;
 }
 

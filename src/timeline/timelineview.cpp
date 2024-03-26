@@ -35,6 +35,8 @@
 #include <QTreeWidget>
 #include <QVBoxLayout>
 
+#include <chrono>
+
 using namespace KCalendarCore;
 using namespace EventViews;
 
@@ -371,10 +373,23 @@ void TimelineView::changeIncidenceDisplay(const Akonadi::Item &incidence, int mo
 
 bool TimelineView::eventDurationHint(QDateTime &startDt, QDateTime &endDt, bool &allDay) const
 {
-    startDt = QDateTime(d->mHintDate);
-    endDt = QDateTime(d->mHintDate.addSecs(2 * 60 * 60));
-    allDay = false;
-    return d->mHintDate.isValid();
+    bool modified = false;
+    if (d->mHintDate.isValid() && !startDt.isValid()) {
+        startDt = QDateTime(d->mHintDate);
+        modified = true;
+    }
+
+    if (modified || !endDt.isValid() || endDt == startDt) {
+        endDt = QDateTime(startDt.addDuration(std::chrono::hours(2)));
+        modified = true;
+    }
+
+    if (allDay) {
+        allDay = false;
+        modified = true;
+    }
+
+    return modified;
 }
 
 QDate TimelineView::startDate() const
