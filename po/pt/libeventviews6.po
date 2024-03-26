@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-30 00:37+0000\n"
+"POT-Creation-Date: 2024-03-26 00:38+0000\n"
 "PO-Revision-Date: 2022-07-06 12:31+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -2062,33 +2062,33 @@ msgctxt "@action:inmenu"
 msgid "%1"
 msgstr "%1"
 
-#: todo/todoviewsortfilterproxymodel.cpp:146
+#: todo/todoviewsortfilterproxymodel.cpp:157
 #, kde-format
 msgctxt "priority is unspecified"
 msgid "unspecified"
 msgstr "não indicada"
 
-#: todo/todoviewsortfilterproxymodel.cpp:147
-#: todo/todoviewsortfilterproxymodel.cpp:149
-#: todo/todoviewsortfilterproxymodel.cpp:151
-#: todo/todoviewsortfilterproxymodel.cpp:153
+#: todo/todoviewsortfilterproxymodel.cpp:158
+#: todo/todoviewsortfilterproxymodel.cpp:160
+#: todo/todoviewsortfilterproxymodel.cpp:162
+#: todo/todoviewsortfilterproxymodel.cpp:164
 #, kde-format
 msgid "%1"
 msgstr "%1"
 
-#: todo/todoviewsortfilterproxymodel.cpp:148
+#: todo/todoviewsortfilterproxymodel.cpp:159
 #, kde-format
 msgctxt "highest priority"
 msgid "%1 (highest)"
 msgstr "%1 (máxima)"
 
-#: todo/todoviewsortfilterproxymodel.cpp:150
+#: todo/todoviewsortfilterproxymodel.cpp:161
 #, kde-format
 msgctxt "medium priority"
 msgid "%1 (medium)"
 msgstr "%1 (média)"
 
-#: todo/todoviewsortfilterproxymodel.cpp:152
+#: todo/todoviewsortfilterproxymodel.cpp:163
 #, kde-format
 msgctxt "lowest priority"
 msgid "%1 (lowest)"
