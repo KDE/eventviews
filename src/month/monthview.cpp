@@ -345,6 +345,15 @@ void MonthView::setDateRange(const QDateTime &start, const QDateTime &end, const
 
 bool MonthView::eventDurationHint(QDateTime &startDt, QDateTime &endDt, bool &allDay) const
 {
+    // If we have valid start and end dates only adjust them to be all day
+    // but otherwise preserve them.
+    if (startDt.isValid() && endDt.isValid()) {
+        startDt.setTime(QTime());
+        endDt.setTime(QTime());
+        allDay = true;
+        return true;
+    }
+
     if (d->scene->selectedCell()) {
         startDt.setDate(d->scene->selectedCell()->date());
         endDt.setDate(d->scene->selectedCell()->date());
