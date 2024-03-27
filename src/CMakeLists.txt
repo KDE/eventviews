@@ -276,8 +276,6 @@ if (BUILD_QCH)
         ${eventviews_journal_HEADERS}
         ${eventviews_list_HEADERS}
         ${eventviews_month_HEADERS}
-        #MD_MAINPAGE "${CMAKE_SOURCE_DIR}/README.md"
-        #IMAGE_DIRS "${CMAKE_SOURCE_DIR}/docs/pics"
         LINK_QCHS
             Qt6Core_QCH
             Qt6Gui_QCH
