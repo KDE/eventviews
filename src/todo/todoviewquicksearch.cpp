@@ -32,7 +32,7 @@ TodoViewQuickSearch::TodoViewQuickSearch(QWidget *parent)
 {
     auto layout = new QHBoxLayout(this);
     // no special margin because it is added by the view
-    layout->setContentsMargins(0, 0, 0, 0);
+    layout->setContentsMargins({});
 
     mSearchLine->setToolTip(i18nc("@info:tooltip", "Filter on matching summaries"));
     mSearchLine->setWhatsThis(i18nc("@info:whatsthis", "Enter text here to filter the to-dos that are shown by matching summaries."));

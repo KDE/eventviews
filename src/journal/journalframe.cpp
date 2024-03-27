@@ -35,7 +35,7 @@ JournalDateView::JournalDateView(const Akonadi::CollectionCalendar::Ptr &calenda
     , mCalendar(calendar)
 {
     auto layout = new QVBoxLayout(this);
-    layout->setContentsMargins(0, 0, 0, 0);
+    layout->setContentsMargins({});
     layout->setSpacing(0);
 }
 

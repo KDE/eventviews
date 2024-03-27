@@ -298,7 +298,7 @@ ListView::ListView(QWidget *parent, bool nonInteractive)
     d->mTreeWidget->setRootIsDecorated(false);
 
     QBoxLayout *layoutTop = new QVBoxLayout(this);
-    layoutTop->setContentsMargins(0, 0, 0, 0);
+    layoutTop->setContentsMargins({});
     layoutTop->addWidget(d->mTreeWidget);
 
     QObject::connect(d->mTreeWidget,

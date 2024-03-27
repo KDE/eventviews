@@ -242,7 +242,7 @@ AgendaHeader::AgendaHeader(bool isSideBySide, QWidget *parent)
     , mIsSideBySide(isSideBySide)
 {
     auto layout = new QVBoxLayout(this);
-    layout->setContentsMargins(0, 0, 0, 0);
+    layout->setContentsMargins({});
 
     if (mIsSideBySide) {
         mCalendarNameLabel = new KSqueezedTextLabel(this);
@@ -254,20 +254,20 @@ AgendaHeader::AgendaHeader(bool isSideBySide, QWidget *parent)
     layout->addWidget(daysWidget);
 
     auto daysLayout = new QHBoxLayout(daysWidget);
-    daysLayout->setContentsMargins(0, 0, 0, 0);
+    daysLayout->setContentsMargins({});
     daysLayout->setSpacing(SPACING);
 
     if (!mIsSideBySide) {
         mWeekLabelBox = new QWidget(daysWidget);
         auto weekLabelBoxLayout = new QVBoxLayout(mWeekLabelBox);
-        weekLabelBoxLayout->setContentsMargins(0, 0, 0, 0);
+        weekLabelBoxLayout->setContentsMargins({});
         weekLabelBoxLayout->setSpacing(0);
         daysLayout->addWidget(mWeekLabelBox);
     }
 
     mDayLabels = new QWidget(daysWidget);
     mDayLabelsLayout = new AgendaHeaderLayout(mDayLabels);
-    mDayLabelsLayout->setContentsMargins(0, 0, 0, 0);
+    mDayLabelsLayout->setContentsMargins({});
     daysLayout->addWidget(mDayLabels);
     daysLayout->setStretchFactor(mDayLabels, 1);
 }
@@ -369,7 +369,7 @@ void AgendaHeader::addDay(const DecorationList &decoList, QDate date, bool withD
 {
     auto topDayLabelBox = new QWidget(mDayLabels);
     auto topDayLabelBoxLayout = new QVBoxLayout(topDayLabelBox);
-    topDayLabelBoxLayout->setContentsMargins(0, 0, 0, 0);
+    topDayLabelBoxLayout->setContentsMargins({});
     topDayLabelBoxLayout->setSpacing(0);
 
     mDayLabelsLayout->addWidget(topDayLabelBox);
@@ -416,7 +416,7 @@ void AgendaHeader::placeDecorations(const DecorationList &decoList, QDate date, 
             labelBox->layout()->addWidget(decoHBox);
             auto layout = new QHBoxLayout(decoHBox);
             layout->setSpacing(0);
-            layout->setContentsMargins(0, 0, 0, 0);
+            layout->setContentsMargins({});
             decoHBox->setMinimumWidth(1);
 
             for (CalendarDecoration::Element *it : elements) {
@@ -1117,7 +1117,7 @@ void AgendaView::init(QDate start, QDate end)
     d->mSelectedDates = AgendaViewPrivate::generateDateList(start, end);
 
     d->mMainLayout = new QVBoxLayout(this);
-    d->mMainLayout->setContentsMargins(0, 0, 0, 0);
+    d->mMainLayout->setContentsMargins({});
 
     /* Create day name labels for agenda columns */
     d->mTopDayLabelsFrame = new AgendaHeader(d->mIsSideBySide, this);
@@ -1130,7 +1130,7 @@ void AgendaView::init(QDate start, QDate end)
     /* Create all-day agenda widget */
     d->mAllDayFrame = new QWidget(d->mSplitterAgenda);
     auto allDayFrameLayout = new QHBoxLayout(d->mAllDayFrame);
-    allDayFrameLayout->setContentsMargins(0, 0, 0, 0);
+    allDayFrameLayout->setContentsMargins({});
     allDayFrameLayout->setSpacing(SPACING);
 
     // Alignment and description widgets
@@ -1138,7 +1138,7 @@ void AgendaView::init(QDate start, QDate end)
         d->mTimeBarHeaderFrame = new QWidget(d->mAllDayFrame);
         allDayFrameLayout->addWidget(d->mTimeBarHeaderFrame);
         auto timeBarHeaderFrameLayout = new QHBoxLayout(d->mTimeBarHeaderFrame);
-        timeBarHeaderFrameLayout->setContentsMargins(0, 0, 0, 0);
+        timeBarHeaderFrameLayout->setContentsMargins({});
         timeBarHeaderFrameLayout->setSpacing(0);
         d->mDummyAllDayLeft = new QWidget(d->mAllDayFrame);
         allDayFrameLayout->addWidget(d->mDummyAllDayLeft);
@@ -1152,7 +1152,7 @@ void AgendaView::init(QDate start, QDate end)
     /* Create the main agenda widget and the related widgets */
     auto agendaFrame = new QWidget(d->mSplitterAgenda);
     auto agendaLayout = new QHBoxLayout(agendaFrame);
-    agendaLayout->setContentsMargins(0, 0, 0, 0);
+    agendaLayout->setContentsMargins({});
     agendaLayout->setSpacing(SPACING);
 
     // Create agenda
@@ -1691,7 +1691,7 @@ void AgendaView::createTimeBarHeaders()
         d->mTimeBarHeaderFrame->layout()->addWidget(label);
         label->setFont(labelFont);
         label->setAlignment(Qt::AlignBottom | Qt::AlignRight);
-        label->setContentsMargins(0, 0, 0, 0);
+        label->setContentsMargins({});
         label->setWordWrap(true);
         label->setToolTip(timeLabel->headerToolTip());
         d->mTimeBarHeaders.append(label);

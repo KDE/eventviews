@@ -192,12 +192,12 @@ MonthView::MonthView(NavButtonsVisibility visibility, QWidget *parent)
 {
     auto topLayout = new QHBoxLayout(this);
     topLayout->addWidget(d->view);
-    topLayout->setContentsMargins(0, 0, 0, 0);
+    topLayout->setContentsMargins({});
 
     if (visibility == Visible) {
         auto rightLayout = new QVBoxLayout();
         rightLayout->setSpacing(0);
-        rightLayout->setContentsMargins(0, 0, 0, 0);
+        rightLayout->setContentsMargins({});
 
         // push buttons to the bottom
         rightLayout->addStretch(1);

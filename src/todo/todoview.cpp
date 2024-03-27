@@ -331,7 +331,7 @@ TodoView::TodoView(const EventViews::PrefsPtr &prefs, bool sidebarView, QWidget 
     }
 
     auto layout = new QGridLayout(this);
-    layout->setContentsMargins(0, 0, 0, 0);
+    layout->setContentsMargins({});
     if (!mSidebarView) {
         layout->addWidget(mQuickSearch, 0, 0, 1, 2);
     }

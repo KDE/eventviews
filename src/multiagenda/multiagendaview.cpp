@@ -154,7 +154,7 @@ MultiAgendaView::MultiAgendaView(const CalendarFactory::Ptr &factory, QWidget *p
 {
     auto topLevelLayout = new QHBoxLayout(this);
     topLevelLayout->setSpacing(0);
-    topLevelLayout->setContentsMargins(0, 0, 0, 0);
+    topLevelLayout->setContentsMargins({});
 
     // agendaheader is a VBox layout with default spacing containing two labels,
     // so the height is 2 * default font height + 2 * default vertical layout spacing
@@ -182,7 +182,7 @@ MultiAgendaView::MultiAgendaView(const CalendarFactory::Ptr &factory, QWidget *p
         auto timeLabelsBox = new QWidget(d->mLeftSplitter);
         auto timeLabelsBoxLayout = new QVBoxLayout(timeLabelsBox);
         timeLabelsBoxLayout->setSpacing(0);
-        timeLabelsBoxLayout->setContentsMargins(0, 0, 0, 0);
+        timeLabelsBoxLayout->setContentsMargins({});
 
         d->mTimeLabelsZone = new TimeLabelsZone(timeLabelsBox, PrefsPtr(new Prefs()));
         timeLabelsBoxLayout->addWidget(d->mTimeLabelsZone);
@@ -204,7 +204,7 @@ MultiAgendaView::MultiAgendaView(const CalendarFactory::Ptr &factory, QWidget *p
 
         d->mTopBox = new QWidget(d->mScrollArea->viewport());
         auto mTopBoxHBoxLayout = new QHBoxLayout(d->mTopBox);
-        mTopBoxHBoxLayout->setContentsMargins(0, 0, 0, 0);
+        mTopBoxHBoxLayout->setContentsMargins({});
         d->mScrollArea->setWidget(d->mTopBox);
 
         topLevelLayout->addWidget(d->mScrollArea, 100);
@@ -506,7 +506,7 @@ AgendaView *MultiAgendaViewPrivate::createView(const QString &title)
     auto box = new QWidget(mTopBox);
     mTopBox->layout()->addWidget(box);
     auto layout = new QVBoxLayout(box);
-    layout->setContentsMargins(0, 0, 0, 0);
+    layout->setContentsMargins({});
     auto av = new AgendaView(q->preferences(), q->startDateTime().date(), q->endDateTime().date(), true, true, q);
     layout->addWidget(av);
     av->setIncidenceChanger(q->changer());
