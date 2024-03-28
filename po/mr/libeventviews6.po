@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-26 02:52+0000\n"
+"POT-Creation-Date: 2024-03-28 02:54+0000\n"
 "PO-Revision-Date: 2013-03-15 14:01+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: Marathi <kde-i18n-doc@kde.org>\n"
@@ -91,12 +91,12 @@ msgctxt "short_weekday short_monthname date (e.g. Mon Aug 13)"
 msgid "%1 %2 %3"
 msgstr "%1, %2 - %3"
 
-#: agenda/agendaview.cpp:2227
+#: agenda/agendaview.cpp:2236
 #, kde-format
 msgid "Unable to modify this to-do, because it cannot be locked."
 msgstr ""
 
-#: agenda/agendaview.cpp:2235
+#: agenda/agendaview.cpp:2244
 #, kde-format
 msgid "Unable to save %1 \"%2\"."
 msgstr ""
@@ -1454,13 +1454,13 @@ msgctxt "'Month day' for month view cells"
 msgid "%1 %2"
 msgstr "%1 %2"
 
-#: month/monthview.cpp:210 month/monthview.cpp:430
+#: month/monthview.cpp:210 month/monthview.cpp:439
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display calendar in a normal size"
 msgstr ""
 
-#: month/monthview.cpp:211 month/monthview.cpp:433
+#: month/monthview.cpp:211 month/monthview.cpp:442
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display calendar in a full window"
@@ -1535,7 +1535,7 @@ msgstr "अजेंडा %1"
 msgid "All Day"
 msgstr "पूर्ण दिवस"
 
-#: timeline/timelineview.cpp:223
+#: timeline/timelineview.cpp:225
 #, kde-format
 msgid "Calendar"
 msgstr "दिनदर्शिका"

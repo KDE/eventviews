@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-26 02:52+0000\n"
+"POT-Creation-Date: 2024-03-28 02:54+0000\n"
 "PO-Revision-Date: 2023-09-25 18:57+0200\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -101,13 +101,13 @@ msgctxt "short_weekday short_monthname date (e.g. Mon Aug 13)"
 msgid "%1 %2 %3"
 msgstr "%1 %3 %2"
 
-#: agenda/agendaview.cpp:2227
+#: agenda/agendaview.cpp:2236
 #, kde-format
 msgid "Unable to modify this to-do, because it cannot be locked."
 msgstr ""
 "Impossibile modificare questa cosa da fare in quanto non può essere bloccata."
 
-#: agenda/agendaview.cpp:2235
+#: agenda/agendaview.cpp:2244
 #, kde-format
 msgid "Unable to save %1 \"%2\"."
 msgstr "Impossibile salvare %1 «%2»."
@@ -1649,13 +1649,13 @@ msgctxt "'Month day' for month view cells"
 msgid "%1 %2"
 msgstr "%1 %2"
 
-#: month/monthview.cpp:210 month/monthview.cpp:430
+#: month/monthview.cpp:210 month/monthview.cpp:439
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display calendar in a normal size"
 msgstr "Mostra il calendario a dimensione normale"
 
-#: month/monthview.cpp:211 month/monthview.cpp:433
+#: month/monthview.cpp:211 month/monthview.cpp:442
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display calendar in a full window"
@@ -1741,7 +1741,7 @@ msgstr "Agenda %1"
 msgid "All Day"
 msgstr "Tutto il giorno"
 
-#: timeline/timelineview.cpp:223
+#: timeline/timelineview.cpp:225
 #, kde-format
 msgid "Calendar"
 msgstr "Calendario"
