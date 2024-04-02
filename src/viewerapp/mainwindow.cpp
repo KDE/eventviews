@@ -6,6 +6,7 @@
 */
 
 #include "mainwindow.h"
+using namespace Qt::Literals::StringLiterals;
 
 #include "settings.h"
 
@@ -66,13 +67,13 @@ void MainWindow::addView(const QString &viewName)
     const auto start = QDateTime::currentDateTime().addDays(-1);
     const auto end = QDateTime::currentDateTime().addDays(1);
 
-    if (viewName == QLatin1StringView("agenda")) {
+    if (viewName == "agenda"_L1) {
         eventView = new AgendaView(start.date(), end.date(), true, false, this);
-    } else if (viewName == QLatin1StringView("multiagenda")) {
+    } else if (viewName == "multiagenda"_L1) {
         eventView = new MultiAgendaView(this);
-    } else if (viewName == QLatin1StringView("month")) {
+    } else if (viewName == "month"_L1) {
         eventView = new MonthView(MonthView::Visible, this);
-    } else if (viewName == QLatin1StringView("timeline")) {
+    } else if (viewName == "timeline"_L1) {
         eventView = new TimelineView(this);
     }
 

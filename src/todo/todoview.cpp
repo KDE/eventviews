@@ -11,6 +11,7 @@
 */
 
 #include "todoview.h"
+using namespace Qt::Literals::StringLiterals;
 
 #include "calendarview_debug.h"
 #include "coloredtodoproxymodel.h"
@@ -415,7 +416,7 @@ TodoView::TodoView(const EventViews::PrefsPtr &prefs, bool sidebarView, QWidget 
                                   i18nc("@action:inmenu", "Create Event from To-do"),
                                   this,
                                   qOverload<>(&TodoView::createEvent));
-    a->setObjectName(QLatin1StringView("createevent"));
+    a->setObjectName("createevent"_L1);
     mItemPopupMenuReadWriteEntries << a;
     mItemPopupMenuItemOnlyEntries << a;
 
@@ -423,7 +424,7 @@ TodoView::TodoView(const EventViews::PrefsPtr &prefs, bool sidebarView, QWidget 
                                   i18nc("@action:inmenu", "Create Note for To-do"),
                                   this,
                                   qOverload<>(&TodoView::createNote));
-    a->setObjectName(QLatin1StringView("createnote"));
+    a->setObjectName("createnote"_L1);
     mItemPopupMenuReadWriteEntries << a;
     mItemPopupMenuItemOnlyEntries << a;
 

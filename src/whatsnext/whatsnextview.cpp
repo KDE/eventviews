@@ -7,6 +7,8 @@
 */
 
 #include "whatsnextview.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "calendarview_debug.h"
 
 #include <Akonadi/CalendarUtils>
@@ -24,9 +26,9 @@ using namespace EventViews;
 void WhatsNextTextBrowser::doSetSource(const QUrl &name, QTextDocument::ResourceType type)
 {
     Q_UNUSED(type);
-    if (name.scheme() == QLatin1StringView("event")) {
+    if (name.scheme() == "event"_L1) {
         Q_EMIT showIncidence(name);
-    } else if (name.scheme() == QLatin1StringView("todo")) {
+    } else if (name.scheme() == "todo"_L1) {
         Q_EMIT showIncidence(name);
     } else {
         QTextBrowser::setSource(name);
@@ -55,11 +57,11 @@ void WhatsNextView::createTaskRow(KIconLoader *kil)
 {
     QString ipath;
     kil->loadIcon(QStringLiteral("view-calendar-tasks"), KIconLoader::NoGroup, 22, KIconLoader::DefaultState, QStringList(), &ipath);
-    mText += QLatin1StringView("<h2><img src=\"");
+    mText += "<h2><img src=\""_L1;
     mText += ipath;
     mText += QLatin1StringView(R"(" width="22" height="22">)");
-    mText += i18n("To-dos:") + QLatin1StringView("</h2>\n");
-    mText += QLatin1StringView("<ul>\n");
+    mText += i18n("To-dos:") + "</h2>\n"_L1;
+    mText += "<ul>\n"_L1;
 }
 
 void WhatsNextView::updateView()
@@ -69,21 +71,21 @@ void WhatsNextView::updateView()
     kil->loadIcon(QStringLiteral("office-calendar"), KIconLoader::NoGroup, 32, KIconLoader::DefaultState, QStringList(), &ipath);
 
     mText = QStringLiteral("<table width=\"100%\">\n");
-    mText += QLatin1StringView("<tr bgcolor=\"#3679AD\"><td><h1>");
-    mText += QLatin1StringView("<img src=\"");
+    mText += "<tr bgcolor=\"#3679AD\"><td><h1>"_L1;
+    mText += "<img src=\""_L1;
     mText += ipath;
     mText += QLatin1StringView(R"(" width="32" height="32">)");
-    mText += QLatin1StringView("<font color=\"white\"> ");
-    mText += i18n("What's Next?") + QLatin1StringView("</font></h1>");
-    mText += QLatin1StringView("</td></tr>\n<tr><td>");
+    mText += "<font color=\"white\"> "_L1;
+    mText += i18n("What's Next?") + "</font></h1>"_L1;
+    mText += "</td></tr>\n<tr><td>"_L1;
 
-    mText += QLatin1StringView("<h2>");
+    mText += "<h2>"_L1;
     if (mStartDate.daysTo(mEndDate) < 1) {
         mText += QLocale::system().toString(mStartDate);
     } else {
         mText += i18nc("date from - to", "%1 - %2", QLocale::system().toString(mStartDate), QLocale::system().toString(mEndDate));
     }
-    mText += QLatin1StringView("</h2>\n");
+    mText += "</h2>\n"_L1;
 
     KCalendarCore::Event::List events;
     for (const auto &calendar : calendars()) {
@@ -92,13 +94,13 @@ void WhatsNextView::updateView()
 
     events = KCalendarCore::Calendar::sortEvents(std::move(events), KCalendarCore::EventSortStartDate, KCalendarCore::SortDirectionAscending);
     if (!events.isEmpty()) {
-        mText += QLatin1StringView("<p></p>");
+        mText += "<p></p>"_L1;
         kil->loadIcon(QStringLiteral("view-calendar-day"), KIconLoader::NoGroup, 22, KIconLoader::DefaultState, QStringList(), &ipath);
-        mText += QLatin1StringView("<h2><img src=\"");
+        mText += "<h2><img src=\""_L1;
         mText += ipath;
         mText += QLatin1StringView(R"(" width="22" height="22">)");
-        mText += i18n("Events:") + QLatin1StringView("</h2>\n");
-        mText += QLatin1StringView("<table>\n");
+        mText += i18n("Events:") + "</h2>\n"_L1;
+        mText += "<table>\n"_L1;
         for (const KCalendarCore::Event::Ptr &ev : std::as_const(events)) {
             const auto calendar = calendar3(ev);
             if (!ev->recurs()) {
@@ -128,7 +130,7 @@ void WhatsNextView::updateView()
                 }
             }
         }
-        mText += QLatin1StringView("</table>\n");
+        mText += "</table>\n"_L1;
     }
 
     mTodos.clear();
@@ -165,7 +167,7 @@ void WhatsNextView::updateView()
             priority++;
         }
         if (taskHeaderWasCreated) {
-            mText += QLatin1StringView("</ul>\n");
+            mText += "</ul>\n"_L1;
         }
     }
 
@@ -181,13 +183,13 @@ void WhatsNextView::updateView()
         if (!me.isNull()) {
             if (me.status() == KCalendarCore::Attendee::NeedsAction && me.RSVP()) {
                 if (replies == 0) {
-                    mText += QLatin1StringView("<p></p>");
+                    mText += "<p></p>"_L1;
                     kil->loadIcon(QStringLiteral("mail-reply-sender"), KIconLoader::NoGroup, 22, KIconLoader::DefaultState, QStringList(), &ipath);
-                    mText += QLatin1StringView("<h2><img src=\"");
+                    mText += "<h2><img src=\""_L1;
                     mText += ipath;
                     mText += QLatin1StringView(R"(" width="22" height="22">)");
-                    mText += i18n("Events and to-dos that need a reply:") + QLatin1StringView("</h2>\n");
-                    mText += QLatin1StringView("<table>\n");
+                    mText += i18n("Events and to-dos that need a reply:") + "</h2>\n"_L1;
+                    mText += "<table>\n"_L1;
                 }
                 replies++;
                 appendEvent(calendar, ev);
@@ -205,13 +207,13 @@ void WhatsNextView::updateView()
         if (!me.isNull()) {
             if (me.status() == KCalendarCore::Attendee::NeedsAction && me.RSVP()) {
                 if (replies == 0) {
-                    mText += QLatin1StringView("<p></p>");
+                    mText += "<p></p>"_L1;
                     kil->loadIcon(QStringLiteral("mail-reply-sender"), KIconLoader::NoGroup, 22, KIconLoader::DefaultState, QStringList(), &ipath);
-                    mText += QLatin1StringView("<h2><img src=\"");
+                    mText += "<h2><img src=\""_L1;
                     mText += ipath;
                     mText += QLatin1StringView(R"(" width="22" height="22">)");
-                    mText += i18n("Events and to-dos that need a reply:") + QLatin1StringView("</h2>\n");
-                    mText += QLatin1StringView("<table>\n");
+                    mText += i18n("Events and to-dos that need a reply:") + "</h2>\n"_L1;
+                    mText += "<table>\n"_L1;
                 }
                 replies++;
                 appendEvent(calendar, to);
@@ -219,10 +221,10 @@ void WhatsNextView::updateView()
         }
     }
     if (replies > 0) {
-        mText += QLatin1StringView("</table>\n");
+        mText += "</table>\n"_L1;
     }
 
-    mText += QLatin1StringView("</td></tr>\n</table>\n");
+    mText += "</td></tr>\n</table>\n"_L1;
 
     mView->setText(mText);
 }
@@ -250,7 +252,7 @@ void WhatsNextView::appendEvent(const Akonadi::CollectionCalendar::Ptr &calendar
                                 const QDateTime &start,
                                 const QDateTime &end)
 {
-    mText += QLatin1StringView("<tr><td><b>");
+    mText += "<tr><td><b>"_L1;
     if (const KCalendarCore::Event::Ptr event = incidence.dynamicCast<KCalendarCore::Event>()) {
         auto starttime = start.toLocalTime();
         if (!starttime.isValid()) {
@@ -283,12 +285,12 @@ void WhatsNextView::appendEvent(const Akonadi::CollectionCalendar::Ptr &calendar
             }
         }
     }
-    mText += QLatin1StringView("</b></td>");
+    mText += "</b></td>"_L1;
     const QString proto = incidence->type() == KCalendarCore::Incidence::TypeTodo ? QStringLiteral("todo") : QStringLiteral("event");
     mText += QStringLiteral(R"(<td><a href="%1:%2?itemId=%3&calendarId=%5">%4</a></td>)")
                  .arg(proto, incidence->uid(), incidence->customProperty("VOLATILE", "AKONADI-ID"), incidence->summary())
                  .arg(calendar->collection().id());
-    mText += QLatin1StringView("</tr>\n");
+    mText += "</tr>\n"_L1;
 }
 
 void WhatsNextView::appendTodo(const Akonadi::CollectionCalendar::Ptr &calendar, const KCalendarCore::Incidence::Ptr &incidence)
@@ -298,7 +300,7 @@ void WhatsNextView::appendTodo(const Akonadi::CollectionCalendar::Ptr &calendar,
         return;
     }
     mTodos.append(aitem);
-    mText += QLatin1StringView("<li>");
+    mText += "<li>"_L1;
     mText += QStringLiteral(R"(<a href="todo:%1?itemId=%2&calendarId=%4">%3</a>)")
                  .arg(incidence->uid(), incidence->customProperty("VOLATILE", "AKONADI-ID"), incidence->summary())
                  .arg(calendar->collection().id());
@@ -307,7 +309,7 @@ void WhatsNextView::appendTodo(const Akonadi::CollectionCalendar::Ptr &calendar,
         if (todo->hasDueDate()) {
             mText += i18nc("to-do due date", "  (Due: %1)", KCalUtils::IncidenceFormatter::dateTimeToString(todo->dtDue(), todo->allDay()));
         }
-        mText += QLatin1StringView("</li>\n");
+        mText += "</li>\n"_L1;
     }
 }
 

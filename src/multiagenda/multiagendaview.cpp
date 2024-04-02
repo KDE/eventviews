@@ -6,6 +6,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 #include "multiagendaview.h"
+using namespace Qt::Literals::StringLiterals;
 
 #include "agenda/agenda.h"
 #include "agenda/agendaview.h"
@@ -769,7 +770,7 @@ void MultiAgendaView::doRestoreConfig(const KConfigGroup &configGroup)
             auto checkableProxy = new KCheckableProxyModel(this);
             checkableProxy->setSourceModel(columnFilterProxy);
             checkableProxy->setSelectionModel(qsm);
-            const QString groupName = configGroup.name() + QLatin1StringView("_subView_") + QString::number(i);
+            const QString groupName = configGroup.name() + "_subView_"_L1 + QString::number(i);
             const KConfigGroup group = configGroup.config()->group(groupName);
 
             if (!d->mSelectionSavers.contains(groupName)) {
@@ -794,7 +795,7 @@ void MultiAgendaView::doSaveConfig(KConfigGroup &configGroup)
     configGroup.writeEntry("ColumnTitles", d->mCustomColumnTitles);
     int idx = 0;
     for (KCheckableProxyModel *checkableProxyModel : std::as_const(d->mCollectionSelectionModels)) {
-        const QString groupName = configGroup.name() + QLatin1StringView("_subView_") + QString::number(idx);
+        const QString groupName = configGroup.name() + "_subView_"_L1 + QString::number(idx);
         KConfigGroup group = configGroup.config()->group(groupName);
         ++idx;
         // TODO never used ?

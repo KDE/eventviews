@@ -9,6 +9,8 @@
 */
 
 #include "eventview_p.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "prefs.h"
 
 #include <CalendarSupport/CollectionSelection>
@@ -556,7 +558,7 @@ void EventView::restoreConfig(const KConfigGroup &configGroup)
 
             d->setUpModels();
         }
-        const KConfigGroup selectionGroup = configGroup.config()->group(configGroup.name() + QLatin1StringView("_selectionSetup"));
+        const KConfigGroup selectionGroup = configGroup.config()->group(configGroup.name() + "_selectionSetup"_L1);
 
         KViewStateMaintainer<ETMViewStateSaver> maintainer(selectionGroup);
         maintainer.setSelectionModel(d->collectionSelectionModel->selectionModel());
@@ -572,7 +574,7 @@ void EventView::saveConfig(KConfigGroup &configGroup)
     configGroup.writeEntry("UseCustomCollectionSelection", d->collectionSelectionModel != nullptr);
 
     if (d->collectionSelectionModel) {
-        KConfigGroup selectionGroup = configGroup.config()->group(configGroup.name() + QLatin1StringView("_selectionSetup"));
+        KConfigGroup selectionGroup = configGroup.config()->group(configGroup.name() + "_selectionSetup"_L1);
 
         KViewStateMaintainer<ETMViewStateSaver> maintainer(selectionGroup);
         maintainer.setSelectionModel(d->collectionSelectionModel->selectionModel());
