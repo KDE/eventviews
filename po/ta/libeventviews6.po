@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-28 00:39+0000\n"
+"POT-Creation-Date: 2024-04-03 00:38+0000\n"
 "PO-Revision-Date: 2022-05-08 15:24+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -57,31 +57,31 @@ msgctxt "@title:window"
 msgid "Error Occurred"
 msgstr "சிக்கல் ஏற்பட்டது"
 
-#: agenda/agendaitem.cpp:82 list/listview.cpp:425
+#: agenda/agendaitem.cpp:81 list/listview.cpp:425
 #, kde-format
 msgid "%2 (1 year)"
 msgid_plural "%2 (%1 years)"
 msgstr[0] "%2 (1 ஆண்டு)"
 msgstr[1] "%2 (%1 ஆண்டுகள்)"
 
-#: agenda/agendaitem.cpp:632
+#: agenda/agendaitem.cpp:631
 #, kde-format
 msgid "Attendee \"%1\" added to the calendar item \"%2\""
 msgstr "\"%2\" என்ற நாள்காட்டிப்பதிவிற்கு \"%1\" பங்கேற்பவராக சேர்க்கப்பட்டார்"
 
-#: agenda/agendaitem.cpp:633
+#: agenda/agendaitem.cpp:632
 #, fuzzy, kde-format
 #| msgid "Attendee added"
 msgctxt "@title:window"
 msgid "Attendee added"
 msgstr "பங்கேற்பவர் சேர்க்கப்பட்டார்"
 
-#: agenda/agendaitem.cpp:857 agenda/agendaitem.cpp:952
+#: agenda/agendaitem.cpp:856 agenda/agendaitem.cpp:951
 #, kde-format
 msgid "%1 - %2"
 msgstr "%1 - %2"
 
-#: agenda/agendaitem.cpp:866
+#: agenda/agendaitem.cpp:865
 #, kde-format
 msgid "- %1"
 msgstr "- %1"
@@ -102,47 +102,47 @@ msgstr "இச்செய்யவேண்டியதை பூட்ட ம�
 msgid "Unable to save %1 \"%2\"."
 msgstr "\"%2\" என்ற %1 தனை சேமிக்க முடியவில்லை."
 
-#: agenda/timelabels.cpp:329
+#: agenda/timelabels.cpp:331
 #, kde-format
 msgid "&Add Timezones..."
 msgstr "நேரமண்டலங்களை &சேர்…"
 
-#: agenda/timelabels.cpp:330
+#: agenda/timelabels.cpp:332
 #, kde-format
 msgid "&Remove Timezone %1"
 msgstr "%1 என்ற நேரமண்டலத்தை &நீக்கு"
 
-#: agenda/timelabels.cpp:370
+#: agenda/timelabels.cpp:372
 #, kde-format
 msgctxt "title for timezone info, the timezone id and utc offset"
 msgid "<b>%1 (%2)</b>"
 msgstr "<b>%1 (%2)</b>"
 
-#: agenda/timelabels.cpp:374
+#: agenda/timelabels.cpp:376
 #, kde-format
 msgctxt "heading for timezone display name"
 msgid "<i>Name:</i> %1"
 msgstr "<i>பெயர்:</i> %1"
 
-#: agenda/timelabels.cpp:378
+#: agenda/timelabels.cpp:380
 #, kde-format
 msgctxt "heading for timezone country"
 msgid "<i>Country:</i> %1"
 msgstr "<i>நாடு:</i> %1"
 
-#: agenda/timelabels.cpp:390
+#: agenda/timelabels.cpp:392
 #, kde-format
 msgctxt "heading for comma-separated list of timezone abbreviations"
 msgid "<i>Abbreviations:</i>"
 msgstr "<i>சுருக்கப்பெயர்கள்:</i>"
 
-#: agenda/timelabels.cpp:396
+#: agenda/timelabels.cpp:398
 #, kde-format
 msgctxt "heading for the timezone comment"
 msgid "<i>Comment:</i> %1"
 msgstr "<i>குறிப்பு:</i> %1"
 
-#: agenda/timelabels.cpp:412
+#: agenda/timelabels.cpp:414
 #, kde-format
 msgctxt "[hour of the day][am/pm/00] [timezone id (timezone-offset)]"
 msgid "%1%2<br/>%3 (%4)"
@@ -154,28 +154,28 @@ msgctxt "@title:window"
 msgid "Timezone"
 msgstr "நேரமண்டலம்"
 
-#: eventview.cpp:107
+#: eventview.cpp:109
 #, kde-format
 msgctxt "@title:window"
 msgid "Changing Recurring Item"
 msgstr "மீளநிகழ்வதை மாற்றுவது"
 
-#: eventview.cpp:108
+#: eventview.cpp:110
 #, kde-format
 msgid "Also &Future Items"
 msgstr "&வருங்கால நிகழ்வுகளையும்"
 
-#: eventview.cpp:109
+#: eventview.cpp:111
 #, kde-format
 msgid "Only &This Item"
 msgstr "&இதை மட்டும்"
 
-#: eventview.cpp:110
+#: eventview.cpp:112
 #, kde-format
 msgid "&All Occurrences"
 msgstr "&அனைத்து நிகழ்வுகளையும்"
 
-#: eventview.cpp:127
+#: eventview.cpp:129
 #, kde-format
 msgid ""
 "The item you are trying to change is a recurring item. Should the changes be "
@@ -186,7 +186,7 @@ msgstr ""
 "செயல்படுத்த வேண்டுமா, இதன் வருங்கால மறுநிகழ்வுகளுக்குமா, அல்லது இதன் அனைத்து "
 "மறுநிகழ்வுகளுக்குமா?"
 
-#: eventview.cpp:138
+#: eventview.cpp:140
 #, kde-format
 msgid ""
 "The item you are trying to change is a recurring item. Should the changes be "
@@ -1343,52 +1343,52 @@ msgstr ""
 msgid "Use system color. If enabled will ignore all other color settings"
 msgstr ""
 
-#: journal/journalframe.cpp:152
+#: journal/journalframe.cpp:153
 #, kde-format
 msgid "&Edit"
 msgstr "&திருத்து"
 
-#: journal/journalframe.cpp:155
+#: journal/journalframe.cpp:156
 #, kde-format
 msgid "Edit this journal entry"
 msgstr ""
 
-#: journal/journalframe.cpp:156
+#: journal/journalframe.cpp:157
 #, kde-format
 msgid "Opens an editor dialog for this journal entry"
 msgstr ""
 
-#: journal/journalframe.cpp:162
+#: journal/journalframe.cpp:163
 #, kde-format
 msgid "&Delete"
 msgstr "&நீக்கு"
 
-#: journal/journalframe.cpp:165 journal/journalframe.cpp:166
+#: journal/journalframe.cpp:166 journal/journalframe.cpp:167
 #, kde-format
 msgid "Delete this journal entry"
 msgstr ""
 
-#: journal/journalframe.cpp:171
+#: journal/journalframe.cpp:172
 #, kde-format
 msgid "&Print"
 msgstr "&அச்சிடு"
 
-#: journal/journalframe.cpp:175
+#: journal/journalframe.cpp:176
 #, kde-format
 msgid "Print this journal entry"
 msgstr ""
 
-#: journal/journalframe.cpp:176
+#: journal/journalframe.cpp:177
 #, kde-format
 msgid "Opens a print dialog for this journal entry"
 msgstr ""
 
-#: journal/journalframe.cpp:181
+#: journal/journalframe.cpp:182
 #, kde-format
 msgid "Print preview"
 msgstr "அச்சு முன்னோட்டம்"
 
-#: journal/journalframe.cpp:185
+#: journal/journalframe.cpp:186
 #, kde-format
 msgid "Print preview this journal entry"
 msgstr ""
@@ -1526,12 +1526,12 @@ msgid ""
 "Click this button and the view will be scrolled forward in time by 1 month."
 msgstr ""
 
-#: multiagenda/multiagendaview.cpp:96
+#: multiagenda/multiagendaview.cpp:97
 #, kde-format
 msgid "Agenda %1"
 msgstr "நிகழ்ச்சிநிரல் %1"
 
-#: multiagenda/multiagendaview.cpp:178
+#: multiagenda/multiagendaview.cpp:179
 #, kde-format
 msgid "All Day"
 msgstr "முழு நாளும்"
@@ -1547,7 +1547,7 @@ msgctxt "@action:inmenu Unspecified priority"
 msgid "unspecified"
 msgstr "குறிப்பிடப்படாத‍து"
 
-#: todo/tododelegates.cpp:153 todo/todoview.cpp:455
+#: todo/tododelegates.cpp:153 todo/todoview.cpp:456
 #, kde-format
 msgctxt "@action:inmenu highest priority"
 msgid "1 (highest)"
@@ -1571,7 +1571,7 @@ msgctxt "@action:inmenu"
 msgid "4"
 msgstr "4"
 
-#: todo/tododelegates.cpp:157 todo/todoview.cpp:459
+#: todo/tododelegates.cpp:157 todo/todoview.cpp:460
 #, kde-format
 msgctxt "@action:inmenu medium priority"
 msgid "5 (medium)"
@@ -1595,43 +1595,43 @@ msgctxt "@action:inmenu"
 msgid "8"
 msgstr "8"
 
-#: todo/tododelegates.cpp:161 todo/todoview.cpp:463
+#: todo/tododelegates.cpp:161 todo/todoview.cpp:464
 #, kde-format
 msgctxt "@action:inmenu lowest priority"
 msgid "9 (lowest)"
 msgstr "9 (குறைவானது)"
 
-#: todo/todoview.cpp:233
+#: todo/todoview.cpp:234
 #, kde-format
 msgid "Cannot move to-do to itself or a child of itself."
 msgstr "செய்யவேண்டியதை தனக்குள்ளோ தன்னை சார்ந்த‍தனுள்ளோ நகரத்த முடியாது."
 
-#: todo/todoview.cpp:234
+#: todo/todoview.cpp:235
 #, fuzzy, kde-format
 #| msgid "Drop To-do"
 msgctxt "@title:window"
 msgid "Drop To-do"
 msgstr "செய்யவேண்டியதை இழுத்துப்போடுவது"
 
-#: todo/todoview.cpp:314
+#: todo/todoview.cpp:315
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display to-do list in a full window"
 msgstr "செய்யவேண்டியவற்றின் பட்டியலை முழுச்சாளரத்தில் காட்டும்"
 
-#: todo/todoview.cpp:315
+#: todo/todoview.cpp:316
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Checking this option will cause the to-do view to use the full window."
 msgstr "இத்தேர்வை குறித்தால், செய்யவேண்டியவற்றின் பட்டியல் முழுச்சாளரத்தை நிரப்பும்."
 
-#: todo/todoview.cpp:320
+#: todo/todoview.cpp:321
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display to-dos in flat list instead of a tree"
 msgstr "செய்யவேண்டியவற்றை கிளைப்படம் போல் இல்லாமல் ஒரே மட்டத்தில் காட்டு"
 
-#: todo/todoview.cpp:322
+#: todo/todoview.cpp:323
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1643,127 +1643,127 @@ msgstr ""
 "காட்டுப்படும். எந்த உருப்படி எதில் சார்ந்திருக்கிறது என்ற விவரங்கள் இக்காட்சிமுறையில் "
 "காட்டப்படா."
 
-#: todo/todoview.cpp:361
+#: todo/todoview.cpp:362
 #, kde-format
 msgctxt "@action:inmenu show the to-do"
 msgid "&Show"
 msgstr "&காட்டு"
 
-#: todo/todoview.cpp:366
+#: todo/todoview.cpp:367
 #, kde-format
 msgctxt "@action:inmenu edit the to-do"
 msgid "&Edit..."
 msgstr "&திருத்து..."
 
-#: todo/todoview.cpp:373
+#: todo/todoview.cpp:374
 #, kde-format
 msgctxt "@action:inmenu delete the to-do"
 msgid "&Delete"
 msgstr "&நீக்கு"
 
-#: todo/todoview.cpp:382
+#: todo/todoview.cpp:383
 #, kde-format
 msgctxt "@action:inmenu print the to-do"
 msgid "&Print..."
 msgstr "&அச்சிடு..."
 
-#: todo/todoview.cpp:387
+#: todo/todoview.cpp:388
 #, kde-format
 msgctxt "@action:inmenu print preview the to-do"
 msgid "Print Previe&w..."
 msgstr "அ&ச்சு முன்னோட்டம்..."
 
-#: todo/todoview.cpp:394
+#: todo/todoview.cpp:395
 #, kde-format
 msgctxt "@action:inmenu create a new to-do"
 msgid "New &To-do..."
 msgstr "&புதிய செய்யவேண்டியது…"
 
-#: todo/todoview.cpp:398
+#: todo/todoview.cpp:399
 #, kde-format
 msgctxt "@action:inmenu create a new sub-to-do"
 msgid "New Su&b-to-do..."
 msgstr "புதிய சார்-செய்யவேண்டியது…"
 
-#: todo/todoview.cpp:402
+#: todo/todoview.cpp:403
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Make this To-do Independent"
 msgstr "&இச்செய்யவேண்டியதை தனித்திருக்க செய்"
 
-#: todo/todoview.cpp:404
+#: todo/todoview.cpp:405
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Make all Sub-to-dos &Independent"
 msgstr "&சார்ந்த அனைத்து செய்யவேண்டியவற்றை தனித்திருக்க செய்"
 
-#: todo/todoview.cpp:415
+#: todo/todoview.cpp:416
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Create Event from To-do"
 msgstr "செய்யவேண்டியதை நிகழ்விலிருந்து உருவாக்கு"
 
-#: todo/todoview.cpp:423
+#: todo/todoview.cpp:424
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Create Note for To-do"
 msgstr "செய்யவேண்டியதற்கான குறிப்பை உருவாக்கு"
 
-#: todo/todoview.cpp:433
+#: todo/todoview.cpp:434
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Copy To"
 msgstr "வே&றிடத்தில் நகலெடு"
 
-#: todo/todoview.cpp:440
+#: todo/todoview.cpp:441
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Move To"
 msgstr "வேறிடத்துக்கு நக&ர்த்து"
 
-#: todo/todoview.cpp:451
+#: todo/todoview.cpp:452
 #, kde-format
 msgctxt "@action:inmenu delete completed to-dos"
 msgid "Pur&ge Completed"
 msgstr "மு&டித்தவற்றை நீக்கு"
 
-#: todo/todoview.cpp:454
+#: todo/todoview.cpp:455
 #, kde-format
 msgctxt "@action:inmenu unspecified priority"
 msgid "unspecified"
 msgstr "குறிப்பிடப்படாத‍து"
 
-#: todo/todoview.cpp:456
+#: todo/todoview.cpp:457
 #, kde-format
 msgctxt "@action:inmenu priority value=2"
 msgid "2"
 msgstr "2"
 
-#: todo/todoview.cpp:457
+#: todo/todoview.cpp:458
 #, kde-format
 msgctxt "@action:inmenu priority value=3"
 msgid "3"
 msgstr "3"
 
-#: todo/todoview.cpp:458
+#: todo/todoview.cpp:459
 #, kde-format
 msgctxt "@action:inmenu priority value=4"
 msgid "4"
 msgstr "4"
 
-#: todo/todoview.cpp:460
+#: todo/todoview.cpp:461
 #, kde-format
 msgctxt "@action:inmenu priority value=6"
 msgid "6"
 msgstr "6"
 
-#: todo/todoview.cpp:461
+#: todo/todoview.cpp:462
 #, kde-format
 msgctxt "@action:inmenu priority value=7"
 msgid "7"
 msgstr "7"
 
-#: todo/todoview.cpp:462
+#: todo/todoview.cpp:463
 #, kde-format
 msgctxt "@action:inmenu priority value=8"
 msgid "8"
@@ -2013,40 +2013,40 @@ msgid ""
 "Configuring Kontact as a KDE Kolab client)."
 msgstr ""
 
-#: whatsnext/whatsnextview.cpp:61
+#: whatsnext/whatsnextview.cpp:63
 #, kde-format
 msgid "To-dos:"
 msgstr "செய்யவேண்டியவை:"
 
-#: whatsnext/whatsnextview.cpp:77
+#: whatsnext/whatsnextview.cpp:79
 #, kde-format
 msgid "What's Next?"
 msgstr "அடுத்த‍து என்ன?"
 
-#: whatsnext/whatsnextview.cpp:84 whatsnext/whatsnextview.cpp:267
-#: whatsnext/whatsnextview.cpp:272
+#: whatsnext/whatsnextview.cpp:86 whatsnext/whatsnextview.cpp:269
+#: whatsnext/whatsnextview.cpp:274
 #, kde-format
 msgctxt "date from - to"
 msgid "%1 - %2"
 msgstr "%1 - %2"
 
-#: whatsnext/whatsnextview.cpp:100
+#: whatsnext/whatsnextview.cpp:102
 #, kde-format
 msgid "Events:"
 msgstr "நிகழ்வுகள்:"
 
-#: whatsnext/whatsnextview.cpp:189 whatsnext/whatsnextview.cpp:213
+#: whatsnext/whatsnextview.cpp:191 whatsnext/whatsnextview.cpp:215
 #, kde-format
 msgid "Events and to-dos that need a reply:"
 msgstr "பதிலளிக்க வேண்டிய நிகழ்வுகளும் செய்யவேண்டியவையும்:"
 
-#: whatsnext/whatsnextview.cpp:279
+#: whatsnext/whatsnextview.cpp:281
 #, kde-format
 msgctxt "date, from - to"
 msgid "%1, %2 - %3"
 msgstr "%1, %2 - %3"
 
-#: whatsnext/whatsnextview.cpp:308
+#: whatsnext/whatsnextview.cpp:310
 #, kde-format
 msgctxt "to-do due date"
 msgid "  (Due: %1)"
