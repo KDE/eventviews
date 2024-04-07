@@ -1753,8 +1753,9 @@ static QDateTime copyTimeSpec(QDateTime dt, const QDateTime &source)
     case Qt::TimeZone:
         return dt.toTimeZone(source.timeZone());
     case Qt::LocalTime:
+        return dt.toTimeZone(QTimeZone::LocalTime);
     case Qt::UTC:
-        return dt.toTimeSpec(source.timeSpec());
+        return dt.toTimeZone(QTimeZone::UTC);
     case Qt::OffsetFromUTC:
         return dt.toOffsetFromUtc(source.offsetFromUtc());
     }
@@ -2078,8 +2079,8 @@ bool AgendaView::displayIncidence(const KCalendarCore::Incidence::Ptr &incidence
     KCalendarCore::Event::Ptr event = CalendarSupport::event(incidence);
     const QDate today = QDate::currentDate();
 
-    QDateTime firstVisibleDateTime(d->mSelectedDates.first(), QTime(0, 0, 0), Qt::LocalTime);
-    QDateTime lastVisibleDateTime(d->mSelectedDates.last(), QTime(23, 59, 59, 999), Qt::LocalTime);
+    QDateTime firstVisibleDateTime(d->mSelectedDates.first(), QTime(0, 0, 0), QTimeZone::LocalTime);
+    QDateTime lastVisibleDateTime(d->mSelectedDates.last(), QTime(23, 59, 59, 999), QTimeZone::LocalTime);
 
     // Optimization, very cheap operation that discards incidences that aren't in the timespan
     if (!d->mightBeVisible(incidence)) {
@@ -2156,7 +2157,7 @@ bool AgendaView::displayIncidence(const KCalendarCore::Incidence::Ptr &incidence
     }
 
     // ToDo items shall be displayed today if they are overdue
-    const QDateTime dateTimeToday = QDateTime(today, QTime(0, 0), Qt::LocalTime);
+    const QDateTime dateTimeToday = QDateTime(today, QTime(0, 0), QTimeZone::LocalTime);
     if (todo && todo->isOverdue() && dateTimeToday >= firstVisibleDateTime && dateTimeToday <= lastVisibleDateTime) {
         /* If there's a recurring instance showing up today don't add "today" again
          * we don't want the event to appear duplicated */
@@ -2287,7 +2288,7 @@ void AgendaView::slotIncidencesDropped(const KCalendarCore::Incidence::List &inc
 
     const QDate day = d->mSelectedDates[gpos.x()];
     const QTime time = d->mAgenda->gyToTime(gpos.y());
-    QDateTime newTime(day, time, Qt::LocalTime);
+    QDateTime newTime(day, time, QTimeZone::LocalTime);
 
     for (const KCalendarCore::Incidence::Ptr &incidence : incidences) {
         const Akonadi::Item existingItem = d->mViewCalendar->item(incidence);

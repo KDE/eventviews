@@ -163,7 +163,7 @@ int TimeLabels::yposToCell(const int ypos) const
         return 0;
     }
 
-    const auto firstDay = QDateTime(datelist.first(), QTime(0, 0, 0), Qt::LocalTime).toUTC();
+    const auto firstDay = QDateTime(datelist.first(), QTime(0, 0, 0), QTimeZone::LocalTime).toUTC();
     const int beginning // the hour we start drawing with
         = !mTimezone.isValid() ? 0 : (mTimezone.offsetFromUtc(firstDay) - mTimeLabelsZone->preferences()->timeZone().offsetFromUtc(firstDay)) / 3600;
 
@@ -230,7 +230,7 @@ void TimeLabels::paintEvent(QPaintEvent *)
     // We won't paint parts that aren't visible
     const int cy = -y(); // y() returns a negative value.
 
-    const auto firstDay = QDateTime(datelist.first(), QTime(0, 0, 0), Qt::LocalTime).toUTC();
+    const auto firstDay = QDateTime(datelist.first(), QTime(0, 0, 0), QTimeZone::LocalTime).toUTC();
     const int beginning =
         !mTimezone.isValid() ? 0 : (mTimezone.offsetFromUtc(firstDay) - mTimeLabelsZone->preferences()->timeZone().offsetFromUtc(firstDay)) / 3600;
 

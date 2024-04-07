@@ -108,9 +108,9 @@ void WhatsNextView::updateView()
             } else {
                 KCalendarCore::Recurrence *recur = ev->recurrence();
                 int duration = ev->dtStart().secsTo(ev->dtEnd());
-                QDateTime start = recur->getPreviousDateTime(QDateTime(mStartDate, QTime(), Qt::LocalTime));
+                QDateTime start = recur->getPreviousDateTime(QDateTime(mStartDate, QTime(), QTimeZone::LocalTime));
                 QDateTime end = start.addSecs(duration);
-                QDateTime endDate(mEndDate, QTime(23, 59, 59), Qt::LocalTime);
+                QDateTime endDate(mEndDate, QTime(23, 59, 59), QTimeZone::LocalTime);
                 if (end.date() >= mStartDate) {
                     appendEvent(calendar, ev, start.toLocalTime(), end.toLocalTime());
                 }
