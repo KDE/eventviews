@@ -2522,6 +2522,7 @@ QSplitter *AgendaView::splitter() const
 
 bool AgendaView::filterByCollectionSelection(const KCalendarCore::Incidence::Ptr &incidence)
 {
+    Q_UNUSED(incidence);
     return true;
     /*
     const Akonadi::Item item = d->mViewCalendar->item(incidence);

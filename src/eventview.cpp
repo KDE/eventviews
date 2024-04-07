@@ -661,13 +661,11 @@ QList<Akonadi::CollectionCalendar::Ptr> EventView::calendars() const
 
 Akonadi::CollectionCalendar::Ptr EventView::calendar3(const Akonadi::Item &item) const
 {
-    Q_D(const EventView);
     return calendarForCollection(item.storageCollectionId());
 }
 
 Akonadi::CollectionCalendar::Ptr EventView::calendar3(const KCalendarCore::Incidence::Ptr &incidence) const
 {
-    Q_D(const EventView);
     const auto collectionId = incidence->customProperty("VOLATILE", "COLLECTION-ID").toLongLong();
     return calendarForCollection(collectionId);
 }
