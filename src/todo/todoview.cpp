@@ -299,7 +299,7 @@ TodoView::TodoView(const EventViews::PrefsPtr &prefs, bool sidebarView, QWidget 
     connect(mView, &TodoViewView::customContextMenuRequested, this, &TodoView::contextMenu);
     connect(mView, &TodoViewView::doubleClicked, this, &TodoView::itemDoubleClicked);
 
-    connect(mView->selectionModel(), &QItemSelectionModel::selectionChanged, this, &TodoView::selectionChanged);
+    connect(mView->selectionModel(), &QItemSelectionModel::currentChanged, this, &TodoView::currentChanged);
 
     mQuickAdd = new TodoViewQuickAddLine(this);
     mQuickAdd->setClearButtonEnabled(true);
@@ -806,16 +806,15 @@ void TodoView::contextMenu(QPoint pos)
     }
 }
 
-void TodoView::selectionChanged(const QItemSelection &selected, const QItemSelection &deselected)
+void TodoView::currentChanged(const QModelIndex &current, const QModelIndex &previous)
 {
-    Q_UNUSED(deselected)
-    QModelIndexList selection = selected.indexes();
-    if (selection.isEmpty() || !selection[0].isValid()) {
+    Q_UNUSED(previous);
+    if (!current.isValid()) {
         Q_EMIT incidenceSelected(Akonadi::Item(), QDate());
         return;
     }
 
-    const auto todoItem = selection[0].data(Akonadi::TodoModel::TodoRole).value<Akonadi::Item>();
+    const auto todoItem = current.data(Akonadi::TodoModel::TodoRole).value<Akonadi::Item>();
 
     if (selectedIncidenceDates().isEmpty()) {
         Q_EMIT incidenceSelected(todoItem, QDate());

@@ -106,7 +106,7 @@ protected Q_SLOTS:
 
     void contextMenu(QPoint pos);
 
-    void selectionChanged(const QItemSelection &selected, const QItemSelection &deselected);
+    void currentChanged(const QModelIndex &current, const QModelIndex &previous);
 
     // slots used by popup-menus
     void showTodo();
