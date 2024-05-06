@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-09 00:38+0000\n"
-"PO-Revision-Date: 2024-01-03 12:30+0100\n"
+"PO-Revision-Date: 2024-05-05 18:09+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -599,14 +599,14 @@ msgid ""
 "Select the height of the hour rows in the agenda grid, in pixels. Increasing "
 "this value will make each row in the agenda grid taller."
 msgstr ""
-"Elektu la altecon de la horvicoj en la tagorda krado, en pikseloj. Pliigi ĉi "
-"tiun valoron plialtigos ĉiun vicon en la tagorda krado."
+"Elektu la altecon de la horvicoj en la tagorda krado, en rastrumeroj. Pliigi "
+"ĉi tiun valoron plialtigos ĉiun vicon en la tagorda krado."
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
 #: eventviews.kcfg:176 viewerapp/settings.kcfg:26
 #, kde-format
 msgid "Set the height (in pixels) for an hour in the agenda grid"
-msgstr "Agordu la altecon (en pikseloj) por horo en la tagorda krado"
+msgstr "Agordu la altecon (en rastrumeroj) por horo en la tagorda krado"
 
 #. i18n: ectx: label, entry (EnableAgendaItemIcons), group (Agenda View)
 #: eventviews.kcfg:183 viewerapp/settings.kcfg:33
