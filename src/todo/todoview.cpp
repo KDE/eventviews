@@ -364,7 +364,7 @@ TodoView::TodoView(const EventViews::PrefsPtr &prefs, bool sidebarView, QWidget 
                                                                &TodoView::showTodo);
 
     QAction *a = mItemPopupMenu->addAction(QIcon::fromTheme(QStringLiteral("document-edit")),
-                                           i18nc("@action:inmenu edit the to-do", "&Edit..."),
+                                           i18nc("@action:inmenu edit the to-do", "&Edit…"),
                                            this,
                                            &TodoView::editTodo);
     mItemPopupMenuReadWriteEntries << a;
@@ -380,23 +380,23 @@ TodoView::TodoView(const EventViews::PrefsPtr &prefs, bool sidebarView, QWidget 
     mItemPopupMenu->addSeparator();
 
     mItemPopupMenuItemOnlyEntries << mItemPopupMenu->addAction(QIcon::fromTheme(QStringLiteral("document-print")),
-                                                               i18nc("@action:inmenu print the to-do", "&Print..."),
+                                                               i18nc("@action:inmenu print the to-do", "&Print…"),
                                                                this,
                                                                &TodoView::printTodo);
 
     mItemPopupMenuItemOnlyEntries << mItemPopupMenu->addAction(QIcon::fromTheme(QStringLiteral("document-print-preview")),
-                                                               i18nc("@action:inmenu print preview the to-do", "Print Previe&w..."),
+                                                               i18nc("@action:inmenu print preview the to-do", "Print Previe&w…"),
                                                                this,
                                                                &TodoView::printPreviewTodo);
 
     mItemPopupMenu->addSeparator();
 
     mItemPopupMenu->addAction(QIcon::fromTheme(QStringLiteral("view-calendar-tasks")),
-                              i18nc("@action:inmenu create a new to-do", "New &To-do..."),
+                              i18nc("@action:inmenu create a new to-do", "New &To-do…"),
                               this,
                               &TodoView::newTodo);
 
-    a = mItemPopupMenu->addAction(i18nc("@action:inmenu create a new sub-to-do", "New Su&b-to-do..."), this, &TodoView::newSubTodo);
+    a = mItemPopupMenu->addAction(i18nc("@action:inmenu create a new sub-to-do", "New Su&b-to-do…"), this, &TodoView::newSubTodo);
     mItemPopupMenuReadWriteEntries << a;
     mItemPopupMenuItemOnlyEntries << a;
 

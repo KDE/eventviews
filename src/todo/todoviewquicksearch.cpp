@@ -36,7 +36,7 @@ TodoViewQuickSearch::TodoViewQuickSearch(QWidget *parent)
 
     mSearchLine->setToolTip(i18nc("@info:tooltip", "Filter on matching summaries"));
     mSearchLine->setWhatsThis(i18nc("@info:whatsthis", "Enter text here to filter the to-dos that are shown by matching summaries."));
-    mSearchLine->setPlaceholderText(i18nc("@label in QuickSearchLine", "Search Summaries..."));
+    mSearchLine->setPlaceholderText(i18nc("@label in QuickSearchLine", "Search Summaries…"));
     mSearchLine->setClearButtonEnabled(true);
     connect(mSearchLine, &QLineEdit::textChanged, this, &TodoViewQuickSearch::searchTextChanged);
 

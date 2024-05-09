@@ -328,7 +328,7 @@ void TimeLabels::contextMenuEvent(QContextMenuEvent *event)
     Q_UNUSED(event)
 
     QMenu popup(this);
-    QAction *editTimeZones = popup.addAction(QIcon::fromTheme(QStringLiteral("document-properties")), i18n("&Add Timezones..."));
+    QAction *editTimeZones = popup.addAction(QIcon::fromTheme(QStringLiteral("document-properties")), i18n("&Add Timezones…"));
     QAction *removeTimeZone = popup.addAction(QIcon::fromTheme(QStringLiteral("edit-delete")), i18n("&Remove Timezone %1", i18n(mTimezone.id().constData())));
     if (!mTimezone.isValid() || !mTimeLabelsZone->preferences()->timeScaleTimezones().count() || mTimezone == mTimeLabelsZone->preferences()->timeZone()) {
         removeTimeZone->setEnabled(false);
