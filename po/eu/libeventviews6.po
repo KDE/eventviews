@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-09 00:38+0000\n"
+"POT-Creation-Date: 2024-05-10 00:38+0000\n"
 "PO-Revision-Date: 2023-09-25 23:27+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -105,8 +105,9 @@ msgid "Unable to save %1 \"%2\"."
 msgstr "Ezin da  gorde %1 \"%2\"."
 
 #: agenda/timelabels.cpp:331
-#, kde-format
-msgid "&Add Timezones..."
+#, fuzzy, kde-format
+#| msgid "&Add Timezones..."
+msgid "&Add Timezones…"
 msgstr "&Gehitu ordu-eremuak..."
 
 #: agenda/timelabels.cpp:332
@@ -1843,10 +1844,11 @@ msgid "&Show"
 msgstr "Erakut&si"
 
 #: todo/todoview.cpp:367
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Edit"
 msgctxt "@action:inmenu edit the to-do"
-msgid "&Edit..."
-msgstr "&Editatu..."
+msgid "&Edit…"
+msgstr "&Editatu"
 
 #: todo/todoview.cpp:374
 #, kde-format
@@ -1855,27 +1857,34 @@ msgid "&Delete"
 msgstr "Eza&batu"
 
 #: todo/todoview.cpp:383
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Print"
 msgctxt "@action:inmenu print the to-do"
-msgid "&Print..."
-msgstr "In&primatu..."
+msgid "&Print…"
+msgstr "In&primatu"
 
 #: todo/todoview.cpp:388
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu print preview the to-do"
+#| msgid "Print Previe&w..."
 msgctxt "@action:inmenu print preview the to-do"
-msgid "Print Previe&w..."
+msgid "Print Previe&w…"
 msgstr "Inprimatze aurrei&kuspegia..."
 
 #: todo/todoview.cpp:395
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu create a new to-do"
+#| msgid "New &To-do..."
 msgctxt "@action:inmenu create a new to-do"
-msgid "New &To-do..."
+msgid "New &To-do…"
 msgstr "&Zeregin berria..."
 
 #: todo/todoview.cpp:399
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu create a new sub-to-do"
+#| msgid "New Su&b-to-do..."
 msgctxt "@action:inmenu create a new sub-to-do"
-msgid "New Su&b-to-do..."
+msgid "New Su&b-to-do…"
 msgstr "Az&pi-zeregin berria..."
 
 #: todo/todoview.cpp:403
@@ -1983,9 +1992,11 @@ msgstr ""
 "iragazteko."
 
 #: todo/todoviewquicksearch.cpp:39
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@label in QuickSearchLine"
+#| msgid "Search Summaries..."
 msgctxt "@label in QuickSearchLine"
-msgid "Search Summaries..."
+msgid "Search Summaries…"
 msgstr "Bilatu laburpenetan..."
 
 #: todo/todoviewquicksearch.cpp:46
@@ -2256,6 +2267,14 @@ msgstr "%1, %2 - %3"
 msgctxt "to-do due date"
 msgid "  (Due: %1)"
 msgstr "(epe-muga: %1)"
+
+#~ msgctxt "@action:inmenu edit the to-do"
+#~ msgid "&Edit..."
+#~ msgstr "&Editatu..."
+
+#~ msgctxt "@action:inmenu print the to-do"
+#~ msgid "&Print..."
+#~ msgstr "In&primatu..."
 
 #~ msgctxt "yes, an exception to a recurring to-do"
 #~ msgid "Exception"

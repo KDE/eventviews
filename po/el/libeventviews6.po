@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-09 00:38+0000\n"
+"POT-Creation-Date: 2024-05-10 00:38+0000\n"
 "PO-Revision-Date: 2021-10-04 08:50+0300\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -111,8 +111,9 @@ msgid "Unable to save %1 \"%2\"."
 msgstr "Αδυναμία αποθήκευσης %1 \"%2\"."
 
 #: agenda/timelabels.cpp:331
-#, kde-format
-msgid "&Add Timezones..."
+#, fuzzy, kde-format
+#| msgid "&Add Timezones..."
+msgid "&Add Timezones…"
 msgstr "&Προσθήκη ζωνών ώρας..."
 
 #: agenda/timelabels.cpp:332
@@ -1891,10 +1892,11 @@ msgid "&Show"
 msgstr "&Εμφάνιση"
 
 #: todo/todoview.cpp:367
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Edit"
 msgctxt "@action:inmenu edit the to-do"
-msgid "&Edit..."
-msgstr "&Επεξεργασία..."
+msgid "&Edit…"
+msgstr "&Επεξεργασία"
 
 #: todo/todoview.cpp:374
 #, kde-format
@@ -1903,27 +1905,34 @@ msgid "&Delete"
 msgstr "&Διαγραφή"
 
 #: todo/todoview.cpp:383
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Print"
 msgctxt "@action:inmenu print the to-do"
-msgid "&Print..."
-msgstr "&Εκτύπωση..."
+msgid "&Print…"
+msgstr "Εκτύ&πωση"
 
 #: todo/todoview.cpp:388
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu print preview the to-do"
+#| msgid "Print Previe&w..."
 msgctxt "@action:inmenu print preview the to-do"
-msgid "Print Previe&w..."
+msgid "Print Previe&w…"
 msgstr "&Προεπισκόπηση εκτύπωσης..."
 
 #: todo/todoview.cpp:395
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu create a new to-do"
+#| msgid "New &To-do..."
 msgctxt "@action:inmenu create a new to-do"
-msgid "New &To-do..."
+msgid "New &To-do…"
 msgstr "Νέα προγραμμα&τισμένη εργασία..."
 
 #: todo/todoview.cpp:399
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu create a new sub-to-do"
+#| msgid "New Su&b-to-do..."
 msgctxt "@action:inmenu create a new sub-to-do"
-msgid "New Su&b-to-do..."
+msgid "New Su&b-to-do…"
 msgstr "Νέα προγραμματισμένη &υποεργασία..."
 
 #: todo/todoview.cpp:403
@@ -2032,9 +2041,11 @@ msgstr ""
 "οποίες εμφανίζονται από ταιριαστές περιλήψεις."
 
 #: todo/todoviewquicksearch.cpp:39
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@label in QuickSearchLine"
+#| msgid "Search Summaries..."
 msgctxt "@label in QuickSearchLine"
-msgid "Search Summaries..."
+msgid "Search Summaries…"
 msgstr "Αναζήτηση περιλήψεων..."
 
 #: todo/todoviewquicksearch.cpp:46
@@ -2309,6 +2320,14 @@ msgstr "%1, %2 - %3"
 msgctxt "to-do due date"
 msgid "  (Due: %1)"
 msgstr "  (Λήξη: %1)"
+
+#~ msgctxt "@action:inmenu edit the to-do"
+#~ msgid "&Edit..."
+#~ msgstr "&Επεξεργασία..."
+
+#~ msgctxt "@action:inmenu print the to-do"
+#~ msgid "&Print..."
+#~ msgstr "&Εκτύπωση..."
 
 #~ msgctxt "yes, an exception to a recurring to-do"
 #~ msgid "Exception"

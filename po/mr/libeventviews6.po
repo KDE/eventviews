@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-09 00:38+0000\n"
+"POT-Creation-Date: 2024-05-10 00:38+0000\n"
 "PO-Revision-Date: 2013-03-15 14:01+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: Marathi <kde-i18n-doc@kde.org>\n"
@@ -102,9 +102,10 @@ msgid "Unable to save %1 \"%2\"."
 msgstr ""
 
 #: agenda/timelabels.cpp:331
-#, kde-format
-msgid "&Add Timezones..."
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "Timezone"
+msgid "&Add Timezones…"
+msgstr "वेळक्षेत्र"
 
 #: agenda/timelabels.cpp:332
 #, kde-format
@@ -1645,10 +1646,11 @@ msgid "&Show"
 msgstr "दर्शवा (&S)"
 
 #: todo/todoview.cpp:367
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Edit"
 msgctxt "@action:inmenu edit the to-do"
-msgid "&Edit..."
-msgstr "संपादन (&E)..."
+msgid "&Edit…"
+msgstr "संपादन (&E)"
 
 #: todo/todoview.cpp:374
 #, kde-format
@@ -1657,27 +1659,32 @@ msgid "&Delete"
 msgstr "काढून टाका (&D)"
 
 #: todo/todoview.cpp:383
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Print"
 msgctxt "@action:inmenu print the to-do"
-msgid "&Print..."
-msgstr "छापा (&P)..."
+msgid "&Print…"
+msgstr "छापा (&P)"
 
 #: todo/todoview.cpp:388
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu print preview the to-do"
+#| msgid "Print Previe&w..."
 msgctxt "@action:inmenu print preview the to-do"
-msgid "Print Previe&w..."
+msgid "Print Previe&w…"
 msgstr "छपाई पूर्वावलोकन (&W)..."
 
 #: todo/todoview.cpp:395
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu create a new to-do"
+#| msgid "New &To-do..."
 msgctxt "@action:inmenu create a new to-do"
-msgid "New &To-do..."
+msgid "New &To-do…"
 msgstr "नवीन करण्यासाठी (&T)...."
 
 #: todo/todoview.cpp:399
 #, kde-format
 msgctxt "@action:inmenu create a new sub-to-do"
-msgid "New Su&b-to-do..."
+msgid "New Su&b-to-do…"
 msgstr ""
 
 #: todo/todoview.cpp:403
@@ -1785,7 +1792,7 @@ msgstr ""
 #: todo/todoviewquicksearch.cpp:39
 #, kde-format
 msgctxt "@label in QuickSearchLine"
-msgid "Search Summaries..."
+msgid "Search Summaries…"
 msgstr ""
 
 #: todo/todoviewquicksearch.cpp:46
@@ -2045,6 +2052,14 @@ msgstr "%1, %2 - %3"
 msgctxt "to-do due date"
 msgid "  (Due: %1)"
 msgstr ""
+
+#~ msgctxt "@action:inmenu edit the to-do"
+#~ msgid "&Edit..."
+#~ msgstr "संपादन (&E)..."
+
+#~ msgctxt "@action:inmenu print the to-do"
+#~ msgid "&Print..."
+#~ msgstr "छापा (&P)..."
 
 #, fuzzy
 #~| msgid "Description"

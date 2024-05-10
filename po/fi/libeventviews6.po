@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-09 00:38+0000\n"
+"POT-Creation-Date: 2024-05-10 00:38+0000\n"
 "PO-Revision-Date: 2023-10-12 18:07+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -105,8 +105,9 @@ msgid "Unable to save %1 \"%2\"."
 msgstr "Ei voi tallentaa: %1 ”%2”."
 
 #: agenda/timelabels.cpp:331
-#, kde-format
-msgid "&Add Timezones..."
+#, fuzzy, kde-format
+#| msgid "&Add Timezones..."
+msgid "&Add Timezones…"
 msgstr "&Lisää aikavyöhykkeitä…"
 
 #: agenda/timelabels.cpp:332
@@ -1805,10 +1806,11 @@ msgid "&Show"
 msgstr "&Näytä"
 
 #: todo/todoview.cpp:367
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Edit"
 msgctxt "@action:inmenu edit the to-do"
-msgid "&Edit..."
-msgstr "&Muokkaa…"
+msgid "&Edit…"
+msgstr "&Muokkaa"
 
 #: todo/todoview.cpp:374
 #, kde-format
@@ -1817,27 +1819,34 @@ msgid "&Delete"
 msgstr "&Poista"
 
 #: todo/todoview.cpp:383
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Print"
 msgctxt "@action:inmenu print the to-do"
-msgid "&Print..."
-msgstr "&Tulosta…"
+msgid "&Print…"
+msgstr "T&ulosta"
 
 #: todo/todoview.cpp:388
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu print preview the to-do"
+#| msgid "Print Previe&w..."
 msgctxt "@action:inmenu print preview the to-do"
-msgid "Print Previe&w..."
+msgid "Print Previe&w…"
 msgstr "Tulostuksen &esikatselu…"
 
 #: todo/todoview.cpp:395
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu create a new to-do"
+#| msgid "New &To-do..."
 msgctxt "@action:inmenu create a new to-do"
-msgid "New &To-do..."
+msgid "New &To-do…"
 msgstr "Uusi t&ehtävä…"
 
 #: todo/todoview.cpp:399
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu create a new sub-to-do"
+#| msgid "New Su&b-to-do..."
 msgctxt "@action:inmenu create a new sub-to-do"
-msgid "New Su&b-to-do..."
+msgid "New Su&b-to-do…"
 msgstr "Uusi &alitehtävä…"
 
 #: todo/todoview.cpp:403
@@ -1945,9 +1954,11 @@ msgstr ""
 "suodatetaan"
 
 #: todo/todoviewquicksearch.cpp:39
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@label in QuickSearchLine"
+#| msgid "Search Summaries..."
 msgctxt "@label in QuickSearchLine"
-msgid "Search Summaries..."
+msgid "Search Summaries…"
 msgstr "Etsi yhteenvedoista…"
 
 #: todo/todoviewquicksearch.cpp:46
@@ -2216,6 +2227,14 @@ msgstr "%1, %2 – %3"
 msgctxt "to-do due date"
 msgid "  (Due: %1)"
 msgstr "  (Määräaika: %1)"
+
+#~ msgctxt "@action:inmenu edit the to-do"
+#~ msgid "&Edit..."
+#~ msgstr "&Muokkaa…"
+
+#~ msgctxt "@action:inmenu print the to-do"
+#~ msgid "&Print..."
+#~ msgstr "&Tulosta…"
 
 #~ msgctxt "yes, an exception to a recurring to-do"
 #~ msgid "Exception"

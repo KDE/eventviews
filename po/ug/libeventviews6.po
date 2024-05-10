@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-09 00:38+0000\n"
+"POT-Creation-Date: 2024-05-10 00:38+0000\n"
 "PO-Revision-Date: 2013-09-08 07:05+0900\n"
 "Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -102,9 +102,10 @@ msgid "Unable to save %1 \"%2\"."
 msgstr "%1 «%2» نى ساقلىغىلى بولمىدى."
 
 #: agenda/timelabels.cpp:331
-#, kde-format
-msgid "&Add Timezones..."
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "Timezone"
+msgid "&Add Timezones…"
+msgstr "ۋاقىت رايونى"
 
 #: agenda/timelabels.cpp:332
 #, kde-format
@@ -1641,10 +1642,11 @@ msgid "&Show"
 msgstr "كۆرسەت(&S)"
 
 #: todo/todoview.cpp:367
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Edit"
 msgctxt "@action:inmenu edit the to-do"
-msgid "&Edit..."
-msgstr "تەھرىر(&E)…"
+msgid "&Edit…"
+msgstr "تەھرىر(&E)"
 
 #: todo/todoview.cpp:374
 #, kde-format
@@ -1653,27 +1655,34 @@ msgid "&Delete"
 msgstr "ئۆچۈر(&D)"
 
 #: todo/todoview.cpp:383
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Print"
 msgctxt "@action:inmenu print the to-do"
-msgid "&Print..."
-msgstr "باس(&P)…"
+msgid "&Print…"
+msgstr "باس(&P)"
 
 #: todo/todoview.cpp:388
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu print preview the to-do"
+#| msgid "Print Previe&w..."
 msgctxt "@action:inmenu print preview the to-do"
-msgid "Print Previe&w..."
+msgid "Print Previe&w…"
 msgstr "بېسىشنى ئالدىن كۆزەت(&W)…"
 
 #: todo/todoview.cpp:395
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu create a new to-do"
+#| msgid "New &To-do..."
 msgctxt "@action:inmenu create a new to-do"
-msgid "New &To-do..."
+msgid "New &To-do…"
 msgstr "يېڭى قىلىدىغان ئىشلار(&T)…"
 
 #: todo/todoview.cpp:399
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu create a new sub-to-do"
+#| msgid "New Su&b-to-do..."
 msgctxt "@action:inmenu create a new sub-to-do"
-msgid "New Su&b-to-do..."
+msgid "New Su&b-to-do…"
 msgstr "يېڭى تارماق قىلىدىغان ئىشلار(&B)…"
 
 #: todo/todoview.cpp:403
@@ -1781,7 +1790,7 @@ msgstr ""
 #: todo/todoviewquicksearch.cpp:39
 #, kde-format
 msgctxt "@label in QuickSearchLine"
-msgid "Search Summaries..."
+msgid "Search Summaries…"
 msgstr ""
 
 #: todo/todoviewquicksearch.cpp:46
@@ -2038,6 +2047,14 @@ msgstr "%1، %2 - %3"
 msgctxt "to-do due date"
 msgid "  (Due: %1)"
 msgstr ""
+
+#~ msgctxt "@action:inmenu edit the to-do"
+#~ msgid "&Edit..."
+#~ msgstr "تەھرىر(&E)…"
+
+#~ msgctxt "@action:inmenu print the to-do"
+#~ msgid "&Print..."
+#~ msgstr "باس(&P)…"
 
 #~ msgctxt "yes, an exception to a recurring to-do"
 #~ msgid "Exception"
