@@ -109,7 +109,7 @@ msgstr "No s'ha pogut guardar %1 «%2»."
 #: agenda/timelabels.cpp:331
 #, kde-format
 msgid "&Add Timezones..."
-msgstr "Afi&g zones horàries..."
+msgstr "Afi&g zones horàries…"
 
 #: agenda/timelabels.cpp:332
 #, kde-format
@@ -254,7 +254,7 @@ msgid ""
 "By default, this file will be called calendar.html and placed in the user "
 "home folder."
 msgstr ""
-"Seleccioneu esta casella per a exportar el calendari a un fitxer HTML cada "
+"Marqueu esta casella per a exportar el calendari a un fitxer HTML cada "
 "vegada que el guardeu. De manera predeterminada, este fitxer s'anomenarà "
 "calendari.html i s'emplaçarà en la carpeta d'inici de l'usuari."
 
@@ -274,10 +274,10 @@ msgid ""
 "not affect the automatic saving of the standard calendar, which is "
 "automatically saved after each change."
 msgstr ""
-"Seleccioneu esta casella per a guardar el fitxer de calendari automàticament "
-"en eixir de KOrganizer sense preguntar i periòdicament, mentre treballeu. "
-"Esta configuració no afecta la guardada automàtica del calendari estàndard, "
-"que es guardarà automàticament després de cada canvi."
+"Marqueu esta casella per a guardar el fitxer de calendari automàticament en "
+"eixir de KOrganizer sense preguntar i periòdicament, mentre treballeu. Esta "
+"configuració no afecta la guardada automàtica del calendari estàndard, que "
+"es guardarà automàticament després de cada canvi."
 
 #. i18n: ectx: label, entry, group (Save Settings)
 #: eventviews.kcfg:50
@@ -309,7 +309,7 @@ msgstr "Confirma les supressions"
 #, kde-format
 msgid "Check this box to display a confirmation dialog when deleting items."
 msgstr ""
-"Seleccioneu esta casella per a mostrar un diàleg de confirmació en suprimir "
+"Marqueu esta casella per a mostrar un diàleg de confirmació en suprimir "
 "elements."
 
 #. i18n: ectx: label, entry (Destination), group (Save Settings)
@@ -368,8 +368,8 @@ msgstr "Mostra el dimoni de recordatoris en la safata del sistema"
 msgid ""
 "Check this box to show the KOrganizer reminder daemon in the system tray."
 msgstr ""
-"Seleccioneu esta casella per a mostrar el dimoni de recordatoris de "
-"KOrganizer en la safata del sistema."
+"Marqueu esta casella per a mostrar el dimoni de recordatoris de KOrganizer "
+"en la safata del sistema."
 
 #. i18n: ectx: whatsthis, entry (TimeZoneId), group (Time &amp; Date)
 #: eventviews.kcfg:90
@@ -467,8 +467,8 @@ msgid ""
 "Check this box to display summary tooltips when hovering the mouse over an "
 "event or a to-do."
 msgstr ""
-"Seleccioneu esta casella per a mostrar un consell amb el resum de "
-"l'esdeveniment o la tasca pendent en passar-hi el ratolí per damunt."
+"Marqueu esta casella per a mostrar un consell amb el resum de l'esdeveniment "
+"o la tasca pendent en passar-hi el ratolí per damunt."
 
 #. i18n: ectx: label, entry, group (General View)
 #: eventviews.kcfg:128
@@ -483,9 +483,9 @@ msgid ""
 "Check this box so that to-dos will use category colors and not colors "
 "specific to their due, due today or overdue state"
 msgstr ""
-"Seleccioneu esta casella perquè les tasques pendents utilitzen els colors de "
-"les categories en lloc de colors específics al seu estat de venciment, "
-"venciment d'hui o endarreriment"
+"Marqueu esta casella perquè les tasques pendents utilitzen els colors de les "
+"categories en lloc de colors específics al seu estat de venciment, venciment "
+"d'hui o endarreriment"
 
 #. i18n: ectx: label, entry, group (General View)
 #: eventviews.kcfg:134
@@ -525,9 +525,9 @@ msgid ""
 "typeface in the Date Navigator, or uncheck it to give more prominence to "
 "other (non daily recurring) events."
 msgstr ""
-"Seleccioneu esta casella per a mostrar en negreta els dies que contenen "
-"esdeveniments de repetició diària en el navegador de dates, o desseleccioneu-"
-"la per a donar més prominència a altres esdeveniments (que no es repetisquen "
+"Marqueu esta casella per a mostrar en negreta els dies que contenen "
+"esdeveniments de repetició diària en el navegador de dates, o desmarqueu-la "
+"per a donar més prominència a altres esdeveniments (que no es repetisquen "
 "diàriament)."
 
 #. i18n: ectx: label, entry (WeeklyRecur), group (General View)
@@ -544,10 +544,10 @@ msgid ""
 "typeface in the Date Navigator, or uncheck it to give more prominence to "
 "other (non weekly recurring) events."
 msgstr ""
-"Seleccioneu esta casella per a mostrar en negreta els dies que contenen "
-"esdeveniments de repetició setmanal en el navegador de dates, o "
-"desseleccioneu-la per a donar més prominència a altres esdeveniments (que no "
-"es repetisquen setmanalment)."
+"Marqueu esta casella per a mostrar en negreta els dies que contenen "
+"esdeveniments de repetició setmanal en el navegador de dates, o desmarqueu-"
+"la per a donar més prominència a altres esdeveniments (que no es repetisquen "
+"setmanalment)."
 
 #. i18n: ectx: label, entry (HighlightTodos), group (General View)
 #: eventviews.kcfg:153
@@ -564,9 +564,9 @@ msgid ""
 "Check this box to show the days containing to-dos in bold typeface in the "
 "Date Navigator when in to-do view."
 msgstr ""
-"Seleccioneu esta casella per a mostrar en negreta els dies que contenen "
-"tasques pendents en el navegador de dates quan esteu en la vista de les "
-"tasques pendents."
+"Marqueu esta casella per a mostrar en negreta els dies que contenen tasques "
+"pendents en el navegador de dates quan esteu en la vista de les tasques "
+"pendents."
 
 #. i18n: ectx: label, entry (HighlightJournals), group (General View)
 #: eventviews.kcfg:159
@@ -581,8 +581,8 @@ msgid ""
 "Check this box to show the days containing journals in bold typeface in the "
 "Date Navigator when in journal view."
 msgstr ""
-"Seleccioneu esta casella per a mostrar en negreta els dies que contenen "
-"diaris en el navegador de dates quan esteu en la vista de diari."
+"Marqueu esta casella per a mostrar en negreta els dies que contenen diaris "
+"en el navegador de dates quan esteu en la vista de diari."
 
 #. i18n: ectx: label, entry (WeekNumbersShowWork), group (General View)
 #: eventviews.kcfg:165
@@ -599,9 +599,9 @@ msgid ""
 "Check this box to select a working week when clicking on the Date "
 "Navigator's week numbers, or uncheck it to choose the whole week."
 msgstr ""
-"Seleccioneu esta casella per a seleccionar una setmana laboral clicant en "
-"els números de la setmana del navegador de dates, o desseleccioneu-la per a "
-"triar la setmana sencera."
+"Marqueu esta casella per a seleccionar una setmana laboral clicant en els "
+"números de la setmana del navegador de dates, o desmarqueu-la per a "
+"seleccionar la setmana sencera."
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #: eventviews.kcfg:174 viewerapp/settings.kcfg:24
@@ -640,8 +640,8 @@ msgid ""
 "Check this box to display icons (alarm, recursion, etc.) in agenda view "
 "items."
 msgstr ""
-"Seleccioneu esta casella per a mostrar les icones (alarma, repetició, etc.) "
-"en els elements en la vista d'agenda."
+"Marqueu esta casella per a mostrar les icones (alarma, repetició, etc.) en "
+"els elements en la vista d'agenda."
 
 #. i18n: ectx: tooltip, entry (EnableAgendaItemIcons), group (Agenda View)
 #: eventviews.kcfg:185 viewerapp/settings.kcfg:35
@@ -662,8 +662,7 @@ msgstr "Mostra les tasques pendents"
 #, kde-format
 msgid "Check this box to display to-dos in the agenda view."
 msgstr ""
-"Seleccioneu esta casella per a mostrar les tasques pendents en la vista "
-"d'agenda."
+"Marqueu esta casella per a mostrar les tasques pendents en la vista d'agenda."
 
 #. i18n: ectx: tooltip, entry (ShowTodosAgendaView), group (Agenda View)
 #: eventviews.kcfg:192 viewerapp/settings.kcfg:42
@@ -684,8 +683,8 @@ msgid ""
 "Check this box to display a line in the day or week view indicating the "
 "current-time line (Marcus Bains line)."
 msgstr ""
-"Seleccioneu esta casella per a mostrar una línia en la vista diària o "
-"setmanal indicant la línia de temps actual (línia de Marcus Bains)."
+"Marqueu esta casella per a mostrar una línia en la vista diària o setmanal "
+"indicant la línia de temps actual (línia de Marcus Bains)."
 
 #. i18n: ectx: tooltip, entry (MarcusBainsEnabled), group (Agenda View)
 #: eventviews.kcfg:199 viewerapp/settings.kcfg:49
@@ -704,8 +703,7 @@ msgstr "Mostra els segons en la línia de temps actual (Marcus Bains)"
 #, kde-format
 msgid "Check this box if you want to show seconds on the current-time line."
 msgstr ""
-"Seleccioneu esta casella si voleu mostrar els segons en la línia de temps "
-"actual."
+"Marqueu esta casella si voleu mostrar els segons en la línia de temps actual."
 
 #. i18n: ectx: tooltip, entry (MarcusBainsShowSeconds), group (Agenda View)
 #: eventviews.kcfg:206 viewerapp/settings.kcfg:56
@@ -729,11 +727,10 @@ msgid ""
 "time range in the daily and weekly view. To select a time range, drag the "
 "mouse from the start time to the end time of the event you are about to plan."
 msgstr ""
-"Seleccioneu esta casella per a iniciar l'editor d'esdeveniments "
-"automàticament quan seleccioneu un interval de temps en la vista diària o "
-"setmanal. Per a seleccionar un interval de temps, arrossegueu el ratolí des "
-"de l'hora inicial fins a la final de l'esdeveniment que esteu a punt de "
-"planificar."
+"Marqueu esta casella per a iniciar l'editor d'esdeveniments automàticament "
+"quan seleccioneu un interval de temps en la vista diària o setmanal. Per a "
+"seleccionar un interval de temps, arrossegueu el ratolí des de l'hora "
+"inicial fins a la final de l'esdeveniment que esteu a punt de planificar."
 
 #. i18n: ectx: tooltip, entry (SelectionStartsEditor), group (Agenda View)
 #: eventviews.kcfg:213 viewerapp/settings.kcfg:63
@@ -888,11 +885,11 @@ msgid ""
 "you can change the background color used for this option on the Colors "
 "configuration page. Look for the \"Busy days background color\" setting."
 msgstr ""
-"Seleccioneu esta casella si voleu que el fons de l'agenda s'emplene amb un "
-"color diferent els dies que teniu almenys un esdeveniment de tot el dia "
-"marcat com a ocupat. També podeu canviar el color de fons utilitzat per a "
-"esta opció en la pàgina de configuració dels colors. Mireu la configuració "
-"«Color de fons per als dies ocupats»."
+"Marqueu esta casella si voleu que el fons de l'agenda s'emplene amb un color "
+"diferent els dies que teniu almenys un esdeveniment de tot el dia marcat com "
+"a ocupat. També podeu canviar el color de fons utilitzat per a esta opció en "
+"la pàgina de configuració dels colors. Mireu la configuració «Color de fons "
+"per als dies ocupats»."
 
 #. i18n: ectx: label, entry (AgendaViewCalendarDisplay), group (Agenda View)
 #: eventviews.kcfg:249 viewerapp/settings.kcfg:95
@@ -979,7 +976,7 @@ msgid ""
 "Check this box to display scrollbars when clicking on a cell in the month "
 "view; they will only appear when needed though."
 msgstr ""
-"Seleccioneu esta casella per a mostrar barres de desplaçament clicant en una "
+"Marqueu esta casella per a mostrar barres de desplaçament clicant en una "
 "cel·la en la vista mensual. Només apareixeran quan calga."
 
 #. i18n: ectx: label, entry (EnableMonthItemIcons), group (Month View)
@@ -994,8 +991,8 @@ msgstr "Mostra les icones en els elements de la vista mensual"
 msgid ""
 "Check this box to display icons (alarm, recursion, etc.) in month view items."
 msgstr ""
-"Seleccioneu esta casella per a mostrar les icones (alarma, repetició, etc.) "
-"en els elements de la vista mensual."
+"Marqueu esta casella per a mostrar les icones (alarma, repetició, etc.) en "
+"els elements de la vista mensual."
 
 #. i18n: ectx: tooltip, entry (EnableMonthItemIcons), group (Month View)
 #: eventviews.kcfg:282 viewerapp/settings.kcfg:128
@@ -1014,8 +1011,8 @@ msgstr "Mostra l'hora en els elements de la vista mensual"
 #, kde-format
 msgid "Check this box to display the time in month view items."
 msgstr ""
-"Seleccioneu esta casella per a visualitzar l'hora en els elements de la "
-"vista mensual."
+"Marqueu esta casella per a visualitzar l'hora en els elements de la vista "
+"mensual."
 
 #. i18n: ectx: tooltip, entry (ShowTimeInMonthView), group (Month View)
 #: eventviews.kcfg:289
@@ -1028,8 +1025,7 @@ msgstr "Mostra l'hora en els elements de la vista mensual"
 #, kde-format
 msgid "Check this box to display to-dos in the month view."
 msgstr ""
-"Seleccioneu esta casella per a mostrar les tasques pendents en la vista "
-"mensual."
+"Marqueu esta casella per a mostrar les tasques pendents en la vista mensual."
 
 #. i18n: ectx: tooltip, entry (ShowTodosMonthView), group (Month View)
 #: eventviews.kcfg:296 viewerapp/settings.kcfg:135
@@ -1047,7 +1043,7 @@ msgstr "Mostra els diaris"
 #: eventviews.kcfg:302 viewerapp/settings.kcfg:141
 #, kde-format
 msgid "Check this box to display journals in the month view."
-msgstr "Seleccioneu esta casella per a mostrar els diaris en la vista mensual."
+msgstr "Marqueu esta casella per a mostrar els diaris en la vista mensual."
 
 #. i18n: ectx: tooltip, entry (ShowJournalsMonthView), group (Month View)
 #: eventviews.kcfg:303 viewerapp/settings.kcfg:142
@@ -1070,8 +1066,8 @@ msgid ""
 "but other widgets, such as the date navigator, the item details and the "
 "calendars list, will not be displayed."
 msgstr ""
-"Seleccioneu esta casella per a utilitzar tota la finestra de KOrganizer en "
-"mostrar la vista mensual. Si se selecciona esta casella, guanyareu una mica "
+"Marqueu esta casella per a utilitzar tota la finestra de KOrganizer en "
+"mostrar la vista mensual. Si es marca esta casella, guanyareu una mica "
 "d'espai en la vista mensual, però no es mostraran altres ginys, com ara el "
 "navegador de dates, els detalls de l'element i la llista de calendaris."
 
@@ -1174,10 +1170,10 @@ msgid ""
 "Colors configuration page. Look for the \"Busy days background color\" "
 "setting."
 msgstr ""
-"Seleccioneu esta casella si voleu que el fons de la vista mensual s'emplene "
-"amb un color diferent els dies que teniu almenys un esdeveniment de tot el "
-"dia marcat com a ocupat. També podeu canviar el color de fons utilitzat per "
-"a esta opció en la pàgina de configuració dels colors. Mireu la configuració "
+"Marqueu esta casella si voleu que el fons de la vista mensual s'emplene amb "
+"un color diferent els dies que teniu almenys un esdeveniment de tot el dia "
+"marcat com a ocupat. També podeu canviar el color de fons utilitzat per a "
+"esta opció en la pàgina de configuració dels colors. Mireu la configuració "
 "«Color de fons per als dies ocupats»."
 
 #. i18n: ectx: label, entry, group (Todo View)
@@ -1195,9 +1191,8 @@ msgid ""
 "Check this box if you want all completed to-dos to be always grouped at the "
 "bottom of the to-do list."
 msgstr ""
-"Seleccioneu esta casella si voleu que totes les tasques pendents "
-"finalitzades s'agrupen sempre a la part inferior de la llista de tasques "
-"pendents."
+"Marqueu esta casella si voleu que totes les tasques pendents finalitzades "
+"s'agrupen sempre a la part inferior de la llista de tasques pendents."
 
 #. i18n: ectx: label, entry, group (Todo View)
 #: eventviews.kcfg:356 viewerapp/settings.kcfg:189
@@ -1214,11 +1209,11 @@ msgid ""
 "list view, but other widgets, such as the date navigator, the to-do details "
 "and the calendars list, will not be displayed."
 msgstr ""
-"Seleccioneu esta casella per a utilitzar tota la finestra de KOrganizer en "
-"mostrar la vista de la llista de tasques pendents. Si se selecciona esta "
-"casella, guanyareu una mica d'espai en la vista de la llista de tasques "
-"pendents, però no es mostraran altres ginys, com ara el navegador de dates, "
-"els detalls de la tasca pendent i la llista de calendaris."
+"Marqueu esta casella per a utilitzar tota la finestra de KOrganizer en "
+"mostrar la vista de la llista de tasques pendents. Si es marca esta casella, "
+"guanyareu una mica d'espai en la vista de la llista de tasques pendents, "
+"però no es mostraran altres ginys, com ara el navegador de dates, els "
+"detalls de la tasca pendent i la llista de calendaris."
 
 #. i18n: ectx: label, entry, group (Todo View)
 #: eventviews.kcfg:362
@@ -1240,8 +1235,8 @@ msgid ""
 "Check this box if you want to see all your to-dos in a flat list instead of "
 "being arranged in a hierarchical tree."
 msgstr ""
-"Seleccioneu esta casella si voleu veure totes les tasques pendents en una "
-"llista plana en lloc d'organitzades en un arbre jeràrquic."
+"Marqueu esta casella si voleu veure totes les tasques pendents en una llista "
+"plana en lloc d'organitzades en un arbre jeràrquic."
 
 #. i18n: ectx: label, entry, group (Todo View)
 #: eventviews.kcfg:369 viewerapp/settings.kcfg:195
@@ -1256,8 +1251,8 @@ msgid ""
 "Check this box to record the completion of a to-do in a new entry of your "
 "journal automatically."
 msgstr ""
-"Seleccioneu esta casella per a enregistrar automàticament la finalització "
-"d'una tasca pendent en una entrada nova del diari."
+"Marqueu esta casella per a enregistrar automàticament la finalització d'una "
+"tasca pendent en una entrada nova del diari."
 
 #. i18n: ectx: label, entry, group (Colors)
 #. i18n: ectx: label, entry, group (Theming)
@@ -1557,7 +1552,7 @@ msgstr "Utilitza el color del sistema"
 #, kde-format
 msgid "Use system color. If enabled will ignore all other color settings"
 msgstr ""
-"Utilitza el color del sistema. Si se selecciona, s'ignorarà qualsevol "
+"Utilitza el color del sistema. Si està marcada, s'ignorarà qualsevol "
 "configuració del color"
 
 #: journal/journalframe.cpp:153
@@ -1841,8 +1836,8 @@ msgstr "Mostra la llista de tasques pendents utilitzant tota la finestra"
 msgctxt "@info:whatsthis"
 msgid "Checking this option will cause the to-do view to use the full window."
 msgstr ""
-"Quan se selecciona esta opció, la vista de les tasques pendents utilitzarà "
-"tota la finestra."
+"Quan es marca esta opció, la vista de les tasques pendents utilitzarà tota "
+"la finestra."
 
 #: todo/todoview.cpp:321
 #, kde-format
@@ -1858,9 +1853,9 @@ msgid ""
 "instead of a hierarchical tree; the parental relationships are removed in "
 "the display."
 msgstr ""
-"Quan se selecciona esta opció, les tasques pendents es mostraran en una "
-"llista plana en lloc d'un arbre jerarquitzat; les relacions de parentiu "
-"seran eliminades en esta vista."
+"Quan es marca esta opció, les tasques pendents es mostraran en una llista "
+"plana en lloc d'un arbre jerarquitzat; les relacions de parentiu seran "
+"eliminades en esta vista."
 
 #: todo/todoview.cpp:362
 #, kde-format
@@ -1872,7 +1867,7 @@ msgstr "&Mostra"
 #, kde-format
 msgctxt "@action:inmenu edit the to-do"
 msgid "&Edit..."
-msgstr "&Edita..."
+msgstr "&Edita…"
 
 #: todo/todoview.cpp:374
 #, kde-format
@@ -1884,25 +1879,25 @@ msgstr "Sup&rimix"
 #, kde-format
 msgctxt "@action:inmenu print the to-do"
 msgid "&Print..."
-msgstr "Im&primix..."
+msgstr "Im&primix…"
 
 #: todo/todoview.cpp:388
 #, kde-format
 msgctxt "@action:inmenu print preview the to-do"
 msgid "Print Previe&w..."
-msgstr "&Vista prèvia d'impressió..."
+msgstr "&Vista prèvia d'impressió…"
 
 #: todo/todoview.cpp:395
 #, kde-format
 msgctxt "@action:inmenu create a new to-do"
 msgid "New &To-do..."
-msgstr "&Tasca pendent nova..."
+msgstr "&Tasca pendent nova…"
 
 #: todo/todoview.cpp:399
 #, kde-format
 msgctxt "@action:inmenu create a new sub-to-do"
 msgid "New Su&b-to-do..."
-msgstr "Su&btasca pendent nova..."
+msgstr "Su&btasca pendent nova…"
 
 #: todo/todoview.cpp:403
 #, kde-format
@@ -2012,7 +2007,7 @@ msgstr ""
 #, kde-format
 msgctxt "@label in QuickSearchLine"
 msgid "Search Summaries..."
-msgstr "Busca als resums..."
+msgstr "Busca en els resums…"
 
 #: todo/todoviewquicksearch.cpp:46
 #, kde-format
@@ -2238,9 +2233,9 @@ msgid ""
 "should check this box if you want to use the groupware functionality (e.g. "
 "Configuring Kontact as a KDE Kolab client)."
 msgstr ""
-"Seleccioneu esta casella per a habilitar la generació automàtica de correus "
-"en crear, actualitzar o suprimir esdeveniments (o tasques pendents) amb "
-"altres assistents implicats. Hauríeu de seleccionar-la si voleu utilitzar la "
+"Marqueu esta casella per a habilitar la generació automàtica de correus en "
+"crear, actualitzar o suprimir esdeveniments (o tasques pendents) amb altres "
+"assistents implicats. Hauríeu de marcar-la si voleu utilitzar la "
 "funcionalitat de treball en grup (p. ex., configurar Kontact com a client "
 "KDE de Kolab)."
 
