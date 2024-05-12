@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# g.sora <g.sora@tiscali.it>, 2011, 2012, 2013, 2020, 2021, 2022, 2023.
+# g.sora <g.sora@tiscali.it>, 2011, 2012, 2013, 2020, 2021, 2022, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-10 00:38+0000\n"
-"PO-Revision-Date: 2023-09-25 10:18+0200\n"
+"PO-Revision-Date: 2024-05-10 12:39+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -106,10 +106,9 @@ msgid "Unable to save %1 \"%2\"."
 msgstr "Incapace de salveguardar %1 \"%2\"."
 
 #: agenda/timelabels.cpp:331
-#, fuzzy, kde-format
-#| msgid "&Add Timezones..."
+#, kde-format
 msgid "&Add Timezones…"
-msgstr "&Adde zonas de tempore..."
+msgstr "&Adde Fuso Horari..."
 
 #: agenda/timelabels.cpp:332
 #, kde-format
@@ -1856,11 +1855,10 @@ msgid "&Show"
 msgstr "&Monstra:"
 
 #: todo/todoview.cpp:367
-#, fuzzy, kde-format
-#| msgid "&Edit"
+#, kde-format
 msgctxt "@action:inmenu edit the to-do"
 msgid "&Edit…"
-msgstr "&Edita"
+msgstr "&Modifica..."
 
 #: todo/todoview.cpp:374
 #, kde-format
@@ -1869,32 +1867,25 @@ msgid "&Delete"
 msgstr "&Dele"
 
 #: todo/todoview.cpp:383
-#, fuzzy, kde-format
-#| msgid "&Print"
+#, kde-format
 msgctxt "@action:inmenu print the to-do"
 msgid "&Print…"
-msgstr "&Imprime"
+msgstr "Im&prime..."
 
 #: todo/todoview.cpp:388
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu print preview the to-do"
-#| msgid "Print Previe&w..."
+#, kde-format
 msgctxt "@action:inmenu print preview the to-do"
 msgid "Print Previe&w…"
 msgstr "Imprime &vista preliminar..."
 
 #: todo/todoview.cpp:395
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu create a new to-do"
-#| msgid "New &To-do..."
+#, kde-format
 msgctxt "@action:inmenu create a new to-do"
 msgid "New &To-do…"
-msgstr "Nove activi&tate de facer ..."
+msgstr "Nove Activi&tate de Facer ..."
 
 #: todo/todoview.cpp:399
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu create a new sub-to-do"
-#| msgid "New Su&b-to-do..."
+#, kde-format
 msgctxt "@action:inmenu create a new sub-to-do"
 msgid "New Su&b-to-do…"
 msgstr "Nove Su&b-activitate-de-facer..."
@@ -2004,9 +1995,7 @@ msgstr ""
 "per summarios coincidente."
 
 #: todo/todoviewquicksearch.cpp:39
-#, fuzzy, kde-format
-#| msgctxt "@label in QuickSearchLine"
-#| msgid "Search Summaries..."
+#, kde-format
 msgctxt "@label in QuickSearchLine"
 msgid "Search Summaries…"
 msgstr "Cerca Summarios..."

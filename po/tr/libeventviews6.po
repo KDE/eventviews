@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kdepim-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-10 00:38+0000\n"
-"PO-Revision-Date: 2024-03-08 18:41+0300\n"
+"PO-Revision-Date: 2024-05-10 13:39+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.02.0\n"
+"X-Generator: Lokalize 24.07.70\n"
 "(http: //www.transifex.com/projects/p/kdepim-k-tr/language/tr/)\n"
 "X-POOTLE-MTIME: 1413132207.000000\n"
 
@@ -111,10 +111,9 @@ msgid "Unable to save %1 \"%2\"."
 msgstr "%1 \"%2\" kaydedilemiyor."
 
 #: agenda/timelabels.cpp:331
-#, fuzzy, kde-format
-#| msgid "&Add Timezones..."
+#, kde-format
 msgid "&Add Timezones…"
-msgstr "Saat Dilimlerini &Ekle..."
+msgstr "Zaman Dilimleri &Ekle…"
 
 #: agenda/timelabels.cpp:332
 #, kde-format
@@ -1830,11 +1829,10 @@ msgid "&Show"
 msgstr "&Göster"
 
 #: todo/todoview.cpp:367
-#, fuzzy, kde-format
-#| msgid "&Edit"
+#, kde-format
 msgctxt "@action:inmenu edit the to-do"
 msgid "&Edit…"
-msgstr "Dü&zenle"
+msgstr "Dü&zenle…"
 
 #: todo/todoview.cpp:374
 #, kde-format
@@ -1843,35 +1841,28 @@ msgid "&Delete"
 msgstr "&Sil"
 
 #: todo/todoview.cpp:383
-#, fuzzy, kde-format
-#| msgid "&Print"
+#, kde-format
 msgctxt "@action:inmenu print the to-do"
 msgid "&Print…"
-msgstr "&Yazdır"
+msgstr "&Yazdır…"
 
 #: todo/todoview.cpp:388
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu print preview the to-do"
-#| msgid "Print Previe&w..."
+#, kde-format
 msgctxt "@action:inmenu print preview the to-do"
 msgid "Print Previe&w…"
-msgstr "&Yazdırma Önizlemesi..."
+msgstr "&Yazdırma Önizlemesi…"
 
 #: todo/todoview.cpp:395
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu create a new to-do"
-#| msgid "New &To-do..."
+#, kde-format
 msgctxt "@action:inmenu create a new to-do"
 msgid "New &To-do…"
-msgstr "Yeni &Yapılacak Ögesi..."
+msgstr "Yeni &Yapılacak Ögesi…"
 
 #: todo/todoview.cpp:399
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu create a new sub-to-do"
-#| msgid "New Su&b-to-do..."
+#, kde-format
 msgctxt "@action:inmenu create a new sub-to-do"
 msgid "New Su&b-to-do…"
-msgstr "Yeni Al&t yapılacak iş..."
+msgstr "Yeni Al&t Yapılacak İş…"
 
 #: todo/todoview.cpp:403
 #, kde-format
@@ -1977,12 +1968,10 @@ msgstr ""
 "Eşleşen özetlerle görüntülenen yapılacakları süzmek için buraya metin girin."
 
 #: todo/todoviewquicksearch.cpp:39
-#, fuzzy, kde-format
-#| msgctxt "@label in QuickSearchLine"
-#| msgid "Search Summaries..."
+#, kde-format
 msgctxt "@label in QuickSearchLine"
 msgid "Search Summaries…"
-msgstr "Özetleri Ara..."
+msgstr "Özetleri Ara…"
 
 #: todo/todoviewquicksearch.cpp:46
 #, kde-format

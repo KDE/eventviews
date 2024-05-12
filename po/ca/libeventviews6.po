@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-10 00:38+0000\n"
-"PO-Revision-Date: 2024-03-06 16:02+0100\n"
+"PO-Revision-Date: 2024-05-10 11:57+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -107,10 +107,9 @@ msgid "Unable to save %1 \"%2\"."
 msgstr "No s'ha pogut desar %1 «%2»."
 
 #: agenda/timelabels.cpp:331
-#, fuzzy, kde-format
-#| msgid "&Add Timezones..."
+#, kde-format
 msgid "&Add Timezones…"
-msgstr "&Afegeix zones horàries..."
+msgstr "&Afegeix zones horàries…"
 
 #: agenda/timelabels.cpp:332
 #, kde-format
@@ -1869,11 +1868,10 @@ msgid "&Show"
 msgstr "&Mostra"
 
 #: todo/todoview.cpp:367
-#, fuzzy, kde-format
-#| msgid "&Edit"
+#, kde-format
 msgctxt "@action:inmenu edit the to-do"
 msgid "&Edit…"
-msgstr "&Edita"
+msgstr "&Edita…"
 
 #: todo/todoview.cpp:374
 #, kde-format
@@ -1882,35 +1880,28 @@ msgid "&Delete"
 msgstr "&Suprimeix"
 
 #: todo/todoview.cpp:383
-#, fuzzy, kde-format
-#| msgid "&Print"
+#, kde-format
 msgctxt "@action:inmenu print the to-do"
 msgid "&Print…"
-msgstr "&Imprimeix"
+msgstr "&Imprimeix…"
 
 #: todo/todoview.cpp:388
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu print preview the to-do"
-#| msgid "Print Previe&w..."
+#, kde-format
 msgctxt "@action:inmenu print preview the to-do"
 msgid "Print Previe&w…"
-msgstr "&Vista prèvia d'impressió..."
+msgstr "&Vista prèvia d'impressió…"
 
 #: todo/todoview.cpp:395
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu create a new to-do"
-#| msgid "New &To-do..."
+#, kde-format
 msgctxt "@action:inmenu create a new to-do"
 msgid "New &To-do…"
-msgstr "&Tasca pendent nova..."
+msgstr "&Tasca pendent nova…"
 
 #: todo/todoview.cpp:399
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu create a new sub-to-do"
-#| msgid "New Su&b-to-do..."
+#, kde-format
 msgctxt "@action:inmenu create a new sub-to-do"
 msgid "New Su&b-to-do…"
-msgstr "Su&btasca pendent nova..."
+msgstr "Su&btasca pendent nova…"
 
 #: todo/todoview.cpp:403
 #, kde-format
@@ -2017,12 +2008,10 @@ msgstr ""
 "resums coincidents."
 
 #: todo/todoviewquicksearch.cpp:39
-#, fuzzy, kde-format
-#| msgctxt "@label in QuickSearchLine"
-#| msgid "Search Summaries..."
+#, kde-format
 msgctxt "@label in QuickSearchLine"
 msgid "Search Summaries…"
-msgstr "Cerca als resums..."
+msgstr "Cerca als resums…"
 
 #: todo/todoviewquicksearch.cpp:46
 #, kde-format

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-10 00:38+0000\n"
-"PO-Revision-Date: 2023-09-30 09:43+0200\n"
+"PO-Revision-Date: 2024-05-10 07:27+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -101,10 +101,9 @@ msgid "Unable to save %1 \"%2\"."
 msgstr "%1-ის შენახვის შეცდომა \"%2\"."
 
 #: agenda/timelabels.cpp:331
-#, fuzzy, kde-format
-#| msgid "&Add Timezones..."
+#, kde-format
 msgid "&Add Timezones…"
-msgstr "დროის სარტყლების &დამატება..."
+msgstr "დროის სარტყლების &დამატება…"
 
 #: agenda/timelabels.cpp:332
 #, kde-format
@@ -1812,11 +1811,10 @@ msgid "&Show"
 msgstr "&ჩვენება"
 
 #: todo/todoview.cpp:367
-#, fuzzy, kde-format
-#| msgid "&Edit"
+#, kde-format
 msgctxt "@action:inmenu edit the to-do"
 msgid "&Edit…"
-msgstr "&ჩასწორება"
+msgstr "&ჩასწორება…"
 
 #: todo/todoview.cpp:374
 #, kde-format
@@ -1825,35 +1823,28 @@ msgid "&Delete"
 msgstr "&წაშლა"
 
 #: todo/todoview.cpp:383
-#, fuzzy, kde-format
-#| msgid "&Print"
+#, kde-format
 msgctxt "@action:inmenu print the to-do"
 msgid "&Print…"
-msgstr "&ბეჭდვა"
+msgstr "&ბეჭდვა…"
 
 #: todo/todoview.cpp:388
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu print preview the to-do"
-#| msgid "Print Previe&w..."
+#, kde-format
 msgctxt "@action:inmenu print preview the to-do"
 msgid "Print Previe&w…"
-msgstr "&დასაბეჭდის გადახედვა..."
+msgstr "&დასაბეჭდის გადახედვა…"
 
 #: todo/todoview.cpp:395
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu create a new to-do"
-#| msgid "New &To-do..."
+#, kde-format
 msgctxt "@action:inmenu create a new to-do"
 msgid "New &To-do…"
-msgstr "&ახალი განრიგი..."
+msgstr "&ახალი განრიგი…"
 
 #: todo/todoview.cpp:399
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu create a new sub-to-do"
-#| msgid "New Su&b-to-do..."
+#, kde-format
 msgctxt "@action:inmenu create a new sub-to-do"
 msgid "New Su&b-to-do…"
-msgstr "ახალი &ქვეგანრიგი..."
+msgstr "ახალი &ქვეგანრიგი…"
 
 #: todo/todoview.cpp:403
 #, kde-format
@@ -1959,12 +1950,10 @@ msgstr ""
 "აქ შეიყვანეთ ტექსტი ნაჩვენები გასაკეთებლების შესაბამისი აღწერით გასაფილტრად."
 
 #: todo/todoviewquicksearch.cpp:39
-#, fuzzy, kde-format
-#| msgctxt "@label in QuickSearchLine"
-#| msgid "Search Summaries..."
+#, kde-format
 msgctxt "@label in QuickSearchLine"
 msgid "Search Summaries…"
-msgstr "შეჯამებების მოძებნა..."
+msgstr "შეჯამებების მოძებნა…"
 
 #: todo/todoviewquicksearch.cpp:46
 #, kde-format
