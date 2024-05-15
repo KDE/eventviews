@@ -21,7 +21,7 @@ int main(int argc, char **argv)
                      i18n("A test app for embedding calendarviews"),
                      KAboutLicense::GPL,
                      i18n("Copyright (C) 2010 Klarälvdalens Datakonsult AB, a KDAB Group company, info@kdab.net"));
-    about.addAuthor(i18n("Kevin Krammer"), QString(), QStringLiteral("krake@kdab.com"));
+    about.addAuthor(i18nc("@info:credit", "Kevin Krammer"), QString(), QStringLiteral("krake@kdab.com"));
 
     QCommandLineParser parser;
     QApplication app(argc, argv);
