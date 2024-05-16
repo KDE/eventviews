@@ -2,15 +2,15 @@
 # Copyright (C) 2010 Free Software Foundation, Inc.
 # This file is distributed under the same license as the "eventviews" package.
 # Axel Rousseau <axel@esperanto-jeunes.org>, 2010.
-# Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
+# Oliver Kellogg <olivermkellogg@gmail.com>, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-10 00:38+0000\n"
-"PO-Revision-Date: 2024-05-10 09:14+0100\n"
-"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
+"POT-Creation-Date: 2024-05-16 00:39+0000\n"
+"PO-Revision-Date: 2024-05-15 09:56+0100\n"
+"Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
@@ -27,7 +27,7 @@ msgstr "Axel Rousseau, Oliver Kellogg"
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "axel.rousseau@esperanto-france.org, okellogg@users.sourceforge.net"
+msgstr "axel.rousseau@esperanto-france.org, olivermkellogg@gmail.com"
 
 #: agenda/agenda.cpp:966
 #, kde-format
@@ -103,10 +103,9 @@ msgid "Unable to save %1 \"%2\"."
 msgstr "Ne eblas konservi %1 \"%2\"."
 
 #: agenda/timelabels.cpp:331
-#, fuzzy, kde-format
-#| msgid "&Add Timezones..."
+#, kde-format
 msgid "&Add Timezones…"
-msgstr "&Aldoni Horzonojn..."
+msgstr "&Aldoni Horzonojn…"
 
 #: agenda/timelabels.cpp:332
 #, kde-format
@@ -2099,7 +2098,9 @@ msgstr ""
 "info@kdab.net"
 
 #: viewerapp/main.cpp:24
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Kevin Krammer"
+msgctxt "@info:credit"
 msgid "Kevin Krammer"
 msgstr "Kevin Krammer"
 
