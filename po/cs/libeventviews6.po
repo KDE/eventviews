@@ -1962,11 +1962,10 @@ msgstr ""
 "KDAB Group, info@kdab.net"
 
 #: viewerapp/main.cpp:24
-#, fuzzy, kde-format
-#| msgid "Kevin Krammer"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Kevin Krammer"
-msgstr "Kevin Krammer"
+msgstr ""
 
 #: viewerapp/main.cpp:33
 #, kde-format
