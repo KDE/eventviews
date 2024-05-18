@@ -2,15 +2,15 @@
 # Copyright (C) 2010 Free Software Foundation, Inc.
 # This file is distributed under the same license as the "eventviews" package.
 # Axel Rousseau <axel@esperanto-jeunes.org>, 2010.
-# Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
+# Oliver Kellogg <olivermkellogg@gmail.com>, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-09 00:38+0000\n"
-"PO-Revision-Date: 2024-01-03 12:30+0100\n"
-"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
+"PO-Revision-Date: 2024-05-17 06:24+0100\n"
+"Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
@@ -27,7 +27,7 @@ msgstr "Axel Rousseau, Oliver Kellogg"
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "axel.rousseau@esperanto-france.org, okellogg@users.sourceforge.net"
+msgstr "axel.rousseau@esperanto-france.org, olivermkellogg@gmail.com"
 
 #: agenda/agenda.cpp:966
 #, kde-format
@@ -599,14 +599,14 @@ msgid ""
 "Select the height of the hour rows in the agenda grid, in pixels. Increasing "
 "this value will make each row in the agenda grid taller."
 msgstr ""
-"Elektu la altecon de la horvicoj en la tagorda krado, en pikseloj. Pliigi ĉi "
-"tiun valoron plialtigos ĉiun vicon en la tagorda krado."
+"Elektu la altecon de la horvicoj en la tagorda krado, en rastrumeroj. Pliigi "
+"ĉi tiun valoron plialtigos ĉiun vicon en la tagorda krado."
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
 #: eventviews.kcfg:176 viewerapp/settings.kcfg:26
 #, kde-format
 msgid "Set the height (in pixels) for an hour in the agenda grid"
-msgstr "Agordu la altecon (en pikseloj) por horo en la tagorda krado"
+msgstr "Agordu la altecon (en rastrumeroj) por horo en la tagorda krado"
 
 #. i18n: ectx: label, entry (EnableAgendaItemIcons), group (Agenda View)
 #: eventviews.kcfg:183 viewerapp/settings.kcfg:33
@@ -2033,7 +2033,7 @@ msgstr "%1 (meza)"
 #, kde-format
 msgctxt "@action:inmenu lowest priority"
 msgid "%1 (lowest)"
-msgstr "%1 (plej malalta)"
+msgstr "%1 (malplej alta)"
 
 #: todo/todoviewquicksearch.cpp:104
 #, kde-format
