@@ -1974,7 +1974,7 @@ msgstr ""
 #: viewerapp/main.cpp:24
 #, kde-format
 msgid "Kevin Krammer"
-msgstr ""
+msgstr "Kevin Krammer"
 
 #: viewerapp/main.cpp:33
 #, kde-format
