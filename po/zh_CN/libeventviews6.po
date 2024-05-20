@@ -1975,7 +1975,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info:credit"
 msgid "Kevin Krammer"
-msgstr ""
+msgstr "Kevin Krammer"
 
 #: viewerapp/main.cpp:33
 #, kde-format
