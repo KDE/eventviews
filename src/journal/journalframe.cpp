@@ -153,7 +153,7 @@ JournalFrame::JournalFrame(const Akonadi::Item &j, const Akonadi::CollectionCale
     mEditButton->setText(i18n("&Edit"));
     mEditButton->setIcon(QIcon::fromTheme(QStringLiteral("document-properties")));
     mEditButton->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
-    mEditButton->setToolTip(i18n("Edit this journal entry"));
+    mEditButton->setToolTip(i18nc("@info:tooltip", "Edit this journal entry"));
     mEditButton->setWhatsThis(i18n("Opens an editor dialog for this journal entry"));
     buttonsLayout->addWidget(mEditButton);
     connect(mEditButton, &QPushButton::clicked, this, &JournalFrame::editItem);
@@ -163,7 +163,7 @@ JournalFrame::JournalFrame(const Akonadi::Item &j, const Akonadi::CollectionCale
     mDeleteButton->setText(i18n("&Delete"));
     mDeleteButton->setIcon(QIcon::fromTheme(QStringLiteral("edit-delete")));
     mDeleteButton->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
-    mDeleteButton->setToolTip(i18n("Delete this journal entry"));
+    mDeleteButton->setToolTip(i18nc("@info:tooltip", "Delete this journal entry"));
     mDeleteButton->setWhatsThis(i18n("Delete this journal entry"));
     buttonsLayout->addWidget(mDeleteButton);
     connect(mDeleteButton, &QPushButton::pressed, this, &JournalFrame::deleteItem);
@@ -173,7 +173,7 @@ JournalFrame::JournalFrame(const Akonadi::Item &j, const Akonadi::CollectionCale
     mPrintButton->setObjectName("printButton"_L1);
     mPrintButton->setIcon(QIcon::fromTheme(QStringLiteral("document-print")));
     mPrintButton->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
-    mPrintButton->setToolTip(i18n("Print this journal entry"));
+    mPrintButton->setToolTip(i18nc("@info:tooltip", "Print this journal entry"));
     mPrintButton->setWhatsThis(i18n("Opens a print dialog for this journal entry"));
     buttonsLayout->addWidget(mPrintButton);
     connect(mPrintButton, &QPushButton::clicked, this, qOverload<>(&JournalFrame::printJournal));
@@ -183,7 +183,7 @@ JournalFrame::JournalFrame(const Akonadi::Item &j, const Akonadi::CollectionCale
     mPrintPreviewButton->setObjectName("printButton"_L1);
     mPrintPreviewButton->setIcon(QIcon::fromTheme(QStringLiteral("document-print-preview")));
     mPrintPreviewButton->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
-    mPrintPreviewButton->setToolTip(i18n("Print preview this journal entry"));
+    mPrintPreviewButton->setToolTip(i18nc("@info:tooltip", "Print preview this journal entry"));
     buttonsLayout->addWidget(mPrintPreviewButton);
     connect(mPrintPreviewButton, &QAbstractButton::clicked, this, &JournalFrame::printPreviewJournal);
 
