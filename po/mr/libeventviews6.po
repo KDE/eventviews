@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-16 00:39+0000\n"
+"POT-Creation-Date: 2024-05-23 00:39+0000\n"
 "PO-Revision-Date: 2013-03-15 14:01+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: Marathi <kde-i18n-doc@kde.org>\n"
@@ -1350,6 +1350,7 @@ msgstr "संपादन (&E)"
 
 #: journal/journalframe.cpp:156
 #, kde-format
+msgctxt "@info:tooltip"
 msgid "Edit this journal entry"
 msgstr ""
 
@@ -1363,7 +1364,13 @@ msgstr ""
 msgid "&Delete"
 msgstr "काढून टाका (&D)"
 
-#: journal/journalframe.cpp:166 journal/journalframe.cpp:167
+#: journal/journalframe.cpp:166
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Delete this journal entry"
+msgstr ""
+
+#: journal/journalframe.cpp:167
 #, kde-format
 msgid "Delete this journal entry"
 msgstr ""
@@ -1375,6 +1382,7 @@ msgstr "छापा (&P)"
 
 #: journal/journalframe.cpp:176
 #, kde-format
+msgctxt "@info:tooltip"
 msgid "Print this journal entry"
 msgstr ""
 
@@ -1392,6 +1400,7 @@ msgstr "छपाई पूर्वावलोकन (&W)..."
 
 #: journal/journalframe.cpp:186
 #, kde-format
+msgctxt "@info:tooltip"
 msgid "Print preview this journal entry"
 msgstr ""
 

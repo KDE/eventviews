@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-16 00:39+0000\n"
+"POT-Creation-Date: 2024-05-23 00:39+0000\n"
 "PO-Revision-Date: 2024-05-17 06:24+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -1514,7 +1514,9 @@ msgid "&Edit"
 msgstr "R&edakti"
 
 #: journal/journalframe.cpp:156
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Edit this journal entry"
+msgctxt "@info:tooltip"
 msgid "Edit this journal entry"
 msgstr "Redakti ĉi tiun taglibran enskribon"
 
@@ -1528,7 +1530,14 @@ msgstr "Malfermas redaktan dialogon por ĉi tiu taglibra enskribo"
 msgid "&Delete"
 msgstr "&Forigi"
 
-#: journal/journalframe.cpp:166 journal/journalframe.cpp:167
+#: journal/journalframe.cpp:166
+#, fuzzy, kde-format
+#| msgid "Delete this journal entry"
+msgctxt "@info:tooltip"
+msgid "Delete this journal entry"
+msgstr "Forigi ĉi tiun taglibran enskribon"
+
+#: journal/journalframe.cpp:167
 #, kde-format
 msgid "Delete this journal entry"
 msgstr "Forigi ĉi tiun taglibran enskribon"
@@ -1539,7 +1548,9 @@ msgid "&Print"
 msgstr "&Presi"
 
 #: journal/journalframe.cpp:176
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Print this journal entry"
+msgctxt "@info:tooltip"
 msgid "Print this journal entry"
 msgstr "Presi ĉi tiun taglibran enskribon"
 
@@ -1554,7 +1565,9 @@ msgid "Print preview"
 msgstr "Presita antaŭvido"
 
 #: journal/journalframe.cpp:186
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Print preview this journal entry"
+msgctxt "@info:tooltip"
 msgid "Print preview this journal entry"
 msgstr "Presa antaŭrigardo de ĉi tiu taglibro"
 

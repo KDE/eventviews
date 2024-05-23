@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-16 00:39+0000\n"
+"POT-Creation-Date: 2024-05-23 00:39+0000\n"
 "PO-Revision-Date: 2024-05-16 11:16+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -1549,7 +1549,9 @@ msgid "&Edit"
 msgstr "&Редактиране"
 
 #: journal/journalframe.cpp:156
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Edit this journal entry"
+msgctxt "@info:tooltip"
 msgid "Edit this journal entry"
 msgstr "Редактиране на този запис в дневника"
 
@@ -1563,7 +1565,14 @@ msgstr "Отваря диалогов прозорец на редактор з�
 msgid "&Delete"
 msgstr "&Изтриване"
 
-#: journal/journalframe.cpp:166 journal/journalframe.cpp:167
+#: journal/journalframe.cpp:166
+#, fuzzy, kde-format
+#| msgid "Delete this journal entry"
+msgctxt "@info:tooltip"
+msgid "Delete this journal entry"
+msgstr "Изтриване на този запис в дневника"
+
+#: journal/journalframe.cpp:167
 #, kde-format
 msgid "Delete this journal entry"
 msgstr "Изтриване на този запис в дневника"
@@ -1574,7 +1583,9 @@ msgid "&Print"
 msgstr "&Печат"
 
 #: journal/journalframe.cpp:176
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Print this journal entry"
+msgctxt "@info:tooltip"
 msgid "Print this journal entry"
 msgstr "Печат на този запис в дневника"
 
@@ -1589,7 +1600,9 @@ msgid "Print preview"
 msgstr "Преглед преди печат"
 
 #: journal/journalframe.cpp:186
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Print preview this journal entry"
+msgctxt "@info:tooltip"
 msgid "Print preview this journal entry"
 msgstr "Преглед на печат на този запис в дневника"
 

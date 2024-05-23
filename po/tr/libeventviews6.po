@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-16 00:39+0000\n"
+"POT-Creation-Date: 2024-05-23 00:39+0000\n"
 "PO-Revision-Date: 2024-05-16 13:55+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -1526,7 +1526,9 @@ msgid "&Edit"
 msgstr "Dü&zenle"
 
 #: journal/journalframe.cpp:156
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Edit this journal entry"
+msgctxt "@info:tooltip"
 msgid "Edit this journal entry"
 msgstr "Bu günce girdisini düzenle"
 
@@ -1540,7 +1542,14 @@ msgstr "Bu günce girdisi için bir düzenleyici iletişim kutusu açar"
 msgid "&Delete"
 msgstr "&Sil"
 
-#: journal/journalframe.cpp:166 journal/journalframe.cpp:167
+#: journal/journalframe.cpp:166
+#, fuzzy, kde-format
+#| msgid "Delete this journal entry"
+msgctxt "@info:tooltip"
+msgid "Delete this journal entry"
+msgstr "Bu günce girdisini sil"
+
+#: journal/journalframe.cpp:167
 #, kde-format
 msgid "Delete this journal entry"
 msgstr "Bu günce girdisini sil"
@@ -1551,7 +1560,9 @@ msgid "&Print"
 msgstr "&Yazdır"
 
 #: journal/journalframe.cpp:176
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Print this journal entry"
+msgctxt "@info:tooltip"
 msgid "Print this journal entry"
 msgstr "Bu günce girdisini yazdır"
 
@@ -1566,7 +1577,9 @@ msgid "Print preview"
 msgstr "Yazdırma önizleme"
 
 #: journal/journalframe.cpp:186
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Print preview this journal entry"
+msgctxt "@info:tooltip"
 msgid "Print preview this journal entry"
 msgstr "Bu günce girdisinin yazdırma önizlemesi"
 

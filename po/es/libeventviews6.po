@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-16 00:39+0000\n"
+"POT-Creation-Date: 2024-05-23 00:39+0000\n"
 "PO-Revision-Date: 2024-05-16 12:18+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -1562,7 +1562,9 @@ msgid "&Edit"
 msgstr "&Editar"
 
 #: journal/journalframe.cpp:156
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Edit this journal entry"
+msgctxt "@info:tooltip"
 msgid "Edit this journal entry"
 msgstr "Editar esta entrada de diario"
 
@@ -1576,7 +1578,14 @@ msgstr "Abre un editor de diálogo para esta entrada de diálogo"
 msgid "&Delete"
 msgstr "&Borrar"
 
-#: journal/journalframe.cpp:166 journal/journalframe.cpp:167
+#: journal/journalframe.cpp:166
+#, fuzzy, kde-format
+#| msgid "Delete this journal entry"
+msgctxt "@info:tooltip"
+msgid "Delete this journal entry"
+msgstr "Borrar esta entrada de diario"
+
+#: journal/journalframe.cpp:167
 #, kde-format
 msgid "Delete this journal entry"
 msgstr "Borrar esta entrada de diario"
@@ -1587,7 +1596,9 @@ msgid "&Print"
 msgstr "&Imprimir"
 
 #: journal/journalframe.cpp:176
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Print this journal entry"
+msgctxt "@info:tooltip"
 msgid "Print this journal entry"
 msgstr "Imprimir esta entrada de diario"
 
@@ -1602,7 +1613,9 @@ msgid "Print preview"
 msgstr "Vista preliminar"
 
 #: journal/journalframe.cpp:186
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Print preview this journal entry"
+msgctxt "@info:tooltip"
 msgid "Print preview this journal entry"
 msgstr "Vista preliminar de esta entrada de diario"
 

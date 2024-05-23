@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-16 00:39+0000\n"
+"POT-Creation-Date: 2024-05-23 00:39+0000\n"
 "PO-Revision-Date: 2023-11-07 21:26+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
@@ -1342,6 +1342,7 @@ msgstr ""
 
 #: journal/journalframe.cpp:156
 #, kde-format
+msgctxt "@info:tooltip"
 msgid "Edit this journal entry"
 msgstr ""
 
@@ -1355,7 +1356,13 @@ msgstr ""
 msgid "&Delete"
 msgstr ""
 
-#: journal/journalframe.cpp:166 journal/journalframe.cpp:167
+#: journal/journalframe.cpp:166
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Delete this journal entry"
+msgstr ""
+
+#: journal/journalframe.cpp:167
 #, kde-format
 msgid "Delete this journal entry"
 msgstr ""
@@ -1367,6 +1374,7 @@ msgstr ""
 
 #: journal/journalframe.cpp:176
 #, kde-format
+msgctxt "@info:tooltip"
 msgid "Print this journal entry"
 msgstr ""
 
@@ -1382,6 +1390,7 @@ msgstr ""
 
 #: journal/journalframe.cpp:186
 #, kde-format
+msgctxt "@info:tooltip"
 msgid "Print preview this journal entry"
 msgstr ""
 

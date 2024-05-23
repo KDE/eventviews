@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-16 00:39+0000\n"
+"POT-Creation-Date: 2024-05-23 00:39+0000\n"
 "PO-Revision-Date: 2013-09-16 04:39+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -1491,7 +1491,9 @@ msgid "&Edit"
 msgstr "Өңд&еу"
 
 #: journal/journalframe.cpp:156
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Edit this journal entry"
+msgctxt "@info:tooltip"
 msgid "Edit this journal entry"
 msgstr "Күнделіктің осы жазуын өзгерту"
 
@@ -1505,7 +1507,14 @@ msgstr "Күнделіктің жазуын өңдеу диалогын ашу"
 msgid "&Delete"
 msgstr "Ө&шіру"
 
-#: journal/journalframe.cpp:166 journal/journalframe.cpp:167
+#: journal/journalframe.cpp:166
+#, fuzzy, kde-format
+#| msgid "Delete this journal entry"
+msgctxt "@info:tooltip"
+msgid "Delete this journal entry"
+msgstr "Күнделіктің осы жазуын өшіру"
+
+#: journal/journalframe.cpp:167
 #, kde-format
 msgid "Delete this journal entry"
 msgstr "Күнделіктің осы жазуын өшіру"
@@ -1516,7 +1525,9 @@ msgid "&Print"
 msgstr "&Басып шығару"
 
 #: journal/journalframe.cpp:176
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Print this journal entry"
+msgctxt "@info:tooltip"
 msgid "Print this journal entry"
 msgstr "Күнделіктің осы жазуын басып шығару"
 
@@ -1535,6 +1546,7 @@ msgstr "Басатынды қа&рап-шығу..."
 #: journal/journalframe.cpp:186
 #, fuzzy, kde-format
 #| msgid "Print this journal entry"
+msgctxt "@info:tooltip"
 msgid "Print preview this journal entry"
 msgstr "Күнделіктің осы жазуын басып шығару"
 

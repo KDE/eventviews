@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-16 00:39+0000\n"
+"POT-Creation-Date: 2024-05-23 00:39+0000\n"
 "PO-Revision-Date: 2013-09-08 07:05+0900\n"
 "Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -1347,6 +1347,7 @@ msgstr "تەھرىر(&E)"
 
 #: journal/journalframe.cpp:156
 #, kde-format
+msgctxt "@info:tooltip"
 msgid "Edit this journal entry"
 msgstr ""
 
@@ -1360,7 +1361,13 @@ msgstr ""
 msgid "&Delete"
 msgstr "ئۆچۈر(&D)"
 
-#: journal/journalframe.cpp:166 journal/journalframe.cpp:167
+#: journal/journalframe.cpp:166
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Delete this journal entry"
+msgstr ""
+
+#: journal/journalframe.cpp:167
 #, kde-format
 msgid "Delete this journal entry"
 msgstr ""
@@ -1372,6 +1379,7 @@ msgstr "باس(&P)"
 
 #: journal/journalframe.cpp:176
 #, kde-format
+msgctxt "@info:tooltip"
 msgid "Print this journal entry"
 msgstr ""
 
@@ -1389,6 +1397,7 @@ msgstr "بېسىشنى ئالدىن كۆزەت(&W)…"
 
 #: journal/journalframe.cpp:186
 #, kde-format
+msgctxt "@info:tooltip"
 msgid "Print preview this journal entry"
 msgstr ""
 

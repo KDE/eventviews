@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-16 00:39+0000\n"
+"POT-Creation-Date: 2024-05-23 00:39+0000\n"
 "PO-Revision-Date: 2014-04-06 20:54+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -1528,7 +1528,9 @@ msgid "&Edit"
 msgstr "&Bewerken"
 
 #: journal/journalframe.cpp:156
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Edit this journal entry"
+msgctxt "@info:tooltip"
 msgid "Edit this journal entry"
 msgstr "Dissen Daagbookindrag bewerken"
 
@@ -1542,7 +1544,14 @@ msgstr "Maakt en Editordialoog för dissen Indrag op"
 msgid "&Delete"
 msgstr "&Wegdoon"
 
-#: journal/journalframe.cpp:166 journal/journalframe.cpp:167
+#: journal/journalframe.cpp:166
+#, fuzzy, kde-format
+#| msgid "Delete this journal entry"
+msgctxt "@info:tooltip"
+msgid "Delete this journal entry"
+msgstr "Dissen Daagbookindrag wegdoon"
+
+#: journal/journalframe.cpp:167
 #, kde-format
 msgid "Delete this journal entry"
 msgstr "Dissen Daagbookindrag wegdoon"
@@ -1553,7 +1562,9 @@ msgid "&Print"
 msgstr "&Drucken"
 
 #: journal/journalframe.cpp:176
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Print this journal entry"
+msgctxt "@info:tooltip"
 msgid "Print this journal entry"
 msgstr "Dissen Daagbookindrag drucken"
 
@@ -1572,6 +1583,7 @@ msgstr "Druck&vöransicht..."
 #: journal/journalframe.cpp:186
 #, fuzzy, kde-format
 #| msgid "Print this journal entry"
+msgctxt "@info:tooltip"
 msgid "Print preview this journal entry"
 msgstr "Dissen Daagbookindrag drucken"
 

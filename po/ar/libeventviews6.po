@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-16 00:39+0000\n"
+"POT-Creation-Date: 2024-05-23 00:39+0000\n"
 "PO-Revision-Date: 2018-08-25 15:53+0300\n"
 "Last-Translator: Safa Alfulaij <safa1996alfulaij@gmail.com>\n"
 "Language-Team: Arabic <doc@arabeyes.org>\n"
@@ -1376,7 +1376,9 @@ msgid "&Edit"
 msgstr "&حرّر"
 
 #: journal/journalframe.cpp:156
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Edit this journal entry"
+msgctxt "@info:tooltip"
 msgid "Edit this journal entry"
 msgstr "حرّر مدخلة اليوميّة هذه"
 
@@ -1390,7 +1392,14 @@ msgstr "يفتح حواريّ تحرير لمدخلة اليوميّة هذه"
 msgid "&Delete"
 msgstr "ا&حذف"
 
-#: journal/journalframe.cpp:166 journal/journalframe.cpp:167
+#: journal/journalframe.cpp:166
+#, fuzzy, kde-format
+#| msgid "Delete this journal entry"
+msgctxt "@info:tooltip"
+msgid "Delete this journal entry"
+msgstr "احذف مدخلة اليوميّة هذه"
+
+#: journal/journalframe.cpp:167
 #, kde-format
 msgid "Delete this journal entry"
 msgstr "احذف مدخلة اليوميّة هذه"
@@ -1401,7 +1410,9 @@ msgid "&Print"
 msgstr "ا&طبع"
 
 #: journal/journalframe.cpp:176
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Print this journal entry"
+msgctxt "@info:tooltip"
 msgid "Print this journal entry"
 msgstr "اطبع مدخلة اليوميّة هذه"
 
@@ -1416,7 +1427,9 @@ msgid "Print preview"
 msgstr "عاين الطباعة"
 
 #: journal/journalframe.cpp:186
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Print preview this journal entry"
+msgctxt "@info:tooltip"
 msgid "Print preview this journal entry"
 msgstr "عاين طباعة مدخلة اليوميّة هذه"
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-16 00:39+0000\n"
+"POT-Creation-Date: 2024-05-23 00:39+0000\n"
 "PO-Revision-Date: 2021-10-04 08:50+0300\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -1583,7 +1583,9 @@ msgid "&Edit"
 msgstr "&Επεξεργασία"
 
 #: journal/journalframe.cpp:156
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Edit this journal entry"
+msgctxt "@info:tooltip"
 msgid "Edit this journal entry"
 msgstr "Επεξεργασία της καταχώρησης ημερολογίου"
 
@@ -1597,7 +1599,14 @@ msgstr "Άνοιγμα ενός διαλόγου επεξεργασίας για
 msgid "&Delete"
 msgstr "&Διαγραφή"
 
-#: journal/journalframe.cpp:166 journal/journalframe.cpp:167
+#: journal/journalframe.cpp:166
+#, fuzzy, kde-format
+#| msgid "Delete this journal entry"
+msgctxt "@info:tooltip"
+msgid "Delete this journal entry"
+msgstr "Διαγραφή της καταχώρησης ημερολογίου"
+
+#: journal/journalframe.cpp:167
 #, kde-format
 msgid "Delete this journal entry"
 msgstr "Διαγραφή της καταχώρησης ημερολογίου"
@@ -1608,7 +1617,9 @@ msgid "&Print"
 msgstr "Εκτύ&πωση"
 
 #: journal/journalframe.cpp:176
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Print this journal entry"
+msgctxt "@info:tooltip"
 msgid "Print this journal entry"
 msgstr "Εκτύπωση της καταχώρησης ημερολογίου"
 
@@ -1624,7 +1635,9 @@ msgid "Print preview"
 msgstr "Προεπισκόπηση εκτύπωσης"
 
 #: journal/journalframe.cpp:186
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Print preview this journal entry"
+msgctxt "@info:tooltip"
 msgid "Print preview this journal entry"
 msgstr "Προεπισκόπηση αυτής της καταχώρησης ημερολογίου"
 

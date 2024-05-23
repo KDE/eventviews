@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-16 00:39+0000\n"
+"POT-Creation-Date: 2024-05-23 00:39+0000\n"
 "PO-Revision-Date: 2024-05-12 15:06+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -1350,6 +1350,7 @@ msgstr "&திருத்து"
 
 #: journal/journalframe.cpp:156
 #, kde-format
+msgctxt "@info:tooltip"
 msgid "Edit this journal entry"
 msgstr ""
 
@@ -1363,7 +1364,13 @@ msgstr ""
 msgid "&Delete"
 msgstr "&நீக்கு"
 
-#: journal/journalframe.cpp:166 journal/journalframe.cpp:167
+#: journal/journalframe.cpp:166
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Delete this journal entry"
+msgstr ""
+
+#: journal/journalframe.cpp:167
 #, kde-format
 msgid "Delete this journal entry"
 msgstr ""
@@ -1375,6 +1382,7 @@ msgstr "&அச்சிடு"
 
 #: journal/journalframe.cpp:176
 #, kde-format
+msgctxt "@info:tooltip"
 msgid "Print this journal entry"
 msgstr ""
 
@@ -1390,6 +1398,7 @@ msgstr "அச்சு முன்னோட்டம்"
 
 #: journal/journalframe.cpp:186
 #, kde-format
+msgctxt "@info:tooltip"
 msgid "Print preview this journal entry"
 msgstr ""
 

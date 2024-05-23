@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-16 00:39+0000\n"
+"POT-Creation-Date: 2024-05-23 00:39+0000\n"
 "PO-Revision-Date: 2014-01-10 19:09+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: bs <bs@kde.org>\n"
@@ -1528,7 +1528,9 @@ msgid "&Edit"
 msgstr "&Izmijeni..."
 
 #: journal/journalframe.cpp:156
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Edit this journal entry"
+msgctxt "@info:tooltip"
 msgid "Edit this journal entry"
 msgstr "Izmijeni ovaj unos u dnevniku"
 
@@ -1542,7 +1544,14 @@ msgstr "Otvara dijalog uređivanja za ovaj unos dnevnika"
 msgid "&Delete"
 msgstr "&Obriši"
 
-#: journal/journalframe.cpp:166 journal/journalframe.cpp:167
+#: journal/journalframe.cpp:166
+#, fuzzy, kde-format
+#| msgid "Delete this journal entry"
+msgctxt "@info:tooltip"
+msgid "Delete this journal entry"
+msgstr "Obriši ovaj unos dnevnika"
+
+#: journal/journalframe.cpp:167
 #, kde-format
 msgid "Delete this journal entry"
 msgstr "Obriši ovaj unos dnevnika"
@@ -1553,7 +1562,9 @@ msgid "&Print"
 msgstr "&Štampaj"
 
 #: journal/journalframe.cpp:176
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Print this journal entry"
+msgctxt "@info:tooltip"
 msgid "Print this journal entry"
 msgstr "Odštampaj ovaj unos dnevnika"
 
@@ -1572,6 +1583,7 @@ msgstr "Pregled prije štampanja"
 #: journal/journalframe.cpp:186
 #, fuzzy, kde-format
 #| msgid "Print this journal entry"
+msgctxt "@info:tooltip"
 msgid "Print preview this journal entry"
 msgstr "Odštampaj ovaj unos dnevnika"
 

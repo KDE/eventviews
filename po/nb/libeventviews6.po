@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-16 00:39+0000\n"
+"POT-Creation-Date: 2024-05-23 00:39+0000\n"
 "PO-Revision-Date: 2013-09-27 17:58+0200\n"
 "Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -1505,7 +1505,9 @@ msgid "&Edit"
 msgstr "&Rediger"
 
 #: journal/journalframe.cpp:156
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Edit this journal entry"
+msgctxt "@info:tooltip"
 msgid "Edit this journal entry"
 msgstr "Rediger denne dagbokoppføringen"
 
@@ -1519,7 +1521,14 @@ msgstr "Åpner en redigering for denne dagbokoppføringen"
 msgid "&Delete"
 msgstr "&Slett"
 
-#: journal/journalframe.cpp:166 journal/journalframe.cpp:167
+#: journal/journalframe.cpp:166
+#, fuzzy, kde-format
+#| msgid "Delete this journal entry"
+msgctxt "@info:tooltip"
+msgid "Delete this journal entry"
+msgstr "Slett denne dagbokoppføringen"
+
+#: journal/journalframe.cpp:167
 #, kde-format
 msgid "Delete this journal entry"
 msgstr "Slett denne dagbokoppføringen"
@@ -1530,7 +1539,9 @@ msgid "&Print"
 msgstr "Skriv &ut"
 
 #: journal/journalframe.cpp:176
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Print this journal entry"
+msgctxt "@info:tooltip"
 msgid "Print this journal entry"
 msgstr "Skriv ut denne dagbokoppføringen"
 
@@ -1545,9 +1556,11 @@ msgid "Print preview"
 msgstr ""
 
 #: journal/journalframe.cpp:186
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Print this journal entry"
+msgctxt "@info:tooltip"
 msgid "Print preview this journal entry"
-msgstr ""
+msgstr "Skriv ut denne dagbokoppføringen"
 
 #: list/listview.cpp:56
 #, kde-format

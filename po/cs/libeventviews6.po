@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-16 00:39+0000\n"
+"POT-Creation-Date: 2024-05-23 00:39+0000\n"
 "PO-Revision-Date: 2023-11-02 13:49+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -1396,7 +1396,9 @@ msgid "&Edit"
 msgstr "&Upravit"
 
 #: journal/journalframe.cpp:156
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Edit this journal entry"
+msgctxt "@info:tooltip"
 msgid "Edit this journal entry"
 msgstr "Upravit tuto položku deníku"
 
@@ -1410,7 +1412,14 @@ msgstr "Otevře editační dialog pro tuto položku deníku."
 msgid "&Delete"
 msgstr "&Smazat"
 
-#: journal/journalframe.cpp:166 journal/journalframe.cpp:167
+#: journal/journalframe.cpp:166
+#, fuzzy, kde-format
+#| msgid "Delete this journal entry"
+msgctxt "@info:tooltip"
+msgid "Delete this journal entry"
+msgstr "Smazat tento záznam z deníku"
+
+#: journal/journalframe.cpp:167
 #, kde-format
 msgid "Delete this journal entry"
 msgstr "Smazat tento záznam z deníku"
@@ -1421,7 +1430,9 @@ msgid "&Print"
 msgstr "Vy&tisknout"
 
 #: journal/journalframe.cpp:176
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Print this journal entry"
+msgctxt "@info:tooltip"
 msgid "Print this journal entry"
 msgstr "Vytisknout tuto položku deníku"
 
@@ -1436,9 +1447,11 @@ msgid "Print preview"
 msgstr "Náhled před tiskem"
 
 #: journal/journalframe.cpp:186
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Print this journal entry"
+msgctxt "@info:tooltip"
 msgid "Print preview this journal entry"
-msgstr ""
+msgstr "Vytisknout tuto položku deníku"
 
 #: list/listview.cpp:56
 #, kde-format
