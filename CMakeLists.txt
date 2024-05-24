@@ -79,7 +79,7 @@ endif()
 
 
 ########### Targets ###########
-
+add_definitions(-DQT_NO_CONTEXTLESS_CONNECT)
 if(BUILD_TESTING)
   add_definitions(-DBUILD_TESTING)
 endif()
