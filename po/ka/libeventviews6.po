@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-23 00:39+0000\n"
-"PO-Revision-Date: 2024-05-16 07:47+0200\n"
+"PO-Revision-Date: 2024-05-24 16:23+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -1512,8 +1512,7 @@ msgid "&Edit"
 msgstr "&ჩასწორება"
 
 #: journal/journalframe.cpp:156
-#, fuzzy, kde-format
-#| msgid "Edit this journal entry"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Edit this journal entry"
 msgstr "ჟურნალის ამ ჩანაწერის ჩასწორება"
@@ -1529,8 +1528,7 @@ msgid "&Delete"
 msgstr "&წაშლა"
 
 #: journal/journalframe.cpp:166
-#, fuzzy, kde-format
-#| msgid "Delete this journal entry"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete this journal entry"
 msgstr "ჟურნალის ამ ჩანაწერის წაშლა"
@@ -1546,8 +1544,7 @@ msgid "&Print"
 msgstr "&ბეჭდვა"
 
 #: journal/journalframe.cpp:176
-#, fuzzy, kde-format
-#| msgid "Print this journal entry"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Print this journal entry"
 msgstr "ჟურნალის ამ ჩანაწერის დაბეჭდვა"
@@ -1563,8 +1560,7 @@ msgid "Print preview"
 msgstr "დასაბეჭდის გადახედვა"
 
 #: journal/journalframe.cpp:186
-#, fuzzy, kde-format
-#| msgid "Print preview this journal entry"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Print preview this journal entry"
 msgstr "ჟურნალის ამ ჩანაწერის დაბეჭდვის გადახედვა"
