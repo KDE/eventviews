@@ -1407,11 +1407,10 @@ msgid "&Edit"
 msgstr "编辑(&E)"
 
 #: journal/journalframe.cpp:156
-#, fuzzy, kde-format
-#| msgid "Edit this journal entry"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Edit this journal entry"
-msgstr "编辑此日记项"
+msgstr ""
 
 #: journal/journalframe.cpp:157
 #, kde-format
@@ -1424,11 +1423,10 @@ msgid "&Delete"
 msgstr "删除(&D)"
 
 #: journal/journalframe.cpp:166
-#, fuzzy, kde-format
-#| msgid "Delete this journal entry"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete this journal entry"
-msgstr "删除日记项"
+msgstr ""
 
 #: journal/journalframe.cpp:167
 #, kde-format
@@ -1441,11 +1439,10 @@ msgid "&Print"
 msgstr "打印(&P)"
 
 #: journal/journalframe.cpp:176
-#, fuzzy, kde-format
-#| msgid "Print this journal entry"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Print this journal entry"
-msgstr "打印此日记项"
+msgstr ""
 
 #: journal/journalframe.cpp:177
 #, kde-format
@@ -1458,11 +1455,10 @@ msgid "Print preview"
 msgstr "打印预览"
 
 #: journal/journalframe.cpp:186
-#, fuzzy, kde-format
-#| msgid "Print preview this journal entry"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Print preview this journal entry"
-msgstr "打印预览此日记项"
+msgstr ""
 
 #: list/listview.cpp:56
 #, kde-format
