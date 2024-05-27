@@ -176,7 +176,7 @@ MultiAgendaView::MultiAgendaView(const CalendarFactory::Ptr &factory, QWidget *p
         sideBoxLayout->addWidget(d->mLeftSplitter, 1);
 
         // Label for all-day view
-        d->mLabel = new QLabel(i18n("All Day"), d->mLeftSplitter);
+        d->mLabel = new QLabel(i18nc("@label:textbox", "All Day"), d->mLeftSplitter);
         d->mLabel->setAlignment(Qt::AlignRight | Qt::AlignVCenter);
         d->mLabel->setWordWrap(true);
 
