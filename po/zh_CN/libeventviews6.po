@@ -1409,7 +1409,7 @@ msgstr "编辑(&E)"
 #: journal/journalframe.cpp:156
 #, kde-format
 msgid "Edit this journal entry"
-msgstr "编辑此日记项"
+msgstr ""
 
 #: journal/journalframe.cpp:157
 #, kde-format
@@ -1434,7 +1434,7 @@ msgstr "打印(&P)"
 #: journal/journalframe.cpp:176
 #, kde-format
 msgid "Print this journal entry"
-msgstr "打印此日记项"
+msgstr ""
 
 #: journal/journalframe.cpp:177
 #, kde-format
@@ -1449,7 +1449,7 @@ msgstr "打印预览"
 #: journal/journalframe.cpp:186
 #, kde-format
 msgid "Print preview this journal entry"
-msgstr "打印预览此日记项"
+msgstr ""
 
 #: list/listview.cpp:56
 #, kde-format
