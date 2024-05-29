@@ -1596,11 +1596,10 @@ msgid "Agenda %1"
 msgstr "日程 %1"
 
 #: multiagenda/multiagendaview.cpp:179
-#, fuzzy, kde-format
-#| msgid "All Day"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "All Day"
-msgstr "全天"
+msgstr ""
 
 #: timeline/timelineview.cpp:225
 #, kde-format
