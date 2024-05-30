@@ -1396,11 +1396,10 @@ msgid "&Edit"
 msgstr "&Upravit"
 
 #: journal/journalframe.cpp:156
-#, fuzzy, kde-format
-#| msgid "Edit this journal entry"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Edit this journal entry"
-msgstr "Upravit tuto položku deníku"
+msgstr ""
 
 #: journal/journalframe.cpp:157
 #, kde-format
@@ -1413,11 +1412,10 @@ msgid "&Delete"
 msgstr "&Smazat"
 
 #: journal/journalframe.cpp:166
-#, fuzzy, kde-format
-#| msgid "Delete this journal entry"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete this journal entry"
-msgstr "Smazat tento záznam z deníku"
+msgstr ""
 
 #: journal/journalframe.cpp:167
 #, kde-format
@@ -1430,11 +1428,10 @@ msgid "&Print"
 msgstr "Vy&tisknout"
 
 #: journal/journalframe.cpp:176
-#, fuzzy, kde-format
-#| msgid "Print this journal entry"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Print this journal entry"
-msgstr "Vytisknout tuto položku deníku"
+msgstr ""
 
 #: journal/journalframe.cpp:177
 #, kde-format
@@ -1447,11 +1444,10 @@ msgid "Print preview"
 msgstr "Náhled před tiskem"
 
 #: journal/journalframe.cpp:186
-#, fuzzy, kde-format
-#| msgid "Print this journal entry"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Print preview this journal entry"
-msgstr "Vytisknout tuto položku deníku"
+msgstr ""
 
 #: list/listview.cpp:56
 #, kde-format
@@ -1591,11 +1587,10 @@ msgid "Agenda %1"
 msgstr "Agenda %1"
 
 #: multiagenda/multiagendaview.cpp:179
-#, fuzzy, kde-format
-#| msgid "All Day"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "All Day"
-msgstr "Celý den"
+msgstr ""
 
 #: timeline/timelineview.cpp:225
 #, kde-format
