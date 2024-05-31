@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-28 00:38+0000\n"
-"PO-Revision-Date: 2024-05-27 14:21+0200\n"
+"PO-Revision-Date: 2024-05-30 10:51+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.05.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -1750,8 +1750,7 @@ msgid "Agenda %1"
 msgstr "Програма %1"
 
 #: multiagenda/multiagendaview.cpp:179
-#, fuzzy, kde-format
-#| msgid "All Day"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "All Day"
 msgstr "Цял ден"
@@ -2284,11 +2283,3 @@ msgstr "%1, %2 - %3"
 msgctxt "to-do due date"
 msgid "  (Due: %1)"
 msgstr "  (Насрочена: %1)"
-
-#~ msgctxt "@action:inmenu edit the to-do"
-#~ msgid "&Edit..."
-#~ msgstr "&Редактиране..."
-
-#~ msgctxt "@action:inmenu print the to-do"
-#~ msgid "&Print..."
-#~ msgstr "&Печат..."
