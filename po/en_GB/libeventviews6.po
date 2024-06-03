@@ -2,21 +2,21 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Andrew Coles <andrew_coles@yahoo.co.uk>, 2010.
-# Steve Allewell <steve.allewell@gmail.com>, 2014, 2015, 2016, 2017, 2018, 2019, 2021.
+# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2018, 2019, 2021, 2024 Steve Allewell <steve.allewell@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-09 00:38+0000\n"
-"PO-Revision-Date: 2021-10-10 10:54+0100\n"
+"PO-Revision-Date: 2024-06-02 11:39+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
-"Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
+"Language-Team: British English\n"
 "Language: en_GB\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.08.1\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -34,8 +34,7 @@ msgid "Unable to lock item for modification. You cannot make any changes."
 msgstr "Unable to lock item for modification. You cannot make any changes."
 
 #: agenda/agenda.cpp:968
-#, fuzzy, kde-format
-#| msgid "Locking Failed"
+#, kde-format
 msgctxt "@title:window"
 msgid "Locking Failed"
 msgstr "Locking Failed"
@@ -53,8 +52,7 @@ msgstr ""
 "Unable to add the exception item to the calendar. No change will be done."
 
 #: agenda/agenda.cpp:1207 month/monthitem.cpp:447
-#, fuzzy, kde-format
-#| msgid "Error Occurred"
+#, kde-format
 msgctxt "@title:window"
 msgid "Error Occurred"
 msgstr "Error Occurred"
@@ -72,8 +70,7 @@ msgid "Attendee \"%1\" added to the calendar item \"%2\""
 msgstr "Attendee \"%1\" added to the calendar item \"%2\""
 
 #: agenda/agendaitem.cpp:632
-#, fuzzy, kde-format
-#| msgid "Attendee added"
+#, kde-format
 msgctxt "@title:window"
 msgid "Attendee added"
 msgstr "Attendee added"
@@ -1762,8 +1759,7 @@ msgid "Cannot move to-do to itself or a child of itself."
 msgstr "Cannot move to-do to itself or a child of itself."
 
 #: todo/todoview.cpp:235
-#, fuzzy, kde-format
-#| msgid "Drop To-do"
+#, kde-format
 msgctxt "@title:window"
 msgid "Drop To-do"
 msgstr "Drop To-do"
