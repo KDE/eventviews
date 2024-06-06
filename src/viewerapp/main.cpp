@@ -30,7 +30,7 @@ int main(int argc, char **argv)
     about.setupCommandLine(&parser);
     parser.process(app);
     about.processCommandLine(&parser);
-    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("+[viewname]"), i18n("Optional list of view names to instantiate")));
+    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("+[viewname]"), i18nc("@info:shell", "Optional list of view names to instantiate")));
 
     QStringList viewNames;
     for (int i = 0; i < parser.positionalArguments().count(); ++i) {
