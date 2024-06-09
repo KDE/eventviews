@@ -1979,7 +1979,7 @@ msgstr "Kevin Krammer"
 #: viewerapp/main.cpp:33
 #, kde-format
 msgid "Optional list of view names to instantiate"
-msgstr "要实例化的可选视图名称列表"
+msgstr ""
 
 #. i18n: ectx: property (windowTitle), widget (QMainWindow, MainWindow)
 #: viewerapp/mainwindow.ui:14
