@@ -7,15 +7,15 @@ msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-07 00:39+0000\n"
-"PO-Revision-Date: 2024-06-07 11:36+0300\n"
+"PO-Revision-Date: 2024-06-09 06:48+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
-"n % 10 == 0) ? 2 : 3));\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n==2 ? 1 : n>10 && n%10==0 ? "
+"2 : 3);\n"
 "X-Generator: Lokalize 24.02.2\n"
 
 #, kde-format
@@ -533,7 +533,7 @@ msgstr ""
 #: eventviews.kcfg:174 viewerapp/settings.kcfg:24
 #, kde-format
 msgid "Hour size"
-msgstr ""
+msgstr "גודל שעה"
 
 #. i18n: ectx: whatsthis, entry, group (Agenda View)
 #: eventviews.kcfg:175 viewerapp/settings.kcfg:25
@@ -542,18 +542,20 @@ msgid ""
 "Select the height of the hour rows in the agenda grid, in pixels. Increasing "
 "this value will make each row in the agenda grid taller."
 msgstr ""
+"בחירת גובה שורות השעה ברשת לוח השנה, בפיקסלים. הגדלת הערך הזה תגביה את גובה "
+"השורה ברשת סדר היום."
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
 #: eventviews.kcfg:176 viewerapp/settings.kcfg:26
 #, kde-format
 msgid "Set the height (in pixels) for an hour in the agenda grid"
-msgstr ""
+msgstr "נא להגדיר את הגובה (בפיקסלים) לשעה ברשת סדר היום"
 
 #. i18n: ectx: label, entry (EnableAgendaItemIcons), group (Agenda View)
 #: eventviews.kcfg:183 viewerapp/settings.kcfg:33
 #, kde-format
 msgid "Show icons in agenda view items"
-msgstr ""
+msgstr "הצגת סמלים בפריטי תצוגת סדר היום"
 
 #. i18n: ectx: whatsthis, entry (EnableAgendaItemIcons), group (Agenda View)
 #: eventviews.kcfg:184 viewerapp/settings.kcfg:34
@@ -562,12 +564,14 @@ msgid ""
 "Check this box to display icons (alarm, recursion, etc.) in agenda view "
 "items."
 msgstr ""
+"יש לסמן את התיבה הזאת כדי להציג סמלים (התראה, חזרה וכו׳) בפריטי תצוגת סדר "
+"יום."
 
 #. i18n: ectx: tooltip, entry (EnableAgendaItemIcons), group (Agenda View)
 #: eventviews.kcfg:185 viewerapp/settings.kcfg:35
 #, kde-format
 msgid "Display icons in agenda view items"
-msgstr ""
+msgstr "הצגת סמלים בפריטי תצוגת סדר היום"
 
 #. i18n: ectx: label, entry (ShowTodosAgendaView), group (Agenda View)
 #. i18n: ectx: label, entry (ShowTodosMonthView), group (Month View)
@@ -575,25 +579,25 @@ msgstr ""
 #: viewerapp/settings.kcfg:133
 #, kde-format
 msgid "Show to-dos"
-msgstr ""
+msgstr "הצגת מטלות"
 
 #. i18n: ectx: whatsthis, entry (ShowTodosAgendaView), group (Agenda View)
 #: eventviews.kcfg:191 viewerapp/settings.kcfg:41
 #, kde-format
 msgid "Check this box to display to-dos in the agenda view."
-msgstr ""
+msgstr "יש לסמן את התיבה הזאת כדי להציג מטלות בתצוגת סדר היום."
 
 #. i18n: ectx: tooltip, entry (ShowTodosAgendaView), group (Agenda View)
 #: eventviews.kcfg:192 viewerapp/settings.kcfg:42
 #, kde-format
 msgid "Display to-dos in the agenda view"
-msgstr ""
+msgstr "הצגת מטלות בתצוגת סדר היום"
 
 #. i18n: ectx: label, entry (MarcusBainsEnabled), group (Agenda View)
 #: eventviews.kcfg:197 viewerapp/settings.kcfg:47
 #, kde-format
 msgid "Show current-time (Marcus Bains) line"
-msgstr ""
+msgstr "הצגת קו השעה הנוכחית (מרקוס ביינס)"
 
 #. i18n: ectx: whatsthis, entry (MarcusBainsEnabled), group (Agenda View)
 #: eventviews.kcfg:198 viewerapp/settings.kcfg:48
@@ -602,36 +606,38 @@ msgid ""
 "Check this box to display a line in the day or week view indicating the "
 "current-time line (Marcus Bains line)."
 msgstr ""
+"סימון התיבה הזאת יציג קו בתצוגת היום או השבוע שמציין את קו השעה הנוכחית (קו "
+"מרקוס ביינס)."
 
 #. i18n: ectx: tooltip, entry (MarcusBainsEnabled), group (Agenda View)
 #: eventviews.kcfg:199 viewerapp/settings.kcfg:49
 #, kde-format
 msgid "Display the current-time indicator"
-msgstr ""
+msgstr "הצגת מחוון השעה הנוכחית"
 
 #. i18n: ectx: label, entry (MarcusBainsShowSeconds), group (Agenda View)
 #: eventviews.kcfg:204 viewerapp/settings.kcfg:54
 #, kde-format
 msgid "Show seconds on the current-time (Marcus Bains) line"
-msgstr ""
+msgstr "הצגת השניות על קו השעה הנוכחית (מרקוס ביינס)"
 
 #. i18n: ectx: whatsthis, entry (MarcusBainsShowSeconds), group (Agenda View)
 #: eventviews.kcfg:205 viewerapp/settings.kcfg:55
 #, kde-format
 msgid "Check this box if you want to show seconds on the current-time line."
-msgstr ""
+msgstr "סימון תיבה זו יגרום להצגת השניות בשורת השעה הנוכחית."
 
 #. i18n: ectx: tooltip, entry (MarcusBainsShowSeconds), group (Agenda View)
 #: eventviews.kcfg:206 viewerapp/settings.kcfg:56
 #, kde-format
 msgid "Display seconds with the current-time indicator"
-msgstr ""
+msgstr "הצגת השניות במחוון השעה הנוכחית"
 
 #. i18n: ectx: label, entry (SelectionStartsEditor), group (Agenda View)
 #: eventviews.kcfg:211 viewerapp/settings.kcfg:61
 #, kde-format
 msgid "Time range selection in agenda view starts event editor"
-msgstr ""
+msgstr "טווח הזמנים הנבחר בתצוגת סדר היום מפעיל את עורך האירועים"
 
 #. i18n: ectx: whatsthis, entry (SelectionStartsEditor), group (Agenda View)
 #: eventviews.kcfg:212 viewerapp/settings.kcfg:62
@@ -641,12 +647,15 @@ msgid ""
 "time range in the daily and weekly view. To select a time range, drag the "
 "mouse from the start time to the end time of the event you are about to plan."
 msgstr ""
+"יש לסמן את התיבה הזאת כדי להתחיל את עורך האירועים אוטומטית בעת בחירת טווח "
+"זמן בתצוגה היומית והשבועית. כדי לבחור את טווח הזמן, יש לגרור את העכבר מזמן "
+"ההתחלה עד זמן הסיום של האירוע המתוכנן."
 
 #. i18n: ectx: tooltip, entry (SelectionStartsEditor), group (Agenda View)
 #: eventviews.kcfg:213 viewerapp/settings.kcfg:63
 #, kde-format
 msgid "Enable automatic event editor with time range selection"
-msgstr ""
+msgstr "הפעלת עורך אירועים אוטומטית עם בחירת טווח זמנים"
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
@@ -654,7 +663,7 @@ msgstr ""
 #: viewerapp/settings.kcfg:153
 #, kde-format
 msgid "Color Usage"
-msgstr ""
+msgstr "שימוש בצבע"
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
@@ -662,7 +671,7 @@ msgstr ""
 #: viewerapp/settings.kcfg:156
 #, kde-format
 msgid "Category inside, calendar outside"
-msgstr ""
+msgstr "קטגוריה בפנים, לוח שנה בחוץ"
 
 #. i18n: ectx: whatsthis, entry, group (Agenda View)
 #: eventviews.kcfg:222 viewerapp/settings.kcfg:72
@@ -688,7 +697,7 @@ msgstr ""
 #: viewerapp/settings.kcfg:161
 #, kde-format
 msgid "Calendar inside, category outside"
-msgstr ""
+msgstr "לוח שנה בפנים, קטגוריה בחוץ"
 
 #. i18n: ectx: whatsthis, entry, group (Agenda View)
 #: eventviews.kcfg:227 viewerapp/settings.kcfg:77
@@ -714,7 +723,7 @@ msgstr ""
 #: viewerapp/settings.kcfg:166
 #, kde-format
 msgid "Only category"
-msgstr ""
+msgstr "קטגוריה בלבד"
 
 #. i18n: ectx: whatsthis, entry, group (Agenda View)
 #: eventviews.kcfg:232 viewerapp/settings.kcfg:82
@@ -724,12 +733,15 @@ msgid ""
 "(both inside and border) in the color of their associated category. Please "
 "use the Colors and Fonts configuration page for setting these colors."
 msgstr ""
+"יש לבחור באפשרות קטגוריה בלבד” כדי לצייר פריטי לוח שנה (פנימית ומסגרת) בצבעי "
+"הקטגוריה המשויכת להם. נא להשתמש בעמוד ההגדרות צבעים וגופנים כדי להגדיר את "
+"הצבעים האלה."
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
 #: eventviews.kcfg:233 viewerapp/settings.kcfg:83
 #, kde-format
 msgid "Draw agenda items using their category color for the inside and border"
-msgstr ""
+msgstr "ציור פריטי סדר יום באמצעות צבע הקטגוריה שלהם לחלק הפנימי והמסגרת"
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
@@ -737,7 +749,7 @@ msgstr ""
 #: viewerapp/settings.kcfg:171
 #, kde-format
 msgid "Only calendar"
-msgstr ""
+msgstr "לוח שנה בלבד"
 
 #. i18n: ectx: whatsthis, entry, group (Agenda View)
 #: eventviews.kcfg:237 viewerapp/settings.kcfg:87
@@ -747,19 +759,22 @@ msgid ""
 "(both inside and border) in the color of their calendar. Please use the "
 "Colors and Fonts configuration page for setting these colors."
 msgstr ""
+"יש לבחור באפשרות לוח שנה בלבד” כדי לצייר פריטי לוח שנה (פנימית ומסגרת) בצבעי "
+"לוח השנה שלהם. נא להשתמש בעמוד ההגדרות צבעים וגופנים כדי להגדיר את הצבעים "
+"האלה."
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
 #: eventviews.kcfg:238 viewerapp/settings.kcfg:88
 #, kde-format
 msgid "Draw agenda items using their calendar color for the inside and border"
-msgstr ""
+msgstr "ציור פריטי סדר יום באמצעות צבע לוח השנה שלהם לחלק הפנימי והמסגרת"
 
 #. i18n: ectx: label, entry (ColorBusyDaysEnabled), group (Agenda View)
 #. i18n: ectx: label, entry (ColorMonthBusyDaysEnabled), group (Month View)
 #: eventviews.kcfg:244 eventviews.kcfg:341
 #, kde-format
 msgid "Color busy days with a different background color"
-msgstr ""
+msgstr "צביעת ימים עמוסים בצבע רקע שונה"
 
 #. i18n: ectx: whatsthis, entry (ColorBusyDaysEnabled), group (Agenda View)
 #: eventviews.kcfg:245
@@ -770,18 +785,22 @@ msgid ""
 "you can change the background color used for this option on the Colors "
 "configuration page. Look for the \"Busy days background color\" setting."
 msgstr ""
+"יש לסמן את התיבה הזאת כדי לצבוע את רקע סדר היום בצבע שונה בימים שיש בהם "
+"לפחות אירוע אחד לכל היום שמסומן במצב עסוק. כמו כן, אפשר לשנות את צבע הרקע "
+"לשימוש האפשרות הזאת בעמוד הגדרות הצבעים. יש לחפש את ההגדרה „צבע רקע לימים "
+"עסוקים”."
 
 #. i18n: ectx: label, entry (AgendaViewCalendarDisplay), group (Agenda View)
 #: eventviews.kcfg:249 viewerapp/settings.kcfg:95
 #, kde-format
 msgid "Multiple Calendar Display"
-msgstr ""
+msgstr "תצוגה מרובת לוחות שנה"
 
 #. i18n: ectx: label, entry (AgendaViewCalendarDisplay), group (Agenda View)
 #: eventviews.kcfg:252 viewerapp/settings.kcfg:98
 #, kde-format
 msgid "Merge all calendars into one view"
-msgstr ""
+msgstr "מיזוג כל לוחות השנה לתצוגה אחת"
 
 #. i18n: ectx: whatsthis, entry (AgendaViewCalendarDisplay), group (Agenda View)
 #: eventviews.kcfg:253 viewerapp/settings.kcfg:99
@@ -790,18 +809,20 @@ msgid ""
 "Select the \"Merge all calendars into one view\" option if you would like "
 "all your calendars to be shown together in one agenda view."
 msgstr ""
+"יש לבחור באפשרות „מיזוג כל לוחות השנה לתצוגה אחת” כדי שכל לוחות השנה שלך "
+"יופיעו יחד בתצוגת סדר יום אחידה."
 
 #. i18n: ectx: tooltip, entry (AgendaViewCalendarDisplay), group (Agenda View)
 #: eventviews.kcfg:254 viewerapp/settings.kcfg:100
 #, kde-format
 msgid "Show all calendars merged together"
-msgstr ""
+msgstr "הצגת כל לוחות השנה ממוזגים יחד"
 
 #. i18n: ectx: label, entry (AgendaViewCalendarDisplay), group (Agenda View)
 #: eventviews.kcfg:257 viewerapp/settings.kcfg:103
 #, kde-format
 msgid "Show calendars side by side"
-msgstr ""
+msgstr "הצגת לוחות שנה זה לצד זה"
 
 #. i18n: ectx: whatsthis, entry (AgendaViewCalendarDisplay), group (Agenda View)
 #: eventviews.kcfg:258 viewerapp/settings.kcfg:104
@@ -810,18 +831,20 @@ msgid ""
 "Select the \"Show calendars side by side\" option if you would like to see "
 "two calendars at once, in a side-by-side view."
 msgstr ""
+"יש לבחור באפשרות „הצגת לוחות שנה זה לצד זה” כדי ששני לוחות שנה יופיעו בבת־"
+"אחת, בתצוגה עם שני צדדים אחד ליד השנה."
 
 #. i18n: ectx: tooltip, entry (AgendaViewCalendarDisplay), group (Agenda View)
 #: eventviews.kcfg:259 viewerapp/settings.kcfg:105
 #, kde-format
 msgid "Show two calendars side-by-side"
-msgstr ""
+msgstr "הצגת שני לוחות שנה זה לצד זה"
 
 #. i18n: ectx: label, entry (AgendaViewCalendarDisplay), group (Agenda View)
 #: eventviews.kcfg:262 viewerapp/settings.kcfg:108
 #, kde-format
 msgid "Switch between views with tabs"
-msgstr ""
+msgstr "החלפה בין תצוגות עם טאבים"
 
 #. i18n: ectx: whatsthis, entry (AgendaViewCalendarDisplay), group (Agenda View)
 #: eventviews.kcfg:263 viewerapp/settings.kcfg:109
@@ -830,18 +853,20 @@ msgid ""
 "Select \"Switch between views with tabs\" if you would like to alternate "
 "between calendars using the tab key."
 msgstr ""
+"יש לבחור באפשרות „החלפה בין תצוגות עם טאבים” כדי להחליף בין לוחות שנה עם מקש "
+"טאב."
 
 #. i18n: ectx: tooltip, entry (AgendaViewCalendarDisplay), group (Agenda View)
 #: eventviews.kcfg:264 viewerapp/settings.kcfg:110
 #, kde-format
 msgid "Tab through calendars"
-msgstr ""
+msgstr "מעבר בטאב בין לוחות השנה"
 
 #. i18n: ectx: label, entry (EnableMonthScroll), group (Month View)
 #: eventviews.kcfg:274 viewerapp/settings.kcfg:120
 #, kde-format
 msgid "Enable scrollbars in month view cells"
-msgstr ""
+msgstr "הפעלת סרגלי גלילה בתאי תצוגת החודש"
 
 #. i18n: ectx: whatsthis, entry (EnableMonthScroll), group (Month View)
 #: eventviews.kcfg:275 viewerapp/settings.kcfg:121
@@ -850,12 +875,14 @@ msgid ""
 "Check this box to display scrollbars when clicking on a cell in the month "
 "view; they will only appear when needed though."
 msgstr ""
+"יש לסמן את התיבה הזאת כדי להציג סרגלי גלילה בלחיצה על תא בתצוגת החודש, עם "
+"זאת הם יופיעו רק בעת הצורך."
 
 #. i18n: ectx: label, entry (EnableMonthItemIcons), group (Month View)
 #: eventviews.kcfg:280 viewerapp/settings.kcfg:126
 #, kde-format
 msgid "Show icons in month view items"
-msgstr ""
+msgstr "הצגת סמלים לפריטי תצוגת חודש"
 
 #. i18n: ectx: whatsthis, entry (EnableMonthItemIcons), group (Month View)
 #: eventviews.kcfg:281 viewerapp/settings.kcfg:127
@@ -863,24 +890,25 @@ msgstr ""
 msgid ""
 "Check this box to display icons (alarm, recursion, etc.) in month view items."
 msgstr ""
+"יש לסמן את התיבה הזאת כדי להציג סמלים (התראה, חזרה וכו׳) בפריטי תצוגת חודש."
 
 #. i18n: ectx: tooltip, entry (EnableMonthItemIcons), group (Month View)
 #: eventviews.kcfg:282 viewerapp/settings.kcfg:128
 #, kde-format
 msgid "Display icons in month view items"
-msgstr ""
+msgstr "הצגת סמלים בפריטי תצוגת חודש"
 
 #. i18n: ectx: label, entry (ShowTimeInMonthView), group (Month View)
 #: eventviews.kcfg:287
 #, kde-format
 msgid "Show time in month view items"
-msgstr ""
+msgstr "הצגת השעה לפריטי תצוגת חודש"
 
 #. i18n: ectx: whatsthis, entry (ShowTimeInMonthView), group (Month View)
 #: eventviews.kcfg:288
 #, kde-format
 msgid "Check this box to display the time in month view items."
-msgstr ""
+msgstr "יש לסמן את התיבה הזאת כדי להציג את השעה בפריטי תצוגת חודש"
 
 #. i18n: ectx: tooltip, entry (ShowTimeInMonthView), group (Month View)
 #: eventviews.kcfg:289
@@ -892,7 +920,7 @@ msgstr ""
 #: eventviews.kcfg:295 viewerapp/settings.kcfg:134
 #, kde-format
 msgid "Check this box to display to-dos in the month view."
-msgstr ""
+msgstr "יש לסמן את התיבה הזאת כדי להציג מטלות בתצוגת החודש."
 
 #. i18n: ectx: tooltip, entry (ShowTodosMonthView), group (Month View)
 #: eventviews.kcfg:296 viewerapp/settings.kcfg:135
@@ -904,25 +932,25 @@ msgstr ""
 #: eventviews.kcfg:301 viewerapp/settings.kcfg:140
 #, kde-format
 msgid "Show journals"
-msgstr ""
+msgstr "הצגת יומנים"
 
 #. i18n: ectx: whatsthis, entry (ShowJournalsMonthView), group (Month View)
 #: eventviews.kcfg:302 viewerapp/settings.kcfg:141
 #, kde-format
 msgid "Check this box to display journals in the month view."
-msgstr ""
+msgstr "יש לסמן את התיבה הזאת כדי להציג יומנים בתצוגת החודש."
 
 #. i18n: ectx: tooltip, entry (ShowJournalsMonthView), group (Month View)
 #: eventviews.kcfg:303 viewerapp/settings.kcfg:142
 #, kde-format
 msgid "Display journals in the month view"
-msgstr ""
+msgstr "הצגת יומנים בתצוגת החודש"
 
 #. i18n: ectx: label, entry, group (Month View)
 #: eventviews.kcfg:308 viewerapp/settings.kcfg:147
 #, kde-format
 msgid "Month view uses full window"
-msgstr ""
+msgstr "תצוגת החודש משתמשת בחלון מלא"
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
 #: eventviews.kcfg:309 viewerapp/settings.kcfg:148
@@ -933,6 +961,9 @@ msgid ""
 "but other widgets, such as the date navigator, the item details and the "
 "calendars list, will not be displayed."
 msgstr ""
+"יש לסמן את התיבה הזאת כדי להשתמש בחלון המלא של KOrganizer להצגת תצוגת החודש. "
+"אם התיבה הזאת מסומנת, יתפנה לך מקום לתצוגת החודש, אך וידג׳טים אחרים כגון "
+"תאריכון, פרטי הפריט ורשימת לוחות השנה, לא יוצגו."
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
 #: eventviews.kcfg:318 viewerapp/settings.kcfg:157
@@ -1648,127 +1679,127 @@ msgstr ""
 #, kde-format
 msgctxt "@action:inmenu show the to-do"
 msgid "&Show"
-msgstr ""
+msgstr "ה&צגה"
 
 #: todo/todoview.cpp:367
 #, kde-format
 msgctxt "@action:inmenu edit the to-do"
 msgid "&Edit…"
-msgstr ""
+msgstr "&עריכה…"
 
 #: todo/todoview.cpp:374
 #, kde-format
 msgctxt "@action:inmenu delete the to-do"
 msgid "&Delete"
-msgstr ""
+msgstr "מ&חיקה"
 
 #: todo/todoview.cpp:383
 #, kde-format
 msgctxt "@action:inmenu print the to-do"
 msgid "&Print…"
-msgstr ""
+msgstr "ה&דפסה…"
 
 #: todo/todoview.cpp:388
 #, kde-format
 msgctxt "@action:inmenu print preview the to-do"
 msgid "Print Previe&w…"
-msgstr ""
+msgstr "תצוגה מ&קדימה להדפסה…"
 
 #: todo/todoview.cpp:395
 #, kde-format
 msgctxt "@action:inmenu create a new to-do"
 msgid "New &To-do…"
-msgstr ""
+msgstr "מ&טלה חדשה…"
 
 #: todo/todoview.cpp:399
 #, kde-format
 msgctxt "@action:inmenu create a new sub-to-do"
 msgid "New Su&b-to-do…"
-msgstr ""
+msgstr "מטלת מ&שנה חדשה…"
 
 #: todo/todoview.cpp:403
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Make this To-do Independent"
-msgstr ""
+msgstr "הסבת מטלת משנה ל&עצמאית"
 
 #: todo/todoview.cpp:405
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Make all Sub-to-dos &Independent"
-msgstr ""
+msgstr "הסבת כל משימות המשנה לע&צמאיות"
 
 #: todo/todoview.cpp:416
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Create Event from To-do"
-msgstr ""
+msgstr "יצירת אירוע ממטלה"
 
 #: todo/todoview.cpp:424
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Create Note for To-do"
-msgstr ""
+msgstr "יצירת הערה למטלה"
 
 #: todo/todoview.cpp:434
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Copy To"
-msgstr ""
+msgstr "הע&תקה אל"
 
 #: todo/todoview.cpp:441
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Move To"
-msgstr ""
+msgstr "הע&ברה אל"
 
 #: todo/todoview.cpp:452
 #, kde-format
 msgctxt "@action:inmenu delete completed to-dos"
 msgid "Pur&ge Completed"
-msgstr ""
+msgstr "ה&ניפוי הושלם"
 
 #: todo/todoview.cpp:455
 #, kde-format
 msgctxt "@action:inmenu unspecified priority"
 msgid "unspecified"
-msgstr ""
+msgstr "לא צוין"
 
 #: todo/todoview.cpp:457
 #, kde-format
 msgctxt "@action:inmenu priority value=2"
 msgid "2"
-msgstr ""
+msgstr "2"
 
 #: todo/todoview.cpp:458
 #, kde-format
 msgctxt "@action:inmenu priority value=3"
 msgid "3"
-msgstr ""
+msgstr "3"
 
 #: todo/todoview.cpp:459
 #, kde-format
 msgctxt "@action:inmenu priority value=4"
 msgid "4"
-msgstr ""
+msgstr "4"
 
 #: todo/todoview.cpp:461
 #, kde-format
 msgctxt "@action:inmenu priority value=6"
 msgid "6"
-msgstr ""
+msgstr "6"
 
 #: todo/todoview.cpp:462
 #, kde-format
 msgctxt "@action:inmenu priority value=7"
 msgid "7"
-msgstr ""
+msgstr "7"
 
 #: todo/todoview.cpp:463
 #, kde-format
 msgctxt "@action:inmenu priority value=8"
 msgid "8"
-msgstr ""
+msgstr "8"
 
 #: todo/todoviewquickaddline.cpp:17
 #, kde-format
@@ -1832,43 +1863,43 @@ msgstr ""
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Select Priority"
-msgstr ""
+msgstr "בחירת עדיפות"
 
 #: todo/todoviewquicksearch.cpp:96
 #, kde-format
 msgctxt "@action:inmenu priority is unspecified"
 msgid "unspecified"
-msgstr ""
+msgstr "לא צוין"
 
 #: todo/todoviewquicksearch.cpp:97
 #, kde-format
 msgctxt "@action:inmenu highest priority"
 msgid "%1 (highest)"
-msgstr ""
+msgstr "%1 (הכי גבוהה)"
 
 #: todo/todoviewquicksearch.cpp:100
 #, kde-format
 msgctxt "@action:inmenu medium priority"
 msgid "%1 (medium)"
-msgstr ""
+msgstr "%1 (בינונית)"
 
 #: todo/todoviewquicksearch.cpp:102
 #, kde-format
 msgctxt "@action:inmenu lowest priority"
 msgid "%1 (lowest)"
-msgstr ""
+msgstr "%1 (הכי נמוכה)"
 
 #: todo/todoviewquicksearch.cpp:104
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "%1"
-msgstr ""
+msgstr "%1"
 
 #: todo/todoviewsortfilterproxymodel.cpp:157
 #, kde-format
 msgctxt "priority is unspecified"
 msgid "unspecified"
-msgstr ""
+msgstr "לא צוין"
 
 #: todo/todoviewsortfilterproxymodel.cpp:158
 #: todo/todoviewsortfilterproxymodel.cpp:160
@@ -1876,30 +1907,30 @@ msgstr ""
 #: todo/todoviewsortfilterproxymodel.cpp:164
 #, kde-format
 msgid "%1"
-msgstr ""
+msgstr "%1"
 
 #: todo/todoviewsortfilterproxymodel.cpp:159
 #, kde-format
 msgctxt "highest priority"
 msgid "%1 (highest)"
-msgstr ""
+msgstr "%1 (הכי גבוהה)"
 
 #: todo/todoviewsortfilterproxymodel.cpp:161
 #, kde-format
 msgctxt "medium priority"
 msgid "%1 (medium)"
-msgstr ""
+msgstr "%1 (בינונית)"
 
 #: todo/todoviewsortfilterproxymodel.cpp:163
 #, kde-format
 msgctxt "lowest priority"
 msgid "%1 (lowest)"
-msgstr ""
+msgstr "%1 (הכי נמוכה)"
 
 #: todo/todoviewview.cpp:48
 #, kde-format
 msgid "View Columns"
-msgstr ""
+msgstr "הצגת עמודות"
 
 #: viewerapp/main.cpp:19
 #, kde-format
@@ -1934,25 +1965,25 @@ msgstr ""
 #: viewerapp/mainwindow.ui:14
 #, kde-format
 msgid "CalendarViews Viewer"
-msgstr ""
+msgstr "מציג תצוגות לוח שנה (CalendarViews)"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab)
 #: viewerapp/mainwindow.ui:55
 #, kde-format
 msgid "Tab 1"
-msgstr ""
+msgstr "לשונית 1"
 
 #. i18n: ectx: property (title), widget (QMenu, addViewMenu)
 #: viewerapp/mainwindow.ui:74
 #, kde-format
 msgid "Add View"
-msgstr ""
+msgstr "הוספת תצוגה"
 
 #. i18n: ectx: property (text), widget (QStatusBar, statusbar)
 #: viewerapp/mainwindow.ui:86
 #, kde-format
 msgid "Agenda"
-msgstr ""
+msgstr "סדר יום"
 
 #. i18n: ectx: property (text), widget (QStatusBar, statusbar)
 #: viewerapp/mainwindow.ui:91
@@ -1964,19 +1995,19 @@ msgstr ""
 #: viewerapp/mainwindow.ui:96
 #, kde-format
 msgid "Month"
-msgstr ""
+msgstr "חודש"
 
 #. i18n: ectx: property (text), widget (QStatusBar, statusbar)
 #: viewerapp/mainwindow.ui:101
 #, kde-format
 msgid "Timeline"
-msgstr ""
+msgstr "ציר זמן"
 
 #. i18n: ectx: label, entry, group (Colors)
 #: viewerapp/settings.kcfg:241
 #, kde-format
 msgid "\"No category\" color (for \"Only category\" drawing schemes)"
-msgstr ""
+msgstr "צבע „ללא קטגוריה” (לסכמות ציור „קטגוריה בלבד”)"
 
 #. i18n: ectx: whatsthis, entry, group (Colors)
 #: viewerapp/settings.kcfg:242
@@ -1992,13 +2023,13 @@ msgstr ""
 #: viewerapp/settings.kcfg:243
 #, kde-format
 msgid "Use this color when drawing items without a category"
-msgstr ""
+msgstr "להשתמש בצבע הזה בעת ציור פריטים בלי קטגוריה"
 
 #. i18n: ectx: label, entry, group (Group Scheduling)
 #: viewerapp/settings.kcfg:274
 #, kde-format
 msgid "Use Groupware communication"
-msgstr ""
+msgstr "להשתמש בתקשורת Groupware"
 
 #. i18n: ectx: whatsthis, entry, group (Group Scheduling)
 #: viewerapp/settings.kcfg:275
@@ -2009,11 +2040,14 @@ msgid ""
 "should check this box if you want to use the groupware functionality (e.g. "
 "Configuring Kontact as a KDE Kolab client)."
 msgstr ""
+"יש לסמן את התיבה הזאת כדי להפעיל יצירת הודעות אוטומטית בעת יצירת, עדכון או "
+"מחיקת אירועים (או מטלות) בהם מעורבים משתתפים נוספים. יש לסמן את התיבה הזאת "
+"כדי להשתמש ביכולות groupware (כלומר הגדרת Kontact כלקוח KDE Kolab)."
 
 #: whatsnext/whatsnextview.cpp:63
 #, kde-format
 msgid "To-dos:"
-msgstr ""
+msgstr "מטלות:"
 
 #: whatsnext/whatsnextview.cpp:79
 #, kde-format
@@ -2025,7 +2059,7 @@ msgstr "מה בהמשך?"
 #, kde-format
 msgctxt "date from - to"
 msgid "%1 - %2"
-msgstr ""
+msgstr "%1 - %2"
 
 #: whatsnext/whatsnextview.cpp:102
 #, kde-format
@@ -2035,16 +2069,16 @@ msgstr "אירועים:"
 #: whatsnext/whatsnextview.cpp:191 whatsnext/whatsnextview.cpp:215
 #, kde-format
 msgid "Events and to-dos that need a reply:"
-msgstr ""
+msgstr "אירועים ומטלות שדורשים תגובה:"
 
 #: whatsnext/whatsnextview.cpp:281
 #, kde-format
 msgctxt "date, from - to"
 msgid "%1, %2 - %3"
-msgstr ""
+msgstr "%1, %2 - %3"
 
 #: whatsnext/whatsnextview.cpp:310
 #, kde-format
 msgctxt "to-do due date"
 msgid "  (Due: %1)"
-msgstr ""
+msgstr "  (יעד: %1)"
