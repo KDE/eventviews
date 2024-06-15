@@ -568,7 +568,7 @@ void MultiAgendaViewPrivate::addView(KCheckableProxyModel *sm, const QString &ti
 {
     auto *view = createView(title);
     // During launch the underlying ETM doesn't have the entire Collection tree populated,
-    // so the "sm" contains an icomplete selection - we must listen for changes and upated
+    // so the "sm" contains an incomplete selection - we must listen for changes and update
     // the view later on
     QObject::connect(sm->selectionModel(),
                      &QItemSelectionModel::selectionChanged,
