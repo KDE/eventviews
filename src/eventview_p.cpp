@@ -51,7 +51,8 @@ void EventViewPrivate::finishTypeAhead()
 
 void EventViewPrivate::setUpModels()
 {
-    q->collectionSelection()->disconnect(q);
+    if (auto cs = q->collectionSelection())
+        cs->disconnect(q);
 
     customCollectionSelection.reset();
     if (collectionSelectionModel) {
