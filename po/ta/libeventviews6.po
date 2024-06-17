@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-07 00:39+0000\n"
-"PO-Revision-Date: 2024-05-12 15:06+0530\n"
+"PO-Revision-Date: 2024-06-16 20:00+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.05.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -33,8 +33,7 @@ msgid "Unable to lock item for modification. You cannot make any changes."
 msgstr "மாற்றுமாறு உருப்படியை பூட்ட முடியவில்லை. உங்களால் எதையும் மாற்ற முடியாது."
 
 #: agenda/agenda.cpp:968
-#, fuzzy, kde-format
-#| msgid "Locking Failed"
+#, kde-format
 msgctxt "@title:window"
 msgid "Locking Failed"
 msgstr "பூட்டல் தோல்வியடைந்த‍து"
@@ -51,8 +50,7 @@ msgid ""
 msgstr "விதிவிலக்கை நாள்காட்டியில் சேர்க்க முடியவில்லை. எம்மாற்றமும் மேற்கொள்ளப்படாது."
 
 #: agenda/agenda.cpp:1207 month/monthitem.cpp:447
-#, fuzzy, kde-format
-#| msgid "Error Occurred"
+#, kde-format
 msgctxt "@title:window"
 msgid "Error Occurred"
 msgstr "சிக்கல் ஏற்பட்டது"
@@ -70,8 +68,7 @@ msgid "Attendee \"%1\" added to the calendar item \"%2\""
 msgstr "\"%2\" என்ற நாள்காட்டிப்பதிவிற்கு \"%1\" பங்கேற்பவராக சேர்க்கப்பட்டார்"
 
 #: agenda/agendaitem.cpp:632
-#, fuzzy, kde-format
-#| msgid "Attendee added"
+#, kde-format
 msgctxt "@title:window"
 msgid "Attendee added"
 msgstr "பங்கேற்பவர் சேர்க்கப்பட்டார்"
@@ -199,7 +196,7 @@ msgstr ""
 #: eventviews.kcfg:15
 #, kde-format
 msgid "Default Email Attachment Method"
-msgstr ""
+msgstr "இயல்பிருப்பு அஞ்சல் இணைப்பு முறை"
 
 #. i18n: ectx: whatsthis, entry (DefaultEmailAttachMethod), group (Personal Settings)
 #: eventviews.kcfg:16
@@ -212,27 +209,27 @@ msgstr ""
 #: eventviews.kcfg:19 eventviews.kcfg:469
 #, kde-format
 msgid "Always ask"
-msgstr ""
+msgstr "எப்போதும் கேள்"
 
 #. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (Personal Settings)
 #. i18n: ectx: label, entry (DefaultTodoAttachMethod), group (Hidden Options)
 #: eventviews.kcfg:22 eventviews.kcfg:472
 #, kde-format
 msgid "Only attach link to message"
-msgstr ""
+msgstr "அஞ்சலுக்கான இணைப்பை மட்டும் சேர்"
 
 #. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (Personal Settings)
 #. i18n: ectx: label, entry (DefaultTodoAttachMethod), group (Hidden Options)
 #: eventviews.kcfg:25 eventviews.kcfg:475
 #, kde-format
 msgid "Attach complete message"
-msgstr ""
+msgstr "முழு அஞ்சலை சேர்"
 
 #. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (Personal Settings)
 #: eventviews.kcfg:28
 #, kde-format
 msgid "Attach message without attachments"
-msgstr ""
+msgstr "உடனிணைப்புகள் இல்லாமல் அஞ்சலை சேர்"
 
 #. i18n: ectx: label, entry, group (Save Settings)
 #: eventviews.kcfg:38

@@ -1,22 +1,22 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Stefan Asserhäll <stefan.asserhall@gmail.com>, 2010.
+# SPDX-FileCopyrightText: 2010, 2024 Stefan Asserhäll <stefan.asserhall@gmail.com>
 # Stefan Asserhall <stefan.asserhall@gmail.com>, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-07 00:39+0000\n"
-"PO-Revision-Date: 2021-09-30 18:23+0200\n"
-"Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
+"PO-Revision-Date: 2024-06-16 22:38+0200\n"
+"Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.08.1\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -34,8 +34,7 @@ msgid "Unable to lock item for modification. You cannot make any changes."
 msgstr "Kan inte låsa objekt för ändring. Du kan inte göra några ändringar."
 
 #: agenda/agenda.cpp:968
-#, fuzzy, kde-format
-#| msgid "Locking Failed"
+#, kde-format
 msgctxt "@title:window"
 msgid "Locking Failed"
 msgstr "Låsning misslyckades"
@@ -54,8 +53,7 @@ msgstr ""
 "göras."
 
 #: agenda/agenda.cpp:1207 month/monthitem.cpp:447
-#, fuzzy, kde-format
-#| msgid "Error Occurred"
+#, kde-format
 msgctxt "@title:window"
 msgid "Error Occurred"
 msgstr "Fel inträffade"
@@ -73,8 +71,7 @@ msgid "Attendee \"%1\" added to the calendar item \"%2\""
 msgstr "Deltagare \"%1\" tillagd i kalenderobjektet \"%2\""
 
 #: agenda/agendaitem.cpp:632
-#, fuzzy, kde-format
-#| msgid "Attendee added"
+#, kde-format
 msgctxt "@title:window"
 msgid "Attendee added"
 msgstr "Deltagare tillagda"
@@ -106,10 +103,9 @@ msgid "Unable to save %1 \"%2\"."
 msgstr "Kan inte spara %1 \"%2\"."
 
 #: agenda/timelabels.cpp:331
-#, fuzzy, kde-format
-#| msgid "&Add Timezones..."
+#, kde-format
 msgid "&Add Timezones…"
-msgstr "&Lägg till tidszoner..."
+msgstr "&Lägg till tidszoner…"
 
 #: agenda/timelabels.cpp:332
 #, kde-format
@@ -1504,8 +1500,7 @@ msgid "&Edit"
 msgstr "&Redigera"
 
 #: journal/journalframe.cpp:156
-#, fuzzy, kde-format
-#| msgid "Edit this journal entry"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Edit this journal entry"
 msgstr "Redigera den här journalanteckningen"
@@ -1521,8 +1516,7 @@ msgid "&Delete"
 msgstr "&Ta bort"
 
 #: journal/journalframe.cpp:166
-#, fuzzy, kde-format
-#| msgid "Delete this journal entry"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete this journal entry"
 msgstr "Ta bort den här journalanteckningen"
@@ -1538,8 +1532,7 @@ msgid "&Print"
 msgstr "Skriv &ut"
 
 #: journal/journalframe.cpp:176
-#, fuzzy, kde-format
-#| msgid "Print this journal entry"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Print this journal entry"
 msgstr "Skriv ut den här journalanteckningen"
@@ -1555,8 +1548,7 @@ msgid "Print preview"
 msgstr "Förhandsgranska utskrift"
 
 #: journal/journalframe.cpp:186
-#, fuzzy, kde-format
-#| msgid "Print preview this journal entry"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Print preview this journal entry"
 msgstr "Förhandsgranska utskrift av den här journalanteckningen"
@@ -1702,8 +1694,7 @@ msgid "Agenda %1"
 msgstr "Agenda %1"
 
 #: multiagenda/multiagendaview.cpp:179
-#, fuzzy, kde-format
-#| msgid "All Day"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "All Day"
 msgstr "Hela dagen"
@@ -1779,8 +1770,7 @@ msgid "Cannot move to-do to itself or a child of itself."
 msgstr "Kan inte flytta uppgift till sig själv eller sin eget deluppgift."
 
 #: todo/todoview.cpp:235
-#, fuzzy, kde-format
-#| msgid "Drop To-do"
+#, kde-format
 msgctxt "@title:window"
 msgid "Drop To-do"
 msgstr "Släpp uppgift"
@@ -1823,11 +1813,10 @@ msgid "&Show"
 msgstr "&Visa"
 
 #: todo/todoview.cpp:367
-#, fuzzy, kde-format
-#| msgid "&Edit"
+#, kde-format
 msgctxt "@action:inmenu edit the to-do"
 msgid "&Edit…"
-msgstr "&Redigera"
+msgstr "&Redigera…"
 
 #: todo/todoview.cpp:374
 #, kde-format
@@ -1836,35 +1825,28 @@ msgid "&Delete"
 msgstr "&Ta bort"
 
 #: todo/todoview.cpp:383
-#, fuzzy, kde-format
-#| msgid "&Print"
+#, kde-format
 msgctxt "@action:inmenu print the to-do"
 msgid "&Print…"
-msgstr "Skriv &ut"
+msgstr "Skriv &ut…"
 
 #: todo/todoview.cpp:388
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu print preview the to-do"
-#| msgid "Print Previe&w..."
+#, kde-format
 msgctxt "@action:inmenu print preview the to-do"
 msgid "Print Previe&w…"
-msgstr "&Förhandsgranska utskrift..."
+msgstr "&Förhandsgranska utskrift…"
 
 #: todo/todoview.cpp:395
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu create a new to-do"
-#| msgid "New &To-do..."
+#, kde-format
 msgctxt "@action:inmenu create a new to-do"
 msgid "New &To-do…"
-msgstr "Ny &uppgift..."
+msgstr "Ny &uppgift…"
 
 #: todo/todoview.cpp:399
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu create a new sub-to-do"
-#| msgid "New Su&b-to-do..."
+#, kde-format
 msgctxt "@action:inmenu create a new sub-to-do"
 msgid "New Su&b-to-do…"
-msgstr "Ny &deluppgift..."
+msgstr "Ny &deluppgift…"
 
 #: todo/todoview.cpp:403
 #, kde-format
@@ -1971,12 +1953,10 @@ msgstr ""
 "sammanfattningar."
 
 #: todo/todoviewquicksearch.cpp:39
-#, fuzzy, kde-format
-#| msgctxt "@label in QuickSearchLine"
-#| msgid "Search Summaries..."
+#, kde-format
 msgctxt "@label in QuickSearchLine"
 msgid "Search Summaries…"
-msgstr "Sök sammanfattningar..."
+msgstr "Sök sammanfattningar…"
 
 #: todo/todoviewquicksearch.cpp:46
 #, kde-format
@@ -2109,15 +2089,13 @@ msgstr ""
 "info@kdab.net"
 
 #: viewerapp/main.cpp:24
-#, fuzzy, kde-format
-#| msgid "Kevin Krammer"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Kevin Krammer"
 msgstr "Kevin Krammer"
 
 #: viewerapp/main.cpp:33
-#, fuzzy, kde-format
-#| msgid "Optional list of view names to instantiate"
+#, kde-format
 msgctxt "@info:shell"
 msgid "Optional list of view names to instantiate"
 msgstr "Valfri lista med visade namn att instantiera"
