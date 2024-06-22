@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-21 00:39+0000\n"
-"PO-Revision-Date: 2024-06-07 20:00+0200\n"
+"PO-Revision-Date: 2024-06-21 12:55+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.0\n"
+"X-Generator: Lokalize 24.05.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -473,23 +473,19 @@ msgstr ""
 
 #. i18n: ectx: label, entry, group (General View)
 #: eventviews.kcfg:128
-#, fuzzy, kde-format
-#| msgid "To-dos use category colors"
+#, kde-format
 msgid "To-dos use tag colors"
-msgstr "Colores para categorías de tareas pendientes"
+msgstr "Colores para etiquetas de tareas pendientes"
 
 #. i18n: ectx: whatsthis, entry, group (General View)
 #: eventviews.kcfg:129
-#, fuzzy, kde-format
-#| msgid ""
-#| "Check this box so that to-dos will use category colors and not colors "
-#| "specific to their due, due today or overdue state"
+#, kde-format
 msgid ""
 "Check this box so that to-dos will use tag colors and not colors specific to "
 "their due, due today or overdue state"
 msgstr ""
-"Marque esta casilla para que las tareas pendientes utilicen colores de "
-"categorías y no los colores específicos a su estado de aún no vencidas, "
+"Marque esta casilla para que las tareas pendientes usen los colores de las "
+"etiquetas y no los colores específicos de su estado de aún no vencidas, "
 "vencen hoy o ya vencidas"
 
 #. i18n: ectx: label, entry, group (General View)
@@ -757,118 +753,92 @@ msgstr "Uso del color"
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
 #: eventviews.kcfg:221 eventviews.kcfg:317
-#, fuzzy, kde-format
-#| msgid "Category inside, calendar outside"
+#, kde-format
 msgid "Tag inside, calendar outside"
-msgstr "Categoría adentro, calendario afuera"
+msgstr "Etiqueta dentro, calendario fuera"
 
 #. i18n: ectx: whatsthis, entry, group (Agenda View)
 #: eventviews.kcfg:222
-#, fuzzy, kde-format
-#| msgid ""
-#| "Select the \"Category inside, calendar outside\" option if you would like "
-#| "to draw calendar items in their associated category color, with the "
-#| "item's border drawn in the color of its calendar. Please use the Colors "
-#| "and Fonts configuration page for setting these colors."
+#, kde-format
 msgid ""
 "Select the \"Tag inside, calendar outside\" option if you would like to draw "
 "calendar items in their associated tag color, with the item's border drawn "
 "in the color of its calendar. Please use the Colors and Fonts configuration "
 "page for setting these colors."
 msgstr ""
-"Seleccione la opción «Categoría dentro, calendario fuera» si le gustaría "
-"pintar elementos de calendario en el color asociado a su categoría, con el "
-"borde de elemento pintado en el color de su calendario. Utilice la página de "
+"Seleccione la opción «Etiqueta dentro, calendario fuera» si le gustaría "
+"pintar elementos de calendario en el color asociado a su etiqueta, con el "
+"borde de elemento pintado en el color de su calendario. Use la página de "
 "configuración de colores y tipos de letra para configurar estos colores."
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
 #: eventviews.kcfg:223
-#, fuzzy, kde-format
-#| msgid ""
-#| "Draw agenda items in their category color inside and calendar color for "
-#| "their border"
+#, kde-format
 msgid ""
 "Draw agenda items in their tag color inside and calendar color for their "
 "border"
 msgstr ""
-"Pintar elementos de la agenda usando el color de su categoría en el interior "
+"Pintar elementos de la agenda usando el color de su etiqueta en el interior "
 "y el color del calendario en el borde"
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
 #: eventviews.kcfg:226 eventviews.kcfg:322
-#, fuzzy, kde-format
-#| msgid "Calendar inside, category outside"
+#, kde-format
 msgid "Calendar inside, tag outside"
-msgstr "Calendario adentro, categoría afuera"
+msgstr "Calendario dentro, etiqueta fuera"
 
 #. i18n: ectx: whatsthis, entry, group (Agenda View)
 #: eventviews.kcfg:227
-#, fuzzy, kde-format
-#| msgid ""
-#| "Select the \"Calendar inside, category outside\" option if you would like "
-#| "to draw calendar items in their associated calendar color, with the "
-#| "item's border drawn in the color of its category. Please use the Colors "
-#| "and Fonts configuration page for setting these colors."
+#, kde-format
 msgid ""
 "Select the \"Calendar inside, tag outside\" option if you would like to draw "
 "calendar items in their associated calendar color, with the item's border "
 "drawn in the color of its tag. Please use the Colors and Fonts configuration "
 "page for setting these colors."
 msgstr ""
-"Seleccione la opción «Calendario dentro, categoría fuera» si le gustaría "
+"Seleccione la opción «Calendario dentro, etiqueta fuera» si le gustaría "
 "pintar elementos de calendario en el color asociado a su calendario, con el "
-"borde de elemento pintado en el color de su categoría. Utilice la página de "
+"borde de elemento pintado en el color de su etiqueta. Use la página de "
 "configuración de colores y tipos de letra para configurar estos colores."
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
 #: eventviews.kcfg:228
-#, fuzzy, kde-format
-#| msgid ""
-#| "Draw agenda items in their calendar color inside and category color for "
-#| "their border"
+#, kde-format
 msgid ""
 "Draw agenda items in their calendar color inside and tag color for their "
 "border"
 msgstr ""
 "Pintar elementos de la agenda usando el color de su calendario en el "
-"interior y el color de su categoría en el borde"
+"interior y el color de su etiqueta en el borde"
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
 #: eventviews.kcfg:231 eventviews.kcfg:327
-#, fuzzy, kde-format
-#| msgid "Only category"
+#, kde-format
 msgid "Only tag"
-msgstr "Solo categoría"
+msgstr "Solo etiqueta"
 
 #. i18n: ectx: whatsthis, entry, group (Agenda View)
 #: eventviews.kcfg:232
-#, fuzzy, kde-format
-#| msgid ""
-#| "Select the \"Only category\" option if you would like to draw calendar "
-#| "items (both inside and border) in the color of their associated category. "
-#| "Please use the Colors and Fonts configuration page for setting these "
-#| "colors."
+#, kde-format
 msgid ""
 "Select the \"Only tag\" option if you would like to draw calendar items "
 "(both inside and border) in the color of their associated tag. Please use "
 "the Colors and Fonts configuration page for setting these colors."
 msgstr ""
-"Seleccione la opción «Solo categoría» si desea dibujar los elementos del "
-"calendario (tanto su interior como su borde) con el color de su categoría "
+"Seleccione la opción «Solo etiqueta» si desea dibujar los elementos del "
+"calendario (tanto su interior como su borde) con el color de su etiqueta "
 "asociada. Use la página de configuración de colores y tipos de letra para "
 "definir estos colores."
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
 #: eventviews.kcfg:233
-#, fuzzy, kde-format
-#| msgid ""
-#| "Draw agenda items using their category color for the inside and border"
+#, kde-format
 msgid "Draw agenda items using their tag color for the inside and border"
 msgstr ""
-"Dibujar elementos de la agenda usando el color de su categoría en el "
-"interior y en el borde"
+"Dibujar elementos de la agenda usando el color de su etiqueta en el interior "
+"y en el borde"
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
@@ -1104,94 +1074,71 @@ msgstr ""
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
 #: eventviews.kcfg:318
-#, fuzzy, kde-format
-#| msgid ""
-#| "Select the \"Category inside, calendar outside\" option if you would like "
-#| "to draw calendar items in their associated category color, with the "
-#| "item's border drawn in the color of its calendar.  Please use the Colors "
-#| "and Fonts configuration page for setting these colors."
+#, kde-format
 msgid ""
 "Select the \"Tag inside, calendar outside\" option if you would like to draw "
 "calendar items in their associated tag color, with the item's border drawn "
 "in the color of its calendar.  Please use the Colors and Fonts configuration "
 "page for setting these colors."
 msgstr ""
-"Seleccione la opción «Categoría dentro, calendario fuera» si le gustaría "
-"pintar elementos de calendario en el color asociado a su categoría, con el "
+"Seleccione la opción «Etiqueta dentro, calendario fuera» si le gustaría "
+"pintar elementos de calendario en el color asociado a su etiqueta, con el "
 "borde de elemento pintado en el color de su calendario. Use la página de "
 "configuración de colores y tipos de letra para configurar estos colores."
 
 #. i18n: ectx: tooltip, entry, group (Month View)
 #: eventviews.kcfg:319
-#, fuzzy, kde-format
-#| msgid ""
-#| "Draw month items in their category color inside and calendar color for "
-#| "their border"
+#, kde-format
 msgid ""
 "Draw month items in their tag color inside and calendar color for their "
 "border"
 msgstr ""
-"Pintar elementos de mensuales usando el color de su categoría en el interior "
+"Pintar elementos de mensuales usando el color de su etiqueta en el interior "
 "y el color del calendario en el borde"
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
 #: eventviews.kcfg:323
-#, fuzzy, kde-format
-#| msgid ""
-#| "Select the \"Calendar inside, category outside\" option if you would like "
-#| "to draw calendar items in their associated calendar color, with the "
-#| "item's border drawn in the color of its category.  Please use the Colors "
-#| "and Fonts configuration page for setting these colors."
+#, kde-format
 msgid ""
 "Select the \"Calendar inside, tag outside\" option if you would like to draw "
 "calendar items in their associated calendar color, with the item's border "
 "drawn in the color of its tag.  Please use the Colors and Fonts "
 "configuration page for setting these colors."
 msgstr ""
-"Seleccione la opción «Calendario dentro, categoría fuera» si le gustaría "
-"pintar elementos de calendario en el color asociado a su calendario, con el "
-"borde de elemento pintado en el color de su categoría. Use la página de "
+"Seleccione la opción «Calendario dentro, etiqueta fuera» si le gustaría "
+"dibujar elementos de calendario con el color asociado a su calendario, con "
+"el borde de elemento pintado con el color de su etiqueta. Use la página de "
 "configuración de colores y tipos de letra para configurar estos colores."
 
 #. i18n: ectx: tooltip, entry, group (Month View)
 #: eventviews.kcfg:324
-#, fuzzy, kde-format
-#| msgid ""
-#| "Draw month items in their calendar color inside and category color for "
-#| "their border"
+#, kde-format
 msgid ""
 "Draw month items in their calendar color inside and tag color for their "
 "border"
 msgstr ""
-"Pintar elementos mensuales usando el color de su calendario en el interior y "
-"el color de su categoría en el borde"
+"Dibujar elementos mensuales usando el color de su calendario en el interior "
+"y el color de su etiqueta en el borde"
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
 #: eventviews.kcfg:328
-#, fuzzy, kde-format
-#| msgid ""
-#| "Select the \"Only category\" option if you would like to draw calendar "
-#| "items (both inside and border) in the color of their associated "
-#| "category.  Please use the Colors and Fonts configuration page for setting "
-#| "these colors."
+#, kde-format
 msgid ""
 "Select the \"Only tag\" option if you would like to draw calendar items "
 "(both inside and border) in the color of their associated tag.  Please use "
 "the Colors and Fonts configuration page for setting these colors."
 msgstr ""
-"Seleccione la opción «Solo categoría» si desea dibujar los elementos del "
-"calendario (tanto su interior como su borde) con el color de su categoría "
+"Seleccione la opción «Solo etiqueta» si desea dibujar los elementos del "
+"calendario (tanto su interior como su borde) con el color de su etiqueta "
 "asociada. Use la página de configuración de colores y tipos de letra para "
 "definir estos colores."
 
 #. i18n: ectx: tooltip, entry, group (Month View)
 #: eventviews.kcfg:329
-#, fuzzy, kde-format
-#| msgid ""
-#| "Draw month items using their category color for the inside and border"
+#, kde-format
 msgid "Draw month items using their tag color for the inside and border"
 msgstr ""
-"Dibujar elementos mensuales usando el color de su categoría para el interior "
+"Dibujar elementos mensuales usando el color de su etiqueta para el interior "
 "y el borde"
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
@@ -1581,20 +1528,16 @@ msgstr "Color predeterminado del evento"
 
 #. i18n: ectx: whatsthis, entry, group (Theme/Month view)
 #: eventviews.kcfg:652
-#, fuzzy, kde-format
-#| msgid ""
-#| "Select the default event color here. The default event color will be used "
-#| "for events categories in your Month. Note that you can specify a separate "
-#| "color for each event category below."
+#, kde-format
 msgid ""
 "Select the default event color here. The default event color will be used "
 "for events categories in your Month. Note that you can specify a separate "
 "color for each event tag below."
 msgstr ""
-"Seleccione el color predeterminado para eventos aquí. El color "
-"predeterminado de eventos será utilizado para categorías de eventos en su "
-"Mes. Tenga en cuenta que puede especificar un color separado para cada "
-"categoría de eventos debajo."
+"Seleccione aquí el color predeterminado para eventos. El color "
+"predeterminado de eventos se usará en las categorías de eventos del Mes. "
+"Tenga en cuenta que puede especificar un color distinto para cada etiqueta "
+"de eventos."
 
 #. i18n: ectx: label, entry, group (Theme/Month view)
 #: eventviews.kcfg:717
@@ -2263,7 +2206,7 @@ msgstr "Cronología"
 #: viewerapp/settings.kcfg:71 viewerapp/settings.kcfg:156
 #, kde-format
 msgid "Category inside, calendar outside"
-msgstr "Categoría adentro, calendario afuera"
+msgstr "Categoría dentro, calendario fuera"
 
 #. i18n: ectx: whatsthis, entry, group (Agenda View)
 #: viewerapp/settings.kcfg:72
@@ -2276,7 +2219,7 @@ msgid ""
 msgstr ""
 "Seleccione la opción «Categoría dentro, calendario fuera» si le gustaría "
 "pintar elementos de calendario en el color asociado a su categoría, con el "
-"borde de elemento pintado en el color de su calendario. Utilice la página de "
+"borde de elemento pintado en el color de su calendario. Use la página de "
 "configuración de colores y tipos de letra para configurar estos colores."
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
@@ -2294,7 +2237,7 @@ msgstr ""
 #: viewerapp/settings.kcfg:76 viewerapp/settings.kcfg:161
 #, kde-format
 msgid "Calendar inside, category outside"
-msgstr "Calendario adentro, categoría afuera"
+msgstr "Calendario dentro, categoría fuera"
 
 #. i18n: ectx: whatsthis, entry, group (Agenda View)
 #: viewerapp/settings.kcfg:77
@@ -2307,7 +2250,7 @@ msgid ""
 msgstr ""
 "Seleccione la opción «Calendario dentro, categoría fuera» si le gustaría "
 "pintar elementos de calendario en el color asociado a su calendario, con el "
-"borde de elemento pintado en el color de su categoría. Utilice la página de "
+"borde de elemento pintado en el color de su categoría. Use la página de "
 "configuración de colores y tipos de letra para configurar estos colores."
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
