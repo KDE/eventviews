@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kdepim-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-09 00:38+0000\n"
-"PO-Revision-Date: 2024-05-16 13:55+0300\n"
+"PO-Revision-Date: 2024-06-22 01:08+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -500,7 +500,7 @@ msgid ""
 "the \"View\" menu."
 msgstr ""
 "Sonraki gün görüntüsünde gösterilecek “x” gün sayısını seçin. Sonraki “x” "
-"günlük görünüme erişmek için, ‘Görünüm’ menüsünden ‘Sonraki X Gün’ menü "
+"günlük görünüme erişmek için, “Görünüm” menüsünden “Sonraki X Gün” menü "
 "ögesini seçin."
 
 #. i18n: ectx: tooltip, entry, group (General View)
@@ -750,8 +750,8 @@ msgid ""
 "configuration page for setting these colors."
 msgstr ""
 "Takvim ögelerini ayarlanmış kategori renklerinde çizdirmek ve ögenin "
-"sınırını takvimin renginde görüntülemek istiyorsanız ‘Kategori içeride, "
-"takvim dışarıda’ seçeneğini seçin. Bu renkleri ayarlamak için lütfen Renkler "
+"sınırını takvimin renginde görüntülemek istiyorsanız “Kategori içeride, "
+"takvim dışarıda” seçeneğini seçin. Bu renkleri ayarlamak için lütfen Renkler "
 "ve Yazıtipleri ayar sayfasını kullanın."
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
@@ -782,8 +782,8 @@ msgid ""
 "configuration page for setting these colors."
 msgstr ""
 "Takvim ögelerini, ilgili takvim renklerini kullanarak ve ögenin kenarlığı "
-"kategori rengiyle çizilmiş olarak çizmek istiyorsanız ‘Takvim içeride, "
-"kategori dışarıda’ seçeneğini seçin. Bu renkleri ayarlamak için lütfen "
+"kategori rengiyle çizilmiş olarak çizmek istiyorsanız “Takvim içeride, "
+"kategori dışarıda” seçeneğini seçin. Bu renkleri ayarlamak için lütfen "
 "Renkler ve Yazıtipleri yapılandırma sayfasını kullanın."
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
@@ -812,7 +812,7 @@ msgid ""
 "(both inside and border) in the color of their associated category. Please "
 "use the Colors and Fonts configuration page for setting these colors."
 msgstr ""
-"‘Yalnızca kategori’ seçeneğini takvim ögelerini (hem içi, hem de sınır "
+"“Yalnızca kategori” seçeneğini takvim ögelerini (hem içi, hem de sınır "
 "çizgisini) ayarlanmış kategori renginde çizdirmek istiyorsanız kullanın. Bu "
 "renkleri ayarlamak için lütfen Renkler ve Yazıtipleri ayar sayfasını "
 "kullanın."
@@ -840,7 +840,7 @@ msgid ""
 "(both inside and border) in the color of their calendar. Please use the "
 "Colors and Fonts configuration page for setting these colors."
 msgstr ""
-"‘Yalnızca takvim’ seçeneği ile takvim unsurlarını (hem içi, hem de sınır "
+"“Yalnızca takvim” seçeneği ile takvim unsurlarını (hem içi, hem de sınır "
 "çizgisini) ayarlanmış takvim renginde çizdirmek istiyorsanız kullanın. Bu "
 "renkleri ayarlamak için lütfen Renkler ve Yazıtipleri ayar sayfasını "
 "kullanın."
@@ -871,7 +871,7 @@ msgstr ""
 "Eğer en az bir tüm gün meşgul olarak işaretlediğiniz günlerin ajanda arka "
 "planının farklı bir renkte doldurulmasını istiyorsanız bu kutuyu "
 "işaretleyin. Ayrıca, bu seçenek için kullanılacak arka plan rengini, Renkler "
-"yapılandırma sayfasından değiştirebilirsiniz. ‘Meşgul gün arka plan rengi’ "
+"yapılandırma sayfasından değiştirebilirsiniz. “Meşgul gün arka plan rengi” "
 "ayarını arayın."
 
 #. i18n: ectx: label, entry (AgendaViewCalendarDisplay), group (Agenda View)
@@ -894,7 +894,7 @@ msgid ""
 "all your calendars to be shown together in one agenda view."
 msgstr ""
 "Bütün takvimlerini tek bir ajanda görünümünde hep beraber göstermek "
-"istiyorsanız, ‘Bütün takvimleri bir görünümde birleştir’ seçeneğini seçin."
+"istiyorsanız, “Bütün takvimleri bir görünümde birleştir” seçeneğini seçin."
 
 #. i18n: ectx: tooltip, entry (AgendaViewCalendarDisplay), group (Agenda View)
 #: eventviews.kcfg:254 viewerapp/settings.kcfg:100
@@ -915,8 +915,8 @@ msgid ""
 "Select the \"Show calendars side by side\" option if you would like to see "
 "two calendars at once, in a side-by-side view."
 msgstr ""
-"Yan yana görünümde iki takvimi bir kerede görmek istiyorsanız, ‘Takvimleri "
-"yan yana göster’ seçeneğini seçin."
+"Yan yana görünümde iki takvimi bir kerede görmek istiyorsanız, “Takvimleri "
+"yan yana göster” seçeneğini seçin."
 
 #. i18n: ectx: tooltip, entry (AgendaViewCalendarDisplay), group (Agenda View)
 #: eventviews.kcfg:259 viewerapp/settings.kcfg:105
@@ -938,7 +938,7 @@ msgid ""
 "between calendars using the tab key."
 msgstr ""
 "Sekme düğmesini kullanarak takvimler arasında değişiklik yapmak istiyorsanız "
-"‘Sekme ile görünümler arasında değiştir’ seçeneğini seçin."
+"“Sekme ile görünümler arasında değiştir” seçeneğini seçin."
 
 #. i18n: ectx: tooltip, entry (AgendaViewCalendarDisplay), group (Agenda View)
 #: eventviews.kcfg:264 viewerapp/settings.kcfg:110
@@ -1061,8 +1061,8 @@ msgid ""
 "configuration page for setting these colors."
 msgstr ""
 "Takvim ögelerini ayarlanmış kategori renklerinde çizdirmek ve ögenin "
-"sınırını takvimin renginde görüntülemek istiyorsanız ‘Kategori içeride, "
-"takvim dışarıda’ seçeneğini seçin. Bu renkleri ayarlamak için lütfen Renkler "
+"sınırını takvimin renginde görüntülemek istiyorsanız “Kategori içeride, "
+"takvim dışarıda” seçeneğini seçin. Bu renkleri ayarlamak için lütfen Renkler "
 "ve Yazıtipleri ayar sayfasını kullanın."
 
 #. i18n: ectx: tooltip, entry, group (Month View)
@@ -1085,8 +1085,8 @@ msgid ""
 "configuration page for setting these colors."
 msgstr ""
 "Takvim ögelerini, ilgili takvim renklerini kullanarak ve ögenin kenarlığı "
-"kategori rengiyle çizilmiş olarak çizmek istiyorsanız ‘Takvim içeride, "
-"kategori dışarıda’ seçeneğini seçin. Bu renkleri ayarlamak için lütfen "
+"kategori rengiyle çizilmiş olarak çizmek istiyorsanız “Takvim içeride, "
+"kategori dışarıda” seçeneğini seçin. Bu renkleri ayarlamak için lütfen "
 "Renkler ve Yazıtipleri yapılandırma sayfasını kullanın."
 
 #. i18n: ectx: tooltip, entry, group (Month View)
@@ -1107,8 +1107,8 @@ msgid ""
 "(both inside and border) in the color of their associated category.  Please "
 "use the Colors and Fonts configuration page for setting these colors."
 msgstr ""
-"‘Yalnızca kategori’ seçeneği ile, takvim ögelerini (hem içi, hem de sınır "
-"çizgisini) ayarlanmış kategori renginde çizdirmek istiyorsanız kullanın.  Bu "
+"“Yalnızca kategori” seçeneği ile, takvim ögelerini (hem içi, hem de sınır "
+"çizgisini) ayarlanmış kategori renginde çizdirmek istiyorsanız kullanın. Bu "
 "renkleri ayarlamak için lütfen Renkler ve Yazıtipleri ayar sayfasını "
 "kullanın."
 
@@ -1127,7 +1127,7 @@ msgid ""
 "(both inside and border) in the color of their calendar.  Please use the "
 "Colors and Fonts configuration page for setting these colors."
 msgstr ""
-"‘Yalnızca takvim’ seçeneği ile, takvim unsurlarını (hem içi, hem de sınır "
+"“Yalnızca takvim” seçeneği ile, takvim unsurlarını (hem içi, hem de sınır "
 "çizgisini) ayarlanmış takvim renginde çizdirmek istiyorsanız kullanın. Bu "
 "renkleri ayarlamak için lütfen Renkler ve Yazıtipleri ayar sayfasını "
 "kullanın."
@@ -1152,8 +1152,8 @@ msgstr ""
 "Eğer en az bir tüm gün meşgul olarak işaretlediğiniz günlerin aylık "
 "görünümdeki arka planının farklı bir renkte doldurulmasını istiyorsanız bu "
 "kutuyu işaretleyin. Ayrıca, bu seçenek için kullanılacak arka plan rengini "
-"Renkler yapılandırma sayfasından değiştirebilirsiniz. ‘Meşgul gün arka plan "
-"rengi’ ayarını arayın."
+"Renkler yapılandırma sayfasından değiştirebilirsiniz. “Meşgul gün arka plan "
+"rengi” ayarını arayın."
 
 #. i18n: ectx: label, entry, group (Todo View)
 #: eventviews.kcfg:350 viewerapp/settings.kcfg:183
@@ -1594,7 +1594,7 @@ msgstr "Bitiş Tarihi/Saati"
 #: list/listview.cpp:293
 #, kde-format
 msgid "Tags"
-msgstr "Etiketler"
+msgstr "Künyeler"
 
 #: list/listview.cpp:366
 #, kde-format
@@ -1976,7 +1976,7 @@ msgstr "Özetleri Ara..."
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Filter on these tags"
-msgstr "Bu etiketlerdeki süzgeç"
+msgstr "Bu künyelerde süz"
 
 #: todo/todoviewquicksearch.cpp:48
 #, kde-format
@@ -1985,14 +1985,14 @@ msgid ""
 "Use this combobox to filter the to-dos that are shown by a list of selected "
 "tags."
 msgstr ""
-"Seçilen etiketlerin listesi tarafından görüntülenen yapılacakları süzmek "
-"için bu çoklu kutuyu kullanın."
+"Seçili künyelerin listesi tarafından görüntülenen yapılacakları süzmek için "
+"bu çoklu kutuyu kullanın."
 
 #: todo/todoviewquicksearch.cpp:50
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Select Tags"
-msgstr "Etiketler Seç"
+msgstr "Künyeler Seç"
 
 #: todo/todoviewquicksearch.cpp:73
 #, kde-format
@@ -2099,7 +2099,7 @@ msgid ""
 "Copyright (C) 2010 Klarälvdalens Datakonsult AB, a KDAB Group company, "
 "info@kdab.net"
 msgstr ""
-"Telif Hakkı (C) 2010 Klarälvdalens Datakonsult AB,  KDAB Grup şirketi, "
+"Telif Hakkı (C) 2010 Klarälvdalens Datakonsult AB, KDAB Grup şirketi, "
 "info@kdab.net"
 
 #: viewerapp/main.cpp:24
@@ -2159,7 +2159,7 @@ msgstr "Zaman Çizgisi"
 #, kde-format
 msgid "\"No category\" color (for \"Only category\" drawing schemes)"
 msgstr ""
-"‘Sınıflandırma yok’ rengi (‘Yalnızca sınıflandırma’ çizim şemaları için)"
+"“Sınıflandırma yok” rengi (“Yalnızca sınıflandırma” çizim şemaları için)"
 
 #. i18n: ectx: whatsthis, entry, group (Colors)
 #: viewerapp/settings.kcfg:242
@@ -2170,9 +2170,9 @@ msgid ""
 "when drawing items in the agenda or month views using the \"Only category\" "
 "scheme."
 msgstr ""
-"Bir öge hiç bir kategoriye ait olmadığında kullanılacak ‘kategori yok’ veya "
-"‘kategori ayarlanmamış’ durumları için kullanılacak rengi seçin. Bu renk "
-"‘Yalnızca kategori’ şeması kullanılarak ajanda veya aylık görünüm çizilirken "
+"Bir öge hiç bir kategoriye ait olmadığında kullanılacak “kategori yok” veya "
+"“kategori ayarlanmamış” durumları için kullanılacak rengi seçin. Bu renk "
+"“Yalnızca kategori” şeması kullanılarak ajanda veya aylık görünüm çizilirken "
 "kullanılır."
 
 #. i18n: ectx: tooltip, entry, group (Colors)
@@ -2239,7 +2239,7 @@ msgstr "%1, %2 — %3"
 #, kde-format
 msgctxt "to-do due date"
 msgid "  (Due: %1)"
-msgstr "  (Bitiş Tarihi: %1)"
+msgstr "  (Bitiş tarihi: %1)"
 
 #~ msgctxt "yes, an exception to a recurring to-do"
 #~ msgid "Exception"

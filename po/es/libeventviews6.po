@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-09 00:38+0000\n"
-"PO-Revision-Date: 2024-05-11 01:06+0200\n"
+"PO-Revision-Date: 2024-06-21 12:55+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.05.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -756,7 +756,7 @@ msgstr "Uso del color"
 #: viewerapp/settings.kcfg:156
 #, kde-format
 msgid "Category inside, calendar outside"
-msgstr "Categoría adentro, calendario afuera"
+msgstr "Categoría dentro, calendario fuera"
 
 #. i18n: ectx: whatsthis, entry, group (Agenda View)
 #: eventviews.kcfg:222 viewerapp/settings.kcfg:72
@@ -769,7 +769,7 @@ msgid ""
 msgstr ""
 "Seleccione la opción «Categoría dentro, calendario fuera» si le gustaría "
 "pintar elementos de calendario en el color asociado a su categoría, con el "
-"borde de elemento pintado en el color de su calendario. Utilice la página de "
+"borde de elemento pintado en el color de su calendario. Use la página de "
 "configuración de colores y tipos de letra para configurar estos colores."
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
@@ -788,7 +788,7 @@ msgstr ""
 #: viewerapp/settings.kcfg:161
 #, kde-format
 msgid "Calendar inside, category outside"
-msgstr "Calendario adentro, categoría afuera"
+msgstr "Calendario dentro, categoría fuera"
 
 #. i18n: ectx: whatsthis, entry, group (Agenda View)
 #: eventviews.kcfg:227 viewerapp/settings.kcfg:77
@@ -801,7 +801,7 @@ msgid ""
 msgstr ""
 "Seleccione la opción «Calendario dentro, categoría fuera» si le gustaría "
 "pintar elementos de calendario en el color asociado a su calendario, con el "
-"borde de elemento pintado en el color de su categoría. Utilice la página de "
+"borde de elemento pintado en el color de su categoría. Use la página de "
 "configuración de colores y tipos de letra para configurar estos colores."
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
