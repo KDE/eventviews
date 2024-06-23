@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-09 00:38+0000\n"
-"PO-Revision-Date: 2024-03-06 16:02+0100\n"
+"PO-Revision-Date: 2024-06-21 10:11+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -770,9 +770,8 @@ msgid ""
 msgstr ""
 "Seleccioneu l'opció «Categoria a dins, calendari a fora» si voleu dibuixar "
 "els elements del calendari en el color de la seva categoria associada, amb "
-"la vora de l'element dibuixada en el color del seu calendari. Si us plau, "
-"useu la pàgina de configuració de colors i lletres per a establir aquests "
-"colors."
+"la vora de l'element dibuixada en el color del seu calendari. Useu la pàgina "
+"de configuració de colors i lletres per a establir aquests colors."
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
 #: eventviews.kcfg:223 viewerapp/settings.kcfg:73
@@ -803,8 +802,8 @@ msgid ""
 msgstr ""
 "Seleccioneu l'opció «Calendari a dins, categoria a fora» si voleu dibuixar "
 "els elements del calendari en el color del calendari associat, amb la vora "
-"de l'element dibuixada en el color de la seva categoria. Si us plau, useu la "
-"pàgina de configuració de colors i lletres per a establir aquests colors."
+"de l'element dibuixada en el color de la seva categoria. Useu la pàgina de "
+"configuració de colors i lletres per a establir aquests colors."
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
 #: eventviews.kcfg:228 viewerapp/settings.kcfg:78
@@ -813,8 +812,8 @@ msgid ""
 "Draw agenda items in their calendar color inside and category color for "
 "their border"
 msgstr ""
-"Dibuixa els elements de l'agenda amb el color del calendari per a dins i el "
-"color de la seva categoria per a les vores"
+"Dibuixa els elements de l'agenda amb el color del calendari a dins i el "
+"color de la seva categoria a les vores"
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
@@ -834,8 +833,8 @@ msgid ""
 msgstr ""
 "Seleccioneu l'opció «Només la categoria» si voleu dibuixar els elements del "
 "calendari en el color de la seva categoria associada (a dins i a les vores). "
-"Si us plau, useu la pàgina de configuració de colors i lletres per a "
-"establir aquests colors."
+"Useu la pàgina de configuració de colors i lletres per a establir aquests "
+"colors."
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
 #: eventviews.kcfg:233 viewerapp/settings.kcfg:83
@@ -862,16 +861,16 @@ msgid ""
 "Colors and Fonts configuration page for setting these colors."
 msgstr ""
 "Seleccioneu l'opció «Només el calendari» si voleu dibuixar els elements del "
-"calendari en el color del calendari (a dins i a les vores). Si us plau, useu "
-"la pàgina de configuració de colors i lletres per a establir aquests colors."
+"calendari en el color del calendari (a dins i a les vores). Useu la pàgina "
+"de configuració de colors i lletres per a establir aquests colors."
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
 #: eventviews.kcfg:238 viewerapp/settings.kcfg:88
 #, kde-format
 msgid "Draw agenda items using their calendar color for the inside and border"
 msgstr ""
-"Dibuixa els elements de l'agenda usant el color del calendari per a dins i "
-"per a les vores"
+"Dibuixa els elements de l'agenda usant el color del calendari a dins i a les "
+"vores"
 
 #. i18n: ectx: label, entry (ColorBusyDaysEnabled), group (Agenda View)
 #. i18n: ectx: label, entry (ColorMonthBusyDaysEnabled), group (Month View)
@@ -1087,9 +1086,8 @@ msgid ""
 msgstr ""
 "Seleccioneu l'opció «Categoria a dins, calendari a fora» si voleu dibuixar "
 "els elements del calendari en el color de la seva categoria associada, amb "
-"la vora de l'element dibuixada en el color del seu calendari. Si us plau, "
-"useu la pàgina de configuració de colors i lletres per a establir aquests "
-"colors."
+"la vora de l'element dibuixada en el color del seu calendari. Useu la pàgina "
+"de configuració de colors i lletres per a establir aquests colors."
 
 #. i18n: ectx: tooltip, entry, group (Month View)
 #: eventviews.kcfg:319 viewerapp/settings.kcfg:158
@@ -1098,8 +1096,8 @@ msgid ""
 "Draw month items in their category color inside and calendar color for their "
 "border"
 msgstr ""
-"Dibuixa els elements mensuals amb el color de la seva categoria per a dins i "
-"el color del calendari per a les vores"
+"Dibuixa els elements mensuals amb el color de la seva categoria a dins i el "
+"color del calendari a les vores"
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
 #: eventviews.kcfg:323 viewerapp/settings.kcfg:162
@@ -1112,8 +1110,8 @@ msgid ""
 msgstr ""
 "Seleccioneu l'opció «Calendari a dins, categoria a fora» si voleu dibuixar "
 "els elements del calendari en el color del calendari associat, amb la vora "
-"de l'element dibuixada en el color de la seva categoria. Si us plau, useu la "
-"pàgina de configuració de colors i lletres per a establir aquests colors."
+"de l'element dibuixada en el color de la seva categoria. Useu la pàgina de "
+"configuració de colors i lletres per a establir aquests colors."
 
 #. i18n: ectx: tooltip, entry, group (Month View)
 #: eventviews.kcfg:324 viewerapp/settings.kcfg:163
@@ -1122,8 +1120,8 @@ msgid ""
 "Draw month items in their calendar color inside and category color for their "
 "border"
 msgstr ""
-"Dibuixa els elements mensuals amb el color del seu calendari per a dins i el "
-"color de la seva categoria per a les vores"
+"Dibuixa els elements mensuals amb el color del seu calendari a dins i el "
+"color de la seva categoria a les vores"
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
 #: eventviews.kcfg:328 viewerapp/settings.kcfg:167
@@ -1135,16 +1133,16 @@ msgid ""
 msgstr ""
 "Seleccioneu l'opció «Només la categoria» si voleu dibuixar els elements del "
 "calendari en el color de la seva categoria associada (a dins i a les vores). "
-"Si us plau, useu la pàgina de configuració de colors i lletres per a "
-"establir aquests colors."
+"Useu la pàgina de configuració de colors i lletres per a establir aquests "
+"colors."
 
 #. i18n: ectx: tooltip, entry, group (Month View)
 #: eventviews.kcfg:329 viewerapp/settings.kcfg:168
 #, kde-format
 msgid "Draw month items using their category color for the inside and border"
 msgstr ""
-"Dibuixa els elements mensuals usant el color de la seva categoria per a dins "
-"i per a les vores"
+"Dibuixa els elements mensuals usant el color de la seva categoria a dins i a "
+"les vores"
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
 #: eventviews.kcfg:333 viewerapp/settings.kcfg:172
@@ -1155,16 +1153,16 @@ msgid ""
 "Colors and Fonts configuration page for setting these colors."
 msgstr ""
 "Seleccioneu l'opció «Només el calendari» si voleu dibuixar els elements del "
-"calendari en el color del calendari (a dins i a les vores) Si us plau, useu "
-"la pàgina de configuració de colors i lletres per a establir aquests colors."
+"calendari en el color del calendari (a dins i a les vores) Useu la pàgina de "
+"configuració de colors i lletres per a establir aquests colors."
 
 #. i18n: ectx: tooltip, entry, group (Month View)
 #: eventviews.kcfg:334 viewerapp/settings.kcfg:173
 #, kde-format
 msgid "Draw month items using their calendar color for the inside and border"
 msgstr ""
-"Dibuixa els elements mensuals usant el color del seu calendari per a dins i "
-"per a les vores"
+"Dibuixa els elements mensuals usant el color del seu calendari a dins i a "
+"les vores"
 
 #. i18n: ectx: whatsthis, entry (ColorMonthBusyDaysEnabled), group (Month View)
 #: eventviews.kcfg:342

@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-#
-# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2023.
+# SPDX-FileCopyrightText: 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2023, 2024 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 # Marta Rybczyńska <kde-i18n@rybczynska.net>, 2013.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-09 00:38+0000\n"
-"PO-Revision-Date: 2023-09-30 11:02+0200\n"
+"PO-Revision-Date: 2024-06-22 07:56+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -17,6 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -749,7 +750,7 @@ msgid ""
 "configuration page for setting these colors."
 msgstr ""
 "Wybierz opcję \"Kategoria wewnątrz, kalendarz na zewnątrz\" jeśli chcesz "
-"rysować elementy kalendarza w kolorze skojarzonej kategorii i z obwódką "
+"rysować wpisy kalendarza w kolorze skojarzonej kategorii i z obwódką "
 "elementu rysowaną w kolorze jego kalendarza. Do ustawienia tych kolorów, "
 "proszę użyć strony konfiguracji \"Kolory i czcionki\"."
 
@@ -760,7 +761,7 @@ msgid ""
 "Draw agenda items in their category color inside and calendar color for "
 "their border"
 msgstr ""
-"Rysuj elementy planu zajęć w kolorze kategorii, dla wnętrza, i w kolorze "
+"Rysuj wpisy planu zajęć w kolorze kategorii, dla wnętrza, i w kolorze "
 "kalendarza, dla obwódki"
 
 #. i18n: ectx: label, entry, group (Agenda View)
@@ -781,7 +782,7 @@ msgid ""
 "configuration page for setting these colors."
 msgstr ""
 "Wybierz opcję Kalendarz wewnątrz, kategoria na zewnątrz jeśli chcesz rysować "
-"elementy kalendarza w kolorze skojarzonego kalendarza i z obwódką elementu "
+"wpisy kalendarza w kolorze skojarzonego kalendarza i z obwódką elementu "
 "rysowaną w kolorze jego kategorii. Do ustawienia tych kolorów, proszę użyć "
 "strony konfiguracji \"Kolory i czcionki\"."
 
@@ -792,7 +793,7 @@ msgid ""
 "Draw agenda items in their calendar color inside and category color for "
 "their border"
 msgstr ""
-"Rysuj elementy planu zajęć w kolorze kalendarza, dla wnętrza, i w kolorze "
+"Rysuj wpisy planu zajęć w kolorze kalendarza, dla wnętrza, i w kolorze "
 "kategorii, dla obwódki"
 
 #. i18n: ectx: label, entry, group (Agenda View)
@@ -811,7 +812,7 @@ msgid ""
 "(both inside and border) in the color of their associated category. Please "
 "use the Colors and Fonts configuration page for setting these colors."
 msgstr ""
-"Wybierz opcję \"Tylko kategoria\", jeśli chcesz rysować elementy kalendarza "
+"Wybierz opcję \"Tylko kategoria\", jeśli chcesz rysować wpisy kalendarza "
 "(zarówno wnętrze jak i obwódkę) w kolorze skojarzonej kategorii. Do "
 "ustawienia tych kolorów, proszę użyć strony konfiguracji \"Kolory i czcionki"
 "\"."
@@ -820,7 +821,7 @@ msgstr ""
 #: eventviews.kcfg:233 viewerapp/settings.kcfg:83
 #, kde-format
 msgid "Draw agenda items using their category color for the inside and border"
-msgstr "Rysuj elementy planu zajęć w kolorze kategorii, dla wnętrza i obwódki"
+msgstr "Rysuj wpisy planu zajęć w kolorze kategorii, dla wnętrza i obwódki"
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
@@ -838,7 +839,7 @@ msgid ""
 "(both inside and border) in the color of their calendar. Please use the "
 "Colors and Fonts configuration page for setting these colors."
 msgstr ""
-"Wybierz opcję \"Tylko kalendarz\", jeśli chcesz rysować elementy kalendarza "
+"Wybierz opcję \"Tylko kalendarz\", jeśli chcesz rysować wpisy kalendarza "
 "(zarówno wnętrze jak i obwódkę) w kolorze kalendarza. Do ustawienia tych "
 "kolorów, proszę użyć strony konfiguracji \"Kolory i czcionki\"."
 
@@ -846,7 +847,7 @@ msgstr ""
 #: eventviews.kcfg:238 viewerapp/settings.kcfg:88
 #, kde-format
 msgid "Draw agenda items using their calendar color for the inside and border"
-msgstr "Rysuj elementy planu zajęć w kolorze kalendarza, dla wnętrza i obwódki"
+msgstr "Rysuj wpisy planu zajęć w kolorze kalendarza, dla wnętrza i obwódki"
 
 #. i18n: ectx: label, entry (ColorBusyDaysEnabled), group (Agenda View)
 #. i18n: ectx: label, entry (ColorMonthBusyDaysEnabled), group (Month View)
@@ -1057,7 +1058,7 @@ msgid ""
 "configuration page for setting these colors."
 msgstr ""
 "Wybierz opcję \"Kategoria wewnątrz, kalendarz na zewnątrz\" jeśli chcesz "
-"rysować elementy kalendarza w kolorze skojarzonej kategorii i z obwódką "
+"rysować wpisy kalendarza w kolorze skojarzonej kategorii i z obwódką "
 "elementu rysowaną w kolorze jego kalendarza. Do ustawienia tych kolorów, "
 "proszę użyć strony konfiguracji \"Kolory i czcionki\"."
 
@@ -1068,7 +1069,7 @@ msgid ""
 "Draw month items in their category color inside and calendar color for their "
 "border"
 msgstr ""
-"Rysuj elementy miesiąca w kolorze kategorii, dla wnętrza, i w kolorze "
+"Rysuj wpisy miesiąca w kolorze kategorii, dla wnętrza, i w kolorze "
 "kalendarza, dla obwódki"
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
@@ -1081,7 +1082,7 @@ msgid ""
 "configuration page for setting these colors."
 msgstr ""
 "Wybierz opcję Kalendarz wewnątrz, kategoria na zewnątrz jeśli chcesz rysować "
-"elementy kalendarza w kolorze skojarzonego kalendarza i z obwódką elementu "
+"wpisy kalendarza w kolorze skojarzonego kalendarza i z obwódką elementu "
 "rysowaną w kolorze jego kategorii. Do ustawienia tych kolorów, proszę użyć "
 "strony konfiguracji \"Kolory i czcionki\"."
 
@@ -1092,7 +1093,7 @@ msgid ""
 "Draw month items in their calendar color inside and category color for their "
 "border"
 msgstr ""
-"Rysuj elementy miesiąca w kolorze kalendarza, dla wnętrza, i w kolorze "
+"Rysuj wpisy miesiąca w kolorze kalendarza, dla wnętrza, i w kolorze "
 "kategorii, dla obwódki"
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
@@ -1103,7 +1104,7 @@ msgid ""
 "(both inside and border) in the color of their associated category.  Please "
 "use the Colors and Fonts configuration page for setting these colors."
 msgstr ""
-"Wybierz opcję \"Tylko kategoria\", jeśli chcesz rysować elementy kalendarza "
+"Wybierz opcję \"Tylko kategoria\", jeśli chcesz rysować wpisy kalendarza "
 "(zarówno wnętrze jak i obwódkę) w kolorze skojarzonej kategorii. Do "
 "ustawienia tych kolorów, proszę użyć strony konfiguracji \"Kolory i czcionki"
 "\"."
@@ -1112,7 +1113,7 @@ msgstr ""
 #: eventviews.kcfg:329 viewerapp/settings.kcfg:168
 #, kde-format
 msgid "Draw month items using their category color for the inside and border"
-msgstr "Rysuj elementy miesiąca w kolorze kategorii, dla wnętrza i obwódki"
+msgstr "Rysuj wpisy miesiąca w kolorze kategorii, dla wnętrza i obwódki"
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
 #: eventviews.kcfg:333 viewerapp/settings.kcfg:172
@@ -1122,7 +1123,7 @@ msgid ""
 "(both inside and border) in the color of their calendar.  Please use the "
 "Colors and Fonts configuration page for setting these colors."
 msgstr ""
-"Wybierz opcję \"Tylko kalendarz\", jeśli chcesz rysować elementy kalendarza "
+"Wybierz opcję \"Tylko kalendarz\", jeśli chcesz rysować wpisy kalendarza "
 "(zarówno wnętrze jak i obwódkę) w kolorze kalendarza. Do ustawienia tych "
 "kolorów, proszę użyć strony konfiguracji \"Kolory i czcionki\"."
 
@@ -1130,7 +1131,7 @@ msgstr ""
 #: eventviews.kcfg:334 viewerapp/settings.kcfg:173
 #, kde-format
 msgid "Draw month items using their calendar color for the inside and border"
-msgstr "Rysuj elementy miesiąca w kolorze kalendarza, dla wnętrza i obwódki"
+msgstr "Rysuj wpisy miesiąca w kolorze kalendarza, dla wnętrza i obwódki"
 
 #. i18n: ectx: whatsthis, entry (ColorMonthBusyDaysEnabled), group (Month View)
 #: eventviews.kcfg:342
