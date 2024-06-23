@@ -72,7 +72,7 @@ ecm_setup_version(PROJECT VARIABLE_PREFIX EVENTVIEWS
 option(USE_UNITY_CMAKE_SUPPORT "Use UNITY cmake support (speedup compile time)" OFF)
 
 set(COMPILE_WITH_UNITY_CMAKE_SUPPORT OFF)
-if (USE_UNITY_CMAKE_SUPPORT)
+if(USE_UNITY_CMAKE_SUPPORT)
     set(COMPILE_WITH_UNITY_CMAKE_SUPPORT ON)
     add_definitions(-DCOMPILE_WITH_UNITY_CMAKE_SUPPORT)
 endif()
@@ -96,7 +96,7 @@ endif()
 
 ########### CMake Config Files ###########
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KPim6EventViews")
-if (BUILD_QCH)
+if(BUILD_QCH)
     ecm_install_qch_export(
         TARGETS KPim6EventViews_QCH
         FILE KPim6EventViewsQchTargets.cmake

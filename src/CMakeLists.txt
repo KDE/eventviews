@@ -104,7 +104,7 @@ ki18n_wrap_ui(KPim6EventViews
 )
 
 
-if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
+if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(KPim6EventViews PROPERTIES UNITY_BUILD ON)
 endif()
 ecm_generate_export_header(KPim6EventViews
@@ -259,7 +259,7 @@ install(FILES
 
 ecm_qt_install_logging_categories(EXPORT EVENTVIEWS FILE eventviews.categories DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR})
 
-if (BUILD_QCH)
+if(BUILD_QCH)
     ecm_add_qch(
         KPim6EventViews_QCH
         NAME KPim6EventViews
