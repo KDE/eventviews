@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-21 00:39+0000\n"
-"PO-Revision-Date: 2024-06-08 08:16+0200\n"
+"PO-Revision-Date: 2024-06-26 21:52+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -484,10 +484,9 @@ msgstr ""
 
 #. i18n: ectx: label, entry, group (General View)
 #: eventviews.kcfg:128
-#, fuzzy, kde-format
-#| msgid "To-dos use category colors"
+#, kde-format
 msgid "To-dos use tag colors"
-msgstr "Les tâches utilisent des couleurs de catégories"
+msgstr "Les tâches utilisent des couleurs d'étiquettes"
 
 #. i18n: ectx: whatsthis, entry, group (General View)
 #: eventviews.kcfg:129
@@ -761,10 +760,9 @@ msgstr "Utilisation de couleurs"
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
 #: eventviews.kcfg:221 eventviews.kcfg:317
-#, fuzzy, kde-format
-#| msgid "Category inside, calendar outside"
+#, kde-format
 msgid "Tag inside, calendar outside"
-msgstr "Catégorie à l'intérieur, calendrier à l'extérieur"
+msgstr "Étiquette à l'intérieur, calendrier à l'extérieur"
 
 #. i18n: ectx: whatsthis, entry, group (Agenda View)
 #: eventviews.kcfg:222
@@ -802,10 +800,9 @@ msgstr ""
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
 #: eventviews.kcfg:226 eventviews.kcfg:322
-#, fuzzy, kde-format
-#| msgid "Calendar inside, category outside"
+#, kde-format
 msgid "Calendar inside, tag outside"
-msgstr "Calendrier à l'intérieur, catégorie à l'extérieur"
+msgstr "Calendrier à l'intérieur, étiquette à l'extérieur"
 
 #. i18n: ectx: whatsthis, entry, group (Agenda View)
 #: eventviews.kcfg:227
@@ -843,10 +840,9 @@ msgstr ""
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
 #: eventviews.kcfg:231 eventviews.kcfg:327
-#, fuzzy, kde-format
-#| msgid "Only category"
+#, kde-format
 msgid "Only tag"
-msgstr "Seulement la catégorie"
+msgstr "Seulement l'étiquette"
 
 #. i18n: ectx: whatsthis, entry, group (Agenda View)
 #: eventviews.kcfg:232
@@ -868,13 +864,11 @@ msgstr ""
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
 #: eventviews.kcfg:233
-#, fuzzy, kde-format
-#| msgid ""
-#| "Draw agenda items using their category color for the inside and border"
+#, kde-format
 msgid "Draw agenda items using their tag color for the inside and border"
 msgstr ""
-"Dessiner les éléments d'agenda avec leur couleur de catégorie pour "
-"l'intérieur et la bordure"
+"Dessiner les éléments d'agenda avec la couleur de leur étiquette pour "
+"l'intérieur et pour le bord"
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
@@ -1194,13 +1188,11 @@ msgstr ""
 
 #. i18n: ectx: tooltip, entry, group (Month View)
 #: eventviews.kcfg:329
-#, fuzzy, kde-format
-#| msgid ""
-#| "Draw month items using their category color for the inside and border"
+#, kde-format
 msgid "Draw month items using their tag color for the inside and border"
 msgstr ""
-"Dessiner les éléments du mois dans leur couleur de catégorie à l'intérieur "
-"et pour leur bordure"
+"Dessiner les éléments de mois dans la couleur de leur étiquette à "
+"l'intérieur et sur leur bords"
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
 #: eventviews.kcfg:333 viewerapp/settings.kcfg:172
