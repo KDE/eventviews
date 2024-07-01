@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-09 00:38+0000\n"
-"PO-Revision-Date: 2024-06-16 20:00+0530\n"
+"PO-Revision-Date: 2024-06-30 13:19+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -235,7 +235,7 @@ msgstr "உடனிணைப்புகள் இல்லாமல் அஞ�
 #: eventviews.kcfg:38
 #, kde-format
 msgid "Export to HTML with every save"
-msgstr ""
+msgstr "சேமிக்கும் ஒவ்வொரு முறையும் HTML கோப்பிற்கு ஏற்றுமதி செய்"
 
 #. i18n: ectx: whatsthis, entry, group (Save Settings)
 #: eventviews.kcfg:39
@@ -266,7 +266,7 @@ msgstr ""
 #: eventviews.kcfg:50
 #, kde-format
 msgid "Save &interval in minutes"
-msgstr ""
+msgstr "&சேமிப்பு இடைவேளி, நிமிடங்களில்"
 
 #. i18n: ectx: whatsthis, entry, group (Save Settings)
 #: eventviews.kcfg:51
