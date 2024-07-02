@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-21 00:39+0000\n"
-"PO-Revision-Date: 2024-06-09 19:07+0900\n"
+"PO-Revision-Date: 2024-07-01 11:34+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -439,21 +439,18 @@ msgstr "勾選此選項，在滑鼠移到顯示的事件上方時，會顯示事
 
 #. i18n: ectx: label, entry, group (General View)
 #: eventviews.kcfg:128
-#, fuzzy, kde-format
-#| msgid "To-dos use category colors"
+#, kde-format
 msgid "To-dos use tag colors"
-msgstr "待辦事項使用分類的顏色"
+msgstr "待辦事項使用標籤的顏色"
 
 #. i18n: ectx: whatsthis, entry, group (General View)
 #: eventviews.kcfg:129
-#, fuzzy, kde-format
-#| msgid ""
-#| "Check this box so that to-dos will use category colors and not colors "
-#| "specific to their due, due today or overdue state"
+#, kde-format
 msgid ""
 "Check this box so that to-dos will use tag colors and not colors specific to "
 "their due, due today or overdue state"
-msgstr "勾選此選項的話，待辦事項會使用分類的顏色，而不是根據到期日來區分顏色。"
+msgstr ""
+"勾選此選項的話，待辦事項會使用標籤的顏色，而不是根據其到期狀態來區分顏色。"
 
 #. i18n: ectx: label, entry, group (General View)
 #: eventviews.kcfg:134
@@ -690,106 +687,80 @@ msgstr "顏色的使用"
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
 #: eventviews.kcfg:221 eventviews.kcfg:317
-#, fuzzy, kde-format
-#| msgid "Category inside, calendar outside"
+#, kde-format
 msgid "Tag inside, calendar outside"
-msgstr "類別在內，行事曆在外"
+msgstr "標籤在內，行事曆在外"
 
 #. i18n: ectx: whatsthis, entry, group (Agenda View)
 #: eventviews.kcfg:222
-#, fuzzy, kde-format
-#| msgid ""
-#| "Select the \"Category inside, calendar outside\" option if you would like "
-#| "to draw calendar items in their associated category color, with the "
-#| "item's border drawn in the color of its calendar. Please use the Colors "
-#| "and Fonts configuration page for setting these colors."
+#, kde-format
 msgid ""
 "Select the \"Tag inside, calendar outside\" option if you would like to draw "
 "calendar items in their associated tag color, with the item's border drawn "
 "in the color of its calendar. Please use the Colors and Fonts configuration "
 "page for setting these colors."
 msgstr ""
-"「類別在內，行事曆在外」表示您要依所屬類別來繪製行事曆項目，然後它的邊框則是"
-"依行事曆的顏色。您可以用「顏色與字型」設定頁來設定這些顏色。"
+"「標籤在內，行事曆在外」表示您要依所屬標籤來繪製行事曆項目，然後它的邊框則是"
+"依行事曆的顏色。您可以用「顏色與字型」設定頁面來設定這些顏色。"
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
 #: eventviews.kcfg:223
-#, fuzzy, kde-format
-#| msgid ""
-#| "Draw agenda items in their category color inside and calendar color for "
-#| "their border"
+#, kde-format
 msgid ""
 "Draw agenda items in their tag color inside and calendar color for their "
 "border"
-msgstr "繪製行程項目時，用類別的顏色畫裡面，邊框則用行事曆的顏色"
+msgstr "繪製行程項目時，用標籤的顏色繪製內部，邊框則用行事曆的顏色"
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
 #: eventviews.kcfg:226 eventviews.kcfg:322
-#, fuzzy, kde-format
-#| msgid "Calendar inside, category outside"
+#, kde-format
 msgid "Calendar inside, tag outside"
-msgstr "行事曆在內，類別在外"
+msgstr "行事曆在內，標籤在外"
 
 #. i18n: ectx: whatsthis, entry, group (Agenda View)
 #: eventviews.kcfg:227
-#, fuzzy, kde-format
-#| msgid ""
-#| "Select the \"Calendar inside, category outside\" option if you would like "
-#| "to draw calendar items in their associated calendar color, with the "
-#| "item's border drawn in the color of its category. Please use the Colors "
-#| "and Fonts configuration page for setting these colors."
+#, kde-format
 msgid ""
 "Select the \"Calendar inside, tag outside\" option if you would like to draw "
 "calendar items in their associated calendar color, with the item's border "
 "drawn in the color of its tag. Please use the Colors and Fonts configuration "
 "page for setting these colors."
 msgstr ""
-"「行事曆在內，類別在外」表示您要依行事曆來繪製行事曆項目，然後它的邊框則是依"
-"所屬類別的顏色。您可以用「顏色與字型」設定頁來設定這些顏色。"
+"「行事曆在內，標籤在外」表示您要依行事曆來繪製行事曆項目，然後它的邊框則是依"
+"所屬標籤的顏色。您可以用「顏色與字型」設定頁面來設定這些顏色。"
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
 #: eventviews.kcfg:228
-#, fuzzy, kde-format
-#| msgid ""
-#| "Draw agenda items in their calendar color inside and category color for "
-#| "their border"
+#, kde-format
 msgid ""
 "Draw agenda items in their calendar color inside and tag color for their "
 "border"
-msgstr "繪製行程項目時，用行事曆的顏色畫裡面，邊框則用類別的顏色"
+msgstr "繪製行程項目時，用行事曆的顏色畫裡面，邊框則用標籤的顏色"
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
 #: eventviews.kcfg:231 eventviews.kcfg:327
-#, fuzzy, kde-format
-#| msgid "Only category"
+#, kde-format
 msgid "Only tag"
-msgstr "只有類別"
+msgstr "只有標籤"
 
 #. i18n: ectx: whatsthis, entry, group (Agenda View)
 #: eventviews.kcfg:232
-#, fuzzy, kde-format
-#| msgid ""
-#| "Select the \"Only category\" option if you would like to draw calendar "
-#| "items (both inside and border) in the color of their associated category. "
-#| "Please use the Colors and Fonts configuration page for setting these "
-#| "colors."
+#, kde-format
 msgid ""
 "Select the \"Only tag\" option if you would like to draw calendar items "
 "(both inside and border) in the color of their associated tag. Please use "
 "the Colors and Fonts configuration page for setting these colors."
 msgstr ""
-"「只有類別」表示您只依所屬類別來繪製行事曆項目，包含邊框。您可以用「顏色與字"
-"型」設定頁來設定這些顏色。"
+"「只有標籤」表示您只依所屬標籤來繪製行事曆項目，包含邊框。您可以用「顏色與字"
+"型」設定頁面來設定這些顏色。"
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
 #: eventviews.kcfg:233
-#, fuzzy, kde-format
-#| msgid ""
-#| "Draw agenda items using their category color for the inside and border"
+#, kde-format
 msgid "Draw agenda items using their tag color for the inside and border"
-msgstr "繪製行程項目時，用所屬類別的顏色畫裡面與邊框"
+msgstr "繪製行程項目時，用所屬標籤的顏色畫裡面與邊框"
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
@@ -808,7 +779,7 @@ msgid ""
 "Colors and Fonts configuration page for setting these colors."
 msgstr ""
 "「只有行事曆」表示您只依行事曆來繪製行事曆項目，包含邊框。您可以用「顏色與字"
-"型」設定頁來設定這些顏色。"
+"型」設定頁面來設定這些顏色。"
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
 #: eventviews.kcfg:238 viewerapp/settings.kcfg:88
@@ -1006,83 +977,60 @@ msgstr ""
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
 #: eventviews.kcfg:318
-#, fuzzy, kde-format
-#| msgid ""
-#| "Select the \"Category inside, calendar outside\" option if you would like "
-#| "to draw calendar items in their associated category color, with the "
-#| "item's border drawn in the color of its calendar.  Please use the Colors "
-#| "and Fonts configuration page for setting these colors."
+#, kde-format
 msgid ""
 "Select the \"Tag inside, calendar outside\" option if you would like to draw "
 "calendar items in their associated tag color, with the item's border drawn "
 "in the color of its calendar.  Please use the Colors and Fonts configuration "
 "page for setting these colors."
 msgstr ""
-"「類別在內，行事曆在外」表示您要依所屬類別來繪製行事曆項目，然後它的邊框則是"
-"依行事曆的顏色。您可以用「顏色與字型」設定頁來設定這些顏色。"
+"「標籤在內，行事曆在外」表示您要依所屬標籤來繪製行事曆項目，然後它的邊框則是"
+"依行事曆的顏色。您可以用「顏色與字型」設定頁面來設定這些顏色。"
 
 #. i18n: ectx: tooltip, entry, group (Month View)
 #: eventviews.kcfg:319
-#, fuzzy, kde-format
-#| msgid ""
-#| "Draw month items in their category color inside and calendar color for "
-#| "their border"
+#, kde-format
 msgid ""
 "Draw month items in their tag color inside and calendar color for their "
 "border"
-msgstr "繪製月檢視項目時，用類別的顏色畫裡面，邊框則用行事曆的顏色"
+msgstr "繪製月檢視項目時，用標籤的顏色畫裡面，邊框則用行事曆的顏色"
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
 #: eventviews.kcfg:323
-#, fuzzy, kde-format
-#| msgid ""
-#| "Select the \"Calendar inside, category outside\" option if you would like "
-#| "to draw calendar items in their associated calendar color, with the "
-#| "item's border drawn in the color of its category.  Please use the Colors "
-#| "and Fonts configuration page for setting these colors."
+#, kde-format
 msgid ""
 "Select the \"Calendar inside, tag outside\" option if you would like to draw "
 "calendar items in their associated calendar color, with the item's border "
 "drawn in the color of its tag.  Please use the Colors and Fonts "
 "configuration page for setting these colors."
 msgstr ""
-"「行事曆在內，類別在外」表示您要依行事曆來繪製行事曆項目，然後它的邊框則是依"
-"所屬類別的顏色。您可以用「顏色與字型」設定頁來設定這些顏色。"
+"「行事曆在內，標籤在外」表示您要依行事曆來繪製行事曆項目，然後它的邊框則是依"
+"所屬標籤的顏色。您可以用「顏色與字型」設定頁面來設定這些顏色。"
 
 #. i18n: ectx: tooltip, entry, group (Month View)
 #: eventviews.kcfg:324
-#, fuzzy, kde-format
-#| msgid ""
-#| "Draw month items in their calendar color inside and category color for "
-#| "their border"
+#, kde-format
 msgid ""
 "Draw month items in their calendar color inside and tag color for their "
 "border"
-msgstr "繪製月檢視項目時，用行事曆的顏色畫裡面，邊框則用類別的顏色"
+msgstr "繪製月檢視項目時，用行事曆的顏色畫裡面，邊框則用標籤的顏色"
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
 #: eventviews.kcfg:328
-#, fuzzy, kde-format
-#| msgid ""
-#| "Select the \"Only category\" option if you would like to draw calendar "
-#| "items (both inside and border) in the color of their associated "
-#| "category.  Please use the Colors and Fonts configuration page for setting "
-#| "these colors."
+#, kde-format
 msgid ""
 "Select the \"Only tag\" option if you would like to draw calendar items "
 "(both inside and border) in the color of their associated tag.  Please use "
 "the Colors and Fonts configuration page for setting these colors."
 msgstr ""
-"「只有類別」表示您只依所屬類別來繪製行事曆項目，包含邊框。您可以用「顏色與字"
-"型」設定頁來設定這些顏色。"
+"「只有標籤」表示您只依所屬標籤來繪製行事曆項目，包含邊框。您可以用「顏色與字"
+"型」設定頁面來設定這些顏色。"
 
 #. i18n: ectx: tooltip, entry, group (Month View)
 #: eventviews.kcfg:329
-#, fuzzy, kde-format
-#| msgid ""
-#| "Draw month items using their category color for the inside and border"
+#, kde-format
 msgid "Draw month items using their tag color for the inside and border"
-msgstr "繪製月檢視項目時，用所屬類別的顏色畫裡面與邊框"
+msgstr "繪製月檢視項目時，用所屬標籤的顏色畫裡面與邊框"
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
 #: eventviews.kcfg:333 viewerapp/settings.kcfg:172
@@ -1093,7 +1041,7 @@ msgid ""
 "Colors and Fonts configuration page for setting these colors."
 msgstr ""
 "「只有行事曆」表示您只依行事曆來繪製行事曆項目，包含邊框。您可以用「顏色與字"
-"型」設定頁來設定這些顏色。"
+"型」設定頁面來設定這些顏色。"
 
 #. i18n: ectx: tooltip, entry, group (Month View)
 #: eventviews.kcfg:334 viewerapp/settings.kcfg:173
@@ -1435,18 +1383,14 @@ msgstr "預設事件顏色"
 
 #. i18n: ectx: whatsthis, entry, group (Theme/Month view)
 #: eventviews.kcfg:652
-#, fuzzy, kde-format
-#| msgid ""
-#| "Select the default event color here. The default event color will be used "
-#| "for events categories in your Month. Note that you can specify a separate "
-#| "color for each event category below."
+#, kde-format
 msgid ""
 "Select the default event color here. The default event color will be used "
 "for events categories in your Month. Note that you can specify a separate "
 "color for each event tag below."
 msgstr ""
 "在此選擇預設事件顏色。預設事件顏色會用於月檢視中的事件類別。注意您可以個別選"
-"擇某一個事件類別的顏色。"
+"擇某一個事件標籤的顏色。"
 
 #. i18n: ectx: label, entry, group (Theme/Month view)
 #: eventviews.kcfg:717
@@ -2110,7 +2054,7 @@ msgid ""
 "configuration page for setting these colors."
 msgstr ""
 "「類別在內，行事曆在外」表示您要依所屬類別來繪製行事曆項目，然後它的邊框則是"
-"依行事曆的顏色。您可以用「顏色與字型」設定頁來設定這些顏色。"
+"依行事曆的顏色。您可以用「顏色與字型」設定頁面來設定這些顏色。"
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
 #: viewerapp/settings.kcfg:73
@@ -2137,7 +2081,7 @@ msgid ""
 "configuration page for setting these colors."
 msgstr ""
 "「行事曆在內，類別在外」表示您要依行事曆來繪製行事曆項目，然後它的邊框則是依"
-"所屬類別的顏色。您可以用「顏色與字型」設定頁來設定這些顏色。"
+"所屬類別的顏色。您可以用「顏色與字型」設定頁面來設定這些顏色。"
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
 #: viewerapp/settings.kcfg:78
@@ -2163,7 +2107,7 @@ msgid ""
 "use the Colors and Fonts configuration page for setting these colors."
 msgstr ""
 "「只有類別」表示您只依所屬類別來繪製行事曆項目，包含邊框。您可以用「顏色與字"
-"型」設定頁來設定這些顏色。"
+"型」設定頁面來設定這些顏色。"
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
 #: viewerapp/settings.kcfg:83
@@ -2181,7 +2125,7 @@ msgid ""
 "configuration page for setting these colors."
 msgstr ""
 "「類別在內，行事曆在外」表示您要依所屬類別來繪製行事曆項目，然後它的邊框則是"
-"依行事曆的顏色。您可以用「顏色與字型」設定頁來設定這些顏色。"
+"依行事曆的顏色。您可以用「顏色與字型」設定頁面來設定這些顏色。"
 
 #. i18n: ectx: tooltip, entry, group (Month View)
 #: viewerapp/settings.kcfg:158
@@ -2201,7 +2145,7 @@ msgid ""
 "configuration page for setting these colors."
 msgstr ""
 "「行事曆在內，類別在外」表示您要依行事曆來繪製行事曆項目，然後它的邊框則是依"
-"所屬類別的顏色。您可以用「顏色與字型」設定頁來設定這些顏色。"
+"所屬類別的顏色。您可以用「顏色與字型」設定頁面來設定這些顏色。"
 
 #. i18n: ectx: tooltip, entry, group (Month View)
 #: viewerapp/settings.kcfg:163
@@ -2220,7 +2164,7 @@ msgid ""
 "use the Colors and Fonts configuration page for setting these colors."
 msgstr ""
 "「只有類別」表示您只依所屬類別來繪製行事曆項目，包含邊框。您可以用「顏色與字"
-"型」設定頁來設定這些顏色。"
+"型」設定頁面來設定這些顏色。"
 
 #. i18n: ectx: tooltip, entry, group (Month View)
 #: viewerapp/settings.kcfg:168
