@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Shinjo Park <kde@peremen.name>, 2017, 2019, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2017, 2019, 2020, 2021, 2022, 2023, 2024 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-21 00:39+0000\n"
-"PO-Revision-Date: 2023-10-08 22:42+0200\n"
+"PO-Revision-Date: 2024-08-19 23:10+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -99,10 +99,9 @@ msgid "Unable to save %1 \"%2\"."
 msgstr "%1 \"%2\"을(를) 저장할 수 없습니다."
 
 #: agenda/timelabels.cpp:331
-#, fuzzy, kde-format
-#| msgid "&Add Timezones..."
+#, kde-format
 msgid "&Add Timezones…"
-msgstr "시간대 추가(&A)..."
+msgstr "시간대 추가(&A)…"
 
 #: agenda/timelabels.cpp:332
 #, kde-format
@@ -452,22 +451,18 @@ msgstr ""
 
 #. i18n: ectx: label, entry, group (General View)
 #: eventviews.kcfg:128
-#, fuzzy, kde-format
-#| msgid "To-dos use category colors"
+#, kde-format
 msgid "To-dos use tag colors"
-msgstr "할 일에 분류 색상 적용"
+msgstr "할 일에 태그색상 적용"
 
 #. i18n: ectx: whatsthis, entry, group (General View)
 #: eventviews.kcfg:129
-#, fuzzy, kde-format
-#| msgid ""
-#| "Check this box so that to-dos will use category colors and not colors "
-#| "specific to their due, due today or overdue state"
+#, kde-format
 msgid ""
 "Check this box so that to-dos will use tag colors and not colors specific to "
 "their due, due today or overdue state"
 msgstr ""
-"이 옵션을 사용하면 할 일 목록에 일자별 색상 대신 분류 색상을 사용합니다"
+"이 옵션을 사용하면 할 일 목록에 일자별 색상 대신 태그 색상을 사용합니다"
 
 #. i18n: ectx: label, entry, group (General View)
 #: eventviews.kcfg:134
@@ -714,108 +709,82 @@ msgstr "색 사용"
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
 #: eventviews.kcfg:221 eventviews.kcfg:317
-#, fuzzy, kde-format
-#| msgid "Category inside, calendar outside"
+#, kde-format
 msgid "Tag inside, calendar outside"
-msgstr "분류 내부, 캘린더 외부"
+msgstr "태그 내부, 캘린더 외부"
 
 #. i18n: ectx: whatsthis, entry, group (Agenda View)
 #: eventviews.kcfg:222
-#, fuzzy, kde-format
-#| msgid ""
-#| "Select the \"Category inside, calendar outside\" option if you would like "
-#| "to draw calendar items in their associated category color, with the "
-#| "item's border drawn in the color of its calendar. Please use the Colors "
-#| "and Fonts configuration page for setting these colors."
+#, kde-format
 msgid ""
 "Select the \"Tag inside, calendar outside\" option if you would like to draw "
 "calendar items in their associated tag color, with the item's border drawn "
 "in the color of its calendar. Please use the Colors and Fonts configuration "
 "page for setting these colors."
 msgstr ""
-"이 옵션을 사용하면 일정 항목의 내부는 분류에 사용하는 색으로 칠하고, 항목 경"
-"계선은 캘린더에 사용하는 색으로 칠합니다. 이 색상은 색과 글꼴 설정 페이지에"
-"서 설정하십시오."
+"\"태그 내부, 캘린더 외부\" 옵션을 사용하면 캘린더 항목의 내부는 태그에 사용하"
+"는 색으로 표시하고, 항목 경계선은 캘린더에 사용하는 색으로 표시합니다. 이 색"
+"상은 색과 글꼴 설정 페이지에서 설정하십시오."
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
 #: eventviews.kcfg:223
-#, fuzzy, kde-format
-#| msgid ""
-#| "Draw agenda items in their category color inside and calendar color for "
-#| "their border"
+#, kde-format
 msgid ""
 "Draw agenda items in their tag color inside and calendar color for their "
 "border"
-msgstr "일정 항목 내부에 분류 색상, 테두리에 캘린더 색상 사용"
+msgstr "일정 항목 내부에 태그 색상, 경계선에 캘린더 색상 사용"
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
 #: eventviews.kcfg:226 eventviews.kcfg:322
-#, fuzzy, kde-format
-#| msgid "Calendar inside, category outside"
+#, kde-format
 msgid "Calendar inside, tag outside"
-msgstr "캘린더 내부, 분류 외부"
+msgstr "캘린더 내부, 태그 외부"
 
 #. i18n: ectx: whatsthis, entry, group (Agenda View)
 #: eventviews.kcfg:227
-#, fuzzy, kde-format
-#| msgid ""
-#| "Select the \"Calendar inside, category outside\" option if you would like "
-#| "to draw calendar items in their associated calendar color, with the "
-#| "item's border drawn in the color of its category. Please use the Colors "
-#| "and Fonts configuration page for setting these colors."
+#, kde-format
 msgid ""
 "Select the \"Calendar inside, tag outside\" option if you would like to draw "
 "calendar items in their associated calendar color, with the item's border "
 "drawn in the color of its tag. Please use the Colors and Fonts configuration "
 "page for setting these colors."
 msgstr ""
-"이 옵션을 사용하면 일정 항목의 내부는 캘린더에 사용하는 색으로 칠하고, 항목 "
-"경계선은 분류에 사용하는 색으로 칠합니다. 이 색상은 색과 글꼴 설정 페이지에"
-"서 설정하십시오."
+"\"캘린더 내부, 태그 외부\" 옵션을 사용하면 캘린더 항목의 내부는 캘린더 색상으"
+"로 표시하고, 항목 경계선은 태그 색상으로 표시합니다. 해당 색상은 색과 글꼴 설"
+"정 페이지에서 설정하십시오."
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
 #: eventviews.kcfg:228
-#, fuzzy, kde-format
-#| msgid ""
-#| "Draw agenda items in their calendar color inside and category color for "
-#| "their border"
+#, kde-format
 msgid ""
 "Draw agenda items in their calendar color inside and tag color for their "
 "border"
-msgstr "일정 항목 내부에 캘린더 색상, 테두리에 분류 색상 사용"
+msgstr "일정 항목 내부에 캘린더 색상, 경계선에 태그 색상 사용"
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
 #: eventviews.kcfg:231 eventviews.kcfg:327
-#, fuzzy, kde-format
-#| msgid "Only category"
+#, kde-format
 msgid "Only tag"
-msgstr "분류만"
+msgstr "태그만"
 
 #. i18n: ectx: whatsthis, entry, group (Agenda View)
 #: eventviews.kcfg:232
-#, fuzzy, kde-format
-#| msgid ""
-#| "Select the \"Only category\" option if you would like to draw calendar "
-#| "items (both inside and border) in the color of their associated category. "
-#| "Please use the Colors and Fonts configuration page for setting these "
-#| "colors."
+#, kde-format
 msgid ""
 "Select the \"Only tag\" option if you would like to draw calendar items "
 "(both inside and border) in the color of their associated tag. Please use "
 "the Colors and Fonts configuration page for setting these colors."
 msgstr ""
-"이 옵션을 사용하면 캘린더 항목의 내부와 테두리 모두를 분류 색상으로 표시합니"
-"다. 해당 색상은 색과 글꼴 설정 페이지에서 설정하십시오."
+"\"태그만\" 옵션을 사용하면 캘린더 항목의 내부와 테두리 모두를 태그 색상으로 "
+"표시합니다. 해당 색상은 색과 글꼴 설정 페이지에서 설정하십시오."
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
 #: eventviews.kcfg:233
-#, fuzzy, kde-format
-#| msgid ""
-#| "Draw agenda items using their category color for the inside and border"
+#, kde-format
 msgid "Draw agenda items using their tag color for the inside and border"
-msgstr "일정 항목 내부와 테두리에 분류 색상 사용"
+msgstr "일정 항목 내부와 테두리에 태그 색상 사용"
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
@@ -833,8 +802,8 @@ msgid ""
 "(both inside and border) in the color of their calendar. Please use the "
 "Colors and Fonts configuration page for setting these colors."
 msgstr ""
-"이 옵션을 사용하면 캘린더 항목의 내부와 테두리 모두를 캘린더 색상으로 표시합"
-"니다. 해당 색상은 색과 글꼴 설정 페이지에서 설정하십시오."
+"\"캘린더만\" 옵션을 사용하면 캘린더 항목의 내부와 테두리 모두를 캘린더 색상으"
+"로 표시합니다. 해당 색상은 색과 글꼴 설정 페이지에서 설정하십시오."
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
 #: eventviews.kcfg:238 viewerapp/settings.kcfg:88
@@ -1032,85 +1001,62 @@ msgstr ""
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
 #: eventviews.kcfg:318
-#, fuzzy, kde-format
-#| msgid ""
-#| "Select the \"Category inside, calendar outside\" option if you would like "
-#| "to draw calendar items in their associated category color, with the "
-#| "item's border drawn in the color of its calendar.  Please use the Colors "
-#| "and Fonts configuration page for setting these colors."
+#, kde-format
 msgid ""
 "Select the \"Tag inside, calendar outside\" option if you would like to draw "
 "calendar items in their associated tag color, with the item's border drawn "
 "in the color of its calendar.  Please use the Colors and Fonts configuration "
 "page for setting these colors."
 msgstr ""
-"이 옵션을 사용하면 일정 항목의 내부는 분류에 사용하는 색으로 칠하고, 항목 경"
-"계선은 캘린더에 사용하는 색으로 칠합니다. 이 색상은 색과 글꼴 설정 페이지에"
-"서 설정하십시오."
+"\"태그 내부, 캘린더 외부\" 옵션을 사용하면 일정 항목의 내부는 태그에 사용하"
+"는 색으로 표시하고, 항목 경계선은 캘린더에 사용하는 색으로 표시합니다. 이 색"
+"상은 색과 글꼴 설정 페이지에서 설정하십시오."
 
 #. i18n: ectx: tooltip, entry, group (Month View)
 #: eventviews.kcfg:319
-#, fuzzy, kde-format
-#| msgid ""
-#| "Draw month items in their category color inside and calendar color for "
-#| "their border"
+#, kde-format
 msgid ""
 "Draw month items in their tag color inside and calendar color for their "
 "border"
-msgstr "월간 보기 항목 내부에 분류 색상, 테두리에 캘린더 색상 사용"
+msgstr "월간 보기 항목 내부에 태그 색상, 테두리에 캘린더 색상 사용"
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
 #: eventviews.kcfg:323
-#, fuzzy, kde-format
-#| msgid ""
-#| "Select the \"Calendar inside, category outside\" option if you would like "
-#| "to draw calendar items in their associated calendar color, with the "
-#| "item's border drawn in the color of its category.  Please use the Colors "
-#| "and Fonts configuration page for setting these colors."
+#, kde-format
 msgid ""
 "Select the \"Calendar inside, tag outside\" option if you would like to draw "
 "calendar items in their associated calendar color, with the item's border "
 "drawn in the color of its tag.  Please use the Colors and Fonts "
 "configuration page for setting these colors."
 msgstr ""
-"이 옵션을 사용하면 일정 항목의 내부는 캘린더에 사용하는 색으로 칠하고, 항목 "
-"경계선은 분류에 사용하는 색으로 칠합니다. 이 색상은 색과 글꼴 설정 페이지에"
-"서 설정하십시오."
+"\"캘린더 내부, 태그 외부\" 옵션을 사용하면 일정 항목의 내부는 캘린더에 사용하"
+"는 색으로 표시하고, 항목 경계선은 태그에 사용하는 색으로 표시합니다. 이 색상"
+"은 색과 글꼴 설정 페이지에서 설정하십시오."
 
 #. i18n: ectx: tooltip, entry, group (Month View)
 #: eventviews.kcfg:324
-#, fuzzy, kde-format
-#| msgid ""
-#| "Draw month items in their calendar color inside and category color for "
-#| "their border"
+#, kde-format
 msgid ""
 "Draw month items in their calendar color inside and tag color for their "
 "border"
-msgstr "월간 보기 항목 내부에 캘린더 색상, 테두리에 분류 색상 사용"
+msgstr "월간 보기 항목 내부에 캘린더 색상, 테두리에 태그 색상 사용"
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
 #: eventviews.kcfg:328
-#, fuzzy, kde-format
-#| msgid ""
-#| "Select the \"Only category\" option if you would like to draw calendar "
-#| "items (both inside and border) in the color of their associated "
-#| "category.  Please use the Colors and Fonts configuration page for setting "
-#| "these colors."
+#, kde-format
 msgid ""
 "Select the \"Only tag\" option if you would like to draw calendar items "
 "(both inside and border) in the color of their associated tag.  Please use "
 "the Colors and Fonts configuration page for setting these colors."
 msgstr ""
-"이 옵션을 사용하면 일정 항목의 내부와 외부를 모두 분류에 사용하는 색으로 칠합"
-"니다. 이 색상은 색과 글꼴 설정 페이지에서 설정하십시오."
+"이 옵션을 사용하면 캘린더 항목의 내부와 테두리 모두를 태그 색상으로 표시합니"
+"다. 해당 색상은 색과 글꼴 설정 페이지에서 설정하십시오."
 
 #. i18n: ectx: tooltip, entry, group (Month View)
 #: eventviews.kcfg:329
-#, fuzzy, kde-format
-#| msgid ""
-#| "Draw month items using their category color for the inside and border"
+#, kde-format
 msgid "Draw month items using their tag color for the inside and border"
-msgstr "월간 보기 항목 내부 및 경계선에 분류 색 사용"
+msgstr "월간 보기 항목 내부와 테두리에 태그 색상 사용"
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
 #: eventviews.kcfg:333 viewerapp/settings.kcfg:172
@@ -1476,18 +1422,14 @@ msgstr "기본 이벤트 색"
 
 #. i18n: ectx: whatsthis, entry, group (Theme/Month view)
 #: eventviews.kcfg:652
-#, fuzzy, kde-format
-#| msgid ""
-#| "Select the default event color here. The default event color will be used "
-#| "for events categories in your Month. Note that you can specify a separate "
-#| "color for each event category below."
+#, kde-format
 msgid ""
 "Select the default event color here. The default event color will be used "
 "for events categories in your Month. Note that you can specify a separate "
 "color for each event tag below."
 msgstr ""
-"기본 이벤트 색상을 선택하십시오. 월간 보기의 기본 이벤트 분류 색상으로 사용합"
-"니다. 각각 이벤트 분류별로도 색상을 선택할 수 있습니다."
+"기본 이벤트 색상을 선택하십시오. 월간 보기의 기본 이벤트 태그 색상으로 사용합"
+"니다. 각각 이벤트 태그별로도 색상을 선택할 수 있습니다."
 
 #. i18n: ectx: label, entry, group (Theme/Month view)
 #: eventviews.kcfg:717
@@ -1507,8 +1449,7 @@ msgid "&Edit"
 msgstr "편집(&E)"
 
 #: journal/journalframe.cpp:156
-#, fuzzy, kde-format
-#| msgid "Edit this journal entry"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Edit this journal entry"
 msgstr "이 저널 항목 편집"
@@ -1524,8 +1465,7 @@ msgid "&Delete"
 msgstr "삭제(&D)"
 
 #: journal/journalframe.cpp:166
-#, fuzzy, kde-format
-#| msgid "Delete this journal entry"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete this journal entry"
 msgstr "이 저널 항목 삭제"
@@ -1541,8 +1481,7 @@ msgid "&Print"
 msgstr "인쇄(&P)"
 
 #: journal/journalframe.cpp:176
-#, fuzzy, kde-format
-#| msgid "Print this journal entry"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Print this journal entry"
 msgstr "이 저널 항목 인쇄"
@@ -1558,8 +1497,7 @@ msgid "Print preview"
 msgstr "인쇄 미리 보기"
 
 #: journal/journalframe.cpp:186
-#, fuzzy, kde-format
-#| msgid "Print preview this journal entry"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Print preview this journal entry"
 msgstr "이 저널 항목 인쇄 미리 보기"
@@ -1701,8 +1639,7 @@ msgid "Agenda %1"
 msgstr "일정 %1"
 
 #: multiagenda/multiagendaview.cpp:179
-#, fuzzy, kde-format
-#| msgid "All Day"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "All Day"
 msgstr "종일"
@@ -1820,11 +1757,10 @@ msgid "&Show"
 msgstr "보기(&S)"
 
 #: todo/todoview.cpp:367
-#, fuzzy, kde-format
-#| msgid "&Edit"
+#, kde-format
 msgctxt "@action:inmenu edit the to-do"
 msgid "&Edit…"
-msgstr "편집(&E)"
+msgstr "편집(&E)…"
 
 #: todo/todoview.cpp:374
 #, kde-format
@@ -1833,35 +1769,28 @@ msgid "&Delete"
 msgstr "삭제(&D)"
 
 #: todo/todoview.cpp:383
-#, fuzzy, kde-format
-#| msgid "&Print"
+#, kde-format
 msgctxt "@action:inmenu print the to-do"
 msgid "&Print…"
-msgstr "인쇄(&P)"
+msgstr "인쇄(&P)…"
 
 #: todo/todoview.cpp:388
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu print preview the to-do"
-#| msgid "Print Previe&w..."
+#, kde-format
 msgctxt "@action:inmenu print preview the to-do"
 msgid "Print Previe&w…"
-msgstr "인쇄 미리 보기(&W)..."
+msgstr "인쇄 미리 보기(&W)…"
 
 #: todo/todoview.cpp:395
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu create a new to-do"
-#| msgid "New &To-do..."
+#, kde-format
 msgctxt "@action:inmenu create a new to-do"
 msgid "New &To-do…"
-msgstr "새 할 일(&T)..."
+msgstr "새 할 일(&T)…"
 
 #: todo/todoview.cpp:399
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu create a new sub-to-do"
-#| msgid "New Su&b-to-do..."
+#, kde-format
 msgctxt "@action:inmenu create a new sub-to-do"
 msgid "New Su&b-to-do…"
-msgstr "새 하위 할 일(&B)..."
+msgstr "새 하위 할 일(&B)…"
 
 #: todo/todoview.cpp:403
 #, kde-format
@@ -1966,12 +1895,10 @@ msgid ""
 msgstr "문자열을 입력하면 요약이 일치하는 기존 할 일을 표시합니다."
 
 #: todo/todoviewquicksearch.cpp:39
-#, fuzzy, kde-format
-#| msgctxt "@label in QuickSearchLine"
-#| msgid "Search Summaries..."
+#, kde-format
 msgctxt "@label in QuickSearchLine"
 msgid "Search Summaries…"
-msgstr "검색 요약..."
+msgstr "요약 검색…"
 
 #: todo/todoviewquicksearch.cpp:46
 #, kde-format
@@ -2100,15 +2027,13 @@ msgstr ""
 "info@kdab.net"
 
 #: viewerapp/main.cpp:24
-#, fuzzy, kde-format
-#| msgid "Kevin Krammer"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Kevin Krammer"
 msgstr "Kevin Krammer"
 
 #: viewerapp/main.cpp:33
-#, fuzzy, kde-format
-#| msgid "Optional list of view names to instantiate"
+#, kde-format
 msgctxt "@info:shell"
 msgid "Optional list of view names to instantiate"
 msgstr "인스턴스화할 보기 이름 목록(선택 사항)"
