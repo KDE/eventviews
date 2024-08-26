@@ -37,7 +37,6 @@ msgstr ""
 
 #: agenda/agenda.cpp:968
 #, fuzzy, kde-format
-#| msgid "Locking Failed"
 msgctxt "@title:window"
 msgid "Locking Failed"
 msgstr "Låsing mislyktes"
@@ -57,7 +56,6 @@ msgstr ""
 
 #: agenda/agenda.cpp:1207 month/monthitem.cpp:447
 #, fuzzy, kde-format
-#| msgid "Error Occurred"
 msgctxt "@title:window"
 msgid "Error Occurred"
 msgstr "En feil oppsto"
@@ -76,7 +74,6 @@ msgstr "Deltaker «%1» lagt til i kalenderoppføringa «%2»"
 
 #: agenda/agendaitem.cpp:632
 #, fuzzy, kde-format
-#| msgid "Attendee added"
 msgctxt "@title:window"
 msgid "Attendee added"
 msgstr "Deltaker lagt til"
@@ -109,7 +106,6 @@ msgstr "Klarte ikke lagre %1 «%2»."
 
 #: agenda/timelabels.cpp:331
 #, fuzzy, kde-format
-#| msgid "&Add Timezones..."
 msgid "&Add Timezones…"
 msgstr "&Legg til tidssoner …"
 
@@ -466,16 +462,12 @@ msgstr ""
 #. i18n: ectx: label, entry, group (General View)
 #: eventviews.kcfg:128
 #, fuzzy, kde-format
-#| msgid "To-dos use category colors"
 msgid "To-dos use tag colors"
 msgstr "Gjøremål bruker kategorifarger"
 
 #. i18n: ectx: whatsthis, entry, group (General View)
 #: eventviews.kcfg:129
 #, fuzzy, kde-format
-#| msgid ""
-#| "Check this box so that to-dos will use category colors and not colors "
-#| "specific to their due, due today or overdue state"
 msgid ""
 "Check this box so that to-dos will use tag colors and not colors specific to "
 "their due, due today or overdue state"
@@ -731,18 +723,12 @@ msgstr "Fargebruk"
 #. i18n: ectx: label, entry, group (Month View)
 #: eventviews.kcfg:221 eventviews.kcfg:317
 #, fuzzy, kde-format
-#| msgid "Category inside, calendar outside"
 msgid "Tag inside, calendar outside"
 msgstr "Kategori inni, kalender utenfor"
 
 #. i18n: ectx: whatsthis, entry, group (Agenda View)
 #: eventviews.kcfg:222
 #, fuzzy, kde-format
-#| msgid ""
-#| "Select the \"Category inside, calendar outside\" option if you would like "
-#| "to draw calendar items in their associated category color, with the "
-#| "item's border drawn in the color of its calendar. Please use the Colors "
-#| "and Fonts configuration page for setting these colors."
 msgid ""
 "Select the \"Tag inside, calendar outside\" option if you would like to draw "
 "calendar items in their associated tag color, with the item's border drawn "
@@ -757,9 +743,6 @@ msgstr ""
 #. i18n: ectx: tooltip, entry, group (Agenda View)
 #: eventviews.kcfg:223
 #, fuzzy, kde-format
-#| msgid ""
-#| "Draw agenda items in their category color inside and calendar color for "
-#| "their border"
 msgid ""
 "Draw agenda items in their tag color inside and calendar color for their "
 "border"
@@ -771,18 +754,12 @@ msgstr ""
 #. i18n: ectx: label, entry, group (Month View)
 #: eventviews.kcfg:226 eventviews.kcfg:322
 #, fuzzy, kde-format
-#| msgid "Calendar inside, category outside"
 msgid "Calendar inside, tag outside"
 msgstr "Kalender inni, kategori utenfor"
 
 #. i18n: ectx: whatsthis, entry, group (Agenda View)
 #: eventviews.kcfg:227
 #, fuzzy, kde-format
-#| msgid ""
-#| "Select the \"Calendar inside, category outside\" option if you would like "
-#| "to draw calendar items in their associated calendar color, with the "
-#| "item's border drawn in the color of its category. Please use the Colors "
-#| "and Fonts configuration page for setting these colors."
 msgid ""
 "Select the \"Calendar inside, tag outside\" option if you would like to draw "
 "calendar items in their associated calendar color, with the item's border "
@@ -797,9 +774,6 @@ msgstr ""
 #. i18n: ectx: tooltip, entry, group (Agenda View)
 #: eventviews.kcfg:228
 #, fuzzy, kde-format
-#| msgid ""
-#| "Draw agenda items in their calendar color inside and category color for "
-#| "their border"
 msgid ""
 "Draw agenda items in their calendar color inside and tag color for their "
 "border"
@@ -811,18 +785,12 @@ msgstr ""
 #. i18n: ectx: label, entry, group (Month View)
 #: eventviews.kcfg:231 eventviews.kcfg:327
 #, fuzzy, kde-format
-#| msgid "Only category"
 msgid "Only tag"
 msgstr "Bare kategori"
 
 #. i18n: ectx: whatsthis, entry, group (Agenda View)
 #: eventviews.kcfg:232
 #, fuzzy, kde-format
-#| msgid ""
-#| "Select the \"Only category\" option if you would like to draw calendar "
-#| "items (both inside and border) in the color of their associated category. "
-#| "Please use the Colors and Fonts configuration page for setting these "
-#| "colors."
 msgid ""
 "Select the \"Only tag\" option if you would like to draw calendar items "
 "(both inside and border) in the color of their associated tag. Please use "
@@ -835,8 +803,6 @@ msgstr ""
 #. i18n: ectx: tooltip, entry, group (Agenda View)
 #: eventviews.kcfg:233
 #, fuzzy, kde-format
-#| msgid ""
-#| "Draw agenda items using their category color for the inside and border"
 msgid "Draw agenda items using their tag color for the inside and border"
 msgstr "Tegn timeplan-elementer med kategorifarge både inni og på kantlinjene"
 
@@ -1067,11 +1033,6 @@ msgstr ""
 #. i18n: ectx: whatsthis, entry, group (Month View)
 #: eventviews.kcfg:318
 #, fuzzy, kde-format
-#| msgid ""
-#| "Select the \"Category inside, calendar outside\" option if you would like "
-#| "to draw calendar items in their associated category color, with the "
-#| "item's border drawn in the color of its calendar.  Please use the Colors "
-#| "and Fonts configuration page for setting these colors."
 msgid ""
 "Select the \"Tag inside, calendar outside\" option if you would like to draw "
 "calendar items in their associated tag color, with the item's border drawn "
@@ -1086,9 +1047,6 @@ msgstr ""
 #. i18n: ectx: tooltip, entry, group (Month View)
 #: eventviews.kcfg:319
 #, fuzzy, kde-format
-#| msgid ""
-#| "Draw month items in their category color inside and calendar color for "
-#| "their border"
 msgid ""
 "Draw month items in their tag color inside and calendar color for their "
 "border"
@@ -1099,11 +1057,6 @@ msgstr ""
 #. i18n: ectx: whatsthis, entry, group (Month View)
 #: eventviews.kcfg:323
 #, fuzzy, kde-format
-#| msgid ""
-#| "Select the \"Calendar inside, category outside\" option if you would like "
-#| "to draw calendar items in their associated calendar color, with the "
-#| "item's border drawn in the color of its category.  Please use the Colors "
-#| "and Fonts configuration page for setting these colors."
 msgid ""
 "Select the \"Calendar inside, tag outside\" option if you would like to draw "
 "calendar items in their associated calendar color, with the item's border "
@@ -1118,9 +1071,6 @@ msgstr ""
 #. i18n: ectx: tooltip, entry, group (Month View)
 #: eventviews.kcfg:324
 #, fuzzy, kde-format
-#| msgid ""
-#| "Draw month items in their calendar color inside and category color for "
-#| "their border"
 msgid ""
 "Draw month items in their calendar color inside and tag color for their "
 "border"
@@ -1131,11 +1081,6 @@ msgstr ""
 #. i18n: ectx: whatsthis, entry, group (Month View)
 #: eventviews.kcfg:328
 #, fuzzy, kde-format
-#| msgid ""
-#| "Select the \"Only category\" option if you would like to draw calendar "
-#| "items (both inside and border) in the color of their associated "
-#| "category.  Please use the Colors and Fonts configuration page for setting "
-#| "these colors."
 msgid ""
 "Select the \"Only tag\" option if you would like to draw calendar items "
 "(both inside and border) in the color of their associated tag.  Please use "
@@ -1148,8 +1093,6 @@ msgstr ""
 #. i18n: ectx: tooltip, entry, group (Month View)
 #: eventviews.kcfg:329
 #, fuzzy, kde-format
-#| msgid ""
-#| "Draw month items using their category color for the inside and border"
 msgid "Draw month items using their tag color for the inside and border"
 msgstr ""
 "Tegn månedselementer med deres kategorifarge både inni og på kantlinjene"
@@ -1528,10 +1471,6 @@ msgstr "Standard hendelsesfarge"
 #. i18n: ectx: whatsthis, entry, group (Theme/Month view)
 #: eventviews.kcfg:652
 #, fuzzy, kde-format
-#| msgid ""
-#| "Select the default event color here. The default event color will be used "
-#| "for events categories in your Month. Note that you can specify a separate "
-#| "color for each event category below."
 msgid ""
 "Select the default event color here. The default event color will be used "
 "for events categories in your Month. Note that you can specify a separate "
@@ -1560,7 +1499,6 @@ msgstr "&Rediger"
 
 #: journal/journalframe.cpp:156
 #, fuzzy, kde-format
-#| msgid "Edit this journal entry"
 msgctxt "@info:tooltip"
 msgid "Edit this journal entry"
 msgstr "Rediger denne dagbokoppføringen"
@@ -1577,7 +1515,6 @@ msgstr "&Slett"
 
 #: journal/journalframe.cpp:166
 #, fuzzy, kde-format
-#| msgid "Delete this journal entry"
 msgctxt "@info:tooltip"
 msgid "Delete this journal entry"
 msgstr "Slett denne dagbokoppføringen"
@@ -1594,7 +1531,6 @@ msgstr "Skriv &ut"
 
 #: journal/journalframe.cpp:176
 #, fuzzy, kde-format
-#| msgid "Print this journal entry"
 msgctxt "@info:tooltip"
 msgid "Print this journal entry"
 msgstr "Skriv ut denne dagbokoppføringen"
@@ -1611,7 +1547,6 @@ msgstr ""
 
 #: journal/journalframe.cpp:186
 #, fuzzy, kde-format
-#| msgid "Print this journal entry"
 msgctxt "@info:tooltip"
 msgid "Print preview this journal entry"
 msgstr "Skriv ut denne dagbokoppføringen"
@@ -1757,7 +1692,6 @@ msgstr "Dagsorden %1"
 
 #: multiagenda/multiagendaview.cpp:179
 #, fuzzy, kde-format
-#| msgid "All Day"
 msgctxt "@label:textbox"
 msgid "All Day"
 msgstr "Hele dagen"
@@ -1835,7 +1769,6 @@ msgstr ""
 
 #: todo/todoview.cpp:235
 #, fuzzy, kde-format
-#| msgid "Drop To-do"
 msgctxt "@title:window"
 msgid "Drop To-do"
 msgstr "Fjern gjøremål"
@@ -1877,7 +1810,6 @@ msgstr "Vi&s"
 
 #: todo/todoview.cpp:367
 #, fuzzy, kde-format
-#| msgid "&Edit"
 msgctxt "@action:inmenu edit the to-do"
 msgid "&Edit…"
 msgstr "&Rediger"
@@ -1890,31 +1822,24 @@ msgstr "&Slett"
 
 #: todo/todoview.cpp:383
 #, fuzzy, kde-format
-#| msgid "&Print"
 msgctxt "@action:inmenu print the to-do"
 msgid "&Print…"
 msgstr "Skriv &ut"
 
 #: todo/todoview.cpp:388
 #, fuzzy, kde-format
-#| msgctxt "@action:inmenu print preview the to-do"
-#| msgid "Print Previe&w..."
 msgctxt "@action:inmenu print preview the to-do"
 msgid "Print Previe&w…"
 msgstr "Forhånds&vis utskrift …"
 
 #: todo/todoview.cpp:395
 #, fuzzy, kde-format
-#| msgctxt "@action:inmenu create a new to-do"
-#| msgid "New &To-do..."
 msgctxt "@action:inmenu create a new to-do"
 msgid "New &To-do…"
 msgstr "Nytt &gjøremål …"
 
 #: todo/todoview.cpp:399
 #, fuzzy, kde-format
-#| msgctxt "@action:inmenu create a new sub-to-do"
-#| msgid "New Su&b-to-do..."
 msgctxt "@action:inmenu create a new sub-to-do"
 msgid "New Su&b-to-do…"
 msgstr "Nytt &delgjøremål …"
@@ -2159,14 +2084,12 @@ msgstr ""
 
 #: viewerapp/main.cpp:24
 #, fuzzy, kde-format
-#| msgid "Kevin Krammer"
 msgctxt "@info:credit"
 msgid "Kevin Krammer"
 msgstr "Kevin Krammer"
 
 #: viewerapp/main.cpp:33
 #, fuzzy, kde-format
-#| msgid "Optional list of view names to instantiate"
 msgctxt "@info:shell"
 msgid "Optional list of view names to instantiate"
 msgstr "Valgfri liste over visningsnavn som skal instansieres"
