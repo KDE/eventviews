@@ -420,14 +420,6 @@ TodoView::TodoView(const EventViews::PrefsPtr &prefs, bool sidebarView, QWidget 
     mItemPopupMenuReadWriteEntries << a;
     mItemPopupMenuItemOnlyEntries << a;
 
-    a = mItemPopupMenu->addAction(QIcon::fromTheme(QStringLiteral("view-pim-notes")),
-                                  i18nc("@action:inmenu", "Create Note for To-do"),
-                                  this,
-                                  qOverload<>(&TodoView::createNote));
-    a->setObjectName("createnote"_L1);
-    mItemPopupMenuReadWriteEntries << a;
-    mItemPopupMenuItemOnlyEntries << a;
-
     mItemPopupMenu->addSeparator();
 
     mCopyPopupMenu = new KDatePickerPopup(KDatePickerPopup::NoDate | KDatePickerPopup::DatePicker | KDatePickerPopup::Words, QDate::currentDate(), this);
@@ -1315,18 +1307,6 @@ void TodoView::createEvent()
     const auto todoItem = selection[0].data(Akonadi::TodoModel::TodoRole).value<Akonadi::Item>();
 
     Q_EMIT createEvent(todoItem);
-}
-
-void TodoView::createNote()
-{
-    const QModelIndexList selection = mView->selectionModel()->selectedRows();
-    if (selection.size() != 1) {
-        return;
-    }
-
-    const auto todoItem = selection[0].data(Akonadi::TodoModel::TodoRole).value<Akonadi::Item>();
-
-    Q_EMIT createNote(todoItem);
 }
 
 #include "todoview.moc"

@@ -97,7 +97,6 @@ public Q_SLOTS:
     void restoreViewState();
     void saveViewState();
 
-    void createNote();
     void createEvent();
 
 protected Q_SLOTS:
@@ -141,7 +140,6 @@ Q_SIGNALS:
     void printPreviewTodo();
     void printTodo();
 
-    void createNote(const Akonadi::Item &item);
     void createEvent(const Akonadi::Item &item);
 
 private:
