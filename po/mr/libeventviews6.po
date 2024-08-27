@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-21 00:39+0000\n"
+"POT-Creation-Date: 2024-08-27 00:39+0000\n"
 "PO-Revision-Date: 2013-03-15 14:01+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: Marathi <kde-i18n-doc@kde.org>\n"
@@ -1555,7 +1555,7 @@ msgctxt "@action:inmenu Unspecified priority"
 msgid "unspecified"
 msgstr "अविनिर्दिष्ट"
 
-#: todo/tododelegates.cpp:153 todo/todoview.cpp:456
+#: todo/tododelegates.cpp:153 todo/todoview.cpp:448
 #, kde-format
 msgctxt "@action:inmenu highest priority"
 msgid "1 (highest)"
@@ -1579,7 +1579,7 @@ msgctxt "@action:inmenu"
 msgid "4"
 msgstr "4"
 
-#: todo/tododelegates.cpp:157 todo/todoview.cpp:460
+#: todo/tododelegates.cpp:157 todo/todoview.cpp:452
 #, kde-format
 msgctxt "@action:inmenu medium priority"
 msgid "5 (medium)"
@@ -1603,7 +1603,7 @@ msgctxt "@action:inmenu"
 msgid "8"
 msgstr "8"
 
-#: todo/tododelegates.cpp:161 todo/todoview.cpp:464
+#: todo/tododelegates.cpp:161 todo/todoview.cpp:456
 #, kde-format
 msgctxt "@action:inmenu lowest priority"
 msgid "9 (lowest)"
@@ -1713,67 +1713,61 @@ msgctxt "@action:inmenu"
 msgid "Create Event from To-do"
 msgstr ""
 
-#: todo/todoview.cpp:424
-#, kde-format
-msgctxt "@action:inmenu"
-msgid "Create Note for To-do"
-msgstr ""
-
-#: todo/todoview.cpp:434
+#: todo/todoview.cpp:426
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Copy To"
 msgstr "येथे प्रत करा (&C)"
 
-#: todo/todoview.cpp:441
+#: todo/todoview.cpp:433
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Move To"
 msgstr "येथे हलवा (&M)"
 
-#: todo/todoview.cpp:452
+#: todo/todoview.cpp:444
 #, kde-format
 msgctxt "@action:inmenu delete completed to-dos"
 msgid "Pur&ge Completed"
 msgstr ""
 
-#: todo/todoview.cpp:455
+#: todo/todoview.cpp:447
 #, kde-format
 msgctxt "@action:inmenu unspecified priority"
 msgid "unspecified"
 msgstr "अविनिर्दिष्ट"
 
-#: todo/todoview.cpp:457
+#: todo/todoview.cpp:449
 #, kde-format
 msgctxt "@action:inmenu priority value=2"
 msgid "2"
 msgstr "2"
 
-#: todo/todoview.cpp:458
+#: todo/todoview.cpp:450
 #, kde-format
 msgctxt "@action:inmenu priority value=3"
 msgid "3"
 msgstr "3"
 
-#: todo/todoview.cpp:459
+#: todo/todoview.cpp:451
 #, kde-format
 msgctxt "@action:inmenu priority value=4"
 msgid "4"
 msgstr "4"
 
-#: todo/todoview.cpp:461
+#: todo/todoview.cpp:453
 #, kde-format
 msgctxt "@action:inmenu priority value=6"
 msgid "6"
 msgstr "6"
 
-#: todo/todoview.cpp:462
+#: todo/todoview.cpp:454
 #, kde-format
 msgctxt "@action:inmenu priority value=7"
 msgid "7"
 msgstr "7"
 
-#: todo/todoview.cpp:463
+#: todo/todoview.cpp:455
 #, kde-format
 msgctxt "@action:inmenu priority value=8"
 msgid "8"
