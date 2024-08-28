@@ -2227,7 +2227,3 @@ msgstr "%1， %2 - %3"
 msgctxt "to-do due date"
 msgid "  (Due: %1)"
 msgstr "  (到期日期：%1)"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "Create Note for To-do"
-#~ msgstr "为待办事项创建便签"
