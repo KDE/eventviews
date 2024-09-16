@@ -37,8 +37,7 @@ msgstr ""
 "αλλαγές."
 
 #: agenda/agenda.cpp:968
-#, fuzzy, kde-format
-#| msgid "Locking Failed"
+#, kde-format
 msgctxt "@title:window"
 msgid "Locking Failed"
 msgstr "Το κλείδωμα απέτυχε"
@@ -57,8 +56,7 @@ msgstr ""
 "αλλαγή."
 
 #: agenda/agenda.cpp:1207 month/monthitem.cpp:447
-#, fuzzy, kde-format
-#| msgid "Error Occurred"
+#, kde-format
 msgctxt "@title:window"
 msgid "Error Occurred"
 msgstr "Παρουσιάστηκε σφάλμα"
@@ -76,8 +74,7 @@ msgid "Attendee \"%1\" added to the calendar item \"%2\""
 msgstr "Ο συμμετέχων \"%1\" προστέθηκε στο αντικείμενο ημερολογίου \"%2\""
 
 #: agenda/agendaitem.cpp:632
-#, fuzzy, kde-format
-#| msgid "Attendee added"
+#, kde-format
 msgctxt "@title:window"
 msgid "Attendee added"
 msgstr "Ο συμμετέχων προστέθηκε"
@@ -111,10 +108,9 @@ msgid "Unable to save %1 \"%2\"."
 msgstr "Αδυναμία αποθήκευσης %1 \"%2\"."
 
 #: agenda/timelabels.cpp:331
-#, fuzzy, kde-format
-#| msgid "&Add Timezones..."
+#, kde-format
 msgid "&Add Timezones…"
-msgstr "&Προσθήκη ζωνών ώρας..."
+msgstr "&Προσθήκη ζωνών ώρας…"
 
 #: agenda/timelabels.cpp:332
 #, kde-format
@@ -1637,8 +1633,7 @@ msgid "&Edit"
 msgstr "&Επεξεργασία"
 
 #: journal/journalframe.cpp:156
-#, fuzzy, kde-format
-#| msgid "Edit this journal entry"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Edit this journal entry"
 msgstr "Επεξεργασία της καταχώρησης ημερολογίου"
@@ -1654,8 +1649,7 @@ msgid "&Delete"
 msgstr "&Διαγραφή"
 
 #: journal/journalframe.cpp:166
-#, fuzzy, kde-format
-#| msgid "Delete this journal entry"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete this journal entry"
 msgstr "Διαγραφή της καταχώρησης ημερολογίου"
@@ -1671,8 +1665,7 @@ msgid "&Print"
 msgstr "Εκτύ&πωση"
 
 #: journal/journalframe.cpp:176
-#, fuzzy, kde-format
-#| msgid "Print this journal entry"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Print this journal entry"
 msgstr "Εκτύπωση της καταχώρησης ημερολογίου"
@@ -1689,8 +1682,7 @@ msgid "Print preview"
 msgstr "Προεπισκόπηση εκτύπωσης"
 
 #: journal/journalframe.cpp:186
-#, fuzzy, kde-format
-#| msgid "Print preview this journal entry"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Print preview this journal entry"
 msgstr "Προεπισκόπηση αυτής της καταχώρησης ημερολογίου"
@@ -1840,8 +1832,7 @@ msgid "Agenda %1"
 msgstr "Ατζέντα %1"
 
 #: multiagenda/multiagendaview.cpp:179
-#, fuzzy, kde-format
-#| msgid "All Day"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "All Day"
 msgstr "Όλη μέρα"
@@ -1917,8 +1908,7 @@ msgid "Cannot move to-do to itself or a child of itself."
 msgstr "Αδύνατη η μετακίνηση μιας εργασίας ή απογόνου στον εαυτό του."
 
 #: todo/todoview.cpp:235
-#, fuzzy, kde-format
-#| msgid "Drop To-do"
+#, kde-format
 msgctxt "@title:window"
 msgid "Drop To-do"
 msgstr "Διαγραφή της εργασίας"
@@ -1961,11 +1951,10 @@ msgid "&Show"
 msgstr "&Εμφάνιση"
 
 #: todo/todoview.cpp:367
-#, fuzzy, kde-format
-#| msgid "&Edit"
+#, kde-format
 msgctxt "@action:inmenu edit the to-do"
 msgid "&Edit…"
-msgstr "&Επεξεργασία"
+msgstr "&Επεξεργασία…"
 
 #: todo/todoview.cpp:374
 #, kde-format
@@ -1974,35 +1963,28 @@ msgid "&Delete"
 msgstr "&Διαγραφή"
 
 #: todo/todoview.cpp:383
-#, fuzzy, kde-format
-#| msgid "&Print"
+#, kde-format
 msgctxt "@action:inmenu print the to-do"
 msgid "&Print…"
-msgstr "Εκτύ&πωση"
+msgstr "Εκτύ&πωση…"
 
 #: todo/todoview.cpp:388
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu print preview the to-do"
-#| msgid "Print Previe&w..."
+#, kde-format
 msgctxt "@action:inmenu print preview the to-do"
 msgid "Print Previe&w…"
-msgstr "&Προεπισκόπηση εκτύπωσης..."
+msgstr "&Προεπισκόπηση εκτύπωσης…"
 
 #: todo/todoview.cpp:395
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu create a new to-do"
-#| msgid "New &To-do..."
+#, kde-format
 msgctxt "@action:inmenu create a new to-do"
 msgid "New &To-do…"
-msgstr "Νέα προγραμμα&τισμένη εργασία..."
+msgstr "Νέα προγραμμα&τισμένη εργασία…"
 
 #: todo/todoview.cpp:399
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu create a new sub-to-do"
-#| msgid "New Su&b-to-do..."
+#, kde-format
 msgctxt "@action:inmenu create a new sub-to-do"
 msgid "New Su&b-to-do…"
-msgstr "Νέα προγραμματισμένη &υποεργασία..."
+msgstr "Νέα προγραμματισμένη &υποεργασία…"
 
 #: todo/todoview.cpp:403
 #, kde-format
@@ -2104,12 +2086,10 @@ msgstr ""
 "οποίες εμφανίζονται από ταιριαστές περιλήψεις."
 
 #: todo/todoviewquicksearch.cpp:39
-#, fuzzy, kde-format
-#| msgctxt "@label in QuickSearchLine"
-#| msgid "Search Summaries..."
+#, kde-format
 msgctxt "@label in QuickSearchLine"
 msgid "Search Summaries…"
-msgstr "Αναζήτηση περιλήψεων..."
+msgstr "Αναζήτηση περιλήψεων…"
 
 #: todo/todoviewquicksearch.cpp:46
 #, kde-format
@@ -2242,15 +2222,13 @@ msgstr ""
 "του ομίλου KDAB, info@kdab.net"
 
 #: viewerapp/main.cpp:24
-#, fuzzy, kde-format
-#| msgid "Kevin Krammer"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Kevin Krammer"
 msgstr "Kevin Krammer"
 
 #: viewerapp/main.cpp:33
-#, fuzzy, kde-format
-#| msgid "Optional list of view names to instantiate"
+#, kde-format
 msgctxt "@info:shell"
 msgid "Optional list of view names to instantiate"
 msgstr "Προαιρετική λίστα των ονομάτων προβολής προς αρχικοποίηση"
