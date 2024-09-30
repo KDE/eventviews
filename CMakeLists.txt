@@ -131,5 +131,5 @@ install(FILES
 kde_configure_git_pre_commit_hook(CHECKS CLANG_FORMAT)
 ki18n_install(po)
 ecm_feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
-file(GLOB_RECURSE ALL_SOURCE_FILES src/*.cpp src/*.h)
+file(GLOB_RECURSE ALL_SOURCE_FILES src/*.cpp src/*.h autotests/*.cpp autotests/*.h)
 ecm_check_outbound_license(LICENSES GPL-2.0-only  FILES ${ALL_SOURCE_FILES})
