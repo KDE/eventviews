@@ -241,7 +241,6 @@ TodoView::TodoView(const EventViews::PrefsPtr &prefs, bool sidebarView, QWidget 
 
     mProxyModel = new TodoViewSortFilterProxyModel(preferences(), this);
     mProxyModel->setSourceModel(sModels->coloredTodoModel);
-    mProxyModel->setDynamicSortFilter(true);
     mProxyModel->setFilterKeyColumn(Akonadi::TodoModel::SummaryColumn);
     mProxyModel->setFilterCaseSensitivity(Qt::CaseInsensitive);
     mProxyModel->setSortRole(Qt::EditRole);

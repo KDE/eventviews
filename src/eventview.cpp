@@ -543,7 +543,6 @@ void EventView::restoreConfig(const KConfigGroup &configGroup)
         if (!d->collectionSelectionModel) {
             // Sort the calendar model on calendar name
             auto sortProxy = new QSortFilterProxyModel(this);
-            sortProxy->setDynamicSortFilter(true);
             sortProxy->setSortCaseSensitivity(Qt::CaseInsensitive);
             sortProxy->setSourceModel(d->model);
 

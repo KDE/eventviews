@@ -755,7 +755,6 @@ void MultiAgendaView::doRestoreConfig(const KConfigGroup &configGroup)
         for (int i = 0; i < d->mCustomNumberOfColumns; ++i) {
             // Sort the calanders by name
             auto sortProxy = new QSortFilterProxyModel(this);
-            sortProxy->setDynamicSortFilter(true);
             sortProxy->setSourceModel(model());
 
             // Only show the first column
