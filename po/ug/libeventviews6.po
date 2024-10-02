@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-27 00:39+0000\n"
+"POT-Creation-Date: 2024-10-02 00:40+0000\n"
 "PO-Revision-Date: 2013-09-08 07:05+0900\n"
 "Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -1554,7 +1554,7 @@ msgctxt "@action:inmenu Unspecified priority"
 msgid "unspecified"
 msgstr "كۆرسىتىلمىگەن"
 
-#: todo/tododelegates.cpp:153 todo/todoview.cpp:448
+#: todo/tododelegates.cpp:153 todo/todoview.cpp:447
 #, kde-format
 msgctxt "@action:inmenu highest priority"
 msgid "1 (highest)"
@@ -1578,7 +1578,7 @@ msgctxt "@action:inmenu"
 msgid "4"
 msgstr "4"
 
-#: todo/tododelegates.cpp:157 todo/todoview.cpp:452
+#: todo/tododelegates.cpp:157 todo/todoview.cpp:451
 #, kde-format
 msgctxt "@action:inmenu medium priority"
 msgid "5 (medium)"
@@ -1602,7 +1602,7 @@ msgctxt "@action:inmenu"
 msgid "8"
 msgstr "8"
 
-#: todo/tododelegates.cpp:161 todo/todoview.cpp:456
+#: todo/tododelegates.cpp:161 todo/todoview.cpp:455
 #, kde-format
 msgctxt "@action:inmenu lowest priority"
 msgid "9 (lowest)"
@@ -1619,25 +1619,25 @@ msgctxt "@title:window"
 msgid "Drop To-do"
 msgstr ""
 
-#: todo/todoview.cpp:315
+#: todo/todoview.cpp:314
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display to-do list in a full window"
 msgstr ""
 
-#: todo/todoview.cpp:316
+#: todo/todoview.cpp:315
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Checking this option will cause the to-do view to use the full window."
 msgstr ""
 
-#: todo/todoview.cpp:321
+#: todo/todoview.cpp:320
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display to-dos in flat list instead of a tree"
 msgstr ""
 
-#: todo/todoview.cpp:323
+#: todo/todoview.cpp:322
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1646,33 +1646,33 @@ msgid ""
 "the display."
 msgstr ""
 
-#: todo/todoview.cpp:362
+#: todo/todoview.cpp:361
 #, kde-format
 msgctxt "@action:inmenu show the to-do"
 msgid "&Show"
 msgstr "كۆرسەت(&S)"
 
-#: todo/todoview.cpp:367
+#: todo/todoview.cpp:366
 #, fuzzy, kde-format
 #| msgid "&Edit"
 msgctxt "@action:inmenu edit the to-do"
 msgid "&Edit…"
 msgstr "تەھرىر(&E)"
 
-#: todo/todoview.cpp:374
+#: todo/todoview.cpp:373
 #, kde-format
 msgctxt "@action:inmenu delete the to-do"
 msgid "&Delete"
 msgstr "ئۆچۈر(&D)"
 
-#: todo/todoview.cpp:383
+#: todo/todoview.cpp:382
 #, fuzzy, kde-format
 #| msgid "&Print"
 msgctxt "@action:inmenu print the to-do"
 msgid "&Print…"
 msgstr "باس(&P)"
 
-#: todo/todoview.cpp:388
+#: todo/todoview.cpp:387
 #, fuzzy, kde-format
 #| msgctxt "@action:inmenu print preview the to-do"
 #| msgid "Print Previe&w..."
@@ -1680,7 +1680,7 @@ msgctxt "@action:inmenu print preview the to-do"
 msgid "Print Previe&w…"
 msgstr "بېسىشنى ئالدىن كۆزەت(&W)…"
 
-#: todo/todoview.cpp:395
+#: todo/todoview.cpp:394
 #, fuzzy, kde-format
 #| msgctxt "@action:inmenu create a new to-do"
 #| msgid "New &To-do..."
@@ -1688,7 +1688,7 @@ msgctxt "@action:inmenu create a new to-do"
 msgid "New &To-do…"
 msgstr "يېڭى قىلىدىغان ئىشلار(&T)…"
 
-#: todo/todoview.cpp:399
+#: todo/todoview.cpp:398
 #, fuzzy, kde-format
 #| msgctxt "@action:inmenu create a new sub-to-do"
 #| msgid "New Su&b-to-do..."
@@ -1696,79 +1696,79 @@ msgctxt "@action:inmenu create a new sub-to-do"
 msgid "New Su&b-to-do…"
 msgstr "يېڭى تارماق قىلىدىغان ئىشلار(&B)…"
 
-#: todo/todoview.cpp:403
+#: todo/todoview.cpp:402
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Make this To-do Independent"
 msgstr ""
 
-#: todo/todoview.cpp:405
+#: todo/todoview.cpp:404
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Make all Sub-to-dos &Independent"
 msgstr ""
 
-#: todo/todoview.cpp:416
+#: todo/todoview.cpp:415
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Create Event from To-do"
 msgstr ""
 
-#: todo/todoview.cpp:426
+#: todo/todoview.cpp:425
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Copy To"
 msgstr "كۆچۈر(&C)"
 
-#: todo/todoview.cpp:433
+#: todo/todoview.cpp:432
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Move To"
 msgstr "يۆتكە(&M)"
 
-#: todo/todoview.cpp:444
+#: todo/todoview.cpp:443
 #, kde-format
 msgctxt "@action:inmenu delete completed to-dos"
 msgid "Pur&ge Completed"
 msgstr ""
 
-#: todo/todoview.cpp:447
+#: todo/todoview.cpp:446
 #, kde-format
 msgctxt "@action:inmenu unspecified priority"
 msgid "unspecified"
 msgstr "كۆرسىتىلمىگەن"
 
-#: todo/todoview.cpp:449
+#: todo/todoview.cpp:448
 #, kde-format
 msgctxt "@action:inmenu priority value=2"
 msgid "2"
 msgstr "2"
 
-#: todo/todoview.cpp:450
+#: todo/todoview.cpp:449
 #, kde-format
 msgctxt "@action:inmenu priority value=3"
 msgid "3"
 msgstr "3"
 
-#: todo/todoview.cpp:451
+#: todo/todoview.cpp:450
 #, kde-format
 msgctxt "@action:inmenu priority value=4"
 msgid "4"
 msgstr "4"
 
-#: todo/todoview.cpp:453
+#: todo/todoview.cpp:452
 #, kde-format
 msgctxt "@action:inmenu priority value=6"
 msgid "6"
 msgstr "6"
 
-#: todo/todoview.cpp:454
+#: todo/todoview.cpp:453
 #, kde-format
 msgctxt "@action:inmenu priority value=7"
 msgid "7"
 msgstr "7"
 
-#: todo/todoview.cpp:455
+#: todo/todoview.cpp:454
 #, kde-format
 msgctxt "@action:inmenu priority value=8"
 msgid "8"
