@@ -41,7 +41,10 @@ class EventIndicator : public QWidget
 {
     Q_OBJECT
 public:
-    enum Location { Top, Bottom };
+    enum Location {
+        Top,
+        Bottom
+    };
     explicit EventIndicator(Location loc = Top, QWidget *parent = nullptr);
     ~EventIndicator() override;
 

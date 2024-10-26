@@ -43,7 +43,9 @@ class KConfigGroup;
 
 namespace EventViews
 {
-enum { BUSY_BACKGROUND_ALPHA = 70 };
+enum {
+    BUSY_BACKGROUND_ALPHA = 70
+};
 
 class EventViewPrivate;
 class Prefs;

@@ -17,7 +17,11 @@ public:
     AlternateLabel(const QString &shortlabel, const QString &longlabel, const QString &extensivelabel = QString(), QWidget *parent = nullptr);
     ~AlternateLabel() override;
 
-    enum TextType { Short = 0, Long = 1, Extensive = 2 };
+    enum TextType {
+        Short = 0,
+        Long = 1,
+        Extensive = 2
+    };
 
     [[nodiscard]] TextType largestFittingTextType() const;
     void setFixedType(TextType type);

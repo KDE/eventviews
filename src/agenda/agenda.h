@@ -220,7 +220,15 @@ Q_SIGNALS:
     void gridSpacingYChanged(double);
 
 private:
-    enum MouseActionType { NOP, MOVE, SELECT, RESIZETOP, RESIZEBOTTOM, RESIZELEFT, RESIZERIGHT };
+    enum MouseActionType {
+        NOP,
+        MOVE,
+        SELECT,
+        RESIZETOP,
+        RESIZEBOTTOM,
+        RESIZELEFT,
+        RESIZERIGHT
+    };
 
     AgendaItem::QPtr
     createAgendaItem(const KCalendarCore::Incidence::Ptr &incidence, int itemPos, int itemCount, const QDateTime &recurrentId, bool isSelected);

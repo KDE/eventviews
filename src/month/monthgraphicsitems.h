@@ -21,7 +21,10 @@ class MonthItem;
 class ScrollIndicator : public QGraphicsItem
 {
 public:
-    enum ArrowDirection { UpArrow, DownArrow };
+    enum ArrowDirection {
+        UpArrow,
+        DownArrow
+    };
 
     explicit ScrollIndicator(ArrowDirection direction);
 

@@ -32,7 +32,9 @@ public:
     PrefsPtr mPreferences;
 };
 
-enum { TimeZoneNameRole = Qt::UserRole };
+enum {
+    TimeZoneNameRole = Qt::UserRole
+};
 
 using TimeZoneNamePair = QPair<QString, QByteArray>;
 

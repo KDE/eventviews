@@ -32,10 +32,17 @@ class MonthScene : public QGraphicsScene
 {
     Q_OBJECT
 
-    enum ActionType { None, Move, Resize };
+    enum ActionType {
+        None,
+        Move,
+        Resize
+    };
 
 public:
-    enum ResizeType { ResizeLeft, ResizeRight };
+    enum ResizeType {
+        ResizeLeft,
+        ResizeRight
+    };
 
     explicit MonthScene(MonthView *parent);
     ~MonthScene() override;

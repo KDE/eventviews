@@ -54,7 +54,9 @@ using namespace std::chrono_literals;
 
 using namespace EventViews;
 
-enum { SPACING = 2 };
+enum {
+    SPACING = 2
+};
 enum {
     SHRINKDOWN = 2 // points less for the timezone font
 };

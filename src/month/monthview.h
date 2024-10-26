@@ -27,7 +27,10 @@ class EVENTVIEWS_EXPORT MonthView : public EventView
 {
     Q_OBJECT
 public:
-    enum NavButtonsVisibility { Visible, Hidden };
+    enum NavButtonsVisibility {
+        Visible,
+        Hidden
+    };
 
     explicit MonthView(NavButtonsVisibility visibility = Visible, QWidget *parent = nullptr);
     ~MonthView() override;
