@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-02 00:40+0000\n"
+"POT-Creation-Date: 2024-10-27 00:40+0000\n"
 "PO-Revision-Date: 2020-09-08 19:18+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian\n"
@@ -89,19 +89,19 @@ msgstr "%1 - %2"
 msgid "- %1"
 msgstr "- %1"
 
-#: agenda/agendaview.cpp:381
+#: agenda/agendaview.cpp:383
 #, fuzzy, kde-format
 #| msgid "%1 - %2"
 msgctxt "short_weekday short_monthname date (e.g. Mon Aug 13)"
 msgid "%1 %2 %3"
 msgstr "%1 - %2"
 
-#: agenda/agendaview.cpp:2237
+#: agenda/agendaview.cpp:2239
 #, kde-format
 msgid "Unable to modify this to-do, because it cannot be locked."
 msgstr "Activitatea nu poate fi modificată, deoarece nu poate fi blocată."
 
-#: agenda/agendaview.cpp:2245
+#: agenda/agendaview.cpp:2247
 #, kde-format
 msgid "Unable to save %1 \"%2\"."
 msgstr "Imposibil de salvat %1 „%2”."
@@ -157,7 +157,7 @@ msgctxt "[hour of the day][am/pm/00] [timezone id (timezone-offset)]"
 msgid "%1%2<br/>%3 (%4)"
 msgstr ""
 
-#: agenda/timescaleconfigdialog.cpp:49
+#: agenda/timescaleconfigdialog.cpp:51
 #, fuzzy, kde-format
 #| msgid "Timezone"
 msgctxt "@title:window"
