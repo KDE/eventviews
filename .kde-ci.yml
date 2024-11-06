@@ -6,7 +6,6 @@ Dependencies:
   'require':
     'frameworks/extra-cmake-modules': '@latest-kf6'
     'frameworks/kcalendarcore' : '@latest-kf6'
-    'frameworks/kconfigwidgets' : '@latest-kf6'
     'graphics/kdiagram' : '@latest-kf6'
     'pim/akonadi' : '@same'
     'pim/akonadi-calendar' : '@same'

@@ -53,7 +53,6 @@ find_package(KF6Service ${KF_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF6Completion ${KF_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF6Holidays ${KF_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF6Contacts ${KF_MIN_VERSION} CONFIG REQUIRED)
-find_package(KF6ConfigWidgets ${KF_MIN_VERSION} CONFIG REQUIRED)
 
 set(KDIAGRAM_LIB_VERSION "3.0.0")
 find_package(KGantt6 ${KDIAGRAM_LIB_VERSION} CONFIG REQUIRED)
