@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-21 00:39+0000\n"
-"PO-Revision-Date: 2024-06-25 19:11+0200\n"
+"PO-Revision-Date: 2024-11-06 23:54+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.1\n"
+"X-Generator: Lokalize 24.11.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -68,7 +68,7 @@ msgstr[1] "%2 ( %1 години)"
 #: agenda/agendaitem.cpp:631
 #, kde-format
 msgid "Attendee \"%1\" added to the calendar item \"%2\""
-msgstr "Участникът \" %1 \"е добавен към елемента на календара \" %2 \""
+msgstr "Участникът „%1“ е добавен към елемента на календара „%2“"
 
 #: agenda/agendaitem.cpp:632
 #, kde-format
@@ -100,7 +100,7 @@ msgstr "Не може да се промени тази задача, защот
 #: agenda/agendaview.cpp:2245
 #, kde-format
 msgid "Unable to save %1 \"%2\"."
-msgstr "Неуспешен запис на %1 \"%2\"."
+msgstr "Неуспешен запис на %1 „%2“."
 
 #: agenda/timelabels.cpp:331
 #, kde-format
