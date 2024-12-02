@@ -1,6 +1,6 @@
 # Copyright © 2011 This_file_is_part_of_KDE
 # This file is distributed under the same license as the kdepim package.
-# Tommi Nieminen <translator@legisign.org>, 2011, 2013, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2011, 2013, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Tommi Nieminen <translator@legisign.org>
 # Lasse Liehu <lasse.liehu@gmail.com>, 2012, 2013, 2014, 2015, 2016.
 #
 # KDE Finnish translation sprint participants:
@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-27 00:40+0000\n"
-"PO-Revision-Date: 2023-10-12 18:07+0300\n"
+"PO-Revision-Date: 2024-10-19 10:17+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -18,8 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-POT-Import-Date: 2012-12-01 22:25:08+0000\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -105,10 +104,9 @@ msgid "Unable to save %1 \"%2\"."
 msgstr "Ei voi tallentaa: %1 ”%2”."
 
 #: agenda/timelabels.cpp:331
-#, fuzzy, kde-format
-#| msgid "&Add Timezones..."
+#, kde-format
 msgid "&Add Timezones…"
-msgstr "&Lisää aikavyöhykkeitä…"
+msgstr "Lisää aika&vyöhykkeitä…"
 
 #: agenda/timelabels.cpp:332
 #, kde-format
@@ -463,23 +461,19 @@ msgstr ""
 
 #. i18n: ectx: label, entry, group (General View)
 #: eventviews.kcfg:128
-#, fuzzy, kde-format
-#| msgid "To-dos use category colors"
+#, kde-format
 msgid "To-dos use tag colors"
-msgstr "Tehtävät käyttävät luokkien värejä"
+msgstr "Tehtävät käyttävät luokitusten värejä"
 
 #. i18n: ectx: whatsthis, entry, group (General View)
 #: eventviews.kcfg:129
-#, fuzzy, kde-format
-#| msgid ""
-#| "Check this box so that to-dos will use category colors and not colors "
-#| "specific to their due, due today or overdue state"
+#, kde-format
 msgid ""
 "Check this box so that to-dos will use tag colors and not colors specific to "
 "their due, due today or overdue state"
 msgstr ""
-"Valitse tämä, niin tehtävät käyttävät luokkiensa värejä eivätkä määräpäivän, "
-"tänäisen määräpäivän tai ohitetun määräpäivän mukaisia värejä."
+"Valitse tämä, niin tehtävät käyttävät luokitustensa värejä eivätkä "
+"määräpäivän, tänäisen määräpäivän tai ohitetun määräpäivän värejä"
 
 #. i18n: ectx: label, entry, group (General View)
 #: eventviews.kcfg:134
@@ -729,115 +723,89 @@ msgstr "Värien käyttö"
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
 #: eventviews.kcfg:221 eventviews.kcfg:317
-#, fuzzy, kde-format
-#| msgid "Category inside, calendar outside"
+#, kde-format
 msgid "Tag inside, calendar outside"
-msgstr "Luokka sisä-, kalenteri ulkopuolella"
+msgstr "Luokitus sisä-, kalenteri ulkopuolella"
 
 #. i18n: ectx: whatsthis, entry, group (Agenda View)
 #: eventviews.kcfg:222
-#, fuzzy, kde-format
-#| msgid ""
-#| "Select the \"Category inside, calendar outside\" option if you would like "
-#| "to draw calendar items in their associated category color, with the "
-#| "item's border drawn in the color of its calendar. Please use the Colors "
-#| "and Fonts configuration page for setting these colors."
+#, kde-format
 msgid ""
 "Select the \"Tag inside, calendar outside\" option if you would like to draw "
 "calendar items in their associated tag color, with the item's border drawn "
 "in the color of its calendar. Please use the Colors and Fonts configuration "
 "page for setting these colors."
 msgstr ""
-"Valitse ”Luokka sisä-, kalenteri ulkopuolella” -asetus, jos haluat "
-"kalenterimerkinnät väritettävän luokkansa värillä niin, että merkinnän "
-"reunus on sen kalenterin värinen. Värit voit asettaa Värit ja fontit -"
-"asetussivulta."
+"Valitse ”Luokitus sisä-, kalenteri ulkopuolella” -asetus, jos "
+"kalenterimerkinnät tulisi värittää luokitustensa väreillä niin, että "
+"merkinnän reunus on kalenterinsa värinen. Värit voi asettaa Värit ja fontit -"
+"asetussivulla."
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
 #: eventviews.kcfg:223
-#, fuzzy, kde-format
-#| msgid ""
-#| "Draw agenda items in their category color inside and calendar color for "
-#| "their border"
+#, kde-format
 msgid ""
 "Draw agenda items in their tag color inside and calendar color for their "
 "border"
 msgstr ""
-"Väritä päivyrin merkinnät luokkansa värillä sisältä ja kalenterin värillä "
-"reunoilta"
+"Väritä päivyrin merkinnät luokituksensa värillä sisältä ja kalenterin "
+"värillä reunoilta"
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
 #: eventviews.kcfg:226 eventviews.kcfg:322
-#, fuzzy, kde-format
-#| msgid "Calendar inside, category outside"
+#, kde-format
 msgid "Calendar inside, tag outside"
-msgstr "Kalenteri sisä-, luokka ulkopuolella"
+msgstr "Kalenteri sisä-, luokitus ulkopuolella"
 
 #. i18n: ectx: whatsthis, entry, group (Agenda View)
 #: eventviews.kcfg:227
-#, fuzzy, kde-format
-#| msgid ""
-#| "Select the \"Calendar inside, category outside\" option if you would like "
-#| "to draw calendar items in their associated calendar color, with the "
-#| "item's border drawn in the color of its category. Please use the Colors "
-#| "and Fonts configuration page for setting these colors."
+#, kde-format
 msgid ""
 "Select the \"Calendar inside, tag outside\" option if you would like to draw "
 "calendar items in their associated calendar color, with the item's border "
 "drawn in the color of its tag. Please use the Colors and Fonts configuration "
 "page for setting these colors."
 msgstr ""
-"Valitse ”Kalenteri sisä-, luokka ulkopuolella” -asetus, jos haluat "
-"kalenterimerkinnät väritettävän niihin yhdistetyn kalenterin värillä niin, "
-"että merkinnän reunus on sen luokan värinen. Värit voit asettaa Värit ja "
-"fontit -asetussivulta."
+"Valitse ”Kalenteri sisä-, luokitus ulkopuolella” -asetus, jos "
+"kalenterimerkinnät tulisi värittää niihin yhdistetyn kalenterin värillä "
+"niin, että merkinnän reunus on luokituksensa värinen. Värit voi asettaa "
+"Värit ja fontit -asetussivulla."
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
 #: eventviews.kcfg:228
-#, fuzzy, kde-format
-#| msgid ""
-#| "Draw agenda items in their calendar color inside and category color for "
-#| "their border"
+#, kde-format
 msgid ""
 "Draw agenda items in their calendar color inside and tag color for their "
 "border"
 msgstr ""
-"Väritä päivyrin merkinnät kalenterin värillä sisältä ja luokkansa värillä "
-"reunoilta"
+"Väritä päivyrin merkinnät kalenterin värillä sisältä ja luokituksensa "
+"värillä reunoilta"
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
 #: eventviews.kcfg:231 eventviews.kcfg:327
-#, fuzzy, kde-format
-#| msgid "Only category"
+#, kde-format
 msgid "Only tag"
-msgstr "Vain luokka"
+msgstr "Vain luokitus"
 
 #. i18n: ectx: whatsthis, entry, group (Agenda View)
 #: eventviews.kcfg:232
-#, fuzzy, kde-format
-#| msgid ""
-#| "Select the \"Only category\" option if you would like to draw calendar "
-#| "items (both inside and border) in the color of their associated category. "
-#| "Please use the Colors and Fonts configuration page for setting these "
-#| "colors."
+#, kde-format
 msgid ""
 "Select the \"Only tag\" option if you would like to draw calendar items "
 "(both inside and border) in the color of their associated tag. Please use "
 "the Colors and Fonts configuration page for setting these colors."
 msgstr ""
-"Valitse ”Vain luokka” -asetus, jos haluat värittää kalenterimerkinnät (niin "
-"sisältä kuin reunoilta) luokkansa värillä. Värit voit asettaa Värit ja "
-"fontit -asetussivulta."
+"Valitse ”Vain luokitus” -asetus, jos kalenterimerkinnät tulisi värittää "
+"(niin sisältä kuin reunoilta) luokitustensa värillä. Värit voi asettaa Värit "
+"ja fontit -asetussivulla."
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
 #: eventviews.kcfg:233
-#, fuzzy, kde-format
-#| msgid ""
-#| "Draw agenda items using their category color for the inside and border"
+#, kde-format
 msgid "Draw agenda items using their tag color for the inside and border"
-msgstr "Väritä päivyrin merkinnät luokkansa värillä sisältä ja reunoilta"
+msgstr "Väritä päivyrin merkinnät luokituksensa värillä sisältä ja reunoilta"
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
@@ -1063,92 +1031,69 @@ msgstr ""
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
 #: eventviews.kcfg:318
-#, fuzzy, kde-format
-#| msgid ""
-#| "Select the \"Category inside, calendar outside\" option if you would like "
-#| "to draw calendar items in their associated category color, with the "
-#| "item's border drawn in the color of its calendar.  Please use the Colors "
-#| "and Fonts configuration page for setting these colors."
+#, kde-format
 msgid ""
 "Select the \"Tag inside, calendar outside\" option if you would like to draw "
 "calendar items in their associated tag color, with the item's border drawn "
 "in the color of its calendar.  Please use the Colors and Fonts configuration "
 "page for setting these colors."
 msgstr ""
-"Valitse ”Luokka sisä-, kalenteri ulkopuolella” -asetus, jos haluat "
-"kalenterimerkinnät väritettävän luokkansa värillä niin, että merkinnän "
-"reunus on sen kalenterin värinen. Värit voit asettaa Värit ja fontit -"
-"asetussivulta."
+"Valitse ”Luokitus sisä-, kalenteri ulkopuolella” -asetus, jos "
+"kalenterimerkinnät tulisi värittää luokituksensa värillä niin, että "
+"merkinnän reunus on kalenterinsa värinen. Värit voi asettaa Värit ja fontit -"
+"asetussivulla."
 
 #. i18n: ectx: tooltip, entry, group (Month View)
 #: eventviews.kcfg:319
-#, fuzzy, kde-format
-#| msgid ""
-#| "Draw month items in their category color inside and calendar color for "
-#| "their border"
+#, kde-format
 msgid ""
 "Draw month items in their tag color inside and calendar color for their "
 "border"
 msgstr ""
-"Väritä kuukausimerkinnät luokkansa värillä sisältä ja kalenterinsa värillä "
-"reunoilta"
+"Väritä kuukausimerkinnät luokituksensa värillä sisältä ja kalenterinsa "
+"värillä reunoilta"
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
 #: eventviews.kcfg:323
-#, fuzzy, kde-format
-#| msgid ""
-#| "Select the \"Calendar inside, category outside\" option if you would like "
-#| "to draw calendar items in their associated calendar color, with the "
-#| "item's border drawn in the color of its category.  Please use the Colors "
-#| "and Fonts configuration page for setting these colors."
+#, kde-format
 msgid ""
 "Select the \"Calendar inside, tag outside\" option if you would like to draw "
 "calendar items in their associated calendar color, with the item's border "
 "drawn in the color of its tag.  Please use the Colors and Fonts "
 "configuration page for setting these colors."
 msgstr ""
-"Valitse ”Kalenteri sisä-, luokka ulkopuolella” -asetus, jos haluat "
-"kalenterimerkinnät väritettävän niihin yhdistetyn kalenterin värillä niin, "
-"että merkinnän reunus on sen luokan värinen. Värit voit asettaa Värit ja "
-"fontit -asetussivulta."
+"Valitse ”Kalenteri sisä-, luokitus ulkopuolella” -asetus, jos "
+"kalenterimerkinnät tulisi värittää niihin yhdistetyn kalenterin värillä "
+"niin, että merkinnän reunus on luokituksen värinen. Värit voi asettaa Värit "
+"ja fontit -asetussivulla."
 
 #. i18n: ectx: tooltip, entry, group (Month View)
 #: eventviews.kcfg:324
-#, fuzzy, kde-format
-#| msgid ""
-#| "Draw month items in their calendar color inside and category color for "
-#| "their border"
+#, kde-format
 msgid ""
 "Draw month items in their calendar color inside and tag color for their "
 "border"
 msgstr ""
-"Väritä kuukausimerkinnät kalenterinsa värillä sisältä ja luokkansa värillä "
-"reunoilta"
+"Väritä kuukausimerkinnät kalenterinsa värillä sisältä ja luokituksensa "
+"värillä reunoilta"
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
 #: eventviews.kcfg:328
-#, fuzzy, kde-format
-#| msgid ""
-#| "Select the \"Only category\" option if you would like to draw calendar "
-#| "items (both inside and border) in the color of their associated "
-#| "category.  Please use the Colors and Fonts configuration page for setting "
-#| "these colors."
+#, kde-format
 msgid ""
 "Select the \"Only tag\" option if you would like to draw calendar items "
 "(both inside and border) in the color of their associated tag.  Please use "
 "the Colors and Fonts configuration page for setting these colors."
 msgstr ""
-"Valitse ”Vain luokka” -asetus, jos haluat värittää kalenterimerkinnät (niin "
-"sisältä kuin reunoilta) luokkansa värillä. Värit voit asettaa Värit ja "
-"fontit -asetussivulta."
+"Valitse ”Vain luokitus” -asetus, jos kalenterimerkinnät tulisi värittää "
+"(niin sisältä kuin reunoilta) luokituksensa värillä. Värit voi asettaa Värit "
+"ja fontit -asetussivulla."
 
 #. i18n: ectx: tooltip, entry, group (Month View)
 #: eventviews.kcfg:329
-#, fuzzy, kde-format
-#| msgid ""
-#| "Draw month items using their category color for the inside and border"
+#, kde-format
 msgid "Draw month items using their tag color for the inside and border"
-msgstr "Väritä kuukausimerkinnät luokkansa värillä sisältä ja reunoilta"
+msgstr "Väritä kuukausimerkinnät luokituksensa värillä sisältä ja reunoilta"
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
 #: eventviews.kcfg:333 viewerapp/settings.kcfg:172
@@ -1520,19 +1465,15 @@ msgstr "Tapahtuman oletusväri"
 
 #. i18n: ectx: whatsthis, entry, group (Theme/Month view)
 #: eventviews.kcfg:652
-#, fuzzy, kde-format
-#| msgid ""
-#| "Select the default event color here. The default event color will be used "
-#| "for events categories in your Month. Note that you can specify a separate "
-#| "color for each event category below."
+#, kde-format
 msgid ""
 "Select the default event color here. The default event color will be used "
 "for events categories in your Month. Note that you can specify a separate "
 "color for each event tag below."
 msgstr ""
-"Valitse tässä tapahtumien oletusväri. Tapahtumien oletusväriä käytetään "
-"kullekin tapahtumalle luokalle kuukausinäytössä. Huomaa, että voit "
-"määritellä eri värit kullekin tapahtumaluokalle."
+"Valitse tässä tapahtumien oletusväri, jota käytetään kuukausinäytössä "
+"tapahtumien luokalle. Huomaa, että kullekin tapahtumaluokitukselle voi "
+"määrittää eri värin."
 
 #. i18n: ectx: label, entry, group (Theme/Month view)
 #: eventviews.kcfg:717
@@ -1552,11 +1493,10 @@ msgid "&Edit"
 msgstr "&Muokkaa"
 
 #: journal/journalframe.cpp:156
-#, fuzzy, kde-format
-#| msgid "Edit this journal entry"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Edit this journal entry"
-msgstr "Muokkaa tätä kalenterimerkintää"
+msgstr "Muokkaa tätä päiväkirjamerkintää"
 
 #: journal/journalframe.cpp:157
 #, kde-format
@@ -1569,8 +1509,7 @@ msgid "&Delete"
 msgstr "&Poista"
 
 #: journal/journalframe.cpp:166
-#, fuzzy, kde-format
-#| msgid "Delete this journal entry"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete this journal entry"
 msgstr "Poista tämä päiväkirjamerkintä"
@@ -1586,11 +1525,10 @@ msgid "&Print"
 msgstr "T&ulosta"
 
 #: journal/journalframe.cpp:176
-#, fuzzy, kde-format
-#| msgid "Print this journal entry"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Print this journal entry"
-msgstr "Tulosta päiväkirjamerkintä"
+msgstr "Tulosta tämä päiväkirjamerkintä"
 
 #: journal/journalframe.cpp:177
 #, kde-format
@@ -1603,11 +1541,10 @@ msgid "Print preview"
 msgstr "Tulostuksen esikatselu"
 
 #: journal/journalframe.cpp:186
-#, fuzzy, kde-format
-#| msgid "Print preview this journal entry"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Print preview this journal entry"
-msgstr "Päiväkirjamerkinnän tulostuksen esikatselu"
+msgstr "Esikatsele tätä päiväkirjamerkintää"
 
 #: list/listview.cpp:56
 #, kde-format
@@ -1756,8 +1693,7 @@ msgid "Agenda %1"
 msgstr "Päivyri %1"
 
 #: multiagenda/multiagendaview.cpp:179
-#, fuzzy, kde-format
-#| msgid "All Day"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "All Day"
 msgstr "Koko päivä"
@@ -1875,11 +1811,10 @@ msgid "&Show"
 msgstr "&Näytä"
 
 #: todo/todoview.cpp:366
-#, fuzzy, kde-format
-#| msgid "&Edit"
+#, kde-format
 msgctxt "@action:inmenu edit the to-do"
 msgid "&Edit…"
-msgstr "&Muokkaa"
+msgstr "&Muokkaa…"
 
 #: todo/todoview.cpp:373
 #, kde-format
@@ -1888,32 +1823,25 @@ msgid "&Delete"
 msgstr "&Poista"
 
 #: todo/todoview.cpp:382
-#, fuzzy, kde-format
-#| msgid "&Print"
+#, kde-format
 msgctxt "@action:inmenu print the to-do"
 msgid "&Print…"
-msgstr "T&ulosta"
+msgstr "T&ulosta…"
 
 #: todo/todoview.cpp:387
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu print preview the to-do"
-#| msgid "Print Previe&w..."
+#, kde-format
 msgctxt "@action:inmenu print preview the to-do"
 msgid "Print Previe&w…"
-msgstr "Tulostuksen &esikatselu…"
+msgstr "Tulostus&esikatselu…"
 
 #: todo/todoview.cpp:394
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu create a new to-do"
-#| msgid "New &To-do..."
+#, kde-format
 msgctxt "@action:inmenu create a new to-do"
 msgid "New &To-do…"
 msgstr "Uusi t&ehtävä…"
 
 #: todo/todoview.cpp:398
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu create a new sub-to-do"
-#| msgid "New Su&b-to-do..."
+#, kde-format
 msgctxt "@action:inmenu create a new sub-to-do"
 msgid "New Su&b-to-do…"
 msgstr "Uusi &alitehtävä…"
@@ -2017,9 +1945,7 @@ msgstr ""
 "suodatetaan"
 
 #: todo/todoviewquicksearch.cpp:39
-#, fuzzy, kde-format
-#| msgctxt "@label in QuickSearchLine"
-#| msgid "Search Summaries..."
+#, kde-format
 msgctxt "@label in QuickSearchLine"
 msgid "Search Summaries…"
 msgstr "Etsi yhteenvedoista…"
@@ -2154,19 +2080,17 @@ msgstr ""
 "info@kdab.net"
 
 #: viewerapp/main.cpp:24
-#, fuzzy, kde-format
-#| msgid "Kevin Krammer"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Kevin Krammer"
 msgstr "Kevin Krammer"
 
 # Instantiate? View name?
 #: viewerapp/main.cpp:33
-#, fuzzy, kde-format
-#| msgid "Optional list of view names to instantiate"
+#, kde-format
 msgctxt "@info:shell"
 msgid "Optional list of view names to instantiate"
-msgstr "Alustettavien näkymänimien valinnainen luettelo"
+msgstr "Valinnainen alustettavien näkymänimien luettelo"
 
 #. i18n: ectx: property (windowTitle), widget (QMainWindow, MainWindow)
 #: viewerapp/mainwindow.ui:14
