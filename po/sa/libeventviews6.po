@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-27 00:40+0000\n"
-"PO-Revision-Date: 2024-12-14 01:48+0530\n"
+"PO-Revision-Date: 2024-12-20 22:01+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
 "Language: sa\n"
@@ -61,8 +61,8 @@ msgstr "त्रुटिः अभवत्"
 #, kde-format
 msgid "%2 (1 year)"
 msgid_plural "%2 (%1 years)"
-msgstr[0] "%2 (१ वर्ष) २."
-msgstr[1] "%2 (%1 वर्ष) २."
+msgstr[0] "%2 (१ वर्ष)"
+msgstr[1] "%2 (%1 वर्ष)"
 
 #: agenda/agendaitem.cpp:631
 #, kde-format
@@ -145,7 +145,7 @@ msgstr "<i>टिप्पणी :</i> %1"
 #, kde-format
 msgctxt "[hour of the day][am/pm/00] [timezone id (timezone-offset)]"
 msgid "%1%2<br/>%3 (%4)"
-msgstr "%1%2<br/> %3 (%4) ९."
+msgstr "%1%2<br/> %3 (%4)"
 
 #: agenda/timescaleconfigdialog.cpp:51
 #, kde-format
@@ -420,7 +420,7 @@ msgstr ""
 #: eventviews.kcfg:112
 #, kde-format
 msgid "Weekly start day:"
-msgstr "साप्ताहिकः आरम्भदिवसः : १."
+msgstr "साप्ताहिकः आरम्भदिवसः :"
 
 #. i18n: ectx: tooltip, entry (WeekStartDay), group (Time &amp; Date)
 #: eventviews.kcfg:113
@@ -1683,7 +1683,7 @@ msgstr "अनिर्दिष्टम्"
 #, kde-format
 msgctxt "@action:inmenu highest priority"
 msgid "1 (highest)"
-msgstr "१ (उच्चतमः) २."
+msgstr "१ (उच्चतमः)"
 
 #: todo/tododelegates.cpp:154
 #, kde-format
@@ -1707,7 +1707,7 @@ msgstr "४"
 #, kde-format
 msgctxt "@action:inmenu medium priority"
 msgid "5 (medium)"
-msgstr "५ (मध्यम) २."
+msgstr "५ (मध्यम)"
 
 #: todo/tododelegates.cpp:158
 #, kde-format
@@ -1731,7 +1731,7 @@ msgstr "८"
 #, kde-format
 msgctxt "@action:inmenu lowest priority"
 msgid "9 (lowest)"
-msgstr "९ (अधमतम) २."
+msgstr "९ (अधमतम)"
 
 #: todo/todoview.cpp:234
 #, kde-format
@@ -1970,19 +1970,19 @@ msgstr "अनिर्दिष्टम्"
 #, kde-format
 msgctxt "@action:inmenu highest priority"
 msgid "%1 (highest)"
-msgstr "%1 (उच्चतम) २."
+msgstr "%1 (उच्चतम)"
 
 #: todo/todoviewquicksearch.cpp:100
 #, kde-format
 msgctxt "@action:inmenu medium priority"
 msgid "%1 (medium)"
-msgstr "%1 (मध्यम) २."
+msgstr "%1 (मध्यम)"
 
 #: todo/todoviewquicksearch.cpp:102
 #, kde-format
 msgctxt "@action:inmenu lowest priority"
 msgid "%1 (lowest)"
-msgstr "%1 (निम्नतम) २."
+msgstr "%1 (निम्नतम)"
 
 #: todo/todoviewquicksearch.cpp:104
 #, kde-format
@@ -2008,19 +2008,19 @@ msgstr "%1"
 #, kde-format
 msgctxt "highest priority"
 msgid "%1 (highest)"
-msgstr "%1 (उच्चतम) २."
+msgstr "%1 (उच्चतम)"
 
 #: todo/todoviewsortfilterproxymodel.cpp:161
 #, kde-format
 msgctxt "medium priority"
 msgid "%1 (medium)"
-msgstr "%1 (मध्यम) २."
+msgstr "%1 (मध्यम)"
 
 #: todo/todoviewsortfilterproxymodel.cpp:163
 #, kde-format
 msgctxt "lowest priority"
 msgid "%1 (lowest)"
-msgstr "%1 (निम्नतम) २."
+msgstr "%1 (निम्नतम)"
 
 #: todo/todoviewview.cpp:48
 #, kde-format
@@ -2291,7 +2291,7 @@ msgstr ""
 #: whatsnext/whatsnextview.cpp:63
 #, kde-format
 msgid "To-dos:"
-msgstr "कार्याणि : १."
+msgstr "कार्याणि :"
 
 #: whatsnext/whatsnextview.cpp:79
 #, kde-format
@@ -2308,7 +2308,7 @@ msgstr "%1 - %2"
 #: whatsnext/whatsnextview.cpp:102
 #, kde-format
 msgid "Events:"
-msgstr "घटनाः : १."
+msgstr "घटनाः :"
 
 #: whatsnext/whatsnextview.cpp:191 whatsnext/whatsnextview.cpp:215
 #, kde-format
