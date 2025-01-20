@@ -20,12 +20,13 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "KDE 中国, Guo Yunhe, Tyson Tan"
+msgstr "KDE 中国, Guo Yunhe, Tyson Tan, Eric Zhao"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "kde-china@kde.org, i@guoyunhe.me, tds00@qq.com"
+msgstr ""
+"kde-china@kde.org, i@guoyunhe.me, tds00@qq.com, zxybbb7892020@outlook.com"
 
 #: agenda/agenda.cpp:966
 #, kde-format
@@ -436,7 +437,7 @@ msgstr "选中此项会在鼠标悬停在一个事件或待办事项上时显示
 #: eventviews.kcfg:128
 #, kde-format
 msgid "To-dos use tag colors"
-msgstr ""
+msgstr "待办事项使用的标签颜色"
 
 #. i18n: ectx: whatsthis, entry, group (General View)
 #: eventviews.kcfg:129
@@ -445,6 +446,7 @@ msgid ""
 "Check this box so that to-dos will use tag colors and not colors specific to "
 "their due, due today or overdue state"
 msgstr ""
+"如果启用此项，待办事宜会使用类别对应的颜色，而不是根据是否到期来区分颜色。"
 
 #. i18n: ectx: label, entry, group (General View)
 #: eventviews.kcfg:134
@@ -684,7 +686,7 @@ msgstr "颜色使用"
 #: eventviews.kcfg:221 eventviews.kcfg:317
 #, kde-format
 msgid "Tag inside, calendar outside"
-msgstr ""
+msgstr "内容使用类别色，边框使用日历色"
 
 #. i18n: ectx: whatsthis, entry, group (Agenda View)
 #: eventviews.kcfg:222
@@ -695,6 +697,8 @@ msgid ""
 "in the color of its calendar. Please use the Colors and Fonts configuration "
 "page for setting these colors."
 msgstr ""
+"如需使用对应类别的颜色绘制日历项，并且使用所在日历的颜色绘制边框，请选中“内容"
+"使用类别色，边框使用日历色”。您可以在 颜色和字体 配置页面中设置这些颜色。"
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
 #: eventviews.kcfg:223
@@ -702,14 +706,14 @@ msgstr ""
 msgid ""
 "Draw agenda items in their tag color inside and calendar color for their "
 "border"
-msgstr ""
+msgstr "使用类别的颜色绘制日程图内容，使用日历的颜色绘制边框"
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
 #: eventviews.kcfg:226 eventviews.kcfg:322
 #, kde-format
 msgid "Calendar inside, tag outside"
-msgstr ""
+msgstr "内容使用日历色，边框使用类别色"
 
 #. i18n: ectx: whatsthis, entry, group (Agenda View)
 #: eventviews.kcfg:227
@@ -720,6 +724,8 @@ msgid ""
 "drawn in the color of its tag. Please use the Colors and Fonts configuration "
 "page for setting these colors."
 msgstr ""
+"如需使用所在日历的颜色绘制日历项，并且使用对应类别的颜色绘制边框，请选中“内容"
+"使用日历色，边框使用类别色”。您可以在 颜色 和 字体 配置页面中设置这些颜色。"
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
 #: eventviews.kcfg:228
@@ -727,14 +733,14 @@ msgstr ""
 msgid ""
 "Draw agenda items in their calendar color inside and tag color for their "
 "border"
-msgstr ""
+msgstr "使用日历的颜色绘制日程图内容，使用类别的颜色绘制边框"
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
 #: eventviews.kcfg:231 eventviews.kcfg:327
 #, kde-format
 msgid "Only tag"
-msgstr ""
+msgstr "仅使用标签色"
 
 #. i18n: ectx: whatsthis, entry, group (Agenda View)
 #: eventviews.kcfg:232
@@ -744,12 +750,14 @@ msgid ""
 "(both inside and border) in the color of their associated tag. Please use "
 "the Colors and Fonts configuration page for setting these colors."
 msgstr ""
+"选中“仅使用标签色”后，日历项将只使用所属标签色 (包括填充色和边框色)。请在颜色"
+"与字体配置页中设置颜色。"
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
 #: eventviews.kcfg:233
 #, kde-format
 msgid "Draw agenda items using their tag color for the inside and border"
-msgstr ""
+msgstr "绘制议事日程图时，内容和边框都使用类别对应的颜色"
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
@@ -969,6 +977,8 @@ msgid ""
 "in the color of its calendar.  Please use the Colors and Fonts configuration "
 "page for setting these colors."
 msgstr ""
+"如需使用对应类别的颜色绘制日历项，并且使用所在日历的颜色绘制边框，请选中“内容"
+"使用类别色，边框使用日历色”。您可以在 颜色和字体 配置页面中设置这些颜色。"
 
 #. i18n: ectx: tooltip, entry, group (Month View)
 #: eventviews.kcfg:319
@@ -976,7 +986,7 @@ msgstr ""
 msgid ""
 "Draw month items in their tag color inside and calendar color for their "
 "border"
-msgstr ""
+msgstr "使用类别的颜色绘制月历内容，使用日历的颜色绘制边框"
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
 #: eventviews.kcfg:323
@@ -987,6 +997,8 @@ msgid ""
 "drawn in the color of its tag.  Please use the Colors and Fonts "
 "configuration page for setting these colors."
 msgstr ""
+"选择“内部使用日历色，外部使用标签色”后，日历项在自身所属的日历中将使用日历色"
+"填充，并将边框设为标签色。请在 颜色与字体 配置页中设置颜色。"
 
 #. i18n: ectx: tooltip, entry, group (Month View)
 #: eventviews.kcfg:324
@@ -994,7 +1006,7 @@ msgstr ""
 msgid ""
 "Draw month items in their calendar color inside and tag color for their "
 "border"
-msgstr ""
+msgstr "使用日历的颜色绘制月历内容，使用类别的颜色绘制边框"
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
 #: eventviews.kcfg:328
@@ -1004,12 +1016,14 @@ msgid ""
 "(both inside and border) in the color of their associated tag.  Please use "
 "the Colors and Fonts configuration page for setting these colors."
 msgstr ""
+"选中“仅使用标签色”后，日历项将只使用所属标签色 (包括填充色和边框色)。请在颜色"
+"与字体配置页中设置颜色。"
 
 #. i18n: ectx: tooltip, entry, group (Month View)
 #: eventviews.kcfg:329
 #, kde-format
 msgid "Draw month items using their tag color for the inside and border"
-msgstr ""
+msgstr "绘制议事日程图时，内容和边框都使用类别对应的颜色"
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
 #: eventviews.kcfg:333 viewerapp/settings.kcfg:172
@@ -1370,6 +1384,8 @@ msgid ""
 "for events categories in your Month. Note that you can specify a separate "
 "color for each event tag below."
 msgstr ""
+"在此选择默认事件颜色。此颜色会被用于标识月份中的事件类别。请注意您可以在下面"
+"为每个事件指定独立的颜色。"
 
 #. i18n: ectx: label, entry, group (Theme/Month view)
 #: eventviews.kcfg:717
@@ -1392,7 +1408,7 @@ msgstr "编辑(&E)"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Edit this journal entry"
-msgstr ""
+msgstr "编辑此日记项"
 
 #: journal/journalframe.cpp:157
 #, kde-format
@@ -1408,7 +1424,7 @@ msgstr "删除(&D)"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete this journal entry"
-msgstr ""
+msgstr "删除此日记项"
 
 #: journal/journalframe.cpp:167
 #, kde-format
@@ -1424,7 +1440,7 @@ msgstr "打印(&P)"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Print this journal entry"
-msgstr ""
+msgstr "打印此日记项"
 
 #: journal/journalframe.cpp:177
 #, kde-format
@@ -1440,7 +1456,7 @@ msgstr "打印预览"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Print preview this journal entry"
-msgstr ""
+msgstr "打印预览此日记项"
 
 #: list/listview.cpp:56
 #, kde-format
@@ -1581,7 +1597,7 @@ msgstr "日程 %1"
 #, kde-format
 msgctxt "@label:textbox"
 msgid "All Day"
-msgstr ""
+msgstr "全天"
 
 #: timeline/timelineview.cpp:225
 #, kde-format
@@ -1967,7 +1983,7 @@ msgstr "Kevin Krammer"
 #, kde-format
 msgctxt "@info:shell"
 msgid "Optional list of view names to instantiate"
-msgstr ""
+msgstr "要实例化的可选视图名称列表"
 
 #. i18n: ectx: property (windowTitle), widget (QMainWindow, MainWindow)
 #: viewerapp/mainwindow.ui:14
