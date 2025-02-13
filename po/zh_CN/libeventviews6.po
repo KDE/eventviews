@@ -725,7 +725,7 @@ msgid ""
 "page for setting these colors."
 msgstr ""
 "如需使用所在日历的颜色绘制日历项，并且使用对应类别的颜色绘制边框，请选中“内容"
-"使用日历色，边框使用类别色”。您可以在 颜色 和 字体 配置页面中设置这些颜色。"
+"使用日历色，边框使用类别色”。您可以在“颜色和字体”配置页面中设置这些颜色。"
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
 #: eventviews.kcfg:228
@@ -776,7 +776,7 @@ msgid ""
 "Colors and Fonts configuration page for setting these colors."
 msgstr ""
 "如需使用所在日历的颜色绘制日历项 (包括内容和边框)，请选中“仅使用日历色”。您可"
-"以在 颜色 和 字体 配置页面中设置这些颜色。"
+"以在“颜色和字体”配置页面中设置这些颜色。"
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
 #: eventviews.kcfg:238 viewerapp/settings.kcfg:88
@@ -978,7 +978,7 @@ msgid ""
 "page for setting these colors."
 msgstr ""
 "如需使用对应类别的颜色绘制日历项，并且使用所在日历的颜色绘制边框，请选中“内容"
-"使用类别色，边框使用日历色”。您可以在 颜色和字体 配置页面中设置这些颜色。"
+"使用类别色，边框使用日历色”。您可以在“颜色和字体”配置页面中设置这些颜色。"
 
 #. i18n: ectx: tooltip, entry, group (Month View)
 #: eventviews.kcfg:319
@@ -998,7 +998,7 @@ msgid ""
 "configuration page for setting these colors."
 msgstr ""
 "选择“内部使用日历色，外部使用标签色”后，日历项在自身所属的日历中将使用日历色"
-"填充，并将边框设为标签色。请在 颜色与字体 配置页中设置颜色。"
+"填充，并将边框设为标签色。请在“颜色和字体”配置页中设置颜色。"
 
 #. i18n: ectx: tooltip, entry, group (Month View)
 #: eventviews.kcfg:324
@@ -1016,8 +1016,8 @@ msgid ""
 "(both inside and border) in the color of their associated tag.  Please use "
 "the Colors and Fonts configuration page for setting these colors."
 msgstr ""
-"选中“仅使用标签色”后，日历项将只使用所属标签色 (包括填充色和边框色)。请在颜色"
-"与字体配置页中设置颜色。"
+"选中“仅使用标签色”后，日历项将只使用所属标签色 (包括填充色和边框色)。请在“颜"
+"色和字体”配置页中设置颜色。"
 
 #. i18n: ectx: tooltip, entry, group (Month View)
 #: eventviews.kcfg:329
@@ -1034,7 +1034,7 @@ msgid ""
 "Colors and Fonts configuration page for setting these colors."
 msgstr ""
 "如需使用所在日历的颜色绘制日历项 (包括内容和边框)，请选中“仅使用日历色”。您可"
-"以在 颜色 和 字体 配置页面中设置这些颜色。"
+"以在“颜色和字体”配置页面中设置这些颜色。"
 
 #. i18n: ectx: tooltip, entry, group (Month View)
 #: eventviews.kcfg:334 viewerapp/settings.kcfg:173
@@ -1662,7 +1662,7 @@ msgstr "8"
 #, kde-format
 msgctxt "@action:inmenu lowest priority"
 msgid "9 (lowest)"
-msgstr "9(最低)"
+msgstr "9 (最低)"
 
 #: todo/todoview.cpp:234
 #, kde-format
