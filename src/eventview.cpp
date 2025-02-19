@@ -631,13 +631,20 @@ QString EventView::iconForItem(const Akonadi::Item &item)
 {
     Q_D(EventView);
     QString iconName;
-    Akonadi::Collection collection = item.parentCollection();
-    while (collection.parentCollection().isValid() && collection.parentCollection() != Akonadi::Collection::root()) {
-        collection = Akonadi::EntityTreeModel::updatedCollection(d->model, collection.parentCollection());
-    }
-
+    Akonadi::Collection collection = Akonadi::EntityTreeModel::updatedCollection(d->model, item.storageCollectionId());
     if (collection.isValid() && collection.hasAttribute<Akonadi::EntityDisplayAttribute>()) {
         iconName = collection.attribute<Akonadi::EntityDisplayAttribute>()->iconName();
+    }
+    // storageCollection typically returns a generic fallback icon, which we ignore for this purpose
+    if (iconName.isEmpty() || iconName.startsWith("view-calendar"_L1) || iconName.startsWith("office-calendar"_L1) || iconName.startsWith("view-pim"_L1)) {
+        collection = item.parentCollection();
+        while (collection.parentCollection().isValid() && collection.parentCollection() != Akonadi::Collection::root()) {
+            collection = Akonadi::EntityTreeModel::updatedCollection(d->model, collection.parentCollection());
+        }
+
+        if (collection.isValid() && collection.hasAttribute<Akonadi::EntityDisplayAttribute>()) {
+            iconName = collection.attribute<Akonadi::EntityDisplayAttribute>()->iconName();
+        }
     }
 
     return iconName;
