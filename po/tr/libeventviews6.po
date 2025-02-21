@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
-# SPDX-FileCopyrightText: 2022, 2023, 2024 Emir SARI <emir_sari@icloud.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Emir SARI <emir_sari@icloud.com>
 # zeugma <sunder67@hotmail.com>, 2013.
 # H. İbrahim Güngör <ibrahim@pardus.org.tr>, 2011.
 # Volkan Gezer <volkangezer@gmail.com>, 2013-2014, 2015, 2017.
@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kdepim-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-27 00:40+0000\n"
-"PO-Revision-Date: 2024-09-23 15:21+0300\n"
+"PO-Revision-Date: 2025-02-20 14:55+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.11.70\n"
+"X-Generator: Lokalize 25.03.70\n"
 "(http: //www.transifex.com/projects/p/kdepim-k-tr/language/tr/)\n"
 "X-POOTLE-MTIME: 1413132207.000000\n"
 
@@ -220,7 +220,7 @@ msgstr "Bir etkinliğe bırakılan e-postaları iliştirmenin öntanımlı yönt
 #: eventviews.kcfg:19 eventviews.kcfg:469
 #, kde-format
 msgid "Always ask"
-msgstr "Daima sor"
+msgstr "Her zaman sor"
 
 #. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (Personal Settings)
 #. i18n: ectx: label, entry (DefaultTodoAttachMethod), group (Hidden Options)
@@ -507,7 +507,7 @@ msgstr ""
 #: eventviews.kcfg:136
 #, kde-format
 msgid "Show this many days at a time in the Next \"x\" days view"
-msgstr "Sonraki “x” günlük görünümünde, bir seferde bu kadar gün gösterir"
+msgstr "Sonraki “x” günlük görünümünde, bir kerede bu kadar gün gösterir"
 
 #. i18n: ectx: label, entry (DailyRecur), group (General View)
 #: eventviews.kcfg:141
@@ -661,7 +661,7 @@ msgstr "Ajanda görünümünde yapılacakları göster"
 #: eventviews.kcfg:197 viewerapp/settings.kcfg:47
 #, kde-format
 msgid "Show current-time (Marcus Bains) line"
-msgstr "Geçerli zaman çizelgesini göster (Marcus Bains)"
+msgstr "Geçerli zaman akışını göster (Marcus Bains)"
 
 #. i18n: ectx: whatsthis, entry (MarcusBainsEnabled), group (Agenda View)
 #: eventviews.kcfg:198 viewerapp/settings.kcfg:48
@@ -670,7 +670,7 @@ msgid ""
 "Check this box to display a line in the day or week view indicating the "
 "current-time line (Marcus Bains line)."
 msgstr ""
-"Gün veya hafta görünümünde geçerli zaman çizgisini gösteren bir çizgi "
+"Gün veya hafta görünümünde geçerli zaman akışını gösteren bir çizgi "
 "görüntülemek için (Marcus Bains çizgisi) bu kutuyu işaretleyin."
 
 #. i18n: ectx: tooltip, entry (MarcusBainsEnabled), group (Agenda View)
@@ -683,7 +683,7 @@ msgstr "Geçerli zaman çizelgesi üzerinde göster"
 #: eventviews.kcfg:204 viewerapp/settings.kcfg:54
 #, kde-format
 msgid "Show seconds on the current-time (Marcus Bains) line"
-msgstr "Geçerli zaman çizelgesi (Marcus Bains) üzerinde saniyeleri göster"
+msgstr "Geçerli zaman akışı (Marcus Bains) üzerinde saniyeleri göster"
 
 #. i18n: ectx: whatsthis, entry (MarcusBainsShowSeconds), group (Agenda View)
 #: eventviews.kcfg:205 viewerapp/settings.kcfg:55
@@ -751,7 +751,7 @@ msgstr ""
 "Takvim ögelerini ayarlanmış künye renklerinde çizdirmek ve ögenin sınırını "
 "takvimin renginde görüntülemek istiyorsanız “Künye içeride, takvim dışarıda” "
 "seçeneğini seçin. Bu renkleri ayarlamak için lütfen Renkler ve Yazıtipleri "
-"ayar sayfasını kullanın."
+"yapılandırma sayfasını kullanın."
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
 #: eventviews.kcfg:223
@@ -809,9 +809,9 @@ msgid ""
 "(both inside and border) in the color of their associated tag. Please use "
 "the Colors and Fonts configuration page for setting these colors."
 msgstr ""
-"“Yalnızca künye” seçeneğini takvim ögelerini (hem içi, hem de sınır "
+"“Yalnızca künye” seçeneğini takvim ögelerini (hem içi hem de sınır "
 "çizgisini) ayarlanmış künye renginde çizdirmek istiyorsanız kullanın. Bu "
-"renkleri ayarlamak için lütfen Renkler ve Yazıtipleri ayar sayfasını "
+"renkleri ayarlamak için lütfen Renkler ve Yazıtipleri yapılandırma sayfasını "
 "kullanın."
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
@@ -837,9 +837,9 @@ msgid ""
 "(both inside and border) in the color of their calendar. Please use the "
 "Colors and Fonts configuration page for setting these colors."
 msgstr ""
-"“Yalnızca takvim” seçeneği ile takvim unsurlarını (hem içi, hem de sınır "
+"“Yalnızca takvim” seçeneği ile takvim unsurlarını (hem içi hem de sınır "
 "çizgisini) ayarlanmış takvim renginde çizdirmek istiyorsanız kullanın. Bu "
-"renkleri ayarlamak için lütfen Renkler ve Yazıtipleri ayar sayfasını "
+"renkleri ayarlamak için lütfen Renkler ve Yazıtipleri yapılandırma sayfasını "
 "kullanın."
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
@@ -1060,7 +1060,7 @@ msgstr ""
 "Takvim ögelerini ayarlanmış künye renklerinde çizdirmek ve ögenin sınırını "
 "takvimin renginde görüntülemek istiyorsanız “Künye içeride, takvim dışarıda” "
 "seçeneğini seçin. Bu renkleri ayarlamak için lütfen Renkler ve Yazıtipleri "
-"ayar sayfasını kullanın."
+"yapılandırma sayfasını kullanın."
 
 #. i18n: ectx: tooltip, entry, group (Month View)
 #: eventviews.kcfg:319
@@ -1104,9 +1104,9 @@ msgid ""
 "(both inside and border) in the color of their associated tag.  Please use "
 "the Colors and Fonts configuration page for setting these colors."
 msgstr ""
-"“Yalnızca künye” seçeneği ile, takvim ögelerini (hem içi, hem de sınır "
+"“Yalnızca künye” seçeneği ile, takvim ögelerini (hem içi hem de sınır "
 "çizgisini) ayarlanmış kategori renginde çizdirmek istiyorsanız kullanın. Bu "
-"renkleri ayarlamak için lütfen Renkler ve Yazıtipleri ayar sayfasını "
+"renkleri ayarlamak için lütfen Renkler ve Yazıtipleri yapılandırma sayfasını "
 "kullanın."
 
 #. i18n: ectx: tooltip, entry, group (Month View)
@@ -1125,7 +1125,7 @@ msgid ""
 msgstr ""
 "“Yalnızca takvim” seçeneği ile, takvim unsurlarını (hem içi, hem de sınır "
 "çizgisini) ayarlanmış takvim renginde çizdirmek istiyorsanız kullanın. Bu "
-"renkleri ayarlamak için lütfen Renkler ve Yazıtipleri ayar sayfasını "
+"renkleri ayarlamak için lütfen Renkler ve Yazıtipleri yapılandırma sayfasını "
 "kullanın."
 
 #. i18n: ectx: tooltip, entry, group (Month View)
@@ -1288,15 +1288,14 @@ msgstr "Ajanda görünümündeki şimdiki saat çizgisinin rengi"
 #: eventviews.kcfg:398 viewerapp/settings.kcfg:217
 #, kde-format
 msgid "Select a color to use for the current-time (Marcus Bains) line."
-msgstr "Geçerli zaman çizelgesinde (Marcus Bains) kullanılacak rengi seçin."
+msgstr "Geçerli zaman akışında (Marcus Bains) kullanılacak rengi seçin."
 
 #. i18n: ectx: tooltip, entry, group (Colors)
 #: eventviews.kcfg:399 viewerapp/settings.kcfg:218
 #, kde-format
 msgid "Use this color for the Agenda View current-time (Marcus Bains) line"
 msgstr ""
-"Ajanda görünümünde geçerli zaman çizelgesi (Marcus Bains) için bu rengi "
-"kullan"
+"Ajanda görünümünde geçerli zaman akışı (Marcus Bains) için bu rengi kullan"
 
 #. i18n: ectx: label, entry, group (Colors)
 #. i18n: ectx: label, entry, group (Theming)
@@ -1903,7 +1902,7 @@ msgstr "&Taşı"
 #, kde-format
 msgctxt "@action:inmenu delete completed to-dos"
 msgid "Pur&ge Completed"
-msgstr "Tamamlananları &Birleştir"
+msgstr "Tamamlanmışları &Temizle"
 
 #: todo/todoview.cpp:446
 #, kde-format
@@ -2173,7 +2172,7 @@ msgstr ""
 "Takvim ögelerini ayarlanmış kategori renklerinde çizdirmek ve ögenin "
 "sınırını takvimin renginde görüntülemek istiyorsanız “Kategori içeride, "
 "takvim dışarıda” seçeneğini seçin. Bu renkleri ayarlamak için lütfen Renkler "
-"ve Yazıtipleri ayar sayfasını kullanın."
+"ve Yazıtipleri yapılandırma sayfasını kullanın."
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
 #: viewerapp/settings.kcfg:73
@@ -2231,9 +2230,9 @@ msgid ""
 "(both inside and border) in the color of their associated category. Please "
 "use the Colors and Fonts configuration page for setting these colors."
 msgstr ""
-"“Yalnızca kategori” seçeneğini takvim ögelerini (hem içi, hem de sınır "
+"“Yalnızca kategori” seçeneğini takvim ögelerini (hem içi hem de sınır "
 "çizgisini) ayarlanmış kategori renginde çizdirmek istiyorsanız kullanın. Bu "
-"renkleri ayarlamak için lütfen Renkler ve Yazıtipleri ayar sayfasını "
+"renkleri ayarlamak için lütfen Renkler ve Yazıtipleri yapılandırma sayfasını "
 "kullanın."
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
@@ -2255,7 +2254,7 @@ msgstr ""
 "Takvim ögelerini ayarlanmış kategori renklerinde çizdirmek ve ögenin "
 "sınırını takvimin renginde görüntülemek istiyorsanız “Kategori içeride, "
 "takvim dışarıda” seçeneğini seçin. Bu renkleri ayarlamak için lütfen Renkler "
-"ve Yazıtipleri ayar sayfasını kullanın."
+"ve Yazıtipleri yapılandırma sayfasını kullanın."
 
 #. i18n: ectx: tooltip, entry, group (Month View)
 #: viewerapp/settings.kcfg:158
@@ -2299,9 +2298,9 @@ msgid ""
 "(both inside and border) in the color of their associated category.  Please "
 "use the Colors and Fonts configuration page for setting these colors."
 msgstr ""
-"“Yalnızca kategori” seçeneği ile, takvim ögelerini (hem içi, hem de sınır "
+"“Yalnızca kategori” seçeneği ile, takvim ögelerini (hem içi hem de sınır "
 "çizgisini) ayarlanmış kategori renginde çizdirmek istiyorsanız kullanın. Bu "
-"renkleri ayarlamak için lütfen Renkler ve Yazıtipleri ayar sayfasını "
+"renkleri ayarlamak için lütfen Renkler ve Yazıtipleri yapılandırma sayfasını "
 "kullanın."
 
 #. i18n: ectx: tooltip, entry, group (Month View)
@@ -2374,7 +2373,7 @@ msgstr "Sırada ne var?"
 #, kde-format
 msgctxt "date from - to"
 msgid "%1 - %2"
-msgstr "%1 — %2"
+msgstr "%1–%2"
 
 #: whatsnext/whatsnextview.cpp:102
 #, kde-format
@@ -2390,7 +2389,7 @@ msgstr "Yanıt gerektiren etkinlikler ve yapılacaklar:"
 #, kde-format
 msgctxt "date, from - to"
 msgid "%1, %2 - %3"
-msgstr "%1, %2 — %3"
+msgstr "%1, %2–%3"
 
 #: whatsnext/whatsnextview.cpp:310
 #, kde-format
