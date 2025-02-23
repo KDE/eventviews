@@ -156,7 +156,13 @@ void MarcusBains::updateLocationRecalc(bool recalculate)
     d->mTimeBox->setFont(d->mEventView->preferences()->agendaMarcusBainsLineFont());
     QPalette pal1 = d->mTimeBox->palette();
     pal1.setColor(QPalette::WindowText, color);
+    if (!d->mEventView->preferences()->useSystemColor()) {
+        pal1.setColor(QPalette::Window, d->mEventView->preferences()->agendaGridBackgroundColor());
+    } else {
+        pal1.setColor(QPalette::Window, palette().color(QPalette::AlternateBase));
+    }
     d->mTimeBox->setPalette(pal1);
+    d->mTimeBox->setAutoFillBackground(true);
     d->mTimeBox->setText(QLocale::system().toString(time, showSeconds ? QLocale::LongFormat : QLocale::ShortFormat));
     d->mTimeBox->adjustSize();
     if (y - d->mTimeBox->height() >= 0) {
