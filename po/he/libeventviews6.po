@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-27 00:40+0000\n"
+"POT-Creation-Date: 2025-02-26 00:42+0000\n"
 "PO-Revision-Date: 2024-06-21 07:55+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -28,29 +28,29 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kde-l10n-he@kde.org"
 
-#: agenda/agenda.cpp:966
+#: agenda/agenda.cpp:972
 #, kde-format
 msgid "Unable to lock item for modification. You cannot make any changes."
 msgstr "לא ניתן לנעול את הפריט מפני שינויים."
 
-#: agenda/agenda.cpp:968
+#: agenda/agenda.cpp:974
 #, kde-format
 msgctxt "@title:window"
 msgid "Locking Failed"
 msgstr "הנעילה נכשלה"
 
-#: agenda/agenda.cpp:1183
+#: agenda/agenda.cpp:1189
 #, kde-format
 msgid "Dissociate event from recurrence"
 msgstr "ניתוק אירוע מהמחזור"
 
-#: agenda/agenda.cpp:1205 month/monthitem.cpp:445
+#: agenda/agenda.cpp:1211 month/monthitem.cpp:445
 #, kde-format
 msgid ""
 "Unable to add the exception item to the calendar. No change will be done."
 msgstr "לא ניתן להוסיף את פריט ההחרגה ללוח השנה. לא יבוצע אף שינוי."
 
-#: agenda/agenda.cpp:1207 month/monthitem.cpp:447
+#: agenda/agenda.cpp:1213 month/monthitem.cpp:447
 #, kde-format
 msgctxt "@title:window"
 msgid "Error Occurred"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-27 00:40+0000\n"
+"POT-Creation-Date: 2025-02-26 00:42+0000\n"
 "PO-Revision-Date: 2024-12-24 20:39+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -29,29 +29,29 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "skkalwar999@gmail.com"
 
-#: agenda/agenda.cpp:966
+#: agenda/agenda.cpp:972
 #, kde-format
 msgid "Unable to lock item for modification. You cannot make any changes."
 msgstr "परिवर्तनार्थं द्रव्यं ताडयितुं असमर्थः। भवन्तः किमपि परिवर्तनं कर्तुं न शक्नुवन्ति।"
 
-#: agenda/agenda.cpp:968
+#: agenda/agenda.cpp:974
 #, kde-format
 msgctxt "@title:window"
 msgid "Locking Failed"
 msgstr "तालाबन्दी विफलम्"
 
-#: agenda/agenda.cpp:1183
+#: agenda/agenda.cpp:1189
 #, kde-format
 msgid "Dissociate event from recurrence"
 msgstr "घटनां पुनरावृत्तितः विच्छेदयन्तु"
 
-#: agenda/agenda.cpp:1205 month/monthitem.cpp:445
+#: agenda/agenda.cpp:1211 month/monthitem.cpp:445
 #, kde-format
 msgid ""
 "Unable to add the exception item to the calendar. No change will be done."
 msgstr "अपवाद-वस्तुं पञ्चाङ्गे योजयितुं असमर्थः । परिवर्तनं न भविष्यति।"
 
-#: agenda/agenda.cpp:1207 month/monthitem.cpp:447
+#: agenda/agenda.cpp:1213 month/monthitem.cpp:447
 #, kde-format
 msgctxt "@title:window"
 msgid "Error Occurred"

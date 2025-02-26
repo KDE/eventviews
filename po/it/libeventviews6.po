@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-27 00:40+0000\n"
+"POT-Creation-Date: 2025-02-26 00:42+0000\n"
 "PO-Revision-Date: 2024-06-21 22:45+0200\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -36,24 +36,24 @@ msgid "Your emails"
 msgstr ""
 "luigi.toscano@tiscali.it,ale.pas@tiscalinet.it,dareus.persarumrex@gmail.com"
 
-#: agenda/agenda.cpp:966
+#: agenda/agenda.cpp:972
 #, kde-format
 msgid "Unable to lock item for modification. You cannot make any changes."
 msgstr ""
 "Impossibile bloccare la voce per la modifica. Non puoi fare alcuna modifica."
 
-#: agenda/agenda.cpp:968
+#: agenda/agenda.cpp:974
 #, kde-format
 msgctxt "@title:window"
 msgid "Locking Failed"
 msgstr "Blocco non riuscito"
 
-#: agenda/agenda.cpp:1183
+#: agenda/agenda.cpp:1189
 #, kde-format
 msgid "Dissociate event from recurrence"
 msgstr "Dissocia evento dalla ricorrenza"
 
-#: agenda/agenda.cpp:1205 month/monthitem.cpp:445
+#: agenda/agenda.cpp:1211 month/monthitem.cpp:445
 #, kde-format
 msgid ""
 "Unable to add the exception item to the calendar. No change will be done."
@@ -61,7 +61,7 @@ msgstr ""
 "Impossibile aggiungere l'eccezione al calendario. Non è stato apportato "
 "nessun cambiamento."
 
-#: agenda/agenda.cpp:1207 month/monthitem.cpp:447
+#: agenda/agenda.cpp:1213 month/monthitem.cpp:447
 #, kde-format
 msgctxt "@title:window"
 msgid "Error Occurred"

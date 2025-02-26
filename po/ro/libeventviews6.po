@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-27 00:40+0000\n"
+"POT-Creation-Date: 2025-02-26 00:42+0000\n"
 "PO-Revision-Date: 2020-09-08 19:18+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian\n"
@@ -28,31 +28,31 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr ""
 
-#: agenda/agenda.cpp:966
+#: agenda/agenda.cpp:972
 #, kde-format
 msgid "Unable to lock item for modification. You cannot make any changes."
 msgstr ""
 "Elementul nu poate fi blocat pentru modificare. Nu puteți face schimbări."
 
-#: agenda/agenda.cpp:968
+#: agenda/agenda.cpp:974
 #, fuzzy, kde-format
 #| msgid "Locking Failed"
 msgctxt "@title:window"
 msgid "Locking Failed"
 msgstr "Blocare eșuată"
 
-#: agenda/agenda.cpp:1183
+#: agenda/agenda.cpp:1189
 #, kde-format
 msgid "Dissociate event from recurrence"
 msgstr "Disociază evenimentul de recurență"
 
-#: agenda/agenda.cpp:1205 month/monthitem.cpp:445
+#: agenda/agenda.cpp:1211 month/monthitem.cpp:445
 #, kde-format
 msgid ""
 "Unable to add the exception item to the calendar. No change will be done."
 msgstr ""
 
-#: agenda/agenda.cpp:1207 month/monthitem.cpp:447
+#: agenda/agenda.cpp:1213 month/monthitem.cpp:447
 #, fuzzy, kde-format
 #| msgid "Error Occurred"
 msgctxt "@title:window"

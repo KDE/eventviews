@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-27 00:40+0000\n"
+"POT-Creation-Date: 2025-02-26 00:42+0000\n"
 "PO-Revision-Date: 2024-06-30 13:19+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -27,29 +27,29 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "Kde-l10n-ta@kde.org"
 
-#: agenda/agenda.cpp:966
+#: agenda/agenda.cpp:972
 #, kde-format
 msgid "Unable to lock item for modification. You cannot make any changes."
 msgstr "மாற்றுமாறு உருப்படியை பூட்ட முடியவில்லை. உங்களால் எதையும் மாற்ற முடியாது."
 
-#: agenda/agenda.cpp:968
+#: agenda/agenda.cpp:974
 #, kde-format
 msgctxt "@title:window"
 msgid "Locking Failed"
 msgstr "பூட்டல் தோல்வியடைந்த‍து"
 
-#: agenda/agenda.cpp:1183
+#: agenda/agenda.cpp:1189
 #, kde-format
 msgid "Dissociate event from recurrence"
 msgstr "மறுநிகழ்விலிருந்து நிகழ்வை பிரிப்பது"
 
-#: agenda/agenda.cpp:1205 month/monthitem.cpp:445
+#: agenda/agenda.cpp:1211 month/monthitem.cpp:445
 #, kde-format
 msgid ""
 "Unable to add the exception item to the calendar. No change will be done."
 msgstr "விதிவிலக்கை நாள்காட்டியில் சேர்க்க முடியவில்லை. எம்மாற்றமும் மேற்கொள்ளப்படாது."
 
-#: agenda/agenda.cpp:1207 month/monthitem.cpp:447
+#: agenda/agenda.cpp:1213 month/monthitem.cpp:447
 #, kde-format
 msgctxt "@title:window"
 msgid "Error Occurred"
