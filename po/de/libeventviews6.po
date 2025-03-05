@@ -28,12 +28,12 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Stefan Winter"
+msgstr "Deutsches KDE-Übersetzungsteam"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "swinter@kde.org"
+msgstr "kde-i18n-de@kde.org"
 
 #: agenda/agenda.cpp:972
 #, kde-format
