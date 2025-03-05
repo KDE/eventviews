@@ -8,6 +8,8 @@
 
 #include <Akonadi/TodoModel>
 
+#include <KCalUtils/IncidenceFormatter>
+
 class ColoredTodoProxyModelPrivate
 {
 public:
@@ -47,6 +49,22 @@ QVariant ColoredTodoProxyModel::data(const QModelIndex &index, int role) const
         } else {
             return {};
         }
+    }
+
+    if (role == Qt::ToolTipRole) {
+        const auto todo = QIdentityProxyModel::data(index, Akonadi::TodoModel::TodoPtrRole).value<KCalendarCore::Todo::Ptr>();
+        if (!todo) {
+            return {};
+        }
+        QString displayName;
+        const Akonadi::Item item = data(index, Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
+        if (item.isValid()) {
+            const Akonadi::Collection col = Akonadi::EntityTreeModel::updatedCollection(this, item.storageCollectionId());
+            if (col.isValid()) {
+                displayName = col.displayName();
+            }
+        }
+        return KCalUtils::IncidenceFormatter::toolTipStr(displayName, todo, QDate::currentDate(), true);
     }
 
     return QIdentityProxyModel::data(index, role);
