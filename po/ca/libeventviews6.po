@@ -2442,15 +2442,3 @@ msgstr "%1, %2 - %3"
 msgctxt "to-do due date"
 msgid "  (Due: %1)"
 msgstr "  (Venciment: %1)"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "Create Note for To-do"
-#~ msgstr "Crea una nota a partir de la tasca pendent"
-
-#~ msgctxt "@action:inmenu edit the to-do"
-#~ msgid "&Edit..."
-#~ msgstr "&Edita..."
-
-#~ msgctxt "@action:inmenu print the to-do"
-#~ msgid "&Print..."
-#~ msgstr "&Imprimeix..."
