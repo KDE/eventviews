@@ -488,7 +488,12 @@ void MonthScene::mouseDoubleClickEvent(QGraphicsSceneMouseEvent *mouseEvent)
             }
         }
     } else {
-        Q_EMIT newEventSignal();
+        QDate currentDate = getCellFromPos(pos)->date();
+        if (currentDate.isValid()) {
+            Q_EMIT newEventSignal(currentDate);
+        } else {
+            Q_EMIT newEventSignal();
+        }
     }
 }
 

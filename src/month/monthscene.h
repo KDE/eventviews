@@ -201,6 +201,7 @@ Q_SIGNALS:
     void incidenceSelected(const Akonadi::Item &incidence, const QDate &);
     void showIncidencePopupSignal(const Akonadi::CollectionCalendar::Ptr &, const Akonadi::Item &, const QDate &);
     void newEventSignal();
+    void newEventSignal(const QDate &);
     void showNewEventPopupSignal();
 
 protected:
