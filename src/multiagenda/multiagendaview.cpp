@@ -753,7 +753,7 @@ void MultiAgendaView::doRestoreConfig(const KConfigGroup &configGroup)
     if (d->mCustomColumnSetupUsed) {
         d->mCollectionSelectionModels.resize(d->mCustomNumberOfColumns);
         for (int i = 0; i < d->mCustomNumberOfColumns; ++i) {
-            // Sort the calanders by name
+            // Sort the calendars by name
             auto sortProxy = new QSortFilterProxyModel(this);
             sortProxy->setSourceModel(model());
 

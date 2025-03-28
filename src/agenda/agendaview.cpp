@@ -1256,7 +1256,7 @@ void AgendaView::removeCalendar(const Akonadi::CollectionCalendar::Ptr &calendar
 
     auto cal = std::find_if(d->mViewCalendar->mSubCalendars.cbegin(), d->mViewCalendar->mSubCalendars.cend(), [calendar](const auto &subcal) {
         if (auto akonadiCal = qSharedPointerDynamicCast<AkonadiViewCalendar>(subcal); akonadiCal) {
-            // TODO: FIXME: the pointer-based comparision MUST succeed here, not collection-based comparison!!!
+            // TODO: FIXME: the pointer-based comparison MUST succeed here, not collection-based comparison!!!
             return akonadiCal->mCalendar->collection() == calendar->collection();
         }
         return false;
@@ -1746,7 +1746,7 @@ void AgendaView::updateTimeBarWidth()
     d->mBottomDayLabelsFrame->setWeekWidth(timeBarWidth);
 }
 
-// By deafult QDateTime::toTimeSpec() will turn Qt::TimeZone to Qt::LocalTime,
+// By default QDateTime::toTimeSpec() will turn Qt::TimeZone to Qt::LocalTime,
 // which would turn the event's timezone into "floating". This code actually
 // preserves the timezone, if the spec is Qt::TimeZone.
 static QDateTime copyTimeSpec(QDateTime dt, const QDateTime &source)
@@ -2104,7 +2104,7 @@ bool AgendaView::displayIncidence(const KCalendarCore::Incidence::Ptr &incidence
         const int eventDuration = event ? incDtStart.daysTo(incDtEnd.addSecs(secsToAdd)) : 0;
 
         // if there's a multiday event that starts before firstVisibleDateTime but ends after
-        // lets include it. timesInInterval() ignores incidences that aren't totaly inside
+        // let's include it. timesInInterval() ignores incidences that aren't totally inside
         // the range
         const QDateTime startDateTimeWithOffset = firstVisibleDateTime.addDays(-eventDuration);
 
