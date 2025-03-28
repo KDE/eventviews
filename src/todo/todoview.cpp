@@ -231,7 +231,7 @@ TodoView::TodoView(const EventViews::PrefsPtr &prefs, bool sidebarView, QWidget 
         sModels = new ModelStack(prefs, parent);
         connect(sModels->todoModel, &Akonadi::TodoModel::dropOnSelfRejected, this, []() {
             KMessageBox::information(nullptr,
-                                     i18n("Cannot move to-do to itself or a child of itself."),
+                                     i18nc("@info", "Cannot move to-do to itself or a child of itself."),
                                      i18nc("@title:window", "Drop To-do"),
                                      QStringLiteral("NoDropTodoOntoItself"));
         });
@@ -317,11 +317,11 @@ TodoView::TodoView(const EventViews::PrefsPtr &prefs, bool sidebarView, QWidget 
     mFlatViewButton = new QToolButton(this);
     mFlatViewButton->setAutoRaise(true);
     mFlatViewButton->setCheckable(true);
-    mFlatViewButton->setToolTip(i18nc("@info:tooltip", "Display to-dos in flat list instead of a tree"));
+    mFlatViewButton->setToolTip(i18nc("@info:tooltip", "Display to-dos in a flat list or a tree"));
     mFlatViewButton->setWhatsThis(i18nc("@info:whatsthis",
-                                        "Checking this option will cause the to-dos to be displayed as a "
-                                        "flat list instead of a hierarchical tree; the parental "
-                                        "relationships are removed in the display."));
+                                        "Checking this button will cause the to-dos to be displayed either as a "
+                                        "flat list or a hierarchical tree where the parental "
+                                        "relationships are removed."));
 
     connect(mFlatViewButton, &QToolButton::toggled, this, [this](bool flatView) {
         setFlatView(flatView, true);
