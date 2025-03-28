@@ -303,6 +303,10 @@ TodoView::TodoView(const EventViews::PrefsPtr &prefs, bool sidebarView, QWidget 
     mQuickAdd = new TodoViewQuickAddLine(this);
     mQuickAdd->setClearButtonEnabled(true);
     mQuickAdd->setVisible(preferences()->enableQuickTodo());
+    mQuickAdd->setToolTip(i18nc("@info:tooltip", "Create an open-ended to-do"));
+    mQuickAdd->setWhatsThis(xi18nc("@info:whatsthis",
+                                   "Enter the summary for a new to-do. <p><note>The new to-do will be open-ended meaning that it has no start or end times nor "
+                                   "will it have a reminder or recurrence. Edit the newly created if you want to add more properties.</note></p>"));
     connect(mQuickAdd, &TodoViewQuickAddLine::returnPressed, this, &TodoView::addQuickTodo);
 
     mFullViewButton = nullptr;
@@ -697,11 +701,19 @@ void TodoView::addTodo(const QString &summary, const Akonadi::Item &parentItem, 
         todo->setRelatedTo(parent->uid());
     }
 
-    Akonadi::Collection collection;
+    /* A todo without a start datetime can't have a reminder so don't bother adding one
+    if (CalendarSupport::KCalPrefs::instance()->defaultTodoReminders()) {
+        KCalendarCore::Alarm::Ptr alarm = todo->newAlarm();
+        CalendarSupport::createAlarmReminder(alarm, todo->type());
+    }
+    */
 
+    // TODO: use the default todo calendar id (once we have one)
+    // Akonadi::Collection collection = Akonadi::EntityTreeModel::updatedCollection(model(), CalendarSupport::KCalPrefs::instance()->defaultCalendarId());
+    Akonadi::Collection collection;
     // Use the same collection of the parent.
     if (parentItem.isValid()) {
-        // Don't use parentColection() since it might be a virtual collection
+        // Don't use parentCollection() since it might be a virtual collection
         collection = Akonadi::EntityTreeModel::updatedCollection(model(), parentItem.storageCollectionId());
     }
 
