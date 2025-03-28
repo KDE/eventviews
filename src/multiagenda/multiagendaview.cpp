@@ -94,7 +94,7 @@ private:
 
 static QString generateColumnLabel(int c)
 {
-    return i18n("Agenda %1", c + 1);
+    return i18nc("@item:intable", "Agenda %1", c + 1);
 }
 
 class EventViews::MultiAgendaViewPrivate
