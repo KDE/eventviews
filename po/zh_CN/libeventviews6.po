@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-26 00:42+0000\n"
+"POT-Creation-Date: 2025-03-29 00:42+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -1517,13 +1517,13 @@ msgctxt "'Month day' for month view cells"
 msgid "%1 %2"
 msgstr "%1 %2"
 
-#: month/monthview.cpp:210 month/monthview.cpp:439
+#: month/monthview.cpp:210 month/monthview.cpp:476
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display calendar in a normal size"
 msgstr "显示正常大小的日历"
 
-#: month/monthview.cpp:211 month/monthview.cpp:442
+#: month/monthview.cpp:211 month/monthview.cpp:479
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display calendar in a full window"
@@ -1589,7 +1589,9 @@ msgid ""
 msgstr "单击此按钮，视图将向未来滚动 1 个月。"
 
 #: multiagenda/multiagendaview.cpp:97
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Agenda %1"
+msgctxt "@item:intable"
 msgid "Agenda %1"
 msgstr "日程 %1"
 
@@ -1665,7 +1667,9 @@ msgid "9 (lowest)"
 msgstr "9 (最低)"
 
 #: todo/todoview.cpp:234
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Cannot move to-do to itself or a child of itself."
+msgctxt "@info"
 msgid "Cannot move to-do to itself or a child of itself."
 msgstr "无法移动待办事项到其自身或者其子项。"
 
@@ -1688,18 +1692,24 @@ msgid "Checking this option will cause the to-do view to use the full window."
 msgstr "选中此项后，待办事项视图将使用整个窗口。"
 
 #: todo/todoview.cpp:320
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Display to-dos in flat list instead of a tree"
 msgctxt "@info:tooltip"
-msgid "Display to-dos in flat list instead of a tree"
+msgid "Display to-dos in a flat list or a tree"
 msgstr "以扁平列表而非层级列表显示待办事项"
 
 #: todo/todoview.cpp:322
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:whatsthis"
+#| msgid ""
+#| "Checking this option will cause the to-dos to be displayed as a flat list "
+#| "instead of a hierarchical tree; the parental relationships are removed in "
+#| "the display."
 msgctxt "@info:whatsthis"
 msgid ""
-"Checking this option will cause the to-dos to be displayed as a flat list "
-"instead of a hierarchical tree; the parental relationships are removed in "
-"the display."
+"Checking this button will cause the to-dos to be displayed either as a flat "
+"list or a hierarchical tree where the parental relationships are removed."
 msgstr ""
 "选中此项时，待办事项将显示为扁平列表，而不是层级列表；主次关系将不被显示。"
 

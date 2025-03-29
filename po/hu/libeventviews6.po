@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-26 00:42+0000\n"
+"POT-Creation-Date: 2025-03-29 00:42+0000\n"
 "PO-Revision-Date: 2024-08-01 22:45+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -1628,13 +1628,13 @@ msgctxt "'Month day' for month view cells"
 msgid "%1 %2"
 msgstr "%1 %2"
 
-#: month/monthview.cpp:210 month/monthview.cpp:439
+#: month/monthview.cpp:210 month/monthview.cpp:476
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display calendar in a normal size"
 msgstr "Naptár megjelenítése normál méretben"
 
-#: month/monthview.cpp:211 month/monthview.cpp:442
+#: month/monthview.cpp:211 month/monthview.cpp:479
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display calendar in a full window"
@@ -1702,7 +1702,9 @@ msgid ""
 msgstr "Kattintson erre a gombra és a nézet előregördül az időben 1 hónapot."
 
 #: multiagenda/multiagendaview.cpp:97
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Agenda %1"
+msgctxt "@item:intable"
 msgid "Agenda %1"
 msgstr "Áttekintő nézet %1"
 
@@ -1778,7 +1780,9 @@ msgid "9 (lowest)"
 msgstr "9 (legalacsonyabb)"
 
 #: todo/todoview.cpp:234
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Cannot move to-do to itself or a child of itself."
+msgctxt "@info"
 msgid "Cannot move to-do to itself or a child of itself."
 msgstr "Feladat nem mozgatható önmagára vagy önmaga alá."
 
@@ -1803,18 +1807,24 @@ msgstr ""
 "fogja eredményezni."
 
 #: todo/todoview.cpp:320
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Display to-dos in flat list instead of a tree"
 msgctxt "@info:tooltip"
-msgid "Display to-dos in flat list instead of a tree"
+msgid "Display to-dos in a flat list or a tree"
 msgstr "A feladatok egyszerű listában jelenjenek meg (ne fastruktúrában)"
 
 #: todo/todoview.cpp:322
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:whatsthis"
+#| msgid ""
+#| "Checking this option will cause the to-dos to be displayed as a flat list "
+#| "instead of a hierarchical tree; the parental relationships are removed in "
+#| "the display."
 msgctxt "@info:whatsthis"
 msgid ""
-"Checking this option will cause the to-dos to be displayed as a flat list "
-"instead of a hierarchical tree; the parental relationships are removed in "
-"the display."
+"Checking this button will cause the to-dos to be displayed either as a flat "
+"list or a hierarchical tree where the parental relationships are removed."
 msgstr ""
 "Ha be van jelölve ez az opció, a feladatok egyszerű listában jelennek meg, "
 "nem fastruktúrában. A származási viszony nem jelenik meg."

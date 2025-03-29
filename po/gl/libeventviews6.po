@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-26 00:42+0000\n"
+"POT-Creation-Date: 2025-03-29 00:42+0000\n"
 "PO-Revision-Date: 2024-06-22 05:48+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -1634,13 +1634,13 @@ msgctxt "'Month day' for month view cells"
 msgid "%1 %2"
 msgstr "%2 de %1"
 
-#: month/monthview.cpp:210 month/monthview.cpp:439
+#: month/monthview.cpp:210 month/monthview.cpp:476
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display calendar in a normal size"
 msgstr "Amosar o calendario a tamaño normal."
 
-#: month/monthview.cpp:211 month/monthview.cpp:442
+#: month/monthview.cpp:211 month/monthview.cpp:479
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display calendar in a full window"
@@ -1708,7 +1708,9 @@ msgid ""
 msgstr "Prema o botón para que a vista avance un mes."
 
 #: multiagenda/multiagendaview.cpp:97
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Agenda %1"
+msgctxt "@item:intable"
 msgid "Agenda %1"
 msgstr "Axenda %1"
 
@@ -1784,7 +1786,9 @@ msgid "9 (lowest)"
 msgstr "9 (a máis baixa)"
 
 #: todo/todoview.cpp:234
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Cannot move to-do to itself or a child of itself."
+msgctxt "@info"
 msgid "Cannot move to-do to itself or a child of itself."
 msgstr "Non é posíbel mover a tarefa a si mesma ou a un fillo da mesma."
 
@@ -1807,18 +1811,24 @@ msgid "Checking this option will cause the to-do view to use the full window."
 msgstr "Marcar esta opción fai que a vista de tarefas ocupe a xanela completa."
 
 #: todo/todoview.cpp:320
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Display to-dos in flat list instead of a tree"
 msgctxt "@info:tooltip"
-msgid "Display to-dos in flat list instead of a tree"
+msgid "Display to-dos in a flat list or a tree"
 msgstr "Amosar as tarefas nunha lista no canto de nunha árbore."
 
 #: todo/todoview.cpp:322
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:whatsthis"
+#| msgid ""
+#| "Checking this option will cause the to-dos to be displayed as a flat list "
+#| "instead of a hierarchical tree; the parental relationships are removed in "
+#| "the display."
 msgctxt "@info:whatsthis"
 msgid ""
-"Checking this option will cause the to-dos to be displayed as a flat list "
-"instead of a hierarchical tree; the parental relationships are removed in "
-"the display."
+"Checking this button will cause the to-dos to be displayed either as a flat "
+"list or a hierarchical tree where the parental relationships are removed."
 msgstr ""
 "Ao marcar esta opción as tarefas aparecen como lista simple no canto de "
 "árbore xerárquica; as relacións de parentesco retíranse da pantalla."

@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-26 00:42+0000\n"
+"POT-Creation-Date: 2025-03-29 00:42+0000\n"
 "PO-Revision-Date: 2024-06-21 22:45+0200\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -1656,13 +1656,13 @@ msgctxt "'Month day' for month view cells"
 msgid "%1 %2"
 msgstr "%1 %2"
 
-#: month/monthview.cpp:210 month/monthview.cpp:439
+#: month/monthview.cpp:210 month/monthview.cpp:476
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display calendar in a normal size"
 msgstr "Mostra il calendario a dimensione normale"
 
-#: month/monthview.cpp:211 month/monthview.cpp:442
+#: month/monthview.cpp:211 month/monthview.cpp:479
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display calendar in a full window"
@@ -1739,7 +1739,9 @@ msgstr ""
 "mese."
 
 #: multiagenda/multiagendaview.cpp:97
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Agenda %1"
+msgctxt "@item:intable"
 msgid "Agenda %1"
 msgstr "Agenda %1"
 
@@ -1815,7 +1817,9 @@ msgid "9 (lowest)"
 msgstr "9 (più bassa)"
 
 #: todo/todoview.cpp:234
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Cannot move to-do to itself or a child of itself."
+msgctxt "@info"
 msgid "Cannot move to-do to itself or a child of itself."
 msgstr ""
 "Impossibile spostare una cosa da fare su sé stessa o su un proprio "
@@ -1841,18 +1845,24 @@ msgstr ""
 "Marcando questa opzione, la vista delle cose da fare userà la finestra intera"
 
 #: todo/todoview.cpp:320
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Display to-dos in flat list instead of a tree"
 msgctxt "@info:tooltip"
-msgid "Display to-dos in flat list instead of a tree"
+msgid "Display to-dos in a flat list or a tree"
 msgstr "Mostra cose da fare in una lista piatta invece che ad albero"
 
 #: todo/todoview.cpp:322
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:whatsthis"
+#| msgid ""
+#| "Checking this option will cause the to-dos to be displayed as a flat list "
+#| "instead of a hierarchical tree; the parental relationships are removed in "
+#| "the display."
 msgctxt "@info:whatsthis"
 msgid ""
-"Checking this option will cause the to-dos to be displayed as a flat list "
-"instead of a hierarchical tree; the parental relationships are removed in "
-"the display."
+"Checking this button will cause the to-dos to be displayed either as a flat "
+"list or a hierarchical tree where the parental relationships are removed."
 msgstr ""
 "Selezionando questa opzione le cose da fare saranno mostrare in una lista "
 "piatta invece che in una gerarchica; le relazioni tra di esse saranno "

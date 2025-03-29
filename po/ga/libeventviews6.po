@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-26 00:42+0000\n"
+"POT-Creation-Date: 2025-03-29 00:42+0000\n"
 "PO-Revision-Date: 2011-12-28 12:28-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -1464,13 +1464,13 @@ msgctxt "'Month day' for month view cells"
 msgid "%1 %2"
 msgstr "%2 %1"
 
-#: month/monthview.cpp:210 month/monthview.cpp:439
+#: month/monthview.cpp:210 month/monthview.cpp:476
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display calendar in a normal size"
 msgstr ""
 
-#: month/monthview.cpp:211 month/monthview.cpp:442
+#: month/monthview.cpp:211 month/monthview.cpp:479
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display calendar in a full window"
@@ -1537,6 +1537,7 @@ msgstr ""
 
 #: multiagenda/multiagendaview.cpp:97
 #, kde-format
+msgctxt "@item:intable"
 msgid "Agenda %1"
 msgstr ""
 
@@ -1614,6 +1615,7 @@ msgstr ""
 
 #: todo/todoview.cpp:234
 #, kde-format
+msgctxt "@info"
 msgid "Cannot move to-do to itself or a child of itself."
 msgstr ""
 
@@ -1638,16 +1640,15 @@ msgstr ""
 #: todo/todoview.cpp:320
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Display to-dos in flat list instead of a tree"
+msgid "Display to-dos in a flat list or a tree"
 msgstr ""
 
 #: todo/todoview.cpp:322
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
-"Checking this option will cause the to-dos to be displayed as a flat list "
-"instead of a hierarchical tree; the parental relationships are removed in "
-"the display."
+"Checking this button will cause the to-dos to be displayed either as a flat "
+"list or a hierarchical tree where the parental relationships are removed."
 msgstr ""
 
 #: todo/todoview.cpp:361
