@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-29 00:42+0000\n"
+"POT-Creation-Date: 2025-03-30 00:42+0000\n"
 "PO-Revision-Date: 2024-07-01 11:34+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -1617,7 +1617,7 @@ msgctxt "@action:inmenu Unspecified priority"
 msgid "unspecified"
 msgstr "未指定"
 
-#: todo/tododelegates.cpp:153 todo/todoview.cpp:447
+#: todo/tododelegates.cpp:153 todo/todoview.cpp:451
 #, kde-format
 msgctxt "@action:inmenu highest priority"
 msgid "1 (highest)"
@@ -1641,7 +1641,7 @@ msgctxt "@action:inmenu"
 msgid "4"
 msgstr "4"
 
-#: todo/tododelegates.cpp:157 todo/todoview.cpp:451
+#: todo/tododelegates.cpp:157 todo/todoview.cpp:455
 #, kde-format
 msgctxt "@action:inmenu medium priority"
 msgid "5 (medium)"
@@ -1665,7 +1665,7 @@ msgctxt "@action:inmenu"
 msgid "8"
 msgstr "8"
 
-#: todo/tododelegates.cpp:161 todo/todoview.cpp:455
+#: todo/tododelegates.cpp:161 todo/todoview.cpp:459
 #, kde-format
 msgctxt "@action:inmenu lowest priority"
 msgid "9 (lowest)"
@@ -1684,19 +1684,37 @@ msgctxt "@title:window"
 msgid "Drop To-do"
 msgstr "丟棄待辦事項"
 
-#: todo/todoview.cpp:314
+#: todo/todoview.cpp:306
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Create Event from To-do"
+msgctxt "@info:tooltip"
+msgid "Create an open-ended to-do"
+msgstr "從待辦事項建立事件"
+
+#: todo/todoview.cpp:308
+#, kde-kuit-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Enter the summary for a new to-do. <p><note>The new to-do will be open-ended "
+"meaning that it has no start or end times nor will it have a reminder or "
+"recurrence. Edit the newly created if you want to add more properties.</"
+"note></p>"
+msgstr ""
+
+#: todo/todoview.cpp:318
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display to-do list in a full window"
 msgstr "在整個視窗顯示待辦事項清單"
 
-#: todo/todoview.cpp:315
+#: todo/todoview.cpp:319
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Checking this option will cause the to-do view to use the full window."
 msgstr "勾選此選項，則使用整個視窗顯示待辦事項"
 
-#: todo/todoview.cpp:320
+#: todo/todoview.cpp:324
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Display to-dos in flat list instead of a tree"
@@ -1704,7 +1722,7 @@ msgctxt "@info:tooltip"
 msgid "Display to-dos in a flat list or a tree"
 msgstr "用平面清單（而不用樹狀圖）顯示待辦事項"
 
-#: todo/todoview.cpp:322
+#: todo/todoview.cpp:326
 #, fuzzy, kde-format
 #| msgctxt "@info:whatsthis"
 #| msgid ""
@@ -1717,121 +1735,121 @@ msgid ""
 "list or a hierarchical tree where the parental relationships are removed."
 msgstr "勾選此選項，會用平面清單方式顯示待辦事項。父事項不會顯示出來。"
 
-#: todo/todoview.cpp:361
+#: todo/todoview.cpp:365
 #, kde-format
 msgctxt "@action:inmenu show the to-do"
 msgid "&Show"
 msgstr "顯示(&S)"
 
-#: todo/todoview.cpp:366
+#: todo/todoview.cpp:370
 #, kde-format
 msgctxt "@action:inmenu edit the to-do"
 msgid "&Edit…"
 msgstr "編輯(&E)…"
 
-#: todo/todoview.cpp:373
+#: todo/todoview.cpp:377
 #, kde-format
 msgctxt "@action:inmenu delete the to-do"
 msgid "&Delete"
 msgstr "刪除(&D)"
 
-#: todo/todoview.cpp:382
+#: todo/todoview.cpp:386
 #, kde-format
 msgctxt "@action:inmenu print the to-do"
 msgid "&Print…"
 msgstr "列印(&P)…"
 
-#: todo/todoview.cpp:387
+#: todo/todoview.cpp:391
 #, kde-format
 msgctxt "@action:inmenu print preview the to-do"
 msgid "Print Previe&w…"
 msgstr "預覽列印(&W)…"
 
-#: todo/todoview.cpp:394
+#: todo/todoview.cpp:398
 #, kde-format
 msgctxt "@action:inmenu create a new to-do"
 msgid "New &To-do…"
 msgstr "新增待辦事項(&T)…"
 
-#: todo/todoview.cpp:398
+#: todo/todoview.cpp:402
 #, kde-format
 msgctxt "@action:inmenu create a new sub-to-do"
 msgid "New Su&b-to-do…"
 msgstr "新增子待辦事項(&B)…"
 
-#: todo/todoview.cpp:402
+#: todo/todoview.cpp:406
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Make this To-do Independent"
 msgstr "將此待辦事項獨立出來(&M)"
 
-#: todo/todoview.cpp:404
+#: todo/todoview.cpp:408
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Make all Sub-to-dos &Independent"
 msgstr "將所有的子待辦事項獨立出來(&I)"
 
-#: todo/todoview.cpp:415
+#: todo/todoview.cpp:419
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Create Event from To-do"
 msgstr "從待辦事項建立事件"
 
-#: todo/todoview.cpp:425
+#: todo/todoview.cpp:429
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Copy To"
 msgstr "複製到(&C)"
 
-#: todo/todoview.cpp:432
+#: todo/todoview.cpp:436
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Move To"
 msgstr "移動到(&M)"
 
-#: todo/todoview.cpp:443
+#: todo/todoview.cpp:447
 #, kde-format
 msgctxt "@action:inmenu delete completed to-dos"
 msgid "Pur&ge Completed"
 msgstr "清除已完成的待辦事項(&G)"
 
-#: todo/todoview.cpp:446
+#: todo/todoview.cpp:450
 #, kde-format
 msgctxt "@action:inmenu unspecified priority"
 msgid "unspecified"
 msgstr "未指定"
 
-#: todo/todoview.cpp:448
+#: todo/todoview.cpp:452
 #, kde-format
 msgctxt "@action:inmenu priority value=2"
 msgid "2"
 msgstr "2"
 
-#: todo/todoview.cpp:449
+#: todo/todoview.cpp:453
 #, kde-format
 msgctxt "@action:inmenu priority value=3"
 msgid "3"
 msgstr "3"
 
-#: todo/todoview.cpp:450
+#: todo/todoview.cpp:454
 #, kde-format
 msgctxt "@action:inmenu priority value=4"
 msgid "4"
 msgstr "4"
 
-#: todo/todoview.cpp:452
+#: todo/todoview.cpp:456
 #, kde-format
 msgctxt "@action:inmenu priority value=6"
 msgid "6"
 msgstr "6"
 
-#: todo/todoview.cpp:453
+#: todo/todoview.cpp:457
 #, kde-format
 msgctxt "@action:inmenu priority value=7"
 msgid "7"
 msgstr "7"
 
-#: todo/todoview.cpp:454
+#: todo/todoview.cpp:458
 #, kde-format
 msgctxt "@action:inmenu priority value=8"
 msgid "8"
