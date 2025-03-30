@@ -1591,7 +1591,7 @@ msgstr "单击此按钮，视图将向未来滚动 1 个月。"
 #: multiagenda/multiagendaview.cpp:97
 #, kde-format
 msgid "Agenda %1"
-msgstr "日程 %1"
+msgstr ""
 
 #: multiagenda/multiagendaview.cpp:179
 #, kde-format
@@ -1667,7 +1667,7 @@ msgstr "9 (最低)"
 #: todo/todoview.cpp:234
 #, kde-format
 msgid "Cannot move to-do to itself or a child of itself."
-msgstr "无法移动待办事项到其自身或者其子项。"
+msgstr ""
 
 #: todo/todoview.cpp:235
 #, kde-format
