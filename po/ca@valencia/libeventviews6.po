@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-30 00:42+0000\n"
-"PO-Revision-Date: 2025-03-29 14:01+0100\n"
+"PO-Revision-Date: 2025-03-30 10:32+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -1835,12 +1835,10 @@ msgid "Drop To-do"
 msgstr "Mou la tasca pendent"
 
 #: todo/todoview.cpp:306
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Create Event from To-do"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Create an open-ended to-do"
-msgstr "Crea un esdeveniment a partir de la tasca pendent"
+msgstr "Crea una tasca pendent sense venciment"
 
 #: todo/todoview.cpp:308
 #, kde-kuit-format
@@ -1851,6 +1849,10 @@ msgid ""
 "recurrence. Edit the newly created if you want to add more properties.</"
 "note></p>"
 msgstr ""
+"Introduïu el resum d'una tasca pendent nova. <p><note>La tasca pendent nova "
+"serà oberta, el que significa que no té temps d'inici ni final ni tindrà cap "
+"recordatori ni recurrència. Editeu la creada nova si voleu afegir més "
+"propietats.</note></p>"
 
 #: todo/todoview.cpp:318
 #, kde-format

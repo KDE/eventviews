@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: libeventviews6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-30 00:42+0000\n"
-"PO-Revision-Date: 2025-03-30 01:10+0100\n"
+"PO-Revision-Date: 2025-03-31 01:42+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -1836,12 +1836,10 @@ msgid "Drop To-do"
 msgstr "Soltar tarea pendiente"
 
 #: todo/todoview.cpp:306
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Create Event from To-do"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Create an open-ended to-do"
-msgstr "Crear evento desde tarea pendiente"
+msgstr "Crear una tarea pendiente abierta"
 
 #: todo/todoview.cpp:308
 #, kde-kuit-format
@@ -1852,6 +1850,10 @@ msgid ""
 "recurrence. Edit the newly created if you want to add more properties.</"
 "note></p>"
 msgstr ""
+"Introduzca el resumen de una nueva tarea pendiente. <p><note>La nueva tarea "
+"pendiente estará abierta, lo que significa que no tiene hora de inicio ni de "
+"fin, ni recordatorio ni repetición. Edite la tarea recién creada si desea "
+"añadirle más propiedades.</note></p>"
 
 #: todo/todoview.cpp:318
 #, kde-format

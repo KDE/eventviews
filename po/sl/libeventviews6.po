@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-30 00:42+0000\n"
-"PO-Revision-Date: 2025-03-29 11:19+0100\n"
+"PO-Revision-Date: 2025-03-30 08:43+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -1796,12 +1796,10 @@ msgid "Drop To-do"
 msgstr "Opusti opravilo"
 
 #: todo/todoview.cpp:306
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Create Event from To-do"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Create an open-ended to-do"
-msgstr "Ustvari dogodek iz opravila"
+msgstr "Ustvari odprto opravilo"
 
 #: todo/todoview.cpp:308
 #, kde-kuit-format
@@ -1812,6 +1810,10 @@ msgid ""
 "recurrence. Edit the newly created if you want to add more properties.</"
 "note></p>"
 msgstr ""
+"Vnesite povzetek za novo opravilo. <p><note>Novo opravilo bo odprto, kar "
+"pomeni, da ne bo imelo začetnega ali končnega časa niti ne bo imelo opomnika "
+"ali ponavljanja. Uredite novo ustvarjeno, če želite dodati več lastnosti.</"
+"note></p>"
 
 #: todo/todoview.cpp:318
 #, kde-format

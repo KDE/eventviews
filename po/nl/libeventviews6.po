@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-30 00:42+0000\n"
-"PO-Revision-Date: 2025-03-29 13:18+0100\n"
+"PO-Revision-Date: 2025-03-31 00:38+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -1815,12 +1815,10 @@ msgid "Drop To-do"
 msgstr "Taak neerzetten"
 
 #: todo/todoview.cpp:306
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Create Event from To-do"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Create an open-ended to-do"
-msgstr "Gebeurtenis aanmaken uit te-doen"
+msgstr "Een open-einde uit te voeren taak aanmaken"
 
 #: todo/todoview.cpp:308
 #, kde-kuit-format
@@ -1831,6 +1829,11 @@ msgid ""
 "recurrence. Edit the newly created if you want to add more properties.</"
 "note></p>"
 msgstr ""
+"Voer de samenvatting voor een nieuwe uit te voeren taak. <p><note>De nieuwe "
+"uit te voeren taak zal een open-einde hebben, wat betekent dat het geen "
+"begin- of eindtijd heeft noch zal het een herinnering of opnieuw verschijnen "
+"hebben. Bewerk de nieuw gemaakte als u meer eigenschappen wilt toevoegen.</"
+"note></p>"
 
 #: todo/todoview.cpp:318
 #, kde-format

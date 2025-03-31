@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-30 00:42+0000\n"
-"PO-Revision-Date: 2025-03-29 12:18+0200\n"
+"PO-Revision-Date: 2025-03-30 13:08+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -1812,12 +1812,10 @@ msgid "Drop To-do"
 msgstr "Відкидання завдання"
 
 #: todo/todoview.cpp:306
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Create Event from To-do"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Create an open-ended to-do"
-msgstr "Створити з завдання запис події"
+msgstr "Створити завдання без обмежень"
 
 #: todo/todoview.cpp:308
 #, kde-kuit-format
@@ -1828,6 +1826,10 @@ msgid ""
 "recurrence. Edit the newly created if you want to add more properties.</"
 "note></p>"
 msgstr ""
+"Введіть резюме щодо нового завдання. <p><note>Нове завдання буде "
+"необмеженим, тобто у нього не буде ні часу початку, ні часу завершення. "
+"Також для нього не буде встановлено ні нагадування, ні повторення. Редагуйте "
+"новостворений запис, якщо хочете додати його властивості.</note></p>"
 
 #: todo/todoview.cpp:318
 #, kde-format

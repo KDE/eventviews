@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kdepim-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-30 00:42+0000\n"
-"PO-Revision-Date: 2025-03-29 14:13+0300\n"
+"PO-Revision-Date: 2025-03-31 01:20+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -1797,12 +1797,10 @@ msgid "Drop To-do"
 msgstr "Yapılacak’ı Bırak"
 
 #: todo/todoview.cpp:306
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Create Event from To-do"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Create an open-ended to-do"
-msgstr "Yapılacaktan Etkinlik Oluştur"
+msgstr "Açık uçlu bir yapılacak oluştur"
 
 #: todo/todoview.cpp:308
 #, kde-kuit-format
@@ -1813,6 +1811,10 @@ msgid ""
 "recurrence. Edit the newly created if you want to add more properties.</"
 "note></p>"
 msgstr ""
+"Yeni yapılacak için olan özeti girin.<p><note>Yeni yapılacak işin ucu açık "
+"olacaktır; bu, ne bir başlangıç veya bitiş ne de bir anımsatıcısının veya "
+"yeniden oluşunun olacağı anlamına gelir. Bunlardan birini veya başka bir şey "
+"eklemek isterseniz yeni oluşturduğunuz yapılacağı düzenleyin.</note></p>"
 
 #: todo/todoview.cpp:318
 #, kde-format

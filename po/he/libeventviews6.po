@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the eventviews package.
 #
-# SPDX-FileCopyrightText: 2024 Yaron Shahrabani <sh.yaron@gmail.com>
+# SPDX-FileCopyrightText: 2024, 2025 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-30 00:42+0000\n"
-"PO-Revision-Date: 2024-06-21 07:55+0300\n"
+"PO-Revision-Date: 2025-03-30 07:55+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.12.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -1656,8 +1656,7 @@ msgid ""
 msgstr "לחיצה על הכפתור הזה תסיט את התצוגה קדימה בחודש"
 
 #: multiagenda/multiagendaview.cpp:97
-#, fuzzy, kde-format
-#| msgid "Agenda %1"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Agenda %1"
 msgstr "סדר יום %1"
@@ -1734,11 +1733,10 @@ msgid "9 (lowest)"
 msgstr "9 (הכי נמוכה)"
 
 #: todo/todoview.cpp:234
-#, fuzzy, kde-format
-#| msgid "Cannot move to-do to itself or a child of itself."
+#, kde-format
 msgctxt "@info"
 msgid "Cannot move to-do to itself or a child of itself."
-msgstr "לא ניתן להעביר מטלה לתוך עצמה או לצאצא שלה."
+msgstr "לא ניתן להעביר מטלה לתוך עצמה או צאצא לתוך עצמו."
 
 #: todo/todoview.cpp:235
 #, kde-format
@@ -1747,12 +1745,10 @@ msgid "Drop To-do"
 msgstr "השמטת מטלה"
 
 #: todo/todoview.cpp:306
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Create Event from To-do"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Create an open-ended to-do"
-msgstr "יצירת אירוע ממטלה"
+msgstr "יצירת מטלה ללא מועד סיום"
 
 #: todo/todoview.cpp:308
 #, kde-kuit-format
@@ -1763,6 +1759,9 @@ msgid ""
 "recurrence. Edit the newly created if you want to add more properties.</"
 "note></p>"
 msgstr ""
+"נא למלא את התקציר למטלה.<p><note>למטלה החדשה לא יהיו מועד, כלומר שאין לה "
+"מועדי התחלה או סוף או תזכורות או חזרתיות. יש לערוך את החדשה שנוצרה כדי "
+"להוסיף מאפיינים נוספים.</note></p>"
 
 #: todo/todoview.cpp:318
 #, kde-format
@@ -1777,27 +1776,20 @@ msgid "Checking this option will cause the to-do view to use the full window."
 msgstr "סימון האפשרות הזאת יגרום לתצוגת המטלות להשתמש בכל החלון."
 
 #: todo/todoview.cpp:324
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Display to-dos in flat list instead of a tree"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Display to-dos in a flat list or a tree"
-msgstr "להציג מטלות ברשימה שטוחה במקום בעץ"
+msgstr "להציג מטלות ברשימה שטוחה או בעץ"
 
 #: todo/todoview.cpp:326
-#, fuzzy, kde-format
-#| msgctxt "@info:whatsthis"
-#| msgid ""
-#| "Checking this option will cause the to-dos to be displayed as a flat list "
-#| "instead of a hierarchical tree; the parental relationships are removed in "
-#| "the display."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Checking this button will cause the to-dos to be displayed either as a flat "
 "list or a hierarchical tree where the parental relationships are removed."
 msgstr ""
-"סימון האפשרות הזאת יגרום למטלות להופיע כרשימה שטוחה במקום כעץ נפרס, יחסי "
-"ההורות יוסרו מהתצוגה."
+"סימון הכפתור הזה יגרום למטלות להופיע כרשימה שטוחה או כעץ היררכי שבו יחסי "
+"ההורות יוסרו."
 
 #: todo/todoview.cpp:365
 #, kde-format
