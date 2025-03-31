@@ -604,13 +604,13 @@ msgstr "显示待办事项"
 #: eventviews.kcfg:191 viewerapp/settings.kcfg:41
 #, kde-format
 msgid "Check this box to display to-dos in the agenda view."
-msgstr "选中此项会在议事日程视图内显示待办事项。"
+msgstr "选中此项会在日程视图内显示待办事项。"
 
 #. i18n: ectx: tooltip, entry (ShowTodosAgendaView), group (Agenda View)
 #: eventviews.kcfg:192 viewerapp/settings.kcfg:42
 #, kde-format
 msgid "Display to-dos in the agenda view"
-msgstr "在议事日程视图内显示待办事项"
+msgstr "在日程视图内显示待办事项"
 
 #. i18n: ectx: label, entry (MarcusBainsEnabled), group (Agenda View)
 #: eventviews.kcfg:197 viewerapp/settings.kcfg:47
@@ -1098,7 +1098,7 @@ msgstr "以扁平列表显示待办事项"
 #: eventviews.kcfg:363
 #, kde-format
 msgid "Display to-dos as a flat list instead of a hierarchical tree"
-msgstr "以扁平列表而层级列表显示待办事项"
+msgstr "以扁平列表，而不是层级列表显示待办事项"
 
 #. i18n: ectx: whatsthis, entry, group (Todo View)
 #: eventviews.kcfg:364
@@ -1591,7 +1591,7 @@ msgstr "单击此按钮，视图将向未来滚动 1 个月。"
 #: multiagenda/multiagendaview.cpp:97
 #, kde-format
 msgid "Agenda %1"
-msgstr ""
+msgstr "日程 %1"
 
 #: multiagenda/multiagendaview.cpp:179
 #, kde-format
@@ -1667,7 +1667,7 @@ msgstr "9 (最低)"
 #: todo/todoview.cpp:234
 #, kde-format
 msgid "Cannot move to-do to itself or a child of itself."
-msgstr ""
+msgstr "无法移动待办事项到其自身或者其子项。"
 
 #: todo/todoview.cpp:235
 #, kde-format
