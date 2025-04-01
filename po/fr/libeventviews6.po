@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Geoffray Levasseur <geoffray.levasseurbrandin@numericable.fr>, 2010, 2011, 2012, 2013.
 # Anne-Marie Mahfouf <annemarie.mahfouf@free.fr>, 2010.
-# SPDX-FileCopyrightText: 2012, 2020, 2021, 2023, 2024 Xavier Besnard <xavier.besnard@kde.org>
+# SPDX-FileCopyrightText: 2012, 2020, 2021, 2023, 2024, 2025 Xavier Besnard <xavier.besnard@kde.org>
 # Sebastien Renard <renard@kde.org>, 2013.
 # Vincent Pinon <vpinon@kde.org>, 2017, 2018.
 # Simon Depiets <sdepiets@gmail.com>, 2018, 2019, 2020.
@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-30 00:42+0000\n"
-"PO-Revision-Date: 2024-07-26 20:40+0200\n"
+"PO-Revision-Date: 2025-03-30 11:55+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.12.3\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -1766,8 +1766,7 @@ msgid ""
 msgstr "Cliquez sur ce bouton et l'affichage avancera d'un mois dans le futur"
 
 #: multiagenda/multiagendaview.cpp:97
-#, fuzzy, kde-format
-#| msgid "Agenda %1"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Agenda %1"
 msgstr "Agenda %1"
@@ -1844,8 +1843,7 @@ msgid "9 (lowest)"
 msgstr "9 (la plus basse)"
 
 #: todo/todoview.cpp:234
-#, fuzzy, kde-format
-#| msgid "Cannot move to-do to itself or a child of itself."
+#, kde-format
 msgctxt "@info"
 msgid "Cannot move to-do to itself or a child of itself."
 msgstr ""
@@ -1859,12 +1857,10 @@ msgid "Drop To-do"
 msgstr "Déposer une tâche à faire"
 
 #: todo/todoview.cpp:306
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Create Event from To-do"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Create an open-ended to-do"
-msgstr "Créer un évènement à partir des choses à faire"
+msgstr "Créer une tâche à faire sans date de fin"
 
 #: todo/todoview.cpp:308
 #, kde-kuit-format
@@ -1875,6 +1871,10 @@ msgid ""
 "recurrence. Edit the newly created if you want to add more properties.</"
 "note></p>"
 msgstr ""
+"Saisissez le résumé d’une nouvelle tâche. <p><note>La nouvelle tâche sera "
+"sans contrainte de date, c’est-à-dire qu’elle n’aura aucune heure de début "
+"ou de fin, aucun rappel ou aucune récurrence. Veuillez modifier la nouvelle "
+"tâche créée si vous souhaitez y ajouter d’autres propriétés. </note></p>"
 
 #: todo/todoview.cpp:318
 #, kde-format
@@ -1891,28 +1891,21 @@ msgstr ""
 "de la fenêtre."
 
 #: todo/todoview.cpp:324
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Display to-dos in flat list instead of a tree"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Display to-dos in a flat list or a tree"
-msgstr "Affiche les tâche dans une vue aplanie au lieu d'un arbre"
+msgstr "Afficher les tâches dans une vue à plat plutôt qu'en arborescence"
 
 #: todo/todoview.cpp:326
-#, fuzzy, kde-format
-#| msgctxt "@info:whatsthis"
-#| msgid ""
-#| "Checking this option will cause the to-dos to be displayed as a flat list "
-#| "instead of a hierarchical tree; the parental relationships are removed in "
-#| "the display."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Checking this button will cause the to-dos to be displayed either as a flat "
 "list or a hierarchical tree where the parental relationships are removed."
 msgstr ""
-"En cochant cette option, les tâche à afficher le seront dans une liste "
-"aplanie au lieu d'un arbre hiérarchique. Les liens de parenté ne seront plus "
-"visible à l'écran."
+"La sélection de ce bouton conduira à l'affichage des tâches soit dans une "
+"liste à plat, soit dans une arborescence hiérarchique. Les liens de parenté "
+"seront supprimés."
 
 #: todo/todoview.cpp:365
 #, kde-format
