@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-30 00:42+0000\n"
-"PO-Revision-Date: 2025-03-21 18:29+0100\n"
+"PO-Revision-Date: 2025-04-02 16:04+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -1736,8 +1736,7 @@ msgstr ""
 "Pulsa iste button e le vista essera rolate avante de un mense de tempore."
 
 #: multiagenda/multiagendaview.cpp:97
-#, fuzzy, kde-format
-#| msgid "Agenda %1"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Agenda %1"
 msgstr "Agenda %1"
@@ -1814,8 +1813,7 @@ msgid "9 (lowest)"
 msgstr "9 (plus basse)"
 
 #: todo/todoview.cpp:234
-#, fuzzy, kde-format
-#| msgid "Cannot move to-do to itself or a child of itself."
+#, kde-format
 msgctxt "@info"
 msgid "Cannot move to-do to itself or a child of itself."
 msgstr ""
@@ -1829,12 +1827,10 @@ msgid "Drop To-do"
 msgstr "Abandona activitate de facer"
 
 #: todo/todoview.cpp:306
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Create Event from To-do"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Create an open-ended to-do"
-msgstr "Crea  evento ex Agenda"
+msgstr "Crea  un nove agenda a termination aperite"
 
 #: todo/todoview.cpp:308
 #, kde-kuit-format
@@ -1845,6 +1841,10 @@ msgid ""
 "recurrence. Edit the newly created if you want to add more properties.</"
 "note></p>"
 msgstr ""
+"Inserta le sumamrio per uin nove agenda. <p><note>Le nove agenda essera "
+"terminate aperite significante que il non ha tempore  de initio e fin ni il "
+"habera un memento o un recurrentia. Modifica loo que tu has apena create si "
+"tu vole adder plus proprietates.</note></p>"
 
 #: todo/todoview.cpp:318
 #, kde-format
@@ -1861,28 +1861,21 @@ msgstr ""
 "usara le fenestra complete."
 
 #: todo/todoview.cpp:324
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Display to-dos in flat list instead of a tree"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Display to-dos in a flat list or a tree"
-msgstr "Monstra activitates de facer in un lista plan in loco de un arbore"
+msgstr "Monstra activitates de facer in un lista plan o un arbore"
 
 #: todo/todoview.cpp:326
-#, fuzzy, kde-format
-#| msgctxt "@info:whatsthis"
-#| msgid ""
-#| "Checking this option will cause the to-dos to be displayed as a flat list "
-#| "instead of a hierarchical tree; the parental relationships are removed in "
-#| "the display."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Checking this button will cause the to-dos to be displayed either as a flat "
 "list or a hierarchical tree where the parental relationships are removed."
 msgstr ""
-"Si on marca iste option, il causara que le activitates essera monstrate como "
-"lista plan in loco de un arbore hierarchical, le relationes parental es "
-"removite in le monstrator."
+"Marcar iste button causara que le activitates de facer essera monstrate o "
+"como lista plan o un arbore hierarchical ubi le relationes parental es "
+"removite."
 
 #: todo/todoview.cpp:365
 #, kde-format
