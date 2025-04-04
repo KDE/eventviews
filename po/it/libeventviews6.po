@@ -8,14 +8,14 @@
 # Pino Toscano <toscano.pino@tiscali.it>, 2007.
 # Dario Panico <Dareus_Persarumrex@fastwebnet.it>, 2008, 2009.
 # Leonardo Finetti <finex@finex.org>, 2008.
-# Luigi Toscano <luigi.toscano@tiscali.it>, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2023, 2024.
+# SPDX-FileCopyrightText: 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2023, 2024, 2025 Luigi Toscano <luigi.toscano@tiscali.it>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-30 00:42+0000\n"
-"PO-Revision-Date: 2024-06-21 22:45+0200\n"
+"PO-Revision-Date: 2025-04-02 10:12+0200\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 25.03.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -1739,8 +1739,7 @@ msgstr ""
 "mese."
 
 #: multiagenda/multiagendaview.cpp:97
-#, fuzzy, kde-format
-#| msgid "Agenda %1"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Agenda %1"
 msgstr "Agenda %1"
@@ -1817,8 +1816,7 @@ msgid "9 (lowest)"
 msgstr "9 (più bassa)"
 
 #: todo/todoview.cpp:234
-#, fuzzy, kde-format
-#| msgid "Cannot move to-do to itself or a child of itself."
+#, kde-format
 msgctxt "@info"
 msgid "Cannot move to-do to itself or a child of itself."
 msgstr ""
@@ -1832,11 +1830,10 @@ msgid "Drop To-do"
 msgstr "Elimina cosa da fare"
 
 #: todo/todoview.cpp:306
-#, fuzzy, kde-format
-#| msgid "Create a new To-do"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Create an open-ended to-do"
-msgstr "Crea una nuova cosa da fare"
+msgstr "Crea una cosa da fare senza data di scadenza"
 
 #: todo/todoview.cpp:308
 #, kde-kuit-format
@@ -1847,6 +1844,10 @@ msgid ""
 "recurrence. Edit the newly created if you want to add more properties.</"
 "note></p>"
 msgstr ""
+"Inserisci il sommario per una nuova cosa da fare. <p><note>La nuova cosa da "
+"fare sarà senza data di scadenza, ovvero non avrà orari di inizio o di fine, "
+"né avrà promemoria o ricorrenze. Modifica la cosa da fare appena creata se "
+"vuoi aggiungere ulteriori proprietà.</note></p>"
 
 #: todo/todoview.cpp:318
 #, kde-format
@@ -1862,28 +1863,21 @@ msgstr ""
 "Marcando questa opzione, la vista delle cose da fare userà la finestra intera"
 
 #: todo/todoview.cpp:324
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Display to-dos in flat list instead of a tree"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Display to-dos in a flat list or a tree"
 msgstr "Mostra cose da fare in una lista piatta invece che ad albero"
 
 #: todo/todoview.cpp:326
-#, fuzzy, kde-format
-#| msgctxt "@info:whatsthis"
-#| msgid ""
-#| "Checking this option will cause the to-dos to be displayed as a flat list "
-#| "instead of a hierarchical tree; the parental relationships are removed in "
-#| "the display."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Checking this button will cause the to-dos to be displayed either as a flat "
 "list or a hierarchical tree where the parental relationships are removed."
 msgstr ""
-"Selezionando questa opzione le cose da fare saranno mostrare in una lista "
-"piatta invece che in una gerarchica; le relazioni tra di esse saranno "
-"rimosse nella vista."
+"Selezionando questo pulsante le cose da fare saranno mostrate o in una lista "
+"piatta o in una ad albero gerarchica in cui le relazioni tra di esse sono "
+"rimosse."
 
 #: todo/todoview.cpp:365
 #, kde-format

@@ -1,14 +1,14 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the eventviews package.
 #
-# SPDX-FileCopyrightText: 2024 Toms Trasuns <toms.trasuns@posteo.net>
+# SPDX-FileCopyrightText: 2024, 2025 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-30 00:42+0000\n"
-"PO-Revision-Date: 2024-09-05 11:26+0300\n"
-"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
+"PO-Revision-Date: 2025-04-02 19:04+0300\n"
+"Last-Translator: Toms Trasūns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -95,7 +95,7 @@ msgstr "%1, %3. %2"
 #: agenda/agendaview.cpp:2239
 #, kde-format
 msgid "Unable to modify this to-do, because it cannot be locked."
-msgstr "Neizdodas rediģēt darāmo uzdevumu, jo to nevar slēgt."
+msgstr "Neizdodas rediģēt uzdevumu, jo to nevar slēgt."
 
 #: agenda/agendaview.cpp:2247
 #, kde-format
@@ -158,7 +158,7 @@ msgstr "Laika josla"
 #, kde-format
 msgctxt "@title:window"
 msgid "Changing Recurring Item"
-msgstr "Maina atkārtojošos vienumu"
+msgstr "Vienuma, kas atkārtojas, maiņa"
 
 #: eventview.cpp:110
 #, kde-format
@@ -386,8 +386,8 @@ msgid ""
 "Enter the start time for events here. This time should be the earliest time "
 "that you use for events, as it will be displayed at the top."
 msgstr ""
-"Te norādīt notikumu sākuma laiku. Šim laikam ir jābūt agrākajam laikam, kurā "
-"var būt notikumi, jo tas būs augšpusē."
+"Norādiet notikumu sākuma laiku. Šim laikam ir jābūt agrākajam laikam, ko "
+"lietojiet notikumiem, jo tas parādīsies augšpusē."
 
 #. i18n: ectx: label, entry (WorkingHoursStart), group (Time &amp; Date)
 #: eventviews.kcfg:100
@@ -402,8 +402,7 @@ msgid ""
 "Enter the start time for the working hours here. The working hours will be "
 "marked with color by KOrganizer."
 msgstr ""
-"Te norādīt darba dienas sākuma laiku. „KOrganizer“ ar krāsu izcels darba "
-"laiku."
+"Norādiet darba dienas sākuma laiku. „KOrganizer“ ar krāsu izcels darba laiku."
 
 #. i18n: ectx: label, entry (WorkingHoursEnd), group (Time &amp; Date)
 #: eventviews.kcfg:106
@@ -418,8 +417,7 @@ msgid ""
 "Enter the ending time for the working hours here. The working hours will be "
 "marked with color by KOrganizer."
 msgstr ""
-"Te norādīt darba dienas beigu laiku. „KOrganizer“ ar krāsu izcels darba "
-"laiku."
+"Norādiet darba dienas beigu laiku. „KOrganizer“ ar krāsu izcels darba laiku."
 
 #. i18n: ectx: label, entry (WeekStartDay), group (Time &amp; Date)
 #: eventviews.kcfg:112
@@ -457,7 +455,7 @@ msgid ""
 "event or a to-do."
 msgstr ""
 "Atzīmējiet šo lauciņu, lai redzētu kopsavilkuma paskaidres, kad uzliekat "
-"peles kursoru virs notikuma vai uzdevuma."
+"peles rādītāju virs notikuma vai uzdevuma."
 
 #. i18n: ectx: label, entry, group (General View)
 #: eventviews.kcfg:128
@@ -540,7 +538,7 @@ msgstr ""
 #: eventviews.kcfg:153
 #, kde-format
 msgid "Show to-dos instead of events when in Todo View"
-msgstr "Darāmo uzdevumu skatā notikumu vietā rādīt uzdevumus"
+msgstr "Uzdevumu skatā notikumu vietā rādīt uzdevumus"
 
 #. i18n: ectx: whatsthis, entry (HighlightTodos), group (General View)
 #: eventviews.kcfg:154
@@ -549,8 +547,8 @@ msgid ""
 "Check this box to show the days containing to-dos in bold typeface in the "
 "Date Navigator when in to-do view."
 msgstr ""
-"Atzīmējiet šo lauciņu, lai Datumu navigatorā dienas, kas satur uzdevumus, "
-"darāmo uzdevumu skatā rādītu treknrakstā."
+"Atzīmējiet šo lauciņu, lai Datumu navigatorā uzdevumu skatā dienas, kas "
+"satur uzdevumus, rādītu treknrakstā."
 
 #. i18n: ectx: label, entry (HighlightJournals), group (General View)
 #: eventviews.kcfg:159
@@ -635,26 +633,25 @@ msgstr "Parādīt ikonas pie dienaskārtības skata vienumiem"
 #: viewerapp/settings.kcfg:133
 #, kde-format
 msgid "Show to-dos"
-msgstr "Rādīt darāmos darbus"
+msgstr "Rādīt uzdevumus"
 
 #. i18n: ectx: whatsthis, entry (ShowTodosAgendaView), group (Agenda View)
 #: eventviews.kcfg:191 viewerapp/settings.kcfg:41
 #, kde-format
 msgid "Check this box to display to-dos in the agenda view."
-msgstr ""
-"Atzīmējiet šo lauciņu, lai parādītu darāmos uzdevumus dienaskārtības skatā."
+msgstr "Atzīmējiet šo lauciņu, lai dienaskārtības skatā parādītu uzdevumus."
 
 #. i18n: ectx: tooltip, entry (ShowTodosAgendaView), group (Agenda View)
 #: eventviews.kcfg:192 viewerapp/settings.kcfg:42
 #, kde-format
 msgid "Display to-dos in the agenda view"
-msgstr "Parāda darāmos darbus dienaskārtības skatā"
+msgstr "Dienaskārtības skatā parāda uzdevumus"
 
 #. i18n: ectx: label, entry (MarcusBainsEnabled), group (Agenda View)
 #: eventviews.kcfg:197 viewerapp/settings.kcfg:47
 #, kde-format
 msgid "Show current-time (Marcus Bains) line"
-msgstr "Parāda pašreizējā laika (Markusa Beinsa) rindiņu"
+msgstr "Parādīt pašreizējā laika (Markusa Beinsa) rindiņu"
 
 #. i18n: ectx: whatsthis, entry (MarcusBainsEnabled), group (Agenda View)
 #: eventviews.kcfg:198 viewerapp/settings.kcfg:48
@@ -670,7 +667,7 @@ msgstr ""
 #: eventviews.kcfg:199 viewerapp/settings.kcfg:49
 #, kde-format
 msgid "Display the current-time indicator"
-msgstr "Parāda pašreizējā laika indikatoru"
+msgstr "Parādīt pašreizējā laika indikatoru"
 
 #. i18n: ectx: label, entry (MarcusBainsShowSeconds), group (Agenda View)
 #: eventviews.kcfg:204 viewerapp/settings.kcfg:54
@@ -989,13 +986,13 @@ msgstr "Parādīt laiku mēneša skata vienumos"
 #: eventviews.kcfg:295 viewerapp/settings.kcfg:134
 #, kde-format
 msgid "Check this box to display to-dos in the month view."
-msgstr "Atzīmējiet šo lauciņu, lai mēneša skatā parādītu darāmos uzdevumus."
+msgstr "Atzīmējiet šo lauciņu, lai mēneša skatā parādītu uzdevumus."
 
 #. i18n: ectx: tooltip, entry (ShowTodosMonthView), group (Month View)
 #: eventviews.kcfg:296 viewerapp/settings.kcfg:135
 #, kde-format
 msgid "Display to-dos in the month view"
-msgstr "Parādīt darāmos darbus mēneša skatā"
+msgstr "Mēneša skatā parādīt uzdevumus"
 
 #. i18n: ectx: label, entry (ShowJournalsMonthView), group (Month View)
 #: eventviews.kcfg:301 viewerapp/settings.kcfg:140
@@ -1138,7 +1135,7 @@ msgstr ""
 #: eventviews.kcfg:350 viewerapp/settings.kcfg:183
 #, kde-format
 msgid "Always display completed to-dos at the bottom of the list"
-msgstr "Saraksta apakšā vienmēr rādīt pabeigtos darāmos darbus"
+msgstr "Saraksta apakšā vienmēr rādīt pabeigtos uzdevumus"
 
 #. i18n: ectx: whatsthis, entry, group (Todo View)
 #: eventviews.kcfg:351 viewerapp/settings.kcfg:184
@@ -1147,14 +1144,14 @@ msgid ""
 "Check this box if you want all completed to-dos to be always grouped at the "
 "bottom of the to-do list."
 msgstr ""
-"Atzīmējiet šo lauciņu, ja vēlaties vienmēr visus pabeigtos darāmos uzdevumus "
+"Atzīmējiet šo lauciņu, ja vēlaties visus pabeigtos uzdevumus vienmēr "
 "sagrupēt saraksta apakšā."
 
 #. i18n: ectx: label, entry, group (Todo View)
 #: eventviews.kcfg:356 viewerapp/settings.kcfg:189
 #, kde-format
 msgid "To-do list view uses full window"
-msgstr "Darāmo uzdevumu saraksts aizņem visu logu"
+msgstr "Uzdevumu saraksts aizņem visu logu"
 
 #. i18n: ectx: whatsthis, entry, group (Todo View)
 #: eventviews.kcfg:357 viewerapp/settings.kcfg:190
@@ -1165,22 +1162,22 @@ msgid ""
 "list view, but other widgets, such as the date navigator, the to-do details "
 "and the calendars list, will not be displayed."
 msgstr ""
-"Atzīmējiet šo lauciņu, lai izmantotu pilnu „KOrganizer“ logu, rādot darāmo "
-"uzdevumu saraksta skatam. Ja šis lauciņš ir atzīmēts, jūs iegūsiet vietu "
-"darāmo uzdevumu saraksta skatam, tomēr citas logdaļas, piemēram, datumu "
-"navigators, darāmā darba informācija un kalendāra saraksts būs paslēptas."
+"Atzīmējiet šo lauciņu, lai, rādot uzdevumu saraksta skatu, izmantotu pilnu "
+"„KOrganizer“ logu. Ja ir atzīmēts šis lauciņš, jūs iegūsiet vietu uzdevumu "
+"saraksta skatam, tomēr citas logdaļas, piemēram, datumu navigators, uzdevuma "
+"informācija un kalendāra saraksts, būs paslēptas."
 
 #. i18n: ectx: label, entry, group (Todo View)
 #: eventviews.kcfg:362
 #, kde-format
 msgid "Display to-dos in a flat list"
-msgstr "Darāmos uzdevumus parādīt plakanā sarakstā"
+msgstr "Uzdevumus parādīt vienkāršā sarakstā"
 
 #. i18n: ectx: tooltip, entry, group (Todo View)
 #: eventviews.kcfg:363
 #, kde-format
 msgid "Display to-dos as a flat list instead of a hierarchical tree"
-msgstr "Parādīt darāmos darbus plakanā sarakstā, bet ne hierarhiskā koka skatā"
+msgstr "Parādīt uzdevumus vienkāršā sarakstā, bet ne hierarhiskā koka skatā"
 
 #. i18n: ectx: whatsthis, entry, group (Todo View)
 #: eventviews.kcfg:364
@@ -1189,14 +1186,14 @@ msgid ""
 "Check this box if you want to see all your to-dos in a flat list instead of "
 "being arranged in a hierarchical tree."
 msgstr ""
-"Atzīmējiet šo lauciņu, ja vēlaties redzēt visus darāmos uzdevumus plakanā "
-"skatā, bet ne izkārtotus hierarhiska koka skatā."
+"Atzīmējiet šo lauciņu, ja vēlaties redzēt visus uzdevumus vienkāršā skatā, "
+"bet ne izkārtotus hierarhiska koka skatā."
 
 #. i18n: ectx: label, entry, group (Todo View)
 #: eventviews.kcfg:369 viewerapp/settings.kcfg:195
 #, kde-format
 msgid "Record completed to-dos in journal entries"
-msgstr "Pabeigtos darāmos uzdevumus reģistrēt žurnāla ierakstos"
+msgstr "Pabeigtos uzdevumus reģistrēt žurnāla ierakstos"
 
 #. i18n: ectx: whatsthis, entry, group (Todo View)
 #: eventviews.kcfg:370 viewerapp/settings.kcfg:196
@@ -1205,8 +1202,8 @@ msgid ""
 "Check this box to record the completion of a to-do in a new entry of your "
 "journal automatically."
 msgstr ""
-"Atzīmējiet šo lauciņu, ja vēlaties visus pabeigtos darāmos uzdevumu "
-"automātiski reģistrēt jaunā žurnāla ierakstā."
+"Atzīmējiet šo lauciņu, ja vēlaties visus pabeigtos uzdevumus automātiski "
+"reģistrēt jaunā žurnāla ierakstā."
 
 #. i18n: ectx: label, entry, group (Colors)
 #. i18n: ectx: label, entry, group (Theming)
@@ -1302,7 +1299,7 @@ msgstr "Norādiet darba stundu krāsu dienaskārtības skatam."
 #: viewerapp/settings.kcfg:229
 #, kde-format
 msgid "To-do due today color"
-msgstr "Krāsa darāmajiem uzdevumiem, kuru termiņš ir šodiena"
+msgstr "Krāsa uzdevumiem, kuru termiņš ir šodiena"
 
 #. i18n: ectx: whatsthis, entry (TodoDueTodayColor), group (Colors)
 #. i18n: ectx: whatsthis, entry, group (Theming)
@@ -1311,7 +1308,7 @@ msgstr "Krāsa darāmajiem uzdevumiem, kuru termiņš ir šodiena"
 #: viewerapp/settings.kcfg:230
 #, kde-format
 msgid "Select the to-do due today color here."
-msgstr "Atlasiet darāmo uzdevumu, kuru termiņš ir šodien, krāsu."
+msgstr "Atlasiet krāsu uzdevumiem, kura termiņš ir šodiena."
 
 #. i18n: ectx: label, entry (TodoOverdueColor), group (Colors)
 #. i18n: ectx: label, entry, group (Theming)
@@ -1320,7 +1317,7 @@ msgstr "Atlasiet darāmo uzdevumu, kuru termiņš ir šodien, krāsu."
 #: viewerapp/settings.kcfg:235
 #, kde-format
 msgid "To-do overdue color"
-msgstr "Kavēto darāmo uzdevumu krāsa"
+msgstr "Kavēto uzdevumu krāsa"
 
 #. i18n: ectx: whatsthis, entry (TodoOverdueColor), group (Colors)
 #. i18n: ectx: whatsthis, entry, group (Theming)
@@ -1329,7 +1326,7 @@ msgstr "Kavēto darāmo uzdevumu krāsa"
 #: viewerapp/settings.kcfg:236
 #, kde-format
 msgid "Select the to-do overdue color here."
-msgstr "Norādiet kavēto darāmo uzdevumu krāsu."
+msgstr "Norādiet kavēto uzdevumu krāsu."
 
 #. i18n: ectx: label, entry, group (Fonts)
 #: eventviews.kcfg:425 viewerapp/settings.kcfg:251
@@ -1406,7 +1403,7 @@ msgstr ""
 #: eventviews.kcfg:465
 #, kde-format
 msgid "Default todo attachment method"
-msgstr "Noklusējuma darāmo uzdevumu pievienošanas metode"
+msgstr "Noklusējuma uzdevumu pievienošanas metode"
 
 #. i18n: ectx: whatsthis, entry (DefaultTodoAttachMethod), group (Hidden Options)
 #: eventviews.kcfg:466
@@ -1627,7 +1624,7 @@ msgstr "Parādīt kalendāru normālā izmērā"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display calendar in a full window"
-msgstr "Parādīt kalendāru pilnekrāna logā"
+msgstr "Parādīt kalendāru pilnekrāna režīmā"
 
 #: month/monthview.cpp:213
 #, kde-format
@@ -1692,8 +1689,7 @@ msgid ""
 msgstr "Spiediet šo pogu, lai sarakstā paietu uz priekšu par vienu mēnesi."
 
 #: multiagenda/multiagendaview.cpp:97
-#, fuzzy, kde-format
-#| msgid "Agenda %1"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Agenda %1"
 msgstr "Dienaskārtība %1"
@@ -1770,25 +1766,22 @@ msgid "9 (lowest)"
 msgstr "9 (zemākā)"
 
 #: todo/todoview.cpp:234
-#, fuzzy, kde-format
-#| msgid "Cannot move to-do to itself or a child of itself."
+#, kde-format
 msgctxt "@info"
 msgid "Cannot move to-do to itself or a child of itself."
-msgstr "Nevar ievietot darāmo uzdevumu sevī vai tā pakārtotu vienumu sevī."
+msgstr "Nevar sevī ievietot uzdevumu vai tā pakārtotu vienumu."
 
 #: todo/todoview.cpp:235
 #, kde-format
 msgctxt "@title:window"
 msgid "Drop To-do"
-msgstr "Nomest darāmo uzdevumu"
+msgstr "Nometiet uzdevumu"
 
 #: todo/todoview.cpp:306
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Create Event from To-do"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Create an open-ended to-do"
-msgstr "Izveidot notikumu un uzdevuma"
+msgstr "Izveidot uzdevumu bez termiņa"
 
 #: todo/todoview.cpp:308
 #, kde-kuit-format
@@ -1799,43 +1792,39 @@ msgid ""
 "recurrence. Edit the newly created if you want to add more properties.</"
 "note></p>"
 msgstr ""
+"Ierakstiet jaunā uzdevuma kopsavilkumu.<p><note>Jaunais uzdevums būs bez "
+"termiņa, kas nozīmē, ka programma nenorādīs tā sākuma un beigu laiku, kā arī "
+"par to neatgādinās. Tāpat arī šāds uzdevums nevar atkārtoties. Rediģējiet "
+"izveidoto uzdevumu, ja vēlaties pievienot vairāk īpašību.</note></p>"
 
 #: todo/todoview.cpp:318
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display to-do list in a full window"
-msgstr "Parādīt darāmo uzdevumu sarakstu pilnā logā"
+msgstr "Parādīt uzdevumu sarakstu pilnā logā"
 
 #: todo/todoview.cpp:319
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Checking this option will cause the to-do view to use the full window."
-msgstr ""
-"Šīs opcijas atzīmēšana darāmo uzdevumu sarakstam liks izmantot visu logu."
+msgstr "Šīs opcijas atzīmēšana uzdevumu sarakstam liks izmantot visu logu."
 
 #: todo/todoview.cpp:324
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Display to-dos in flat list instead of a tree"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Display to-dos in a flat list or a tree"
-msgstr "Darāmos uzdevumus parādīt plakanā sarakstā, bet ne koka skatā"
+msgstr "Uzdevumus rādīt vienkāršā sarakstā vai koka skatā"
 
 #: todo/todoview.cpp:326
-#, fuzzy, kde-format
-#| msgctxt "@info:whatsthis"
-#| msgid ""
-#| "Checking this option will cause the to-dos to be displayed as a flat list "
-#| "instead of a hierarchical tree; the parental relationships are removed in "
-#| "the display."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Checking this button will cause the to-dos to be displayed either as a flat "
 "list or a hierarchical tree where the parental relationships are removed."
 msgstr ""
-"Atzīmējiet šo opciju, lai darāmos uzdevumus parādītu kā vienkāršu sarakstu, "
-"bet ne hierarhisku koku. Šādā attēlojumā neparādās vecākobjektu un "
-"bērnobjektu attiecības."
+"Atzīmējiet šo opciju, lai uzdevumus parādītu vienkāršā sarakstā vai "
+"hierarhiskā koka skatā, kurā ir neparādās vecākobjektu un bērnobjektu "
+"attiecības."
 
 #: todo/todoview.cpp:365
 #, kde-format
@@ -1871,7 +1860,7 @@ msgstr "Drukas &priekšskatījms…"
 #, kde-format
 msgctxt "@action:inmenu create a new to-do"
 msgid "New &To-do…"
-msgstr "Jauns darāmais &uzdevums…"
+msgstr "Jauns &uzdevums…"
 
 #: todo/todoview.cpp:402
 #, kde-format
@@ -1960,7 +1949,7 @@ msgstr "8"
 #: todo/todoviewquickaddline.cpp:17
 #, kde-format
 msgid "Enter a summary to create a new to-do"
-msgstr "Ierakstiet kopsavilkumu, lai izveidotu jaunu darāmo uzdevumu"
+msgstr "Ierakstiet jaunā uzdevuma kopsavilkumu"
 
 #: todo/todoviewquicksearch.cpp:37
 #, kde-format
@@ -1973,7 +1962,7 @@ msgstr "Filtrs kopsavilkumiem, kas nesakrīt"
 msgctxt "@info:whatsthis"
 msgid ""
 "Enter text here to filter the to-dos that are shown by matching summaries."
-msgstr "Rakstiet tekstu, lai filtrētu darāmos uzdevumus pēc kopsavilkumiem."
+msgstr "Rakstiet tekstu, pēc kura filtrēt uzdevumu kopsavilkumus."
 
 #: todo/todoviewquicksearch.cpp:39
 #, kde-format
@@ -1994,8 +1983,8 @@ msgid ""
 "Use this combobox to filter the to-dos that are shown by a list of selected "
 "tags."
 msgstr ""
-"Izmantojiet šo kombinēto lodziņu, lai filtrētu darāmos uzdevumus pēc "
-"atlasītas birkas."
+"Izmantojiet šo kombinēto lodziņu, lai filtrētu uzdevumus pēc atlasītas "
+"birkas."
 
 #: todo/todoviewquicksearch.cpp:50
 #, kde-format
@@ -2016,8 +2005,8 @@ msgid ""
 "Use this combobox to filter the to-dos that are shown by a list of selected "
 "priorities."
 msgstr ""
-"Izmantojiet šo kombinēto lodziņu, lai filtrētu darāmos uzdevumus pēc "
-"atlasītajām prioritātēm."
+"Izmantojiet šo kombinēto lodziņu, lai filtrētu uzdevumus pēc atlasītajām "
+"prioritātēm."
 
 #: todo/todoviewquicksearch.cpp:77
 #, kde-format
@@ -2367,7 +2356,7 @@ msgstr ""
 #: whatsnext/whatsnextview.cpp:63
 #, kde-format
 msgid "To-dos:"
-msgstr "Darāmie uzdevumi:"
+msgstr "Uzdevumi:"
 
 #: whatsnext/whatsnextview.cpp:79
 #, kde-format
