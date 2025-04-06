@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# SPDX-FileCopyrightText: 2010, 2024 Stefan Asserhäll <stefan.asserhall@gmail.com>
+# SPDX-FileCopyrightText: 2010, 2024, 2025 Stefan Asserhäll <stefan.asserhall@gmail.com>
 # Stefan Asserhall <stefan.asserhall@gmail.com>, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-30 00:42+0000\n"
-"PO-Revision-Date: 2024-06-21 12:27+0200\n"
+"PO-Revision-Date: 2025-04-05 13:54+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -342,9 +342,10 @@ msgid ""
 "Kolab client. "
 msgstr ""
 "Markera alternativet för att välja kalender som ska användas för att lagra "
-"ett objekt varje gång du skapar ett nytt. Valet rekommenderas om du avser "
-"att använda funktionen med delade kataloger i Kolab-servern eller hantera "
-"flera konton med Kontact som KDE:s Kolab-klient."
+"ett objekt varje gång du skapar en ny händelse, uppgift eller "
+"journalanteckning. Valet rekommenderas om du avser att använda funktionen "
+"med delade kataloger i Kolab-servern eller hantera flera konton med Kontact "
+"som KDE:s Kolab-klient."
 
 #. i18n: ectx: label, entry, group (System Tray)
 #: eventviews.kcfg:81
@@ -1686,8 +1687,7 @@ msgid ""
 msgstr "Klicka på knappen för att få visningen att gå framåt i tiden 1 månad."
 
 #: multiagenda/multiagendaview.cpp:97
-#, fuzzy, kde-format
-#| msgid "Agenda %1"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Agenda %1"
 msgstr "Agenda %1"
@@ -1764,8 +1764,7 @@ msgid "9 (lowest)"
 msgstr "9 (lägst)"
 
 #: todo/todoview.cpp:234
-#, fuzzy, kde-format
-#| msgid "Cannot move to-do to itself or a child of itself."
+#, kde-format
 msgctxt "@info"
 msgid "Cannot move to-do to itself or a child of itself."
 msgstr "Kan inte flytta uppgift till sig själv eller sin eget deluppgift."
@@ -1777,12 +1776,10 @@ msgid "Drop To-do"
 msgstr "Släpp uppgift"
 
 #: todo/todoview.cpp:306
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Create Event from To-do"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Create an open-ended to-do"
-msgstr "Skapa händelse från uppgift"
+msgstr "Skapa händelse utan tider"
 
 #: todo/todoview.cpp:308
 #, kde-kuit-format
@@ -1793,6 +1790,10 @@ msgid ""
 "recurrence. Edit the newly created if you want to add more properties.</"
 "note></p>"
 msgstr ""
+"Ange sammanfattningen för en ny uppgift. <p><note>Den nya uppgift är utan "
+"tider, vilket betyder att den inte har några start- eller sluttider och har "
+"inte heller någon påminnelse eller upprepning. Redigera den nyskapade "
+"uppgiften om du vill lägga till fler egenskaper.</note></p>"
 
 #: todo/todoview.cpp:318
 #, kde-format
@@ -1808,28 +1809,20 @@ msgstr ""
 "Att markera alternativet gör att uppgiftslistan använder hela fönstret."
 
 #: todo/todoview.cpp:324
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Display to-dos in flat list instead of a tree"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Display to-dos in a flat list or a tree"
-msgstr "Visa uppgifter i en enkel lista istället för ett träd"
+msgstr "Visa uppgifter i en enkel lista eller ett träd"
 
 #: todo/todoview.cpp:326
-#, fuzzy, kde-format
-#| msgctxt "@info:whatsthis"
-#| msgid ""
-#| "Checking this option will cause the to-dos to be displayed as a flat list "
-#| "instead of a hierarchical tree; the parental relationships are removed in "
-#| "the display."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Checking this button will cause the to-dos to be displayed either as a flat "
 "list or a hierarchical tree where the parental relationships are removed."
 msgstr ""
-"Att markera alternativet gör att uppgifterna visas som en enkel lista "
-"istället för ett hierarkiskt träd. Förhållanden med överliggande uppgifter "
-"tas bort från visningen."
+"Att markera knappen gör att uppgifterna antingen visas som en enkel lista "
+"eller ett hierarkiskt träd där överliggande uppgiftsförhållanden tas bort."
 
 #: todo/todoview.cpp:365
 #, kde-format
