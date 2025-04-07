@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2017, 2019, 2020, 2021, 2022, 2023, 2024 Shinjo Park <kde@peremen.name>
+# SPDX-FileCopyrightText: 2017, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-30 00:42+0000\n"
-"PO-Revision-Date: 2024-08-19 23:10+0200\n"
+"PO-Revision-Date: 2025-04-06 22:09+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -1634,8 +1634,7 @@ msgid ""
 msgstr "이 단추를 클릭하면 한 달 앞으로 보기를 스크롤합니다."
 
 #: multiagenda/multiagendaview.cpp:97
-#, fuzzy, kde-format
-#| msgid "Agenda %1"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Agenda %1"
 msgstr "일정 %1"
@@ -1712,8 +1711,7 @@ msgid "9 (lowest)"
 msgstr "9(가장 낮음)"
 
 #: todo/todoview.cpp:234
-#, fuzzy, kde-format
-#| msgid "Cannot move to-do to itself or a child of itself."
+#, kde-format
 msgctxt "@info"
 msgid "Cannot move to-do to itself or a child of itself."
 msgstr ""
@@ -1726,12 +1724,10 @@ msgid "Drop To-do"
 msgstr "할 일 드롭"
 
 #: todo/todoview.cpp:306
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Create Event from To-do"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Create an open-ended to-do"
-msgstr "할 일에서 이벤트 만들기"
+msgstr "기한 없는 할 일 만들기"
 
 #: todo/todoview.cpp:308
 #, kde-kuit-format
@@ -1742,6 +1738,9 @@ msgid ""
 "recurrence. Edit the newly created if you want to add more properties.</"
 "note></p>"
 msgstr ""
+"새 할 일의 요약을 입력하십시오.<p><note>기한 없는 할 일은 시작이나 종료 시"
+"간, 알림이나 반복이 설정되어 있지 않습니다. 더 많은 속성을 지정하려면 새 항목"
+"을 편집하십시오.</note></p>"
 
 #: todo/todoview.cpp:318
 #, kde-format
@@ -1756,27 +1755,20 @@ msgid "Checking this option will cause the to-do view to use the full window."
 msgstr "이 옵션을 선택하면 할 일 보기를 전체 창 크기로 표시합니다."
 
 #: todo/todoview.cpp:324
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Display to-dos in flat list instead of a tree"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Display to-dos in a flat list or a tree"
-msgstr "할 일 목록에 체계를 사용하지 않고 단일 단계로 표시"
+msgstr "할 일 목록을 단일 단계나 트리 구조로 표시"
 
 #: todo/todoview.cpp:326
-#, fuzzy, kde-format
-#| msgctxt "@info:whatsthis"
-#| msgid ""
-#| "Checking this option will cause the to-dos to be displayed as a flat list "
-#| "instead of a hierarchical tree; the parental relationships are removed in "
-#| "the display."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Checking this button will cause the to-dos to be displayed either as a flat "
 "list or a hierarchical tree where the parental relationships are removed."
 msgstr ""
-"이 옵션을 사용하면 할 일 목록에 계층 구조를 사용하지 않고 단일 단계 목록으로 "
-"표시합니다. 부모-자식 관계를 표시하지 않습니다."
+"이 옵션을 사용하면 할 일 목록을 단일 단계 목록이나 부모-자식 관계를 표시하지 "
+"않는 계층적 트리 구조로 표시합니다."
 
 #: todo/todoview.cpp:365
 #, kde-format

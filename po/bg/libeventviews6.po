@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-30 00:42+0000\n"
-"PO-Revision-Date: 2025-03-29 14:08+0100\n"
+"PO-Revision-Date: 2025-04-06 16:14+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -1831,12 +1831,10 @@ msgid "Drop To-do"
 msgstr "Завлечете задача"
 
 #: todo/todoview.cpp:306
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Create Event from To-do"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Create an open-ended to-do"
-msgstr "Създаване на събитие от задача"
+msgstr "Създаване на безсрочна задача"
 
 #: todo/todoview.cpp:308
 #, kde-kuit-format
@@ -1847,6 +1845,10 @@ msgid ""
 "recurrence. Edit the newly created if you want to add more properties.</"
 "note></p>"
 msgstr ""
+"Въведете резюмето за нова задача. <p><note>Новата задача ще бъде безсрочна, "
+"което означава, че няма начален или краен час, нито ще има напомняне или "
+"повторение. Редактирайте новосъздадените, ако искате да добавите още "
+"свойства.</note></p>"
 
 #: todo/todoview.cpp:318
 #, kde-format
