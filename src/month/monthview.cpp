@@ -257,7 +257,8 @@ MonthView::MonthView(NavButtonsVisibility visibility, QWidget *parent)
 
     connect(d->scene, &MonthScene::incidenceSelected, this, &EventView::incidenceSelected);
 
-    connect(d->scene, &MonthScene::newEventSignal, this, qOverload<>(&EventView::newEventSignal));
+    connect(d->scene, qOverload<>(&MonthScene::newEventSignal), this, qOverload<>(&EventView::newEventSignal));
+    connect(d->scene, qOverload<const QDate &>(&MonthScene::newEventSignal), this, qOverload<const QDate &>(&EventView::newEventSignal));
 
     connect(d->scene, &MonthScene::showNewEventPopupSignal, this, &MonthView::showNewEventPopupSignal);
 
@@ -343,21 +344,57 @@ void MonthView::setDateRange(const QDateTime &start, const QDateTime &end, const
     d->reloadTimer.start(50);
 }
 
+static QTime nextQuarterHour(const QTime &time)
+{
+    if (time.second() % 900) {
+        return time.addSecs(900 - (time.minute() * 60 + time.second()) % 900);
+    }
+    return time; // roundup not needed
+}
+
+static QTime adjustedDefaultStartTime(const QDate &startDt)
+{
+    QTime prefTime;
+    if (CalendarSupport::KCalPrefs::instance()->startTime().isValid()) {
+        prefTime = CalendarSupport::KCalPrefs::instance()->startTime().time();
+    }
+
+    const QDateTime currentDateTime = QDateTime::currentDateTime();
+    if (startDt == currentDateTime.date()) {
+        // If today and the current time is already past the default time
+        // use the next quarter hour after the current time.
+        // but don't spill over into tomorrow.
+        const QTime currentTime = currentDateTime.time();
+        if (!prefTime.isValid() || (currentTime > prefTime && currentTime < QTime(23, 45))) {
+            prefTime = nextQuarterHour(currentTime);
+        }
+    }
+    return prefTime;
+}
+
 bool MonthView::eventDurationHint(QDateTime &startDt, QDateTime &endDt, bool &allDay) const
 {
-    // If we have valid start and end dates only adjust them to be all day
-    // but otherwise preserve them.
-    if (startDt.isValid() && endDt.isValid()) {
-        startDt.setTime(QTime());
-        endDt.setTime(QTime());
-        allDay = true;
+    Q_UNUSED(allDay);
+    auto defaultDuration = CalendarSupport::KCalPrefs::instance()->defaultDuration().time();
+    auto duration = (defaultDuration.hour() * 3600) + (defaultDuration.minute() * 60);
+    if (startDt.isValid()) {
+        if (endDt.isValid()) {
+            if (startDt >= endDt) {
+                endDt.setTime(startDt.time().addSecs(duration));
+            }
+        } else {
+            endDt.setDate(startDt.date());
+            endDt.setTime(startDt.time().addSecs(duration));
+        }
         return true;
     }
 
     if (d->scene->selectedCell()) {
         startDt.setDate(d->scene->selectedCell()->date());
+        startDt.setTime(adjustedDefaultStartTime(startDt.date()));
+
         endDt.setDate(d->scene->selectedCell()->date());
-        allDay = true;
+        endDt.setTime(startDt.time().addSecs(duration));
         return true;
     }
 

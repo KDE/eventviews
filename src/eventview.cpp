@@ -343,7 +343,11 @@ bool EventView::processKeyEvent(QKeyEvent *ke)
             d->mReturnPressed = true;
         } else if (ke->type() == QEvent::KeyRelease) {
             if (d->mReturnPressed) {
-                Q_EMIT newEventSignal();
+                if (d->startDateTime.isValid()) {
+                    Q_EMIT newEventSignal(d->startDateTime);
+                } else {
+                    Q_EMIT newEventSignal();
+                }
                 d->mReturnPressed = false;
                 return true;
             } else {
@@ -382,7 +386,11 @@ bool EventView::processKeyEvent(QKeyEvent *ke)
             d->mTypeAheadEvents.append(new QKeyEvent(ke->type(), ke->key(), ke->modifiers(), ke->text(), ke->isAutoRepeat(), static_cast<ushort>(ke->count())));
             if (!d->mTypeAhead) {
                 d->mTypeAhead = true;
-                Q_EMIT newEventSignal();
+                if (d->startDateTime.isValid()) {
+                    Q_EMIT newEventSignal(d->startDateTime);
+                } else {
+                    Q_EMIT newEventSignal();
+                }
             }
             return true;
         }
