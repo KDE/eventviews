@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-26 00:42+0000\n"
+"POT-Creation-Date: 2025-04-16 02:32+0000\n"
 "PO-Revision-Date: 2024-06-22 05:48+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -1634,13 +1634,13 @@ msgctxt "'Month day' for month view cells"
 msgid "%1 %2"
 msgstr "%2 de %1"
 
-#: month/monthview.cpp:210 month/monthview.cpp:439
+#: month/monthview.cpp:210 month/monthview.cpp:476
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display calendar in a normal size"
 msgstr "Amosar o calendario a tamaño normal."
 
-#: month/monthview.cpp:211 month/monthview.cpp:442
+#: month/monthview.cpp:211 month/monthview.cpp:479
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display calendar in a full window"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-26 00:42+0000\n"
+"POT-Creation-Date: 2025-04-16 02:32+0000\n"
 "PO-Revision-Date: 2024-06-21 09:28+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -1647,13 +1647,13 @@ msgctxt "'Month day' for month view cells"
 msgid "%1 %2"
 msgstr "%1 %2"
 
-#: month/monthview.cpp:210 month/monthview.cpp:439
+#: month/monthview.cpp:210 month/monthview.cpp:476
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display calendar in a normal size"
 msgstr "Agenda in normale grootte tonen"
 
-#: month/monthview.cpp:211 month/monthview.cpp:442
+#: month/monthview.cpp:211 month/monthview.cpp:479
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display calendar in a full window"

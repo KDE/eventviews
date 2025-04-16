@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-26 00:42+0000\n"
+"POT-Creation-Date: 2025-04-16 02:32+0000\n"
 "PO-Revision-Date: 2024-12-24 20:39+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -1584,13 +1584,13 @@ msgctxt "'Month day' for month view cells"
 msgid "%1 %2"
 msgstr "%1 %2"
 
-#: month/monthview.cpp:210 month/monthview.cpp:439
+#: month/monthview.cpp:210 month/monthview.cpp:476
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display calendar in a normal size"
 msgstr "सामान्याकारे पञ्चाङ्गं प्रदर्शयन्तु"
 
-#: month/monthview.cpp:211 month/monthview.cpp:442
+#: month/monthview.cpp:211 month/monthview.cpp:479
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display calendar in a full window"

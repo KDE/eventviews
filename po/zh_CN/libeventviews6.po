@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-26 00:42+0000\n"
+"POT-Creation-Date: 2025-04-16 02:32+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -1517,13 +1517,13 @@ msgctxt "'Month day' for month view cells"
 msgid "%1 %2"
 msgstr "%1 %2"
 
-#: month/monthview.cpp:210 month/monthview.cpp:439
+#: month/monthview.cpp:210 month/monthview.cpp:476
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display calendar in a normal size"
 msgstr "显示正常大小的日历"
 
-#: month/monthview.cpp:211 month/monthview.cpp:442
+#: month/monthview.cpp:211 month/monthview.cpp:479
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display calendar in a full window"
