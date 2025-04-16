@@ -18,7 +18,7 @@
 #include <QRandomGenerator>
 using namespace EventViews;
 
-QSet<EventViews::EventView::ItemIcon> iconArrayToSet(const QByteArray &array)
+static QSet<EventViews::EventView::ItemIcon> iconArrayToSet(const QByteArray &array)
 {
     QSet<EventViews::EventView::ItemIcon> set;
     for (int i = 0; i < array.size(); ++i) {
@@ -33,7 +33,7 @@ QSet<EventViews::EventView::ItemIcon> iconArrayToSet(const QByteArray &array)
     return set;
 }
 
-QByteArray iconSetToArray(const QSet<EventViews::EventView::ItemIcon> &set)
+static QByteArray iconSetToArray(const QSet<EventViews::EventView::ItemIcon> &set)
 {
     QByteArray array;
     for (int i = 0; i < EventViews::EventView::IconCount; ++i) {
@@ -44,7 +44,7 @@ QByteArray iconSetToArray(const QSet<EventViews::EventView::ItemIcon> &set)
     return array;
 }
 
-QByteArray agendaViewIconDefaults()
+static QByteArray agendaViewIconDefaults()
 {
     QByteArray iconDefaults;
     iconDefaults.resize(7);
@@ -60,7 +60,7 @@ QByteArray agendaViewIconDefaults()
     return iconDefaults;
 }
 
-QByteArray monthViewIconDefaults()
+static QByteArray monthViewIconDefaults()
 {
     QByteArray iconDefaults;
     iconDefaults.resize(7);
@@ -105,7 +105,7 @@ protected:
 };
 
 BaseConfig::BaseConfig()
-    : PrefsBase()
+
 {
     mDefaultResourceColor = QColor(); // Default is a color invalid
 
@@ -214,8 +214,7 @@ class EventViews::PrefsPrivate
 {
 public:
     explicit PrefsPrivate(Prefs *parent)
-        : mAppConfig(nullptr)
-        , q(parent)
+        : q(parent)
     {
     }
 

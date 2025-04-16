@@ -105,8 +105,7 @@ Akonadi::CollectionCalendar::Ptr TimelineItem::calendar() const
 }
 
 TimelineSubItem::TimelineSubItem(const Akonadi::Item &incidence, TimelineItem *parent)
-    : QStandardItem()
-    , mIncidence(incidence)
+    : mIncidence(incidence)
     , mParent(parent)
     , mToolTipNeedsUpdate(true)
 {

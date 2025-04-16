@@ -193,28 +193,10 @@ public:
     AgendaPrivate(AgendaView *agendaView, QScrollArea *scrollArea, int columns, int rows, int rowSize, bool isInteractive)
         : mAgendaView(agendaView)
         , mScrollArea(scrollArea)
-        , mAllDayMode(false)
         , mColumns(columns)
         , mRows(rows)
-        , mGridSpacingX(0.0)
         , mGridSpacingY(rowSize)
         , mDesiredGridSpacingY(rowSize)
-        , mChanger(nullptr)
-        , mResizeBorderWidth(0)
-        , mScrollBorderWidth(0)
-        , mScrollDelay(0)
-        , mScrollOffset(0)
-        , mWorkingHoursEnable(false)
-        , mHolidayMask(nullptr)
-        , mWorkingHoursYTop(0)
-        , mWorkingHoursYBottom(0)
-        , mHasSelection(false)
-        , mMarcusBains(nullptr)
-        , mActionType(Agenda::NOP)
-        , mItemMoved(false)
-        , mOldLowerScrollValue(0)
-        , mOldUpperScrollValue(0)
-        , mReturnPressed(false)
         , mIsInteractive(isInteractive)
     {
         if (mGridSpacingY < 4 || mGridSpacingY > 30) {
@@ -242,7 +224,7 @@ public:
     AgendaView *mAgendaView = nullptr;
     QScrollArea *mScrollArea = nullptr;
 
-    bool mAllDayMode;
+    bool mAllDayMode{false};
 
     // Number of Columns/Rows of agenda grid
     int mColumns;
@@ -251,19 +233,19 @@ public:
     // Width and height of agenda cells. mDesiredGridSpacingY is the height
     // set in the config. The actual height might be larger since otherwise
     // more than 24 hours might be displayed.
-    double mGridSpacingX;
+    double mGridSpacingX{0.0};
     double mGridSpacingY;
     double mDesiredGridSpacingY;
 
     Akonadi::IncidenceChanger *mChanger = nullptr;
 
     // size of border, where mouse action will resize the AgendaItem
-    int mResizeBorderWidth;
+    int mResizeBorderWidth{0};
 
     // size of border, where mouse mve will cause a scroll of the agenda
-    int mScrollBorderWidth;
-    int mScrollDelay;
-    int mScrollOffset;
+    int mScrollBorderWidth{0};
+    int mScrollDelay{0};
+    int mScrollOffset{0};
 
     QTimer mScrollUpTimer;
     QTimer mScrollDownTimer;
@@ -273,13 +255,13 @@ public:
     QPoint mEndCell;
 
     // Working Hour coordinates
-    bool mWorkingHoursEnable;
+    bool mWorkingHoursEnable{false};
     QList<bool> *mHolidayMask = nullptr;
-    int mWorkingHoursYTop;
-    int mWorkingHoursYBottom;
+    int mWorkingHoursYTop{0};
+    int mWorkingHoursYBottom{0};
 
     // Selection
-    bool mHasSelection;
+    bool mHasSelection{false};
     QPoint mSelectionStartPoint;
     QPoint mSelectionStartCell;
     QPoint mSelectionEndCell;
@@ -303,18 +285,18 @@ public:
     // The Marcus Bains Line widget.
     MarcusBains *mMarcusBains = nullptr;
 
-    Agenda::MouseActionType mActionType;
+    Agenda::MouseActionType mActionType{Agenda::NOP};
 
-    bool mItemMoved;
+    bool mItemMoved{false};
 
     // List of all Items contained in agenda
     QList<AgendaItem::QPtr> mItems;
     QList<AgendaItem::QPtr> mItemsToDelete;
 
-    int mOldLowerScrollValue;
-    int mOldUpperScrollValue;
+    int mOldLowerScrollValue{0};
+    int mOldUpperScrollValue{0};
 
-    bool mReturnPressed;
+    bool mReturnPressed{false};
     bool mIsInteractive;
 
     MultiViewCalendar::Ptr mCalendar;

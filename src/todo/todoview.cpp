@@ -215,8 +215,6 @@ static ModelStack *sModels = nullptr;
 TodoView::TodoView(const EventViews::PrefsPtr &prefs, bool sidebarView, QWidget *parent)
     : EventView(parent)
     , mCalendarFilterModel(std::make_unique<CalendarFilterModel>())
-    , mQuickSearch(nullptr)
-    , mQuickAdd(nullptr)
     , mTreeStateRestorer(nullptr)
     , mSidebarView(sidebarView)
     , mResizeColumnsScheduled(false)

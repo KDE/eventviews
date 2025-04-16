@@ -52,7 +52,7 @@ public: /// Members
     QTimer reloadTimer;
     MonthScene *scene = nullptr;
     QDate selectedItemDate;
-    Akonadi::Item::Id selectedItemId;
+    Akonadi::Item::Id selectedItemId{-1};
     MonthGraphicsView *view = nullptr;
     QToolButton *fullView = nullptr;
 
@@ -74,9 +74,8 @@ private:
 MonthViewPrivate::MonthViewPrivate(MonthView *qq)
     : q(qq)
     , scene(new MonthScene(qq))
-    , selectedItemId(-1)
     , view(new MonthGraphicsView(qq))
-    , fullView(nullptr)
+
 {
     reloadTimer.setSingleShot(true);
     view->setScene(scene);

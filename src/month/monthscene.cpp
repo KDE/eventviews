@@ -28,15 +28,10 @@ MonthScene::MonthScene(MonthView *parent)
     : QGraphicsScene(parent)
     , mMonthView(parent)
     , mInitialized(false)
-    , mClickedItem(nullptr)
-    , mActionItem(nullptr)
     , mActionInitiated(false)
-    , mSelectedItem(nullptr)
-    , mStartCell(nullptr)
-    , mPreviousCell(nullptr)
     , mActionType(None)
     , mStartHeight(0)
-    , mCurrentIndicator(nullptr)
+
 {
     mBirthdayPixmap = QIcon::fromTheme(QStringLiteral("view-calendar-birthday")).pixmap(16, 16);
     mAnniversaryPixmap = QIcon::fromTheme(QStringLiteral("view-calendar-wedding-anniversary")).pixmap(16, 16);
