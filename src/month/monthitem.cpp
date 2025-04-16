@@ -303,7 +303,11 @@ IncidenceMonthItem::IncidenceMonthItem(MonthScene *monthScene,
         if (years > 0) {
             inc = KCalendarCore::Incidence::Ptr(inc->clone());
             inc->setReadOnly(false);
-            inc->setDescription(i18np("%2 1 year", "%2 %1 years", years, i18n("Age:")));
+            if (inc->customProperty("KABC", "BIRTHDAY") == QLatin1StringView("YES")) {
+                inc->setDescription(i18ncp("@info/plain a person's age", "1 year old", "%1 years old", years));
+            } else { // anniversary
+                inc->setDescription(i18ncp("@info/plain number of years of marriage", "1 year", "%1 years", years));
+            }
             inc->setReadOnly(true);
             mIncidence = inc;
         }
@@ -436,14 +440,15 @@ void IncidenceMonthItem::updateDates(int startOffset, int endOffset)
             occurrenceDate.setDate(startDate());
             KCalendarCore::Incidence::Ptr newIncidence(KCalendarCore::Calendar::createException(mIncidence, occurrenceDate, thisAndFuture));
             if (newIncidence) {
-                changer->startAtomicOperation(i18n("Move occurrence(s)"));
+                changer->startAtomicOperation(i18nc("@info/plain", "Move occurrence(s)"));
                 setNewDates(newIncidence, startOffset, endOffset);
                 changer->createIncidence(newIncidence, item.parentCollection(), parentWidget());
                 changer->endAtomicOperation();
             } else {
                 KMessageBox::error(parentWidget(),
-                                   i18n("Unable to add the exception item to the calendar. "
-                                        "No change will be done."),
+                                   i18nc("@info",
+                                         "Unable to add the exception item to the calendar. "
+                                         "No change will be done."),
                                    i18nc("@title:window", "Error Occurred"));
             }
             break;

@@ -52,7 +52,7 @@
        </property>
        <widget class="QWidget" name="tab">
         <attribute name="title">
-         <string>Tab 1</string>
+         <string comment="@title:tab a generic tab">Tab 1</string>
         </attribute>
        </widget>
       </widget>

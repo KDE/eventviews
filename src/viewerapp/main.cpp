@@ -16,11 +16,11 @@
 int main(int argc, char **argv)
 {
     KAboutData about(QStringLiteral("viewerapp"),
-                     i18n("ViewerApp"),
+                     i18nc("@label", "ViewerApp"),
                      QStringLiteral("0.1"),
-                     i18n("A test app for embedding calendarviews"),
+                     i18nc("@info", "A test app for embedding calendarviews"),
                      KAboutLicense::GPL,
-                     i18n("Copyright (C) 2010 Klarälvdalens Datakonsult AB, a KDAB Group company, info@kdab.net"));
+                     i18nc("@info", "Copyright (C) 2010 Klarälvdalens Datakonsult AB, a KDAB Group company, info@kdab.net"));
     about.addAuthor(i18nc("@info:credit", "Kevin Krammer"), QString(), QStringLiteral("krake@kdab.com"));
 
     QCommandLineParser parser;

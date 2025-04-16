@@ -951,8 +951,9 @@ void Agenda::performItemAction(QPoint pos)
         if (!d->mItemMoved) {
             if (!d->mChanger) {
                 KMessageBox::information(this,
-                                         i18n("Unable to lock item for modification. "
-                                              "You cannot make any changes."),
+                                         i18nc("@info",
+                                               "Unable to lock item for modification. "
+                                               "You cannot make any changes."),
                                          i18nc("@title:window", "Locking Failed"),
                                          QStringLiteral("AgendaLockingFailed"));
                 d->mScrollUpTimer.stop();
@@ -1168,7 +1169,7 @@ void Agenda::endItemAction()
                 const bool thisAndFuture = (res == KCalUtils::RecurrenceActions::FutureOccurrences);
                 modify = true;
                 multiModify = true;
-                d->mChanger->startAtomicOperation(i18n("Dissociate event from recurrence"));
+                d->mChanger->startAtomicOperation(i18nc("@info/plain", "Dissociate event from recurrence"));
                 KCalendarCore::Incidence::Ptr newInc(KCalendarCore::Calendar::createException(incidence, recurrenceId, thisAndFuture));
                 if (newInc) {
                     newInc->removeCustomProperty("VOLATILE", "AKONADI-ID");
@@ -1190,8 +1191,9 @@ void Agenda::endItemAction()
                     d->mAgendaView->enableAgendaUpdate(true);
                 } else {
                     KMessageBox::error(this,
-                                       i18n("Unable to add the exception item to the calendar. "
-                                            "No change will be done."),
+                                       i18nc("@info",
+                                             "Unable to add the exception item to the calendar. "
+                                             "No change will be done."),
                                        i18nc("@title:window", "Error Occurred"));
                 }
                 break;

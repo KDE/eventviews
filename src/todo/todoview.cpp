@@ -302,9 +302,10 @@ TodoView::TodoView(const EventViews::PrefsPtr &prefs, bool sidebarView, QWidget 
     mQuickAdd->setClearButtonEnabled(true);
     mQuickAdd->setVisible(preferences()->enableQuickTodo());
     mQuickAdd->setToolTip(i18nc("@info:tooltip", "Create an open-ended to-do"));
-    mQuickAdd->setWhatsThis(xi18nc("@info:whatsthis",
-                                   "Enter the summary for a new to-do. <p><note>The new to-do will be open-ended meaning that it has no start or end times nor "
-                                   "will it have a reminder or recurrence. Edit the newly created if you want to add more properties.</note></p>"));
+    mQuickAdd->setWhatsThis(
+        xi18nc("@info:whatsthis",
+               "Enter the summary for a new to-do. <para><note>The new to-do will be open-ended meaning that it has no start or end times nor "
+               "will it have a reminder or recurrence. Edit the newly created if you want to add more properties.</note></para>"));
     connect(mQuickAdd, &TodoViewQuickAddLine::returnPressed, this, &TodoView::addQuickTodo);
 
     mFullViewButton = nullptr;

@@ -150,40 +150,41 @@ JournalFrame::JournalFrame(const Akonadi::Item &j, const Akonadi::CollectionCale
 
     mEditButton = new QPushButton(this);
     mEditButton->setObjectName("editButton"_L1);
-    mEditButton->setText(i18n("&Edit"));
+    mEditButton->setText(i18nc("@action: button", "&Edit"));
     mEditButton->setIcon(QIcon::fromTheme(QStringLiteral("document-properties")));
     mEditButton->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
     mEditButton->setToolTip(i18nc("@info:tooltip", "Edit this journal entry"));
-    mEditButton->setWhatsThis(i18n("Opens an editor dialog for this journal entry"));
+    mEditButton->setWhatsThis(i18nc("@info:whatsthis", "Opens an editor dialog for this journal entry"));
     buttonsLayout->addWidget(mEditButton);
     connect(mEditButton, &QPushButton::clicked, this, &JournalFrame::editItem);
 
     mDeleteButton = new QPushButton(this);
     mDeleteButton->setObjectName("deleteButton"_L1);
-    mDeleteButton->setText(i18n("&Delete"));
+    mDeleteButton->setText(i18nc("@action: button", "&Delete"));
     mDeleteButton->setIcon(QIcon::fromTheme(QStringLiteral("edit-delete")));
     mDeleteButton->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
     mDeleteButton->setToolTip(i18nc("@info:tooltip", "Delete this journal entry"));
-    mDeleteButton->setWhatsThis(i18n("Delete this journal entry"));
+    mDeleteButton->setWhatsThis(i18nc("@info:whatsthis", "Delete this journal entry"));
     buttonsLayout->addWidget(mDeleteButton);
     connect(mDeleteButton, &QPushButton::pressed, this, &JournalFrame::deleteItem);
 
     mPrintButton = new QPushButton(this);
-    mPrintButton->setText(i18n("&Print"));
+    mPrintButton->setText(i18nc("@action: button", "&Print"));
     mPrintButton->setObjectName("printButton"_L1);
     mPrintButton->setIcon(QIcon::fromTheme(QStringLiteral("document-print")));
     mPrintButton->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
     mPrintButton->setToolTip(i18nc("@info:tooltip", "Print this journal entry"));
-    mPrintButton->setWhatsThis(i18n("Opens a print dialog for this journal entry"));
+    mPrintButton->setWhatsThis(i18nc("@info:whatsthis", "Opens a print dialog for this journal entry"));
     buttonsLayout->addWidget(mPrintButton);
     connect(mPrintButton, &QPushButton::clicked, this, qOverload<>(&JournalFrame::printJournal));
 
     mPrintPreviewButton = new QPushButton(this);
-    mPrintPreviewButton->setText(i18n("Print preview"));
+    mPrintPreviewButton->setText(i18nc("@action: button", "Print preview"));
     mPrintPreviewButton->setObjectName("printButton"_L1);
     mPrintPreviewButton->setIcon(QIcon::fromTheme(QStringLiteral("document-print-preview")));
     mPrintPreviewButton->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
     mPrintPreviewButton->setToolTip(i18nc("@info:tooltip", "Print preview this journal entry"));
+    mPrintPreviewButton->setWhatsThis(i18nc("@info:whatsthis", "Opens a print preview of this journal entry"));
     buttonsLayout->addWidget(mPrintPreviewButton);
     connect(mPrintPreviewButton, &QAbstractButton::clicked, this, &JournalFrame::printPreviewJournal);
 
