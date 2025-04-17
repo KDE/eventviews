@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-30 00:42+0000\n"
+"POT-Creation-Date: 2025-04-17 00:41+0000\n"
 "PO-Revision-Date: 2025-04-07 13:59+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -30,29 +30,29 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "franklin@goodhorse.idv.tw, s8321414@gmail.com"
 
-#: agenda/agenda.cpp:972
+#: agenda/agenda.cpp:954
 #, kde-format
 msgid "Unable to lock item for modification. You cannot make any changes."
 msgstr "無法鎖定要變更的項目。您無法做任何變更。"
 
-#: agenda/agenda.cpp:974
+#: agenda/agenda.cpp:956
 #, kde-format
 msgctxt "@title:window"
 msgid "Locking Failed"
 msgstr "鎖定失敗"
 
-#: agenda/agenda.cpp:1189
+#: agenda/agenda.cpp:1171
 #, kde-format
 msgid "Dissociate event from recurrence"
 msgstr "將此事件從循環中分離出來"
 
-#: agenda/agenda.cpp:1211 month/monthitem.cpp:445
+#: agenda/agenda.cpp:1193 month/monthitem.cpp:445
 #, kde-format
 msgid ""
 "Unable to add the exception item to the calendar. No change will be done."
 msgstr "無法將例外的項目加入行事曆。將不做任何變更。"
 
-#: agenda/agenda.cpp:1213 month/monthitem.cpp:447
+#: agenda/agenda.cpp:1195 month/monthitem.cpp:447
 #, kde-format
 msgctxt "@title:window"
 msgid "Error Occurred"
@@ -1510,31 +1510,31 @@ msgstr[0] "%2 %1 年"
 msgid "Move occurrence(s)"
 msgstr "移動事件"
 
-#: month/monthscene.cpp:189
+#: month/monthscene.cpp:184
 #, kde-format
 msgctxt "monthname year"
 msgid "%1 %2"
 msgstr "%1 %2"
 
-#: month/monthscene.cpp:316
+#: month/monthscene.cpp:311
 #, kde-format
 msgctxt "'Month day' for month view cells"
 msgid "%1 %2"
 msgstr "%1 %2"
 
-#: month/monthview.cpp:210 month/monthview.cpp:476
+#: month/monthview.cpp:209 month/monthview.cpp:475
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display calendar in a normal size"
 msgstr "以正常大小顯示行事曆"
 
-#: month/monthview.cpp:211 month/monthview.cpp:479
+#: month/monthview.cpp:210 month/monthview.cpp:478
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display calendar in a full window"
 msgstr "在整個視窗中顯示行事曆"
 
-#: month/monthview.cpp:213
+#: month/monthview.cpp:212
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1542,51 +1542,51 @@ msgid ""
 "available window space / or shrunk back to its normal size."
 msgstr "按下此按鍵，會將月檢視放大到填滿整個視窗空間，或是縮小到它的正常大小。"
 
-#: month/monthview.cpp:220
+#: month/monthview.cpp:219
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Go back one month"
 msgstr "往前一個月"
 
-#: month/monthview.cpp:221
+#: month/monthview.cpp:220
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Click this button and the view will be scrolled back in time by 1 month."
 msgstr "點擊此按鍵會往前捲動一個月。"
 
-#: month/monthview.cpp:227
+#: month/monthview.cpp:226
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Go back one week"
 msgstr "往前一週"
 
-#: month/monthview.cpp:228
+#: month/monthview.cpp:227
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Click this button and the view will be scrolled back in time by 1 week."
 msgstr "點擊此按鍵會往前捲動一週。"
 
-#: month/monthview.cpp:234
+#: month/monthview.cpp:233
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Go forward one week"
 msgstr "往後一週"
 
-#: month/monthview.cpp:235
+#: month/monthview.cpp:234
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Click this button and the view will be scrolled forward in time by 1 week."
 msgstr "點擊此按鍵會往後捲動一週。"
 
-#: month/monthview.cpp:241
+#: month/monthview.cpp:240
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Go forward one month"
 msgstr "往後一個月"
 
-#: month/monthview.cpp:242
+#: month/monthview.cpp:241
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1616,7 +1616,7 @@ msgctxt "@action:inmenu Unspecified priority"
 msgid "unspecified"
 msgstr "未指定"
 
-#: todo/tododelegates.cpp:153 todo/todoview.cpp:451
+#: todo/tododelegates.cpp:153 todo/todoview.cpp:449
 #, kde-format
 msgctxt "@action:inmenu highest priority"
 msgid "1 (highest)"
@@ -1640,7 +1640,7 @@ msgctxt "@action:inmenu"
 msgid "4"
 msgstr "4"
 
-#: todo/tododelegates.cpp:157 todo/todoview.cpp:455
+#: todo/tododelegates.cpp:157 todo/todoview.cpp:453
 #, kde-format
 msgctxt "@action:inmenu medium priority"
 msgid "5 (medium)"
@@ -1664,31 +1664,31 @@ msgctxt "@action:inmenu"
 msgid "8"
 msgstr "8"
 
-#: todo/tododelegates.cpp:161 todo/todoview.cpp:459
+#: todo/tododelegates.cpp:161 todo/todoview.cpp:457
 #, kde-format
 msgctxt "@action:inmenu lowest priority"
 msgid "9 (lowest)"
 msgstr "9 (最低)"
 
-#: todo/todoview.cpp:234
+#: todo/todoview.cpp:232
 #, kde-format
 msgctxt "@info"
 msgid "Cannot move to-do to itself or a child of itself."
 msgstr "無法將待辦事項移到它自己或它的子事項身上。"
 
-#: todo/todoview.cpp:235
+#: todo/todoview.cpp:233
 #, kde-format
 msgctxt "@title:window"
 msgid "Drop To-do"
 msgstr "捨棄待辦事項"
 
-#: todo/todoview.cpp:306
+#: todo/todoview.cpp:304
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Create an open-ended to-do"
 msgstr "建立無尾的待辦事項"
 
-#: todo/todoview.cpp:308
+#: todo/todoview.cpp:306
 #, kde-kuit-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1701,25 +1701,25 @@ msgstr ""
 "束時間，也不會提醒或重複。希望加入更多屬性的話請在待辦事項建立之後編輯它。</"
 "note></p>"
 
-#: todo/todoview.cpp:318
+#: todo/todoview.cpp:316
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display to-do list in a full window"
 msgstr "在整個視窗顯示待辦事項清單"
 
-#: todo/todoview.cpp:319
+#: todo/todoview.cpp:317
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Checking this option will cause the to-do view to use the full window."
 msgstr "勾選此選項，則使用整個視窗顯示待辦事項"
 
-#: todo/todoview.cpp:324
+#: todo/todoview.cpp:322
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display to-dos in a flat list or a tree"
 msgstr "用平面清單或樹狀圖方式顯示待辦事項"
 
-#: todo/todoview.cpp:326
+#: todo/todoview.cpp:324
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1729,121 +1729,121 @@ msgstr ""
 "勾選此按鈕會使待辦事項以平面清單或層疊樹狀圖方式顯示，其中上層事項的關係會被"
 "移除。"
 
-#: todo/todoview.cpp:365
+#: todo/todoview.cpp:363
 #, kde-format
 msgctxt "@action:inmenu show the to-do"
 msgid "&Show"
 msgstr "顯示(&S)"
 
-#: todo/todoview.cpp:370
+#: todo/todoview.cpp:368
 #, kde-format
 msgctxt "@action:inmenu edit the to-do"
 msgid "&Edit…"
 msgstr "編輯(&E)…"
 
-#: todo/todoview.cpp:377
+#: todo/todoview.cpp:375
 #, kde-format
 msgctxt "@action:inmenu delete the to-do"
 msgid "&Delete"
 msgstr "刪除(&D)"
 
-#: todo/todoview.cpp:386
+#: todo/todoview.cpp:384
 #, kde-format
 msgctxt "@action:inmenu print the to-do"
 msgid "&Print…"
 msgstr "列印(&P)…"
 
-#: todo/todoview.cpp:391
+#: todo/todoview.cpp:389
 #, kde-format
 msgctxt "@action:inmenu print preview the to-do"
 msgid "Print Previe&w…"
 msgstr "預覽列印(&W)…"
 
-#: todo/todoview.cpp:398
+#: todo/todoview.cpp:396
 #, kde-format
 msgctxt "@action:inmenu create a new to-do"
 msgid "New &To-do…"
 msgstr "新增待辦事項(&T)…"
 
-#: todo/todoview.cpp:402
+#: todo/todoview.cpp:400
 #, kde-format
 msgctxt "@action:inmenu create a new sub-to-do"
 msgid "New Su&b-to-do…"
 msgstr "新增子待辦事項(&B)…"
 
-#: todo/todoview.cpp:406
+#: todo/todoview.cpp:404
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Make this To-do Independent"
 msgstr "將此待辦事項獨立出來(&M)"
 
-#: todo/todoview.cpp:408
+#: todo/todoview.cpp:406
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Make all Sub-to-dos &Independent"
 msgstr "將所有的子待辦事項獨立出來(&I)"
 
-#: todo/todoview.cpp:419
+#: todo/todoview.cpp:417
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Create Event from To-do"
 msgstr "從待辦事項建立事件"
 
-#: todo/todoview.cpp:429
+#: todo/todoview.cpp:427
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Copy To"
 msgstr "複製到(&C)"
 
-#: todo/todoview.cpp:436
+#: todo/todoview.cpp:434
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Move To"
 msgstr "移動到(&M)"
 
-#: todo/todoview.cpp:447
+#: todo/todoview.cpp:445
 #, kde-format
 msgctxt "@action:inmenu delete completed to-dos"
 msgid "Pur&ge Completed"
 msgstr "清除已完成的待辦事項(&G)"
 
-#: todo/todoview.cpp:450
+#: todo/todoview.cpp:448
 #, kde-format
 msgctxt "@action:inmenu unspecified priority"
 msgid "unspecified"
 msgstr "未指定"
 
-#: todo/todoview.cpp:452
+#: todo/todoview.cpp:450
 #, kde-format
 msgctxt "@action:inmenu priority value=2"
 msgid "2"
 msgstr "2"
 
-#: todo/todoview.cpp:453
+#: todo/todoview.cpp:451
 #, kde-format
 msgctxt "@action:inmenu priority value=3"
 msgid "3"
 msgstr "3"
 
-#: todo/todoview.cpp:454
+#: todo/todoview.cpp:452
 #, kde-format
 msgctxt "@action:inmenu priority value=4"
 msgid "4"
 msgstr "4"
 
-#: todo/todoview.cpp:456
+#: todo/todoview.cpp:454
 #, kde-format
 msgctxt "@action:inmenu priority value=6"
 msgid "6"
 msgstr "6"
 
-#: todo/todoview.cpp:457
+#: todo/todoview.cpp:455
 #, kde-format
 msgctxt "@action:inmenu priority value=7"
 msgid "7"
 msgstr "7"
 
-#: todo/todoview.cpp:458
+#: todo/todoview.cpp:456
 #, kde-format
 msgctxt "@action:inmenu priority value=8"
 msgid "8"

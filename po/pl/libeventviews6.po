@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-30 00:42+0000\n"
+"POT-Creation-Date: 2025-04-17 00:41+0000\n"
 "PO-Revision-Date: 2024-06-22 07:56+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -29,25 +29,25 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "lukasz.wojnilowicz@gmail.com"
 
-#: agenda/agenda.cpp:972
+#: agenda/agenda.cpp:954
 #, kde-format
 msgid "Unable to lock item for modification. You cannot make any changes."
 msgstr ""
 "Nie można zablokować elementu do modyfikacji. Nie możesz dokonać żadnych "
 "zmian."
 
-#: agenda/agenda.cpp:974
+#: agenda/agenda.cpp:956
 #, kde-format
 msgctxt "@title:window"
 msgid "Locking Failed"
 msgstr "Nieudane zablokowanie"
 
-#: agenda/agenda.cpp:1189
+#: agenda/agenda.cpp:1171
 #, kde-format
 msgid "Dissociate event from recurrence"
 msgstr "Oddziel zdarzenie od powtarzalności"
 
-#: agenda/agenda.cpp:1211 month/monthitem.cpp:445
+#: agenda/agenda.cpp:1193 month/monthitem.cpp:445
 #, kde-format
 msgid ""
 "Unable to add the exception item to the calendar. No change will be done."
@@ -55,7 +55,7 @@ msgstr ""
 "Nie można dodać elementu wyjątku do kalendarza. Nie zostanie wprowadzona "
 "żadna zmiana."
 
-#: agenda/agenda.cpp:1213 month/monthitem.cpp:447
+#: agenda/agenda.cpp:1195 month/monthitem.cpp:447
 #, kde-format
 msgctxt "@title:window"
 msgid "Error Occurred"
@@ -1622,31 +1622,31 @@ msgstr[2] "%2 %1 lat"
 msgid "Move occurrence(s)"
 msgstr "Przenieś wystąpienie(a)"
 
-#: month/monthscene.cpp:189
+#: month/monthscene.cpp:184
 #, kde-format
 msgctxt "monthname year"
 msgid "%1 %2"
 msgstr "%1 %2"
 
-#: month/monthscene.cpp:316
+#: month/monthscene.cpp:311
 #, kde-format
 msgctxt "'Month day' for month view cells"
 msgid "%1 %2"
 msgstr "%1 %2"
 
-#: month/monthview.cpp:210 month/monthview.cpp:476
+#: month/monthview.cpp:209 month/monthview.cpp:475
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display calendar in a normal size"
 msgstr "Wyświetl kalendarz w normalnym rozmiarze"
 
-#: month/monthview.cpp:211 month/monthview.cpp:479
+#: month/monthview.cpp:210 month/monthview.cpp:478
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display calendar in a full window"
 msgstr "Wyświetl kalendarz w pełnym oknie"
 
-#: month/monthview.cpp:213
+#: month/monthview.cpp:212
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1657,13 +1657,13 @@ msgstr ""
 "wypełnić maksymalna dostępną przestrzeń okna / lub zmniejszy się z powrotem "
 "do swojego normalnego rozmiaru."
 
-#: month/monthview.cpp:220
+#: month/monthview.cpp:219
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Go back one month"
 msgstr "Idź wstecz o jeden miesiąc"
 
-#: month/monthview.cpp:221
+#: month/monthview.cpp:220
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1672,13 +1672,13 @@ msgstr ""
 "Kliknij na ten przycisk i widok zostanie przewinięty z powrotem w czasie o 1 "
 "miesiąc."
 
-#: month/monthview.cpp:227
+#: month/monthview.cpp:226
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Go back one week"
 msgstr "Idź wstecz o jeden tydzień"
 
-#: month/monthview.cpp:228
+#: month/monthview.cpp:227
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Click this button and the view will be scrolled back in time by 1 week."
@@ -1686,13 +1686,13 @@ msgstr ""
 "Kliknij na ten przycisk i widok zostanie przewinięty z powrotem w czasie o 1 "
 "tydzień."
 
-#: month/monthview.cpp:234
+#: month/monthview.cpp:233
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Go forward one week"
 msgstr "Idź do przodu o jeden tydzień"
 
-#: month/monthview.cpp:235
+#: month/monthview.cpp:234
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1701,13 +1701,13 @@ msgstr ""
 "Kliknij na ten przycisk i widok zostanie przewinięty w przód w czasie o 1 "
 "tydzień."
 
-#: month/monthview.cpp:241
+#: month/monthview.cpp:240
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Go forward one month"
 msgstr "Idź do przodu o jeden miesiąc"
 
-#: month/monthview.cpp:242
+#: month/monthview.cpp:241
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1740,7 +1740,7 @@ msgctxt "@action:inmenu Unspecified priority"
 msgid "unspecified"
 msgstr "nieokreślony"
 
-#: todo/tododelegates.cpp:153 todo/todoview.cpp:451
+#: todo/tododelegates.cpp:153 todo/todoview.cpp:449
 #, kde-format
 msgctxt "@action:inmenu highest priority"
 msgid "1 (highest)"
@@ -1764,7 +1764,7 @@ msgctxt "@action:inmenu"
 msgid "4"
 msgstr "4"
 
-#: todo/tododelegates.cpp:157 todo/todoview.cpp:455
+#: todo/tododelegates.cpp:157 todo/todoview.cpp:453
 #, kde-format
 msgctxt "@action:inmenu medium priority"
 msgid "5 (medium)"
@@ -1788,13 +1788,13 @@ msgctxt "@action:inmenu"
 msgid "8"
 msgstr "8"
 
-#: todo/tododelegates.cpp:161 todo/todoview.cpp:459
+#: todo/tododelegates.cpp:161 todo/todoview.cpp:457
 #, kde-format
 msgctxt "@action:inmenu lowest priority"
 msgid "9 (lowest)"
 msgstr "9 (najniższy)"
 
-#: todo/todoview.cpp:234
+#: todo/todoview.cpp:232
 #, fuzzy, kde-format
 #| msgid "Cannot move to-do to itself or a child of itself."
 msgctxt "@info"
@@ -1802,13 +1802,13 @@ msgid "Cannot move to-do to itself or a child of itself."
 msgstr ""
 "Nie można przesunąć zadania do niego samego lub swojego zadania potomnego."
 
-#: todo/todoview.cpp:235
+#: todo/todoview.cpp:233
 #, kde-format
 msgctxt "@title:window"
 msgid "Drop To-do"
 msgstr "Porzuć zadanie"
 
-#: todo/todoview.cpp:306
+#: todo/todoview.cpp:304
 #, fuzzy, kde-format
 #| msgctxt "@action:inmenu"
 #| msgid "Create Event from To-do"
@@ -1816,7 +1816,7 @@ msgctxt "@info:tooltip"
 msgid "Create an open-ended to-do"
 msgstr "Utwórz wydarzenie z zadania"
 
-#: todo/todoview.cpp:308
+#: todo/todoview.cpp:306
 #, kde-kuit-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1826,19 +1826,19 @@ msgid ""
 "note></p>"
 msgstr ""
 
-#: todo/todoview.cpp:318
+#: todo/todoview.cpp:316
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display to-do list in a full window"
 msgstr "Wyświetl listę zadań w pełnym oknie"
 
-#: todo/todoview.cpp:319
+#: todo/todoview.cpp:317
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Checking this option will cause the to-do view to use the full window."
 msgstr "Zaznaczenie tej opcji wyświetli widok zadań w pełnym oknie."
 
-#: todo/todoview.cpp:324
+#: todo/todoview.cpp:322
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Display to-dos in flat list instead of a tree"
@@ -1846,7 +1846,7 @@ msgctxt "@info:tooltip"
 msgid "Display to-dos in a flat list or a tree"
 msgstr "Pokaż zadania w postaci płaskiej listy a nie drzewa"
 
-#: todo/todoview.cpp:326
+#: todo/todoview.cpp:324
 #, fuzzy, kde-format
 #| msgctxt "@info:whatsthis"
 #| msgid ""
@@ -1861,121 +1861,121 @@ msgstr ""
 "Zaznaczenie tej opcji spowoduje, że zadania zostaną pokazane w postaci "
 "płaskiej listy a nie hierarchicznego drzewa. Zależności nie są pokazane."
 
-#: todo/todoview.cpp:365
+#: todo/todoview.cpp:363
 #, kde-format
 msgctxt "@action:inmenu show the to-do"
 msgid "&Show"
 msgstr "&Pokaż"
 
-#: todo/todoview.cpp:370
+#: todo/todoview.cpp:368
 #, kde-format
 msgctxt "@action:inmenu edit the to-do"
 msgid "&Edit…"
 msgstr "&Edytuj…"
 
-#: todo/todoview.cpp:377
+#: todo/todoview.cpp:375
 #, kde-format
 msgctxt "@action:inmenu delete the to-do"
 msgid "&Delete"
 msgstr "&Usuń"
 
-#: todo/todoview.cpp:386
+#: todo/todoview.cpp:384
 #, kde-format
 msgctxt "@action:inmenu print the to-do"
 msgid "&Print…"
 msgstr "Wy&drukuj…"
 
-#: todo/todoview.cpp:391
+#: todo/todoview.cpp:389
 #, kde-format
 msgctxt "@action:inmenu print preview the to-do"
 msgid "Print Previe&w…"
 msgstr "Podejrzyj &wydruk…"
 
-#: todo/todoview.cpp:398
+#: todo/todoview.cpp:396
 #, kde-format
 msgctxt "@action:inmenu create a new to-do"
 msgid "New &To-do…"
 msgstr "Nowe &zadanie…"
 
-#: todo/todoview.cpp:402
+#: todo/todoview.cpp:400
 #, kde-format
 msgctxt "@action:inmenu create a new sub-to-do"
 msgid "New Su&b-to-do…"
 msgstr "Nowe &pod-zadanie…"
 
-#: todo/todoview.cpp:406
+#: todo/todoview.cpp:404
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Make this To-do Independent"
 msgstr "U&niezależnij to zadanie"
 
-#: todo/todoview.cpp:408
+#: todo/todoview.cpp:406
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Make all Sub-to-dos &Independent"
 msgstr "Un&iezależnij wszystkie pod-zadania"
 
-#: todo/todoview.cpp:419
+#: todo/todoview.cpp:417
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Create Event from To-do"
 msgstr "Utwórz wydarzenie z zadania"
 
-#: todo/todoview.cpp:429
+#: todo/todoview.cpp:427
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Copy To"
 msgstr "S&kopiuj do"
 
-#: todo/todoview.cpp:436
+#: todo/todoview.cpp:434
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Move To"
 msgstr "&Przenieś na"
 
-#: todo/todoview.cpp:447
+#: todo/todoview.cpp:445
 #, kde-format
 msgctxt "@action:inmenu delete completed to-dos"
 msgid "Pur&ge Completed"
 msgstr "Usuń u&kończone zadania"
 
-#: todo/todoview.cpp:450
+#: todo/todoview.cpp:448
 #, kde-format
 msgctxt "@action:inmenu unspecified priority"
 msgid "unspecified"
 msgstr "nieokreślony"
 
-#: todo/todoview.cpp:452
+#: todo/todoview.cpp:450
 #, kde-format
 msgctxt "@action:inmenu priority value=2"
 msgid "2"
 msgstr "2"
 
-#: todo/todoview.cpp:453
+#: todo/todoview.cpp:451
 #, kde-format
 msgctxt "@action:inmenu priority value=3"
 msgid "3"
 msgstr "3"
 
-#: todo/todoview.cpp:454
+#: todo/todoview.cpp:452
 #, kde-format
 msgctxt "@action:inmenu priority value=4"
 msgid "4"
 msgstr "4"
 
-#: todo/todoview.cpp:456
+#: todo/todoview.cpp:454
 #, kde-format
 msgctxt "@action:inmenu priority value=6"
 msgid "6"
 msgstr "6"
 
-#: todo/todoview.cpp:457
+#: todo/todoview.cpp:455
 #, kde-format
 msgctxt "@action:inmenu priority value=7"
 msgid "7"
 msgstr "7"
 
-#: todo/todoview.cpp:458
+#: todo/todoview.cpp:456
 #, kde-format
 msgctxt "@action:inmenu priority value=8"
 msgid "8"
