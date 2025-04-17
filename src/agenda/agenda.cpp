@@ -1185,7 +1185,7 @@ void Agenda::endItemAction()
                     d->mAgendaView->enableAgendaUpdate(false);
 
                     d->mActionItem->setIncidence(newInc);
-                    d->mActionItem->dissociateFromMultiItem();
+                    (void)d->mActionItem->dissociateFromMultiItem(); // returns false if not a multi-item. we don't care in this case
 
                     d->mAgendaView->enableAgendaUpdate(true);
                 } else {
