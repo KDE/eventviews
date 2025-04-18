@@ -250,8 +250,6 @@ public:
 public:
     BaseConfig mBaseConfig;
     KCoreConfigSkeleton *mAppConfig = nullptr;
-
-private:
     Prefs *q;
 };
 
