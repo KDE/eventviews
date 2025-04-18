@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-17 00:41+0000\n"
+"POT-Creation-Date: 2025-04-18 00:42+0000\n"
 "PO-Revision-Date: 2020-07-27 22:01+0200\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -27,33 +27,40 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "mschlander@opensuse.org"
 
-#: agenda/agenda.cpp:954
-#, kde-format
+#: agenda/agenda.cpp:955
+#, fuzzy, kde-format
+#| msgid "Unable to lock item for modification. You cannot make any changes."
+msgctxt "@info"
 msgid "Unable to lock item for modification. You cannot make any changes."
 msgstr ""
 "Kan ikke låse elementet til ændring. Du kan ikke foretage nogen ændringer."
 
-#: agenda/agenda.cpp:956
+#: agenda/agenda.cpp:957
 #, fuzzy, kde-format
 #| msgid "Locking Failed"
 msgctxt "@title:window"
 msgid "Locking Failed"
 msgstr "Låsning mislykkedes"
 
-#: agenda/agenda.cpp:1171
-#, kde-format
+#: agenda/agenda.cpp:1172
+#, fuzzy, kde-format
+#| msgid "Dissociate event from recurrence"
+msgctxt "@info/plain"
 msgid "Dissociate event from recurrence"
 msgstr "Dissociér begivenhed fra gentagelsen"
 
-#: agenda/agenda.cpp:1193 month/monthitem.cpp:445
-#, kde-format
+#: agenda/agenda.cpp:1195 month/monthitem.cpp:450
+#, fuzzy, kde-format
+#| msgid ""
+#| "Unable to add the exception item to the calendar. No change will be done."
+msgctxt "@info"
 msgid ""
 "Unable to add the exception item to the calendar. No change will be done."
 msgstr ""
 "Kan ikke føje undtagelseselement til kalenderen. Ingen ændring vil blive "
 "udført."
 
-#: agenda/agenda.cpp:1195 month/monthitem.cpp:447
+#: agenda/agenda.cpp:1197 month/monthitem.cpp:452
 #, fuzzy, kde-format
 #| msgid "Error Occurred"
 msgctxt "@title:window"
@@ -1561,7 +1568,9 @@ msgstr ""
 "blive ignoreret"
 
 #: journal/journalframe.cpp:153
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Edit"
+msgctxt "@action: button"
 msgid "&Edit"
 msgstr "&Redigér"
 
@@ -1573,12 +1582,16 @@ msgid "Edit this journal entry"
 msgstr "Redigér denne journalindgang"
 
 #: journal/journalframe.cpp:157
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Opens an editor dialog for this journal entry"
+msgctxt "@info:whatsthis"
 msgid "Opens an editor dialog for this journal entry"
 msgstr "Åbner en redigeringsdialog for denne journalindgang"
 
 #: journal/journalframe.cpp:163
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Delete"
+msgctxt "@action: button"
 msgid "&Delete"
 msgstr "&Slet"
 
@@ -1590,12 +1603,16 @@ msgid "Delete this journal entry"
 msgstr "Slet denne journalindgang"
 
 #: journal/journalframe.cpp:167
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Delete this journal entry"
+msgctxt "@info:whatsthis"
 msgid "Delete this journal entry"
 msgstr "Slet denne journalindgang"
 
 #: journal/journalframe.cpp:172
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Print"
+msgctxt "@action: button"
 msgid "&Print"
 msgstr "&Udskriv"
 
@@ -1607,12 +1624,16 @@ msgid "Print this journal entry"
 msgstr "Udskriv denne journalindgang"
 
 #: journal/journalframe.cpp:177
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Opens a print dialog for this journal entry"
+msgctxt "@info:whatsthis"
 msgid "Opens a print dialog for this journal entry"
 msgstr "Åbner en udskriftsdialog for denne journalindgang"
 
 #: journal/journalframe.cpp:182
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Print preview"
+msgctxt "@action: button"
 msgid "Print preview"
 msgstr "Vis udskrift"
 
@@ -1622,6 +1643,13 @@ msgstr "Vis udskrift"
 msgctxt "@info:tooltip"
 msgid "Print preview this journal entry"
 msgstr "Vis udskrift for denne journalindgang"
+
+#: journal/journalframe.cpp:187
+#, fuzzy, kde-format
+#| msgid "Opens a print dialog for this journal entry"
+msgctxt "@info:whatsthis"
+msgid "Opens a print preview of this journal entry"
+msgstr "Åbner en udskriftsdialog for denne journalindgang"
 
 #: list/listview.cpp:56
 #, kde-format
@@ -1654,20 +1682,30 @@ msgstr ""
 msgid "Summary [%1 - %2]"
 msgstr "Resumé [%1 - %2]"
 
-#: month/monthitem.cpp:306
-#, kde-format
-msgid "Age:"
-msgstr "Alder:"
-
-#: month/monthitem.cpp:306
-#, kde-format
-msgid "%2 1 year"
-msgid_plural "%2 %1 years"
+#: month/monthitem.cpp:307
+#, fuzzy, kde-format
+#| msgid "%2 1 year"
+#| msgid_plural "%2 %1 years"
+msgctxt "@info/plain a person's age"
+msgid "1 year old"
+msgid_plural "%1 years old"
 msgstr[0] "%2 1 år"
 msgstr[1] "%2 %1 år"
 
-#: month/monthitem.cpp:439
-#, kde-format
+#: month/monthitem.cpp:309
+#, fuzzy, kde-format
+#| msgid "%2 1 year"
+#| msgid_plural "%2 %1 years"
+msgctxt "@info/plain number of years of marriage"
+msgid "1 year"
+msgid_plural "%1 years"
+msgstr[0] "%2 1 år"
+msgstr[1] "%2 %1 år"
+
+#: month/monthitem.cpp:443
+#, fuzzy, kde-format
+#| msgid "Move occurrence(s)"
+msgctxt "@info/plain"
 msgid "Move occurrence(s)"
 msgstr "Flyt forekomster"
 
@@ -1785,7 +1823,7 @@ msgctxt "@action:inmenu Unspecified priority"
 msgid "unspecified"
 msgstr "ikke angivet"
 
-#: todo/tododelegates.cpp:153 todo/todoview.cpp:449
+#: todo/tododelegates.cpp:153 todo/todoview.cpp:450
 #, kde-format
 msgctxt "@action:inmenu highest priority"
 msgid "1 (highest)"
@@ -1809,7 +1847,7 @@ msgctxt "@action:inmenu"
 msgid "4"
 msgstr "4"
 
-#: todo/tododelegates.cpp:157 todo/todoview.cpp:453
+#: todo/tododelegates.cpp:157 todo/todoview.cpp:454
 #, kde-format
 msgctxt "@action:inmenu medium priority"
 msgid "5 (medium)"
@@ -1833,7 +1871,7 @@ msgctxt "@action:inmenu"
 msgid "8"
 msgstr "8"
 
-#: todo/tododelegates.cpp:161 todo/todoview.cpp:457
+#: todo/tododelegates.cpp:161 todo/todoview.cpp:458
 #, kde-format
 msgctxt "@action:inmenu lowest priority"
 msgid "9 (lowest)"
@@ -1861,30 +1899,30 @@ msgctxt "@info:tooltip"
 msgid "Create an open-ended to-do"
 msgstr "Opret begivenhed"
 
-#: todo/todoview.cpp:306
+#: todo/todoview.cpp:307
 #, kde-kuit-format
 msgctxt "@info:whatsthis"
 msgid ""
-"Enter the summary for a new to-do. <p><note>The new to-do will be open-ended "
-"meaning that it has no start or end times nor will it have a reminder or "
-"recurrence. Edit the newly created if you want to add more properties.</"
-"note></p>"
+"Enter the summary for a new to-do. <para><note>The new to-do will be open-"
+"ended meaning that it has no start or end times nor will it have a reminder "
+"or recurrence. Edit the newly created if you want to add more properties.</"
+"note></para>"
 msgstr ""
 
-#: todo/todoview.cpp:316
+#: todo/todoview.cpp:317
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display to-do list in a full window"
 msgstr "Vis gøremålslisten i et helt vindue"
 
-#: todo/todoview.cpp:317
+#: todo/todoview.cpp:318
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Checking this option will cause the to-do view to use the full window."
 msgstr ""
 "Markering af denne indstilling får gøremålslisten til at bruge hele vinduet."
 
-#: todo/todoview.cpp:322
+#: todo/todoview.cpp:323
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Display to-dos in flat list instead of a tree"
@@ -1892,7 +1930,7 @@ msgctxt "@info:tooltip"
 msgid "Display to-dos in a flat list or a tree"
 msgstr "Vis gøremål i en flad liste i stedet for som et træ"
 
-#: todo/todoview.cpp:324
+#: todo/todoview.cpp:325
 #, fuzzy, kde-format
 #| msgctxt "@info:whatsthis"
 #| msgid ""
@@ -1907,33 +1945,33 @@ msgstr ""
 "Markering af denne indstilling får gøremål til at vises som en flad liste i "
 "stedet for et hierarkisk træ. Forælderforholdene fjernes i visningen."
 
-#: todo/todoview.cpp:363
+#: todo/todoview.cpp:364
 #, kde-format
 msgctxt "@action:inmenu show the to-do"
 msgid "&Show"
 msgstr "&Vis"
 
-#: todo/todoview.cpp:368
+#: todo/todoview.cpp:369
 #, fuzzy, kde-format
 #| msgid "&Edit"
 msgctxt "@action:inmenu edit the to-do"
 msgid "&Edit…"
 msgstr "&Redigér"
 
-#: todo/todoview.cpp:375
+#: todo/todoview.cpp:376
 #, kde-format
 msgctxt "@action:inmenu delete the to-do"
 msgid "&Delete"
 msgstr "&Slet"
 
-#: todo/todoview.cpp:384
+#: todo/todoview.cpp:385
 #, fuzzy, kde-format
 #| msgid "&Print"
 msgctxt "@action:inmenu print the to-do"
 msgid "&Print…"
 msgstr "&Udskriv"
 
-#: todo/todoview.cpp:389
+#: todo/todoview.cpp:390
 #, fuzzy, kde-format
 #| msgctxt "@action:inmenu print preview the to-do"
 #| msgid "Print Previe&w..."
@@ -1941,7 +1979,7 @@ msgctxt "@action:inmenu print preview the to-do"
 msgid "Print Previe&w…"
 msgstr "&Vis udskrift..."
 
-#: todo/todoview.cpp:396
+#: todo/todoview.cpp:397
 #, fuzzy, kde-format
 #| msgctxt "@action:inmenu create a new to-do"
 #| msgid "New &To-do..."
@@ -1949,7 +1987,7 @@ msgctxt "@action:inmenu create a new to-do"
 msgid "New &To-do…"
 msgstr "Nyt &gøremål..."
 
-#: todo/todoview.cpp:400
+#: todo/todoview.cpp:401
 #, fuzzy, kde-format
 #| msgctxt "@action:inmenu create a new sub-to-do"
 #| msgid "New Su&b-to-do..."
@@ -1957,19 +1995,19 @@ msgctxt "@action:inmenu create a new sub-to-do"
 msgid "New Su&b-to-do…"
 msgstr "Nyt &delgøremål..."
 
-#: todo/todoview.cpp:404
+#: todo/todoview.cpp:405
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Make this To-do Independent"
 msgstr "&Gør dette gøremål uafhængigt"
 
-#: todo/todoview.cpp:406
+#: todo/todoview.cpp:407
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Make all Sub-to-dos &Independent"
 msgstr "Gør alle delgøremål &uafhængige"
 
-#: todo/todoview.cpp:417
+#: todo/todoview.cpp:418
 #, fuzzy, kde-format
 #| msgctxt "@action:inmenu"
 #| msgid "Create Event"
@@ -1977,61 +2015,61 @@ msgctxt "@action:inmenu"
 msgid "Create Event from To-do"
 msgstr "Opret begivenhed"
 
-#: todo/todoview.cpp:427
+#: todo/todoview.cpp:428
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Copy To"
 msgstr "&Kopiér til"
 
-#: todo/todoview.cpp:434
+#: todo/todoview.cpp:435
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Move To"
 msgstr "&Flyt til"
 
-#: todo/todoview.cpp:445
+#: todo/todoview.cpp:446
 #, kde-format
 msgctxt "@action:inmenu delete completed to-dos"
 msgid "Pur&ge Completed"
 msgstr "R&yd gennemførte"
 
-#: todo/todoview.cpp:448
+#: todo/todoview.cpp:449
 #, kde-format
 msgctxt "@action:inmenu unspecified priority"
 msgid "unspecified"
 msgstr "ikke angivet"
 
-#: todo/todoview.cpp:450
+#: todo/todoview.cpp:451
 #, kde-format
 msgctxt "@action:inmenu priority value=2"
 msgid "2"
 msgstr "2"
 
-#: todo/todoview.cpp:451
+#: todo/todoview.cpp:452
 #, kde-format
 msgctxt "@action:inmenu priority value=3"
 msgid "3"
 msgstr "3"
 
-#: todo/todoview.cpp:452
+#: todo/todoview.cpp:453
 #, kde-format
 msgctxt "@action:inmenu priority value=4"
 msgid "4"
 msgstr "4"
 
-#: todo/todoview.cpp:454
+#: todo/todoview.cpp:455
 #, kde-format
 msgctxt "@action:inmenu priority value=6"
 msgid "6"
 msgstr "6"
 
-#: todo/todoview.cpp:455
+#: todo/todoview.cpp:456
 #, kde-format
 msgctxt "@action:inmenu priority value=7"
 msgid "7"
 msgstr "7"
 
-#: todo/todoview.cpp:456
+#: todo/todoview.cpp:457
 #, kde-format
 msgctxt "@action:inmenu priority value=8"
 msgid "8"
@@ -2185,17 +2223,25 @@ msgid "View Columns"
 msgstr "Vis kolonner"
 
 #: viewerapp/main.cpp:19
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "ViewerApp"
+msgctxt "@label"
 msgid "ViewerApp"
 msgstr "ViewerApp"
 
 #: viewerapp/main.cpp:21
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "A test app for embedding calendarviews"
+msgctxt "@info"
 msgid "A test app for embedding calendarviews"
 msgstr "En test-app til indlejring af kalendervisninger"
 
 #: viewerapp/main.cpp:23
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Copyright (C) 2010 Klarälvdalens Datakonsult AB, a KDAB Group company, "
+#| "info@kdab.net"
+msgctxt "@info"
 msgid ""
 "Copyright (C) 2010 Klarälvdalens Datakonsult AB, a KDAB Group company, "
 "info@kdab.net"
@@ -2225,7 +2271,9 @@ msgstr "Fremviser til kalendervisninger"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab)
 #: viewerapp/mainwindow.ui:55
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Tab 1"
+msgctxt "@title:tab a generic tab"
 msgid "Tab 1"
 msgstr "Faneblad 1"
 
@@ -2499,6 +2547,9 @@ msgstr "%1, %2 - %3"
 msgctxt "to-do due date"
 msgid "  (Due: %1)"
 msgstr "   (Forfalder: %1)"
+
+#~ msgid "Age:"
+#~ msgstr "Alder:"
 
 #, fuzzy
 #~| msgctxt "@action:inmenu"
