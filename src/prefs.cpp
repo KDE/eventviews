@@ -213,14 +213,12 @@ bool BaseConfig::usrSave()
 class EventViews::PrefsPrivate
 {
 public:
-    explicit PrefsPrivate(Prefs *parent)
-        : q(parent)
+    explicit PrefsPrivate()
     {
     }
 
-    PrefsPrivate(Prefs *parent, KCoreConfigSkeleton *appConfig)
+    PrefsPrivate(KCoreConfigSkeleton *appConfig)
         : mAppConfig(appConfig)
-        , q(parent)
     {
     }
 
@@ -250,7 +248,6 @@ public:
 public:
     BaseConfig mBaseConfig;
     KCoreConfigSkeleton *mAppConfig = nullptr;
-    Prefs *q;
 };
 
 KConfigSkeletonItem *PrefsPrivate::appConfigItem(const KConfigSkeletonItem *baseConfigItem) const
@@ -467,14 +464,14 @@ QFont PrefsPrivate::getFont(const KConfigSkeleton::ItemFont *baseConfigItem) con
 }
 
 Prefs::Prefs()
-    : d(new PrefsPrivate(this))
+    : d(new PrefsPrivate())
 {
     // necessary to use CollectionColorAttribute in the EventViews::resourceColor and EventViews::setResourceColor
     Akonadi::AttributeFactory::registerAttribute<Akonadi::CollectionColorAttribute>();
 }
 
 Prefs::Prefs(KCoreConfigSkeleton *appConfig)
-    : d(new PrefsPrivate(this, appConfig))
+    : d(new PrefsPrivate(appConfig))
 {
     // necessary to use CollectionColorAttribute in the EventViews::resourceColor and EventViews::setResourceColor
     Akonadi::AttributeFactory::registerAttribute<Akonadi::CollectionColorAttribute>();
