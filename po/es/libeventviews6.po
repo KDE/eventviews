@@ -1,15 +1,15 @@
-# Copyright (C) YEAR This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
+# Spanish translations for libeventviews6.po package.
+# Copyright (C) 2010-2025 This_file_is_part_of_KDE
+# This file is distributed under the same license as the eventviews package.
 #
-# Javier Vinal <fjvinalgmail.com>, 2010, 2011, 2012, 2017.
-# Javier Viñal <fjvinal@gmail.com>, 2012, 2013, 2014, 2015, 2016, 2018, 2019.
-# SPDX-FileCopyrightText: 2019, 2020, 2021, 2023, 2024 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019 Javier Viñal <fjvinal@gmail.com>
+# SPDX-FileCopyrightText: 2019, 2020, 2021, 2023, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: libeventviews6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-16 02:32+0000\n"
-"PO-Revision-Date: 2024-06-21 12:55+0200\n"
+"PO-Revision-Date: 2025-04-18 18:05+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.1\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -109,7 +109,7 @@ msgstr "No se puede guardar %1 «%2»."
 #: agenda/timelabels.cpp:331
 #, kde-format
 msgid "&Add Timezones…"
-msgstr "&Añadir zonas horarias..."
+msgstr "&Añadir zonas horarias…"
 
 #: agenda/timelabels.cpp:332
 #, kde-format
@@ -1875,7 +1875,7 @@ msgstr "Mo&strar"
 #, kde-format
 msgctxt "@action:inmenu edit the to-do"
 msgid "&Edit…"
-msgstr "&Editar..."
+msgstr "&Editar…"
 
 #: todo/todoview.cpp:373
 #, kde-format
@@ -1887,25 +1887,25 @@ msgstr "&Borrar"
 #, kde-format
 msgctxt "@action:inmenu print the to-do"
 msgid "&Print…"
-msgstr "&Imprimir..."
+msgstr "&Imprimir…"
 
 #: todo/todoview.cpp:387
 #, kde-format
 msgctxt "@action:inmenu print preview the to-do"
 msgid "Print Previe&w…"
-msgstr "&Vista previa de la impresión..."
+msgstr "&Vista previa de la impresión…"
 
 #: todo/todoview.cpp:394
 #, kde-format
 msgctxt "@action:inmenu create a new to-do"
 msgid "New &To-do…"
-msgstr "Nueva &tarea pendiente..."
+msgstr "Nueva &tarea pendiente…"
 
 #: todo/todoview.cpp:398
 #, kde-format
 msgctxt "@action:inmenu create a new sub-to-do"
 msgid "New Su&b-to-do…"
-msgstr "Nueva su&btarea pendiente..."
+msgstr "Nueva su&btarea pendiente…"
 
 #: todo/todoview.cpp:402
 #, kde-format
@@ -2009,7 +2009,7 @@ msgstr ""
 #, kde-format
 msgctxt "@label in QuickSearchLine"
 msgid "Search Summaries…"
-msgstr "Buscar resúmenes..."
+msgstr "Buscar resúmenes…"
 
 #: todo/todoviewquicksearch.cpp:46
 #, kde-format
@@ -2130,7 +2130,7 @@ msgstr "ViewerApp"
 #: viewerapp/main.cpp:21
 #, kde-format
 msgid "A test app for embedding calendarviews"
-msgstr "Una aplicación de prueba para listas de calendario incrustadas"
+msgstr "Una aplicación de prueba para vistas de calendario integradas"
 
 #: viewerapp/main.cpp:23
 #, kde-format
@@ -2138,8 +2138,8 @@ msgid ""
 "Copyright (C) 2010 Klarälvdalens Datakonsult AB, a KDAB Group company, "
 "info@kdab.net"
 msgstr ""
-"Derechos de autor © 2010 Klarälvdalens Datakonsult AB, una compañía del "
-"grupo KDAB, info@kdab.net"
+"Copyright © 2010 Klarälvdalens Datakonsult AB, una compañía del grupo KDAB, "
+"info@kdab.net"
 
 #: viewerapp/main.cpp:24
 #, kde-format
@@ -2439,72 +2439,3 @@ msgstr "%1, %2 - %3"
 msgctxt "to-do due date"
 msgid "  (Due: %1)"
 msgstr "  (Vencido: %1)"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "Create Note for To-do"
-#~ msgstr "Crear nota para tarea pendiente"
-
-#~ msgctxt "@action:inmenu edit the to-do"
-#~ msgid "&Edit..."
-#~ msgstr "&Editar..."
-
-#~ msgctxt "@action:inmenu print the to-do"
-#~ msgid "&Print..."
-#~ msgstr "Im&primir..."
-
-#~ msgctxt "yes, an exception to a recurring to-do"
-#~ msgid "Exception"
-#~ msgstr "Excepción"
-
-#~ msgctxt "yes, recurring to-do"
-#~ msgid "Yes"
-#~ msgstr "Sí"
-
-#~ msgctxt "no, not a recurring to-do"
-#~ msgid "No"
-#~ msgstr "No"
-
-#~ msgctxt "delimiter for joining category/tag names"
-#~ msgid ","
-#~ msgstr ","
-
-#~ msgid "Recurs"
-#~ msgstr "Se repite"
-
-#~ msgid "Priority"
-#~ msgstr "Prioridad"
-
-#~ msgctxt "@title:column percent complete"
-#~ msgid "Complete"
-#~ msgstr "Terminada"
-
-#~ msgid "Start Date"
-#~ msgstr "Fecha de inicio"
-
-#~ msgid "Due Date"
-#~ msgstr "Fecha de vencimiento"
-
-#~ msgctxt "@title:column date completed"
-#~ msgid "Completed"
-#~ msgstr "Terminada"
-
-#~ msgid "Description"
-#~ msgstr "Descripción"
-
-#~ msgctxt "@item:intext delimiter for joining holiday names"
-#~ msgid ","
-#~ msgstr ","
-
-#~ msgid "Categories"
-#~ msgstr "Categorías"
-
-#~ msgctxt "delimiter for joining category names"
-#~ msgid ","
-#~ msgstr ","
-
-#~ msgctxt "@item:intext delimiter for joining category names"
-#~ msgid ","
-#~ msgstr ","
-
-#~ msgid "Click to add a new to-do"
-#~ msgstr "Pulse para añadir una nueva tarea pendiente"

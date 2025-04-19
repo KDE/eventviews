@@ -31,7 +31,7 @@ msgstr ""
 #: agenda/agenda.cpp:972
 #, kde-format
 msgid "Unable to lock item for modification. You cannot make any changes."
-msgstr "无法锁定对项目的修改。您无法进行任何更改。"
+msgstr ""
 
 #: agenda/agenda.cpp:974
 #, kde-format
@@ -42,13 +42,13 @@ msgstr "锁定失败"
 #: agenda/agenda.cpp:1189
 #, kde-format
 msgid "Dissociate event from recurrence"
-msgstr "从重现中分离事件"
+msgstr ""
 
 #: agenda/agenda.cpp:1211 month/monthitem.cpp:445
 #, kde-format
 msgid ""
 "Unable to add the exception item to the calendar. No change will be done."
-msgstr "无法将例外项目添加到日历。未更改。"
+msgstr ""
 
 #: agenda/agenda.cpp:1213 month/monthitem.cpp:447
 #, kde-format
@@ -1402,7 +1402,7 @@ msgstr "使用系统颜色。如果启用，将忽略所有其他颜色设置"
 #: journal/journalframe.cpp:153
 #, kde-format
 msgid "&Edit"
-msgstr "编辑(&E)"
+msgstr ""
 
 #: journal/journalframe.cpp:156
 #, kde-format
@@ -1413,7 +1413,7 @@ msgstr "编辑此日记项"
 #: journal/journalframe.cpp:157
 #, kde-format
 msgid "Opens an editor dialog for this journal entry"
-msgstr "打开日记编辑器对话框"
+msgstr ""
 
 #: journal/journalframe.cpp:163
 #, kde-format
@@ -1429,12 +1429,12 @@ msgstr "删除此日记项"
 #: journal/journalframe.cpp:167
 #, kde-format
 msgid "Delete this journal entry"
-msgstr "删除日记项"
+msgstr "删除此日记项"
 
 #: journal/journalframe.cpp:172
 #, kde-format
 msgid "&Print"
-msgstr "打印(&P)"
+msgstr ""
 
 #: journal/journalframe.cpp:176
 #, kde-format
@@ -1445,12 +1445,12 @@ msgstr "打印此日记项"
 #: journal/journalframe.cpp:177
 #, kde-format
 msgid "Opens a print dialog for this journal entry"
-msgstr "打开日记的打印对话框"
+msgstr ""
 
 #: journal/journalframe.cpp:182
 #, kde-format
 msgid "Print preview"
-msgstr "打印预览"
+msgstr ""
 
 #: journal/journalframe.cpp:186
 #, kde-format
@@ -1503,7 +1503,7 @@ msgstr[0] "%2 %1 年"
 #: month/monthitem.cpp:439
 #, kde-format
 msgid "Move occurrence(s)"
-msgstr "移动重现"
+msgstr ""
 
 #: month/monthscene.cpp:189
 #, kde-format
@@ -1957,12 +1957,12 @@ msgstr "查看列"
 #: viewerapp/main.cpp:19
 #, kde-format
 msgid "ViewerApp"
-msgstr "ViewerApp"
+msgstr ""
 
 #: viewerapp/main.cpp:21
 #, kde-format
 msgid "A test app for embedding calendarviews"
-msgstr "嵌入日历视图的测试工具"
+msgstr ""
 
 #: viewerapp/main.cpp:23
 #, kde-format
@@ -1970,8 +1970,6 @@ msgid ""
 "Copyright (C) 2010 Klarälvdalens Datakonsult AB, a KDAB Group company, "
 "info@kdab.net"
 msgstr ""
-"Copyright (C) 2010 Klarälvdalens Datakonsult AB, a KDAB Group company, "
-"info@kdab.net"
 
 #: viewerapp/main.cpp:24
 #, kde-format
@@ -1995,7 +1993,7 @@ msgstr "日历视图查看器"
 #: viewerapp/mainwindow.ui:55
 #, kde-format
 msgid "Tab 1"
-msgstr "标签页 1"
+msgstr ""
 
 #. i18n: ectx: property (title), widget (QMenu, addViewMenu)
 #: viewerapp/mainwindow.ui:74
