@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: libeventviews6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-18 00:42+0000\n"
-"PO-Revision-Date: 2025-03-31 01:42+0100\n"
+"PO-Revision-Date: 2025-04-18 18:05+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -30,8 +30,7 @@ msgid "Your emails"
 msgstr "ecuadra@eloihr.net,fjvinal@gmail.com"
 
 #: agenda/agenda.cpp:955
-#, fuzzy, kde-format
-#| msgid "Unable to lock item for modification. You cannot make any changes."
+#, kde-format
 msgctxt "@info"
 msgid "Unable to lock item for modification. You cannot make any changes."
 msgstr ""
@@ -45,16 +44,13 @@ msgid "Locking Failed"
 msgstr "El bloqueo ha fallado"
 
 #: agenda/agenda.cpp:1172
-#, fuzzy, kde-format
-#| msgid "Dissociate event from recurrence"
+#, kde-format
 msgctxt "@info/plain"
 msgid "Dissociate event from recurrence"
 msgstr "Disociar el evento de la repetición"
 
 #: agenda/agenda.cpp:1195 month/monthitem.cpp:450
-#, fuzzy, kde-format
-#| msgid ""
-#| "Unable to add the exception item to the calendar. No change will be done."
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Unable to add the exception item to the calendar. No change will be done."
@@ -1561,8 +1557,7 @@ msgstr ""
 "preferencias de color"
 
 #: journal/journalframe.cpp:153
-#, fuzzy, kde-format
-#| msgid "&Edit"
+#, kde-format
 msgctxt "@action: button"
 msgid "&Edit"
 msgstr "&Editar"
@@ -1574,15 +1569,13 @@ msgid "Edit this journal entry"
 msgstr "Editar esta entrada de diario"
 
 #: journal/journalframe.cpp:157
-#, fuzzy, kde-format
-#| msgid "Opens an editor dialog for this journal entry"
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Opens an editor dialog for this journal entry"
 msgstr "Abre un editor de diálogo para esta entrada de diálogo"
 
 #: journal/journalframe.cpp:163
-#, fuzzy, kde-format
-#| msgid "&Delete"
+#, kde-format
 msgctxt "@action: button"
 msgid "&Delete"
 msgstr "&Borrar"
@@ -1594,15 +1587,13 @@ msgid "Delete this journal entry"
 msgstr "Borrar esta entrada de diario"
 
 #: journal/journalframe.cpp:167
-#, fuzzy, kde-format
-#| msgid "Delete this journal entry"
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Delete this journal entry"
 msgstr "Borrar esta entrada de diario"
 
 #: journal/journalframe.cpp:172
-#, fuzzy, kde-format
-#| msgid "&Print"
+#, kde-format
 msgctxt "@action: button"
 msgid "&Print"
 msgstr "&Imprimir"
@@ -1614,15 +1605,13 @@ msgid "Print this journal entry"
 msgstr "Imprimir esta entrada de diario"
 
 #: journal/journalframe.cpp:177
-#, fuzzy, kde-format
-#| msgid "Opens a print dialog for this journal entry"
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Opens a print dialog for this journal entry"
 msgstr "Abre un diálogo de impresión para esta entrada de diálogo"
 
 #: journal/journalframe.cpp:182
-#, fuzzy, kde-format
-#| msgid "Print preview"
+#, kde-format
 msgctxt "@action: button"
 msgid "Print preview"
 msgstr "Vista preliminar"
@@ -1634,11 +1623,10 @@ msgid "Print preview this journal entry"
 msgstr "Vista preliminar de esta entrada de diario"
 
 #: journal/journalframe.cpp:187
-#, fuzzy, kde-format
-#| msgid "Opens a print dialog for this journal entry"
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Opens a print preview of this journal entry"
-msgstr "Abre un diálogo de impresión para esta entrada de diálogo"
+msgstr "Abre una vista preliminar de la impresión de esta entrada de diálogo"
 
 #: list/listview.cpp:56
 #, kde-format
@@ -1672,28 +1660,23 @@ msgid "Summary [%1 - %2]"
 msgstr "Resumen [%1 - %2]"
 
 #: month/monthitem.cpp:307
-#, fuzzy, kde-format
-#| msgid "%2 1 year"
-#| msgid_plural "%2 %1 years"
+#, kde-format
 msgctxt "@info/plain a person's age"
 msgid "1 year old"
 msgid_plural "%1 years old"
-msgstr[0] "%2 1 años"
-msgstr[1] "%2 %1 años"
+msgstr[0] "1 año de edad"
+msgstr[1] "%1 años de edad"
 
 #: month/monthitem.cpp:309
-#, fuzzy, kde-format
-#| msgid "%2 1 year"
-#| msgid_plural "%2 %1 years"
+#, kde-format
 msgctxt "@info/plain number of years of marriage"
 msgid "1 year"
 msgid_plural "%1 years"
-msgstr[0] "%2 1 años"
-msgstr[1] "%2 %1 años"
+msgstr[0] "1 año"
+msgstr[1] "%1 años"
 
 #: month/monthitem.cpp:443
-#, fuzzy, kde-format
-#| msgid "Move occurrence(s)"
+#, kde-format
 msgctxt "@info/plain"
 msgid "Move occurrence(s)"
 msgstr "Mover apariciones"
@@ -1880,13 +1863,7 @@ msgid "Create an open-ended to-do"
 msgstr "Crear una tarea pendiente abierta"
 
 #: todo/todoview.cpp:307
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:whatsthis"
-#| msgid ""
-#| "Enter the summary for a new to-do. <p><note>The new to-do will be open-"
-#| "ended meaning that it has no start or end times nor will it have a "
-#| "reminder or recurrence. Edit the newly created if you want to add more "
-#| "properties.</note></p>"
+#, kde-kuit-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Enter the summary for a new to-do. <para><note>The new to-do will be open-"
@@ -1894,10 +1871,10 @@ msgid ""
 "or recurrence. Edit the newly created if you want to add more properties.</"
 "note></para>"
 msgstr ""
-"Introduzca el resumen de una nueva tarea pendiente. <p><note>La nueva tarea "
-"pendiente estará abierta, lo que significa que no tiene hora de inicio ni de "
-"fin, ni recordatorio ni repetición. Edite la tarea recién creada si desea "
-"añadirle más propiedades.</note></p>"
+"Introduzca el resumen de una nueva tarea pendiente. <para><note>La nueva "
+"tarea pendiente estará abierta, lo que significa que no tiene hora de inicio "
+"ni de fin, ni recordatorio ni repetición. Edite la tarea recién creada si "
+"desea añadirle más propiedades.</note></para>"
 
 #: todo/todoview.cpp:317
 #, kde-format
@@ -2188,31 +2165,26 @@ msgid "View Columns"
 msgstr "Ver columnas"
 
 #: viewerapp/main.cpp:19
-#, fuzzy, kde-format
-#| msgid "ViewerApp"
+#, kde-format
 msgctxt "@label"
 msgid "ViewerApp"
 msgstr "ViewerApp"
 
 #: viewerapp/main.cpp:21
-#, fuzzy, kde-format
-#| msgid "A test app for embedding calendarviews"
+#, kde-format
 msgctxt "@info"
 msgid "A test app for embedding calendarviews"
-msgstr "Una aplicación de prueba para listas de calendario incrustadas"
+msgstr "Una aplicación de prueba para vistas de calendario integradas"
 
 #: viewerapp/main.cpp:23
-#, fuzzy, kde-format
-#| msgid ""
-#| "Copyright (C) 2010 Klarälvdalens Datakonsult AB, a KDAB Group company, "
-#| "info@kdab.net"
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Copyright (C) 2010 Klarälvdalens Datakonsult AB, a KDAB Group company, "
 "info@kdab.net"
 msgstr ""
-"Derechos de autor © 2010 Klarälvdalens Datakonsult AB, una compañía del "
-"grupo KDAB, info@kdab.net"
+"Copyright © 2010 Klarälvdalens Datakonsult AB, una compañía del grupo KDAB, "
+"info@kdab.net"
 
 #: viewerapp/main.cpp:24
 #, kde-format
@@ -2234,8 +2206,7 @@ msgstr "Visor de vistas de calendario"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab)
 #: viewerapp/mainwindow.ui:55
-#, fuzzy, kde-format
-#| msgid "Tab 1"
+#, kde-format
 msgctxt "@title:tab a generic tab"
 msgid "Tab 1"
 msgstr "Pestaña 1"
@@ -2514,6 +2485,3 @@ msgstr "%1, %2 - %3"
 msgctxt "to-do due date"
 msgid "  (Due: %1)"
 msgstr "  (Vencido: %1)"
-
-#~ msgid "Age:"
-#~ msgstr "Edad:"

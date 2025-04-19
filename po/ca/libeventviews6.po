@@ -5,13 +5,13 @@
 #
 # Manuel Tortosa <manutortosa@chakra-project.org>, 2010, 2011.
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022.
-# Josep M. Ferrer <txemaq@gmail.com>, 2010, 2011, 2012, 2013, 2014, 2015, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025.
+# SPDX-FileCopyrightText: 2010, 2011, 2012, 2013, 2014, 2015, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Josep M. Ferrer <txemaq@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-18 00:42+0000\n"
-"PO-Revision-Date: 2025-04-06 12:02+0200\n"
+"PO-Revision-Date: 2025-04-18 10:58+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -33,8 +33,7 @@ msgid "Your emails"
 msgstr "manutortosa@gmail.com,txemaq@gmail.com,antonibella5@yahoo.com"
 
 #: agenda/agenda.cpp:955
-#, fuzzy, kde-format
-#| msgid "Unable to lock item for modification. You cannot make any changes."
+#, kde-format
 msgctxt "@info"
 msgid "Unable to lock item for modification. You cannot make any changes."
 msgstr ""
@@ -47,16 +46,13 @@ msgid "Locking Failed"
 msgstr "Ha fallat el bloqueig"
 
 #: agenda/agenda.cpp:1172
-#, fuzzy, kde-format
-#| msgid "Dissociate event from recurrence"
+#, kde-format
 msgctxt "@info/plain"
 msgid "Dissociate event from recurrence"
 msgstr "Dissocia l'esdeveniment de la repetició"
 
 #: agenda/agenda.cpp:1195 month/monthitem.cpp:450
-#, fuzzy, kde-format
-#| msgid ""
-#| "Unable to add the exception item to the calendar. No change will be done."
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Unable to add the exception item to the calendar. No change will be done."
@@ -1563,8 +1559,7 @@ msgstr ""
 "del color"
 
 #: journal/journalframe.cpp:153
-#, fuzzy, kde-format
-#| msgid "&Edit"
+#, kde-format
 msgctxt "@action: button"
 msgid "&Edit"
 msgstr "&Edita"
@@ -1576,15 +1571,13 @@ msgid "Edit this journal entry"
 msgstr "Edita aquesta entrada de diari"
 
 #: journal/journalframe.cpp:157
-#, fuzzy, kde-format
-#| msgid "Opens an editor dialog for this journal entry"
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Opens an editor dialog for this journal entry"
 msgstr "Obre un diàleg d'editor per a aquesta entrada de diari"
 
 #: journal/journalframe.cpp:163
-#, fuzzy, kde-format
-#| msgid "&Delete"
+#, kde-format
 msgctxt "@action: button"
 msgid "&Delete"
 msgstr "Su&primeix"
@@ -1596,18 +1589,16 @@ msgid "Delete this journal entry"
 msgstr "Suprimeix aquesta entrada de diari"
 
 #: journal/journalframe.cpp:167
-#, fuzzy, kde-format
-#| msgid "Delete this journal entry"
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Delete this journal entry"
 msgstr "Suprimeix aquesta entrada de diari"
 
 #: journal/journalframe.cpp:172
-#, fuzzy, kde-format
-#| msgid "&Print"
+#, kde-format
 msgctxt "@action: button"
 msgid "&Print"
-msgstr "&Imprimeix"
+msgstr "Im&primeix"
 
 #: journal/journalframe.cpp:176
 #, kde-format
@@ -1616,15 +1607,13 @@ msgid "Print this journal entry"
 msgstr "Imprimeix aquesta entrada de diari"
 
 #: journal/journalframe.cpp:177
-#, fuzzy, kde-format
-#| msgid "Opens a print dialog for this journal entry"
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Opens a print dialog for this journal entry"
 msgstr "Obre un diàleg d'impressió per a aquesta entrada de diari"
 
 #: journal/journalframe.cpp:182
-#, fuzzy, kde-format
-#| msgid "Print preview"
+#, kde-format
 msgctxt "@action: button"
 msgid "Print preview"
 msgstr "Vista prèvia d'impressió"
@@ -1636,11 +1625,10 @@ msgid "Print preview this journal entry"
 msgstr "Vista prèvia d'impressió d'aquesta entrada de diari"
 
 #: journal/journalframe.cpp:187
-#, fuzzy, kde-format
-#| msgid "Opens a print dialog for this journal entry"
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Opens a print preview of this journal entry"
-msgstr "Obre un diàleg d'impressió per a aquesta entrada de diari"
+msgstr "Obre una vista prèvia d'impressió d'aquesta entrada de diari"
 
 #: list/listview.cpp:56
 #, kde-format
@@ -1674,28 +1662,23 @@ msgid "Summary [%1 - %2]"
 msgstr "Resum [%1 - %2]"
 
 #: month/monthitem.cpp:307
-#, fuzzy, kde-format
-#| msgid "%2 1 year"
-#| msgid_plural "%2 %1 years"
+#, kde-format
 msgctxt "@info/plain a person's age"
 msgid "1 year old"
 msgid_plural "%1 years old"
-msgstr[0] "%2 1 any"
-msgstr[1] "%2 %1 anys"
+msgstr[0] "1 any"
+msgstr[1] "%1 anys"
 
 #: month/monthitem.cpp:309
-#, fuzzy, kde-format
-#| msgid "%2 1 year"
-#| msgid_plural "%2 %1 years"
+#, kde-format
 msgctxt "@info/plain number of years of marriage"
 msgid "1 year"
 msgid_plural "%1 years"
-msgstr[0] "%2 1 any"
-msgstr[1] "%2 %1 anys"
+msgstr[0] "1 any"
+msgstr[1] "%1 anys"
 
 #: month/monthitem.cpp:443
-#, fuzzy, kde-format
-#| msgid "Move occurrence(s)"
+#, kde-format
 msgctxt "@info/plain"
 msgid "Move occurrence(s)"
 msgstr "Mou la/es ocurrència/es"
@@ -1881,13 +1864,7 @@ msgid "Create an open-ended to-do"
 msgstr "Crea una tasca pendent sense venciment"
 
 #: todo/todoview.cpp:307
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:whatsthis"
-#| msgid ""
-#| "Enter the summary for a new to-do. <p><note>The new to-do will be open-"
-#| "ended meaning that it has no start or end times nor will it have a "
-#| "reminder or recurrence. Edit the newly created if you want to add more "
-#| "properties.</note></p>"
+#, kde-kuit-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Enter the summary for a new to-do. <para><note>The new to-do will be open-"
@@ -1895,10 +1872,10 @@ msgid ""
 "or recurrence. Edit the newly created if you want to add more properties.</"
 "note></para>"
 msgstr ""
-"Introduïu el resum d'una tasca pendent nova. <p><note>La tasca pendent nova "
-"serà oberta, el que significa que no té temps d'inici ni final ni tindrà cap "
-"recordatori ni recurrència. Editeu la creada nova si voleu afegir més "
-"propietats.</note></p>"
+"Introduïu el resum d'una tasca pendent nova. <para><note>S'obrirà la tasca "
+"pendent nova, el que significa que no té temps d'inici ni final ni tindrà "
+"cap recordatori ni recurrència. Editeu la creada nova si voleu afegir més "
+"propietats.</note></para>"
 
 #: todo/todoview.cpp:317
 #, kde-format
@@ -2188,24 +2165,19 @@ msgid "View Columns"
 msgstr "Mostra les columnes"
 
 #: viewerapp/main.cpp:19
-#, fuzzy, kde-format
-#| msgid "ViewerApp"
+#, kde-format
 msgctxt "@label"
 msgid "ViewerApp"
 msgstr "ViewerApp"
 
 #: viewerapp/main.cpp:21
-#, fuzzy, kde-format
-#| msgid "A test app for embedding calendarviews"
+#, kde-format
 msgctxt "@info"
 msgid "A test app for embedding calendarviews"
 msgstr "Una aplicació de prova per a incrustar vistes de calendari"
 
 #: viewerapp/main.cpp:23
-#, fuzzy, kde-format
-#| msgid ""
-#| "Copyright (C) 2010 Klarälvdalens Datakonsult AB, a KDAB Group company, "
-#| "info@kdab.net"
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Copyright (C) 2010 Klarälvdalens Datakonsult AB, a KDAB Group company, "
@@ -2234,8 +2206,7 @@ msgstr "Visualitzador de vistes de calendari"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab)
 #: viewerapp/mainwindow.ui:55
-#, fuzzy, kde-format
-#| msgid "Tab 1"
+#, kde-format
 msgctxt "@title:tab a generic tab"
 msgid "Tab 1"
 msgstr "Pestanya 1"
