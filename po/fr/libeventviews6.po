@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-16 02:32+0000\n"
-"PO-Revision-Date: 2024-07-26 20:40+0200\n"
+"PO-Revision-Date: 2025-04-18 16:04+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -1579,7 +1579,7 @@ msgstr "&Édition"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Edit this journal entry"
-msgstr "Modi iercette entrée de journal"
+msgstr "Modifier cette entrée de journal"
 
 #: journal/journalframe.cpp:157
 #, kde-format
