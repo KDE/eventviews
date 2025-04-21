@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the eventviews package.
 #
-# SPDX-FileCopyrightText: 2022, 2024 Kishore G <kishore96@gmail.com>
+# SPDX-FileCopyrightText: 2022, 2024, 2025 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-16 02:32+0000\n"
-"PO-Revision-Date: 2024-06-30 13:19+0530\n"
+"PO-Revision-Date: 2025-04-20 18:19+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.1\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -202,7 +202,7 @@ msgstr "இயல்பிருப்பு அஞ்சல் இணைப்�
 #: eventviews.kcfg:16
 #, kde-format
 msgid "The default way of attaching dropped emails to an event"
-msgstr ""
+msgstr "இழுத்துப்போடப்படும் மின்னஞ்சல்களை நிகழ்வுடன் இணைப்பதற்கான இயல்பிருப்பு முறை"
 
 #. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (Personal Settings)
 #. i18n: ectx: label, entry (DefaultTodoAttachMethod), group (Hidden Options)
@@ -281,7 +281,7 @@ msgstr ""
 #: eventviews.kcfg:57
 #, kde-format
 msgid "Confirm deletes"
-msgstr ""
+msgstr "நீக்கவதை உறுதிப்படுத்து"
 
 #. i18n: ectx: whatsthis, entry (Confirm), group (Save Settings)
 #: eventviews.kcfg:58
@@ -352,7 +352,7 @@ msgstr ""
 #: eventviews.kcfg:94
 #, kde-format
 msgid "Day begins at"
-msgstr ""
+msgstr "நாளின் துவக்கம்"
 
 #. i18n: ectx: whatsthis, entry (DayBegins), group (Time &amp; Date)
 #: eventviews.kcfg:95
@@ -366,7 +366,7 @@ msgstr ""
 #: eventviews.kcfg:100
 #, kde-format
 msgid "Daily starting hour"
-msgstr ""
+msgstr "பணிநாளின் துவக்க நேரம்"
 
 #. i18n: ectx: whatsthis, entry (WorkingHoursStart), group (Time &amp; Date)
 #: eventviews.kcfg:101
@@ -380,7 +380,7 @@ msgstr ""
 #: eventviews.kcfg:106
 #, kde-format
 msgid "Daily ending hour"
-msgstr ""
+msgstr "பணிநாளின் முடிவு நேரம்"
 
 #. i18n: ectx: whatsthis, entry (WorkingHoursEnd), group (Time &amp; Date)
 #: eventviews.kcfg:107
@@ -394,7 +394,7 @@ msgstr ""
 #: eventviews.kcfg:112
 #, kde-format
 msgid "Weekly start day:"
-msgstr ""
+msgstr "வாரத்தின் முதல் நாள்:"
 
 #. i18n: ectx: tooltip, entry (WeekStartDay), group (Time &amp; Date)
 #: eventviews.kcfg:113
