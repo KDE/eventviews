@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the eventviews package.
 #
-# SPDX-FileCopyrightText: 2022, 2024 Kishore G <kishore96@gmail.com>
+# SPDX-FileCopyrightText: 2022, 2024, 2025 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-18 00:42+0000\n"
-"PO-Revision-Date: 2024-06-30 13:19+0530\n"
+"PO-Revision-Date: 2025-04-20 18:19+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.1\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -28,11 +28,10 @@ msgid "Your emails"
 msgstr "Kde-l10n-ta@kde.org"
 
 #: agenda/agenda.cpp:955
-#, fuzzy, kde-format
-#| msgid "Unable to lock item for modification. You cannot make any changes."
+#, kde-format
 msgctxt "@info"
 msgid "Unable to lock item for modification. You cannot make any changes."
-msgstr "மாற்றுமாறு உருப்படியை பூட்ட முடியவில்லை. உங்களால் எதையும் மாற்ற முடியாது."
+msgstr "மாற்றுவதற்கு உருப்படியை பூட்ட முடியவில்லை. உங்களால் எதையும் மாற்ற முடியாது."
 
 #: agenda/agenda.cpp:957
 #, kde-format
@@ -41,16 +40,13 @@ msgid "Locking Failed"
 msgstr "பூட்டல் தோல்வியடைந்த‍து"
 
 #: agenda/agenda.cpp:1172
-#, fuzzy, kde-format
-#| msgid "Dissociate event from recurrence"
+#, kde-format
 msgctxt "@info/plain"
 msgid "Dissociate event from recurrence"
 msgstr "மறுநிகழ்விலிருந்து நிகழ்வை பிரிப்பது"
 
 #: agenda/agenda.cpp:1195 month/monthitem.cpp:450
-#, fuzzy, kde-format
-#| msgid ""
-#| "Unable to add the exception item to the calendar. No change will be done."
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Unable to add the exception item to the calendar. No change will be done."
@@ -209,7 +205,7 @@ msgstr "இயல்பிருப்பு அஞ்சல் இணைப்�
 #: eventviews.kcfg:16
 #, kde-format
 msgid "The default way of attaching dropped emails to an event"
-msgstr ""
+msgstr "இழுத்துப்போடப்படும் மின்னஞ்சல்களை நிகழ்வுடன் இணைப்பதற்கான இயல்பிருப்பு முறை"
 
 #. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (Personal Settings)
 #. i18n: ectx: label, entry (DefaultTodoAttachMethod), group (Hidden Options)
@@ -288,7 +284,7 @@ msgstr ""
 #: eventviews.kcfg:57
 #, kde-format
 msgid "Confirm deletes"
-msgstr ""
+msgstr "நீக்கவதை உறுதிப்படுத்து"
 
 #. i18n: ectx: whatsthis, entry (Confirm), group (Save Settings)
 #: eventviews.kcfg:58
@@ -359,7 +355,7 @@ msgstr ""
 #: eventviews.kcfg:94
 #, kde-format
 msgid "Day begins at"
-msgstr ""
+msgstr "நாளின் துவக்கம்"
 
 #. i18n: ectx: whatsthis, entry (DayBegins), group (Time &amp; Date)
 #: eventviews.kcfg:95
@@ -373,7 +369,7 @@ msgstr ""
 #: eventviews.kcfg:100
 #, kde-format
 msgid "Daily starting hour"
-msgstr ""
+msgstr "பணிநாளின் துவக்க நேரம்"
 
 #. i18n: ectx: whatsthis, entry (WorkingHoursStart), group (Time &amp; Date)
 #: eventviews.kcfg:101
@@ -387,7 +383,7 @@ msgstr ""
 #: eventviews.kcfg:106
 #, kde-format
 msgid "Daily ending hour"
-msgstr ""
+msgstr "பணிநாளின் முடிவு நேரம்"
 
 #. i18n: ectx: whatsthis, entry (WorkingHoursEnd), group (Time &amp; Date)
 #: eventviews.kcfg:107
@@ -401,7 +397,7 @@ msgstr ""
 #: eventviews.kcfg:112
 #, kde-format
 msgid "Weekly start day:"
-msgstr ""
+msgstr "வாரத்தின் முதல் நாள்:"
 
 #. i18n: ectx: tooltip, entry (WeekStartDay), group (Time &amp; Date)
 #: eventviews.kcfg:113
