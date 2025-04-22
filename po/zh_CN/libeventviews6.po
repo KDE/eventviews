@@ -31,7 +31,7 @@ msgstr ""
 #: agenda/agenda.cpp:972
 #, kde-format
 msgid "Unable to lock item for modification. You cannot make any changes."
-msgstr ""
+msgstr "无法锁定对项目的修改。您无法进行任何更改。"
 
 #: agenda/agenda.cpp:974
 #, kde-format
@@ -1402,7 +1402,7 @@ msgstr "使用系统颜色。如果启用，将忽略所有其他颜色设置"
 #: journal/journalframe.cpp:153
 #, kde-format
 msgid "&Edit"
-msgstr ""
+msgstr "编辑(&E)"
 
 #: journal/journalframe.cpp:156
 #, kde-format
