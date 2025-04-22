@@ -13,15 +13,15 @@ msgstr ""
 "Project-Id-Version: kdepim-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-18 00:42+0000\n"
-"PO-Revision-Date: 2025-03-31 01:20+0300\n"
-"Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
+"PO-Revision-Date: 2025-04-21 10:37+0300\n"
+"Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.07.70\n"
+"X-Generator: Lokalize 25.04.0\n"
 "(http: //www.transifex.com/projects/p/kdepim-k-tr/language/tr/)\n"
 "X-POOTLE-MTIME: 1413132207.000000\n"
 
@@ -36,8 +36,7 @@ msgid "Your emails"
 msgstr "ebru.akagunduz@gmail.com, emir_sari@îcloud.com"
 
 #: agenda/agenda.cpp:955
-#, fuzzy, kde-format
-#| msgid "Unable to lock item for modification. You cannot make any changes."
+#, kde-format
 msgctxt "@info"
 msgid "Unable to lock item for modification. You cannot make any changes."
 msgstr ""
@@ -50,16 +49,13 @@ msgid "Locking Failed"
 msgstr "Kilitleme Başarısız"
 
 #: agenda/agenda.cpp:1172
-#, fuzzy, kde-format
-#| msgid "Dissociate event from recurrence"
+#, kde-format
 msgctxt "@info/plain"
 msgid "Dissociate event from recurrence"
 msgstr "Etkinliği yinelemeden ayır"
 
 #: agenda/agenda.cpp:1195 month/monthitem.cpp:450
-#, fuzzy, kde-format
-#| msgid ""
-#| "Unable to add the exception item to the calendar. No change will be done."
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Unable to add the exception item to the calendar. No change will be done."
@@ -1523,8 +1519,7 @@ msgstr ""
 "Sistem rengini kullan. Etkinleştirilirse diğer tüm renk ayarlarını yok sayar."
 
 #: journal/journalframe.cpp:153
-#, fuzzy, kde-format
-#| msgid "&Edit"
+#, kde-format
 msgctxt "@action: button"
 msgid "&Edit"
 msgstr "Dü&zenle"
@@ -1536,15 +1531,13 @@ msgid "Edit this journal entry"
 msgstr "Bu günce girdisini düzenle"
 
 #: journal/journalframe.cpp:157
-#, fuzzy, kde-format
-#| msgid "Opens an editor dialog for this journal entry"
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Opens an editor dialog for this journal entry"
 msgstr "Bu günce girdisi için bir düzenleyici iletişim kutusu açar"
 
 #: journal/journalframe.cpp:163
-#, fuzzy, kde-format
-#| msgid "&Delete"
+#, kde-format
 msgctxt "@action: button"
 msgid "&Delete"
 msgstr "&Sil"
@@ -1556,15 +1549,13 @@ msgid "Delete this journal entry"
 msgstr "Bu günce girdisini sil"
 
 #: journal/journalframe.cpp:167
-#, fuzzy, kde-format
-#| msgid "Delete this journal entry"
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Delete this journal entry"
 msgstr "Bu günce girdisini sil"
 
 #: journal/journalframe.cpp:172
-#, fuzzy, kde-format
-#| msgid "&Print"
+#, kde-format
 msgctxt "@action: button"
 msgid "&Print"
 msgstr "&Yazdır"
@@ -1576,18 +1567,16 @@ msgid "Print this journal entry"
 msgstr "Bu günce girdisini yazdır"
 
 #: journal/journalframe.cpp:177
-#, fuzzy, kde-format
-#| msgid "Opens a print dialog for this journal entry"
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Opens a print dialog for this journal entry"
 msgstr "Bu günce girdisi için bir yazdırma iletişim kutusu açar"
 
 #: journal/journalframe.cpp:182
-#, fuzzy, kde-format
-#| msgid "Print preview"
+#, kde-format
 msgctxt "@action: button"
 msgid "Print preview"
-msgstr "Yazdırma önizleme"
+msgstr "Yazdırma Önizlemesi"
 
 #: journal/journalframe.cpp:186
 #, kde-format
@@ -1596,8 +1585,7 @@ msgid "Print preview this journal entry"
 msgstr "Bu günce girdisinin yazdırma önizlemesi"
 
 #: journal/journalframe.cpp:187
-#, fuzzy, kde-format
-#| msgid "Opens a print dialog for this journal entry"
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Opens a print preview of this journal entry"
 msgstr "Bu günce girdisi için bir yazdırma iletişim kutusu açar"
@@ -1634,31 +1622,26 @@ msgid "Summary [%1 - %2]"
 msgstr "Özet [%1 — %2]"
 
 #: month/monthitem.cpp:307
-#, fuzzy, kde-format
-#| msgid "%2 1 year"
-#| msgid_plural "%2 %1 years"
+#, kde-format
 msgctxt "@info/plain a person's age"
 msgid "1 year old"
 msgid_plural "%1 years old"
-msgstr[0] "%2 1 yıl"
-msgstr[1] "%2 %1 yıl"
+msgstr[0] "1 yaşında"
+msgstr[1] "%1 yaşında"
 
 #: month/monthitem.cpp:309
-#, fuzzy, kde-format
-#| msgid "%2 1 year"
-#| msgid_plural "%2 %1 years"
+#, kde-format
 msgctxt "@info/plain number of years of marriage"
 msgid "1 year"
 msgid_plural "%1 years"
-msgstr[0] "%2 1 yıl"
-msgstr[1] "%2 %1 yıl"
+msgstr[0] "1 yıl"
+msgstr[1] "%1 yıl"
 
 #: month/monthitem.cpp:443
-#, fuzzy, kde-format
-#| msgid "Move occurrence(s)"
+#, kde-format
 msgctxt "@info/plain"
 msgid "Move occurrence(s)"
-msgstr "Olay(lar)ı taşı"
+msgstr "Oluşları taşı"
 
 #: month/monthscene.cpp:184
 #, kde-format
@@ -1841,13 +1824,7 @@ msgid "Create an open-ended to-do"
 msgstr "Açık uçlu bir yapılacak oluştur"
 
 #: todo/todoview.cpp:307
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:whatsthis"
-#| msgid ""
-#| "Enter the summary for a new to-do. <p><note>The new to-do will be open-"
-#| "ended meaning that it has no start or end times nor will it have a "
-#| "reminder or recurrence. Edit the newly created if you want to add more "
-#| "properties.</note></p>"
+#, kde-kuit-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Enter the summary for a new to-do. <para><note>The new to-do will be open-"
@@ -1855,10 +1832,11 @@ msgid ""
 "or recurrence. Edit the newly created if you want to add more properties.</"
 "note></para>"
 msgstr ""
-"Yeni yapılacak için olan özeti girin.<p><note>Yeni yapılacak işin ucu açık "
-"olacaktır; bu, ne bir başlangıç veya bitiş ne de bir anımsatıcısının veya "
-"yeniden oluşunun olacağı anlamına gelir. Bunlardan birini veya başka bir şey "
-"eklemek isterseniz yeni oluşturduğunuz yapılacağı düzenleyin.</note></p>"
+"Yeni yapılacak için olan özeti girin.<para><note>Yeni yapılacak işin ucu "
+"açık olacaktır; bu, ne bir başlangıç veya bitiş ne de bir anımsatıcısının "
+"veya yeniden oluşunun olacağı anlamına gelir. Bunlardan birini veya başka "
+"bir şey eklemek isterseniz yeni oluşturduğunuz yapılacağı düzenleyin.</"
+"note></para>"
 
 #: todo/todoview.cpp:317
 #, kde-format
@@ -2148,24 +2126,19 @@ msgid "View Columns"
 msgstr "Sütunları Göster"
 
 #: viewerapp/main.cpp:19
-#, fuzzy, kde-format
-#| msgid "ViewerApp"
+#, kde-format
 msgctxt "@label"
 msgid "ViewerApp"
-msgstr "Görüntüleyici Uygulaması"
+msgstr "Görüntüleyici uygulaması"
 
 #: viewerapp/main.cpp:21
-#, fuzzy, kde-format
-#| msgid "A test app for embedding calendarviews"
+#, kde-format
 msgctxt "@info"
 msgid "A test app for embedding calendarviews"
-msgstr "Takvim görünümlerini gömmek için bir test uygulaması"
+msgstr "Takvim görünümlerini gömmek için bir sınama uygulaması"
 
 #: viewerapp/main.cpp:23
-#, fuzzy, kde-format
-#| msgid ""
-#| "Copyright (C) 2010 Klarälvdalens Datakonsult AB, a KDAB Group company, "
-#| "info@kdab.net"
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Copyright (C) 2010 Klarälvdalens Datakonsult AB, a KDAB Group company, "
@@ -2192,8 +2165,7 @@ msgstr "Takvim Görünümleri Görüntüleyicisi"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab)
 #: viewerapp/mainwindow.ui:55
-#, fuzzy, kde-format
-#| msgid "Tab 1"
+#, kde-format
 msgctxt "@title:tab a generic tab"
 msgid "Tab 1"
 msgstr "Sekme 1"
