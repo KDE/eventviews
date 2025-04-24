@@ -28,6 +28,10 @@ void TodoViewSortFilterProxyModel::sort(int column, Qt::SortOrder order)
 
 bool TodoViewSortFilterProxyModel::filterAcceptsRow(int source_row, const QModelIndex &source_parent) const
 {
+    if (!source_parent.isValid()) {
+        return false;
+    }
+
     bool ret = QSortFilterProxyModel::filterAcceptsRow(source_row, source_parent);
 
     if (ret && mCalFilter) {
@@ -35,7 +39,7 @@ bool TodoViewSortFilterProxyModel::filterAcceptsRow(int source_row, const QModel
                                    ->index(source_row, Akonadi::TodoModel::SummaryColumn, source_parent)
                                    .data(Akonadi::TodoModel::TodoPtrRole)
                                    .value<KCalendarCore::Todo::Ptr>();
-        if (!mCalFilter->filterIncidence(incidence)) {
+        if (!incidence || !mCalFilter->filterIncidence(incidence)) {
             return false;
         }
     }
