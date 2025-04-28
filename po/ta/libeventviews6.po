@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-25 00:42+0000\n"
-"PO-Revision-Date: 2025-04-20 18:19+0530\n"
+"PO-Revision-Date: 2025-04-27 12:03+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -253,7 +253,7 @@ msgstr ""
 #: eventviews.kcfg:44
 #, kde-format
 msgid "Enable automatic saving of manually opened calendar files"
-msgstr ""
+msgstr "கைமுறையாகத் திறக்கப்படும் நாள்காட்டிக் கோப்புகளைத் தானாக சேமி"
 
 #. i18n: ectx: whatsthis, entry, group (Save Settings)
 #: eventviews.kcfg:45
@@ -290,19 +290,19 @@ msgstr "நீக்கவதை உறுதிப்படுத்து"
 #: eventviews.kcfg:58
 #, kde-format
 msgid "Check this box to display a confirmation dialog when deleting items."
-msgstr ""
+msgstr "உருப்படிகளை நீக்கும்போது உறுதிகோர வேண்டுமெனில் இப்பெட்டியைக் குறிக்கவும்."
 
 #. i18n: ectx: label, entry (Destination), group (Save Settings)
 #: eventviews.kcfg:63
 #, kde-format
 msgid "New Events, To-dos and Journal Entries Should"
-msgstr ""
+msgstr "புதிய நிகழ்வுகள், செய்யவேண்டியவை, மற்றும் நாள்காட்டி பதிவுகளை"
 
 #. i18n: ectx: label, entry (Destination), group (Save Settings)
 #: eventviews.kcfg:66
 #, kde-format
 msgid "Be added to the standard calendar"
-msgstr ""
+msgstr "இயல்பிருப்பு நாள்காட்டியில் சேர்"
 
 #. i18n: ectx: whatsthis, entry (Destination), group (Save Settings)
 #: eventviews.kcfg:67
@@ -316,7 +316,7 @@ msgstr ""
 #: eventviews.kcfg:70
 #, kde-format
 msgid "Be asked which calendar to use"
-msgstr ""
+msgstr "எந்த நாள்காட்டியில் சேர்க்க வேண்டுமென கேள்"
 
 #. i18n: ectx: whatsthis, entry (Destination), group (Save Settings)
 #: eventviews.kcfg:71
@@ -333,7 +333,7 @@ msgstr ""
 #: eventviews.kcfg:81
 #, kde-format
 msgid "Show Reminder Daemon in the System Tray"
-msgstr ""
+msgstr "நினைவூட்டும் பின்னணி சேவையை கணினித் தட்டில் காட்டு"
 
 #. i18n: ectx: whatsthis, entry, group (System Tray)
 #: eventviews.kcfg:82
@@ -417,7 +417,7 @@ msgstr ""
 #: eventviews.kcfg:122 viewerapp/settings.kcfg:15
 #, kde-format
 msgid "Enable tooltips for displaying summaries"
-msgstr ""
+msgstr "சுருக்க விளக்கங்களை கொண்ட கருவித்துப்புகளைக் காட்டு"
 
 #. i18n: ectx: whatsthis, entry, group (General View)
 #: eventviews.kcfg:123 viewerapp/settings.kcfg:16
@@ -445,7 +445,7 @@ msgstr ""
 #: eventviews.kcfg:134
 #, kde-format
 msgid "Next x days"
-msgstr ""
+msgstr "அடுத்த x நாட்கள்"
 
 #. i18n: ectx: whatsthis, entry, group (General View)
 #: eventviews.kcfg:135
@@ -466,7 +466,7 @@ msgstr ""
 #: eventviews.kcfg:141
 #, kde-format
 msgid "Show items that recur daily"
-msgstr ""
+msgstr "தினமும் மீளநிகழ்பவற்றைக் காட்டு"
 
 #. i18n: ectx: whatsthis, entry (DailyRecur), group (General View)
 #: eventviews.kcfg:142
@@ -481,7 +481,7 @@ msgstr ""
 #: eventviews.kcfg:147
 #, kde-format
 msgid "Show items that recur weekly"
-msgstr ""
+msgstr "ஒவ்வொரு வாரமும் மீளநிகழ்பவற்றைக் காட்டு"
 
 #. i18n: ectx: whatsthis, entry (WeeklyRecur), group (General View)
 #: eventviews.kcfg:148
