@@ -574,6 +574,7 @@ void TodoView::saveLayout(KConfig *config, const QString &group) const
         preferences()->setFullViewTodo(mFullViewButton->isChecked());
     }
     preferences()->setFlatListTodo(mFlatViewButton->isChecked());
+    cfgGroup.writeEntry("FlatView", mFlatViewButton->isChecked());
 }
 
 void TodoView::restoreLayout(KConfig *config, const QString &group, bool minimalDefaults)
