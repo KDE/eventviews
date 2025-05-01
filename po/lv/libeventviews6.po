@@ -7,8 +7,8 @@ msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-25 00:42+0000\n"
-"PO-Revision-Date: 2025-04-02 19:04+0300\n"
-"Last-Translator: Toms Trasūns <toms.trasuns@posteo.net>\n"
+"PO-Revision-Date: 2025-04-29 17:37+0300\n"
+"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -29,11 +29,10 @@ msgid "Your emails"
 msgstr "toms.trasuns@posteo.net"
 
 #: agenda/agenda.cpp:955
-#, fuzzy, kde-format
-#| msgid "Unable to lock item for modification. You cannot make any changes."
+#, kde-format
 msgctxt "@info"
 msgid "Unable to lock item for modification. You cannot make any changes."
-msgstr "Neizdodas slēgt vienumu rediģēšanai. Nevarat veikt izmaiņas."
+msgstr "Neizdodas slēgt vienumu modificēšanai. Nevarat veikt izmaiņas."
 
 #: agenda/agenda.cpp:957
 #, kde-format
@@ -42,16 +41,13 @@ msgid "Locking Failed"
 msgstr "Slēgšana neizdevās"
 
 #: agenda/agenda.cpp:1172
-#, fuzzy, kde-format
-#| msgid "Dissociate event from recurrence"
+#, kde-format
 msgctxt "@info/plain"
 msgid "Dissociate event from recurrence"
-msgstr "Noņemt notikuma asociāciju no atkārtošanās"
+msgstr "Noņemt notikuma no atkārtošanās"
 
 #: agenda/agenda.cpp:1195 month/monthitem.cpp:450
-#, fuzzy, kde-format
-#| msgid ""
-#| "Unable to add the exception item to the calendar. No change will be done."
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Unable to add the exception item to the calendar. No change will be done."
@@ -1502,8 +1498,7 @@ msgstr ""
 "iestatījumus"
 
 #: journal/journalframe.cpp:153
-#, fuzzy, kde-format
-#| msgid "&Edit"
+#, kde-format
 msgctxt "@action: button"
 msgid "&Edit"
 msgstr "&Rediģēt"
@@ -1515,15 +1510,13 @@ msgid "Edit this journal entry"
 msgstr "Rediģēt žurnāla ierakstu"
 
 #: journal/journalframe.cpp:157
-#, fuzzy, kde-format
-#| msgid "Opens an editor dialog for this journal entry"
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Opens an editor dialog for this journal entry"
 msgstr "Atver redaktora lodziņu šim žurnāla ierakstam"
 
 #: journal/journalframe.cpp:163
-#, fuzzy, kde-format
-#| msgid "&Delete"
+#, kde-format
 msgctxt "@action: button"
 msgid "&Delete"
 msgstr "&Dzēst"
@@ -1535,15 +1528,13 @@ msgid "Delete this journal entry"
 msgstr "Dzēst žurnāla ierakstu"
 
 #: journal/journalframe.cpp:167
-#, fuzzy, kde-format
-#| msgid "Delete this journal entry"
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Delete this journal entry"
 msgstr "Dzēst šo žurnāla ierakstu"
 
 #: journal/journalframe.cpp:172
-#, fuzzy, kde-format
-#| msgid "&Print"
+#, kde-format
 msgctxt "@action: button"
 msgid "&Print"
 msgstr "D&rukāt"
@@ -1555,15 +1546,13 @@ msgid "Print this journal entry"
 msgstr "Drukāt šo žurnāla ierakstu"
 
 #: journal/journalframe.cpp:177
-#, fuzzy, kde-format
-#| msgid "Opens a print dialog for this journal entry"
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Opens a print dialog for this journal entry"
 msgstr "Atver drukāšanas lodziņu šim žurnāla ierakstam"
 
 #: journal/journalframe.cpp:182
-#, fuzzy, kde-format
-#| msgid "Print preview"
+#, kde-format
 msgctxt "@action: button"
 msgid "Print preview"
 msgstr "Drukas priekšiestatījums"
@@ -1575,11 +1564,10 @@ msgid "Print preview this journal entry"
 msgstr "Drukas priekšstatījums šim žurnāla ierakstam"
 
 #: journal/journalframe.cpp:187
-#, fuzzy, kde-format
-#| msgid "Opens a print dialog for this journal entry"
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Opens a print preview of this journal entry"
-msgstr "Atver drukāšanas lodziņu šim žurnāla ierakstam"
+msgstr "Atver žurnāla ieraksta drukas priekšskatījumu"
 
 #: list/listview.cpp:56
 #, kde-format
@@ -1613,30 +1601,25 @@ msgid "Summary [%1 - %2]"
 msgstr "Kopsavilkums [%1 — %2]"
 
 #: month/monthitem.cpp:307
-#, fuzzy, kde-format
-#| msgid "%2 1 year"
-#| msgid_plural "%2 %1 years"
+#, kde-format
 msgctxt "@info/plain a person's age"
 msgid "1 year old"
 msgid_plural "%1 years old"
-msgstr[0] "%2 %1 gads"
-msgstr[1] "%2 %1 gadi"
-msgstr[2] "%2 %1 gadu"
+msgstr[0] "%1 gadu vecs"
+msgstr[1] "%1 gadus vecs"
+msgstr[2] "%1 gadu vecs"
 
 #: month/monthitem.cpp:309
-#, fuzzy, kde-format
-#| msgid "%2 1 year"
-#| msgid_plural "%2 %1 years"
+#, kde-format
 msgctxt "@info/plain number of years of marriage"
 msgid "1 year"
 msgid_plural "%1 years"
-msgstr[0] "%2 %1 gads"
-msgstr[1] "%2 %1 gadi"
-msgstr[2] "%2 %1 gadu"
+msgstr[0] "%1 gads"
+msgstr[1] "%1 gadi"
+msgstr[2] "%1 gadu"
 
 #: month/monthitem.cpp:443
-#, fuzzy, kde-format
-#| msgid "Move occurrence(s)"
+#, kde-format
 msgctxt "@info/plain"
 msgid "Move occurrence(s)"
 msgstr "Pārvietošanas gadījums(-i)"
@@ -1823,13 +1806,7 @@ msgid "Create an open-ended to-do"
 msgstr "Izveidot uzdevumu bez termiņa"
 
 #: todo/todoview.cpp:307
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:whatsthis"
-#| msgid ""
-#| "Enter the summary for a new to-do. <p><note>The new to-do will be open-"
-#| "ended meaning that it has no start or end times nor will it have a "
-#| "reminder or recurrence. Edit the newly created if you want to add more "
-#| "properties.</note></p>"
+#, kde-kuit-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Enter the summary for a new to-do. <para><note>The new to-do will be open-"
@@ -1837,10 +1814,10 @@ msgid ""
 "or recurrence. Edit the newly created if you want to add more properties.</"
 "note></para>"
 msgstr ""
-"Ierakstiet jaunā uzdevuma kopsavilkumu.<p><note>Jaunais uzdevums būs bez "
+"Ierakstiet jaunā uzdevuma kopsavilkumu.<para><note>Jaunais uzdevums būs bez "
 "termiņa, kas nozīmē, ka programma nenorādīs tā sākuma un beigu laiku, kā arī "
 "par to neatgādinās. Tāpat arī šāds uzdevums nevar atkārtoties. Rediģējiet "
-"izveidoto uzdevumu, ja vēlaties pievienot vairāk īpašību.</note></p>"
+"izveidoto uzdevumu, ja vēlaties pievienot vairāk īpašību.</note></para>"
 
 #: todo/todoview.cpp:317
 #, kde-format
@@ -2127,24 +2104,19 @@ msgid "View Columns"
 msgstr "Skatīt kolonnas"
 
 #: viewerapp/main.cpp:19
-#, fuzzy, kde-format
-#| msgid "ViewerApp"
+#, kde-format
 msgctxt "@label"
 msgid "ViewerApp"
 msgstr "Skatīšanas programma"
 
 #: viewerapp/main.cpp:21
-#, fuzzy, kde-format
-#| msgid "A test app for embedding calendarviews"
+#, kde-format
 msgctxt "@info"
 msgid "A test app for embedding calendarviews"
 msgstr "Testa programma kalendāra skatu iegulšanai"
 
 #: viewerapp/main.cpp:23
-#, fuzzy, kde-format
-#| msgid ""
-#| "Copyright (C) 2010 Klarälvdalens Datakonsult AB, a KDAB Group company, "
-#| "info@kdab.net"
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Copyright (C) 2010 Klarälvdalens Datakonsult AB, a KDAB Group company, "
@@ -2173,8 +2145,7 @@ msgstr "Kalendāra skatu skatītājs"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab)
 #: viewerapp/mainwindow.ui:55
-#, fuzzy, kde-format
-#| msgid "Tab 1"
+#, kde-format
 msgctxt "@title:tab a generic tab"
 msgid "Tab 1"
 msgstr "1. cilne"
