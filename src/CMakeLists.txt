@@ -130,6 +130,7 @@ PRIVATE
   KF6::IconThemes
   KF6::GuiAddons
   KF6::I18n
+  KF6::ColorScheme
   KPim6::Libkdepim
   KF6::Codecs
   KGantt6
