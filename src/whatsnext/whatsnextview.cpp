@@ -5,6 +5,7 @@
 
   SPDX-License-Identifier: GPL-2.0-or-later WITH Qt-Commercial-exception-1.0
 */
+// krazy:excludeall=i18ncheckarg internal error for unknown reason
 
 #include "whatsnextview.h"
 using namespace Qt::Literals::StringLiterals;
