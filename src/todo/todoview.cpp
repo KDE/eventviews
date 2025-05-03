@@ -569,7 +569,9 @@ void TodoView::saveLayout(KConfig *config, const QString &group) const
 
     if (!mSidebarView) {
         preferences()->setFullViewTodo(mFullViewButton->isChecked());
+        cfgGroup.writeEntry("FullView", mFullViewButton->isChecked());
     }
+
     preferences()->setFlatListTodo(mFlatViewButton->isChecked());
     cfgGroup.writeEntry("FlatView", mFlatViewButton->isChecked());
 }
@@ -620,6 +622,9 @@ void TodoView::restoreLayout(KConfig *config, const QString &group, bool minimal
     }
 
     mFlatViewButton->setChecked(cfgGroup.readEntry("FlatView", false));
+    if (!mSidebarView) {
+        mFullViewButton->setChecked(cfgGroup.readEntry("FullView", false));
+    }
 }
 
 void TodoView::setIncidenceChanger(Akonadi::IncidenceChanger *changer)
