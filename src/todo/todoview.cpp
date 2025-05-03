@@ -314,8 +314,10 @@ TodoView::TodoView(const EventViews::PrefsPtr &prefs, bool sidebarView, QWidget 
         mFullViewButton->setAutoRaise(true);
         mFullViewButton->setCheckable(true);
 
-        mFullViewButton->setToolTip(i18nc("@info:tooltip", "Display to-do list in a full window"));
-        mFullViewButton->setWhatsThis(i18nc("@info:whatsthis", "Checking this option will cause the to-do view to use the full window."));
+        mFullViewButton->setToolTip(i18nc("@info:tooltip", "Display to-do list in a full window without the sidebar"));
+        mFullViewButton->setWhatsThis(i18nc("@info:whatsthis",
+                                            "Checking this button will cause the to-do display to be shown in a "
+                                            "full window by hiding the sidebar."));
     }
     mFlatViewButton = new QToolButton(this);
     mFlatViewButton->setAutoRaise(true);
@@ -572,7 +574,9 @@ void TodoView::saveLayout(KConfig *config, const QString &group) const
 
     if (!mSidebarView) {
         preferences()->setFullViewTodo(mFullViewButton->isChecked());
+        cfgGroup.writeEntry("FullView", mFullViewButton->isChecked());
     }
+
     preferences()->setFlatListTodo(mFlatViewButton->isChecked());
     cfgGroup.writeEntry("FlatView", mFlatViewButton->isChecked());
 }
@@ -623,6 +627,9 @@ void TodoView::restoreLayout(KConfig *config, const QString &group, bool minimal
     }
 
     mFlatViewButton->setChecked(cfgGroup.readEntry("FlatView", false));
+    if (!mSidebarView) {
+        mFullViewButton->setChecked(cfgGroup.readEntry("FullView", false));
+    }
 }
 
 void TodoView::setIncidenceChanger(Akonadi::IncidenceChanger *changer)
@@ -1122,8 +1129,10 @@ void TodoView::setFullView(bool fullView)
     mFullViewButton->setChecked(fullView);
     if (fullView) {
         mFullViewButton->setIcon(QIcon::fromTheme(QStringLiteral("view-restore")));
+        mFullViewButton->setToolTip(i18nc("@info:tooltip", "Display the sidebar"));
     } else {
         mFullViewButton->setIcon(QIcon::fromTheme(QStringLiteral("view-fullscreen")));
+        mFullViewButton->setToolTip(i18nc("@info:tooltip", "Hide the sidebar"));
     }
 
     mFullViewButton->blockSignals(true);
