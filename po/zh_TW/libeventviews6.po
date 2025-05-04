@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-25 02:34+0000\n"
-"PO-Revision-Date: 2025-04-07 13:56+0900\n"
+"PO-Revision-Date: 2025-05-03 15:07+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.07.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -859,7 +859,7 @@ msgstr "並排顯示行事曆"
 #: eventviews.kcfg:262 viewerapp/settings.kcfg:108
 #, kde-format
 msgid "Switch between views with tabs"
-msgstr "切換檢視分頁"
+msgstr "用 Tab 切換檢視"
 
 #. i18n: ectx: whatsthis, entry (AgendaViewCalendarDisplay), group (Agenda View)
 #: eventviews.kcfg:263 viewerapp/settings.kcfg:109
@@ -867,7 +867,7 @@ msgstr "切換檢視分頁"
 msgid ""
 "Select \"Switch between views with tabs\" if you would like to alternate "
 "between calendars using the tab key."
-msgstr "「切換檢視分頁」讓您可以用 Tab 鍵來在行事曆之間切換。"
+msgstr "「用 Tab 切換檢視」讓您可以用 Tab 鍵來在行事曆之間切換。"
 
 #. i18n: ectx: tooltip, entry (AgendaViewCalendarDisplay), group (Agenda View)
 #: eventviews.kcfg:264 viewerapp/settings.kcfg:110
