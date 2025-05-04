@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-25 00:42+0000\n"
-"PO-Revision-Date: 2025-04-07 13:59+0900\n"
+"POT-Creation-Date: 2025-05-04 00:43+0000\n"
+"PO-Revision-Date: 2025-05-03 15:07+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.07.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -31,8 +31,7 @@ msgid "Your emails"
 msgstr "franklin@goodhorse.idv.tw, s8321414@gmail.com"
 
 #: agenda/agenda.cpp:955
-#, fuzzy, kde-format
-#| msgid "Unable to lock item for modification. You cannot make any changes."
+#, kde-format
 msgctxt "@info"
 msgid "Unable to lock item for modification. You cannot make any changes."
 msgstr "無法鎖定要變更的項目。您無法做任何變更。"
@@ -44,16 +43,13 @@ msgid "Locking Failed"
 msgstr "鎖定失敗"
 
 #: agenda/agenda.cpp:1172
-#, fuzzy, kde-format
-#| msgid "Dissociate event from recurrence"
+#, kde-format
 msgctxt "@info/plain"
 msgid "Dissociate event from recurrence"
 msgstr "將此事件從循環中分離出來"
 
 #: agenda/agenda.cpp:1195 month/monthitem.cpp:450
-#, fuzzy, kde-format
-#| msgid ""
-#| "Unable to add the exception item to the calendar. No change will be done."
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Unable to add the exception item to the calendar. No change will be done."
@@ -866,7 +862,7 @@ msgstr "並排顯示行事曆"
 #: eventviews.kcfg:262 viewerapp/settings.kcfg:108
 #, kde-format
 msgid "Switch between views with tabs"
-msgstr "切換檢視分頁"
+msgstr "用 Tab 切換檢視"
 
 #. i18n: ectx: whatsthis, entry (AgendaViewCalendarDisplay), group (Agenda View)
 #: eventviews.kcfg:263 viewerapp/settings.kcfg:109
@@ -874,7 +870,7 @@ msgstr "切換檢視分頁"
 msgid ""
 "Select \"Switch between views with tabs\" if you would like to alternate "
 "between calendars using the tab key."
-msgstr "「切換檢視分頁」讓您可以用 Tab 鍵來在行事曆之間切換。"
+msgstr "「用 Tab 切換檢視」讓您可以用 Tab 鍵來在行事曆之間切換。"
 
 #. i18n: ectx: tooltip, entry (AgendaViewCalendarDisplay), group (Agenda View)
 #: eventviews.kcfg:264 viewerapp/settings.kcfg:110
@@ -1412,8 +1408,7 @@ msgid "Use system color. If enabled will ignore all other color settings"
 msgstr "使用系統色彩。若啟用，將會忽略所有其他的色彩設定"
 
 #: journal/journalframe.cpp:153
-#, fuzzy, kde-format
-#| msgid "&Edit"
+#, kde-format
 msgctxt "@action: button"
 msgid "&Edit"
 msgstr "編輯(&E)"
@@ -1425,15 +1420,13 @@ msgid "Edit this journal entry"
 msgstr "編輯此日誌項目"
 
 #: journal/journalframe.cpp:157
-#, fuzzy, kde-format
-#| msgid "Opens an editor dialog for this journal entry"
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Opens an editor dialog for this journal entry"
 msgstr "開啟編輯此日誌項目的編輯視窗"
 
 #: journal/journalframe.cpp:163
-#, fuzzy, kde-format
-#| msgid "&Delete"
+#, kde-format
 msgctxt "@action: button"
 msgid "&Delete"
 msgstr "刪除(&D)"
@@ -1445,15 +1438,13 @@ msgid "Delete this journal entry"
 msgstr "刪除此日誌項目"
 
 #: journal/journalframe.cpp:167
-#, fuzzy, kde-format
-#| msgid "Delete this journal entry"
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Delete this journal entry"
 msgstr "刪除此日誌項目"
 
 #: journal/journalframe.cpp:172
-#, fuzzy, kde-format
-#| msgid "&Print"
+#, kde-format
 msgctxt "@action: button"
 msgid "&Print"
 msgstr "列印(&P)"
@@ -1465,15 +1456,13 @@ msgid "Print this journal entry"
 msgstr "列印此日誌項目"
 
 #: journal/journalframe.cpp:177
-#, fuzzy, kde-format
-#| msgid "Opens a print dialog for this journal entry"
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Opens a print dialog for this journal entry"
 msgstr "開啟此日誌項目的列印視窗"
 
 #: journal/journalframe.cpp:182
-#, fuzzy, kde-format
-#| msgid "Print preview"
+#, kde-format
 msgctxt "@action: button"
 msgid "Print preview"
 msgstr "預覽列印"
@@ -1485,11 +1474,10 @@ msgid "Print preview this journal entry"
 msgstr "預覽列印此日誌項目"
 
 #: journal/journalframe.cpp:187
-#, fuzzy, kde-format
-#| msgid "Opens a print dialog for this journal entry"
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Opens a print preview of this journal entry"
-msgstr "開啟此日誌項目的列印視窗"
+msgstr "開啟此日誌項目的列印預覽"
 
 #: list/listview.cpp:56
 #, kde-format
@@ -1523,26 +1511,21 @@ msgid "Summary [%1 - %2]"
 msgstr "摘要 [%1 - %2]"
 
 #: month/monthitem.cpp:307
-#, fuzzy, kde-format
-#| msgid "%2 1 year"
-#| msgid_plural "%2 %1 years"
+#, kde-format
 msgctxt "@info/plain a person's age"
 msgid "1 year old"
 msgid_plural "%1 years old"
-msgstr[0] "%2 %1 年"
+msgstr[0] "%1 歲"
 
 #: month/monthitem.cpp:309
-#, fuzzy, kde-format
-#| msgid "%2 1 year"
-#| msgid_plural "%2 %1 years"
+#, kde-format
 msgctxt "@info/plain number of years of marriage"
 msgid "1 year"
 msgid_plural "%1 years"
-msgstr[0] "%2 %1 年"
+msgstr[0] "%1 年"
 
 #: month/monthitem.cpp:443
-#, fuzzy, kde-format
-#| msgid "Move occurrence(s)"
+#, kde-format
 msgctxt "@info/plain"
 msgid "Move occurrence(s)"
 msgstr "移動事件"
@@ -1653,7 +1636,7 @@ msgctxt "@action:inmenu Unspecified priority"
 msgid "unspecified"
 msgstr "未指定"
 
-#: todo/tododelegates.cpp:153 todo/todoview.cpp:450
+#: todo/tododelegates.cpp:153 todo/todoview.cpp:452
 #, kde-format
 msgctxt "@action:inmenu highest priority"
 msgid "1 (highest)"
@@ -1677,7 +1660,7 @@ msgctxt "@action:inmenu"
 msgid "4"
 msgstr "4"
 
-#: todo/tododelegates.cpp:157 todo/todoview.cpp:454
+#: todo/tododelegates.cpp:157 todo/todoview.cpp:456
 #, kde-format
 msgctxt "@action:inmenu medium priority"
 msgid "5 (medium)"
@@ -1701,7 +1684,7 @@ msgctxt "@action:inmenu"
 msgid "8"
 msgstr "8"
 
-#: todo/tododelegates.cpp:161 todo/todoview.cpp:458
+#: todo/tododelegates.cpp:161 todo/todoview.cpp:460
 #, kde-format
 msgctxt "@action:inmenu lowest priority"
 msgid "9 (lowest)"
@@ -1726,13 +1709,7 @@ msgid "Create an open-ended to-do"
 msgstr "建立無尾的待辦事項"
 
 #: todo/todoview.cpp:307
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:whatsthis"
-#| msgid ""
-#| "Enter the summary for a new to-do. <p><note>The new to-do will be open-"
-#| "ended meaning that it has no start or end times nor will it have a "
-#| "reminder or recurrence. Edit the newly created if you want to add more "
-#| "properties.</note></p>"
+#, kde-kuit-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Enter the summary for a new to-do. <para><note>The new to-do will be open-"
@@ -1740,29 +1717,40 @@ msgid ""
 "or recurrence. Edit the newly created if you want to add more properties.</"
 "note></para>"
 msgstr ""
-"輸入新待辦事項的摘要。<p><note>這個待辦事項會是「無尾」的，代表它沒有開始和結"
-"束時間，也不會提醒或重複。希望加入更多屬性的話請在待辦事項建立之後編輯它。</"
-"note></p>"
+"輸入新待辦事項的摘要。<para><note>這個待辦事項會是「無尾」的，代表它沒有開始"
+"和結束時間，也不會提醒或重複。希望加入更多屬性的話請在待辦事項建立之後編輯"
+"它。</note></para>"
 
 #: todo/todoview.cpp:317
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Display to-do list in a full window"
 msgctxt "@info:tooltip"
-msgid "Display to-do list in a full window"
+msgid "Display to-dos in a full window without the sidebar"
 msgstr "在整個視窗顯示待辦事項清單"
 
-#: todo/todoview.cpp:318
-#, kde-format
+#: todo/todoview.cpp:319
+#, fuzzy, kde-format
+#| msgctxt "@info:whatsthis"
+#| msgid ""
+#| "Checking this button will cause the to-dos to be displayed either as a "
+#| "flat list or a hierarchical tree where the parental relationships are "
+#| "removed."
 msgctxt "@info:whatsthis"
-msgid "Checking this option will cause the to-do view to use the full window."
-msgstr "勾選此選項，則使用整個視窗顯示待辦事項"
+msgid ""
+"Checking this button will cause the to-dos to be displayed in a larger "
+"window by hiding the sidebar."
+msgstr ""
+"勾選此按鈕會使待辦事項以平面清單或層疊樹狀圖方式顯示，其中上層事項的關係會被"
+"移除。"
 
-#: todo/todoview.cpp:323
+#: todo/todoview.cpp:325
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display to-dos in a flat list or a tree"
 msgstr "用平面清單或樹狀圖方式顯示待辦事項"
 
-#: todo/todoview.cpp:325
+#: todo/todoview.cpp:327
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1772,125 +1760,150 @@ msgstr ""
 "勾選此按鈕會使待辦事項以平面清單或層疊樹狀圖方式顯示，其中上層事項的關係會被"
 "移除。"
 
-#: todo/todoview.cpp:364
+#: todo/todoview.cpp:366
 #, kde-format
 msgctxt "@action:inmenu show the to-do"
 msgid "&Show"
 msgstr "顯示(&S)"
 
-#: todo/todoview.cpp:369
+#: todo/todoview.cpp:371
 #, kde-format
 msgctxt "@action:inmenu edit the to-do"
 msgid "&Edit…"
 msgstr "編輯(&E)…"
 
-#: todo/todoview.cpp:376
+#: todo/todoview.cpp:378
 #, kde-format
 msgctxt "@action:inmenu delete the to-do"
 msgid "&Delete"
 msgstr "刪除(&D)"
 
-#: todo/todoview.cpp:385
+#: todo/todoview.cpp:387
 #, kde-format
 msgctxt "@action:inmenu print the to-do"
 msgid "&Print…"
 msgstr "列印(&P)…"
 
-#: todo/todoview.cpp:390
+#: todo/todoview.cpp:392
 #, kde-format
 msgctxt "@action:inmenu print preview the to-do"
 msgid "Print Previe&w…"
 msgstr "預覽列印(&W)…"
 
-#: todo/todoview.cpp:397
+#: todo/todoview.cpp:399
 #, kde-format
 msgctxt "@action:inmenu create a new to-do"
 msgid "New &To-do…"
 msgstr "新增待辦事項(&T)…"
 
-#: todo/todoview.cpp:401
+#: todo/todoview.cpp:403
 #, kde-format
 msgctxt "@action:inmenu create a new sub-to-do"
 msgid "New Su&b-to-do…"
 msgstr "新增子待辦事項(&B)…"
 
-#: todo/todoview.cpp:405
+#: todo/todoview.cpp:407
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Make this To-do Independent"
 msgstr "將此待辦事項獨立出來(&M)"
 
-#: todo/todoview.cpp:407
+#: todo/todoview.cpp:409
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Make all Sub-to-dos &Independent"
 msgstr "將所有的子待辦事項獨立出來(&I)"
 
-#: todo/todoview.cpp:418
+#: todo/todoview.cpp:420
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Create Event from To-do"
 msgstr "從待辦事項建立事件"
 
-#: todo/todoview.cpp:428
+#: todo/todoview.cpp:430
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Copy To"
 msgstr "複製到(&C)"
 
-#: todo/todoview.cpp:435
+#: todo/todoview.cpp:437
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Move To"
 msgstr "移動到(&M)"
 
-#: todo/todoview.cpp:446
+#: todo/todoview.cpp:448
 #, kde-format
 msgctxt "@action:inmenu delete completed to-dos"
 msgid "Pur&ge Completed"
 msgstr "清除已完成的待辦事項(&G)"
 
-#: todo/todoview.cpp:449
+#: todo/todoview.cpp:451
 #, kde-format
 msgctxt "@action:inmenu unspecified priority"
 msgid "unspecified"
 msgstr "未指定"
 
-#: todo/todoview.cpp:451
+#: todo/todoview.cpp:453
 #, kde-format
 msgctxt "@action:inmenu priority value=2"
 msgid "2"
 msgstr "2"
 
-#: todo/todoview.cpp:452
+#: todo/todoview.cpp:454
 #, kde-format
 msgctxt "@action:inmenu priority value=3"
 msgid "3"
 msgstr "3"
 
-#: todo/todoview.cpp:453
+#: todo/todoview.cpp:455
 #, kde-format
 msgctxt "@action:inmenu priority value=4"
 msgid "4"
 msgstr "4"
 
-#: todo/todoview.cpp:455
+#: todo/todoview.cpp:457
 #, kde-format
 msgctxt "@action:inmenu priority value=6"
 msgid "6"
 msgstr "6"
 
-#: todo/todoview.cpp:456
+#: todo/todoview.cpp:458
 #, kde-format
 msgctxt "@action:inmenu priority value=7"
 msgid "7"
 msgstr "7"
 
-#: todo/todoview.cpp:457
+#: todo/todoview.cpp:459
 #, kde-format
 msgctxt "@action:inmenu priority value=8"
 msgid "8"
 msgstr "8"
+
+#: todo/todoview.cpp:1132
+#, fuzzy, kde-format
+#| msgid "Display the current-time indicator"
+msgctxt "@info:tooltip"
+msgid "Display the sidebar"
+msgstr "顯示目前時間指示器"
+
+#: todo/todoview.cpp:1135
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Hide the sidebar"
+msgstr ""
+
+#: todo/todoview.cpp:1154
+#, kde-format
+msgctxt "@info::tooltip"
+msgid "Switch to the flat list display"
+msgstr ""
+
+#: todo/todoview.cpp:1157
+#, kde-format
+msgctxt "@info::tooltip"
+msgid "Switch to the tree list display"
+msgstr ""
 
 #: todo/todoviewquickaddline.cpp:17
 #, kde-format
@@ -2024,24 +2037,19 @@ msgid "View Columns"
 msgstr "檢視欄位"
 
 #: viewerapp/main.cpp:19
-#, fuzzy, kde-format
-#| msgid "ViewerApp"
+#, kde-format
 msgctxt "@label"
 msgid "ViewerApp"
 msgstr "ViewerApp"
 
 #: viewerapp/main.cpp:21
-#, fuzzy, kde-format
-#| msgid "A test app for embedding calendarviews"
+#, kde-format
 msgctxt "@info"
 msgid "A test app for embedding calendarviews"
 msgstr "嵌入 calendarview 的測試程式"
 
 #: viewerapp/main.cpp:23
-#, fuzzy, kde-format
-#| msgid ""
-#| "Copyright (C) 2010 Klarälvdalens Datakonsult AB, a KDAB Group company, "
-#| "info@kdab.net"
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Copyright (C) 2010 Klarälvdalens Datakonsult AB, a KDAB Group company, "
@@ -2070,8 +2078,7 @@ msgstr "行事曆檢視器"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab)
 #: viewerapp/mainwindow.ui:55
-#, fuzzy, kde-format
-#| msgid "Tab 1"
+#, kde-format
 msgctxt "@title:tab a generic tab"
 msgid "Tab 1"
 msgstr "Tab 1"
@@ -2284,44 +2291,49 @@ msgstr ""
 "生電子郵件。如果您要使用群組功能（如設定 Kontact 為 KDE Kolab 的用戶端），建"
 "議使用此選項。"
 
-#: whatsnext/whatsnextview.cpp:63
+#: whatsnext/whatsnextview.cpp:64
 #, kde-format
 msgid "To-dos:"
 msgstr "待辦事項："
 
-#: whatsnext/whatsnextview.cpp:79
+#: whatsnext/whatsnextview.cpp:80
 #, kde-format
 msgid "What's Next?"
 msgstr "下一個是什麼？"
 
-#: whatsnext/whatsnextview.cpp:86 whatsnext/whatsnextview.cpp:269
-#: whatsnext/whatsnextview.cpp:274
+#: whatsnext/whatsnextview.cpp:87 whatsnext/whatsnextview.cpp:270
+#: whatsnext/whatsnextview.cpp:275
 #, kde-format
 msgctxt "date from - to"
 msgid "%1 - %2"
 msgstr "%1 - %2"
 
-#: whatsnext/whatsnextview.cpp:102
+#: whatsnext/whatsnextview.cpp:103
 #, kde-format
 msgid "Events:"
 msgstr "事件："
 
-#: whatsnext/whatsnextview.cpp:191 whatsnext/whatsnextview.cpp:215
+#: whatsnext/whatsnextview.cpp:192 whatsnext/whatsnextview.cpp:216
 #, kde-format
 msgid "Events and to-dos that need a reply:"
 msgstr "此事件或待辦事項需要回覆："
 
-#: whatsnext/whatsnextview.cpp:281
+#: whatsnext/whatsnextview.cpp:282
 #, kde-format
 msgctxt "date, from - to"
 msgid "%1, %2 - %3"
 msgstr "%1, %2 - %3"
 
-#: whatsnext/whatsnextview.cpp:310
+#: whatsnext/whatsnextview.cpp:311
 #, kde-format
 msgctxt "to-do due date"
 msgid "  (Due: %1)"
 msgstr "  （到期：%1）"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Checking this option will cause the to-do view to use the full window."
+#~ msgstr "勾選此選項，則使用整個視窗顯示待辦事項"
 
 #~ msgid "Age:"
 #~ msgstr "年紀："

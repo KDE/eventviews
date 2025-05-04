@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-25 00:42+0000\n"
+"POT-Creation-Date: 2025-05-04 00:43+0000\n"
 "PO-Revision-Date: 2024-12-15 15:58+0530\n"
 "Last-Translator: Kali <EMAIL@ADDRESS>\n"
 "Language-Team: Hindi <fedora-trans-hi@redhat.com>\n"
@@ -1566,7 +1566,7 @@ msgctxt "@action:inmenu Unspecified priority"
 msgid "unspecified"
 msgstr ""
 
-#: todo/tododelegates.cpp:153 todo/todoview.cpp:450
+#: todo/tododelegates.cpp:153 todo/todoview.cpp:452
 #, kde-format
 msgctxt "@action:inmenu highest priority"
 msgid "1 (highest)"
@@ -1590,7 +1590,7 @@ msgctxt "@action:inmenu"
 msgid "4"
 msgstr ""
 
-#: todo/tododelegates.cpp:157 todo/todoview.cpp:454
+#: todo/tododelegates.cpp:157 todo/todoview.cpp:456
 #, kde-format
 msgctxt "@action:inmenu medium priority"
 msgid "5 (medium)"
@@ -1614,7 +1614,7 @@ msgctxt "@action:inmenu"
 msgid "8"
 msgstr ""
 
-#: todo/tododelegates.cpp:161 todo/todoview.cpp:458
+#: todo/tododelegates.cpp:161 todo/todoview.cpp:460
 #, kde-format
 msgctxt "@action:inmenu lowest priority"
 msgid "9 (lowest)"
@@ -1651,22 +1651,24 @@ msgstr ""
 #: todo/todoview.cpp:317
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Display to-do list in a full window"
+msgid "Display to-dos in a full window without the sidebar"
 msgstr ""
 
-#: todo/todoview.cpp:318
+#: todo/todoview.cpp:319
 #, kde-format
 msgctxt "@info:whatsthis"
-msgid "Checking this option will cause the to-do view to use the full window."
+msgid ""
+"Checking this button will cause the to-dos to be displayed in a larger "
+"window by hiding the sidebar."
 msgstr ""
 
-#: todo/todoview.cpp:323
+#: todo/todoview.cpp:325
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display to-dos in a flat list or a tree"
 msgstr ""
 
-#: todo/todoview.cpp:325
+#: todo/todoview.cpp:327
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1674,124 +1676,148 @@ msgid ""
 "list or a hierarchical tree where the parental relationships are removed."
 msgstr ""
 
-#: todo/todoview.cpp:364
+#: todo/todoview.cpp:366
 #, kde-format
 msgctxt "@action:inmenu show the to-do"
 msgid "&Show"
 msgstr ""
 
-#: todo/todoview.cpp:369
+#: todo/todoview.cpp:371
 #, kde-format
 msgctxt "@action:inmenu edit the to-do"
 msgid "&Edit…"
 msgstr ""
 
-#: todo/todoview.cpp:376
+#: todo/todoview.cpp:378
 #, kde-format
 msgctxt "@action:inmenu delete the to-do"
 msgid "&Delete"
 msgstr ""
 
-#: todo/todoview.cpp:385
+#: todo/todoview.cpp:387
 #, kde-format
 msgctxt "@action:inmenu print the to-do"
 msgid "&Print…"
 msgstr ""
 
-#: todo/todoview.cpp:390
+#: todo/todoview.cpp:392
 #, kde-format
 msgctxt "@action:inmenu print preview the to-do"
 msgid "Print Previe&w…"
 msgstr ""
 
-#: todo/todoview.cpp:397
+#: todo/todoview.cpp:399
 #, kde-format
 msgctxt "@action:inmenu create a new to-do"
 msgid "New &To-do…"
 msgstr ""
 
-#: todo/todoview.cpp:401
+#: todo/todoview.cpp:403
 #, kde-format
 msgctxt "@action:inmenu create a new sub-to-do"
 msgid "New Su&b-to-do…"
 msgstr ""
 
-#: todo/todoview.cpp:405
+#: todo/todoview.cpp:407
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Make this To-do Independent"
 msgstr ""
 
-#: todo/todoview.cpp:407
+#: todo/todoview.cpp:409
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Make all Sub-to-dos &Independent"
 msgstr ""
 
-#: todo/todoview.cpp:418
+#: todo/todoview.cpp:420
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Create Event from To-do"
 msgstr ""
 
-#: todo/todoview.cpp:428
+#: todo/todoview.cpp:430
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Copy To"
 msgstr ""
 
-#: todo/todoview.cpp:435
+#: todo/todoview.cpp:437
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Move To"
 msgstr ""
 
-#: todo/todoview.cpp:446
+#: todo/todoview.cpp:448
 #, kde-format
 msgctxt "@action:inmenu delete completed to-dos"
 msgid "Pur&ge Completed"
 msgstr ""
 
-#: todo/todoview.cpp:449
+#: todo/todoview.cpp:451
 #, kde-format
 msgctxt "@action:inmenu unspecified priority"
 msgid "unspecified"
 msgstr ""
 
-#: todo/todoview.cpp:451
+#: todo/todoview.cpp:453
 #, kde-format
 msgctxt "@action:inmenu priority value=2"
 msgid "2"
 msgstr ""
 
-#: todo/todoview.cpp:452
+#: todo/todoview.cpp:454
 #, kde-format
 msgctxt "@action:inmenu priority value=3"
 msgid "3"
 msgstr ""
 
-#: todo/todoview.cpp:453
+#: todo/todoview.cpp:455
 #, kde-format
 msgctxt "@action:inmenu priority value=4"
 msgid "4"
 msgstr ""
 
-#: todo/todoview.cpp:455
+#: todo/todoview.cpp:457
 #, kde-format
 msgctxt "@action:inmenu priority value=6"
 msgid "6"
 msgstr ""
 
-#: todo/todoview.cpp:456
+#: todo/todoview.cpp:458
 #, kde-format
 msgctxt "@action:inmenu priority value=7"
 msgid "7"
 msgstr ""
 
-#: todo/todoview.cpp:457
+#: todo/todoview.cpp:459
 #, kde-format
 msgctxt "@action:inmenu priority value=8"
 msgid "8"
+msgstr ""
+
+#: todo/todoview.cpp:1132
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Display the sidebar"
+msgstr ""
+
+#: todo/todoview.cpp:1135
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Hide the sidebar"
+msgstr ""
+
+#: todo/todoview.cpp:1154
+#, kde-format
+msgctxt "@info::tooltip"
+msgid "Switch to the flat list display"
+msgstr ""
+
+#: todo/todoview.cpp:1157
+#, kde-format
+msgctxt "@info::tooltip"
+msgid "Switch to the tree list display"
 msgstr ""
 
 #: todo/todoviewquickaddline.cpp:17
@@ -2161,40 +2187,40 @@ msgid ""
 "Configuring Kontact as a KDE Kolab client)."
 msgstr ""
 
-#: whatsnext/whatsnextview.cpp:63
+#: whatsnext/whatsnextview.cpp:64
 #, kde-format
 msgid "To-dos:"
 msgstr ""
 
-#: whatsnext/whatsnextview.cpp:79
+#: whatsnext/whatsnextview.cpp:80
 #, kde-format
 msgid "What's Next?"
 msgstr ""
 
-#: whatsnext/whatsnextview.cpp:86 whatsnext/whatsnextview.cpp:269
-#: whatsnext/whatsnextview.cpp:274
+#: whatsnext/whatsnextview.cpp:87 whatsnext/whatsnextview.cpp:270
+#: whatsnext/whatsnextview.cpp:275
 #, kde-format
 msgctxt "date from - to"
 msgid "%1 - %2"
 msgstr ""
 
-#: whatsnext/whatsnextview.cpp:102
+#: whatsnext/whatsnextview.cpp:103
 #, kde-format
 msgid "Events:"
 msgstr ""
 
-#: whatsnext/whatsnextview.cpp:191 whatsnext/whatsnextview.cpp:215
+#: whatsnext/whatsnextview.cpp:192 whatsnext/whatsnextview.cpp:216
 #, kde-format
 msgid "Events and to-dos that need a reply:"
 msgstr ""
 
-#: whatsnext/whatsnextview.cpp:281
+#: whatsnext/whatsnextview.cpp:282
 #, kde-format
 msgctxt "date, from - to"
 msgid "%1, %2 - %3"
 msgstr ""
 
-#: whatsnext/whatsnextview.cpp:310
+#: whatsnext/whatsnextview.cpp:311
 #, kde-format
 msgctxt "to-do due date"
 msgid "  (Due: %1)"
