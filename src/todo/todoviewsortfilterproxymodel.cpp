@@ -28,10 +28,6 @@ void TodoViewSortFilterProxyModel::sort(int column, Qt::SortOrder order)
 
 bool TodoViewSortFilterProxyModel::filterAcceptsRow(int source_row, const QModelIndex &source_parent) const
 {
-    if (!source_parent.isValid()) {
-        return false;
-    }
-
     bool ret = QSortFilterProxyModel::filterAcceptsRow(source_row, source_parent);
 
     if (ret && mCalFilter) {
