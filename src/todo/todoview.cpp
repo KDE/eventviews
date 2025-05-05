@@ -1151,10 +1151,10 @@ void TodoView::setFlatView(bool flatView, bool notifyOtherViews)
 {
     if (flatView) {
         mFlatViewButton->setIcon(QIcon::fromTheme(QStringLiteral("view-list-tree")));
-        mFlatViewButton->setToolTip(i18nc("@info::tooltip", "Switch to the flat list display"));
+        mFlatViewButton->setToolTip(i18nc("@info::tooltip", "Switch to the tree list display"));
     } else {
         mFlatViewButton->setIcon(QIcon::fromTheme(QStringLiteral("view-list-details")));
-        mFlatViewButton->setToolTip(i18nc("@info::tooltip", "Switch to the tree list display"));
+        mFlatViewButton->setToolTip(i18nc("@info::tooltip", "Switch to the flat list display"));
     }
 
     if (notifyOtherViews) {
