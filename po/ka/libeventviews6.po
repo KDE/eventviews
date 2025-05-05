@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-04 00:43+0000\n"
-"PO-Revision-Date: 2025-04-18 03:32+0200\n"
+"PO-Revision-Date: 2025-05-04 04:13+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -1824,27 +1824,20 @@ msgstr ""
 "მეტი თვისება დაამატოთ.,</note></para>"
 
 #: todo/todoview.cpp:317
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Display to-do list in a full window"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Display to-dos in a full window without the sidebar"
-msgstr "გასაკეთებლების სიის სრულ ფანჯარაში ჩვენება"
+msgstr "გასაკეთებლების სიის სრულ ფანჯარაში ჩვენება გვერდითი პანელის გარეშე"
 
 #: todo/todoview.cpp:319
-#, fuzzy, kde-format
-#| msgctxt "@info:whatsthis"
-#| msgid ""
-#| "Checking this button will cause the to-dos to be displayed either as a "
-#| "flat list or a hierarchical tree where the parental relationships are "
-#| "removed."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Checking this button will cause the to-dos to be displayed in a larger "
 "window by hiding the sidebar."
 msgstr ""
-"ამ პარამეტრის ჩართვა გასაკეთებლების იერარქიული ხის მაგიერ ბრტყელი სიის სახით "
-"გამოტანას გამოიწვევს. ჩვენებისას მშობლებთან ურთიერთობები წაიშლება."
+"ამ პარამეტრის ჩართვა გასაკეთებლებს უფრო დიდ ფანჯარაში აჩვენებს გვერდითი "
+"პანელის დამალვის გზით."
 
 #: todo/todoview.cpp:325
 #, kde-format
@@ -1983,29 +1976,28 @@ msgid "8"
 msgstr "8"
 
 #: todo/todoview.cpp:1132
-#, fuzzy, kde-format
-#| msgid "Display the current-time indicator"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Display the sidebar"
-msgstr "მიმდინარე დროის მაჩვენებლის ჩვენება"
+msgstr "გვერდითი პანელის ჩვენება"
 
 #: todo/todoview.cpp:1135
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Hide the sidebar"
-msgstr ""
+msgstr "გვერდითი პანელის დამალვა"
 
 #: todo/todoview.cpp:1154
 #, kde-format
 msgctxt "@info::tooltip"
 msgid "Switch to the flat list display"
-msgstr ""
+msgstr "ბრტყელი სიის ჩვენებაზე გადართვა"
 
 #: todo/todoview.cpp:1157
 #, kde-format
 msgctxt "@info::tooltip"
 msgid "Switch to the tree list display"
-msgstr ""
+msgstr "ხის სიის ჩვენებაზე გადართვა"
 
 #: todo/todoviewquickaddline.cpp:17
 #, kde-format

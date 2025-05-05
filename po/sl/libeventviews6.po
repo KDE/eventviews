@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-04 00:43+0000\n"
-"PO-Revision-Date: 2025-04-18 07:03+0200\n"
+"PO-Revision-Date: 2025-05-04 06:34+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -1839,27 +1839,20 @@ msgstr ""
 "note></para>"
 
 #: todo/todoview.cpp:317
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Display to-do list in a full window"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Display to-dos in a full window without the sidebar"
-msgstr "Pokaži seznam opravil v celotnem oknu"
+msgstr "Pokaži seznam opravil v celotnem oknu brez stranske vrstice"
 
 #: todo/todoview.cpp:319
-#, fuzzy, kde-format
-#| msgctxt "@info:whatsthis"
-#| msgid ""
-#| "Checking this button will cause the to-dos to be displayed either as a "
-#| "flat list or a hierarchical tree where the parental relationships are "
-#| "removed."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Checking this button will cause the to-dos to be displayed in a larger "
 "window by hiding the sidebar."
 msgstr ""
-"Če označite to možnost, bodo opravila prikazana kot navaden seznam ali kot "
-"hierarhično drevo, kjer so nadrejeni odnosi v prikazu odstranjeni."
+"Če označite ta gumb, se bodo opravila prikazala v večjem oknu, tako da se bo "
+"skrila stranska vrstica."
 
 #: todo/todoview.cpp:325
 #, kde-format
@@ -1998,29 +1991,28 @@ msgid "8"
 msgstr "8"
 
 #: todo/todoview.cpp:1132
-#, fuzzy, kde-format
-#| msgid "Display the current-time indicator"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Display the sidebar"
-msgstr "Pokaži kazalnik trenutnega časa"
+msgstr "Pokaži stransko vrstico"
 
 #: todo/todoview.cpp:1135
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Hide the sidebar"
-msgstr ""
+msgstr "Skrij stransko vrstico"
 
 #: todo/todoview.cpp:1154
 #, kde-format
 msgctxt "@info::tooltip"
 msgid "Switch to the flat list display"
-msgstr ""
+msgstr "Preklopi na prikaz preprostega seznama"
 
 #: todo/todoview.cpp:1157
 #, kde-format
 msgctxt "@info::tooltip"
 msgid "Switch to the tree list display"
-msgstr ""
+msgstr "Preklopi na prikaz drevesnega seznama"
 
 #: todo/todoviewquickaddline.cpp:17
 #, kde-format

@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-04 00:43+0000\n"
-"PO-Revision-Date: 2025-04-18 09:30+0300\n"
+"PO-Revision-Date: 2025-05-04 09:19+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -1856,28 +1856,20 @@ msgstr ""
 "новостворений запис, якщо хочете додати його властивості.</note></para>"
 
 #: todo/todoview.cpp:317
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Display to-do list in a full window"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Display to-dos in a full window without the sidebar"
-msgstr "Показати список завдань на все вікно"
+msgstr "Показувати завдання у всьому вікні, без бічної панелі"
 
 #: todo/todoview.cpp:319
-#, fuzzy, kde-format
-#| msgctxt "@info:whatsthis"
-#| msgid ""
-#| "Checking this button will cause the to-dos to be displayed either as a "
-#| "flat list or a hierarchical tree where the parental relationships are "
-#| "removed."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Checking this button will cause the to-dos to be displayed in a larger "
 "window by hiding the sidebar."
 msgstr ""
-"Позначення цього пункту вплине на те, буде завдання показано у простому "
-"списку чи у форматі деревоподібного ієрархічного списку, де під час показу "
-"зв’язки підлеглості буде вилучено."
+"Якщо позначити цей пункт, список завдань буде розгорнуто на все вікно, без "
+"бічної панелі."
 
 #: todo/todoview.cpp:325
 #, kde-format
@@ -2017,29 +2009,28 @@ msgid "8"
 msgstr "8"
 
 #: todo/todoview.cpp:1132
-#, fuzzy, kde-format
-#| msgid "Display the current-time indicator"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Display the sidebar"
-msgstr "Показати індикатор поточного часу"
+msgstr "Показати бічну панель"
 
 #: todo/todoview.cpp:1135
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Hide the sidebar"
-msgstr ""
+msgstr "Приховати бічну панель"
 
 #: todo/todoview.cpp:1154
 #, kde-format
 msgctxt "@info::tooltip"
 msgid "Switch to the flat list display"
-msgstr ""
+msgstr "Перемкнутися на показ простого списку"
 
 #: todo/todoview.cpp:1157
 #, kde-format
 msgctxt "@info::tooltip"
 msgid "Switch to the tree list display"
-msgstr ""
+msgstr "Перемкнутися на показ ієрархічного списку"
 
 #: todo/todoviewquickaddline.cpp:17
 #, kde-format
