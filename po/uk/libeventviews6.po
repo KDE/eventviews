@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-04 00:43+0000\n"
+"POT-Creation-Date: 2025-05-06 00:42+0000\n"
 "PO-Revision-Date: 2025-05-04 09:19+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -2023,14 +2023,14 @@ msgstr "Приховати бічну панель"
 #: todo/todoview.cpp:1154
 #, kde-format
 msgctxt "@info::tooltip"
-msgid "Switch to the flat list display"
-msgstr "Перемкнутися на показ простого списку"
+msgid "Switch to the tree list display"
+msgstr "Перемкнутися на показ ієрархічного списку"
 
 #: todo/todoview.cpp:1157
 #, kde-format
 msgctxt "@info::tooltip"
-msgid "Switch to the tree list display"
-msgstr "Перемкнутися на показ ієрархічного списку"
+msgid "Switch to the flat list display"
+msgstr "Перемкнутися на показ простого списку"
 
 #: todo/todoviewquickaddline.cpp:17
 #, kde-format
@@ -2130,33 +2130,33 @@ msgctxt "@action:inmenu"
 msgid "%1"
 msgstr "%1"
 
-#: todo/todoviewsortfilterproxymodel.cpp:161
+#: todo/todoviewsortfilterproxymodel.cpp:157
 #, kde-format
 msgctxt "priority is unspecified"
 msgid "unspecified"
 msgstr "не вказано"
 
+#: todo/todoviewsortfilterproxymodel.cpp:158
+#: todo/todoviewsortfilterproxymodel.cpp:160
 #: todo/todoviewsortfilterproxymodel.cpp:162
 #: todo/todoviewsortfilterproxymodel.cpp:164
-#: todo/todoviewsortfilterproxymodel.cpp:166
-#: todo/todoviewsortfilterproxymodel.cpp:168
 #, kde-format
 msgid "%1"
 msgstr "%1"
 
-#: todo/todoviewsortfilterproxymodel.cpp:163
+#: todo/todoviewsortfilterproxymodel.cpp:159
 #, kde-format
 msgctxt "highest priority"
 msgid "%1 (highest)"
 msgstr "%1 (найвищий)"
 
-#: todo/todoviewsortfilterproxymodel.cpp:165
+#: todo/todoviewsortfilterproxymodel.cpp:161
 #, kde-format
 msgctxt "medium priority"
 msgid "%1 (medium)"
 msgstr "%1 (середній)"
 
-#: todo/todoviewsortfilterproxymodel.cpp:167
+#: todo/todoviewsortfilterproxymodel.cpp:163
 #, kde-format
 msgctxt "lowest priority"
 msgid "%1 (lowest)"

@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-04 00:43+0000\n"
-"PO-Revision-Date: 2025-04-19 18:28+0300\n"
+"POT-Creation-Date: 2025-05-06 00:42+0000\n"
+"PO-Revision-Date: 2025-05-05 13:12+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -1787,27 +1787,19 @@ msgstr ""
 "להוסיף מאפיינים נוספים.</note></para>"
 
 #: todo/todoview.cpp:317
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Display to-do list in a full window"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Display to-dos in a full window without the sidebar"
-msgstr "הצגת רשימת מטלות בחלון מלא"
+msgstr "הצגת מטלות בחלון מלא בלי סרגל הצד"
 
 #: todo/todoview.cpp:319
-#, fuzzy, kde-format
-#| msgctxt "@info:whatsthis"
-#| msgid ""
-#| "Checking this button will cause the to-dos to be displayed either as a "
-#| "flat list or a hierarchical tree where the parental relationships are "
-#| "removed."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Checking this button will cause the to-dos to be displayed in a larger "
 "window by hiding the sidebar."
 msgstr ""
-"סימון הכפתור הזה יגרום למטלות להופיע כרשימה שטוחה או כעץ היררכי שבו יחסי "
-"ההורות יוסרו."
+"סימון הכפתור הזה יגרום למטלות להופיע בחלון גדול יותר על ידי הסתרת סרגל הצד."
 
 #: todo/todoview.cpp:325
 #, kde-format
@@ -1946,29 +1938,28 @@ msgid "8"
 msgstr "8"
 
 #: todo/todoview.cpp:1132
-#, fuzzy, kde-format
-#| msgid "Display the current-time indicator"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Display the sidebar"
-msgstr "הצגת מחוון השעה הנוכחית"
+msgstr "הצגת סרגל הצד"
 
 #: todo/todoview.cpp:1135
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Hide the sidebar"
-msgstr ""
+msgstr "הסתרת סרגל הצד"
 
 #: todo/todoview.cpp:1154
 #, kde-format
 msgctxt "@info::tooltip"
-msgid "Switch to the flat list display"
-msgstr ""
+msgid "Switch to the tree list display"
+msgstr "מעבר לתצוגת רשימת עץ"
 
 #: todo/todoview.cpp:1157
 #, kde-format
 msgctxt "@info::tooltip"
-msgid "Switch to the tree list display"
-msgstr ""
+msgid "Switch to the flat list display"
+msgstr "מעבר לתצוגת רשימה שטוחה"
 
 #: todo/todoviewquickaddline.cpp:17
 #, kde-format
@@ -2067,33 +2058,33 @@ msgctxt "@action:inmenu"
 msgid "%1"
 msgstr "%1"
 
-#: todo/todoviewsortfilterproxymodel.cpp:161
+#: todo/todoviewsortfilterproxymodel.cpp:157
 #, kde-format
 msgctxt "priority is unspecified"
 msgid "unspecified"
 msgstr "לא צוין"
 
+#: todo/todoviewsortfilterproxymodel.cpp:158
+#: todo/todoviewsortfilterproxymodel.cpp:160
 #: todo/todoviewsortfilterproxymodel.cpp:162
 #: todo/todoviewsortfilterproxymodel.cpp:164
-#: todo/todoviewsortfilterproxymodel.cpp:166
-#: todo/todoviewsortfilterproxymodel.cpp:168
 #, kde-format
 msgid "%1"
 msgstr "%1"
 
-#: todo/todoviewsortfilterproxymodel.cpp:163
+#: todo/todoviewsortfilterproxymodel.cpp:159
 #, kde-format
 msgctxt "highest priority"
 msgid "%1 (highest)"
 msgstr "%1 (הכי גבוהה)"
 
-#: todo/todoviewsortfilterproxymodel.cpp:165
+#: todo/todoviewsortfilterproxymodel.cpp:161
 #, kde-format
 msgctxt "medium priority"
 msgid "%1 (medium)"
 msgstr "%1 (בינונית)"
 
-#: todo/todoviewsortfilterproxymodel.cpp:167
+#: todo/todoviewsortfilterproxymodel.cpp:163
 #, kde-format
 msgctxt "lowest priority"
 msgid "%1 (lowest)"
