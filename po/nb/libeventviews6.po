@@ -2463,8 +2463,3 @@ msgstr "%1, %2 – %3"
 msgctxt "to-do due date"
 msgid "  (Due: %1)"
 msgstr "  (Forfall: %1)"
-
-#~ msgctxt "@info:whatsthis"
-#~ msgid ""
-#~ "Checking this option will cause the to-do view to use the full window."
-#~ msgstr "Kryss av her for å få gjørelista vist i hele vinduet."
