@@ -29,8 +29,7 @@ msgstr ""
 "kde-china@kde.org, i@guoyunhe.me, tds00@qq.com, zxybbb7892020@outlook.com"
 
 #: agenda/agenda.cpp:955
-#, fuzzy, kde-format
-#| msgid "Unable to lock item for modification. You cannot make any changes."
+#, kde-format
 msgctxt "@info"
 msgid "Unable to lock item for modification. You cannot make any changes."
 msgstr "无法锁定对项目的修改。您无法进行任何更改。"
@@ -42,20 +41,17 @@ msgid "Locking Failed"
 msgstr "锁定失败"
 
 #: agenda/agenda.cpp:1172
-#, fuzzy, kde-format
-#| msgid "Dissociate event from recurrence"
+#, kde-format
 msgctxt "@info/plain"
 msgid "Dissociate event from recurrence"
-msgstr "从重现中分离事件"
+msgstr ""
 
 #: agenda/agenda.cpp:1195 month/monthitem.cpp:450
-#, fuzzy, kde-format
-#| msgid ""
-#| "Unable to add the exception item to the calendar. No change will be done."
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Unable to add the exception item to the calendar. No change will be done."
-msgstr "无法将例外项目添加到日历。未更改。"
+msgstr ""
 
 #: agenda/agenda.cpp:1197 month/monthitem.cpp:452
 #, kde-format
@@ -1407,8 +1403,7 @@ msgid "Use system color. If enabled will ignore all other color settings"
 msgstr "使用系统颜色。如果启用，将忽略所有其他颜色设置"
 
 #: journal/journalframe.cpp:153
-#, fuzzy, kde-format
-#| msgid "&Edit"
+#, kde-format
 msgctxt "@action: button"
 msgid "&Edit"
 msgstr "编辑(&E)"
@@ -1420,15 +1415,13 @@ msgid "Edit this journal entry"
 msgstr "编辑此日记项"
 
 #: journal/journalframe.cpp:157
-#, fuzzy, kde-format
-#| msgid "Opens an editor dialog for this journal entry"
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Opens an editor dialog for this journal entry"
-msgstr "打开日记编辑器对话框"
+msgstr ""
 
 #: journal/journalframe.cpp:163
-#, fuzzy, kde-format
-#| msgid "&Delete"
+#, kde-format
 msgctxt "@action: button"
 msgid "&Delete"
 msgstr "删除(&D)"
@@ -1440,18 +1433,16 @@ msgid "Delete this journal entry"
 msgstr "删除此日记项"
 
 #: journal/journalframe.cpp:167
-#, fuzzy, kde-format
-#| msgid "Delete this journal entry"
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Delete this journal entry"
-msgstr "删除日记项"
+msgstr ""
 
 #: journal/journalframe.cpp:172
-#, fuzzy, kde-format
-#| msgid "&Print"
+#, kde-format
 msgctxt "@action: button"
 msgid "&Print"
-msgstr "打印(&P)"
+msgstr ""
 
 #: journal/journalframe.cpp:176
 #, kde-format
@@ -1460,18 +1451,16 @@ msgid "Print this journal entry"
 msgstr "打印此日记项"
 
 #: journal/journalframe.cpp:177
-#, fuzzy, kde-format
-#| msgid "Opens a print dialog for this journal entry"
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Opens a print dialog for this journal entry"
-msgstr "打开日记的打印对话框"
+msgstr ""
 
 #: journal/journalframe.cpp:182
-#, fuzzy, kde-format
-#| msgid "Print preview"
+#, kde-format
 msgctxt "@action: button"
 msgid "Print preview"
-msgstr "打印预览"
+msgstr ""
 
 #: journal/journalframe.cpp:186
 #, kde-format
@@ -1480,11 +1469,10 @@ msgid "Print preview this journal entry"
 msgstr "打印预览此日记项"
 
 #: journal/journalframe.cpp:187
-#, fuzzy, kde-format
-#| msgid "Opens a print dialog for this journal entry"
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Opens a print preview of this journal entry"
-msgstr "打开日记的打印对话框"
+msgstr ""
 
 #: list/listview.cpp:56
 #, kde-format
@@ -1518,29 +1506,24 @@ msgid "Summary [%1 - %2]"
 msgstr "摘要 [%1 - %2]"
 
 #: month/monthitem.cpp:307
-#, fuzzy, kde-format
-#| msgid "%2 1 year"
-#| msgid_plural "%2 %1 years"
+#, kde-format
 msgctxt "@info/plain a person's age"
 msgid "1 year old"
 msgid_plural "%1 years old"
-msgstr[0] "%2 %1 年"
+msgstr[0] ""
 
 #: month/monthitem.cpp:309
-#, fuzzy, kde-format
-#| msgid "%2 1 year"
-#| msgid_plural "%2 %1 years"
+#, kde-format
 msgctxt "@info/plain number of years of marriage"
 msgid "1 year"
 msgid_plural "%1 years"
-msgstr[0] "%2 %1 年"
+msgstr[0] ""
 
 #: month/monthitem.cpp:443
-#, fuzzy, kde-format
-#| msgid "Move occurrence(s)"
+#, kde-format
 msgctxt "@info/plain"
 msgid "Move occurrence(s)"
-msgstr "移动重现"
+msgstr ""
 
 #: month/monthscene.cpp:184
 #, kde-format
@@ -1731,25 +1714,18 @@ msgid ""
 msgstr ""
 
 #: todo/todoview.cpp:317
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Display to-do list in a full window"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Display to-dos in a full window without the sidebar"
-msgstr "使用整个窗口显示待办列表视图"
+msgstr ""
 
 #: todo/todoview.cpp:319
-#, fuzzy, kde-format
-#| msgctxt "@info:whatsthis"
-#| msgid ""
-#| "Checking this button will cause the to-dos to be displayed either as a "
-#| "flat list or a hierarchical tree where the parental relationships are "
-#| "removed."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Checking this button will cause the to-dos to be displayed in a larger "
 "window by hiding the sidebar."
-msgstr "点击此按钮，待办事项在扁平列表和不包含主次关系的层级列表之间切换。"
+msgstr ""
 
 #: todo/todoview.cpp:325
 #, kde-format
@@ -1886,11 +1862,10 @@ msgid "8"
 msgstr "8"
 
 #: todo/todoview.cpp:1132
-#, fuzzy, kde-format
-#| msgid "Display the current-time indicator"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Display the sidebar"
-msgstr "显示当前时间标识符号"
+msgstr ""
 
 #: todo/todoview.cpp:1135
 #, kde-format
@@ -2042,31 +2017,24 @@ msgid "View Columns"
 msgstr "查看列"
 
 #: viewerapp/main.cpp:19
-#, fuzzy, kde-format
-#| msgid "ViewerApp"
+#, kde-format
 msgctxt "@label"
 msgid "ViewerApp"
-msgstr "ViewerApp"
+msgstr ""
 
 #: viewerapp/main.cpp:21
-#, fuzzy, kde-format
-#| msgid "A test app for embedding calendarviews"
+#, kde-format
 msgctxt "@info"
 msgid "A test app for embedding calendarviews"
-msgstr "嵌入日历视图的测试工具"
+msgstr ""
 
 #: viewerapp/main.cpp:23
-#, fuzzy, kde-format
-#| msgid ""
-#| "Copyright (C) 2010 Klarälvdalens Datakonsult AB, a KDAB Group company, "
-#| "info@kdab.net"
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Copyright (C) 2010 Klarälvdalens Datakonsult AB, a KDAB Group company, "
 "info@kdab.net"
 msgstr ""
-"Copyright (C) 2010 Klarälvdalens Datakonsult AB, a KDAB Group company, "
-"info@kdab.net"
 
 #: viewerapp/main.cpp:24
 #, kde-format
@@ -2088,11 +2056,10 @@ msgstr "日历视图查看器"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab)
 #: viewerapp/mainwindow.ui:55
-#, fuzzy, kde-format
-#| msgid "Tab 1"
+#, kde-format
 msgctxt "@title:tab a generic tab"
 msgid "Tab 1"
-msgstr "标签页 1"
+msgstr ""
 
 #. i18n: ectx: property (title), widget (QMenu, addViewMenu)
 #: viewerapp/mainwindow.ui:74
@@ -2340,11 +2307,3 @@ msgstr "%1， %2 - %3"
 msgctxt "to-do due date"
 msgid "  (Due: %1)"
 msgstr "  (到期日期：%1)"
-
-#~ msgctxt "@info:whatsthis"
-#~ msgid ""
-#~ "Checking this option will cause the to-do view to use the full window."
-#~ msgstr "选中此项后，待办事项视图将使用整个窗口。"
-
-#~ msgid "Age:"
-#~ msgstr "年龄："

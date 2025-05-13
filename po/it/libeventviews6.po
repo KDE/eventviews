@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-06 00:42+0000\n"
-"PO-Revision-Date: 2025-04-27 14:29+0200\n"
+"PO-Revision-Date: 2025-05-09 16:15+0200\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -1871,28 +1871,20 @@ msgstr ""
 "creata se vuoi aggiungere ulteriori proprietà.</note></para>"
 
 #: todo/todoview.cpp:317
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Display to-do list in a full window"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Display to-dos in a full window without the sidebar"
-msgstr "Mostra la lista delle cose da fare usando la finestra intera"
+msgstr "Mostra le cose da fare a finestra intera senza la barra laterale"
 
 #: todo/todoview.cpp:319
-#, fuzzy, kde-format
-#| msgctxt "@info:whatsthis"
-#| msgid ""
-#| "Checking this button will cause the to-dos to be displayed either as a "
-#| "flat list or a hierarchical tree where the parental relationships are "
-#| "removed."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Checking this button will cause the to-dos to be displayed in a larger "
 "window by hiding the sidebar."
 msgstr ""
-"Selezionando questo pulsante le cose da fare saranno mostrate o in una lista "
-"piatta o in una ad albero gerarchica in cui le relazioni tra di esse sono "
-"rimosse."
+"Selezionando questo pulsante le cose da fare saranno mostrate in una "
+"finestra più grande nascondendo la barra laterale."
 
 #: todo/todoview.cpp:325
 #, kde-format
@@ -2032,29 +2024,28 @@ msgid "8"
 msgstr "8"
 
 #: todo/todoview.cpp:1132
-#, fuzzy, kde-format
-#| msgid "&Display reminder"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Display the sidebar"
-msgstr "&Mostra promemoria"
+msgstr "Mostra la barra laterale"
 
 #: todo/todoview.cpp:1135
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Hide the sidebar"
-msgstr ""
+msgstr "Nascondi la barra laterale"
 
 #: todo/todoview.cpp:1154
 #, kde-format
 msgctxt "@info::tooltip"
 msgid "Switch to the tree list display"
-msgstr ""
+msgstr "Passa alla visualizzazione a lista ad albero"
 
 #: todo/todoview.cpp:1157
 #, kde-format
 msgctxt "@info::tooltip"
 msgid "Switch to the flat list display"
-msgstr ""
+msgstr "Passa alla visualizzazione a lista semplice"
 
 #: todo/todoviewquickaddline.cpp:17
 #, kde-format

@@ -31,12 +31,10 @@ msgid "Your emails"
 msgstr "vit@pelcak.org"
 
 #: agenda/agenda.cpp:955
-#, fuzzy, kde-format
-#| msgid "Unable to lock item for modification. You cannot make any changes."
+#, kde-format
 msgctxt "@info"
 msgid "Unable to lock item for modification. You cannot make any changes."
 msgstr ""
-"Nelze zamknout položku pro její úpravu. Nebude možné provést žádné změny."
 
 #: agenda/agenda.cpp:957
 #, kde-format
@@ -45,20 +43,17 @@ msgid "Locking Failed"
 msgstr "Uzamknutí selhalo"
 
 #: agenda/agenda.cpp:1172
-#, fuzzy, kde-format
-#| msgid "Dissociate event from recurrence"
+#, kde-format
 msgctxt "@info/plain"
 msgid "Dissociate event from recurrence"
-msgstr "Vyjmout událost z opakování"
+msgstr ""
 
 #: agenda/agenda.cpp:1195 month/monthitem.cpp:450
-#, fuzzy, kde-format
-#| msgid ""
-#| "Unable to add the exception item to the calendar. No change will be done."
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Unable to add the exception item to the calendar. No change will be done."
-msgstr "Nelze přidat výjimku do kalendáře. Nebude provedena žádná změna."
+msgstr ""
 
 #: agenda/agenda.cpp:1197 month/monthitem.cpp:452
 #, kde-format
@@ -1395,11 +1390,10 @@ msgid "Use system color. If enabled will ignore all other color settings"
 msgstr ""
 
 #: journal/journalframe.cpp:153
-#, fuzzy, kde-format
-#| msgid "&Edit"
+#, kde-format
 msgctxt "@action: button"
 msgid "&Edit"
-msgstr "&Upravit"
+msgstr ""
 
 #: journal/journalframe.cpp:156
 #, kde-format
@@ -1408,18 +1402,16 @@ msgid "Edit this journal entry"
 msgstr "Upravit tuto položku deníku"
 
 #: journal/journalframe.cpp:157
-#, fuzzy, kde-format
-#| msgid "Opens an editor dialog for this journal entry"
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Opens an editor dialog for this journal entry"
-msgstr "Otevře editační dialog pro tuto položku deníku."
+msgstr ""
 
 #: journal/journalframe.cpp:163
-#, fuzzy, kde-format
-#| msgid "&Delete"
+#, kde-format
 msgctxt "@action: button"
 msgid "&Delete"
-msgstr "&Smazat"
+msgstr ""
 
 #: journal/journalframe.cpp:166
 #, kde-format
@@ -1428,18 +1420,16 @@ msgid "Delete this journal entry"
 msgstr "Smazat tento záznam z deníku"
 
 #: journal/journalframe.cpp:167
-#, fuzzy, kde-format
-#| msgid "Delete this journal entry"
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Delete this journal entry"
-msgstr "Smazat tento záznam z deníku"
+msgstr ""
 
 #: journal/journalframe.cpp:172
-#, fuzzy, kde-format
-#| msgid "&Print"
+#, kde-format
 msgctxt "@action: button"
 msgid "&Print"
-msgstr "Vy&tisknout"
+msgstr ""
 
 #: journal/journalframe.cpp:176
 #, kde-format
@@ -1448,18 +1438,16 @@ msgid "Print this journal entry"
 msgstr "Vytisknout tuto položku deníku"
 
 #: journal/journalframe.cpp:177
-#, fuzzy, kde-format
-#| msgid "Opens a print dialog for this journal entry"
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Opens a print dialog for this journal entry"
-msgstr "Otevře tiskový dialog pro tuto položku deníku."
+msgstr ""
 
 #: journal/journalframe.cpp:182
-#, fuzzy, kde-format
-#| msgid "Print preview"
+#, kde-format
 msgctxt "@action: button"
 msgid "Print preview"
-msgstr "Náhled před tiskem"
+msgstr ""
 
 #: journal/journalframe.cpp:186
 #, kde-format
@@ -1468,11 +1456,10 @@ msgid "Print preview this journal entry"
 msgstr "Vytisknout náhled této položky deníku"
 
 #: journal/journalframe.cpp:187
-#, fuzzy, kde-format
-#| msgid "Opens a print dialog for this journal entry"
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Opens a print preview of this journal entry"
-msgstr "Otevře tiskový dialog pro tuto položku deníku."
+msgstr ""
 
 #: list/listview.cpp:56
 #, kde-format
@@ -1506,33 +1493,28 @@ msgid "Summary [%1 - %2]"
 msgstr "Shrnutí [%1 - %2]"
 
 #: month/monthitem.cpp:307
-#, fuzzy, kde-format
-#| msgid "%2 1 year"
-#| msgid_plural "%2 %1 years"
+#, kde-format
 msgctxt "@info/plain a person's age"
 msgid "1 year old"
 msgid_plural "%1 years old"
-msgstr[0] "%2 1 rok"
-msgstr[1] "%2 %1 roky"
-msgstr[2] "%2 %1 let"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
 
 #: month/monthitem.cpp:309
-#, fuzzy, kde-format
-#| msgid "%2 1 year"
-#| msgid_plural "%2 %1 years"
+#, kde-format
 msgctxt "@info/plain number of years of marriage"
 msgid "1 year"
 msgid_plural "%1 years"
-msgstr[0] "%2 1 rok"
-msgstr[1] "%2 %1 roky"
-msgstr[2] "%2 %1 let"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
 
 #: month/monthitem.cpp:443
-#, fuzzy, kde-format
-#| msgid "Move occurrence(s)"
+#, kde-format
 msgctxt "@info/plain"
 msgid "Move occurrence(s)"
-msgstr "Posunout výskyt(y)"
+msgstr ""
 
 #: month/monthscene.cpp:184
 #, kde-format
@@ -1618,11 +1600,10 @@ msgid ""
 msgstr ""
 
 #: multiagenda/multiagendaview.cpp:97
-#, fuzzy, kde-format
-#| msgid "Agenda %1"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Agenda %1"
-msgstr "Agenda %1"
+msgstr ""
 
 #: multiagenda/multiagendaview.cpp:179
 #, kde-format
@@ -1696,11 +1677,10 @@ msgid "9 (lowest)"
 msgstr "9 (nejnižší)"
 
 #: todo/todoview.cpp:232
-#, fuzzy, kde-format
-#| msgid "Cannot move to-do to itself or a child of itself."
+#, kde-format
 msgctxt "@info"
 msgid "Cannot move to-do to itself or a child of itself."
-msgstr "Úlohu nelze přesunout do sebe sama nebo do svého potomka."
+msgstr ""
 
 #: todo/todoview.cpp:233
 #, kde-format
@@ -1709,12 +1689,10 @@ msgid "Drop To-do"
 msgstr "Zrušit úlohu"
 
 #: todo/todoview.cpp:304
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Create Event from To-do"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Create an open-ended to-do"
-msgstr "Vytvořit událost z úlohy"
+msgstr ""
 
 #: todo/todoview.cpp:307
 #, kde-kuit-format
@@ -1727,12 +1705,10 @@ msgid ""
 msgstr ""
 
 #: todo/todoview.cpp:317
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Display to-do list in a full window"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Display to-dos in a full window without the sidebar"
-msgstr "Zobrazit seznam úloh v celém okně"
+msgstr ""
 
 #: todo/todoview.cpp:319
 #, kde-format
@@ -1743,12 +1719,10 @@ msgid ""
 msgstr ""
 
 #: todo/todoview.cpp:325
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Display to-dos in flat list instead of a tree"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Display to-dos in a flat list or a tree"
-msgstr "Zobrazit úlohy v seznamu namísto stromu"
+msgstr ""
 
 #: todo/todoview.cpp:327
 #, kde-format
@@ -2046,17 +2020,12 @@ msgid "A test app for embedding calendarviews"
 msgstr ""
 
 #: viewerapp/main.cpp:23
-#, fuzzy, kde-format
-#| msgid ""
-#| "Copyright (C) 2010 Klarälvdalens Datakonsult AB, a KDAB Group company, "
-#| "info@kdab.net"
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Copyright (C) 2010 Klarälvdalens Datakonsult AB, a KDAB Group company, "
 "info@kdab.net"
 msgstr ""
-"Autorská práva (C) 2010 Klarälvdalens Datakonsult AB, společnost skupiny "
-"KDAB Group, info@kdab.net"
 
 #: viewerapp/main.cpp:24
 #, kde-format
@@ -2078,11 +2047,10 @@ msgstr ""
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab)
 #: viewerapp/mainwindow.ui:55
-#, fuzzy, kde-format
-#| msgid "Tab 1"
+#, kde-format
 msgctxt "@title:tab a generic tab"
 msgid "Tab 1"
-msgstr "Karta 1"
+msgstr ""
 
 #. i18n: ectx: property (title), widget (QMenu, addViewMenu)
 #: viewerapp/mainwindow.ui:74
@@ -2317,6 +2285,3 @@ msgstr "%1, %2 - %3"
 msgctxt "to-do due date"
 msgid "  (Due: %1)"
 msgstr "  (Do: %1)"
-
-#~ msgid "Age:"
-#~ msgstr "Stáří:"
