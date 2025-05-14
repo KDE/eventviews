@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-25 02:34+0000\n"
+"POT-Creation-Date: 2025-05-14 02:38+0000\n"
 "PO-Revision-Date: 2024-11-13 15:57+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
@@ -2029,33 +2029,33 @@ msgctxt "@action:inmenu"
 msgid "%1"
 msgstr "%1"
 
-#: todo/todoviewsortfilterproxymodel.cpp:161
+#: todo/todoviewsortfilterproxymodel.cpp:157
 #, kde-format
 msgctxt "priority is unspecified"
 msgid "unspecified"
 msgstr "не определён"
 
+#: todo/todoviewsortfilterproxymodel.cpp:158
+#: todo/todoviewsortfilterproxymodel.cpp:160
 #: todo/todoviewsortfilterproxymodel.cpp:162
 #: todo/todoviewsortfilterproxymodel.cpp:164
-#: todo/todoviewsortfilterproxymodel.cpp:166
-#: todo/todoviewsortfilterproxymodel.cpp:168
 #, kde-format
 msgid "%1"
 msgstr "%1"
 
-#: todo/todoviewsortfilterproxymodel.cpp:163
+#: todo/todoviewsortfilterproxymodel.cpp:159
 #, kde-format
 msgctxt "highest priority"
 msgid "%1 (highest)"
 msgstr "%1 (высший)"
 
-#: todo/todoviewsortfilterproxymodel.cpp:165
+#: todo/todoviewsortfilterproxymodel.cpp:161
 #, kde-format
 msgctxt "medium priority"
 msgid "%1 (medium)"
 msgstr "%1 (средний)"
 
-#: todo/todoviewsortfilterproxymodel.cpp:167
+#: todo/todoviewsortfilterproxymodel.cpp:163
 #, kde-format
 msgctxt "lowest priority"
 msgid "%1 (lowest)"
