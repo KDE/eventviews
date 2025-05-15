@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-06 00:42+0000\n"
-"PO-Revision-Date: 2025-04-19 12:25+0200\n"
+"PO-Revision-Date: 2025-05-08 20:02+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Lokalize 25.07.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -1872,28 +1872,20 @@ msgstr ""
 "добавите още свойства.</note></para>"
 
 #: todo/todoview.cpp:317
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Display to-do list in a full window"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Display to-dos in a full window without the sidebar"
-msgstr "Показване на списъка със задачи в пълен прозорец"
+msgstr "Показване на списъка със задачи в пълен прозорец без странична лента"
 
 #: todo/todoview.cpp:319
-#, fuzzy, kde-format
-#| msgctxt "@info:whatsthis"
-#| msgid ""
-#| "Checking this button will cause the to-dos to be displayed either as a "
-#| "flat list or a hierarchical tree where the parental relationships are "
-#| "removed."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Checking this button will cause the to-dos to be displayed in a larger "
 "window by hiding the sidebar."
 msgstr ""
 "Поставянето на отметка в тази опция ще доведе до показване на задачите за "
-"изпълнение като плосък списък или като йерархично дърво, в което "
-"родителските връзки са премахнати."
+"изпълнение в по–голям прозорец като скрива страничния панел."
 
 #: todo/todoview.cpp:325
 #, kde-format
@@ -2033,29 +2025,28 @@ msgid "8"
 msgstr "8"
 
 #: todo/todoview.cpp:1132
-#, fuzzy, kde-format
-#| msgid "Display the current-time indicator"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Display the sidebar"
-msgstr "Показване на индикатора за текущо време"
+msgstr "Показване на страничната лента"
 
 #: todo/todoview.cpp:1135
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Hide the sidebar"
-msgstr ""
+msgstr "Скриване на страничната лента"
 
 #: todo/todoview.cpp:1154
 #, kde-format
 msgctxt "@info::tooltip"
 msgid "Switch to the tree list display"
-msgstr ""
+msgstr "Превключване в изглед на йерархичен списък"
 
 #: todo/todoview.cpp:1157
 #, kde-format
 msgctxt "@info::tooltip"
 msgid "Switch to the flat list display"
-msgstr ""
+msgstr "Превключване в изглед на плосък списък"
 
 #: todo/todoviewquickaddline.cpp:17
 #, kde-format
