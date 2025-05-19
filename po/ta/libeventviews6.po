@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-06 00:42+0000\n"
-"PO-Revision-Date: 2025-04-27 12:03+0530\n"
+"PO-Revision-Date: 2025-05-18 21:05+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.0\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -558,7 +558,7 @@ msgstr ""
 #: eventviews.kcfg:183 viewerapp/settings.kcfg:33
 #, kde-format
 msgid "Show icons in agenda view items"
-msgstr ""
+msgstr "நிகழ்ச்சிநிரல் காட்சிமுறையில் சின்னங்களைக் காட்டு"
 
 #. i18n: ectx: whatsthis, entry (EnableAgendaItemIcons), group (Agenda View)
 #: eventviews.kcfg:184 viewerapp/settings.kcfg:34
@@ -572,7 +572,7 @@ msgstr ""
 #: eventviews.kcfg:185 viewerapp/settings.kcfg:35
 #, kde-format
 msgid "Display icons in agenda view items"
-msgstr ""
+msgstr "நிகழ்ச்சிநிரல் காட்சிமுறையில் சின்னங்களைக் காட்டு"
 
 #. i18n: ectx: label, entry (ShowTodosAgendaView), group (Agenda View)
 #. i18n: ectx: label, entry (ShowTodosMonthView), group (Month View)
@@ -580,7 +580,7 @@ msgstr ""
 #: viewerapp/settings.kcfg:133
 #, kde-format
 msgid "Show to-dos"
-msgstr ""
+msgstr "செய்யவேண்டியவற்றைக் காட்டு"
 
 #. i18n: ectx: whatsthis, entry (ShowTodosAgendaView), group (Agenda View)
 #: eventviews.kcfg:191 viewerapp/settings.kcfg:41
@@ -598,7 +598,7 @@ msgstr ""
 #: eventviews.kcfg:197 viewerapp/settings.kcfg:47
 #, kde-format
 msgid "Show current-time (Marcus Bains) line"
-msgstr ""
+msgstr "தற்போதைய நேரத்தை கோடாகக் காட்டு (Marcus Bains கோடு)"
 
 #. i18n: ectx: whatsthis, entry (MarcusBainsEnabled), group (Agenda View)
 #: eventviews.kcfg:198 viewerapp/settings.kcfg:48
@@ -612,7 +612,7 @@ msgstr ""
 #: eventviews.kcfg:199 viewerapp/settings.kcfg:49
 #, kde-format
 msgid "Display the current-time indicator"
-msgstr ""
+msgstr "தற்போதைய நேரத்தைக் குறி"
 
 #. i18n: ectx: label, entry (MarcusBainsShowSeconds), group (Agenda View)
 #: eventviews.kcfg:204 viewerapp/settings.kcfg:54
@@ -857,7 +857,7 @@ msgstr ""
 #: eventviews.kcfg:280 viewerapp/settings.kcfg:126
 #, kde-format
 msgid "Show icons in month view items"
-msgstr ""
+msgstr "மாதக் காட்சிமுறையில் சின்னங்களைக் காட்டு"
 
 #. i18n: ectx: whatsthis, entry (EnableMonthItemIcons), group (Month View)
 #: eventviews.kcfg:281 viewerapp/settings.kcfg:127
@@ -870,7 +870,7 @@ msgstr ""
 #: eventviews.kcfg:282 viewerapp/settings.kcfg:128
 #, kde-format
 msgid "Display icons in month view items"
-msgstr ""
+msgstr "மாதக் காட்சிமுறையில் சின்னங்களைக் காட்டு"
 
 #. i18n: ectx: label, entry (ShowTimeInMonthView), group (Month View)
 #: eventviews.kcfg:287
@@ -900,13 +900,13 @@ msgstr ""
 #: eventviews.kcfg:296 viewerapp/settings.kcfg:135
 #, kde-format
 msgid "Display to-dos in the month view"
-msgstr ""
+msgstr "மாதக் காட்சிமுறையில் செய்யவேண்டியவற்றைக் காட்டு"
 
 #. i18n: ectx: label, entry (ShowJournalsMonthView), group (Month View)
 #: eventviews.kcfg:301 viewerapp/settings.kcfg:140
 #, kde-format
 msgid "Show journals"
-msgstr ""
+msgstr "நாளேடுகளைக் காட்டு"
 
 #. i18n: ectx: whatsthis, entry (ShowJournalsMonthView), group (Month View)
 #: eventviews.kcfg:302 viewerapp/settings.kcfg:141
