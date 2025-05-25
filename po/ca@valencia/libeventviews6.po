@@ -602,9 +602,9 @@ msgid ""
 "Check this box to select a working week when clicking on the Date "
 "Navigator's week numbers, or uncheck it to choose the whole week."
 msgstr ""
-"Marqueu esta casella per a seleccionar una setmana laboral clicant en els "
-"números de la setmana del navegador de dates, o desmarqueu-la per a "
-"seleccionar la setmana sencera."
+"Marqueu esta casella per a seleccionar una setmana laboral quan es clique "
+"damunt dels números de la setmana del navegador de dates, o desmarqueu-la "
+"per a seleccionar la setmana sencera."
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #: eventviews.kcfg:174 viewerapp/settings.kcfg:24
@@ -976,8 +976,8 @@ msgid ""
 "Check this box to display scrollbars when clicking on a cell in the month "
 "view; they will only appear when needed though."
 msgstr ""
-"Marqueu esta casella per a mostrar barres de desplaçament clicant en una "
-"cel·la en la vista mensual. Només apareixeran quan calga."
+"Marqueu esta casella per a mostrar barres de desplaçament quan es clique "
+"damunt d'una cel·la en la vista mensual. Només apareixeran quan calga."
 
 #. i18n: ectx: label, entry (EnableMonthItemIcons), group (Month View)
 #: eventviews.kcfg:280 viewerapp/settings.kcfg:126
@@ -1711,8 +1711,8 @@ msgid ""
 "Click this button and the month view will be enlarged to fill the maximum "
 "available window space / or shrunk back to its normal size."
 msgstr ""
-"Cliqueu este botó i la vista de mes augmentarà fins a omplir l'espai màxim "
-"disponible de la finestra / o retornarà a la seua mida normal."
+"Cliqueu damunt d'este botó i la vista de mes augmentarà fins a omplir "
+"l'espai màxim disponible de la finestra / o retornarà a la seua mida normal."
 
 #: month/monthview.cpp:219
 #, kde-format
@@ -1725,7 +1725,7 @@ msgstr "Torna un mes arrere"
 msgctxt "@info:whatsthis"
 msgid ""
 "Click this button and the view will be scrolled back in time by 1 month."
-msgstr "Cliqueu este botó i la vista retrocedirà 1 mes en el temps."
+msgstr "Cliqueu damunt d'este botó i la vista retrocedirà 1 mes en el temps."
 
 #: month/monthview.cpp:226
 #, kde-format
@@ -1737,7 +1737,8 @@ msgstr "Torna una setmana arrere"
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Click this button and the view will be scrolled back in time by 1 week."
-msgstr "Cliqueu este botó i la vista retrocedirà 1 setmana en el temps."
+msgstr ""
+"Cliqueu damunt d'este botó i la vista retrocedirà 1 setmana en el temps."
 
 #: month/monthview.cpp:233
 #, kde-format
@@ -1750,7 +1751,7 @@ msgstr "Ves una setmana avant"
 msgctxt "@info:whatsthis"
 msgid ""
 "Click this button and the view will be scrolled forward in time by 1 week."
-msgstr "Cliqueu este botó i la vista avançarà 1 setmana en el temps."
+msgstr "Cliqueu damunt d'este botó i la vista avançarà 1 setmana en el temps."
 
 #: month/monthview.cpp:240
 #, kde-format
@@ -1763,7 +1764,7 @@ msgstr "Ves un mes avant"
 msgctxt "@info:whatsthis"
 msgid ""
 "Click this button and the view will be scrolled forward in time by 1 month."
-msgstr "Cliqueu este botó i la vista avançarà 1 mes en el temps."
+msgstr "Cliqueu damunt d'este botó i la vista avançarà 1 mes en el temps."
 
 #: multiagenda/multiagendaview.cpp:97
 #, kde-format
