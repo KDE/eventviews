@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-06 00:42+0000\n"
-"PO-Revision-Date: 2025-04-20 10:23+0300\n"
+"PO-Revision-Date: 2025-05-25 17:55+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -1495,8 +1495,7 @@ msgid "Use system color. If enabled will ignore all other color settings"
 msgstr "Käytä järjestelmäväriä. Jos käytössä, muut väriasetukset ohitetaan"
 
 #: journal/journalframe.cpp:153
-#, fuzzy, kde-format
-#| msgid "&Edit"
+#, kde-format
 msgctxt "@action: button"
 msgid "&Edit"
 msgstr "&Muokkaa"
@@ -1508,15 +1507,13 @@ msgid "Edit this journal entry"
 msgstr "Muokkaa tätä päiväkirjamerkintää"
 
 #: journal/journalframe.cpp:157
-#, fuzzy, kde-format
-#| msgid "Opens an editor dialog for this journal entry"
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Opens an editor dialog for this journal entry"
-msgstr "Avaa tämän päiväkirjamerkinnän muokkaimessa"
+msgstr "Avaa muokkaimen tähän päiväkirjamerkintään"
 
 #: journal/journalframe.cpp:163
-#, fuzzy, kde-format
-#| msgid "&Delete"
+#, kde-format
 msgctxt "@action: button"
 msgid "&Delete"
 msgstr "&Poista"
@@ -1528,15 +1525,13 @@ msgid "Delete this journal entry"
 msgstr "Poista tämä päiväkirjamerkintä"
 
 #: journal/journalframe.cpp:167
-#, fuzzy, kde-format
-#| msgid "Delete this journal entry"
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Delete this journal entry"
 msgstr "Poista tämä päiväkirjamerkintä"
 
 #: journal/journalframe.cpp:172
-#, fuzzy, kde-format
-#| msgid "&Print"
+#, kde-format
 msgctxt "@action: button"
 msgid "&Print"
 msgstr "T&ulosta"
@@ -1548,18 +1543,16 @@ msgid "Print this journal entry"
 msgstr "Tulosta tämä päiväkirjamerkintä"
 
 #: journal/journalframe.cpp:177
-#, fuzzy, kde-format
-#| msgid "Opens a print dialog for this journal entry"
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Opens a print dialog for this journal entry"
-msgstr "Avaa tulostusikkunan tätä päiväkirjamerkintää varten"
+msgstr "Avaa tätä päiväkirjamerkintää varten tulostusikkunan"
 
 #: journal/journalframe.cpp:182
-#, fuzzy, kde-format
-#| msgid "Print preview"
+#, kde-format
 msgctxt "@action: button"
 msgid "Print preview"
-msgstr "Tulostuksen esikatselu"
+msgstr "Tulostusesikatselu"
 
 #: journal/journalframe.cpp:186
 #, kde-format
@@ -1568,11 +1561,10 @@ msgid "Print preview this journal entry"
 msgstr "Esikatsele tätä päiväkirjamerkintää"
 
 #: journal/journalframe.cpp:187
-#, fuzzy, kde-format
-#| msgid "Opens a print dialog for this journal entry"
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Opens a print preview of this journal entry"
-msgstr "Avaa tulostusikkunan tätä päiväkirjamerkintää varten"
+msgstr "Avaa tätä päiväkirjamerkintää varten tulostusesikatselun"
 
 #: list/listview.cpp:56
 #, kde-format
@@ -1606,14 +1598,12 @@ msgid "Summary [%1 - %2]"
 msgstr "Yhteenveto [%1 – %2]"
 
 #: month/monthitem.cpp:307
-#, fuzzy, kde-format
-#| msgid "%2 1 year"
-#| msgid_plural "%2 %1 years"
+#, kde-format
 msgctxt "@info/plain a person's age"
 msgid "1 year old"
 msgid_plural "%1 years old"
-msgstr[0] "%2 1 vuosi"
-msgstr[1] "%2 %1 vuotta"
+msgstr[0] "Vuoden vanha"
+msgstr[1] "%1 vuotta vanha"
 
 #: month/monthitem.cpp:309
 #, fuzzy, kde-format
@@ -1990,29 +1980,28 @@ msgid "8"
 msgstr "8"
 
 #: todo/todoview.cpp:1132
-#, fuzzy, kde-format
-#| msgid "Display the current-time indicator"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Display the sidebar"
-msgstr "Näytä nykyhetken osoitin"
+msgstr "Näytä sivupaneeli"
 
 #: todo/todoview.cpp:1135
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Hide the sidebar"
-msgstr ""
+msgstr "Piilota sivupaneeli"
 
 #: todo/todoview.cpp:1154
 #, kde-format
 msgctxt "@info::tooltip"
 msgid "Switch to the tree list display"
-msgstr ""
+msgstr "Vaihda puunäkymään"
 
 #: todo/todoview.cpp:1157
 #, kde-format
 msgctxt "@info::tooltip"
 msgid "Switch to the flat list display"
-msgstr ""
+msgstr "Vaihda luettelonäkymään"
 
 #: todo/todoviewquickaddline.cpp:17
 #, kde-format
@@ -2151,24 +2140,19 @@ msgid "View Columns"
 msgstr "Näytä sarakkeet"
 
 #: viewerapp/main.cpp:19
-#, fuzzy, kde-format
-#| msgid "ViewerApp"
+#, kde-format
 msgctxt "@label"
 msgid "ViewerApp"
 msgstr "ViewerApp"
 
 #: viewerapp/main.cpp:21
-#, fuzzy, kde-format
-#| msgid "A test app for embedding calendarviews"
+#, kde-format
 msgctxt "@info"
 msgid "A test app for embedding calendarviews"
 msgstr "Kalenterinäkymien upotuksen kokeilusovelma"
 
 #: viewerapp/main.cpp:23
-#, fuzzy, kde-format
-#| msgid ""
-#| "Copyright (C) 2010 Klarälvdalens Datakonsult AB, a KDAB Group company, "
-#| "info@kdab.net"
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Copyright (C) 2010 Klarälvdalens Datakonsult AB, a KDAB Group company, "
