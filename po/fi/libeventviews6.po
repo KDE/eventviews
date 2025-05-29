@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-06 00:42+0000\n"
-"PO-Revision-Date: 2025-05-25 17:55+0300\n"
+"PO-Revision-Date: 2025-05-28 10:48+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -31,12 +31,11 @@ msgid "Your emails"
 msgstr "translator@legisign.org"
 
 #: agenda/agenda.cpp:955
-#, fuzzy, kde-format
-#| msgid "Unable to lock item for modification. You cannot make any changes."
+#, kde-format
 msgctxt "@info"
 msgid "Unable to lock item for modification. You cannot make any changes."
 msgstr ""
-"Merkintää ei saatu lukituksi muuttamista varten: et voi tehdä muutoksia."
+"Merkintää ei saatu lukituksi muuttamista varten. Muutoksia ei voi tehdä."
 
 #: agenda/agenda.cpp:957
 #, kde-format
@@ -45,16 +44,13 @@ msgid "Locking Failed"
 msgstr "Lukitus epäonnistui"
 
 #: agenda/agenda.cpp:1172
-#, fuzzy, kde-format
-#| msgid "Dissociate event from recurrence"
+#, kde-format
 msgctxt "@info/plain"
 msgid "Dissociate event from recurrence"
 msgstr "Irrota tapahtuma toistosta"
 
 #: agenda/agenda.cpp:1195 month/monthitem.cpp:450
-#, fuzzy, kde-format
-#| msgid ""
-#| "Unable to add the exception item to the calendar. No change will be done."
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Unable to add the exception item to the calendar. No change will be done."
@@ -1606,21 +1602,18 @@ msgstr[0] "Vuoden vanha"
 msgstr[1] "%1 vuotta vanha"
 
 #: month/monthitem.cpp:309
-#, fuzzy, kde-format
-#| msgid "%2 1 year"
-#| msgid_plural "%2 %1 years"
+#, kde-format
 msgctxt "@info/plain number of years of marriage"
 msgid "1 year"
 msgid_plural "%1 years"
-msgstr[0] "%2 1 vuosi"
-msgstr[1] "%2 %1 vuotta"
+msgstr[0] "1 vuosi"
+msgstr[1] "%1 vuotta"
 
 #: month/monthitem.cpp:443
-#, fuzzy, kde-format
-#| msgid "Move occurrence(s)"
+#, kde-format
 msgctxt "@info/plain"
 msgid "Move occurrence(s)"
-msgstr "Siirrä tapahtumat"
+msgstr "Siirrä tapahtumia"
 
 #: month/monthscene.cpp:184
 #, kde-format
@@ -1819,29 +1812,25 @@ msgid ""
 "or recurrence. Edit the newly created if you want to add more properties.</"
 "note></para>"
 msgstr ""
+"Syötä uuden tehtävän yhteenveto.<para><note>Uudesta tehtävästä tulee avoin "
+"eli sillä ei ole aloitus- ja päättymisaikoja, muistutuksia tai toistoa. "
+"Ominaisuuksia voi lisätä muokkaamalla luotua tehtävää.</note></para>"
 
 #: todo/todoview.cpp:317
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Display to-do list in a full window"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Display to-dos in a full window without the sidebar"
-msgstr "Näytä tehtäväluettelo koko ikkunassa"
+msgstr "Näytä tehtävät sivupaneelitta koko ikkunassa"
 
 #: todo/todoview.cpp:319
-#, fuzzy, kde-format
-#| msgctxt "@info:whatsthis"
-#| msgid ""
-#| "Checking this option will cause the to-dos to be displayed as a flat list "
-#| "instead of a hierarchical tree; the parental relationships are removed in "
-#| "the display."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Checking this button will cause the to-dos to be displayed in a larger "
 "window by hiding the sidebar."
 msgstr ""
-"Tämän asetuksen valitseminen saa tehtävänäkymän käyttämään luetteloa "
-"hierarkkisen puun sijaan (perhesuhteet poistetaan näkymästä)."
+"Tämän valitseminen näyttää tehtävät suuremmassa ikkunassa piilottamalla "
+"sivupaneelin."
 
 #: todo/todoview.cpp:325
 #, kde-format
@@ -2182,8 +2171,7 @@ msgstr "Kalenterinäkymien katselin"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab)
 #: viewerapp/mainwindow.ui:55
-#, fuzzy, kde-format
-#| msgid "Tab 1"
+#, kde-format
 msgctxt "@title:tab a generic tab"
 msgid "Tab 1"
 msgstr "Välilehti 1"
