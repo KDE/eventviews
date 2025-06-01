@@ -114,6 +114,7 @@ protected Q_SLOTS:
     void newTodo();
     void newSubTodo();
     void copyTodoToDate(QDate date);
+    void toggleTodoCompleted();
 
 private Q_SLOTS:
     EVENTVIEWS_NO_EXPORT void scheduleResizeColumns();

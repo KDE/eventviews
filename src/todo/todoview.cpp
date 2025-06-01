@@ -424,6 +424,11 @@ TodoView::TodoView(const EventViews::PrefsPtr &prefs, bool sidebarView, QWidget 
     mItemPopupMenuReadWriteEntries << a;
     mItemPopupMenuItemOnlyEntries << a;
 
+    mItemPopupMenu->addAction(QIcon::fromTheme(QStringLiteral("task-complete")),
+                              i18nc("@action:inmenu", "Togg&le To-do Completed"),
+                              this,
+                              &TodoView::toggleTodoCompleted);
+
     mItemPopupMenu->addSeparator();
 
     mCopyPopupMenu = new KDatePickerPopup(KDatePickerPopup::NoDate | KDatePickerPopup::DatePicker | KDatePickerPopup::Words, QDate::currentDate(), this);
@@ -883,6 +888,15 @@ void TodoView::newSubTodo()
     } else {
         // This never happens
         qCWarning(CALENDARVIEW_LOG) << "Selection size isn't 1";
+    }
+}
+
+void TodoView::toggleTodoCompleted()
+{
+    QModelIndexList selection = mView->selectionModel()->selectedRows();
+    if (selection.size() == 1) {
+        const auto todoItem = selection[0].data(Akonadi::TodoModel::TodoRole).value<Akonadi::Item>();
+        Q_EMIT toggleTodoCompletedSignal(todoItem);
     }
 }
 
