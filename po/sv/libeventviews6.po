@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-06 00:42+0000\n"
-"PO-Revision-Date: 2025-04-05 13:54+0200\n"
+"PO-Revision-Date: 2025-05-31 09:05+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -29,8 +29,7 @@ msgid "Your emails"
 msgstr "stefan.asserhall@gmail.com"
 
 #: agenda/agenda.cpp:955
-#, fuzzy, kde-format
-#| msgid "Unable to lock item for modification. You cannot make any changes."
+#, kde-format
 msgctxt "@info"
 msgid "Unable to lock item for modification. You cannot make any changes."
 msgstr "Kan inte låsa objekt för ändring. Du kan inte göra några ändringar."
@@ -42,16 +41,13 @@ msgid "Locking Failed"
 msgstr "Låsning misslyckades"
 
 #: agenda/agenda.cpp:1172
-#, fuzzy, kde-format
-#| msgid "Dissociate event from recurrence"
+#, kde-format
 msgctxt "@info/plain"
 msgid "Dissociate event from recurrence"
 msgstr "Koppla bort händelse från upprepning"
 
 #: agenda/agenda.cpp:1195 month/monthitem.cpp:450
-#, fuzzy, kde-format
-#| msgid ""
-#| "Unable to add the exception item to the calendar. No change will be done."
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Unable to add the exception item to the calendar. No change will be done."
@@ -1500,8 +1496,7 @@ msgstr ""
 "Använd systemfärg. Om aktiverad ignoreras alla övriga färginställningar."
 
 #: journal/journalframe.cpp:153
-#, fuzzy, kde-format
-#| msgid "&Edit"
+#, kde-format
 msgctxt "@action: button"
 msgid "&Edit"
 msgstr "&Redigera"
@@ -1513,15 +1508,13 @@ msgid "Edit this journal entry"
 msgstr "Redigera den här journalanteckningen"
 
 #: journal/journalframe.cpp:157
-#, fuzzy, kde-format
-#| msgid "Opens an editor dialog for this journal entry"
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Opens an editor dialog for this journal entry"
 msgstr "Öppnar en redigeringsdialogruta för journalanteckningen"
 
 #: journal/journalframe.cpp:163
-#, fuzzy, kde-format
-#| msgid "&Delete"
+#, kde-format
 msgctxt "@action: button"
 msgid "&Delete"
 msgstr "&Ta bort"
@@ -1533,15 +1526,13 @@ msgid "Delete this journal entry"
 msgstr "Ta bort den här journalanteckningen"
 
 #: journal/journalframe.cpp:167
-#, fuzzy, kde-format
-#| msgid "Delete this journal entry"
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Delete this journal entry"
 msgstr "Ta bort den här journalanteckningen"
 
 #: journal/journalframe.cpp:172
-#, fuzzy, kde-format
-#| msgid "&Print"
+#, kde-format
 msgctxt "@action: button"
 msgid "&Print"
 msgstr "Skriv &ut"
@@ -1553,15 +1544,13 @@ msgid "Print this journal entry"
 msgstr "Skriv ut den här journalanteckningen"
 
 #: journal/journalframe.cpp:177
-#, fuzzy, kde-format
-#| msgid "Opens a print dialog for this journal entry"
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Opens a print dialog for this journal entry"
 msgstr "Öppnar en utskriftsdialogruta för journalanteckningen"
 
 #: journal/journalframe.cpp:182
-#, fuzzy, kde-format
-#| msgid "Print preview"
+#, kde-format
 msgctxt "@action: button"
 msgid "Print preview"
 msgstr "Förhandsgranska utskrift"
@@ -1573,11 +1562,10 @@ msgid "Print preview this journal entry"
 msgstr "Förhandsgranska utskrift av den här journalanteckningen"
 
 #: journal/journalframe.cpp:187
-#, fuzzy, kde-format
-#| msgid "Opens a print dialog for this journal entry"
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Opens a print preview of this journal entry"
-msgstr "Öppnar en utskriftsdialogruta för journalanteckningen"
+msgstr "Öppnar en utskriftsförhandsgranskning för journalanteckningen"
 
 #: list/listview.cpp:56
 #, kde-format
@@ -1611,28 +1599,23 @@ msgid "Summary [%1 - %2]"
 msgstr "Sammanfattning [%1 - %2]"
 
 #: month/monthitem.cpp:307
-#, fuzzy, kde-format
-#| msgid "%2 1 year"
-#| msgid_plural "%2 %1 years"
+#, kde-format
 msgctxt "@info/plain a person's age"
 msgid "1 year old"
 msgid_plural "%1 years old"
-msgstr[0] "%2 1 år"
-msgstr[1] "%2 %1 år"
+msgstr[0] "1 år gammal"
+msgstr[1] "%1 år gamla"
 
 #: month/monthitem.cpp:309
-#, fuzzy, kde-format
-#| msgid "%2 1 year"
-#| msgid_plural "%2 %1 years"
+#, kde-format
 msgctxt "@info/plain number of years of marriage"
 msgid "1 year"
 msgid_plural "%1 years"
-msgstr[0] "%2 1 år"
-msgstr[1] "%2 %1 år"
+msgstr[0] "1 år"
+msgstr[1] "%1 år"
 
 #: month/monthitem.cpp:443
-#, fuzzy, kde-format
-#| msgid "Move occurrence(s)"
+#, kde-format
 msgctxt "@info/plain"
 msgid "Move occurrence(s)"
 msgstr "Flytta förekomst(er)"
@@ -1820,13 +1803,7 @@ msgid "Create an open-ended to-do"
 msgstr "Skapa händelse utan tider"
 
 #: todo/todoview.cpp:307
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:whatsthis"
-#| msgid ""
-#| "Enter the summary for a new to-do. <p><note>The new to-do will be open-"
-#| "ended meaning that it has no start or end times nor will it have a "
-#| "reminder or recurrence. Edit the newly created if you want to add more "
-#| "properties.</note></p>"
+#, kde-kuit-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Enter the summary for a new to-do. <para><note>The new to-do will be open-"
@@ -1834,33 +1811,26 @@ msgid ""
 "or recurrence. Edit the newly created if you want to add more properties.</"
 "note></para>"
 msgstr ""
-"Ange sammanfattningen för en ny uppgift. <p><note>Den nya uppgift är utan "
-"tider, vilket betyder att den inte har några start- eller sluttider och har "
-"inte heller någon påminnelse eller upprepning. Redigera den nyskapade "
-"uppgiften om du vill lägga till fler egenskaper.</note></p>"
+"Ange sammanfattningen för en ny uppgift. <para><note>Den nya uppgift är "
+"öppen, vilket betyder att den inte har några start- eller sluttider och inte "
+"heller har någon påminnelse eller upprepning. Redigera den nyskapade "
+"uppgiften om du vill lägga till fler egenskaper.</note></para>"
 
 #: todo/todoview.cpp:317
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Display to-do list in a full window"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Display to-dos in a full window without the sidebar"
-msgstr "Visa uppgiftslistan i ett helt fönster"
+msgstr "Visa uppgifter i ett helt fönster utan sidoraden"
 
 #: todo/todoview.cpp:319
-#, fuzzy, kde-format
-#| msgctxt "@info:whatsthis"
-#| msgid ""
-#| "Checking this button will cause the to-dos to be displayed either as a "
-#| "flat list or a hierarchical tree where the parental relationships are "
-#| "removed."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Checking this button will cause the to-dos to be displayed in a larger "
 "window by hiding the sidebar."
 msgstr ""
-"Att markera knappen gör att uppgifterna antingen visas som en enkel lista "
-"eller ett hierarkiskt träd där överliggande uppgiftsförhållanden tas bort."
+"Att markera knappen gör att uppgifterna visas i ett större fönster genom att "
+"dölja sidoraden."
 
 #: todo/todoview.cpp:325
 #, kde-format
@@ -1999,29 +1969,28 @@ msgid "8"
 msgstr "8"
 
 #: todo/todoview.cpp:1132
-#, fuzzy, kde-format
-#| msgid "Display the current-time indicator"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Display the sidebar"
-msgstr "Visar indikering av aktuell tid"
+msgstr "Visa sidoraden"
 
 #: todo/todoview.cpp:1135
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Hide the sidebar"
-msgstr ""
+msgstr "Dölj sidoraden"
 
 #: todo/todoview.cpp:1154
 #, kde-format
 msgctxt "@info::tooltip"
 msgid "Switch to the tree list display"
-msgstr ""
+msgstr "Byt till trädlistvisning"
 
 #: todo/todoview.cpp:1157
 #, kde-format
 msgctxt "@info::tooltip"
 msgid "Switch to the flat list display"
-msgstr ""
+msgstr "Byt till enkel listvisning"
 
 #: todo/todoviewquickaddline.cpp:17
 #, kde-format
@@ -2161,24 +2130,19 @@ msgid "View Columns"
 msgstr "Visa kolumner"
 
 #: viewerapp/main.cpp:19
-#, fuzzy, kde-format
-#| msgid "ViewerApp"
+#, kde-format
 msgctxt "@label"
 msgid "ViewerApp"
 msgstr "Visningsprogram"
 
 #: viewerapp/main.cpp:21
-#, fuzzy, kde-format
-#| msgid "A test app for embedding calendarviews"
+#, kde-format
 msgctxt "@info"
 msgid "A test app for embedding calendarviews"
 msgstr "Ett testprogram för inbäddad kalendervisning"
 
 #: viewerapp/main.cpp:23
-#, fuzzy, kde-format
-#| msgid ""
-#| "Copyright (C) 2010 Klarälvdalens Datakonsult AB, a KDAB Group company, "
-#| "info@kdab.net"
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Copyright (C) 2010 Klarälvdalens Datakonsult AB, a KDAB Group company, "
@@ -2207,8 +2171,7 @@ msgstr "Visning av kalendervyer"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab)
 #: viewerapp/mainwindow.ui:55
-#, fuzzy, kde-format
-#| msgid "Tab 1"
+#, kde-format
 msgctxt "@title:tab a generic tab"
 msgid "Tab 1"
 msgstr "Flik 1"
