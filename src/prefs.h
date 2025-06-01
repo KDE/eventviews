@@ -147,6 +147,9 @@ public:
     [[nodiscard]] QStringList timeScaleTimezones() const;
     void setTimeScaleTimezones(const QStringList &list);
 
+    [[nodiscard]] bool use24HourClock() const;
+    void setUse24HourClock(bool);
+
     [[nodiscard]] QStringList selectedPlugins() const;
     void setSelectedPlugins(const QStringList &);
 

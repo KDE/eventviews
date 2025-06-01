@@ -85,6 +85,8 @@ public:
 
     void setTimeScaleTimezones(const QStringList &timeZones);
     QStringList timeScaleTimezones() const;
+    void setUse24HourClock(bool enable);
+    bool use24HourClock() const;
 
 public:
     QHash<QString, QColor> mResourceColors;
@@ -94,6 +96,7 @@ public:
     QFont mDefaultAgendaTimeLabelsFont;
 
     QStringList mTimeScaleTimeZones;
+    bool mUse24HourClock;
 
     QSet<EventViews::EventView::ItemIcon> mAgendaViewIcons;
     QSet<EventViews::EventView::ItemIcon> mMonthViewIcons;
@@ -138,6 +141,16 @@ QStringList BaseConfig::timeScaleTimezones() const
     return mTimeScaleTimeZones;
 }
 
+void BaseConfig::setUse24HourClock(bool enable)
+{
+    mUse24HourClock = enable;
+}
+
+bool BaseConfig::use24HourClock() const
+{
+    return mUse24HourClock;
+}
+
 void BaseConfig::usrSetDefaults()
 {
     setAgendaTimeLabelsFont(mDefaultAgendaTimeLabelsFont);
@@ -167,6 +180,7 @@ void BaseConfig::usrRead()
 
     KConfigGroup timeScaleConfig(config(), QStringLiteral("Timescale"));
     setTimeScaleTimezones(timeScaleConfig.readEntry("Timescale Timezones", QStringList()));
+    setUse24HourClock(timeScaleConfig.readEntry("24 Hour Clock", false));
 
     KConfigGroup monthViewConfig(config(), QStringLiteral("Month View"));
     KConfigGroup agendaViewConfig(config(), QStringLiteral("Agenda View"));
@@ -197,6 +211,7 @@ bool BaseConfig::usrSave()
 
     KConfigGroup timeScaleConfig(config(), QStringLiteral("Timescale"));
     timeScaleConfig.writeEntry("Timescale Timezones", timeScaleTimezones());
+    timeScaleConfig.writeEntry("24 Hour Clock", use24HourClock());
 
     KConfigGroup monthViewConfig(config(), QStringLiteral("Month View"));
     KConfigGroup agendaViewConfig(config(), QStringLiteral("Agenda View"));
@@ -950,6 +965,16 @@ QStringList Prefs::timeScaleTimezones() const
 void Prefs::setTimeScaleTimezones(const QStringList &list)
 {
     d->mBaseConfig.setTimeScaleTimezones(list);
+}
+
+bool Prefs::use24HourClock() const
+{
+    return d->mBaseConfig.use24HourClock();
+}
+
+void Prefs::setUse24HourClock(bool enable)
+{
+    d->mBaseConfig.setUse24HourClock(enable);
 }
 
 KConfigSkeleton::ItemFont *Prefs::fontItem(const QString &name) const

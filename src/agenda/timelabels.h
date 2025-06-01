@@ -70,6 +70,9 @@ private:
     void showMousePos();
     void hideMousePos();
 
+    /** determine if using a 24-hour clock */
+    bool use12Clock() const;
+
     void setCellHeight(double height);
     void colorMousePos();
     const QTimeZone mTimezone;

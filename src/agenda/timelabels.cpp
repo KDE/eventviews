@@ -96,12 +96,9 @@ QSize TimeLabels::minimumSizeHint() const
     return sh;
 }
 
-static bool use12Clock()
+bool TimeLabels::use12Clock() const
 {
-    const QString str = QLocale().timeFormat();
-    // 'A' or 'a' means am/pm is shown (and then 'h' uses 12-hour format)
-    // but 'H' forces a 24-hour format anyway, even with am/pm shown.
-    return str.contains(QLatin1Char('a'), Qt::CaseInsensitive) && !str.contains(QLatin1Char('H'));
+    return !mTimeLabelsZone->preferences()->use24HourClock();
 }
 
 /** updates widget's internal state */
@@ -333,6 +330,12 @@ void TimeLabels::contextMenuEvent(QContextMenuEvent *event)
     if (!mTimezone.isValid() || !mTimeLabelsZone->preferences()->timeScaleTimezones().count() || mTimezone == mTimeLabelsZone->preferences()->timeZone()) {
         removeTimeZone->setEnabled(false);
     }
+    const QAction *HourTimeMode;
+    if (mTimeLabelsZone->preferences()->use24HourClock()) {
+        HourTimeMode = popup.addAction(QIcon::fromTheme(QStringLiteral("clock")), i18nc("@action:inmenu", "12 Hour Clock"));
+    } else {
+        HourTimeMode = popup.addAction(QIcon::fromTheme(QStringLiteral("clock")), i18nc("@action:inmenu", "24 Hour Clock"));
+    }
 
     QAction *activatedAction = popup.exec(QCursor::pos());
     if (activatedAction == editTimeZones) {
@@ -349,6 +352,13 @@ void TimeLabels::contextMenuEvent(QContextMenuEvent *event)
         mTimeLabelsZone->reset();
         hide();
         deleteLater();
+    } else if (activatedAction == HourTimeMode) {
+        if (mTimeLabelsZone->preferences()->use24HourClock()) {
+            mTimeLabelsZone->preferences()->setUse24HourClock(false);
+        } else {
+            mTimeLabelsZone->preferences()->setUse24HourClock(true);
+        }
+        mTimeLabelsZone->preferences()->writeConfig();
     }
 }
 
