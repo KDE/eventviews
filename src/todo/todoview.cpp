@@ -425,7 +425,7 @@ TodoView::TodoView(const EventViews::PrefsPtr &prefs, bool sidebarView, QWidget 
     mItemPopupMenuItemOnlyEntries << a;
 
     mItemPopupMenu->addAction(QIcon::fromTheme(QStringLiteral("task-complete")),
-                              i18nc("@action:inmenu", "Togg&le To-do Completed"),
+                              i18nc("@action:inmenu set or unset to-do is completed", "Togg&le To-do Completed"),
                               this,
                               &TodoView::toggleTodoCompleted);
 
