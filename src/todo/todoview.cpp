@@ -885,9 +885,6 @@ void TodoView::newSubTodo()
         const auto todoItem = selection[0].data(Akonadi::TodoModel::TodoRole).value<Akonadi::Item>();
 
         Q_EMIT newSubTodoSignal(todoItem);
-    } else {
-        // This never happens
-        qCWarning(CALENDARVIEW_LOG) << "Selection size isn't 1";
     }
 }
 
