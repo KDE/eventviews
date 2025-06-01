@@ -428,6 +428,10 @@ TodoView::TodoView(const EventViews::PrefsPtr &prefs, bool sidebarView, QWidget 
                               i18nc("@action:inmenu set or unset to-do is completed", "Togg&le To-do Completed"),
                               this,
                               &TodoView::toggleTodoCompleted);
+    mItemPopupMenu->addAction(QIcon::fromTheme(QStringLiteral("task-reminder")),
+                              i18nc("@action:inmenu enable or disable reminder", "&Toggle Reminder"),
+                              this,
+                              &TodoView::toggleTodoAlarm);
 
     mItemPopupMenu->addSeparator();
 
@@ -894,6 +898,15 @@ void TodoView::toggleTodoCompleted()
     if (selection.size() == 1) {
         const auto todoItem = selection[0].data(Akonadi::TodoModel::TodoRole).value<Akonadi::Item>();
         Q_EMIT toggleTodoCompletedSignal(todoItem);
+    }
+}
+
+void TodoView::toggleTodoAlarm()
+{
+    QModelIndexList selection = mView->selectionModel()->selectedRows();
+    if (selection.size() == 1) {
+        const auto todoItem = selection[0].data(Akonadi::TodoModel::TodoRole).value<Akonadi::Item>();
+        Q_EMIT toggleAlarmSignal(todoItem);
     }
 }
 
