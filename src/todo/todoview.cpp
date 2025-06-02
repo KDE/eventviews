@@ -662,11 +662,12 @@ void TodoView::showIncidences(const Akonadi::Item::List &incidenceList, const QD
 
 void TodoView::updateView()
 {
-    if (calendars().empty()) {
+    auto calendarList = calendars();
+    if (calendarList.isEmpty()) {
         return;
     }
 
-    auto calendar = calendars().first();
+    auto calendar = calendarList.first();
     mProxyModel->setCalFilter(calendar->filter());
 }
 
