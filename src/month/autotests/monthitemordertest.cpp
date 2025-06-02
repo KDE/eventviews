@@ -31,7 +31,7 @@ void MonthItemOrderTest::longerInstancesFirst()
 {
     QDate startDate(2000, 01, 01);
     IncidenceMonthItem *longEvent = eventItem(startDate, startDate.addDays(1));
-    auto longHoliday = new HolidayMonthItem(nullptr, startDate, startDate.addDays(1), QStringLiteral(""));
+    auto longHoliday = new HolidayMonthItem(nullptr, startDate, startDate.addDays(1), QString());
     for (int offset = -1; offset < 3; offset++) {
         QDate d = startDate.addDays(offset);
 
@@ -41,7 +41,7 @@ void MonthItemOrderTest::longerInstancesFirst()
         QVERIFY(MonthItem::greaterThan(longHoliday, shortEvent));
         QVERIFY(!MonthItem::greaterThan(shortEvent, longHoliday));
 
-        auto shortHoliday = new HolidayMonthItem(nullptr, d, QStringLiteral(""));
+        auto shortHoliday = new HolidayMonthItem(nullptr, d, QString());
         QVERIFY(MonthItem::greaterThan(longEvent, shortHoliday));
         QVERIFY(!MonthItem::greaterThan(shortHoliday, longEvent));
         QVERIFY(MonthItem::greaterThan(longHoliday, shortHoliday));
@@ -56,7 +56,7 @@ void MonthItemOrderTest::holidaysFirst()
 {
     QDate startDate(2000, 01, 01);
     IncidenceMonthItem *event = eventItem(startDate, startDate);
-    auto holiday = new HolidayMonthItem(nullptr, startDate, QStringLiteral(""));
+    auto holiday = new HolidayMonthItem(nullptr, startDate, QString());
     QVERIFY(!MonthItem::greaterThan(event, holiday));
     QVERIFY(MonthItem::greaterThan(holiday, event));
 }
@@ -69,8 +69,8 @@ void MonthItemOrderTest::stableOrder()
 {
     QDate startDate(2000, 01, 01);
 
-    auto holiday = new HolidayMonthItem(nullptr, startDate, QStringLiteral(""));
-    auto otherHoliday = new HolidayMonthItem(nullptr, startDate, QStringLiteral(""));
+    auto holiday = new HolidayMonthItem(nullptr, startDate, QString());
+    auto otherHoliday = new HolidayMonthItem(nullptr, startDate, QString());
     QVERIFY(!(MonthItem::greaterThan(otherHoliday, holiday) && MonthItem::greaterThan(holiday, otherHoliday)));
 
     IncidenceMonthItem *event = eventItem(startDate, startDate);
