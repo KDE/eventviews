@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-06 00:42+0000\n"
+"POT-Creation-Date: 2025-06-02 00:42+0000\n"
 "PO-Revision-Date: 2013-09-08 07:05+0900\n"
 "Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -104,49 +104,61 @@ msgstr ""
 msgid "Unable to save %1 \"%2\"."
 msgstr "%1 «%2» نى ساقلىغىلى بولمىدى."
 
-#: agenda/timelabels.cpp:331
+#: agenda/timelabels.cpp:328
 #, fuzzy, kde-format
 #| msgid "Timezone"
 msgid "&Add Timezones…"
 msgstr "ۋاقىت رايونى"
 
-#: agenda/timelabels.cpp:332
+#: agenda/timelabels.cpp:329
 #, kde-format
 msgid "&Remove Timezone %1"
 msgstr ""
 
-#: agenda/timelabels.cpp:372
+#: agenda/timelabels.cpp:335
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "12 Hour Clock"
+msgstr ""
+
+#: agenda/timelabels.cpp:337
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "24 Hour Clock"
+msgstr ""
+
+#: agenda/timelabels.cpp:382
 #, fuzzy, kde-format
 #| msgid "<b>%1</b>"
 msgctxt "title for timezone info, the timezone id and utc offset"
 msgid "<b>%1 (%2)</b>"
 msgstr "<b>%1</b>"
 
-#: agenda/timelabels.cpp:376
+#: agenda/timelabels.cpp:386
 #, kde-format
 msgctxt "heading for timezone display name"
 msgid "<i>Name:</i> %1"
 msgstr ""
 
-#: agenda/timelabels.cpp:380
+#: agenda/timelabels.cpp:390
 #, kde-format
 msgctxt "heading for timezone country"
 msgid "<i>Country:</i> %1"
 msgstr ""
 
-#: agenda/timelabels.cpp:392
+#: agenda/timelabels.cpp:402
 #, kde-format
 msgctxt "heading for comma-separated list of timezone abbreviations"
 msgid "<i>Abbreviations:</i>"
 msgstr ""
 
-#: agenda/timelabels.cpp:398
+#: agenda/timelabels.cpp:408
 #, kde-format
 msgctxt "heading for the timezone comment"
 msgid "<i>Comment:</i> %1"
 msgstr ""
 
-#: agenda/timelabels.cpp:414
+#: agenda/timelabels.cpp:424
 #, kde-format
 msgctxt "[hour of the day][am/pm/00] [timezone id (timezone-offset)]"
 msgid "%1%2<br/>%3 (%4)"
@@ -1580,7 +1592,7 @@ msgctxt "@action:inmenu Unspecified priority"
 msgid "unspecified"
 msgstr "كۆرسىتىلمىگەن"
 
-#: todo/tododelegates.cpp:153 todo/todoview.cpp:452
+#: todo/tododelegates.cpp:153 todo/todoview.cpp:461
 #, kde-format
 msgctxt "@action:inmenu highest priority"
 msgid "1 (highest)"
@@ -1604,7 +1616,7 @@ msgctxt "@action:inmenu"
 msgid "4"
 msgstr "4"
 
-#: todo/tododelegates.cpp:157 todo/todoview.cpp:456
+#: todo/tododelegates.cpp:157 todo/todoview.cpp:465
 #, kde-format
 msgctxt "@action:inmenu medium priority"
 msgid "5 (medium)"
@@ -1628,7 +1640,7 @@ msgctxt "@action:inmenu"
 msgid "8"
 msgstr "8"
 
-#: todo/tododelegates.cpp:161 todo/todoview.cpp:460
+#: todo/tododelegates.cpp:161 todo/todoview.cpp:469
 #, kde-format
 msgctxt "@action:inmenu lowest priority"
 msgid "9 (lowest)"
@@ -1760,86 +1772,99 @@ msgctxt "@action:inmenu"
 msgid "Create Event from To-do"
 msgstr ""
 
-#: todo/todoview.cpp:430
+#: todo/todoview.cpp:428
+#, kde-format
+msgctxt "@action:inmenu set or unset to-do is completed"
+msgid "Togg&le To-do Completed"
+msgstr ""
+
+#: todo/todoview.cpp:432
+#, fuzzy, kde-format
+#| msgid "Reminder"
+msgctxt "@action:inmenu enable or disable reminder"
+msgid "&Toggle Reminder"
+msgstr "ئەسكەرتكۈچ"
+
+#: todo/todoview.cpp:439
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Copy To"
 msgstr "كۆچۈر(&C)"
 
-#: todo/todoview.cpp:437
+#: todo/todoview.cpp:446
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Move To"
 msgstr "يۆتكە(&M)"
 
-#: todo/todoview.cpp:448
+#: todo/todoview.cpp:457
 #, kde-format
 msgctxt "@action:inmenu delete completed to-dos"
 msgid "Pur&ge Completed"
 msgstr ""
 
-#: todo/todoview.cpp:451
+#: todo/todoview.cpp:460
 #, kde-format
 msgctxt "@action:inmenu unspecified priority"
 msgid "unspecified"
 msgstr "كۆرسىتىلمىگەن"
 
-#: todo/todoview.cpp:453
+#: todo/todoview.cpp:462
 #, kde-format
 msgctxt "@action:inmenu priority value=2"
 msgid "2"
 msgstr "2"
 
-#: todo/todoview.cpp:454
+#: todo/todoview.cpp:463
 #, kde-format
 msgctxt "@action:inmenu priority value=3"
 msgid "3"
 msgstr "3"
 
-#: todo/todoview.cpp:455
+#: todo/todoview.cpp:464
 #, kde-format
 msgctxt "@action:inmenu priority value=4"
 msgid "4"
 msgstr "4"
 
-#: todo/todoview.cpp:457
+#: todo/todoview.cpp:466
 #, kde-format
 msgctxt "@action:inmenu priority value=6"
 msgid "6"
 msgstr "6"
 
-#: todo/todoview.cpp:458
+#: todo/todoview.cpp:467
 #, kde-format
 msgctxt "@action:inmenu priority value=7"
 msgid "7"
 msgstr "7"
 
-#: todo/todoview.cpp:459
+#: todo/todoview.cpp:468
 #, kde-format
 msgctxt "@action:inmenu priority value=8"
 msgid "8"
 msgstr "8"
 
-#: todo/todoview.cpp:1132
+#: todo/todoview.cpp:1156
 #, fuzzy, kde-format
 #| msgid "Display the current-time indicator"
 msgctxt "@info:tooltip"
 msgid "Display the sidebar"
 msgstr "نۆۋەتتىكى ۋاقىت كۆرسەتكۈچىنى كۆرسەت"
 
-#: todo/todoview.cpp:1135
+#: todo/todoview.cpp:1159
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Hide the sidebar"
 msgstr ""
 
-#: todo/todoview.cpp:1154
+#: todo/todoview.cpp:1178
 #, kde-format
 msgctxt "@info::tooltip"
 msgid "Switch to the tree list display"
 msgstr ""
 
-#: todo/todoview.cpp:1157
+#: todo/todoview.cpp:1181
 #, kde-format
 msgctxt "@info::tooltip"
 msgid "Switch to the flat list display"
@@ -2346,6 +2371,3 @@ msgstr ""
 #~ msgctxt "@label an elipsis"
 #~ msgid "..."
 #~ msgstr "…"
-
-#~ msgid "Reminder"
-#~ msgstr "ئەسكەرتكۈچ"

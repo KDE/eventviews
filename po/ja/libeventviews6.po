@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-06 00:42+0000\n"
+"POT-Creation-Date: 2025-06-02 00:42+0000\n"
 "PO-Revision-Date: 2010-05-08 12:40-0700\n"
 "Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -98,47 +98,59 @@ msgstr ""
 msgid "Unable to save %1 \"%2\"."
 msgstr ""
 
-#: agenda/timelabels.cpp:331
+#: agenda/timelabels.cpp:328
 #, kde-format
 msgid "&Add Timezones…"
 msgstr ""
 
-#: agenda/timelabels.cpp:332
+#: agenda/timelabels.cpp:329
 #, kde-format
 msgid "&Remove Timezone %1"
 msgstr ""
 
-#: agenda/timelabels.cpp:372
+#: agenda/timelabels.cpp:335
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "12 Hour Clock"
+msgstr ""
+
+#: agenda/timelabels.cpp:337
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "24 Hour Clock"
+msgstr ""
+
+#: agenda/timelabels.cpp:382
 #, kde-format
 msgctxt "title for timezone info, the timezone id and utc offset"
 msgid "<b>%1 (%2)</b>"
 msgstr ""
 
-#: agenda/timelabels.cpp:376
+#: agenda/timelabels.cpp:386
 #, kde-format
 msgctxt "heading for timezone display name"
 msgid "<i>Name:</i> %1"
 msgstr ""
 
-#: agenda/timelabels.cpp:380
+#: agenda/timelabels.cpp:390
 #, kde-format
 msgctxt "heading for timezone country"
 msgid "<i>Country:</i> %1"
 msgstr ""
 
-#: agenda/timelabels.cpp:392
+#: agenda/timelabels.cpp:402
 #, kde-format
 msgctxt "heading for comma-separated list of timezone abbreviations"
 msgid "<i>Abbreviations:</i>"
 msgstr ""
 
-#: agenda/timelabels.cpp:398
+#: agenda/timelabels.cpp:408
 #, kde-format
 msgctxt "heading for the timezone comment"
 msgid "<i>Comment:</i> %1"
 msgstr ""
 
-#: agenda/timelabels.cpp:414
+#: agenda/timelabels.cpp:424
 #, kde-format
 msgctxt "[hour of the day][am/pm/00] [timezone id (timezone-offset)]"
 msgid "%1%2<br/>%3 (%4)"
@@ -1560,7 +1572,7 @@ msgctxt "@action:inmenu Unspecified priority"
 msgid "unspecified"
 msgstr ""
 
-#: todo/tododelegates.cpp:153 todo/todoview.cpp:452
+#: todo/tododelegates.cpp:153 todo/todoview.cpp:461
 #, kde-format
 msgctxt "@action:inmenu highest priority"
 msgid "1 (highest)"
@@ -1584,7 +1596,7 @@ msgctxt "@action:inmenu"
 msgid "4"
 msgstr ""
 
-#: todo/tododelegates.cpp:157 todo/todoview.cpp:456
+#: todo/tododelegates.cpp:157 todo/todoview.cpp:465
 #, kde-format
 msgctxt "@action:inmenu medium priority"
 msgid "5 (medium)"
@@ -1608,7 +1620,7 @@ msgctxt "@action:inmenu"
 msgid "8"
 msgstr ""
 
-#: todo/tododelegates.cpp:161 todo/todoview.cpp:460
+#: todo/tododelegates.cpp:161 todo/todoview.cpp:469
 #, kde-format
 msgctxt "@action:inmenu lowest priority"
 msgid "9 (lowest)"
@@ -1730,85 +1742,97 @@ msgctxt "@action:inmenu"
 msgid "Create Event from To-do"
 msgstr ""
 
-#: todo/todoview.cpp:430
+#: todo/todoview.cpp:428
+#, kde-format
+msgctxt "@action:inmenu set or unset to-do is completed"
+msgid "Togg&le To-do Completed"
+msgstr ""
+
+#: todo/todoview.cpp:432
+#, kde-format
+msgctxt "@action:inmenu enable or disable reminder"
+msgid "&Toggle Reminder"
+msgstr ""
+
+#: todo/todoview.cpp:439
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Copy To"
 msgstr ""
 
-#: todo/todoview.cpp:437
+#: todo/todoview.cpp:446
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Move To"
 msgstr ""
 
-#: todo/todoview.cpp:448
+#: todo/todoview.cpp:457
 #, kde-format
 msgctxt "@action:inmenu delete completed to-dos"
 msgid "Pur&ge Completed"
 msgstr ""
 
-#: todo/todoview.cpp:451
+#: todo/todoview.cpp:460
 #, kde-format
 msgctxt "@action:inmenu unspecified priority"
 msgid "unspecified"
 msgstr ""
 
-#: todo/todoview.cpp:453
+#: todo/todoview.cpp:462
 #, kde-format
 msgctxt "@action:inmenu priority value=2"
 msgid "2"
 msgstr ""
 
-#: todo/todoview.cpp:454
+#: todo/todoview.cpp:463
 #, kde-format
 msgctxt "@action:inmenu priority value=3"
 msgid "3"
 msgstr ""
 
-#: todo/todoview.cpp:455
+#: todo/todoview.cpp:464
 #, kde-format
 msgctxt "@action:inmenu priority value=4"
 msgid "4"
 msgstr ""
 
-#: todo/todoview.cpp:457
+#: todo/todoview.cpp:466
 #, kde-format
 msgctxt "@action:inmenu priority value=6"
 msgid "6"
 msgstr ""
 
-#: todo/todoview.cpp:458
+#: todo/todoview.cpp:467
 #, kde-format
 msgctxt "@action:inmenu priority value=7"
 msgid "7"
 msgstr ""
 
-#: todo/todoview.cpp:459
+#: todo/todoview.cpp:468
 #, kde-format
 msgctxt "@action:inmenu priority value=8"
 msgid "8"
 msgstr ""
 
-#: todo/todoview.cpp:1132
+#: todo/todoview.cpp:1156
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display the sidebar"
 msgstr ""
 
-#: todo/todoview.cpp:1135
+#: todo/todoview.cpp:1159
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Hide the sidebar"
 msgstr ""
 
-#: todo/todoview.cpp:1154
+#: todo/todoview.cpp:1178
 #, kde-format
 msgctxt "@info::tooltip"
 msgid "Switch to the tree list display"
 msgstr ""
 
-#: todo/todoview.cpp:1157
+#: todo/todoview.cpp:1181
 #, kde-format
 msgctxt "@info::tooltip"
 msgid "Switch to the flat list display"
