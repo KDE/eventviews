@@ -207,8 +207,8 @@ Q_SIGNALS:
     void upperYChanged(int);
 
     void startDragSignal(const KCalendarCore::Incidence::Ptr &);
-    void droppedIncidences(const KCalendarCore::Incidence::List &, const QPoint &gpos, bool allDay);
-    void droppedIncidences(const QList<QUrl> &, const QPoint &gpos, bool allDay);
+    void droppedIncidencesSignal(const KCalendarCore::Incidence::List &, const QPoint &gpos, bool allDay);
+    void droppedUrlsSignal(const QList<QUrl> &, const QPoint &gpos, bool allDay);
 
     void enableAgendaUpdate(bool enable);
     void zoomView(const int delta, const QPoint &pos, const Qt::Orientation);

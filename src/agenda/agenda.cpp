@@ -574,9 +574,9 @@ bool Agenda::eventFilter_drag(QObject *obj, QDropEvent *de)
 
         const QPoint gridPosition = contentsToGrid(dropPosition);
         if (!incidenceUrls.isEmpty()) {
-            Q_EMIT droppedIncidences(incidenceUrls, gridPosition, d->mAllDayMode);
+            Q_EMIT droppedUrlsSignal(incidenceUrls, gridPosition, d->mAllDayMode);
         } else {
-            Q_EMIT droppedIncidences(incidences, gridPosition, d->mAllDayMode);
+            Q_EMIT droppedIncidencesSignal(incidences, gridPosition, d->mAllDayMode);
         }
         return true;
     }

@@ -8,6 +8,8 @@
 
   SPDX-License-Identifier: GPL-2.0-or-later WITH Qt-Commercial-exception-1.0
 */
+// clazy:excludeall=overloaded-signal
+
 #pragma once
 
 #include "eventview.h"
@@ -142,7 +144,7 @@ Q_SIGNALS:
     void printPreviewTodo();
     void printTodo();
 
-    void createEvent(const Akonadi::Item &item);
+    void createEvent(const Akonadi::Item &item); // clazy:exclude=overloaded-signal
 
 private:
     EVENTVIEWS_NO_EXPORT QMenu *createCategoryPopupMenu();

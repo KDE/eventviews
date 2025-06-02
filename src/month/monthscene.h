@@ -4,6 +4,8 @@
   SPDX-License-Identifier: GPL-2.0-or-later WITH Qt-Commercial-exception-1.0
 */
 
+// clazy:excludeall=overloaded-signal
+
 #pragma once
 
 #include <Akonadi/Collection>
@@ -200,8 +202,8 @@ public:
 Q_SIGNALS:
     void incidenceSelected(const Akonadi::Item &incidence, const QDate &);
     void showIncidencePopupSignal(const Akonadi::CollectionCalendar::Ptr &, const Akonadi::Item &, const QDate &);
-    void newEventSignal();
-    void newEventSignal(const QDate &);
+    void newEventSignal(); // clazy:exclude=overloaded-signal
+    void newEventSignal(const QDate &); // clazy:exclude=overloaded-signal
     void showNewEventPopupSignal();
 
 protected:

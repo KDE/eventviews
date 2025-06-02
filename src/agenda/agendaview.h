@@ -199,7 +199,7 @@ public Q_SLOTS:
     /** reschedule the todo  to the given x- and y- coordinates.
         Third parameter determines all-day (no time specified) */
     void slotIncidencesDropped(const KCalendarCore::Incidence::List &incidences, const QPoint &, bool);
-    void slotIncidencesDropped(const QList<QUrl> &incidences, const QPoint &, bool);
+    void slotUrlsDropped(const QList<QUrl> &incidences, const QPoint &, bool);
     void startDrag(const KCalendarCore::Incidence::Ptr &);
 
 protected Q_SLOTS:

@@ -64,7 +64,7 @@ public Q_SLOTS:
     void setDate(QDate date);
 
 Q_SIGNALS:
-    void printJournal(const KCalendarCore::Journal::Ptr &, bool preview);
+    void printJournalSignal(const KCalendarCore::Journal::Ptr &, bool preview);
     void deleteIncidence(const Akonadi::Item &);
     void editIncidence(const Akonadi::Item &);
     void incidenceSelected(const Akonadi::Item &, const QDate &);

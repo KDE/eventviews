@@ -200,7 +200,7 @@ public:
 
     [[nodiscard]] QDate occurrenceDate() const;
 
-    // /** Update the date of this item's occurrence (not in the event) */
+    /** Update the date of this item's occurrence (not in the event) */
     void setOccurrenceDateTime(const QDateTime &qd);
 
     void setText(const QString &text)

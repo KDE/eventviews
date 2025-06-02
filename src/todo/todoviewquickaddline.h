@@ -23,7 +23,7 @@ protected:
     void resizeEvent(QResizeEvent *event) override;
 
 Q_SIGNALS:
-    void returnPressed(Qt::KeyboardModifiers modifiers);
+    void returnPressedSignal(Qt::KeyboardModifiers modifiers);
 
 private:
     void returnPressedSlot();
