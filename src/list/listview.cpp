@@ -366,8 +366,9 @@ void ListView::showDates(const QDate &start, const QDate &end, const QDate &pref
     d->mTreeWidget->headerItem()->setText(Summary_Column, i18n("Summary [%1 - %2]", startStr, endStr));
 
     QDate date = start;
+    const auto cals = calendars();
     while (date <= end) {
-        for (const auto &calendar : calendars()) {
+        for (const auto &calendar : cals) {
             d->addIncidences(calendar, calendar->incidences(date), date);
         }
         d->mSelectedDates.append(date);
@@ -381,7 +382,8 @@ void ListView::showDates(const QDate &start, const QDate &end, const QDate &pref
 
 void ListView::showAll()
 {
-    for (const auto &calendar : calendars()) {
+    const auto cals = calendars();
+    for (const auto &calendar : cals) {
         d->addIncidences(calendar, calendar->incidences(), QDate());
     }
 }

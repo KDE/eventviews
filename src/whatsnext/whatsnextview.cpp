@@ -89,7 +89,8 @@ void WhatsNextView::updateView()
     mText += "</h2>\n"_L1;
 
     KCalendarCore::Event::List events;
-    for (const auto &calendar : calendars()) {
+    const auto cals = calendars();
+    for (const auto &calendar : cals) {
         events += calendar->events(mStartDate, mEndDate, QTimeZone::systemTimeZone(), false);
     }
 
@@ -103,9 +104,9 @@ void WhatsNextView::updateView()
         mText += i18n("Events:") + "</h2>\n"_L1;
         mText += "<table>\n"_L1;
         for (const KCalendarCore::Event::Ptr &ev : std::as_const(events)) {
-            const auto calendar = calendar3(ev);
+            const auto evCalendar = calendar3(ev);
             if (!ev->recurs()) {
-                appendEvent(calendar, ev);
+                appendEvent(evCalendar, ev);
             } else {
                 KCalendarCore::Recurrence *recur = ev->recurrence();
                 int duration = ev->dtStart().secsTo(ev->dtEnd());
@@ -113,7 +114,7 @@ void WhatsNextView::updateView()
                 QDateTime end = start.addSecs(duration);
                 QDateTime endDate(mEndDate, QTime(23, 59, 59), QTimeZone::LocalTime);
                 if (end.date() >= mStartDate) {
-                    appendEvent(calendar, ev, start.toLocalTime(), end.toLocalTime());
+                    appendEvent(evCalendar, ev, start.toLocalTime(), end.toLocalTime());
                 }
                 const auto times = recur->timesInInterval(start, endDate);
                 int count = times.count();
@@ -126,7 +127,7 @@ void WhatsNextView::updateView()
                         --count; // list overflow
                     }
                     for (; i < count && times[i].date() <= mEndDate; ++i) {
-                        appendEvent(calendar, ev, times[i].toLocalTime());
+                        appendEvent(evCalendar, ev, times[i].toLocalTime());
                     }
                 }
             }
@@ -136,32 +137,32 @@ void WhatsNextView::updateView()
 
     mTodos.clear();
     KCalendarCore::Todo::List todos;
-    for (const auto &calendar : calendars()) {
+    for (const auto &calendar : cals) {
         todos += calendar->todos(KCalendarCore::TodoSortDueDate, KCalendarCore::SortDirectionAscending);
     }
     if (!todos.isEmpty()) {
         bool taskHeaderWasCreated = false;
         for (const KCalendarCore::Todo::Ptr &todo : std::as_const(todos)) {
-            const auto calendar = calendar3(todo);
+            const auto todoCalendar = calendar3(todo);
             if (!todo->isCompleted() && todo->hasDueDate() && todo->dtDue().date() <= mEndDate) {
                 if (!taskHeaderWasCreated) {
                     createTaskRow(kil);
                     taskHeaderWasCreated = true;
                 }
-                appendTodo(calendar, todo);
+                appendTodo(todoCalendar, todo);
             }
         }
         bool gotone = false;
         int priority = 1;
         while (!gotone && priority <= 9) {
             for (const KCalendarCore::Todo::Ptr &todo : std::as_const(todos)) {
-                const auto calendar = calendar3(todo);
+                const auto todoCalendar = calendar3(todo);
                 if (!todo->isCompleted() && (todo->priority() == priority)) {
                     if (!taskHeaderWasCreated) {
                         createTaskRow(kil);
                         taskHeaderWasCreated = true;
                     }
-                    appendTodo(calendar, todo);
+                    appendTodo(todoCalendar, todo);
                     gotone = true;
                 }
             }
@@ -175,11 +176,11 @@ void WhatsNextView::updateView()
     QStringList myEmails(CalendarSupport::KCalPrefs::instance()->allEmails());
     int replies = 0;
     events.clear();
-    for (const auto &calendar : calendars()) {
+    for (const auto &calendar : cals) {
         events += calendar->events(QDate::currentDate(), QDate(2975, 12, 6), QTimeZone::systemTimeZone());
     }
     for (const KCalendarCore::Event::Ptr &ev : std::as_const(events)) {
-        const auto calendar = calendar3(ev);
+        const auto evCalendar = calendar3(ev);
         KCalendarCore::Attendee me = ev->attendeeByMails(myEmails);
         if (!me.isNull()) {
             if (me.status() == KCalendarCore::Attendee::NeedsAction && me.RSVP()) {
@@ -193,17 +194,17 @@ void WhatsNextView::updateView()
                     mText += "<table>\n"_L1;
                 }
                 replies++;
-                appendEvent(calendar, ev);
+                appendEvent(evCalendar, ev);
             }
         }
     }
 
     todos.clear();
-    for (const auto &calendar : calendars()) {
+    for (const auto &calendar : cals) {
         todos += calendar->todos();
     }
     for (const KCalendarCore::Todo::Ptr &to : std::as_const(todos)) {
-        const auto calendar = calendar3(to);
+        const auto todoCalendar = calendar3(to);
         KCalendarCore::Attendee me = to->attendeeByMails(myEmails);
         if (!me.isNull()) {
             if (me.status() == KCalendarCore::Attendee::NeedsAction && me.RSVP()) {
@@ -217,7 +218,7 @@ void WhatsNextView::updateView()
                     mText += "<table>\n"_L1;
                 }
                 replies++;
-                appendEvent(calendar, to);
+                appendEvent(todoCalendar, to);
             }
         }
     }

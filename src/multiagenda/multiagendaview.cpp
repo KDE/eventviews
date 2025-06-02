@@ -289,7 +289,8 @@ void MultiAgendaView::recreateViews()
             d->addView(d->mCollectionSelectionModels[i], d->mCustomColumnTitles[i]);
         }
     } else {
-        for (const auto &calendar : calendars()) {
+        const auto cals = calendars();
+        for (const auto &calendar : cals) {
             d->addView(calendar);
         }
     }
@@ -549,13 +550,15 @@ static void updateViewFromSelection(AgendaView *view,
                                     const QItemSelection &deselected,
                                     const MultiAgendaView::CalendarFactory::Ptr &factory)
 {
-    for (const auto index : selected.indexes()) {
+    const auto selectedList = selected.indexes();
+    for (const auto index : selectedList) {
         if (const auto col = index.data(Akonadi::EntityTreeModel::CollectionRole).value<Akonadi::Collection>(); col.isValid()) {
             const auto calendar = factory->calendarForCollection(col);
             view->addCalendar(calendar);
         }
     }
-    for (const auto index : deselected.indexes()) {
+    const auto deselectedList = deselected.indexes();
+    for (const auto index : deselectedList) {
         if (const auto col = index.data(Akonadi::EntityTreeModel::CollectionRole).value<Akonadi::Collection>(); col.isValid()) {
             if (const auto calendar = view->calendarForCollection(col); calendar) {
                 view->removeCalendar(calendar);

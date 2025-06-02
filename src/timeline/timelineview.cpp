@@ -301,7 +301,8 @@ void TimelineView::showDates(const QDate &start, const QDate &end, const QDate &
     d->mCalendarItemMap.clear();
 
     uint index = 0;
-    for (const auto &calendar : calendars()) {
+    const auto cals = calendars();
+    for (const auto &calendar : cals) {
         auto item = new TimelineItem(calendar, index++, static_cast<QStandardItemModel *>(d->mGantt->model()), d->mGantt);
         const auto name = Akonadi::CalendarUtils::displayName(calendar->model(), calendar->collection());
         d->mLeftView->addTopLevelItem(new QTreeWidgetItem(QStringList{name}));
@@ -324,7 +325,7 @@ void TimelineView::showDates(const QDate &start, const QDate &end, const QDate &
     QAbstractItemModel *ganttModel = d->mGantt->model();
     d->mGantt->setModel(nullptr);
 
-    for (const auto &calendar : calendars()) {
+    for (const auto &calendar : cals) {
         for (QDate day = d->mStartDate; day <= d->mEndDate; day = day.addDays(1)) {
             const auto events = calendar->events(day, QTimeZone::systemTimeZone(), KCalendarCore::EventSortStartDate, KCalendarCore::SortDirectionAscending);
             for (const KCalendarCore::Event::Ptr &event : std::as_const(events)) {

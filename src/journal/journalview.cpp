@@ -96,10 +96,11 @@ void JournalView::clearEntries()
 void JournalView::updateView()
 {
     QMap<QDate, JournalDateView *>::Iterator it = mEntries.end();
+    const auto cals = calendars();
     while (it != mEntries.begin()) {
         --it;
         it.value()->clear();
-        for (const auto &calendar : calendars()) {
+        for (const auto &calendar : cals) {
             const auto journals = calendar->journals(it.key());
             for (const auto &journal : journals) {
                 it.value()->addJournal(calendar->item(journal));

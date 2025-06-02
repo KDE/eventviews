@@ -580,7 +580,8 @@ void MonthView::reloadIncidences()
     }
 
     // build global event list
-    for (const auto &calendar : calendars()) {
+    const auto cals = calendars();
+    for (const auto &calendar : cals) {
         auto *newItemToReselect = d->loadCalendarIncidences(calendar, actualStartDateTime(), actualEndDateTime());
         if (itemToReselect == nullptr) {
             itemToReselect = newItemToReselect;
@@ -592,7 +593,8 @@ void MonthView::reloadIncidences()
     }
 
     // add holidays
-    for (auto const &h : holidays(actualStartDateTime().date(), actualEndDateTime().date())) {
+    auto const hols = holidays(actualStartDateTime().date(), actualEndDateTime().date());
+    for (auto const &h : hols) {
         if (h.dayType() == KHolidays::Holiday::NonWorkday) {
             MonthItem *holidayItem = new HolidayMonthItem(d->scene, h.observedStartDate(), h.observedEndDate(), h.name());
             d->scene->mManagerList << holidayItem;
