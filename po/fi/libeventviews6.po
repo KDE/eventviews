@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-02 00:42+0000\n"
+"POT-Creation-Date: 2025-06-03 00:43+0000\n"
 "PO-Revision-Date: 2025-05-28 10:48+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -96,12 +96,12 @@ msgctxt "short_weekday short_monthname date (e.g. Mon Aug 13)"
 msgid "%1 %2 %3"
 msgstr "%1 %2 %3"
 
-#: agenda/agendaview.cpp:2239
+#: agenda/agendaview.cpp:2233
 #, kde-format
 msgid "Unable to modify this to-do, because it cannot be locked."
 msgstr "Tätä tehtävää ei voi muuttaa, koska se on lukittu."
 
-#: agenda/agendaview.cpp:2247
+#: agenda/agendaview.cpp:2241
 #, kde-format
 msgid "Unable to save %1 \"%2\"."
 msgstr "Ei voi tallentaa: %1 ”%2”."
@@ -1502,73 +1502,73 @@ msgstr "Käytä järjestelmäväriä"
 msgid "Use system color. If enabled will ignore all other color settings"
 msgstr "Käytä järjestelmäväriä. Jos käytössä, muut väriasetukset ohitetaan"
 
-#: journal/journalframe.cpp:153
+#: journal/journalframe.cpp:150
 #, kde-format
 msgctxt "@action: button"
 msgid "&Edit"
 msgstr "&Muokkaa"
 
-#: journal/journalframe.cpp:156
+#: journal/journalframe.cpp:153
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Edit this journal entry"
 msgstr "Muokkaa tätä päiväkirjamerkintää"
 
-#: journal/journalframe.cpp:157
+#: journal/journalframe.cpp:154
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Opens an editor dialog for this journal entry"
 msgstr "Avaa muokkaimen tähän päiväkirjamerkintään"
 
-#: journal/journalframe.cpp:163
+#: journal/journalframe.cpp:160
 #, kde-format
 msgctxt "@action: button"
 msgid "&Delete"
 msgstr "&Poista"
 
-#: journal/journalframe.cpp:166
+#: journal/journalframe.cpp:163
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete this journal entry"
 msgstr "Poista tämä päiväkirjamerkintä"
 
-#: journal/journalframe.cpp:167
+#: journal/journalframe.cpp:164
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Delete this journal entry"
 msgstr "Poista tämä päiväkirjamerkintä"
 
-#: journal/journalframe.cpp:172
+#: journal/journalframe.cpp:169
 #, kde-format
 msgctxt "@action: button"
 msgid "&Print"
 msgstr "T&ulosta"
 
-#: journal/journalframe.cpp:176
+#: journal/journalframe.cpp:173
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Print this journal entry"
 msgstr "Tulosta tämä päiväkirjamerkintä"
 
-#: journal/journalframe.cpp:177
+#: journal/journalframe.cpp:174
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Opens a print dialog for this journal entry"
 msgstr "Avaa tätä päiväkirjamerkintää varten tulostusikkunan"
 
-#: journal/journalframe.cpp:182
+#: journal/journalframe.cpp:179
 #, kde-format
 msgctxt "@action: button"
 msgid "Print preview"
 msgstr "Tulostusesikatselu"
 
-#: journal/journalframe.cpp:186
+#: journal/journalframe.cpp:183
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Print preview this journal entry"
 msgstr "Esikatsele tätä päiväkirjamerkintää"
 
-#: journal/journalframe.cpp:187
+#: journal/journalframe.cpp:184
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Opens a print preview of this journal entry"

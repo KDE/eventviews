@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-02 00:42+0000\n"
+"POT-Creation-Date: 2025-06-03 00:43+0000\n"
 "PO-Revision-Date: 2025-04-22 01:21+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -91,12 +91,12 @@ msgctxt "short_weekday short_monthname date (e.g. Mon Aug 13)"
 msgid "%1 %2 %3"
 msgstr "%2 %3일(%1)"
 
-#: agenda/agendaview.cpp:2239
+#: agenda/agendaview.cpp:2233
 #, kde-format
 msgid "Unable to modify this to-do, because it cannot be locked."
 msgstr "항목을 잠글 수 없어서 이 할 일을 편집할 수 없습니다."
 
-#: agenda/agendaview.cpp:2247
+#: agenda/agendaview.cpp:2241
 #, kde-format
 msgid "Unable to save %1 \"%2\"."
 msgstr "%1 \"%2\"을(를) 저장할 수 없습니다."
@@ -1458,73 +1458,73 @@ msgstr "시스템 색 사용"
 msgid "Use system color. If enabled will ignore all other color settings"
 msgstr "시스템 색상을 사용합니다. 활성화되면 다른 모든 색 설정을 무시합니다"
 
-#: journal/journalframe.cpp:153
+#: journal/journalframe.cpp:150
 #, kde-format
 msgctxt "@action: button"
 msgid "&Edit"
 msgstr "편집(&E)"
 
-#: journal/journalframe.cpp:156
+#: journal/journalframe.cpp:153
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Edit this journal entry"
 msgstr "이 저널 항목 편집"
 
-#: journal/journalframe.cpp:157
+#: journal/journalframe.cpp:154
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Opens an editor dialog for this journal entry"
 msgstr "이 저널 항목 편집기 열기"
 
-#: journal/journalframe.cpp:163
+#: journal/journalframe.cpp:160
 #, kde-format
 msgctxt "@action: button"
 msgid "&Delete"
 msgstr "삭제(&D)"
 
-#: journal/journalframe.cpp:166
+#: journal/journalframe.cpp:163
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete this journal entry"
 msgstr "이 저널 항목 삭제"
 
-#: journal/journalframe.cpp:167
+#: journal/journalframe.cpp:164
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Delete this journal entry"
 msgstr "이 저널 항목 삭제"
 
-#: journal/journalframe.cpp:172
+#: journal/journalframe.cpp:169
 #, kde-format
 msgctxt "@action: button"
 msgid "&Print"
 msgstr "인쇄(&P)"
 
-#: journal/journalframe.cpp:176
+#: journal/journalframe.cpp:173
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Print this journal entry"
 msgstr "이 저널 항목 인쇄"
 
-#: journal/journalframe.cpp:177
+#: journal/journalframe.cpp:174
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Opens a print dialog for this journal entry"
 msgstr "이 저널 항목 인쇄 대화 상자 열기"
 
-#: journal/journalframe.cpp:182
+#: journal/journalframe.cpp:179
 #, kde-format
 msgctxt "@action: button"
 msgid "Print preview"
 msgstr "인쇄 미리 보기"
 
-#: journal/journalframe.cpp:186
+#: journal/journalframe.cpp:183
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Print preview this journal entry"
 msgstr "이 저널 항목 인쇄 미리 보기"
 
-#: journal/journalframe.cpp:187
+#: journal/journalframe.cpp:184
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Opens a print preview of this journal entry"

@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-02 00:42+0000\n"
-"PO-Revision-Date: 2025-05-04 06:34+0200\n"
+"POT-Creation-Date: 2025-06-03 00:43+0000\n"
+"PO-Revision-Date: 2025-06-02 07:01+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -104,12 +104,12 @@ msgctxt "short_weekday short_monthname date (e.g. Mon Aug 13)"
 msgid "%1 %2 %3"
 msgstr "%1, %3. %2"
 
-#: agenda/agendaview.cpp:2239
+#: agenda/agendaview.cpp:2233
 #, kde-format
 msgid "Unable to modify this to-do, because it cannot be locked."
 msgstr "Ni mogoče spremeniti tega opravila, ker ne more biti zaklenjeno."
 
-#: agenda/agendaview.cpp:2247
+#: agenda/agendaview.cpp:2241
 #, kde-format
 msgid "Unable to save %1 \"%2\"."
 msgstr "Ni mogoče shraniti %1 »%2«."
@@ -128,13 +128,13 @@ msgstr "Odstrani časovni pas %1"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "12 Hour Clock"
-msgstr ""
+msgstr "12 urni zapis"
 
 #: agenda/timelabels.cpp:337
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "24 Hour Clock"
-msgstr ""
+msgstr "24 urni zapis"
 
 #: agenda/timelabels.cpp:382
 #, kde-format
@@ -1526,73 +1526,73 @@ msgstr ""
 "Uporabi sistemsko barvo. Če je omogočena, bodo prezrte vse druge barvne "
 "nastavitve"
 
-#: journal/journalframe.cpp:153
+#: journal/journalframe.cpp:150
 #, kde-format
 msgctxt "@action: button"
 msgid "&Edit"
 msgstr "Ur&edi"
 
-#: journal/journalframe.cpp:156
+#: journal/journalframe.cpp:153
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Edit this journal entry"
 msgstr "Uredi ta vnos dnevnika"
 
-#: journal/journalframe.cpp:157
+#: journal/journalframe.cpp:154
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Opens an editor dialog for this journal entry"
 msgstr "Odpre pogovorno okno urejevalnika za ta vnos dnevnika"
 
-#: journal/journalframe.cpp:163
+#: journal/journalframe.cpp:160
 #, kde-format
 msgctxt "@action: button"
 msgid "&Delete"
 msgstr "Izbriši"
 
-#: journal/journalframe.cpp:166
+#: journal/journalframe.cpp:163
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete this journal entry"
 msgstr "Izbriši ta vnos dnevnika"
 
-#: journal/journalframe.cpp:167
+#: journal/journalframe.cpp:164
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Delete this journal entry"
 msgstr "Izbriši ta vnos dnevnika"
 
-#: journal/journalframe.cpp:172
+#: journal/journalframe.cpp:169
 #, kde-format
 msgctxt "@action: button"
 msgid "&Print"
 msgstr "Natisni"
 
-#: journal/journalframe.cpp:176
+#: journal/journalframe.cpp:173
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Print this journal entry"
 msgstr "Natisni ta vnos dnevnika"
 
-#: journal/journalframe.cpp:177
+#: journal/journalframe.cpp:174
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Opens a print dialog for this journal entry"
 msgstr "Odpre pogovorno okno tiskanja za ta vnos dnevnika"
 
-#: journal/journalframe.cpp:182
+#: journal/journalframe.cpp:179
 #, kde-format
 msgctxt "@action: button"
 msgid "Print preview"
 msgstr "Predogled tiskanja"
 
-#: journal/journalframe.cpp:186
+#: journal/journalframe.cpp:183
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Print preview this journal entry"
 msgstr "Pokaži predogled tiskanja tega vnosa dnevnika"
 
-#: journal/journalframe.cpp:187
+#: journal/journalframe.cpp:184
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Opens a print preview of this journal entry"
@@ -1943,18 +1943,16 @@ msgid "Create Event from To-do"
 msgstr "Ustvari dogodek iz opravila"
 
 #: todo/todoview.cpp:428
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu delete completed to-dos"
-#| msgid "Pur&ge Completed"
+#, kde-format
 msgctxt "@action:inmenu set or unset to-do is completed"
 msgid "Togg&le To-do Completed"
-msgstr "Počisti zaključena"
+msgstr "Preklopi zaključena opravila"
 
 #: todo/todoview.cpp:432
 #, kde-format
 msgctxt "@action:inmenu enable or disable reminder"
 msgid "&Toggle Reminder"
-msgstr ""
+msgstr "Preklopi opomnik"
 
 #: todo/todoview.cpp:439
 #, kde-format

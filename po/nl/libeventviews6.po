@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-02 00:42+0000\n"
-"PO-Revision-Date: 2025-05-04 15:09+0200\n"
+"POT-Creation-Date: 2025-06-03 00:43+0000\n"
+"PO-Revision-Date: 2025-06-02 11:49+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.0\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -95,12 +95,12 @@ msgctxt "short_weekday short_monthname date (e.g. Mon Aug 13)"
 msgid "%1 %2 %3"
 msgstr "%1 %2 %3"
 
-#: agenda/agendaview.cpp:2239
+#: agenda/agendaview.cpp:2233
 #, kde-format
 msgid "Unable to modify this to-do, because it cannot be locked."
 msgstr "Kon deze taak niet bewerken omdat die niet kan worden vergrendeld."
 
-#: agenda/agendaview.cpp:2247
+#: agenda/agendaview.cpp:2241
 #, kde-format
 msgid "Unable to save %1 \"%2\"."
 msgstr "Kon %1 niet opslaan \"%2\"."
@@ -119,13 +119,13 @@ msgstr "Tijdzone %1 ve&rwijderen"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "12 Hour Clock"
-msgstr ""
+msgstr "12-uursklok"
 
 #: agenda/timelabels.cpp:337
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "24 Hour Clock"
-msgstr ""
+msgstr "24-uursklok"
 
 #: agenda/timelabels.cpp:382
 #, kde-format
@@ -1543,73 +1543,73 @@ msgstr ""
 "Systeemkleur gebruiken. Indien ingeschakeld zullen alle andere "
 "kleurinstellingen worden genegeerd"
 
-#: journal/journalframe.cpp:153
+#: journal/journalframe.cpp:150
 #, kde-format
 msgctxt "@action: button"
 msgid "&Edit"
 msgstr "B&ewerken"
 
-#: journal/journalframe.cpp:156
+#: journal/journalframe.cpp:153
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Edit this journal entry"
 msgstr "Bewerk dit item in het journaal"
 
-#: journal/journalframe.cpp:157
+#: journal/journalframe.cpp:154
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Opens an editor dialog for this journal entry"
 msgstr "Opent een bewerkingsdialoog voor deze invoer in het journaal"
 
-#: journal/journalframe.cpp:163
+#: journal/journalframe.cpp:160
 #, kde-format
 msgctxt "@action: button"
 msgid "&Delete"
 msgstr "Verwij&deren"
 
-#: journal/journalframe.cpp:166
+#: journal/journalframe.cpp:163
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete this journal entry"
 msgstr "Verwijder deze invoer van het journaal"
 
-#: journal/journalframe.cpp:167
+#: journal/journalframe.cpp:164
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Delete this journal entry"
 msgstr "Verwijder deze invoer van het journaal"
 
-#: journal/journalframe.cpp:172
+#: journal/journalframe.cpp:169
 #, kde-format
 msgctxt "@action: button"
 msgid "&Print"
 msgstr "A&fdrukken"
 
-#: journal/journalframe.cpp:176
+#: journal/journalframe.cpp:173
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Print this journal entry"
 msgstr "Deze invoer van het journaal afdrukken"
 
-#: journal/journalframe.cpp:177
+#: journal/journalframe.cpp:174
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Opens a print dialog for this journal entry"
 msgstr "Opent een afdrukdialoog voor deze journaalinvoer"
 
-#: journal/journalframe.cpp:182
+#: journal/journalframe.cpp:179
 #, kde-format
 msgctxt "@action: button"
 msgid "Print preview"
 msgstr "Afdrukvoorbeeld"
 
-#: journal/journalframe.cpp:186
+#: journal/journalframe.cpp:183
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Print preview this journal entry"
 msgstr "Maak een afdrukvoorbeeld van dit journaal"
 
-#: journal/journalframe.cpp:187
+#: journal/journalframe.cpp:184
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Opens a print preview of this journal entry"
@@ -1964,19 +1964,16 @@ msgid "Create Event from To-do"
 msgstr "Gebeurtenis aanmaken uit te-doen"
 
 #: todo/todoview.cpp:428
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu delete completed to-dos"
-#| msgid "Pur&ge Completed"
+#, kde-format
 msgctxt "@action:inmenu set or unset to-do is completed"
 msgid "Togg&le To-do Completed"
-msgstr "&Voltooide taken verwijderen"
+msgstr "Taak vo&ltooid aan/uit"
 
 #: todo/todoview.cpp:432
-#, fuzzy, kde-format
-#| msgid "Reminder"
+#, kde-format
 msgctxt "@action:inmenu enable or disable reminder"
 msgid "&Toggle Reminder"
-msgstr "Herinnering"
+msgstr "Herinnering aan/ui&t"
 
 #: todo/todoview.cpp:439
 #, kde-format

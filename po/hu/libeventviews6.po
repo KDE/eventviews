@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-02 00:42+0000\n"
+"POT-Creation-Date: 2025-06-03 00:43+0000\n"
 "PO-Revision-Date: 2024-08-01 22:45+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -98,12 +98,12 @@ msgctxt "short_weekday short_monthname date (e.g. Mon Aug 13)"
 msgid "%1 %2 %3"
 msgstr "%2 %3, %1"
 
-#: agenda/agendaview.cpp:2239
+#: agenda/agendaview.cpp:2233
 #, kde-format
 msgid "Unable to modify this to-do, because it cannot be locked."
 msgstr "A feladatot nem sikerült módosítani, mert nem lehetett zárolni."
 
-#: agenda/agendaview.cpp:2247
+#: agenda/agendaview.cpp:2241
 #, kde-format
 msgid "Unable to save %1 \"%2\"."
 msgstr "Nem sikerült elmenteni: %1 „%2”."
@@ -1528,80 +1528,80 @@ msgstr ""
 "Rendszerszínek használata. Ha be van kapcsolva, minden más színbeállítás "
 "mellőzve lesz"
 
-#: journal/journalframe.cpp:153
+#: journal/journalframe.cpp:150
 #, fuzzy, kde-format
 #| msgid "&Edit"
 msgctxt "@action: button"
 msgid "&Edit"
 msgstr "S&zerkesztés"
 
-#: journal/journalframe.cpp:156
+#: journal/journalframe.cpp:153
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Edit this journal entry"
 msgstr "A naplóbejegyzés szerkesztése"
 
-#: journal/journalframe.cpp:157
+#: journal/journalframe.cpp:154
 #, fuzzy, kde-format
 #| msgid "Opens an editor dialog for this journal entry"
 msgctxt "@info:whatsthis"
 msgid "Opens an editor dialog for this journal entry"
 msgstr "Megnyit egy szerkesztőablakot a naplóbejegyzéshez"
 
-#: journal/journalframe.cpp:163
+#: journal/journalframe.cpp:160
 #, fuzzy, kde-format
 #| msgid "&Delete"
 msgctxt "@action: button"
 msgid "&Delete"
 msgstr "&Törlés"
 
-#: journal/journalframe.cpp:166
+#: journal/journalframe.cpp:163
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete this journal entry"
 msgstr "A naplóbejegyzés törlése"
 
-#: journal/journalframe.cpp:167
+#: journal/journalframe.cpp:164
 #, fuzzy, kde-format
 #| msgid "Delete this journal entry"
 msgctxt "@info:whatsthis"
 msgid "Delete this journal entry"
 msgstr "A naplóbejegyzés törlése"
 
-#: journal/journalframe.cpp:172
+#: journal/journalframe.cpp:169
 #, fuzzy, kde-format
 #| msgid "&Print"
 msgctxt "@action: button"
 msgid "&Print"
 msgstr "&Nyomtatás"
 
-#: journal/journalframe.cpp:176
+#: journal/journalframe.cpp:173
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Print this journal entry"
 msgstr "A naplóbejegyzés kinyomtatása"
 
-#: journal/journalframe.cpp:177
+#: journal/journalframe.cpp:174
 #, fuzzy, kde-format
 #| msgid "Opens a print dialog for this journal entry"
 msgctxt "@info:whatsthis"
 msgid "Opens a print dialog for this journal entry"
 msgstr "Megnyitja a nyomtatási párbeszédablakot a naplóbejegyzéshez"
 
-#: journal/journalframe.cpp:182
+#: journal/journalframe.cpp:179
 #, fuzzy, kde-format
 #| msgid "Print preview"
 msgctxt "@action: button"
 msgid "Print preview"
 msgstr "Nyomtatási kép"
 
-#: journal/journalframe.cpp:186
+#: journal/journalframe.cpp:183
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Print preview this journal entry"
 msgstr "A naplóbejegyzés nyomtatási képe"
 
-#: journal/journalframe.cpp:187
+#: journal/journalframe.cpp:184
 #, fuzzy, kde-format
 #| msgid "Opens a print dialog for this journal entry"
 msgctxt "@info:whatsthis"

@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-02 00:42+0000\n"
-"PO-Revision-Date: 2025-05-04 11:00+0200\n"
+"POT-Creation-Date: 2025-06-03 00:43+0000\n"
+"PO-Revision-Date: 2025-06-02 10:52+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -99,12 +99,12 @@ msgctxt "short_weekday short_monthname date (e.g. Mon Aug 13)"
 msgid "%1 %2 %3"
 msgstr "%1 %3 %2"
 
-#: agenda/agendaview.cpp:2239
+#: agenda/agendaview.cpp:2233
 #, kde-format
 msgid "Unable to modify this to-do, because it cannot be locked."
 msgstr "No es pot modificar aquesta tasca pendent perquè no es pot bloquejar."
 
-#: agenda/agendaview.cpp:2247
+#: agenda/agendaview.cpp:2241
 #, kde-format
 msgid "Unable to save %1 \"%2\"."
 msgstr "No s'ha pogut desar %1 «%2»."
@@ -123,13 +123,13 @@ msgstr "&Elimina la zona horària %1"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "12 Hour Clock"
-msgstr ""
+msgstr "Rellotge de 12 hores"
 
 #: agenda/timelabels.cpp:337
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "24 Hour Clock"
-msgstr ""
+msgstr "Rellotge de 24 hores"
 
 #: agenda/timelabels.cpp:382
 #, kde-format
@@ -1570,73 +1570,73 @@ msgstr ""
 "Usa el color del sistema. Si està activat, s'ignorarà qualsevol configuració "
 "del color"
 
-#: journal/journalframe.cpp:153
+#: journal/journalframe.cpp:150
 #, kde-format
 msgctxt "@action: button"
 msgid "&Edit"
 msgstr "&Edita"
 
-#: journal/journalframe.cpp:156
+#: journal/journalframe.cpp:153
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Edit this journal entry"
 msgstr "Edita aquesta entrada de diari"
 
-#: journal/journalframe.cpp:157
+#: journal/journalframe.cpp:154
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Opens an editor dialog for this journal entry"
 msgstr "Obre un diàleg d'editor per a aquesta entrada de diari"
 
-#: journal/journalframe.cpp:163
+#: journal/journalframe.cpp:160
 #, kde-format
 msgctxt "@action: button"
 msgid "&Delete"
 msgstr "Su&primeix"
 
-#: journal/journalframe.cpp:166
+#: journal/journalframe.cpp:163
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete this journal entry"
 msgstr "Suprimeix aquesta entrada de diari"
 
-#: journal/journalframe.cpp:167
+#: journal/journalframe.cpp:164
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Delete this journal entry"
 msgstr "Suprimeix aquesta entrada de diari"
 
-#: journal/journalframe.cpp:172
+#: journal/journalframe.cpp:169
 #, kde-format
 msgctxt "@action: button"
 msgid "&Print"
 msgstr "Im&primeix"
 
-#: journal/journalframe.cpp:176
+#: journal/journalframe.cpp:173
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Print this journal entry"
 msgstr "Imprimeix aquesta entrada de diari"
 
-#: journal/journalframe.cpp:177
+#: journal/journalframe.cpp:174
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Opens a print dialog for this journal entry"
 msgstr "Obre un diàleg d'impressió per a aquesta entrada de diari"
 
-#: journal/journalframe.cpp:182
+#: journal/journalframe.cpp:179
 #, kde-format
 msgctxt "@action: button"
 msgid "Print preview"
 msgstr "Vista prèvia d'impressió"
 
-#: journal/journalframe.cpp:186
+#: journal/journalframe.cpp:183
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Print preview this journal entry"
 msgstr "Vista prèvia d'impressió d'aquesta entrada de diari"
 
-#: journal/journalframe.cpp:187
+#: journal/journalframe.cpp:184
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Opens a print preview of this journal entry"
@@ -1984,18 +1984,16 @@ msgid "Create Event from To-do"
 msgstr "Crea un esdeveniment a partir de la tasca pendent"
 
 #: todo/todoview.cpp:428
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu delete completed to-dos"
-#| msgid "Pur&ge Completed"
+#, kde-format
 msgctxt "@action:inmenu set or unset to-do is completed"
 msgid "Togg&le To-do Completed"
-msgstr "Nete&ja les finalitzades"
+msgstr "Commuta &les tasques pendents finalitzades"
 
 #: todo/todoview.cpp:432
 #, kde-format
 msgctxt "@action:inmenu enable or disable reminder"
 msgid "&Toggle Reminder"
-msgstr ""
+msgstr "&Commuta el recordatori"
 
 #: todo/todoview.cpp:439
 #, kde-format
@@ -2540,13 +2538,3 @@ msgstr "%1, %2 - %3"
 msgctxt "to-do due date"
 msgid "  (Due: %1)"
 msgstr "  (Venciment: %1)"
-
-#~ msgctxt "@info:whatsthis"
-#~ msgid ""
-#~ "Checking this option will cause the to-do view to use the full window."
-#~ msgstr ""
-#~ "En activar aquesta opció la vista de les tasques pendents usarà tota la "
-#~ "finestra."
-
-#~ msgid "Age:"
-#~ msgstr "Antiguitat:"
