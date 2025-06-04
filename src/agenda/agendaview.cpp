@@ -1972,7 +1972,7 @@ void AgendaView::showIncidences(const Akonadi::Item::List &incidences, const QDa
         end = qMax(start, Akonadi::CalendarUtils::incidence(aitem)->dateTime(KCalendarCore::Incidence::RoleEnd).toLocalTime());
     }
 
-    end.toTimeZone(start.timeZone()); // allow direct comparison of dates
+    end = end.toTimeZone(start.timeZone()); // allow direct comparison of dates
     if (start.date().daysTo(end.date()) + 1 <= currentDateCount()) {
         showDates(start.date(), end.date());
     } else {
