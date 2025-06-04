@@ -267,10 +267,10 @@ private:
     bool mSelected = false;
     bool mMoving = false; // during move
     bool mResizing = false; // during resize
-    QDate mOverrideStartDate;
-    int mOverrideDaySpan;
+    QDate mOverrideStartDate = QDate();
+    int mOverrideDaySpan = 0;
 
-    int mPosition;
+    int mPosition = 0;
 };
 
 class EVENTVIEWS_EXPORT IncidenceMonthItem : public MonthItem

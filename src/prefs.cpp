@@ -96,7 +96,7 @@ public:
     QFont mDefaultAgendaTimeLabelsFont;
 
     QStringList mTimeScaleTimeZones;
-    bool mUse24HourClock;
+    bool mUse24HourClock = false;
 
     QSet<EventViews::EventView::ItemIcon> mAgendaViewIcons;
     QSet<EventViews::EventView::ItemIcon> mMonthViewIcons;

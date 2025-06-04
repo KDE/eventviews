@@ -129,7 +129,7 @@ public:
     Qt::SortOrder mSortOrder = Qt::AscendingOrder;
 
     // if it's non interactive we disable context menu, and incidence editing
-    bool mIsNonInteractive;
+    bool mIsNonInteractive = false;
     class ListItemVisitor;
 };
 
