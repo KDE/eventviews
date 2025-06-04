@@ -25,6 +25,7 @@
 #include <KConfigGroup>
 
 #include "calendarview_debug.h"
+
 #include <QBoxLayout>
 #include <QHeaderView>
 #include <QIcon>
@@ -43,8 +44,8 @@ enum {
     Dummy_EOF_Column // Dummy enum value for iteration purposes only. Always keep at the end.
 };
 
-static const QTime DAY_START{00, 00};
-static const QTime DAY_END{23, 59, 59, 999};
+#define DAY_START (QTime(0, 0))
+#define DAY_END (QTime(23, 59, 59, 999))
 
 static QString cleanSummary(const QString &summary, const QDateTime &next)
 {
