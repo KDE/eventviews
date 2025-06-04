@@ -586,7 +586,6 @@ public:
 
     KCalendarCore::DateList mSelectedDates; // List of dates to be displayed
     KCalendarCore::DateList mSaveSelectedDates; // Save the list of dates between updateViews
-    int mViewType;
     EventIndicator *mEventIndicatorTop = nullptr;
     EventIndicator *mEventIndicatorBottom = nullptr;
 
