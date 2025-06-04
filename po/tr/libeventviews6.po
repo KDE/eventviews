@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-03 00:43+0000\n"
-"PO-Revision-Date: 2025-05-04 19:36+0300\n"
+"POT-Creation-Date: 2025-06-04 00:43+0000\n"
+"PO-Revision-Date: 2025-06-03 13:30+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.04.0\n"
+"X-Generator: Lokalize 25.04.1\n"
 "(http: //www.transifex.com/projects/p/kdepim-k-tr/language/tr/)\n"
 "X-POOTLE-MTIME: 1413132207.000000\n"
 
@@ -127,13 +127,13 @@ msgstr "%1 Zaman Dilimini &Kaldır"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "12 Hour Clock"
-msgstr ""
+msgstr "12 Saat Biçimi"
 
 #: agenda/timelabels.cpp:337
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "24 Hour Clock"
-msgstr ""
+msgstr "24 Saat Biçimi"
 
 #: agenda/timelabels.cpp:382
 #, kde-format
@@ -1945,18 +1945,16 @@ msgid "Create Event from To-do"
 msgstr "Yapılacaktan Etkinlik Oluştur"
 
 #: todo/todoview.cpp:428
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu delete completed to-dos"
-#| msgid "Pur&ge Completed"
+#, kde-format
 msgctxt "@action:inmenu set or unset to-do is completed"
 msgid "Togg&le To-do Completed"
-msgstr "Tamamlanmışları &Temizle"
+msgstr "Tamamlanmış Yapılacakları Aç/&Kapat"
 
 #: todo/todoview.cpp:432
 #, kde-format
 msgctxt "@action:inmenu enable or disable reminder"
 msgid "&Toggle Reminder"
-msgstr ""
+msgstr "&Anımsatıcıyı Aç/Kapat"
 
 #: todo/todoview.cpp:439
 #, kde-format
@@ -2018,25 +2016,25 @@ msgctxt "@action:inmenu priority value=8"
 msgid "8"
 msgstr "8"
 
-#: todo/todoview.cpp:1156
+#: todo/todoview.cpp:1157
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display the sidebar"
 msgstr "Kenar çubuğunu görüntüle"
 
-#: todo/todoview.cpp:1159
+#: todo/todoview.cpp:1160
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Hide the sidebar"
 msgstr "Kenar çubuğunu gizle"
 
-#: todo/todoview.cpp:1178
+#: todo/todoview.cpp:1179
 #, kde-format
 msgctxt "@info::tooltip"
 msgid "Switch to the tree list display"
 msgstr "Ağaç liste görüntüsüne geç"
 
-#: todo/todoview.cpp:1181
+#: todo/todoview.cpp:1182
 #, kde-format
 msgctxt "@info::tooltip"
 msgid "Switch to the flat list display"

@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-03 00:43+0000\n"
-"PO-Revision-Date: 2025-05-05 22:53+0900\n"
+"POT-Creation-Date: 2025-06-04 00:43+0000\n"
+"PO-Revision-Date: 2025-06-04 07:31+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -118,13 +118,13 @@ msgstr "移除時區 %1(&R)"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "12 Hour Clock"
-msgstr ""
+msgstr "12 小時時鐘"
 
 #: agenda/timelabels.cpp:337
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "24 Hour Clock"
-msgstr ""
+msgstr "24 小時時鐘"
 
 #: agenda/timelabels.cpp:382
 #, kde-format
@@ -1824,18 +1824,16 @@ msgid "Create Event from To-do"
 msgstr "從待辦事項建立事件"
 
 #: todo/todoview.cpp:428
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu delete completed to-dos"
-#| msgid "Pur&ge Completed"
+#, kde-format
 msgctxt "@action:inmenu set or unset to-do is completed"
 msgid "Togg&le To-do Completed"
-msgstr "清除已完成的待辦事項(&G)"
+msgstr "切換待辦事項是否已完成(&L)"
 
 #: todo/todoview.cpp:432
 #, kde-format
 msgctxt "@action:inmenu enable or disable reminder"
 msgid "&Toggle Reminder"
-msgstr ""
+msgstr "切換提醒(&T)"
 
 #: todo/todoview.cpp:439
 #, kde-format
@@ -1897,25 +1895,25 @@ msgctxt "@action:inmenu priority value=8"
 msgid "8"
 msgstr "8"
 
-#: todo/todoview.cpp:1156
+#: todo/todoview.cpp:1157
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display the sidebar"
 msgstr "顯示側邊欄"
 
-#: todo/todoview.cpp:1159
+#: todo/todoview.cpp:1160
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Hide the sidebar"
 msgstr "隱藏側邊欄"
 
-#: todo/todoview.cpp:1178
+#: todo/todoview.cpp:1179
 #, kde-format
 msgctxt "@info::tooltip"
 msgid "Switch to the tree list display"
 msgstr "切換成樹狀清單檢視"
 
-#: todo/todoview.cpp:1181
+#: todo/todoview.cpp:1182
 #, kde-format
 msgctxt "@info::tooltip"
 msgid "Switch to the flat list display"
