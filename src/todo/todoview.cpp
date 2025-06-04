@@ -124,6 +124,7 @@ public:
         delete todoFlatModel;
     }
 
+    /* cppcheck-suppress constParameterPointer */
     void registerView(TodoView *view)
     {
         views << view;
