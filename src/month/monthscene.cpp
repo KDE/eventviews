@@ -31,16 +31,14 @@ MonthScene::MonthScene(MonthView *parent)
     , mActionInitiated(false)
     , mActionType(None)
     , mStartHeight(0)
-
+    , mBirthdayPixmap(QIcon::fromTheme(QStringLiteral("view-calendar-birthday")).pixmap(16, 16))
+    , mAnniversaryPixmap(QIcon::fromTheme(QStringLiteral("view-calendar-wedding-anniversary")).pixmap(16, 16))
+    , mAlarmPixmap(QIcon::fromTheme(QStringLiteral("appointment-reminder")).pixmap(16, 16))
+    , mRecurPixmap(QIcon::fromTheme(QStringLiteral("appointment-recurring")).pixmap(16, 16))
+    , mReadonlyPixmap(QIcon::fromTheme(QStringLiteral("object-locked")).pixmap(16, 16))
+    , mReplyPixmap(QIcon::fromTheme(QStringLiteral("mail-reply-sender")).pixmap(16, 16))
+    , mHolidayPixmap(QIcon::fromTheme(QStringLiteral("view-calendar-holiday")).pixmap(16, 16))
 {
-    mBirthdayPixmap = QIcon::fromTheme(QStringLiteral("view-calendar-birthday")).pixmap(16, 16);
-    mAnniversaryPixmap = QIcon::fromTheme(QStringLiteral("view-calendar-wedding-anniversary")).pixmap(16, 16);
-    mAlarmPixmap = QIcon::fromTheme(QStringLiteral("appointment-reminder")).pixmap(16, 16);
-    mRecurPixmap = QIcon::fromTheme(QStringLiteral("appointment-recurring")).pixmap(16, 16);
-    mReadonlyPixmap = QIcon::fromTheme(QStringLiteral("object-locked")).pixmap(16, 16);
-    mReplyPixmap = QIcon::fromTheme(QStringLiteral("mail-reply-sender")).pixmap(16, 16);
-    mHolidayPixmap = QIcon::fromTheme(QStringLiteral("view-calendar-holiday")).pixmap(16, 16);
-
     setSceneRect(0, 0, parent->width(), parent->height());
 }
 

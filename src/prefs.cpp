@@ -108,15 +108,13 @@ protected:
 };
 
 BaseConfig::BaseConfig()
-
+    : mDefaultResourceColor(QColor()) // Default is an invalid color
+    , mDefaultMonthViewFont(QFontDatabase::systemFont(QFontDatabase::GeneralFont))
+    , mDefaultAgendaTimeLabelsFont(QFontDatabase::systemFont(QFontDatabase::GeneralFont))
 {
-    mDefaultResourceColor = QColor(); // Default is a color invalid
-
-    mDefaultAgendaTimeLabelsFont = QFontDatabase::systemFont(QFontDatabase::GeneralFont);
     // make a large default time bar font, at least 16 points.
     mDefaultAgendaTimeLabelsFont.setPointSize(qMax(mDefaultAgendaTimeLabelsFont.pointSize() + 4, 16));
 
-    mDefaultMonthViewFont = QFontDatabase::systemFont(QFontDatabase::GeneralFont);
     // make it a bit smaller
     mDefaultMonthViewFont.setPointSize(qMax(mDefaultMonthViewFont.pointSize() - 2, 6));
 
