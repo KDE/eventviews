@@ -13,7 +13,7 @@
 class ColoredTodoProxyModelPrivate
 {
 public:
-    ColoredTodoProxyModelPrivate(const EventViews::PrefsPtr &preferences)
+    explicit ColoredTodoProxyModelPrivate(const EventViews::PrefsPtr &preferences)
         : m_preferences(preferences)
     {
     }

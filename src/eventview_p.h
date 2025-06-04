@@ -31,7 +31,7 @@ class EventView;
 class EventViewPrivate
 {
 public: /// Methods
-    EventViewPrivate(EventView *qq);
+    explicit EventViewPrivate(EventView *qq);
     ~EventViewPrivate();
 
     /**

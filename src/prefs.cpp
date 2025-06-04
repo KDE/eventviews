@@ -232,7 +232,7 @@ public:
     {
     }
 
-    PrefsPrivate(KCoreConfigSkeleton *appConfig)
+    explicit PrefsPrivate(KCoreConfigSkeleton *appConfig)
         : mAppConfig(appConfig)
     {
     }
