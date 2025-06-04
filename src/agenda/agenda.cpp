@@ -597,7 +597,8 @@ bool Agenda::eventFilter_wheel(QObject *object, QWheelEvent *e)
     const QPoint pos = e->position().toPoint();
     if ((e->modifiers() & Qt::ShiftModifier) == Qt::ShiftModifier) {
         if (object != this) {
-            viewportPos = ((QWidget *)object)->mapToParent(pos);
+            const QWidget *w = static_cast<QWidget *>(object);
+            viewportPos = w->mapToParent(pos);
         } else {
             viewportPos = pos;
         }
@@ -608,7 +609,8 @@ bool Agenda::eventFilter_wheel(QObject *object, QWheelEvent *e)
 
     if ((e->modifiers() & Qt::ControlModifier) == Qt::ControlModifier) {
         if (object != this) {
-            viewportPos = ((QWidget *)object)->mapToParent(pos);
+            const QWidget *w = static_cast<QWidget *>(object);
+            viewportPos = w->mapToParent(pos);
         } else {
             viewportPos = pos;
         }
