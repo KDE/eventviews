@@ -25,6 +25,7 @@
 #include <KConfigGroup>
 
 #include "calendarview_debug.h"
+
 #include <QBoxLayout>
 #include <QHeaderView>
 #include <QIcon>
@@ -42,9 +43,6 @@ enum {
     Categories_Column,
     Dummy_EOF_Column // Dummy enum value for iteration purposes only. Always keep at the end.
 };
-
-static const QTime DAY_START{00, 00};
-static const QTime DAY_END{23, 59, 59, 999};
 
 static QString cleanSummary(const QString &summary, const QDateTime &next)
 {
@@ -156,6 +154,9 @@ public:
         // to inhibit hidden virtual compile warning
         return true;
     }
+
+    QTime DAY_START = {0, 0};
+    QTime DAY_END = {23, 59, 59, 999};
 
 private:
     ListViewItem *mItem = nullptr;
