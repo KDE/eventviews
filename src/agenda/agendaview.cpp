@@ -435,6 +435,7 @@ void AgendaHeader::loadDecorations(const QStringList &decorations, const QString
 {
     for (const QString &decoName : decorations) {
         if (whiteList.contains(decoName)) {
+            /* cppcheck-suppress constVariablePointer */
             CalendarDecoration::Decoration *deco = loadCalendarDecoration(decoName);
             if (deco != nullptr) {
                 decoList << deco;
@@ -1717,7 +1718,7 @@ void AgendaView::updateTimeBarWidth()
     QFontMetrics fm(labelFont);
 
     int width = d->mTimeLabelsZone->preferedTimeLabelsWidth();
-    for (QLabel *l : std::as_const(d->mTimeBarHeaders)) {
+    for (const QLabel *l : std::as_const(d->mTimeBarHeaders)) {
         const auto lst = l->text().split(QLatin1Char(' '));
         for (const QString &word : lst) {
             width = qMax(width, fm.boundingRect(word).width());

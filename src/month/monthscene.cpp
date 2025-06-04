@@ -62,7 +62,7 @@ MonthCell *MonthScene::previousCell() const
 
 int MonthScene::getRightSpan(QDate date) const
 {
-    MonthCell *cell = mMonthCellMap.value(date);
+    const MonthCell *cell = mMonthCellMap.value(date);
     if (!cell) {
         return 0;
     }
@@ -72,7 +72,7 @@ int MonthScene::getRightSpan(QDate date) const
 
 int MonthScene::getLeftSpan(QDate date) const
 {
-    MonthCell *cell = mMonthCellMap.value(date);
+    const MonthCell *cell = mMonthCellMap.value(date);
     if (!cell) {
         return 0;
     }
@@ -471,7 +471,7 @@ void MonthScene::mouseDoubleClickEvent(QGraphicsSceneMouseEvent *mouseEvent)
 {
     QPointF pos = mouseEvent->scenePos();
     repeatTimer.stop();
-    MonthGraphicsItem *iItem = dynamic_cast<MonthGraphicsItem *>(itemAt(pos, {}));
+    const MonthGraphicsItem *iItem = dynamic_cast<MonthGraphicsItem *>(itemAt(pos, {}));
     if (iItem) {
         if (iItem->monthItem()) {
             auto tmp = qobject_cast<IncidenceMonthItem *>(iItem->monthItem());
@@ -606,7 +606,7 @@ void MonthScene::mousePressEvent(QGraphicsSceneMouseEvent *mouseEvent)
         // unselect items when clicking somewhere else
         selectItem(nullptr);
 
-        MonthCell *cell = getCellFromPos(pos);
+        const MonthCell *cell = getCellFromPos(pos);
         if (cell) {
             mSelectedCellDate = cell->date();
             update();
@@ -635,7 +635,7 @@ void MonthScene::helpEvent(QGraphicsSceneHelpEvent *helpEvent)
 {
     // Find the first item that does tooltips
     const QPointF pos = helpEvent->scenePos();
-    MonthGraphicsItem *toolTipItem = dynamic_cast<MonthGraphicsItem *>(itemAt(pos, {}));
+    const MonthGraphicsItem *toolTipItem = dynamic_cast<MonthGraphicsItem *>(itemAt(pos, {}));
 
     // Show or hide the tooltip
     QString text;
@@ -658,7 +658,7 @@ void MonthScene::mouseReleaseEvent(QGraphicsSceneMouseEvent *mouseEvent)
     mCurrentIndicator = nullptr;
 
     if (mActionItem) {
-        MonthCell *currentCell = getCellFromPos(pos);
+        const MonthCell *currentCell = getCellFromPos(pos);
 
         const bool somethingChanged = currentCell && currentCell != mStartCell;
 

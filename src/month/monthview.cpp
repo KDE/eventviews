@@ -596,6 +596,7 @@ void MonthView::reloadIncidences()
     auto const hols = holidays(actualStartDateTime().date(), actualEndDateTime().date());
     for (auto const &h : hols) {
         if (h.dayType() == KHolidays::Holiday::NonWorkday) {
+            /* cppcheck-suppress constVariablePointer */
             MonthItem *holidayItem = new HolidayMonthItem(d->scene, h.observedStartDate(), h.observedEndDate(), h.name());
             d->scene->mManagerList << holidayItem;
         }
@@ -605,6 +606,7 @@ void MonthView::reloadIncidences()
     std::sort(d->scene->mManagerList.begin(), d->scene->mManagerList.end(), MonthItem::greaterThan);
 
     // build each month's cell event list
+    /* cppcheck-suppress constVariablePointer */
     for (MonthItem *manager : std::as_const(d->scene->mManagerList)) {
         for (QDate date = manager->startDate(); date <= manager->endDate(); date = date.addDays(1)) {
             MonthCell *cell = d->scene->mMonthCellMap.value(date);

@@ -325,7 +325,7 @@ void TimeLabels::contextMenuEvent(QContextMenuEvent *event)
     Q_UNUSED(event)
 
     QMenu popup(this);
-    QAction *editTimeZones = popup.addAction(QIcon::fromTheme(QStringLiteral("document-properties")), i18n("&Add Timezones…"));
+    const QAction *editTimeZones = popup.addAction(QIcon::fromTheme(QStringLiteral("document-properties")), i18n("&Add Timezones…"));
     QAction *removeTimeZone = popup.addAction(QIcon::fromTheme(QStringLiteral("edit-delete")), i18n("&Remove Timezone %1", i18n(mTimezone.id().constData())));
     if (!mTimezone.isValid() || !mTimeLabelsZone->preferences()->timeScaleTimezones().count() || mTimezone == mTimeLabelsZone->preferences()->timeZone()) {
         removeTimeZone->setEnabled(false);
@@ -337,7 +337,7 @@ void TimeLabels::contextMenuEvent(QContextMenuEvent *event)
         HourTimeMode = popup.addAction(QIcon::fromTheme(QStringLiteral("clock")), i18nc("@action:inmenu", "24 Hour Clock"));
     }
 
-    QAction *activatedAction = popup.exec(QCursor::pos());
+    const QAction *activatedAction = popup.exec(QCursor::pos());
     if (activatedAction == editTimeZones) {
         QPointer<TimeScaleConfigDialog> dialog = new TimeScaleConfigDialog(mTimeLabelsZone->preferences(), this);
         if (dialog->exec() == QDialog::Accepted) {
