@@ -175,7 +175,7 @@ public Q_SLOTS:
       deselected. This function emits the itemSelected(bool) signal to inform
       about selection/deselection of events.
     */
-    void selectItem(const AgendaItem::QPtr &);
+    void selectItem(const EventViews::AgendaItem::QPtr &);
 
     /**
       Selects the item associated with a given Akonadi Item id.
@@ -186,8 +186,8 @@ public Q_SLOTS:
     void selectIncidenceByUid(const QString &id);
     void selectItem(const Akonadi::Item &item);
 
-    bool removeAgendaItem(const AgendaItem::QPtr &item);
-    void showAgendaItem(const AgendaItem::QPtr &item);
+    bool removeAgendaItem(const EventViews::AgendaItem::QPtr &item);
+    void showAgendaItem(const EventViews::AgendaItem::QPtr &item);
 
 Q_SIGNALS:
     void newEventSignal();

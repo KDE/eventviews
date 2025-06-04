@@ -233,8 +233,8 @@ public:
     }
 
 Q_SIGNALS:
-    void removeAgendaItem(const AgendaItem::QPtr &);
-    void showAgendaItem(const AgendaItem::QPtr &);
+    void removeAgendaItem(const EventViews::AgendaItem::QPtr &);
+    void showAgendaItem(const EventViews::AgendaItem::QPtr &);
 
 public Q_SLOTS:
     void updateIcons();

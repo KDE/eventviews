@@ -19,8 +19,6 @@ namespace EventViews
 class ConfigDialogInterface;
 class MultiAgendaViewPrivate;
 
-;
-
 /**
   Shows one agenda for every resource side-by-side.
 */
@@ -74,7 +72,7 @@ Q_SIGNALS:
 
 public Q_SLOTS:
 
-    void customCollectionsChanged(ConfigDialogInterface *dlg);
+    void customCollectionsChanged(EventViews::ConfigDialogInterface *dlg);
 
     void showDates(const QDate &start, const QDate &end, const QDate &preferredMonth = QDate()) override;
     void showIncidences(const Akonadi::Item::List &incidenceList, const QDate &date) override;
