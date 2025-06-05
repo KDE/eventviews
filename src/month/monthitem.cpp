@@ -453,6 +453,12 @@ void IncidenceMonthItem::updateDates(int startOffset, int endOffset)
             }
             break;
         }
+        case KCalUtils::RecurrenceActions::PastOccurrences:
+            // nothing to do with past occurrences
+            break;
+        case KCalUtils::RecurrenceActions::NoOccurrence:
+            // nothing to do
+            break;
         }
     } else { // Doesn't recur
         KCalendarCore::Incidence::Ptr const oldIncidence(mIncidence->clone());
