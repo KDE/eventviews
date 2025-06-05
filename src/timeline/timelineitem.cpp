@@ -83,7 +83,7 @@ void TimelineItem::removeIncidence(const Akonadi::Item &incidence)
 void TimelineItem::moveItems(const Akonadi::Item &incidence, int delta, int duration)
 {
     using ItemList = QList<QStandardItem *>;
-    ItemList list = mItemMap.value(incidence.id());
+    const ItemList list = mItemMap.value(incidence.id());
     const ItemList::ConstIterator end(list.constEnd());
     for (ItemList::ConstIterator it = list.constBegin(); it != end; ++it) {
         QDateTime start = static_cast<TimelineSubItem *>(*it)->originalStart();

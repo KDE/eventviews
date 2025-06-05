@@ -109,10 +109,10 @@ void WhatsNextView::updateView()
                 appendEvent(evCalendar, ev);
             } else {
                 KCalendarCore::Recurrence *recur = ev->recurrence();
-                int duration = ev->dtStart().secsTo(ev->dtEnd());
-                QDateTime start = recur->getPreviousDateTime(QDateTime(mStartDate, QTime(), QTimeZone::LocalTime));
-                QDateTime end = start.addSecs(duration);
-                QDateTime endDate(mEndDate, QTime(23, 59, 59), QTimeZone::LocalTime);
+                const int duration = ev->dtStart().secsTo(ev->dtEnd());
+                const QDateTime start = recur->getPreviousDateTime(QDateTime(mStartDate, QTime(), QTimeZone::LocalTime));
+                const QDateTime end = start.addSecs(duration);
+                const QDateTime endDate(mEndDate, QTime(23, 59, 59), QTimeZone::LocalTime);
                 if (end.date() >= mStartDate) {
                     appendEvent(evCalendar, ev, start.toLocalTime(), end.toLocalTime());
                 }
@@ -173,7 +173,7 @@ void WhatsNextView::updateView()
         }
     }
 
-    QStringList myEmails(CalendarSupport::KCalPrefs::instance()->allEmails());
+    const QStringList myEmails(CalendarSupport::KCalPrefs::instance()->allEmails());
     int replies = 0;
     events.clear();
     for (const auto &calendar : cals) {
@@ -181,7 +181,7 @@ void WhatsNextView::updateView()
     }
     for (const KCalendarCore::Event::Ptr &ev : std::as_const(events)) {
         const auto evCalendar = calendar3(ev);
-        KCalendarCore::Attendee me = ev->attendeeByMails(myEmails);
+        const KCalendarCore::Attendee me = ev->attendeeByMails(myEmails);
         if (!me.isNull()) {
             if (me.status() == KCalendarCore::Attendee::NeedsAction && me.RSVP()) {
                 if (replies == 0) {
@@ -205,7 +205,7 @@ void WhatsNextView::updateView()
     }
     for (const KCalendarCore::Todo::Ptr &to : std::as_const(todos)) {
         const auto todoCalendar = calendar3(to);
-        KCalendarCore::Attendee me = to->attendeeByMails(myEmails);
+        const KCalendarCore::Attendee me = to->attendeeByMails(myEmails);
         if (!me.isNull()) {
             if (me.status() == KCalendarCore::Attendee::NeedsAction && me.RSVP()) {
                 if (replies == 0) {
@@ -297,7 +297,7 @@ void WhatsNextView::appendEvent(const Akonadi::CollectionCalendar::Ptr &calendar
 
 void WhatsNextView::appendTodo(const Akonadi::CollectionCalendar::Ptr &calendar, const KCalendarCore::Incidence::Ptr &incidence)
 {
-    Akonadi::Item aitem = calendar->item(incidence);
+    const Akonadi::Item aitem = calendar->item(incidence);
     if (mTodos.contains(aitem)) {
         return;
     }
@@ -333,7 +333,7 @@ static std::optional<Akonadi::Item::Id> idFromQuery(const QUrlQuery &query, cons
 
 void WhatsNextView::showIncidence(const QUrl &uri)
 {
-    QUrlQuery query(uri);
+    const QUrlQuery query(uri);
     const auto itemId = idFromQuery(query, QStringLiteral("itemId"));
     const auto calendarId = idFromQuery(query, QStringLiteral("calendarId"));
 

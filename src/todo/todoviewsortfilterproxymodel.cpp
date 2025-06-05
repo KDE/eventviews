@@ -42,7 +42,7 @@ bool TodoViewSortFilterProxyModel::filterAcceptsRow(int source_row, const QModel
 
     bool returnValue = true;
     if (ret && !mPriorities.isEmpty()) {
-        QString priorityValue = sourceModel()->index(source_row, Akonadi::TodoModel::PriorityColumn, source_parent).data(Qt::EditRole).toString();
+        const QString priorityValue = sourceModel()->index(source_row, Akonadi::TodoModel::PriorityColumn, source_parent).data(Qt::EditRole).toString();
         returnValue = mPriorities.contains(priorityValue);
     }
     if (ret && !mCategories.isEmpty()) {
@@ -57,7 +57,7 @@ bool TodoViewSortFilterProxyModel::filterAcceptsRow(int source_row, const QModel
     }
 
     // check if one of the children is accepted, and accept this node too if so
-    QModelIndex cur = sourceModel()->index(source_row, Akonadi::TodoModel::SummaryColumn, source_parent);
+    const QModelIndex cur = sourceModel()->index(source_row, Akonadi::TodoModel::SummaryColumn, source_parent);
     if (cur.isValid()) {
         for (int r = 0; r < cur.model()->rowCount(cur); ++r) {
             if (filterAcceptsRow(r, cur)) {
@@ -72,8 +72,8 @@ bool TodoViewSortFilterProxyModel::filterAcceptsRow(int source_row, const QModel
 bool TodoViewSortFilterProxyModel::lessThan(const QModelIndex &left, const QModelIndex &right) const
 {
     if (mPreferences->sortCompletedTodosSeparately() && left.column() != Akonadi::TodoModel::PercentColumn) {
-        QModelIndex cLeft = left.sibling(left.row(), Akonadi::TodoModel::PercentColumn);
-        QModelIndex cRight = right.sibling(right.row(), Akonadi::TodoModel::PercentColumn);
+        const QModelIndex cLeft = left.sibling(left.row(), Akonadi::TodoModel::PercentColumn);
+        const QModelIndex cRight = right.sibling(right.row(), Akonadi::TodoModel::PercentColumn);
 
         if (cRight.data(Qt::EditRole).toInt() == 100 && cLeft.data(Qt::EditRole).toInt() != 100) {
             return mSortOrder == Qt::AscendingOrder ? true : false;
@@ -92,8 +92,8 @@ bool TodoViewSortFilterProxyModel::lessThan(const QModelIndex &left, const QMode
         } else {
             // Due dates are equal, but the user still expects sorting by importance
             // Fallback to the PriorityColumn
-            QModelIndex leftPriorityIndex = left.sibling(left.row(), Akonadi::TodoModel::PriorityColumn);
-            QModelIndex rightPriorityIndex = right.sibling(right.row(), Akonadi::TodoModel::PriorityColumn);
+            const QModelIndex leftPriorityIndex = left.sibling(left.row(), Akonadi::TodoModel::PriorityColumn);
+            const QModelIndex rightPriorityIndex = right.sibling(right.row(), Akonadi::TodoModel::PriorityColumn);
             const int fallbackComparison = comparePriorities(leftPriorityIndex, rightPriorityIndex);
 
             if (fallbackComparison != 0) {
@@ -112,8 +112,8 @@ bool TodoViewSortFilterProxyModel::lessThan(const QModelIndex &left, const QMode
         } else {
             // Priorities are equal, but the user still expects sorting by importance
             // Fallback to the DueDateColumn
-            QModelIndex leftDueDateIndex = left.sibling(left.row(), Akonadi::TodoModel::DueDateColumn);
-            QModelIndex rightDueDateIndex = right.sibling(right.row(), Akonadi::TodoModel::DueDateColumn);
+            const QModelIndex leftDueDateIndex = left.sibling(left.row(), Akonadi::TodoModel::DueDateColumn);
+            const QModelIndex rightDueDateIndex = right.sibling(right.row(), Akonadi::TodoModel::DueDateColumn);
             const int fallbackComparison = compareDueDates(leftDueDateIndex, rightDueDateIndex);
 
             if (fallbackComparison != 0) {
@@ -132,8 +132,8 @@ bool TodoViewSortFilterProxyModel::lessThan(const QModelIndex &left, const QMode
         // Fixes to-dos jumping around when you have calendar A selected, and then check/uncheck
         // a calendar B with no to-dos. No to-do is added/removed because calendar B is empty,
         // but you see the existing to-dos switching places.
-        QModelIndex leftSummaryIndex = left.sibling(left.row(), Akonadi::TodoModel::SummaryColumn);
-        QModelIndex rightSummaryIndex = right.sibling(right.row(), Akonadi::TodoModel::SummaryColumn);
+        const QModelIndex leftSummaryIndex = left.sibling(left.row(), Akonadi::TodoModel::SummaryColumn);
+        const QModelIndex rightSummaryIndex = right.sibling(right.row(), Akonadi::TodoModel::SummaryColumn);
 
         // This patch is not about fallingback to the SummaryColumn for sorting.
         // It's about avoiding jumping due to random reasons.

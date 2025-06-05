@@ -32,7 +32,7 @@ void CreateColorGui_test::createListWidgetItem()
     mListWidget->clear();
     for (int i = 0; i < 100; ++i) {
         auto item = new QListWidgetItem;
-        QColor color = prefs.resourceColor(QString::number(i));
+        const QColor color = prefs.resourceColor(QString::number(i));
         item->setBackground(color);
         mListWidget->addItem(item);
     }
@@ -40,7 +40,7 @@ void CreateColorGui_test::createListWidgetItem()
 
 int main(int argc, char **argv)
 {
-    QApplication app(argc, argv);
+    const QApplication app(argc, argv);
     KAboutData aboutData(QStringLiteral("CreateColorGui_test"), i18n("CreateColorGui_test"), QStringLiteral("1.0"));
     aboutData.setShortDescription(i18n("Test creating color"));
     QCommandLineParser parser;

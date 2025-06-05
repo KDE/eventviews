@@ -48,7 +48,7 @@ void TimelineViewPrivate::itemDoubleClicked(const QModelIndex &index)
 
 void TimelineViewPrivate::contextMenuRequested(QPoint point)
 {
-    QPersistentModelIndex index = mGantt->indexAt(point);
+    const QPersistentModelIndex index = mGantt->indexAt(point);
     // mHintDate = QDateTime( mGantt->getDateTimeForCoordX( QCursor::pos().x(), true ) );
     auto tlitem = dynamic_cast<TimelineSubItem *>(static_cast<QStandardItemModel *>(mGantt->model())->item(index.row(), index.column()));
     if (!tlitem) {
@@ -123,7 +123,7 @@ void TimelineViewPrivate::insertIncidence(const Akonadi::CollectionCalendar::Ptr
             // PENDING(AKONADI_PORT) check if correct. also check the original if,
             // was inside the for loop (unnecessarily)
             for (const KCalendarCore::Event::Ptr &i : events) {
-                Akonadi::Item item = calendar->item(i);
+                const Akonadi::Item item = calendar->item(i);
                 insertIncidence(calendar, item, day);
             }
         }
@@ -168,12 +168,12 @@ void TimelineViewPrivate::itemChanged(QStandardItem *item)
         newStart = QDateTime(newStart.date().startOfDay());
     }
 
-    int delta = tlit->originalStart().secsTo(newStart);
+    const int delta = tlit->originalStart().secsTo(newStart);
     inc->setDtStart(inc->dtStart().addSecs(delta));
     int duration = tlit->startTime().secsTo(tlit->endTime());
     int allDayOffset = 0;
     if (inc->allDay()) {
-        int secsPerDay = 60 * 60 * 24;
+        const int secsPerDay = 60 * 60 * 24;
         duration /= secsPerDay;
         duration *= secsPerDay;
         allDayOffset = secsPerDay;

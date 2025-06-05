@@ -152,7 +152,7 @@ private:
         const KGantt::ItemType type = static_cast<KGantt::ItemType>(idx.model()->data(idx, KGantt::ItemTypeRole).toInt());
 
         const QString txt = idx.model()->data(idx, Qt::DisplayRole).toString();
-        QRectF itemRect = opt.itemRect;
+        const QRectF itemRect = opt.itemRect;
         QRectF boundingRect = opt.boundingRect;
         boundingRect.setY(itemRect.y());
         boundingRect.setHeight(itemRect.height());
@@ -175,7 +175,7 @@ private:
         switch (type) {
         case KGantt::TypeTask:
             if (itemRect.isValid()) {
-                QRectF r = itemRect;
+                const QRectF r = itemRect;
                 painter->drawRect(r);
                 bool drawText = true;
                 Qt::Alignment ta;
@@ -331,7 +331,7 @@ void TimelineView::showDates(const QDate &start, const QDate &end, const QDate &
                 if (event->hasRecurrenceId()) {
                     continue;
                 }
-                Akonadi::Item item = calendar->item(event);
+                const Akonadi::Item item = calendar->item(event);
                 d->insertIncidence(calendar, item, day);
             }
         }

@@ -58,7 +58,7 @@ bool TodoViewView::eventFilter(QObject *watched, QEvent *event)
         }
 
         for (QAction *action : std::as_const(mColumnActions)) {
-            int column = action->data().toInt();
+            const int column = action->data().toInt();
             action->setChecked(!isColumnHidden(column));
         }
 
@@ -133,7 +133,7 @@ QModelIndex TodoViewView::moveCursor(CursorAction cursorAction, Qt::KeyboardModi
             return tmp;
         }
 
-        int lastCol = model()->columnCount(QModelIndex()) - 1;
+        const int lastCol = model()->columnCount(QModelIndex()) - 1;
 
         // search on top of the item, also include expanded items
         tmp = current.sibling(current.row() - 1, 0);
@@ -165,8 +165,8 @@ QModelIndex TodoViewView::getNextEditableIndex(const QModelIndex &cur, int inc)
     }
 
     QModelIndex tmp;
-    int colCount = model()->columnCount(QModelIndex());
-    int end = inc == 1 ? colCount : -1;
+    const int colCount = model()->columnCount(QModelIndex());
+    const int end = inc == 1 ? colCount : -1;
 
     for (int c = cur.column(); c != end; c += inc) {
         tmp = cur.sibling(cur.row(), c);
@@ -203,7 +203,7 @@ void TodoViewView::mouseMoveEvent(QMouseEvent *event)
 void TodoViewView::mousePressEvent(QMouseEvent *event)
 {
     mExpandTimer.stop();
-    QModelIndex index = indexAt(event->pos());
+    const QModelIndex index = indexAt(event->pos());
     if (index.isValid() && event->button() == Qt::LeftButton) {
         mExpandTimer.start();
     }
@@ -213,7 +213,7 @@ void TodoViewView::mousePressEvent(QMouseEvent *event)
 
 void TodoViewView::expandParent()
 {
-    QModelIndex index = indexAt(viewport()->mapFromGlobal(QCursor::pos()));
+    const QModelIndex index = indexAt(viewport()->mapFromGlobal(QCursor::pos()));
     if (index.isValid()) {
         mIgnoreNextMouseRelease = true;
         QKeyEvent keyEvent = QKeyEvent(QEvent::KeyPress, Qt::Key_Asterisk, Qt::NoModifier);

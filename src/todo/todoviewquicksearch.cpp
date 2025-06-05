@@ -58,7 +58,7 @@ TodoViewQuickSearch::TodoViewQuickSearch(QWidget *parent)
 
     {
         // Make the combo big enough so that "Select Categories" fits.
-        QFontMetrics fm = mCategoryCombo->lineEdit()->fontMetrics();
+        const QFontMetrics fm = mCategoryCombo->lineEdit()->fontMetrics();
 
         // QLineEdit::sizeHint() returns a nice size to fit 17 'x' chars.
         const int currentPreferedWidth = mCategoryCombo->lineEdit()->sizeHint().width();

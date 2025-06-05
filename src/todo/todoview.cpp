@@ -499,7 +499,7 @@ TodoView::~TodoView()
 
 void TodoView::expandIndex(const QModelIndex &index)
 {
-    QModelIndex todoModelIndex = sModels->todoModel->mapFromSource(index);
+    const QModelIndex todoModelIndex = sModels->todoModel->mapFromSource(index);
     Q_ASSERT(todoModelIndex.isValid());
     const auto coloredIndex = sModels->coloredTodoModel->mapFromSource(todoModelIndex);
     Q_ASSERT(coloredIndex.isValid());
@@ -593,7 +593,7 @@ void TodoView::saveLayout(KConfig *config, const QString &group) const
 
 void TodoView::restoreLayout(KConfig *config, const QString &group, bool minimalDefaults)
 {
-    KConfigGroup cfgGroup = config->group(group);
+    const KConfigGroup cfgGroup = config->group(group);
     QHeaderView *header = mView->header();
 
     QVariantList columnVisibility = cfgGroup.readEntry("ColumnVisibility", QVariantList());
@@ -618,9 +618,9 @@ void TodoView::restoreLayout(KConfig *config, const QString &group, bool minimal
         QTimer::singleShot(0, this, &TodoView::resizeColumns);
     } else {
         for (int i = 0; i < header->count() && i < columnOrder.size() && i < columnWidths.size() && i < columnVisibility.size(); i++) {
-            bool visible = columnVisibility[i].toBool();
-            int width = columnWidths[i].toInt();
-            int order = columnOrder[i].toInt();
+            const bool visible = columnVisibility[i].toBool();
+            const int width = columnWidths[i].toInt();
+            const int order = columnOrder[i].toInt();
 
             header->resizeSection(i, width);
             header->moveSection(header->visualIndex(i), order);
@@ -630,8 +630,8 @@ void TodoView::restoreLayout(KConfig *config, const QString &group, bool minimal
         }
     }
 
-    int sortOrder = cfgGroup.readEntry("SortAscending", (int)Qt::AscendingOrder);
-    int sortColumn = cfgGroup.readEntry("SortColumn", -1);
+    const int sortOrder = cfgGroup.readEntry("SortAscending", (int)Qt::AscendingOrder);
+    const int sortColumn = cfgGroup.readEntry("SortColumn", -1);
     if (sortColumn >= 0) {
         mView->sortByColumn(sortColumn, (Qt::SortOrder)sortOrder);
     }
@@ -707,9 +707,9 @@ void TodoView::addTodo(const QString &summary, const Akonadi::Item &parentItem, 
         return;
     }
 
-    KCalendarCore::Todo::Ptr parent = Akonadi::CalendarUtils::todo(parentItem);
+    const KCalendarCore::Todo::Ptr parent = Akonadi::CalendarUtils::todo(parentItem);
 
-    KCalendarCore::Todo::Ptr todo(new KCalendarCore::Todo);
+    const KCalendarCore::Todo::Ptr todo(new KCalendarCore::Todo);
     todo->setSummary(summaryTrimmed);
     todo->setOrganizer(Person(CalendarSupport::KCalPrefs::instance()->fullName(), CalendarSupport::KCalPrefs::instance()->email()));
 
@@ -773,7 +773,7 @@ void TodoView::contextMenu(QPoint pos)
             if (incidences.isEmpty()) {
                 enable = false;
             } else {
-                Akonadi::Item item = incidences.first();
+                const Akonadi::Item item = incidences.first();
                 incidencePtr = Akonadi::CalendarUtils::incidence(item);
 
                 // Action isn't RO, it can change the incidence, "Edit" for example.
@@ -933,7 +933,7 @@ void TodoView::copyTodoToDate(QDate date)
         return;
     }
 
-    KCalendarCore::Todo::Ptr todo(orig->clone());
+    const KCalendarCore::Todo::Ptr todo(orig->clone());
 
     todo->setUid(KCalendarCore::CalFormat::createUniqueId());
 
@@ -953,7 +953,7 @@ void TodoView::scheduleResizeColumns()
 void TodoView::itemDoubleClicked(const QModelIndex &index)
 {
     if (index.isValid()) {
-        QModelIndex summary = index.sibling(index.row(), Akonadi::TodoModel::SummaryColumn);
+        const QModelIndex summary = index.sibling(index.row(), Akonadi::TodoModel::SummaryColumn);
         if (summary.flags() & Qt::ItemIsEditable) {
             editTodo();
         } else {
@@ -972,7 +972,7 @@ QMenu *TodoView::createCategoryPopupMenu()
     }
 
     const auto todoItem = selection[0].data(Akonadi::TodoModel::TodoRole).value<Akonadi::Item>();
-    KCalendarCore::Todo::Ptr todo = Akonadi::CalendarUtils::todo(todoItem);
+    const KCalendarCore::Todo::Ptr todo = Akonadi::CalendarUtils::todo(todoItem);
     Q_ASSERT(todo);
 
     const QStringList checkedCategories = todo->categories();
@@ -1018,12 +1018,12 @@ void TodoView::setNewDate(QDate date)
     }
 
     const auto todoItem = selection[0].data(Akonadi::TodoModel::TodoRole).value<Akonadi::Item>();
-    KCalendarCore::Todo::Ptr todo = Akonadi::CalendarUtils::todo(todoItem);
+    const KCalendarCore::Todo::Ptr todo = Akonadi::CalendarUtils::todo(todoItem);
     Q_ASSERT(todo);
 
     const auto collection = Akonadi::EntityTreeModel::updatedCollection(model(), todoItem.storageCollectionId());
     if (collection.rights() & Akonadi::Collection::CanChangeItem) {
-        KCalendarCore::Todo::Ptr oldTodo(todo->clone());
+        const KCalendarCore::Todo::Ptr oldTodo(todo->clone());
         QDateTime dt(date.startOfDay());
 
         if (!todo->allDay()) {
@@ -1049,12 +1049,12 @@ void TodoView::setStartDate(QDate date)
     }
 
     const auto todoItem = selection[0].data(Akonadi::TodoModel::TodoRole).value<Akonadi::Item>();
-    KCalendarCore::Todo::Ptr todo = Akonadi::CalendarUtils::todo(todoItem);
+    const KCalendarCore::Todo::Ptr todo = Akonadi::CalendarUtils::todo(todoItem);
     Q_ASSERT(todo);
 
     const auto collection = Akonadi::EntityTreeModel::updatedCollection(model(), todoItem.storageCollectionId());
     if (collection.rights() & Akonadi::Collection::CanChangeItem) {
-        KCalendarCore::Todo::Ptr oldTodo(todo->clone());
+        const KCalendarCore::Todo::Ptr oldTodo(todo->clone());
         QDateTime dt(date.startOfDay());
 
         if (!todo->allDay()) {
@@ -1080,14 +1080,14 @@ void TodoView::setNewPercentage(QAction *action)
     }
 
     const auto todoItem = selection[0].data(Akonadi::TodoModel::TodoRole).value<Akonadi::Item>();
-    KCalendarCore::Todo::Ptr todo = Akonadi::CalendarUtils::todo(todoItem);
+    const KCalendarCore::Todo::Ptr todo = Akonadi::CalendarUtils::todo(todoItem);
     Q_ASSERT(todo);
 
     const auto collection = Akonadi::EntityTreeModel::updatedCollection(model(), todoItem.storageCollectionId());
     if (collection.rights() & Akonadi::Collection::CanChangeItem) {
-        KCalendarCore::Todo::Ptr oldTodo(todo->clone());
+        const KCalendarCore::Todo::Ptr oldTodo(todo->clone());
 
-        int percentage = mPercentage.value(action);
+        const int percentage = mPercentage.value(action);
         if (percentage == 100) {
             todo->setCompleted(QDateTime::currentDateTime());
             todo->setPercentComplete(100);
@@ -1107,10 +1107,10 @@ void TodoView::setNewPriority(QAction *action)
         return;
     }
     const auto todoItem = selection[0].data(Akonadi::TodoModel::TodoRole).value<Akonadi::Item>();
-    KCalendarCore::Todo::Ptr todo = Akonadi::CalendarUtils::todo(todoItem);
+    const KCalendarCore::Todo::Ptr todo = Akonadi::CalendarUtils::todo(todoItem);
     const auto collection = Akonadi::EntityTreeModel::updatedCollection(model(), todoItem.storageCollectionId());
     if (collection.rights() & Akonadi::Collection::CanChangeItem) {
-        KCalendarCore::Todo::Ptr oldTodo(todo->clone());
+        const KCalendarCore::Todo::Ptr oldTodo(todo->clone());
         todo->setPriority(mPriority[action]);
 
         changer()->modifyIncidence(todoItem, oldTodo, this);
@@ -1125,11 +1125,11 @@ void TodoView::changedCategories(QAction *action)
     }
 
     const auto todoItem = selection[0].data(Akonadi::TodoModel::TodoRole).value<Akonadi::Item>();
-    KCalendarCore::Todo::Ptr todo = Akonadi::CalendarUtils::todo(todoItem);
+    const KCalendarCore::Todo::Ptr todo = Akonadi::CalendarUtils::todo(todoItem);
     Q_ASSERT(todo);
     const auto collection = Akonadi::EntityTreeModel::updatedCollection(model(), todoItem.storageCollectionId());
     if (collection.rights() & Akonadi::Collection::CanChangeItem) {
-        KCalendarCore::Todo::Ptr oldTodo(todo->clone());
+        const KCalendarCore::Todo::Ptr oldTodo(todo->clone());
 
         const QString cat = action->data().toString();
         QStringList categories = todo->categories();
@@ -1194,10 +1194,10 @@ void TodoView::onRowsInserted(const QModelIndex &parent, int start, int end)
         return;
     }
 
-    QModelIndex idx = mView->model()->index(start, 0);
+    const QModelIndex idx = mView->model()->index(start, 0);
 
     // If the collection is currently being populated, we don't do anything
-    QVariant v = idx.data(Akonadi::EntityTreeModel::ItemRole);
+    const QVariant v = idx.data(Akonadi::EntityTreeModel::ItemRole);
     if (!v.isValid()) {
         return;
     }
@@ -1214,11 +1214,11 @@ void TodoView::onRowsInserted(const QModelIndex &parent, int start, int end)
 
     // Case #1, adding an item that doesn't have parent: We select it
     if (!parent.isValid()) {
-        QModelIndexList selection = mView->selectionModel()->selectedRows();
+        const QModelIndexList selection = mView->selectionModel()->selectedRows();
         if (selection.size() <= 1) {
             // don't destroy complex selections, not applicable now (only single
             // selection allowed), but for the future...
-            int colCount = static_cast<int>(Akonadi::TodoModel::ColumnCount);
+            const int colCount = static_cast<int>(Akonadi::TodoModel::ColumnCount);
             mView->selectionModel()->select(QItemSelection(idx, mView->model()->index(start, colCount - 1)),
                                             QItemSelectionModel::ClearAndSelect | QItemSelectionModel::Rows);
         }
@@ -1314,8 +1314,8 @@ void TodoView::restoreViewState()
     // timer.start();
     delete mTreeStateRestorer;
     mTreeStateRestorer = new Akonadi::ETMViewStateSaver();
-    KSharedConfig::Ptr config = KSharedConfig::openConfig();
-    KConfigGroup group(config, stateSaverGroup());
+    const KSharedConfig::Ptr config = KSharedConfig::openConfig();
+    const KConfigGroup group(config, stateSaverGroup());
     mTreeStateRestorer->setView(mView);
     mTreeStateRestorer->restoreState(group);
     // qCDebug(CALENDARVIEW_LOG) << "Took " << timer.elapsed();
