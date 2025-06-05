@@ -668,7 +668,7 @@ void TodoView::updateView()
         return;
     }
 
-    auto calendar = calendarList.first();
+    auto &calendar = calendarList.first();
     mProxyModel->setCalFilter(calendar->filter());
 }
 
@@ -773,7 +773,7 @@ void TodoView::contextMenu(QPoint pos)
             if (incidences.isEmpty()) {
                 enable = false;
             } else {
-                const Akonadi::Item item = incidences.first();
+                const Akonadi::Item &item = incidences.first();
                 incidencePtr = Akonadi::CalendarUtils::incidence(item);
 
                 // Action isn't RO, it can change the incidence, "Edit" for example.
