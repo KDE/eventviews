@@ -54,7 +54,7 @@ QPixmap *AgendaItem::eventPxmp = nullptr;
 
 AgendaItem::AgendaItem(EventView *eventView,
                        const MultiViewCalendar::Ptr &calendar,
-                       const KCalendarCore::Incidence::Ptr &item,
+                       const KCalendarCore::Incidence::Ptr &incidence,
                        int itemPos,
                        int itemCount,
                        const QDateTime &qd,
@@ -63,7 +63,7 @@ AgendaItem::AgendaItem(EventView *eventView,
     : QWidget(parent)
     , mEventView(eventView)
     , mCalendar(calendar)
-    , mIncidence(item)
+    , mIncidence(incidence)
     , mOccurrenceDateTime(qd)
     , mSelected(isSelected)
     , mSpecialEvent(false)

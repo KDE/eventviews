@@ -352,19 +352,19 @@ void TimelineView::updateView()
     }
 }
 
-void TimelineView::changeIncidenceDisplay(const Akonadi::Item &incidence, int mode)
+void TimelineView::changeIncidenceDisplay(const Akonadi::Item &item, int mode)
 {
-    const auto cal = calendar3(incidence);
+    const auto cal = calendar3(item);
     switch (mode) {
     case Akonadi::IncidenceChanger::ChangeTypeCreate:
-        d->insertIncidence(cal, incidence);
+        d->insertIncidence(cal, item);
         break;
     case Akonadi::IncidenceChanger::ChangeTypeModify:
-        d->removeIncidence(incidence);
-        d->insertIncidence(cal, incidence);
+        d->removeIncidence(item);
+        d->insertIncidence(cal, item);
         break;
     case Akonadi::IncidenceChanger::ChangeTypeDelete:
-        d->removeIncidence(incidence);
+        d->removeIncidence(item);
         break;
     default:
         updateView();

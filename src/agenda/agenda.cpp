@@ -829,7 +829,7 @@ void Agenda::performSelectAction(QPoint pos)
     }
 }
 
-void Agenda::endSelectAction(const QPoint &currentPos)
+void Agenda::endSelectAction(const QPoint &viewportPos)
 {
     d->mScrollUpTimer.stop();
     d->mScrollDownTimer.stop();
@@ -839,7 +839,7 @@ void Agenda::endSelectAction(const QPoint &currentPos)
     Q_EMIT newTimeSpanSignal(d->mSelectionStartCell, d->mSelectionEndCell);
 
     if (d->preferences()->selectionStartsEditor()) {
-        if ((d->mSelectionStartPoint - currentPos).manhattanLength() > QApplication::startDragDistance()) {
+        if ((d->mSelectionStartPoint - viewportPos).manhattanLength() > QApplication::startDragDistance()) {
             Q_EMIT newEventSignal();
         }
     }

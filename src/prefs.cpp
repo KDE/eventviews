@@ -127,9 +127,9 @@ void BaseConfig::setResourceColor(const QString &resource, const QColor &color)
     mResourceColors.insert(resource, color);
 }
 
-void BaseConfig::setTimeScaleTimezones(const QStringList &list)
+void BaseConfig::setTimeScaleTimezones(const QStringList &timeZones)
 {
-    mTimeScaleTimeZones = list;
+    mTimeScaleTimeZones = timeZones;
 }
 
 QStringList BaseConfig::timeScaleTimezones() const
@@ -760,9 +760,9 @@ bool Prefs::showTodosMonthView() const
     return d->getBool(d->mBaseConfig.showTodosMonthViewItem());
 }
 
-void Prefs::setShowTodosMonthView(bool enable)
+void Prefs::setShowTodosMonthView(bool show)
 {
-    d->setBool(d->mBaseConfig.showTodosMonthViewItem(), enable);
+    d->setBool(d->mBaseConfig.showTodosMonthViewItem(), show);
 }
 
 bool Prefs::showJournalsMonthView() const
@@ -770,9 +770,9 @@ bool Prefs::showJournalsMonthView() const
     return d->getBool(d->mBaseConfig.showJournalsMonthViewItem());
 }
 
-void Prefs::setShowJournalsMonthView(bool enable)
+void Prefs::setShowJournalsMonthView(bool show)
 {
-    d->setBool(d->mBaseConfig.showJournalsMonthViewItem(), enable);
+    d->setBool(d->mBaseConfig.showJournalsMonthViewItem(), show);
 }
 
 bool Prefs::fullViewMonth() const
@@ -957,9 +957,9 @@ QStringList Prefs::timeScaleTimezones() const
     return d->mBaseConfig.timeScaleTimezones();
 }
 
-void Prefs::setTimeScaleTimezones(const QStringList &list)
+void Prefs::setTimeScaleTimezones(const QStringList &timeZones)
 {
-    d->mBaseConfig.setTimeScaleTimezones(list);
+    d->mBaseConfig.setTimeScaleTimezones(timeZones);
 }
 
 bool Prefs::use24HourClock() const

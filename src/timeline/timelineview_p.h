@@ -35,10 +35,10 @@ public:
     explicit TimelineViewPrivate(TimelineView *parent = nullptr);
     ~TimelineViewPrivate() override;
 
-    TimelineItem *calendarItemForIncidence(const Akonadi::Item &incidence) const;
-    void insertIncidence(const Akonadi::CollectionCalendar::Ptr &calendar, const Akonadi::Item &incidence);
-    void insertIncidence(const Akonadi::CollectionCalendar::Ptr &calendar, const Akonadi::Item &incidence, QDate day);
-    void removeIncidence(const Akonadi::Item &incidence);
+    TimelineItem *calendarItemForIncidence(const Akonadi::Item &item) const;
+    void insertIncidence(const Akonadi::CollectionCalendar::Ptr &calendar, const Akonadi::Item &item);
+    void insertIncidence(const Akonadi::CollectionCalendar::Ptr &calendar, const Akonadi::Item &item, QDate day);
+    void removeIncidence(const Akonadi::Item &item);
 
 public Q_SLOTS:
     // void overscale( KDGantt::View::Scale scale );

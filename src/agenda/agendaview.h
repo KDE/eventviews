@@ -70,7 +70,7 @@ class EVENTVIEWS_EXPORT AgendaView : public EventView
 {
     Q_OBJECT
 public:
-    explicit AgendaView(const PrefsPtr &preferences, QDate start, QDate end, bool isInteractive, bool isSideBySide = false, QWidget *parent = nullptr);
+    explicit AgendaView(const PrefsPtr &prefs, QDate start, QDate end, bool isInteractive, bool isSideBySide = false, QWidget *parent = nullptr);
 
     explicit AgendaView(QDate start, QDate end, bool isInteractive, bool isSideBySide = false, QWidget *parent = nullptr);
 
@@ -139,7 +139,7 @@ public:
 
     void showDates(const QDate &start, const QDate &end, const QDate &preferredMonth = QDate()) override;
 
-    void showIncidences(const Akonadi::Item::List &incidenceList, const QDate &date) override;
+    void showIncidences(const Akonadi::Item::List &incidences, const QDate &date) override;
 
     void clearSelection() override;
 
@@ -199,7 +199,7 @@ public Q_SLOTS:
     /** reschedule the todo  to the given x- and y- coordinates.
         Third parameter determines all-day (no time specified) */
     void slotIncidencesDropped(const KCalendarCore::Incidence::List &incidences, const QPoint &, bool);
-    void slotUrlsDropped(const QList<QUrl> &incidences, const QPoint &, bool);
+    void slotUrlsDropped(const QList<QUrl> &urls, const QPoint &, bool);
     void startDrag(const KCalendarCore::Incidence::Ptr &);
 
 protected Q_SLOTS:

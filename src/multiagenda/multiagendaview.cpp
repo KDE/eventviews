@@ -113,7 +113,7 @@ public:
 
     void addView(const Akonadi::CollectionCalendar::Ptr &calendar);
     void addView(KCheckableProxyModel *selectionProxy, const QString &title);
-    AgendaView *createView(const QString &calendar);
+    AgendaView *createView(const QString &title);
     void deleteViews();
     void setupViews();
     void resizeScrollView(QSize size);
@@ -567,13 +567,13 @@ static void updateViewFromSelection(AgendaView *view,
     }
 }
 
-void MultiAgendaViewPrivate::addView(KCheckableProxyModel *sm, const QString &title)
+void MultiAgendaViewPrivate::addView(KCheckableProxyModel *selectionProxy, const QString &title)
 {
     auto *view = createView(title);
     // During launch the underlying ETM doesn't have the entire Collection tree populated,
-    // so the "sm" contains an incomplete selection - we must listen for changes and update
+    // so the selectionProxy contains an incomplete selection - we must listen for changes and update
     // the view later on
-    QObject::connect(sm->selectionModel(),
+    QObject::connect(selectionProxy->selectionModel(),
                      &QItemSelectionModel::selectionChanged,
                      view,
                      [this, view](const QItemSelection &selected, const QItemSelection &deselected) {
@@ -581,7 +581,7 @@ void MultiAgendaViewPrivate::addView(KCheckableProxyModel *sm, const QString &ti
                      });
 
     // Initial update
-    updateViewFromSelection(view, sm->selectionModel()->selection(), QItemSelection{}, mCalendarFactory);
+    updateViewFromSelection(view, selectionProxy->selectionModel()->selection(), QItemSelection{}, mCalendarFactory);
 }
 
 void MultiAgendaView::resizeEvent(QResizeEvent *ev)

@@ -57,7 +57,7 @@ public:
 
     void showIncidences(const Akonadi::Item::List &incidenceList, const QDate &date) override;
     void updateView() override;
-    virtual void changeIncidenceDisplay(const Akonadi::Item &incidence, int mode);
+    virtual void changeIncidenceDisplay(const Akonadi::Item &item, int mode);
     [[nodiscard]] bool eventDurationHint(QDateTime &startDt, QDateTime &endDt, bool &allDay) const override;
 
 Q_SIGNALS:

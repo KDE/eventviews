@@ -55,7 +55,7 @@ class EVENTVIEWS_EXPORT TodoView : public EventViews::EventView
     friend class ModelStack;
 
 public:
-    TodoView(const EventViews::PrefsPtr &preferences, bool sidebarView, QWidget *parent);
+    TodoView(const EventViews::PrefsPtr &prefs, bool sidebarView, QWidget *parent);
     ~TodoView() override;
 
     void setModel(QAbstractItemModel *model) override;

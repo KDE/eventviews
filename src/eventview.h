@@ -331,7 +331,7 @@ public Q_SLOTS:
      Perform the default action for an incidence, e.g. open the event editor,
      when double-clicking an event in the agenda view.
     */
-    void defaultAction(const Akonadi::Item &incidence);
+    void defaultAction(const Akonadi::Item &item);
 
     /**
        Set which holiday regions the user wants to use.

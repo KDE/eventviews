@@ -29,10 +29,10 @@ public:
     TimelineItem(const Akonadi::CollectionCalendar::Ptr &calendar, uint index, QStandardItemModel *model, QObject *parent);
     ~TimelineItem() override;
 
-    void insertIncidence(const Akonadi::Item &incidence, const QDateTime &start = QDateTime(), const QDateTime &end = QDateTime());
-    void removeIncidence(const Akonadi::Item &incidence);
+    void insertIncidence(const Akonadi::Item &item, const QDateTime &start = QDateTime(), const QDateTime &end = QDateTime());
+    void removeIncidence(const Akonadi::Item &item);
 
-    void moveItems(const Akonadi::Item &incidence, int delta, int duration);
+    void moveItems(const Akonadi::Item &item, int delta, int duration);
 
     void setColor(const QColor &color);
 

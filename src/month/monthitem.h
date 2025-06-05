@@ -28,7 +28,7 @@ class EVENTVIEWS_EXPORT MonthItem : public QObject
     Q_OBJECT
 
 public:
-    explicit MonthItem(MonthScene *monthWidget);
+    explicit MonthItem(MonthScene *monthScene);
     ~MonthItem() override;
 
     [[nodiscard]] QWidget *parentWidget() const;
@@ -147,7 +147,7 @@ public:
       Called during move to move the item a bit, relative to the previous
       move step.
     */
-    void moveBy(int offsetFromPreviousDate);
+    void moveBy(int offsetToPreviousDate);
 
     /**
      * Called during a drag to move the item to a particular date.
@@ -159,7 +159,7 @@ public:
       Called during resize to resize the item a bit, relative to the previous
       resize step.
     */
-    bool resizeBy(int offsetFromPreviousDate);
+    bool resizeBy(int offsetToPreviousDate);
 
     /**
       Returns true if the item is being moved.

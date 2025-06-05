@@ -74,7 +74,7 @@ public Q_SLOTS:
 
     void showDates(const QDate &start, const QDate &end, const QDate &preferredMonth = QDate()) override;
 
-    void showIncidences(const Akonadi::Item::List &incidenceList, const QDate &date) override;
+    void showIncidences(const Akonadi::Item::List &items, const QDate &date) override;
 
     void clearSelection() override;
 

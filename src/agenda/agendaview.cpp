@@ -209,7 +209,7 @@ public:
 
     void setCalendarName(const QString &calendarName);
     void setAgenda(Agenda *agenda);
-    bool createDayLabels(const KCalendarCore::DateList &dates, bool withDayLabel, const QStringList &decos, const QStringList &enabledDecos);
+    bool createDayLabels(const KCalendarCore::DateList &dates, bool withDayLabel, const QStringList &decoNames, const QStringList &enabledDecos);
     void setWeekWidth(int width);
     void updateDayLabelSizes();
     void updateMargins();
@@ -339,12 +339,12 @@ void AgendaHeader::clear()
     mDateDayLabels.clear();
 }
 
-bool AgendaHeader::createDayLabels(const KCalendarCore::DateList &dates, bool withDayLabel, const QStringList &decoNames, const QStringList &enabledPlugins)
+bool AgendaHeader::createDayLabels(const KCalendarCore::DateList &dates, bool withDayLabel, const QStringList &decoNames, const QStringList &enabledDecos)
 {
     clear();
 
     QList<CalendarDecoration::Decoration *> decos;
-    loadDecorations(decoNames, enabledPlugins, decos);
+    loadDecorations(decoNames, enabledDecos, decos);
     const bool hasDecos = !decos.isEmpty();
 
     for (const QDate &date : dates) {
@@ -2195,9 +2195,9 @@ void AgendaView::updateEventIndicatorBottom(int newY)
     d->mEventIndicatorBottom->update();
 }
 
-void AgendaView::slotUrlsDropped(const QList<QUrl> &items, const QPoint &gpos, bool allDay)
+void AgendaView::slotUrlsDropped(const QList<QUrl> &urls, const QPoint &gpos, bool allDay)
 {
-    Q_UNUSED(items)
+    Q_UNUSED(urls)
     Q_UNUSED(gpos)
     Q_UNUSED(allDay)
 

@@ -121,7 +121,7 @@ public:
                                 int itemCount,
                                 bool isSelected);
 
-    AgendaItem::QPtr insertAllDayItem(const KCalendarCore::Incidence::Ptr &event, const QDateTime &recurrenceId, int XBegin, int XEnd, bool isSelected);
+    AgendaItem::QPtr insertAllDayItem(const KCalendarCore::Incidence::Ptr &incidence, const QDateTime &recurrenceId, int XBegin, int XEnd, bool isSelected);
 
     void
     insertMultiItem(const KCalendarCore::Incidence::Ptr &event, const QDateTime &recurrenceId, int XBegin, int XEnd, int YTop, int YBottom, bool isSelected);
@@ -231,7 +231,7 @@ private:
     };
 
     AgendaItem::QPtr
-    createAgendaItem(const KCalendarCore::Incidence::Ptr &incidence, int itemPos, int itemCount, const QDateTime &recurrentId, bool isSelected);
+    createAgendaItem(const KCalendarCore::Incidence::Ptr &incidence, int itemPos, int itemCount, const QDateTime &recurrenceId, bool isSelected);
 
 protected:
     /**

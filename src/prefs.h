@@ -125,7 +125,7 @@ public:
     void setFullViewMonth(bool fullView);
 
     [[nodiscard]] bool sortCompletedTodosSeparately() const;
-    void setSortCompletedTodosSeparately(bool sort);
+    void setSortCompletedTodosSeparately(bool enable);
 
     void setEnableToolTips(bool enable);
     [[nodiscard]] bool enableToolTips() const;
@@ -145,7 +145,7 @@ public:
     [[nodiscard]] QTimeZone timeZone() const;
 
     [[nodiscard]] QStringList timeScaleTimezones() const;
-    void setTimeScaleTimezones(const QStringList &list);
+    void setTimeScaleTimezones(const QStringList &timeZones);
 
     [[nodiscard]] bool use24HourClock() const;
     void setUse24HourClock(bool);

@@ -113,7 +113,7 @@ public:
 
     ~ListViewPrivate() = default;
 
-    void addIncidences(const Akonadi::CollectionCalendar::Ptr &calendar, const KCalendarCore::Incidence::List &incidenceList, QDate date);
+    void addIncidences(const Akonadi::CollectionCalendar::Ptr &calendar, const KCalendarCore::Incidence::List &incidences, QDate date);
     void addIncidence(const Akonadi::CollectionCalendar::Ptr &calendar, const KCalendarCore::Incidence::Ptr &, QDate date);
     void addIncidence(const Akonadi::CollectionCalendar::Ptr &calendar, const Akonadi::Item &, QDate date);
     ListViewItem *getItemForIncidence(const Akonadi::Item &);
@@ -439,10 +439,10 @@ void ListViewPrivate::addIncidence(const Akonadi::CollectionCalendar::Ptr &calen
     item->setData(0, Qt::UserRole, QVariant(aitem.id()));
 }
 
-void ListView::showIncidences(const Akonadi::Item::List &itemList, const QDate &date)
+void ListView::showIncidences(const Akonadi::Item::List &items, const QDate &date)
 {
     clear();
-    for (const auto &item : itemList) {
+    for (const auto &item : items) {
         const auto calendar = calendar3(item);
         if (calendar) {
             d->addIncidence(calendar, Akonadi::CalendarUtils::incidence(item), date);

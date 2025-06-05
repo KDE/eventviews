@@ -35,55 +35,55 @@ TimelineItem::~TimelineItem()
     mModel->removeRow(mIndex);
 }
 
-void TimelineItem::insertIncidence(const Akonadi::Item &aitem, const QDateTime &_start, const QDateTime &_end)
+void TimelineItem::insertIncidence(const Akonadi::Item &item, const QDateTime &start, const QDateTime &end)
 {
-    const Incidence::Ptr incidence = Akonadi::CalendarUtils::incidence(aitem);
-    QDateTime start(_start);
-    QDateTime end(_end);
-    if (!start.isValid()) {
-        start = incidence->dtStart().toLocalTime();
+    const Incidence::Ptr incidence = Akonadi::CalendarUtils::incidence(item);
+    QDateTime dtStart(start);
+    QDateTime dtEnd(end);
+    if (!dtStart.isValid()) {
+        dtStart = incidence->dtStart().toLocalTime();
     }
-    if (!end.isValid()) {
-        end = incidence->dateTime(Incidence::RoleEnd).toLocalTime();
+    if (!dtEnd.isValid()) {
+        dtEnd = incidence->dateTime(Incidence::RoleEnd).toLocalTime();
     }
     if (incidence->allDay()) {
-        end = end.addDays(1);
+        dtEnd = dtEnd.addDays(1);
     }
 
     using ItemList = QList<QStandardItem *>;
-    ItemList list = mItemMap.value(aitem.id());
+    ItemList list = mItemMap.value(item.id());
     for (ItemList::ConstIterator it = list.constBegin(); it != list.constEnd(); ++it) {
-        if (static_cast<TimelineSubItem *>(*it)->startTime() == start && static_cast<TimelineSubItem *>(*it)->endTime() == end) {
+        if (static_cast<TimelineSubItem *>(*it)->startTime() == dtStart && static_cast<TimelineSubItem *>(*it)->endTime() == dtEnd) {
             return;
         }
     }
 
-    auto item = new TimelineSubItem(aitem, this);
+    auto subItem = new TimelineSubItem(item, this);
 
-    item->setStartTime(start);
-    item->setOriginalStart(start);
-    item->setEndTime(end);
-    item->setData(mColor, Qt::DecorationRole);
+    subItem->setStartTime(dtStart);
+    subItem->setOriginalStart(dtStart);
+    subItem->setEndTime(dtEnd);
+    subItem->setData(mColor, Qt::DecorationRole);
 
     list = mModel->takeRow(mIndex);
 
-    mItemMap[aitem.id()].append(item);
+    mItemMap[item.id()].append(subItem);
 
-    list.append(mItemMap[aitem.id()]);
+    list.append(mItemMap[item.id()]);
 
     mModel->insertRow(mIndex, list);
 }
 
-void TimelineItem::removeIncidence(const Akonadi::Item &incidence)
+void TimelineItem::removeIncidence(const Akonadi::Item &item)
 {
-    qDeleteAll(mItemMap.value(incidence.id()));
-    mItemMap.remove(incidence.id());
+    qDeleteAll(mItemMap.value(item.id()));
+    mItemMap.remove(item.id());
 }
 
-void TimelineItem::moveItems(const Akonadi::Item &incidence, int delta, int duration)
+void TimelineItem::moveItems(const Akonadi::Item &item, int delta, int duration)
 {
     using ItemList = QList<QStandardItem *>;
-    const ItemList list = mItemMap.value(incidence.id());
+    const ItemList list = mItemMap.value(item.id());
     const ItemList::ConstIterator end(list.constEnd());
     for (ItemList::ConstIterator it = list.constBegin(); it != end; ++it) {
         QDateTime start = static_cast<TimelineSubItem *>(*it)->originalStart();

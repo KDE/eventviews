@@ -71,10 +71,10 @@ EventView::EventView(QWidget *parent)
 
 EventView::~EventView() = default;
 
-void EventView::defaultAction(const Akonadi::Item &aitem)
+void EventView::defaultAction(const Akonadi::Item &item)
 {
     qCDebug(CALENDARVIEW_LOG);
-    const Incidence::Ptr incidence = Akonadi::CalendarUtils::incidence(aitem);
+    const Incidence::Ptr incidence = Akonadi::CalendarUtils::incidence(item);
     if (!incidence) {
         return;
     }
@@ -82,9 +82,9 @@ void EventView::defaultAction(const Akonadi::Item &aitem)
     qCDebug(CALENDARVIEW_LOG) << "  type:" << int(incidence->type());
 
     if (incidence->isReadOnly()) {
-        Q_EMIT showIncidenceSignal(aitem);
+        Q_EMIT showIncidenceSignal(item);
     } else {
-        Q_EMIT editIncidenceSignal(aitem);
+        Q_EMIT editIncidenceSignal(item);
     }
 }
 

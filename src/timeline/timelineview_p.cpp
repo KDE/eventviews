@@ -70,22 +70,21 @@ void TimelineViewPrivate::newEventWithHint(const QDateTime &dt)
     Q_EMIT q->newEventSignal(dt);
 }
 
-TimelineItem *TimelineViewPrivate::calendarItemForIncidence(const Akonadi::Item &incidence) const
+TimelineItem *TimelineViewPrivate::calendarItemForIncidence(const Akonadi::Item &item) const
 {
-    auto item = mCalendarItemMap.constFind(incidence.parentCollection().id());
-    if (item == mCalendarItemMap.cend()) {
+    auto timelineItem = mCalendarItemMap.constFind(item.parentCollection().id());
+    if (timelineItem == mCalendarItemMap.cend()) {
         return mCalendarItemMap.value(-1);
     }
 
-    return *item;
+    return *timelineItem;
 }
 
-void TimelineViewPrivate::insertIncidence(const Akonadi::CollectionCalendar::Ptr &calendar, const Akonadi::Item &aitem, QDate day)
+void TimelineViewPrivate::insertIncidence(const Akonadi::CollectionCalendar::Ptr &calendar, const Akonadi::Item &item, QDate day)
 {
-    const Incidence::Ptr incidence = Akonadi::CalendarUtils::incidence(aitem);
-    // qCDebug(CALENDARVIEW_LOG) << "Item " << aitem.id() << " parentcollection: " << aitem.parentCollection().id();
-    TimelineItem *item = calendarItemForIncidence(aitem);
-    if (!item) {
+    const Incidence::Ptr incidence = Akonadi::CalendarUtils::incidence(item);
+    TimelineItem *timelineItem = calendarItemForIncidence(item);
+    if (!timelineItem) {
         qCWarning(CALENDARVIEW_LOG) << "Help! Something is really wrong here!";
         return;
     }
@@ -97,24 +96,24 @@ void TimelineViewPrivate::insertIncidence(const Akonadi::CollectionCalendar::Ptr
             const Akonadi::Item akonadiItem = calendar->item(occurIter.incidence());
             const QDateTime startOfOccurrence = occurIter.occurrenceStartDate();
             const QDateTime endOfOccurrence = occurIter.incidence()->endDateForStart(startOfOccurrence);
-            item->insertIncidence(akonadiItem, startOfOccurrence.toLocalTime(), endOfOccurrence.toLocalTime());
+            timelineItem->insertIncidence(akonadiItem, startOfOccurrence.toLocalTime(), endOfOccurrence.toLocalTime());
         }
     } else {
         if (incidence->dtStart().date() == day || incidence->dtStart().date() < mStartDate) {
-            item->insertIncidence(aitem);
+            timelineItem->insertIncidence(item);
         }
     }
 }
 
-void TimelineViewPrivate::insertIncidence(const Akonadi::CollectionCalendar::Ptr &calendar, const Akonadi::Item &incidence)
+void TimelineViewPrivate::insertIncidence(const Akonadi::CollectionCalendar::Ptr &calendar, const Akonadi::Item &item)
 {
-    const Event::Ptr event = Akonadi::CalendarUtils::event(incidence);
+    const Event::Ptr event = Akonadi::CalendarUtils::event(item);
     if (!event) {
         return;
     }
 
     if (event->recurs()) {
-        insertIncidence(calendar, incidence, QDate());
+        insertIncidence(calendar, item, QDate());
     }
 
     for (QDate day = mStartDate; day <= mEndDate; day = day.addDays(1)) {
@@ -130,11 +129,11 @@ void TimelineViewPrivate::insertIncidence(const Akonadi::CollectionCalendar::Ptr
     }
 }
 
-void TimelineViewPrivate::removeIncidence(const Akonadi::Item &incidence)
+void TimelineViewPrivate::removeIncidence(const Akonadi::Item &item)
 {
-    TimelineItem *item = calendarItemForIncidence(incidence);
-    if (item) {
-        item->removeIncidence(incidence);
+    TimelineItem *timelineItem = calendarItemForIncidence(item);
+    if (timelineItem) {
+        timelineItem->removeIncidence(item);
     } else {
 #if 0 // AKONADI_PORT_DISABLED
       // try harder, the incidence might already be removed from the resource
@@ -145,7 +144,7 @@ void TimelineViewPrivate::removeIncidence(const Akonadi::Item &incidence)
             for (M2_t::ConstIterator it2 = it1.value().constBegin();
                  it2 != it1.value().constEnd(); ++it2) {
                 if (it2.value()) {
-                    it2.value()->removeIncidence(incidence);
+                    it2.value()->removeIncidence(item);
                 }
             }
         }
