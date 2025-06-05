@@ -453,10 +453,7 @@ void IncidenceMonthItem::updateDates(int startOffset, int endOffset)
             }
             break;
         }
-        case KCalUtils::RecurrenceActions::PastOccurrences:
-            // nothing to do with past occurrences
-            break;
-        case KCalUtils::RecurrenceActions::NoOccurrence:
+        default:
             // nothing to do
             break;
         }
