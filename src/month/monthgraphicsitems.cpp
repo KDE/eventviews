@@ -214,17 +214,17 @@ void MonthGraphicsItem::paint(QPainter *p, const QStyleOptionGraphicsItem *, QWi
 
     MonthScene *scene = mMonthItem->monthScene();
 
-    int textMargin = 7;
+    int const textMargin = 7;
 
     QColor bgColor = mMonthItem->bgColor();
     bgColor = mMonthItem->selected() ? bgColor.lighter(EventView::BRIGHTNESS_FACTOR) : bgColor;
     QColor frameColor = mMonthItem->frameColor();
     frameColor = mMonthItem->selected() ? frameColor.lighter(EventView::BRIGHTNESS_FACTOR) : frameColor;
-    QColor textColor = EventViews::getTextColor(bgColor);
+    QColor const textColor = EventViews::getTextColor(bgColor);
 
     // make moving or resizing items translucent
     if (mMonthItem->isMoving() || mMonthItem->isResizing()) {
-        bgColor.setAlphaF(0.75f);
+        bgColor.setAlphaF(0.75F);
     }
 
     // draw the widget without border
@@ -293,7 +293,7 @@ void MonthGraphicsItem::paint(QPainter *p, const QStyleOptionGraphicsItem *, QWi
         textRect.setLeft(curXPos + iconWidths);
 
         // assume that all pixmaps have the same height
-        int pixYPos = icons.isEmpty() ? 0 : (textRect.height() - icons.at(0).height()) / 2;
+        int const pixYPos = icons.isEmpty() ? 0 : (textRect.height() - icons.at(0).height()) / 2;
         for (const QPixmap &icon : std::as_const(icons)) {
             p->drawPixmap(curXPos, pixYPos, icon);
             curXPos += icon.width();
@@ -346,7 +346,7 @@ void MonthGraphicsItem::updateGeometry()
 
     prepareGeometryChange();
 
-    int beginX = 1 + mMonthItem->monthScene()->cellHorizontalPos(cell);
+    int const beginX = 1 + mMonthItem->monthScene()->cellHorizontalPos(cell);
     int beginY = 1 + cell->topMargin() + mMonthItem->monthScene()->cellVerticalPos(cell);
 
     beginY += mMonthItem->position() * mMonthItem->monthScene()->itemHeightIncludingSpacing()

@@ -128,7 +128,7 @@ void AgendaItem::updateIcons()
             mIconGroupTent = false;
             mIconOrganizer = true;
         } else {
-            KCalendarCore::Attendee me = mIncidence->attendeeByMails(mEventView->kcalPreferences()->allEmails());
+            KCalendarCore::Attendee const me = mIncidence->attendeeByMails(mEventView->kcalPreferences()->allEmails());
 
             if (!me.isNull()) {
                 if (me.status() == KCalendarCore::Attendee::NeedsAction && me.RSVP()) {
@@ -182,8 +182,8 @@ bool AgendaItem::dissociateFromMultiItem()
         lastItem = prevMultiItem();
     }
 
-    AgendaItem::QPtr prevItem = prevMultiItem();
-    AgendaItem::QPtr nextItem = nextMultiItem();
+    AgendaItem::QPtr const prevItem = prevMultiItem();
+    AgendaItem::QPtr const nextItem = nextMultiItem();
 
     if (prevItem) {
         prevItem->setMultiItem(firstItem, prevItem->prevMultiItem(), nextItem, lastItem);
@@ -553,10 +553,10 @@ void AgendaItem::endMovePrivate()
 
 void AgendaItem::moveRelative(int dx, int dy)
 {
-    int newXLeft = cellXLeft() + dx;
-    int newXRight = cellXRight() + dx;
-    int newYTop = cellYTop() + dy;
-    int newYBottom = cellYBottom() + dy;
+    int const newXLeft = cellXLeft() + dx;
+    int const newXRight = cellXRight() + dx;
+    int const newYTop = cellYTop() + dy;
+    int const newYBottom = cellYBottom() + dy;
     setCellXY(newXLeft, newYTop, newYBottom);
     setCellXRight(newXRight);
 }
@@ -564,7 +564,7 @@ void AgendaItem::moveRelative(int dx, int dy)
 void AgendaItem::expandTop(int dy, const bool allowOverLimit)
 {
     int newYTop = cellYTop() + dy;
-    int newYBottom = cellYBottom();
+    int const newYBottom = cellYBottom();
     if (newYTop > newYBottom && !allowOverLimit) {
         newYTop = newYBottom;
     }
@@ -573,7 +573,7 @@ void AgendaItem::expandTop(int dy, const bool allowOverLimit)
 
 void AgendaItem::expandBottom(int dy)
 {
-    int newYTop = cellYTop();
+    int const newYTop = cellYTop();
     int newYBottom = cellYBottom() + dy;
     if (newYBottom < newYTop) {
         newYBottom = newYTop;
@@ -584,7 +584,7 @@ void AgendaItem::expandBottom(int dy)
 void AgendaItem::expandLeft(int dx)
 {
     int newXLeft = cellXLeft() + dx;
-    int newXRight = cellXRight();
+    int const newXRight = cellXRight();
     if (newXLeft > newXRight) {
         newXLeft = newXRight;
     }
@@ -593,7 +593,7 @@ void AgendaItem::expandLeft(int dx)
 
 void AgendaItem::expandRight(int dx)
 {
-    int newXLeft = cellXLeft();
+    int const newXLeft = cellXLeft();
     int newXRight = cellXRight() + dx;
     if (newXRight < newXLeft) {
         newXRight = newXLeft;
@@ -646,8 +646,8 @@ void AgendaItem::dropEvent(QDropEvent *e)
 
     const QMimeData *md = e->mimeData();
 
-    bool decoded = md->hasText();
-    QString text = md->text();
+    bool const decoded = md->hasText();
+    QString const text = md->text();
     if (decoded && text.startsWith("file:"_L1)) {
         mIncidence->addAttachment(KCalendarCore::Attachment(text));
         return;
@@ -693,7 +693,7 @@ QString AgendaItem::label() const
 
 bool AgendaItem::overlaps(CellItem *o) const
 {
-    AgendaItem::QPtr other = static_cast<AgendaItem *>(o);
+    AgendaItem::QPtr const other = static_cast<AgendaItem *>(o);
 
     if (cellXLeft() <= other->cellXRight() && cellXRight() >= other->cellXLeft()) {
         if ((cellYTop() <= other->cellYBottom()) && (cellYBottom() >= other->cellYTop())) {
@@ -734,7 +734,7 @@ void AgendaItem::paintIcons(QPainter *p, int &x, int y, int ft)
 
     paintIcon(p, x, y, ft);
 
-    QSet<EventView::ItemIcon> icons = mEventView->preferences()->agendaViewIcons();
+    QSet<EventView::ItemIcon> const icons = mEventView->preferences()->agendaViewIcons();
 
     if (icons.contains(EventViews::EventView::CalendarCustomIcon)) {
         const QString iconName = mCalendar->iconForIncidence(mIncidence);
@@ -785,7 +785,7 @@ void AgendaItem::paintEvent(QPaintEvent *ev)
         return;
     }
 
-    QRect visRect = visibleRegion().boundingRect();
+    QRect const visRect = visibleRegion().boundingRect();
     // when scrolling horizontally in the side-by-side view, the repainted area is clipped
     // to the newly visible area, which is a problem since the content changes when visRect
     // changes, so repaint the full item in that case
@@ -866,9 +866,9 @@ void AgendaItem::paintEvent(QPaintEvent *ev)
     }
 
     KWordWrap ww = KWordWrap::formatText(fm, QRect(0, 0, width() - (2 * margin), -1), 0, mLabelText);
-    int th = ww.boundingRect().height();
+    int const th = ww.boundingRect().height();
 
-    int hlHeight =
+    int const hlHeight =
         qMax(fm.boundingRect(longH).height(),
              qMax(alarmPxmp->height(),
                   qMax(recurPxmp->height(), qMax(readonlyPxmp->height(), qMax(replyPxmp->height(), qMax(groupPxmp->height(), organizerPxmp->height()))))));
@@ -1036,7 +1036,7 @@ void AgendaItem::paintEvent(QPaintEvent *ev)
 
     p.setBackground(QBrush(bgColor));
     p.setPen(textColor);
-    QString ws = ww.wrappedString();
+    QString const ws = ww.wrappedString();
     if (QStringView(ws).left(ws.length() - 1).indexOf(QLatin1Char('\n')) >= 0) {
         ww.drawText(&p, eventX, y, Qt::AlignLeft | KWordWrap::FadeOut);
     } else {
@@ -1145,7 +1145,7 @@ QColor AgendaItem::getFrameColor(const QColor &resourceColor, const QColor &cate
 QColor AgendaItem::getBackgroundColor(const QColor &resourceColor, const QColor &categoryColor) const
 {
     if (CalendarSupport::hasTodo(mIncidence) && !mEventView->preferences()->todosUseCategoryColors()) {
-        Todo::Ptr todo = CalendarSupport::todo(mIncidence);
+        Todo::Ptr const todo = CalendarSupport::todo(mIncidence);
         Q_ASSERT(todo);
         const QDate dueDate = todo->dtDue().toLocalTime().date();
         const QDate today = QDate::currentDate();

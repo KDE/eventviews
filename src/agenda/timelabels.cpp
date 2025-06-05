@@ -118,7 +118,7 @@ void TimeLabels::updateConfig()
     }
     QFont sFont = font();
     sFont.setPointSize(sFont.pointSize() / 2);
-    QFontMetrics fmS(sFont);
+    QFontMetrics const fmS(sFont);
     mMiniWidth += fmS.boundingRect(test).width() + 4;
 
     /** Can happen if all resources are disabled */
@@ -275,7 +275,7 @@ void TimeLabels::paintEvent(QPaintEvent *)
     // timeHeight -= (timeHeight/4-2);
     QFont suffixFont = hourFont;
     suffixFont.setPointSize(suffixFont.pointSize() / 2);
-    QFontMetrics fmS(suffixFont);
+    QFontMetrics const fmS(suffixFont);
     const int startW = cw - 2;
     const int tw2 = fmS.boundingRect(suffix).width();
     const int divTimeHeight = (timeHeight - 1) / 2 - 1;
@@ -339,7 +339,7 @@ void TimeLabels::contextMenuEvent(QContextMenuEvent *event)
 
     const QAction *activatedAction = popup.exec(QCursor::pos());
     if (activatedAction == editTimeZones) {
-        QPointer<TimeScaleConfigDialog> dialog = new TimeScaleConfigDialog(mTimeLabelsZone->preferences(), this);
+        QPointer<TimeScaleConfigDialog> const dialog = new TimeScaleConfigDialog(mTimeLabelsZone->preferences(), this);
         if (dialog->exec() == QDialog::Accepted) {
             mTimeLabelsZone->reset();
         }
@@ -374,7 +374,7 @@ QString TimeLabels::header() const
 
 QString TimeLabels::headerToolTip() const
 {
-    QDateTime now = QDateTime::currentDateTime();
+    QDateTime const now = QDateTime::currentDateTime();
     QString toolTip;
 
     toolTip += "<qt>"_L1;

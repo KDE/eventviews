@@ -88,7 +88,6 @@ public:
     void setUse24HourClock(bool enable);
     bool use24HourClock() const;
 
-public:
     QHash<QString, QColor> mResourceColors;
     QColor mDefaultResourceColor;
 
@@ -108,8 +107,7 @@ protected:
 };
 
 BaseConfig::BaseConfig()
-    : mDefaultResourceColor(QColor()) // Default is an invalid color
-    , mDefaultMonthViewFont(QFontDatabase::systemFont(QFontDatabase::GeneralFont))
+    : mDefaultMonthViewFont(QFontDatabase::systemFont(QFontDatabase::GeneralFont))
     , mDefaultAgendaTimeLabelsFont(QFontDatabase::systemFont(QFontDatabase::GeneralFont))
 {
     // make a large default time bar font, at least 16 points.
@@ -159,11 +157,11 @@ void BaseConfig::usrSetDefaults()
 
 void BaseConfig::usrRead()
 {
-    KConfigGroup rColorsConfig(config(), QStringLiteral("Resources Colors"));
+    KConfigGroup const rColorsConfig(config(), QStringLiteral("Resources Colors"));
     const QStringList colorKeyList = rColorsConfig.keyList();
 
     for (const QString &key : colorKeyList) {
-        QColor color = rColorsConfig.readEntry(key, mDefaultResourceColor);
+        QColor const color = rColorsConfig.readEntry(key, mDefaultResourceColor);
         // qCDebug(CALENDARVIEW_LOG) << "key:" << key << "value:" << color;
         setResourceColor(key, color);
     }
@@ -176,12 +174,12 @@ void BaseConfig::usrRead()
     }
 #endif
 
-    KConfigGroup timeScaleConfig(config(), QStringLiteral("Timescale"));
+    KConfigGroup const timeScaleConfig(config(), QStringLiteral("Timescale"));
     setTimeScaleTimezones(timeScaleConfig.readEntry("Timescale Timezones", QStringList()));
     setUse24HourClock(timeScaleConfig.readEntry("24 Hour Clock", false));
 
-    KConfigGroup monthViewConfig(config(), QStringLiteral("Month View"));
-    KConfigGroup agendaViewConfig(config(), QStringLiteral("Agenda View"));
+    KConfigGroup const monthViewConfig(config(), QStringLiteral("Month View"));
+    KConfigGroup const agendaViewConfig(config(), QStringLiteral("Agenda View"));
     const auto agendaIconArray = agendaViewConfig.readEntry<QByteArray>("agendaViewItemIcons", agendaViewIconDefaults());
     const auto monthIconArray = monthViewConfig.readEntry<QByteArray>("monthViewItemIcons", monthViewIconDefaults());
 
@@ -258,7 +256,6 @@ public:
     void setFont(KConfigSkeleton::ItemFont *baseConfigItem, const QFont &value);
     QFont getFont(const KConfigSkeleton::ItemFont *baseConfigItem) const;
 
-public:
     BaseConfig mBaseConfig;
     KCoreConfigSkeleton *mAppConfig = nullptr;
 };

@@ -135,11 +135,11 @@ void DecorationLabel::squeezeContentsToLabel()
         return;
     }
 
-    QFontMetrics fm(fontMetrics());
+    QFontMetrics const fm(fontMetrics());
 
-    int labelWidth = size().width();
-    int longTextWidth = fm.boundingRect(mLongText).width();
-    int extensiveTextWidth = fm.boundingRect(mExtensiveText).width();
+    int const labelWidth = size().width();
+    int const longTextWidth = fm.boundingRect(mLongText).width();
+    int const extensiveTextWidth = fm.boundingRect(mExtensiveText).width();
 
     if (!mPixmap.isNull()) {
         usePixmap(true);

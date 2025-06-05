@@ -63,7 +63,7 @@ void MonthItem::updateMonthGraphicsItems()
     // For each row of the month view, create an item to build the whole
     // MonthItem's MonthGraphicsItems.
     for (QDate d = mMonthScene->mMonthView->actualStartDateTime().date(); d < mMonthScene->mMonthView->actualEndDateTime().date(); d = d.addDays(7)) {
-        QDate end = d.addDays(6);
+        QDate const end = d.addDays(6);
 
         int span;
         QDate start;
@@ -204,8 +204,8 @@ int MonthItem::daySpan() const
     if (isMoving() || isResizing()) {
         return mOverrideDaySpan;
     }
-    QDateTime start(startDate().startOfDay());
-    QDateTime end(endDate().startOfDay());
+    QDateTime const start(startDate().startOfDay());
+    QDateTime const end(endDate().startOfDay());
 
     if (start.isValid() && end.isValid()) {
         return start.daysTo(end);
@@ -259,7 +259,7 @@ void MonthItem::updatePosition()
         if (!cell) {
             continue; // cell can be null if the item begins outside the month
         }
-        int firstFreeSpaceTmp = cell->firstFreeSpace();
+        int const firstFreeSpaceTmp = cell->firstFreeSpace();
         if (firstFreeSpaceTmp > firstFreeSpace) {
             firstFreeSpace = firstFreeSpaceTmp;
         }
@@ -428,7 +428,7 @@ void IncidenceMonthItem::updateDates(int startOffset, int endOffset)
         switch (res) {
         case KCalUtils::RecurrenceActions::AllOccurrences: {
             // All occurrences
-            KCalendarCore::Incidence::Ptr oldIncidence(mIncidence->clone());
+            KCalendarCore::Incidence::Ptr const oldIncidence(mIncidence->clone());
             setNewDates(mIncidence, startOffset, endOffset);
             changer->modifyIncidence(item, oldIncidence);
             break;
@@ -438,7 +438,7 @@ void IncidenceMonthItem::updateDates(int startOffset, int endOffset)
             const bool thisAndFuture = (res == KCalUtils::RecurrenceActions::FutureOccurrences);
             QDateTime occurrenceDate(mIncidence->dtStart());
             occurrenceDate.setDate(startDate());
-            KCalendarCore::Incidence::Ptr newIncidence(KCalendarCore::Calendar::createException(mIncidence, occurrenceDate, thisAndFuture));
+            KCalendarCore::Incidence::Ptr const newIncidence(KCalendarCore::Calendar::createException(mIncidence, occurrenceDate, thisAndFuture));
             if (newIncidence) {
                 changer->startAtomicOperation(i18nc("@info/plain", "Move occurrence(s)"));
                 setNewDates(newIncidence, startOffset, endOffset);
@@ -455,7 +455,7 @@ void IncidenceMonthItem::updateDates(int startOffset, int endOffset)
         }
         }
     } else { // Doesn't recur
-        KCalendarCore::Incidence::Ptr oldIncidence(mIncidence->clone());
+        KCalendarCore::Incidence::Ptr const oldIncidence(mIncidence->clone());
         setNewDates(mIncidence, startOffset, endOffset);
         changer->modifyIncidence(item, oldIncidence);
     }
@@ -474,7 +474,7 @@ QString IncidenceMonthItem::text(bool end) const
         // Prepend the time str to the text
         QString timeStr;
         if (mIsTodo) {
-            KCalendarCore::Todo::Ptr todo = mIncidence.staticCast<Todo>();
+            KCalendarCore::Todo::Ptr const todo = mIncidence.staticCast<Todo>();
             timeStr = QLocale().toString(todo->dtDue().toLocalTime().time(), QLocale::ShortFormat);
         } else {
             if (!end) {
@@ -487,7 +487,7 @@ QString IncidenceMonthItem::text(bool end) const
                 }
                 timeStr = QLocale().toString(time, QLocale::ShortFormat);
             } else {
-                KCalendarCore::Event::Ptr event = mIncidence.staticCast<Event>();
+                KCalendarCore::Event::Ptr const event = mIncidence.staticCast<Event>();
                 timeStr = QLocale().toString(event->dtEnd().toLocalTime().time(), QLocale::ShortFormat);
             }
         }
@@ -520,7 +520,7 @@ QList<QPixmap> IncidenceMonthItem::icons() const
     }
 
     bool specialEvent = false;
-    Akonadi::Item item = akonadiItem();
+    Akonadi::Item const item = akonadiItem();
 
     const QSet<EventView::ItemIcon> icons = monthScene()->monthView()->preferences()->monthViewIcons();
 
@@ -553,7 +553,7 @@ QList<QPixmap> IncidenceMonthItem::icons() const
 
         // ret << monthScene()->eventPixmap();
     } else if ((mIsTodo || mIsJournal) && icons.contains(mIsTodo ? EventView::TaskIcon : EventView::JournalIcon)) {
-        QDateTime occurrenceDateTime = mIncidence->dateTime(Incidence::RoleRecurrenceStart).addDays(mRecurDayOffset);
+        QDateTime const occurrenceDateTime = mIncidence->dateTime(Incidence::RoleRecurrenceStart).addDays(mRecurDayOffset);
 
         const QString incidenceIconName = mIncidence->iconName(occurrenceDateTime);
         if (customIconName != incidenceIconName) {
@@ -599,7 +599,7 @@ QColor IncidenceMonthItem::bgColor() const
     const auto &prefs = monthScene()->monthView()->preferences();
 
     if (!prefs->todosUseCategoryColors() && mIsTodo) {
-        Todo::Ptr todo = Akonadi::CalendarUtils::todo(akonadiItem());
+        Todo::Ptr const todo = Akonadi::CalendarUtils::todo(akonadiItem());
         Q_ASSERT(todo);
         if (todo) {
             // this is dtDue if there's no dtRecurrence
@@ -662,7 +662,7 @@ void IncidenceMonthItem::setNewDates(const KCalendarCore::Incidence::Ptr &incide
         // Lets just call it offset to reduce confusion.
         const int offset = startOffset;
 
-        KCalendarCore::Todo::Ptr todo = incidence.staticCast<Todo>();
+        KCalendarCore::Todo::Ptr const todo = incidence.staticCast<Todo>();
         QDateTime due = todo->dtDue();
         QDateTime start = todo->dtStart();
         if (due.isValid()) { // Due has priority over start.
@@ -685,7 +685,7 @@ void IncidenceMonthItem::setNewDates(const KCalendarCore::Incidence::Ptr &incide
     } else {
         incidence->setDtStart(incidence->dtStart().addDays(startOffset));
         if (mIsEvent) {
-            KCalendarCore::Event::Ptr event = incidence.staticCast<Event>();
+            KCalendarCore::Event::Ptr const event = incidence.staticCast<Event>();
             event->setDtEnd(event->dtEnd().addDays(endOffset));
         }
     }

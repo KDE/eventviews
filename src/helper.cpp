@@ -19,7 +19,7 @@
 
 bool EventViews::isColorDark(const QColor &c)
 {
-    double luminance = (c.red() * 0.299) + (c.green() * 0.587) + (c.blue() * 0.114);
+    double const luminance = (c.red() * 0.299) + (c.green() * 0.587) + (c.blue() * 0.114);
     return (luminance < 128.0) ? true : false;
 }
 

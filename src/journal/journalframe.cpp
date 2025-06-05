@@ -57,7 +57,7 @@ void JournalDateView::clear()
 // should only be called by the JournalView now.
 void JournalDateView::addJournal(const Akonadi::Item &j)
 {
-    QMap<Akonadi::Item::Id, JournalFrame *>::Iterator pos = mEntries.find(j.id());
+    QMap<Akonadi::Item::Id, JournalFrame *>::Iterator pos = mEntries.find(j.id()); // NOLINT(misc-const-correctness)
     if (pos != mEntries.end()) {
         return;
     }
@@ -106,7 +106,7 @@ void JournalDateView::emitNewJournal()
 
 void JournalDateView::journalEdited(const Akonadi::Item &journal)
 {
-    QMap<Akonadi::Item::Id, JournalFrame *>::Iterator pos = mEntries.find(journal.id());
+    QMap<Akonadi::Item::Id, JournalFrame *>::Iterator pos = mEntries.find(journal.id()); // NOLINT(misc-const-correctness)
     if (pos == mEntries.end()) {
         return;
     }
@@ -116,7 +116,7 @@ void JournalDateView::journalEdited(const Akonadi::Item &journal)
 
 void JournalDateView::journalDeleted(const Akonadi::Item &journal)
 {
-    QMap<Akonadi::Item::Id, JournalFrame *>::Iterator pos = mEntries.find(journal.id());
+    QMap<Akonadi::Item::Id, JournalFrame *>::Iterator pos = mEntries.find(journal.id()); // NOLINT(misc-const-correctness)
     if (pos == mEntries.end()) {
         return;
     }
@@ -272,7 +272,7 @@ void JournalFrame::printPreviewJournal()
 
 void JournalFrame::readJournal(const Akonadi::Item &j)
 {
-    int baseFontSize = QFontDatabase::systemFont(QFontDatabase::GeneralFont).pointSize();
+    int const baseFontSize = QFontDatabase::systemFont(QFontDatabase::GeneralFont).pointSize();
     mJournal = j;
     const KCalendarCore::Journal::Ptr journal = Akonadi::CalendarUtils::journal(j);
     mBrowser->clear();
@@ -282,7 +282,7 @@ void JournalFrame::readJournal(const Akonadi::Item &j)
     QTextBlockFormat bodyBlock = QTextBlockFormat(cursor.blockFormat());
     // FIXME: Do padding
     bodyBlock.setTextIndent(2);
-    QTextCharFormat bodyFormat = QTextCharFormat(cursor.charFormat());
+    QTextCharFormat const bodyFormat = QTextCharFormat(cursor.charFormat());
     if (!journal->summary().isEmpty()) {
         QTextCharFormat titleFormat = bodyFormat;
         titleFormat.setFontWeight(QFont::Bold);

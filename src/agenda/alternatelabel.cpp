@@ -61,10 +61,10 @@ void AlternateLabel::squeezeTextToLabel()
         return;
     }
 
-    QFontMetrics fm(fontMetrics());
-    int labelWidth = size().width() - getIndent();
-    int textWidth = fm.boundingRect(mLongText).width();
-    int longTextWidth = fm.boundingRect(mExtensiveText).width();
+    QFontMetrics const fm(fontMetrics());
+    int const labelWidth = size().width() - getIndent();
+    int const textWidth = fm.boundingRect(mLongText).width();
+    int const longTextWidth = fm.boundingRect(mExtensiveText).width();
     if (longTextWidth <= labelWidth) {
         QLabel::setText(mExtensiveText);
         this->setToolTip(QString());
@@ -84,7 +84,7 @@ void AlternateLabel::resizeEvent(QResizeEvent *)
 
 AlternateLabel::TextType AlternateLabel::largestFittingTextType() const
 {
-    QFontMetrics fm(fontMetrics());
+    QFontMetrics const fm(fontMetrics());
     const int labelWidth = size().width() - getIndent();
     const int longTextWidth = fm.boundingRect(mLongText).width();
     const int extensiveTextWidth = fm.boundingRect(mExtensiveText).width();

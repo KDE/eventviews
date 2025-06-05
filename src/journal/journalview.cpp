@@ -128,7 +128,7 @@ void JournalView::showDates(const QDate &start, const QDate &end, const QDate &)
             const KCalendarCore::Journal::List jnls = calendar->journals(d);
             // qCDebug(CALENDARVIEW_LOG) << "Found" << jnls.count() << "journals on date" << d;
             for (const KCalendarCore::Journal::Ptr &journal : jnls) {
-                Akonadi::Item item = calendar->item(journal);
+                Akonadi::Item const item = calendar->item(journal);
                 appendJournal(item, calendar, d);
             }
             if (jnls.isEmpty()) {
@@ -154,7 +154,7 @@ void JournalView::showIncidences(const Akonadi::Item::List &incidences, const QD
 
 void JournalView::changeIncidenceDisplay(const Akonadi::Item &incidence, Akonadi::IncidenceChanger::ChangeType changeType)
 {
-    if (KCalendarCore::Journal::Ptr journal = Akonadi::CalendarUtils::journal(incidence)) {
+    if (KCalendarCore::Journal::Ptr const journal = Akonadi::CalendarUtils::journal(incidence)) {
         switch (changeType) {
         case Akonadi::IncidenceChanger::ChangeTypeCreate:
             appendJournal(incidence, calendar3(incidence), journal->dtStart().date());

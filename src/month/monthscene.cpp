@@ -161,7 +161,7 @@ void MonthGraphicsView::drawBackground(QPainter *p, const QRectF &rect)
 {
     Q_ASSERT(mScene);
 
-    PrefsPtr prefs = mScene->monthView()->preferences();
+    PrefsPtr const prefs = mScene->monthView()->preferences();
     p->setFont(prefs->monthViewFont());
     p->fillRect(rect, palette().color(QPalette::Window));
 
@@ -204,9 +204,9 @@ void MonthGraphicsView::drawBackground(QPainter *p, const QRectF &rect)
     /*
       Month grid
     */
-    int columnWidth = mScene->columnWidth();
-    int rowHeight = mScene->rowHeight();
-    QDate todayDate{QDate::currentDate()};
+    int const columnWidth = mScene->columnWidth();
+    int const rowHeight = mScene->rowHeight();
+    QDate const todayDate{QDate::currentDate()};
 
     const QList<QDate> workDays = CalendarSupport::workDays(mMonthView->actualStartDateTime().date(), mMonthView->actualEndDateTime().date());
     QRect todayRect;
@@ -250,7 +250,7 @@ void MonthGraphicsView::drawBackground(QPainter *p, const QRectF &rect)
         }
     }
     if (!todayRect.isNull()) {
-        KColorScheme scheme(QPalette::Normal, KColorScheme::ColorSet::View);
+        KColorScheme const scheme(QPalette::Normal, KColorScheme::ColorSet::View);
         p->setPen(scheme.foreground(KColorScheme::ForegroundRole::PositiveText).color());
         p->setBrush(scheme.background(KColorScheme::BackgroundRole::PositiveBackground));
         p->drawRect(todayRect);
@@ -283,10 +283,10 @@ void MonthGraphicsView::drawBackground(QPainter *p, const QRectF &rect)
         MonthCell *const cell = mScene->mMonthCellMap.value(d);
 
         // Draw cell header
-        int cellHeaderX = mScene->cellHorizontalPos(cell) + 1;
-        int cellHeaderY = mScene->cellVerticalPos(cell) + 1;
-        int cellHeaderWidth = columnWidth - 2;
-        int cellHeaderHeight = cell->topMargin() - 2;
+        int const cellHeaderX = mScene->cellHorizontalPos(cell) + 1;
+        int const cellHeaderY = mScene->cellVerticalPos(cell) + 1;
+        int const cellHeaderWidth = columnWidth - 2;
+        int const cellHeaderHeight = cell->topMargin() - 2;
         const auto brush = KColorScheme(QPalette::Normal, KColorScheme::ColorSet::Header).background(KColorScheme::BackgroundRole::NormalBackground);
         p->setBrush(brush);
         p->setPen(Qt::NoPen);
@@ -377,7 +377,7 @@ int MonthScene::totalHeight()
 {
     int max = 0;
     for (QDate d = mMonthView->actualStartDateTime().date(); d <= mMonthView->actualEndDateTime().date(); d = d.addDays(1)) {
-        int c = mMonthCellMap[d]->firstFreeSpace();
+        int const c = mMonthCellMap[d]->firstFreeSpace();
         if (c > max) {
             max = c;
         }
@@ -434,7 +434,7 @@ void MonthScene::wheelEvent(QGraphicsSceneWheelEvent *event)
 
 void MonthScene::scrollCellsDown()
 {
-    int newHeight = startHeight() + 1;
+    int const newHeight = startHeight() + 1;
     setStartHeight(newHeight);
 
     for (MonthItem *manager : std::as_const(mManagerList)) {
@@ -446,7 +446,7 @@ void MonthScene::scrollCellsDown()
 
 void MonthScene::scrollCellsUp()
 {
-    int newHeight = startHeight() - 1;
+    int const newHeight = startHeight() - 1;
     setStartHeight(newHeight);
 
     for (MonthItem *manager : std::as_const(mManagerList)) {
@@ -467,7 +467,7 @@ void MonthScene::clickOnScrollIndicator(ScrollIndicator *scrollItem)
 
 void MonthScene::mouseDoubleClickEvent(QGraphicsSceneMouseEvent *mouseEvent)
 {
-    QPointF pos = mouseEvent->scenePos();
+    QPointF const pos = mouseEvent->scenePos();
     repeatTimer.stop();
     const MonthGraphicsItem *iItem = dynamic_cast<MonthGraphicsItem *>(itemAt(pos, {}));
     if (iItem) {
@@ -481,7 +481,7 @@ void MonthScene::mouseDoubleClickEvent(QGraphicsSceneMouseEvent *mouseEvent)
             }
         }
     } else {
-        QDate currentDate = getCellFromPos(pos)->date();
+        QDate const currentDate = getCellFromPos(pos)->date();
         if (currentDate.isValid()) {
             Q_EMIT newEventSignal(currentDate);
         } else {
@@ -492,7 +492,7 @@ void MonthScene::mouseDoubleClickEvent(QGraphicsSceneMouseEvent *mouseEvent)
 
 void MonthScene::mouseMoveEvent(QGraphicsSceneMouseEvent *mouseEvent)
 {
-    QPointF pos = mouseEvent->scenePos();
+    QPointF const pos = mouseEvent->scenePos();
 
     MonthGraphicsView *view = static_cast<MonthGraphicsView *>(views().at(0));
 
@@ -560,7 +560,7 @@ void MonthScene::mouseMoveEvent(QGraphicsSceneMouseEvent *mouseEvent)
 
 void MonthScene::mousePressEvent(QGraphicsSceneMouseEvent *mouseEvent)
 {
-    QPointF pos = mouseEvent->scenePos();
+    QPointF const pos = mouseEvent->scenePos();
 
     mClickedItem = nullptr;
     mCurrentIndicator = nullptr;
@@ -648,7 +648,7 @@ void MonthScene::helpEvent(QGraphicsSceneHelpEvent *helpEvent)
 
 void MonthScene::mouseReleaseEvent(QGraphicsSceneMouseEvent *mouseEvent)
 {
-    QPointF pos = mouseEvent->scenePos();
+    QPointF const pos = mouseEvent->scenePos();
 
     static_cast<MonthGraphicsView *>(views().at(0))->setActionCursor(None);
 
@@ -687,12 +687,12 @@ bool MonthScene::isInMonthGrid(int x, int y) const
 // be able to locate the cell.
 MonthCell *MonthScene::getCellFromPos(QPointF pos)
 {
-    int y = sceneYToMonthGridY(static_cast<int>(pos.y()));
-    int x = sceneXToMonthGridX(static_cast<int>(pos.x()));
+    int const y = sceneYToMonthGridY(static_cast<int>(pos.y()));
+    int const x = sceneXToMonthGridX(static_cast<int>(pos.x()));
     if (!isInMonthGrid(x, y)) {
         return nullptr;
     }
-    int id = (int)(y / rowHeight()) * 7 + (int)(x / columnWidth());
+    int const id = (int)(y / rowHeight()) * 7 + (int)(x / columnWidth());
 
     return mMonthCellMap.value(mMonthView->actualStartDateTime().date().addDays(id));
 }
@@ -736,7 +736,7 @@ void MonthScene::removeIncidence(const QString &uid)
             continue;
         }
 
-        KCalendarCore::Incidence::Ptr incidence = imi->incidence();
+        KCalendarCore::Incidence::Ptr const incidence = imi->incidence();
         if (!incidence) {
             continue;
         }

@@ -27,7 +27,6 @@ public:
     {
     }
 
-public:
     TimeScaleConfigDialog *const q;
     PrefsPtr mPreferences;
 };
@@ -154,7 +153,7 @@ void TimeScaleConfigDialog::remove()
 
 void TimeScaleConfigDialog::up()
 {
-    int row = listWidget->currentRow();
+    int const row = listWidget->currentRow();
     QListWidgetItem *item = listWidget->takeItem(row);
     listWidget->insertItem(qMax(row - 1, 0), item);
     listWidget->setCurrentRow(qMax(row - 1, 0));
@@ -162,7 +161,7 @@ void TimeScaleConfigDialog::up()
 
 void TimeScaleConfigDialog::down()
 {
-    int row = listWidget->currentRow();
+    int const row = listWidget->currentRow();
     QListWidgetItem *item = listWidget->takeItem(row);
     listWidget->insertItem(qMin(row + 1, listWidget->count()), item);
     listWidget->setCurrentRow(qMin(row + 1, listWidget->count() - 1));

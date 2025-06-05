@@ -275,7 +275,7 @@ void TodoRichTextDelegate::paint(QPainter *painter, const QStyleOptionViewItem &
         const QWidget *widget = opt.widget;
         QStyle *style = widget ? widget->style() : QApplication::style();
 
-        QRect textRect = style->subElementRect(QStyle::SE_ItemViewItemText, &opt, widget);
+        QRect const textRect = style->subElementRect(QStyle::SE_ItemViewItemText, &opt, widget);
 
         // draw the item without text
         opt.text.clear();

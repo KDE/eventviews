@@ -463,7 +463,7 @@ void MultiAgendaView::slotSelectionChanged()
 bool MultiAgendaView::eventDurationHint(QDateTime &startDt, QDateTime &endDt, bool &allDay) const
 {
     for (AgendaView *agenda : std::as_const(d->mAgendaViews)) {
-        bool valid = agenda->eventDurationHint(startDt, endDt, allDay);
+        bool const valid = agenda->eventDurationHint(startDt, endDt, allDay);
         if (valid) {
             return true;
         }
@@ -750,7 +750,7 @@ void MultiAgendaView::doRestoreConfig(const KConfigGroup &configGroup)
         }
     }
 
-    QList<KCheckableProxyModel *> oldModels = d->mCollectionSelectionModels;
+    QList<KCheckableProxyModel *> const oldModels = d->mCollectionSelectionModels;
     d->mCollectionSelectionModels.clear();
 
     if (d->mCustomColumnSetupUsed) {
@@ -798,10 +798,10 @@ void MultiAgendaView::doSaveConfig(KConfigGroup &configGroup)
     int idx = 0;
     for (KCheckableProxyModel *checkableProxyModel : std::as_const(d->mCollectionSelectionModels)) {
         const QString groupName = configGroup.name() + "_subView_"_L1 + QString::number(idx);
-        KConfigGroup group = configGroup.config()->group(groupName);
+        KConfigGroup const group = configGroup.config()->group(groupName);
         ++idx;
         // TODO never used ?
-        KViewStateMaintainer<ETMViewStateSaver> saver(group);
+        KViewStateMaintainer<ETMViewStateSaver> const saver(group);
         if (!d->mSelectionSavers.contains(groupName)) {
             d->mSelectionSavers.insert(groupName, new KViewStateMaintainer<ETMViewStateSaver>(group));
             d->mSelectionSavers[groupName]->setSelectionModel(checkableProxyModel->selectionModel());

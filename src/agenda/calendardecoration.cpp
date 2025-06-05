@@ -181,7 +181,7 @@ Element::List Decoration::dayElements(const QDate &date)
 
 Element::List Decoration::weekElements(const QDate &d)
 {
-    QDate date = weekDate(d);
+    QDate const date = weekDate(d);
     QMap<QDate, Element::List>::ConstIterator it;
     it = mWeekElements.constFind(date);
     if (it == mWeekElements.constEnd()) {
@@ -193,7 +193,7 @@ Element::List Decoration::weekElements(const QDate &d)
 
 Element::List Decoration::monthElements(const QDate &d)
 {
-    QDate date = monthDate(d);
+    QDate const date = monthDate(d);
     QMap<QDate, Element::List>::ConstIterator it;
     it = mMonthElements.constFind(date);
     if (it == mMonthElements.constEnd()) {
@@ -205,7 +205,7 @@ Element::List Decoration::monthElements(const QDate &d)
 
 Element::List Decoration::yearElements(const QDate &d)
 {
-    QDate date = yearDate(d);
+    QDate const date = yearDate(d);
     QMap<QDate, Element::List>::ConstIterator it;
     it = mYearElements.constFind(date);
     if (it == mYearElements.constEnd()) {
@@ -265,7 +265,7 @@ void Decoration::configure(QWidget *)
 
 QDate Decoration::weekDate(QDate date)
 {
-    QDate result = date;
+    QDate const result = date;
     return result.addDays(date.dayOfWeek() - 1);
 }
 

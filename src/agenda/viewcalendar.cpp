@@ -98,7 +98,7 @@ void MultiViewCalendar::removeCalendar(const ViewCalendar::Ptr &calendar)
 
 QString MultiViewCalendar::displayName(const KCalendarCore::Incidence::Ptr &incidence) const
 {
-    ViewCalendar::Ptr cal = findCalendar(incidence);
+    ViewCalendar::Ptr const cal = findCalendar(incidence);
     if (cal) {
         return cal->displayName(incidence);
     }
@@ -107,7 +107,7 @@ QString MultiViewCalendar::displayName(const KCalendarCore::Incidence::Ptr &inci
 
 QString MultiViewCalendar::iconForIncidence(const KCalendarCore::Incidence::Ptr &incidence) const
 {
-    ViewCalendar::Ptr cal = findCalendar(incidence);
+    ViewCalendar::Ptr const cal = findCalendar(incidence);
     if (cal) {
         return cal->iconForIncidence(incidence);
     }
@@ -116,19 +116,19 @@ QString MultiViewCalendar::iconForIncidence(const KCalendarCore::Incidence::Ptr 
 
 bool MultiViewCalendar::isValid(const KCalendarCore::Incidence::Ptr &incidence) const
 {
-    ViewCalendar::Ptr cal = findCalendar(incidence);
+    ViewCalendar::Ptr const cal = findCalendar(incidence);
     return !cal.isNull();
 }
 
 bool MultiViewCalendar::isValid(const QString &incidenceIdentifier) const
 {
-    ViewCalendar::Ptr cal = findCalendar(incidenceIdentifier);
+    ViewCalendar::Ptr const cal = findCalendar(incidenceIdentifier);
     return !cal.isNull();
 }
 
 QColor MultiViewCalendar::resourceColor(const KCalendarCore::Incidence::Ptr &incidence) const
 {
-    ViewCalendar::Ptr cal = findCalendar(incidence);
+    ViewCalendar::Ptr const cal = findCalendar(incidence);
     if (cal) {
         return cal->resourceColor(incidence);
     }

@@ -102,14 +102,14 @@ void EventView::setHolidayRegions(const QStringList &regions)
 
 int EventView::showMoveRecurDialog(const Incidence::Ptr &inc, QDate date)
 {
-    QDateTime dateTime(date, {}, QTimeZone::LocalTime);
+    QDateTime const dateTime(date, {}, QTimeZone::LocalTime);
 
-    int availableOccurrences = KCalUtils::RecurrenceActions::availableOccurrences(inc, dateTime);
+    int const availableOccurrences = KCalUtils::RecurrenceActions::availableOccurrences(inc, dateTime);
 
     const QString caption = i18nc("@title:window", "Changing Recurring Item");
-    KGuiItem itemFuture(i18n("Also &Future Items"));
-    KGuiItem itemSelected(i18n("Only &This Item"));
-    KGuiItem itemAll(i18n("&All Occurrences"));
+    KGuiItem const itemFuture(i18n("Also &Future Items"));
+    KGuiItem const itemSelected(i18n("Only &This Item"));
+    KGuiItem const itemAll(i18n("&All Occurrences"));
 
     switch (availableOccurrences) {
     case KCalUtils::RecurrenceActions::NoOccurrence:
@@ -581,7 +581,7 @@ void EventView::saveConfig(KConfigGroup &configGroup)
     configGroup.writeEntry("UseCustomCollectionSelection", d->collectionSelectionModel != nullptr);
 
     if (d->collectionSelectionModel) {
-        KConfigGroup selectionGroup = configGroup.config()->group(configGroup.name() + "_selectionSetup"_L1);
+        KConfigGroup const selectionGroup = configGroup.config()->group(configGroup.name() + "_selectionSetup"_L1);
 
         KViewStateMaintainer<ETMViewStateSaver> maintainer(selectionGroup);
         maintainer.setSelectionModel(d->collectionSelectionModel->selectionModel());
@@ -602,7 +602,7 @@ bool EventView::makesWholeDayBusy(const KCalendarCore::Incidence::Ptr &incidence
         return false;
     }
 
-    KCalendarCore::Event::Ptr ev = incidence.staticCast<KCalendarCore::Event>();
+    KCalendarCore::Event::Ptr const ev = incidence.staticCast<KCalendarCore::Event>();
 
     if (ev->transparency() != KCalendarCore::Event::Opaque) {
         return false;
@@ -614,7 +614,7 @@ bool EventView::makesWholeDayBusy(const KCalendarCore::Incidence::Ptr &incidence
         return true;
     }
 
-    KCalendarCore::Attendee::List attendees = ev->attendees();
+    KCalendarCore::Attendee::List const attendees = ev->attendees();
     KCalendarCore::Attendee::List::ConstIterator it;
     for (it = attendees.constBegin(); it != attendees.constEnd(); ++it) {
         if (kcalPreferences()->thatIsMe((*it).email())) {

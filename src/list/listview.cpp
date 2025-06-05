@@ -339,7 +339,7 @@ DateList ListView::selectedIncidenceDates() const
 
 void ListView::updateView()
 {
-    static int maxLen = 38;
+    static int const maxLen = 38;
 
     /* Set the width of the summary column to show 'maxlen' chars, at most */
     int width = qMin(maxLen * fontMetrics().averageCharWidth(), maxLen * 12);
@@ -409,7 +409,7 @@ void ListViewPrivate::addIncidence(const Akonadi::CollectionCalendar::Ptr &calen
         return;
     }
 
-    Akonadi::Item aitem = calendar->item(incidence);
+    Akonadi::Item const aitem = calendar->item(incidence);
 
     if (!aitem.isValid() || mItems.contains(aitem.id())) {
         return;
@@ -521,7 +521,7 @@ void ListView::defaultItemAction(const QModelIndex &index)
     if (!d->mIsNonInteractive) {
         // Get the first column, it has our Akonadi::Id
         const QModelIndex col0Idx = d->mTreeWidget->model()->index(index.row(), 0);
-        Akonadi::Item::Id id = d->mTreeWidget->model()->data(col0Idx, Qt::UserRole).toLongLong();
+        Akonadi::Item::Id const id = d->mTreeWidget->model()->data(col0Idx, Qt::UserRole).toLongLong();
         defaultAction(d->mItems.value(id));
     }
 }
@@ -551,7 +551,7 @@ void ListView::popupMenu(const QPoint &point)
 
 void ListView::readSettings(KConfig *config)
 {
-    KConfigGroup cfgGroup = config->group(QStringLiteral("ListView Layout"));
+    KConfigGroup const cfgGroup = config->group(QStringLiteral("ListView Layout"));
     readSettings(cfgGroup);
 }
 
@@ -565,7 +565,7 @@ void EventViews::ListView::readSettings(const KConfigGroup &cfgGroup)
 
 void ListView::writeSettings(KConfig *config)
 {
-    KConfigGroup cfgGroup = config->group(QStringLiteral("ListView Layout"));
+    KConfigGroup const cfgGroup = config->group(QStringLiteral("ListView Layout"));
 }
 
 void EventViews::ListView::writeSettings(KConfigGroup &cfgGroup)

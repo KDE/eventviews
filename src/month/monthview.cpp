@@ -48,7 +48,7 @@ public: /// Methods
     // void setUpModels();
     void triggerDelayedReload(EventView::Change reason);
 
-public: /// Members
+    /// Members
     QTimer reloadTimer;
     MonthScene *scene = nullptr;
     QDate selectedItemDate;
@@ -309,7 +309,7 @@ KCalendarCore::DateList MonthView::selectedIncidenceDates() const
     if (d->scene->selectedItem()) {
         auto tmp = qobject_cast<IncidenceMonthItem *>(d->scene->selectedItem());
         if (tmp) {
-            QDate selectedItemDate = tmp->realStartDate();
+            QDate const selectedItemDate = tmp->realStartDate();
             if (selectedItemDate.isValid()) {
                 list << selectedItemDate;
             }
@@ -468,7 +468,7 @@ void MonthView::keyReleaseEvent(QKeyEvent *event)
 
 void MonthView::changeFullView()
 {
-    bool fullView = d->fullView->isChecked();
+    bool const fullView = d->fullView->isChecked();
 
     if (fullView) {
         d->fullView->setIcon(QIcon::fromTheme(QStringLiteral("view-restore")));
@@ -530,7 +530,7 @@ Akonadi::Item::List MonthView::selectedIncidences() const
     if (d->scene->selectedItem()) {
         auto tmp = qobject_cast<IncidenceMonthItem *>(d->scene->selectedItem());
         if (tmp) {
-            Akonadi::Item incidenceSelected = tmp->akonadiItem();
+            Akonadi::Item const incidenceSelected = tmp->akonadiItem();
             if (incidenceSelected.isValid()) {
                 selected.append(incidenceSelected);
             }
@@ -544,7 +544,7 @@ KHolidays::Holiday::List MonthView::holidays(QDate startDate, QDate endDate)
     KHolidays::Holiday::List holidays;
     auto const regions = CalendarSupport::KCalPrefs::instance()->mHolidays;
     for (auto const &r : regions) {
-        KHolidays::HolidayRegion region(r);
+        KHolidays::HolidayRegion const region(r);
         if (region.isValid()) {
             holidays += region.rawHolidaysWithAstroSeasons(startDate, endDate);
         }
@@ -558,7 +558,7 @@ void MonthView::reloadIncidences()
         return;
     }
     // keep selection if it exists
-    Akonadi::Item incidenceSelected;
+    Akonadi::Item const incidenceSelected;
 
     MonthItem *itemToReselect = nullptr;
 
