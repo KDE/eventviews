@@ -259,7 +259,6 @@ void TimeLabels::paintEvent(QPaintEvent *)
 
     // We adjust the size of the hour font to keep it reasonable
     if (timeHeight > mCellHeight) {
-        timeHeight = static_cast<int>(mCellHeight - 1);
         int pointS = hourFont.pointSize();
         while (pointS > 4) { // TODO: use smallestReadableFont() when added to kdelibs
             hourFont.setPointSize(pointS);
