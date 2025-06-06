@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-05 00:43+0000\n"
+"POT-Creation-Date: 2025-06-06 00:43+0000\n"
 "PO-Revision-Date: 2025-06-02 10:52+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -93,81 +93,81 @@ msgstr "%1 - %2"
 msgid "- %1"
 msgstr "- %1"
 
-#: agenda/agendaview.cpp:383
+#: agenda/agendaview.cpp:380
 #, kde-format
 msgctxt "short_weekday short_monthname date (e.g. Mon Aug 13)"
 msgid "%1 %2 %3"
 msgstr "%1 %3 %2"
 
-#: agenda/agendaview.cpp:2233
+#: agenda/agendaview.cpp:2228
 #, kde-format
 msgid "Unable to modify this to-do, because it cannot be locked."
 msgstr "No es pot modificar aquesta tasca pendent perquè no es pot bloquejar."
 
-#: agenda/agendaview.cpp:2241
+#: agenda/agendaview.cpp:2236
 #, kde-format
 msgid "Unable to save %1 \"%2\"."
 msgstr "No s'ha pogut desar %1 «%2»."
 
-#: agenda/timelabels.cpp:328
+#: agenda/timelabels.cpp:327
 #, kde-format
 msgid "&Add Timezones…"
 msgstr "&Afegeix zones horàries…"
 
-#: agenda/timelabels.cpp:329
+#: agenda/timelabels.cpp:328
 #, kde-format
 msgid "&Remove Timezone %1"
 msgstr "&Elimina la zona horària %1"
 
-#: agenda/timelabels.cpp:335
+#: agenda/timelabels.cpp:334
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "12 Hour Clock"
 msgstr "Rellotge de 12 hores"
 
-#: agenda/timelabels.cpp:337
+#: agenda/timelabels.cpp:336
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "24 Hour Clock"
 msgstr "Rellotge de 24 hores"
 
-#: agenda/timelabels.cpp:382
+#: agenda/timelabels.cpp:381
 #, kde-format
 msgctxt "title for timezone info, the timezone id and utc offset"
 msgid "<b>%1 (%2)</b>"
 msgstr "<b>%1 (%2)</b>"
 
-#: agenda/timelabels.cpp:386
+#: agenda/timelabels.cpp:385
 #, kde-format
 msgctxt "heading for timezone display name"
 msgid "<i>Name:</i> %1"
 msgstr "<i>Nom:</i> %1"
 
-#: agenda/timelabels.cpp:390
+#: agenda/timelabels.cpp:389
 #, kde-format
 msgctxt "heading for timezone country"
 msgid "<i>Country:</i> %1"
 msgstr "<i>País:</i> %1"
 
-#: agenda/timelabels.cpp:402
+#: agenda/timelabels.cpp:401
 #, kde-format
 msgctxt "heading for comma-separated list of timezone abbreviations"
 msgid "<i>Abbreviations:</i>"
 msgstr "<i>Abreviatures:</i>"
 
-#: agenda/timelabels.cpp:408
+#: agenda/timelabels.cpp:407
 #, kde-format
 msgctxt "heading for the timezone comment"
 msgid "<i>Comment:</i> %1"
 msgstr "<i>Comentari:</i> %1"
 
-#: agenda/timelabels.cpp:424
+#: agenda/timelabels.cpp:423
 #, kde-format
 msgctxt "[hour of the day][am/pm/00] [timezone id (timezone-offset)]"
 msgid "%1%2<br/>%3 (%4)"
 msgstr "%1%2<br/>%3 (%4)"
 
-#: agenda/timescaleconfigdialog.cpp:51
+#: agenda/timescaleconfigdialog.cpp:50
 #, kde-format
 msgctxt "@title:window"
 msgid "Timezone"

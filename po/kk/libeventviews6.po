@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-05 00:43+0000\n"
+"POT-Creation-Date: 2025-06-06 00:43+0000\n"
 "PO-Revision-Date: 2013-09-16 04:39+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -92,7 +92,7 @@ msgstr "%1 - %2"
 msgid "- %1"
 msgstr "- %1"
 
-#: agenda/agendaview.cpp:383
+#: agenda/agendaview.cpp:380
 #, fuzzy, kde-format
 #| msgctxt "date, from - to"
 #| msgid "%1, %2 - %3"
@@ -100,81 +100,81 @@ msgctxt "short_weekday short_monthname date (e.g. Mon Aug 13)"
 msgid "%1 %2 %3"
 msgstr "%1, %2 - %3"
 
-#: agenda/agendaview.cpp:2233
+#: agenda/agendaview.cpp:2228
 #, kde-format
 msgid "Unable to modify this to-do, because it cannot be locked."
 msgstr "Бұл іс жоспары озгетілмеді, өйткені ол бұғатталмайды."
 
-#: agenda/agendaview.cpp:2241
+#: agenda/agendaview.cpp:2236
 #, kde-format
 msgid "Unable to save %1 \"%2\"."
 msgstr "%1 \"%2\" сақталмады."
 
-#: agenda/timelabels.cpp:328
+#: agenda/timelabels.cpp:327
 #, fuzzy, kde-format
 #| msgid "&Add Timezones..."
 msgid "&Add Timezones…"
 msgstr "Уақыт беледеуін қ&осу..."
 
-#: agenda/timelabels.cpp:329
+#: agenda/timelabels.cpp:328
 #, kde-format
 msgid "&Remove Timezone %1"
 msgstr "%1 белдеуін ө&шіру"
 
-#: agenda/timelabels.cpp:335
+#: agenda/timelabels.cpp:334
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "12 Hour Clock"
 msgstr ""
 
-#: agenda/timelabels.cpp:337
+#: agenda/timelabels.cpp:336
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "24 Hour Clock"
 msgstr ""
 
-#: agenda/timelabels.cpp:382
+#: agenda/timelabels.cpp:381
 #, fuzzy, kde-format
 #| msgid "<b>%1</b>"
 msgctxt "title for timezone info, the timezone id and utc offset"
 msgid "<b>%1 (%2)</b>"
 msgstr "<b>%1</b>"
 
-#: agenda/timelabels.cpp:386
+#: agenda/timelabels.cpp:385
 #, fuzzy, kde-format
 #| msgid "<i>Comment:</i> %1"
 msgctxt "heading for timezone display name"
 msgid "<i>Name:</i> %1"
 msgstr "<i>Түсініктемесі:</i> %1"
 
-#: agenda/timelabels.cpp:390
+#: agenda/timelabels.cpp:389
 #, fuzzy, kde-format
 #| msgid "<i>Country Code:</i> %1"
 msgctxt "heading for timezone country"
 msgid "<i>Country:</i> %1"
 msgstr "<i>Елінің коды:</i> %1"
 
-#: agenda/timelabels.cpp:402
+#: agenda/timelabels.cpp:401
 #, fuzzy, kde-format
 #| msgid "<i>Abbreviations:</i>"
 msgctxt "heading for comma-separated list of timezone abbreviations"
 msgid "<i>Abbreviations:</i>"
 msgstr "<i>Қысқартулары:</i>"
 
-#: agenda/timelabels.cpp:408
+#: agenda/timelabels.cpp:407
 #, fuzzy, kde-format
 #| msgid "<i>Comment:</i> %1"
 msgctxt "heading for the timezone comment"
 msgid "<i>Comment:</i> %1"
 msgstr "<i>Түсініктемесі:</i> %1"
 
-#: agenda/timelabels.cpp:424
+#: agenda/timelabels.cpp:423
 #, kde-format
 msgctxt "[hour of the day][am/pm/00] [timezone id (timezone-offset)]"
 msgid "%1%2<br/>%3 (%4)"
 msgstr ""
 
-#: agenda/timescaleconfigdialog.cpp:51
+#: agenda/timescaleconfigdialog.cpp:50
 #, fuzzy, kde-format
 #| msgid "Timezone"
 msgctxt "@title:window"
