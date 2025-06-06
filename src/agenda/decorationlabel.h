@@ -43,7 +43,7 @@ public Q_SLOTS:
 protected:
     void resizeEvent(QResizeEvent *) override;
     void mouseReleaseEvent(QMouseEvent *) override;
-    virtual void squeezeContentsToLabel();
+    void squeezeContentsToLabel();
     bool mAutomaticSqueeze = true;
     EventViews::CalendarDecoration::Element *mDecorationElement = nullptr;
     QString mShortText;
