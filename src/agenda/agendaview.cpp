@@ -2053,11 +2053,15 @@ bool AgendaView::displayIncidence(const KCalendarCore::Incidence::Ptr &incidence
         return false;
     }
 
+    const auto cal = calendar2(incidence);
+    if (!cal) {
+        return false;
+    }
+
     if (incidence->hasRecurrenceId()) {
         // Normally a disassociated instance belongs to a recurring instance that
         // displays it.
-        const auto cal = calendar2(incidence);
-        if (cal && cal->incidence(incidence->uid())) {
+        if (cal->incidence(incidence->uid())) {
             return false;
         }
     }
@@ -2097,7 +2101,7 @@ bool AgendaView::displayIncidence(const KCalendarCore::Incidence::Ptr &incidence
         // the range
         const QDateTime startDateTimeWithOffset = firstVisibleDateTime.addDays(-eventDuration);
 
-        KCalendarCore::OccurrenceIterator rIt(*calendar2(incidence), incidence, startDateTimeWithOffset, lastVisibleDateTime);
+        KCalendarCore::OccurrenceIterator rIt(*cal, incidence, startDateTimeWithOffset, lastVisibleDateTime);
         while (rIt.hasNext()) {
             rIt.next();
             auto occurrenceDate = rIt.occurrenceStartDate().toLocalTime();
