@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-06 00:43+0000\n"
+"POT-Creation-Date: 2025-06-08 00:43+0000\n"
 "PO-Revision-Date: 2025-06-02 17:32+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -95,12 +95,12 @@ msgctxt "short_weekday short_monthname date (e.g. Mon Aug 13)"
 msgid "%1 %2 %3"
 msgstr "%1 %2 %3"
 
-#: agenda/agendaview.cpp:2228
+#: agenda/agendaview.cpp:2232
 #, kde-format
 msgid "Unable to modify this to-do, because it cannot be locked."
 msgstr "Kan inte ändra den här uppgiften, eftersom den inte kan låsas."
 
-#: agenda/agendaview.cpp:2236
+#: agenda/agendaview.cpp:2240
 #, kde-format
 msgid "Unable to save %1 \"%2\"."
 msgstr "Kan inte spara %1 \"%2\"."
