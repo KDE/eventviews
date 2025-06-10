@@ -712,7 +712,7 @@
     <entry key="Month Holidays Background Image" type="String">
     </entry>
     <!-- END:   These entries are the same for the Month and month views, please keep them in sync -->
-    
+
     <entry type="Bool" key="Use System Color">
       <label>Use system color</label>
       <whatsthis>Use system color. If enabled will ignore all other color settings</whatsthis>
