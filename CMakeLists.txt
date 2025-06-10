@@ -27,7 +27,6 @@ file(
     tests/*.cpp
     tests/*.h
 )
-kde_clang_format(${ALL_CLANG_FORMAT_SOURCE_FILES})
 set(PRE_COMMIT_INSTALLED FALSE)
 if(${CMAKE_SOURCE_DIR} STREQUAL ${PROJECT_SOURCE_DIR})
     if(EXISTS "${PROJECT_SOURCE_DIR}/.git/hooks/pre-commit")
