@@ -19,7 +19,7 @@ include(KDECompilerSettings NO_POLICY_SCOPE)
 include(ECMGenerateExportHeader)
 include(ECMSetupVersion)
 include(ECMGenerateHeaders)
-
+include(ECMQtDeclareLoggingCategory)
 file(
     GLOB_RECURSE ALL_CLANG_FORMAT_SOURCE_FILES
     src/*.cpp
