@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-08 00:43+0000\n"
-"PO-Revision-Date: 2025-04-22 01:21+0200\n"
+"PO-Revision-Date: 2025-06-11 00:09+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -115,13 +115,13 @@ msgstr "%1 시간대 삭제(&R)"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "12 Hour Clock"
-msgstr ""
+msgstr "12시간제 시계"
 
 #: agenda/timelabels.cpp:336
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "24 Hour Clock"
-msgstr ""
+msgstr "24시간제 시계"
 
 #: agenda/timelabels.cpp:381
 #, kde-format
@@ -1775,27 +1775,18 @@ msgstr ""
 "을 편집하십시오.</note></para>"
 
 #: todo/todoview.cpp:318
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Display to-do list in a full window"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Display to-dos in a full window without the sidebar"
-msgstr "전체 창으로 할 일 목록 표시"
+msgstr "사이드바 없이 전체 창에 할 일 표시"
 
 #: todo/todoview.cpp:320
-#, fuzzy, kde-format
-#| msgctxt "@info:whatsthis"
-#| msgid ""
-#| "Checking this button will cause the to-dos to be displayed either as a "
-#| "flat list or a hierarchical tree where the parental relationships are "
-#| "removed."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Checking this button will cause the to-dos to be displayed in a larger "
 "window by hiding the sidebar."
-msgstr ""
-"이 옵션을 사용하면 할 일 목록을 단일 단계 목록이나 부모-자식 관계를 표시하지 "
-"않는 계층적 트리 구조로 표시합니다."
+msgstr "이 옵션을 사용하면 할 일을 사이드바가 숨겨진 큰 창에 표시합니다."
 
 #: todo/todoview.cpp:326
 #, kde-format
@@ -1874,18 +1865,16 @@ msgid "Create Event from To-do"
 msgstr "할 일에서 이벤트 만들기"
 
 #: todo/todoview.cpp:429
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu delete completed to-dos"
-#| msgid "Pur&ge Completed"
+#, kde-format
 msgctxt "@action:inmenu set or unset to-do is completed"
 msgid "Togg&le To-do Completed"
-msgstr "완료된 항목 정리(&G)"
+msgstr "할 일 완료 여부 전환(&L)"
 
 #: todo/todoview.cpp:433
 #, kde-format
 msgctxt "@action:inmenu enable or disable reminder"
 msgid "&Toggle Reminder"
-msgstr ""
+msgstr "알림 전환(&T)"
 
 #: todo/todoview.cpp:440
 #, kde-format
@@ -1948,29 +1937,28 @@ msgid "8"
 msgstr "8"
 
 #: todo/todoview.cpp:1158
-#, fuzzy, kde-format
-#| msgid "Display the current-time indicator"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Display the sidebar"
-msgstr "현재 시간 표시선 표시"
+msgstr "사이드바 표시"
 
 #: todo/todoview.cpp:1161
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Hide the sidebar"
-msgstr ""
+msgstr "사이드바 숨기기"
 
 #: todo/todoview.cpp:1180
 #, kde-format
 msgctxt "@info::tooltip"
 msgid "Switch to the tree list display"
-msgstr ""
+msgstr "트리 목록 표시로 전환"
 
 #: todo/todoview.cpp:1183
 #, kde-format
 msgctxt "@info::tooltip"
 msgid "Switch to the flat list display"
-msgstr ""
+msgstr "단일 목록 표시로 전환"
 
 #: todo/todoviewquickaddline.cpp:17
 #, kde-format
