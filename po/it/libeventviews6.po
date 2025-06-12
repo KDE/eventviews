@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-08 00:43+0000\n"
-"PO-Revision-Date: 2025-05-09 16:15+0200\n"
+"PO-Revision-Date: 2025-06-10 11:38+0200\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.12.0\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -126,18 +126,16 @@ msgid "&Remove Timezone %1"
 msgstr "&Rimuovi il fuso orario %1"
 
 #: agenda/timelabels.cpp:334
-#, fuzzy, kde-format
-#| msgid "1 hour "
-#| msgid_plural "%1 hours "
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "12 Hour Clock"
-msgstr "1 ora"
+msgstr "Orologio a 12 ore"
 
 #: agenda/timelabels.cpp:336
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "24 Hour Clock"
-msgstr ""
+msgstr "Orologio a 24 ore"
 
 #: agenda/timelabels.cpp:381
 #, kde-format
@@ -1978,18 +1976,16 @@ msgid "Create Event from To-do"
 msgstr "Crea evento da cosa da fare"
 
 #: todo/todoview.cpp:429
-#, fuzzy, kde-format
-#| msgid "Togg&le To-do Completed"
+#, kde-format
 msgctxt "@action:inmenu set or unset to-do is completed"
 msgid "Togg&le To-do Completed"
-msgstr "&Mostra cose da fare completate"
+msgstr "Mostra/nascondi cose da fare comp&letate"
 
 #: todo/todoview.cpp:433
-#, fuzzy, kde-format
-#| msgid "&Toggle Reminder"
+#, kde-format
 msgctxt "@action:inmenu enable or disable reminder"
 msgid "&Toggle Reminder"
-msgstr "&Attiva promemoria"
+msgstr "A&ttiva/disattiva promemoria"
 
 #: todo/todoview.cpp:440
 #, kde-format
