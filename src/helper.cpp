@@ -11,6 +11,7 @@
 #include <Akonadi/Collection>
 #include <Akonadi/Item>
 
+#include <Akonadi/AttributeFactory>
 #include <Akonadi/CollectionColorAttribute>
 #include <Akonadi/CollectionModifyJob>
 
@@ -37,6 +38,7 @@ void EventViews::setResourceColor(const Akonadi::Collection &coll, const QColor 
     const QString id = QString::number(coll.id());
 
     // Save the color in akonadi (so the resource can even save it server-side)
+    Akonadi::AttributeFactory::registerAttribute<Akonadi::CollectionColorAttribute>();
     Akonadi::Collection collection = coll;
     auto colorAttr = collection.attribute<Akonadi::CollectionColorAttribute>(Akonadi::Collection::AddIfMissing);
     if (colorAttr) {
