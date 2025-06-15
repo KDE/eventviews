@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-08 00:43+0000\n"
-"PO-Revision-Date: 2025-06-08 08:01+0200\n"
+"PO-Revision-Date: 2025-06-14 13:48+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -123,13 +123,13 @@ msgstr "&Usuń strefę czasową %1"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "12 Hour Clock"
-msgstr ""
+msgstr "Zegar 12-to godzinny"
 
 #: agenda/timelabels.cpp:336
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "24 Hour Clock"
-msgstr ""
+msgstr "Zegar 24-ro godzinny"
 
 #: agenda/timelabels.cpp:381
 #, kde-format
@@ -1954,19 +1954,16 @@ msgid "Create Event from To-do"
 msgstr "Utwórz wydarzenie z zadania"
 
 #: todo/todoview.cpp:429
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu delete completed to-dos"
-#| msgid "Pur&ge Completed"
+#, kde-format
 msgctxt "@action:inmenu set or unset to-do is completed"
 msgid "Togg&le To-do Completed"
-msgstr "Usuń u&kończone zadania"
+msgstr "&Przełącz ukończenie zadania"
 
 #: todo/todoview.cpp:433
-#, fuzzy, kde-format
-#| msgid "Reminder"
+#, kde-format
 msgctxt "@action:inmenu enable or disable reminder"
 msgid "&Toggle Reminder"
-msgstr "Przypomnienie"
+msgstr "Przełącz p&rzypomnienia"
 
 #: todo/todoview.cpp:440
 #, kde-format
