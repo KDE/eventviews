@@ -294,7 +294,6 @@ public:
     int mOldLowerScrollValue{0};
     int mOldUpperScrollValue{0};
 
-    bool mReturnPressed{false};
     bool mIsInteractive;
 
     MultiViewCalendar::Ptr mCalendar;
