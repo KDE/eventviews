@@ -195,15 +195,6 @@ bool BaseConfig::usrSave()
         rColorsConfig.writeEntry(it.key(), it.value());
     }
 
-#if 0
-    if (mRememberRetrievePw) {
-        config()->writeEntry("Retrieve Server Password",
-                             KStringHandler::obscure(mRetrievePassword));
-    } else {
-        config()->deleteEntry("Retrieve Server Password");
-    }
-#endif
-
     KConfigGroup timeScaleConfig(config(), QStringLiteral("Timescale"));
     timeScaleConfig.writeEntry("Timescale Timezones", timeScaleTimezones());
     timeScaleConfig.writeEntry("24 Hour Clock", use24HourClock());
