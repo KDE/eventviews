@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-08 00:43+0000\n"
+"POT-Creation-Date: 2025-06-17 00:42+0000\n"
 "PO-Revision-Date: 2025-06-11 00:09+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -58,7 +58,7 @@ msgctxt "@title:window"
 msgid "Error Occurred"
 msgstr "오류가 발생함"
 
-#: agenda/agendaitem.cpp:81 list/listview.cpp:427
+#: agenda/agendaitem.cpp:81 list/listview.cpp:428
 #, kde-format
 msgid "%2 (1 year)"
 msgid_plural "%2 (%1 years)"
@@ -1530,33 +1530,33 @@ msgctxt "@info:whatsthis"
 msgid "Opens a print preview of this journal entry"
 msgstr "이 저널 항목 인쇄 대화 상자 열기"
 
-#: list/listview.cpp:56
+#: list/listview.cpp:57
 #, kde-format
 msgctxt "%1 is an item summary. %2 is the date when this item reoccurs"
 msgid "%1 (next: %2)"
 msgstr "%1(다음: %2)"
 
-#: list/listview.cpp:290
+#: list/listview.cpp:291
 #, kde-format
 msgid "Summary"
 msgstr "요약"
 
-#: list/listview.cpp:291
+#: list/listview.cpp:292
 #, kde-format
 msgid "Start Date/Time"
 msgstr "시작 날짜와 시간"
 
-#: list/listview.cpp:292
+#: list/listview.cpp:293
 #, kde-format
 msgid "End Date/Time"
 msgstr "끝 날짜와 시간"
 
-#: list/listview.cpp:293
+#: list/listview.cpp:294
 #, kde-format
 msgid "Tags"
 msgstr "태그"
 
-#: list/listview.cpp:366
+#: list/listview.cpp:367
 #, kde-format
 msgid "Summary [%1 - %2]"
 msgstr "요약 [%1 - %2]"

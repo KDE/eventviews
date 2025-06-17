@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-08 00:43+0000\n"
+"POT-Creation-Date: 2025-06-17 00:42+0000\n"
 "PO-Revision-Date: 2025-06-02 07:01+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -68,7 +68,7 @@ msgctxt "@title:window"
 msgid "Error Occurred"
 msgstr "Prišlo je do napake"
 
-#: agenda/agendaitem.cpp:81 list/listview.cpp:427
+#: agenda/agendaitem.cpp:81 list/listview.cpp:428
 #, kde-format
 msgid "%2 (1 year)"
 msgid_plural "%2 (%1 years)"
@@ -1598,33 +1598,33 @@ msgctxt "@info:whatsthis"
 msgid "Opens a print preview of this journal entry"
 msgstr "Odpre pogovorno okno tiskanja za ta vnos dnevnika"
 
-#: list/listview.cpp:56
+#: list/listview.cpp:57
 #, kde-format
 msgctxt "%1 is an item summary. %2 is the date when this item reoccurs"
 msgid "%1 (next: %2)"
 msgstr "%1 (naslednjič: %2)"
 
-#: list/listview.cpp:290
+#: list/listview.cpp:291
 #, kde-format
 msgid "Summary"
 msgstr "Povzetek"
 
-#: list/listview.cpp:291
+#: list/listview.cpp:292
 #, kde-format
 msgid "Start Date/Time"
 msgstr "Datum in čas začetka"
 
-#: list/listview.cpp:292
+#: list/listview.cpp:293
 #, kde-format
 msgid "End Date/Time"
 msgstr "Datum in čas konca"
 
-#: list/listview.cpp:293
+#: list/listview.cpp:294
 #, kde-format
 msgid "Tags"
 msgstr "Oznake"
 
-#: list/listview.cpp:366
+#: list/listview.cpp:367
 #, kde-format
 msgid "Summary [%1 - %2]"
 msgstr "Povzetek [%1 – %2]"
