@@ -767,6 +767,7 @@ bool Agenda::eventFilter_mouse(QObject *object, QMouseEvent *me)
 
 bool Agenda::ptInSelection(QPoint gpos) const
 {
+    // NOLINTBEGIN(bugprone-branch-clone)
     if (!d->mHasSelection) {
         return false;
     } else if (gpos.x() < d->mSelectionStartCell.x() || gpos.x() > d->mSelectionEndCell.x()) {
@@ -777,6 +778,7 @@ bool Agenda::ptInSelection(QPoint gpos) const
         return false;
     }
     return true;
+    // NOLINTEND(bugprone-branch-clone)
 }
 
 void Agenda::startSelectAction(QPoint viewportPos)

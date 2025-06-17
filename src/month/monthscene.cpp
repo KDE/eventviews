@@ -501,6 +501,7 @@ void MonthScene::mouseMoveEvent(QGraphicsSceneMouseEvent *mouseEvent)
     if (mActionType == None) {
         MonthGraphicsItem *iItem = dynamic_cast<MonthGraphicsItem *>(itemAt(pos, {}));
         if (iItem) {
+            // NOLINTBEGIN(bugprone-branch-clone)
             if (iItem->monthItem()->isResizable() && iItem->isBeginItem() && iItem->mapFromScene(pos).x() <= 10) {
                 view->setActionCursor(Resize);
             } else if (iItem->monthItem()->isResizable() && iItem->isEndItem() && iItem->mapFromScene(pos).x() >= iItem->boundingRect().width() - 10) {
@@ -508,6 +509,7 @@ void MonthScene::mouseMoveEvent(QGraphicsSceneMouseEvent *mouseEvent)
             } else {
                 view->setActionCursor(None);
             }
+            // NOLINTEND(bugprone-branch-clone)
         } else {
             view->setActionCursor(None);
         }

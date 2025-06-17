@@ -27,9 +27,7 @@ using namespace EventViews;
 void WhatsNextTextBrowser::doSetSource(const QUrl &name, QTextDocument::ResourceType type)
 {
     Q_UNUSED(type);
-    if (name.scheme() == "event"_L1) {
-        Q_EMIT showIncidence(name);
-    } else if (name.scheme() == "todo"_L1) {
+    if ((name.scheme() == "event"_L1) || (name.scheme() == "todo"_L1)) {
         Q_EMIT showIncidence(name);
     } else {
         QTextBrowser::setSource(name);
