@@ -1395,21 +1395,6 @@ void Agenda::placeAgendaItem(const AgendaItem::QPtr &item, double subCellWidth)
 */
 void Agenda::placeSubCells(const AgendaItem::QPtr &placeItem)
 {
-#if 0
-    qCDebug(CALENDARVIEW_LOG);
-    if (placeItem) {
-        KCalendarCore::Incidence::Ptr event = placeItem->incidence();
-        if (!event) {
-            qCDebug(CALENDARVIEW_LOG) << "  event is 0";
-        } else {
-            qCDebug(CALENDARVIEW_LOG) << "  event:" << event->summary();
-        }
-    } else {
-        qCDebug(CALENDARVIEW_LOG) << "  placeItem is 0";
-    }
-    qCDebug(CALENDARVIEW_LOG) << "Agenda::placeSubCells()...";
-#endif
-
     QList<CalendarSupport::CellItem *> cells;
     for (CalendarSupport::CellItem *item : std::as_const(d->mItems)) {
         if (item) {

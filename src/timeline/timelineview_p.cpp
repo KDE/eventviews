@@ -135,14 +135,12 @@ void TimelineViewPrivate::removeIncidence(const Akonadi::Item &item)
     if (timelineItem) {
         timelineItem->removeIncidence(item);
     } else {
-#if 0 // AKONADI_PORT_DISABLED
-      // try harder, the incidence might already be removed from the resource
+#ifdef AKONADI_PORT_DISABLED
+        // try harder, the incidence might already be removed from the resource
         typedef QMap<QString, KOrg::TimelineItem *> M2_t;
         typedef QMap<KCalendarCore::ResourceCalendar *, M2_t> M1_t;
-        for (M1_t::ConstIterator it1 = d->mCalendarItemMap.constBegin();
-             it1 != mCalendarItemMap.constEnd(); ++it1) {
-            for (M2_t::ConstIterator it2 = it1.value().constBegin();
-                 it2 != it1.value().constEnd(); ++it2) {
+        for (M1_t::ConstIterator it1 = d->mCalendarItemMap.constBegin(); it1 != mCalendarItemMap.constEnd(); ++it1) {
+            for (M2_t::ConstIterator it2 = it1.value().constBegin(); it2 != it1.value().constEnd(); ++it2) {
                 if (it2.value()) {
                     it2.value()->removeIncidence(item);
                 }

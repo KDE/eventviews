@@ -166,14 +166,6 @@ void BaseConfig::usrRead()
         setResourceColor(key, color);
     }
 
-#if 0
-    config()->setGroup("FreeBusy");
-    if (mRememberRetrievePw) {
-        mRetrievePassword
-            = KStringHandler::obscure(config()->readEntry("Retrieve Server Password"));
-    }
-#endif
-
     KConfigGroup const timeScaleConfig(config(), QStringLiteral("Timescale"));
     setTimeScaleTimezones(timeScaleConfig.readEntry("Timescale Timezones", QStringList()));
     const QString str = QLocale().timeFormat();

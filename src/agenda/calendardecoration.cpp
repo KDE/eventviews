@@ -143,25 +143,6 @@ Decoration::Decoration(QObject *parent, const QVariantList &args)
 
 Decoration::~Decoration()
 {
-    // Deleted by label directly.
-#if 0
-    for (Element::List lst : std::as_const(mDayElements)) {
-        qDeleteAll(lst);
-        lst.clear();
-    }
-    for (Element::List lst : std::as_const(mWeekElements)) {
-        qDeleteAll(lst);
-        lst.clear();
-    }
-    for (Element::List lst : std::as_const(mMonthElements)) {
-        qDeleteAll(lst);
-        lst.clear();
-    }
-    for (Element::List lst : std::as_const(mYearElements)) {
-        qDeleteAll(lst);
-        lst.clear();
-    }
-#endif
     mDayElements.clear();
     mWeekElements.clear();
     mMonthElements.clear();
