@@ -2287,9 +2287,7 @@ void AgendaView::slotIncidencesDropped(const KCalendarCore::Incidence::List &inc
 
     for (const KCalendarCore::Incidence::Ptr &incidence : incidences) {
         const Akonadi::Item existingItem = d->mViewCalendar->item(incidence);
-        const bool existsInSameCollection = existingItem.isValid();
-
-        if (existingItem.isValid() && existsInSameCollection) {
+        if (existingItem.isValid()) {
             auto newIncidence = existingItem.payload<KCalendarCore::Incidence::Ptr>();
 
             if (newIncidence->dtStart() == newTime && newIncidence->allDay() == allDay) {
