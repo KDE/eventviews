@@ -284,7 +284,9 @@ int TimelineView::currentDateCount() const
 void TimelineView::showDates(const QDate &start, const QDate &end, const QDate &preferredMonth)
 {
     Q_UNUSED(preferredMonth)
+    /* cppcheck-suppress assertWithSideEffect */
     Q_ASSERT_X(start.isValid(), "showDates()", "start date must be valid");
+    /* cppcheck-suppress assertWithSideEffect */
     Q_ASSERT_X(end.isValid(), "showDates()", "end date must be valid");
 
     qCDebug(CALENDARVIEW_LOG) << "start=" << start << "end=" << end;
