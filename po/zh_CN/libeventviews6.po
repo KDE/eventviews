@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-17 00:42+0000\n"
+"POT-Creation-Date: 2025-06-18 00:43+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -28,32 +28,32 @@ msgid "Your emails"
 msgstr ""
 "kde-china@kde.org, i@guoyunhe.me, tds00@qq.com, zxybbb7892020@outlook.com"
 
-#: agenda/agenda.cpp:955
+#: agenda/agenda.cpp:956
 #, kde-format
 msgctxt "@info"
 msgid "Unable to lock item for modification. You cannot make any changes."
 msgstr "无法锁定对项目的修改。您无法进行任何更改。"
 
-#: agenda/agenda.cpp:957
+#: agenda/agenda.cpp:958
 #, kde-format
 msgctxt "@title:window"
 msgid "Locking Failed"
 msgstr "锁定失败"
 
-#: agenda/agenda.cpp:1172
+#: agenda/agenda.cpp:1173
 #, kde-format
 msgctxt "@info/plain"
 msgid "Dissociate event from recurrence"
 msgstr ""
 
-#: agenda/agenda.cpp:1195 month/monthitem.cpp:450
+#: agenda/agenda.cpp:1196 month/monthitem.cpp:450
 #, kde-format
 msgctxt "@info"
 msgid ""
 "Unable to add the exception item to the calendar. No change will be done."
 msgstr ""
 
-#: agenda/agenda.cpp:1197 month/monthitem.cpp:452
+#: agenda/agenda.cpp:1198 month/monthitem.cpp:452
 #, kde-format
 msgctxt "@title:window"
 msgid "Error Occurred"
@@ -2293,40 +2293,40 @@ msgstr ""
 "件。如果您想要使用群件功能(如将 Kontact 配置为 KDE Kolab 客户端)，请选中此"
 "项。"
 
-#: whatsnext/whatsnextview.cpp:64
+#: whatsnext/whatsnextview.cpp:62
 #, kde-format
 msgid "To-dos:"
 msgstr "待办事项："
 
-#: whatsnext/whatsnextview.cpp:80
+#: whatsnext/whatsnextview.cpp:78
 #, kde-format
 msgid "What's Next?"
 msgstr "接下来干什么？"
 
-#: whatsnext/whatsnextview.cpp:87 whatsnext/whatsnextview.cpp:271
-#: whatsnext/whatsnextview.cpp:276
+#: whatsnext/whatsnextview.cpp:85 whatsnext/whatsnextview.cpp:269
+#: whatsnext/whatsnextview.cpp:274
 #, kde-format
 msgctxt "date from - to"
 msgid "%1 - %2"
 msgstr "%1 - %2"
 
-#: whatsnext/whatsnextview.cpp:104
+#: whatsnext/whatsnextview.cpp:102
 #, kde-format
 msgid "Events:"
 msgstr "事件："
 
-#: whatsnext/whatsnextview.cpp:193 whatsnext/whatsnextview.cpp:217
+#: whatsnext/whatsnextview.cpp:191 whatsnext/whatsnextview.cpp:215
 #, kde-format
 msgid "Events and to-dos that need a reply:"
 msgstr "需要答复的事件或待办："
 
-#: whatsnext/whatsnextview.cpp:283
+#: whatsnext/whatsnextview.cpp:281
 #, kde-format
 msgctxt "date, from - to"
 msgid "%1, %2 - %3"
 msgstr "%1， %2 - %3"
 
-#: whatsnext/whatsnextview.cpp:312
+#: whatsnext/whatsnextview.cpp:310
 #, kde-format
 msgctxt "to-do due date"
 msgid "  (Due: %1)"

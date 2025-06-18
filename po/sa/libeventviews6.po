@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-17 00:42+0000\n"
+"POT-Creation-Date: 2025-06-18 00:43+0000\n"
 "PO-Revision-Date: 2024-12-24 20:39+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -29,27 +29,27 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "skkalwar999@gmail.com"
 
-#: agenda/agenda.cpp:955
+#: agenda/agenda.cpp:956
 #, fuzzy, kde-format
 #| msgid "Unable to lock item for modification. You cannot make any changes."
 msgctxt "@info"
 msgid "Unable to lock item for modification. You cannot make any changes."
 msgstr "परिवर्तनार्थं द्रव्यं ताडयितुं असमर्थः। भवन्तः किमपि परिवर्तनं कर्तुं न शक्नुवन्ति।"
 
-#: agenda/agenda.cpp:957
+#: agenda/agenda.cpp:958
 #, kde-format
 msgctxt "@title:window"
 msgid "Locking Failed"
 msgstr "तालाबन्दी विफलम्"
 
-#: agenda/agenda.cpp:1172
+#: agenda/agenda.cpp:1173
 #, fuzzy, kde-format
 #| msgid "Dissociate event from recurrence"
 msgctxt "@info/plain"
 msgid "Dissociate event from recurrence"
 msgstr "घटनां पुनरावृत्तितः विच्छेदयन्तु"
 
-#: agenda/agenda.cpp:1195 month/monthitem.cpp:450
+#: agenda/agenda.cpp:1196 month/monthitem.cpp:450
 #, fuzzy, kde-format
 #| msgid ""
 #| "Unable to add the exception item to the calendar. No change will be done."
@@ -58,7 +58,7 @@ msgid ""
 "Unable to add the exception item to the calendar. No change will be done."
 msgstr "अपवाद-वस्तुं पञ्चाङ्गे योजयितुं असमर्थः । परिवर्तनं न भविष्यति।"
 
-#: agenda/agenda.cpp:1197 month/monthitem.cpp:452
+#: agenda/agenda.cpp:1198 month/monthitem.cpp:452
 #, kde-format
 msgctxt "@title:window"
 msgid "Error Occurred"
@@ -2426,40 +2426,40 @@ msgstr ""
 "(उदा. Kontact इत्यस्य KDE Kolab क्लायन्ट् इत्यस्य रूपेण विन्यस्तं) उपयोक्तुं इच्छति तर्हि "
 "भवान् एतत् पेटीम् अवलोकयतु ।"
 
-#: whatsnext/whatsnextview.cpp:64
+#: whatsnext/whatsnextview.cpp:62
 #, kde-format
 msgid "To-dos:"
 msgstr "कार्याणि :"
 
-#: whatsnext/whatsnextview.cpp:80
+#: whatsnext/whatsnextview.cpp:78
 #, kde-format
 msgid "What's Next?"
 msgstr "अग्रे किम् ?"
 
-#: whatsnext/whatsnextview.cpp:87 whatsnext/whatsnextview.cpp:271
-#: whatsnext/whatsnextview.cpp:276
+#: whatsnext/whatsnextview.cpp:85 whatsnext/whatsnextview.cpp:269
+#: whatsnext/whatsnextview.cpp:274
 #, kde-format
 msgctxt "date from - to"
 msgid "%1 - %2"
 msgstr "%1 - %2"
 
-#: whatsnext/whatsnextview.cpp:104
+#: whatsnext/whatsnextview.cpp:102
 #, kde-format
 msgid "Events:"
 msgstr "घटनाः :"
 
-#: whatsnext/whatsnextview.cpp:193 whatsnext/whatsnextview.cpp:217
+#: whatsnext/whatsnextview.cpp:191 whatsnext/whatsnextview.cpp:215
 #, kde-format
 msgid "Events and to-dos that need a reply:"
 msgstr "घटनाः कार्याणि च येषां उत्तरस्य आवश्यकता वर्तते:"
 
-#: whatsnext/whatsnextview.cpp:283
+#: whatsnext/whatsnextview.cpp:281
 #, kde-format
 msgctxt "date, from - to"
 msgid "%1, %2 - %3"
 msgstr "%1, %2 - %3"
 
-#: whatsnext/whatsnextview.cpp:312
+#: whatsnext/whatsnextview.cpp:310
 #, kde-format
 msgctxt "to-do due date"
 msgid "  (Due: %1)"

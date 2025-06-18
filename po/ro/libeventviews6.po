@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-17 00:42+0000\n"
+"POT-Creation-Date: 2025-06-18 00:43+0000\n"
 "PO-Revision-Date: 2020-09-08 19:18+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian\n"
@@ -28,7 +28,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr ""
 
-#: agenda/agenda.cpp:955
+#: agenda/agenda.cpp:956
 #, fuzzy, kde-format
 #| msgid "Unable to lock item for modification. You cannot make any changes."
 msgctxt "@info"
@@ -36,21 +36,21 @@ msgid "Unable to lock item for modification. You cannot make any changes."
 msgstr ""
 "Elementul nu poate fi blocat pentru modificare. Nu puteți face schimbări."
 
-#: agenda/agenda.cpp:957
+#: agenda/agenda.cpp:958
 #, fuzzy, kde-format
 #| msgid "Locking Failed"
 msgctxt "@title:window"
 msgid "Locking Failed"
 msgstr "Blocare eșuată"
 
-#: agenda/agenda.cpp:1172
+#: agenda/agenda.cpp:1173
 #, fuzzy, kde-format
 #| msgid "Dissociate event from recurrence"
 msgctxt "@info/plain"
 msgid "Dissociate event from recurrence"
 msgstr "Disociază evenimentul de recurență"
 
-#: agenda/agenda.cpp:1195 month/monthitem.cpp:450
+#: agenda/agenda.cpp:1196 month/monthitem.cpp:450
 #, fuzzy, kde-format
 #| msgid ""
 #| "Unable to add the future items to the calendar. No change will be done."
@@ -61,7 +61,7 @@ msgstr ""
 "Elementele viitoare nu au putut fi adăugate la calendar. Nu se vor face "
 "modificări."
 
-#: agenda/agenda.cpp:1197 month/monthitem.cpp:452
+#: agenda/agenda.cpp:1198 month/monthitem.cpp:452
 #, fuzzy, kde-format
 #| msgid "Error Occurred"
 msgctxt "@title:window"
@@ -2284,42 +2284,42 @@ msgid ""
 "Configuring Kontact as a KDE Kolab client)."
 msgstr ""
 
-#: whatsnext/whatsnextview.cpp:64
+#: whatsnext/whatsnextview.cpp:62
 #, kde-format
 msgid "To-dos:"
 msgstr ""
 
-#: whatsnext/whatsnextview.cpp:80
+#: whatsnext/whatsnextview.cpp:78
 #, kde-format
 msgid "What's Next?"
 msgstr ""
 
-#: whatsnext/whatsnextview.cpp:87 whatsnext/whatsnextview.cpp:271
-#: whatsnext/whatsnextview.cpp:276
+#: whatsnext/whatsnextview.cpp:85 whatsnext/whatsnextview.cpp:269
+#: whatsnext/whatsnextview.cpp:274
 #, fuzzy, kde-format
 #| msgid "%1 - %2"
 msgctxt "date from - to"
 msgid "%1 - %2"
 msgstr "%1 - %2"
 
-#: whatsnext/whatsnextview.cpp:104
+#: whatsnext/whatsnextview.cpp:102
 #, kde-format
 msgid "Events:"
 msgstr ""
 
-#: whatsnext/whatsnextview.cpp:193 whatsnext/whatsnextview.cpp:217
+#: whatsnext/whatsnextview.cpp:191 whatsnext/whatsnextview.cpp:215
 #, kde-format
 msgid "Events and to-dos that need a reply:"
 msgstr ""
 
-#: whatsnext/whatsnextview.cpp:283
+#: whatsnext/whatsnextview.cpp:281
 #, fuzzy, kde-format
 #| msgid "%1 - %2"
 msgctxt "date, from - to"
 msgid "%1, %2 - %3"
 msgstr "%1 - %2"
 
-#: whatsnext/whatsnextview.cpp:312
+#: whatsnext/whatsnextview.cpp:310
 #, kde-format
 msgctxt "to-do due date"
 msgid "  (Due: %1)"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-08 00:43+0000\n"
+"POT-Creation-Date: 2025-06-18 00:43+0000\n"
 "PO-Revision-Date: 2025-06-04 07:31+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -30,38 +30,38 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "franklin@goodhorse.idv.tw, s8321414@gmail.com"
 
-#: agenda/agenda.cpp:955
+#: agenda/agenda.cpp:956
 #, kde-format
 msgctxt "@info"
 msgid "Unable to lock item for modification. You cannot make any changes."
 msgstr "無法鎖定要變更的項目。您無法做任何變更。"
 
-#: agenda/agenda.cpp:957
+#: agenda/agenda.cpp:958
 #, kde-format
 msgctxt "@title:window"
 msgid "Locking Failed"
 msgstr "鎖定失敗"
 
-#: agenda/agenda.cpp:1172
+#: agenda/agenda.cpp:1173
 #, kde-format
 msgctxt "@info/plain"
 msgid "Dissociate event from recurrence"
 msgstr "將此事件從循環中分離出來"
 
-#: agenda/agenda.cpp:1195 month/monthitem.cpp:450
+#: agenda/agenda.cpp:1196 month/monthitem.cpp:450
 #, kde-format
 msgctxt "@info"
 msgid ""
 "Unable to add the exception item to the calendar. No change will be done."
 msgstr "無法將例外的項目加入行事曆。將不做任何變更。"
 
-#: agenda/agenda.cpp:1197 month/monthitem.cpp:452
+#: agenda/agenda.cpp:1198 month/monthitem.cpp:452
 #, kde-format
 msgctxt "@title:window"
 msgid "Error Occurred"
 msgstr "發生錯誤"
 
-#: agenda/agendaitem.cpp:81 list/listview.cpp:427
+#: agenda/agendaitem.cpp:81 list/listview.cpp:428
 #, kde-format
 msgid "%2 (1 year)"
 msgid_plural "%2 (%1 years)"
@@ -1491,33 +1491,33 @@ msgctxt "@info:whatsthis"
 msgid "Opens a print preview of this journal entry"
 msgstr "開啟此日誌項目的列印預覽"
 
-#: list/listview.cpp:56
+#: list/listview.cpp:57
 #, kde-format
 msgctxt "%1 is an item summary. %2 is the date when this item reoccurs"
 msgid "%1 (next: %2)"
 msgstr "%1 (下一個：%2)"
 
-#: list/listview.cpp:290
+#: list/listview.cpp:291
 #, kde-format
 msgid "Summary"
 msgstr "摘要"
 
-#: list/listview.cpp:291
+#: list/listview.cpp:292
 #, kde-format
 msgid "Start Date/Time"
 msgstr "開始日期與時間"
 
-#: list/listview.cpp:292
+#: list/listview.cpp:293
 #, kde-format
 msgid "End Date/Time"
 msgstr "結束日期與時間"
 
-#: list/listview.cpp:293
+#: list/listview.cpp:294
 #, kde-format
 msgid "Tags"
 msgstr "標籤"
 
-#: list/listview.cpp:366
+#: list/listview.cpp:367
 #, kde-format
 msgid "Summary [%1 - %2]"
 msgstr "摘要 [%1 - %2]"
@@ -2305,40 +2305,40 @@ msgstr ""
 "生電子郵件。如果您要使用群組功能（如設定 Kontact 為 KDE Kolab 的用戶端），建"
 "議使用此選項。"
 
-#: whatsnext/whatsnextview.cpp:64
+#: whatsnext/whatsnextview.cpp:62
 #, kde-format
 msgid "To-dos:"
 msgstr "待辦事項："
 
-#: whatsnext/whatsnextview.cpp:80
+#: whatsnext/whatsnextview.cpp:78
 #, kde-format
 msgid "What's Next?"
 msgstr "下一個是什麼？"
 
-#: whatsnext/whatsnextview.cpp:87 whatsnext/whatsnextview.cpp:271
-#: whatsnext/whatsnextview.cpp:276
+#: whatsnext/whatsnextview.cpp:85 whatsnext/whatsnextview.cpp:269
+#: whatsnext/whatsnextview.cpp:274
 #, kde-format
 msgctxt "date from - to"
 msgid "%1 - %2"
 msgstr "%1 - %2"
 
-#: whatsnext/whatsnextview.cpp:104
+#: whatsnext/whatsnextview.cpp:102
 #, kde-format
 msgid "Events:"
 msgstr "事件："
 
-#: whatsnext/whatsnextview.cpp:193 whatsnext/whatsnextview.cpp:217
+#: whatsnext/whatsnextview.cpp:191 whatsnext/whatsnextview.cpp:215
 #, kde-format
 msgid "Events and to-dos that need a reply:"
 msgstr "此事件或待辦事項需要回覆："
 
-#: whatsnext/whatsnextview.cpp:283
+#: whatsnext/whatsnextview.cpp:281
 #, kde-format
 msgctxt "date, from - to"
 msgid "%1, %2 - %3"
 msgstr "%1, %2 - %3"
 
-#: whatsnext/whatsnextview.cpp:312
+#: whatsnext/whatsnextview.cpp:310
 #, kde-format
 msgctxt "to-do due date"
 msgid "  (Due: %1)"

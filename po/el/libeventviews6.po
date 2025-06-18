@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-17 00:42+0000\n"
+"POT-Creation-Date: 2025-06-18 00:43+0000\n"
 "PO-Revision-Date: 2024-09-19 14:45+0300\n"
 "Last-Translator: Antonis Geralis <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -30,7 +30,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "dglent@free.fr"
 
-#: agenda/agenda.cpp:955
+#: agenda/agenda.cpp:956
 #, fuzzy, kde-format
 #| msgid "Unable to lock item for modification. You cannot make any changes."
 msgctxt "@info"
@@ -39,20 +39,20 @@ msgstr ""
 "Αδυναμία κλειδώματος αντικειμένου για τροποποίηση. Δεν μπορείτε να κάνετε "
 "αλλαγές."
 
-#: agenda/agenda.cpp:957
+#: agenda/agenda.cpp:958
 #, kde-format
 msgctxt "@title:window"
 msgid "Locking Failed"
 msgstr "Το κλείδωμα απέτυχε"
 
-#: agenda/agenda.cpp:1172
+#: agenda/agenda.cpp:1173
 #, fuzzy, kde-format
 #| msgid "Dissociate event from recurrence"
 msgctxt "@info/plain"
 msgid "Dissociate event from recurrence"
 msgstr "Να διαχωριστεί το γεγονός από την επανεμφάνιση"
 
-#: agenda/agenda.cpp:1195 month/monthitem.cpp:450
+#: agenda/agenda.cpp:1196 month/monthitem.cpp:450
 #, fuzzy, kde-format
 #| msgid ""
 #| "Unable to add the exception item to the calendar. No change will be done."
@@ -63,7 +63,7 @@ msgstr ""
 "Αδυναμία προσθήκης αντικειμένου εξαίρεσης στο ημερολόγιο. Δεν θα γίνει καμιά "
 "αλλαγή."
 
-#: agenda/agenda.cpp:1197 month/monthitem.cpp:452
+#: agenda/agenda.cpp:1198 month/monthitem.cpp:452
 #, kde-format
 msgctxt "@title:window"
 msgid "Error Occurred"
@@ -2626,40 +2626,40 @@ msgstr ""
 "αυτή την επιλογή αν επιθυμείτε να χρησιμοποιήσετε τη λειτουργία groupware (π."
 "χ. ρύθμιση του Kontact σαν πελάτης Kolab του KDE)."
 
-#: whatsnext/whatsnextview.cpp:64
+#: whatsnext/whatsnextview.cpp:62
 #, kde-format
 msgid "To-dos:"
 msgstr "Προγραμματισμένες:"
 
-#: whatsnext/whatsnextview.cpp:80
+#: whatsnext/whatsnextview.cpp:78
 #, kde-format
 msgid "What's Next?"
 msgstr "Τι υπάρχει μετά;"
 
-#: whatsnext/whatsnextview.cpp:87 whatsnext/whatsnextview.cpp:271
-#: whatsnext/whatsnextview.cpp:276
+#: whatsnext/whatsnextview.cpp:85 whatsnext/whatsnextview.cpp:269
+#: whatsnext/whatsnextview.cpp:274
 #, kde-format
 msgctxt "date from - to"
 msgid "%1 - %2"
 msgstr "%1 - %2"
 
-#: whatsnext/whatsnextview.cpp:104
+#: whatsnext/whatsnextview.cpp:102
 #, kde-format
 msgid "Events:"
 msgstr "Γεγονότα:"
 
-#: whatsnext/whatsnextview.cpp:193 whatsnext/whatsnextview.cpp:217
+#: whatsnext/whatsnextview.cpp:191 whatsnext/whatsnextview.cpp:215
 #, kde-format
 msgid "Events and to-dos that need a reply:"
 msgstr "Γεγονότα και προγραμματισμένες εργασίες που χρειάζονται μια απάντηση:"
 
-#: whatsnext/whatsnextview.cpp:283
+#: whatsnext/whatsnextview.cpp:281
 #, kde-format
 msgctxt "date, from - to"
 msgid "%1, %2 - %3"
 msgstr "%1, %2 - %3"
 
-#: whatsnext/whatsnextview.cpp:312
+#: whatsnext/whatsnextview.cpp:310
 #, kde-format
 msgctxt "to-do due date"
 msgid "  (Due: %1)"

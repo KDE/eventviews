@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-17 00:42+0000\n"
+"POT-Creation-Date: 2025-06-18 00:43+0000\n"
 "PO-Revision-Date: 2022-07-06 12:31+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -25,7 +25,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "zepires@gmail.com"
 
-#: agenda/agenda.cpp:955
+#: agenda/agenda.cpp:956
 #, fuzzy, kde-format
 #| msgid "Unable to lock item for modification. You cannot make any changes."
 msgctxt "@info"
@@ -34,21 +34,21 @@ msgstr ""
 "Não é possível bloquear o item para o modificar. Não poderá efectuar "
 "quaisquer modificações."
 
-#: agenda/agenda.cpp:957
+#: agenda/agenda.cpp:958
 #, fuzzy, kde-format
 #| msgid "Locking Failed"
 msgctxt "@title:window"
 msgid "Locking Failed"
 msgstr "O Bloqueio Falhou"
 
-#: agenda/agenda.cpp:1172
+#: agenda/agenda.cpp:1173
 #, fuzzy, kde-format
 #| msgid "Dissociate event from recurrence"
 msgctxt "@info/plain"
 msgid "Dissociate event from recurrence"
 msgstr "Dissociar o compromisso da recorrência"
 
-#: agenda/agenda.cpp:1195 month/monthitem.cpp:450
+#: agenda/agenda.cpp:1196 month/monthitem.cpp:450
 #, fuzzy, kde-format
 #| msgid ""
 #| "Unable to add the exception item to the calendar. No change will be done."
@@ -59,7 +59,7 @@ msgstr ""
 "Não é possível adicionar o item de excepção ao calendário. Não será feita "
 "nenhuma alteração."
 
-#: agenda/agenda.cpp:1197 month/monthitem.cpp:452
+#: agenda/agenda.cpp:1198 month/monthitem.cpp:452
 #, fuzzy, kde-format
 #| msgid "Error Occurred"
 msgctxt "@title:window"
@@ -2591,40 +2591,40 @@ msgstr ""
 "funcionalidade de 'groupware' (p.ex., Configurar o Kontact como um cliente "
 "de Kolab para o KDE)."
 
-#: whatsnext/whatsnextview.cpp:64
+#: whatsnext/whatsnextview.cpp:62
 #, kde-format
 msgid "To-dos:"
 msgstr "Por-Fazer:"
 
-#: whatsnext/whatsnextview.cpp:80
+#: whatsnext/whatsnextview.cpp:78
 #, kde-format
 msgid "What's Next?"
 msgstr "O Que se Segue?"
 
-#: whatsnext/whatsnextview.cpp:87 whatsnext/whatsnextview.cpp:271
-#: whatsnext/whatsnextview.cpp:276
+#: whatsnext/whatsnextview.cpp:85 whatsnext/whatsnextview.cpp:269
+#: whatsnext/whatsnextview.cpp:274
 #, kde-format
 msgctxt "date from - to"
 msgid "%1 - %2"
 msgstr "%1 - %2"
 
-#: whatsnext/whatsnextview.cpp:104
+#: whatsnext/whatsnextview.cpp:102
 #, kde-format
 msgid "Events:"
 msgstr "Eventos:"
 
-#: whatsnext/whatsnextview.cpp:193 whatsnext/whatsnextview.cpp:217
+#: whatsnext/whatsnextview.cpp:191 whatsnext/whatsnextview.cpp:215
 #, kde-format
 msgid "Events and to-dos that need a reply:"
 msgstr "Eventos e itens por-fazer que necessitam de resposta:"
 
-#: whatsnext/whatsnextview.cpp:283
+#: whatsnext/whatsnextview.cpp:281
 #, kde-format
 msgctxt "date, from - to"
 msgid "%1, %2 - %3"
 msgstr "%1, %2 - %3"
 
-#: whatsnext/whatsnextview.cpp:312
+#: whatsnext/whatsnextview.cpp:310
 #, kde-format
 msgctxt "to-do due date"
 msgid "  (Due: %1)"
