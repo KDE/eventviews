@@ -46,9 +46,10 @@ bool TodoViewSortFilterProxyModel::filterAcceptsRow(int source_row, const QModel
         returnValue = mPriorities.contains(priorityValue);
     }
     if (ret && !mCategories.isEmpty()) {
-        const QStringList categories = sourceModel()->index(source_row, Akonadi::TodoModel::CategoriesColumn, source_parent).data(Qt::EditRole).toStringList();
+        const QStringList categoryList =
+            sourceModel()->index(source_row, Akonadi::TodoModel::CategoriesColumn, source_parent).data(Qt::EditRole).toStringList();
 
-        for (const QString &category : categories) {
+        for (const QString &category : categoryList) {
             if (mCategories.contains(category)) {
                 return returnValue && true;
             }

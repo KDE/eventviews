@@ -66,8 +66,8 @@ void EventViewPrivate::setEtm(QAbstractItemModel *model)
     while (model) {
         if (const auto *proxy = qobject_cast<QAbstractProxyModel *>(model); proxy != nullptr) {
             model = proxy->sourceModel();
-        } else if (auto *etm = qobject_cast<Akonadi::EntityTreeModel *>(model); etm != nullptr) {
-            this->etm = etm;
+        } else if (auto *modelEtm = qobject_cast<Akonadi::EntityTreeModel *>(model); modelEtm != nullptr) {
+            this->etm = modelEtm;
             break;
         } else {
             model = nullptr;

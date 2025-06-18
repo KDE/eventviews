@@ -647,9 +647,9 @@ void AgendaItem::dropEvent(QDropEvent *e)
     const QMimeData *md = e->mimeData();
 
     bool const decoded = md->hasText();
-    QString const text = md->text();
-    if (decoded && text.startsWith("file:"_L1)) {
-        mIncidence->addAttachment(KCalendarCore::Attachment(text));
+    QString const mdText = md->text();
+    if (decoded && mdText.startsWith("file:"_L1)) {
+        mIncidence->addAttachment(KCalendarCore::Attachment(mdText));
         return;
     }
 
@@ -817,9 +817,9 @@ void AgendaItem::paintEvent(QPaintEvent *ev)
     }
 
     const auto categoryColor = getCategoryColor();
-    const auto resourceColor = mResourceColor.isValid() ? mResourceColor : categoryColor;
-    const auto frameColor = getFrameColor(resourceColor, categoryColor);
-    const auto bgBaseColor = getBackgroundColor(resourceColor, categoryColor);
+    const auto rcColor = mResourceColor.isValid() ? mResourceColor : categoryColor;
+    const auto frameColor = getFrameColor(rcColor, categoryColor);
+    const auto bgBaseColor = getBackgroundColor(rcColor, categoryColor);
     const auto bgColor = mSelected ? bgBaseColor.lighter(EventView::BRIGHTNESS_FACTOR) : bgBaseColor;
     const auto textColor = EventViews::getTextColor(bgColor);
 
@@ -945,8 +945,8 @@ void AgendaItem::paintEvent(QPaintEvent *ev)
         shortH.clear();
         longH.clear();
 
-        if (const KCalendarCore::Event::Ptr event = CalendarSupport::event(mIncidence)) {
-            if (event->isMultiDay(QTimeZone::systemTimeZone())) {
+        if (const KCalendarCore::Event::Ptr alldayEvent = CalendarSupport::event(mIncidence)) {
+            if (alldayEvent->isMultiDay(QTimeZone::systemTimeZone())) {
                 // multi-day, all-day event
                 shortH = i18n("%1 - %2",
                               QLocale().toString(mIncidence->dtStart().toLocalTime().date()),
@@ -1149,10 +1149,10 @@ QColor AgendaItem::getBackgroundColor(const QColor &resourceColor, const QColor 
         Q_ASSERT(todo);
         const QDate dueDate = todo->dtDue().toLocalTime().date();
         const QDate today = QDate::currentDate();
-        const QDate occurrenceDate = this->occurrenceDate();
-        if (todo->isOverdue() && today >= occurrenceDate) {
+        const QDate occurDate = this->occurrenceDate();
+        if (todo->isOverdue() && today >= occurDate) {
             return mEventView->preferences()->todoOverdueColor();
-        } else if (dueDate == today && dueDate == occurrenceDate && !todo->isCompleted()) {
+        } else if (dueDate == today && dueDate == occurDate && !todo->isCompleted()) {
             return mEventView->preferences()->todoDueTodayColor();
         }
     }

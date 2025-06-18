@@ -92,14 +92,8 @@ void TimeLabelsZone::setupTimeLabel(QScrollArea *area)
         area->verticalScrollBar()->setValue(mAgenda->verticalScrollBar()->value());
     }
 
-    auto timeLabels = static_cast<TimeLabels *>(area->widget());
-    timeLabels->setAgenda(mAgenda);
-
-    // timelabel's scroll is just a slave, this shouldn't be here
-    // if ( mParent ) {
-    //  connect( area->verticalScrollBar(), SIGNAL(valueChanged(int)),
-    //           mParent, SLOT(setContentsPos(int)) );
-    // }
+    auto timeLabelsWidget = static_cast<TimeLabels *>(area->widget());
+    timeLabelsWidget->setAgenda(mAgenda);
 }
 
 int TimeLabelsZone::preferedTimeLabelsWidth() const

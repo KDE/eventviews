@@ -46,7 +46,7 @@ public:
     }
 
     void clear();
-    void readJournal(const Akonadi::Item &journal);
+    void readJournal(const Akonadi::Item &item);
 
 protected Q_SLOTS:
     void setDirty();

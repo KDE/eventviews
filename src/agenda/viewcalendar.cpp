@@ -142,8 +142,8 @@ Akonadi::Item MultiViewCalendar::item(const KCalendarCore::Incidence::Ptr &incid
         if (!akonadiCal) {
             continue;
         }
-        if (const auto &item = akonadiCal->item(incidence); item.isValid()) {
-            return item;
+        if (const auto &aItem = akonadiCal->item(incidence); aItem.isValid()) {
+            return aItem;
         }
     }
     return {};

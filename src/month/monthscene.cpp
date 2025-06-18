@@ -292,9 +292,9 @@ void MonthGraphicsView::drawBackground(QPainter *p, const QRectF &rect)
         p->setPen(Qt::NoPen);
         p->drawRect(QRect(cellHeaderX, cellHeaderY, cellHeaderWidth, cellHeaderHeight));
 
-        QFont font = p->font();
-        font.setBold(cell->date() == todayDate);
-        p->setFont(font);
+        QFont boldFont = p->font();
+        boldFont.setBold(cell->date() == todayDate);
+        p->setFont(boldFont);
 
         if (d.month() == mMonthView->currentMonth()) {
             p->setPen(palette().color(QPalette::WindowText));

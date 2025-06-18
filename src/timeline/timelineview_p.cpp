@@ -122,8 +122,8 @@ void TimelineViewPrivate::insertIncidence(const Akonadi::CollectionCalendar::Ptr
             // PENDING(AKONADI_PORT) check if correct. also check the original if,
             // was inside the for loop (unnecessarily)
             for (const KCalendarCore::Event::Ptr &i : events) {
-                const Akonadi::Item item = calendar->item(i);
-                insertIncidence(calendar, item, day);
+                const Akonadi::Item aItem = calendar->item(i);
+                insertIncidence(calendar, aItem, day);
             }
         }
     }

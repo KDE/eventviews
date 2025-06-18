@@ -682,8 +682,8 @@ bool AgendaViewPrivate::datesEqual(const KCalendarCore::Incidence::Ptr &one, con
 
 AgendaItem::List AgendaViewPrivate::agendaItems(const QString &uid) const
 {
-    AgendaItem::List const allDayAgendaItems = mAllDayAgenda->agendaItems(uid);
-    return allDayAgendaItems.isEmpty() ? mAgenda->agendaItems(uid) : allDayAgendaItems;
+    AgendaItem::List const allDayAgendaItemList = mAllDayAgenda->agendaItems(uid);
+    return allDayAgendaItemList.isEmpty() ? mAgenda->agendaItems(uid) : allDayAgendaItemList;
 }
 
 bool AgendaViewPrivate::mightBeVisible(const KCalendarCore::Incidence::Ptr &incidence) const
@@ -805,20 +805,18 @@ void AgendaViewPrivate::calendarIncidenceChanged(const KCalendarCore::Incidence:
         return;
     }
 
-    AgendaItem::List agendaItems = this->agendaItems(incidence->uid());
-    if (agendaItems.isEmpty()) {
-        // Don't warn - it's possible the incidence has been changed in another calendar that we do not display.
-        // qCWarning(CALENDARVIEW_LOG) << "AgendaView::calendarIncidenceChanged() Invalid agendaItem for incidence " << incidence->uid();
+    AgendaItem::List agendaItemList = this->agendaItems(incidence->uid());
+    if (agendaItemList.isEmpty()) {
         return;
     }
 
     // Optimization: If the dates didn't change, just repaint it.
     // This optimization for now because we need to process collisions between agenda items.
-    if (false && !incidence->recurs() && agendaItems.count() == 1) {
-        KCalendarCore::Incidence::Ptr const originalIncidence = agendaItems.first()->incidence();
+    if (false && !incidence->recurs() && agendaItemList.count() == 1) {
+        KCalendarCore::Incidence::Ptr const originalIncidence = agendaItemList.first()->incidence();
 
         if (datesEqual(originalIncidence, incidence)) {
-            for (const AgendaItem::QPtr &agendaItem : std::as_const(agendaItems)) {
+            for (const AgendaItem::QPtr &agendaItem : std::as_const(agendaItemList)) {
                 agendaItem->setIncidence(KCalendarCore::Incidence::Ptr(incidence->clone()));
                 agendaItem->update();
             }
@@ -2104,21 +2102,21 @@ bool AgendaView::displayIncidence(const KCalendarCore::Incidence::Ptr &incidence
         KCalendarCore::OccurrenceIterator rIt(*cal, incidence, startDateTimeWithOffset, lastVisibleDateTime);
         while (rIt.hasNext()) {
             rIt.next();
-            auto occurrenceDate = rIt.occurrenceStartDate().toLocalTime();
-            if (const auto todo = CalendarSupport::todo(rIt.incidence())) {
+            auto nextOccurrenceDate = rIt.occurrenceStartDate().toLocalTime();
+            if (const auto nextTodo = CalendarSupport::todo(rIt.incidence())) {
                 // Recurrence exceptions may have durations different from the normal recurrences.
-                occurrenceDate = occurrenceDate.addSecs(todo->dtStart().secsTo(todo->dtDue()));
+                nextOccurrenceDate = nextOccurrenceDate.addSecs(nextTodo->dtStart().secsTo(nextTodo->dtDue()));
             }
             const bool makesDayBusy = preferences()->colorAgendaBusyDays() && makesWholeDayBusy(rIt.incidence());
             if (makesDayBusy) {
-                KCalendarCore::Event::List &busyEvents = d->mBusyDays[occurrenceDate.date()];
+                KCalendarCore::Event::List &busyEvents = d->mBusyDays[nextOccurrenceDate.date()];
                 busyEvents.append(event);
             }
 
-            if (occurrenceDate.date() == today) {
+            if (nextOccurrenceDate.date() == today) {
                 alreadyAddedToday = true;
             }
-            d->insertIncidence(rIt.incidence(), rIt.recurrenceId(), occurrenceDate, createSelected);
+            d->insertIncidence(rIt.incidence(), rIt.recurrenceId(), nextOccurrenceDate, createSelected);
         }
     } else {
         QDateTime dateToAdd; // date to add to our date list

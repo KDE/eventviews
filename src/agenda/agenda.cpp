@@ -1905,13 +1905,11 @@ void Agenda::removeIncidence(const KCalendarCore::Incidence::Ptr &incidence)
         return; // It's already queued for deletion
     }
 
-    const AgendaItem::List agendaItems = d->mAgendaItemsById.values(incidence->uid());
-    if (agendaItems.isEmpty()) {
-        // We're not displaying such item
-        // qCDebug(CALENDARVIEW_LOG) << "Ignoring";
+    const AgendaItem::List agendaItemList = d->mAgendaItemsById.values(incidence->uid());
+    if (agendaItemList.isEmpty()) {
         return;
     }
-    for (const AgendaItem::QPtr &agendaItem : agendaItems) {
+    for (const AgendaItem::QPtr &agendaItem : agendaItemList) {
         if (agendaItem) {
             if (incidence->instanceIdentifier() != agendaItem->incidence()->instanceIdentifier()) {
                 continue;
@@ -2186,9 +2184,9 @@ void Agenda::selectItem(const AgendaItem::QPtr &item)
     Q_ASSERT(d->mSelectedItem->incidence());
     d->mSelectedId = d->mSelectedItem->incidence()->uid();
 
-    for (const AgendaItem::QPtr &item : std::as_const(d->mItems)) {
-        if (item && item->incidence()->uid() == d->mSelectedId) {
-            item->select();
+    for (const AgendaItem::QPtr &agendaItem : std::as_const(d->mItems)) {
+        if (agendaItem && agendaItem->incidence()->uid() == d->mSelectedId) {
+            agendaItem->select();
         }
     }
     Q_EMIT incidenceSelected(d->mSelectedItem->incidence(), d->mSelectedItem->occurrenceDate());

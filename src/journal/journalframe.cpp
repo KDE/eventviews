@@ -270,11 +270,11 @@ void JournalFrame::printPreviewJournal()
     Q_EMIT printJournalSignal(Akonadi::CalendarUtils::journal(mJournal), true);
 }
 
-void JournalFrame::readJournal(const Akonadi::Item &j)
+void JournalFrame::readJournal(const Akonadi::Item &item)
 {
     int const baseFontSize = QFontDatabase::systemFont(QFontDatabase::GeneralFont).pointSize();
-    mJournal = j;
-    const KCalendarCore::Journal::Ptr journal = Akonadi::CalendarUtils::journal(j);
+    mJournal = item;
+    const KCalendarCore::Journal::Ptr j = Akonadi::CalendarUtils::journal(item);
     mBrowser->clear();
     QTextCursor cursor = QTextCursor(mBrowser->textCursor());
     cursor.movePosition(QTextCursor::Start);
@@ -283,22 +283,22 @@ void JournalFrame::readJournal(const Akonadi::Item &j)
     // FIXME: Do padding
     bodyBlock.setTextIndent(2);
     QTextCharFormat const bodyFormat = QTextCharFormat(cursor.charFormat());
-    if (!journal->summary().isEmpty()) {
+    if (!j->summary().isEmpty()) {
         QTextCharFormat titleFormat = bodyFormat;
         titleFormat.setFontWeight(QFont::Bold);
         titleFormat.setFontPointSize(baseFontSize + 4);
-        cursor.insertText(journal->summary(), titleFormat);
+        cursor.insertText(j->summary(), titleFormat);
         cursor.insertBlock();
     }
     QTextCharFormat dateFormat = bodyFormat;
     dateFormat.setFontWeight(QFont::Bold);
     dateFormat.setFontPointSize(baseFontSize + 1);
-    cursor.insertText(KCalUtils::IncidenceFormatter::dateTimeToString(journal->dtStart(), journal->allDay()), dateFormat);
+    cursor.insertText(KCalUtils::IncidenceFormatter::dateTimeToString(j->dtStart(), j->allDay()), dateFormat);
     cursor.insertBlock();
     cursor.insertBlock();
     cursor.setBlockCharFormat(bodyFormat);
-    const QString description = journal->description();
-    if (journal->descriptionIsRich()) {
+    const QString description = j->description();
+    if (j->descriptionIsRich()) {
         mBrowser->insertHtml(description);
     } else {
         mBrowser->insertPlainText(description);
