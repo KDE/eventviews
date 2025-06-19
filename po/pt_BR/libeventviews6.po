@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-18 00:43+0000\n"
+"POT-Creation-Date: 2025-06-19 00:43+0000\n"
 "PO-Revision-Date: 2023-10-17 19:53-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -103,13 +103,13 @@ msgctxt "short_weekday short_monthname date (e.g. Mon Aug 13)"
 msgid "%1 %2 %3"
 msgstr "%1, %2 de %3"
 
-#: agenda/agendaview.cpp:2232
+#: agenda/agendaview.cpp:2230
 #, kde-format
 msgid "Unable to modify this to-do, because it cannot be locked."
 msgstr ""
 "Não foi possível modificar esta tarefa, porque ela não pôde ser bloqueada."
 
-#: agenda/agendaview.cpp:2240
+#: agenda/agendaview.cpp:2238
 #, kde-format
 msgid "Unable to save %1 \"%2\"."
 msgstr "Não foi possível salvar %1 \"%2\"."
@@ -2254,33 +2254,33 @@ msgctxt "@action:inmenu"
 msgid "%1"
 msgstr "%1"
 
-#: todo/todoviewsortfilterproxymodel.cpp:157
+#: todo/todoviewsortfilterproxymodel.cpp:158
 #, kde-format
 msgctxt "priority is unspecified"
 msgid "unspecified"
 msgstr "não especificada"
 
-#: todo/todoviewsortfilterproxymodel.cpp:158
-#: todo/todoviewsortfilterproxymodel.cpp:160
-#: todo/todoviewsortfilterproxymodel.cpp:162
-#: todo/todoviewsortfilterproxymodel.cpp:164
+#: todo/todoviewsortfilterproxymodel.cpp:159
+#: todo/todoviewsortfilterproxymodel.cpp:161
+#: todo/todoviewsortfilterproxymodel.cpp:163
+#: todo/todoviewsortfilterproxymodel.cpp:165
 #, kde-format
 msgid "%1"
 msgstr "%1"
 
-#: todo/todoviewsortfilterproxymodel.cpp:159
+#: todo/todoviewsortfilterproxymodel.cpp:160
 #, kde-format
 msgctxt "highest priority"
 msgid "%1 (highest)"
 msgstr "%1 (mais alta)"
 
-#: todo/todoviewsortfilterproxymodel.cpp:161
+#: todo/todoviewsortfilterproxymodel.cpp:162
 #, kde-format
 msgctxt "medium priority"
 msgid "%1 (medium)"
 msgstr "%1 (média)"
 
-#: todo/todoviewsortfilterproxymodel.cpp:163
+#: todo/todoviewsortfilterproxymodel.cpp:164
 #, kde-format
 msgctxt "lowest priority"
 msgid "%1 (lowest)"

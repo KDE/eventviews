@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-18 00:43+0000\n"
+"POT-Creation-Date: 2025-06-19 00:43+0000\n"
 "PO-Revision-Date: 2025-06-02 17:43+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -98,13 +98,13 @@ msgctxt "short_weekday short_monthname date (e.g. Mon Aug 13)"
 msgid "%1 %2 %3"
 msgstr "%1 %2 %3"
 
-#: agenda/agendaview.cpp:2232
+#: agenda/agendaview.cpp:2230
 #, kde-format
 msgid "Unable to modify this to-do, because it cannot be locked."
 msgstr ""
 "No se puede modificar esta tarea pendiente porque no se puede bloquear."
 
-#: agenda/agendaview.cpp:2240
+#: agenda/agendaview.cpp:2238
 #, kde-format
 msgid "Unable to save %1 \"%2\"."
 msgstr "No se puede guardar %1 «%2»."
@@ -2178,33 +2178,33 @@ msgctxt "@action:inmenu"
 msgid "%1"
 msgstr "%1"
 
-#: todo/todoviewsortfilterproxymodel.cpp:157
+#: todo/todoviewsortfilterproxymodel.cpp:158
 #, kde-format
 msgctxt "priority is unspecified"
 msgid "unspecified"
 msgstr "sin especificar"
 
-#: todo/todoviewsortfilterproxymodel.cpp:158
-#: todo/todoviewsortfilterproxymodel.cpp:160
-#: todo/todoviewsortfilterproxymodel.cpp:162
-#: todo/todoviewsortfilterproxymodel.cpp:164
+#: todo/todoviewsortfilterproxymodel.cpp:159
+#: todo/todoviewsortfilterproxymodel.cpp:161
+#: todo/todoviewsortfilterproxymodel.cpp:163
+#: todo/todoviewsortfilterproxymodel.cpp:165
 #, kde-format
 msgid "%1"
 msgstr "%1"
 
-#: todo/todoviewsortfilterproxymodel.cpp:159
+#: todo/todoviewsortfilterproxymodel.cpp:160
 #, kde-format
 msgctxt "highest priority"
 msgid "%1 (highest)"
 msgstr "%1 (la más alta)"
 
-#: todo/todoviewsortfilterproxymodel.cpp:161
+#: todo/todoviewsortfilterproxymodel.cpp:162
 #, kde-format
 msgctxt "medium priority"
 msgid "%1 (medium)"
 msgstr "%1 (media)"
 
-#: todo/todoviewsortfilterproxymodel.cpp:163
+#: todo/todoviewsortfilterproxymodel.cpp:164
 #, kde-format
 msgctxt "lowest priority"
 msgid "%1 (lowest)"
