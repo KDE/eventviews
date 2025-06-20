@@ -27,7 +27,9 @@ ScrollIndicator::ScrollIndicator(ScrollIndicator::ArrowDirection dir)
 
 QRectF ScrollIndicator::boundingRect() const
 {
+    // NOLINTBEGIN(bugprone-integer-division)
     return {-mWidth / 2, -mHeight / 2, mWidth, mHeight};
+    // NOLINTEND(bugprone-integer-division)
 }
 
 void ScrollIndicator::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)

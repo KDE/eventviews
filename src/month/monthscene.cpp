@@ -323,8 +323,10 @@ void MonthGraphicsView::drawBackground(QPainter *p, const QRectF &rect)
 
         // Up arrow if first item is above cell top
         if (mScene->startHeight() != 0 && cell->hasEventBelow(mScene->startHeight())) {
+            // NOLINTBEGIN(bugprone-integer-division)
             cell->upArrow()->setPos(mScene->cellHorizontalPos(cell) + columnWidth / 2,
                                     mScene->cellVerticalPos(cell) + cell->upArrow()->boundingRect().height() / 2 + 2);
+            // NOLINTEND(bugprone-integer-division)
             cell->upArrow()->show();
         } else {
             cell->upArrow()->hide();
@@ -332,8 +334,10 @@ void MonthGraphicsView::drawBackground(QPainter *p, const QRectF &rect)
 
         // Down arrow if last item is below cell bottom
         if (!mScene->lastItemFit(cell)) {
+            // NOLINTBEGIN(bugprone-integer-division)
             cell->downArrow()->setPos(mScene->cellHorizontalPos(cell) + columnWidth / 2,
                                       mScene->cellVerticalPos(cell) + rowHeight - cell->downArrow()->boundingRect().height() / 2 - 2);
+            // NOLINTEND(bugprone-integer-division)
             cell->downArrow()->show();
         } else {
             cell->downArrow()->hide();
