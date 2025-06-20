@@ -911,6 +911,8 @@ void AgendaViewPrivate::insertIncidence(const KCalendarCore::Incidence::Ptr &inc
                                         const QDateTime &insertAtDateTime,
                                         bool createSelected)
 {
+    /* cppcheck-suppress knownConditionTrueFalse */
+    /* we may want to make filterByCollectionSelection useful in the future */
     if (!q->filterByCollectionSelection(incidence)) {
         return;
     }
