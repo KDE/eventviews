@@ -106,6 +106,7 @@ private:
 
     ScrollIndicator *mUpArrow = nullptr;
     ScrollIndicator *mDownArrow = nullptr;
+    Q_DISABLE_COPY_MOVE(MonthCell)
 };
 
 /**

@@ -207,6 +207,9 @@ public:
     Akonadi::IncidenceTreeModel *todoTreeModel = nullptr;
     Akonadi::EntityMimeTypeFilterModel *todoFlatModel = nullptr;
     EventViews::PrefsPtr prefs;
+
+private:
+    Q_DISABLE_COPY_MOVE(ModelStack)
 };
 }
 
