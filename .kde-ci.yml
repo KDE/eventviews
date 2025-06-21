@@ -19,3 +19,4 @@ Options:
  cmake-options: '-DKDEPIM_BUILD_EXAMPLES=ON'
  require-passing-tests-on: ['Linux', 'FreeBSD', 'Windows']
  tests-run-in-parallel: True
+ cppcheck-arguments: '--error-exitcode=1 --enable=warning,performance,portability,style'
