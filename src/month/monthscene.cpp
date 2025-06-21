@@ -539,8 +539,17 @@ void MonthScene::mouseMoveEvent(QGraphicsSceneMouseEvent *mouseEvent)
         if (currentCell && currentCell != mPreviousCell) {
             bool ok = true;
             if (mActionType == Move) {
-                mActionItem->moveTo(currentCell->date());
-                mActionItem->updateGeometry();
+                if (currentCell) {
+                    mActionItem->moveTo(currentCell->date());
+                    mActionItem->updateGeometry();
+                } else {
+                    mActionItem->moveTo(QDate());
+                    mActionItem->updateGeometry();
+                    mActionItem->endMove();
+                    mActionItem = nullptr;
+                    mActionType = None;
+                    mStartCell = nullptr;
+                }
             } else if (mActionType == Resize) {
                 ok = mActionItem->resizeBy(mPreviousCell->date().daysTo(currentCell->date()));
                 mActionItem->updateGeometry();
