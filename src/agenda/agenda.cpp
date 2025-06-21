@@ -1864,7 +1864,7 @@ void Agenda::insertMultiItem(const KCalendarCore::Incidence::Ptr &event,
             newtext = QStringLiteral("(%1/%2): ").arg(count).arg(width);
             newtext.append(ev->summary());
 
-            current = insertItem(event, recurrenceId, cellX, cellYTop, cellYBottom, count, width, isSelected);
+            current = insertItem(event, recurrenceId, cellX, cellYTop, cellYBottom, width, count, isSelected);
             Q_ASSERT(current);
             current->setText(newtext);
             multiItems.append(current);
