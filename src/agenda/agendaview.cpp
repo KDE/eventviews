@@ -886,8 +886,8 @@ void EventViews::AgendaViewPrivate::setChanges(EventView::Changes changes, const
         mUpdateAllDayAgenda = true;
         mUpdateAgenda = true;
     } else if (incidence) {
-        mUpdateAllDayAgenda = mUpdateAllDayAgenda || incidence->allDay();
-        mUpdateAgenda = mUpdateAgenda || !incidence->allDay();
+        mUpdateAllDayAgenda = mUpdateAllDayAgenda | incidence->allDay();
+        mUpdateAgenda = mUpdateAgenda | !incidence->allDay();
     }
 
     q->EventView::setChanges(changes);
