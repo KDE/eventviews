@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-21 00:43+0000\n"
+"POT-Creation-Date: 2025-06-25 00:43+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -1643,7 +1643,7 @@ msgctxt "@action:inmenu Unspecified priority"
 msgid "unspecified"
 msgstr "未指定"
 
-#: todo/tododelegates.cpp:153 todo/todoview.cpp:465
+#: todo/tododelegates.cpp:153 todo/todoview.cpp:467
 #, kde-format
 msgctxt "@action:inmenu highest priority"
 msgid "1 (highest)"
@@ -1667,7 +1667,7 @@ msgctxt "@action:inmenu"
 msgid "4"
 msgstr "4"
 
-#: todo/tododelegates.cpp:157 todo/todoview.cpp:469
+#: todo/tododelegates.cpp:157 todo/todoview.cpp:471
 #, kde-format
 msgctxt "@action:inmenu medium priority"
 msgid "5 (medium)"
@@ -1691,31 +1691,31 @@ msgctxt "@action:inmenu"
 msgid "8"
 msgstr "8"
 
-#: todo/tododelegates.cpp:161 todo/todoview.cpp:473
+#: todo/tododelegates.cpp:161 todo/todoview.cpp:475
 #, kde-format
 msgctxt "@action:inmenu lowest priority"
 msgid "9 (lowest)"
 msgstr "9 (最低)"
 
-#: todo/todoview.cpp:236
+#: todo/todoview.cpp:238
 #, kde-format
 msgctxt "@info"
 msgid "Cannot move to-do to itself or a child of itself."
 msgstr "无法移动待办事项到其自身或者其子项。"
 
-#: todo/todoview.cpp:237
+#: todo/todoview.cpp:239
 #, kde-format
 msgctxt "@title:window"
 msgid "Drop To-do"
 msgstr "删除待办事项"
 
-#: todo/todoview.cpp:308
+#: todo/todoview.cpp:310
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Create an open-ended to-do"
 msgstr ""
 
-#: todo/todoview.cpp:311
+#: todo/todoview.cpp:313
 #, kde-kuit-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1725,13 +1725,13 @@ msgid ""
 "note></para>"
 msgstr ""
 
-#: todo/todoview.cpp:321
+#: todo/todoview.cpp:323
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display to-dos in a full window without the sidebar"
 msgstr ""
 
-#: todo/todoview.cpp:323
+#: todo/todoview.cpp:325
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1739,13 +1739,13 @@ msgid ""
 "window by hiding the sidebar."
 msgstr ""
 
-#: todo/todoview.cpp:329
+#: todo/todoview.cpp:331
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display to-dos in a flat list or a tree"
 msgstr "以扁平列表或层级列表显示待办事项"
 
-#: todo/todoview.cpp:331
+#: todo/todoview.cpp:333
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1753,157 +1753,157 @@ msgid ""
 "list or a hierarchical tree where the parental relationships are removed."
 msgstr "点击此按钮，待办事项在扁平列表和不包含主次关系的层级列表之间切换。"
 
-#: todo/todoview.cpp:370
+#: todo/todoview.cpp:372
 #, kde-format
 msgctxt "@action:inmenu show the to-do"
 msgid "&Show"
 msgstr "显示(&S)"
 
-#: todo/todoview.cpp:375
+#: todo/todoview.cpp:377
 #, kde-format
 msgctxt "@action:inmenu edit the to-do"
 msgid "&Edit…"
 msgstr "编辑(&E)…"
 
-#: todo/todoview.cpp:382
+#: todo/todoview.cpp:384
 #, kde-format
 msgctxt "@action:inmenu delete the to-do"
 msgid "&Delete"
 msgstr "删除(&D)"
 
-#: todo/todoview.cpp:391
+#: todo/todoview.cpp:393
 #, kde-format
 msgctxt "@action:inmenu print the to-do"
 msgid "&Print…"
 msgstr "打印(&P)…"
 
-#: todo/todoview.cpp:396
+#: todo/todoview.cpp:398
 #, kde-format
 msgctxt "@action:inmenu print preview the to-do"
 msgid "Print Previe&w…"
 msgstr "打印预览(&W)…"
 
-#: todo/todoview.cpp:403
+#: todo/todoview.cpp:405
 #, kde-format
 msgctxt "@action:inmenu create a new to-do"
 msgid "New &To-do…"
 msgstr "新建待办事项(&T)…"
 
-#: todo/todoview.cpp:407
+#: todo/todoview.cpp:409
 #, kde-format
 msgctxt "@action:inmenu create a new sub-to-do"
 msgid "New Su&b-to-do…"
 msgstr "新建子待办事项(&B)…"
 
-#: todo/todoview.cpp:411
+#: todo/todoview.cpp:413
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Make this To-do Independent"
 msgstr "将此待办事项独立(&M)"
 
-#: todo/todoview.cpp:413
+#: todo/todoview.cpp:415
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Make all Sub-to-dos &Independent"
 msgstr "将待办事项的子项独立(&I)"
 
-#: todo/todoview.cpp:424
+#: todo/todoview.cpp:426
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Create Event from To-do"
 msgstr "从待办事项创建事件"
 
-#: todo/todoview.cpp:432
+#: todo/todoview.cpp:434
 #, kde-format
 msgctxt "@action:inmenu set or unset to-do is completed"
 msgid "Togg&le To-do Completed"
 msgstr ""
 
-#: todo/todoview.cpp:436
+#: todo/todoview.cpp:438
 #, kde-format
 msgctxt "@action:inmenu enable or disable reminder"
 msgid "&Toggle Reminder"
 msgstr ""
 
-#: todo/todoview.cpp:443
+#: todo/todoview.cpp:445
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Copy To"
 msgstr "复制到(&C)"
 
-#: todo/todoview.cpp:450
+#: todo/todoview.cpp:452
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Move To"
 msgstr "移动到(&M)"
 
-#: todo/todoview.cpp:461
+#: todo/todoview.cpp:463
 #, kde-format
 msgctxt "@action:inmenu delete completed to-dos"
 msgid "Pur&ge Completed"
 msgstr "删除已完成(&G)"
 
-#: todo/todoview.cpp:464
+#: todo/todoview.cpp:466
 #, kde-format
 msgctxt "@action:inmenu unspecified priority"
 msgid "unspecified"
 msgstr "未指定"
 
-#: todo/todoview.cpp:466
+#: todo/todoview.cpp:468
 #, kde-format
 msgctxt "@action:inmenu priority value=2"
 msgid "2"
 msgstr "2"
 
-#: todo/todoview.cpp:467
+#: todo/todoview.cpp:469
 #, kde-format
 msgctxt "@action:inmenu priority value=3"
 msgid "3"
 msgstr "3"
 
-#: todo/todoview.cpp:468
+#: todo/todoview.cpp:470
 #, kde-format
 msgctxt "@action:inmenu priority value=4"
 msgid "4"
 msgstr "4"
 
-#: todo/todoview.cpp:470
+#: todo/todoview.cpp:472
 #, kde-format
 msgctxt "@action:inmenu priority value=6"
 msgid "6"
 msgstr "6"
 
-#: todo/todoview.cpp:471
+#: todo/todoview.cpp:473
 #, kde-format
 msgctxt "@action:inmenu priority value=7"
 msgid "7"
 msgstr "7"
 
-#: todo/todoview.cpp:472
+#: todo/todoview.cpp:474
 #, kde-format
 msgctxt "@action:inmenu priority value=8"
 msgid "8"
 msgstr "8"
 
-#: todo/todoview.cpp:1161
+#: todo/todoview.cpp:1163
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display the sidebar"
 msgstr ""
 
-#: todo/todoview.cpp:1164
+#: todo/todoview.cpp:1166
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Hide the sidebar"
 msgstr ""
 
-#: todo/todoview.cpp:1183
+#: todo/todoview.cpp:1185
 #, kde-format
 msgctxt "@info::tooltip"
 msgid "Switch to the tree list display"
 msgstr ""
 
-#: todo/todoview.cpp:1186
+#: todo/todoview.cpp:1188
 #, kde-format
 msgctxt "@info::tooltip"
 msgid "Switch to the flat list display"

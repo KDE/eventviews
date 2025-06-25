@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-21 00:43+0000\n"
+"POT-Creation-Date: 2025-06-25 00:43+0000\n"
 "PO-Revision-Date: 2025-06-02 17:32+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -1742,7 +1742,7 @@ msgctxt "@action:inmenu Unspecified priority"
 msgid "unspecified"
 msgstr "ospecificerad"
 
-#: todo/tododelegates.cpp:153 todo/todoview.cpp:465
+#: todo/tododelegates.cpp:153 todo/todoview.cpp:467
 #, kde-format
 msgctxt "@action:inmenu highest priority"
 msgid "1 (highest)"
@@ -1766,7 +1766,7 @@ msgctxt "@action:inmenu"
 msgid "4"
 msgstr "4"
 
-#: todo/tododelegates.cpp:157 todo/todoview.cpp:469
+#: todo/tododelegates.cpp:157 todo/todoview.cpp:471
 #, kde-format
 msgctxt "@action:inmenu medium priority"
 msgid "5 (medium)"
@@ -1790,31 +1790,31 @@ msgctxt "@action:inmenu"
 msgid "8"
 msgstr "8"
 
-#: todo/tododelegates.cpp:161 todo/todoview.cpp:473
+#: todo/tododelegates.cpp:161 todo/todoview.cpp:475
 #, kde-format
 msgctxt "@action:inmenu lowest priority"
 msgid "9 (lowest)"
 msgstr "9 (lägst)"
 
-#: todo/todoview.cpp:236
+#: todo/todoview.cpp:238
 #, kde-format
 msgctxt "@info"
 msgid "Cannot move to-do to itself or a child of itself."
 msgstr "Kan inte flytta uppgift till sig själv eller sin eget deluppgift."
 
-#: todo/todoview.cpp:237
+#: todo/todoview.cpp:239
 #, kde-format
 msgctxt "@title:window"
 msgid "Drop To-do"
 msgstr "Släpp uppgift"
 
-#: todo/todoview.cpp:308
+#: todo/todoview.cpp:310
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Create an open-ended to-do"
 msgstr "Skapa händelse utan tider"
 
-#: todo/todoview.cpp:311
+#: todo/todoview.cpp:313
 #, kde-kuit-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1828,13 +1828,13 @@ msgstr ""
 "heller har någon påminnelse eller upprepning. Redigera den nyskapade "
 "uppgiften om du vill lägga till fler egenskaper.</note></para>"
 
-#: todo/todoview.cpp:321
+#: todo/todoview.cpp:323
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display to-dos in a full window without the sidebar"
 msgstr "Visa uppgifter i ett helt fönster utan sidoraden"
 
-#: todo/todoview.cpp:323
+#: todo/todoview.cpp:325
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1844,13 +1844,13 @@ msgstr ""
 "Att markera knappen gör att uppgifterna visas i ett större fönster genom att "
 "dölja sidoraden."
 
-#: todo/todoview.cpp:329
+#: todo/todoview.cpp:331
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display to-dos in a flat list or a tree"
 msgstr "Visa uppgifter i en enkel lista eller ett träd"
 
-#: todo/todoview.cpp:331
+#: todo/todoview.cpp:333
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1860,157 +1860,157 @@ msgstr ""
 "Att markera knappen gör att uppgifterna antingen visas som en enkel lista "
 "eller ett hierarkiskt träd där överliggande uppgiftsförhållanden tas bort."
 
-#: todo/todoview.cpp:370
+#: todo/todoview.cpp:372
 #, kde-format
 msgctxt "@action:inmenu show the to-do"
 msgid "&Show"
 msgstr "&Visa"
 
-#: todo/todoview.cpp:375
+#: todo/todoview.cpp:377
 #, kde-format
 msgctxt "@action:inmenu edit the to-do"
 msgid "&Edit…"
 msgstr "&Redigera…"
 
-#: todo/todoview.cpp:382
+#: todo/todoview.cpp:384
 #, kde-format
 msgctxt "@action:inmenu delete the to-do"
 msgid "&Delete"
 msgstr "&Ta bort"
 
-#: todo/todoview.cpp:391
+#: todo/todoview.cpp:393
 #, kde-format
 msgctxt "@action:inmenu print the to-do"
 msgid "&Print…"
 msgstr "Skriv &ut…"
 
-#: todo/todoview.cpp:396
+#: todo/todoview.cpp:398
 #, kde-format
 msgctxt "@action:inmenu print preview the to-do"
 msgid "Print Previe&w…"
 msgstr "&Förhandsgranska utskrift…"
 
-#: todo/todoview.cpp:403
+#: todo/todoview.cpp:405
 #, kde-format
 msgctxt "@action:inmenu create a new to-do"
 msgid "New &To-do…"
 msgstr "Ny &uppgift…"
 
-#: todo/todoview.cpp:407
+#: todo/todoview.cpp:409
 #, kde-format
 msgctxt "@action:inmenu create a new sub-to-do"
 msgid "New Su&b-to-do…"
 msgstr "Ny &deluppgift…"
 
-#: todo/todoview.cpp:411
+#: todo/todoview.cpp:413
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Make this To-do Independent"
 msgstr "&Gör uppgift oberoende"
 
-#: todo/todoview.cpp:413
+#: todo/todoview.cpp:415
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Make all Sub-to-dos &Independent"
 msgstr "Gör alla deluppgifter &oberoende"
 
-#: todo/todoview.cpp:424
+#: todo/todoview.cpp:426
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Create Event from To-do"
 msgstr "Skapa händelse från uppgift"
 
-#: todo/todoview.cpp:432
+#: todo/todoview.cpp:434
 #, kde-format
 msgctxt "@action:inmenu set or unset to-do is completed"
 msgid "Togg&le To-do Completed"
 msgstr "Väx&la färdiga uppgifter"
 
-#: todo/todoview.cpp:436
+#: todo/todoview.cpp:438
 #, kde-format
 msgctxt "@action:inmenu enable or disable reminder"
 msgid "&Toggle Reminder"
 msgstr "&Växla påminnelse"
 
-#: todo/todoview.cpp:443
+#: todo/todoview.cpp:445
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Copy To"
 msgstr "&Kopiera till"
 
-#: todo/todoview.cpp:450
+#: todo/todoview.cpp:452
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Move To"
 msgstr "&Flytta till"
 
-#: todo/todoview.cpp:461
+#: todo/todoview.cpp:463
 #, kde-format
 msgctxt "@action:inmenu delete completed to-dos"
 msgid "Pur&ge Completed"
 msgstr "&Rensa färdiga"
 
-#: todo/todoview.cpp:464
+#: todo/todoview.cpp:466
 #, kde-format
 msgctxt "@action:inmenu unspecified priority"
 msgid "unspecified"
 msgstr "ospecificerad"
 
-#: todo/todoview.cpp:466
+#: todo/todoview.cpp:468
 #, kde-format
 msgctxt "@action:inmenu priority value=2"
 msgid "2"
 msgstr "2"
 
-#: todo/todoview.cpp:467
+#: todo/todoview.cpp:469
 #, kde-format
 msgctxt "@action:inmenu priority value=3"
 msgid "3"
 msgstr "3"
 
-#: todo/todoview.cpp:468
+#: todo/todoview.cpp:470
 #, kde-format
 msgctxt "@action:inmenu priority value=4"
 msgid "4"
 msgstr "4"
 
-#: todo/todoview.cpp:470
+#: todo/todoview.cpp:472
 #, kde-format
 msgctxt "@action:inmenu priority value=6"
 msgid "6"
 msgstr "6"
 
-#: todo/todoview.cpp:471
+#: todo/todoview.cpp:473
 #, kde-format
 msgctxt "@action:inmenu priority value=7"
 msgid "7"
 msgstr "7"
 
-#: todo/todoview.cpp:472
+#: todo/todoview.cpp:474
 #, kde-format
 msgctxt "@action:inmenu priority value=8"
 msgid "8"
 msgstr "8"
 
-#: todo/todoview.cpp:1161
+#: todo/todoview.cpp:1163
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display the sidebar"
 msgstr "Visa sidoraden"
 
-#: todo/todoview.cpp:1164
+#: todo/todoview.cpp:1166
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Hide the sidebar"
 msgstr "Dölj sidoraden"
 
-#: todo/todoview.cpp:1183
+#: todo/todoview.cpp:1185
 #, kde-format
 msgctxt "@info::tooltip"
 msgid "Switch to the tree list display"
 msgstr "Byt till trädlistvisning"
 
-#: todo/todoview.cpp:1186
+#: todo/todoview.cpp:1188
 #, kde-format
 msgctxt "@info::tooltip"
 msgid "Switch to the flat list display"
