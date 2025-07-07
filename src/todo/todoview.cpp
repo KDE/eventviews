@@ -88,12 +88,18 @@ public:
 
     void addCalendar(const Akonadi::CollectionCalendar::Ptr &calendar)
     {
+#if QT_VERSION >= QT_VERSION_CHECK(6, 9, 0)
+        beginFilterChange();
+#endif
         mEnabledCalendars.insert(calendar->collection().id());
         invalidateFilter();
     }
 
     void removeCalendar(const Akonadi::CollectionCalendar::Ptr &calendar)
     {
+#if QT_VERSION >= QT_VERSION_CHECK(6, 9, 0)
+        beginFilterChange();
+#endif
         mEnabledCalendars.remove(calendar->collection().id());
         invalidateFilter();
     }
