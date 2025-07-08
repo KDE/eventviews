@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-07 00:42+0000\n"
+"POT-Creation-Date: 2025-07-08 00:42+0000\n"
 "PO-Revision-Date: 2015-12-29 20:54+0200\n"
 "Last-Translator: Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
@@ -1771,7 +1771,7 @@ msgctxt "@action:inmenu Unspecified priority"
 msgid "unspecified"
 msgstr "nenurodytas"
 
-#: todo/tododelegates.cpp:153 todo/todoview.cpp:467
+#: todo/tododelegates.cpp:153 todo/todoview.cpp:473
 #, kde-format
 msgctxt "@action:inmenu highest priority"
 msgid "1 (highest)"
@@ -1795,7 +1795,7 @@ msgctxt "@action:inmenu"
 msgid "4"
 msgstr "4"
 
-#: todo/tododelegates.cpp:157 todo/todoview.cpp:471
+#: todo/tododelegates.cpp:157 todo/todoview.cpp:477
 #, kde-format
 msgctxt "@action:inmenu medium priority"
 msgid "5 (medium)"
@@ -1819,32 +1819,32 @@ msgctxt "@action:inmenu"
 msgid "8"
 msgstr "8"
 
-#: todo/tododelegates.cpp:161 todo/todoview.cpp:475
+#: todo/tododelegates.cpp:161 todo/todoview.cpp:481
 #, kde-format
 msgctxt "@action:inmenu lowest priority"
 msgid "9 (lowest)"
 msgstr "9 (žemiausias)"
 
-#: todo/todoview.cpp:238
+#: todo/todoview.cpp:244
 #, kde-format
 msgctxt "@info"
 msgid "Cannot move to-do to itself or a child of itself."
 msgstr ""
 
-#: todo/todoview.cpp:239
+#: todo/todoview.cpp:245
 #, fuzzy, kde-format
 #| msgid "Drop To-do"
 msgctxt "@title:window"
 msgid "Drop To-do"
 msgstr "Paleisti darbą"
 
-#: todo/todoview.cpp:310
+#: todo/todoview.cpp:316
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Create an open-ended to-do"
 msgstr ""
 
-#: todo/todoview.cpp:313
+#: todo/todoview.cpp:319
 #, kde-kuit-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1854,7 +1854,7 @@ msgid ""
 "note></para>"
 msgstr ""
 
-#: todo/todoview.cpp:323
+#: todo/todoview.cpp:329
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Display to-do list in a full window"
@@ -1862,7 +1862,7 @@ msgctxt "@info:tooltip"
 msgid "Display to-dos in a full window without the sidebar"
 msgstr "Rodyti darbus pilname lange"
 
-#: todo/todoview.cpp:325
+#: todo/todoview.cpp:331
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1870,7 +1870,7 @@ msgid ""
 "window by hiding the sidebar."
 msgstr ""
 
-#: todo/todoview.cpp:331
+#: todo/todoview.cpp:337
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Display to-dos in flat list instead of a tree"
@@ -1878,7 +1878,7 @@ msgctxt "@info:tooltip"
 msgid "Display to-dos in a flat list or a tree"
 msgstr "Rodyti darbus plokščiame sąraše vietoje medžio"
 
-#: todo/todoview.cpp:333
+#: todo/todoview.cpp:339
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1886,33 +1886,33 @@ msgid ""
 "list or a hierarchical tree where the parental relationships are removed."
 msgstr ""
 
-#: todo/todoview.cpp:372
+#: todo/todoview.cpp:378
 #, kde-format
 msgctxt "@action:inmenu show the to-do"
 msgid "&Show"
 msgstr "&Rodyti"
 
-#: todo/todoview.cpp:377
+#: todo/todoview.cpp:383
 #, fuzzy, kde-format
 #| msgid "&Edit"
 msgctxt "@action:inmenu edit the to-do"
 msgid "&Edit…"
 msgstr "&Keisti"
 
-#: todo/todoview.cpp:384
+#: todo/todoview.cpp:390
 #, kde-format
 msgctxt "@action:inmenu delete the to-do"
 msgid "&Delete"
 msgstr "&Ištrinti"
 
-#: todo/todoview.cpp:393
+#: todo/todoview.cpp:399
 #, fuzzy, kde-format
 #| msgid "&Print"
 msgctxt "@action:inmenu print the to-do"
 msgid "&Print…"
 msgstr "&Spausdinti"
 
-#: todo/todoview.cpp:398
+#: todo/todoview.cpp:404
 #, fuzzy, kde-format
 #| msgctxt "@action:inmenu print preview the to-do"
 #| msgid "Print Previe&w..."
@@ -1920,7 +1920,7 @@ msgctxt "@action:inmenu print preview the to-do"
 msgid "Print Previe&w…"
 msgstr "Spausdinimo &peržiūra..."
 
-#: todo/todoview.cpp:405
+#: todo/todoview.cpp:411
 #, fuzzy, kde-format
 #| msgctxt "@action:inmenu create a new to-do"
 #| msgid "New &To-do..."
@@ -1928,7 +1928,7 @@ msgctxt "@action:inmenu create a new to-do"
 msgid "New &To-do…"
 msgstr "Naujas &darbas..."
 
-#: todo/todoview.cpp:409
+#: todo/todoview.cpp:415
 #, fuzzy, kde-format
 #| msgctxt "@action:inmenu create a new sub-to-do"
 #| msgid "New Su&b-to-do..."
@@ -1936,25 +1936,25 @@ msgctxt "@action:inmenu create a new sub-to-do"
 msgid "New Su&b-to-do…"
 msgstr "Naujas sudedamasis darbas..."
 
-#: todo/todoview.cpp:413
+#: todo/todoview.cpp:419
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Make this To-do Independent"
 msgstr "Padaryti šį darbą &nepriklausomu"
 
-#: todo/todoview.cpp:415
+#: todo/todoview.cpp:421
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Make all Sub-to-dos &Independent"
 msgstr "Padaryti visus sudedamuosius darbus nepriklausomais"
 
-#: todo/todoview.cpp:426
+#: todo/todoview.cpp:432
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Create Event from To-do"
 msgstr ""
 
-#: todo/todoview.cpp:434
+#: todo/todoview.cpp:440
 #, fuzzy, kde-format
 #| msgctxt "@action:inmenu delete completed to-dos"
 #| msgid "Pur&ge Completed"
@@ -1962,92 +1962,92 @@ msgctxt "@action:inmenu set or unset to-do is completed"
 msgid "Togg&le To-do Completed"
 msgstr "P&ašalinti užbaigtus"
 
-#: todo/todoview.cpp:438
+#: todo/todoview.cpp:444
 #, kde-format
 msgctxt "@action:inmenu enable or disable reminder"
 msgid "&Toggle Reminder"
 msgstr ""
 
-#: todo/todoview.cpp:445
+#: todo/todoview.cpp:451
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Copy To"
 msgstr "&Kopijuoti į"
 
-#: todo/todoview.cpp:452
+#: todo/todoview.cpp:458
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Move To"
 msgstr "&Perkelti į"
 
-#: todo/todoview.cpp:463
+#: todo/todoview.cpp:469
 #, kde-format
 msgctxt "@action:inmenu delete completed to-dos"
 msgid "Pur&ge Completed"
 msgstr "P&ašalinti užbaigtus"
 
-#: todo/todoview.cpp:466
+#: todo/todoview.cpp:472
 #, kde-format
 msgctxt "@action:inmenu unspecified priority"
 msgid "unspecified"
 msgstr "nenurodytas"
 
-#: todo/todoview.cpp:468
+#: todo/todoview.cpp:474
 #, kde-format
 msgctxt "@action:inmenu priority value=2"
 msgid "2"
 msgstr "2"
 
-#: todo/todoview.cpp:469
+#: todo/todoview.cpp:475
 #, kde-format
 msgctxt "@action:inmenu priority value=3"
 msgid "3"
 msgstr "3"
 
-#: todo/todoview.cpp:470
+#: todo/todoview.cpp:476
 #, kde-format
 msgctxt "@action:inmenu priority value=4"
 msgid "4"
 msgstr "4"
 
-#: todo/todoview.cpp:472
+#: todo/todoview.cpp:478
 #, kde-format
 msgctxt "@action:inmenu priority value=6"
 msgid "6"
 msgstr "6"
 
-#: todo/todoview.cpp:473
+#: todo/todoview.cpp:479
 #, kde-format
 msgctxt "@action:inmenu priority value=7"
 msgid "7"
 msgstr "7"
 
-#: todo/todoview.cpp:474
+#: todo/todoview.cpp:480
 #, kde-format
 msgctxt "@action:inmenu priority value=8"
 msgid "8"
 msgstr "8"
 
-#: todo/todoview.cpp:1163
+#: todo/todoview.cpp:1169
 #, fuzzy, kde-format
 #| msgid "Display the current-time indicator"
 msgctxt "@info:tooltip"
 msgid "Display the sidebar"
 msgstr "Rodyti dabartinio laiko žymeklį."
 
-#: todo/todoview.cpp:1166
+#: todo/todoview.cpp:1172
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Hide the sidebar"
 msgstr ""
 
-#: todo/todoview.cpp:1185
+#: todo/todoview.cpp:1191
 #, kde-format
 msgctxt "@info::tooltip"
 msgid "Switch to the tree list display"
 msgstr ""
 
-#: todo/todoview.cpp:1188
+#: todo/todoview.cpp:1194
 #, kde-format
 msgctxt "@info::tooltip"
 msgid "Switch to the flat list display"
@@ -2153,33 +2153,33 @@ msgctxt "@action:inmenu"
 msgid "%1"
 msgstr "%1"
 
-#: todo/todoviewsortfilterproxymodel.cpp:158
+#: todo/todoviewsortfilterproxymodel.cpp:161
 #, kde-format
 msgctxt "priority is unspecified"
 msgid "unspecified"
 msgstr "nenurodytas"
 
-#: todo/todoviewsortfilterproxymodel.cpp:159
-#: todo/todoviewsortfilterproxymodel.cpp:161
-#: todo/todoviewsortfilterproxymodel.cpp:163
-#: todo/todoviewsortfilterproxymodel.cpp:165
+#: todo/todoviewsortfilterproxymodel.cpp:162
+#: todo/todoviewsortfilterproxymodel.cpp:164
+#: todo/todoviewsortfilterproxymodel.cpp:166
+#: todo/todoviewsortfilterproxymodel.cpp:168
 #, kde-format
 msgid "%1"
 msgstr "%1"
 
-#: todo/todoviewsortfilterproxymodel.cpp:160
+#: todo/todoviewsortfilterproxymodel.cpp:163
 #, kde-format
 msgctxt "highest priority"
 msgid "%1 (highest)"
 msgstr "%1 (aukščiausias)"
 
-#: todo/todoviewsortfilterproxymodel.cpp:162
+#: todo/todoviewsortfilterproxymodel.cpp:165
 #, kde-format
 msgctxt "medium priority"
 msgid "%1 (medium)"
 msgstr "%1 (vidutinis)"
 
-#: todo/todoviewsortfilterproxymodel.cpp:164
+#: todo/todoviewsortfilterproxymodel.cpp:167
 #, kde-format
 msgctxt "lowest priority"
 msgid "%1 (lowest)"
