@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-07 02:32+0000\n"
+"POT-Creation-Date: 2025-07-08 02:38+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -44,14 +44,14 @@ msgstr "锁定失败"
 #, kde-format
 msgctxt "@info/plain"
 msgid "Dissociate event from recurrence"
-msgstr ""
+msgstr "解除事件与复发之间的关联"
 
 #: agenda/agenda.cpp:1196 month/monthitem.cpp:450
 #, kde-format
 msgctxt "@info"
 msgid ""
 "Unable to add the exception item to the calendar. No change will be done."
-msgstr ""
+msgstr "无法将异常项目添加到日历。将不会做任何更改。"
 
 #: agenda/agenda.cpp:1198 month/monthitem.cpp:452
 #, kde-format
@@ -116,13 +116,13 @@ msgstr "删除时区 %1(&R)"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "12 Hour Clock"
-msgstr ""
+msgstr "12 小时制时钟"
 
 #: agenda/timelabels.cpp:336
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "24 Hour Clock"
-msgstr ""
+msgstr "24 小时制时钟"
 
 #: agenda/timelabels.cpp:381
 #, kde-format
@@ -1430,7 +1430,7 @@ msgstr "编辑此日记项"
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Opens an editor dialog for this journal entry"
-msgstr ""
+msgstr "为此日记项打开编辑对话框"
 
 #: journal/journalframe.cpp:160
 #, kde-format
@@ -1448,13 +1448,13 @@ msgstr "删除此日记项"
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Delete this journal entry"
-msgstr ""
+msgstr "删除此日记项"
 
 #: journal/journalframe.cpp:169
 #, kde-format
 msgctxt "@action: button"
 msgid "&Print"
-msgstr ""
+msgstr "打印(&P)"
 
 #: journal/journalframe.cpp:173
 #, kde-format
@@ -1466,13 +1466,13 @@ msgstr "打印此日记项"
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Opens a print dialog for this journal entry"
-msgstr ""
+msgstr "为此日记项打开打印对话框"
 
 #: journal/journalframe.cpp:179
 #, kde-format
 msgctxt "@action: button"
 msgid "Print preview"
-msgstr ""
+msgstr "打印预览"
 
 #: journal/journalframe.cpp:183
 #, kde-format
@@ -1484,7 +1484,7 @@ msgstr "打印预览此日记项"
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Opens a print preview of this journal entry"
-msgstr ""
+msgstr "为此日记项打开打印预览"
 
 #: list/listview.cpp:57
 #, kde-format
@@ -1522,20 +1522,20 @@ msgstr "摘要 [%1 - %2]"
 msgctxt "@info/plain a person's age"
 msgid "1 year old"
 msgid_plural "%1 years old"
-msgstr[0] ""
+msgstr[0] "%1 岁"
 
 #: month/monthitem.cpp:309
 #, kde-format
 msgctxt "@info/plain number of years of marriage"
 msgid "1 year"
 msgid_plural "%1 years"
-msgstr[0] ""
+msgstr[0] "%1 年"
 
 #: month/monthitem.cpp:443
 #, kde-format
 msgctxt "@info/plain"
 msgid "Move occurrence(s)"
-msgstr ""
+msgstr "移动重现"
 
 #: month/monthscene.cpp:183
 #, kde-format
@@ -1643,7 +1643,7 @@ msgctxt "@action:inmenu Unspecified priority"
 msgid "unspecified"
 msgstr "未指定"
 
-#: todo/tododelegates.cpp:153 todo/todoview.cpp:467
+#: todo/tododelegates.cpp:153 todo/todoview.cpp:473
 #, kde-format
 msgctxt "@action:inmenu highest priority"
 msgid "1 (highest)"
@@ -1667,7 +1667,7 @@ msgctxt "@action:inmenu"
 msgid "4"
 msgstr "4"
 
-#: todo/tododelegates.cpp:157 todo/todoview.cpp:471
+#: todo/tododelegates.cpp:157 todo/todoview.cpp:477
 #, kde-format
 msgctxt "@action:inmenu medium priority"
 msgid "5 (medium)"
@@ -1691,31 +1691,31 @@ msgctxt "@action:inmenu"
 msgid "8"
 msgstr "8"
 
-#: todo/tododelegates.cpp:161 todo/todoview.cpp:475
+#: todo/tododelegates.cpp:161 todo/todoview.cpp:481
 #, kde-format
 msgctxt "@action:inmenu lowest priority"
 msgid "9 (lowest)"
 msgstr "9 (最低)"
 
-#: todo/todoview.cpp:238
+#: todo/todoview.cpp:244
 #, kde-format
 msgctxt "@info"
 msgid "Cannot move to-do to itself or a child of itself."
 msgstr "无法移动待办事项到其自身或者其子项。"
 
-#: todo/todoview.cpp:239
+#: todo/todoview.cpp:245
 #, kde-format
 msgctxt "@title:window"
 msgid "Drop To-do"
 msgstr "删除待办事项"
 
-#: todo/todoview.cpp:310
+#: todo/todoview.cpp:316
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Create an open-ended to-do"
-msgstr ""
+msgstr "创建开放式待办事项"
 
-#: todo/todoview.cpp:313
+#: todo/todoview.cpp:319
 #, kde-kuit-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1724,28 +1724,31 @@ msgid ""
 "or recurrence. Edit the newly created if you want to add more properties.</"
 "note></para>"
 msgstr ""
+"输入新待办事项的摘要。<para><note>新建的待办事项为开放式任务，即没有开始或结"
+"束时间，也不会设置提醒或重复规则。如需添加更多属性（如时间、提醒等），请编辑"
+"新建的待办事项。</note></para>"
 
-#: todo/todoview.cpp:323
+#: todo/todoview.cpp:329
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display to-dos in a full window without the sidebar"
-msgstr ""
+msgstr "全屏显示待办事项（隐藏侧边栏）"
 
-#: todo/todoview.cpp:325
+#: todo/todoview.cpp:331
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Checking this button will cause the to-dos to be displayed in a larger "
 "window by hiding the sidebar."
-msgstr ""
+msgstr "勾选此选项后，系统将隐藏侧边栏，以更大窗口显示待办事项。"
 
-#: todo/todoview.cpp:331
+#: todo/todoview.cpp:337
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display to-dos in a flat list or a tree"
 msgstr "以扁平列表或层级列表显示待办事项"
 
-#: todo/todoview.cpp:333
+#: todo/todoview.cpp:339
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1753,161 +1756,161 @@ msgid ""
 "list or a hierarchical tree where the parental relationships are removed."
 msgstr "点击此按钮，待办事项在扁平列表和不包含主次关系的层级列表之间切换。"
 
-#: todo/todoview.cpp:372
+#: todo/todoview.cpp:378
 #, kde-format
 msgctxt "@action:inmenu show the to-do"
 msgid "&Show"
 msgstr "显示(&S)"
 
-#: todo/todoview.cpp:377
+#: todo/todoview.cpp:383
 #, kde-format
 msgctxt "@action:inmenu edit the to-do"
 msgid "&Edit…"
 msgstr "编辑(&E)…"
 
-#: todo/todoview.cpp:384
+#: todo/todoview.cpp:390
 #, kde-format
 msgctxt "@action:inmenu delete the to-do"
 msgid "&Delete"
 msgstr "删除(&D)"
 
-#: todo/todoview.cpp:393
+#: todo/todoview.cpp:399
 #, kde-format
 msgctxt "@action:inmenu print the to-do"
 msgid "&Print…"
 msgstr "打印(&P)…"
 
-#: todo/todoview.cpp:398
+#: todo/todoview.cpp:404
 #, kde-format
 msgctxt "@action:inmenu print preview the to-do"
 msgid "Print Previe&w…"
 msgstr "打印预览(&W)…"
 
-#: todo/todoview.cpp:405
+#: todo/todoview.cpp:411
 #, kde-format
 msgctxt "@action:inmenu create a new to-do"
 msgid "New &To-do…"
 msgstr "新建待办事项(&T)…"
 
-#: todo/todoview.cpp:409
+#: todo/todoview.cpp:415
 #, kde-format
 msgctxt "@action:inmenu create a new sub-to-do"
 msgid "New Su&b-to-do…"
 msgstr "新建子待办事项(&B)…"
 
-#: todo/todoview.cpp:413
+#: todo/todoview.cpp:419
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Make this To-do Independent"
 msgstr "将此待办事项独立(&M)"
 
-#: todo/todoview.cpp:415
+#: todo/todoview.cpp:421
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Make all Sub-to-dos &Independent"
 msgstr "将待办事项的子项独立(&I)"
 
-#: todo/todoview.cpp:426
+#: todo/todoview.cpp:432
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Create Event from To-do"
 msgstr "从待办事项创建事件"
 
-#: todo/todoview.cpp:434
+#: todo/todoview.cpp:440
 #, kde-format
 msgctxt "@action:inmenu set or unset to-do is completed"
 msgid "Togg&le To-do Completed"
-msgstr ""
+msgstr "切换待办事项完成度(&L)"
 
-#: todo/todoview.cpp:438
+#: todo/todoview.cpp:444
 #, kde-format
 msgctxt "@action:inmenu enable or disable reminder"
 msgid "&Toggle Reminder"
-msgstr ""
+msgstr "切换提醒(&T)"
 
-#: todo/todoview.cpp:445
+#: todo/todoview.cpp:451
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Copy To"
 msgstr "复制到(&C)"
 
-#: todo/todoview.cpp:452
+#: todo/todoview.cpp:458
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Move To"
 msgstr "移动到(&M)"
 
-#: todo/todoview.cpp:463
+#: todo/todoview.cpp:469
 #, kde-format
 msgctxt "@action:inmenu delete completed to-dos"
 msgid "Pur&ge Completed"
 msgstr "删除已完成(&G)"
 
-#: todo/todoview.cpp:466
+#: todo/todoview.cpp:472
 #, kde-format
 msgctxt "@action:inmenu unspecified priority"
 msgid "unspecified"
 msgstr "未指定"
 
-#: todo/todoview.cpp:468
+#: todo/todoview.cpp:474
 #, kde-format
 msgctxt "@action:inmenu priority value=2"
 msgid "2"
 msgstr "2"
 
-#: todo/todoview.cpp:469
+#: todo/todoview.cpp:475
 #, kde-format
 msgctxt "@action:inmenu priority value=3"
 msgid "3"
 msgstr "3"
 
-#: todo/todoview.cpp:470
+#: todo/todoview.cpp:476
 #, kde-format
 msgctxt "@action:inmenu priority value=4"
 msgid "4"
 msgstr "4"
 
-#: todo/todoview.cpp:472
+#: todo/todoview.cpp:478
 #, kde-format
 msgctxt "@action:inmenu priority value=6"
 msgid "6"
 msgstr "6"
 
-#: todo/todoview.cpp:473
+#: todo/todoview.cpp:479
 #, kde-format
 msgctxt "@action:inmenu priority value=7"
 msgid "7"
 msgstr "7"
 
-#: todo/todoview.cpp:474
+#: todo/todoview.cpp:480
 #, kde-format
 msgctxt "@action:inmenu priority value=8"
 msgid "8"
 msgstr "8"
 
-#: todo/todoview.cpp:1163
+#: todo/todoview.cpp:1169
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display the sidebar"
-msgstr ""
+msgstr "显示侧边栏"
 
-#: todo/todoview.cpp:1166
+#: todo/todoview.cpp:1172
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Hide the sidebar"
-msgstr ""
+msgstr "隐藏侧边栏"
 
-#: todo/todoview.cpp:1185
+#: todo/todoview.cpp:1191
 #, kde-format
 msgctxt "@info::tooltip"
 msgid "Switch to the tree list display"
-msgstr ""
+msgstr "切换到树状列表视图"
 
-#: todo/todoview.cpp:1188
+#: todo/todoview.cpp:1194
 #, kde-format
 msgctxt "@info::tooltip"
 msgid "Switch to the flat list display"
-msgstr ""
+msgstr "切换到平铺列表视图"
 
 #: todo/todoviewquickaddline.cpp:17
 #, kde-format
@@ -2003,33 +2006,33 @@ msgctxt "@action:inmenu"
 msgid "%1"
 msgstr "%1"
 
-#: todo/todoviewsortfilterproxymodel.cpp:158
+#: todo/todoviewsortfilterproxymodel.cpp:161
 #, kde-format
 msgctxt "priority is unspecified"
 msgid "unspecified"
 msgstr "未指定"
 
-#: todo/todoviewsortfilterproxymodel.cpp:159
-#: todo/todoviewsortfilterproxymodel.cpp:161
-#: todo/todoviewsortfilterproxymodel.cpp:163
-#: todo/todoviewsortfilterproxymodel.cpp:165
+#: todo/todoviewsortfilterproxymodel.cpp:162
+#: todo/todoviewsortfilterproxymodel.cpp:164
+#: todo/todoviewsortfilterproxymodel.cpp:166
+#: todo/todoviewsortfilterproxymodel.cpp:168
 #, kde-format
 msgid "%1"
 msgstr "%1"
 
-#: todo/todoviewsortfilterproxymodel.cpp:160
+#: todo/todoviewsortfilterproxymodel.cpp:163
 #, kde-format
 msgctxt "highest priority"
 msgid "%1 (highest)"
 msgstr "%1 (最高)"
 
-#: todo/todoviewsortfilterproxymodel.cpp:162
+#: todo/todoviewsortfilterproxymodel.cpp:165
 #, kde-format
 msgctxt "medium priority"
 msgid "%1 (medium)"
 msgstr "%1 (中等)"
 
-#: todo/todoviewsortfilterproxymodel.cpp:164
+#: todo/todoviewsortfilterproxymodel.cpp:167
 #, kde-format
 msgctxt "lowest priority"
 msgid "%1 (lowest)"
@@ -2044,13 +2047,13 @@ msgstr "查看列"
 #, kde-format
 msgctxt "@label"
 msgid "ViewerApp"
-msgstr ""
+msgstr "ViewerApp"
 
 #: viewerapp/main.cpp:21
 #, kde-format
 msgctxt "@info"
 msgid "A test app for embedding calendarviews"
-msgstr ""
+msgstr "嵌入日历视图的测试工具"
 
 #: viewerapp/main.cpp:23
 #, kde-format
@@ -2059,6 +2062,8 @@ msgid ""
 "Copyright (C) 2010 Klarälvdalens Datakonsult AB, a KDAB Group company, "
 "info@kdab.net"
 msgstr ""
+"Copyright (C) 2010 Klarälvdalens Datakonsult AB, a KDAB Group company, "
+"info@kdab.net"
 
 #: viewerapp/main.cpp:24
 #, kde-format
@@ -2083,7 +2088,7 @@ msgstr "日历视图查看器"
 #, kde-format
 msgctxt "@title:tab a generic tab"
 msgid "Tab 1"
-msgstr ""
+msgstr "标签页 1"
 
 #. i18n: ectx: property (title), widget (QMenu, addViewMenu)
 #: viewerapp/mainwindow.ui:74
