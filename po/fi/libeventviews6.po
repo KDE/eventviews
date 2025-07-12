@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-08 02:38+0000\n"
-"PO-Revision-Date: 2025-05-28 10:48+0300\n"
+"PO-Revision-Date: 2025-07-11 11:29+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -120,13 +120,13 @@ msgstr "&Poista aikavyöhyke %1"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "12 Hour Clock"
-msgstr ""
+msgstr "12-tuntinen kello"
 
 #: agenda/timelabels.cpp:336
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "24 Hour Clock"
-msgstr ""
+msgstr "24-tuntinen kello"
 
 #: agenda/timelabels.cpp:381
 #, kde-format
@@ -1921,19 +1921,16 @@ msgid "Create Event from To-do"
 msgstr "Luo tehtävästä tapahtuma"
 
 #: todo/todoview.cpp:440
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu delete completed to-dos"
-#| msgid "Pur&ge Completed"
+#, kde-format
 msgctxt "@action:inmenu set or unset to-do is completed"
 msgid "Togg&le To-do Completed"
-msgstr "Poista teh&dyt tehtävät"
+msgstr "Vaihda t&ehtävän valmis-tilaa"
 
 #: todo/todoview.cpp:444
-#, fuzzy, kde-format
-#| msgid "Reminder"
+#, kde-format
 msgctxt "@action:inmenu enable or disable reminder"
 msgid "&Toggle Reminder"
-msgstr "Muistutus"
+msgstr "&Vaihda muistutuksen tilaa"
 
 #: todo/todoview.cpp:451
 #, kde-format
