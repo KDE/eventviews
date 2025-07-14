@@ -211,7 +211,7 @@ msgstr ""
 #: eventviews.kcfg:15
 #, kde-format
 msgid "Default Email Attachment Method"
-msgstr "ელფოსტაზე ფაილის მიმაგრების ნაგულისხმები მეთოდი"
+msgstr "ელფოსტაზე ფაილის მიმაგრების ნაგულისხმევი მეთოდი"
 
 #. i18n: ectx: whatsthis, entry (DefaultEmailAttachMethod), group (Personal Settings)
 #: eventviews.kcfg:16
@@ -1424,7 +1424,7 @@ msgstr ""
 #: eventviews.kcfg:465
 #, kde-format
 msgid "Default todo attachment method"
-msgstr "გეგმაზე მიმაგრების ნაგულისხმები მეთოდი"
+msgstr "გეგმაზე მიმაგრების ნაგულისხმევი მეთოდი"
 
 #. i18n: ectx: whatsthis, entry (DefaultTodoAttachMethod), group (Hidden Options)
 #: eventviews.kcfg:466
@@ -1488,7 +1488,7 @@ msgstr "აქ შეგიძლიათ თვის ხედისთვი
 #: eventviews.kcfg:651
 #, kde-format
 msgid "Default event color"
-msgstr "ნაგულისხმები მოვლენის ფერი"
+msgstr "ნაგულისხმევი მოვლენის ფერი"
 
 #. i18n: ectx: whatsthis, entry, group (Theme/Month view)
 #: eventviews.kcfg:652
