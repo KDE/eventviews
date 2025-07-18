@@ -88,6 +88,12 @@ public:
 
     void addCalendar(const Akonadi::CollectionCalendar::Ptr &calendar)
     {
+        if (!calendar || !calendar->collection().isValid()) {
+            return;
+        }
+        if (mEnabledCalendars.contains(calendar->collection().id())) {
+            return;
+        }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 9, 0)
         beginFilterChange();
 #endif
@@ -97,6 +103,12 @@ public:
 
     void removeCalendar(const Akonadi::CollectionCalendar::Ptr &calendar)
     {
+        if (!calendar || !calendar->collection().isValid()) {
+            return;
+        }
+        if (!mEnabledCalendars.contains(calendar->collection().id())) {
+            return;
+        }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 9, 0)
         beginFilterChange();
 #endif
