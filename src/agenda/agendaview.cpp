@@ -1247,17 +1247,20 @@ void AgendaView::addCalendar(const Akonadi::CollectionCalendar::Ptr &calendar)
 
 void AgendaView::removeCalendar(const Akonadi::CollectionCalendar::Ptr &calendar)
 {
+    if (!calendar || !calendar->collection().isValid()) {
+        return;
+    }
     EventView::removeCalendar(calendar);
 
     auto cal = std::find_if(d->mViewCalendar->mSubCalendars.cbegin(), d->mViewCalendar->mSubCalendars.cend(), [calendar](const auto &subcal) {
-        if (auto akonadiCal = qSharedPointerDynamicCast<AkonadiViewCalendar>(subcal); akonadiCal) {
-            // TODO: FIXME: the pointer-based comparison MUST succeed here, not collection-based comparison!!!
-            return akonadiCal->mCalendar->collection() == calendar->collection();
+        auto s = subcal->getCalendar();
+        if (s) {
+            return s == calendar;
         }
         return false;
     });
 
-    if (cal != d->mViewCalendar->mSubCalendars.end()) {
+    if (*cal && cal != d->mViewCalendar->mSubCalendars.end()) {
         calendar->unregisterObserver(d.get());
         d->mViewCalendar->removeCalendar(*cal);
         setChanges(EventViews::EventView::ResourcesChanged);
