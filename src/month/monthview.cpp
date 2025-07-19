@@ -277,18 +277,22 @@ MonthView::~MonthView()
 
 void MonthView::addCalendar(const Akonadi::CollectionCalendar::Ptr &calendar)
 {
-    EventView::addCalendar(calendar);
-    calendar->registerObserver(d.get());
-    setChanges(changes() | ResourcesChanged);
-    d->reloadTimer.start(50);
+    if (calendar && calendar->collection().isValid()) {
+        EventView::addCalendar(calendar);
+        calendar->registerObserver(d.get());
+        setChanges(changes() | ResourcesChanged);
+        d->reloadTimer.start(50);
+    }
 }
 
 void MonthView::removeCalendar(const Akonadi::CollectionCalendar::Ptr &calendar)
 {
-    EventView::removeCalendar(calendar);
-    calendar->unregisterObserver(d.get());
-    setChanges(changes() | ResourcesChanged);
-    d->reloadTimer.start(50);
+    if (calendar && calendar->collection().isValid()) {
+        EventView::removeCalendar(calendar);
+        calendar->unregisterObserver(d.get());
+        setChanges(changes() | ResourcesChanged);
+        d->reloadTimer.start(50);
+    }
 }
 
 void MonthView::updateConfig()
