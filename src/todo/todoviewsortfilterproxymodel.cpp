@@ -31,12 +31,12 @@ bool TodoViewSortFilterProxyModel::filterAcceptsRow(int source_row, const QModel
     bool ret = QSortFilterProxyModel::filterAcceptsRow(source_row, source_parent);
 
     if (ret && mCalFilter) {
-        const auto incidence = sourceModel()
-                                   ->index(source_row, Akonadi::TodoModel::SummaryColumn, source_parent)
-                                   .data(Akonadi::TodoModel::TodoPtrRole)
-                                   .value<KCalendarCore::Todo::Ptr>();
-        if (!incidence || !mCalFilter->filterIncidence(incidence)) {
-            return false;
+        const QModelIndex cur = sourceModel()->index(source_row, Akonadi::TodoModel::SummaryColumn, source_parent);
+        if (cur.isValid()) {
+            const auto incidence = cur.data(Akonadi::TodoModel::TodoPtrRole).value<KCalendarCore::Todo::Ptr>();
+            if (!incidence || !mCalFilter->filterIncidence(incidence)) {
+                return false;
+            }
         }
     }
 
