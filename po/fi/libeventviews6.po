@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-08 00:42+0000\n"
+"POT-Creation-Date: 2025-07-20 00:43+0000\n"
 "PO-Revision-Date: 2025-07-11 11:29+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -96,12 +96,12 @@ msgctxt "short_weekday short_monthname date (e.g. Mon Aug 13)"
 msgid "%1 %2 %3"
 msgstr "%1 %2 %3"
 
-#: agenda/agendaview.cpp:2232
+#: agenda/agendaview.cpp:2235
 #, kde-format
 msgid "Unable to modify this to-do, because it cannot be locked."
 msgstr "Tätä tehtävää ei voi muuttaa, koska se on lukittu."
 
-#: agenda/agendaview.cpp:2240
+#: agenda/agendaview.cpp:2243
 #, kde-format
 msgid "Unable to save %1 \"%2\"."
 msgstr "Ei voi tallentaa: %1 ”%2”."
@@ -1639,13 +1639,13 @@ msgctxt "'Month day' for month view cells"
 msgid "%1 %2"
 msgstr "%1 %2"
 
-#: month/monthview.cpp:209 month/monthview.cpp:475
+#: month/monthview.cpp:209 month/monthview.cpp:479
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display calendar in a normal size"
 msgstr "Näytä kalenteri tavallisessa koossa"
 
-#: month/monthview.cpp:210 month/monthview.cpp:478
+#: month/monthview.cpp:210 month/monthview.cpp:482
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display calendar in a full window"
@@ -1743,7 +1743,7 @@ msgctxt "@action:inmenu Unspecified priority"
 msgid "unspecified"
 msgstr "määrittämätön"
 
-#: todo/tododelegates.cpp:153 todo/todoview.cpp:473
+#: todo/tododelegates.cpp:153 todo/todoview.cpp:485
 #, kde-format
 msgctxt "@action:inmenu highest priority"
 msgid "1 (highest)"
@@ -1767,7 +1767,7 @@ msgctxt "@action:inmenu"
 msgid "4"
 msgstr "4"
 
-#: todo/tododelegates.cpp:157 todo/todoview.cpp:477
+#: todo/tododelegates.cpp:157 todo/todoview.cpp:489
 #, kde-format
 msgctxt "@action:inmenu medium priority"
 msgid "5 (medium)"
@@ -1791,31 +1791,31 @@ msgctxt "@action:inmenu"
 msgid "8"
 msgstr "8"
 
-#: todo/tododelegates.cpp:161 todo/todoview.cpp:481
+#: todo/tododelegates.cpp:161 todo/todoview.cpp:493
 #, kde-format
 msgctxt "@action:inmenu lowest priority"
 msgid "9 (lowest)"
 msgstr "9 (pienin)"
 
-#: todo/todoview.cpp:244
+#: todo/todoview.cpp:256
 #, kde-format
 msgctxt "@info"
 msgid "Cannot move to-do to itself or a child of itself."
 msgstr "Tehtävää ei voi siirtää itseensä tai alitehtäväänsä"
 
-#: todo/todoview.cpp:245
+#: todo/todoview.cpp:257
 #, kde-format
 msgctxt "@title:window"
 msgid "Drop To-do"
 msgstr "Pudota tehtävä"
 
-#: todo/todoview.cpp:316
+#: todo/todoview.cpp:328
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Create an open-ended to-do"
 msgstr "Luo avoin tehtävä"
 
-#: todo/todoview.cpp:319
+#: todo/todoview.cpp:331
 #, kde-kuit-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1828,13 +1828,13 @@ msgstr ""
 "eli sillä ei ole aloitus- ja päättymisaikoja, muistutuksia tai toistoa. "
 "Ominaisuuksia voi lisätä muokkaamalla luotua tehtävää.</note></para>"
 
-#: todo/todoview.cpp:329
+#: todo/todoview.cpp:341
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display to-dos in a full window without the sidebar"
 msgstr "Näytä tehtävät sivupaneelitta koko ikkunassa"
 
-#: todo/todoview.cpp:331
+#: todo/todoview.cpp:343
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1844,13 +1844,13 @@ msgstr ""
 "Tämän valitseminen näyttää tehtävät suuremmassa ikkunassa piilottamalla "
 "sivupaneelin."
 
-#: todo/todoview.cpp:337
+#: todo/todoview.cpp:349
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display to-dos in a flat list or a tree"
 msgstr "Näytetäänkö tehtävät luettelona vai puuna"
 
-#: todo/todoview.cpp:339
+#: todo/todoview.cpp:351
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1860,157 +1860,157 @@ msgstr ""
 "Tämän valitseminen saa tehtävänäkymän käyttämään luetteloa hierarkkisen puun "
 "sijaan (perhesuhteet poistetaan näkymästä)."
 
-#: todo/todoview.cpp:378
+#: todo/todoview.cpp:390
 #, kde-format
 msgctxt "@action:inmenu show the to-do"
 msgid "&Show"
 msgstr "&Näytä"
 
-#: todo/todoview.cpp:383
+#: todo/todoview.cpp:395
 #, kde-format
 msgctxt "@action:inmenu edit the to-do"
 msgid "&Edit…"
 msgstr "&Muokkaa…"
 
-#: todo/todoview.cpp:390
+#: todo/todoview.cpp:402
 #, kde-format
 msgctxt "@action:inmenu delete the to-do"
 msgid "&Delete"
 msgstr "&Poista"
 
-#: todo/todoview.cpp:399
+#: todo/todoview.cpp:411
 #, kde-format
 msgctxt "@action:inmenu print the to-do"
 msgid "&Print…"
 msgstr "T&ulosta…"
 
-#: todo/todoview.cpp:404
+#: todo/todoview.cpp:416
 #, kde-format
 msgctxt "@action:inmenu print preview the to-do"
 msgid "Print Previe&w…"
 msgstr "Tulostus&esikatselu…"
 
-#: todo/todoview.cpp:411
+#: todo/todoview.cpp:423
 #, kde-format
 msgctxt "@action:inmenu create a new to-do"
 msgid "New &To-do…"
 msgstr "Uusi t&ehtävä…"
 
-#: todo/todoview.cpp:415
+#: todo/todoview.cpp:427
 #, kde-format
 msgctxt "@action:inmenu create a new sub-to-do"
 msgid "New Su&b-to-do…"
 msgstr "Uusi &alitehtävä…"
 
-#: todo/todoview.cpp:419
+#: todo/todoview.cpp:431
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Make this To-do Independent"
 msgstr "Tee tästä tehtävästä &itsenäinen"
 
-#: todo/todoview.cpp:421
+#: todo/todoview.cpp:433
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Make all Sub-to-dos &Independent"
 msgstr "Tee kaikista &alitehtävistä itsenäisiä"
 
-#: todo/todoview.cpp:432
+#: todo/todoview.cpp:444
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Create Event from To-do"
 msgstr "Luo tehtävästä tapahtuma"
 
-#: todo/todoview.cpp:440
+#: todo/todoview.cpp:452
 #, kde-format
 msgctxt "@action:inmenu set or unset to-do is completed"
 msgid "Togg&le To-do Completed"
 msgstr "Vaihda t&ehtävän valmis-tilaa"
 
-#: todo/todoview.cpp:444
+#: todo/todoview.cpp:456
 #, kde-format
 msgctxt "@action:inmenu enable or disable reminder"
 msgid "&Toggle Reminder"
 msgstr "&Vaihda muistutuksen tilaa"
 
-#: todo/todoview.cpp:451
+#: todo/todoview.cpp:463
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Copy To"
 msgstr "&Kopioi kohteeseen"
 
-#: todo/todoview.cpp:458
+#: todo/todoview.cpp:470
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Move To"
 msgstr "&Siirrä kohteeseen"
 
-#: todo/todoview.cpp:469
+#: todo/todoview.cpp:481
 #, kde-format
 msgctxt "@action:inmenu delete completed to-dos"
 msgid "Pur&ge Completed"
 msgstr "Poista teh&dyt tehtävät"
 
-#: todo/todoview.cpp:472
+#: todo/todoview.cpp:484
 #, kde-format
 msgctxt "@action:inmenu unspecified priority"
 msgid "unspecified"
 msgstr "määrittämätön"
 
-#: todo/todoview.cpp:474
+#: todo/todoview.cpp:486
 #, kde-format
 msgctxt "@action:inmenu priority value=2"
 msgid "2"
 msgstr "2"
 
-#: todo/todoview.cpp:475
+#: todo/todoview.cpp:487
 #, kde-format
 msgctxt "@action:inmenu priority value=3"
 msgid "3"
 msgstr "3"
 
-#: todo/todoview.cpp:476
+#: todo/todoview.cpp:488
 #, kde-format
 msgctxt "@action:inmenu priority value=4"
 msgid "4"
 msgstr "4"
 
-#: todo/todoview.cpp:478
+#: todo/todoview.cpp:490
 #, kde-format
 msgctxt "@action:inmenu priority value=6"
 msgid "6"
 msgstr "6"
 
-#: todo/todoview.cpp:479
+#: todo/todoview.cpp:491
 #, kde-format
 msgctxt "@action:inmenu priority value=7"
 msgid "7"
 msgstr "7"
 
-#: todo/todoview.cpp:480
+#: todo/todoview.cpp:492
 #, kde-format
 msgctxt "@action:inmenu priority value=8"
 msgid "8"
 msgstr "8"
 
-#: todo/todoview.cpp:1169
+#: todo/todoview.cpp:1181
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display the sidebar"
 msgstr "Näytä sivupaneeli"
 
-#: todo/todoview.cpp:1172
+#: todo/todoview.cpp:1184
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Hide the sidebar"
 msgstr "Piilota sivupaneeli"
 
-#: todo/todoview.cpp:1191
+#: todo/todoview.cpp:1203
 #, kde-format
 msgctxt "@info::tooltip"
 msgid "Switch to the tree list display"
 msgstr "Vaihda puunäkymään"
 
-#: todo/todoview.cpp:1194
+#: todo/todoview.cpp:1206
 #, kde-format
 msgctxt "@info::tooltip"
 msgid "Switch to the flat list display"

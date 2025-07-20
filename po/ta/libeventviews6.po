@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-08 00:42+0000\n"
-"PO-Revision-Date: 2025-05-18 21:05+0530\n"
+"POT-Creation-Date: 2025-07-20 00:43+0000\n"
+"PO-Revision-Date: 2025-07-19 18:50+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.04.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -92,12 +92,12 @@ msgctxt "short_weekday short_monthname date (e.g. Mon Aug 13)"
 msgid "%1 %2 %3"
 msgstr "%1 %2 %3"
 
-#: agenda/agendaview.cpp:2232
+#: agenda/agendaview.cpp:2235
 #, kde-format
 msgid "Unable to modify this to-do, because it cannot be locked."
 msgstr "இச்செய்யவேண்டியதை பூட்ட முடியாத‍தால் இதை மாற்ற முடியாது."
 
-#: agenda/agendaview.cpp:2240
+#: agenda/agendaview.cpp:2243
 #, kde-format
 msgid "Unable to save %1 \"%2\"."
 msgstr "\"%2\" என்ற %1 தனை சேமிக்க முடியவில்லை."
@@ -116,13 +116,13 @@ msgstr "%1 என்ற நேரமண்டலத்தை &நீக்கு
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "12 Hour Clock"
-msgstr ""
+msgstr "12 மணிநேர கடிகாரம்"
 
 #: agenda/timelabels.cpp:336
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "24 Hour Clock"
-msgstr ""
+msgstr "24 மணிநேர கடிகாரம்"
 
 #: agenda/timelabels.cpp:381
 #, kde-format
@@ -550,7 +550,7 @@ msgstr ""
 #: eventviews.kcfg:174 viewerapp/settings.kcfg:24
 #, kde-format
 msgid "Hour size"
-msgstr ""
+msgstr "மணிநேர வரியின் அளவு"
 
 #. i18n: ectx: whatsthis, entry, group (Agenda View)
 #: eventviews.kcfg:175 viewerapp/settings.kcfg:25
@@ -671,14 +671,14 @@ msgstr ""
 #: viewerapp/settings.kcfg:153
 #, kde-format
 msgid "Color Usage"
-msgstr ""
+msgstr "நிறங்களை இடுவது"
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
 #: eventviews.kcfg:221 eventviews.kcfg:317
 #, kde-format
 msgid "Tag inside, calendar outside"
-msgstr ""
+msgstr "குறிச்சொல்லுக்கானது உள்ளே, நாள்காட்டிக்கானது வெளியே"
 
 #. i18n: ectx: whatsthis, entry, group (Agenda View)
 #: eventviews.kcfg:222
@@ -703,7 +703,7 @@ msgstr ""
 #: eventviews.kcfg:226 eventviews.kcfg:322
 #, kde-format
 msgid "Calendar inside, tag outside"
-msgstr ""
+msgstr "நாள்காட்டிக்கானது உள்ளே, குறிச்சொல்லுக்கானது வெளியே"
 
 #. i18n: ectx: whatsthis, entry, group (Agenda View)
 #: eventviews.kcfg:227
@@ -728,7 +728,7 @@ msgstr ""
 #: eventviews.kcfg:231 eventviews.kcfg:327
 #, kde-format
 msgid "Only tag"
-msgstr ""
+msgstr "குறிச்சொல் மட்டும்"
 
 #. i18n: ectx: whatsthis, entry, group (Agenda View)
 #: eventviews.kcfg:232
@@ -751,7 +751,7 @@ msgstr ""
 #: viewerapp/settings.kcfg:171
 #, kde-format
 msgid "Only calendar"
-msgstr ""
+msgstr "நாள்காட்டி மட்டும்"
 
 #. i18n: ectx: whatsthis, entry, group (Agenda View)
 #: eventviews.kcfg:237 viewerapp/settings.kcfg:87
@@ -789,7 +789,7 @@ msgstr ""
 #: eventviews.kcfg:249 viewerapp/settings.kcfg:95
 #, kde-format
 msgid "Multiple Calendar Display"
-msgstr ""
+msgstr "பல நாள்காட்டிகளைக் காட்டுவது"
 
 #. i18n: ectx: label, entry (AgendaViewCalendarDisplay), group (Agenda View)
 #: eventviews.kcfg:252 viewerapp/settings.kcfg:98
@@ -815,7 +815,7 @@ msgstr ""
 #: eventviews.kcfg:257 viewerapp/settings.kcfg:103
 #, kde-format
 msgid "Show calendars side by side"
-msgstr ""
+msgstr "நாள்காட்டிகளை பக்கத்துப்பக்கத்தில் காட்டு"
 
 #. i18n: ectx: whatsthis, entry (AgendaViewCalendarDisplay), group (Agenda View)
 #: eventviews.kcfg:258 viewerapp/settings.kcfg:104
@@ -849,7 +849,7 @@ msgstr ""
 #: eventviews.kcfg:264 viewerapp/settings.kcfg:110
 #, kde-format
 msgid "Tab through calendars"
-msgstr ""
+msgstr "நாள்காட்டிகளை கீற்றுகளில் காட்டு"
 
 #. i18n: ectx: label, entry (EnableMonthScroll), group (Month View)
 #: eventviews.kcfg:274 viewerapp/settings.kcfg:120
@@ -936,7 +936,7 @@ msgstr ""
 #: eventviews.kcfg:308 viewerapp/settings.kcfg:147
 #, kde-format
 msgid "Month view uses full window"
-msgstr ""
+msgstr "மாத பார்வை முழு சாளரத்தை பயன்படுத்தட்டும்"
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
 #: eventviews.kcfg:309 viewerapp/settings.kcfg:148
@@ -1500,13 +1500,13 @@ msgctxt "'Month day' for month view cells"
 msgid "%1 %2"
 msgstr "%1 %2"
 
-#: month/monthview.cpp:209 month/monthview.cpp:475
+#: month/monthview.cpp:209 month/monthview.cpp:479
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display calendar in a normal size"
 msgstr "நாள்காட்டியை சாதாரண அளவில் காட்டும்"
 
-#: month/monthview.cpp:210 month/monthview.cpp:478
+#: month/monthview.cpp:210 month/monthview.cpp:482
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display calendar in a full window"
@@ -1596,7 +1596,7 @@ msgctxt "@action:inmenu Unspecified priority"
 msgid "unspecified"
 msgstr "குறிப்பிடப்படாத‍து"
 
-#: todo/tododelegates.cpp:153 todo/todoview.cpp:473
+#: todo/tododelegates.cpp:153 todo/todoview.cpp:485
 #, kde-format
 msgctxt "@action:inmenu highest priority"
 msgid "1 (highest)"
@@ -1620,7 +1620,7 @@ msgctxt "@action:inmenu"
 msgid "4"
 msgstr "4"
 
-#: todo/tododelegates.cpp:157 todo/todoview.cpp:477
+#: todo/tododelegates.cpp:157 todo/todoview.cpp:489
 #, kde-format
 msgctxt "@action:inmenu medium priority"
 msgid "5 (medium)"
@@ -1644,27 +1644,27 @@ msgctxt "@action:inmenu"
 msgid "8"
 msgstr "8"
 
-#: todo/tododelegates.cpp:161 todo/todoview.cpp:481
+#: todo/tododelegates.cpp:161 todo/todoview.cpp:493
 #, kde-format
 msgctxt "@action:inmenu lowest priority"
 msgid "9 (lowest)"
 msgstr "9 (குறைவானது)"
 
-#: todo/todoview.cpp:244
+#: todo/todoview.cpp:256
 #, fuzzy, kde-format
 #| msgid "Cannot move to-do to itself or a child of itself."
 msgctxt "@info"
 msgid "Cannot move to-do to itself or a child of itself."
 msgstr "செய்யவேண்டியதை தனக்குள்ளோ தன்னை சார்ந்த‍தனுள்ளோ நகரத்த முடியாது."
 
-#: todo/todoview.cpp:245
+#: todo/todoview.cpp:257
 #, fuzzy, kde-format
 #| msgid "Drop To-do"
 msgctxt "@title:window"
 msgid "Drop To-do"
 msgstr "செய்யவேண்டியதை இழுத்துப்போடுவது"
 
-#: todo/todoview.cpp:316
+#: todo/todoview.cpp:328
 #, fuzzy, kde-format
 #| msgctxt "@action:inmenu"
 #| msgid "Create Event from To-do"
@@ -1672,7 +1672,7 @@ msgctxt "@info:tooltip"
 msgid "Create an open-ended to-do"
 msgstr "செய்யவேண்டியதை நிகழ்விலிருந்து உருவாக்கு"
 
-#: todo/todoview.cpp:319
+#: todo/todoview.cpp:331
 #, kde-kuit-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1682,7 +1682,7 @@ msgid ""
 "note></para>"
 msgstr ""
 
-#: todo/todoview.cpp:329
+#: todo/todoview.cpp:341
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Display to-do list in a full window"
@@ -1690,7 +1690,7 @@ msgctxt "@info:tooltip"
 msgid "Display to-dos in a full window without the sidebar"
 msgstr "செய்யவேண்டியவற்றின் பட்டியலை முழுச்சாளரத்தில் காட்டும்"
 
-#: todo/todoview.cpp:331
+#: todo/todoview.cpp:343
 #, fuzzy, kde-format
 #| msgctxt "@info:whatsthis"
 #| msgid ""
@@ -1706,7 +1706,7 @@ msgstr ""
 "காட்டுப்படும். எந்த உருப்படி எதில் சார்ந்திருக்கிறது என்ற விவரங்கள் இக்காட்சிமுறையில் "
 "காட்டப்படா."
 
-#: todo/todoview.cpp:337
+#: todo/todoview.cpp:349
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Display to-dos in flat list instead of a tree"
@@ -1714,7 +1714,7 @@ msgctxt "@info:tooltip"
 msgid "Display to-dos in a flat list or a tree"
 msgstr "செய்யவேண்டியவற்றை கிளைப்படம் போல் இல்லாமல் ஒரே மட்டத்தில் காட்டு"
 
-#: todo/todoview.cpp:339
+#: todo/todoview.cpp:351
 #, fuzzy, kde-format
 #| msgctxt "@info:whatsthis"
 #| msgid ""
@@ -1730,67 +1730,67 @@ msgstr ""
 "காட்டுப்படும். எந்த உருப்படி எதில் சார்ந்திருக்கிறது என்ற விவரங்கள் இக்காட்சிமுறையில் "
 "காட்டப்படா."
 
-#: todo/todoview.cpp:378
+#: todo/todoview.cpp:390
 #, kde-format
 msgctxt "@action:inmenu show the to-do"
 msgid "&Show"
 msgstr "&காட்டு"
 
-#: todo/todoview.cpp:383
+#: todo/todoview.cpp:395
 #, kde-format
 msgctxt "@action:inmenu edit the to-do"
 msgid "&Edit…"
 msgstr "&திருத்து…"
 
-#: todo/todoview.cpp:390
+#: todo/todoview.cpp:402
 #, kde-format
 msgctxt "@action:inmenu delete the to-do"
 msgid "&Delete"
 msgstr "&நீக்கு"
 
-#: todo/todoview.cpp:399
+#: todo/todoview.cpp:411
 #, kde-format
 msgctxt "@action:inmenu print the to-do"
 msgid "&Print…"
 msgstr "&அச்சிடு…"
 
-#: todo/todoview.cpp:404
+#: todo/todoview.cpp:416
 #, kde-format
 msgctxt "@action:inmenu print preview the to-do"
 msgid "Print Previe&w…"
 msgstr "அ&ச்சு முன்னோட்டம்…"
 
-#: todo/todoview.cpp:411
+#: todo/todoview.cpp:423
 #, kde-format
 msgctxt "@action:inmenu create a new to-do"
 msgid "New &To-do…"
 msgstr "&புதிய செய்யவேண்டியது…"
 
-#: todo/todoview.cpp:415
+#: todo/todoview.cpp:427
 #, kde-format
 msgctxt "@action:inmenu create a new sub-to-do"
 msgid "New Su&b-to-do…"
 msgstr "புதிய சா&ர்-செய்யவேண்டியது…"
 
-#: todo/todoview.cpp:419
+#: todo/todoview.cpp:431
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Make this To-do Independent"
 msgstr "&இச்செய்யவேண்டியதை தனித்திருக்க செய்"
 
-#: todo/todoview.cpp:421
+#: todo/todoview.cpp:433
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Make all Sub-to-dos &Independent"
 msgstr "&சார்ந்த அனைத்து செய்யவேண்டியவற்றை தனித்திருக்க செய்"
 
-#: todo/todoview.cpp:432
+#: todo/todoview.cpp:444
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Create Event from To-do"
 msgstr "செய்யவேண்டியதை நிகழ்விலிருந்து உருவாக்கு"
 
-#: todo/todoview.cpp:440
+#: todo/todoview.cpp:452
 #, fuzzy, kde-format
 #| msgctxt "@action:inmenu delete completed to-dos"
 #| msgid "Pur&ge Completed"
@@ -1798,91 +1798,91 @@ msgctxt "@action:inmenu set or unset to-do is completed"
 msgid "Togg&le To-do Completed"
 msgstr "மு&டித்தவற்றை நீக்கு"
 
-#: todo/todoview.cpp:444
+#: todo/todoview.cpp:456
 #, kde-format
 msgctxt "@action:inmenu enable or disable reminder"
 msgid "&Toggle Reminder"
 msgstr ""
 
-#: todo/todoview.cpp:451
+#: todo/todoview.cpp:463
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Copy To"
 msgstr "வே&றிடத்தில் நகலெடு"
 
-#: todo/todoview.cpp:458
+#: todo/todoview.cpp:470
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Move To"
 msgstr "வேறிடத்துக்கு நக&ர்த்து"
 
-#: todo/todoview.cpp:469
+#: todo/todoview.cpp:481
 #, kde-format
 msgctxt "@action:inmenu delete completed to-dos"
 msgid "Pur&ge Completed"
 msgstr "மு&டித்தவற்றை நீக்கு"
 
-#: todo/todoview.cpp:472
+#: todo/todoview.cpp:484
 #, kde-format
 msgctxt "@action:inmenu unspecified priority"
 msgid "unspecified"
 msgstr "குறிப்பிடப்படாத‍து"
 
-#: todo/todoview.cpp:474
+#: todo/todoview.cpp:486
 #, kde-format
 msgctxt "@action:inmenu priority value=2"
 msgid "2"
 msgstr "2"
 
-#: todo/todoview.cpp:475
+#: todo/todoview.cpp:487
 #, kde-format
 msgctxt "@action:inmenu priority value=3"
 msgid "3"
 msgstr "3"
 
-#: todo/todoview.cpp:476
+#: todo/todoview.cpp:488
 #, kde-format
 msgctxt "@action:inmenu priority value=4"
 msgid "4"
 msgstr "4"
 
-#: todo/todoview.cpp:478
+#: todo/todoview.cpp:490
 #, kde-format
 msgctxt "@action:inmenu priority value=6"
 msgid "6"
 msgstr "6"
 
-#: todo/todoview.cpp:479
+#: todo/todoview.cpp:491
 #, kde-format
 msgctxt "@action:inmenu priority value=7"
 msgid "7"
 msgstr "7"
 
-#: todo/todoview.cpp:480
+#: todo/todoview.cpp:492
 #, kde-format
 msgctxt "@action:inmenu priority value=8"
 msgid "8"
 msgstr "8"
 
-#: todo/todoview.cpp:1169
+#: todo/todoview.cpp:1181
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display the sidebar"
 msgstr ""
 
-#: todo/todoview.cpp:1172
+#: todo/todoview.cpp:1184
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Hide the sidebar"
 msgstr ""
 
-#: todo/todoview.cpp:1191
+#: todo/todoview.cpp:1203
 #, kde-format
 msgctxt "@info::tooltip"
 msgid "Switch to the tree list display"
 msgstr ""
 
-#: todo/todoview.cpp:1194
+#: todo/todoview.cpp:1206
 #, kde-format
 msgctxt "@info::tooltip"
 msgid "Switch to the flat list display"
