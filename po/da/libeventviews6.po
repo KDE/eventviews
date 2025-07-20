@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-08 02:38+0000\n"
+"POT-Creation-Date: 2025-07-20 02:39+0000\n"
 "PO-Revision-Date: 2020-07-27 22:01+0200\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -102,12 +102,12 @@ msgctxt "short_weekday short_monthname date (e.g. Mon Aug 13)"
 msgid "%1 %2 %3"
 msgstr "%1 %2 %3"
 
-#: agenda/agendaview.cpp:2232
+#: agenda/agendaview.cpp:2235
 #, kde-format
 msgid "Unable to modify this to-do, because it cannot be locked."
 msgstr "Kan ikke ændre dette gøremål, eftersom det ikke kan låses."
 
-#: agenda/agendaview.cpp:2240
+#: agenda/agendaview.cpp:2243
 #, kde-format
 msgid "Unable to save %1 \"%2\"."
 msgstr "Kan ikke gemme %1 \"%2\"."
@@ -1733,13 +1733,13 @@ msgctxt "'Month day' for month view cells"
 msgid "%1 %2"
 msgstr "%1 %2"
 
-#: month/monthview.cpp:209 month/monthview.cpp:475
+#: month/monthview.cpp:209 month/monthview.cpp:479
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display calendar in a normal size"
 msgstr "Vis kalender i normal størrelse"
 
-#: month/monthview.cpp:210 month/monthview.cpp:478
+#: month/monthview.cpp:210 month/monthview.cpp:482
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display calendar in a full window"
@@ -1835,7 +1835,7 @@ msgctxt "@action:inmenu Unspecified priority"
 msgid "unspecified"
 msgstr "ikke angivet"
 
-#: todo/tododelegates.cpp:153 todo/todoview.cpp:473
+#: todo/tododelegates.cpp:153 todo/todoview.cpp:485
 #, kde-format
 msgctxt "@action:inmenu highest priority"
 msgid "1 (highest)"
@@ -1859,7 +1859,7 @@ msgctxt "@action:inmenu"
 msgid "4"
 msgstr "4"
 
-#: todo/tododelegates.cpp:157 todo/todoview.cpp:477
+#: todo/tododelegates.cpp:157 todo/todoview.cpp:489
 #, kde-format
 msgctxt "@action:inmenu medium priority"
 msgid "5 (medium)"
@@ -1883,27 +1883,27 @@ msgctxt "@action:inmenu"
 msgid "8"
 msgstr "8"
 
-#: todo/tododelegates.cpp:161 todo/todoview.cpp:481
+#: todo/tododelegates.cpp:161 todo/todoview.cpp:493
 #, kde-format
 msgctxt "@action:inmenu lowest priority"
 msgid "9 (lowest)"
 msgstr "9 (lavest)"
 
-#: todo/todoview.cpp:244
+#: todo/todoview.cpp:256
 #, fuzzy, kde-format
 #| msgid "Cannot move to-do to itself or a child of itself."
 msgctxt "@info"
 msgid "Cannot move to-do to itself or a child of itself."
 msgstr "Kan ikke flytte gøremål til sig selv eller til en afledt af sig selv."
 
-#: todo/todoview.cpp:245
+#: todo/todoview.cpp:257
 #, fuzzy, kde-format
 #| msgid "Drop To-do"
 msgctxt "@title:window"
 msgid "Drop To-do"
 msgstr "Drop gøremål"
 
-#: todo/todoview.cpp:316
+#: todo/todoview.cpp:328
 #, fuzzy, kde-format
 #| msgctxt "@action:inmenu"
 #| msgid "Create Event"
@@ -1911,7 +1911,7 @@ msgctxt "@info:tooltip"
 msgid "Create an open-ended to-do"
 msgstr "Opret begivenhed"
 
-#: todo/todoview.cpp:319
+#: todo/todoview.cpp:331
 #, kde-kuit-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1921,7 +1921,7 @@ msgid ""
 "note></para>"
 msgstr ""
 
-#: todo/todoview.cpp:329
+#: todo/todoview.cpp:341
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Display to-do list in a full window"
@@ -1929,7 +1929,7 @@ msgctxt "@info:tooltip"
 msgid "Display to-dos in a full window without the sidebar"
 msgstr "Vis gøremålslisten i et helt vindue"
 
-#: todo/todoview.cpp:331
+#: todo/todoview.cpp:343
 #, fuzzy, kde-format
 #| msgctxt "@info:whatsthis"
 #| msgid ""
@@ -1944,7 +1944,7 @@ msgstr ""
 "Markering af denne indstilling får gøremål til at vises som en flad liste i "
 "stedet for et hierarkisk træ. Forælderforholdene fjernes i visningen."
 
-#: todo/todoview.cpp:337
+#: todo/todoview.cpp:349
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Display to-dos in flat list instead of a tree"
@@ -1952,7 +1952,7 @@ msgctxt "@info:tooltip"
 msgid "Display to-dos in a flat list or a tree"
 msgstr "Vis gøremål i en flad liste i stedet for som et træ"
 
-#: todo/todoview.cpp:339
+#: todo/todoview.cpp:351
 #, fuzzy, kde-format
 #| msgctxt "@info:whatsthis"
 #| msgid ""
@@ -1967,33 +1967,33 @@ msgstr ""
 "Markering af denne indstilling får gøremål til at vises som en flad liste i "
 "stedet for et hierarkisk træ. Forælderforholdene fjernes i visningen."
 
-#: todo/todoview.cpp:378
+#: todo/todoview.cpp:390
 #, kde-format
 msgctxt "@action:inmenu show the to-do"
 msgid "&Show"
 msgstr "&Vis"
 
-#: todo/todoview.cpp:383
+#: todo/todoview.cpp:395
 #, fuzzy, kde-format
 #| msgid "&Edit"
 msgctxt "@action:inmenu edit the to-do"
 msgid "&Edit…"
 msgstr "&Redigér"
 
-#: todo/todoview.cpp:390
+#: todo/todoview.cpp:402
 #, kde-format
 msgctxt "@action:inmenu delete the to-do"
 msgid "&Delete"
 msgstr "&Slet"
 
-#: todo/todoview.cpp:399
+#: todo/todoview.cpp:411
 #, fuzzy, kde-format
 #| msgid "&Print"
 msgctxt "@action:inmenu print the to-do"
 msgid "&Print…"
 msgstr "&Udskriv"
 
-#: todo/todoview.cpp:404
+#: todo/todoview.cpp:416
 #, fuzzy, kde-format
 #| msgctxt "@action:inmenu print preview the to-do"
 #| msgid "Print Previe&w..."
@@ -2001,7 +2001,7 @@ msgctxt "@action:inmenu print preview the to-do"
 msgid "Print Previe&w…"
 msgstr "&Vis udskrift..."
 
-#: todo/todoview.cpp:411
+#: todo/todoview.cpp:423
 #, fuzzy, kde-format
 #| msgctxt "@action:inmenu create a new to-do"
 #| msgid "New &To-do..."
@@ -2009,7 +2009,7 @@ msgctxt "@action:inmenu create a new to-do"
 msgid "New &To-do…"
 msgstr "Nyt &gøremål..."
 
-#: todo/todoview.cpp:415
+#: todo/todoview.cpp:427
 #, fuzzy, kde-format
 #| msgctxt "@action:inmenu create a new sub-to-do"
 #| msgid "New Su&b-to-do..."
@@ -2017,19 +2017,19 @@ msgctxt "@action:inmenu create a new sub-to-do"
 msgid "New Su&b-to-do…"
 msgstr "Nyt &delgøremål..."
 
-#: todo/todoview.cpp:419
+#: todo/todoview.cpp:431
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Make this To-do Independent"
 msgstr "&Gør dette gøremål uafhængigt"
 
-#: todo/todoview.cpp:421
+#: todo/todoview.cpp:433
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Make all Sub-to-dos &Independent"
 msgstr "Gør alle delgøremål &uafhængige"
 
-#: todo/todoview.cpp:432
+#: todo/todoview.cpp:444
 #, fuzzy, kde-format
 #| msgctxt "@action:inmenu"
 #| msgid "Create Event"
@@ -2037,7 +2037,7 @@ msgctxt "@action:inmenu"
 msgid "Create Event from To-do"
 msgstr "Opret begivenhed"
 
-#: todo/todoview.cpp:440
+#: todo/todoview.cpp:452
 #, fuzzy, kde-format
 #| msgctxt "@action:inmenu delete completed to-dos"
 #| msgid "Pur&ge Completed"
@@ -2045,93 +2045,93 @@ msgctxt "@action:inmenu set or unset to-do is completed"
 msgid "Togg&le To-do Completed"
 msgstr "R&yd gennemførte"
 
-#: todo/todoview.cpp:444
+#: todo/todoview.cpp:456
 #, fuzzy, kde-format
 #| msgid "Reminder"
 msgctxt "@action:inmenu enable or disable reminder"
 msgid "&Toggle Reminder"
 msgstr "Påmindelse"
 
-#: todo/todoview.cpp:451
+#: todo/todoview.cpp:463
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Copy To"
 msgstr "&Kopiér til"
 
-#: todo/todoview.cpp:458
+#: todo/todoview.cpp:470
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Move To"
 msgstr "&Flyt til"
 
-#: todo/todoview.cpp:469
+#: todo/todoview.cpp:481
 #, kde-format
 msgctxt "@action:inmenu delete completed to-dos"
 msgid "Pur&ge Completed"
 msgstr "R&yd gennemførte"
 
-#: todo/todoview.cpp:472
+#: todo/todoview.cpp:484
 #, kde-format
 msgctxt "@action:inmenu unspecified priority"
 msgid "unspecified"
 msgstr "ikke angivet"
 
-#: todo/todoview.cpp:474
+#: todo/todoview.cpp:486
 #, kde-format
 msgctxt "@action:inmenu priority value=2"
 msgid "2"
 msgstr "2"
 
-#: todo/todoview.cpp:475
+#: todo/todoview.cpp:487
 #, kde-format
 msgctxt "@action:inmenu priority value=3"
 msgid "3"
 msgstr "3"
 
-#: todo/todoview.cpp:476
+#: todo/todoview.cpp:488
 #, kde-format
 msgctxt "@action:inmenu priority value=4"
 msgid "4"
 msgstr "4"
 
-#: todo/todoview.cpp:478
+#: todo/todoview.cpp:490
 #, kde-format
 msgctxt "@action:inmenu priority value=6"
 msgid "6"
 msgstr "6"
 
-#: todo/todoview.cpp:479
+#: todo/todoview.cpp:491
 #, kde-format
 msgctxt "@action:inmenu priority value=7"
 msgid "7"
 msgstr "7"
 
-#: todo/todoview.cpp:480
+#: todo/todoview.cpp:492
 #, kde-format
 msgctxt "@action:inmenu priority value=8"
 msgid "8"
 msgstr "8"
 
-#: todo/todoview.cpp:1169
+#: todo/todoview.cpp:1181
 #, fuzzy, kde-format
 #| msgid "Display the current-time indicator"
 msgctxt "@info:tooltip"
 msgid "Display the sidebar"
 msgstr "Vis indikation af nuværende tidspunkt"
 
-#: todo/todoview.cpp:1172
+#: todo/todoview.cpp:1184
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Hide the sidebar"
 msgstr ""
 
-#: todo/todoview.cpp:1191
+#: todo/todoview.cpp:1203
 #, kde-format
 msgctxt "@info::tooltip"
 msgid "Switch to the tree list display"
 msgstr ""
 
-#: todo/todoview.cpp:1194
+#: todo/todoview.cpp:1206
 #, kde-format
 msgctxt "@info::tooltip"
 msgid "Switch to the flat list display"
