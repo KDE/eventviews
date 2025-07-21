@@ -544,17 +544,21 @@ void TodoView::setModel(QAbstractItemModel *model)
 
 void TodoView::addCalendar(const Akonadi::CollectionCalendar::Ptr &calendar)
 {
-    EventView::addCalendar(calendar);
-    mCalendarFilterModel->addCalendar(calendar);
-    if (calendars().size() == 1) {
-        mProxyModel->setCalFilter(calendar->filter());
+    if (calendar && calendar->collection().isValid()) {
+        EventView::addCalendar(calendar);
+        mCalendarFilterModel->addCalendar(calendar);
+        if (calendars().size() == 1) {
+            mProxyModel->setCalFilter(calendar->filter());
+        }
     }
 }
 
 void TodoView::removeCalendar(const Akonadi::CollectionCalendar::Ptr &calendar)
 {
-    mCalendarFilterModel->removeCalendar(calendar);
-    EventView::removeCalendar(calendar);
+    if (calendar && calendar->collection().isValid()) {
+        mCalendarFilterModel->removeCalendar(calendar);
+        EventView::removeCalendar(calendar);
+    }
 }
 
 Akonadi::Item::List TodoView::selectedIncidences() const
