@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-20 00:43+0000\n"
+"POT-Creation-Date: 2025-07-21 00:42+0000\n"
 "PO-Revision-Date: 2024-06-21 23:56+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -2045,26 +2045,26 @@ msgctxt "@action:inmenu priority value=8"
 msgid "8"
 msgstr "8"
 
-#: todo/todoview.cpp:1181
+#: todo/todoview.cpp:1185
 #, fuzzy, kde-format
 #| msgid "Display the current-time indicator"
 msgctxt "@info:tooltip"
 msgid "Display the sidebar"
 msgstr "Montri la nuntempan indikilon"
 
-#: todo/todoview.cpp:1184
+#: todo/todoview.cpp:1188
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Hide the sidebar"
 msgstr ""
 
-#: todo/todoview.cpp:1203
+#: todo/todoview.cpp:1207
 #, kde-format
 msgctxt "@info::tooltip"
 msgid "Switch to the tree list display"
 msgstr ""
 
-#: todo/todoview.cpp:1206
+#: todo/todoview.cpp:1210
 #, kde-format
 msgctxt "@info::tooltip"
 msgid "Switch to the flat list display"

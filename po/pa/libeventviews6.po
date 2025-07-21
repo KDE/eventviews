@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-20 00:43+0000\n"
+"POT-Creation-Date: 2025-07-21 00:42+0000\n"
 "PO-Revision-Date: 2010-12-26 08:43+0530\n"
 "Last-Translator: A S Alam <aalam@users.sf.net>\n"
 "Language-Team: Punjabi/Panjabi <punjabi-users@lists.sf.net>\n"
@@ -1838,25 +1838,25 @@ msgctxt "@action:inmenu priority value=8"
 msgid "8"
 msgstr ""
 
-#: todo/todoview.cpp:1181
+#: todo/todoview.cpp:1185
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display the sidebar"
 msgstr ""
 
-#: todo/todoview.cpp:1184
+#: todo/todoview.cpp:1188
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Hide the sidebar"
 msgstr ""
 
-#: todo/todoview.cpp:1203
+#: todo/todoview.cpp:1207
 #, kde-format
 msgctxt "@info::tooltip"
 msgid "Switch to the tree list display"
 msgstr ""
 
-#: todo/todoview.cpp:1206
+#: todo/todoview.cpp:1210
 #, kde-format
 msgctxt "@info::tooltip"
 msgid "Switch to the flat list display"
