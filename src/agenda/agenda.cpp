@@ -1744,7 +1744,6 @@ AgendaItem::QPtr Agenda::insertItem(const KCalendarCore::Incidence::Ptr &inciden
         YTop = d->mRows - 1;
     }
     if (YBottom <= YTop) {
-        qCDebug(CALENDARVIEW_LOG) << "Text:" << agendaItem->text() << " YSize<0";
         YBottom = YTop;
     }
 
