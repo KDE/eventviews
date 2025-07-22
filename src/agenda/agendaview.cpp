@@ -1024,8 +1024,12 @@ void AgendaViewPrivate::insertIncidence(const KCalendarCore::Incidence::Ptr &inc
             // start time. This way is best because it preserves the duration of the event. There are some
             // corner cases where the duration would be messed up, for example a UTC event that when
             // converted to local has dtStart() in day light saving time, but dtEnd() outside DST.
-            // It could create events with 0 duration.
-            const int durationOfFirstOccurrence = event->dtStart().secsTo(event->dtEnd());
+            int durationOfFirstOccurrence = event->dtStart().secsTo(event->dtEnd());
+            if (durationOfFirstOccurrence <= 0) {
+                // https://bugs.kde.org/show_bug.cgi?id=61740
+                // Display 0 duration events as 30 minutes long to have enough space for icons and text
+                durationOfFirstOccurrence = 30 * 60;
+            }
             QTime endTime = startTime.addSecs(durationOfFirstOccurrence);
 
             startY = mAgenda->timeToY(startTime);
