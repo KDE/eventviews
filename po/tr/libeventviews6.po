@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-20 02:39+0000\n"
+"POT-Creation-Date: 2025-07-22 02:39+0000\n"
 "PO-Revision-Date: 2025-06-03 13:30+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -2016,25 +2016,25 @@ msgctxt "@action:inmenu priority value=8"
 msgid "8"
 msgstr "8"
 
-#: todo/todoview.cpp:1181
+#: todo/todoview.cpp:1185
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display the sidebar"
 msgstr "Kenar çubuğunu görüntüle"
 
-#: todo/todoview.cpp:1184
+#: todo/todoview.cpp:1188
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Hide the sidebar"
 msgstr "Kenar çubuğunu gizle"
 
-#: todo/todoview.cpp:1203
+#: todo/todoview.cpp:1207
 #, kde-format
 msgctxt "@info::tooltip"
 msgid "Switch to the tree list display"
 msgstr "Ağaç liste görüntüsüne geç"
 
-#: todo/todoview.cpp:1206
+#: todo/todoview.cpp:1210
 #, kde-format
 msgctxt "@info::tooltip"
 msgid "Switch to the flat list display"
