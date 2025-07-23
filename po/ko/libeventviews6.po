@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-22 02:39+0000\n"
+"POT-Creation-Date: 2025-07-23 02:37+0000\n"
 "PO-Revision-Date: 2025-06-11 00:09+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -91,12 +91,12 @@ msgctxt "short_weekday short_monthname date (e.g. Mon Aug 13)"
 msgid "%1 %2 %3"
 msgstr "%2 %3일(%1)"
 
-#: agenda/agendaview.cpp:2235
+#: agenda/agendaview.cpp:2239
 #, kde-format
 msgid "Unable to modify this to-do, because it cannot be locked."
 msgstr "항목을 잠글 수 없어서 이 할 일을 편집할 수 없습니다."
 
-#: agenda/agendaview.cpp:2243
+#: agenda/agendaview.cpp:2247
 #, kde-format
 msgid "Unable to save %1 \"%2\"."
 msgstr "%1 \"%2\"을(를) 저장할 수 없습니다."
