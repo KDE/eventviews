@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-21 00:42+0000\n"
+"POT-Creation-Date: 2025-07-23 00:43+0000\n"
 "PO-Revision-Date: 2025-06-02 08:28+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -95,12 +95,12 @@ msgctxt "short_weekday short_monthname date (e.g. Mon Aug 13)"
 msgid "%1 %2 %3"
 msgstr "%1 %2 %3"
 
-#: agenda/agendaview.cpp:2235
+#: agenda/agendaview.cpp:2239
 #, kde-format
 msgid "Unable to modify this to-do, because it cannot be locked."
 msgstr "לא ניתן לשנות את המטלה הזאת כיוון שאי אפשר לנעול אותה."
 
-#: agenda/agendaview.cpp:2243
+#: agenda/agendaview.cpp:2247
 #, kde-format
 msgid "Unable to save %1 \"%2\"."
 msgstr "לא ניתן לשמור את %1 „%2”."
