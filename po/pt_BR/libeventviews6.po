@@ -5,20 +5,21 @@
 # André Marcelo Alvarenga <alvarenga@kde.org>, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2018.
 # Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2010, 2018, 2019, 2021, 2023.
 # Aracele Torres <araceletorres@gmail.com>, 2010.
+# SPDX-FileCopyrightText: 2025 Marcus Gama <marcus.gama@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-23 02:37+0000\n"
-"PO-Revision-Date: 2023-10-17 19:53-0300\n"
-"Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
+"PO-Revision-Date: 2025-07-26 14:52-0300\n"
+"Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 25.04.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -31,8 +32,7 @@ msgid "Your emails"
 msgstr "alvarenga@kde.org"
 
 #: agenda/agenda.cpp:956
-#, fuzzy, kde-format
-#| msgid "Unable to lock item for modification. You cannot make any changes."
+#, kde-format
 msgctxt "@info"
 msgid "Unable to lock item for modification. You cannot make any changes."
 msgstr ""
@@ -46,16 +46,13 @@ msgid "Locking Failed"
 msgstr "O bloqueio falhou"
 
 #: agenda/agenda.cpp:1173
-#, fuzzy, kde-format
-#| msgid "Dissociate event from recurrence"
+#, kde-format
 msgctxt "@info/plain"
 msgid "Dissociate event from recurrence"
 msgstr "Desassociar o evento da recorrência"
 
 #: agenda/agenda.cpp:1196 month/monthitem.cpp:450
-#, fuzzy, kde-format
-#| msgid ""
-#| "Unable to add the exception item to the calendar. No change will be done."
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Unable to add the exception item to the calendar. No change will be done."
@@ -115,8 +112,7 @@ msgid "Unable to save %1 \"%2\"."
 msgstr "Não foi possível salvar %1 \"%2\"."
 
 #: agenda/timelabels.cpp:327
-#, fuzzy, kde-format
-#| msgid "&Add Timezones..."
+#, kde-format
 msgid "&Add Timezones…"
 msgstr "&Adicionar fusos horários..."
 
@@ -129,13 +125,13 @@ msgstr "&Remover fuso horário %1"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "12 Hour Clock"
-msgstr ""
+msgstr "Relógio de 12 horas"
 
 #: agenda/timelabels.cpp:336
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "24 Hour Clock"
-msgstr ""
+msgstr "Relógio de 24 horas"
 
 #: agenda/timelabels.cpp:381
 #, kde-format
@@ -491,22 +487,18 @@ msgstr ""
 
 #. i18n: ectx: label, entry, group (General View)
 #: eventviews.kcfg:128
-#, fuzzy, kde-format
-#| msgid "To-dos use category colors"
+#, kde-format
 msgid "To-dos use tag colors"
-msgstr "As tarefas usam as cores da categoria"
+msgstr "As tarefas usam as cores da etiqueta"
 
 #. i18n: ectx: whatsthis, entry, group (General View)
 #: eventviews.kcfg:129
-#, fuzzy, kde-format
-#| msgid ""
-#| "Check this box so that to-dos will use category colors and not colors "
-#| "specific to their due, due today or overdue state"
+#, kde-format
 msgid ""
 "Check this box so that to-dos will use tag colors and not colors specific to "
 "their due, due today or overdue state"
 msgstr ""
-"Marque esta opção para que as tarefas usem as cores da categoria e não as "
+"Marque esta opção para que as tarefas usem as cores da etiqueta e não as "
 "cores específicas do seu estado de vencido, a tempo ou vencido hoje"
 
 #. i18n: ectx: label, entry, group (General View)
@@ -589,7 +581,7 @@ msgstr ""
 #: eventviews.kcfg:159
 #, kde-format
 msgid "Show journals instead of events when in Journal View"
-msgstr "Mostrar diários em vez de eventos quando estiver na Visão Diário"
+msgstr "Mostrar diários em vez de eventos quando estiver na Visão do Diário"
 
 #. i18n: ectx: whatsthis, entry (HighlightJournals), group (General View)
 #: eventviews.kcfg:160
@@ -599,7 +591,7 @@ msgid ""
 "Date Navigator when in journal view."
 msgstr ""
 "Marque esta opção para mostrar os dias que contêm diários em negrito no "
-"navegador de datas, quando estiver na visão diário."
+"navegador de datas, quando estiver na visão do diário."
 
 #. i18n: ectx: label, entry (WeekNumbersShowWork), group (General View)
 #: eventviews.kcfg:165
@@ -765,116 +757,90 @@ msgstr "Uso das cores"
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
 #: eventviews.kcfg:221 eventviews.kcfg:317
-#, fuzzy, kde-format
-#| msgid "Category inside, calendar outside"
+#, kde-format
 msgid "Tag inside, calendar outside"
-msgstr "Categoria interna, calendário externo"
+msgstr "Etiqueta interna, calendário externo"
 
 #. i18n: ectx: whatsthis, entry, group (Agenda View)
 #: eventviews.kcfg:222
-#, fuzzy, kde-format
-#| msgid ""
-#| "Select the \"Category inside, calendar outside\" option if you would like "
-#| "to draw calendar items in their associated category color, with the "
-#| "item's border drawn in the color of its calendar. Please use the Colors "
-#| "and Fonts configuration page for setting these colors."
+#, kde-format
 msgid ""
 "Select the \"Tag inside, calendar outside\" option if you would like to draw "
 "calendar items in their associated tag color, with the item's border drawn "
 "in the color of its calendar. Please use the Colors and Fonts configuration "
 "page for setting these colors."
 msgstr ""
-"Selecione a opção \"Categoria interna, calendário externo\" se quiser "
-"desenhar os itens do calendário com a sua cor de categoria associada, tendo "
-"as bordas do item desenhado com a cor do seu calendário. Use a página de "
+"Selecione a opção \"Etiqueta interna, calendário externo\" se quiser "
+"desenhar os itens do calendário com a sua cor de etiqueta associada, tendo "
+"as bordas do item desenhadas com a cor do seu calendário. Use a página de "
 "configuração de Cores e Fontes para definição dessas cores."
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
 #: eventviews.kcfg:223
-#, fuzzy, kde-format
-#| msgid ""
-#| "Draw agenda items in their category color inside and calendar color for "
-#| "their border"
+#, kde-format
 msgid ""
 "Draw agenda items in their tag color inside and calendar color for their "
 "border"
 msgstr ""
-"Desenha os itens da agenda com a cor da sua categoria interna e a cor do "
+"Desenha os itens da agenda com a cor da sua etiqueta interna e a cor do "
 "calendário como borda"
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
 #: eventviews.kcfg:226 eventviews.kcfg:322
-#, fuzzy, kde-format
-#| msgid "Calendar inside, category outside"
+#, kde-format
 msgid "Calendar inside, tag outside"
-msgstr "Calendário interno, categoria externa"
+msgstr "Calendário interno, etiqueta externa"
 
 #. i18n: ectx: whatsthis, entry, group (Agenda View)
 #: eventviews.kcfg:227
-#, fuzzy, kde-format
-#| msgid ""
-#| "Select the \"Calendar inside, category outside\" option if you would like "
-#| "to draw calendar items in their associated calendar color, with the "
-#| "item's border drawn in the color of its category. Please use the Colors "
-#| "and Fonts configuration page for setting these colors."
+#, kde-format
 msgid ""
 "Select the \"Calendar inside, tag outside\" option if you would like to draw "
 "calendar items in their associated calendar color, with the item's border "
 "drawn in the color of its tag. Please use the Colors and Fonts configuration "
 "page for setting these colors."
 msgstr ""
-"Selecione a opção \"Calendário interno, categoria externa\" se quiser "
+"Selecione a opção \"Calendário interno, etiqueta externa\" se quiser "
 "desenhar os itens do calendário com a sua cor de calendário associado, tendo "
-"a borda do item desenhado com a cor da sua categoria. Use a página de "
+"a borda do item desenhado com a cor da sua etiqueta. Use a página de "
 "configuração de Cores e Fontes para definir essas cores."
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
 #: eventviews.kcfg:228
-#, fuzzy, kde-format
-#| msgid ""
-#| "Draw agenda items in their calendar color inside and category color for "
-#| "their border"
+#, kde-format
 msgid ""
 "Draw agenda items in their calendar color inside and tag color for their "
 "border"
 msgstr ""
-"Desenha os itens da agenda com a cor da sua categoria como borda e a cor "
+"Desenha os itens da agenda com a cor da sua etiqueta como borda e a cor do "
 "calendário interno"
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
 #: eventviews.kcfg:231 eventviews.kcfg:327
-#, fuzzy, kde-format
-#| msgid "Only category"
+#, kde-format
 msgid "Only tag"
-msgstr "Somente categoria"
+msgstr "Somente etiqueta"
 
 #. i18n: ectx: whatsthis, entry, group (Agenda View)
 #: eventviews.kcfg:232
-#, fuzzy, kde-format
-#| msgid ""
-#| "Select the \"Only category\" option if you would like to draw calendar "
-#| "items (both inside and border) in the color of their associated category. "
-#| "Please use the Colors and Fonts configuration page for setting these "
-#| "colors."
+#, kde-format
 msgid ""
 "Select the \"Only tag\" option if you would like to draw calendar items "
 "(both inside and border) in the color of their associated tag. Please use "
 "the Colors and Fonts configuration page for setting these colors."
 msgstr ""
-"Selecione a opção \"Somente categoria\" se quiser desenhar os itens do "
-"calendário (interior e borda) com a cor da sua categoria associada. Use a "
+"Selecione a opção \"Somente etiqueta\" se quiser desenhar os itens do "
+"calendário (interior e borda) com a cor da sua etiqueta associada. Use a "
 "página de configuração de Cores e Fontes para definir essas cores."
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
 #: eventviews.kcfg:233
-#, fuzzy, kde-format
-#| msgid ""
-#| "Draw agenda items using their category color for the inside and border"
+#, kde-format
 msgid "Draw agenda items using their tag color for the inside and border"
 msgstr ""
-"Desenha os itens da agenda com a cor da sua categoria por dentro e como borda"
+"Desenha os itens da agenda com a cor da sua etiqueta por dentro e como borda"
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
@@ -1105,93 +1071,70 @@ msgstr ""
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
 #: eventviews.kcfg:318
-#, fuzzy, kde-format
-#| msgid ""
-#| "Select the \"Category inside, calendar outside\" option if you would like "
-#| "to draw calendar items in their associated category color, with the "
-#| "item's border drawn in the color of its calendar.  Please use the Colors "
-#| "and Fonts configuration page for setting these colors."
+#, kde-format
 msgid ""
 "Select the \"Tag inside, calendar outside\" option if you would like to draw "
 "calendar items in their associated tag color, with the item's border drawn "
 "in the color of its calendar.  Please use the Colors and Fonts configuration "
 "page for setting these colors."
 msgstr ""
-"Selecione a opção \"Categoria interna, calendário externo\" se quiser "
-"desenhar os itens do calendário com a sua cor de categoria associada, tendo "
+"Selecione a opção \"Etiqueta interna, calendário externo\" se quiser "
+"desenhar os itens do calendário com a sua cor de etiqueta associada, tendo "
 "as bordas do item desenhado com a cor do seu calendário. Use a página de "
 "configuração de Cores e Fontes para definição dessas cores."
 
 #. i18n: ectx: tooltip, entry, group (Month View)
 #: eventviews.kcfg:319
-#, fuzzy, kde-format
-#| msgid ""
-#| "Draw month items in their category color inside and calendar color for "
-#| "their border"
+#, kde-format
 msgid ""
 "Draw month items in their tag color inside and calendar color for their "
 "border"
 msgstr ""
-"Desenha os itens do mês com a cor da sua categoria interna e a cor do "
+"Desenha os itens do mês com a cor da sua etiqueta interna e a cor do "
 "calendário como borda"
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
 #: eventviews.kcfg:323
-#, fuzzy, kde-format
-#| msgid ""
-#| "Select the \"Calendar inside, category outside\" option if you would like "
-#| "to draw calendar items in their associated calendar color, with the "
-#| "item's border drawn in the color of its category.  Please use the Colors "
-#| "and Fonts configuration page for setting these colors."
+#, kde-format
 msgid ""
 "Select the \"Calendar inside, tag outside\" option if you would like to draw "
 "calendar items in their associated calendar color, with the item's border "
 "drawn in the color of its tag.  Please use the Colors and Fonts "
 "configuration page for setting these colors."
 msgstr ""
-"Selecione a opção \"Calendário interno, categoria externa\" se quiser "
+"Selecione a opção \"Calendário interno, etiqueta externa\" se quiser "
 "desenhar os itens do calendário com a sua cor de calendário associado, tendo "
-"a borda do item desenhado com a cor da sua categoria. Use a página de "
+"a borda do item desenhado com a cor da sua etiqueta. Use a página de "
 "configuração de Cores e Fontes para definir essas cores."
 
 #. i18n: ectx: tooltip, entry, group (Month View)
 #: eventviews.kcfg:324
-#, fuzzy, kde-format
-#| msgid ""
-#| "Draw month items in their calendar color inside and category color for "
-#| "their border"
+#, kde-format
 msgid ""
 "Draw month items in their calendar color inside and tag color for their "
 "border"
 msgstr ""
 "Desenha os itens do mês agenda com a cor interna do calendário e a cor da "
-"categoria como borda"
+"etiqueta como borda"
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
 #: eventviews.kcfg:328
-#, fuzzy, kde-format
-#| msgid ""
-#| "Select the \"Only category\" option if you would like to draw calendar "
-#| "items (both inside and border) in the color of their associated "
-#| "category.  Please use the Colors and Fonts configuration page for setting "
-#| "these colors."
+#, kde-format
 msgid ""
 "Select the \"Only tag\" option if you would like to draw calendar items "
 "(both inside and border) in the color of their associated tag.  Please use "
 "the Colors and Fonts configuration page for setting these colors."
 msgstr ""
-"Selecione a opção \"Somente categoria\" se quiser desenhar os itens do "
-"calendário (interior e borda) com a cor da sua categoria associada. Use a "
+"Selecione a opção \"Somente etiqueta\" se quiser desenhar os itens do "
+"calendário (interior e borda) com a cor da sua etiqueta associada. Use a "
 "página de configuração de Cores e Fontes para definir essas cores."
 
 #. i18n: ectx: tooltip, entry, group (Month View)
 #: eventviews.kcfg:329
-#, fuzzy, kde-format
-#| msgid ""
-#| "Draw month items using their category color for the inside and border"
+#, kde-format
 msgid "Draw month items using their tag color for the inside and border"
 msgstr ""
-"Desenha os itens do mês usando a cor da sua categoria por dentro e como borda"
+"Desenha os itens do mês usando a cor da sua etiqueta por dentro e como borda"
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
 #: eventviews.kcfg:333 viewerapp/settings.kcfg:172
@@ -1572,11 +1515,7 @@ msgstr "Cor padrão dos eventos"
 
 #. i18n: ectx: whatsthis, entry, group (Theme/Month view)
 #: eventviews.kcfg:652
-#, fuzzy, kde-format
-#| msgid ""
-#| "Select the default event color here. The default event color will be used "
-#| "for events categories in your Month. Note that you can specify a separate "
-#| "color for each event category below."
+#, kde-format
 msgid ""
 "Select the default event color here. The default event color will be used "
 "for events categories in your Month. Note that you can specify a separate "
@@ -1584,7 +1523,7 @@ msgid ""
 msgstr ""
 "Selecione aqui a cor padrão do evento. A cor padrão do eventos será usada "
 "para as categorias dos eventos na sua janela mensal. Note que você pode "
-"especificar abaixo uma cor separada para cada categoria de evento."
+"especificar abaixo uma cor separada para cada etiqueta de evento."
 
 #. i18n: ectx: label, entry, group (Theme/Month view)
 #: eventviews.kcfg:717
@@ -1601,85 +1540,73 @@ msgstr ""
 "configurações de cor"
 
 #: journal/journalframe.cpp:150
-#, fuzzy, kde-format
-#| msgid "&Edit"
+#, kde-format
 msgctxt "@action: button"
 msgid "&Edit"
 msgstr "&Editar"
 
 #: journal/journalframe.cpp:153
-#, fuzzy, kde-format
-#| msgid "Edit this journal entry"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Edit this journal entry"
 msgstr "Editar esta entrada de diário"
 
 #: journal/journalframe.cpp:154
-#, fuzzy, kde-format
-#| msgid "Opens an editor dialog for this journal entry"
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Opens an editor dialog for this journal entry"
 msgstr "Abre um diálogo de edição para esta entrada de diário"
 
 #: journal/journalframe.cpp:160
-#, fuzzy, kde-format
-#| msgid "&Delete"
+#, kde-format
 msgctxt "@action: button"
 msgid "&Delete"
 msgstr "E&xcluir"
 
 #: journal/journalframe.cpp:163
-#, fuzzy, kde-format
-#| msgid "Delete this journal entry"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete this journal entry"
 msgstr "Excluir esta entrada de diário"
 
 #: journal/journalframe.cpp:164
-#, fuzzy, kde-format
-#| msgid "Delete this journal entry"
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Delete this journal entry"
 msgstr "Excluir esta entrada de diário"
 
 #: journal/journalframe.cpp:169
-#, fuzzy, kde-format
-#| msgid "&Print"
+#, kde-format
 msgctxt "@action: button"
 msgid "&Print"
 msgstr "&Imprimir"
 
 #: journal/journalframe.cpp:173
-#, fuzzy, kde-format
-#| msgid "Print this journal entry"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Print this journal entry"
 msgstr "Imprimir esta entrada de diário"
 
 #: journal/journalframe.cpp:174
-#, fuzzy, kde-format
-#| msgid "Opens a print dialog for this journal entry"
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Opens a print dialog for this journal entry"
 msgstr "Abre um diálogo de impressão para esta entrada de diário"
 
 #: journal/journalframe.cpp:179
-#, fuzzy, kde-format
-#| msgid "Print preview"
+#, kde-format
 msgctxt "@action: button"
 msgid "Print preview"
 msgstr "Visualizar impressão"
 
 #: journal/journalframe.cpp:183
-#, fuzzy, kde-format
-#| msgid "Print preview this journal entry"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Print preview this journal entry"
 msgstr "Visualiza a impressão desta entrada de diário"
 
 #: journal/journalframe.cpp:184
-#, fuzzy, kde-format
-#| msgid "Opens a print dialog for this journal entry"
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Opens a print preview of this journal entry"
 msgstr "Abre um diálogo de impressão para esta entrada de diário"
@@ -1716,31 +1643,26 @@ msgid "Summary [%1 - %2]"
 msgstr "Resumo [%1 - %2]"
 
 #: month/monthitem.cpp:307
-#, fuzzy, kde-format
-#| msgid "%2 1 year"
-#| msgid_plural "%2 %1 years"
+#, kde-format
 msgctxt "@info/plain a person's age"
 msgid "1 year old"
 msgid_plural "%1 years old"
-msgstr[0] "%2 1 ano"
-msgstr[1] "%2 %1 anos"
+msgstr[0] "1 ano de idade"
+msgstr[1] "%1 anos de idade"
 
 #: month/monthitem.cpp:309
-#, fuzzy, kde-format
-#| msgid "%2 1 year"
-#| msgid_plural "%2 %1 years"
+#, kde-format
 msgctxt "@info/plain number of years of marriage"
 msgid "1 year"
 msgid_plural "%1 years"
-msgstr[0] "%2 1 ano"
-msgstr[1] "%2 %1 anos"
+msgstr[0] "1 ano"
+msgstr[1] "%1 anos"
 
 #: month/monthitem.cpp:443
-#, fuzzy, kde-format
-#| msgid "Move occurrence(s)"
+#, kde-format
 msgctxt "@info/plain"
 msgid "Move occurrence(s)"
-msgstr "Mover a(s) ocorrência(s)"
+msgstr "Mover ocorrência(s)"
 
 #: month/monthscene.cpp:183
 #, kde-format
@@ -1828,15 +1750,13 @@ msgid ""
 msgstr "Clique neste botão para deslocar a exibição para um mês a frente."
 
 #: multiagenda/multiagendaview.cpp:97
-#, fuzzy, kde-format
-#| msgid "Agenda %1"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Agenda %1"
 msgstr "Agenda %1"
 
 #: multiagenda/multiagendaview.cpp:179
-#, fuzzy, kde-format
-#| msgid "All Day"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "All Day"
 msgstr "O dia todo"
@@ -1907,8 +1827,7 @@ msgid "9 (lowest)"
 msgstr "9 (mais baixa)"
 
 #: todo/todoview.cpp:256
-#, fuzzy, kde-format
-#| msgid "Cannot move to-do to itself or a child of itself."
+#, kde-format
 msgctxt "@info"
 msgid "Cannot move to-do to itself or a child of itself."
 msgstr "Não foi possível mover uma tarefa para ela mesma ou uma filha dela."
@@ -1920,9 +1839,7 @@ msgid "Drop To-do"
 msgstr "Arrastar tarefa"
 
 #: todo/todoview.cpp:328
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Create Event from To-do"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Create an open-ended to-do"
 msgstr "Criar evento a partir da tarefa"
@@ -1936,46 +1853,35 @@ msgid ""
 "or recurrence. Edit the newly created if you want to add more properties.</"
 "note></para>"
 msgstr ""
+"Digite o resumo para a nova tarefa. <para><note>A nova tarefa será aberta, "
+"finalizada o que significa que ela não possui hora de início nem lembrete ou "
+"recorrência. Edite a nova tarefa criada se desejar adicionar mais "
+"propriedades.</note></para>"
 
 #: todo/todoview.cpp:341
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Display to-do list in a full window"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Display to-dos in a full window without the sidebar"
-msgstr "Mostra a lista de tarefas em toda a janela"
+msgstr "Mostra a lista de tarefas em toda a janela sem barra lateral"
 
 #: todo/todoview.cpp:343
-#, fuzzy, kde-format
-#| msgctxt "@info:whatsthis"
-#| msgid ""
-#| "Checking this option will cause the to-dos to be displayed as a flat list "
-#| "instead of a hierarchical tree; the parental relationships are removed in "
-#| "the display."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Checking this button will cause the to-dos to be displayed in a larger "
 "window by hiding the sidebar."
 msgstr ""
-"Se marcar esta opção, fará com que as tarefas sejam apresentadas numa lista "
-"plana, em vez de uma árvore hierárquica. As relações de parentesco são "
-"removidas na exibição."
+"Se marcar esta opção, fará com que as tarefas sejam apresentadas em uma "
+"janela ampla ocultado a barra lateral."
 
 #: todo/todoview.cpp:349
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Display to-dos in flat list instead of a tree"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Display to-dos in a flat list or a tree"
 msgstr "Mostra as tarefas numa lista plana, em vez de uma árvore"
 
 #: todo/todoview.cpp:351
-#, fuzzy, kde-format
-#| msgctxt "@info:whatsthis"
-#| msgid ""
-#| "Checking this option will cause the to-dos to be displayed as a flat list "
-#| "instead of a hierarchical tree; the parental relationships are removed in "
-#| "the display."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Checking this button will cause the to-dos to be displayed either as a flat "
@@ -1992,11 +1898,10 @@ msgid "&Show"
 msgstr "&Mostrar"
 
 #: todo/todoview.cpp:395
-#, fuzzy, kde-format
-#| msgid "&Edit"
+#, kde-format
 msgctxt "@action:inmenu edit the to-do"
 msgid "&Edit…"
-msgstr "&Editar"
+msgstr "&Editar..."
 
 #: todo/todoview.cpp:402
 #, kde-format
@@ -2005,32 +1910,25 @@ msgid "&Delete"
 msgstr "E&xcluir"
 
 #: todo/todoview.cpp:411
-#, fuzzy, kde-format
-#| msgid "&Print"
+#, kde-format
 msgctxt "@action:inmenu print the to-do"
 msgid "&Print…"
-msgstr "&Imprimir"
+msgstr "&Imprimir..."
 
 #: todo/todoview.cpp:416
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu print preview the to-do"
-#| msgid "Print Previe&w..."
+#, kde-format
 msgctxt "@action:inmenu print preview the to-do"
 msgid "Print Previe&w…"
 msgstr "Visuali&zar impressão..."
 
 #: todo/todoview.cpp:423
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu create a new to-do"
-#| msgid "New &To-do..."
+#, kde-format
 msgctxt "@action:inmenu create a new to-do"
 msgid "New &To-do…"
 msgstr "Nova &tarefa..."
 
 #: todo/todoview.cpp:427
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu create a new sub-to-do"
-#| msgid "New Su&b-to-do..."
+#, kde-format
 msgctxt "@action:inmenu create a new sub-to-do"
 msgid "New Su&b-to-do…"
 msgstr "Nova su&btarefa..."
@@ -2054,18 +1952,16 @@ msgid "Create Event from To-do"
 msgstr "Criar evento a partir da tarefa"
 
 #: todo/todoview.cpp:452
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu delete completed to-dos"
-#| msgid "Pur&ge Completed"
+#, kde-format
 msgctxt "@action:inmenu set or unset to-do is completed"
 msgid "Togg&le To-do Completed"
-msgstr "Eli&minar concluídas"
+msgstr "Alternar &tarefas concluídas"
 
 #: todo/todoview.cpp:456
 #, kde-format
 msgctxt "@action:inmenu enable or disable reminder"
 msgid "&Toggle Reminder"
-msgstr ""
+msgstr "Al&ternar lembrete"
 
 #: todo/todoview.cpp:463
 #, kde-format
@@ -2128,29 +2024,28 @@ msgid "8"
 msgstr "8"
 
 #: todo/todoview.cpp:1185
-#, fuzzy, kde-format
-#| msgid "Display the current-time indicator"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Display the sidebar"
-msgstr "Exibir o indicador da hora atual"
+msgstr "Exibir a barra lateral"
 
 #: todo/todoview.cpp:1188
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Hide the sidebar"
-msgstr ""
+msgstr "Ocultar a barra lateral"
 
 #: todo/todoview.cpp:1207
 #, kde-format
 msgctxt "@info::tooltip"
 msgid "Switch to the tree list display"
-msgstr ""
+msgstr "Alternar para exibição em árvore"
 
 #: todo/todoview.cpp:1210
 #, kde-format
 msgctxt "@info::tooltip"
 msgid "Switch to the flat list display"
-msgstr ""
+msgstr "Alternar para exibição em lista plana"
 
 #: todo/todoviewquickaddline.cpp:17
 #, kde-format
@@ -2173,9 +2068,7 @@ msgstr ""
 "correspondentes."
 
 #: todo/todoviewquicksearch.cpp:39
-#, fuzzy, kde-format
-#| msgctxt "@label in QuickSearchLine"
-#| msgid "Search Summaries..."
+#, kde-format
 msgctxt "@label in QuickSearchLine"
 msgid "Search Summaries…"
 msgstr "Pesquisar nos resumos..."
@@ -2292,24 +2185,19 @@ msgid "View Columns"
 msgstr "Exibir colunas"
 
 #: viewerapp/main.cpp:19
-#, fuzzy, kde-format
-#| msgid "ViewerApp"
+#, kde-format
 msgctxt "@label"
 msgid "ViewerApp"
-msgstr "Aplicativo de visualização"
+msgstr "ViewerApp"
 
 #: viewerapp/main.cpp:21
-#, fuzzy, kde-format
-#| msgid "A test app for embedding calendarviews"
+#, kde-format
 msgctxt "@info"
 msgid "A test app for embedding calendarviews"
 msgstr "Um aplicativo de testes para incorporar calendários"
 
 #: viewerapp/main.cpp:23
-#, fuzzy, kde-format
-#| msgid ""
-#| "Copyright (C) 2010 Klarälvdalens Datakonsult AB, a KDAB Group company, "
-#| "info@kdab.net"
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Copyright (C) 2010 Klarälvdalens Datakonsult AB, a KDAB Group company, "
@@ -2319,15 +2207,13 @@ msgstr ""
 "info@kdab.net"
 
 #: viewerapp/main.cpp:24
-#, fuzzy, kde-format
-#| msgid "Kevin Krammer"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Kevin Krammer"
 msgstr "Kevin Krammer"
 
 #: viewerapp/main.cpp:33
-#, fuzzy, kde-format
-#| msgid "Optional list of view names to instantiate"
+#, kde-format
 msgctxt "@info:shell"
 msgid "Optional list of view names to instantiate"
 msgstr "Lista opcional dos nomes das janelas para criar uma instância"
@@ -2340,8 +2226,7 @@ msgstr "Visualizador de Calendários"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab)
 #: viewerapp/mainwindow.ui:55
-#, fuzzy, kde-format
-#| msgid "Tab 1"
+#, kde-format
 msgctxt "@title:tab a generic tab"
 msgid "Tab 1"
 msgstr "Aba 1"
@@ -2412,7 +2297,7 @@ msgstr ""
 #: viewerapp/settings.kcfg:76 viewerapp/settings.kcfg:161
 #, kde-format
 msgid "Calendar inside, category outside"
-msgstr "Calendário interno, categoria externa"
+msgstr "Calendário interno, etiqueta externa"
 
 #. i18n: ectx: whatsthis, entry, group (Agenda View)
 #: viewerapp/settings.kcfg:77
@@ -2586,7 +2471,7 @@ msgstr "Tarefas:"
 #: whatsnext/whatsnextview.cpp:78
 #, kde-format
 msgid "What's Next?"
-msgstr "O que segue?"
+msgstr "O que vem a seguir?"
 
 #: whatsnext/whatsnextview.cpp:85 whatsnext/whatsnextview.cpp:269
 #: whatsnext/whatsnextview.cpp:274
