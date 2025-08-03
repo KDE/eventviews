@@ -15,8 +15,9 @@
 
 using namespace EventViews;
 
-TimeLabelsZone::TimeLabelsZone(QWidget *parent, const PrefsPtr &preferences, Agenda *agenda)
+TimeLabelsZone::TimeLabelsZone(QWidget *parent, const PrefsPtr &preferences, Agenda *agenda, bool readOnly)
     : QWidget(parent)
+    , mReadOnly(readOnly)
     , mAgenda(agenda)
     , mPrefs(preferences)
     , mParent(qobject_cast<AgendaView *>(parent))
@@ -50,7 +51,12 @@ void TimeLabelsZone::init()
 {
     QStringList seenTimeZones(QString::fromUtf8(mPrefs->timeZone().id()));
 
+    // Add the time labels for the system time zone first
     addTimeLabels(mPrefs->timeZone());
+    if (mReadOnly) {
+        // Read-only can only create the system time zone labels
+        return;
+    }
 
     const auto lst = mPrefs->timeScaleTimezones();
     for (const QString &zoneStr : lst) {
@@ -66,8 +72,19 @@ void TimeLabelsZone::init()
 
 void TimeLabelsZone::addTimeLabels(const QTimeZone &zone)
 {
+    // Read-only time labels can be created for the system timezone only
+    if (mReadOnly && zone != mPrefs->timeZone()) {
+        return;
+    }
+
     auto area = new QScrollArea(this);
     auto labels = new TimeLabels(zone, 24, this);
+
+    // Do not allow a context menu for read-only time labels
+    if (mReadOnly) {
+        labels->setContextMenuPolicy(Qt::PreventContextMenu);
+    }
+
     mTimeLabelsList.prepend(area);
     area->setWidgetResizable(true);
     area->setWidget(labels);
@@ -128,6 +145,11 @@ void TimeLabelsZone::setAgendaView(AgendaView *agendaView)
     }
 }
 
+void TimeLabelsZone::setReadOnly(bool enable)
+{
+    mReadOnly = enable;
+}
+
 void TimeLabelsZone::updateTimeLabelsPosition()
 {
     if (mAgenda) {
@@ -154,6 +176,11 @@ void TimeLabelsZone::setPreferences(const PrefsPtr &prefs)
     if (prefs != mPrefs) {
         mPrefs = prefs;
     }
+}
+
+AgendaView *TimeLabelsZone::agendaView() const
+{
+    return mParent;
 }
 
 #include "moc_timelabelszone.cpp"

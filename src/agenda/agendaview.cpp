@@ -83,10 +83,18 @@ public:
     void invalidate() override;
     void setGeometry(const QRect &rect) override;
 
+    [[nodiscard]] bool isDualTimeLabels() const;
+    void setDualTimeLabels(bool enable);
+    [[nodiscard]] int timeLabelsWidth() const;
+    void setTimeLabelsWidth(const int width);
+
 private:
     void updateCache() const;
 
     QList<QLayoutItem *> mItems;
+
+    bool mIsDualTimeLabels = false;
+    int mTimeLabelsWidth = 0;
 
     mutable bool mIsDirty = false;
     mutable QSize mSizeHint;
@@ -103,6 +111,26 @@ AgendaHeaderLayout::~AgendaHeaderLayout()
     while (!mItems.isEmpty()) {
         delete mItems.takeFirst();
     }
+}
+
+bool AgendaHeaderLayout::isDualTimeLabels() const
+{
+    return mIsDualTimeLabels;
+}
+
+void AgendaHeaderLayout::setDualTimeLabels(bool enable)
+{
+    mIsDualTimeLabels = enable;
+}
+
+int AgendaHeaderLayout::timeLabelsWidth() const
+{
+    return mTimeLabelsWidth;
+}
+
+void AgendaHeaderLayout::setTimeLabelsWidth(const int width)
+{
+    mTimeLabelsWidth = width;
 }
 
 void AgendaHeaderLayout::addItem(QLayoutItem *item)
@@ -151,7 +179,10 @@ void AgendaHeaderLayout::setGeometry(const QRect &rect)
     const QMargins margins = contentsMargins();
 
     // same logic as Agenda uses to distribute the width
-    const int contentWidth = rect.width() - margins.left() - margins.right();
+    int contentWidth = rect.width() - margins.left() - margins.right();
+    if (mIsDualTimeLabels) {
+        contentWidth -= mTimeLabelsWidth;
+    }
     const double agendaGridSpacingX = static_cast<double>(contentWidth) / mItems.size();
     int x = margins.left();
     const int contentHeight = rect.height() - margins.top() - margins.bottom();
@@ -203,7 +234,7 @@ class AgendaHeader : public QWidget
 {
     Q_OBJECT
 public:
-    explicit AgendaHeader(bool isSideBySide, QWidget *parent);
+    explicit AgendaHeader(bool isSideBySide, bool isDualTimeLabels, QWidget *parent);
 
     using DecorationList = QList<EventViews::CalendarDecoration::Decoration *>;
 
@@ -213,6 +244,8 @@ public:
     void setWeekWidth(int width);
     void updateDayLabelSizes();
     void updateMargins();
+
+    [[nodiscard]] AgendaHeaderLayout *dayLabelsLayout();
 
 protected:
     void resizeEvent(QResizeEvent *resizeEvent) override;
@@ -226,6 +259,7 @@ private:
     void loadDecorations(const QStringList &decorations, const QStringList &whiteList, DecorationList &decoList);
 
     const bool mIsSideBySide;
+    const bool mIsDualTimeLabels;
 
     Agenda *mAgenda = nullptr;
     KSqueezedTextLabel *mCalendarNameLabel = nullptr;
@@ -236,9 +270,10 @@ private:
     QList<AlternateLabel *> mDateDayLabels;
 };
 
-AgendaHeader::AgendaHeader(bool isSideBySide, QWidget *parent)
+AgendaHeader::AgendaHeader(bool isSideBySide, bool isDualTimeLabels, QWidget *parent)
     : QWidget(parent)
     , mIsSideBySide(isSideBySide)
+    , mIsDualTimeLabels(isDualTimeLabels)
 {
     auto layout = new QVBoxLayout(this);
     layout->setContentsMargins({});
@@ -266,9 +301,15 @@ AgendaHeader::AgendaHeader(bool isSideBySide, QWidget *parent)
 
     mDayLabels = new QWidget(daysWidget);
     mDayLabelsLayout = new AgendaHeaderLayout(mDayLabels);
+    mDayLabelsLayout->setDualTimeLabels(mIsDualTimeLabels);
     mDayLabelsLayout->setContentsMargins({});
     daysLayout->addWidget(mDayLabels);
     daysLayout->setStretchFactor(mDayLabels, 1);
+}
+
+AgendaHeaderLayout *AgendaHeader::dayLabelsLayout()
+{
+    return mDayLabelsLayout;
 }
 
 void AgendaHeader::setAgenda(Agenda *agenda)
@@ -285,7 +326,7 @@ void AgendaHeader::setCalendarName(const QString &calendarName)
 
 void AgendaHeader::updateMargins()
 {
-    const int frameWidth = mAgenda ? mAgenda->scrollArea()->frameWidth() : 0;
+    const int frameWidth = (mAgenda && mAgenda->verticalScrollBar()->isVisible()) ? mAgenda->scrollArea()->frameWidth() : 0;
     const int scrollBarWidth = (mIsSideBySide || !mAgenda || !mAgenda->verticalScrollBar()->isVisible()) ? 0 : mAgenda->verticalScrollBar()->width();
     const bool isLTR = (layoutDirection() == Qt::LeftToRight);
     const int leftSpacing = SPACING + frameWidth;
@@ -571,14 +612,17 @@ public:
     AgendaHeader *mBottomDayLabelsFrame = nullptr;
     QWidget *mAllDayFrame = nullptr;
     QSpacerItem *mAllDayRightSpacer = nullptr;
-    QWidget *mTimeBarHeaderFrame = nullptr;
+    QWidget *mTimeBarHeaderFrameLeft = nullptr;
+    QWidget *mTimeBarHeaderFrameRight = nullptr;
     QSplitter *mSplitterAgenda = nullptr;
-    QList<QLabel *> mTimeBarHeaders;
+    QList<QLabel *> mTimeBarHeadersLeft;
+    QList<QLabel *> mTimeBarHeadersRight;
 
     Agenda *mAllDayAgenda = nullptr;
     Agenda *mAgenda = nullptr;
 
-    TimeLabelsZone *mTimeLabelsZone = nullptr;
+    TimeLabelsZone *mTimeLabelsZoneRight = nullptr;
+    TimeLabelsZone *mTimeLabelsZoneLeft = nullptr;
 
     KCalendarCore::DateList mSelectedDates; // List of dates to be displayed
     KCalendarCore::DateList mSaveSelectedDates; // Save the list of dates between updateViews
@@ -598,6 +642,7 @@ public:
     Akonadi::Item mUpdateItem;
 
     const bool mIsSideBySide;
+    bool mIsDualTimeLabels = false;
 
     QWidget *mDummyAllDayLeft = nullptr;
     bool mUpdateAllDayAgenda = true;
@@ -1088,7 +1133,7 @@ void AgendaViewPrivate::updateAllDayRightSpacer()
     // Make the all-day and normal agendas line up with each other
     auto verticalAgendaScrollBar = mAgenda->verticalScrollBar();
     int margin = verticalAgendaScrollBar->isVisible() ? verticalAgendaScrollBar->width() : 0;
-    if (q->style()->styleHint(QStyle::SH_ScrollView_FrameOnlyAroundContents)) {
+    if (q->style()->styleHint(QStyle::SH_ScrollView_FrameOnlyAroundContents) && verticalAgendaScrollBar->isVisible()) {
         // Needed for some styles. Oxygen needs it, Plastique does not.
         margin -= mAgenda->scrollArea()->frameWidth();
     }
@@ -1121,7 +1166,7 @@ void AgendaView::init(QDate start, QDate end)
     d->mMainLayout->setContentsMargins({});
 
     /* Create day name labels for agenda columns */
-    d->mTopDayLabelsFrame = new AgendaHeader(d->mIsSideBySide, this);
+    d->mTopDayLabelsFrame = new AgendaHeader(d->mIsSideBySide, d->mIsDualTimeLabels, this);
     d->mMainLayout->addWidget(d->mTopDayLabelsFrame);
 
     /* Create agenda splitter */
@@ -1136,19 +1181,28 @@ void AgendaView::init(QDate start, QDate end)
 
     // Alignment and description widgets
     if (!d->mIsSideBySide) {
-        d->mTimeBarHeaderFrame = new QWidget(d->mAllDayFrame);
-        allDayFrameLayout->addWidget(d->mTimeBarHeaderFrame);
-        auto timeBarHeaderFrameLayout = new QHBoxLayout(d->mTimeBarHeaderFrame);
+        d->mTimeBarHeaderFrameLeft = new QWidget(d->mAllDayFrame);
+        allDayFrameLayout->insertWidget(0, d->mTimeBarHeaderFrameLeft);
+        auto timeBarHeaderFrameLayout = new QHBoxLayout(d->mTimeBarHeaderFrameLeft);
         timeBarHeaderFrameLayout->setContentsMargins({});
         timeBarHeaderFrameLayout->setSpacing(0);
         d->mDummyAllDayLeft = new QWidget(d->mAllDayFrame);
-        allDayFrameLayout->addWidget(d->mDummyAllDayLeft);
+        allDayFrameLayout->insertWidget(1, d->mDummyAllDayLeft);
     }
 
     // The widget itself
     auto allDayScrollArea = new AgendaScrollArea(true, this, d->mIsInteractive, d->mAllDayFrame);
-    allDayFrameLayout->addWidget(allDayScrollArea);
+    allDayFrameLayout->insertWidget(2, allDayScrollArea);
     d->mAllDayAgenda = allDayScrollArea->agenda();
+
+    if (!d->mIsSideBySide) {
+        d->mTimeBarHeaderFrameRight = new QWidget(d->mAllDayFrame);
+        allDayFrameLayout->insertWidget(0, d->mTimeBarHeaderFrameRight);
+        auto timeBarHeaderFrameLayout = new QHBoxLayout(d->mTimeBarHeaderFrameRight);
+        timeBarHeaderFrameLayout->setContentsMargins({});
+        timeBarHeaderFrameLayout->setSpacing(0);
+        allDayFrameLayout->insertWidget(3, d->mTimeBarHeaderFrameRight);
+    }
 
     /* Create the main agenda widget and the related widgets */
     auto agendaFrame = new QWidget(d->mSplitterAgenda);
@@ -1159,6 +1213,8 @@ void AgendaView::init(QDate start, QDate end)
     // Create agenda
     auto scrollArea = new AgendaScrollArea(false, this, d->mIsInteractive, agendaFrame);
     d->mAgenda = scrollArea->agenda();
+    scrollArea->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+    d->mAgenda->verticalScrollBar()->setVisible(false);
     d->mAgenda->verticalScrollBar()->installEventFilter(this);
     d->mAgenda->setCalendar(d->mViewCalendar);
 
@@ -1169,18 +1225,26 @@ void AgendaView::init(QDate start, QDate end)
     d->mEventIndicatorBottom = new EventIndicator(EventIndicator::Bottom, scrollArea->viewport());
 
     // Create time labels
-    d->mTimeLabelsZone = new TimeLabelsZone(this, preferences(), d->mAgenda);
+    d->mTimeLabelsZoneLeft = new TimeLabelsZone(this, preferences(), d->mAgenda, false);
+    d->mTimeLabelsZoneLeft->setAgendaView(this);
+    d->mTimeLabelsZoneRight = new TimeLabelsZone(this, preferences(), d->mAgenda, true);
+    d->mTimeLabelsZoneRight->setAgendaView(this);
 
     // This timeLabelsZoneLayout is for adding some spacing
     // to align timelabels, to agenda's grid
-    auto timeLabelsZoneLayout = new QVBoxLayout();
+    auto timeLabelsZoneLayoutLeft = new QVBoxLayout();
+    auto timeLabelsZoneLayoutRight = new QVBoxLayout();
 
-    agendaLayout->addLayout(timeLabelsZoneLayout);
-    agendaLayout->addWidget(scrollArea);
+    agendaLayout->insertLayout(0, timeLabelsZoneLayoutLeft);
+    agendaLayout->insertWidget(1, scrollArea);
+    agendaLayout->insertLayout(-1, timeLabelsZoneLayoutRight);
 
-    timeLabelsZoneLayout->addSpacing(scrollArea->frameWidth());
-    timeLabelsZoneLayout->addWidget(d->mTimeLabelsZone);
-    timeLabelsZoneLayout->addSpacing(scrollArea->frameWidth());
+    timeLabelsZoneLayoutLeft->addSpacing(scrollArea->frameWidth());
+    timeLabelsZoneLayoutLeft->addWidget(d->mTimeLabelsZoneLeft);
+    timeLabelsZoneLayoutLeft->addSpacing(scrollArea->frameWidth());
+    timeLabelsZoneLayoutRight->addSpacing(scrollArea->frameWidth());
+    timeLabelsZoneLayoutRight->addWidget(d->mTimeLabelsZoneRight);
+    timeLabelsZoneLayoutRight->addSpacing(scrollArea->frameWidth());
 
     // Scrolling
     connect(d->mAgenda, &Agenda::zoomView, this, &AgendaView::zoomView);
@@ -1190,11 +1254,12 @@ void AgendaView::init(QDate start, QDate end)
     connect(d->mAgenda, &Agenda::upperYChanged, this, &AgendaView::updateEventIndicatorBottom);
 
     if (d->mIsSideBySide) {
-        d->mTimeLabelsZone->hide();
+        d->mTimeLabelsZoneLeft->hide();
+        d->mTimeLabelsZoneRight->hide();
     }
 
     /* Create a frame at the bottom which may be used by decorations */
-    d->mBottomDayLabelsFrame = new AgendaHeader(d->mIsSideBySide, this);
+    d->mBottomDayLabelsFrame = new AgendaHeader(d->mIsSideBySide, d->mIsDualTimeLabels, this);
     d->mBottomDayLabelsFrame->hide();
 
     d->mTopDayLabelsFrame->setAgenda(d->mAgenda);
@@ -1224,6 +1289,8 @@ void AgendaView::init(QDate start, QDate end)
 
     connectAgenda(d->mAgenda, d->mAllDayAgenda);
     connectAgenda(d->mAllDayAgenda, d->mAgenda);
+
+    setTimeLabelVisibility(preferences()->useDualLabels());
 }
 
 AgendaView::~AgendaView()
@@ -1406,7 +1473,8 @@ void AgendaView::zoomInVertically()
     d->mAgenda->updateConfig();
     d->mAgenda->checkScrollBoundaries();
 
-    d->mTimeLabelsZone->updateAll();
+    d->mTimeLabelsZoneLeft->updateAll();
+    d->mTimeLabelsZoneRight->updateAll();
     setChanges(changes() | ZoomChanged);
     updateView();
 }
@@ -1420,7 +1488,8 @@ void AgendaView::zoomOutVertically()
         d->mAgenda->updateConfig();
         d->mAgenda->checkScrollBoundaries();
 
-        d->mTimeLabelsZone->updateAll();
+        d->mTimeLabelsZoneLeft->updateAll();
+        d->mTimeLabelsZoneRight->updateAll();
         setChanges(changes() | ZoomChanged);
         updateView();
     }
@@ -1672,8 +1741,10 @@ void AgendaView::updateConfig()
     if (d->mAgenda && d->mAllDayAgenda) {
         d->mAgenda->updateConfig();
         d->mAllDayAgenda->updateConfig();
-        d->mTimeLabelsZone->setPreferences(preferences());
-        d->mTimeLabelsZone->updateAll();
+        d->mTimeLabelsZoneLeft->setPreferences(preferences());
+        d->mTimeLabelsZoneLeft->updateAll();
+        d->mTimeLabelsZoneRight->setPreferences(preferences());
+        d->mTimeLabelsZoneRight->updateAll();
         updateTimeBarWidth();
         setHolidayMasks();
         createDayLabels(true);
@@ -1684,28 +1755,44 @@ void AgendaView::updateConfig()
 
 void AgendaView::createTimeBarHeaders()
 {
-    qDeleteAll(d->mTimeBarHeaders);
-    d->mTimeBarHeaders.clear();
+    qDeleteAll(d->mTimeBarHeadersLeft);
+    d->mTimeBarHeadersLeft.clear();
+    qDeleteAll(d->mTimeBarHeadersRight);
+    d->mTimeBarHeadersRight.clear();
 
     const QFont oldFont(font());
-    QFont labelFont = d->mTimeLabelsZone->preferences()->agendaTimeLabelsFont();
+    QFont labelFont = d->mTimeLabelsZoneLeft->preferences()->agendaTimeLabelsFont();
     labelFont.setPointSize(labelFont.pointSize() - SHRINKDOWN);
 
-    const auto lst = d->mTimeLabelsZone->timeLabels();
+    const auto lst = d->mTimeLabelsZoneLeft->timeLabels();
+    const TimeLabels *timeLabelLeft;
     for (QScrollArea *area : lst) {
-        auto timeLabel = static_cast<TimeLabels *>(area->widget());
-        auto label = new QLabel(timeLabel->header().replace(QLatin1Char('/'), QStringLiteral("/ ")), d->mTimeBarHeaderFrame);
-        d->mTimeBarHeaderFrame->layout()->addWidget(label);
-        label->setFont(labelFont);
-        label->setAlignment(Qt::AlignBottom | Qt::AlignRight);
-        label->setContentsMargins({});
-        label->setWordWrap(true);
-        label->setToolTip(timeLabel->headerToolTip());
-        d->mTimeBarHeaders.append(label);
+        timeLabelLeft = static_cast<TimeLabels *>(area->widget());
+        const QString labelStr = timeLabelLeft->header().replace(QLatin1Char('/'), QStringLiteral("/ "));
+        const QString tooltipStr = timeLabelLeft->headerToolTip();
+
+        auto labelLeft = new QLabel(labelStr, d->mTimeBarHeaderFrameLeft);
+        labelLeft->setFont(labelFont);
+        labelLeft->setAlignment(Qt::AlignBottom | Qt::AlignRight);
+        labelLeft->setContentsMargins({});
+        labelLeft->setWordWrap(true);
+        labelLeft->setToolTip(tooltipStr);
+        d->mTimeBarHeaderFrameLeft->layout()->addWidget(labelLeft);
+        d->mTimeBarHeadersLeft.append(labelLeft);
     }
+
+    // Add only the last (system timezone) to the right labels
+    const auto labelRight = new QLabel(timeLabelLeft->header().replace(QLatin1Char('/'), QStringLiteral("/ ")), d->mTimeBarHeaderFrameRight);
+    labelRight->setFont(labelFont);
+    labelRight->setAlignment(Qt::AlignBottom | Qt::AlignRight);
+    labelRight->setContentsMargins({});
+    labelRight->setWordWrap(true);
+    labelRight->setToolTip(timeLabelLeft->headerToolTip());
+    d->mTimeBarHeaderFrameRight->layout()->addWidget(labelRight);
+    d->mTimeBarHeadersRight.append(labelRight);
+
     setFont(oldFont);
 }
-
 void AgendaView::updateTimeBarWidth()
 {
     if (d->mIsSideBySide) {
@@ -1715,12 +1802,12 @@ void AgendaView::updateTimeBarWidth()
     createTimeBarHeaders();
 
     const QFont oldFont(font());
-    QFont labelFont = d->mTimeLabelsZone->preferences()->agendaTimeLabelsFont();
+    QFont labelFont = d->mTimeLabelsZoneLeft->preferences()->agendaTimeLabelsFont();
     labelFont.setPointSize(labelFont.pointSize() - SHRINKDOWN);
     QFontMetrics const fm(labelFont);
 
-    int width = d->mTimeLabelsZone->preferedTimeLabelsWidth();
-    for (const QLabel *l : std::as_const(d->mTimeBarHeaders)) {
+    int width = d->mTimeLabelsZoneLeft->preferedTimeLabelsWidth();
+    for (const QLabel *l : std::as_const(d->mTimeBarHeadersLeft)) {
         const auto lst = l->text().split(QLatin1Char(' '));
         for (const QString &word : lst) {
             width = qMax(width, fm.boundingRect(word).width());
@@ -1729,11 +1816,14 @@ void AgendaView::updateTimeBarWidth()
     setFont(oldFont);
 
     width = width + fm.boundingRect(QLatin1Char('/')).width();
+    const auto dayLabelsLayout = d->mTopDayLabelsFrame->dayLabelsLayout();
+    dayLabelsLayout->setTimeLabelsWidth(width);
 
-    const int timeBarWidth = width * d->mTimeBarHeaders.count();
-
-    d->mTimeBarHeaderFrame->setFixedWidth(timeBarWidth - SPACING);
-    d->mTimeLabelsZone->setFixedWidth(timeBarWidth);
+    const int timeBarWidth = width * d->mTimeBarHeadersLeft.count();
+    d->mTimeBarHeaderFrameLeft->setFixedWidth(timeBarWidth - SPACING);
+    d->mTimeBarHeaderFrameRight->setFixedWidth(width - SPACING);
+    d->mTimeLabelsZoneLeft->setFixedWidth(timeBarWidth);
+    d->mTimeLabelsZoneRight->setFixedWidth(width);
     if (d->mDummyAllDayLeft) {
         d->mDummyAllDayLeft->setFixedWidth(0);
     }
@@ -1948,7 +2038,8 @@ void AgendaView::showDates(const QDate &start, const QDate &end, const QDate &pr
     // and update the view
     setChanges(changes() | DatesChanged);
     fillAgenda();
-    d->mTimeLabelsZone->update();
+    d->mTimeLabelsZoneLeft->update();
+    d->mTimeLabelsZoneRight->update();
 }
 
 void AgendaView::showIncidences(const Akonadi::Item::List &incidences, const QDate &date)
@@ -2543,7 +2634,7 @@ void AgendaView::alignAgendas()
 {
     // resize dummy widget so the allday agenda lines up with the hourly agenda.
     if (d->mDummyAllDayLeft) {
-        d->mDummyAllDayLeft->setFixedWidth(d->mTimeLabelsZone->width() - d->mTimeBarHeaderFrame->width() - SPACING);
+        d->mDummyAllDayLeft->setFixedWidth(d->mTimeLabelsZoneLeft->width() - d->mTimeBarHeaderFrameLeft->width() - SPACING);
     }
 
     // Must be async, so they are centered
@@ -2565,6 +2656,23 @@ void AgendaView::scheduleUpdateEventIndicators()
     if (!d->mUpdateEventIndicatorsScheduled) {
         d->mUpdateEventIndicatorsScheduled = true;
         QTimer::singleShot(0, this, &AgendaView::updateEventIndicators);
+    }
+}
+
+void AgendaView::setTimeLabelVisibility(bool enable)
+{
+    d->mIsDualTimeLabels = enable;
+    d->mTopDayLabelsFrame->dayLabelsLayout()->setDualTimeLabels(enable);
+    if (!d->mIsSideBySide) {
+        d->mTimeLabelsZoneRight->setVisible(enable);
+        d->mTimeBarHeaderFrameRight->setVisible(enable);
+    }
+    if (!enable) {
+        d->mAgenda->scrollArea()->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
+        d->mAgenda->verticalScrollBar()->setVisible(true);
+    } else {
+        d->mAgenda->scrollArea()->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        d->mAgenda->verticalScrollBar()->setVisible(false);
     }
 }
 

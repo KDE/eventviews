@@ -173,6 +173,8 @@ public:
 
     void setTitle(const QString &title);
 
+    void setTimeLabelVisibility(bool enable);
+
 Q_SIGNALS:
     void showNewEventPopupSignal();
     void showIncidencePopupSignal(const Akonadi::CollectionCalendar::Ptr &, const Akonadi::Item &, const QDate &);

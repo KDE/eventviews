@@ -150,6 +150,9 @@ public:
     [[nodiscard]] bool use24HourClock() const;
     void setUse24HourClock(bool);
 
+    [[nodiscard]] bool useDualLabels() const;
+    void setUseDualLabels(bool);
+
     [[nodiscard]] QStringList selectedPlugins() const;
     void setSelectedPlugins(const QStringList &);
 

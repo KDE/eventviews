@@ -87,6 +87,8 @@ public:
     QStringList timeScaleTimezones() const;
     void setUse24HourClock(bool enable);
     bool use24HourClock() const;
+    void setUseDualLabels(bool enable);
+    bool useDualLabels() const;
 
     QHash<QString, QColor> mResourceColors;
     QColor mDefaultResourceColor;
@@ -96,6 +98,7 @@ public:
 
     QStringList mTimeScaleTimeZones;
     bool mUse24HourClock = false;
+    bool mUseDualLabels = false;
 
     QSet<EventViews::EventView::ItemIcon> mAgendaViewIcons;
     QSet<EventViews::EventView::ItemIcon> mMonthViewIcons;
@@ -147,6 +150,16 @@ bool BaseConfig::use24HourClock() const
     return mUse24HourClock;
 }
 
+void BaseConfig::setUseDualLabels(bool enable)
+{
+    mUseDualLabels = enable;
+}
+
+bool BaseConfig::useDualLabels() const
+{
+    return mUseDualLabels;
+}
+
 void BaseConfig::usrSetDefaults()
 {
     setAgendaTimeLabelsFont(mDefaultAgendaTimeLabelsFont);
@@ -176,6 +189,7 @@ void BaseConfig::usrRead()
     } else {
         setUse24HourClock(timeScaleConfig.readEntry("24 Hour Clock", true));
     }
+    setUseDualLabels(timeScaleConfig.readEntry("Dual Labels", false));
 
     KConfigGroup const monthViewConfig(config(), QStringLiteral("Month View"));
     KConfigGroup const agendaViewConfig(config(), QStringLiteral("Agenda View"));
@@ -198,6 +212,7 @@ bool BaseConfig::usrSave()
     KConfigGroup timeScaleConfig(config(), QStringLiteral("Timescale"));
     timeScaleConfig.writeEntry("Timescale Timezones", timeScaleTimezones());
     timeScaleConfig.writeEntry("24 Hour Clock", use24HourClock());
+    timeScaleConfig.writeEntry("Dual Labels", useDualLabels());
 
     KConfigGroup monthViewConfig(config(), QStringLiteral("Month View"));
     KConfigGroup agendaViewConfig(config(), QStringLiteral("Agenda View"));
@@ -960,6 +975,16 @@ bool Prefs::use24HourClock() const
 void Prefs::setUse24HourClock(bool enable)
 {
     d->mBaseConfig.setUse24HourClock(enable);
+}
+
+bool Prefs::useDualLabels() const
+{
+    return d->mBaseConfig.useDualLabels();
+}
+
+void Prefs::setUseDualLabels(bool enable)
+{
+    d->mBaseConfig.setUseDualLabels(enable);
 }
 
 KConfigSkeleton::ItemFont *Prefs::fontItem(const QString &name) const

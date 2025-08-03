@@ -9,6 +9,7 @@
 using namespace Qt::Literals::StringLiterals;
 
 #include "agenda.h"
+#include "agendaview.h"
 #include "prefs.h"
 #include "timelabelszone.h"
 #include "timescaleconfigdialog.h"
@@ -335,6 +336,26 @@ void TimeLabels::contextMenuEvent(QContextMenuEvent *event)
     } else {
         HourTimeMode = popup.addAction(QIcon::fromTheme(QStringLiteral("clock")), i18nc("@action:inmenu", "24 Hour Clock"));
     }
+    QAction *DualLabels;
+    if (!QApplication::isRightToLeft()) {
+        if (mTimeLabelsZone->preferences()->useDualLabels()) {
+            DualLabels = popup.addAction(i18nc("@action:inmenu", "Hide Right-side Time Labels"));
+        } else {
+            DualLabels = popup.addAction(i18nc("@action:inmenu", "Show Right-side Time Labels"));
+        }
+    } else {
+        if (mTimeLabelsZone->preferences()->useDualLabels()) {
+            DualLabels = popup.addAction(i18nc("@action:inmenu", "Hide Left-side Time Labels"));
+        } else {
+            DualLabels = popup.addAction(i18nc("@action:inmenu", "Show Left-side Time Labels"));
+        }
+    }
+    DualLabels->setToolTip(i18nc("info::tooltip", "Show or hide time labels on both sides of the agenda view"));
+    DualLabels->setWhatsThis(i18nc("info::whatsthis",
+                                   "This menu section shows or hides the time labels on both sides of the "
+                                   "agenda view. Only the system timezone (and no extra added timezones) is "
+                                   "shown on the second side to save screen space. Similarly, the vertical "
+                                   "scrollbar is removed when the time labels are shown on both sides."));
 
     const QAction *activatedAction = popup.exec(QCursor::pos());
     if (activatedAction == editTimeZones) {
@@ -358,6 +379,14 @@ void TimeLabels::contextMenuEvent(QContextMenuEvent *event)
             mTimeLabelsZone->preferences()->setUse24HourClock(true);
         }
         mTimeLabelsZone->preferences()->writeConfig();
+    } else if (activatedAction == DualLabels) {
+        const bool enabled = !mTimeLabelsZone->preferences()->useDualLabels();
+        mTimeLabelsZone->preferences()->setUseDualLabels(enabled);
+        mTimeLabelsZone->preferences()->writeConfig();
+        AgendaView *agendaView = mTimeLabelsZone->agendaView();
+        if (agendaView) {
+            agendaView->setTimeLabelVisibility(enabled);
+        }
     }
 }
 

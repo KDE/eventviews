@@ -23,7 +23,7 @@ class TimeLabelsZone : public QWidget
 {
     Q_OBJECT
 public:
-    explicit TimeLabelsZone(QWidget *parent, const PrefsPtr &preferences, Agenda *agenda = nullptr);
+    explicit TimeLabelsZone(QWidget *parent, const PrefsPtr &preferences, Agenda *agenda = nullptr, bool readOnly = false);
 
     /** Add a new time label with the given time zone.
         If @p zone is not valid, use the display time zone.
@@ -39,6 +39,7 @@ public:
     void reset();
     void init();
     void setAgendaView(AgendaView *agenda);
+    void setReadOnly(bool enable);
 
     [[nodiscard]] QList<QScrollArea *> timeLabels() const;
 
@@ -50,8 +51,11 @@ public:
     */
     void updateTimeLabelsPosition();
 
+    AgendaView *agendaView() const;
+
 private:
     void setupTimeLabel(QScrollArea *area);
+    bool mReadOnly = false;
     Agenda *mAgenda = nullptr;
     PrefsPtr mPrefs;
     AgendaView *mParent = nullptr;
