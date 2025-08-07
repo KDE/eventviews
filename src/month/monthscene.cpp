@@ -488,7 +488,7 @@ void MonthScene::mouseDoubleClickEvent(QGraphicsSceneMouseEvent *mouseEvent)
             }
         }
     } else {
-        MonthCell *const currentCell = getCellFromPos(pos);
+        const MonthCell *currentCell = getCellFromPos(pos);
         if (currentCell) {
             QDate const currentDate = getCellFromPos(pos)->date();
             if (currentDate.isValid()) {
