@@ -81,7 +81,7 @@ void MainWindow::addView(const QString &viewName)
         eventView->setIncidenceChanger(mIncidenceChanger);
         eventView->updateConfig();
 
-        for (const auto &calendar : mCalendars) {
+        for (const auto &calendar : std::as_const(mCalendars)) {
             eventView->addCalendar(calendar);
         }
 
@@ -104,7 +104,8 @@ void MainWindow::delayedInit()
     mViewPreferences = new PrefsPtr(new Prefs(mSettings));
 
     mMonitor = new Akonadi::Monitor(this);
-    for (const auto &mt : KCalendarCore::Incidence::mimeTypes()) {
+    const auto mimeTypes = KCalendarCore::Incidence::mimeTypes();
+    for (const auto &mt : mimeTypes) {
         mMonitor->setMimeTypeMonitored(mt);
     }
     mMonitor->itemFetchScope().fetchFullPayload();
@@ -129,7 +130,8 @@ void MainWindow::delayedInit()
     connect(collectionSelection, &CalendarSupport::CollectionSelection::collectionSelected, this, &MainWindow::collectionSelected);
     connect(collectionSelection, &CalendarSupport::CollectionSelection::collectionDeselected, this, &MainWindow::collectionDeselected);
 
-    for (const auto &collection : collectionSelection->selectedCollections()) {
+    const auto selectedCollections = collectionSelection->selectedCollections();
+    for (const auto &collection : selectedCollections) {
         collectionSelected(collection);
     }
 
@@ -153,7 +155,7 @@ void MainWindow::collectionSelected(const Akonadi::Collection &col)
     auto calendar = Akonadi::CollectionCalendar::Ptr::create(mEtm, col);
     mCalendars.push_back(calendar);
 
-    for (auto view : mEventViews) {
+    for (auto view : std::as_const(mEventViews)) {
         view->addCalendar(calendar);
         view->updateView();
     }
@@ -165,14 +167,11 @@ void MainWindow::collectionDeselected(const Akonadi::Collection &col)
     auto calendar = std::find_if(mCalendars.begin(), mCalendars.end(), [col](const auto &cal) {
         return cal->collection() == col;
     });
-    if (calendar == mCalendars.cend()) {
+    if (calendar == mCalendars.end()) {
         return;
     }
 
-    const auto start = QDateTime::currentDateTime().addDays(-1);
-    const auto end = QDateTime::currentDateTime().addDays(1);
-
-    for (auto view : mEventViews) {
+    for (auto view : std::as_const(mEventViews)) {
         view->removeCalendar(*calendar);
         view->updateView();
     }
