@@ -78,15 +78,15 @@ public:
 
     enum ItemIcon {
         CalendarCustomIcon = 0,
-        TaskIcon,
-        JournalIcon,
-        RecurringIcon,
-        ReminderIcon,
-        ReadOnlyIcon,
-        ReplyIcon,
-        AttendingIcon,
-        TentativeIcon,
-        OrganizerIcon,
+        TaskIcon = 1,
+        JournalIcon = 2,
+        RecurringIcon = 3,
+        ReminderIcon = 4,
+        ReadOnlyIcon = 5,
+        ReplyIcon = 6,
+        AttendingIcon = 7,
+        TentativeIcon = 8,
+        OrganizerIcon = 9,
         IconCount = 10 // Always keep at the end
     };
 
