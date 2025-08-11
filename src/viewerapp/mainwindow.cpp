@@ -37,8 +37,7 @@ using namespace CalendarSupport;
 using namespace EventViews;
 
 MainWindow::MainWindow(const QStringList &viewNames)
-    : QMainWindow()
-    , mViewNames(viewNames)
+    : mViewNames(viewNames)
     , mIncidenceChanger(nullptr)
     , mSettings(nullptr)
     , mViewPreferences(nullptr)

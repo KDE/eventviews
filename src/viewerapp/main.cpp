@@ -24,7 +24,7 @@ int main(int argc, char **argv)
     about.addAuthor(i18nc("@info:credit", "Kevin Krammer"), QString(), QStringLiteral("krake@kdab.com"));
 
     QCommandLineParser parser;
-    QApplication app(argc, argv);
+    const QApplication app(argc, argv);
     parser.addVersionOption();
     parser.addHelpOption();
     about.setupCommandLine(&parser);
