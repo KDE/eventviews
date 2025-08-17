@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-16 00:43+0000\n"
-"PO-Revision-Date: 2025-06-02 05:54+0200\n"
+"PO-Revision-Date: 2025-08-16 06:35+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -129,31 +129,31 @@ msgstr "24 საათიანი საათი"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Right-side Time Labels"
-msgstr ""
+msgstr "მარჯვენა მხრის დროის ჭდეების დამალვა"
 
 #: agenda/timelabels.cpp:344
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Right-side Time Labels"
-msgstr ""
+msgstr "მარჯვენა მხრის დროის ჭდეების ჩვენება"
 
 #: agenda/timelabels.cpp:348
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Left-side Time Labels"
-msgstr ""
+msgstr "მარცხენა მხრის დროის ჭდეების დამალვა"
 
 #: agenda/timelabels.cpp:350
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Left-side Time Labels"
-msgstr ""
+msgstr "მარცხენა მხრის დროის ჭდეების ჩვენება"
 
 #: agenda/timelabels.cpp:353
 #, kde-format
 msgctxt "info::tooltip"
 msgid "Show or hide time labels on both sides of the agenda view"
-msgstr ""
+msgstr "დროის ჭდეების დამალვა, ან ჩვენება გეგმის ხედის ორივე მხარეს"
 
 #: agenda/timelabels.cpp:355
 #, kde-format
@@ -164,6 +164,11 @@ msgid ""
 "the second side to save screen space. Similarly, the vertical scrollbar is "
 "removed when the time labels are shown on both sides."
 msgstr ""
+"ეს მენიუს სექცია აჩვენებს, ან დამალავს დროის ჭდეების გეგმის ხედის ორივე "
+"მხარეს. მეორე მხარეს ნაჩვენები იქნება, მხოლოდ სისტემური დროის სარტყელი (და "
+"არა დამატებითი დროის სარტყლები), რომ ეკრანზე ნაკლები ადგილი დაიკავოს. "
+"მსგავსად, ვერტიკალური ჩოჩია წაიშლება, როცა დროის ჭდეები ორივე მხარესაა "
+"ნაჩვენები."
 
 #: agenda/timelabels.cpp:410
 #, kde-format

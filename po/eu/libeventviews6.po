@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-16 00:43+0000\n"
-"PO-Revision-Date: 2025-07-23 13:57+0200\n"
+"PO-Revision-Date: 2025-08-16 13:32+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -133,31 +133,31 @@ msgstr "24 orduko ordularia"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Right-side Time Labels"
-msgstr ""
+msgstr "Ezkutatu eskuin aldeko denbora-etiketak"
 
 #: agenda/timelabels.cpp:344
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Right-side Time Labels"
-msgstr ""
+msgstr "Erakutsi eskuin aldeko denbora-etiketak"
 
 #: agenda/timelabels.cpp:348
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Left-side Time Labels"
-msgstr ""
+msgstr "Ezkutatu ezker aldeko denbora-etiketak"
 
 #: agenda/timelabels.cpp:350
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Left-side Time Labels"
-msgstr ""
+msgstr "Erakutsi ezker aldeko denbora-etiketak"
 
 #: agenda/timelabels.cpp:353
 #, kde-format
 msgctxt "info::tooltip"
 msgid "Show or hide time labels on both sides of the agenda view"
-msgstr ""
+msgstr "Erakutsi edo ezkutatu denbora-etiketak agenda-ikuspegiaren bi aldeetan"
 
 #: agenda/timelabels.cpp:355
 #, kde-format
@@ -168,6 +168,11 @@ msgid ""
 "the second side to save screen space. Similarly, the vertical scrollbar is "
 "removed when the time labels are shown on both sides."
 msgstr ""
+"Menuaren atal honek agenda-ikuspegiko bi aldeetako denbora-etiketak "
+"erakusten edo ezkutatzen ditu. Sistemaren ordu-eremua bakarrik (eta ordu-"
+"eremu gehigarririk ez) erakusten da bigarren aldean pantailan espazioa "
+"aurrezteko. Era berean, denbora-etiketak bi aldeetan erakusten direnean, "
+"kiribiltze-barra bertikala kentzen da."
 
 #: agenda/timelabels.cpp:410
 #, kde-format

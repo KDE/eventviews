@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-16 00:43+0000\n"
-"PO-Revision-Date: 2025-06-02 17:32+0200\n"
+"PO-Revision-Date: 2025-08-16 07:24+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.08.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -131,31 +131,31 @@ msgstr "24-timmarsklocka"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Right-side Time Labels"
-msgstr ""
+msgstr "Dölj tidsbeteckningar på höger sida"
 
 #: agenda/timelabels.cpp:344
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Right-side Time Labels"
-msgstr ""
+msgstr "Visa tidsbeteckningar på höger sida"
 
 #: agenda/timelabels.cpp:348
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Left-side Time Labels"
-msgstr ""
+msgstr "Dölj tidsbeteckningar på vänster sida"
 
 #: agenda/timelabels.cpp:350
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Left-side Time Labels"
-msgstr ""
+msgstr "Visa tidsbeteckningar på vänster sida"
 
 #: agenda/timelabels.cpp:353
 #, kde-format
 msgctxt "info::tooltip"
 msgid "Show or hide time labels on both sides of the agenda view"
-msgstr ""
+msgstr "Visa eller dölj tidsbeteckningar på båda sidor om agendavyn"
 
 #: agenda/timelabels.cpp:355
 #, kde-format
@@ -166,6 +166,10 @@ msgid ""
 "the second side to save screen space. Similarly, the vertical scrollbar is "
 "removed when the time labels are shown on both sides."
 msgstr ""
+"Menydelen visar eller döljer tidsbeteckningar på båda sidor om agendavyn. "
+"Endast systemets tidszon (och inga extra tillagda tidszoner) visas på den "
+"andra sidan för att spara skärmutrymme. På samma sätt tas den vertikala "
+"rullningslisten bort när tidsbeteckningarna visas på båda sidor."
 
 #: agenda/timelabels.cpp:410
 #, kde-format

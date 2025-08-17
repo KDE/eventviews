@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-16 00:43+0000\n"
-"PO-Revision-Date: 2025-06-02 09:46+0300\n"
+"PO-Revision-Date: 2025-08-16 16:48+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -135,31 +135,33 @@ msgstr "24-годинний відлік"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Right-side Time Labels"
-msgstr ""
+msgstr "Приховати часові мітки з правого боку"
 
 #: agenda/timelabels.cpp:344
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Right-side Time Labels"
-msgstr ""
+msgstr "Показати часові мітки з правого боку"
 
 #: agenda/timelabels.cpp:348
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Left-side Time Labels"
-msgstr ""
+msgstr "Приховати часові мітки з лівого боку"
 
 #: agenda/timelabels.cpp:350
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Left-side Time Labels"
-msgstr ""
+msgstr "Показати часові мітки з лівого боку"
 
 #: agenda/timelabels.cpp:353
 #, kde-format
 msgctxt "info::tooltip"
 msgid "Show or hide time labels on both sides of the agenda view"
 msgstr ""
+"Показати або приховати часові мітки з обох боків панелі перегляду порядку "
+"денного"
 
 #: agenda/timelabels.cpp:355
 #, kde-format
@@ -170,6 +172,12 @@ msgid ""
 "the second side to save screen space. Similarly, the vertical scrollbar is "
 "removed when the time labels are shown on both sides."
 msgstr ""
+"За допомогою цього розділу меню можна наказати програмі показувати або "
+"приховувати часові мітки з обох боків панелі перегляду порядку денного. Для "
+"заощадження місця на екрані буде показано лише загальносистемний часовий "
+"пояс (без додаткових часових поясів) на другому боці. Так само, буде "
+"вилучено вертикальну смужку гортання, якщо часові мітки показано з обох "
+"боків."
 
 #: agenda/timelabels.cpp:410
 #, kde-format
