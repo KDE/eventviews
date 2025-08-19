@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-16 00:43+0000\n"
-"PO-Revision-Date: 2025-06-10 11:38+0200\n"
+"PO-Revision-Date: 2025-08-16 14:39+0200\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -141,33 +141,33 @@ msgstr "Orologio a 24 ore"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Right-side Time Labels"
-msgstr ""
+msgstr "Nascondi le etichette dell'orario a destra"
 
 #: agenda/timelabels.cpp:344
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Right-side Time Labels"
-msgstr ""
+msgstr "Mostra le etichette dell'orario a destra"
 
 #: agenda/timelabels.cpp:348
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Left-side Time Labels"
-msgstr ""
+msgstr "Nascondi le etichette dell'orario a sinistra"
 
 #: agenda/timelabels.cpp:350
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Left-side Time Labels"
-msgstr ""
+msgstr "Mostra le etichette dell'orario a sinistra"
 
 #: agenda/timelabels.cpp:353
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show at the bottom of the agenda views"
+#, kde-format
 msgctxt "info::tooltip"
 msgid "Show or hide time labels on both sides of the agenda view"
-msgstr "Mostra in basso nelle viste agenda"
+msgstr ""
+"Mostra o nasconde le etichette dell'orario su entrambi i lati della vista "
+"agenda"
 
 #: agenda/timelabels.cpp:355
 #, kde-format
@@ -178,6 +178,11 @@ msgid ""
 "the second side to save screen space. Similarly, the vertical scrollbar is "
 "removed when the time labels are shown on both sides."
 msgstr ""
+"Questa sezione del menu mostra o nasconde le etichette dell'orario su "
+"entrambi i lati della vista agenda. Solo il fuso orario di sistema (e nessun "
+"altro) viene mostrato sul secondo lato, in modo da risparmiare spazio sullo "
+"schermo. Analogamente, la barra di scorrimento verticale viene rimossa "
+"quando le etichette dell'orario sono mostrate su entrambi i lati."
 
 #: agenda/timelabels.cpp:410
 #, kde-format
