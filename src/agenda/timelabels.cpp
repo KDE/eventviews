@@ -215,9 +215,9 @@ void TimeLabels::paintEvent(QPaintEvent *)
     if (!mAgenda) {
         return;
     }
-    const KCalendarCore::DateList datelist = mAgenda->dateList();
+    KCalendarCore::DateList datelist = mAgenda->dateList();
     if (datelist.isEmpty()) {
-        return;
+        datelist << mTimeLabelsZone->agendaView()->startDate();
     }
 
     QPainter p(this);
