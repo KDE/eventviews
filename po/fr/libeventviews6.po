@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-16 00:43+0000\n"
-"PO-Revision-Date: 2025-06-10 08:17+0200\n"
+"PO-Revision-Date: 2025-08-18 09:16+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Accelerator-Marker: &\n"
 "X-Environment: kde\n"
-"X-Generator: Lokalize 25.04.2\n"
+"X-Generator: Lokalize 25.08.0\n"
 "X-Text-Markup: kde4\n"
 
 #, kde-format
@@ -142,31 +142,33 @@ msgstr "Horloge sur 24 heures"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Right-side Time Labels"
-msgstr ""
+msgstr "Masquer les étiquettes de temps présentes sur le côté droit"
 
 #: agenda/timelabels.cpp:344
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Right-side Time Labels"
-msgstr ""
+msgstr "Afficher les étiquettes de temps présentes sur le côté droit"
 
 #: agenda/timelabels.cpp:348
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Left-side Time Labels"
-msgstr ""
+msgstr "Masquer les étiquettes de temps présentes sur le côté gauche"
 
 #: agenda/timelabels.cpp:350
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Left-side Time Labels"
-msgstr ""
+msgstr "Afficher les étiquettes de temps présentes sur le côté gauche"
 
 #: agenda/timelabels.cpp:353
 #, kde-format
 msgctxt "info::tooltip"
 msgid "Show or hide time labels on both sides of the agenda view"
 msgstr ""
+"Afficher ou masquer les étiquettes de temps présentes des deux côtés de la "
+"vue d'agenda"
 
 #: agenda/timelabels.cpp:355
 #, kde-format
@@ -177,6 +179,11 @@ msgid ""
 "the second side to save screen space. Similarly, the vertical scrollbar is "
 "removed when the time labels are shown on both sides."
 msgstr ""
+"Cette section de menu affiche ou masque les étiquettes de temps des deux "
+"côtés de la vue d'agenda. Seul le fuseau horaire du système (Et aucun fuseau "
+"horaire supplémentaire) est affiché sur le deuxième côté pour économiser de "
+"l'espace sur l'écran. De même, la barre de défilement vertical est supprimée "
+"lorsque les étiquettes de temps sont affichées des deux côtés."
 
 #: agenda/timelabels.cpp:410
 #, kde-format
