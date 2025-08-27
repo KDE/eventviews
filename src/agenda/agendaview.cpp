@@ -2088,10 +2088,6 @@ void AgendaView::fillAgenda()
     enableAgendaUpdate(true);
     d->clearView();
 
-    if (d->mViewCalendar->calendarCount() == 0) {
-        return;
-    }
-
     /*
     qCDebug(CALENDARVIEW_LOG) << "changes = " << changes()
              << "; mUpdateAgenda = " << d->mUpdateAgenda
