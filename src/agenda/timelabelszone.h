@@ -50,6 +50,8 @@ public:
     */
     void updateTimeLabelsPosition();
 
+    AgendaView *agendaView() const;
+
 private:
     void setupTimeLabel(QScrollArea *area);
     Agenda *mAgenda = nullptr;

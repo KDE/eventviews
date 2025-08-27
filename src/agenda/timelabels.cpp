@@ -9,6 +9,7 @@
 using namespace Qt::Literals::StringLiterals;
 
 #include "agenda.h"
+#include "agendaview.h"
 #include "prefs.h"
 #include "timelabelszone.h"
 #include "timescaleconfigdialog.h"

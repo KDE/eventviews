@@ -156,4 +156,9 @@ void TimeLabelsZone::setPreferences(const PrefsPtr &prefs)
     }
 }
 
+AgendaView *TimeLabelsZone::agendaView() const
+{
+    return mParent;
+}
+
 #include "moc_timelabelszone.cpp"
