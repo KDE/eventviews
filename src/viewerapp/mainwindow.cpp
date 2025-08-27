@@ -145,7 +145,7 @@ void MainWindow::delayedInit()
 void MainWindow::addViewTriggered(QAction *action)
 {
     QString viewName = action->text().toLower();
-    viewName.remove(QLatin1Char('&'));
+    viewName.remove(u'&');
     addView(viewName);
 }
 

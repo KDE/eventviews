@@ -64,7 +64,7 @@ TodoViewQuickSearch::TodoViewQuickSearch(QWidget *parent)
         const int currentPreferedWidth = mCategoryCombo->lineEdit()->sizeHint().width();
 
         // Calculate a nice size for "Select Categories"
-        const int newPreferedWidth = currentPreferedWidth - fm.boundingRect(QLatin1Char('x')).width() * 17 + fm.boundingRect(defaultText).width();
+        const int newPreferedWidth = currentPreferedWidth - fm.boundingRect(u'x').width() * 17 + fm.boundingRect(defaultText).width();
 
         const int pixelsToAdd = newPreferedWidth - mCategoryCombo->lineEdit()->width();
         mCategoryCombo->setMinimumWidth(mCategoryCombo->width() + pixelsToAdd);

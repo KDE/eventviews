@@ -1768,7 +1768,7 @@ void AgendaView::createTimeBarHeaders()
     const TimeLabels *timeLabelLeft;
     for (QScrollArea *area : lst) {
         timeLabelLeft = static_cast<TimeLabels *>(area->widget());
-        const QString labelStr = timeLabelLeft->header().replace(QLatin1Char('/'), QStringLiteral("/ "));
+        const QString labelStr = timeLabelLeft->header().replace(u'/', QStringLiteral("/ "));
         const QString tooltipStr = timeLabelLeft->headerToolTip();
 
         auto labelLeft = new QLabel(labelStr, d->mTimeBarHeaderFrameLeft);
@@ -1782,7 +1782,7 @@ void AgendaView::createTimeBarHeaders()
     }
 
     // Add only the last (system timezone) to the right labels
-    const auto labelRight = new QLabel(timeLabelLeft->header().replace(QLatin1Char('/'), QStringLiteral("/ ")), d->mTimeBarHeaderFrameRight);
+    const auto labelRight = new QLabel(timeLabelLeft->header().replace(u'/', QStringLiteral("/ ")), d->mTimeBarHeaderFrameRight);
     labelRight->setFont(labelFont);
     labelRight->setAlignment(Qt::AlignBottom | Qt::AlignRight);
     labelRight->setContentsMargins({});
@@ -1808,14 +1808,14 @@ void AgendaView::updateTimeBarWidth()
 
     int width = d->mTimeLabelsZoneLeft->preferedTimeLabelsWidth();
     for (const QLabel *l : std::as_const(d->mTimeBarHeadersLeft)) {
-        const auto lst = l->text().split(QLatin1Char(' '));
+        const auto lst = l->text().split(u' ');
         for (const QString &word : lst) {
             width = qMax(width, fm.boundingRect(word).width());
         }
     }
     setFont(oldFont);
 
-    width = width + fm.boundingRect(QLatin1Char('/')).width();
+    width = width + fm.boundingRect(u'/').width();
     const auto dayLabelsLayout = d->mTopDayLabelsFrame->dayLabelsLayout();
     dayLabelsLayout->setTimeLabelsWidth(width);
 

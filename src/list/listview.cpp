@@ -50,7 +50,7 @@ enum {
 static QString cleanSummary(const QString &summary, const QDateTime &next)
 {
     QString retStr = summary;
-    retStr.replace(QLatin1Char('\n'), QLatin1Char(' '));
+    retStr.replace(QLatin1Char('\n'), u' ');
 
     if (next.isValid()) {
         const QString dateStr = QLocale().toString(next.date(), QLocale::ShortFormat);
@@ -262,7 +262,7 @@ bool ListViewPrivate::ListItemVisitor::visit(const Journal::Ptr &j)
     mItem->end = QDateTime();
 
     if (j->summary().isEmpty()) {
-        mItem->setText(Summary_Column, cleanSummary(j->description().section(QLatin1Char('\n'), 0, 0), QDateTime()));
+        mItem->setText(Summary_Column, cleanSummary(j->description().section(u'\n', 0, 0), QDateTime()));
     } else {
         mItem->setText(Summary_Column, cleanSummary(j->summary(), QDateTime()));
     }

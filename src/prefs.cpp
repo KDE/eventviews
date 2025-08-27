@@ -184,7 +184,7 @@ void BaseConfig::usrRead()
     const QString str = QLocale().timeFormat();
     // 'A' or 'a' means am/pm is shown (and then 'h' uses 12-hour format)
     // but 'H' forces a 24-hour format anyway, even with am/pm shown.
-    if (str.contains(QLatin1Char('a'), Qt::CaseInsensitive) && !str.contains(QLatin1Char('H'))) {
+    if (str.contains(QLatin1Char('a'), Qt::CaseInsensitive) && !str.contains(u'H')) {
         setUse24HourClock(timeScaleConfig.readEntry("24 Hour Clock", false));
     } else {
         setUse24HourClock(timeScaleConfig.readEntry("24 Hour Clock", true));

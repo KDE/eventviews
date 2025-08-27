@@ -496,9 +496,9 @@ QString IncidenceMonthItem::text(bool end) const
         }
         if (!timeStr.isEmpty()) {
             if (!end) {
-                ret = timeStr + QLatin1Char(' ') + ret;
+                ret = timeStr + u' ' + ret;
             } else {
-                ret = ret + QLatin1Char(' ') + timeStr;
+                ret = ret + u' ' + timeStr;
             }
         }
     }

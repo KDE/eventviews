@@ -1037,7 +1037,7 @@ void AgendaItem::paintEvent(QPaintEvent *ev)
     p.setBackground(QBrush(bgColor));
     p.setPen(textColor);
     QString const ws = ww.wrappedString();
-    if (QStringView(ws).left(ws.length() - 1).indexOf(QLatin1Char('\n')) >= 0) {
+    if (QStringView(ws).left(ws.length() - 1).indexOf(u'\n') >= 0) {
         ww.drawText(&p, eventX, y, Qt::AlignLeft | KWordWrap::FadeOut);
     } else {
         ww.drawText(&p, eventX + (txtWidth - ww.boundingRect().width() - 2 * margin) / 2, y, Qt::AlignHCenter | KWordWrap::FadeOut);

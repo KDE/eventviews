@@ -1352,7 +1352,7 @@ QString TodoView::stateSaverGroup() const
 {
     QString str = QStringLiteral("TodoTreeViewState");
     if (mSidebarView) {
-        str += QLatin1Char('S');
+        str += u'S';
     }
 
     return str;
