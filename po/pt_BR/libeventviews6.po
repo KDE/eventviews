@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-28 00:43+0000\n"
-"PO-Revision-Date: 2025-07-26 14:52-0300\n"
+"PO-Revision-Date: 2025-08-29 09:17-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.04.3\n"
+"X-Generator: Lokalize 25.08.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -137,31 +137,33 @@ msgstr "Relógio de 24 horas"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Right-side Time Labels"
-msgstr ""
+msgstr "Ocultar rótulos de tempo do lado direito"
 
 #: agenda/timelabels.cpp:344
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Right-side Time Labels"
-msgstr ""
+msgstr "Mostrar rótulos de tempo do lado direito"
 
 #: agenda/timelabels.cpp:348
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Left-side Time Labels"
-msgstr ""
+msgstr "Ocultar rótulos de tempo do lado esquerdo"
 
 #: agenda/timelabels.cpp:350
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Left-side Time Labels"
-msgstr ""
+msgstr "Mostrar rótulos de tempo do lado esquerdo"
 
 #: agenda/timelabels.cpp:353
 #, kde-format
 msgctxt "info::tooltip"
 msgid "Show or hide time labels on both sides of the agenda view"
 msgstr ""
+"Mostrar ou ocultar rótulos de tempo em ambos os lados da visualização da "
+"agenda"
 
 #: agenda/timelabels.cpp:355
 #, kde-format
@@ -172,6 +174,11 @@ msgid ""
 "the second side to save screen space. Similarly, the vertical scrollbar is "
 "removed when the time labels are shown on both sides."
 msgstr ""
+"Esta seção do menu mostra ou oculta os rótulos de tempo em ambos os lados da "
+"visualização da agenda. Apenas o fuso horário do sistema (e nenhum fuso "
+"horário adicional) é exibido no segundo lado para economizar espaço na tela. "
+"Da mesma forma, a barra de rolagem vertical é removida quando os rótulos de "
+"tempo são exibidos em ambos os lados."
 
 #: agenda/timelabels.cpp:410
 #, kde-format
