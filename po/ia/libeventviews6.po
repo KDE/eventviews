@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-28 00:43+0000\n"
-"PO-Revision-Date: 2025-05-09 16:20+0200\n"
+"PO-Revision-Date: 2025-09-02 18:11+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -128,7 +128,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "24 Hour Clock"
-msgstr ""
+msgstr "Horologio de 24-horas"
 
 #: agenda/timelabels.cpp:342
 #, kde-format
@@ -2013,19 +2013,16 @@ msgid "Create Event from To-do"
 msgstr "Crea  evento ex Agenda"
 
 #: todo/todoview.cpp:452
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu delete completed to-dos"
-#| msgid "Pur&ge Completed"
+#, kde-format
 msgctxt "@action:inmenu set or unset to-do is completed"
 msgid "Togg&le To-do Completed"
-msgstr "Activitate de deletion (pur&gar) completate"
+msgstr "Marca activitate de agenda comp&letate"
 
 #: todo/todoview.cpp:456
-#, fuzzy, kde-format
-#| msgid "Reminder"
+#, kde-format
 msgctxt "@action:inmenu enable or disable reminder"
 msgid "&Toggle Reminder"
-msgstr "Memento"
+msgstr "Marca memen&to"
 
 #: todo/todoview.cpp:463
 #, kde-format
