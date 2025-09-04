@@ -57,7 +57,7 @@ add_feature_info(
     ${BUILD_QCH}
     "API documentation in QCH format (for e.g. Qt Assistant, Qt Creator & KDevelop)"
 )
-
+set(CMAKE_CXX_SCAN_FOR_MODULES OFF)
 set(EVENTVIEW_LIB_VERSION ${PIM_VERSION})
 set(CALENDARUTILS_LIB_VERSION "6.5.40")
 set(AKONADI_LIB_VERSION "6.5.40")
