@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-28 00:43+0000\n"
-"PO-Revision-Date: 2025-06-04 19:20+0200\n"
+"PO-Revision-Date: 2025-09-03 20:14+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -131,31 +131,33 @@ msgstr "Часовник с формат 24 часа"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Right-side Time Labels"
-msgstr ""
+msgstr "Скриване на етикетите за време от дясната страна"
 
 #: agenda/timelabels.cpp:344
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Right-side Time Labels"
-msgstr ""
+msgstr "Показване на етикетите за време от дясната страна"
 
 #: agenda/timelabels.cpp:348
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Left-side Time Labels"
-msgstr ""
+msgstr "Скриване на етикетите за време от лявата страна"
 
 #: agenda/timelabels.cpp:350
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Left-side Time Labels"
-msgstr ""
+msgstr "Показване на етикетите за време от лявата страна"
 
 #: agenda/timelabels.cpp:353
 #, kde-format
 msgctxt "info::tooltip"
 msgid "Show or hide time labels on both sides of the agenda view"
 msgstr ""
+"Показване или скриване на етикети с време от двете страни на изгледа на "
+"дневния ред"
 
 #: agenda/timelabels.cpp:355
 #, kde-format
@@ -166,6 +168,11 @@ msgid ""
 "the second side to save screen space. Similarly, the vertical scrollbar is "
 "removed when the time labels are shown on both sides."
 msgstr ""
+"Тази секция от менюто показва или скрива етикетите с времето от двете страни "
+"на изгледа на дневния ред. За да се спести място на екрана, на втората "
+"страна се показва само системната часова зона (без допълнително добавени "
+"часови зони). По същия начин вертикалната лента за превъртане се премахва, "
+"когато етикетите с времето се показват от двете страни."
 
 #: agenda/timelabels.cpp:410
 #, kde-format
