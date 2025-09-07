@@ -28,8 +28,6 @@
 #include <QToolButton>
 #include <QWheelEvent>
 
-#include <ranges>
-
 using namespace EventViews;
 
 namespace EventViews
