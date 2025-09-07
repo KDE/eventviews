@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-28 00:43+0000\n"
-"PO-Revision-Date: 2025-06-14 13:48+0200\n"
+"PO-Revision-Date: 2025-09-06 06:19+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
-"Language-Team: Polish <kde-i18n-doc@kde.org>\n"
+"Language-Team: pl\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.08.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -117,7 +117,7 @@ msgstr "Dod&aj strefy czasowe…"
 #: agenda/timelabels.cpp:329
 #, kde-format
 msgid "&Remove Timezone %1"
-msgstr "&Usuń strefę czasową %1"
+msgstr "Usuń st&refę czasową %1"
 
 #: agenda/timelabels.cpp:335
 #, kde-format
@@ -135,31 +135,31 @@ msgstr "Zegar 24-ro godzinny"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Right-side Time Labels"
-msgstr ""
+msgstr "Ukryj etykiety czasowe po prawej"
 
 #: agenda/timelabels.cpp:344
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Right-side Time Labels"
-msgstr ""
+msgstr "Pokaż etykiety czasowe po prawej"
 
 #: agenda/timelabels.cpp:348
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Left-side Time Labels"
-msgstr ""
+msgstr "Ukryj etykiety czasowe po lewej"
 
 #: agenda/timelabels.cpp:350
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Left-side Time Labels"
-msgstr ""
+msgstr "Pokaż etykiety czasowe po lewej"
 
 #: agenda/timelabels.cpp:353
 #, kde-format
 msgctxt "info::tooltip"
 msgid "Show or hide time labels on both sides of the agenda view"
-msgstr ""
+msgstr "Pokaż lub ukryj etykiety czasowe po obu stronach widoku rozkładu"
 
 #: agenda/timelabels.cpp:355
 #, kde-format
@@ -170,6 +170,11 @@ msgid ""
 "the second side to save screen space. Similarly, the vertical scrollbar is "
 "removed when the time labels are shown on both sides."
 msgstr ""
+"To menu pokazuje lub ukrywa etykiety czasowe po obu stronach widoku "
+"rozkładu. Po drugiej stronie pokazywana jest tylko systemowa strefa czasowa "
+"(bez żadnych dodatkowych stref), aby zaoszczędzić miejsca na ekranie. "
+"Podobnie, pionowe paski przewijania zostaną usunięte, gdy etykiety czasowe "
+"są pokazywane po obu stronach."
 
 #: agenda/timelabels.cpp:410
 #, kde-format
