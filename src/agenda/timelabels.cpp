@@ -325,17 +325,33 @@ void TimeLabels::contextMenuEvent(QContextMenuEvent *event)
     Q_UNUSED(event)
 
     QMenu popup(this);
-    const QAction *editTimeZones = popup.addAction(QIcon::fromTheme(QStringLiteral("document-properties")), i18n("&Add Timezones…"));
+
+    QAction *editTimeZones = popup.addAction(QIcon::fromTheme(QStringLiteral("document-properties")), i18n("&Add Timezones…"));
+    editTimeZones->setToolTip(i18nc("@info:tooltip", "Add a timelabel display column for a new timezone"));
+    editTimeZones->setWhatsThis(i18nc(
+        "@info:whatsthis",
+        "This menu will show a timezone selection dialog allowing you to select a timezone for showing hour labels alongside your system timezone hour labels. "
+        "This feature is very useful when showing calendar events for people in timezones other than your own."));
+
     QAction *removeTimeZone = popup.addAction(QIcon::fromTheme(QStringLiteral("edit-delete")), i18n("&Remove Timezone %1", i18n(mTimezone.id().constData())));
     if (!mTimezone.isValid() || !mTimeLabelsZone->preferences()->timeScaleTimezones().count() || mTimezone == mTimeLabelsZone->preferences()->timeZone()) {
         removeTimeZone->setEnabled(false);
     }
-    const QAction *HourTimeMode;
+    removeTimeZone->setToolTip(i18nc("@info:tooltip", "Remove the hour label column for the currently selected timezone, for non-system timezones only."));
+    removeTimeZone->setWhatsThis(
+        i18nc("@info:whatsthis",
+              "For non-system timezones, this menu selection removes the time hour labels display column for the currently selected timezone."));
+
+    QAction *HourTimeMode;
     if (mTimeLabelsZone->preferences()->use24HourClock()) {
         HourTimeMode = popup.addAction(QIcon::fromTheme(QStringLiteral("clock")), i18nc("@action:inmenu", "12 Hour Clock"));
     } else {
         HourTimeMode = popup.addAction(QIcon::fromTheme(QStringLiteral("clock")), i18nc("@action:inmenu", "24 Hour Clock"));
     }
+    HourTimeMode->setToolTip(i18nc("@info:tooltip", "Display the time label hours in 24-hour \"military\" format or according to your locale"));
+    HourTimeMode->setWhatsThis(
+        i18nc("@info:whatsthis", "This menu selection shows the time hour labels according to 24-hour \"military\" time or your system locale."));
+
     QAction *DualLabels;
     if (!QApplication::isRightToLeft()) {
         if (mTimeLabelsZone->preferences()->useDualLabels()) {
@@ -352,7 +368,7 @@ void TimeLabels::contextMenuEvent(QContextMenuEvent *event)
     }
     DualLabels->setToolTip(i18nc("@info::tooltip", "Show or hide time labels on both sides of the agenda view"));
     DualLabels->setWhatsThis(i18nc("@info::whatsthis",
-                                   "This menu section shows or hides the time labels on both sides of the "
+                                   "This menu selection shows or hides the time labels on both sides of the "
                                    "agenda view. Only the system timezone (and no extra added timezones) is "
                                    "shown on the second side to save screen space. Similarly, the vertical "
                                    "scrollbar is removed when the time labels are shown on both sides."));
