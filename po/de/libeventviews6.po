@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-28 00:43+0000\n"
+"POT-Creation-Date: 2025-09-08 00:45+0000\n"
 "PO-Revision-Date: 2025-06-08 22:19+0200\n"
 "Last-Translator: Alois Spitzbart <spitz234@hotmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -1756,19 +1756,19 @@ msgctxt "'Month day' for month view cells"
 msgid "%1 %2"
 msgstr "%2. %1"
 
-#: month/monthview.cpp:209 month/monthview.cpp:479
+#: month/monthview.cpp:207 month/monthview.cpp:477
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display calendar in a normal size"
 msgstr "Kalender in normaler Größe anzeigen"
 
-#: month/monthview.cpp:210 month/monthview.cpp:482
+#: month/monthview.cpp:208 month/monthview.cpp:480
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display calendar in a full window"
 msgstr "Kalender fensterfüllend anzeigen"
 
-#: month/monthview.cpp:212
+#: month/monthview.cpp:210
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1779,13 +1779,13 @@ msgstr ""
 "dass der maximal verfügbare Platz im Fenster ausgefüllt wird, oder die "
 "Monatsansicht wird wieder auf die normale Größe verringert."
 
-#: month/monthview.cpp:219
+#: month/monthview.cpp:217
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Go back one month"
 msgstr "Einen Monat zurückgehen"
 
-#: month/monthview.cpp:220
+#: month/monthview.cpp:218
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1794,13 +1794,13 @@ msgstr ""
 "Klicken Sie auf diesen Knopf, dann wird die Ansicht des vorherigen Monats "
 "angezeigt."
 
-#: month/monthview.cpp:226
+#: month/monthview.cpp:224
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Go back one week"
 msgstr "Eine Woche zurückgehen"
 
-#: month/monthview.cpp:227
+#: month/monthview.cpp:225
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Click this button and the view will be scrolled back in time by 1 week."
@@ -1808,13 +1808,13 @@ msgstr ""
 "Klicken Sie auf diesen Knopf, dann wird die Ansicht der vorherigen Woche "
 "angezeigt."
 
-#: month/monthview.cpp:233
+#: month/monthview.cpp:231
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Go forward one week"
 msgstr "Eine Woche vorwärts gehen"
 
-#: month/monthview.cpp:234
+#: month/monthview.cpp:232
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1823,13 +1823,13 @@ msgstr ""
 "Klicken Sie auf diesen Knopf, dann wird die Ansicht der folgenden Woche "
 "angezeigt."
 
-#: month/monthview.cpp:240
+#: month/monthview.cpp:238
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Go forward one month"
 msgstr "Einen Monat vorwärts gehen"
 
-#: month/monthview.cpp:241
+#: month/monthview.cpp:239
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""

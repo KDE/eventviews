@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-28 00:43+0000\n"
+"POT-Creation-Date: 2025-09-08 00:45+0000\n"
 "PO-Revision-Date: 2025-08-22 17:46+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -1689,19 +1689,19 @@ msgctxt "'Month day' for month view cells"
 msgid "%1 %2"
 msgstr "%2 %1"
 
-#: month/monthview.cpp:209 month/monthview.cpp:479
+#: month/monthview.cpp:207 month/monthview.cpp:477
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display calendar in a normal size"
 msgstr "Показывать календарь обычного размера"
 
-#: month/monthview.cpp:210 month/monthview.cpp:482
+#: month/monthview.cpp:208 month/monthview.cpp:480
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display calendar in a full window"
 msgstr "Показывать календарь на всё окно"
 
-#: month/monthview.cpp:212
+#: month/monthview.cpp:210
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1711,13 +1711,13 @@ msgstr ""
 "При нажатии этой кнопки расписание на месяц будет развёрнуто на всё окно или "
 "свёрнуто до своего нормального размера."
 
-#: month/monthview.cpp:219
+#: month/monthview.cpp:217
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Go back one month"
 msgstr "Перейти на месяц назад"
 
-#: month/monthview.cpp:220
+#: month/monthview.cpp:218
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1726,13 +1726,13 @@ msgstr ""
 "При нажатии этой кнопки отображаемое в календаре время будет смещено на один "
 "месяц назад."
 
-#: month/monthview.cpp:226
+#: month/monthview.cpp:224
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Go back one week"
 msgstr "Перейти на неделю назад"
 
-#: month/monthview.cpp:227
+#: month/monthview.cpp:225
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Click this button and the view will be scrolled back in time by 1 week."
@@ -1740,13 +1740,13 @@ msgstr ""
 "При нажатии этой кнопки отображаемое в календаре время будет смещено на одну "
 "неделю назад."
 
-#: month/monthview.cpp:233
+#: month/monthview.cpp:231
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Go forward one week"
 msgstr "Перейти на неделю вперёд"
 
-#: month/monthview.cpp:234
+#: month/monthview.cpp:232
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1755,13 +1755,13 @@ msgstr ""
 "При нажатии этой кнопки отображаемое в календаре время будет смещено на одну "
 "неделю вперёд."
 
-#: month/monthview.cpp:240
+#: month/monthview.cpp:238
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Go forward one month"
 msgstr "Перейти на месяц вперёд"
 
-#: month/monthview.cpp:241
+#: month/monthview.cpp:239
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-28 00:43+0000\n"
+"POT-Creation-Date: 2025-09-08 00:45+0000\n"
 "PO-Revision-Date: 2024-09-19 14:45+0300\n"
 "Last-Translator: Antonis Geralis <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -1839,19 +1839,19 @@ msgctxt "'Month day' for month view cells"
 msgid "%1 %2"
 msgstr "%1 %2"
 
-#: month/monthview.cpp:209 month/monthview.cpp:479
+#: month/monthview.cpp:207 month/monthview.cpp:477
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display calendar in a normal size"
 msgstr "Εμφάνιση ημερολογίου σε κανονικό μέγεθος"
 
-#: month/monthview.cpp:210 month/monthview.cpp:482
+#: month/monthview.cpp:208 month/monthview.cpp:480
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display calendar in a full window"
 msgstr "Εμφάνιση ημερολογίου σε πλήρες παράθυρο"
 
-#: month/monthview.cpp:212
+#: month/monthview.cpp:210
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1862,13 +1862,13 @@ msgstr ""
 "μέγιστο διαθέσιμο χώρο παραθύρου / ή να συρρικνωθεί πίσω στο κανονικό της "
 "μέγεθος."
 
-#: month/monthview.cpp:219
+#: month/monthview.cpp:217
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Go back one month"
 msgstr "Μετάβαση πίσω κατά ένα μήνα"
 
-#: month/monthview.cpp:220
+#: month/monthview.cpp:218
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1876,26 +1876,26 @@ msgid ""
 msgstr ""
 "Με κλικ στο κουμπί αυτό η προβολή θα κυλίσει πίσω στο χρόνο κατά 1 μήνα."
 
-#: month/monthview.cpp:226
+#: month/monthview.cpp:224
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Go back one week"
 msgstr "Μετάβαση πίσω κατά μία εβδομάδα"
 
-#: month/monthview.cpp:227
+#: month/monthview.cpp:225
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Click this button and the view will be scrolled back in time by 1 week."
 msgstr ""
 "Με κλικ στο κουμπί αυτό η προβολή θα κυλίσει πίσω στο χρόνο κατά 1 εβδομάδα."
 
-#: month/monthview.cpp:233
+#: month/monthview.cpp:231
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Go forward one week"
 msgstr "Μετάβαση εμπρός κατά μία εβδομάδα"
 
-#: month/monthview.cpp:234
+#: month/monthview.cpp:232
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1904,13 +1904,13 @@ msgstr ""
 "Με κλικ στο κουμπί αυτό η προβολή θα κυλίσει μπροστά στο χρόνο κατά 1 "
 "εβδομάδα."
 
-#: month/monthview.cpp:240
+#: month/monthview.cpp:238
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Go forward one month"
 msgstr "Μετάβαση εμπρός κατά ένα μήνα"
 
-#: month/monthview.cpp:241
+#: month/monthview.cpp:239
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""

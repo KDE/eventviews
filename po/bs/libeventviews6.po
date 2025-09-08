@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-28 00:43+0000\n"
+"POT-Creation-Date: 2025-09-08 00:45+0000\n"
 "PO-Revision-Date: 2014-01-10 19:09+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: bs <bs@kde.org>\n"
@@ -1792,19 +1792,19 @@ msgctxt "'Month day' for month view cells"
 msgid "%1 %2"
 msgstr "%2 %1"
 
-#: month/monthview.cpp:209 month/monthview.cpp:479
+#: month/monthview.cpp:207 month/monthview.cpp:477
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display calendar in a normal size"
 msgstr "Prikaži kalendar u normalnoj veličini"
 
-#: month/monthview.cpp:210 month/monthview.cpp:482
+#: month/monthview.cpp:208 month/monthview.cpp:480
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display calendar in a full window"
 msgstr "Prikaži kalendar preko cijelog prozora"
 
-#: month/monthview.cpp:212
+#: month/monthview.cpp:210
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1814,13 +1814,13 @@ msgstr ""
 "Kliknite na ovo dugme i prikaz mjeseca bit će povećan da popunu maksimalno "
 "dostupan prostor prozora ili smanji nazad na normalnu veličinu."
 
-#: month/monthview.cpp:219
+#: month/monthview.cpp:217
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Go back one month"
 msgstr "Idi nazad jedan mjesec"
 
-#: month/monthview.cpp:220
+#: month/monthview.cpp:218
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1828,26 +1828,26 @@ msgid ""
 msgstr ""
 "Kliknite na ovo dugme i prikaz će se pomicati natrag u vremenu jedan mjesec."
 
-#: month/monthview.cpp:226
+#: month/monthview.cpp:224
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Go back one week"
 msgstr "Idi nazad jednu sedmicu"
 
-#: month/monthview.cpp:227
+#: month/monthview.cpp:225
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Click this button and the view will be scrolled back in time by 1 week."
 msgstr ""
 "Kliknite na ovo dugme i prikaz će se pomicati natrag u vremenu jednu sedmicu."
 
-#: month/monthview.cpp:233
+#: month/monthview.cpp:231
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Go forward one week"
 msgstr "Idi naprijed jednu sedmicu"
 
-#: month/monthview.cpp:234
+#: month/monthview.cpp:232
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1856,13 +1856,13 @@ msgstr ""
 "Kliknite na ovo dugme i prikaz će se pomicati naprijed u vremenu jednu "
 "sedmicu."
 
-#: month/monthview.cpp:240
+#: month/monthview.cpp:238
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Go forward one month"
 msgstr "Idi naprijed jedan mjesec"
 
-#: month/monthview.cpp:241
+#: month/monthview.cpp:239
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""

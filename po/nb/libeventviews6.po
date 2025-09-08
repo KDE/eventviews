@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-28 00:43+0000\n"
+"POT-Creation-Date: 2025-09-08 00:45+0000\n"
 "PO-Revision-Date: 2013-09-27 17:58+0200\n"
 "Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -1700,19 +1700,19 @@ msgctxt "'Month day' for month view cells"
 msgid "%1 %2"
 msgstr "%1 %2"
 
-#: month/monthview.cpp:209 month/monthview.cpp:479
+#: month/monthview.cpp:207 month/monthview.cpp:477
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display calendar in a normal size"
 msgstr "Vis kalender i normal størrelse"
 
-#: month/monthview.cpp:210 month/monthview.cpp:482
+#: month/monthview.cpp:208 month/monthview.cpp:480
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display calendar in a full window"
 msgstr "Vis kalender i hele vinduet"
 
-#: month/monthview.cpp:212
+#: month/monthview.cpp:210
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1722,13 +1722,13 @@ msgstr ""
 "Trykk denne knappen, så blir månedsvisningen forstørret til å fylle all "
 "tilgjengelig vindusplass / eller krympet tilbake til sin normale størrelse."
 
-#: month/monthview.cpp:219
+#: month/monthview.cpp:217
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Go back one month"
 msgstr "Gå tilbake én måned"
 
-#: month/monthview.cpp:220
+#: month/monthview.cpp:218
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1736,38 +1736,38 @@ msgid ""
 msgstr ""
 "Trykk denne knappen, så blir visningen rullet tilbake i tid med én måned."
 
-#: month/monthview.cpp:226
+#: month/monthview.cpp:224
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Go back one week"
 msgstr "Gå tilbake én uke"
 
-#: month/monthview.cpp:227
+#: month/monthview.cpp:225
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Click this button and the view will be scrolled back in time by 1 week."
 msgstr "Trykk denne knappen, så blir visningen rullet tilbake i tid med én uke"
 
-#: month/monthview.cpp:233
+#: month/monthview.cpp:231
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Go forward one week"
 msgstr "Gå fram én uke"
 
-#: month/monthview.cpp:234
+#: month/monthview.cpp:232
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Click this button and the view will be scrolled forward in time by 1 week."
 msgstr "Trykk denne knappen, så blir visningen rullet fram i tid med én uke"
 
-#: month/monthview.cpp:240
+#: month/monthview.cpp:238
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Go forward one month"
 msgstr "Gå fram én måned"
 
-#: month/monthview.cpp:241
+#: month/monthview.cpp:239
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
