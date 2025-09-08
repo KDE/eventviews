@@ -350,8 +350,8 @@ void TimeLabels::contextMenuEvent(QContextMenuEvent *event)
             DualLabels = popup.addAction(i18nc("@action:inmenu", "Show Left-side Time Labels"));
         }
     }
-    DualLabels->setToolTip(i18nc("info::tooltip", "Show or hide time labels on both sides of the agenda view"));
-    DualLabels->setWhatsThis(i18nc("info::whatsthis",
+    DualLabels->setToolTip(i18nc("@info::tooltip", "Show or hide time labels on both sides of the agenda view"));
+    DualLabels->setWhatsThis(i18nc("@info::whatsthis",
                                    "This menu section shows or hides the time labels on both sides of the "
                                    "agenda view. Only the system timezone (and no extra added timezones) is "
                                    "shown on the second side to save screen space. Similarly, the vertical "
