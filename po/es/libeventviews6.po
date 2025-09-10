@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: libeventviews6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-09 00:56+0000\n"
-"PO-Revision-Date: 2025-08-16 19:05+0100\n"
+"PO-Revision-Date: 2025-09-09 22:14+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.3\n"
+"X-Generator: Lokalize 25.08.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -119,6 +119,8 @@ msgstr "&Añadir zonas horarias…"
 msgctxt "@info:tooltip"
 msgid "Add a timelabel display column for a new timezone"
 msgstr ""
+"Añadir una columna de visualización de etiquetas de horas para una nueva "
+"zona horaria"
 
 #: agenda/timelabels.cpp:333
 #, kde-format
@@ -129,6 +131,10 @@ msgid ""
 "This feature is very useful when showing calendar events for people in "
 "timezones other than your own."
 msgstr ""
+"Este menú mostrará un diálogo que le permite seleccionar una zona horaria "
+"para mostrar etiquetas de horas junto a las etiquetas de horas de la zona "
+"horaria del sistema. Esta función es muy útil cuando se muestran eventos de "
+"calendario de personas que residen en zonas horarias distintas a la suya."
 
 #: agenda/timelabels.cpp:336
 #, kde-format
@@ -142,6 +148,8 @@ msgid ""
 "Remove the hour label column for the currently selected timezone, for non-"
 "system timezones only."
 msgstr ""
+"Eliminar la columna de etiquetas de horas de la zona horaria seleccionada, "
+"solo para zonas horarias distintas a la del sistema."
 
 #: agenda/timelabels.cpp:343
 #, kde-format
@@ -150,6 +158,9 @@ msgid ""
 "For non-system timezones, this menu selection removes the time hour labels "
 "display column for the currently selected timezone."
 msgstr ""
+"Para las zonas horarias distintas a la del sistema, esta opción del menú "
+"elimina la columna de visualización de etiquetas de horas de la zona horaria "
+"seleccionada."
 
 #: agenda/timelabels.cpp:347
 #, kde-format
@@ -170,6 +181,8 @@ msgid ""
 "Display the time label hours in 24-hour \"military\" format or according to "
 "your locale"
 msgstr ""
+"Mostrar las etiquetas de horas en el formato «militar» de 24 horas o según "
+"su configuración local"
 
 #: agenda/timelabels.cpp:353
 #, kde-format
@@ -178,6 +191,8 @@ msgid ""
 "This menu selection shows the time hour labels according to 24-hour "
 "\"military\" time or your system locale."
 msgstr ""
+"Esta opción del menú muestra las etiquetas de horas en el formato «militar» "
+"de 24 horas o según la configuración local del sistema."
 
 #: agenda/timelabels.cpp:358
 #, kde-format
@@ -204,22 +219,14 @@ msgid "Show Left-side Time Labels"
 msgstr "Mostrar etiquetas de tiempo del lado izquierdo"
 
 #: agenda/timelabels.cpp:369
-#, fuzzy, kde-format
-#| msgctxt "info::tooltip"
-#| msgid "Show or hide time labels on both sides of the agenda view"
+#, kde-format
 msgctxt "@info::tooltip"
 msgid "Show or hide time labels on both sides of the agenda view"
 msgstr ""
 "Mostrar u ocultar etiquetas de tiempo en ambos lados de la vista de la agenda"
 
 #: agenda/timelabels.cpp:371
-#, fuzzy, kde-format
-#| msgctxt "info::whatsthis"
-#| msgid ""
-#| "This menu section shows or hides the time labels on both sides of the "
-#| "agenda view. Only the system timezone (and no extra added timezones) is "
-#| "shown on the second side to save screen space. Similarly, the vertical "
-#| "scrollbar is removed when the time labels are shown on both sides."
+#, kde-format
 msgctxt "@info::whatsthis"
 msgid ""
 "This menu selection shows or hides the time labels on both sides of the "
@@ -227,10 +234,10 @@ msgid ""
 "shown on the second side to save screen space. Similarly, the vertical "
 "scrollbar is removed when the time labels are shown on both sides."
 msgstr ""
-"Esta sección del menú muestra u oculta las etiquetas de tiempo en ambos "
-"lados de la vista de la agenda. Solo se muestra la zona horaria del sistema "
-"(sin zonas horarias adicionales) en el segundo lado para ahorrar espacio en "
-"la pantalla. Del mismo modo, la barra de desplazamiento vertical se elimina "
+"Esta opción del menú muestra u oculta las etiquetas de tiempo en ambos lados "
+"de la vista de la agenda. Solo se muestra la zona horaria del sistema (sin "
+"zonas horarias adicionales) en el segundo lado para ahorrar espacio en la "
+"pantalla. Del mismo modo, la barra de desplazamiento vertical se elimina "
 "cuando las etiquetas de tiempo se muestran en ambos lados."
 
 #: agenda/timelabels.cpp:426

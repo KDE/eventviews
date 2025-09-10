@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-09 00:56+0000\n"
-"PO-Revision-Date: 2025-08-16 10:33+0200\n"
+"PO-Revision-Date: 2025-09-09 07:38+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.6\n"
+"X-Generator: Poedit 3.7\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -123,7 +123,7 @@ msgstr "Dod&aj časovne pasove…"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Add a timelabel display column for a new timezone"
-msgstr ""
+msgstr "Dodaj stolpec za prikaz časovne oznake za nov časovni pas"
 
 #: agenda/timelabels.cpp:333
 #, kde-format
@@ -134,6 +134,10 @@ msgid ""
 "This feature is very useful when showing calendar events for people in "
 "timezones other than your own."
 msgstr ""
+"V tem meniju se bo prikazalo pogovorno okno za izbiro časovnega pasu, ki vam "
+"bo omogočilo, da izberete časovni pas za prikaz urnih oznak poleg urnih "
+"oznak vašega sistemskega časovnega pasu. Ta funkcija je zelo uporabna pri "
+"prikazovanju dogodkov v koledarju za ljudi v časovnih pasovih, ki niso vaš."
 
 #: agenda/timelabels.cpp:336
 #, kde-format
@@ -147,6 +151,8 @@ msgid ""
 "Remove the hour label column for the currently selected timezone, for non-"
 "system timezones only."
 msgstr ""
+"Odstrani stolpec z oznako ure za trenutno izbrani časovni pas, samo za "
+"časovne pasove, ki niso del sistema."
 
 #: agenda/timelabels.cpp:343
 #, kde-format
@@ -155,6 +161,8 @@ msgid ""
 "For non-system timezones, this menu selection removes the time hour labels "
 "display column for the currently selected timezone."
 msgstr ""
+"Za ne-sistemske časovne pasove ta izbira v meniju odstrani stolpec z "
+"oznakami ur za trenutno izbrani časovni pas."
 
 #: agenda/timelabels.cpp:347
 #, kde-format
@@ -175,6 +183,8 @@ msgid ""
 "Display the time label hours in 24-hour \"military\" format or according to "
 "your locale"
 msgstr ""
+"Prikaži urne časovne oznake v 24-urnem \"vojaškem\" formatu ali glede na "
+"vaše lokalno okolje"
 
 #: agenda/timelabels.cpp:353
 #, kde-format
@@ -183,6 +193,8 @@ msgid ""
 "This menu selection shows the time hour labels according to 24-hour "
 "\"military\" time or your system locale."
 msgstr ""
+"Ta izbira menija prikazuje oznake ur v skladu z 24-urnim \"vojaškim\" časom "
+"ali vaše lokalne sistemske nastavitve."
 
 #: agenda/timelabels.cpp:358
 #, kde-format
@@ -209,21 +221,13 @@ msgid "Show Left-side Time Labels"
 msgstr "Pokaži časovne oznake na levi strani"
 
 #: agenda/timelabels.cpp:369
-#, fuzzy, kde-format
-#| msgctxt "info::tooltip"
-#| msgid "Show or hide time labels on both sides of the agenda view"
+#, kde-format
 msgctxt "@info::tooltip"
 msgid "Show or hide time labels on both sides of the agenda view"
 msgstr "Prikaži ali skrij časovne oznake na obeh straneh pogleda dnevnega reda"
 
 #: agenda/timelabels.cpp:371
-#, fuzzy, kde-format
-#| msgctxt "info::whatsthis"
-#| msgid ""
-#| "This menu section shows or hides the time labels on both sides of the "
-#| "agenda view. Only the system timezone (and no extra added timezones) is "
-#| "shown on the second side to save screen space. Similarly, the vertical "
-#| "scrollbar is removed when the time labels are shown on both sides."
+#, kde-format
 msgctxt "@info::whatsthis"
 msgid ""
 "This menu selection shows or hides the time labels on both sides of the "
@@ -231,7 +235,7 @@ msgid ""
 "shown on the second side to save screen space. Similarly, the vertical "
 "scrollbar is removed when the time labels are shown on both sides."
 msgstr ""
-"Ta razdelek menija prikaže ali skrije časovne oznake na obeh straneh pogleda "
+"Ta izbira menija prikaže ali skrije časovne oznake na obeh straneh pogleda "
 "dnevnega reda. Na drugi strani je prikazan samo sistemski časovni pas (in "
 "nobenih dodatnih časovnih pasov), da se prihrani prostor na zaslonu. Podobno "
 "se navpični drsni trak odstrani, ko so časovne oznake prikazane na obeh "

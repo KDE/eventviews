@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-09 00:56+0000\n"
-"PO-Revision-Date: 2025-08-16 13:32+0200\n"
+"PO-Revision-Date: 2025-09-10 01:11+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.04.3\n"
+"X-Generator: Lokalize 25.08.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -117,6 +117,7 @@ msgstr "&Gehitu ordu-eremuak…"
 msgctxt "@info:tooltip"
 msgid "Add a timelabel display column for a new timezone"
 msgstr ""
+"Gehitu, ordu-eremu berri baterako, denbora-etiketa azaltzeko zutabe bat"
 
 #: agenda/timelabels.cpp:333
 #, kde-format
@@ -127,6 +128,11 @@ msgid ""
 "This feature is very useful when showing calendar events for people in "
 "timezones other than your own."
 msgstr ""
+"Menu honek ordu-eremua hautatzeko elkarrizketa-koadro bat erakutsiko du, "
+"zure sistemaren ordu-eremuko ordu-etiketen ondoan aukeratzen duzun beste "
+"ordu-eremu bateko ordu-etiketak erakusteko aukera eskaintzen dizuna. "
+"Ezaugarri hau oso erabilgarria da, norberarena ez den beste ordu-eremu "
+"batean dagoen jendearentzako egutegiko ekitaldiak erakusteko."
 
 #: agenda/timelabels.cpp:336
 #, kde-format
@@ -140,6 +146,8 @@ msgid ""
 "Remove the hour label column for the currently selected timezone, for non-"
 "system timezones only."
 msgstr ""
+"Kendu unean hautatutako ordu-eremurako ordu-etiketa zutabea, sistemakoak ez "
+"diren ordu-eremuetarako bakarrik."
 
 #: agenda/timelabels.cpp:343
 #, kde-format
@@ -148,6 +156,8 @@ msgid ""
 "For non-system timezones, this menu selection removes the time hour labels "
 "display column for the currently selected timezone."
 msgstr ""
+"Sistemakoak ez diren ordu-eremuetarako, menu-hautapen honek unean "
+"hautatutako ordu-eremuko orduaren ordu-etiketak azaltzeko zutabea kentzen du."
 
 #: agenda/timelabels.cpp:347
 #, kde-format
@@ -168,6 +178,8 @@ msgid ""
 "Display the time label hours in 24-hour \"military\" format or according to "
 "your locale"
 msgstr ""
+"Azaldu denbora-etiketen ordua 24 orduko formatu \"militarrean\" edo zure "
+"tokiko ezarpenen arabera"
 
 #: agenda/timelabels.cpp:353
 #, kde-format
@@ -176,6 +188,8 @@ msgid ""
 "This menu selection shows the time hour labels according to 24-hour "
 "\"military\" time or your system locale."
 msgstr ""
+"Menu-hautapen honek orduaren denbora-etiketak 24 orduko formatu "
+"\"militarraren\" arabera edo zure tokiko ezarpenen arabera erakusten ditu."
 
 #: agenda/timelabels.cpp:358
 #, kde-format
@@ -202,21 +216,13 @@ msgid "Show Left-side Time Labels"
 msgstr "Erakutsi ezker aldeko denbora-etiketak"
 
 #: agenda/timelabels.cpp:369
-#, fuzzy, kde-format
-#| msgctxt "info::tooltip"
-#| msgid "Show or hide time labels on both sides of the agenda view"
+#, kde-format
 msgctxt "@info::tooltip"
 msgid "Show or hide time labels on both sides of the agenda view"
 msgstr "Erakutsi edo ezkutatu denbora-etiketak agenda-ikuspegiaren bi aldeetan"
 
 #: agenda/timelabels.cpp:371
-#, fuzzy, kde-format
-#| msgctxt "info::whatsthis"
-#| msgid ""
-#| "This menu section shows or hides the time labels on both sides of the "
-#| "agenda view. Only the system timezone (and no extra added timezones) is "
-#| "shown on the second side to save screen space. Similarly, the vertical "
-#| "scrollbar is removed when the time labels are shown on both sides."
+#, kde-format
 msgctxt "@info::whatsthis"
 msgid ""
 "This menu selection shows or hides the time labels on both sides of the "
@@ -224,9 +230,9 @@ msgid ""
 "shown on the second side to save screen space. Similarly, the vertical "
 "scrollbar is removed when the time labels are shown on both sides."
 msgstr ""
-"Menuaren atal honek agenda-ikuspegiko bi aldeetako denbora-etiketak "
-"erakusten edo ezkutatzen ditu. Sistemaren ordu-eremua bakarrik (eta ordu-"
-"eremu gehigarririk ez) erakusten da bigarren aldean pantailan espazioa "
+"Menu-hautapen honek agenda-ikuspegiko bi alboetako denbora-etiketak "
+"erakusten edo ezkutatzen ditu. Sistemaren ordu-eremua bakarrik (ordu-eremu "
+"gehigarririk gabe) erakusten da bigarren alboan pantailan espazioa "
 "aurrezteko. Era berean, denbora-etiketak bi aldeetan erakusten direnean, "
 "kiribiltze-barra bertikala kentzen da."
 

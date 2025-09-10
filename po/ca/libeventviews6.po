@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-09 00:56+0000\n"
-"PO-Revision-Date: 2025-08-16 17:32+0200\n"
+"PO-Revision-Date: 2025-09-09 09:58+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
-"X-Generator: Lokalize 25.04.3\n"
+"X-Generator: Lokalize 25.08.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -112,13 +112,14 @@ msgstr "No s'ha pogut desar %1 «%2»."
 #: agenda/timelabels.cpp:329
 #, kde-format
 msgid "&Add Timezones…"
-msgstr "&Afegeix zones horàries…"
+msgstr "&Afegeix fusos horaris…"
 
 #: agenda/timelabels.cpp:330
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Add a timelabel display column for a new timezone"
 msgstr ""
+"Afegeix una columna de visualització del fus horari per a un fus horari nou"
 
 #: agenda/timelabels.cpp:333
 #, kde-format
@@ -129,11 +130,16 @@ msgid ""
 "This feature is very useful when showing calendar events for people in "
 "timezones other than your own."
 msgstr ""
+"Aquest menú mostrarà un diàleg de selecció del fus horari que us permet "
+"seleccionar un fus horari per a mostrar etiquetes d'hora al costat de les "
+"etiquetes d'hora del sistema. Aquesta característica és molt útil quan es "
+"mostren esdeveniments de calendari de persones en fusos horaris diferents "
+"del vostre."
 
 #: agenda/timelabels.cpp:336
 #, kde-format
 msgid "&Remove Timezone %1"
-msgstr "&Elimina la zona horària %1"
+msgstr "&Elimina el fus horari %1"
 
 #: agenda/timelabels.cpp:340
 #, kde-format
@@ -142,6 +148,8 @@ msgid ""
 "Remove the hour label column for the currently selected timezone, for non-"
 "system timezones only."
 msgstr ""
+"Elimina la columna de l'etiqueta d'hora del fus horari seleccionat "
+"actualment, només per als fusos horaris que no siguin del sistema."
 
 #: agenda/timelabels.cpp:343
 #, kde-format
@@ -150,6 +158,9 @@ msgid ""
 "For non-system timezones, this menu selection removes the time hour labels "
 "display column for the currently selected timezone."
 msgstr ""
+"Per als fusos horaris que no són del sistema, aquesta selecció de menú "
+"elimina la columna de visualització d'etiquetes d'hora del fus horari "
+"seleccionat."
 
 #: agenda/timelabels.cpp:347
 #, kde-format
@@ -170,6 +181,8 @@ msgid ""
 "Display the time label hours in 24-hour \"military\" format or according to "
 "your locale"
 msgstr ""
+"Mostra les hores de l'etiqueta d'hora en format «militar» de 24 hores o "
+"segons la vostra configuració regional"
 
 #: agenda/timelabels.cpp:353
 #, kde-format
@@ -178,6 +191,8 @@ msgid ""
 "This menu selection shows the time hour labels according to 24-hour "
 "\"military\" time or your system locale."
 msgstr ""
+"Aquesta selecció de menú mostra les etiquetes de l'hora segons l'hora "
+"«militar» de 24 hores o la configuració regional del sistema."
 
 #: agenda/timelabels.cpp:358
 #, kde-format
@@ -204,22 +219,14 @@ msgid "Show Left-side Time Labels"
 msgstr "Mostra les etiquetes d'hora de mà esquerra"
 
 #: agenda/timelabels.cpp:369
-#, fuzzy, kde-format
-#| msgctxt "info::tooltip"
-#| msgid "Show or hide time labels on both sides of the agenda view"
+#, kde-format
 msgctxt "@info::tooltip"
 msgid "Show or hide time labels on both sides of the agenda view"
 msgstr ""
 "Mostra o oculta les etiquetes d'hora dels dos costats de la vista d'agenda"
 
 #: agenda/timelabels.cpp:371
-#, fuzzy, kde-format
-#| msgctxt "info::whatsthis"
-#| msgid ""
-#| "This menu section shows or hides the time labels on both sides of the "
-#| "agenda view. Only the system timezone (and no extra added timezones) is "
-#| "shown on the second side to save screen space. Similarly, the vertical "
-#| "scrollbar is removed when the time labels are shown on both sides."
+#, kde-format
 msgctxt "@info::whatsthis"
 msgid ""
 "This menu selection shows or hides the time labels on both sides of the "
@@ -227,10 +234,10 @@ msgid ""
 "shown on the second side to save screen space. Similarly, the vertical "
 "scrollbar is removed when the time labels are shown on both sides."
 msgstr ""
-"Aquesta secció de menú mostra o oculta les etiquetes d'hora a ambdós costats "
-"de la vista d'agenda. Només es mostra la zona horària del sistema (i no hi "
-"ha zones horàries addicionals afegides) al segon costat per estalviar espai "
-"a la pantalla. De la mateixa manera, la barra de desplaçament vertical "
+"Aquesta selecció de menú mostra o oculta les etiquetes d'hora a ambdós "
+"costats de la vista d'agenda. Només es mostra el fus horari del sistema (i "
+"no hi ha fusos horaris addicionals afegits) al segon costat per estalviar "
+"espai a la pantalla. De la mateixa manera, la barra de desplaçament vertical "
 "s'elimina quan es mostren les etiquetes d'hora a ambdós costats."
 
 #: agenda/timelabels.cpp:426

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-09 00:56+0000\n"
-"PO-Revision-Date: 2025-08-16 06:35+0200\n"
+"PO-Revision-Date: 2025-09-09 04:53+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.6\n"
+"X-Generator: Poedit 3.7\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -112,7 +112,7 @@ msgstr "დროის სარტყლების &დამატება
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Add a timelabel display column for a new timezone"
-msgstr ""
+msgstr "დროის ჭდის ჩვენების სვეტის დამატება ახალი დროის სარტყლისთვის"
 
 #: agenda/timelabels.cpp:333
 #, kde-format
@@ -123,6 +123,11 @@ msgid ""
 "This feature is very useful when showing calendar events for people in "
 "timezones other than your own."
 msgstr ""
+"ეს მენიუ გაჩვენებთ დროის სარტყლის არჩევის დიალოგს, რომელიც საშუალებას "
+"გაძლევთ, აირჩიოთ დროის სარტყელი საათის ჭდეების საჩვენებლად თქვენი სისტემური "
+"დროის სარტყლის საათის ჭდის გასწვრივ. ეს ფუნქცია ძალიან სასარგებლოა, როცა "
+"ნაჩვენებია კალენდრის მოვლენები ხალხისთვის, რომლების დროის სარტყლებიც "
+"თქვენისგან განსხვავდება."
 
 #: agenda/timelabels.cpp:336
 #, kde-format
@@ -136,6 +141,8 @@ msgid ""
 "Remove the hour label column for the currently selected timezone, for non-"
 "system timezones only."
 msgstr ""
+"საათის ჭდის სვეტის მოცილება ამჟამად მონიშნული დროის სარტყლისთვის. მხოლოდ "
+"არასისტემური დროის სარტყლებისთვის."
 
 #: agenda/timelabels.cpp:343
 #, kde-format
@@ -144,6 +151,8 @@ msgid ""
 "For non-system timezones, this menu selection removes the time hour labels "
 "display column for the currently selected timezone."
 msgstr ""
+"არასისტემური დროის სარტყლებისთვის ეს მენიუ წაშლის დროის საათის ჭდის ჩვენების "
+"სვეტს ამჟამად მონიშნული დროის სარტყლისთვის."
 
 #: agenda/timelabels.cpp:347
 #, kde-format
@@ -164,6 +173,8 @@ msgid ""
 "Display the time label hours in 24-hour \"military\" format or according to "
 "your locale"
 msgstr ""
+"დროის სარტყლის საათების ჩვენება 24-საათიან \"სამხედრო\" ფორმატში, ან თქვენს "
+"ლოკალზე დაყრდნობით"
 
 #: agenda/timelabels.cpp:353
 #, kde-format
@@ -172,6 +183,8 @@ msgid ""
 "This menu selection shows the time hour labels according to 24-hour "
 "\"military\" time or your system locale."
 msgstr ""
+"ეს მენიუს არჩევანი აჩვენებს დროის საათის ჭდეებს 24-საათიან \"სამხედრო\" "
+"დროში, ან თქვენს სისტემურ ლოკალში."
 
 #: agenda/timelabels.cpp:358
 #, kde-format
@@ -198,21 +211,13 @@ msgid "Show Left-side Time Labels"
 msgstr "მარცხენა მხრის დროის ჭდეების ჩვენება"
 
 #: agenda/timelabels.cpp:369
-#, fuzzy, kde-format
-#| msgctxt "info::tooltip"
-#| msgid "Show or hide time labels on both sides of the agenda view"
+#, kde-format
 msgctxt "@info::tooltip"
 msgid "Show or hide time labels on both sides of the agenda view"
-msgstr "დროის ჭდეების დამალვა, ან ჩვენება გეგმის ხედის ორივე მხარეს"
+msgstr "დროის ჭდეების დამალვა ან ჩვენება გეგმის ხედის ორივე მხარეს"
 
 #: agenda/timelabels.cpp:371
-#, fuzzy, kde-format
-#| msgctxt "info::whatsthis"
-#| msgid ""
-#| "This menu section shows or hides the time labels on both sides of the "
-#| "agenda view. Only the system timezone (and no extra added timezones) is "
-#| "shown on the second side to save screen space. Similarly, the vertical "
-#| "scrollbar is removed when the time labels are shown on both sides."
+#, kde-format
 msgctxt "@info::whatsthis"
 msgid ""
 "This menu selection shows or hides the time labels on both sides of the "

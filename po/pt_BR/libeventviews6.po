@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-09 00:56+0000\n"
-"PO-Revision-Date: 2025-08-29 09:17-0300\n"
+"PO-Revision-Date: 2025-09-09 08:19-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -121,6 +121,7 @@ msgstr "&Adicionar fusos horários..."
 msgctxt "@info:tooltip"
 msgid "Add a timelabel display column for a new timezone"
 msgstr ""
+"Adicionar uma coluna de exibição de rótulo de hora para um novo fuso horário"
 
 #: agenda/timelabels.cpp:333
 #, kde-format
@@ -131,6 +132,11 @@ msgid ""
 "This feature is very useful when showing calendar events for people in "
 "timezones other than your own."
 msgstr ""
+"Este menu exibirá uma caixa de diálogo de seleção de fuso horário, "
+"permitindo que você selecione um fuso horário para exibir rótulos de hora "
+"junto com os rótulos de hora do fuso horário do sistema. Este recurso é "
+"muito útil ao exibir eventos de calendário para pessoas em fusos horários "
+"diferentes do seu."
 
 #: agenda/timelabels.cpp:336
 #, kde-format
@@ -144,6 +150,8 @@ msgid ""
 "Remove the hour label column for the currently selected timezone, for non-"
 "system timezones only."
 msgstr ""
+"Remover a coluna de rótulo de hora para o fuso horário selecionado no "
+"momento, somente para fusos horários que não sejam do sistema."
 
 #: agenda/timelabels.cpp:343
 #, kde-format
@@ -152,6 +160,8 @@ msgid ""
 "For non-system timezones, this menu selection removes the time hour labels "
 "display column for the currently selected timezone."
 msgstr ""
+"Para fusos horários que não sejam do sistema, esta seleção de menu remove os "
+"rótulos de hora da coluna de exibição do fuso horário selecionado no momento."
 
 #: agenda/timelabels.cpp:347
 #, kde-format
@@ -172,6 +182,8 @@ msgid ""
 "Display the time label hours in 24-hour \"military\" format or according to "
 "your locale"
 msgstr ""
+"Exibir as horas do rótulo de tempo no formato \"militar\" de 24 horas ou de "
+"acordo com sua localidade"
 
 #: agenda/timelabels.cpp:353
 #, kde-format
@@ -180,6 +192,8 @@ msgid ""
 "This menu selection shows the time hour labels according to 24-hour "
 "\"military\" time or your system locale."
 msgstr ""
+"Esta seleção de menu mostra os rótulos de hora de acordo com o horário "
+"\"militar\" de 24 horas ou a localidade do seu sistema."
 
 #: agenda/timelabels.cpp:358
 #, kde-format
@@ -206,9 +220,7 @@ msgid "Show Left-side Time Labels"
 msgstr "Mostrar rótulos de tempo do lado esquerdo"
 
 #: agenda/timelabels.cpp:369
-#, fuzzy, kde-format
-#| msgctxt "info::tooltip"
-#| msgid "Show or hide time labels on both sides of the agenda view"
+#, kde-format
 msgctxt "@info::tooltip"
 msgid "Show or hide time labels on both sides of the agenda view"
 msgstr ""
@@ -216,13 +228,7 @@ msgstr ""
 "agenda"
 
 #: agenda/timelabels.cpp:371
-#, fuzzy, kde-format
-#| msgctxt "info::whatsthis"
-#| msgid ""
-#| "This menu section shows or hides the time labels on both sides of the "
-#| "agenda view. Only the system timezone (and no extra added timezones) is "
-#| "shown on the second side to save screen space. Similarly, the vertical "
-#| "scrollbar is removed when the time labels are shown on both sides."
+#, kde-format
 msgctxt "@info::whatsthis"
 msgid ""
 "This menu selection shows or hides the time labels on both sides of the "
@@ -230,8 +236,8 @@ msgid ""
 "shown on the second side to save screen space. Similarly, the vertical "
 "scrollbar is removed when the time labels are shown on both sides."
 msgstr ""
-"Esta seção do menu mostra ou oculta os rótulos de tempo em ambos os lados da "
-"visualização da agenda. Apenas o fuso horário do sistema (e nenhum fuso "
+"A seleção deste menu mostra ou oculta os rótulos de tempo em ambos os lados "
+"da visualização da agenda. Apenas o fuso horário do sistema (e nenhum fuso "
 "horário adicional) é exibido no segundo lado para economizar espaço na tela. "
 "Da mesma forma, a barra de rolagem vertical é removida quando os rótulos de "
 "tempo são exibidos em ambos os lados."

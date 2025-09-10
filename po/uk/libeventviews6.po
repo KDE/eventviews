@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-09 00:56+0000\n"
-"PO-Revision-Date: 2025-08-16 16:48+0300\n"
+"PO-Revision-Date: 2025-09-09 18:05+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -118,7 +118,7 @@ msgstr "&Додати часові пояси…"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Add a timelabel display column for a new timezone"
-msgstr ""
+msgstr "Додати стовпчик показу часової мітки для нового часового поясу"
 
 #: agenda/timelabels.cpp:333
 #, kde-format
@@ -129,6 +129,11 @@ msgid ""
 "This feature is very useful when showing calendar events for people in "
 "timezones other than your own."
 msgstr ""
+"За допомогою цього меню можна відкрити діалогове вікно вибору часового "
+"поясу, яке надасть вам змогу вибрати часовий пояс для показу міток годин "
+"поряд із мітками годин часового поясу вашої системи. Ця функція дуже корисна "
+"під час перегляду подій календаря для людей у ​​часових поясах, відмінних від "
+"вашого власного."
 
 #: agenda/timelabels.cpp:336
 #, kde-format
@@ -142,6 +147,8 @@ msgid ""
 "Remove the hour label column for the currently selected timezone, for non-"
 "system timezones only."
 msgstr ""
+"Вилучити стовпчик міток годин для поточного вибраного часового поясу, лише "
+"для часових поясів, відмінних від поясу системи."
 
 #: agenda/timelabels.cpp:343
 #, kde-format
@@ -150,6 +157,8 @@ msgid ""
 "For non-system timezones, this menu selection removes the time hour labels "
 "display column for the currently selected timezone."
 msgstr ""
+"Для часових поясів, відмінних від часового поясу системи, цей пункт вилучає "
+"стовпчик показу міток годин для поточного вибраного часового поясу."
 
 #: agenda/timelabels.cpp:347
 #, kde-format
@@ -170,6 +179,8 @@ msgid ""
 "Display the time label hours in 24-hour \"military\" format or according to "
 "your locale"
 msgstr ""
+"Показувати часові мітки годин у 24-годинному «військовому» форматі або "
+"відповідно до параметрів вашої локалі"
 
 #: agenda/timelabels.cpp:353
 #, kde-format
@@ -178,6 +189,9 @@ msgid ""
 "This menu selection shows the time hour labels according to 24-hour "
 "\"military\" time or your system locale."
 msgstr ""
+"За допомогою цього пункту меню можна наказати системі показувати часові "
+"мітки годин відповідно до 24-годинного «військовому» форматі або у форматі "
+"локалі вашої системи."
 
 #: agenda/timelabels.cpp:358
 #, kde-format
@@ -204,9 +218,7 @@ msgid "Show Left-side Time Labels"
 msgstr "Показати часові мітки з лівого боку"
 
 #: agenda/timelabels.cpp:369
-#, fuzzy, kde-format
-#| msgctxt "info::tooltip"
-#| msgid "Show or hide time labels on both sides of the agenda view"
+#, kde-format
 msgctxt "@info::tooltip"
 msgid "Show or hide time labels on both sides of the agenda view"
 msgstr ""
@@ -214,13 +226,7 @@ msgstr ""
 "денного"
 
 #: agenda/timelabels.cpp:371
-#, fuzzy, kde-format
-#| msgctxt "info::whatsthis"
-#| msgid ""
-#| "This menu section shows or hides the time labels on both sides of the "
-#| "agenda view. Only the system timezone (and no extra added timezones) is "
-#| "shown on the second side to save screen space. Similarly, the vertical "
-#| "scrollbar is removed when the time labels are shown on both sides."
+#, kde-format
 msgctxt "@info::whatsthis"
 msgid ""
 "This menu selection shows or hides the time labels on both sides of the "
@@ -228,12 +234,11 @@ msgid ""
 "shown on the second side to save screen space. Similarly, the vertical "
 "scrollbar is removed when the time labels are shown on both sides."
 msgstr ""
-"За допомогою цього розділу меню можна наказати програмі показувати або "
-"приховувати часові мітки з обох боків панелі перегляду порядку денного. Для "
-"заощадження місця на екрані буде показано лише загальносистемний часовий "
-"пояс (без додаткових часових поясів) на другому боці. Так само, буде "
-"вилучено вертикальну смужку гортання, якщо часові мітки показано з обох "
-"боків."
+"За допомогою цього меню можна наказати програмі показувати або приховувати "
+"часові мітки з обох боків панелі перегляду порядку денного. Для заощадження "
+"місця на екрані буде показано лише загальносистемний часовий пояс (без "
+"додаткових часових поясів) на другому боці. Так само, буде вилучено "
+"вертикальну смужку гортання, якщо часові мітки показано з обох боків."
 
 #: agenda/timelabels.cpp:426
 #, kde-format
