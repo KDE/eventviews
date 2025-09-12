@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-09 00:56+0000\n"
-"PO-Revision-Date: 2025-09-09 09:48+0200\n"
+"PO-Revision-Date: 2025-09-11 17:21+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -125,6 +125,10 @@ msgid ""
 "This feature is very useful when showing calendar events for people in "
 "timezones other than your own."
 msgstr ""
+"Dit menu zal een selectiedialoog voor een tijdzone tonen waarmee u een "
+"tijdzone kunt selecteren voor het tonen van uurlabels naast die van uw "
+"systeemtijdzone. Deze functie is erg nuttig bij het tonen van gebeurtenissen "
+"in uw agenda voor mensen in tijdzones anders dan de uwe."
 
 #: agenda/timelabels.cpp:336
 #, kde-format
@@ -138,6 +142,8 @@ msgid ""
 "Remove the hour label column for the currently selected timezone, for non-"
 "system timezones only."
 msgstr ""
+"Uurlabelkolom voor de nu geselecteerde tijdzone verwijderen, alleen voor "
+"niet-systeemtijdzones."
 
 #: agenda/timelabels.cpp:343
 #, kde-format
@@ -146,6 +152,8 @@ msgid ""
 "For non-system timezones, this menu selection removes the time hour labels "
 "display column for the currently selected timezone."
 msgstr ""
+"Voor niet-systeemtijdzones, verwijdert deze menuselectie de getoonde kolom "
+"met tijduurlabels voor de nu geselecteerde tijdzone."
 
 #: agenda/timelabels.cpp:347
 #, kde-format
@@ -166,6 +174,7 @@ msgid ""
 "Display the time label hours in 24-hour \"military\" format or according to "
 "your locale"
 msgstr ""
+"Toon de tijdlabeluren in 24-uur \"militair\" formaat of volgens uw taalcode"
 
 #: agenda/timelabels.cpp:353
 #, kde-format
@@ -174,6 +183,8 @@ msgid ""
 "This menu selection shows the time hour labels according to 24-hour "
 "\"military\" time or your system locale."
 msgstr ""
+"Deze menuselectie toont de tijduurlabels volgens de 24-uur \"militaire\" "
+"tijd of uw systeemtaalcode."
 
 #: agenda/timelabels.cpp:358
 #, kde-format
