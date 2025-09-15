@@ -7,15 +7,15 @@ msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-09 00:56+0000\n"
-"PO-Revision-Date: 2025-07-19 18:50+0530\n"
+"PO-Revision-Date: 2025-09-14 14:23+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
-"Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
+"Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
 "Language: ta\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.3\n"
+"X-Generator: Lokalize 25.08.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -176,31 +176,33 @@ msgstr ""
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Right-side Time Labels"
-msgstr ""
+msgstr "வலதுபக்கத்திலுள்ள நேர தலைப்புகளை மறை"
 
 #: agenda/timelabels.cpp:360
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Right-side Time Labels"
-msgstr ""
+msgstr "வலதுபக்கத்தில் நேர தலைப்புகளைக் காட்டு"
 
 #: agenda/timelabels.cpp:364
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Left-side Time Labels"
-msgstr ""
+msgstr "இடதுபக்கத்திலுள்ள நேர தலைப்புகளை மறை"
 
 #: agenda/timelabels.cpp:366
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Left-side Time Labels"
-msgstr ""
+msgstr "இடதுபக்கத்தில் நேர தலைப்புகளை மறை"
 
 #: agenda/timelabels.cpp:369
 #, kde-format
 msgctxt "@info::tooltip"
 msgid "Show or hide time labels on both sides of the agenda view"
 msgstr ""
+"நிகழ்ச்சிநிரல் காட்சிமுறையின் இடதிலும் வலதிலும் நேரத்தைக் குறிக்கும் தலைப்புகளைக் காட்டலாம் "
+"அல்லது மறைக்கலாம்"
 
 #: agenda/timelabels.cpp:371
 #, kde-format
@@ -348,6 +350,9 @@ msgid ""
 "By default, this file will be called calendar.html and placed in the user "
 "home folder."
 msgstr ""
+"நாள்காட்டியை சேமிக்கும் ஒவ்வொரு முறையும் அதை HTML கோப்புக்கு ஏற்றுமதி செய்ய வேண்டுமெனில் "
+"இப்பெட்டியைக் குறிக்கவும். இயல்பிருப்பாக், அக்கோப்பு உங்கள் முகப்பு அடைவில் calendar.html "
+"எனும் பெயருடன் இருக்கும்."
 
 #. i18n: ectx: label, entry, group (Save Settings)
 #: eventviews.kcfg:44

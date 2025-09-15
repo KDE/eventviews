@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-09 00:56+0000\n"
-"PO-Revision-Date: 2025-09-03 20:14+0200\n"
+"PO-Revision-Date: 2025-09-14 11:44+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -114,7 +114,7 @@ msgstr "&Добавяне на часови зони…"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Add a timelabel display column for a new timezone"
-msgstr ""
+msgstr "Добавяне на колона за показване на времето за нова часова зона"
 
 #: agenda/timelabels.cpp:333
 #, kde-format
@@ -125,6 +125,11 @@ msgid ""
 "This feature is very useful when showing calendar events for people in "
 "timezones other than your own."
 msgstr ""
+"Това меню ще покаже диалогов прозорец за избор на часова зона, който ви "
+"позволява да изберете часова зона за показване на етикети за часа заедно с "
+"етикетите за часа на системната ви часова зона. Тази функция е много "
+"полезна, когато показвате събития от календара за хора в часови зони, "
+"различни от вашата."
 
 #: agenda/timelabels.cpp:336
 #, kde-format
@@ -138,6 +143,8 @@ msgid ""
 "Remove the hour label column for the currently selected timezone, for non-"
 "system timezones only."
 msgstr ""
+"Премахване на колоната с етикета за час за текущо избраната часова зона, "
+"само за несистемни часови зони."
 
 #: agenda/timelabels.cpp:343
 #, kde-format
@@ -146,6 +153,8 @@ msgid ""
 "For non-system timezones, this menu selection removes the time hour labels "
 "display column for the currently selected timezone."
 msgstr ""
+"За несистемни часови зони този избор от менюто премахва колоната с етикетите "
+"за часовете за текущо избраната часова зона."
 
 #: agenda/timelabels.cpp:347
 #, kde-format
@@ -166,6 +175,8 @@ msgid ""
 "Display the time label hours in 24-hour \"military\" format or according to "
 "your locale"
 msgstr ""
+"Показване на часовете в 24-часов „военен“ формат или според вашата локална "
+"настройка"
 
 #: agenda/timelabels.cpp:353
 #, kde-format
@@ -174,6 +185,8 @@ msgid ""
 "This menu selection shows the time hour labels according to 24-hour "
 "\"military\" time or your system locale."
 msgstr ""
+"Това меню показва етикетите за часовете в 24-часов „военен“ формат или "
+"според локалната настройка на вашата система."
 
 #: agenda/timelabels.cpp:358
 #, kde-format
@@ -200,9 +213,7 @@ msgid "Show Left-side Time Labels"
 msgstr "Показване на етикетите за време от лявата страна"
 
 #: agenda/timelabels.cpp:369
-#, fuzzy, kde-format
-#| msgctxt "info::tooltip"
-#| msgid "Show or hide time labels on both sides of the agenda view"
+#, kde-format
 msgctxt "@info::tooltip"
 msgid "Show or hide time labels on both sides of the agenda view"
 msgstr ""
@@ -210,13 +221,7 @@ msgstr ""
 "дневния ред"
 
 #: agenda/timelabels.cpp:371
-#, fuzzy, kde-format
-#| msgctxt "info::whatsthis"
-#| msgid ""
-#| "This menu section shows or hides the time labels on both sides of the "
-#| "agenda view. Only the system timezone (and no extra added timezones) is "
-#| "shown on the second side to save screen space. Similarly, the vertical "
-#| "scrollbar is removed when the time labels are shown on both sides."
+#, kde-format
 msgctxt "@info::whatsthis"
 msgid ""
 "This menu selection shows or hides the time labels on both sides of the "
@@ -224,11 +229,11 @@ msgid ""
 "shown on the second side to save screen space. Similarly, the vertical "
 "scrollbar is removed when the time labels are shown on both sides."
 msgstr ""
-"Тази секция от менюто показва или скрива етикетите с времето от двете страни "
-"на изгледа на дневния ред. За да се спести място на екрана, на втората "
-"страна се показва само системната часова зона (без допълнително добавени "
-"часови зони). По същия начин вертикалната лента за превъртане се премахва, "
-"когато етикетите с времето се показват от двете страни."
+"Тази селекция от менюто показва или скрива етикетите с времето от двете "
+"страни на изгледа на дневния ред. За да се спести място на екрана, на "
+"втората страна се показва само системната часова зона (без допълнително "
+"добавени часови зони). По същия начин вертикалната лента за превъртане се "
+"премахва, когато етикетите с времето се показват от двете страни."
 
 #: agenda/timelabels.cpp:426
 #, kde-format
