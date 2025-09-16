@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-09 00:56+0000\n"
-"PO-Revision-Date: 2025-08-20 19:36+0400\n"
+"PO-Revision-Date: 2025-09-15 12:58+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -117,7 +117,7 @@ msgstr "أضف &مناطق زمنية…"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Add a timelabel display column for a new timezone"
-msgstr ""
+msgstr "إضافة عمود عرض التسمية الزمنية لمنطقة زمنية جديدة"
 
 #: agenda/timelabels.cpp:333
 #, kde-format
@@ -128,6 +128,10 @@ msgid ""
 "This feature is very useful when showing calendar events for people in "
 "timezones other than your own."
 msgstr ""
+"ستعرض هذه القائمة مربع حوار لاختيار المنطقة الزمنية، مما يتيح لك تحديد منطقة "
+"زمنية لعرض تسميات الساعات جنبًا إلى جنب مع تسميات الساعات في المنطقة الزمنية "
+"لنظامك. هذه الميزة مفيدة جدًا عند عرض أحداث التقويم للأشخاص في مناطق زمنية "
+"أخرى غير منطقتك."
 
 #: agenda/timelabels.cpp:336
 #, kde-format
@@ -141,6 +145,8 @@ msgid ""
 "Remove the hour label column for the currently selected timezone, for non-"
 "system timezones only."
 msgstr ""
+"إزالة عمود تسمية الساعة للمنطقة الزمنية المحددة حاليًا، للمنطقة الزمنية غير "
+"التابعة للنظام فقط."
 
 #: agenda/timelabels.cpp:343
 #, kde-format
@@ -149,6 +155,8 @@ msgid ""
 "For non-system timezones, this menu selection removes the time hour labels "
 "display column for the currently selected timezone."
 msgstr ""
+"بالنسبة للمناطق الزمنية غير التابعة للنظام، يؤدي اختيار هذا القائمة إلى "
+"إزالة عمود عرض تسميات الساعات الزمنية للمنطقة الزمنية المحددة حاليًا."
 
 #: agenda/timelabels.cpp:347
 #, kde-format
@@ -169,6 +177,8 @@ msgid ""
 "Display the time label hours in 24-hour \"military\" format or according to "
 "your locale"
 msgstr ""
+"عرض تسمية الوقت بالساعات بتنسيق ”عسكري“ على مدار 24 ساعة أو وفقًا لإعداداتك "
+"المحلية"
 
 #: agenda/timelabels.cpp:353
 #, kde-format
@@ -177,6 +187,8 @@ msgid ""
 "This menu selection shows the time hour labels according to 24-hour "
 "\"military\" time or your system locale."
 msgstr ""
+"يعرض هذا الاختيار من القائمة تسميات الساعات وفقًا للنظام الزمني ”العسكري“ "
+"الذي يعتمد على 24 ساعة أو وفقًا لإعدادات اللغة في نظامك."
 
 #: agenda/timelabels.cpp:358
 #, kde-format
@@ -203,21 +215,13 @@ msgid "Show Left-side Time Labels"
 msgstr "اعرض تسميات الوقت في الجانب اليسار"
 
 #: agenda/timelabels.cpp:369
-#, fuzzy, kde-format
-#| msgctxt "info::tooltip"
-#| msgid "Show or hide time labels on both sides of the agenda view"
+#, kde-format
 msgctxt "@info::tooltip"
 msgid "Show or hide time labels on both sides of the agenda view"
 msgstr "اعرض أو أخفِ تسميات الوقت على جانبي عرض جدول الأعمال"
 
 #: agenda/timelabels.cpp:371
-#, fuzzy, kde-format
-#| msgctxt "info::whatsthis"
-#| msgid ""
-#| "This menu section shows or hides the time labels on both sides of the "
-#| "agenda view. Only the system timezone (and no extra added timezones) is "
-#| "shown on the second side to save screen space. Similarly, the vertical "
-#| "scrollbar is removed when the time labels are shown on both sides."
+#, kde-format
 msgctxt "@info::whatsthis"
 msgid ""
 "This menu selection shows or hides the time labels on both sides of the "
@@ -225,7 +229,7 @@ msgid ""
 "shown on the second side to save screen space. Similarly, the vertical "
 "scrollbar is removed when the time labels are shown on both sides."
 msgstr ""
-"يعرض هذا القسم من القائمة أو يخفي تسميات الوقت على جانبي عرض جدول الأعمال. "
+"يعرض هذا الخيار من القائمة أو يخفي علامات الوقت على جانبي عرض جدول الأعمال. "
 "تُعرض المنطقة الزمنية للنظام فقط (دون أي مناطق زمنية إضافية) على الجانب "
 "الثاني لتوفير مساحة على الشاشة. وبالمثل، يُزال شريط التمرير العمودي عندما "
 "تُعرض تسميات الوقت على كلا الجانبين."
