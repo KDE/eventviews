@@ -30,7 +30,6 @@ namespace Akonadi
 class ETMViewStateSaver;
 }
 
-class QItemSelection;
 class QMenu;
 class QModelIndex;
 class QToolButton;

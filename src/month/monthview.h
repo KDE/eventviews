@@ -14,7 +14,6 @@
 
 #include <memory>
 
-class QModelIndex;
 
 namespace EventViews
 {
