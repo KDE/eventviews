@@ -14,7 +14,6 @@
 
 #include <memory>
 
-
 namespace EventViews
 {
 class MonthViewPrivate;
