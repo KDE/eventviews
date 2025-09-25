@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-09 00:56+0000\n"
-"PO-Revision-Date: 2025-08-19 04:58+0900\n"
+"PO-Revision-Date: 2025-09-25 02:24+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -113,7 +113,7 @@ msgstr "編輯時區(&A)…"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Add a timelabel display column for a new timezone"
-msgstr ""
+msgstr "為新時區加入時間標記顯示欄位"
 
 #: agenda/timelabels.cpp:333
 #, kde-format
@@ -124,6 +124,8 @@ msgid ""
 "This feature is very useful when showing calendar events for people in "
 "timezones other than your own."
 msgstr ""
+"這個選單項目會顯示時區選取對話框，讓您選取在系統時區小時標記旁要顯示的額外小"
+"時標記所使用的時區。這個功能適合用來查看與您不同時區的人們的行事曆事件。"
 
 #: agenda/timelabels.cpp:336
 #, kde-format
@@ -136,7 +138,7 @@ msgctxt "@info:tooltip"
 msgid ""
 "Remove the hour label column for the currently selected timezone, for non-"
 "system timezones only."
-msgstr ""
+msgstr "為目前選取的時區移除小時標記欄位，僅非系統時區。"
 
 #: agenda/timelabels.cpp:343
 #, kde-format
@@ -144,7 +146,7 @@ msgctxt "@info:whatsthis"
 msgid ""
 "For non-system timezones, this menu selection removes the time hour labels "
 "display column for the currently selected timezone."
-msgstr ""
+msgstr "對於非系統時區，這個選單項目會為目前選取的時區移除小時標記的欄位。"
 
 #: agenda/timelabels.cpp:347
 #, kde-format
@@ -164,7 +166,7 @@ msgctxt "@info:tooltip"
 msgid ""
 "Display the time label hours in 24-hour \"military\" format or according to "
 "your locale"
-msgstr ""
+msgstr "依 24 小時制或是依您的地域顯示小時標記"
 
 #: agenda/timelabels.cpp:353
 #, kde-format
@@ -172,7 +174,7 @@ msgctxt "@info:whatsthis"
 msgid ""
 "This menu selection shows the time hour labels according to 24-hour "
 "\"military\" time or your system locale."
-msgstr ""
+msgstr "這個選單項目會依 24 小時制或是您的系統地域來顯示小時標記。"
 
 #: agenda/timelabels.cpp:358
 #, kde-format
@@ -199,21 +201,13 @@ msgid "Show Left-side Time Labels"
 msgstr "顯示左側時間標記"
 
 #: agenda/timelabels.cpp:369
-#, fuzzy, kde-format
-#| msgctxt "info::tooltip"
-#| msgid "Show or hide time labels on both sides of the agenda view"
+#, kde-format
 msgctxt "@info::tooltip"
 msgid "Show or hide time labels on both sides of the agenda view"
 msgstr "顯示或隱藏行程檢視兩側的時間標記"
 
 #: agenda/timelabels.cpp:371
-#, fuzzy, kde-format
-#| msgctxt "info::whatsthis"
-#| msgid ""
-#| "This menu section shows or hides the time labels on both sides of the "
-#| "agenda view. Only the system timezone (and no extra added timezones) is "
-#| "shown on the second side to save screen space. Similarly, the vertical "
-#| "scrollbar is removed when the time labels are shown on both sides."
+#, kde-format
 msgctxt "@info::whatsthis"
 msgid ""
 "This menu selection shows or hides the time labels on both sides of the "
@@ -221,7 +215,7 @@ msgid ""
 "shown on the second side to save screen space. Similarly, the vertical "
 "scrollbar is removed when the time labels are shown on both sides."
 msgstr ""
-"這個選單區塊用來顯示或隱藏行程檢視兩側的時間標記。只有系統時區會顯示在第二"
+"這個選單項目用來顯示或隱藏行程檢視兩側的時間標記。只有系統時區會顯示在第二"
 "側，其他額外加入的時區不會，來節省螢幕空間。兩側都有時間標記的時候垂直捲軸列"
 "也會為了節省螢幕空間而隱藏。"
 

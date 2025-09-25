@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-09 00:56+0000\n"
-"PO-Revision-Date: 2025-08-16 14:39+0200\n"
+"PO-Revision-Date: 2025-09-12 22:59+0200\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -125,6 +125,8 @@ msgstr "&Aggiungi fusi orari…"
 msgctxt "@info:tooltip"
 msgid "Add a timelabel display column for a new timezone"
 msgstr ""
+"Aggiunge una colonna per la visualizzazione dell'etichetta oraria per un "
+"nuovo fuso orario"
 
 #: agenda/timelabels.cpp:333
 #, kde-format
@@ -135,6 +137,11 @@ msgid ""
 "This feature is very useful when showing calendar events for people in "
 "timezones other than your own."
 msgstr ""
+"Questo menu mostra una finestra di selezione del fuso orario, che permette "
+"di selezionare un fuso orario per mostrare le etichette dell'ora accanto "
+"alle etichette dell'ora del fuso orario di sistema. Questa funzione è molto "
+"utile per vedere gli eventi di calendario di persone in fusi orari diversi "
+"dal proprio."
 
 #: agenda/timelabels.cpp:336
 #, kde-format
@@ -148,6 +155,8 @@ msgid ""
 "Remove the hour label column for the currently selected timezone, for non-"
 "system timezones only."
 msgstr ""
+"Rimuove la colonna dell'etichetta dell'ora per il fuso orario attualmente "
+"selezionato, solo per i fusi orari non di sistema."
 
 #: agenda/timelabels.cpp:343
 #, kde-format
@@ -156,6 +165,9 @@ msgid ""
 "For non-system timezones, this menu selection removes the time hour labels "
 "display column for the currently selected timezone."
 msgstr ""
+"Per fusi orari non di sistema, questa selezione di menu rimuove la colonna "
+"che mostra le etichette dell'orario per il fuso orario attualmente "
+"selezionato."
 
 #: agenda/timelabels.cpp:347
 #, kde-format
@@ -176,6 +188,8 @@ msgid ""
 "Display the time label hours in 24-hour \"military\" format or according to "
 "your locale"
 msgstr ""
+"Mostra l'orario in base all'orario «militare» di 24 ore o alle impostazioni "
+"locali di sistema."
 
 #: agenda/timelabels.cpp:353
 #, kde-format
@@ -184,6 +198,8 @@ msgid ""
 "This menu selection shows the time hour labels according to 24-hour "
 "\"military\" time or your system locale."
 msgstr ""
+"Questa selezione del menu mostra le etichette dell'ora in base all'orario "
+"«militare» di 24 ore o alle impostazioni locali di sistema."
 
 #: agenda/timelabels.cpp:358
 #, kde-format
@@ -210,9 +226,7 @@ msgid "Show Left-side Time Labels"
 msgstr "Mostra le etichette dell'orario a sinistra"
 
 #: agenda/timelabels.cpp:369
-#, fuzzy, kde-format
-#| msgctxt "info::tooltip"
-#| msgid "Show or hide time labels on both sides of the agenda view"
+#, kde-format
 msgctxt "@info::tooltip"
 msgid "Show or hide time labels on both sides of the agenda view"
 msgstr ""
@@ -220,13 +234,7 @@ msgstr ""
 "agenda"
 
 #: agenda/timelabels.cpp:371
-#, fuzzy, kde-format
-#| msgctxt "info::whatsthis"
-#| msgid ""
-#| "This menu section shows or hides the time labels on both sides of the "
-#| "agenda view. Only the system timezone (and no extra added timezones) is "
-#| "shown on the second side to save screen space. Similarly, the vertical "
-#| "scrollbar is removed when the time labels are shown on both sides."
+#, kde-format
 msgctxt "@info::whatsthis"
 msgid ""
 "This menu selection shows or hides the time labels on both sides of the "
@@ -234,7 +242,7 @@ msgid ""
 "shown on the second side to save screen space. Similarly, the vertical "
 "scrollbar is removed when the time labels are shown on both sides."
 msgstr ""
-"Questa sezione del menu mostra o nasconde le etichette dell'orario su "
+"Questa selezione del menu mostra o nasconde le etichette dell'orario su "
 "entrambi i lati della vista agenda. Solo il fuso orario di sistema (e nessun "
 "altro) viene mostrato sul secondo lato, in modo da risparmiare spazio sullo "
 "schermo. Analogamente, la barra di scorrimento verticale viene rimossa "
