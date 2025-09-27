@@ -7,8 +7,8 @@ msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-09 00:56+0000\n"
-"PO-Revision-Date: 2025-08-19 13:20+0300\n"
-"Last-Translator: Toms Trasūns <toms.trasuns@posteo.net>\n"
+"PO-Revision-Date: 2025-09-24 14:18+0300\n"
+"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
@@ -114,7 +114,7 @@ msgstr "&Pievienot laika joslas…"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Add a timelabel display column for a new timezone"
-msgstr ""
+msgstr "Pievienot laika etiķetes parādīšanas kolonnu jaunai laika joslai"
 
 #: agenda/timelabels.cpp:333
 #, kde-format
@@ -125,6 +125,10 @@ msgid ""
 "This feature is very useful when showing calendar events for people in "
 "timezones other than your own."
 msgstr ""
+"Šī izvēlne parādīs laika josla atlases lodziņu, ļaujot atlasīt laika joslu, "
+"kurai parādīt stundas etiķetes līdz ar sistēmas laika joslas etiķetēm. Šī "
+"iespēja ir noderīga, lai parādītu kalendāra notikumus cilvēkiem citās laika "
+"joslās."
 
 #: agenda/timelabels.cpp:336
 #, kde-format
@@ -138,6 +142,8 @@ msgid ""
 "Remove the hour label column for the currently selected timezone, for non-"
 "system timezones only."
 msgstr ""
+"Noņemt stundas etiķetes kolonnas pašreiz atlasītajai laika joslai, tikai "
+"laika joslām, kas nav sistēmas laika josla."
 
 #: agenda/timelabels.cpp:343
 #, kde-format
@@ -146,6 +152,8 @@ msgid ""
 "For non-system timezones, this menu selection removes the time hour labels "
 "display column for the currently selected timezone."
 msgstr ""
+"Ne sistēmas laika joslām šī izvēlne noņem laika marķējumu kolonnu "
+"atlasītajai laika joslai."
 
 #: agenda/timelabels.cpp:347
 #, kde-format
@@ -166,6 +174,7 @@ msgid ""
 "Display the time label hours in 24-hour \"military\" format or according to "
 "your locale"
 msgstr ""
+"Parādīt laika etiķeti stundās 24 stundu formātā vai atbilstoši jūsu lokālei"
 
 #: agenda/timelabels.cpp:353
 #, kde-format
@@ -174,6 +183,8 @@ msgid ""
 "This menu selection shows the time hour labels according to 24-hour "
 "\"military\" time or your system locale."
 msgstr ""
+"Šī izvēlne liek parādīt laika etiķeti 24 stundu formātā vai saskaņā ar "
+"sistēmas lokāli."
 
 #: agenda/timelabels.cpp:358
 #, kde-format
@@ -200,21 +211,13 @@ msgid "Show Left-side Time Labels"
 msgstr "Rādīt kreisās puses laika etiķetes"
 
 #: agenda/timelabels.cpp:369
-#, fuzzy, kde-format
-#| msgctxt "info::tooltip"
-#| msgid "Show or hide time labels on both sides of the agenda view"
+#, kde-format
 msgctxt "@info::tooltip"
 msgid "Show or hide time labels on both sides of the agenda view"
 msgstr "Slēpt vai rādīt etiķetes dienaskārtības skata abās pusēs"
 
 #: agenda/timelabels.cpp:371
-#, fuzzy, kde-format
-#| msgctxt "info::whatsthis"
-#| msgid ""
-#| "This menu section shows or hides the time labels on both sides of the "
-#| "agenda view. Only the system timezone (and no extra added timezones) is "
-#| "shown on the second side to save screen space. Similarly, the vertical "
-#| "scrollbar is removed when the time labels are shown on both sides."
+#, kde-format
 msgctxt "@info::whatsthis"
 msgid ""
 "This menu selection shows or hides the time labels on both sides of the "
@@ -222,7 +225,7 @@ msgid ""
 "shown on the second side to save screen space. Similarly, the vertical "
 "scrollbar is removed when the time labels are shown on both sides."
 msgstr ""
-"Šī izvēlnes sadaļa parāda vai paslēpj laika etiķetes dienaskārtības skata "
+"Šī izvēlnes atlase parāda vai paslēpj laika etiķetes dienaskārtības skata "
 "abās pusēs. Lai taupītu vietu ekrānā, otrā pusē tiek parādīta tikai sistēmas "
 "laika josla (bez jebkādām papildu laika joslām). Tāpat arī, rādot laiku abās "
 "pusēs, tiek noņemta ritjosla."
