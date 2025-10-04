@@ -294,8 +294,8 @@ void MonthGraphicsItem::paint(QPainter *p, const QStyleOptionGraphicsItem *, QWi
         // update the rect, where the text will be displayed
         textRect.setLeft(curXPos + iconWidths);
 
-        // assume that all pixmaps have the same height
-        int const pixYPos = icons.isEmpty() ? 0 : (textRect.height() - icons.at(0).height()) / 2;
+        const int iconHeightMax = 16; // we always use 16x16 icons
+        int const pixYPos = icons.isEmpty() ? 0 : (textRect.height() - iconHeightMax) / 2;
         for (const QPixmap &icon : std::as_const(icons)) {
             p->drawPixmap(curXPos, pixYPos, icon);
             curXPos += icon.width();
