@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-09 00:56+0000\n"
-"PO-Revision-Date: 2025-09-04 10:21+0300\n"
+"PO-Revision-Date: 2025-10-02 18:01+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -115,7 +115,7 @@ msgstr "Lisää aika&vyöhykkeitä…"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Add a timelabel display column for a new timezone"
-msgstr ""
+msgstr "Lisää uudelle aikavyöhykkeelle ajan näyttösarake"
 
 #: agenda/timelabels.cpp:333
 #, kde-format
@@ -126,6 +126,10 @@ msgid ""
 "This feature is very useful when showing calendar events for people in "
 "timezones other than your own."
 msgstr ""
+"Tämä valikko näyttää aikavyöhykevalinnan, jolla voi valita järjestelmän "
+"aikavyöhykkeen oheen toisen aikavyöhykkeen tuntiselitteet. Ominaisuudesta on "
+"apua, kun kalenterissa on tapahtumia ihmisiltä, joiden aikavyöhyke eroaa "
+"omastasi."
 
 #: agenda/timelabels.cpp:336
 #, kde-format
@@ -139,6 +143,8 @@ msgid ""
 "Remove the hour label column for the currently selected timezone, for non-"
 "system timezones only."
 msgstr ""
+"Poista tuntisarake valitulta aikavyöhykkeeltä; koskee vain muita kuin "
+"järjestelmän aikavyöhykkeitä."
 
 #: agenda/timelabels.cpp:343
 #, kde-format
@@ -147,6 +153,8 @@ msgid ""
 "For non-system timezones, this menu selection removes the time hour labels "
 "display column for the currently selected timezone."
 msgstr ""
+"Tämä valinta poistaa tuntien näyttösarakkeen valitulta aikavyöhykkeeltä "
+"(paitsi järjestelmän aikavyöhykkeiltä)."
 
 #: agenda/timelabels.cpp:347
 #, kde-format
@@ -166,7 +174,7 @@ msgctxt "@info:tooltip"
 msgid ""
 "Display the time label hours in 24-hour \"military\" format or according to "
 "your locale"
-msgstr ""
+msgstr "Näytä aikaselitteet 24-tuntisina tai maa-asetusten mukaisesti"
 
 #: agenda/timelabels.cpp:353
 #, kde-format
@@ -175,36 +183,37 @@ msgid ""
 "This menu selection shows the time hour labels according to 24-hour "
 "\"military\" time or your system locale."
 msgstr ""
+"Tämä valinta näyttää aikaselitteet 24-tuntisina tai maa-asetusten mukaisesti."
 
 #: agenda/timelabels.cpp:358
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Right-side Time Labels"
-msgstr "Piilota oikean puolen aikanimiöt"
+msgstr "Piilota oikean puolen aikaselitteet"
 
 #: agenda/timelabels.cpp:360
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Right-side Time Labels"
-msgstr "Näytä oikean puolen aikanimiöt"
+msgstr "Näytä oikean puolen aikaselitteet"
 
 #: agenda/timelabels.cpp:364
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Left-side Time Labels"
-msgstr "Piilota vasemman puolen aikanimiöt"
+msgstr "Piilota vasemman puolen aikaselitteet"
 
 #: agenda/timelabels.cpp:366
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Left-side Time Labels"
-msgstr "Näytä vasemman puolen aikanimiöt"
+msgstr "Näytä vasemman puolen aikaselitteet"
 
 #: agenda/timelabels.cpp:369
 #, kde-format
 msgctxt "@info::tooltip"
 msgid "Show or hide time labels on both sides of the agenda view"
-msgstr ""
+msgstr "Näytä tai piilota aikaselitteet päivyrinäkymän kummaltakin puolen"
 
 #: agenda/timelabels.cpp:371
 #, kde-format
@@ -215,6 +224,10 @@ msgid ""
 "shown on the second side to save screen space. Similarly, the vertical "
 "scrollbar is removed when the time labels are shown on both sides."
 msgstr ""
+"Tämä valikkovalinta näyttää tai piilottaa aikaselitteet päivyrinäkymän "
+"kummaltakin puolen. Toisella puolen näytetään näyttötilan säästämiseksi vain "
+"järjestelmän aikavyöhyke, ei lisättyjä vyöhykkeitä. Samoin "
+"pystyvierityspalkki poistetaan, kun aikaselitteet näytetään molemmin puolin."
 
 #: agenda/timelabels.cpp:426
 #, kde-format
