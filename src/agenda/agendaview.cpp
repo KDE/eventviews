@@ -1264,7 +1264,7 @@ void AgendaView::removeCalendar(const Akonadi::CollectionCalendar::Ptr &calendar
         return false;
     });
 
-    if (*cal && cal != d->mViewCalendar->mSubCalendars.end()) {
+    if (cal != d->mViewCalendar->mSubCalendars.end() && *cal) {
         calendar->unregisterObserver(d.get());
         d->mViewCalendar->removeCalendar(*cal);
         setChanges(EventViews::EventView::ResourcesChanged);
