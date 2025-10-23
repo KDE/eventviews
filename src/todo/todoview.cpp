@@ -94,11 +94,15 @@ public:
         if (mEnabledCalendars.contains(calendar->collection().id())) {
             return;
         }
-#if QT_VERSION >= QT_VERSION_CHECK(6, 9, 0)
+#if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
         beginFilterChange();
 #endif
         mEnabledCalendars.insert(calendar->collection().id());
+#if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
+        endFilterChange(QSortFilterProxyModel::Direction::Rows);
+#else
         invalidateFilter();
+#endif
     }
 
     void removeCalendar(const Akonadi::CollectionCalendar::Ptr &calendar)
@@ -109,11 +113,15 @@ public:
         if (!mEnabledCalendars.contains(calendar->collection().id())) {
             return;
         }
-#if QT_VERSION >= QT_VERSION_CHECK(6, 9, 0)
+#if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
         beginFilterChange();
 #endif
         mEnabledCalendars.remove(calendar->collection().id());
+#if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
+        endFilterChange(QSortFilterProxyModel::Direction::Rows);
+#else
         invalidateFilter();
+#endif
     }
 
 private:

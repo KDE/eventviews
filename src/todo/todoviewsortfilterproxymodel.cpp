@@ -152,8 +152,7 @@ bool TodoViewSortFilterProxyModel::lessThan(const QModelIndex &left, const QMode
 
 void TodoViewSortFilterProxyModel::setPriorityFilter(const QStringList &priorities)
 {
-    // preparing priority list for comparison
-#if QT_VERSION >= QT_VERSION_CHECK(6, 9, 0)
+#if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
     beginFilterChange();
 #endif
     mPriorities.clear();
@@ -170,7 +169,11 @@ void TodoViewSortFilterProxyModel::setPriorityFilter(const QStringList &prioriti
             mPriorities.append(eachPriority);
         }
     }
+#if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
+    endFilterChange(QSortFilterProxyModel::Direction::Rows);
+#else
     invalidateFilter();
+#endif
 }
 
 int TodoViewSortFilterProxyModel::compareStartDates(const QModelIndex &left, const QModelIndex &right) const
@@ -242,22 +245,30 @@ int TodoViewSortFilterProxyModel::compareCompletedDates(const QModelIndex &left,
 void TodoViewSortFilterProxyModel::setCategoryFilter(const QStringList &categories)
 {
     if (mCategories != categories) {
-#if QT_VERSION >= QT_VERSION_CHECK(6, 9, 0)
+#if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
         beginFilterChange();
 #endif
         mCategories = categories;
+#if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
+        endFilterChange(QSortFilterProxyModel::Direction::Rows);
+#else
         invalidateFilter();
+#endif
     }
 }
 
 void TodoViewSortFilterProxyModel::setCalFilter(KCalendarCore::CalFilter *filter)
 {
     if (mCalFilter != filter) {
-#if QT_VERSION >= QT_VERSION_CHECK(6, 9, 0)
+#if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
         beginFilterChange();
 #endif
         mCalFilter = filter;
+#if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
+        endFilterChange(QSortFilterProxyModel::Direction::Rows);
+#else
         invalidateFilter();
+#endif
     }
 }
 
