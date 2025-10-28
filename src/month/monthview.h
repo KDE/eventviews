@@ -89,6 +89,10 @@ public:
 
     /*!
      */
+    void showFullWindowButton(bool show);
+
+    /*!
+     */
     void enableMonthYearHeader(bool enable);
 
     /*!
