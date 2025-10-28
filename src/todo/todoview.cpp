@@ -1281,6 +1281,11 @@ bool TodoView::usesFullWindow()
     return preferences()->fullViewTodo();
 }
 
+void TodoView::showFullWindowButton(bool show)
+{
+    mFullViewButton->setVisible(show);
+}
+
 void TodoView::resizeColumns()
 {
     mResizeColumnsScheduled = false;

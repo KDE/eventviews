@@ -109,6 +109,10 @@ public:
 
     /*!
      */
+    void showFullWindowButton(bool show);
+
+    /*!
+     */
     [[nodiscard]] bool supportsDateRangeSelection() const
     {
         return false;
