@@ -1283,7 +1283,10 @@ bool TodoView::usesFullWindow()
 
 void TodoView::showFullWindowButton(bool show)
 {
-    mFullViewButton->setVisible(show);
+    // mFullViewButton will be null when running in sidebar mode
+    if (mFullViewButton) {
+        mFullViewButton->setVisible(show);
+    }
 }
 
 void TodoView::resizeColumns()
