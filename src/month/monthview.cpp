@@ -666,6 +666,11 @@ bool MonthView::hasEnabledMonthYearHeader()
     return d->enableMonthYearHeader;
 }
 
+void MonthView::showFullWindowButton(bool show)
+{
+    d->fullView->setVisible(show);
+}
+
 bool MonthView::isBusyDay(QDate day) const
 {
     return !d->mBusyDays[day].isEmpty();
