@@ -59,6 +59,8 @@ public:
 
     [[nodiscard]] bool usesFullWindow();
 
+    void showFullWindowButton(bool show);
+
     void enableMonthYearHeader(bool enable);
 
     [[nodiscard]] bool hasEnabledMonthYearHeader();
