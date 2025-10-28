@@ -1286,6 +1286,8 @@ void TodoView::showFullWindowButton(bool show)
     // mFullViewButton will be null when running in sidebar mode
     if (mFullViewButton) {
         mFullViewButton->setVisible(show);
+        preferences()->setFullViewTodo(show);
+        preferences()->writeConfig();
     }
 }
 
