@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-10-24 00:43+0000\n"
-"PO-Revision-Date: 2025-10-24 22:07+0200\n"
+"PO-Revision-Date: 2025-10-24 23:22+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -1628,7 +1628,7 @@ msgstr ""
 #: eventviews.kcfg:629
 #, kde-format
 msgid "Select the working hours background color for the Month view here."
-msgstr "Изберете тук цвета на фона за работното време за изгледа„ Месец “."
+msgstr "Изберете тук цвета на фона за работното време за изгледа „Месец“."
 
 #. i18n: ectx: label, entry, group (Theme/Month view)
 #: eventviews.kcfg:651
