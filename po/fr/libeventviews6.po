@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-28 02:48+0000\n"
-"PO-Revision-Date: 2025-06-10 08:17+0200\n"
+"PO-Revision-Date: 2025-09-11 15:54+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -335,7 +335,7 @@ msgstr "Confirmez l'effacement"
 #, kde-format
 msgid "Check this box to display a confirmation dialog when deleting items."
 msgstr ""
-"Cochez cette case pour afficher une boîte de dialogue de confirmation pour "
+"Cochez cette case pour afficher une boite de dialogue de confirmation pour "
 "l'effacement d'éléments."
 
 #. i18n: ectx: label, entry (Destination), group (Save Settings)
@@ -386,7 +386,7 @@ msgstr ""
 #: eventviews.kcfg:81
 #, kde-format
 msgid "Show Reminder Daemon in the System Tray"
-msgstr "Afficher le démon de rappel dans la boîte à miniatures"
+msgstr "Afficher le démon de rappel dans la boite à miniatures"
 
 #. i18n: ectx: whatsthis, entry, group (System Tray)
 #: eventviews.kcfg:82
@@ -395,7 +395,7 @@ msgid ""
 "Check this box to show the KOrganizer reminder daemon in the system tray."
 msgstr ""
 "Cochez cette case pour afficher le démon de rappel de KOrganizer dans la "
-"boîte à miniatures."
+"boite à miniatures."
 
 #. i18n: ectx: whatsthis, entry (TimeZoneId), group (Time &amp; Date)
 #: eventviews.kcfg:90
@@ -1001,7 +1001,7 @@ msgid ""
 "view; they will only appear when needed though."
 msgstr ""
 "Cochez cette case pour afficher des ascenseurs quand vous cliquez sur une "
-"cellule dans la vue mensuelle : elles n'apparaîtront cependant que quand "
+"cellule dans la vue mensuelle : elles n'apparaitront cependant que quand "
 "nécessaire."
 
 #. i18n: ectx: label, entry (EnableMonthItemIcons), group (Month View)
@@ -1424,7 +1424,7 @@ msgid ""
 msgstr ""
 "Cliquez sur ce bouton pour configurer la police de la barre de temps. La "
 "barre de temps est l'élément graphique qui affiche les heures dans la vue de "
-"l'agenda. Ce bouton ouvrira la boîte de dialogue « Choisir une police », "
+"l'agenda. Ce bouton ouvrira la boite de dialogue « Choisir une police », "
 "vous permettant de choisir la police des heures dans la barre de temps."
 
 #. i18n: ectx: label, entry, group (Fonts)
@@ -1442,7 +1442,7 @@ msgid ""
 "the month view."
 msgstr ""
 "Cliquez sur ce bouton pour configurer la police de la vue mensuelle. Ce "
-"bouton ouvrira la boîte de dialogue « Choisir une police », vous permettant "
+"bouton ouvrira la boite de dialogue « Choisir une police », vous permettant "
 "de choisir la police des éléments dans la vue mensuelle."
 
 #. i18n: ectx: label, entry, group (Fonts)
@@ -1460,7 +1460,7 @@ msgid ""
 "in the agenda view."
 msgstr ""
 "Cliquez sur ce bouton pour configurer la police de la vue de l'agenda. Ce "
-"bouton ouvrira la boîte de dialogue « Choisir une police », vous permettant "
+"bouton ouvrira la boite de dialogue « Choisir une police », vous permettant "
 "de choisir la police des évènements dans la vue de l'agenda."
 
 #. i18n: ectx: label, entry, group (Fonts)
@@ -1478,7 +1478,7 @@ msgid ""
 "current-time line in the agenda view."
 msgstr ""
 "Cliquez sur ce bouton pour configurer la police de la ligne de temps actuel. "
-"Ce bouton ouvrira la boîte de dialogue « Choisir une police », vous "
+"Ce bouton ouvrira la boite de dialogue « Choisir une police », vous "
 "permettant de choisir la police de la ligne de temps actuel dans la vue de "
 "l'agenda."
 
@@ -1601,7 +1601,7 @@ msgstr "Modifier cette entrée de journal"
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Opens an editor dialog for this journal entry"
-msgstr "Ouvrir une boîte de dialogue d'édition pour cette entrée de journal"
+msgstr "Ouvrir une boite de dialogue d'édition pour cette entrée de journal"
 
 #: journal/journalframe.cpp:160
 #, kde-format
@@ -1637,7 +1637,7 @@ msgstr "Imprimer cette entrée de journal"
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Opens a print dialog for this journal entry"
-msgstr "Ouvre une boîte de dialogue d'impression pour cette entrée de journal"
+msgstr "Ouvre une boite de dialogue d'impression pour cette entrée de journal"
 
 #: journal/journalframe.cpp:179
 #, kde-format
