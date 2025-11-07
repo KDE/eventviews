@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: CC0-1.0
 # SPDX-FileCopyrightText: none
 cmake_minimum_required(VERSION 3.16 FATAL_ERROR)
-set(PIM_VERSION "6.5.80")
+set(PIM_VERSION "6.6.40")
 
 project(eventviews VERSION ${PIM_VERSION})
 
