@@ -6,20 +6,21 @@
 # Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2010, 2018, 2019, 2021, 2023.
 # Aracele Torres <araceletorres@gmail.com>, 2010.
 # SPDX-FileCopyrightText: 2025 Marcus Gama <marcus.gama@gmail.com>
+# SPDX-FileCopyrightText: 2025 Guilherme Marçal Silva <guimarcalsilva@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-10-24 00:43+0000\n"
-"PO-Revision-Date: 2025-09-09 08:19-0300\n"
-"Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
+"PO-Revision-Date: 2025-11-08 21:16-0300\n"
+"Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.08.0\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -114,7 +115,7 @@ msgstr "Não foi possível salvar %1 \"%2\"."
 #: agenda/timelabels.cpp:329
 #, kde-format
 msgid "&Add Timezones…"
-msgstr "&Adicionar fusos horários..."
+msgstr "&Adicionar fusos horários…"
 
 #: agenda/timelabels.cpp:330
 #, kde-format
@@ -2010,7 +2011,7 @@ msgstr "&Mostrar"
 #, kde-format
 msgctxt "@action:inmenu edit the to-do"
 msgid "&Edit…"
-msgstr "&Editar..."
+msgstr "&Editar…"
 
 #: todo/todoview.cpp:410
 #, kde-format
@@ -2022,25 +2023,25 @@ msgstr "E&xcluir"
 #, kde-format
 msgctxt "@action:inmenu print the to-do"
 msgid "&Print…"
-msgstr "&Imprimir..."
+msgstr "&Imprimir…"
 
 #: todo/todoview.cpp:424
 #, kde-format
 msgctxt "@action:inmenu print preview the to-do"
 msgid "Print Previe&w…"
-msgstr "Visuali&zar impressão..."
+msgstr "Visuali&zar impressão…"
 
 #: todo/todoview.cpp:431
 #, kde-format
 msgctxt "@action:inmenu create a new to-do"
 msgid "New &To-do…"
-msgstr "Nova &tarefa..."
+msgstr "Nova &tarefa…"
 
 #: todo/todoview.cpp:435
 #, kde-format
 msgctxt "@action:inmenu create a new sub-to-do"
 msgid "New Su&b-to-do…"
-msgstr "Nova su&btarefa..."
+msgstr "Nova su&btarefa…"
 
 #: todo/todoview.cpp:439
 #, kde-format
@@ -2180,7 +2181,7 @@ msgstr ""
 #, kde-format
 msgctxt "@label in QuickSearchLine"
 msgid "Search Summaries…"
-msgstr "Pesquisar nos resumos..."
+msgstr "Pesquisar nos resumos…"
 
 #: todo/todoviewquicksearch.cpp:46
 #, kde-format
