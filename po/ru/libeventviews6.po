@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-10-24 00:43+0000\n"
-"PO-Revision-Date: 2025-08-22 17:46+0300\n"
+"PO-Revision-Date: 2025-10-30 19:53+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.08.0\n"
+"X-Generator: Lokalize 25.08.2\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -1922,29 +1922,25 @@ msgid ""
 "or recurrence. Edit the newly created if you want to add more properties.</"
 "note></para>"
 msgstr ""
+"Введите краткое описание новой задачи. <para><note>Новая задача будет без "
+"ограничений по времени, напоминаний и повторов. Отредактируйте созданную "
+"задачу, если хотите добавить дополнительные свойства.</note></para>"
 
 #: todo/todoview.cpp:349
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Display to-do list in a full window"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Display to-dos in a full window without the sidebar"
-msgstr "Развернуть список задач на всё окно"
+msgstr "Развернуть список задач на всё окно без боковой панели"
 
 #: todo/todoview.cpp:351
-#, fuzzy, kde-format
-#| msgctxt "@info:whatsthis"
-#| msgid ""
-#| "Checking this option will cause the to-dos to be displayed as a flat list "
-#| "instead of a hierarchical tree; the parental relationships are removed in "
-#| "the display."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Checking this button will cause the to-dos to be displayed in a larger "
 "window by hiding the sidebar."
 msgstr ""
-"Нажмите эту кнопку, чтобы задачи были показаны в виде плоского списка, а не "
-"иерархического дерева. Все родительские связи при этом будут скрыты."
+"Установка этого флажка приведёт к отображению задач в большем окне за счёт "
+"скрытия боковой панели."
 
 #: todo/todoview.cpp:357
 #, kde-format
