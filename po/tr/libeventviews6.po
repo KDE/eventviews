@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kdepim-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-10-24 00:43+0000\n"
-"PO-Revision-Date: 2025-09-12 10:09+0300\n"
+"PO-Revision-Date: 2025-11-15 21:01+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.08.0\n"
+"X-Generator: Lokalize 25.08.2\n"
 "(http: //www.transifex.com/projects/p/kdepim-k-tr/language/tr/)\n"
 "X-POOTLE-MTIME: 1413132207.000000\n"
 
@@ -2147,7 +2147,7 @@ msgstr "Düz liste görüntüsüne geç"
 #: todo/todoviewquickaddline.cpp:17
 #, kde-format
 msgid "Enter a summary to create a new to-do"
-msgstr "Yeni bir yapılacak olşuturmak için bir özet girin"
+msgstr "Yeni yapılacak oluşturmak için bir özet gir…"
 
 #: todo/todoviewquicksearch.cpp:37
 #, kde-format
@@ -2167,7 +2167,7 @@ msgstr ""
 #, kde-format
 msgctxt "@label in QuickSearchLine"
 msgid "Search Summaries…"
-msgstr "Özetleri Ara…"
+msgstr "Özetlerde ara…"
 
 #: todo/todoviewquicksearch.cpp:46
 #, kde-format
@@ -2211,7 +2211,7 @@ msgstr ""
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Select Priority"
-msgstr "Önceliği Seç"
+msgstr "Öncelik Seç"
 
 #: todo/todoviewquicksearch.cpp:96
 #, kde-format
