@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:52+0000\n"
-"PO-Revision-Date: 2025-09-06 06:19+0200\n"
+"PO-Revision-Date: 2025-11-22 22:18+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
 "Language: pl\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 25.08.0\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -118,7 +118,7 @@ msgstr "Dod&aj strefy czasowe…"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Add a timelabel display column for a new timezone"
-msgstr ""
+msgstr "Dodaj kolumnę wyświetlającą czas dla nowej strefy czasowej"
 
 #: agenda/timelabels.cpp:333
 #, kde-format
@@ -129,6 +129,10 @@ msgid ""
 "This feature is very useful when showing calendar events for people in "
 "timezones other than your own."
 msgstr ""
+"To menu pokaże okno wyboru strefy czasowej, które umożliwi wybranie strefy "
+"czasowej do wyświetlania godziny wraz z godziną danej strefy czasowej. Jest "
+"to bardzo użyteczne przy pokazywaniu wydarzeń z kalendarza dla ludzi, którzy "
+"mają inną strefę czasową niż twoja."
 
 #: agenda/timelabels.cpp:336
 #, kde-format
@@ -142,6 +146,8 @@ msgid ""
 "Remove the hour label column for the currently selected timezone, for non-"
 "system timezones only."
 msgstr ""
+"Usuń kolumnę godziny dla obecnie wybranej strefy czasowej, tylko dla "
+"niesystemowych stref czasowych."
 
 #: agenda/timelabels.cpp:343
 #, kde-format
@@ -150,6 +156,8 @@ msgid ""
 "For non-system timezones, this menu selection removes the time hour labels "
 "display column for the currently selected timezone."
 msgstr ""
+"Dla niesystemowych stref czasowych, ten wpis w menu usuwa kolumnę "
+"wyświetlającą godzinę dla obecnie wybranej strefy czasowej."
 
 #: agenda/timelabels.cpp:347
 #, kde-format
@@ -170,6 +178,8 @@ msgid ""
 "Display the time label hours in 24-hour \"military\" format or according to "
 "your locale"
 msgstr ""
+"Wyświetl godziny w formacie 24-godzinnym \"wojskowym\" lub zgodnie ze swoimi "
+"ustawieniami regionalnymi"
 
 #: agenda/timelabels.cpp:353
 #, kde-format
@@ -204,9 +214,7 @@ msgid "Show Left-side Time Labels"
 msgstr "Pokaż etykiety czasowe po lewej"
 
 #: agenda/timelabels.cpp:369
-#, fuzzy, kde-format
-#| msgctxt "info::tooltip"
-#| msgid "Show or hide time labels on both sides of the agenda view"
+#, kde-format
 msgctxt "@info::tooltip"
 msgid "Show or hide time labels on both sides of the agenda view"
 msgstr "Pokaż lub ukryj etykiety czasowe po obu stronach widoku rozkładu"
