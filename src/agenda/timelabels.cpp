@@ -334,7 +334,7 @@ void TimeLabels::contextMenuEvent(QContextMenuEvent *event)
         "This feature is very useful when showing calendar events for people in timezones other than your own."));
 
     QAction *removeTimeZone = popup.addAction(QIcon::fromTheme(QStringLiteral("edit-delete")), i18n("&Remove Timezone %1", i18n(mTimezone.id().constData())));
-    if (!mTimezone.isValid() || !mTimeLabelsZone->preferences()->timeScaleTimezones().count() || mTimezone == mTimeLabelsZone->preferences()->timeZone()) {
+    if (!mTimezone.isValid() || mTimeLabelsZone->preferences()->timeScaleTimezones().isEmpty() || mTimezone == mTimeLabelsZone->preferences()->timeZone()) {
         removeTimeZone->setEnabled(false);
     }
     removeTimeZone->setToolTip(i18nc("@info:tooltip", "Remove the hour label column for the currently selected timezone, for non-system timezones only."));

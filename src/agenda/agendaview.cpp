@@ -557,7 +557,7 @@ void EventIndicator::paintEvent(QPaintEvent *)
     const bool isRightToLeft = QApplication::isRightToLeft();
     const uint pixmapOffset = isRightToLeft ? 0 : (cellWidth - d->mPixmap.width());
     for (int i = 0; i < d->mColumns; ++i) {
-        if (d->mEnabled[i]) {
+        if (d->mEnabled.at(i)) {
             const int xOffset = (isRightToLeft ? (d->mColumns - 1 - i) : i) * cellWidth;
             painter.drawPixmap(xOffset + pixmapOffset, 0, d->mPixmap);
         }
@@ -968,7 +968,7 @@ void AgendaViewPrivate::insertIncidence(const KCalendarCore::Incidence::Ptr &inc
     const QDate insertAtDate = insertAtDateTime.date();
 
     // In case incidence->dtStart() isn't visible (crosses boundaries)
-    const int curCol = qMax(mSelectedDates.first().daysTo(insertAtDate), qint64(0));
+    const int curCol = qMax(mSelectedDates.constFirst().daysTo(insertAtDate), qint64(0));
 
     // The date for the event is not displayed, just ignore it
     if (curCol >= mSelectedDates.count()) {
@@ -2010,7 +2010,7 @@ QDate AgendaView::startDate() const
     if (d->mSelectedDates.isEmpty()) {
         return {};
     }
-    return d->mSelectedDates.first();
+    return d->mSelectedDates.constFirst();
 }
 
 QDate AgendaView::endDate() const
@@ -2018,7 +2018,7 @@ QDate AgendaView::endDate() const
     if (d->mSelectedDates.isEmpty()) {
         return {};
     }
-    return d->mSelectedDates.last();
+    return d->mSelectedDates.constLast();
 }
 
 void AgendaView::showDates(const QDate &start, const QDate &end, const QDate &preferredMonth)
@@ -2267,7 +2267,7 @@ bool AgendaView::displayIncidence(const KCalendarCore::Incidence::Ptr &incidence
 
     // Can be multiday
     if (event && makesDayBusy && event->isMultiDay()) {
-        const QDate lastVisibleDate = d->mSelectedDates.last();
+        const QDate lastVisibleDate = d->mSelectedDates.constLast();
         for (QDate date = event->dtStart().date(); date <= event->dtEnd().date() && date <= lastVisibleDate; date = date.addDays(1)) {
             KCalendarCore::Event::List &busyEvents = d->mBusyDays[date];
             busyEvents.append(event);
