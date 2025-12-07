@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:52+0000\n"
-"PO-Revision-Date: 2025-11-22 22:18+0100\n"
+"PO-Revision-Date: 2025-12-06 15:04+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
 "Language: pl\n"
@@ -188,6 +188,8 @@ msgid ""
 "This menu selection shows the time hour labels according to 24-hour "
 "\"military\" time or your system locale."
 msgstr ""
+"To menu pokazuje godziny na etykietach czasowych w zapisie 24-godzinnym lub "
+"zgodnym z ustawieniami regionalnymi twojego systemu."
 
 #: agenda/timelabels.cpp:358
 #, kde-format
@@ -220,13 +222,7 @@ msgid "Show or hide time labels on both sides of the agenda view"
 msgstr "Pokaż lub ukryj etykiety czasowe po obu stronach widoku rozkładu"
 
 #: agenda/timelabels.cpp:371
-#, fuzzy, kde-format
-#| msgctxt "info::whatsthis"
-#| msgid ""
-#| "This menu section shows or hides the time labels on both sides of the "
-#| "agenda view. Only the system timezone (and no extra added timezones) is "
-#| "shown on the second side to save screen space. Similarly, the vertical "
-#| "scrollbar is removed when the time labels are shown on both sides."
+#, kde-format
 msgctxt "@info::whatsthis"
 msgid ""
 "This menu selection shows or hides the time labels on both sides of the "
