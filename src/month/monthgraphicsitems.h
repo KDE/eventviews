@@ -107,9 +107,7 @@ private:
     ScrollIndicator *mUpArrow = nullptr;
     ScrollIndicator *mDownArrow = nullptr;
 
-    // disable copy ctor
-    MonthCell(const MonthCell &) = delete;
-    MonthCell &operator=(const MonthCell &) = delete;
+    Q_DISABLE_COPY_MOVE(MonthCell)
 };
 
 /**

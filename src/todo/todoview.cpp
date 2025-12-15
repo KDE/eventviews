@@ -235,9 +235,7 @@ public:
     EventViews::PrefsPtr prefs;
 
 private:
-    // disable copy ctor
-    ModelStack(const ModelStack &) = delete;
-    ModelStack &operator=(const ModelStack &) = delete;
+    Q_DISABLE_COPY_MOVE(ModelStack)
 };
 }
 
