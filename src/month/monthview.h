@@ -59,6 +59,10 @@ public:
 
     [[nodiscard]] bool usesFullWindow();
 
+    void enableMonthYearHeader(bool enable);
+
+    [[nodiscard]] bool hasEnabledMonthYearHeader();
+
     [[nodiscard]] bool supportsDateRangeSelection() const
     {
         return false;

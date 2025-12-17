@@ -134,7 +134,11 @@ int MonthScene::rowHeight() const
 
 int MonthScene::headerHeight() const
 {
-    return 50;
+    if (monthView()->hasEnabledMonthYearHeader()) {
+        return 50;
+    } else {
+        return 0;
+    }
 }
 
 int MonthScene::cellVerticalPos(const MonthCell *cell) const
@@ -168,22 +172,23 @@ void MonthGraphicsView::drawBackground(QPainter *p, const QRectF &rect)
     /*
       Headers
     */
+    const int dayLabelsHeight = 20;
     QFont font = prefs->monthViewFont();
     font.setBold(true);
-    font.setPointSize(15);
-    p->setFont(font);
-    const int dayLabelsHeight = 20;
-    const auto dayInMonth = mMonthView->averageDate();
-    p->drawText(QRect(0,
-                      0, // top right
-                      static_cast<int>(mScene->sceneRect().width()),
-                      static_cast<int>(mScene->headerHeight() - dayLabelsHeight)),
-                Qt::AlignCenter,
-                i18nc("monthname year",
-                      "%1 %2",
-                      QLocale().standaloneMonthName(dayInMonth.month(), QLocale::LongFormat),
-                      QString::number(dayInMonth.year()))); // krazy:exclude=i18ncheckargs
-
+    if (mScene->monthView()->hasEnabledMonthYearHeader()) {
+        font.setPointSize(15);
+        p->setFont(font);
+        const auto dayInMonth = mMonthView->averageDate();
+        p->drawText(QRect(0,
+                          0, // top right
+                          static_cast<int>(mScene->sceneRect().width()),
+                          static_cast<int>(mScene->headerHeight() - dayLabelsHeight)),
+                    Qt::AlignCenter,
+                    i18nc("monthname year",
+                          "%1 %2",
+                          QLocale().standaloneMonthName(dayInMonth.month(), QLocale::LongFormat),
+                          QString::number(dayInMonth.year()))); // krazy:exclude=i18ncheckargs
+    }
     font.setPointSize(dayLabelsHeight - 10);
     p->setFont(font);
 

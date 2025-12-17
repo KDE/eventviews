@@ -57,6 +57,9 @@ public: /// Methods
     // List of uids for QDate
     QMap<QDate, QStringList> mBusyDays;
 
+    // If the Month Year header is enabled
+    bool enableMonthYearHeader = true;
+
 protected:
     /* reimplemented from KCalendarCore::Calendar::CalendarObserver */
     void calendarIncidenceAdded(const KCalendarCore::Incidence::Ptr &incidence) override;
@@ -651,6 +654,16 @@ int MonthView::currentMonth() const
 bool MonthView::usesFullWindow()
 {
     return preferences()->fullViewMonth();
+}
+
+void MonthView::enableMonthYearHeader(bool enable)
+{
+    d->enableMonthYearHeader = enable;
+}
+
+bool MonthView::hasEnabledMonthYearHeader()
+{
+    return d->enableMonthYearHeader;
 }
 
 bool MonthView::isBusyDay(QDate day) const
