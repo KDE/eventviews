@@ -286,6 +286,8 @@ void MonthGraphicsView::drawBackground(QPainter *p, const QRectF &rect)
     } else {
         oldPen = mMonthView->preferences()->monthGridBackgroundColor().darker(150);
     }
+    // The Pen for drawing the date labels on days not in the current month
+    const QPen nonMonthPen = mMonthView->preferences()->monthGridBackgroundColor().darker(200);
 
     for (QDate d = mMonthView->actualStartDateTime().date(); d <= mMonthView->actualEndDateTime().date(); d = d.addDays(1)) {
         MonthCell *const cell = mScene->mMonthCellMap.value(d);
@@ -307,7 +309,7 @@ void MonthGraphicsView::drawBackground(QPainter *p, const QRectF &rect)
         if (d.month() == mMonthView->currentMonth()) {
             p->setPen(palette().color(QPalette::WindowText));
         } else {
-            p->setPen(oldPen);
+            p->setPen(nonMonthPen);
         }
 
         QString dayText;
