@@ -242,6 +242,16 @@ protected:
 
 private:
     /**
+     * Returns the height of the month label
+     */
+    [[nodiscard]] int monthLabelHeight() const;
+
+    /**
+     * Returns the height of the day labels
+     */
+    [[nodiscard]] int dayLabelsHeight() const;
+
+    /**
      * Returns the height of the header of the view
      */
     [[nodiscard]] int headerHeight() const;
