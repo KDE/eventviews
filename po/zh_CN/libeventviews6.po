@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-18 00:44+0000\n"
+"POT-Creation-Date: 2025-12-19 00:44+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -1630,31 +1630,31 @@ msgctxt "@info/plain"
 msgid "Move occurrence(s)"
 msgstr "移动重现"
 
-#: month/monthscene.cpp:183
+#: month/monthscene.cpp:188
 #, kde-format
 msgctxt "monthname year"
 msgid "%1 %2"
 msgstr "%1 %2"
 
-#: month/monthscene.cpp:312
+#: month/monthscene.cpp:319
 #, kde-format
 msgctxt "'Month day' for month view cells"
 msgid "%1 %2"
 msgstr "%1 %2"
 
-#: month/monthview.cpp:207 month/monthview.cpp:477
+#: month/monthview.cpp:210 month/monthview.cpp:480
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display calendar in a normal size"
 msgstr "显示正常大小的日历"
 
-#: month/monthview.cpp:208 month/monthview.cpp:480
+#: month/monthview.cpp:211 month/monthview.cpp:483
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display calendar in a full window"
 msgstr "显示全窗口日历"
 
-#: month/monthview.cpp:210
+#: month/monthview.cpp:213
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1662,51 +1662,51 @@ msgid ""
 "available window space / or shrunk back to its normal size."
 msgstr "单击此按钮，月视图将被扩展到窗口可用的最大空间 / 缩小到正常尺寸。"
 
-#: month/monthview.cpp:217
+#: month/monthview.cpp:220
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Go back one month"
 msgstr "后退一个月"
 
-#: month/monthview.cpp:218
+#: month/monthview.cpp:221
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Click this button and the view will be scrolled back in time by 1 month."
 msgstr "单击此按钮，视图将向过去滚动 1 个月。"
 
-#: month/monthview.cpp:224
+#: month/monthview.cpp:227
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Go back one week"
 msgstr "后退一周"
 
-#: month/monthview.cpp:225
+#: month/monthview.cpp:228
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Click this button and the view will be scrolled back in time by 1 week."
 msgstr "单击此按钮，视图将向过去滚动 1 个星期。"
 
-#: month/monthview.cpp:231
+#: month/monthview.cpp:234
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Go forward one week"
 msgstr "前进一周"
 
-#: month/monthview.cpp:232
+#: month/monthview.cpp:235
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Click this button and the view will be scrolled forward in time by 1 week."
 msgstr "单击此按钮，视图将向未来滚动 1 个星期。"
 
-#: month/monthview.cpp:238
+#: month/monthview.cpp:241
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Go forward one month"
 msgstr "前进一个月"
 
-#: month/monthview.cpp:239
+#: month/monthview.cpp:242
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
