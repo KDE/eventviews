@@ -335,7 +335,7 @@ int MonthGraphicsItem::daySpan() const
 
 void MonthGraphicsItem::updateGeometry()
 {
-    MonthCell *cell = mMonthItem->monthScene()->mMonthCellMap.value(startDate());
+    const MonthCell *cell = mMonthItem->monthScene()->mMonthCellMap.value(startDate());
 
     // If the item is moving and this one is moved outside the view,
     // cell will be null

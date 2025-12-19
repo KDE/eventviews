@@ -84,7 +84,7 @@ MonthViewPrivate::MonthViewPrivate(MonthView *qq)
 
 MonthItem *MonthViewPrivate::loadCalendarIncidences(const Akonadi::CollectionCalendar::Ptr &calendar, const QDateTime &startDt, const QDateTime &endDt)
 {
-    MonthItem *itemToReselect = nullptr;
+    MonthItem *itemToReselect = nullptr; // NOLINT(misc-const-correctness)
 
     const bool colorMonthBusyDays = q->preferences()->colorMonthBusyDays();
 

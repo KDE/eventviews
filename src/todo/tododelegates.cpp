@@ -35,7 +35,7 @@ void TodoCompleteDelegate::paint(QPainter *painter, const QStyleOptionViewItem &
     QStyleOptionViewItem opt = option;
     initStyleOption(&opt, index);
 
-    QStyle *style = opt.widget ? opt.widget->style() : QApplication::style();
+    const QStyle *style = opt.widget ? opt.widget->style() : QApplication::style();
     style->drawPrimitive(QStyle::PE_PanelItemViewItem, &opt, painter);
 
     if (index.data(Qt::EditRole).toInt() > 0) {
@@ -63,7 +63,7 @@ QSize TodoCompleteDelegate::sizeHint(const QStyleOptionViewItem &option, const Q
     QStyleOptionViewItem opt = option;
     initStyleOption(&opt, index);
 
-    QStyle *style = opt.widget ? opt.widget->style() : QApplication::style();
+    const QStyle *style = opt.widget ? opt.widget->style() : QApplication::style();
 
     QStyleOptionProgressBar pbOption;
     pbOption.QStyleOption::operator=(option);
@@ -273,7 +273,7 @@ void TodoRichTextDelegate::paint(QPainter *painter, const QStyleOptionViewItem &
         initStyleOption(&opt, index);
 
         const QWidget *widget = opt.widget;
-        QStyle *style = widget ? widget->style() : QApplication::style();
+        const QStyle *style = widget ? widget->style() : QApplication::style();
 
         QRect const textRect = style->subElementRect(QStyle::SE_ItemViewItemText, &opt, widget);
 

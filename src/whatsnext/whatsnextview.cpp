@@ -106,7 +106,7 @@ void WhatsNextView::updateView()
             if (!ev->recurs()) {
                 appendEvent(evCalendar, ev);
             } else {
-                KCalendarCore::Recurrence *recur = ev->recurrence();
+                const KCalendarCore::Recurrence *recur = ev->recurrence();
                 const int duration = ev->dtStart().secsTo(ev->dtEnd());
                 const QDateTime start = recur->getPreviousDateTime(QDateTime(mStartDate, QTime(), QTimeZone::LocalTime));
                 const QDateTime end = start.addSecs(duration);

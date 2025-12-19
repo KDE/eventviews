@@ -124,7 +124,7 @@ int TimeLabelsZone::preferedTimeLabelsWidth() const
 
 void TimeLabelsZone::updateAll()
 {
-    for (QScrollArea *area : std::as_const(mTimeLabelsList)) {
+    for (const QScrollArea *area : std::as_const(mTimeLabelsList)) {
         auto timeLabel = static_cast<TimeLabels *>(area->widget());
         timeLabel->updateConfig();
     }
@@ -154,7 +154,7 @@ void TimeLabelsZone::updateTimeLabelsPosition()
 {
     if (mAgenda) {
         const auto lst = timeLabels();
-        for (QScrollArea *area : lst) {
+        for (const QScrollArea *area : lst) {
             auto label = static_cast<TimeLabels *>(area->widget());
             const int adjustment = mAgenda->contentsY();
             // y() is the offset to our parent (QScrollArea)

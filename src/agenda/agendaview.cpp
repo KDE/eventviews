@@ -1770,7 +1770,7 @@ void AgendaView::createTimeBarHeaders()
 
     const auto lst = d->mTimeLabelsZoneLeft->timeLabels();
     const TimeLabels *timeLabelLeft;
-    for (QScrollArea *area : lst) {
+    for (const QScrollArea *area : lst) {
         timeLabelLeft = static_cast<TimeLabels *>(area->widget());
         const QString labelStr = timeLabelLeft->header().replace(u'/', QStringLiteral("/ "));
         const QString tooltipStr = timeLabelLeft->headerToolTip();

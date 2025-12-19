@@ -196,7 +196,7 @@ Akonadi::Item AkonadiViewCalendar::item(const KCalendarCore::Incidence::Ptr &inc
 QString AkonadiViewCalendar::displayName(const KCalendarCore::Incidence::Ptr &incidence) const
 {
     auto *model = mAgendaView->model();
-    Akonadi::EntityTreeModel *etm = nullptr;
+    const Akonadi::EntityTreeModel *etm = nullptr;
     while (model) {
         if (const auto *proxy = qobject_cast<QAbstractProxyModel *>(model); proxy != nullptr) {
             model = proxy->sourceModel();

@@ -439,7 +439,7 @@ KCheckableProxyModel *EventView::customCollectionSelectionProxyModel() const
 KCheckableProxyModel *EventView::takeCustomCollectionSelectionProxyModel()
 {
     Q_D(EventView);
-    KCheckableProxyModel *m = d->collectionSelectionModel;
+    KCheckableProxyModel *m = d->collectionSelectionModel; // NOLINT(misc-const-correctness)
     d->collectionSelectionModel = nullptr;
     d->setUpModels();
     return m;

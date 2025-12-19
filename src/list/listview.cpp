@@ -460,7 +460,7 @@ void ListView::changeIncidenceDisplay(const Akonadi::Item &aitem, int action)
     const Incidence::Ptr incidence = Akonadi::CalendarUtils::incidence(aitem);
     const auto calendar = calendar3(aitem);
 
-    ListViewItem *item = nullptr;
+    const ListViewItem *item = nullptr;
     const QDate f = d->mSelectedDates.constFirst();
     const QDate l = d->mSelectedDates.constLast();
 

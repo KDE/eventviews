@@ -590,7 +590,7 @@ DateList TodoView::selectedIncidenceDates() const
 void TodoView::saveLayout(KConfig *config, const QString &group) const
 {
     KConfigGroup cfgGroup = config->group(group);
-    QHeaderView *header = mView->header();
+    const QHeaderView *header = mView->header();
 
     QVariantList columnVisibility;
     QVariantList columnOrder;

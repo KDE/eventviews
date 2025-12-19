@@ -96,7 +96,7 @@ int MonthScene::itemHeight()
 MonthCell *MonthScene::firstCellForMonthItem(MonthItem *manager)
 {
     for (QDate d = manager->startDate(); d <= manager->endDate(); d = d.addDays(1)) {
-        MonthCell *monthCell = mMonthCellMap.value(d);
+        MonthCell *monthCell = mMonthCellMap.value(d); // NOLINT(misc-const-correctness)
         if (monthCell) {
             return monthCell;
         }
@@ -525,7 +525,7 @@ void MonthScene::mouseMoveEvent(QGraphicsSceneMouseEvent *mouseEvent)
     // Change cursor depending on the part of the item it hovers to inform
     // the user that he can resize the item.
     if (mActionType == None) {
-        MonthGraphicsItem *iItem = dynamic_cast<MonthGraphicsItem *>(itemAt(pos, {}));
+        const MonthGraphicsItem *iItem = dynamic_cast<MonthGraphicsItem *>(itemAt(pos, {}));
         if (iItem) {
             // NOLINTBEGIN(bugprone-branch-clone)
             if (iItem->monthItem()->isResizable() && iItem->isBeginItem() && iItem->mapFromScene(pos).x() <= 10) {
@@ -584,7 +584,7 @@ void MonthScene::mousePressEvent(QGraphicsSceneMouseEvent *mouseEvent)
     mClickedItem = nullptr;
     mCurrentIndicator = nullptr;
 
-    MonthGraphicsItem *iItem = dynamic_cast<MonthGraphicsItem *>(itemAt(pos, {}));
+    const MonthGraphicsItem *iItem = dynamic_cast<MonthGraphicsItem *>(itemAt(pos, {}));
     if (iItem) {
         mClickedItem = iItem->monthItem();
 
