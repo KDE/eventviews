@@ -422,7 +422,11 @@ void AgendaHeader::addDay(const DecorationList &decoList, QDate date, bool withD
                                       QLocale::system().dayName(dW, QLocale::ShortFormat),
                                       QLocale::system().monthName(date.month(), QLocale::ShortFormat),
                                       date.day());
-        const QString shortstr = QString::number(date.day());
+        QString shortstr = QLocale::system().toString(date, QLocale::NarrowFormat);
+        // according to the Qt documentation, NarrowFormat can return an empty string
+        if (shortstr.isEmpty()) {
+            shortstr = QString::number(date.day());
+        }
 
         auto dayLabel = new AlternateLabel(shortstr, longstr, veryLongStr, topDayLabelBox);
         topDayLabelBoxLayout->addWidget(dayLabel);
