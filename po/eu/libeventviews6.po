@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 14:41+0000\n"
+"POT-Creation-Date: 2025-12-21 02:39+0000\n"
 "PO-Revision-Date: 2025-09-10 01:11+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -97,12 +97,12 @@ msgctxt "short_weekday short_monthname date (e.g. Mon Aug 13)"
 msgid "%1 %2 %3"
 msgstr "%2 %3 %1"
 
-#: agenda/agendaview.cpp:2326
+#: agenda/agendaview.cpp:2330
 #, kde-format
 msgid "Unable to modify this to-do, because it cannot be locked."
 msgstr "Ez da zeregin hau aldatzeko gai, ezin delako giltzatu."
 
-#: agenda/agendaview.cpp:2334
+#: agenda/agendaview.cpp:2338
 #, kde-format
 msgid "Unable to save %1 \"%2\"."
 msgstr "Ezin da  gorde %1 \"%2\"."

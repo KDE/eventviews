@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 14:41+0000\n"
+"POT-Creation-Date: 2025-12-21 02:39+0000\n"
 "PO-Revision-Date: 2025-06-08 22:19+0200\n"
 "Last-Translator: Alois Spitzbart <spitz234@hotmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -105,14 +105,14 @@ msgctxt "short_weekday short_monthname date (e.g. Mon Aug 13)"
 msgid "%1 %2 %3"
 msgstr "%1 %2 %3"
 
-#: agenda/agendaview.cpp:2326
+#: agenda/agendaview.cpp:2330
 #, kde-format
 msgid "Unable to modify this to-do, because it cannot be locked."
 msgstr ""
 "Diese Aufgabe kann nicht verändert werden, da kein exklusiver Zugriff darauf "
 "möglich ist."
 
-#: agenda/agendaview.cpp:2334
+#: agenda/agendaview.cpp:2338
 #, kde-format
 msgid "Unable to save %1 \"%2\"."
 msgstr "Speichern von %1 „%2“ nicht möglich."
