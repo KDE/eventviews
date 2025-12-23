@@ -1,0 +1,33 @@
+include($KDE_DOCS/global/qt-module-defaults.qdocconf)
+
+project = EventViews
+description = Event views library.
+
+
+documentationinheaders = true
+
+headerdirs += .
+sourcedirs += .
+
+outputformats = HTML
+
+depends += \
+    qtcore
+
+navigation.landingpage = "EventViews"
+
+qhp.projects            = EventViews
+
+qhp.EventViews.file                = eventviews.qhp
+qhp.EventViews.namespace           = org.kde.eventviews.$QT_VERSION_TAG
+qhp.EventViews.virtualFolder       = eventviews
+qhp.EventViews.indexTitle          = EventViews
+qhp.EventViews.indexRoot           =
+
+qhp.EventViews.subprojects         = classes
+qhp.EventViews.subprojects.classes.title = C++ Classes
+qhp.EventViews.subprojects.classes.indexTitle = EventViews C++ Classes
+qhp.EventViews.subprojects.classes.selectors = class fake:headerfile
+qhp.EventViews.subprojects.classes.sortPages = true
+
+tagfile = eventviews.tags

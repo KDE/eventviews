@@ -19,14 +19,14 @@ namespace EventViews
 {
 class ListViewPrivate;
 
-/**
+/*!
   This class provides a multi-column list view of events.  It can
   display events from one particular day or several days, it doesn't
   matter.
 
-  @short multi-column list view of various events.
+  \brief multi-column list view of various events.
   @author Preston Brown <pbrown@kde.org>
-  @see EventView
+  \sa EventView
 */
 class EVENTVIEWS_EXPORT ListView : public EventView
 {
@@ -42,27 +42,27 @@ public:
     // Shows all incidences of the calendar
     void showAll();
 
-    /**
+    /*!
      * Read settings from the "ListView Layout" group of the configuration.
-     * @deprecated Use readSettings with a specific KConfigGroup.
+     * \deprecated Use readSettings with a specific KConfigGroup.
      */
     void readSettings(KConfig *config);
 
-    /**
+    /*!
      * Read settings from the given configuration group.
-     * @since 5.18.1
+     * \since 5.18.1
      */
     void readSettings(const KConfigGroup &cfgGroup);
 
-    /**
+    /*!
      * Write settings to the "ListView Layout" group of the configuration.
-     * @deprecated Use writeSettings with a specific KConfigGroup.
+     * \deprecated Use writeSettings with a specific KConfigGroup.
      */
     void writeSettings(KConfig *config);
 
-    /**
+    /*!
      * Write settings to the given configuration group.
-     * @since 5.18.1
+     * \since 5.18.1
      */
     void writeSettings(KConfigGroup &cfgGroup);
 

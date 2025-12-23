@@ -20,7 +20,7 @@ namespace EventViews
 class MonthGraphicsItem;
 class MonthScene;
 
-/**
+/*!
  * A month item manages different MonthGraphicsItems.
  */
 class EVENTVIEWS_EXPORT MonthItem : public QObject
@@ -33,7 +33,7 @@ public:
 
     [[nodiscard]] QWidget *parentWidget() const;
 
-    /**
+    /*!
       Compares two items to decide which to place in the view first.
 
       The month view displays a list of items. When loading (which occurs each
@@ -47,50 +47,50 @@ public:
     */
     static bool greaterThan(const MonthItem *e1, const MonthItem *e2);
 
-    /**
+    /*!
       Compare this event with a second one, if the former function is not
       able to sort them.
     */
     virtual bool greaterThanFallback(const MonthItem *other) const;
 
-    /**
+    /*!
       The start date of the incidence, generally realStartDate. But it
       reflect changes, even during move.
     */
     [[nodiscard]] QDate startDate() const;
 
-    /**
+    /*!
       The end date of the incidence, generally realEndDate. But it
       reflect changes, even during move.
      */
     [[nodiscard]] QDate endDate() const;
 
-    /**
+    /*!
       The number of days this item spans.
     */
     [[nodiscard]] int daySpan() const;
 
-    /**
+    /*!
       This is the real start date, usually the start date of the incidence.
     */
     virtual QDate realStartDate() const = 0;
 
-    /**
+    /*!
       This is the real end date, usually the end date of the incidence.
     */
     virtual QDate realEndDate() const = 0;
 
-    /**
+    /*!
       True if this item last all the day.
     */
     virtual bool allDay() const = 0;
 
-    /**
+    /*!
       Updates geometry of all MonthGraphicsItems.
     */
     void updateGeometry();
 
-    /**
+    /*!
       Find the lowest possible position for this item.
 
       The position of an item in a cell is it's vertical position. This is used
@@ -99,7 +99,7 @@ public:
     */
     void updatePosition();
 
-    /**
+    /*!
       Returns true if this item is selected.
     */
     [[nodiscard]] bool selected() const
@@ -107,7 +107,7 @@ public:
         return mSelected;
     }
 
-    /**
+    /*!
       Returns the position of the item ( > 0 ).
     */
     [[nodiscard]] int position() const
@@ -115,7 +115,7 @@ public:
         return mPosition;
     }
 
-    /**
+    /*!
       Returns the associated month scene to this item.
     */
     [[nodiscard]] MonthScene *monthScene() const
@@ -123,45 +123,45 @@ public:
         return mMonthScene;
     }
 
-    /**
+    /*!
       Begin a move.
     */
     void beginMove();
 
-    /**
+    /*!
       End a move.
     */
     void endMove();
 
-    /**
+    /*!
       Begin a resize.
     */
     void beginResize();
 
-    /**
+    /*!
       End a resize.
     */
     void endResize();
 
-    /**
+    /*!
       Called during move to move the item a bit, relative to the previous
       move step.
     */
     void moveBy(int offsetToPreviousDate);
 
-    /**
+    /*!
      * Called during a drag to move the item to a particular date.
      * An invalid date indicates a drag outside the month grid.
      */
     void moveTo(QDate date);
 
-    /**
+    /*!
       Called during resize to resize the item a bit, relative to the previous
       resize step.
     */
     bool resizeBy(int offsetToPreviousDate);
 
-    /**
+    /*!
       Returns true if the item is being moved.
     */
     [[nodiscard]] bool isMoving() const
@@ -169,7 +169,7 @@ public:
         return mMoving;
     }
 
-    /**
+    /*!
       Returns true if the item is being resized.
     */
     [[nodiscard]] bool isResizing() const
@@ -177,22 +177,22 @@ public:
         return mResizing;
     }
 
-    /**
+    /*!
       Returns true if the item can be moved.
     */
     virtual bool isMoveable() const = 0;
 
-    /**
+    /*!
       Returns true if the item can be resized.
     */
     virtual bool isResizable() const = 0;
 
-    /**
+    /*!
       Deletes all MonthGraphicsItem this item handles. Clear the list.
     */
     void deleteAll();
 
-    /**
+    /*!
       Update the monthgraphicsitems
 
       This basically deletes and rebuild all the MonthGraphicsItems but tries
@@ -204,7 +204,7 @@ public:
     */
     void updateMonthGraphicsItems();
 
-    /**
+    /*!
       Sets the selection state of this item.
     */
     void setSelected(bool selected)
@@ -214,29 +214,29 @@ public:
 
     // METHODS NEEDED TO PAINT ITEMS
 
-    /**
+    /*!
       Returns the text to draw in an item.
 
-     @param end True if the text at the end of an item should be returned.
+     \a end True if the text at the end of an item should be returned.
     */
     virtual QString text(bool end) const = 0;
 
-    /**
+    /*!
        Returns the text for the tooltip of the item
      */
     virtual QString toolTipText(const QDate &date) const = 0;
 
-    /**
+    /*!
       Returns the background color of the item.
     */
     [[nodiscard]] virtual QColor bgColor() const = 0;
 
-    /**
+    /*!
       Returns the frame color of the item.
     */
     [[nodiscard]] virtual QColor frameColor() const = 0;
 
-    /**
+    /*!
       Returns a list of pixmaps to draw next to the items.
     */
     virtual QList<QPixmap> icons() const = 0;
@@ -244,19 +244,19 @@ public:
     QList<MonthGraphicsItem *> monthGraphicsItems() const;
 
 protected:
-    /**
+    /*!
       Called after a move operation.
     */
     virtual void finalizeMove(const QDate &newStartDate) = 0;
 
-    /**
+    /*!
       Called after a resize operation.
     */
     virtual void finalizeResize(const QDate &newStartDate, const QDate &newEndDate) = 0;
 
 private:
-    /**
-      Sets the value of all MonthGraphicsItem to @param z.
+    /*!
+      Sets the value of all MonthGraphicsItem to \a z.
     */
     EVENTVIEWS_NO_EXPORT void setZValue(qreal z);
 
@@ -313,7 +313,7 @@ protected:
     void finalizeResize(const QDate &newStartDate, const QDate &newEndDate) override;
 
 protected Q_SLOTS:
-    /**
+    /*!
       Update the selected state of this item.
       If will be selected if incidence is the incidence managed by this item.
       Else it will be deselected.
@@ -325,7 +325,7 @@ private:
 
     EVENTVIEWS_NO_EXPORT void setNewDates(const KCalendarCore::Incidence::Ptr &incidence, int startOffset, int endOffset);
 
-    /**
+    /*!
       Returns the category color for this incidence.
     */
     QColor catColor() const;

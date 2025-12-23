@@ -263,37 +263,7 @@ install(
 
 ecm_qt_install_logging_categories(EXPORT EVENTVIEWS FILE eventviews.categories DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR})
 
-if(BUILD_QCH)
-    ecm_add_qch(
-        KPim6EventViews_QCH
-        NAME KPim6EventViews
-        BASE_NAME KPim6EventViews
-        VERSION ${PIM_VERSION}
-        ORG_DOMAIN org.kde
-        SOURCES # using only public headers, to cover only public API
-        ${eventviews_CamelCase_HEADERS}
-        ${eventviews_agenda_HEADERS}
-        ${eventviews_todo_HEADERS}
-        ${eventviews_whatsnext_HEADERS}
-        ${eventviews_timeline_HEADERS}
-        ${eventviews_multiagenda_HEADERS}
-        ${eventviews_journal_HEADERS}
-        ${eventviews_list_HEADERS}
-        ${eventviews_month_HEADERS}
-        LINK_QCHS
-            Qt6Core_QCH
-            Qt6Gui_QCH
-            Qt6Widgets_QCH
-        INCLUDE_DIRS
-            ${CMAKE_CURRENT_BINARY_DIR}
-        BLANK_MACROS
-            EVENTVIEWS_EXPORT
-        TAGFILE_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
-        QCH_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
-        COMPONENT Devel
-    )
-endif()
-
 if(BUILD_TESTING)
     add_subdirectory(month/autotests)
 endif()
+ecm_generate_qdoc(KPim6EventViews eventviews.qdocconf)

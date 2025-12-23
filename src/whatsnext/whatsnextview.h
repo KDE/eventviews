@@ -27,14 +27,14 @@ public:
     {
     }
 
-    /** Reimplemented from QTextBrowser to handle links. */
+    /*! Reimplemented from QTextBrowser to handle links. */
     void doSetSource(const QUrl &name, QTextDocument::ResourceType type = QTextDocument::UnknownResource) override;
 
 Q_SIGNALS:
     void showIncidence(const QUrl &url);
 };
 
-/**
+/*!
   This class provides a view of the next events and todos
 */
 class EVENTVIEWS_EXPORT WhatsNextView : public EventViews::EventView

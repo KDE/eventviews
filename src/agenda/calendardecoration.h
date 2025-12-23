@@ -18,10 +18,8 @@ namespace EventViews
 {
 namespace CalendarDecoration
 {
-/**
-  @class Element
-
-  @brief Class for calendar decoration elements
+/*!
+  \brief Class for calendar decoration elements
 
   It provides entities like texts and pictures for a given date.
   Implementations can implement all functions or only a subset.
@@ -36,25 +34,25 @@ public:
     explicit Element(const QString &id);
     ~Element() override;
 
-    /**
+    /*!
       Return a name for easy identification.
       This will be used for example for internal configuration (position, etc.),
       so don't i18n it and make it unique for your decoration.
     */
     [[nodiscard]] virtual QString id() const;
 
-    /**
+    /*!
       Description of element.
     */
     [[nodiscard]] virtual QString elementInfo() const;
 
-    /**
+    /*!
       Return a short text for a given date,
       usually only a few words.
     */
     [[nodiscard]] virtual QString shortText() const;
 
-    /**
+    /*!
       Return a long text for a given date.
       This text can be of any length,
       but usually it will have one or a few lines.
@@ -63,19 +61,19 @@ public:
     */
     [[nodiscard]] virtual QString longText() const;
 
-    /**
+    /*!
       Return an extensive text for a given date.
       This text can be of any length,
       but usually it will have one or a few paragraphs.
     */
     [[nodiscard]] virtual QString extensiveText() const;
 
-    /**
+    /*!
       Return a pixmap for a given date and a given size.
     */
     [[nodiscard]] virtual QPixmap newPixmap(const QSize &);
 
-    /**
+    /*!
       Return a URL pointing to more information about the content of the
       element.
      */
@@ -92,7 +90,7 @@ protected:
     QString mId;
 };
 
-/**
+/*!
   This class provides a stored element, which contains all data for the given
   date/month/year.
 */
@@ -129,10 +127,8 @@ protected:
     QUrl mUrl;
 };
 
-/**
-  @class Decoration
-
-  @brief This class provides the interface for a date dependent decoration.
+/*!
+  \brief This class provides the interface for a date dependent decoration.
 
   The decoration is made of various decoration elements,
   which show a defined text/picture/widget for a given date.
@@ -147,22 +143,22 @@ public:
     Decoration(QObject *parent = nullptr, const QVariantList &args = {});
     ~Decoration() override;
 
-    /**
+    /*!
       Return all Elements for the given day.
     */
     virtual Element::List dayElements(const QDate &date);
 
-    /**
+    /*!
       Return all elements for the week the given date belongs to.
     */
     virtual Element::List weekElements(const QDate &d);
 
-    /**
+    /*!
       Return all elements for the month the given date belongs to.
     */
     virtual Element::List monthElements(const QDate &d);
 
-    /**
+    /*!
       Return all elements for the year the given date belongs to.
     */
     virtual Element::List yearElements(const QDate &d);
@@ -172,61 +168,61 @@ public:
     virtual QString info() const = 0;
 
 protected:
-    /**
+    /*!
       Register the given elements for the given date. They will be deleted when
       this object is destroyed.
     */
     Element::List registerDayElements(const Element::List &e, const QDate &d);
 
-    /**
+    /*!
       Register the given elements for the week the given date belongs to. They
       will be deleted when this object is destroyed.
     */
     Element::List registerWeekElements(const Element::List &e, const QDate &d);
 
-    /**
+    /*!
       Register the given elements for the month the given date belongs to. They
       will be deleted when this object is destroyed.
     */
     Element::List registerMonthElements(const Element::List &e, const QDate &d);
 
-    /**
+    /*!
       Register the given elements for the year the given date belongs to. They
       will be deleted when this object is destroyed.
     */
     Element::List registerYearElements(const Element::List &e, const QDate &d);
 
-    /**
+    /*!
       Create day elements for given date.
     */
     virtual Element::List createDayElements(const QDate &);
 
-    /**
+    /*!
       Create elements for the week the given date belongs to.
     */
     virtual Element::List createWeekElements(const QDate &);
 
-    /**
+    /*!
       Create elements for the month the given date belongs to.
     */
     virtual Element::List createMonthElements(const QDate &);
 
-    /**
+    /*!
       Create elements for the year the given date belongs to.
     */
     virtual Element::List createYearElements(const QDate &);
 
-    /**
+    /*!
       Map all dates of the same week to a single date.
     */
     [[nodiscard]] QDate weekDate(QDate date);
 
-    /**
+    /*!
       Map all dates of the same month to a single date.
     */
     [[nodiscard]] QDate monthDate(QDate date);
 
-    /**
+    /*!
       Map all dates of the same year to a single date.
     */
     [[nodiscard]] QDate yearDate(QDate date);

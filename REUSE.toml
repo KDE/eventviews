@@ -1,0 +1,12 @@
+version = 1
+SPDX-FileCopyrightText = "none"
+SPDX-License-Identifier = "CC0-1.0"
+SPDX-PackageName = "eventviews"
+SPDX-PackageSupplier = "Montel Laurent <montel@kde.org>"
+SPDX-PackageDownloadLocation = "https://invent.kde.org/pim/eventviews"
+
+[[annotations]]
+path = ["src/eventviews-index.qdoc", "src/eventviews.qdoc", "src/eventviews.qdocconf"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "none"
+SPDX-License-Identifier = "CC0-1.0"

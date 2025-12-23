@@ -41,12 +41,12 @@ namespace EventViews
 
 class CalendarFilterModel;
 
-/**
+/*!
  * This class provides a view for Todo items.
 
- * @short View for Todo components.
+ * \brief View for Todo components.
  * @author Cornelius Schumacher <schumacher@kde.org>, Reinhold Kainhofer <reinhold@kainhofer.com>
- * @see EventView
+ * \sa EventView
  */
 class EVENTVIEWS_EXPORT TodoView : public EventViews::EventView
 {
@@ -76,7 +76,7 @@ public:
 
     void restoreLayout(KConfig *config, const QString &group, bool minimalDefaults);
 
-    /** documentation in baseview.h */
+    /*! documentation in baseview.h */
     void getHighlightMode(bool &highlightEvents, bool &highlightTodos, bool &highlightJournals);
 
     [[nodiscard]] bool usesFullWindow();
@@ -149,7 +149,7 @@ private:
     EVENTVIEWS_NO_EXPORT QMenu *createCategoryPopupMenu();
     EVENTVIEWS_NO_EXPORT QString stateSaverGroup() const;
 
-    /** Creates a new todo with the given text as summary under the given parent */
+    /*! Creates a new todo with the given text as summary under the given parent */
     void addTodo(const QString &summary, const Akonadi::Item &parentItem, const QStringList &categories = QStringList());
 
     TodoViewView *mView = nullptr;

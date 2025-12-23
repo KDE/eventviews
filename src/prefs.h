@@ -23,15 +23,15 @@ class PrefsPrivate;
 class EVENTVIEWS_EXPORT Prefs
 {
 public:
-    /**
+    /*!
       Creates an instance of Prefs with just base config
     */
     Prefs();
 
-    /**
+    /*!
       Creates an instance of Prefs with base config and application override config
 
-      The passed @p appConfig will be queried for matching items whenever one of the
+      The passed \a appConfig will be queried for matching items whenever one of the
       accessors is called. If one is found it is used for setting/getting the value
       otherwise the one from the eventviews base config is used.
     */

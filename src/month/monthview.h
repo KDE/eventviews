@@ -18,7 +18,7 @@ namespace EventViews
 {
 class MonthViewPrivate;
 
-/**
+/*!
   New month view.
 */
 class EVENTVIEWS_EXPORT MonthView : public EventView
@@ -41,7 +41,7 @@ public:
 
     [[nodiscard]] Akonadi::Item::List selectedIncidences() const override;
 
-    /** Returns dates of the currently selected events */
+    /*! Returns dates of the currently selected events */
     [[nodiscard]] KCalendarCore::DateList selectedIncidenceDates() const override;
 
     [[nodiscard]] QDateTime selectionStart() const override;
@@ -52,7 +52,7 @@ public:
 
     [[nodiscard]] bool eventDurationHint(QDateTime &startDt, QDateTime &endDt, bool &allDay) const override;
 
-    /**
+    /*!
      * Returns the average date in the view
      */
     [[nodiscard]] QDate averageDate() const;
@@ -105,8 +105,8 @@ protected:
     void reloadIncidences();
 
 protected:
-    /**
-     * @deprecated
+    /*!
+     * \deprecated
      */
     void showDates(const QDate &start, const QDate &end, const QDate &preferedMonth = QDate()) override;
 

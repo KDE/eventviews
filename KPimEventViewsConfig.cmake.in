@@ -8,4 +8,3 @@ find_dependency(KF6CalendarCore "@KF_MIN_VERSION@")
 find_dependency(KPim6CalendarUtils "@CALENDARUTILS_LIB_VERSION@")
 find_dependency(KPim6AkonadiCalendar "@AKONADICALENDAR_LIB_VERSION@")
 include("${CMAKE_CURRENT_LIST_DIR}/KPim6EventViewsTargets.cmake")
-@PACKAGE_INCLUDE_QCHTARGETS@

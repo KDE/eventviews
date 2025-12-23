@@ -19,7 +19,7 @@ namespace EventViews
 class ConfigDialogInterface;
 class MultiAgendaViewPrivate;
 
-/**
+/*!
   Shows one agenda for every resource side-by-side.
 */
 class EVENTVIEWS_EXPORT MultiAgendaView : public EventView
@@ -89,7 +89,7 @@ protected:
     void doSaveConfig(KConfigGroup &configGroup) override;
 
 protected Q_SLOTS:
-    /**
+    /*!
      * Reimplemented from KOrg::BaseView
      */
     void collectionSelectionChanged();

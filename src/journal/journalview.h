@@ -18,12 +18,12 @@ namespace EventViews
 {
 class JournalDateView;
 
-/**
+/*!
  * This class provides a journal view.
 
- * @short View for Journal components.
+ * \brief View for Journal components.
  * @author Cornelius Schumacher <schumacher@kde.org>, Reinhold Kainhofer <reinhold@kainhofer.com>
- * @see EventView
+ * \sa EventView
  */
 class EVENTVIEWS_EXPORT JournalView : public EventView
 {
@@ -41,7 +41,7 @@ public:
 
     void appendJournal(const Akonadi::Item &journal, const Akonadi::CollectionCalendar::Ptr &calendar, QDate dt);
 
-    /** documentation in baseview.h */
+    /*! documentation in baseview.h */
     void getHighlightMode(bool &highlightEvents, bool &highlightTodos, bool &highlightJournals);
 
     bool eventFilter(QObject *, QEvent *) override;

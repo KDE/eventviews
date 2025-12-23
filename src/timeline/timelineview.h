@@ -19,7 +19,7 @@ namespace EventViews
 {
 class TimelineViewPrivate;
 
-/**
+/*!
   This class provides a view showing which blocks of time are occupied by events
   in the user's calendars.
 */
@@ -27,14 +27,14 @@ class EVENTVIEWS_EXPORT TimelineView : public EventView
 {
     Q_OBJECT
 public:
-    /**
+    /*!
      * Create a TimelineView.
-     * @param preferences Preferences object for user-configurable aspects of the view.
+     * \a preferences Preferences object for user-configurable aspects of the view.
      */
     explicit TimelineView(const EventViews::PrefsPtr &preferences, QWidget *parent = nullptr);
 
-    /**
-     * @deprecated Use TimelineView(const EventViews::PrefsPtr &preferences, QWidget *parent = nullptr)
+    /*!
+     * \deprecated Use TimelineView(const EventViews::PrefsPtr &preferences, QWidget *parent = nullptr)
      */
     explicit TimelineView(QWidget *parent = nullptr);
 
@@ -48,11 +48,11 @@ public:
     void showDates(const QDate &, const QDate &, const QDate &preferredMonth = QDate()) override;
 
     // Unused.
-    /** @deprecated Use EventView::startDateTime. */
+    /*! \deprecated Use EventView::startDateTime. */
     [[deprecated("Use EventView::startDateTime.")]] [[nodiscard]] QDate startDate() const;
 
     // Unused.
-    /** @deprecated Use EventView::endDateTime.   */
+    /*! \deprecated Use EventView::endDateTime.   */
     [[deprecated("Use EventView::endDateTime.")]] [[nodiscard]] QDate endDate() const;
 
     void showIncidences(const Akonadi::Item::List &incidenceList, const QDate &date) override;

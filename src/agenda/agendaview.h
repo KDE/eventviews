@@ -62,7 +62,7 @@ private:
 
 class AgendaViewPrivate;
 
-/**
+/*!
   AgendaView is the agenda-like view that displays events in a single
   or multi-day view.
 */
@@ -83,31 +83,31 @@ public:
     void addCalendar(const Akonadi::CollectionCalendar::Ptr &calendar) override;
     void removeCalendar(const Akonadi::CollectionCalendar::Ptr &calendar) override;
 
-    /** Returns number of currently shown dates. */
+    /*! Returns number of currently shown dates. */
     [[nodiscard]] int currentDateCount() const override;
 
-    /** returns the currently selected events */
+    /*! returns the currently selected events */
     [[nodiscard]] Akonadi::Item::List selectedIncidences() const override;
 
-    /** returns the currently selected incidence's dates */
+    /*! returns the currently selected incidence's dates */
     [[nodiscard]] KCalendarCore::DateList selectedIncidenceDates() const override;
 
-    /** return the default start/end date/time for new events   */
+    /*! return the default start/end date/time for new events   */
     bool eventDurationHint(QDateTime &startDt, QDateTime &endDt, bool &allDay) const override;
 
-    /** start-datetime of selection */
+    /*! start-datetime of selection */
     [[nodiscard]] QDateTime selectionStart() const override;
 
-    /** end-datetime of selection */
+    /*! end-datetime of selection */
     [[nodiscard]] QDateTime selectionEnd() const override;
 
-    /** returns true if selection is for whole day */
+    /*! returns true if selection is for whole day */
     [[nodiscard]] bool selectedIsAllDay() const;
 
-    /** make selected start/end invalid */
+    /*! make selected start/end invalid */
     void deleteSelectedDateTime();
 
-    /** returns if only a single cell is selected, or a range of cells */
+    /*! returns if only a single cell is selected, or a range of cells */
     [[nodiscard]] bool selectedIsSingleCell() const;
 
     /* reimp from EventView */
@@ -117,19 +117,19 @@ public:
 
     // FIXME: we already have startDateTime() and endDateTime() in the base class
 
-    /** First shown day */
+    /*! First shown day */
     [[nodiscard]] QDate startDate() const;
-    /** Last shown day */
+    /*! Last shown day */
     [[nodiscard]] QDate endDate() const;
 
-    /** Update event belonging to agenda item
+    /*! Update event belonging to agenda item
         If the incidence is multi-day, item is the first one
     */
     void updateEventDates(AgendaItem *item, bool addIncidence, Akonadi::Collection::Id collectionId);
 
     [[nodiscard]] QList<bool> busyDayMask() const;
 
-    /**
+    /*!
      * Return calendar object for a concrete incidence.
      * this function is able to use multiple calendars
      * TODO: replace EventsView::calendar()
@@ -164,7 +164,7 @@ public:
 
     // Used by the timelabelszone
     void updateTimeBarWidth();
-    /** Create labels for the selected dates. */
+    /*! Create labels for the selected dates. */
     void createDayLabels(bool force);
 
     void createTimeBarHeaders();
@@ -183,12 +183,12 @@ Q_SIGNALS:
     void timeSpanSelectionChanged();
 
 protected:
-    /** Fill agenda using the current set value for the start date */
+    /*! Fill agenda using the current set value for the start date */
     void fillAgenda();
 
     void connectAgenda(Agenda *agenda, Agenda *otherAgenda);
 
-    /**
+    /*!
       Set the masks on the agenda widgets indicating, which days are holidays.
     */
     void setHolidayMasks();
@@ -198,7 +198,7 @@ protected:
 public Q_SLOTS:
     void updateView() override;
     void updateConfig() override;
-    /** reschedule the todo  to the given x- and y- coordinates.
+    /*! reschedule the todo  to the given x- and y- coordinates.
         Third parameter determines all-day (no time specified) */
     void slotIncidencesDropped(const KCalendarCore::Incidence::List &incidences, const QPoint &, bool);
     void slotUrlsDropped(const QList<QUrl> &urls, const QPoint &, bool);
@@ -208,11 +208,11 @@ protected Q_SLOTS:
     void updateEventIndicatorTop(int newY);
     void updateEventIndicatorBottom(int newY);
 
-    /** Updates data for selected timespan */
+    /*! Updates data for selected timespan */
     void newTimeSpanSelected(const QPoint &start, const QPoint &end);
-    /** Updates data for selected timespan for all day event*/
+    /*! Updates data for selected timespan for all day event*/
     void newTimeSpanSelectedAllDay(const QPoint &start, const QPoint &end);
-    /**
+    /*!
       Updates the event indicators after a certain incidence was modified or
       removed.
     */
