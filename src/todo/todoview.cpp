@@ -211,9 +211,9 @@ public:
         prefs->writeConfig();
     }
 
-    void setModel(QAbstractItemModel *model)
+    void setModel(QAbstractItemModel *newModel)
     {
-        this->model = model;
+        this->model = newModel;
         if (todoTreeModel) {
             todoTreeModel->setSourceModel(this->model);
         }

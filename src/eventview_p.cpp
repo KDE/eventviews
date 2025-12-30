@@ -60,16 +60,16 @@ void EventViewPrivate::setUpModels()
     }
 }
 
-void EventViewPrivate::setEtm(QAbstractItemModel *model)
+void EventViewPrivate::setEtm(QAbstractItemModel *newModel)
 {
-    while (model) {
-        if (const auto *proxy = qobject_cast<QAbstractProxyModel *>(model); proxy != nullptr) {
-            model = proxy->sourceModel();
-        } else if (auto *modelEtm = qobject_cast<Akonadi::EntityTreeModel *>(model); modelEtm != nullptr) {
+    while (newModel) {
+        if (const auto *proxy = qobject_cast<QAbstractProxyModel *>(newModel); proxy != nullptr) {
+            newModel = proxy->sourceModel();
+        } else if (auto *modelEtm = qobject_cast<Akonadi::EntityTreeModel *>(newModel); modelEtm != nullptr) {
             this->etm = modelEtm;
             break;
         } else {
-            model = nullptr;
+            newModel = nullptr;
         }
     }
 
