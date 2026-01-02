@@ -2,7 +2,7 @@
   SPDX-FileCopyrightText: 2008 Bruno Virlet <bruno.virlet@gmail.com>
   SPDX-FileCopyrightText: 2008 Thomas Thrainer <tom_t@gmx.at>
 
-  SPDX-License-Identifier: GPL-2.0-or-later WITH Qt-Commercial-exception-1.0
+  SPDX-License-Identifier: GPL-2.0-or-later WITH LicenseRef-Qt-Commercial-exception-1.0
 */
 
 #include "monthgraphicsitems.h"

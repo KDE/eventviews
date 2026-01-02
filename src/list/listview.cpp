@@ -5,7 +5,7 @@
   SPDX-FileCopyrightText: 2010 Sérgio Martins <iamsergio@gmail.com>
   SPDX-FileCopyrightText: 2012-2013 Allen Winter <winter@kde.org>
 
-  SPDX-License-Identifier: GPL-2.0-or-later WITH Qt-Commercial-exception-1.0
+  SPDX-License-Identifier: GPL-2.0-or-later WITH LicenseRef-Qt-Commercial-exception-1.0
 */
 
 // TODO: put a reminder and/or recurs icon on the item?

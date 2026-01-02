@@ -7,7 +7,7 @@
   Marcus Bains line.
   SPDX-FileCopyrightText: 2001 Ali Rahimi <ali@mit.edu>
 
-  SPDX-License-Identifier: GPL-2.0-or-later WITH Qt-Commercial-exception-1.0
+  SPDX-License-Identifier: GPL-2.0-or-later WITH LicenseRef-Qt-Commercial-exception-1.0
 */
 #pragma once
 
