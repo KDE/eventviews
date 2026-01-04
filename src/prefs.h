@@ -19,7 +19,13 @@
 namespace EventViews
 {
 class PrefsPrivate;
-
+/*!
+ * \class EventViews::Prefs
+ * \inmodule EventViews
+ * \inheaderfile EventViews/Prefs
+ *
+ * \brief The Prefs class
+ */
 class EVENTVIEWS_EXPORT Prefs
 {
 public:

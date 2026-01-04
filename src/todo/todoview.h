@@ -42,6 +42,10 @@ namespace EventViews
 class CalendarFilterModel;
 
 /*!
+ * \class EventViews::TodoView
+ * \inmodule EventViews
+ * \inheaderfile EventViews/TodoView
+ *
  * This class provides a view for Todo items.
 
  * \brief View for Todo components.

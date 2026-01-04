@@ -55,6 +55,10 @@ using PrefsPtr = QSharedPointer<Prefs>;
 using KCalPrefsPtr = QSharedPointer<CalendarSupport::KCalPrefs>;
 
 /*!
+  \class EventViews::EventView
+  \inmodule EventViews
+  \inheaderfile EventViews/EventView
+
   EventView is the abstract base class from which all other calendar views
   for event data are derived.  It provides methods for displaying
   appointments and events on one or more days.  The actual number of

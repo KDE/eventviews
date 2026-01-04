@@ -20,6 +20,10 @@ namespace EventViews
 class TimelineViewPrivate;
 
 /*!
+  \class EventViews::TimelineView
+  \inmodule EventViews
+  \inheaderfile EventViews/TimelineView
+
   This class provides a view showing which blocks of time are occupied by events
   in the user's calendars.
 */

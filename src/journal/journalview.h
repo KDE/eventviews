@@ -19,8 +19,12 @@ namespace EventViews
 class JournalDateView;
 
 /*!
+ * \class EventViews::JournalView
+ * \inmodule EventViews
+ * \inheaderfile EventViews/JournalView
+ *
  * This class provides a journal view.
-
+ *
  * \brief View for Journal components.
  * \author Cornelius Schumacher <schumacher@kde.org>, Reinhold Kainhofer <reinhold@kainhofer.com>
  * \sa EventView

@@ -20,6 +20,10 @@ class ConfigDialogInterface;
 class MultiAgendaViewPrivate;
 
 /*!
+  \class EventViews::MultiAgendaView
+  \inmodule EventViews
+  \inheaderfile EventViews/MultiAgendaView
+
   Shows one agenda for every resource side-by-side.
 */
 class EVENTVIEWS_EXPORT MultiAgendaView : public EventView

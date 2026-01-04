@@ -18,7 +18,13 @@
 namespace EventViews
 {
 class AgendaView;
-
+/*!
+ * \class EventViews::ViewCalendar
+ * \inmodule EventViews
+ * \inheaderfile EventViews/ViewCalendar
+ *
+ * \brief The ViewCalendar class
+ */
 class EVENTVIEWS_EXPORT ViewCalendar
 {
 public:

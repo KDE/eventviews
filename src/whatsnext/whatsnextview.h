@@ -35,6 +35,10 @@ Q_SIGNALS:
 };
 
 /*!
+  \class EventViews::WhatsNextView
+  \inmodule EventViews
+  \inheaderfile EventViews/WhatsNextView
+
   This class provides a view of the next events and todos
 */
 class EVENTVIEWS_EXPORT WhatsNextView : public EventViews::EventView

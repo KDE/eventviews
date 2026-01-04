@@ -19,6 +19,10 @@ namespace EventViews
 class MonthViewPrivate;
 
 /*!
+  \class EventViews::MonthView
+  \inmodule EventViews
+  \inheaderfile EventViews/MonthView
+
   New month view.
 */
 class EVENTVIEWS_EXPORT MonthView : public EventView

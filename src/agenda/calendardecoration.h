@@ -177,6 +177,10 @@ protected:
 };
 
 /*!
+  \class EventViews::Decoration
+  \inmodule EventViews
+  \inheaderfile EventViews/CalendarDecoration
+
   \brief This class provides the interface for a date dependent decoration.
 
   The decoration is made of various decoration elements,

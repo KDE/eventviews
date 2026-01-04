@@ -20,6 +20,10 @@ namespace EventViews
 class ListViewPrivate;
 
 /*!
+  \class EventViews::ListView
+  \inmodule EventViews
+  \inheaderfile EventViews/ListView
+
   This class provides a multi-column list view of events.  It can
   display events from one particular day or several days, it doesn't
   matter.
