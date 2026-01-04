@@ -64,7 +64,7 @@ using KCalPrefsPtr = QSharedPointer<CalendarSupport::KCalPrefs>;
   event (or events), and the like.
 
   \brief Abstract class from which all event views are derived.
-  @author Preston Brown <pbrown@kde.org>
+  \author Preston Brown <pbrown@kde.org>
   \sa KOListView, AgendaView, KOMonthView
 */
 class EVENTVIEWS_EXPORT EventView : public QWidget
@@ -116,20 +116,38 @@ public:
      */
     ~EventView() override;
 
+    /*!
+     */
     virtual void addCalendar(const Akonadi::CollectionCalendar::Ptr &calendar);
+    /*!
+     */
     virtual void removeCalendar(const Akonadi::CollectionCalendar::Ptr &calendar);
 
+    /*!
+     */
     virtual void setModel(QAbstractItemModel *model);
+    /*!
+     */
     QAbstractItemModel *model() const;
+    /*!
+     */
     Akonadi::EntityTreeModel *entityTreeModel() const;
 
     /*
       update config is called after prefs are set.
     */
+    /*!
+     */
     virtual void setPreferences(const PrefsPtr &preferences);
+    /*!
+     */
     [[nodiscard]] PrefsPtr preferences() const;
 
+    /*!
+     */
     virtual void setKCalPreferences(const KCalPrefsPtr &preferences);
+    /*!
+     */
     [[nodiscard]] KCalPrefsPtr kcalPreferences() const;
 
     /*!
@@ -190,11 +208,19 @@ public:
      */
     virtual bool supportsZoom() const;
 
+    /*!
+     */
     virtual bool hasConfigurationDialog() const;
 
+    /*!
+     */
     virtual void showConfigurationDialog(QWidget *parent);
 
+    /*!
+     */
     [[nodiscard]] QByteArray identifier() const;
+    /*!
+     */
     void setIdentifier(const QByteArray &identifier);
 
     /*!
@@ -216,13 +242,25 @@ public:
     void saveConfig(KConfigGroup &configGroup);
 
     //----------------------------------------------------------------------------
+    /*!
+     */
     KCheckableProxyModel *takeCustomCollectionSelectionProxyModel();
+    /*!
+     */
     KCheckableProxyModel *customCollectionSelectionProxyModel() const;
+    /*!
+     */
     void setCustomCollectionSelectionProxyModel(KCheckableProxyModel *model);
 
+    /*!
+     */
     CalendarSupport::CollectionSelection *customCollectionSelection() const;
 
+    /*!
+     */
     static CalendarSupport::CollectionSelection *globalCollectionSelection();
+    /*!
+     */
     static void setGlobalCollectionSelection(CalendarSupport::CollectionSelection *selection);
     //----------------------------------------------------------------------------
 
@@ -240,12 +278,22 @@ public:
      */
     virtual void setDateRange(const QDateTime &start, const QDateTime &end, const QDate &preferredMonth = QDate());
 
+    /*!
+     */
     [[nodiscard]] QDateTime startDateTime() const;
+    /*!
+     */
     [[nodiscard]] QDateTime endDateTime() const;
 
+    /*!
+     */
     [[nodiscard]] QDateTime actualStartDateTime() const;
+    /*!
+     */
     [[nodiscard]] QDateTime actualEndDateTime() const;
 
+    /*!
+     */
     [[nodiscard]] int showMoveRecurDialog(const KCalendarCore::Incidence::Ptr &incidence, QDate date);
 
     /*!
@@ -282,9 +330,15 @@ public:
      */
     [[nodiscard]] static QColor itemFrameColor(const QColor &color, bool selected);
 
+    /*!
+     */
     [[nodiscard]] QString iconForItem(const Akonadi::Item &);
 
+    /*!
+     */
     [[nodiscard]] Akonadi::CollectionCalendar::Ptr calendarForCollection(const Akonadi::Collection &collection) const;
+    /*!
+     */
     [[nodiscard]] Akonadi::CollectionCalendar::Ptr calendarForCollection(Akonadi::Collection::Id collectionId) const;
 
 public Q_SLOTS:
@@ -302,6 +356,8 @@ public Q_SLOTS:
       in the calendar since the last display refresh.
     */
     virtual void updateView() = 0;
+    /*!
+     */
     virtual void dayPassed(const QDate &);
 
     /*!
@@ -325,6 +381,8 @@ public Q_SLOTS:
     */
     virtual void clearSelection();
 
+    /*!
+     */
     void focusChanged(QWidget *, QWidget *);
 
     /*!
@@ -356,6 +414,8 @@ Q_SIGNALS:
      */
     void shiftedEvent(const QDate &olddate, const QDate &newdate);
 
+    /*!
+     */
     void incidenceSelected(const Akonadi::Item &, const QDate);
 
     /*!
@@ -441,12 +501,20 @@ Q_SIGNALS:
      */
     void newEventSignal(const QDateTime &, const QDateTime &);
 
+    /*!
+     */
     void newTodoSignal(const QDate &);
+    /*!
+     */
     void newSubTodoSignal(const Akonadi::Item &);
 
+    /*!
+     */
     void newJournalSignal(const QDate &);
 
 protected Q_SLOTS:
+    /*!
+     */
     virtual void calendarReset();
 
 private:

@@ -29,9 +29,18 @@ class EVENTVIEWS_EXPORT Element : public QObject
     Q_OBJECT
 
 public:
+    /*!
+     * \typealias EventViews::CalendarDecoration::List
+     *
+     * Describes a list of Element.
+     */
     using List = QList<Element *>;
 
+    /*!
+     */
     explicit Element(const QString &id);
+    /*!
+     */
     ~Element() override;
 
     /*!
@@ -80,10 +89,20 @@ public:
     [[nodiscard]] virtual QUrl url() const;
 
 Q_SIGNALS:
+    /*!
+     */
     void gotNewPixmap(const QPixmap &);
+    /*!
+     */
     void gotNewShortText(const QString &);
+    /*!
+     */
     void gotNewLongText(const QString &);
+    /*!
+     */
     void gotNewExtensiveText(const QString &);
+    /*!
+     */
     void gotNewUrl(const QUrl &);
 
 protected:
@@ -98,25 +117,55 @@ class EVENTVIEWS_EXPORT StoredElement : public Element
 {
     Q_OBJECT
 public:
+    /*!
+     */
     explicit StoredElement(const QString &id);
+    /*!
+     */
     StoredElement(const QString &id, const QString &shortText);
+    /*!
+     */
     StoredElement(const QString &id, const QString &shortText, const QString &longText);
+    /*!
+     */
     StoredElement(const QString &id, const QString &shortText, const QString &longText, const QString &extensiveText);
+    /*!
+     */
     StoredElement(const QString &id, const QPixmap &pixmap);
 
+    /*!
+     */
     virtual void setShortText(const QString &t);
+    /*!
+     */
     [[nodiscard]] QString shortText() const override;
 
+    /*!
+     */
     virtual void setLongText(const QString &t);
+    /*!
+     */
     [[nodiscard]] QString longText() const override;
 
+    /*!
+     */
     virtual void setExtensiveText(const QString &t);
+    /*!
+     */
     [[nodiscard]] QString extensiveText() const override;
 
+    /*!
+     */
     virtual void setPixmap(const QPixmap &p);
+    /*!
+     */
     [[nodiscard]] virtual QPixmap pixmap() const;
 
+    /*!
+     */
     virtual void setUrl(const QUrl &u);
+    /*!
+     */
     [[nodiscard]] QUrl url() const override;
 
 protected:
@@ -140,7 +189,11 @@ class EVENTVIEWS_EXPORT Decoration : public QObject
 public:
     using List = QList<Decoration *>;
 
+    /*!
+     */
     Decoration(QObject *parent = nullptr, const QVariantList &args = {});
+    /*!
+     */
     ~Decoration() override;
 
     /*!

@@ -41,37 +41,61 @@ class EVENTVIEWS_EXPORT WhatsNextView : public EventViews::EventView
 {
     Q_OBJECT
 public:
+    /*!
+     */
     explicit WhatsNextView(QWidget *parent = nullptr);
+    /*!
+     */
     ~WhatsNextView() override;
 
+    /*!
+     */
     [[nodiscard]] int currentDateCount() const override;
+    /*!
+     */
     [[nodiscard]] Akonadi::Item::List selectedIncidences() const override
     {
         return {};
     }
 
+    /*!
+     */
     [[nodiscard]] KCalendarCore::DateList selectedIncidenceDates() const override
     {
         return {};
     }
 
+    /*!
+     */
     [[nodiscard]] bool supportsDateNavigation() const
     {
         return true;
     }
 
 public Q_SLOTS:
+    /*!
+     */
     void updateView() override;
+    /*!
+     */
     void showDates(const QDate &start, const QDate &end, const QDate &preferredMonth) override;
+    /*!
+     */
     void showIncidences(const Akonadi::Item::List &incidenceList, const QDate &date) override;
 
+    /*!
+     */
     void changeIncidenceDisplay(const Akonadi::Item &, Akonadi::IncidenceChanger::ChangeType);
 
 protected:
+    /*!
+     */
     void appendEvent(const Akonadi::CollectionCalendar::Ptr &,
                      const KCalendarCore::Incidence::Ptr &,
                      const QDateTime &start = QDateTime(),
                      const QDateTime &end = QDateTime());
+    /*!
+     */
     void appendTodo(const Akonadi::CollectionCalendar::Ptr &, const KCalendarCore::Incidence::Ptr &);
 
 private Q_SLOTS:

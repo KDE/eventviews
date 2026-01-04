@@ -58,19 +58,39 @@ class EVENTVIEWS_EXPORT Agenda : public QWidget
 {
     Q_OBJECT
 public:
+    /*!
+     */
     Agenda(AgendaView *agendaView, QScrollArea *scrollArea, int columns, int rows, int rowSize, bool isInteractive);
 
+    /*!
+     */
     Agenda(AgendaView *agendaView, QScrollArea *scrollArea, int columns, bool isInteractive);
 
+    /*!
+     */
     ~Agenda() override;
 
+    /*!
+     */
     [[nodiscard]] KCalendarCore::Incidence::Ptr selectedIncidence() const;
+    /*!
+     */
     [[nodiscard]] QDate selectedIncidenceDate() const;
+    /*!
+     */
     QSize sizeHint() const override;
+    /*!
+     */
     QSize minimumSizeHint() const override;
+    /*!
+     */
     QSize minimumSize() const;
+    /*!
+     */
     int minimumHeight() const;
-    // QSizePolicy sizePolicy() const;
+
+    /*!
+     */
     [[nodiscard]] int contentsY() const
     {
         return -y();
@@ -81,10 +101,16 @@ public:
         return x();
     }
 
+    /*!
+     */
     [[nodiscard]] QScrollBar *verticalScrollBar() const;
 
+    /*!
+     */
     [[nodiscard]] QScrollArea *scrollArea() const;
 
+    /*!
+     */
     [[nodiscard]] AgendaItem::List agendaItems(const QString &uid) const;
 
     /*!
@@ -94,24 +120,48 @@ public:
     */
     [[nodiscard]] QString lastSelectedItemUid() const;
 
+    /*!
+     */
     bool eventFilter(QObject *, QEvent *) override;
 
+    /*!
+     */
     void paintEvent(QPaintEvent *) override;
 
+    /*!
+     */
     [[nodiscard]] QPoint contentsToGrid(QPoint pos) const;
+    /*!
+     */
     [[nodiscard]] QPoint gridToContents(QPoint gpos) const;
 
+    /*!
+     */
     [[nodiscard]] int timeToY(QTime time) const;
+    /*!
+     */
     [[nodiscard]] QTime gyToTime(int y) const;
 
+    /*!
+     */
     [[nodiscard]] QList<int> minContentsY() const;
+    /*!
+     */
     [[nodiscard]] QList<int> maxContentsY() const;
 
+    /*!
+     */
     [[nodiscard]] int visibleContentsYMin() const;
+    /*!
+     */
     [[nodiscard]] int visibleContentsYMax() const;
 
+    /*!
+     */
     void setStartTime(QTime startHour);
 
+    /*!
+     */
     AgendaItem::QPtr insertItem(const KCalendarCore::Incidence::Ptr &incidence,
                                 const QDateTime &recurrenceId,
                                 int X,
@@ -121,6 +171,8 @@ public:
                                 int itemCount,
                                 bool isSelected);
 
+    /*!
+     */
     AgendaItem::QPtr insertAllDayItem(const KCalendarCore::Incidence::Ptr &incidence, const QDateTime &recurrenceId, int XBegin, int XEnd, bool isSelected);
 
     void
@@ -135,39 +187,71 @@ public:
     */
     void removeIncidence(const KCalendarCore::Incidence::Ptr &incidence);
 
+    /*!
+     */
     void changeColumns(int columns);
 
+    /*!
+     */
     [[nodiscard]] int columns() const;
+    /*!
+     */
     [[nodiscard]] int rows() const;
 
+    /*!
+     */
     [[nodiscard]] double gridSpacingX() const;
+    /*!
+     */
     [[nodiscard]] double gridSpacingY() const;
 
+    /*!
+     */
     void clear();
 
     /*! Update configuration from preference settings */
     void updateConfig();
 
+    /*!
+     */
     void checkScrollBoundaries();
 
+    /*!
+     */
     void setHolidayMask(QList<bool> *);
 
+    /*!
+     */
     void setDateList(const KCalendarCore::DateList &selectedDates);
+    /*!
+     */
     [[nodiscard]] KCalendarCore::DateList dateList() const;
 
+    /*!
+     */
     void setCalendar(const EventViews::MultiViewCalendar::Ptr &cal);
 
+    /*!
+     */
     void setIncidenceChanger(Akonadi::IncidenceChanger *changer);
 
 public Q_SLOTS:
+    /*!
+     */
     void scrollUp();
+    /*!
+     */
     void scrollDown();
 
+    /*!
+     */
     void checkScrollBoundaries(int);
 
     /*! Deselect selected items. This function does not Q_EMIT any signals. */
     void deselectItem();
 
+    /*!
+     */
     void clearSelection();
 
     /*!
@@ -184,39 +268,85 @@ public Q_SLOTS:
       item exists, the selection is not changed.
     */
     void selectIncidenceByUid(const QString &id);
+    /*!
+     */
     void selectItem(const Akonadi::Item &item);
 
+    /*!
+     */
     bool removeAgendaItem(const EventViews::AgendaItem::QPtr &item);
+    /*!
+     */
     void showAgendaItem(const EventViews::AgendaItem::QPtr &item);
 
 Q_SIGNALS:
+    /*!
+     */
     void newEventSignal();
+    /*!
+     */
     void newTimeSpanSignal(const QPoint &, const QPoint &);
+    /*!
+     */
     void newStartSelectSignal();
 
+    /*!
+     */
     void showIncidenceSignal(const KCalendarCore::Incidence::Ptr &);
+    /*!
+     */
     void editIncidenceSignal(const KCalendarCore::Incidence::Ptr &);
+    /*!
+     */
     void deleteIncidenceSignal(const KCalendarCore::Incidence::Ptr &);
+    /*!
+     */
     void showIncidencePopupSignal(const KCalendarCore::Incidence::Ptr &, const QDate &);
 
+    /*!
+     */
     void showNewEventPopupSignal();
 
+    /*!
+     */
     void incidenceSelected(const KCalendarCore::Incidence::Ptr &, const QDate &);
 
+    /*!
+     */
     void lowerYChanged(int);
+    /*!
+     */
     void upperYChanged(int);
 
+    /*!
+     */
     void startDragSignal(const KCalendarCore::Incidence::Ptr &);
+    /*!
+     */
     void droppedIncidencesSignal(const KCalendarCore::Incidence::List &, const QPoint &gpos, bool allDay);
+    /*!
+     */
     void droppedUrlsSignal(const QList<QUrl> &, const QPoint &gpos, bool allDay);
 
+    /*!
+     */
     void enableAgendaUpdate(bool enable);
+    /*!
+     */
     void zoomView(const int delta, const QPoint &pos, const Qt::Orientation);
 
+    /*!
+     */
     void mousePosSignal(const QPoint &pos);
+    /*!
+     */
     void enterAgenda();
+    /*!
+     */
     void leaveAgenda();
 
+    /*!
+     */
     void gridSpacingYChanged(double);
 
 private:

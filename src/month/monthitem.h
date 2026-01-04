@@ -28,7 +28,11 @@ class EVENTVIEWS_EXPORT MonthItem : public QObject
     Q_OBJECT
 
 public:
+    /*!
+     */
     explicit MonthItem(MonthScene *monthScene);
+    /*!
+     */
     ~MonthItem() override;
 
     [[nodiscard]] QWidget *parentWidget() const;
@@ -278,38 +282,76 @@ class EVENTVIEWS_EXPORT IncidenceMonthItem : public MonthItem
     Q_OBJECT
 
 public:
+    /*!
+     */
     IncidenceMonthItem(MonthScene *monthScene,
                        const Akonadi::CollectionCalendar::Ptr &calendar,
                        const Akonadi::Item &item,
                        const KCalendarCore::Incidence::Ptr &incidence,
                        QDate recurStartDate = QDate());
 
+    /*!
+     */
     ~IncidenceMonthItem() override;
 
+    /*!
+     */
     KCalendarCore::Incidence::Ptr incidence() const;
+    /*!
+     */
     Akonadi::Item akonadiItem() const;
+    /*!
+     */
     Akonadi::Item::Id akonadiItemId() const;
+    /*!
+     */
     Akonadi::CollectionCalendar::Ptr calendar() const;
 
+    /*!
+     */
     bool greaterThanFallback(const MonthItem *other) const override;
 
+    /*!
+     */
     QDate realStartDate() const override;
+    /*!
+     */
     QDate realEndDate() const override;
+    /*!
+     */
     bool allDay() const override;
 
+    /*!
+     */
     bool isMoveable() const override;
+    /*!
+     */
     bool isResizable() const override;
 
+    /*!
+     */
     QString text(bool end) const override;
+    /*!
+     */
     QString toolTipText(const QDate &date) const override;
 
+    /*!
+     */
     QColor bgColor() const override;
+    /*!
+     */
     QColor frameColor() const override;
 
+    /*!
+     */
     QList<QPixmap> icons() const override;
 
 protected:
+    /*!
+     */
     void finalizeMove(const QDate &newStartDate) override;
+    /*!
+     */
     void finalizeResize(const QDate &newStartDate, const QDate &newEndDate) override;
 
 protected Q_SLOTS:
@@ -342,55 +384,87 @@ class EVENTVIEWS_EXPORT HolidayMonthItem : public MonthItem
     Q_OBJECT
 
 public:
+    /*!
+     */
     HolidayMonthItem(MonthScene *monthScene, QDate date, const QString &name);
+    /*!
+     */
     HolidayMonthItem(MonthScene *monthScene, QDate startDate, QDate endDate, const QString &name);
+    /*!
+     */
     ~HolidayMonthItem() override;
 
+    /*!
+     */
     bool greaterThanFallback(const MonthItem *other) const override;
 
+    /*!
+     */
     QDate realStartDate() const override
     {
         return mStartDate;
     }
 
+    /*!
+     */
     QDate realEndDate() const override
     {
         return mEndDate;
     }
 
+    /*!
+     */
     bool allDay() const override
     {
         return true;
     }
 
+    /*!
+     */
     bool isMoveable() const override
     {
         return false;
     }
 
+    /*!
+     */
     bool isResizable() const override
     {
         return false;
     }
 
+    /*!
+     */
     QString text(bool end) const override
     {
         Q_UNUSED(end)
         return mName;
     }
 
+    /*!
+     */
     QString toolTipText(const QDate &) const override
     {
         return mName;
     }
 
+    /*!
+     */
     QColor bgColor() const override;
+    /*!
+     */
     QColor frameColor() const override;
 
+    /*!
+     */
     QList<QPixmap> icons() const override;
 
 protected:
+    /*!
+     */
     void finalizeMove(const QDate &newStartDate) override;
+    /*!
+     */
     void finalizeResize(const QDate &newStartDate, const QDate &newEndDate) override;
 
 private:

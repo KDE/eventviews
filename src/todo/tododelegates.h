@@ -20,7 +20,7 @@ class QTextDocument;
   status of indivitual todos. It also provides a slider to change the completion
   status of the todo when in editing mode.
 
-  @author Thomas Thrainer
+  \author Thomas Thrainer
 */
 class TodoCompleteDelegate : public QStyledItemDelegate
 {
@@ -56,7 +56,7 @@ private Q_SLOTS:
   It also provides a combo box to change the priority of the todo
   when in editing mode.
 
-  @author Thomas Thrainer
+  \author Thomas Thrainer
  */
 class TodoPriorityDelegate : public QStyledItemDelegate
 {
@@ -75,7 +75,7 @@ public:
   It also provides a combo box to change the due date of the todo
   when in editing mode.
 
-  @author Thomas Thrainer
+  \author Thomas Thrainer
  */
 class TodoDueDateDelegate : public QStyledItemDelegate
 {
@@ -94,7 +94,7 @@ public:
   It also provides a combo box to change the categories of the todo
   when in editing mode.
 
-  @author Thomas Thrainer
+  \author Thomas Thrainer
  */
 class TodoCategoriesDelegate : public QStyledItemDelegate
 {
@@ -112,7 +112,7 @@ public:
   This delegate is responsible for displaying possible rich text elements
   of a todo. That's the summary and the description.
 
-  @author Thomas Thrainer
+  \author Thomas Thrainer
  */
 class TodoRichTextDelegate : public QStyledItemDelegate
 {

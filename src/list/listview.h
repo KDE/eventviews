@@ -25,18 +25,28 @@ class ListViewPrivate;
   matter.
 
   \brief multi-column list view of various events.
-  @author Preston Brown <pbrown@kde.org>
+  \author Preston Brown <pbrown@kde.org>
   \sa EventView
 */
 class EVENTVIEWS_EXPORT ListView : public EventView
 {
     Q_OBJECT
 public:
+    /*!
+     */
     explicit ListView(QWidget *parent = nullptr, bool nonInteractive = false);
+    /*!
+     */
     ~ListView() override;
 
+    /*!
+     */
     [[nodiscard]] int currentDateCount() const override;
+    /*!
+     */
     [[nodiscard]] Akonadi::Item::List selectedIncidences() const override;
+    /*!
+     */
     [[nodiscard]] KCalendarCore::DateList selectedIncidenceDates() const override;
 
     // Shows all incidences of the calendar
@@ -70,26 +80,48 @@ public:
     QSize sizeHint() const override;
 
 public Q_SLOTS:
+    /*!
+     */
     void updateView() override;
 
+    /*!
+     */
     void showDates(const QDate &start, const QDate &end, const QDate &preferredMonth = QDate()) override;
 
+    /*!
+     */
     void showIncidences(const Akonadi::Item::List &items, const QDate &date) override;
 
+    /*!
+     */
     void clearSelection() override;
 
+    /*!
+     */
     void changeIncidenceDisplay(const Akonadi::Item &, int);
 
+    /*!
+     */
     void defaultItemAction(const QModelIndex &);
+    /*!
+     */
     void defaultItemAction(const Akonadi::Item::Id id);
 
+    /*!
+     */
     void popupMenu(const QPoint &);
 
 Q_SIGNALS:
+    /*!
+     */
     void showNewEventPopupSignal();
+    /*!
+     */
     void showIncidencePopupSignal(const Akonadi::CollectionCalendar::Ptr &, const Akonadi::Item &, const QDate &);
 
 protected Q_SLOTS:
+    /*!
+     */
     void processSelectionChange();
 
 private:

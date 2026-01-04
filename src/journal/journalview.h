@@ -22,28 +22,42 @@ class JournalDateView;
  * This class provides a journal view.
 
  * \brief View for Journal components.
- * @author Cornelius Schumacher <schumacher@kde.org>, Reinhold Kainhofer <reinhold@kainhofer.com>
+ * \author Cornelius Schumacher <schumacher@kde.org>, Reinhold Kainhofer <reinhold@kainhofer.com>
  * \sa EventView
  */
 class EVENTVIEWS_EXPORT JournalView : public EventView
 {
     Q_OBJECT
 public:
+    /*!
+     */
     explicit JournalView(QWidget *parent = nullptr);
+    /*!
+     */
     ~JournalView() override;
 
+    /*!
+     */
     [[nodiscard]] int currentDateCount() const override;
+    /*!
+     */
     [[nodiscard]] Akonadi::Item::List selectedIncidences() const override;
+    /*!
+     */
     [[nodiscard]] KCalendarCore::DateList selectedIncidenceDates() const override
     {
         return {};
     }
 
+    /*!
+     */
     void appendJournal(const Akonadi::Item &journal, const Akonadi::CollectionCalendar::Ptr &calendar, QDate dt);
 
     /*! documentation in baseview.h */
     void getHighlightMode(bool &highlightEvents, bool &highlightTodos, bool &highlightJournals);
 
+    /*!
+     */
     bool eventFilter(QObject *, QEvent *) override;
 
 public Q_SLOTS:
@@ -52,23 +66,49 @@ public Q_SLOTS:
     {
     }
 
+    /*!
+     */
     void updateView() override;
+    /*!
+     */
     void flushView() override;
 
+    /*!
+     */
     void showDates(const QDate &start, const QDate &end, const QDate &preferredMonth = QDate()) override;
+    /*!
+     */
     void showIncidences(const Akonadi::Item::List &incidences, const QDate &date) override;
 
+    /*!
+     */
     void changeIncidenceDisplay(const Akonadi::Item &incidence, Akonadi::IncidenceChanger::ChangeType);
+    /*!
+     */
     void setIncidenceChanger(Akonadi::IncidenceChanger *changer) override;
+    /*!
+     */
     void newJournal();
 Q_SIGNALS:
+    /*!
+     */
     void flushEntries();
+    /*!
+     */
     void setIncidenceChangerSignal(Akonadi::IncidenceChanger *);
+    /*!
+     */
     void journalEdited(const Akonadi::Item &journal);
+    /*!
+     */
     void journalDeleted(const Akonadi::Item &journal);
+    /*!
+     */
     void printJournal(const KCalendarCore::Journal::Ptr &, bool preview);
 
 protected:
+    /*!
+     */
     void clearEntries();
 
 private:

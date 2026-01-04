@@ -70,17 +70,27 @@ class EVENTVIEWS_EXPORT AgendaView : public EventView
 {
     Q_OBJECT
 public:
+    /*!
+     */
     explicit AgendaView(const PrefsPtr &prefs, QDate start, QDate end, bool isInteractive, bool isSideBySide = false, QWidget *parent = nullptr);
 
+    /*!
+     */
     explicit AgendaView(QDate start, QDate end, bool isInteractive, bool isSideBySide = false, QWidget *parent = nullptr);
 
+    /*!
+     */
     ~AgendaView() override;
 
     enum {
         MAX_DAY_COUNT = 42 // (6 * 7)
     };
 
+    /*!
+     */
     void addCalendar(const Akonadi::CollectionCalendar::Ptr &calendar) override;
+    /*!
+     */
     void removeCalendar(const Akonadi::CollectionCalendar::Ptr &calendar) override;
 
     /*! Returns number of currently shown dates. */
@@ -113,6 +123,8 @@ public:
     /* reimp from EventView */
     virtual void addCalendar(const ViewCalendar::Ptr &cal);
 
+    /*!
+     */
     QSplitter *splitter() const;
 
     // FIXME: we already have startDateTime() and endDateTime() in the base class
@@ -135,31 +147,63 @@ public:
      * TODO: replace EventsView::calendar()
      */
     virtual KCalendarCore::Calendar::Ptr calendar2(const KCalendarCore::Incidence::Ptr &incidence) const;
+    /*!
+     */
     virtual KCalendarCore::Calendar::Ptr calendar2(const QString &incidenceIdentifier) const;
 
+    /*!
+     */
     void showDates(const QDate &start, const QDate &end, const QDate &preferredMonth = QDate()) override;
 
+    /*!
+     */
     void showIncidences(const Akonadi::Item::List &incidences, const QDate &date) override;
 
+    /*!
+     */
     void clearSelection() override;
 
+    /*!
+     */
     void startDrag(const Akonadi::Item &);
 
+    /*!
+     */
     void readSettings();
+    /*!
+     */
     void readSettings(const KConfig *);
+    /*!
+     */
     void writeSettings(KConfig *);
 
+    /*!
+     */
     void enableAgendaUpdate(bool enable);
+    /*!
+     */
     void setIncidenceChanger(Akonadi::IncidenceChanger *changer) override;
 
+    /*!
+     */
     void zoomInHorizontally(QDate date = QDate());
+    /*!
+     */
     void zoomOutHorizontally(QDate date = QDate());
 
+    /*!
+     */
     void zoomInVertically();
+    /*!
+     */
     void zoomOutVertically();
 
+    /*!
+     */
     void zoomView(const int delta, QPoint pos, const Qt::Orientation orient = Qt::Horizontal);
 
+    /*!
+     */
     void clearTimeSpanSelection();
 
     // Used by the timelabelszone
@@ -167,25 +211,43 @@ public:
     /*! Create labels for the selected dates. */
     void createDayLabels(bool force);
 
+    /*!
+     */
     void createTimeBarHeaders();
 
+    /*!
+     */
     void setChanges(EventView::Changes) override;
 
+    /*!
+     */
     void setTitle(const QString &title);
 
+    /*!
+     */
     void setTimeLabelVisibility(bool enable);
 
 Q_SIGNALS:
+    /*!
+     */
     void showNewEventPopupSignal();
+    /*!
+     */
     void showIncidencePopupSignal(const Akonadi::CollectionCalendar::Ptr &, const Akonadi::Item &, const QDate &);
+    /*!
+     */
     void zoomViewHorizontally(const QDate &, int count);
 
+    /*!
+     */
     void timeSpanSelectionChanged();
 
 protected:
     /*! Fill agenda using the current set value for the start date */
     void fillAgenda();
 
+    /*!
+     */
     void connectAgenda(Agenda *agenda, Agenda *otherAgenda);
 
     /*!
@@ -193,19 +255,33 @@ protected:
     */
     void setHolidayMasks();
 
+    /*!
+     */
     void removeIncidence(const KCalendarCore::Incidence::Ptr &inc);
 
 public Q_SLOTS:
+    /*!
+     */
     void updateView() override;
+    /*!
+     */
     void updateConfig() override;
     /*! reschedule the todo  to the given x- and y- coordinates.
         Third parameter determines all-day (no time specified) */
     void slotIncidencesDropped(const KCalendarCore::Incidence::List &incidences, const QPoint &, bool);
+    /*!
+     */
     void slotUrlsDropped(const QList<QUrl> &urls, const QPoint &, bool);
+    /*!
+     */
     void startDrag(const KCalendarCore::Incidence::Ptr &);
 
 protected Q_SLOTS:
+    /*!
+     */
     void updateEventIndicatorTop(int newY);
+    /*!
+     */
     void updateEventIndicatorBottom(int newY);
 
     /*! Updates data for selected timespan */
@@ -217,12 +293,20 @@ protected Q_SLOTS:
       removed.
     */
     void updateEventIndicators();
+    /*!
+     */
     void scheduleUpdateEventIndicators();
 
+    /*!
+     */
     void alignAgendas();
 
 protected:
+    /*!
+     */
     void showEvent(QShowEvent *showEvent) override;
+    /*!
+     */
     bool eventFilter(QObject *object, QEvent *event) override;
 
 private:

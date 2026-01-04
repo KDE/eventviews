@@ -45,7 +45,7 @@ class CalendarFilterModel;
  * This class provides a view for Todo items.
 
  * \brief View for Todo components.
- * @author Cornelius Schumacher <schumacher@kde.org>, Reinhold Kainhofer <reinhold@kainhofer.com>
+ * \author Cornelius Schumacher <schumacher@kde.org>, Reinhold Kainhofer <reinhold@kainhofer.com>
  * \sa EventView
  */
 class EVENTVIEWS_EXPORT TodoView : public EventViews::EventView
@@ -54,15 +54,31 @@ class EVENTVIEWS_EXPORT TodoView : public EventViews::EventView
     friend class ModelStack;
 
 public:
+    /*!
+     */
     TodoView(const EventViews::PrefsPtr &prefs, bool sidebarView, QWidget *parent);
+    /*!
+     */
     ~TodoView() override;
 
+    /*!
+     */
     void setModel(QAbstractItemModel *model) override;
+    /*!
+     */
     void addCalendar(const Akonadi::CollectionCalendar::Ptr &calendar) override;
+    /*!
+     */
     void removeCalendar(const Akonadi::CollectionCalendar::Ptr &calendar) override;
 
+    /*!
+     */
     [[nodiscard]] Akonadi::Item::List selectedIncidences() const override;
+    /*!
+     */
     [[nodiscard]] KCalendarCore::DateList selectedIncidenceDates() const override;
+    /*!
+     */
     [[nodiscard]] int currentDateCount() const override
     {
         return 0;
@@ -72,50 +88,104 @@ public:
     {
     }
 
+    /*!
+     */
     void saveLayout(KConfig *config, const QString &group) const;
 
+    /*!
+     */
     void restoreLayout(KConfig *config, const QString &group, bool minimalDefaults);
 
     /*! documentation in baseview.h */
     void getHighlightMode(bool &highlightEvents, bool &highlightTodos, bool &highlightJournals);
 
+    /*!
+     */
     [[nodiscard]] bool usesFullWindow();
 
+    /*!
+     */
     [[nodiscard]] bool supportsDateRangeSelection() const
     {
         return false;
     }
 
 public Q_SLOTS:
+    /*!
+     */
     void setIncidenceChanger(Akonadi::IncidenceChanger *changer) override;
+    /*!
+     */
     void showDates(const QDate &start, const QDate &end, const QDate &preferredMonth = QDate()) override;
+    /*!
+     */
     void showIncidences(const Akonadi::Item::List &incidenceList, const QDate &date) override;
+    /*!
+     */
     void updateView() override;
+    /*!
+     */
     virtual void changeIncidenceDisplay(const Akonadi::Item &incidence, Akonadi::IncidenceChanger::ChangeType changeType);
+    /*!
+     */
     void updateConfig() override;
+    /*!
+     */
     void clearSelection() override;
+    /*!
+     */
     void expandIndex(const QModelIndex &index);
+    /*!
+     */
     void restoreViewState();
+    /*!
+     */
     void saveViewState();
 
+    /*!
+     */
     void createEvent();
 
 protected Q_SLOTS:
+    /*!
+     */
     void resizeEvent(QResizeEvent *) override;
+    /*!
+     */
     void addQuickTodo(Qt::KeyboardModifiers modifier);
 
+    /*!
+     */
     void contextMenu(QPoint pos);
 
+    /*!
+     */
     void currentChanged(const QModelIndex &current, const QModelIndex &previous);
 
     // slots used by popup-menus
+    /*!
+     */
     void showTodo();
+    /*!
+     */
     void editTodo();
+    /*!
+     */
     void deleteTodo();
+    /*!
+     */
     void newTodo();
+    /*!
+     */
     void newSubTodo();
+    /*!
+     */
     void copyTodoToDate(QDate date);
+    /*!
+     */
     void toggleTodoCompleted();
+    /*!
+     */
     void toggleTodoAlarm();
 
 private Q_SLOTS:

@@ -38,10 +38,18 @@ public:
      */
     explicit TimelineView(QWidget *parent = nullptr);
 
+    /*!
+     */
     ~TimelineView() override;
 
+    /*!
+     */
     [[nodiscard]] Akonadi::Item::List selectedIncidences() const override;
+    /*!
+     */
     [[nodiscard]] KCalendarCore::DateList selectedIncidenceDates() const override;
+    /*!
+     */
     [[nodiscard]] int currentDateCount() const override;
 
     // ensure start and end are valid before calling this.
@@ -55,13 +63,25 @@ public:
     /*! \deprecated Use EventView::endDateTime.   */
     [[deprecated("Use EventView::endDateTime.")]] [[nodiscard]] QDate endDate() const;
 
+    /*!
+     */
     void showIncidences(const Akonadi::Item::List &incidenceList, const QDate &date) override;
+    /*!
+     */
     void updateView() override;
+    /*!
+     */
     virtual void changeIncidenceDisplay(const Akonadi::Item &item, int mode);
+    /*!
+     */
     [[nodiscard]] bool eventDurationHint(QDateTime &startDt, QDateTime &endDt, bool &allDay) const override;
 
 Q_SIGNALS:
+    /*!
+     */
     void showNewEventPopupSignal();
+    /*!
+     */
     void showIncidencePopupSignal(const Akonadi::CollectionCalendar::Ptr &, const Akonadi::Item &, const QDate &);
 
 protected:
