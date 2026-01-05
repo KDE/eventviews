@@ -12,7 +12,6 @@
 #pragma once
 
 #include "agendaitem.h"
-#include "eventviews_export.h"
 #include "viewcalendar.h"
 
 #include <Akonadi/Item>
@@ -54,7 +53,7 @@ private:
 
 class AgendaPrivate;
 
-class EVENTVIEWS_EXPORT Agenda : public QWidget
+class Agenda : public QWidget
 {
     Q_OBJECT
 public:
