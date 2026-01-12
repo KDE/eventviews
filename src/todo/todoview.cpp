@@ -47,8 +47,6 @@ using namespace Qt::Literals::StringLiterals;
 #include <QSortFilterProxyModel>
 #include <QToolButton>
 
-#include <chrono>
-
 using namespace std::chrono_literals;
 
 Q_DECLARE_METATYPE(QPointer<QMenu>)
