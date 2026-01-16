@@ -103,6 +103,9 @@ void WhatsNextView::updateView()
         mText += "<table>\n"_L1;
         for (const KCalendarCore::Event::Ptr &ev : std::as_const(events)) {
             const auto evCalendar = calendar3(ev);
+            if (!evCalendar) {
+                continue;
+            }
             if (!ev->recurs()) {
                 appendEvent(evCalendar, ev);
             } else {
@@ -142,7 +145,7 @@ void WhatsNextView::updateView()
         bool taskHeaderWasCreated = false;
         for (const KCalendarCore::Todo::Ptr &todo : std::as_const(todos)) {
             const auto todoCalendar = calendar3(todo);
-            if (!todo->isCompleted() && todo->hasDueDate() && todo->dtDue().date() <= mEndDate) {
+            if (todoCalendar && !todo->isCompleted() && todo->hasDueDate() && todo->dtDue().date() <= mEndDate) {
                 if (!taskHeaderWasCreated) {
                     createTaskRow(kil);
                     taskHeaderWasCreated = true;
@@ -155,7 +158,7 @@ void WhatsNextView::updateView()
         while (!gotone && priority <= 9) {
             for (const KCalendarCore::Todo::Ptr &todo : std::as_const(todos)) {
                 const auto todoCalendar = calendar3(todo);
-                if (!todo->isCompleted() && (todo->priority() == priority)) {
+                if (todoCalendar && !todo->isCompleted() && (todo->priority() == priority)) {
                     if (!taskHeaderWasCreated) {
                         createTaskRow(kil);
                         taskHeaderWasCreated = true;
@@ -178,9 +181,9 @@ void WhatsNextView::updateView()
         events += calendar->events(QDate::currentDate(), QDate(2975, 12, 6), QTimeZone::systemTimeZone());
     }
     for (const KCalendarCore::Event::Ptr &ev : std::as_const(events)) {
-        const auto evCalendar = calendar3(ev);
         const KCalendarCore::Attendee me = ev->attendeeByMails(myEmails);
-        if (!me.isNull()) {
+        const auto evCalendar = calendar3(ev);
+        if (evCalendar && !me.isNull()) {
             if (me.status() == KCalendarCore::Attendee::NeedsAction && me.RSVP()) {
                 if (replies == 0) {
                     mText += "<p></p>"_L1;
@@ -202,9 +205,9 @@ void WhatsNextView::updateView()
         todos += calendar->todos();
     }
     for (const KCalendarCore::Todo::Ptr &to : std::as_const(todos)) {
-        const auto todoCalendar = calendar3(to);
         const KCalendarCore::Attendee me = to->attendeeByMails(myEmails);
-        if (!me.isNull()) {
+        const auto todoCalendar = calendar3(to);
+        if (todoCalendar && !me.isNull()) {
             if (me.status() == KCalendarCore::Attendee::NeedsAction && me.RSVP()) {
                 if (replies == 0) {
                     mText += "<p></p>"_L1;

@@ -357,6 +357,9 @@ void TimelineView::updateView()
 void TimelineView::changeIncidenceDisplay(const Akonadi::Item &item, int mode)
 {
     const auto cal = calendar3(item);
+    if (!cal) {
+        return;
+    }
     switch (mode) {
     case Akonadi::IncidenceChanger::ChangeTypeCreate:
         d->insertIncidence(cal, item);

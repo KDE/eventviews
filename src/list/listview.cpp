@@ -459,6 +459,9 @@ void ListView::changeIncidenceDisplay(const Akonadi::Item &aitem, int action)
 {
     const Incidence::Ptr incidence = Akonadi::CalendarUtils::incidence(aitem);
     const auto calendar = calendar3(aitem);
+    if (!calendar) {
+        return;
+    }
 
     const ListViewItem *item = nullptr;
     const QDate f = d->mSelectedDates.constFirst();
@@ -541,10 +544,11 @@ void ListView::popupMenu(const QPoint &point)
     if (d->mActiveItem && !d->mIsNonInteractive) {
         const Akonadi::Item aitem = d->mActiveItem->mIncidence;
         const auto calendar = calendar3(aitem);
-        // FIXME: For recurring incidences we don't know the date of this
-        // occurrence, there's no reference to it at all!
-
-        Q_EMIT showIncidencePopupSignal(calendar, aitem, Akonadi::CalendarUtils::incidence(aitem)->dtStart().date());
+        if (calendar) {
+            // FIXME: For recurring incidences we don't know the date of this
+            // occurrence, there's no reference to it at all!
+            Q_EMIT showIncidencePopupSignal(calendar, aitem, Akonadi::CalendarUtils::incidence(aitem)->dtStart().date());
+        }
     } else {
         Q_EMIT showNewEventPopupSignal();
     }
