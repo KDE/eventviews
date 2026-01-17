@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# SPDX-FileCopyrightText: 2011, 2012, 2013, 2020, 2021, 2022, 2023, 2024, 2025 g.sora <g.sora@tiscali.it>
+# SPDX-FileCopyrightText: 2011, 2012, 2013, 2020, 2021, 2022, 2023, 2024, 2025, 2026 g.sora <g.sora@tiscali.it>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-21 02:39+0000\n"
-"PO-Revision-Date: 2025-10-14 17:21+0200\n"
+"PO-Revision-Date: 2026-01-16 12:01+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -118,6 +118,7 @@ msgstr "&Adde Fuso Horari..."
 msgctxt "@info:tooltip"
 msgid "Add a timelabel display column for a new timezone"
 msgstr ""
+"Adde un columna de monstrator de etiquetta de tempore per un nove fuso horari"
 
 #: agenda/timelabels.cpp:333
 #, kde-format
@@ -128,6 +129,10 @@ msgid ""
 "This feature is very useful when showing calendar events for people in "
 "timezones other than your own."
 msgstr ""
+"Iste menu monstrara un dialogo sde selection de fuso horari que te permitte "
+"seliger un fuso horari per montrar etiquettas de hora contu etiquettas de "
+"hora de fuso horari de systema. Iste characteristica es multe utile quando "
+"on monstra eventos de calendario per gente in altere fuso horari que le tu."
 
 #: agenda/timelabels.cpp:336
 #, kde-format
@@ -141,6 +146,8 @@ msgid ""
 "Remove the hour label column for the currently selected timezone, for non-"
 "system timezones only."
 msgstr ""
+"Remove le columna de etiquetta de hora per le fuso horari currentemente "
+"seligite, solmente per fusos horari non de systema."
 
 #: agenda/timelabels.cpp:343
 #, kde-format
@@ -149,6 +156,8 @@ msgid ""
 "For non-system timezones, this menu selection removes the time hour labels "
 "display column for the currently selected timezone."
 msgstr ""
+"Per fusos horari non de systema, iste menu remove le coluimna de monstrator "
+"de etiquettas de hora de tempore per le fuso horari currentemente seligite."
 
 #: agenda/timelabels.cpp:347
 #, kde-format
@@ -169,6 +178,8 @@ msgid ""
 "Display the time label hours in 24-hour \"military\" format or according to "
 "your locale"
 msgstr ""
+"Monstra le horas de etiquettas de tempore in le formato \"militar\" de 24-"
+"horas o secundo tu localisation"
 
 #: agenda/timelabels.cpp:353
 #, kde-format
@@ -177,36 +188,39 @@ msgid ""
 "This menu selection shows the time hour labels according to 24-hour "
 "\"military\" time or your system locale."
 msgstr ""
+"Iste selection de menu monstra le etiquettas de hora de tempore secundo le "
+"tempore \"militar\" de 24-horas o tu localisation de systema."
 
 #: agenda/timelabels.cpp:358
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Right-side Time Labels"
-msgstr ""
+msgstr "Cela Etiquettas de Tempore del Lato Dextere"
 
 #: agenda/timelabels.cpp:360
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Right-side Time Labels"
-msgstr ""
+msgstr "Monstra etiquettas de Tempore de Lato Dextere"
 
 #: agenda/timelabels.cpp:364
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Left-side Time Labels"
-msgstr ""
+msgstr "Cela Etiquettas de Tempore del Lato Sinistre"
 
 #: agenda/timelabels.cpp:366
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Left-side Time Labels"
-msgstr ""
+msgstr "Monstra Etiquettas de Tempore del Lato Sinistre"
 
 #: agenda/timelabels.cpp:369
 #, kde-format
 msgctxt "@info::tooltip"
 msgid "Show or hide time labels on both sides of the agenda view"
 msgstr ""
+"Monstra o cela etiquettas de tempore sur ambe lateres del vista de agenda"
 
 #: agenda/timelabels.cpp:371
 #, kde-format
@@ -217,6 +231,11 @@ msgid ""
 "shown on the second side to save screen space. Similarly, the vertical "
 "scrollbar is removed when the time labels are shown on both sides."
 msgstr ""
+"Iste selection de menu monstra o cela le etiquettas de tempore sur ambe "
+"lateres del vista de agenda. Solmente le fuso horari de systema ( e "
+"nullefusos horari addite extra) es monstrate sur le secunde latere per "
+"salveguardar spatio de schermo. Similarmente, le barra a rolar vertical es "
+"removite quando le etiquettas de tempore es monstrate sur ambe lateres."
 
 #: agenda/timelabels.cpp:426
 #, kde-format
