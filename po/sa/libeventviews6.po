@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-13 08:41+0000\n"
+"POT-Creation-Date: 2026-01-18 00:43+0000\n"
 "PO-Revision-Date: 2024-12-24 20:39+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -98,12 +98,12 @@ msgctxt "short_weekday short_monthname date (e.g. Mon Aug 13)"
 msgid "%1 %2 %3"
 msgstr "%1 %2 %3"
 
-#: agenda/agendaview.cpp:2330
+#: agenda/agendaview.cpp:2332
 #, kde-format
 msgid "Unable to modify this to-do, because it cannot be locked."
 msgstr "एतत् कार्यं परिवर्तयितुं असमर्थः, यतः एतत् ताडयितुं न शक्यते ।"
 
-#: agenda/agendaview.cpp:2338
+#: agenda/agendaview.cpp:2340
 #, kde-format
 msgid "Unable to save %1 \"%2\"."
 msgstr "%1 \"%2\" रक्षितुं असमर्थः ।"
@@ -2524,8 +2524,8 @@ msgstr "कार्याणि :"
 msgid "What's Next?"
 msgstr "अग्रे किम् ?"
 
-#: whatsnext/whatsnextview.cpp:85 whatsnext/whatsnextview.cpp:269
-#: whatsnext/whatsnextview.cpp:274
+#: whatsnext/whatsnextview.cpp:85 whatsnext/whatsnextview.cpp:272
+#: whatsnext/whatsnextview.cpp:277
 #, kde-format
 msgctxt "date from - to"
 msgid "%1 - %2"
@@ -2536,18 +2536,18 @@ msgstr "%1 - %2"
 msgid "Events:"
 msgstr "घटनाः :"
 
-#: whatsnext/whatsnextview.cpp:191 whatsnext/whatsnextview.cpp:215
+#: whatsnext/whatsnextview.cpp:194 whatsnext/whatsnextview.cpp:218
 #, kde-format
 msgid "Events and to-dos that need a reply:"
 msgstr "घटनाः कार्याणि च येषां उत्तरस्य आवश्यकता वर्तते:"
 
-#: whatsnext/whatsnextview.cpp:281
+#: whatsnext/whatsnextview.cpp:284
 #, kde-format
 msgctxt "date, from - to"
 msgid "%1, %2 - %3"
 msgstr "%1, %2 - %3"
 
-#: whatsnext/whatsnextview.cpp:310
+#: whatsnext/whatsnextview.cpp:313
 #, kde-format
 msgctxt "to-do due date"
 msgid "  (Due: %1)"
