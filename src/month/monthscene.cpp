@@ -267,9 +267,14 @@ void MonthGraphicsView::drawBackground(QPainter *p, const QRectF &rect)
         }
     }
     if (!todayRect.isNull()) {
-        KColorScheme const scheme(QPalette::Normal, KColorScheme::ColorSet::View);
-        p->setPen(scheme.foreground(KColorScheme::ForegroundRole::PositiveText).color());
-        p->setBrush(scheme.background(KColorScheme::BackgroundRole::PositiveBackground));
+        if (mMonthView->preferences()->useSystemColor()) {
+            KColorScheme const scheme(QPalette::Normal, KColorScheme::ColorSet::View);
+            p->setPen(scheme.foreground(KColorScheme::ForegroundRole::PositiveText).color());
+            p->setBrush(scheme.background(KColorScheme::BackgroundRole::PositiveBackground));
+        } else {
+            const QColor todayColor = mMonthView->preferences()->monthTodayColor();
+            p->setBrush(todayColor);
+        }
         p->drawRect(todayRect);
     }
     if (!selectedRect.isNull()) {

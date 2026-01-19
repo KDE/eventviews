@@ -197,6 +197,13 @@ public:
 
     /*!
      */
+    [[nodiscard]] QColor monthTodayColor() const;
+    /*!
+     */
+    void setMonthTodayColor(const QColor &color);
+
+    /*!
+     */
     [[nodiscard]] QColor monthGridWorkHoursBackgroundColor() const;
     /*!
      */

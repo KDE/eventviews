@@ -561,6 +561,12 @@
       <whatsthis>Select the working hours background color for the Month view here.</whatsthis>
       <default>225, 225, 255</default>
     </entry>
+    <entry type="Color" key="Month Today Color" name="MonthTodayColor">
+      <label>Month view today background color</label>
+      <tooltip>Set the background color for today's date in month view</tooltip>
+      <whatsthis>In Month View, select the background color for today's date.</whatsthis>
+      <default>255, 255, 255</default>
+    </entry>
     <entry key="Month Grid WorkHours Background Image" type="String">
     </entry>
     <!-- END:   These entries are the same for the Month and month views, please keep them in sync -->

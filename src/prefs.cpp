@@ -915,6 +915,16 @@ void Prefs::setColorMonthBusyDays(bool enable)
     d->mBaseConfig.mColorMonthBusyDaysEnabled = enable;
 }
 
+QColor Prefs::monthTodayColor() const
+{
+    return d->getColor(d->mBaseConfig.monthTodayColorItem());
+}
+
+void Prefs::setMonthTodayColor(const QColor &color)
+{
+    d->mBaseConfig.mMonthTodayColor = color;
+}
+
 void Prefs::setResourceColor(const QString &cal, const QColor &color)
 {
     d->mBaseConfig.setResourceColor(cal, color);
