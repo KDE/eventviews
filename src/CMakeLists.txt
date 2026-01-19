@@ -83,6 +83,7 @@ target_sources(
 )
 
 kconfig_add_kcfg_files(KPim6EventViews prefs_base.kcfgc)
+set_source_files_properties(prefs_base.cpp PROPERTIES SKIP_LINTING ON)
 
 ecm_qt_declare_logging_category(KPim6EventViews HEADER calendarview_debug.h
         IDENTIFIER CALENDARVIEW_LOG
