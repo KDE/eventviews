@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-18 00:43+0000\n"
+"POT-Creation-Date: 2026-01-21 00:45+0000\n"
 "PO-Revision-Date: 2025-06-11 00:09+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -295,52 +295,52 @@ msgstr ""
 "까? 아니면 전체 반복 항목에 적용하시겠습니까?"
 
 #. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (Personal Settings)
-#: eventviews.kcfg:15
+#: eventviews.kcfg:9
 #, kde-format
 msgid "Default Email Attachment Method"
 msgstr "기본 이메일 첨부 방식"
 
 #. i18n: ectx: whatsthis, entry (DefaultEmailAttachMethod), group (Personal Settings)
-#: eventviews.kcfg:16
+#: eventviews.kcfg:10
 #, kde-format
 msgid "The default way of attaching dropped emails to an event"
 msgstr "이벤트에 끌어다 놓은 메일을 첨부할 기본 방식"
 
 #. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (Personal Settings)
 #. i18n: ectx: label, entry (DefaultTodoAttachMethod), group (Hidden Options)
-#: eventviews.kcfg:19 eventviews.kcfg:469
+#: eventviews.kcfg:13 eventviews.kcfg:408
 #, kde-format
 msgid "Always ask"
 msgstr "항상 묻기"
 
 #. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (Personal Settings)
 #. i18n: ectx: label, entry (DefaultTodoAttachMethod), group (Hidden Options)
-#: eventviews.kcfg:22 eventviews.kcfg:472
+#: eventviews.kcfg:16 eventviews.kcfg:411
 #, kde-format
 msgid "Only attach link to message"
 msgstr "메시지로 가는 링크만 첨부"
 
 #. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (Personal Settings)
 #. i18n: ectx: label, entry (DefaultTodoAttachMethod), group (Hidden Options)
-#: eventviews.kcfg:25 eventviews.kcfg:475
+#: eventviews.kcfg:19 eventviews.kcfg:414
 #, kde-format
 msgid "Attach complete message"
 msgstr "전체 메시지 첨부"
 
 #. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (Personal Settings)
-#: eventviews.kcfg:28
+#: eventviews.kcfg:22
 #, kde-format
 msgid "Attach message without attachments"
 msgstr "첨부 없이 메시지 첨부"
 
 #. i18n: ectx: label, entry, group (Save Settings)
-#: eventviews.kcfg:38
+#: eventviews.kcfg:31
 #, kde-format
 msgid "Export to HTML with every save"
 msgstr "저장할 때마다 HTML로 내보내기"
 
 #. i18n: ectx: whatsthis, entry, group (Save Settings)
-#: eventviews.kcfg:39
+#: eventviews.kcfg:32
 #, kde-format
 msgid ""
 "Check this box to export the calendar to a HTML-file every time you save it. "
@@ -351,13 +351,13 @@ msgstr ""
 "홈 폴더 아래에 calendar.html 파일로 저장합니다."
 
 #. i18n: ectx: label, entry, group (Save Settings)
-#: eventviews.kcfg:44
+#: eventviews.kcfg:36
 #, kde-format
 msgid "Enable automatic saving of manually opened calendar files"
 msgstr "수동으로 연 캘린더 파일 자동 저장 사용"
 
 #. i18n: ectx: whatsthis, entry, group (Save Settings)
-#: eventviews.kcfg:45
+#: eventviews.kcfg:37
 #, kde-format
 msgid ""
 "Check this box to save your calendar file automatically when you exit "
@@ -370,13 +370,13 @@ msgstr ""
 "습니다."
 
 #. i18n: ectx: label, entry, group (Save Settings)
-#: eventviews.kcfg:50
+#: eventviews.kcfg:41
 #, kde-format
 msgid "Save &interval in minutes"
 msgstr "분 단위 자동 저장 간격(&I)"
 
 #. i18n: ectx: whatsthis, entry, group (Save Settings)
-#: eventviews.kcfg:51
+#: eventviews.kcfg:42
 #, kde-format
 msgid ""
 "Set the interval between automatic saving of calendar events in minutes "
@@ -388,31 +388,31 @@ msgstr ""
 "다."
 
 #. i18n: ectx: label, entry (Confirm), group (Save Settings)
-#: eventviews.kcfg:57
+#: eventviews.kcfg:47
 #, kde-format
 msgid "Confirm deletes"
 msgstr "삭제 확인"
 
 #. i18n: ectx: whatsthis, entry (Confirm), group (Save Settings)
-#: eventviews.kcfg:58
+#: eventviews.kcfg:48
 #, kde-format
 msgid "Check this box to display a confirmation dialog when deleting items."
 msgstr "이 옵션을 선택하면 항목을 삭제할 때 확인합니다."
 
 #. i18n: ectx: label, entry (Destination), group (Save Settings)
-#: eventviews.kcfg:63
+#: eventviews.kcfg:52
 #, kde-format
 msgid "New Events, To-dos and Journal Entries Should"
 msgstr "새 이벤트, 할 일, 저널 항목의 위치"
 
 #. i18n: ectx: label, entry (Destination), group (Save Settings)
-#: eventviews.kcfg:66
+#: eventviews.kcfg:55
 #, kde-format
 msgid "Be added to the standard calendar"
 msgstr "표준 캘린더에 추가"
 
 #. i18n: ectx: whatsthis, entry (Destination), group (Save Settings)
-#: eventviews.kcfg:67
+#: eventviews.kcfg:56
 #, kde-format
 msgid ""
 "Select this option to always record new events, to-dos and journal entries "
@@ -422,13 +422,13 @@ msgstr ""
 "다."
 
 #. i18n: ectx: label, entry (Destination), group (Save Settings)
-#: eventviews.kcfg:70
+#: eventviews.kcfg:59
 #, kde-format
 msgid "Be asked which calendar to use"
 msgstr "사용할 캘린더 묻기"
 
 #. i18n: ectx: whatsthis, entry (Destination), group (Save Settings)
-#: eventviews.kcfg:71
+#: eventviews.kcfg:60
 #, kde-format
 msgid ""
 "Select this option to choose the calendar to be used to record the item each "
@@ -442,20 +442,20 @@ msgstr ""
 "트로 사용하여 여러 계정을 관리해야 할 경우 유용합니다."
 
 #. i18n: ectx: label, entry, group (System Tray)
-#: eventviews.kcfg:81
+#: eventviews.kcfg:69
 #, kde-format
 msgid "Show Reminder Daemon in the System Tray"
 msgstr "시스템 트레이에 알림 데몬 표시"
 
 #. i18n: ectx: whatsthis, entry, group (System Tray)
-#: eventviews.kcfg:82
+#: eventviews.kcfg:70
 #, kde-format
 msgid ""
 "Check this box to show the KOrganizer reminder daemon in the system tray."
 msgstr "이 옵션을 사용하면 시스템 트레이에 KOrganizer 알림 데몬을 표시합니다."
 
 #. i18n: ectx: whatsthis, entry (TimeZoneId), group (Time &amp; Date)
-#: eventviews.kcfg:90
+#: eventviews.kcfg:77
 #, kde-format
 msgid ""
 "Select your timezone from the list of locations in this drop down box. If "
@@ -467,13 +467,13 @@ msgstr ""
 "리합니다."
 
 #. i18n: ectx: label, entry (DayBegins), group (Time &amp; Date)
-#: eventviews.kcfg:94
+#: eventviews.kcfg:80
 #, kde-format
 msgid "Day begins at"
 msgstr "일일 시작 시간"
 
 #. i18n: ectx: whatsthis, entry (DayBegins), group (Time &amp; Date)
-#: eventviews.kcfg:95
+#: eventviews.kcfg:81
 #, kde-format
 msgid ""
 "Enter the start time for events here. This time should be the earliest time "
@@ -483,13 +483,13 @@ msgstr ""
 "입니다."
 
 #. i18n: ectx: label, entry (WorkingHoursStart), group (Time &amp; Date)
-#: eventviews.kcfg:100
+#: eventviews.kcfg:85
 #, kde-format
 msgid "Daily starting hour"
 msgstr "업무 시작 시간"
 
 #. i18n: ectx: whatsthis, entry (WorkingHoursStart), group (Time &amp; Date)
-#: eventviews.kcfg:101
+#: eventviews.kcfg:86
 #, kde-format
 msgid ""
 "Enter the start time for the working hours here. The working hours will be "
@@ -499,13 +499,13 @@ msgstr ""
 "됩니다."
 
 #. i18n: ectx: label, entry (WorkingHoursEnd), group (Time &amp; Date)
-#: eventviews.kcfg:106
+#: eventviews.kcfg:90
 #, kde-format
 msgid "Daily ending hour"
 msgstr "업무 종료 시간"
 
 #. i18n: ectx: whatsthis, entry (WorkingHoursEnd), group (Time &amp; Date)
-#: eventviews.kcfg:107
+#: eventviews.kcfg:91
 #, kde-format
 msgid ""
 "Enter the ending time for the working hours here. The working hours will be "
@@ -515,19 +515,19 @@ msgstr ""
 "됩니다."
 
 #. i18n: ectx: label, entry (WeekStartDay), group (Time &amp; Date)
-#: eventviews.kcfg:112
+#: eventviews.kcfg:95
 #, kde-format
 msgid "Weekly start day:"
 msgstr "한 주의 시작 요일:"
 
 #. i18n: ectx: tooltip, entry (WeekStartDay), group (Time &amp; Date)
-#: eventviews.kcfg:113
+#: eventviews.kcfg:96
 #, kde-format
 msgid "Select the first day of each week"
 msgstr "일주일의 시작 요일 선택"
 
 #. i18n: ectx: whatsthis, entry (WeekStartDay), group (Time &amp; Date)
-#: eventviews.kcfg:114
+#: eventviews.kcfg:97
 #, kde-format
 msgid ""
 "Select the first day of each week. Normally, you can ignore this since it is "
@@ -537,13 +537,13 @@ msgstr ""
 "변경하십시오."
 
 #. i18n: ectx: label, entry, group (General View)
-#: eventviews.kcfg:122 viewerapp/settings.kcfg:15
+#: eventviews.kcfg:104 viewerapp/settings.kcfg:9
 #, kde-format
 msgid "Enable tooltips for displaying summaries"
 msgstr "요약 표시 풍선 도움말 활성화"
 
 #. i18n: ectx: whatsthis, entry, group (General View)
-#: eventviews.kcfg:123 viewerapp/settings.kcfg:16
+#: eventviews.kcfg:105 viewerapp/settings.kcfg:10
 #, kde-format
 msgid ""
 "Check this box to display summary tooltips when hovering the mouse over an "
@@ -553,13 +553,13 @@ msgstr ""
 "말을 표시합니다."
 
 #. i18n: ectx: label, entry, group (General View)
-#: eventviews.kcfg:128
+#: eventviews.kcfg:109
 #, kde-format
 msgid "To-dos use tag colors"
 msgstr "할 일에 태그색상 적용"
 
 #. i18n: ectx: whatsthis, entry, group (General View)
-#: eventviews.kcfg:129
+#: eventviews.kcfg:110
 #, kde-format
 msgid ""
 "Check this box so that to-dos will use tag colors and not colors specific to "
@@ -568,13 +568,13 @@ msgstr ""
 "이 옵션을 사용하면 할 일 목록에 일자별 색상 대신 태그 색상을 사용합니다"
 
 #. i18n: ectx: label, entry, group (General View)
-#: eventviews.kcfg:134
+#: eventviews.kcfg:114
 #, kde-format
 msgid "Next x days"
 msgstr "다음 x일"
 
 #. i18n: ectx: whatsthis, entry, group (General View)
-#: eventviews.kcfg:135
+#: eventviews.kcfg:115
 #, kde-format
 msgid ""
 "Select the number of \"x\" days to be displayed in the next days view. To "
@@ -585,19 +585,19 @@ msgstr ""
 "면 \"보기\" 메뉴에서 \"다음 x일\" 항목을 선택하십시오."
 
 #. i18n: ectx: tooltip, entry, group (General View)
-#: eventviews.kcfg:136
+#: eventviews.kcfg:116
 #, kde-format
 msgid "Show this many days at a time in the Next \"x\" days view"
 msgstr "다음 \"x\"일 보기에 표시할 날짜 수 지정"
 
 #. i18n: ectx: label, entry (DailyRecur), group (General View)
-#: eventviews.kcfg:141
+#: eventviews.kcfg:120
 #, kde-format
 msgid "Show items that recur daily"
 msgstr "매일 반복되는 항목 표시"
 
 #. i18n: ectx: whatsthis, entry (DailyRecur), group (General View)
-#: eventviews.kcfg:142
+#: eventviews.kcfg:121
 #, kde-format
 msgid ""
 "Check this box to show the days containing daily recurring events in bold "
@@ -609,13 +609,13 @@ msgstr ""
 "만 굵게 표시합니다."
 
 #. i18n: ectx: label, entry (WeeklyRecur), group (General View)
-#: eventviews.kcfg:147
+#: eventviews.kcfg:125
 #, kde-format
 msgid "Show items that recur weekly"
 msgstr "매주 반복되는 항목 표시"
 
 #. i18n: ectx: whatsthis, entry (WeeklyRecur), group (General View)
-#: eventviews.kcfg:148
+#: eventviews.kcfg:126
 #, kde-format
 msgid ""
 "Check this box to show the days containing weekly recurring events in bold "
@@ -627,13 +627,13 @@ msgstr ""
 "만 굵게 표시합니다."
 
 #. i18n: ectx: label, entry (HighlightTodos), group (General View)
-#: eventviews.kcfg:153
+#: eventviews.kcfg:130
 #, kde-format
 msgid "Show to-dos instead of events when in Todo View"
 msgstr "할 일 목록 보기에 이벤트 대신 할 일 표시"
 
 #. i18n: ectx: whatsthis, entry (HighlightTodos), group (General View)
-#: eventviews.kcfg:154
+#: eventviews.kcfg:131
 #, kde-format
 msgid ""
 "Check this box to show the days containing to-dos in bold typeface in the "
@@ -643,13 +643,13 @@ msgstr ""
 "표시합니다."
 
 #. i18n: ectx: label, entry (HighlightJournals), group (General View)
-#: eventviews.kcfg:159
+#: eventviews.kcfg:135
 #, kde-format
 msgid "Show journals instead of events when in Journal View"
 msgstr "저널 보기에 이벤트 대신 저널 표시"
 
 #. i18n: ectx: whatsthis, entry (HighlightJournals), group (General View)
-#: eventviews.kcfg:160
+#: eventviews.kcfg:136
 #, kde-format
 msgid ""
 "Check this box to show the days containing journals in bold typeface in the "
@@ -659,13 +659,13 @@ msgstr ""
 "시합니다."
 
 #. i18n: ectx: label, entry (WeekNumbersShowWork), group (General View)
-#: eventviews.kcfg:165
+#: eventviews.kcfg:140
 #, kde-format
 msgid "Week numbers select a work week when in work week mode"
 msgstr "업무 주간 모드에서 주 번호로 업무 주간 선택"
 
 #. i18n: ectx: whatsthis, entry (WeekNumbersShowWork), group (General View)
-#: eventviews.kcfg:166
+#: eventviews.kcfg:141
 #, kde-format
 msgid ""
 "Check this box to select a working week when clicking on the Date "
@@ -675,13 +675,13 @@ msgstr ""
 "사용하지 않으면 전체 주간을 선택합니다."
 
 #. i18n: ectx: label, entry, group (Agenda View)
-#: eventviews.kcfg:174 viewerapp/settings.kcfg:24
+#: eventviews.kcfg:148 viewerapp/settings.kcfg:17
 #, kde-format
 msgid "Hour size"
 msgstr "시간 크기"
 
 #. i18n: ectx: whatsthis, entry, group (Agenda View)
-#: eventviews.kcfg:175 viewerapp/settings.kcfg:25
+#: eventviews.kcfg:149 viewerapp/settings.kcfg:18
 #, kde-format
 msgid ""
 "Select the height of the hour rows in the agenda grid, in pixels. Increasing "
@@ -691,19 +691,19 @@ msgstr ""
 "키면 일정 모눈의 각각 열 높이를 높입니다."
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
-#: eventviews.kcfg:176 viewerapp/settings.kcfg:26
+#: eventviews.kcfg:150 viewerapp/settings.kcfg:19
 #, kde-format
 msgid "Set the height (in pixels) for an hour in the agenda grid"
 msgstr "일정 모눈의 한 시간의 높이를 픽셀 단위로 설정"
 
 #. i18n: ectx: label, entry (EnableAgendaItemIcons), group (Agenda View)
-#: eventviews.kcfg:183 viewerapp/settings.kcfg:33
+#: eventviews.kcfg:156 viewerapp/settings.kcfg:25
 #, kde-format
 msgid "Show icons in agenda view items"
 msgstr "일정 보기 항목에 아이콘 표시"
 
 #. i18n: ectx: whatsthis, entry (EnableAgendaItemIcons), group (Agenda View)
-#: eventviews.kcfg:184 viewerapp/settings.kcfg:34
+#: eventviews.kcfg:157 viewerapp/settings.kcfg:26
 #, kde-format
 msgid ""
 "Check this box to display icons (alarm, recursion, etc.) in agenda view "
@@ -712,39 +712,39 @@ msgstr ""
 "이 옵션을 사용하면 일정 보기 항목에 아이콘(알람, 반복 등)을 표시합니다."
 
 #. i18n: ectx: tooltip, entry (EnableAgendaItemIcons), group (Agenda View)
-#: eventviews.kcfg:185 viewerapp/settings.kcfg:35
+#: eventviews.kcfg:158 viewerapp/settings.kcfg:27
 #, kde-format
 msgid "Display icons in agenda view items"
 msgstr "일정 보기 항목에 아이콘 표시"
 
 #. i18n: ectx: label, entry (ShowTodosAgendaView), group (Agenda View)
 #. i18n: ectx: label, entry (ShowTodosMonthView), group (Month View)
-#: eventviews.kcfg:190 eventviews.kcfg:294 viewerapp/settings.kcfg:40
-#: viewerapp/settings.kcfg:133
+#: eventviews.kcfg:162 eventviews.kcfg:258 viewerapp/settings.kcfg:31
+#: viewerapp/settings.kcfg:116
 #, kde-format
 msgid "Show to-dos"
 msgstr "할 일 표시"
 
 #. i18n: ectx: whatsthis, entry (ShowTodosAgendaView), group (Agenda View)
-#: eventviews.kcfg:191 viewerapp/settings.kcfg:41
+#: eventviews.kcfg:163 viewerapp/settings.kcfg:32
 #, kde-format
 msgid "Check this box to display to-dos in the agenda view."
 msgstr "이 옵션을 사용하면 일정 보기에 할 일을 표시합니다."
 
 #. i18n: ectx: tooltip, entry (ShowTodosAgendaView), group (Agenda View)
-#: eventviews.kcfg:192 viewerapp/settings.kcfg:42
+#: eventviews.kcfg:164 viewerapp/settings.kcfg:33
 #, kde-format
 msgid "Display to-dos in the agenda view"
 msgstr "일정 보기에 할 일 표시"
 
 #. i18n: ectx: label, entry (MarcusBainsEnabled), group (Agenda View)
-#: eventviews.kcfg:197 viewerapp/settings.kcfg:47
+#: eventviews.kcfg:168 viewerapp/settings.kcfg:37
 #, kde-format
 msgid "Show current-time (Marcus Bains) line"
 msgstr "현재 시간 표시선 표시"
 
 #. i18n: ectx: whatsthis, entry (MarcusBainsEnabled), group (Agenda View)
-#: eventviews.kcfg:198 viewerapp/settings.kcfg:48
+#: eventviews.kcfg:169 viewerapp/settings.kcfg:38
 #, kde-format
 msgid ""
 "Check this box to display a line in the day or week view indicating the "
@@ -754,37 +754,37 @@ msgstr ""
 "Bains 선)을 표시합니다."
 
 #. i18n: ectx: tooltip, entry (MarcusBainsEnabled), group (Agenda View)
-#: eventviews.kcfg:199 viewerapp/settings.kcfg:49
+#: eventviews.kcfg:170 viewerapp/settings.kcfg:39
 #, kde-format
 msgid "Display the current-time indicator"
 msgstr "현재 시간 표시선 표시"
 
 #. i18n: ectx: label, entry (MarcusBainsShowSeconds), group (Agenda View)
-#: eventviews.kcfg:204 viewerapp/settings.kcfg:54
+#: eventviews.kcfg:174 viewerapp/settings.kcfg:43
 #, kde-format
 msgid "Show seconds on the current-time (Marcus Bains) line"
 msgstr "현재 시간 표시선에 초 표시"
 
 #. i18n: ectx: whatsthis, entry (MarcusBainsShowSeconds), group (Agenda View)
-#: eventviews.kcfg:205 viewerapp/settings.kcfg:55
+#: eventviews.kcfg:175 viewerapp/settings.kcfg:44
 #, kde-format
 msgid "Check this box if you want to show seconds on the current-time line."
 msgstr "이 옵션을 사용하면 현재 시간 표시선에 초를 표시합니다."
 
 #. i18n: ectx: tooltip, entry (MarcusBainsShowSeconds), group (Agenda View)
-#: eventviews.kcfg:206 viewerapp/settings.kcfg:56
+#: eventviews.kcfg:176 viewerapp/settings.kcfg:45
 #, kde-format
 msgid "Display seconds with the current-time indicator"
 msgstr "현재 시간 표시선에 초 표시"
 
 #. i18n: ectx: label, entry (SelectionStartsEditor), group (Agenda View)
-#: eventviews.kcfg:211 viewerapp/settings.kcfg:61
+#: eventviews.kcfg:180 viewerapp/settings.kcfg:49
 #, kde-format
 msgid "Time range selection in agenda view starts event editor"
 msgstr "일정 보기에서 시간 범위를 선택할 때 이벤트 편집기 시작 "
 
 #. i18n: ectx: whatsthis, entry (SelectionStartsEditor), group (Agenda View)
-#: eventviews.kcfg:212 viewerapp/settings.kcfg:62
+#: eventviews.kcfg:181 viewerapp/settings.kcfg:50
 #, kde-format
 msgid ""
 "Check this box to start the event editor automatically when you select a "
@@ -796,28 +796,28 @@ msgstr ""
 "간부터 끝 시간까지를 마우스 드래그로 선택하십시오."
 
 #. i18n: ectx: tooltip, entry (SelectionStartsEditor), group (Agenda View)
-#: eventviews.kcfg:213 viewerapp/settings.kcfg:63
+#: eventviews.kcfg:182 viewerapp/settings.kcfg:51
 #, kde-format
 msgid "Enable automatic event editor with time range selection"
 msgstr "시간 범위 선택 시 자동으로 이벤트 편집기 실행"
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
-#: eventviews.kcfg:218 eventviews.kcfg:314 viewerapp/settings.kcfg:68
-#: viewerapp/settings.kcfg:153
+#: eventviews.kcfg:186 eventviews.kcfg:275 viewerapp/settings.kcfg:55
+#: viewerapp/settings.kcfg:133
 #, kde-format
 msgid "Color Usage"
 msgstr "색 사용"
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
-#: eventviews.kcfg:221 eventviews.kcfg:317
+#: eventviews.kcfg:189 eventviews.kcfg:278
 #, kde-format
 msgid "Tag inside, calendar outside"
 msgstr "태그 내부, 캘린더 외부"
 
 #. i18n: ectx: whatsthis, entry, group (Agenda View)
-#: eventviews.kcfg:222
+#: eventviews.kcfg:190
 #, kde-format
 msgid ""
 "Select the \"Tag inside, calendar outside\" option if you would like to draw "
@@ -830,7 +830,7 @@ msgstr ""
 "상은 색과 글꼴 설정 페이지에서 설정하십시오."
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
-#: eventviews.kcfg:223
+#: eventviews.kcfg:191
 #, kde-format
 msgid ""
 "Draw agenda items in their tag color inside and calendar color for their "
@@ -839,13 +839,13 @@ msgstr "일정 항목 내부에 태그 색상, 경계선에 캘린더 색상 사
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
-#: eventviews.kcfg:226 eventviews.kcfg:322
+#: eventviews.kcfg:194 eventviews.kcfg:283
 #, kde-format
 msgid "Calendar inside, tag outside"
 msgstr "캘린더 내부, 태그 외부"
 
 #. i18n: ectx: whatsthis, entry, group (Agenda View)
-#: eventviews.kcfg:227
+#: eventviews.kcfg:195
 #, kde-format
 msgid ""
 "Select the \"Calendar inside, tag outside\" option if you would like to draw "
@@ -858,7 +858,7 @@ msgstr ""
 "정 페이지에서 설정하십시오."
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
-#: eventviews.kcfg:228
+#: eventviews.kcfg:196
 #, kde-format
 msgid ""
 "Draw agenda items in their calendar color inside and tag color for their "
@@ -867,13 +867,13 @@ msgstr "일정 항목 내부에 캘린더 색상, 경계선에 태그 색상 사
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
-#: eventviews.kcfg:231 eventviews.kcfg:327
+#: eventviews.kcfg:199 eventviews.kcfg:288
 #, kde-format
 msgid "Only tag"
 msgstr "태그만"
 
 #. i18n: ectx: whatsthis, entry, group (Agenda View)
-#: eventviews.kcfg:232
+#: eventviews.kcfg:200
 #, kde-format
 msgid ""
 "Select the \"Only tag\" option if you would like to draw calendar items "
@@ -884,21 +884,21 @@ msgstr ""
 "표시합니다. 해당 색상은 색과 글꼴 설정 페이지에서 설정하십시오."
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
-#: eventviews.kcfg:233
+#: eventviews.kcfg:201
 #, kde-format
 msgid "Draw agenda items using their tag color for the inside and border"
 msgstr "일정 항목 내부와 테두리에 태그 색상 사용"
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
-#: eventviews.kcfg:236 eventviews.kcfg:332 viewerapp/settings.kcfg:86
-#: viewerapp/settings.kcfg:171
+#: eventviews.kcfg:204 eventviews.kcfg:293 viewerapp/settings.kcfg:73
+#: viewerapp/settings.kcfg:151
 #, kde-format
 msgid "Only calendar"
 msgstr "캘린더만"
 
 #. i18n: ectx: whatsthis, entry, group (Agenda View)
-#: eventviews.kcfg:237 viewerapp/settings.kcfg:87
+#: eventviews.kcfg:205 viewerapp/settings.kcfg:74
 #, kde-format
 msgid ""
 "Select the \"Only calendar\" option if you would like to draw calendar items "
@@ -909,20 +909,20 @@ msgstr ""
 "로 표시합니다. 해당 색상은 색과 글꼴 설정 페이지에서 설정하십시오."
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
-#: eventviews.kcfg:238 viewerapp/settings.kcfg:88
+#: eventviews.kcfg:206 viewerapp/settings.kcfg:75
 #, kde-format
 msgid "Draw agenda items using their calendar color for the inside and border"
 msgstr "일정 항목 내부와 테두리에 캘린더 색상 사용"
 
 #. i18n: ectx: label, entry (ColorBusyDaysEnabled), group (Agenda View)
 #. i18n: ectx: label, entry (ColorMonthBusyDaysEnabled), group (Month View)
-#: eventviews.kcfg:244 eventviews.kcfg:341
+#: eventviews.kcfg:212 eventviews.kcfg:301
 #, kde-format
 msgid "Color busy days with a different background color"
 msgstr "바쁜 날에 다른 배경색 사용"
 
 #. i18n: ectx: whatsthis, entry (ColorBusyDaysEnabled), group (Agenda View)
-#: eventviews.kcfg:245
+#: eventviews.kcfg:213
 #, kde-format
 msgid ""
 "Check this box if you want agenda's background to be filled with a different "
@@ -935,19 +935,19 @@ msgstr ""
 "배경색을 변경할 수 있습니다. \"바쁜 날 배경색\" 설정을 변경하십시오."
 
 #. i18n: ectx: label, entry (AgendaViewCalendarDisplay), group (Agenda View)
-#: eventviews.kcfg:249 viewerapp/settings.kcfg:95
+#: eventviews.kcfg:217 viewerapp/settings.kcfg:81
 #, kde-format
 msgid "Multiple Calendar Display"
 msgstr "여러 캘린더 표시"
 
 #. i18n: ectx: label, entry (AgendaViewCalendarDisplay), group (Agenda View)
-#: eventviews.kcfg:252 viewerapp/settings.kcfg:98
+#: eventviews.kcfg:220 viewerapp/settings.kcfg:84
 #, kde-format
 msgid "Merge all calendars into one view"
 msgstr "모든 캘린더를 한 보기로 합치기"
 
 #. i18n: ectx: whatsthis, entry (AgendaViewCalendarDisplay), group (Agenda View)
-#: eventviews.kcfg:253 viewerapp/settings.kcfg:99
+#: eventviews.kcfg:221 viewerapp/settings.kcfg:85
 #, kde-format
 msgid ""
 "Select the \"Merge all calendars into one view\" option if you would like "
@@ -955,19 +955,19 @@ msgid ""
 msgstr "이 옵션을 사용하면 모든 캘린더를 하나의 일정 보기에 합쳐서 표시합니다."
 
 #. i18n: ectx: tooltip, entry (AgendaViewCalendarDisplay), group (Agenda View)
-#: eventviews.kcfg:254 viewerapp/settings.kcfg:100
+#: eventviews.kcfg:222 viewerapp/settings.kcfg:86
 #, kde-format
 msgid "Show all calendars merged together"
 msgstr "모든 캘린더를 합쳐서 표시"
 
 #. i18n: ectx: label, entry (AgendaViewCalendarDisplay), group (Agenda View)
-#: eventviews.kcfg:257 viewerapp/settings.kcfg:103
+#: eventviews.kcfg:225 viewerapp/settings.kcfg:89
 #, kde-format
 msgid "Show calendars side by side"
 msgstr "캘린더를 양쪽으로 표시"
 
 #. i18n: ectx: whatsthis, entry (AgendaViewCalendarDisplay), group (Agenda View)
-#: eventviews.kcfg:258 viewerapp/settings.kcfg:104
+#: eventviews.kcfg:226 viewerapp/settings.kcfg:90
 #, kde-format
 msgid ""
 "Select the \"Show calendars side by side\" option if you would like to see "
@@ -975,19 +975,19 @@ msgid ""
 msgstr "이 옵션을 사용하면 한 번에 캘린더 두 개를 양쪽으로 나눠서 표시합니다."
 
 #. i18n: ectx: tooltip, entry (AgendaViewCalendarDisplay), group (Agenda View)
-#: eventviews.kcfg:259 viewerapp/settings.kcfg:105
+#: eventviews.kcfg:227 viewerapp/settings.kcfg:91
 #, kde-format
 msgid "Show two calendars side-by-side"
 msgstr "두 캘린더를 양쪽으로 표시"
 
 #. i18n: ectx: label, entry (AgendaViewCalendarDisplay), group (Agenda View)
-#: eventviews.kcfg:262 viewerapp/settings.kcfg:108
+#: eventviews.kcfg:230 viewerapp/settings.kcfg:94
 #, kde-format
 msgid "Switch between views with tabs"
 msgstr "Tab 키로 보기 전환"
 
 #. i18n: ectx: whatsthis, entry (AgendaViewCalendarDisplay), group (Agenda View)
-#: eventviews.kcfg:263 viewerapp/settings.kcfg:109
+#: eventviews.kcfg:231 viewerapp/settings.kcfg:95
 #, kde-format
 msgid ""
 "Select \"Switch between views with tabs\" if you would like to alternate "
@@ -995,19 +995,19 @@ msgid ""
 msgstr "이 옵션을 사용하면 Tab 키를 사용하여 캘린더 간을 전환합니다."
 
 #. i18n: ectx: tooltip, entry (AgendaViewCalendarDisplay), group (Agenda View)
-#: eventviews.kcfg:264 viewerapp/settings.kcfg:110
+#: eventviews.kcfg:232 viewerapp/settings.kcfg:96
 #, kde-format
 msgid "Tab through calendars"
 msgstr "Tab 키로 캘린더 전환"
 
 #. i18n: ectx: label, entry (EnableMonthScroll), group (Month View)
-#: eventviews.kcfg:274 viewerapp/settings.kcfg:120
+#: eventviews.kcfg:241 viewerapp/settings.kcfg:105
 #, kde-format
 msgid "Enable scrollbars in month view cells"
 msgstr "월간 보기 셀에 스크롤바 사용"
 
 #. i18n: ectx: whatsthis, entry (EnableMonthScroll), group (Month View)
-#: eventviews.kcfg:275 viewerapp/settings.kcfg:121
+#: eventviews.kcfg:242 viewerapp/settings.kcfg:106
 #, kde-format
 msgid ""
 "Check this box to display scrollbars when clicking on a cell in the month "
@@ -1017,13 +1017,13 @@ msgstr ""
 "롤바는 필요한 경우에만 나타납니다."
 
 #. i18n: ectx: label, entry (EnableMonthItemIcons), group (Month View)
-#: eventviews.kcfg:280 viewerapp/settings.kcfg:126
+#: eventviews.kcfg:246 viewerapp/settings.kcfg:110
 #, kde-format
 msgid "Show icons in month view items"
 msgstr "월간 보기 항목에 아이콘 표시"
 
 #. i18n: ectx: whatsthis, entry (EnableMonthItemIcons), group (Month View)
-#: eventviews.kcfg:281 viewerapp/settings.kcfg:127
+#: eventviews.kcfg:247 viewerapp/settings.kcfg:111
 #, kde-format
 msgid ""
 "Check this box to display icons (alarm, recursion, etc.) in month view items."
@@ -1031,67 +1031,67 @@ msgstr ""
 "이 옵션을 사용하면 월간 보기 항목에 아이콘(알람, 반복 등)을 표시합니다."
 
 #. i18n: ectx: tooltip, entry (EnableMonthItemIcons), group (Month View)
-#: eventviews.kcfg:282 viewerapp/settings.kcfg:128
+#: eventviews.kcfg:248 viewerapp/settings.kcfg:112
 #, kde-format
 msgid "Display icons in month view items"
 msgstr "월간 보기 항목에 아이콘 표시"
 
 #. i18n: ectx: label, entry (ShowTimeInMonthView), group (Month View)
-#: eventviews.kcfg:287
+#: eventviews.kcfg:252
 #, kde-format
 msgid "Show time in month view items"
 msgstr "월간 보기 항목에 시간 표시"
 
 #. i18n: ectx: whatsthis, entry (ShowTimeInMonthView), group (Month View)
-#: eventviews.kcfg:288
+#: eventviews.kcfg:253
 #, kde-format
 msgid "Check this box to display the time in month view items."
 msgstr "이 옵션을 사용하면 월간 보기 항목에 시간을 표시합니다."
 
 #. i18n: ectx: tooltip, entry (ShowTimeInMonthView), group (Month View)
-#: eventviews.kcfg:289
+#: eventviews.kcfg:254
 #, kde-format
 msgid "Display time in month view items"
 msgstr "월간 보기 항목에 시간 표시"
 
 #. i18n: ectx: whatsthis, entry (ShowTodosMonthView), group (Month View)
-#: eventviews.kcfg:295 viewerapp/settings.kcfg:134
+#: eventviews.kcfg:259 viewerapp/settings.kcfg:117
 #, kde-format
 msgid "Check this box to display to-dos in the month view."
 msgstr "이 옵션을 사용하면 월간 보기에 할 일을 표시합니다."
 
 #. i18n: ectx: tooltip, entry (ShowTodosMonthView), group (Month View)
-#: eventviews.kcfg:296 viewerapp/settings.kcfg:135
+#: eventviews.kcfg:260 viewerapp/settings.kcfg:118
 #, kde-format
 msgid "Display to-dos in the month view"
 msgstr "월간 보기에 할 일 표시"
 
 #. i18n: ectx: label, entry (ShowJournalsMonthView), group (Month View)
-#: eventviews.kcfg:301 viewerapp/settings.kcfg:140
+#: eventviews.kcfg:264 viewerapp/settings.kcfg:122
 #, kde-format
 msgid "Show journals"
 msgstr "저널 표시"
 
 #. i18n: ectx: whatsthis, entry (ShowJournalsMonthView), group (Month View)
-#: eventviews.kcfg:302 viewerapp/settings.kcfg:141
+#: eventviews.kcfg:265 viewerapp/settings.kcfg:123
 #, kde-format
 msgid "Check this box to display journals in the month view."
 msgstr "이 옵션을 사용하면 월간 보기에 저널을 표시합니다."
 
 #. i18n: ectx: tooltip, entry (ShowJournalsMonthView), group (Month View)
-#: eventviews.kcfg:303 viewerapp/settings.kcfg:142
+#: eventviews.kcfg:266 viewerapp/settings.kcfg:124
 #, kde-format
 msgid "Display journals in the month view"
 msgstr "월간 보기에 저널 표시"
 
 #. i18n: ectx: label, entry, group (Month View)
-#: eventviews.kcfg:308 viewerapp/settings.kcfg:147
+#: eventviews.kcfg:270 viewerapp/settings.kcfg:128
 #, kde-format
 msgid "Month view uses full window"
 msgstr "전체 창으로 월간 보기"
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
-#: eventviews.kcfg:309 viewerapp/settings.kcfg:148
+#: eventviews.kcfg:271 viewerapp/settings.kcfg:129
 #, kde-format
 msgid ""
 "Check this box to use the full KOrganizer window when displaying the month "
@@ -1103,7 +1103,7 @@ msgstr ""
 "항목 정보, 캘린더 목록 등의 다른 항목을 숨깁니다."
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
-#: eventviews.kcfg:318
+#: eventviews.kcfg:279
 #, kde-format
 msgid ""
 "Select the \"Tag inside, calendar outside\" option if you would like to draw "
@@ -1116,7 +1116,7 @@ msgstr ""
 "상은 색과 글꼴 설정 페이지에서 설정하십시오."
 
 #. i18n: ectx: tooltip, entry, group (Month View)
-#: eventviews.kcfg:319
+#: eventviews.kcfg:280
 #, kde-format
 msgid ""
 "Draw month items in their tag color inside and calendar color for their "
@@ -1124,7 +1124,7 @@ msgid ""
 msgstr "월간 보기 항목 내부에 태그 색상, 테두리에 캘린더 색상 사용"
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
-#: eventviews.kcfg:323
+#: eventviews.kcfg:284
 #, kde-format
 msgid ""
 "Select the \"Calendar inside, tag outside\" option if you would like to draw "
@@ -1137,7 +1137,7 @@ msgstr ""
 "은 색과 글꼴 설정 페이지에서 설정하십시오."
 
 #. i18n: ectx: tooltip, entry, group (Month View)
-#: eventviews.kcfg:324
+#: eventviews.kcfg:285
 #, kde-format
 msgid ""
 "Draw month items in their calendar color inside and tag color for their "
@@ -1145,7 +1145,7 @@ msgid ""
 msgstr "월간 보기 항목 내부에 캘린더 색상, 테두리에 태그 색상 사용"
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
-#: eventviews.kcfg:328
+#: eventviews.kcfg:289
 #, kde-format
 msgid ""
 "Select the \"Only tag\" option if you would like to draw calendar items "
@@ -1156,13 +1156,13 @@ msgstr ""
 "다. 해당 색상은 색과 글꼴 설정 페이지에서 설정하십시오."
 
 #. i18n: ectx: tooltip, entry, group (Month View)
-#: eventviews.kcfg:329
+#: eventviews.kcfg:290
 #, kde-format
 msgid "Draw month items using their tag color for the inside and border"
 msgstr "월간 보기 항목 내부와 테두리에 태그 색상 사용"
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
-#: eventviews.kcfg:333 viewerapp/settings.kcfg:172
+#: eventviews.kcfg:294 viewerapp/settings.kcfg:152
 #, kde-format
 msgid ""
 "Select the \"Only calendar\" option if you would like to draw calendar items "
@@ -1173,13 +1173,13 @@ msgstr ""
 "니다. 해당 색상은 색과 글꼴 설정 페이지에서 설정하십시오."
 
 #. i18n: ectx: tooltip, entry, group (Month View)
-#: eventviews.kcfg:334 viewerapp/settings.kcfg:173
+#: eventviews.kcfg:295 viewerapp/settings.kcfg:153
 #, kde-format
 msgid "Draw month items using their calendar color for the inside and border"
 msgstr "월간 보기 항목 내부와 테두리에 캘린더 색상 사용"
 
 #. i18n: ectx: whatsthis, entry (ColorMonthBusyDaysEnabled), group (Month View)
-#: eventviews.kcfg:342
+#: eventviews.kcfg:302
 #, kde-format
 msgid ""
 "Check this box if you want month view's background to be filled with a "
@@ -1194,13 +1194,13 @@ msgstr ""
 "오."
 
 #. i18n: ectx: label, entry, group (Todo View)
-#: eventviews.kcfg:350 viewerapp/settings.kcfg:183
+#: eventviews.kcfg:309 viewerapp/settings.kcfg:162
 #, kde-format
 msgid "Always display completed to-dos at the bottom of the list"
 msgstr "완료한 할 일을 항상 목록 아래쪽에 표시"
 
 #. i18n: ectx: whatsthis, entry, group (Todo View)
-#: eventviews.kcfg:351 viewerapp/settings.kcfg:184
+#: eventviews.kcfg:310 viewerapp/settings.kcfg:163
 #, kde-format
 msgid ""
 "Check this box if you want all completed to-dos to be always grouped at the "
@@ -1210,13 +1210,13 @@ msgstr ""
 "다."
 
 #. i18n: ectx: label, entry, group (Todo View)
-#: eventviews.kcfg:356 viewerapp/settings.kcfg:189
+#: eventviews.kcfg:314 viewerapp/settings.kcfg:167
 #, kde-format
 msgid "To-do list view uses full window"
 msgstr "전체 창으로 할 일 보기"
 
 #. i18n: ectx: whatsthis, entry, group (Todo View)
-#: eventviews.kcfg:357 viewerapp/settings.kcfg:190
+#: eventviews.kcfg:315 viewerapp/settings.kcfg:168
 #, kde-format
 msgid ""
 "Check this box to use the full KOrganizer window when displaying the to-do "
@@ -1228,19 +1228,19 @@ msgstr ""
 "기, 할 일 정보, 캘린더 목록 등의 다른 항목을 숨깁니다."
 
 #. i18n: ectx: label, entry, group (Todo View)
-#: eventviews.kcfg:362
+#: eventviews.kcfg:319
 #, kde-format
 msgid "Display to-dos in a flat list"
 msgstr "할 일 목록을 단일 단계 목록으로 표시"
 
 #. i18n: ectx: tooltip, entry, group (Todo View)
-#: eventviews.kcfg:363
+#: eventviews.kcfg:320
 #, kde-format
 msgid "Display to-dos as a flat list instead of a hierarchical tree"
 msgstr "할 일 목록에 체계를 사용하지 않고 단일 단계로 표시"
 
 #. i18n: ectx: whatsthis, entry, group (Todo View)
-#: eventviews.kcfg:364
+#: eventviews.kcfg:321
 #, kde-format
 msgid ""
 "Check this box if you want to see all your to-dos in a flat list instead of "
@@ -1250,13 +1250,13 @@ msgstr ""
 "시합니다."
 
 #. i18n: ectx: label, entry, group (Todo View)
-#: eventviews.kcfg:369 viewerapp/settings.kcfg:195
+#: eventviews.kcfg:325 viewerapp/settings.kcfg:172
 #, kde-format
 msgid "Record completed to-dos in journal entries"
 msgstr "끝난 할 일을 저널 항목으로 기록"
 
 #. i18n: ectx: whatsthis, entry, group (Todo View)
-#: eventviews.kcfg:370 viewerapp/settings.kcfg:196
+#: eventviews.kcfg:326 viewerapp/settings.kcfg:173
 #, kde-format
 msgid ""
 "Check this box to record the completion of a to-do in a new entry of your "
@@ -1267,8 +1267,8 @@ msgstr ""
 #. i18n: ectx: label, entry, group (Colors)
 #. i18n: ectx: label, entry, group (Theming)
 #. i18n: ectx: label, entry, group (Theme/Month view)
-#: eventviews.kcfg:379 eventviews.kcfg:604 eventviews.kcfg:708
-#: viewerapp/settings.kcfg:204
+#: eventviews.kcfg:333 eventviews.kcfg:537 eventviews.kcfg:645
+#: viewerapp/settings.kcfg:180
 #, kde-format
 msgid "Holiday color"
 msgstr "공휴일 색"
@@ -1276,8 +1276,8 @@ msgstr "공휴일 색"
 #. i18n: ectx: whatsthis, entry, group (Colors)
 #. i18n: ectx: whatsthis, entry, group (Theming)
 #. i18n: ectx: whatsthis, entry, group (Theme/Month view)
-#: eventviews.kcfg:380 eventviews.kcfg:605 eventviews.kcfg:709
-#: viewerapp/settings.kcfg:205
+#: eventviews.kcfg:334 eventviews.kcfg:538 eventviews.kcfg:646
+#: viewerapp/settings.kcfg:181
 #, kde-format
 msgid ""
 "Select the holiday color here. The holiday color will be used for the "
@@ -1288,26 +1288,26 @@ msgstr ""
 
 #. i18n: ectx: label, entry (AgendaBgColor), group (Colors)
 #. i18n: ectx: label, entry, group (Theming)
-#: eventviews.kcfg:385 eventviews.kcfg:516 viewerapp/settings.kcfg:210
+#: eventviews.kcfg:338 eventviews.kcfg:451 viewerapp/settings.kcfg:185
 #, kde-format
 msgid "Agenda view background color"
 msgstr "일정 보기 배경색"
 
 #. i18n: ectx: whatsthis, entry (AgendaBgColor), group (Colors)
 #. i18n: ectx: whatsthis, entry, group (Theming)
-#: eventviews.kcfg:386 eventviews.kcfg:517 viewerapp/settings.kcfg:211
+#: eventviews.kcfg:339 eventviews.kcfg:452 viewerapp/settings.kcfg:186
 #, kde-format
 msgid "Select the agenda view background color here."
 msgstr "일정 보기에 사용할 배경색을 선택하십시오."
 
 #. i18n: ectx: label, entry (ViewBgBusyColor), group (Colors)
-#: eventviews.kcfg:391
+#: eventviews.kcfg:343
 #, kde-format
 msgid "Agenda/Month view background busy color"
 msgstr "일정/월간 보기 배경색 바쁨 색상"
 
 #. i18n: ectx: whatsthis, entry (ViewBgBusyColor), group (Colors)
-#: eventviews.kcfg:392
+#: eventviews.kcfg:344
 #, kde-format
 msgid ""
 "When you have an all day event marked as busy, you can have a different "
@@ -1317,19 +1317,19 @@ msgstr ""
 "색을 변경할 수 있습니다. 여기에서 색상을 선택하십시오."
 
 #. i18n: ectx: label, entry, group (Colors)
-#: eventviews.kcfg:397 viewerapp/settings.kcfg:216
+#: eventviews.kcfg:348 viewerapp/settings.kcfg:190
 #, kde-format
 msgid "Agenda view current-time line color"
 msgstr "일정 보기 현재 시간 표시선 색"
 
 #. i18n: ectx: whatsthis, entry, group (Colors)
-#: eventviews.kcfg:398 viewerapp/settings.kcfg:217
+#: eventviews.kcfg:349 viewerapp/settings.kcfg:191
 #, kde-format
 msgid "Select a color to use for the current-time (Marcus Bains) line."
 msgstr "현재 시간 표시선(Marcus Bains 선)에 사용할 색상을 선택하십시오."
 
 #. i18n: ectx: tooltip, entry, group (Colors)
-#: eventviews.kcfg:399 viewerapp/settings.kcfg:218
+#: eventviews.kcfg:350 viewerapp/settings.kcfg:192
 #, kde-format
 msgid "Use this color for the Agenda View current-time (Marcus Bains) line"
 msgstr "다음 색상을 일정 보기의 현재 시간 표시선에 사용"
@@ -1337,14 +1337,14 @@ msgstr "다음 색상을 일정 보기의 현재 시간 표시선에 사용"
 #. i18n: ectx: label, entry, group (Colors)
 #. i18n: ectx: label, entry, group (Theming)
 #. i18n: ectx: label, entry, group (Theme/Month view)
-#: eventviews.kcfg:404 eventviews.kcfg:528 eventviews.kcfg:628
-#: viewerapp/settings.kcfg:223
+#: eventviews.kcfg:354 eventviews.kcfg:463 eventviews.kcfg:560
+#: viewerapp/settings.kcfg:197
 #, kde-format
 msgid "Working hours color"
 msgstr "업무 시간 색"
 
 #. i18n: ectx: whatsthis, entry, group (Colors)
-#: eventviews.kcfg:405 viewerapp/settings.kcfg:224
+#: eventviews.kcfg:355 viewerapp/settings.kcfg:198
 #, kde-format
 msgid "Select the working hours color for the agenda view here."
 msgstr "일정 보기에 사용할 업무 시간 색상을 선택하십시오."
@@ -1352,8 +1352,8 @@ msgstr "일정 보기에 사용할 업무 시간 색상을 선택하십시오."
 #. i18n: ectx: label, entry (TodoDueTodayColor), group (Colors)
 #. i18n: ectx: label, entry, group (Theming)
 #. i18n: ectx: label, entry, group (Theme/Month view)
-#: eventviews.kcfg:410 eventviews.kcfg:575 eventviews.kcfg:679
-#: viewerapp/settings.kcfg:229
+#: eventviews.kcfg:359 eventviews.kcfg:510 eventviews.kcfg:618
+#: viewerapp/settings.kcfg:202
 #, kde-format
 msgid "To-do due today color"
 msgstr "오늘까지 해야 할 일 색"
@@ -1361,8 +1361,8 @@ msgstr "오늘까지 해야 할 일 색"
 #. i18n: ectx: whatsthis, entry (TodoDueTodayColor), group (Colors)
 #. i18n: ectx: whatsthis, entry, group (Theming)
 #. i18n: ectx: whatsthis, entry, group (Theme/Month view)
-#: eventviews.kcfg:411 eventviews.kcfg:576 eventviews.kcfg:680
-#: viewerapp/settings.kcfg:230
+#: eventviews.kcfg:360 eventviews.kcfg:511 eventviews.kcfg:619
+#: viewerapp/settings.kcfg:203
 #, kde-format
 msgid "Select the to-do due today color here."
 msgstr "오늘까지 끝내야 할 일의 색상을 선택하십시오."
@@ -1370,8 +1370,8 @@ msgstr "오늘까지 끝내야 할 일의 색상을 선택하십시오."
 #. i18n: ectx: label, entry (TodoOverdueColor), group (Colors)
 #. i18n: ectx: label, entry, group (Theming)
 #. i18n: ectx: label, entry, group (Theme/Month view)
-#: eventviews.kcfg:416 eventviews.kcfg:589 eventviews.kcfg:693
-#: viewerapp/settings.kcfg:235
+#: eventviews.kcfg:364 eventviews.kcfg:523 eventviews.kcfg:631
+#: viewerapp/settings.kcfg:207
 #, kde-format
 msgid "To-do overdue color"
 msgstr "기한이 지난 할 일 색"
@@ -1379,20 +1379,20 @@ msgstr "기한이 지난 할 일 색"
 #. i18n: ectx: whatsthis, entry (TodoOverdueColor), group (Colors)
 #. i18n: ectx: whatsthis, entry, group (Theming)
 #. i18n: ectx: whatsthis, entry, group (Theme/Month view)
-#: eventviews.kcfg:417 eventviews.kcfg:590 eventviews.kcfg:694
-#: viewerapp/settings.kcfg:236
+#: eventviews.kcfg:365 eventviews.kcfg:524 eventviews.kcfg:632
+#: viewerapp/settings.kcfg:208
 #, kde-format
 msgid "Select the to-do overdue color here."
 msgstr "기한이 지난 할 일의 색상을 선택하십시오."
 
 #. i18n: ectx: label, entry, group (Fonts)
-#: eventviews.kcfg:425 viewerapp/settings.kcfg:251
+#: eventviews.kcfg:372 viewerapp/settings.kcfg:221
 #, kde-format
 msgid "Time bar"
 msgstr "시간 표시선"
 
 #. i18n: ectx: whatsthis, entry, group (Fonts)
-#: eventviews.kcfg:426 viewerapp/settings.kcfg:252
+#: eventviews.kcfg:373 viewerapp/settings.kcfg:222
 #, kde-format
 msgid ""
 "Press this button to configure the time bar font. The time bar is the widget "
@@ -1404,13 +1404,13 @@ msgstr ""
 "간 표시선의 시간 글꼴을 결정할 수 있습니다."
 
 #. i18n: ectx: label, entry, group (Fonts)
-#: eventviews.kcfg:430 viewerapp/settings.kcfg:256
+#: eventviews.kcfg:376 viewerapp/settings.kcfg:225
 #, kde-format
 msgid "Month view"
 msgstr "월간 보기"
 
 #. i18n: ectx: whatsthis, entry, group (Fonts)
-#: eventviews.kcfg:431 viewerapp/settings.kcfg:257
+#: eventviews.kcfg:377 viewerapp/settings.kcfg:226
 #, kde-format
 msgid ""
 "Press this button to configure the month view font. This button will open "
@@ -1421,13 +1421,13 @@ msgstr ""
 "를 표시해서 월간 보기 항목 글꼴을 결정할 수 있습니다."
 
 #. i18n: ectx: label, entry, group (Fonts)
-#: eventviews.kcfg:435 viewerapp/settings.kcfg:261
+#: eventviews.kcfg:380 viewerapp/settings.kcfg:229
 #, kde-format
 msgid "Agenda view"
 msgstr "일정 보기"
 
 #. i18n: ectx: whatsthis, entry, group (Fonts)
-#: eventviews.kcfg:436 viewerapp/settings.kcfg:262
+#: eventviews.kcfg:381 viewerapp/settings.kcfg:230
 #, kde-format
 msgid ""
 "Press this button to configure the agenda view font. This button will open "
@@ -1438,13 +1438,13 @@ msgstr ""
 "를 표시해서 일정 보기 항목 글꼴을 결정할 수 있습니다."
 
 #. i18n: ectx: label, entry, group (Fonts)
-#: eventviews.kcfg:440 viewerapp/settings.kcfg:266
+#: eventviews.kcfg:384 viewerapp/settings.kcfg:233
 #, kde-format
 msgid "Current-time line"
 msgstr "현재 시간 표시선"
 
 #. i18n: ectx: whatsthis, entry, group (Fonts)
-#: eventviews.kcfg:441 viewerapp/settings.kcfg:267
+#: eventviews.kcfg:385 viewerapp/settings.kcfg:234
 #, kde-format
 msgid ""
 "Press this button to configure the current-time line font. This button will "
@@ -1455,26 +1455,26 @@ msgstr ""
 "화 상자를 표시해서 일정 보기 현재 시간 표시선 글꼴을 결정할 수 있습니다."
 
 #. i18n: ectx: label, entry (DefaultTodoAttachMethod), group (Hidden Options)
-#: eventviews.kcfg:465
+#: eventviews.kcfg:404
 #, kde-format
 msgid "Default todo attachment method"
 msgstr "기본 할 일 첨부 방식"
 
 #. i18n: ectx: whatsthis, entry (DefaultTodoAttachMethod), group (Hidden Options)
-#: eventviews.kcfg:466
+#: eventviews.kcfg:405
 #, kde-format
 msgid "The default way of attaching dropped emails to a task"
 msgstr "할 일에 끌어다 놓은 메일을 첨부할 기본 방식"
 
 #. i18n: ectx: label, entry, group (Theming)
 #. i18n: ectx: label, entry, group (Theme/Month view)
-#: eventviews.kcfg:523 eventviews.kcfg:623
+#: eventviews.kcfg:458 eventviews.kcfg:555
 #, kde-format
 msgid "Highlight color"
 msgstr "강조 색상"
 
 #. i18n: ectx: whatsthis, entry, group (Theming)
-#: eventviews.kcfg:524
+#: eventviews.kcfg:459
 #, kde-format
 msgid ""
 "Select the highlight color here. The highlight color will be used for "
@@ -1484,25 +1484,25 @@ msgstr ""
 "는 데 사용할 강조 색상입니다."
 
 #. i18n: ectx: whatsthis, entry, group (Theming)
-#: eventviews.kcfg:529
+#: eventviews.kcfg:464
 #, kde-format
 msgid "Select the working hours background color for the agenda view here."
 msgstr "일정 보기에 사용할 업무 시간 배경색을 선택하십시오."
 
 #. i18n: ectx: label, entry, group (Theme/Month view)
-#: eventviews.kcfg:616
+#: eventviews.kcfg:548
 #, kde-format
 msgid "Month view background color"
 msgstr "월간 보기 배경색"
 
 #. i18n: ectx: whatsthis, entry, group (Theme/Month view)
-#: eventviews.kcfg:617
+#: eventviews.kcfg:549
 #, kde-format
 msgid "Select the Month view background color here."
 msgstr "월간 보기 배경색을 선택하십시오."
 
 #. i18n: ectx: whatsthis, entry, group (Theme/Month view)
-#: eventviews.kcfg:624
+#: eventviews.kcfg:556
 #, kde-format
 msgid ""
 "Select the highlight color here. The highlight color will be used for "
@@ -1512,19 +1512,39 @@ msgstr ""
 "는 데 사용할 강조 색상입니다."
 
 #. i18n: ectx: whatsthis, entry, group (Theme/Month view)
-#: eventviews.kcfg:629
+#: eventviews.kcfg:561
 #, kde-format
 msgid "Select the working hours background color for the Month view here."
 msgstr "월간 보기에 사용할 업무 시간 배경색을 선택하십시오."
 
+#. i18n: ectx: label, entry (MonthTodayColor), group (Theme/Month view)
+#: eventviews.kcfg:565
+#, fuzzy, kde-format
+#| msgid "Month view background color"
+msgid "Month view today background color"
+msgstr "월간 보기 배경색"
+
+#. i18n: ectx: tooltip, entry (MonthTodayColor), group (Theme/Month view)
+#: eventviews.kcfg:566
+#, fuzzy, kde-format
+#| msgid "Select the working hours background color for the Month view here."
+msgid "Set the background color for today's date in month view"
+msgstr "월간 보기에 사용할 업무 시간 배경색을 선택하십시오."
+
+#. i18n: ectx: whatsthis, entry (MonthTodayColor), group (Theme/Month view)
+#: eventviews.kcfg:567
+#, kde-format
+msgid "In Month View, select the background color for today's date."
+msgstr ""
+
 #. i18n: ectx: label, entry, group (Theme/Month view)
-#: eventviews.kcfg:651
+#: eventviews.kcfg:589
 #, kde-format
 msgid "Default event color"
 msgstr "기본 이벤트 색"
 
 #. i18n: ectx: whatsthis, entry, group (Theme/Month view)
-#: eventviews.kcfg:652
+#: eventviews.kcfg:590
 #, kde-format
 msgid ""
 "Select the default event color here. The default event color will be used "
@@ -1535,13 +1555,13 @@ msgstr ""
 "니다. 각각 이벤트 태그별로도 색상을 선택할 수 있습니다."
 
 #. i18n: ectx: label, entry, group (Theme/Month view)
-#: eventviews.kcfg:717
+#: eventviews.kcfg:653
 #, kde-format
 msgid "Use system color"
 msgstr "시스템 색 사용"
 
 #. i18n: ectx: whatsthis, entry, group (Theme/Month view)
-#: eventviews.kcfg:718
+#: eventviews.kcfg:654
 #, kde-format
 msgid "Use system color. If enabled will ignore all other color settings"
 msgstr "시스템 색상을 사용합니다. 활성화되면 다른 모든 색 설정을 무시합니다"
@@ -1675,7 +1695,7 @@ msgctxt "monthname year"
 msgid "%1 %2"
 msgstr "%2년 %1"
 
-#: month/monthscene.cpp:328
+#: month/monthscene.cpp:333
 #, kde-format
 msgctxt "'Month day' for month view cells"
 msgid "%1 %2"
@@ -2258,13 +2278,13 @@ msgstr "타임라인"
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
-#: viewerapp/settings.kcfg:71 viewerapp/settings.kcfg:156
+#: viewerapp/settings.kcfg:58 viewerapp/settings.kcfg:136
 #, kde-format
 msgid "Category inside, calendar outside"
 msgstr "분류 내부, 캘린더 외부"
 
 #. i18n: ectx: whatsthis, entry, group (Agenda View)
-#: viewerapp/settings.kcfg:72
+#: viewerapp/settings.kcfg:59
 #, kde-format
 msgid ""
 "Select the \"Category inside, calendar outside\" option if you would like to "
@@ -2277,7 +2297,7 @@ msgstr ""
 "서 설정하십시오."
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
-#: viewerapp/settings.kcfg:73
+#: viewerapp/settings.kcfg:60
 #, kde-format
 msgid ""
 "Draw agenda items in their category color inside and calendar color for "
@@ -2286,13 +2306,13 @@ msgstr "일정 항목 내부에 분류 색상, 테두리에 캘린더 색상 사
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
-#: viewerapp/settings.kcfg:76 viewerapp/settings.kcfg:161
+#: viewerapp/settings.kcfg:63 viewerapp/settings.kcfg:141
 #, kde-format
 msgid "Calendar inside, category outside"
 msgstr "캘린더 내부, 분류 외부"
 
 #. i18n: ectx: whatsthis, entry, group (Agenda View)
-#: viewerapp/settings.kcfg:77
+#: viewerapp/settings.kcfg:64
 #, kde-format
 msgid ""
 "Select the \"Calendar inside, category outside\" option if you would like to "
@@ -2305,7 +2325,7 @@ msgstr ""
 "서 설정하십시오."
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
-#: viewerapp/settings.kcfg:78
+#: viewerapp/settings.kcfg:65
 #, kde-format
 msgid ""
 "Draw agenda items in their calendar color inside and category color for "
@@ -2314,13 +2334,13 @@ msgstr "일정 항목 내부에 캘린더 색상, 테두리에 분류 색상 사
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
-#: viewerapp/settings.kcfg:81 viewerapp/settings.kcfg:166
+#: viewerapp/settings.kcfg:68 viewerapp/settings.kcfg:146
 #, kde-format
 msgid "Only category"
 msgstr "분류만"
 
 #. i18n: ectx: whatsthis, entry, group (Agenda View)
-#: viewerapp/settings.kcfg:82
+#: viewerapp/settings.kcfg:69
 #, kde-format
 msgid ""
 "Select the \"Only category\" option if you would like to draw calendar items "
@@ -2331,13 +2351,13 @@ msgstr ""
 "다. 해당 색상은 색과 글꼴 설정 페이지에서 설정하십시오."
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
-#: viewerapp/settings.kcfg:83
+#: viewerapp/settings.kcfg:70
 #, kde-format
 msgid "Draw agenda items using their category color for the inside and border"
 msgstr "일정 항목 내부와 테두리에 분류 색상 사용"
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
-#: viewerapp/settings.kcfg:157
+#: viewerapp/settings.kcfg:137
 #, kde-format
 msgid ""
 "Select the \"Category inside, calendar outside\" option if you would like to "
@@ -2350,7 +2370,7 @@ msgstr ""
 "서 설정하십시오."
 
 #. i18n: ectx: tooltip, entry, group (Month View)
-#: viewerapp/settings.kcfg:158
+#: viewerapp/settings.kcfg:138
 #, kde-format
 msgid ""
 "Draw month items in their category color inside and calendar color for their "
@@ -2358,7 +2378,7 @@ msgid ""
 msgstr "월간 보기 항목 내부에 분류 색상, 테두리에 캘린더 색상 사용"
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
-#: viewerapp/settings.kcfg:162
+#: viewerapp/settings.kcfg:142
 #, kde-format
 msgid ""
 "Select the \"Calendar inside, category outside\" option if you would like to "
@@ -2371,7 +2391,7 @@ msgstr ""
 "서 설정하십시오."
 
 #. i18n: ectx: tooltip, entry, group (Month View)
-#: viewerapp/settings.kcfg:163
+#: viewerapp/settings.kcfg:143
 #, kde-format
 msgid ""
 "Draw month items in their calendar color inside and category color for their "
@@ -2379,7 +2399,7 @@ msgid ""
 msgstr "월간 보기 항목 내부에 캘린더 색상, 테두리에 분류 색상 사용"
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
-#: viewerapp/settings.kcfg:167
+#: viewerapp/settings.kcfg:147
 #, kde-format
 msgid ""
 "Select the \"Only category\" option if you would like to draw calendar items "
@@ -2390,19 +2410,19 @@ msgstr ""
 "니다. 이 색상은 색과 글꼴 설정 페이지에서 설정하십시오."
 
 #. i18n: ectx: tooltip, entry, group (Month View)
-#: viewerapp/settings.kcfg:168
+#: viewerapp/settings.kcfg:148
 #, kde-format
 msgid "Draw month items using their category color for the inside and border"
 msgstr "월간 보기 항목 내부 및 경계선에 분류 색 사용"
 
 #. i18n: ectx: label, entry, group (Colors)
-#: viewerapp/settings.kcfg:241
+#: viewerapp/settings.kcfg:212
 #, kde-format
 msgid "\"No category\" color (for \"Only category\" drawing schemes)"
 msgstr "\"분류 없음\" 색상(\"분류만\" 표시 모드)"
 
 #. i18n: ectx: whatsthis, entry, group (Colors)
-#: viewerapp/settings.kcfg:242
+#: viewerapp/settings.kcfg:213
 #, kde-format
 msgid ""
 "Select a color to use for the \"no category\" or \"unset category\" "
@@ -2414,19 +2434,19 @@ msgstr ""
 "요약 및 월간 보기에서 \"다음 분류만\" 보기를 사용할 때 이 색상을 사용합니다."
 
 #. i18n: ectx: tooltip, entry, group (Colors)
-#: viewerapp/settings.kcfg:243
+#: viewerapp/settings.kcfg:214
 #, kde-format
 msgid "Use this color when drawing items without a category"
 msgstr "분류가 없는 항목을 표시할 때 다음 색상 사용"
 
 #. i18n: ectx: label, entry, group (Group Scheduling)
-#: viewerapp/settings.kcfg:274
+#: viewerapp/settings.kcfg:240
 #, kde-format
 msgid "Use Groupware communication"
 msgstr "그룹웨어 통신 사용"
 
 #. i18n: ectx: whatsthis, entry, group (Group Scheduling)
-#: viewerapp/settings.kcfg:275
+#: viewerapp/settings.kcfg:241
 #, kde-format
 msgid ""
 "Check this box to enable automatic generation of mails when creating, "
