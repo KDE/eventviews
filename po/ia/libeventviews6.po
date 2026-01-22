@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-21 00:45+0000\n"
-"PO-Revision-Date: 2026-01-14 11:11+0100\n"
+"PO-Revision-Date: 2026-01-21 12:40+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -1631,23 +1631,21 @@ msgstr "Selige ci le color de fundo de horas de labor pro le vista de mense."
 
 #. i18n: ectx: label, entry (MonthTodayColor), group (Theme/Month view)
 #: eventviews.kcfg:565
-#, fuzzy, kde-format
-#| msgid "Month view background color"
+#, kde-format
 msgid "Month view today background color"
-msgstr "Color de fundo de vista de mense"
+msgstr "Color de fundo de hodie de vista de mense"
 
 #. i18n: ectx: tooltip, entry (MonthTodayColor), group (Theme/Month view)
 #: eventviews.kcfg:566
-#, fuzzy, kde-format
-#| msgid "Select the working hours background color for the Month view here."
+#, kde-format
 msgid "Set the background color for today's date in month view"
-msgstr "Selige ci le color de fundo de horas de labor pro le vista de mense."
+msgstr "Assigna le color de fundo per le data de hodie in le vista de mense"
 
 #. i18n: ectx: whatsthis, entry (MonthTodayColor), group (Theme/Month view)
 #: eventviews.kcfg:567
 #, kde-format
 msgid "In Month View, select the background color for today's date."
-msgstr ""
+msgstr "In vista de mense, selige le color de fundo per data de hodie."
 
 #. i18n: ectx: label, entry, group (Theme/Month view)
 #: eventviews.kcfg:589

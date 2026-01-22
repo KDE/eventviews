@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-21 00:45+0000\n"
-"PO-Revision-Date: 2025-09-09 07:38+0200\n"
+"PO-Revision-Date: 2026-01-21 06:51+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.7\n"
+"X-Generator: Poedit 3.8\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -1601,23 +1601,21 @@ msgstr "Tu izberite barvo ozadja delovnih ur za mesečni prikaz."
 
 #. i18n: ectx: label, entry (MonthTodayColor), group (Theme/Month view)
 #: eventviews.kcfg:565
-#, fuzzy, kde-format
-#| msgid "Month view background color"
+#, kde-format
 msgid "Month view today background color"
-msgstr "Barva ozadja mesečnega prikaza"
+msgstr "Barva ozadja za današnji mesečni pogled"
 
 #. i18n: ectx: tooltip, entry (MonthTodayColor), group (Theme/Month view)
 #: eventviews.kcfg:566
-#, fuzzy, kde-format
-#| msgid "Select the working hours background color for the Month view here."
+#, kde-format
 msgid "Set the background color for today's date in month view"
-msgstr "Tu izberite barvo ozadja delovnih ur za mesečni prikaz."
+msgstr "Nastavi barve ozadja za današnji datum v mesečnem pogledu"
 
 #. i18n: ectx: whatsthis, entry (MonthTodayColor), group (Theme/Month view)
 #: eventviews.kcfg:567
 #, kde-format
 msgid "In Month View, select the background color for today's date."
-msgstr ""
+msgstr "V mesečnem pogledu izberi barvo ozadja za današnji datum."
 
 #. i18n: ectx: label, entry, group (Theme/Month view)
 #: eventviews.kcfg:589

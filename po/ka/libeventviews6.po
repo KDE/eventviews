@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-21 00:45+0000\n"
-"PO-Revision-Date: 2025-09-09 04:53+0200\n"
+"PO-Revision-Date: 2026-01-21 04:39+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.7\n"
+"X-Generator: Poedit 3.8\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -1592,23 +1592,21 @@ msgstr "აქ შეგიძლიათ თვის ხედისთვი
 
 #. i18n: ectx: label, entry (MonthTodayColor), group (Theme/Month view)
 #: eventviews.kcfg:565
-#, fuzzy, kde-format
-#| msgid "Month view background color"
+#, kde-format
 msgid "Month view today background color"
-msgstr "თვის ხედის ფონის ფერი"
+msgstr "დღევანდელის ფონის ფერი თვის ხედში"
 
 #. i18n: ectx: tooltip, entry (MonthTodayColor), group (Theme/Month view)
 #: eventviews.kcfg:566
-#, fuzzy, kde-format
-#| msgid "Select the working hours background color for the Month view here."
+#, kde-format
 msgid "Set the background color for today's date in month view"
-msgstr "აქ შეგიძლიათ თვის ხედისთვის სამუშაო საათების ფონის ფერი აირჩიოთ."
+msgstr "ფონის ფერის დაყენება დღევანდელი თარიღისთვის თვის ხედში"
 
 #. i18n: ectx: whatsthis, entry (MonthTodayColor), group (Theme/Month view)
 #: eventviews.kcfg:567
 #, kde-format
 msgid "In Month View, select the background color for today's date."
-msgstr ""
+msgstr "თვის ხედში აირჩიეთ ფონის ფერი დღევანდელი თარიღისთვის."
 
 #. i18n: ectx: label, entry, group (Theme/Month view)
 #: eventviews.kcfg:589
