@@ -1480,17 +1480,15 @@ msgstr "在此选择月视图的工作时间背景色。"
 
 #. i18n: ectx: label, entry (MonthTodayColor), group (Theme/Month view)
 #: eventviews.kcfg:565
-#, fuzzy, kde-format
-#| msgid "Month view background color"
+#, kde-format
 msgid "Month view today background color"
-msgstr "月视图背景色"
+msgstr ""
 
 #. i18n: ectx: tooltip, entry (MonthTodayColor), group (Theme/Month view)
 #: eventviews.kcfg:566
-#, fuzzy, kde-format
-#| msgid "Select the working hours background color for the Month view here."
+#, kde-format
 msgid "Set the background color for today's date in month view"
-msgstr "在此选择月视图的工作时间背景色。"
+msgstr ""
 
 #. i18n: ectx: whatsthis, entry (MonthTodayColor), group (Theme/Month view)
 #: eventviews.kcfg:567
