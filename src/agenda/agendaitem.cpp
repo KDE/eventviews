@@ -903,7 +903,9 @@ void AgendaItem::paintEvent(QPaintEvent *ev)
         }
 
         const int y = ((height() - singleLineHeight) / 2) + fm.ascent();
-        KWordWrap::drawFadeoutText(&p, x, y, txtWidth, mLabelText);
+        // show "start: summary"
+        const auto startTime = QLocale().toString(mIncidence->dateTime(KCalendarCore::Incidence::RoleDisplayStart).toLocalTime().time(), QLocale::ShortFormat);
+        KWordWrap::drawFadeoutText(&p, x, y, txtWidth, i18n("%1: %2", startTime, mLabelText));
         return;
     }
 
@@ -923,8 +925,9 @@ void AgendaItem::paintEvent(QPaintEvent *ev)
             txtWidth = width() - margin - x;
         }
 
-        ww = KWordWrap::formatText(fm, QRect(0, 0, txtWidth, (height() - (2 * margin))), 0, mLabelText);
-
+        // show "start: summary"
+        const auto startTime = QLocale().toString(mIncidence->dateTime(KCalendarCore::Incidence::RoleDisplayStart).toLocalTime().time(), QLocale::ShortFormat);
+        ww = KWordWrap::formatText(fm, QRect(0, 0, txtWidth, (height() - (2 * margin))), 0, i18n("%1: %2", startTime, mLabelText));
         ww.drawText(&p, x, margin, Qt::AlignHCenter | KWordWrap::FadeOut);
         return;
     }
