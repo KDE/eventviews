@@ -63,6 +63,10 @@ private:
 class AgendaViewPrivate;
 
 /*!
+  \class EventViews::AgendaView
+  \inmodule EventViews
+  \inheaderfile EventViews/AgendaView
+
   AgendaView is the agenda-like view that displays events in a single
   or multi-day view.
 */
