@@ -903,9 +903,10 @@ void AgendaItem::paintEvent(QPaintEvent *ev)
         }
 
         const int y = ((height() - singleLineHeight) / 2) + fm.ascent();
-        // show "start: summary"
+        // show "summary: start - end"
         const auto startTime = QLocale().toString(mIncidence->dateTime(KCalendarCore::Incidence::RoleDisplayStart).toLocalTime().time(), QLocale::ShortFormat);
-        KWordWrap::drawFadeoutText(&p, x, y, txtWidth, i18n("%1: %2", startTime, mLabelText));
+        const auto endTime = QLocale().toString(mIncidence->dateTime(KCalendarCore::Incidence::RoleDisplayEnd).toLocalTime().time(), QLocale::ShortFormat);
+        KWordWrap::drawFadeoutText(&p, x, y, txtWidth, i18n("%1: %2 - %3", mLabelText, startTime, endTime));
         return;
     }
 
@@ -925,9 +926,10 @@ void AgendaItem::paintEvent(QPaintEvent *ev)
             txtWidth = width() - margin - x;
         }
 
-        // show "start: summary"
+        // show "summary: start"
         const auto startTime = QLocale().toString(mIncidence->dateTime(KCalendarCore::Incidence::RoleDisplayStart).toLocalTime().time(), QLocale::ShortFormat);
-        ww = KWordWrap::formatText(fm, QRect(0, 0, txtWidth, (height() - (2 * margin))), 0, i18n("%1: %2", startTime, mLabelText));
+        const auto endTime = QLocale().toString(mIncidence->dateTime(KCalendarCore::Incidence::RoleDisplayEnd).toLocalTime().time(), QLocale::ShortFormat);
+        ww = KWordWrap::formatText(fm, QRect(0, 0, txtWidth, (height() - (2 * margin))), 0, i18n("%1: %2 - %3", mLabelText, startTime, endTime));
         ww.drawText(&p, x, margin, Qt::AlignHCenter | KWordWrap::FadeOut);
         return;
     }
