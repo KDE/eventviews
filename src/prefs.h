@@ -155,6 +155,13 @@ public:
 
     /*!
      */
+    void setEnableAgendaItemDesc(bool enable);
+    /*!
+     */
+    [[nodiscard]] bool enableAgendaItemDesc() const;
+
+    /*!
+     */
     void setTodosUseCategoryColors(bool useColors);
     /*!
      */

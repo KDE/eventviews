@@ -1036,8 +1036,23 @@ void AgendaItem::paintEvent(QPaintEvent *ev)
     p.setPen(EventViews::getTextColor(frameColor));
     KWordWrap::drawFadeoutText(&p, x, (margin + hlHeight + fm.ascent()) / 2 - 2, hTxtWidth, headline);
 
-    // draw event text
-    ww = KWordWrap::formatText(fm, QRect(0, 0, txtWidth, height() - margin - y), 0, mLabelText);
+    // draw event text, possibly with the incidence description
+    auto fullText = mLabelText;
+    const QStringList descBlackList = {i18n("Google Calendar Settings"), i18n("Public Holiday")};
+    if (mEventView->preferences()->enableAgendaItemDesc()) {
+        const auto incidenceDesc = mIncidence->description();
+        bool found = false;
+        for (const QString &desc : descBlackList) {
+            if (incidenceDesc.contains(desc, Qt::CaseInsensitive)) {
+                found = true;
+                break; // Stop once we find a match
+            }
+        }
+        if (!found) {
+            fullText = i18n("%1: %2", mLabelText, incidenceDesc);
+        }
+    }
+    ww = KWordWrap::formatText(fm, QRect(0, 0, txtWidth, height() - margin - y), 0, fullText);
 
     p.setBackground(QBrush(bgColor));
     p.setPen(textColor);
