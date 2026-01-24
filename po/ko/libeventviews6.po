@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-21 00:45+0000\n"
+"POT-Creation-Date: 2026-01-24 00:43+0000\n"
 "PO-Revision-Date: 2025-06-11 00:09+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -75,7 +75,7 @@ msgctxt "@title:window"
 msgid "Attendee added"
 msgstr "참석자 추가됨"
 
-#: agenda/agendaitem.cpp:856 agenda/agendaitem.cpp:951
+#: agenda/agendaitem.cpp:856 agenda/agendaitem.cpp:956
 #, kde-format
 msgid "%1 - %2"
 msgstr "%1 - %2"
@@ -84,6 +84,13 @@ msgstr "%1 - %2"
 #, kde-format
 msgid "- %1"
 msgstr "- %1"
+
+#: agenda/agendaitem.cpp:909 agenda/agendaitem.cpp:932
+#, fuzzy, kde-format
+#| msgctxt "date, from - to"
+#| msgid "%1, %2 - %3"
+msgid "%1: %2 - %3"
+msgstr "%1, %2 - %3"
 
 #: agenda/agendaview.cpp:421
 #, kde-format

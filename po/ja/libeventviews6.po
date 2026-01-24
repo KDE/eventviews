@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-21 00:45+0000\n"
+"POT-Creation-Date: 2026-01-24 00:43+0000\n"
 "PO-Revision-Date: 2010-05-08 12:40-0700\n"
 "Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -72,7 +72,7 @@ msgctxt "@title:window"
 msgid "Attendee added"
 msgstr ""
 
-#: agenda/agendaitem.cpp:856 agenda/agendaitem.cpp:951
+#: agenda/agendaitem.cpp:856 agenda/agendaitem.cpp:956
 #, kde-format
 msgid "%1 - %2"
 msgstr ""
@@ -80,6 +80,11 @@ msgstr ""
 #: agenda/agendaitem.cpp:865
 #, kde-format
 msgid "- %1"
+msgstr ""
+
+#: agenda/agendaitem.cpp:909 agenda/agendaitem.cpp:932
+#, kde-format
+msgid "%1: %2 - %3"
 msgstr ""
 
 #: agenda/agendaview.cpp:421
