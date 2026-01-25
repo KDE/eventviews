@@ -147,7 +147,10 @@ void JournalView::showIncidences(const Akonadi::Item::List &incidences, const QD
     clearEntries();
     for (const Akonadi::Item &i : incidences) {
         if (const KCalendarCore::Journal::Ptr j = Akonadi::CalendarUtils::journal(i)) {
-            appendJournal(i, calendar3(j), j->dtStart().date());
+            const auto journalCalendar = calendar3(j);
+            if (journalCalendar) {
+                appendJournal(i, journalCalendar, j->dtStart().date());
+            }
         }
     }
 }
@@ -156,9 +159,12 @@ void JournalView::changeIncidenceDisplay(const Akonadi::Item &incidence, Akonadi
 {
     if (KCalendarCore::Journal::Ptr const journal = Akonadi::CalendarUtils::journal(incidence)) {
         switch (changeType) {
-        case Akonadi::IncidenceChanger::ChangeTypeCreate:
-            appendJournal(incidence, calendar3(incidence), journal->dtStart().date());
-            break;
+        case Akonadi::IncidenceChanger::ChangeTypeCreate: {
+            const auto journalCalendar = calendar3(incidence);
+            if (journalCalendar) {
+                appendJournal(incidence, journalCalendar, journal->dtStart().date());
+            }
+        } break;
         case Akonadi::IncidenceChanger::ChangeTypeModify:
             Q_EMIT journalEdited(incidence);
             break;

@@ -1441,7 +1441,9 @@ void AgendaView::slotShowIncidencePopup(const KCalendarCore::Incidence::Ptr &inc
     // qDebug() << "wanna see the popup for " << incidence->uid() << item.id();
     if (item.isValid()) {
         const auto calendar = calendar3(item);
-        Q_EMIT showIncidencePopupSignal(calendar, item, date);
+        if (calendar) {
+            Q_EMIT showIncidencePopupSignal(calendar, item, date);
+        }
     }
 }
 
