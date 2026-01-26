@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-25 00:45+0000\n"
+"POT-Creation-Date: 2026-01-26 00:43+0000\n"
 "PO-Revision-Date: 2011-12-28 12:28-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -107,7 +107,7 @@ msgstr ""
 msgid "Public Holiday"
 msgstr ""
 
-#: agenda/agendaitem.cpp:1052
+#: agenda/agendaitem.cpp:1053
 #, fuzzy, kde-format
 #| msgid "%1 - %2"
 msgid "%1: %2"
@@ -717,7 +717,7 @@ msgstr ""
 #. i18n: ectx: tooltip, entry (EnableAgendaItemDesc), group (Agenda View)
 #: eventviews.kcfg:164
 #, kde-format
-msgid "Display inicidence descriptions agenda view items"
+msgid "Display incidence descriptions agenda view items"
 msgstr ""
 
 #. i18n: ectx: label, entry (ShowTodosAgendaView), group (Agenda View)

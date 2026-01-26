@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-25 00:45+0000\n"
-"PO-Revision-Date: 2026-01-24 05:38+0200\n"
+"POT-Creation-Date: 2026-01-26 00:43+0000\n"
+"PO-Revision-Date: 2026-01-25 08:07+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -101,18 +101,17 @@ msgstr "%1: %2 – %3"
 #: agenda/agendaitem.cpp:1041
 #, kde-format
 msgid "Google Calendar Settings"
-msgstr ""
+msgstr "Параметри Календаря Google"
 
 #: agenda/agendaitem.cpp:1041
 #, kde-format
 msgid "Public Holiday"
-msgstr ""
+msgstr "Громадське свято"
 
-#: agenda/agendaitem.cpp:1052
-#, fuzzy, kde-format
-#| msgid "%1: %2 - %3"
+#: agenda/agendaitem.cpp:1053
+#, kde-format
 msgid "%1: %2"
-msgstr "%1: %2 – %3"
+msgstr "%1: %2"
 
 #: agenda/agendaview.cpp:421
 #, kde-format
@@ -785,29 +784,25 @@ msgstr "Показувати піктограми для пунктів пере
 
 #. i18n: ectx: label, entry (EnableAgendaItemDesc), group (Agenda View)
 #: eventviews.kcfg:162
-#, fuzzy, kde-format
-#| msgid "Show icons in agenda view items"
+#, kde-format
 msgid "Show incidence descriptions in agenda view items"
-msgstr "Показувати піктограми у перегляді пунктів порядку денного"
+msgstr "Показувати описи зустрічей для пунктів перегляду порядку денного"
 
 #. i18n: ectx: whatsthis, entry (EnableAgendaItemDesc), group (Agenda View)
 #: eventviews.kcfg:163
-#, fuzzy, kde-format
-#| msgid ""
-#| "Check this box to display icons (alarm, recursion, etc.) in agenda view "
-#| "items."
+#, kde-format
 msgid ""
 "Check this box to display the incidence descriptions in agenda view items."
 msgstr ""
-"Позначте цей пункт, щоб для пунктів перегляду порядку денного було показано "
-"піктограми (нагадування, повторення та інші)."
+"Позначте цей пункт, щоб для елементів перегляду порядку денного було "
+"показано описи."
 
 #. i18n: ectx: tooltip, entry (EnableAgendaItemDesc), group (Agenda View)
 #: eventviews.kcfg:164
 #, fuzzy, kde-format
-#| msgid "Display icons in agenda view items"
-msgid "Display inicidence descriptions agenda view items"
-msgstr "Показувати піктограми для пунктів перегляду порядку денного"
+#| msgid "Display inicidence descriptions agenda view items"
+msgid "Display incidence descriptions agenda view items"
+msgstr "Показувати описи зустрічей для пунктів перегляду порядку денного"
 
 #. i18n: ectx: label, entry (ShowTodosAgendaView), group (Agenda View)
 #. i18n: ectx: label, entry (ShowTodosMonthView), group (Month View)

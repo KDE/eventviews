@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-25 00:45+0000\n"
-"PO-Revision-Date: 2026-01-24 11:23+0100\n"
+"POT-Creation-Date: 2026-01-26 00:43+0000\n"
+"PO-Revision-Date: 2026-01-25 07:39+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -100,18 +100,17 @@ msgstr "%1: %2 - %3"
 #: agenda/agendaitem.cpp:1041
 #, kde-format
 msgid "Google Calendar Settings"
-msgstr ""
+msgstr "Preferencias del Calendario de Google"
 
 #: agenda/agendaitem.cpp:1041
 #, kde-format
 msgid "Public Holiday"
-msgstr ""
+msgstr "Festivo público"
 
-#: agenda/agendaitem.cpp:1052
-#, fuzzy, kde-format
-#| msgid "%1: %2 - %3"
+#: agenda/agendaitem.cpp:1053
+#, kde-format
 msgid "%1: %2"
-msgstr "%1: %2 - %3"
+msgstr "%1: %2"
 
 #: agenda/agendaview.cpp:421
 #, kde-format
@@ -672,7 +671,7 @@ msgid ""
 "other (non daily recurring) events."
 msgstr ""
 "Marque esta casilla para mostrar los días que contengan los eventos que se "
-"repiten a diario con tipo de letra negrita en el navegador de fechas o "
+"repiten a diario con tipo de letra negrita en el selector de fechas o "
 "desmárquelo para dar más importancia al resto de eventos (los que no se "
 "repiten a diario)."
 
@@ -691,7 +690,7 @@ msgid ""
 "other (non weekly recurring) events."
 msgstr ""
 "Marque esta casilla para mostrar los días que contienen eventos que se "
-"repiten semanalmente con tipo de letra negrita en el navegador de fechas o "
+"repiten semanalmente con tipo de letra negrita en el selector de fechas o "
 "desmárquela para darle más importancia al resto de eventos (los que no se "
 "repiten semanalmente)."
 
@@ -711,7 +710,7 @@ msgid ""
 "Date Navigator when in to-do view."
 msgstr ""
 "Marque esta casilla para mostrar los días que contengan tareas pendientes "
-"con letra en negrita en el navegador de fechas cuando esté en la vista de "
+"con letra en negrita en el selector de fechas cuando esté en la vista de "
 "tareas pendientes."
 
 #. i18n: ectx: label, entry (HighlightJournals), group (General View)
@@ -728,7 +727,7 @@ msgid ""
 "Date Navigator when in journal view."
 msgstr ""
 "Marque esta casilla para mostrar los días que contengan entradas de diario "
-"con letra en negrita en el navegador de fechas cuando esté en la vista del "
+"con letra en negrita en el selector de fechas cuando esté en la vista del "
 "diario."
 
 #. i18n: ectx: label, entry (WeekNumbersShowWork), group (General View)
@@ -747,7 +746,8 @@ msgid ""
 "Navigator's week numbers, or uncheck it to choose the whole week."
 msgstr ""
 "Marque esta casilla para seleccionar una semana de trabajo al pulsar en los "
-"números de semana del navegador o desmárquela para elegir la semana completa."
+"números de semana del selector de fechas o desmárquela para elegir la semana "
+"completa."
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #: eventviews.kcfg:148 viewerapp/settings.kcfg:17
@@ -797,29 +797,27 @@ msgstr "Mostrar iconos en los elementos de la vista de agenda"
 
 #. i18n: ectx: label, entry (EnableAgendaItemDesc), group (Agenda View)
 #: eventviews.kcfg:162
-#, fuzzy, kde-format
-#| msgid "Show icons in agenda view items"
+#, kde-format
 msgid "Show incidence descriptions in agenda view items"
-msgstr "Mostrar iconos en los elementos de la vista de agenda"
+msgstr ""
+"Mostrar descripciones de incidencias en los elementos de la vista de agenda"
 
 #. i18n: ectx: whatsthis, entry (EnableAgendaItemDesc), group (Agenda View)
 #: eventviews.kcfg:163
-#, fuzzy, kde-format
-#| msgid ""
-#| "Check this box to display icons (alarm, recursion, etc.) in agenda view "
-#| "items."
+#, kde-format
 msgid ""
 "Check this box to display the incidence descriptions in agenda view items."
 msgstr ""
-"Marque esta casilla para mostrar iconos (alarmas, repeticiones, etc.) en los "
+"Marque esta casilla para mostrar descripciones de incidencias en los "
 "elementos de la vista de agenda."
 
 #. i18n: ectx: tooltip, entry (EnableAgendaItemDesc), group (Agenda View)
 #: eventviews.kcfg:164
 #, fuzzy, kde-format
-#| msgid "Display icons in agenda view items"
-msgid "Display inicidence descriptions agenda view items"
-msgstr "Mostrar iconos en los elementos de la vista de agenda"
+#| msgid "Display inicidence descriptions agenda view items"
+msgid "Display incidence descriptions agenda view items"
+msgstr ""
+"Mostrar descripciones de incidencias en los elementos de la vista de agenda"
 
 #. i18n: ectx: label, entry (ShowTodosAgendaView), group (Agenda View)
 #. i18n: ectx: label, entry (ShowTodosMonthView), group (Month View)
@@ -1240,7 +1238,7 @@ msgid ""
 msgstr ""
 "Marque esta casilla para usar la ventana completa de KOrganizer cuando se "
 "muestre la vista de mes. Si la casilla está marcada, tendrá más espacio para "
-"la vista de mes, pero en otros controles, como en el navegador de fechas, no "
+"la vista de mes, pero en otros controles, como en el selector de fechas, no "
 "se mostrarán ni los detalles del elemento ni la lista de calendarios."
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
@@ -1383,7 +1381,7 @@ msgstr ""
 "Marque esta casilla para usar la ventana completa de KOrganizer cuando se "
 "muestre la vista de la lista de tareas pendientes. Si la casilla está "
 "marcada, tendrá algo más de espacio en la vista de tareas pendientes, pero "
-"en otros controles, como en el navegador de fechas, no se mostrarán ni los "
+"en otros controles, como en el selector de fechas, no se mostrarán ni los "
 "detalles de las tareas pendientes ni la lista de calendarios."
 
 #. i18n: ectx: label, entry, group (Todo View)
@@ -1432,7 +1430,7 @@ msgstr ""
 #: viewerapp/settings.kcfg:180
 #, kde-format
 msgid "Holiday color"
-msgstr "Color de vacaciones"
+msgstr "Color de festivos"
 
 #. i18n: ectx: whatsthis, entry, group (Colors)
 #. i18n: ectx: whatsthis, entry, group (Theming)
@@ -1444,9 +1442,9 @@ msgid ""
 "Select the holiday color here. The holiday color will be used for the "
 "holiday name in the month view and the holiday number in the date navigator."
 msgstr ""
-"Seleccione aquí el color de las vacaciones. El color de las vacaciones se "
-"usa para el nombre de la fiesta en la vista de mes y para el número en el "
-"navegador de fechas."
+"Seleccione aquí el color de los días festivos. Este color se usa para el "
+"nombre del festivo en la vista mensual y para el número en el selector de "
+"fechas."
 
 #. i18n: ectx: label, entry (AgendaBgColor), group (Colors)
 #. i18n: ectx: label, entry, group (Theming)
@@ -1651,7 +1649,7 @@ msgid ""
 "marking the currently selected area in your agenda and in the date navigator."
 msgstr ""
 "Seleccione aquí el color de resaltado. El color de resaltado se usa para "
-"marcar el área seleccionada actualmente en su agenda y en el navegador de "
+"marcar el área seleccionada actualmente en su agenda y en el selector de "
 "fechas."
 
 #. i18n: ectx: whatsthis, entry, group (Theming)
@@ -1681,7 +1679,7 @@ msgid ""
 "marking the currently selected area in your Month and in the date navigator."
 msgstr ""
 "Seleccione el color de resaltado aquí. El color de resaltado será utilizado "
-"para marcar el área actualmente seleccionada en su Mes y en el navegador de "
+"para marcar el área actualmente seleccionada en su Mes y en el selector de "
 "fechas."
 
 #. i18n: ectx: whatsthis, entry, group (Theme/Month view)

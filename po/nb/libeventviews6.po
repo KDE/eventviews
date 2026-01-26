@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-25 00:45+0000\n"
+"POT-Creation-Date: 2026-01-26 00:43+0000\n"
 "PO-Revision-Date: 2013-09-27 17:58+0200\n"
 "Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -112,7 +112,7 @@ msgstr ""
 msgid "Public Holiday"
 msgstr ""
 
-#: agenda/agendaitem.cpp:1052
+#: agenda/agendaitem.cpp:1053
 #, fuzzy, kde-format
 #| msgctxt "date, from - to"
 #| msgid "%1, %2 - %3"
@@ -781,7 +781,7 @@ msgstr ""
 #: eventviews.kcfg:164
 #, fuzzy, kde-format
 #| msgid "Display icons in agenda view items"
-msgid "Display inicidence descriptions agenda view items"
+msgid "Display incidence descriptions agenda view items"
 msgstr "Vis ikoner i elementene i timeplanvisningen"
 
 #. i18n: ectx: label, entry (ShowTodosAgendaView), group (Agenda View)

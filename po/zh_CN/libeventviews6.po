@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-25 00:45+0000\n"
+"POT-Creation-Date: 2026-01-26 00:43+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -101,7 +101,7 @@ msgstr ""
 msgid "Public Holiday"
 msgstr ""
 
-#: agenda/agendaitem.cpp:1052
+#: agenda/agendaitem.cpp:1053
 #, fuzzy, kde-format
 #| msgctxt "%1 is an item summary. %2 is the date when this item reoccurs"
 #| msgid "%1 (next: %2)"
@@ -743,7 +743,7 @@ msgstr "选中此项会显示议事日程视图项目的图标(提醒、循环�
 #: eventviews.kcfg:164
 #, fuzzy, kde-format
 #| msgid "Display icons in agenda view items"
-msgid "Display inicidence descriptions agenda view items"
+msgid "Display incidence descriptions agenda view items"
 msgstr "显示议事日程视图项目的图标"
 
 #. i18n: ectx: label, entry (ShowTodosAgendaView), group (Agenda View)

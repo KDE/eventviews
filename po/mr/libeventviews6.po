@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-25 00:45+0000\n"
+"POT-Creation-Date: 2026-01-26 00:43+0000\n"
 "PO-Revision-Date: 2013-03-15 14:01+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: Marathi <kde-i18n-doc@kde.org>\n"
@@ -103,7 +103,7 @@ msgstr ""
 msgid "Public Holiday"
 msgstr ""
 
-#: agenda/agendaitem.cpp:1052
+#: agenda/agendaitem.cpp:1053
 #, fuzzy, kde-format
 #| msgctxt "date, from - to"
 #| msgid "%1, %2 - %3"
@@ -717,7 +717,7 @@ msgstr ""
 #. i18n: ectx: tooltip, entry (EnableAgendaItemDesc), group (Agenda View)
 #: eventviews.kcfg:164
 #, kde-format
-msgid "Display inicidence descriptions agenda view items"
+msgid "Display incidence descriptions agenda view items"
 msgstr ""
 
 #. i18n: ectx: label, entry (ShowTodosAgendaView), group (Agenda View)

@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-25 00:45+0000\n"
-"PO-Revision-Date: 2026-01-21 17:15+0100\n"
+"POT-Creation-Date: 2026-01-26 00:43+0000\n"
+"PO-Revision-Date: 2026-01-25 17:18+0100\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -99,31 +99,24 @@ msgid "- %1"
 msgstr "- %1"
 
 #: agenda/agendaitem.cpp:909 agenda/agendaitem.cpp:932
-#, fuzzy, kde-format
-#| msgctxt "date, from - to"
-#| msgid "%1, %2 - %3"
+#, kde-format
 msgid "%1: %2 - %3"
-msgstr "%1, %2 - %3"
+msgstr "%1: %2 - %3"
 
 #: agenda/agendaitem.cpp:1041
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Edit calendar settings"
+#, kde-format
 msgid "Google Calendar Settings"
-msgstr "Modifica impostazioni calendario"
+msgstr "Impostazioni del calendario di Google"
 
 #: agenda/agendaitem.cpp:1041
-#, fuzzy, kde-format
-#| msgid "Holiday"
+#, kde-format
 msgid "Public Holiday"
-msgstr "Festività"
+msgstr "Giorno festivo"
 
-#: agenda/agendaitem.cpp:1052
-#, fuzzy, kde-format
-#| msgctxt "subitem counter"
-#| msgid "%1: "
+#: agenda/agendaitem.cpp:1053
+#, kde-format
 msgid "%1: %2"
-msgstr "%1: "
+msgstr "%1: %2"
 
 #: agenda/agendaview.cpp:421
 #, kde-format
@@ -783,7 +776,7 @@ msgstr "Imposta l'altezza (in pixel) di un'ora nella grigia dell'agenda"
 #: eventviews.kcfg:156 viewerapp/settings.kcfg:25
 #, kde-format
 msgid "Show icons in agenda view items"
-msgstr "Mostra icone le voci della vista agenda."
+msgstr "Mostra icone nelle voci della vista agenda."
 
 #. i18n: ectx: whatsthis, entry (EnableAgendaItemIcons), group (Agenda View)
 #: eventviews.kcfg:157 viewerapp/settings.kcfg:26
@@ -803,29 +796,25 @@ msgstr "Mostra icone nelle voci della vista agenda."
 
 #. i18n: ectx: label, entry (EnableAgendaItemDesc), group (Agenda View)
 #: eventviews.kcfg:162
-#, fuzzy, kde-format
-#| msgid "Show icons in agenda view items"
+#, kde-format
 msgid "Show incidence descriptions in agenda view items"
-msgstr "Mostra icone le voci della vista agenda."
+msgstr "Mostra descrizioni delle occorrenze nelle voci della vista agenda."
 
 #. i18n: ectx: whatsthis, entry (EnableAgendaItemDesc), group (Agenda View)
 #: eventviews.kcfg:163
-#, fuzzy, kde-format
-#| msgid ""
-#| "Check this box to display icons (alarm, recursion, etc.) in agenda view "
-#| "items."
+#, kde-format
 msgid ""
 "Check this box to display the incidence descriptions in agenda view items."
 msgstr ""
-"Marca questa casella per mostrare le icone (avvisi, ricorrenze, ecc.) nelle "
-"voci della vista agenda."
+"Marca questa casella per mostrare le descrizioni delle occorrenze nelle voci "
+"della vista agenda."
 
 #. i18n: ectx: tooltip, entry (EnableAgendaItemDesc), group (Agenda View)
 #: eventviews.kcfg:164
 #, fuzzy, kde-format
-#| msgid "Display icons in agenda view items"
-msgid "Display inicidence descriptions agenda view items"
-msgstr "Mostra icone nelle voci della vista agenda."
+#| msgid "Display inicidence descriptions agenda view items"
+msgid "Display incidence descriptions agenda view items"
+msgstr "Mostra descrizioni delle occorrenze nelle voci della vista agenda."
 
 #. i18n: ectx: label, entry (ShowTodosAgendaView), group (Agenda View)
 #. i18n: ectx: label, entry (ShowTodosMonthView), group (Month View)

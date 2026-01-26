@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-25 00:45+0000\n"
+"POT-Creation-Date: 2026-01-26 00:43+0000\n"
 "PO-Revision-Date: 2022-07-06 12:31+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -112,7 +112,7 @@ msgstr ""
 msgid "Public Holiday"
 msgstr ""
 
-#: agenda/agendaitem.cpp:1052
+#: agenda/agendaitem.cpp:1053
 #, fuzzy, kde-format
 #| msgctxt "date, from - to"
 #| msgid "%1, %2 - %3"
@@ -798,7 +798,7 @@ msgstr ""
 #: eventviews.kcfg:164
 #, fuzzy, kde-format
 #| msgid "Display icons in agenda view items"
-msgid "Display inicidence descriptions agenda view items"
+msgid "Display incidence descriptions agenda view items"
 msgstr "Mostrar os ícones nos itens da agenda"
 
 #. i18n: ectx: label, entry (ShowTodosAgendaView), group (Agenda View)

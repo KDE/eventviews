@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-25 00:45+0000\n"
-"PO-Revision-Date: 2026-01-21 11:28+0100\n"
+"POT-Creation-Date: 2026-01-26 00:43+0000\n"
+"PO-Revision-Date: 2026-01-25 14:36+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -90,28 +90,24 @@ msgid "- %1"
 msgstr "- %1"
 
 #: agenda/agendaitem.cpp:909 agenda/agendaitem.cpp:932
-#, fuzzy, kde-format
-#| msgctxt "date, from - to"
-#| msgid "%1, %2 - %3"
+#, kde-format
 msgid "%1: %2 - %3"
-msgstr "%1, %2 - %3"
+msgstr "%1: %2 - %3"
 
 #: agenda/agendaitem.cpp:1041
 #, kde-format
 msgid "Google Calendar Settings"
-msgstr ""
+msgstr "Agenda-instellingen van Google"
 
 #: agenda/agendaitem.cpp:1041
 #, kde-format
 msgid "Public Holiday"
-msgstr ""
+msgstr "Publieke feestdag"
 
-#: agenda/agendaitem.cpp:1052
-#, fuzzy, kde-format
-#| msgctxt "date, from - to"
-#| msgid "%1, %2 - %3"
+#: agenda/agendaitem.cpp:1053
+#, kde-format
 msgid "%1: %2"
-msgstr "%1, %2 - %3"
+msgstr "%1: %2"
 
 #: agenda/agendaview.cpp:421
 #, kde-format
@@ -780,29 +776,25 @@ msgstr "Pictogrammen tonen in agendaweergaven"
 
 #. i18n: ectx: label, entry (EnableAgendaItemDesc), group (Agenda View)
 #: eventviews.kcfg:162
-#, fuzzy, kde-format
-#| msgid "Show icons in agenda view items"
+#, kde-format
 msgid "Show incidence descriptions in agenda view items"
-msgstr "Pictogrammen tonen in agendaweergaven"
+msgstr "Incidentbeschrijvingen tonen in de agendaweergave"
 
 #. i18n: ectx: whatsthis, entry (EnableAgendaItemDesc), group (Agenda View)
 #: eventviews.kcfg:163
-#, fuzzy, kde-format
-#| msgid ""
-#| "Check this box to display icons (alarm, recursion, etc.) in agenda view "
-#| "items."
+#, kde-format
 msgid ""
 "Check this box to display the incidence descriptions in agenda view items."
 msgstr ""
-"Selecteer dit keuzevakje als u pictogrammen (herinnering, herhaling, etc) in "
-"de agendaweergaven wilt laten weergeven."
+"Activeer dit vakje voor het tonen van incidentbeschrijvingen in de items van "
+"de agendaweergave."
 
 #. i18n: ectx: tooltip, entry (EnableAgendaItemDesc), group (Agenda View)
 #: eventviews.kcfg:164
 #, fuzzy, kde-format
-#| msgid "Display icons in agenda view items"
-msgid "Display inicidence descriptions agenda view items"
-msgstr "Pictogrammen tonen in agendaweergaven"
+#| msgid "Display inicidence descriptions agenda view items"
+msgid "Display incidence descriptions agenda view items"
+msgstr "Incidentbeschrijvingen tonen in de items van de agendaweergave"
 
 #. i18n: ectx: label, entry (ShowTodosAgendaView), group (Agenda View)
 #. i18n: ectx: label, entry (ShowTodosMonthView), group (Month View)
