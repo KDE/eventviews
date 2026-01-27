@@ -108,11 +108,9 @@ msgid "Public Holiday"
 msgstr ""
 
 #: agenda/agendaitem.cpp:1053
-#, fuzzy, kde-format
-#| msgctxt "date, from - to"
-#| msgid "%1, %2 - %3"
+#, kde-format
 msgid "%1: %2"
-msgstr "%1, %2 - %3"
+msgstr "%1: %2"
 
 #: agenda/agendaview.cpp:421
 #, kde-format
@@ -310,6 +308,9 @@ msgid ""
 "applied only to this single occurrence, also to future items, or to all "
 "items in the recurrence?"
 msgstr ""
+"Položka, kterou se pokoušíte změnit, je opakující se položka. Mají se změny "
+"uplatnit pouze na tento jediný výskyt a na budoucí položky, nebo na všechny "
+"opakované položky?"
 
 #: eventview.cpp:140
 #, kde-format
