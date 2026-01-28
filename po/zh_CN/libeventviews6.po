@@ -102,11 +102,9 @@ msgid "Public Holiday"
 msgstr ""
 
 #: agenda/agendaitem.cpp:1053
-#, fuzzy, kde-format
-#| msgctxt "%1 is an item summary. %2 is the date when this item reoccurs"
-#| msgid "%1 (next: %2)"
+#, kde-format
 msgid "%1: %2"
-msgstr "%1 (下一个：%2)"
+msgstr ""
 
 #: agenda/agendaview.cpp:421
 #, kde-format
@@ -724,27 +722,22 @@ msgstr "显示议事日程视图项目的图标"
 
 #. i18n: ectx: label, entry (EnableAgendaItemDesc), group (Agenda View)
 #: eventviews.kcfg:162
-#, fuzzy, kde-format
-#| msgid "Show icons in agenda view items"
+#, kde-format
 msgid "Show incidence descriptions in agenda view items"
-msgstr "显示议事日程视图项目的图标"
+msgstr ""
 
 #. i18n: ectx: whatsthis, entry (EnableAgendaItemDesc), group (Agenda View)
 #: eventviews.kcfg:163
-#, fuzzy, kde-format
-#| msgid ""
-#| "Check this box to display icons (alarm, recursion, etc.) in agenda view "
-#| "items."
+#, kde-format
 msgid ""
 "Check this box to display the incidence descriptions in agenda view items."
-msgstr "选中此项会显示议事日程视图项目的图标(提醒、循环等)。"
+msgstr ""
 
 #. i18n: ectx: tooltip, entry (EnableAgendaItemDesc), group (Agenda View)
 #: eventviews.kcfg:164
-#, fuzzy, kde-format
-#| msgid "Display icons in agenda view items"
+#, kde-format
 msgid "Display incidence descriptions agenda view items"
-msgstr "显示议事日程视图项目的图标"
+msgstr ""
 
 #. i18n: ectx: label, entry (ShowTodosAgendaView), group (Agenda View)
 #. i18n: ectx: label, entry (ShowTodosMonthView), group (Month View)

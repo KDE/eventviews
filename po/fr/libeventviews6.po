@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-26 00:43+0000\n"
-"PO-Revision-Date: 2026-01-25 10:11+0100\n"
+"PO-Revision-Date: 2026-01-26 13:48+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -107,19 +107,17 @@ msgstr "%1 : %2 - %3"
 #: agenda/agendaitem.cpp:1041
 #, kde-format
 msgid "Google Calendar Settings"
-msgstr ""
+msgstr "Configuration de Google Agenda"
 
 #: agenda/agendaitem.cpp:1041
 #, kde-format
 msgid "Public Holiday"
-msgstr ""
+msgstr "Jour férié"
 
 #: agenda/agendaitem.cpp:1053
-#, fuzzy, kde-format
-#| msgctxt "date, from - to"
-#| msgid "%1, %2 - %3"
+#, kde-format
 msgid "%1: %2"
-msgstr "%1, %2 - %3"
+msgstr "%1 : %2"
 
 #: agenda/agendaview.cpp:421
 #, kde-format
@@ -806,22 +804,19 @@ msgstr "Affichez des icônes pour les éléments de la vue de l'agenda"
 
 #. i18n: ectx: label, entry (EnableAgendaItemDesc), group (Agenda View)
 #: eventviews.kcfg:162
-#, fuzzy, kde-format
-#| msgid "Show icons in agenda view items"
+#, kde-format
 msgid "Show incidence descriptions in agenda view items"
-msgstr "Afficher des icônes pour les éléments de la vue de l'agenda"
+msgstr ""
+"Afficher les descriptions de récurrence pour les éléments de la vue d'agenda"
 
 #. i18n: ectx: whatsthis, entry (EnableAgendaItemDesc), group (Agenda View)
 #: eventviews.kcfg:163
-#, fuzzy, kde-format
-#| msgid ""
-#| "Check this box to display icons (alarm, recursion, etc.) in agenda view "
-#| "items."
+#, kde-format
 msgid ""
 "Check this box to display the incidence descriptions in agenda view items."
 msgstr ""
-"Cochez cette case pour afficher des icônes (alarme, reproduction, etc.) dans "
-"la vue des éléments de l'agenda"
+"Veuillez cocher cette case si vous souhaitez afficher les descriptions de "
+"récurrence pour les éléments de la vue d'agenda"
 
 #. i18n: ectx: tooltip, entry (EnableAgendaItemDesc), group (Agenda View)
 #: eventviews.kcfg:164
