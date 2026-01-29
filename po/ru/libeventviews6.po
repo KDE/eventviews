@@ -4,15 +4,15 @@
 # Alexander Potashev <aspotashev@gmail.com>, 2011, 2014, 2015, 2016.
 # Julia Dronova <juliette.tux@gmail.com>, 2012.
 # Alexander Lakhin <exclusion@gmail.com>, 2013.
-# SPDX-FileCopyrightText: 2018, 2019, 2020, 2021, 2022, 2024, 2025 Alexander Yavorsky <kekcuha@gmail.com>
+# SPDX-FileCopyrightText: 2018, 2019, 2020, 2021, 2022, 2024, 2025, 2026 Alexander Yavorsky <kekcuha@gmail.com>
 # SPDX-FileCopyrightText: 2024 Olesya Gerasimenko <translation-team@basealt.ru>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-26 02:35+0000\n"
-"PO-Revision-Date: 2025-10-30 19:53+0300\n"
-"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
+"PO-Revision-Date: 2026-01-28 18:02+0200\n"
+"Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.08.2\n"
+"X-Generator: Lokalize 25.12.1\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -28,12 +28,14 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Александр Лахин,Ольга Миронова,Олеся Герасименко"
+msgstr "Александр Лахин,Ольга Миронова,Олеся Герасименко,Александр Яворский"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "exclusion@gmail.com,omiro@basealt.ru,translation-team@basealt.ru"
+msgstr ""
+"exclusion@gmail.com,omiro@basealt.ru,translation-team@basealt.ru,"
+"kekcuha@gmail.com"
 
 #: agenda/agenda.cpp:956
 #, kde-format
@@ -126,7 +128,7 @@ msgstr "&Добавить часовые пояса…"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Add a timelabel display column for a new timezone"
-msgstr ""
+msgstr "Добавить колонку с меткой времени для нового часового пояса"
 
 #: agenda/timelabels.cpp:333
 #, kde-format
@@ -137,6 +139,10 @@ msgid ""
 "This feature is very useful when showing calendar events for people in "
 "timezones other than your own."
 msgstr ""
+"В этом меню откроется диалог выбора часового пояса, позволяющий указать "
+"часовой пояс для отображения меток времени рядом с метками времени вашей "
+"системы. Эта функция особенно полезна при показе событий календаря для людей "
+"в других часовых поясах."
 
 #: agenda/timelabels.cpp:336
 #, kde-format
@@ -150,6 +156,8 @@ msgid ""
 "Remove the hour label column for the currently selected timezone, for non-"
 "system timezones only."
 msgstr ""
+"Удалить колонку с меткой времени для выбранного часового пояса. Только для "
+"часовых поясов, отличных от системного."
 
 #: agenda/timelabels.cpp:343
 #, kde-format
@@ -158,6 +166,8 @@ msgid ""
 "For non-system timezones, this menu selection removes the time hour labels "
 "display column for the currently selected timezone."
 msgstr ""
+"Для часовых поясов, отличных от системного, этот пункт меню удаляет колонку "
+"с метками времени для выбранного часового пояса."
 
 #: agenda/timelabels.cpp:347
 #, kde-format
@@ -178,6 +188,8 @@ msgid ""
 "Display the time label hours in 24-hour \"military\" format or according to "
 "your locale"
 msgstr ""
+"Отображать часы метки времени в 24-часовом формате или в соответствии с "
+"региональными настройками."
 
 #: agenda/timelabels.cpp:353
 #, kde-format
@@ -186,36 +198,38 @@ msgid ""
 "This menu selection shows the time hour labels according to 24-hour "
 "\"military\" time or your system locale."
 msgstr ""
+"Этот пункт меню отображает часы меток времени в 24-часовом формате или "
+"согласно региональным настройкам системы."
 
 #: agenda/timelabels.cpp:358
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Right-side Time Labels"
-msgstr ""
+msgstr "Скрыть метки времени справа"
 
 #: agenda/timelabels.cpp:360
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Right-side Time Labels"
-msgstr ""
+msgstr "Показать метки времени справа"
 
 #: agenda/timelabels.cpp:364
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Left-side Time Labels"
-msgstr ""
+msgstr "Скрыть метки времени слева"
 
 #: agenda/timelabels.cpp:366
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Left-side Time Labels"
-msgstr ""
+msgstr "Показать метки времени слева"
 
 #: agenda/timelabels.cpp:369
 #, kde-format
 msgctxt "@info::tooltip"
 msgid "Show or hide time labels on both sides of the agenda view"
-msgstr ""
+msgstr "Показать или скрыть метки времени с обеих сторон в виде расписания дня"
 
 #: agenda/timelabels.cpp:371
 #, kde-format
@@ -226,6 +240,11 @@ msgid ""
 "shown on the second side to save screen space. Similarly, the vertical "
 "scrollbar is removed when the time labels are shown on both sides."
 msgstr ""
+"Этот пункт меню включает или скрывает метки времени с обеих сторон "
+"расписания дня. На второй стороне отображается лишь системный часовой пояс, "
+"без дополнительных, что позволяет экономить место на экране. При этом "
+"вертикальная полоса прокрутки исчезает, когда метки времени видны с обеих "
+"сторон"
 
 #: agenda/timelabels.cpp:426
 #, kde-format
