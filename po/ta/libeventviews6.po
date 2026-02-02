@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the eventviews package.
 #
-# SPDX-FileCopyrightText: 2022, 2024, 2025 Kishore G <kishore96@gmail.com>
+# SPDX-FileCopyrightText: 2022, 2024, 2025, 2026 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-26 00:43+0000\n"
-"PO-Revision-Date: 2025-09-14 14:23+0530\n"
+"PO-Revision-Date: 2026-02-01 16:18+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.08.0\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -87,28 +87,24 @@ msgid "- %1"
 msgstr "- %1"
 
 #: agenda/agendaitem.cpp:909 agenda/agendaitem.cpp:932
-#, fuzzy, kde-format
-#| msgctxt "date, from - to"
-#| msgid "%1, %2 - %3"
+#, kde-format
 msgid "%1: %2 - %3"
-msgstr "%1, %2 - %3"
+msgstr "%1: %2 - %3"
 
 #: agenda/agendaitem.cpp:1041
 #, kde-format
 msgid "Google Calendar Settings"
-msgstr ""
+msgstr "கூகுள் நாள்காட்டி அமைப்புகள்"
 
 #: agenda/agendaitem.cpp:1041
 #, kde-format
 msgid "Public Holiday"
-msgstr ""
+msgstr "அரசு விடுமுறை"
 
 #: agenda/agendaitem.cpp:1053
-#, fuzzy, kde-format
-#| msgctxt "date, from - to"
-#| msgid "%1, %2 - %3"
+#, kde-format
 msgid "%1: %2"
-msgstr "%1, %2 - %3"
+msgstr "%1: %2"
 
 #: agenda/agendaview.cpp:421
 #, kde-format
@@ -135,7 +131,7 @@ msgstr "நேரமண்டலங்களை &சேர்…"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Add a timelabel display column for a new timezone"
-msgstr ""
+msgstr "வேறு நேரமண்டலத்தில் நேரத்தைக் காட்டும் நெடுவரிசையை சேர்க்கும்"
 
 #: agenda/timelabels.cpp:333
 #, kde-format
@@ -159,6 +155,8 @@ msgid ""
 "Remove the hour label column for the currently selected timezone, for non-"
 "system timezones only."
 msgstr ""
+"தற்போது தேர்ந்தெடுத்துள்ள நேரமண்டலத்திற்கான நெடுவரிசையை நீக்கும் (அது கணினி "
+"முழுவதற்குமான நேரமண்டலமாக இல்லாத பட்சத்தில்)."
 
 #: agenda/timelabels.cpp:343
 #, kde-format
@@ -532,7 +530,7 @@ msgstr "வாரத்தின் முதல் நாள்:"
 #: eventviews.kcfg:96
 #, kde-format
 msgid "Select the first day of each week"
-msgstr ""
+msgstr "வாரத்தின் முதல் நாளைத் தேர்ந்தெடுக்க விடும்"
 
 #. i18n: ectx: whatsthis, entry (WeekStartDay), group (Time &amp; Date)
 #: eventviews.kcfg:97
@@ -560,7 +558,7 @@ msgstr ""
 #: eventviews.kcfg:109
 #, kde-format
 msgid "To-dos use tag colors"
-msgstr ""
+msgstr "செய்யவேண்டியவற்றிற்கு தத்தம் நிறங்களையே பயன்படுத்து"
 
 #. i18n: ectx: whatsthis, entry, group (General View)
 #: eventviews.kcfg:110
@@ -589,7 +587,7 @@ msgstr ""
 #: eventviews.kcfg:116
 #, kde-format
 msgid "Show this many days at a time in the Next \"x\" days view"
-msgstr ""
+msgstr "அடுத்த x நாட்கள் எனும் காட்சிமுறையில் எத்தனை நாட்களைக் காட்ட வேண்டும்"
 
 #. i18n: ectx: label, entry (DailyRecur), group (General View)
 #: eventviews.kcfg:120
@@ -626,6 +624,8 @@ msgstr ""
 #, kde-format
 msgid "Show to-dos instead of events when in Todo View"
 msgstr ""
+"செய்யவேண்டியவை காட்சிமுறையில் இருக்கும்போது நிகழ்வுகளைக் காட்டாமல் செய்யவேண்டியவற்றை "
+"மட்டும் காட்டு"
 
 #. i18n: ectx: whatsthis, entry (HighlightTodos), group (General View)
 #: eventviews.kcfg:131
@@ -640,6 +640,7 @@ msgstr ""
 #, kde-format
 msgid "Show journals instead of events when in Journal View"
 msgstr ""
+"நாளேடு காட்சிமுறையில் இருக்கும்போது நிகழ்வுகளுக்கு பதிலாக நாளேடு பதிவுகளைக் காட்டு"
 
 #. i18n: ectx: whatsthis, entry (HighlightJournals), group (General View)
 #: eventviews.kcfg:136
@@ -705,10 +706,9 @@ msgstr "நிகழ்ச்சிநிரல் காட்சிமுற�
 
 #. i18n: ectx: label, entry (EnableAgendaItemDesc), group (Agenda View)
 #: eventviews.kcfg:162
-#, fuzzy, kde-format
-#| msgid "Show icons in agenda view items"
+#, kde-format
 msgid "Show incidence descriptions in agenda view items"
-msgstr "நிகழ்ச்சிநிரல் காட்சிமுறையில் சின்னங்களைக் காட்டு"
+msgstr "நிகழ்ச்சிநிரல் காட்சிமுறையில் நிகழ்வுகளின் விவரணங்களைக் காட்டு"
 
 #. i18n: ectx: whatsthis, entry (EnableAgendaItemDesc), group (Agenda View)
 #: eventviews.kcfg:163
@@ -743,7 +743,7 @@ msgstr ""
 #: eventviews.kcfg:170 viewerapp/settings.kcfg:33
 #, kde-format
 msgid "Display to-dos in the agenda view"
-msgstr ""
+msgstr "நிகழ்ச்சிநிரல் காட்சிமுறையில் செய்யவேண்டியவற்றைக் காட்டு"
 
 #. i18n: ectx: label, entry (MarcusBainsEnabled), group (Agenda View)
 #: eventviews.kcfg:174 viewerapp/settings.kcfg:37
