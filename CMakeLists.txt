@@ -137,7 +137,7 @@ if(BUILD_TESTING)
 endif()
 
 ecm_set_disabled_deprecation_versions(QT 6.10.0
-     KF 6.22.0
+     KF 6.23.0
 )
 if(CMAKE_CXX_COMPILER_ID MATCHES "Clang")
     # Not setting for GNU due to too many warnings related to private members of base classes or around lambdas
