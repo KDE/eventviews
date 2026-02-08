@@ -1,6 +1,10 @@
 # SPDX-License-Identifier: CC0-1.0
 # SPDX-FileCopyrightText: none
-set(viewerapp_SRCS main.cpp mainwindow.cpp ../calendarview_debug.cpp)
+set(viewerapp_SRCS
+    main.cpp
+    mainwindow.cpp
+    ../calendarview_debug.cpp
+)
 
 kconfig_add_kcfg_files(viewerapp_SRCS settings.kcfgc)
 

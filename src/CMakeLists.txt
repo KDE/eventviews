@@ -83,7 +83,12 @@ target_sources(
 )
 
 kconfig_add_kcfg_files(KPim6EventViews prefs_base.kcfgc)
-set_source_files_properties(prefs_base.cpp PROPERTIES SKIP_LINTING ON)
+set_source_files_properties(
+    prefs_base.cpp
+    PROPERTIES
+        SKIP_LINTING
+            ON
+)
 
 ecm_qt_declare_logging_category(KPim6EventViews HEADER calendarview_debug.h
         IDENTIFIER CALENDARVIEW_LOG
@@ -97,7 +102,12 @@ ki18n_wrap_ui(KPim6EventViews
 )
 
 if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
-    set_target_properties(KPim6EventViews PROPERTIES UNITY_BUILD ON)
+    set_target_properties(
+        KPim6EventViews
+        PROPERTIES
+            UNITY_BUILD
+                ON
+    )
 endif()
 ecm_generate_export_header(KPim6EventViews
     BASE_NAME eventviews
@@ -130,10 +140,7 @@ target_link_libraries(
         KF6::Contacts
 )
 
-target_include_directories(
-    KPim6EventViews
-    INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR}/KPim6/EventViews/>"
-)
+target_include_directories(KPim6EventViews INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR}/KPim6/EventViews/>")
 target_include_directories(
     KPim6EventViews
     PUBLIC
@@ -143,16 +150,15 @@ target_include_directories(
 set_target_properties(
     KPim6EventViews
     PROPERTIES
-        VERSION ${EVENTVIEWS_VERSION}
-        SOVERSION ${EVENTVIEWS_SOVERSION}
-        EXPORT_NAME EventViews
+        VERSION
+            ${EVENTVIEWS_VERSION}
+        SOVERSION
+            ${EVENTVIEWS_SOVERSION}
+        EXPORT_NAME
+            EventViews
 )
 
-install(
-    TARGETS KPim6EventViews
-    EXPORT KPim6EventViewsTargets
-    ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
-)
+install(TARGETS KPim6EventViews EXPORT KPim6EventViewsTargets ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 
 ecm_generate_headers(eventviews_CamelCase_HEADERS
   HEADER_NAMES
