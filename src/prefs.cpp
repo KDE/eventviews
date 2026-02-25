@@ -840,6 +840,7 @@ QFont Prefs::agendaTimeLabelsFont() const
     return d->getFont(d->mBaseConfig.agendaTimeLabelsFontItem());
 }
 
+/* cppcheck-suppress functionStatic */
 QTimeZone Prefs::timeZone() const
 {
     return QTimeZone::systemTimeZone();

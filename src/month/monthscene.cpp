@@ -132,11 +132,13 @@ int MonthScene::rowHeight() const
     return static_cast<int>((availableHeight() - 1) / 6.);
 }
 
+/* cppcheck-suppress functionStatic */
 int MonthScene::monthLabelHeight() const
 {
     return 15;
 }
 
+/* cppcheck-suppress functionStatic */
 int MonthScene::dayLabelsHeight() const
 {
     return 20;
