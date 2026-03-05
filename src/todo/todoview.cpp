@@ -757,15 +757,16 @@ void TodoView::addTodo(const QString &summary, const Akonadi::Item &parentItem, 
     }
     */
 
-    // TODO: use the default todo calendar id (once we have one)
-    // Akonadi::Collection collection = Akonadi::EntityTreeModel::updatedCollection(model(), CalendarSupport::KCalPrefs::instance()->defaultCalendarId());
+    // Use the same collection of the parent, else the default todo calendar
     Akonadi::Collection collection;
-    // Use the same collection of the parent.
     if (parentItem.isValid()) {
         // Don't use parentCollection() since it might be a virtual collection
         collection = Akonadi::EntityTreeModel::updatedCollection(model(), parentItem.storageCollectionId());
+    } else {
+        collection.setId(CalendarSupport::KCalPrefs::instance()->defaultTodoCalendarId());
     }
 
+    /* If the collection is invalid createIncidence will prompt to select one */
     changer()->createIncidence(todo, collection, this);
 }
 
