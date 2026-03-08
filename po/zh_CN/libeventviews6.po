@@ -2078,7 +2078,7 @@ msgstr "按照摘要的匹配情况进行过滤"
 msgctxt "@info:whatsthis"
 msgid ""
 "Enter text here to filter the to-dos that are shown by matching summaries."
-msgstr "在此输入文字可过滤显示含有匹配摘要的待办事项。"
+msgstr "在此输入文本可过滤显示含有匹配摘要的待办事项。"
 
 #: todo/todoviewquicksearch.cpp:39
 #, kde-format
