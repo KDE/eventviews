@@ -249,6 +249,7 @@ private:
     QList<QAction *> mItemPopupMenuItemOnlyEntries;
     QList<QAction *> mItemPopupMenuReadWriteEntries;
 
+    QAction *mToggleReminder = nullptr;
     QAction *mMakeTodoIndependent = nullptr;
     QAction *mMakeSubtodosIndependent = nullptr;
 

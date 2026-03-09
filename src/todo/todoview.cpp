@@ -456,10 +456,10 @@ TodoView::TodoView(const EventViews::PrefsPtr &prefs, bool sidebarView, QWidget 
                               i18nc("@action:inmenu set or unset to-do is completed", "Togg&le To-do Completed"),
                               this,
                               &TodoView::toggleTodoCompleted);
-    mItemPopupMenu->addAction(QIcon::fromTheme(QStringLiteral("task-reminder")),
-                              i18nc("@action:inmenu enable or disable reminder", "&Toggle Reminder"),
-                              this,
-                              &TodoView::toggleTodoAlarm);
+    mToggleReminder = mItemPopupMenu->addAction(QIcon::fromTheme(QStringLiteral("task-reminder")),
+                                                i18nc("@action:inmenu enable or disable reminder", "&Toggle Reminder"),
+                                                this,
+                                                &TodoView::toggleTodoAlarm);
 
     mItemPopupMenu->addSeparator();
 
@@ -851,6 +851,10 @@ void TodoView::contextMenu(QPoint pos)
             createCategoryPopupMenu()->popup(mView->viewport()->mapToGlobal(pos));
             break;
         default:
+            if (mToggleReminder) {
+                mToggleReminder->setText(incidencePtr->hasEnabledAlarms() ? i18nc("@action:inmenu", "&Toggle Reminder Off")
+                                                                          : i18nc("@action:inmenu", "&Toggle Reminder On"));
+            }
             mItemPopupMenu->popup(mView->viewport()->mapToGlobal(pos));
             break;
         }
