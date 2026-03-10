@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-09 00:43+0000\n"
+"POT-Creation-Date: 2026-03-10 00:44+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -2038,25 +2038,41 @@ msgctxt "@action:inmenu priority value=8"
 msgid "8"
 msgstr "8"
 
-#: todo/todoview.cpp:1190
+#: todo/todoview.cpp:855
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu enable or disable reminder"
+#| msgid "&Toggle Reminder"
+msgctxt "@action:inmenu"
+msgid "&Toggle Reminder Off"
+msgstr "切换提醒(&T)"
+
+#: todo/todoview.cpp:856
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu enable or disable reminder"
+#| msgid "&Toggle Reminder"
+msgctxt "@action:inmenu"
+msgid "&Toggle Reminder On"
+msgstr "切换提醒(&T)"
+
+#: todo/todoview.cpp:1194
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display the sidebar"
 msgstr "显示侧边栏"
 
-#: todo/todoview.cpp:1193
+#: todo/todoview.cpp:1197
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Hide the sidebar"
 msgstr "隐藏侧边栏"
 
-#: todo/todoview.cpp:1212
+#: todo/todoview.cpp:1216
 #, kde-format
 msgctxt "@info::tooltip"
 msgid "Switch to the tree list display"
 msgstr "切换到树状列表视图"
 
-#: todo/todoview.cpp:1215
+#: todo/todoview.cpp:1219
 #, kde-format
 msgctxt "@info::tooltip"
 msgid "Switch to the flat list display"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-09 00:43+0000\n"
+"POT-Creation-Date: 2026-03-10 00:44+0000\n"
 "PO-Revision-Date: 2026-01-26 13:19+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -2200,25 +2200,41 @@ msgctxt "@action:inmenu priority value=8"
 msgid "8"
 msgstr "8"
 
-#: todo/todoview.cpp:1190
+#: todo/todoview.cpp:855
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu enable or disable reminder"
+#| msgid "&Toggle Reminder"
+msgctxt "@action:inmenu"
+msgid "&Toggle Reminder Off"
+msgstr "&Перемкнути нагадування"
+
+#: todo/todoview.cpp:856
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu enable or disable reminder"
+#| msgid "&Toggle Reminder"
+msgctxt "@action:inmenu"
+msgid "&Toggle Reminder On"
+msgstr "&Перемкнути нагадування"
+
+#: todo/todoview.cpp:1194
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display the sidebar"
 msgstr "Показати бічну панель"
 
-#: todo/todoview.cpp:1193
+#: todo/todoview.cpp:1197
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Hide the sidebar"
 msgstr "Приховати бічну панель"
 
-#: todo/todoview.cpp:1212
+#: todo/todoview.cpp:1216
 #, kde-format
 msgctxt "@info::tooltip"
 msgid "Switch to the tree list display"
 msgstr "Перемкнутися на показ ієрархічного списку"
 
-#: todo/todoview.cpp:1215
+#: todo/todoview.cpp:1219
 #, kde-format
 msgctxt "@info::tooltip"
 msgid "Switch to the flat list display"
