@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-10 00:44+0000\n"
-"PO-Revision-Date: 2026-01-26 13:19+0200\n"
+"PO-Revision-Date: 2026-03-10 14:35+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -2201,20 +2201,16 @@ msgid "8"
 msgstr "8"
 
 #: todo/todoview.cpp:855
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu enable or disable reminder"
-#| msgid "&Toggle Reminder"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&Toggle Reminder Off"
-msgstr "&Перемкнути нагадування"
+msgstr "Ви&мкнути нагадування"
 
 #: todo/todoview.cpp:856
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu enable or disable reminder"
-#| msgid "&Toggle Reminder"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&Toggle Reminder On"
-msgstr "&Перемкнути нагадування"
+msgstr "&Увімкнути нагадування"
 
 #: todo/todoview.cpp:1194
 #, kde-format

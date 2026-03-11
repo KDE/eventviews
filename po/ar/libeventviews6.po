@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-10 00:44+0000\n"
-"PO-Revision-Date: 2026-01-28 20:53+0400\n"
+"PO-Revision-Date: 2026-03-10 22:58+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -2123,20 +2123,16 @@ msgid "8"
 msgstr "8"
 
 #: todo/todoview.cpp:855
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu enable or disable reminder"
-#| msgid "&Toggle Reminder"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&Toggle Reminder Off"
-msgstr "&بدّل التذكير"
+msgstr "أو&قف تشغيل التذكير"
 
 #: todo/todoview.cpp:856
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu enable or disable reminder"
-#| msgid "&Toggle Reminder"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&Toggle Reminder On"
-msgstr "&بدّل التذكير"
+msgstr "&شغل التذكير"
 
 #: todo/todoview.cpp:1194
 #, kde-format
