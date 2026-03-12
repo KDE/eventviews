@@ -152,6 +152,12 @@
       <min>4</min>
       <max>30</max>
     </entry>
+    <entry type="Bool" key="Draw Bold Even Hour Grid Lines" name="EnableAgendaBoldEvenHours">
+      <label>Draw bold horizontal grid lines for the even hours</label>
+      <whatsthis>Draw a bolder horizontal grid line for the even hours (12am, 2am, 4am, etc).</whatsthis>
+      <tooltip>Draw bolder even hour grid lines</tooltip>
+      <default>false</default>
+    </entry>
     <entry type="Bool" key="Show Icons in Agenda View" name="EnableAgendaItemIcons">
       <label>Show icons in agenda view items</label>
       <whatsthis>Check this box to display icons (alarm, recursion, etc.) in agenda view items.</whatsthis>

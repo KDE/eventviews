@@ -1581,6 +1581,7 @@ void Agenda::drawContents(QPainter *p, int cx, int cy, int cw, int ch)
     // Compute the grid line color for both the hour and half-hour
     // The grid colors are always computed as a function of the palette's windowText color.
     QPen hourPen;
+    QPen hourPen2;
     QPen halfHourPen;
 
     const QColor windowTextColor = palette().color(QPalette::WindowText);
@@ -1592,6 +1593,13 @@ void Agenda::drawContents(QPainter *p, int cx, int cy, int cw, int ch)
         // light grey line
         hourPen = windowTextColor.darker(150);
         halfHourPen = windowTextColor.darker(200);
+    }
+    hourPen.setWidth(1);
+    hourPen2 = hourPen;
+    int y_offset = 0;
+    if (d->preferences()->enableAgendaBoldEvenHours()) {
+        hourPen2.setWidth(3); // must be an odd number
+        y_offset = (hourPen2.width() - 1) / 2;
     }
 
     dbp.setPen(hourPen);
@@ -1605,8 +1613,15 @@ void Agenda::drawContents(QPainter *p, int cx, int cy, int cw, int ch)
 
     // Draw horizontal lines of grid
     double y = (int(cy / (2 * lGridSpacingY))) * 2 * lGridSpacingY;
+    int hourCnt = 0;
     while (y < cy + ch) {
-        dbp.drawLine(cx, int(y), cx + cw, int(y));
+        if (hourCnt++ % 2 == 0) {
+            dbp.setPen(hourPen2); // even hours have fatter lines
+            dbp.drawLine(cx, int(y) - y_offset, cx + cw, int(y) - y_offset);
+        } else {
+            dbp.setPen(hourPen);
+            dbp.drawLine(cx, int(y), cx + cw, int(y));
+        }
         y += 2 * lGridSpacingY;
     }
     y = (2 * int(cy / (2 * lGridSpacingY)) + 1) * lGridSpacingY;

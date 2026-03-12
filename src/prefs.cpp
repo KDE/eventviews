@@ -650,6 +650,16 @@ QColor Prefs::agendaGridBackgroundColor() const
     return d->getColor(d->mBaseConfig.agendaGridBackgroundColorItem());
 }
 
+void Prefs::setEnableAgendaBoldEvenHours(bool enable)
+{
+    d->setBool(d->mBaseConfig.enableAgendaBoldEvenHoursItem(), enable);
+}
+
+bool Prefs::enableAgendaBoldEvenHours() const
+{
+    return d->getBool(d->mBaseConfig.enableAgendaBoldEvenHoursItem());
+}
+
 void Prefs::setEnableAgendaItemIcons(bool enable)
 {
     d->setBool(d->mBaseConfig.enableAgendaItemIconsItem(), enable);

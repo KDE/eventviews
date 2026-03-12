@@ -127,6 +127,13 @@ public:
 
     /*!
      */
+    void setEnableAgendaBoldEvenHours(bool enable);
+    /*!
+     */
+    [[nodiscard]] bool enableAgendaBoldEvenHours() const;
+
+    /*!
+     */
     void setAgendaGridWorkHoursBackgroundColor(const QColor &color);
     /*!
      */
