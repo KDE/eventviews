@@ -2037,13 +2037,13 @@ msgstr "8"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Toggle Reminder Off"
-msgstr ""
+msgstr "Vypnou&t upomínku"
 
 #: todo/todoview.cpp:856
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Toggle Reminder On"
-msgstr ""
+msgstr "Zapnou&t upomínku"
 
 #: todo/todoview.cpp:1194
 #, kde-format
