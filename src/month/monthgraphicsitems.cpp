@@ -103,11 +103,9 @@ void MonthCell::addMonthItem(MonthItem *manager, int height)
 
 int MonthCell::firstFreeSpace()
 {
-    const MonthItem *manager = nullptr;
     int i = 0;
     while (true) {
-        manager = mHeightHash[i];
-        if (manager == nullptr) {
+        if (mHeightHash[i] == nullptr) {
             return i;
         }
         i++;

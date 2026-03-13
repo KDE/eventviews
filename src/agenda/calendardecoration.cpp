@@ -250,11 +250,13 @@ QDate Decoration::weekDate(QDate date)
     return result.addDays(date.dayOfWeek() - 1);
 }
 
+/* cppcheck-suppress functionStatic */
 QDate Decoration::monthDate(QDate date)
 {
     return {date.year(), date.month(), 1};
 }
 
+/* cppcheck-suppress functionStatic */
 QDate Decoration::yearDate(QDate date)
 {
     return {date.year(), 1, 1};
