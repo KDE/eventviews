@@ -83,11 +83,13 @@ int MonthScene::maxRowCount()
     return (rowHeight() - MonthCell::topMargin()) / itemHeightIncludingSpacing();
 }
 
+/* cppcheck-suppress functionStatic */
 int MonthScene::itemHeightIncludingSpacing()
 {
     return MonthCell::topMargin() + 2;
 }
 
+/* cppcheck-suppress functionStatic */
 int MonthScene::itemHeight()
 {
     return MonthCell::topMargin();
@@ -168,6 +170,7 @@ int MonthScene::sceneYToMonthGridY(int yScene)
     return yScene - headerHeight();
 }
 
+/* cppcheck-suppress functionStatic */
 int MonthScene::sceneXToMonthGridX(int xScene)
 {
     return xScene;

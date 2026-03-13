@@ -1840,7 +1840,6 @@ void Agenda::insertMultiItem(const KCalendarCore::Incidence::Ptr &event,
     int cellX;
     int cellYTop;
     int cellYBottom;
-    QString newtext;
     int const width = XEnd - XBegin + 1;
     int count = 0;
     AgendaItem::QPtr current = nullptr;
@@ -1860,7 +1859,7 @@ void Agenda::insertMultiItem(const KCalendarCore::Incidence::Ptr &event,
             } else {
                 cellYBottom = rows() - 1;
             }
-            newtext = QStringLiteral("(%1/%2): ").arg(count).arg(width);
+            QString newtext = QStringLiteral("(%1/%2): ").arg(count).arg(width);
             newtext.append(ev->summary());
 
             current = insertItem(event, recurrenceId, cellX, cellYTop, cellYBottom, width, count, isSelected);
@@ -2019,11 +2018,9 @@ void Agenda::resizeEvent(QResizeEvent *ev)
 
 void Agenda::resizeAllContents()
 {
-    double subCellWidth;
     for (const AgendaItem::QPtr &item : std::as_const(d->mItems)) {
         if (item) {
-            subCellWidth = calcSubCellWidth(item);
-            placeAgendaItem(item, subCellWidth);
+            placeAgendaItem(item, calcSubCellWidth(item));
         }
     }
     /*
