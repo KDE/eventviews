@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-14 00:44+0000\n"
-"PO-Revision-Date: 2026-03-10 10:39+0100\n"
+"PO-Revision-Date: 2026-03-14 09:13+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -775,6 +775,7 @@ msgstr ""
 #, kde-format
 msgid "Draw bold horizontal grid lines for the even hours"
 msgstr ""
+"Dibuixa línies de quadrícula horitzontals en negreta per a les hores parells"
 
 #. i18n: ectx: whatsthis, entry (EnableAgendaBoldEvenHours), group (Agenda View)
 #: eventviews.kcfg:157
@@ -782,12 +783,14 @@ msgstr ""
 msgid ""
 "Draw a bolder horizontal grid line for the even hours (12am, 2am, 4am, etc)."
 msgstr ""
+"Dibuixa una línia de quadrícula horitzontal en negreta per a les hores "
+"parells (12:00, 2:00, 4:00, etc.)."
 
 #. i18n: ectx: tooltip, entry (EnableAgendaBoldEvenHours), group (Agenda View)
 #: eventviews.kcfg:158
 #, kde-format
 msgid "Draw bolder even hour grid lines"
-msgstr ""
+msgstr "Dibuixa línies de quadrícula d'hores parell en negreta"
 
 #. i18n: ectx: label, entry (EnableAgendaItemIcons), group (Agenda View)
 #: eventviews.kcfg:162 viewerapp/settings.kcfg:25
