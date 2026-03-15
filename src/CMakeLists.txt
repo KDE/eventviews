@@ -253,7 +253,6 @@ install(
 
 install(
     FILES
-        ${eventviews_HEADERS}
         ${CMAKE_CURRENT_BINARY_DIR}/eventviews_export.h
         ${eventviews_CamelCase_HEADERS}
         ${eventviews_agenda_HEADERS}
