@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-14 00:44+0000\n"
-"PO-Revision-Date: 2026-03-10 22:58+0400\n"
+"PO-Revision-Date: 2026-03-15 09:34+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -738,7 +738,7 @@ msgstr "اضبط الارتفاع (بالبكسل) لوحدة ساعة في شب
 #: eventviews.kcfg:156
 #, kde-format
 msgid "Draw bold horizontal grid lines for the even hours"
-msgstr ""
+msgstr "ارسم خطوطًا أفقية سميكة للساعات الزوجية"
 
 #. i18n: ectx: whatsthis, entry (EnableAgendaBoldEvenHours), group (Agenda View)
 #: eventviews.kcfg:157
@@ -746,12 +746,14 @@ msgstr ""
 msgid ""
 "Draw a bolder horizontal grid line for the even hours (12am, 2am, 4am, etc)."
 msgstr ""
+"ارسم خطًا أفقيًا أكثر سمكًا على الشبكة للإشارة إلى الساعات الزوجية (12 صباحًا، 2 "
+"صباحًا، 4 صباحًا، إلخ)."
 
 #. i18n: ectx: tooltip, entry (EnableAgendaBoldEvenHours), group (Agenda View)
 #: eventviews.kcfg:158
 #, kde-format
 msgid "Draw bolder even hour grid lines"
-msgstr ""
+msgstr "ارسم خطوطًا أكثر سمكًا لشبكة الساعات"
 
 #. i18n: ectx: label, entry (EnableAgendaItemIcons), group (Agenda View)
 #: eventviews.kcfg:162 viewerapp/settings.kcfg:25
