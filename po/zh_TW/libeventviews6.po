@@ -4,13 +4,13 @@
 # Franklin Weng <franklin@goodhorse.idv.tw>, 2010, 2011, 2012, 2013, 2015.
 # Frank Weng (a.k.a. Franklin) <franklin at goodhorse dot idv dot tw>, 2010.
 # Jeff Huang <s8321414@gmail.com>, 2020.
-# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025, 2026 Kisaragi Hiu <mail@kisaragi-hiu.com>
+# SPDX-FileCopyrightText: 2022-2026 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-14 00:44+0000\n"
-"PO-Revision-Date: 2026-01-28 21:17+0900\n"
+"PO-Revision-Date: 2026-03-16 16:43+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -705,20 +705,20 @@ msgstr "設定行程檢視小時格的高度（單位為像素）"
 #: eventviews.kcfg:156
 #, kde-format
 msgid "Draw bold horizontal grid lines for the even hours"
-msgstr ""
+msgstr "為偶數小時繪製粗水平格線"
 
 #. i18n: ectx: whatsthis, entry (EnableAgendaBoldEvenHours), group (Agenda View)
 #: eventviews.kcfg:157
 #, kde-format
 msgid ""
 "Draw a bolder horizontal grid line for the even hours (12am, 2am, 4am, etc)."
-msgstr ""
+msgstr "為偶數小時（12 點、2 點、4 點等等）繪製更粗的水平格線。"
 
 #. i18n: ectx: tooltip, entry (EnableAgendaBoldEvenHours), group (Agenda View)
 #: eventviews.kcfg:158
 #, kde-format
 msgid "Draw bolder even hour grid lines"
-msgstr ""
+msgstr "用更粗的方式繪製偶數小時格線"
 
 #. i18n: ectx: label, entry (EnableAgendaItemIcons), group (Agenda View)
 #: eventviews.kcfg:162 viewerapp/settings.kcfg:25
@@ -2065,20 +2065,16 @@ msgid "8"
 msgstr "8"
 
 #: todo/todoview.cpp:855
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu enable or disable reminder"
-#| msgid "&Toggle Reminder"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&Toggle Reminder Off"
-msgstr "切換提醒(&T)"
+msgstr "切換提醒關閉(&T)"
 
 #: todo/todoview.cpp:856
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu enable or disable reminder"
-#| msgid "&Toggle Reminder"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&Toggle Reminder On"
-msgstr "切換提醒(&T)"
+msgstr "切換提醒開啟(&T)"
 
 #: todo/todoview.cpp:1194
 #, kde-format

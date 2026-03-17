@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-14 00:44+0000\n"
-"PO-Revision-Date: 2026-03-12 12:17+0100\n"
+"PO-Revision-Date: 2026-03-15 17:45+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -785,6 +785,7 @@ msgstr "Règle la hauteur en pixel d'une heure dans la grille de l'agenda"
 #, kde-format
 msgid "Draw bold horizontal grid lines for the even hours"
 msgstr ""
+"Tracez des lignes horizontales épaisses dans la grille pour les heures paires"
 
 #. i18n: ectx: whatsthis, entry (EnableAgendaBoldEvenHours), group (Agenda View)
 #: eventviews.kcfg:157
@@ -792,12 +793,14 @@ msgstr ""
 msgid ""
 "Draw a bolder horizontal grid line for the even hours (12am, 2am, 4am, etc)."
 msgstr ""
+"Tracez une ligne horizontale plus épaisse dans la grille pour les heures "
+"paires (Minuit, 2 h, 4 h, etc.)."
 
 #. i18n: ectx: tooltip, entry (EnableAgendaBoldEvenHours), group (Agenda View)
 #: eventviews.kcfg:158
 #, kde-format
 msgid "Draw bolder even hour grid lines"
-msgstr ""
+msgstr "Tracez des lignes plus épaisses dans la grille pour les heures paires"
 
 #. i18n: ectx: label, entry (EnableAgendaItemIcons), group (Agenda View)
 #: eventviews.kcfg:162 viewerapp/settings.kcfg:25
