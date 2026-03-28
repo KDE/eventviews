@@ -242,7 +242,7 @@ void TimeLabels::paintEvent(QPaintEvent *)
     // end of workaround
 
     int cell = yposToCell(cy);
-    double y = (cell - beginning) * mCellHeight;
+    double y = ((cell - beginning) * mCellHeight) + 2; // add 2 pixels for better vertical alignment with the grid
     QFontMetrics fm = fontMetrics();
     QString hour;
     int timeHeight = fm.ascent();
