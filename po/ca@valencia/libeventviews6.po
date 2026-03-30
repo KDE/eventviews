@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-14 00:44+0000\n"
-"PO-Revision-Date: 2026-03-14 09:13+0100\n"
+"PO-Revision-Date: 2026-03-29 13:50+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -86,7 +86,7 @@ msgstr "S'ha afegit l'assistent"
 #: agenda/agendaitem.cpp:856 agenda/agendaitem.cpp:956
 #, kde-format
 msgid "%1 - %2"
-msgstr "%1 - %2"
+msgstr "%1 – %2"
 
 #: agenda/agendaitem.cpp:865
 #, kde-format
@@ -96,7 +96,7 @@ msgstr "- %1"
 #: agenda/agendaitem.cpp:909 agenda/agendaitem.cpp:932
 #, kde-format
 msgid "%1: %2 - %3"
-msgstr "%1: %2 - %3"
+msgstr "%1: %2 – %3"
 
 #: agenda/agendaitem.cpp:1041
 #, kde-format
@@ -299,7 +299,7 @@ msgstr "%1%2<br/>%3 (%4)"
 #, kde-format
 msgctxt "@title:window"
 msgid "Timezone"
-msgstr "Zona horària"
+msgstr "Fus horari"
 
 #: eventview.cpp:109
 #, kde-format
@@ -522,9 +522,9 @@ msgid ""
 "your city is not listed, select one which shares the same timezone. "
 "KOrganizer will automatically adjust for daylight savings."
 msgstr ""
-"Trieu la vostra zona horària de la llista d'ubicacions d'esta llista "
-"desplegable. Si la vostra ciutat no hi és, trieu-ne una amb la mateixa zona "
-"horària. KOrganizer ajustarà automàticament el canvi d'hora."
+"Trieu el vostre fus horari de la llista d'ubicacions d'esta llista "
+"desplegable. Si la vostra ciutat no hi és, trieu-ne una amb el mateix fus "
+"horari. KOrganizer ajustarà automàticament el canvi d'hora."
 
 #. i18n: ectx: label, entry (DayBegins), group (Time &amp; Date)
 #: eventviews.kcfg:80
@@ -601,7 +601,7 @@ msgstr ""
 #: eventviews.kcfg:104 viewerapp/settings.kcfg:9
 #, kde-format
 msgid "Enable tooltips for displaying summaries"
-msgstr "Habilita els consells que mostren els resums"
+msgstr "Habilita els consells d'eina que mostren els resums"
 
 #. i18n: ectx: whatsthis, entry, group (General View)
 #: eventviews.kcfg:105 viewerapp/settings.kcfg:10
@@ -610,8 +610,8 @@ msgid ""
 "Check this box to display summary tooltips when hovering the mouse over an "
 "event or a to-do."
 msgstr ""
-"Marqueu esta casella per a mostrar un consell amb el resum de l'esdeveniment "
-"o la tasca pendent en passar-hi el ratolí per damunt."
+"Marqueu esta casella per a mostrar un consell d'eina amb el resum de "
+"l'esdeveniment o la tasca pendent en passar-hi el ratolí per damunt."
 
 #. i18n: ectx: label, entry, group (General View)
 #: eventviews.kcfg:109
@@ -1855,7 +1855,7 @@ msgstr "Etiquetes"
 #: list/listview.cpp:367
 #, kde-format
 msgid "Summary [%1 - %2]"
-msgstr "Resum [%1 - %2]"
+msgstr "Resum [%1 – %2]"
 
 #: month/monthitem.cpp:307
 #, kde-format
@@ -2713,7 +2713,7 @@ msgstr "Què toca ara?"
 #, kde-format
 msgctxt "date from - to"
 msgid "%1 - %2"
-msgstr "%1 - %2"
+msgstr "%1 – %2"
 
 #: whatsnext/whatsnextview.cpp:102
 #, kde-format
@@ -2729,7 +2729,7 @@ msgstr "Esdeveniments i tasques pendents que requerixen resposta:"
 #, kde-format
 msgctxt "date, from - to"
 msgid "%1, %2 - %3"
-msgstr "%1, %2 - %3"
+msgstr "%1, %2 – %3"
 
 #: whatsnext/whatsnextview.cpp:313
 #, kde-format

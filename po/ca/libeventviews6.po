@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-14 00:44+0000\n"
-"PO-Revision-Date: 2026-03-14 09:13+0100\n"
+"PO-Revision-Date: 2026-03-29 13:50+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -300,7 +300,7 @@ msgstr "%1%2<br/>%3 (%4)"
 #, kde-format
 msgctxt "@title:window"
 msgid "Timezone"
-msgstr "Zona horària"
+msgstr "Fus horari"
 
 #: eventview.cpp:109
 #, kde-format
@@ -523,9 +523,9 @@ msgid ""
 "your city is not listed, select one which shares the same timezone. "
 "KOrganizer will automatically adjust for daylight savings."
 msgstr ""
-"Seleccioneu la vostra zona horària de la llista d'ubicacions d'aquesta "
-"llista desplegable. Si la vostra ciutat no hi és, seleccioneu-ne una amb la "
-"mateixa zona horària. El KOrganizer ajustarà automàticament el canvi d'hora."
+"Seleccioneu el vostre fus horari de la llista d'ubicacions d'aquesta llista "
+"desplegable. Si la vostra ciutat no hi és, seleccioneu-ne una amb el mateix "
+"fus horari. El KOrganizer ajustarà automàticament el canvi d'hora."
 
 #. i18n: ectx: label, entry (DayBegins), group (Time &amp; Date)
 #: eventviews.kcfg:80
