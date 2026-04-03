@@ -543,7 +543,7 @@ void EventView::restoreConfig(const KConfigGroup &configGroup)
 {
     Q_D(EventView);
     const bool useCustom = configGroup.readEntry("UseCustomCollectionSelection", false);
-    if (!d->collectionSelectionModel && !useCustom) {
+    if (d->collectionSelectionModel && !useCustom) {
         delete d->collectionSelectionModel;
         d->collectionSelectionModel = nullptr;
         d->setUpModels();
