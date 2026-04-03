@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-14 00:44+0000\n"
-"PO-Revision-Date: 2026-02-13 22:51+0100\n"
+"PO-Revision-Date: 2026-04-03 01:51+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.12.2\n"
+"X-Generator: Lokalize 26.03.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -763,7 +763,7 @@ msgstr "Задайте височината (в пиксели) за един ч
 #: eventviews.kcfg:156
 #, kde-format
 msgid "Draw bold horizontal grid lines for the even hours"
-msgstr ""
+msgstr "Изчертаване на удебелени хоризонтални линии за четните часове"
 
 #. i18n: ectx: whatsthis, entry (EnableAgendaBoldEvenHours), group (Agenda View)
 #: eventviews.kcfg:157
@@ -771,12 +771,14 @@ msgstr ""
 msgid ""
 "Draw a bolder horizontal grid line for the even hours (12am, 2am, 4am, etc)."
 msgstr ""
+"Изчертава се по-удебелена хоризонтална линия за четните часове (00:00, "
+"02:00, 04:00 и т.н.)."
 
 #. i18n: ectx: tooltip, entry (EnableAgendaBoldEvenHours), group (Agenda View)
 #: eventviews.kcfg:158
 #, kde-format
 msgid "Draw bolder even hour grid lines"
-msgstr ""
+msgstr "Удебеляване на линиите за четните часове"
 
 #. i18n: ectx: label, entry (EnableAgendaItemIcons), group (Agenda View)
 #: eventviews.kcfg:162 viewerapp/settings.kcfg:25
@@ -2235,20 +2237,16 @@ msgid "8"
 msgstr "8"
 
 #: todo/todoview.cpp:855
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu enable or disable reminder"
-#| msgid "&Toggle Reminder"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&Toggle Reminder Off"
-msgstr "&Превключване на напомнянето"
+msgstr "&Изключване на напомнянето"
 
 #: todo/todoview.cpp:856
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu enable or disable reminder"
-#| msgid "&Toggle Reminder"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&Toggle Reminder On"
-msgstr "&Превключване на напомнянето"
+msgstr "&Включване на напомнянето"
 
 #: todo/todoview.cpp:1194
 #, kde-format

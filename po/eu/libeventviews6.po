@@ -1,16 +1,16 @@
 # Translation for libeventviews.po to Euskara/Basque (eu).
-# Copyright (C) 2021-2025 This file is copyright:
+# Copyright (C) 2021-2026 This file is copyright:
 # This file is distributed under the same license as the eventviews package.
-# SPDX-FileCopyrightText: 2023, 2024, 2025 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2023, 2024, 2025, 2026 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
 #
 # Itzultzaileak:
-# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2021, 2022, 2023, 2024, 2025.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2021, 2022, 2023, 2024, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-14 00:44+0000\n"
-"PO-Revision-Date: 2025-09-10 01:11+0200\n"
+"PO-Revision-Date: 2026-04-02 23:22+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.08.0\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -92,28 +92,24 @@ msgid "- %1"
 msgstr "- %1"
 
 #: agenda/agendaitem.cpp:909 agenda/agendaitem.cpp:932
-#, fuzzy, kde-format
-#| msgctxt "date, from - to"
-#| msgid "%1, %2 - %3"
+#, kde-format
 msgid "%1: %2 - %3"
-msgstr "%1, %2 - %3"
+msgstr "%1: %2 - %3"
 
 #: agenda/agendaitem.cpp:1041
 #, kde-format
 msgid "Google Calendar Settings"
-msgstr ""
+msgstr "Google Calendar ezarpenak"
 
 #: agenda/agendaitem.cpp:1041
 #, kde-format
 msgid "Public Holiday"
-msgstr ""
+msgstr "Jai ofiziala"
 
 #: agenda/agendaitem.cpp:1053
-#, fuzzy, kde-format
-#| msgctxt "date, from - to"
-#| msgid "%1, %2 - %3"
+#, kde-format
 msgid "%1: %2"
-msgstr "%1, %2 - %3"
+msgstr "%1: %2"
 
 #: agenda/agendaview.cpp:421
 #, kde-format
@@ -762,7 +758,7 @@ msgstr "Ezarri agenda-saretako ordu baterako altuera (pixeletan)"
 #: eventviews.kcfg:156
 #, kde-format
 msgid "Draw bold horizontal grid lines for the even hours"
-msgstr ""
+msgstr "Marraztu sareta-lerro horizontal lodiak ordu bikoitietarako"
 
 #. i18n: ectx: whatsthis, entry (EnableAgendaBoldEvenHours), group (Agenda View)
 #: eventviews.kcfg:157
@@ -770,12 +766,14 @@ msgstr ""
 msgid ""
 "Draw a bolder horizontal grid line for the even hours (12am, 2am, 4am, etc)."
 msgstr ""
+"Marraztu sareta-lerro horizontal lodiago bat ordu bikoitietarako (12am, 2am, "
+"4am, etab)."
 
 #. i18n: ectx: tooltip, entry (EnableAgendaBoldEvenHours), group (Agenda View)
 #: eventviews.kcfg:158
 #, kde-format
 msgid "Draw bolder even hour grid lines"
-msgstr ""
+msgstr "Marraztu ordu bikoitien sareta-lerro lodiagoak"
 
 #. i18n: ectx: label, entry (EnableAgendaItemIcons), group (Agenda View)
 #: eventviews.kcfg:162 viewerapp/settings.kcfg:25
@@ -801,29 +799,24 @@ msgstr "Erakutsi ikonoak agenda ikuspegiko elementuetan"
 
 #. i18n: ectx: label, entry (EnableAgendaItemDesc), group (Agenda View)
 #: eventviews.kcfg:168
-#, fuzzy, kde-format
-#| msgid "Show icons in agenda view items"
+#, kde-format
 msgid "Show incidence descriptions in agenda view items"
-msgstr "Erakutsi ikonoak agenda ikuspegiko elementuetan"
+msgstr "Erakutsi gertakizunen deskribapenak agenda ikuspegiko elementuetan"
 
 #. i18n: ectx: whatsthis, entry (EnableAgendaItemDesc), group (Agenda View)
 #: eventviews.kcfg:169
-#, fuzzy, kde-format
-#| msgid ""
-#| "Check this box to display icons (alarm, recursion, etc.) in agenda view "
-#| "items."
+#, kde-format
 msgid ""
 "Check this box to display the incidence descriptions in agenda view items."
 msgstr ""
-"Markatu lauki hau, agenda ikuspegiko elementuetan ikonoak (alarma, "
-"errekurtsioa, etab.) bistaratzeko."
+"Markatu lauki hau, agenda ikuspegiko elementuetan gertakizunen deskribapenak "
+"erakusteko."
 
 #. i18n: ectx: tooltip, entry (EnableAgendaItemDesc), group (Agenda View)
 #: eventviews.kcfg:170
-#, fuzzy, kde-format
-#| msgid "Display icons in agenda view items"
+#, kde-format
 msgid "Display incidence descriptions agenda view items"
-msgstr "Erakutsi ikonoak agenda ikuspegiko elementuetan"
+msgstr "Erakutsi gertakizunen deskribapenak agenda ikuspegiko elementuetan"
 
 #. i18n: ectx: label, entry (ShowTodosAgendaView), group (Agenda View)
 #. i18n: ectx: label, entry (ShowTodosMonthView), group (Month View)
@@ -1683,24 +1676,22 @@ msgstr ""
 
 #. i18n: ectx: label, entry (MonthTodayColor), group (Theme/Month view)
 #: eventviews.kcfg:577
-#, fuzzy, kde-format
-#| msgid "Month view background color"
+#, kde-format
 msgid "Month view today background color"
-msgstr "Hilabeteko ikuspegiaren atzeko planoaren kolorea"
+msgstr "Hilabeteko ikuspegian gaurko atzeko planoaren kolorea"
 
 #. i18n: ectx: tooltip, entry (MonthTodayColor), group (Theme/Month view)
 #: eventviews.kcfg:578
-#, fuzzy, kde-format
-#| msgid "Select the working hours background color for the Month view here."
+#, kde-format
 msgid "Set the background color for today's date in month view"
-msgstr ""
-"Hautatu hemen Hilabeteko ikuspegirako laneko orduen atzeko planoko kolorea."
+msgstr "Ezarri gaurko dataren atzeko planoaren kolorea hilabeteko ikuspegian"
 
 #. i18n: ectx: whatsthis, entry (MonthTodayColor), group (Theme/Month view)
 #: eventviews.kcfg:579
 #, kde-format
 msgid "In Month View, select the background color for today's date."
 msgstr ""
+"Hilabeteko ikuspegian, hautatu gaurko dataren atzeko planoaren kolorea."
 
 #. i18n: ectx: label, entry, group (Theme/Month view)
 #: eventviews.kcfg:601
@@ -2231,20 +2222,16 @@ msgid "8"
 msgstr "8"
 
 #: todo/todoview.cpp:855
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu enable or disable reminder"
-#| msgid "&Toggle Reminder"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&Toggle Reminder Off"
-msgstr "&Txandakatu oroigarria"
+msgstr "&Oroigarria itzali"
 
 #: todo/todoview.cpp:856
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu enable or disable reminder"
-#| msgid "&Toggle Reminder"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&Toggle Reminder On"
-msgstr "&Txandakatu oroigarria"
+msgstr "&Oroigarria piztu"
 
 #: todo/todoview.cpp:1194
 #, kde-format
