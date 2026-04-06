@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: CC0-1.0
 # SPDX-FileCopyrightText: none
 cmake_minimum_required(VERSION 3.29)
-set(PIM_VERSION "6.7.41")
+set(PIM_VERSION "6.7.42")
 
 project(eventviews VERSION ${PIM_VERSION})
 
@@ -101,7 +101,7 @@ set(AKONADI_LIB_VERSION "6.7.40")
 set(AKONADICALENDAR_LIB_VERSION "6.7.40")
 set(KMIME_LIB_VERSION "6.7.40")
 set(LIBKDEPIM_LIB_VERSION "6.7.40")
-set(CALENDARSUPPORT_LIB_VERSION "6.7.40")
+set(CALENDARSUPPORT_LIB_VERSION "6.7.41")
 
 find_package(KPim6Akonadi ${AKONADI_LIB_VERSION} CONFIG REQUIRED)
 find_package(Qt6 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets)

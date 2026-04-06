@@ -73,6 +73,7 @@ public: /// Members
     QList<Akonadi::CollectionCalendar::Ptr> mCalendars;
 
     std::vector<std::unique_ptr<KHolidays::HolidayRegion>> mHolidayRegions;
+    QStringList mHolidayCategories;
     PrefsPtr mPrefs;
     KCalPrefsPtr mKCalPrefs;
 

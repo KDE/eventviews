@@ -175,7 +175,7 @@ protected:
 
     /*!
      */
-    KHolidays::Holiday::List holidays(QDate startDate, QDate endDate);
+    KHolidays::Holiday::List holidays(QDate startDate, QDate endDate, const QStringList &categories = QStringList());
 
     // Compute and update the whole view
     /*!

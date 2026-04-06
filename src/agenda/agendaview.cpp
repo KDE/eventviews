@@ -439,7 +439,8 @@ void AgendaHeader::addDay(const DecorationList &decoList, QDate date, bool withD
         mDateDayLabels.append(dayLabel);
 
         // if a holiday region is selected, show the holiday name
-        const QStringList texts = CalendarSupport::holiday(date);
+        const QStringList holidayCats = CalendarSupport::KCalPrefs::instance()->holidayCategories();
+        const QStringList texts = CalendarSupport::holiday(date, holidayCats);
         for (const QString &text : texts) {
             auto label = new KSqueezedTextLabel(text, topDayLabelBox);
             label->setTextElideMode(Qt::ElideRight);

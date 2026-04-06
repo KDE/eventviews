@@ -25,6 +25,7 @@ using namespace Qt::Literals::StringLiterals;
 
 #include <KCalUtils/RecurrenceActions>
 
+#include <KHolidays/HolidayCategories>
 #include <KHolidays/HolidayRegion>
 
 #include "calendarview_debug.h"
@@ -96,6 +97,17 @@ void EventView::setHolidayRegions(const QStringList &regions)
         auto region = std::make_unique<KHolidays::HolidayRegion>(regionStr);
         if (region->isValid()) {
             d->mHolidayRegions.push_back(std::move(region));
+        }
+    }
+}
+
+void EventView::setHolidayCategories(const QStringList &categories)
+{
+    Q_D(EventView);
+    d->mHolidayCategories.clear();
+    for (const QString &catStr : categories) {
+        if (KHolidays::isHolidayCategoryValid(catStr)) {
+            d->mHolidayCategories.append(catStr);
         }
     }
 }

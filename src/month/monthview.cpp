@@ -544,13 +544,14 @@ Akonadi::Item::List MonthView::selectedIncidences() const
     return selected;
 }
 
-KHolidays::Holiday::List MonthView::holidays(QDate startDate, QDate endDate)
+KHolidays::Holiday::List MonthView::holidays(QDate startDate, QDate endDate, const QStringList &categories)
 {
     KHolidays::Holiday::List holidays;
     auto const regions = CalendarSupport::KCalPrefs::instance()->mHolidays;
     for (auto const &r : regions) {
-        KHolidays::HolidayRegion const region(r);
+        KHolidays::HolidayRegion region(r);
         if (region.isValid()) {
+            region.setCategories(categories);
             holidays += region.rawHolidaysWithAstroSeasons(startDate, endDate);
         }
     }
@@ -598,7 +599,8 @@ void MonthView::reloadIncidences()
     }
 
     // add holidays
-    auto const hols = holidays(actualStartDateTime().date(), actualEndDateTime().date());
+    const QStringList holidayCats = CalendarSupport::KCalPrefs::instance()->holidayCategories();
+    auto const hols = holidays(actualStartDateTime().date(), actualEndDateTime().date(), holidayCats);
     for (auto const &h : hols) {
         if (h.dayType() == KHolidays::Holiday::NonWorkday) {
             /* cppcheck-suppress constVariablePointer */

@@ -401,6 +401,12 @@ public Q_SLOTS:
     */
     void setHolidayRegions(const QStringList &regions);
 
+    /*!
+     * Set which holiday categories the user wants to use.
+     * \a regions a list of Holiday category strings.
+     */
+    void setHolidayCategories(const QStringList &categories);
+
 Q_SIGNALS:
     /*!
      * when the view changes the dates that are selected in one way or
