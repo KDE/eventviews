@@ -14,8 +14,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.3\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Lokalize 23.08.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -28,11 +28,10 @@ msgid "Your emails"
 msgstr "wizzardsk@gmail.com"
 
 #: agenda/agenda.cpp:956
-#, fuzzy, kde-format
-#| msgid "Unable to lock item for modification. You cannot make any changes."
+#, kde-format
 msgctxt "@info"
 msgid "Unable to lock item for modification. You cannot make any changes."
-msgstr "Nemôžno zamknúť položku pre úpravy. Nemôžete vykonať žiadne zmeny."
+msgstr "Nemožno zamknúť položku pre úpravy. Nemôžete vykonať žiadne zmeny."
 
 #: agenda/agenda.cpp:958
 #, kde-format
@@ -41,16 +40,13 @@ msgid "Locking Failed"
 msgstr "Zamknutie zlyhalo"
 
 #: agenda/agenda.cpp:1173
-#, fuzzy, kde-format
-#| msgid "Dissociate event from recurrence"
+#, kde-format
 msgctxt "@info/plain"
 msgid "Dissociate event from recurrence"
-msgstr "Oddeliť udalosť z opakovania"
+msgstr "Oddeliť udalosť od opakovania"
 
 #: agenda/agenda.cpp:1196 month/monthitem.cpp:450
-#, fuzzy, kde-format
-#| msgid ""
-#| "Unable to add the exception item to the calendar. No change will be done."
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Unable to add the exception item to the calendar. No change will be done."
@@ -93,28 +89,24 @@ msgid "- %1"
 msgstr "- %1"
 
 #: agenda/agendaitem.cpp:909 agenda/agendaitem.cpp:932
-#, fuzzy, kde-format
-#| msgctxt "date, from - to"
-#| msgid "%1, %2 - %3"
+#, kde-format
 msgid "%1: %2 - %3"
-msgstr "%1, %2 - %3"
+msgstr "%1: %2 - %3"
 
 #: agenda/agendaitem.cpp:1041
 #, kde-format
 msgid "Google Calendar Settings"
-msgstr ""
+msgstr "Nastavenia Google Calendar"
 
 #: agenda/agendaitem.cpp:1041
 #, kde-format
 msgid "Public Holiday"
-msgstr ""
+msgstr "Štátny sviatok"
 
 #: agenda/agendaitem.cpp:1053
-#, fuzzy, kde-format
-#| msgctxt "date, from - to"
-#| msgid "%1, %2 - %3"
+#, kde-format
 msgid "%1: %2"
-msgstr "%1, %2 - %3"
+msgstr "%1: %2"
 
 #: agenda/agendaview.cpp:421
 #, kde-format
@@ -133,16 +125,15 @@ msgid "Unable to save %1 \"%2\"."
 msgstr "Nepodarilo sa uložiť %1 \"%2\"."
 
 #: agenda/timelabels.cpp:329
-#, fuzzy, kde-format
-#| msgid "&Add Timezones..."
+#, kde-format
 msgid "&Add Timezones…"
-msgstr "Prid&ať časové zóny..."
+msgstr "Prid&ať časové zóny…"
 
 #: agenda/timelabels.cpp:330
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Add a timelabel display column for a new timezone"
-msgstr ""
+msgstr "Pridať stĺpec s časovými označeniami pre nové časové pásmo"
 
 #: agenda/timelabels.cpp:333
 #, kde-format
@@ -153,6 +144,10 @@ msgid ""
 "This feature is very useful when showing calendar events for people in "
 "timezones other than your own."
 msgstr ""
+"Táto ponuka zobrazí dialógové okno na výber časového pásma, ktoré vám umožní "
+"vybrať časové pásmo na zobrazenie hodinových označení vedľa označení "
+"systémového časového pásma. Táto funkcia je veľmi užitočná pri zobrazovaní "
+"udalostí kalendára pre ľudí v iných časových pásmach, ako je vaše."
 
 #: agenda/timelabels.cpp:336
 #, kde-format
@@ -166,6 +161,8 @@ msgid ""
 "Remove the hour label column for the currently selected timezone, for non-"
 "system timezones only."
 msgstr ""
+"Odstrániť stĺpec hodinových označení pre aktuálne vybrané časové pásmo (iba "
+"pre nesystémové časové pásma)."
 
 #: agenda/timelabels.cpp:343
 #, kde-format
@@ -174,18 +171,20 @@ msgid ""
 "For non-system timezones, this menu selection removes the time hour labels "
 "display column for the currently selected timezone."
 msgstr ""
+"Pre nesystémové časové pásma táto voľba ponuky odstráni stĺpec zobrazenia "
+"hodinových označení pre aktuálne vybrané časové pásmo."
 
 #: agenda/timelabels.cpp:347
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "12 Hour Clock"
-msgstr ""
+msgstr "12-hodinový formát"
 
 #: agenda/timelabels.cpp:349
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "24 Hour Clock"
-msgstr ""
+msgstr "24-hodinový formát"
 
 #: agenda/timelabels.cpp:351
 #, kde-format
@@ -194,6 +193,8 @@ msgid ""
 "Display the time label hours in 24-hour \"military\" format or according to "
 "your locale"
 msgstr ""
+"Display the time label hours in 24-hour \"military\" format or podľa your "
+"locale"
 
 #: agenda/timelabels.cpp:353
 #, kde-format
@@ -202,36 +203,39 @@ msgid ""
 "This menu selection shows the time hour labels according to 24-hour "
 "\"military\" time or your system locale."
 msgstr ""
+"This menu selection shows the time hour labels podľa 24-hour \"military\" "
+"time or your system locale."
 
 #: agenda/timelabels.cpp:358
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Right-side Time Labels"
-msgstr ""
+msgstr "Skryť časové označenia na pravej strane"
 
 #: agenda/timelabels.cpp:360
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Right-side Time Labels"
-msgstr ""
+msgstr "Zobraziť časové označenia na pravej strane"
 
 #: agenda/timelabels.cpp:364
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Left-side Time Labels"
-msgstr ""
+msgstr "Skryť časové označenia na ľavej strane"
 
 #: agenda/timelabels.cpp:366
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Left-side Time Labels"
-msgstr ""
+msgstr "Zobraziť časové označenia na ľavej strane"
 
 #: agenda/timelabels.cpp:369
 #, kde-format
 msgctxt "@info::tooltip"
 msgid "Show or hide time labels on both sides of the agenda view"
 msgstr ""
+"Zobraziť alebo skryť časové označenia na oboch stranách zobrazenia agendy"
 
 #: agenda/timelabels.cpp:371
 #, kde-format
@@ -242,6 +246,11 @@ msgid ""
 "shown on the second side to save screen space. Similarly, the vertical "
 "scrollbar is removed when the time labels are shown on both sides."
 msgstr ""
+"Táto voľba ponuky zobrazí alebo skryje časové označenia na oboch stranách "
+"zobrazenia agendy. Na druhej strane sa zobrazí iba systémové časové pásmo "
+"(žiadne ďalšie pridané časové pásma), aby sa ušetril priestor na obrazovke. "
+"Podobne sa zvislý posuvník odstráni, keď sú časové označenia zobrazené na "
+"oboch stranách."
 
 #: agenda/timelabels.cpp:426
 #, kde-format
@@ -592,17 +601,13 @@ msgstr ""
 
 #. i18n: ectx: label, entry, group (General View)
 #: eventviews.kcfg:109
-#, fuzzy, kde-format
-#| msgid "To-dos use category colors"
+#, kde-format
 msgid "To-dos use tag colors"
 msgstr "Úlohy používajú farby kategórií"
 
 #. i18n: ectx: whatsthis, entry, group (General View)
 #: eventviews.kcfg:110
-#, fuzzy, kde-format
-#| msgid ""
-#| "Check this box so that to-dos will use category colors and not colors "
-#| "specific to their due, due today or overdue state"
+#, kde-format
 msgid ""
 "Check this box so that to-dos will use tag colors and not colors specific to "
 "their due, due today or overdue state"
@@ -785,17 +790,13 @@ msgstr "Zobraziť ikony v položkách pohľadu programu"
 
 #. i18n: ectx: label, entry (EnableAgendaItemDesc), group (Agenda View)
 #: eventviews.kcfg:168
-#, fuzzy, kde-format
-#| msgid "Show icons in agenda view items"
+#, kde-format
 msgid "Show incidence descriptions in agenda view items"
-msgstr "Ukázať ikony v položkách pohľadu programu"
+msgstr "Zobraziť ikony v položkách pohľadu agendy"
 
 #. i18n: ectx: whatsthis, entry (EnableAgendaItemDesc), group (Agenda View)
 #: eventviews.kcfg:169
-#, fuzzy, kde-format
-#| msgid ""
-#| "Check this box to display icons (alarm, recursion, etc.) in agenda view "
-#| "items."
+#, kde-format
 msgid ""
 "Check this box to display the incidence descriptions in agenda view items."
 msgstr ""
@@ -804,8 +805,7 @@ msgstr ""
 
 #. i18n: ectx: tooltip, entry (EnableAgendaItemDesc), group (Agenda View)
 #: eventviews.kcfg:170
-#, fuzzy, kde-format
-#| msgid "Display icons in agenda view items"
+#, kde-format
 msgid "Display incidence descriptions agenda view items"
 msgstr "Zobraziť ikony v položkách pohľadu programu"
 
@@ -905,113 +905,87 @@ msgstr "Použitie farby"
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
 #: eventviews.kcfg:201 eventviews.kcfg:290
-#, fuzzy, kde-format
-#| msgid "Category inside, calendar outside"
+#, kde-format
 msgid "Tag inside, calendar outside"
 msgstr "Kategória vnútri, kalendár vonku"
 
 #. i18n: ectx: whatsthis, entry, group (Agenda View)
 #: eventviews.kcfg:202
-#, fuzzy, kde-format
-#| msgid ""
-#| "Select the \"Category inside, calendar outside\" option if you would like "
-#| "to draw calendar items in their associated category color, with the "
-#| "item's border drawn in the color of its calendar. Please use the Colors "
-#| "and Fonts configuration page for setting these colors."
+#, kde-format
 msgid ""
 "Select the \"Tag inside, calendar outside\" option if you would like to draw "
 "calendar items in their associated tag color, with the item's border drawn "
 "in the color of its calendar. Please use the Colors and Fonts configuration "
 "page for setting these colors."
 msgstr ""
-"Vyberte voľbu \"Vnútro kategória, vonkajšok kalendár\", ak chcete vyplniť "
-"položky kalendára vo farbe ich pridruženej kategórie, s okrajom položky "
-"vykresleným vo farbe jej kalendára. Prosím, použite konfiguračnú stranu "
-"farieb a písma pre určenie týchto farieb."
+"Vyberte voľbu \"Štítok vnútri, kalendár vonku\", ak chcete vyplniť položky "
+"kalendára vo farbe ich pridruženého štítku, s okrajom položky vykresleným vo "
+"farbe jej kalendára. Prosím, použite konfiguračnú stranu farieb a písma pre "
+"určenie týchto farieb."
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
 #: eventviews.kcfg:203
-#, fuzzy, kde-format
-#| msgid ""
-#| "Draw agenda items in their category color inside and calendar color for "
-#| "their border"
+#, kde-format
 msgid ""
 "Draw agenda items in their tag color inside and calendar color for their "
 "border"
 msgstr ""
-"Vykresliť vnútro položiek programu vo farbe ich kategórie a ich okraj vo "
-"farbe kalendára"
+"Vykresliť vnútro položiek agendy vo farbe ich štítku a ich okraj vo farbe "
+"kalendára"
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
 #: eventviews.kcfg:206 eventviews.kcfg:295
-#, fuzzy, kde-format
-#| msgid "Calendar inside, category outside"
+#, kde-format
 msgid "Calendar inside, tag outside"
 msgstr "kalendár vnútri, kategória vonku"
 
 #. i18n: ectx: whatsthis, entry, group (Agenda View)
 #: eventviews.kcfg:207
-#, fuzzy, kde-format
-#| msgid ""
-#| "Select the \"Calendar inside, category outside\" option if you would like "
-#| "to draw calendar items in their associated calendar color, with the "
-#| "item's border drawn in the color of its category. Please use the Colors "
-#| "and Fonts configuration page for setting these colors."
+#, kde-format
 msgid ""
 "Select the \"Calendar inside, tag outside\" option if you would like to draw "
 "calendar items in their associated calendar color, with the item's border "
 "drawn in the color of its tag. Please use the Colors and Fonts configuration "
 "page for setting these colors."
 msgstr ""
-"Vyberte voľbu \"Vnútro kalendár, vonkajšok kategória\", ak chcete vyplniť "
-"položky kalendára vo farbe ich pridruženého kalendára, s okrajom položky "
-"vykresleným vo farbe jej kategórie. Prosím, použite konfiguračnú stranu "
-"farieb a písma pre určenie týchto farieb."
+"Vyberte voľbu \"Kalendár vnútri, štítok vonku\", ak chcete vyplniť položky "
+"kalendára vo farbe ich pridruženého kalendára, s okrajom položky vykresleným "
+"vo farbe jej štítku. Prosím, použite konfiguračnú stranu farieb a písma pre "
+"určenie týchto farieb."
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
 #: eventviews.kcfg:208
-#, fuzzy, kde-format
-#| msgid ""
-#| "Draw agenda items in their calendar color inside and category color for "
-#| "their border"
+#, kde-format
 msgid ""
 "Draw agenda items in their calendar color inside and tag color for their "
 "border"
 msgstr ""
-"Vykresliť vnútro položiek programu vo farbe ich kalendára a ich okraj vo "
-"farbe kategórie"
+"Vykresliť vnútro položiek agendy vo farbe ich kalendára a ich okraj vo farbe "
+"štítku"
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
 #: eventviews.kcfg:211 eventviews.kcfg:300
-#, fuzzy, kde-format
-#| msgid "Only category"
+#, kde-format
 msgid "Only tag"
 msgstr "Iba kategória"
 
 #. i18n: ectx: whatsthis, entry, group (Agenda View)
 #: eventviews.kcfg:212
-#, fuzzy, kde-format
-#| msgid ""
-#| "Select the \"Only category\" option if you would like to draw calendar "
-#| "items (both inside and border) in the color of their associated category. "
-#| "Please use the Colors and Fonts configuration page for setting these "
-#| "colors."
+#, kde-format
 msgid ""
 "Select the \"Only tag\" option if you would like to draw calendar items "
 "(both inside and border) in the color of their associated tag. Please use "
 "the Colors and Fonts configuration page for setting these colors."
 msgstr ""
-"Vyberte voľbu \"Iba kategória\", ak chcete vykresliť položky kalendára "
-"(vnútro aj okraj) vo farbe ich pridruženej kategórie. Prosím, použite "
-"konfiguračnú stranu farieb a písma pre určenie týchto farieb."
+"Vyberte voľbu \"Iba štítok\", ak chcete vykresliť položky kalendára (vnútro "
+"aj okraj) vo farbe ich pridruženého štítku. Prosím, použite konfiguračnú "
+"stranu farieb a písma pre určenie týchto farieb."
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
 #: eventviews.kcfg:213
-#, fuzzy, kde-format
-#| msgid ""
-#| "Draw agenda items using their category color for the inside and border"
+#, kde-format
 msgid "Draw agenda items using their tag color for the inside and border"
 msgstr "Vykresliť vnútro a okraj položiek programu pomocou farby ich kateórie"
 
@@ -1242,76 +1216,55 @@ msgstr ""
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
 #: eventviews.kcfg:291
-#, fuzzy, kde-format
-#| msgid ""
-#| "Select the \"Category inside, calendar outside\" option if you would like "
-#| "to draw calendar items in their associated category color, with the "
-#| "item's border drawn in the color of its calendar.  Please use the Colors "
-#| "and Fonts configuration page for setting these colors."
+#, kde-format
 msgid ""
 "Select the \"Tag inside, calendar outside\" option if you would like to draw "
 "calendar items in their associated tag color, with the item's border drawn "
 "in the color of its calendar.  Please use the Colors and Fonts configuration "
 "page for setting these colors."
 msgstr ""
-"Vyberte voľbu \"Vnútro kategória, vonkajšok kalendár\", ak chcete vyplniť "
-"položky kalendára vo farbe ich pridruženej kategórie, s okrajom položky "
-"vykresleným vo farbe jej kalendára. Prosím, použite konfiguračnú stranu "
-"farieb a písma pre určenie týchto farieb."
+"Vyberte voľbu \"Štítok vnútri, kalendár vonku\", ak chcete vyplniť položky "
+"kalendára vo farbe ich pridruženého štítku, s okrajom položky vykresleným vo "
+"farbe jej kalendára. Prosím, použite konfiguračnú stranu farieb a písma pre "
+"určenie týchto farieb."
 
 #. i18n: ectx: tooltip, entry, group (Month View)
 #: eventviews.kcfg:292
-#, fuzzy, kde-format
-#| msgid ""
-#| "Draw month items in their category color inside and calendar color for "
-#| "their border"
+#, kde-format
 msgid ""
 "Draw month items in their tag color inside and calendar color for their "
 "border"
 msgstr ""
-"Vykresliť vnútro položiek mesiaca vo farbe ich kategórie a ich okraj vo "
-"farbe kalendára"
+"Vykresliť vnútro položiek mesiaca vo farbe ich štítku a ich okraj vo farbe "
+"kalendára"
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
 #: eventviews.kcfg:296
-#, fuzzy, kde-format
-#| msgid ""
-#| "Select the \"Calendar inside, category outside\" option if you would like "
-#| "to draw calendar items in their associated calendar color, with the "
-#| "item's border drawn in the color of its category.  Please use the Colors "
-#| "and Fonts configuration page for setting these colors."
+#, kde-format
 msgid ""
 "Select the \"Calendar inside, tag outside\" option if you would like to draw "
 "calendar items in their associated calendar color, with the item's border "
 "drawn in the color of its tag.  Please use the Colors and Fonts "
 "configuration page for setting these colors."
 msgstr ""
-"Vyberte voľbu \"Vnútro kalendár, vonkajšok kategória\", ak chcete vyplniť "
-"položky kalendára vo farbe ich pridruženého kalendára, s okrajom položky "
-"vykresleným vo farbe jej kategórie. Prosím, použite konfiguračnú stranu "
-"farieb a písma pre určenie týchto farieb."
+"Vyberte voľbu \"Kalendár vnútri, štítok vonku\", ak chcete vyplniť položky "
+"kalendára vo farbe ich pridruženého kalendára, s okrajom položky vykresleným "
+"vo farbe jej štítku. Prosím, použite konfiguračnú stranu farieb a písma pre "
+"určenie týchto farieb."
 
 #. i18n: ectx: tooltip, entry, group (Month View)
 #: eventviews.kcfg:297
-#, fuzzy, kde-format
-#| msgid ""
-#| "Draw month items in their calendar color inside and category color for "
-#| "their border"
+#, kde-format
 msgid ""
 "Draw month items in their calendar color inside and tag color for their "
 "border"
 msgstr ""
 "Vykresliť vnútro položiek mesiaca vo farbe ich kalendára a ich okraj vo "
-"farbe kategórie"
+"farbe štítku"
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
 #: eventviews.kcfg:301
-#, fuzzy, kde-format
-#| msgid ""
-#| "Select the \"Only category\" option if you would like to draw calendar "
-#| "items (both inside and border) in the color of their associated "
-#| "category.  Please use the Colors and Fonts configuration page for setting "
-#| "these colors."
+#, kde-format
 msgid ""
 "Select the \"Only tag\" option if you would like to draw calendar items "
 "(both inside and border) in the color of their associated tag.  Please use "
@@ -1323,9 +1276,7 @@ msgstr ""
 
 #. i18n: ectx: tooltip, entry, group (Month View)
 #: eventviews.kcfg:302
-#, fuzzy, kde-format
-#| msgid ""
-#| "Draw month items using their category color for the inside and border"
+#, kde-format
 msgid "Draw month items using their tag color for the inside and border"
 msgstr "Vykresliť vnútro a okraj položiek mesiaca pomocou farby ich kateórie"
 
@@ -1696,15 +1647,13 @@ msgstr "Tu vybať farbu pozadia pracovných hodín pre pohľad mesiaca."
 
 #. i18n: ectx: label, entry (MonthTodayColor), group (Theme/Month view)
 #: eventviews.kcfg:577
-#, fuzzy, kde-format
-#| msgid "Month view background color"
+#, kde-format
 msgid "Month view today background color"
-msgstr "Farba pozadia pohľadu mesiaca"
+msgstr "Farba pozadia mesačného pohľadu"
 
 #. i18n: ectx: tooltip, entry (MonthTodayColor), group (Theme/Month view)
 #: eventviews.kcfg:578
-#, fuzzy, kde-format
-#| msgid "Select the working hours background color for the Month view here."
+#, kde-format
 msgid "Set the background color for today's date in month view"
 msgstr "Tu vybať farbu pozadia pracovných hodín pre pohľad mesiaca."
 
@@ -1712,7 +1661,7 @@ msgstr "Tu vybať farbu pozadia pracovných hodín pre pohľad mesiaca."
 #: eventviews.kcfg:579
 #, kde-format
 msgid "In Month View, select the background color for today's date."
-msgstr ""
+msgstr "In Month View, select the background color for today's date."
 
 #. i18n: ectx: label, entry, group (Theme/Month view)
 #: eventviews.kcfg:601
@@ -1722,19 +1671,15 @@ msgstr "Štandardná farba udalosti"
 
 #. i18n: ectx: whatsthis, entry, group (Theme/Month view)
 #: eventviews.kcfg:602
-#, fuzzy, kde-format
-#| msgid ""
-#| "Select the default event color here. The default event color will be used "
-#| "for events categories in your Month. Note that you can specify a separate "
-#| "color for each event category below."
+#, kde-format
 msgid ""
 "Select the default event color here. The default event color will be used "
 "for events categories in your Month. Note that you can specify a separate "
 "color for each event tag below."
 msgstr ""
 "Tu vyberte predvolenú farbu udalosti. Predvolená farba udalosti bude použitá "
-"pre kategórie udalostí vo vašom mesiaci. Nižšie môžete špecifikovať "
-"samostatnú farbu pre každú kategóriu udalosti."
+"pre kategórie udalostí vo Vašom mesiaci. Nižšie môžete špecifikovať "
+"samostatnú farbu pre každú značku udalosti."
 
 #. i18n: ectx: label, entry, group (Theme/Month view)
 #: eventviews.kcfg:665
@@ -1751,88 +1696,76 @@ msgstr ""
 "nastavenia farieb"
 
 #: journal/journalframe.cpp:150
-#, fuzzy, kde-format
-#| msgid "&Edit"
+#, kde-format
 msgctxt "@action: button"
 msgid "&Edit"
 msgstr "&Upraviť"
 
 #: journal/journalframe.cpp:153
-#, fuzzy, kde-format
-#| msgid "Edit this journal entry"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Edit this journal entry"
 msgstr "Upraviť tento zápis v denníku"
 
 #: journal/journalframe.cpp:154
-#, fuzzy, kde-format
-#| msgid "Opens an editor dialog for this journal entry"
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Opens an editor dialog for this journal entry"
-msgstr "Otvorí editor pre tento zápis v denníku"
+msgstr "Otvorí dialóg editora pre tento zápis v denníku"
 
 #: journal/journalframe.cpp:160
-#, fuzzy, kde-format
-#| msgid "&Delete"
+#, kde-format
 msgctxt "@action: button"
 msgid "&Delete"
-msgstr "Vymazať"
+msgstr "&Odstrániť"
 
 #: journal/journalframe.cpp:163
-#, fuzzy, kde-format
-#| msgid "Delete this journal entry"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete this journal entry"
 msgstr "Odstrániť tento zápis v denníku"
 
 #: journal/journalframe.cpp:164
-#, fuzzy, kde-format
-#| msgid "Delete this journal entry"
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Delete this journal entry"
 msgstr "Odstrániť tento zápis v denníku"
 
 #: journal/journalframe.cpp:169
-#, fuzzy, kde-format
-#| msgid "&Print"
+#, kde-format
 msgctxt "@action: button"
 msgid "&Print"
 msgstr "&Tlačiť"
 
 #: journal/journalframe.cpp:173
-#, fuzzy, kde-format
-#| msgid "Print this journal entry"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Print this journal entry"
 msgstr "Vytlačiť tento zápis v denníku"
 
 #: journal/journalframe.cpp:174
-#, fuzzy, kde-format
-#| msgid "Opens a print dialog for this journal entry"
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Opens a print dialog for this journal entry"
 msgstr "Otvorí tlačový dialóg pre túto položku denníka"
 
 #: journal/journalframe.cpp:179
-#, fuzzy, kde-format
-#| msgid "Print preview"
+#, kde-format
 msgctxt "@action: button"
 msgid "Print preview"
 msgstr "Náhľad tlače"
 
 #: journal/journalframe.cpp:183
-#, fuzzy, kde-format
-#| msgid "Print preview this journal entry"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Print preview this journal entry"
 msgstr "Zobraziť náhľad tlače tejto položky denníka"
 
 #: journal/journalframe.cpp:184
-#, fuzzy, kde-format
-#| msgid "Opens a print dialog for this journal entry"
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Opens a print preview of this journal entry"
-msgstr "Otvorí tlačový dialóg pre túto položku denníka"
+msgstr "Otvorí náhľad tlače tejto položky denníka"
 
 #: list/listview.cpp:57
 #, kde-format
@@ -1866,30 +1799,25 @@ msgid "Summary [%1 - %2]"
 msgstr "Zhrnutie [%1 - %2]"
 
 #: month/monthitem.cpp:307
-#, fuzzy, kde-format
-#| msgid "%2 1 year"
-#| msgid_plural "%2 %1 years"
+#, kde-format
 msgctxt "@info/plain a person's age"
 msgid "1 year old"
 msgid_plural "%1 years old"
-msgstr[0] "%2 1 rok"
-msgstr[1] "%2 %1 roky"
-msgstr[2] "%2 %1 rokov"
+msgstr[0] "1 rok"
+msgstr[1] "%1 roky"
+msgstr[2] "%1 rokov"
 
 #: month/monthitem.cpp:309
-#, fuzzy, kde-format
-#| msgid "%2 1 year"
-#| msgid_plural "%2 %1 years"
+#, kde-format
 msgctxt "@info/plain number of years of marriage"
 msgid "1 year"
 msgid_plural "%1 years"
-msgstr[0] "%2 1 rok"
-msgstr[1] "%2 %1 roky"
-msgstr[2] "%2 %1 rokov"
+msgstr[0] "1 rok"
+msgstr[1] "%1 roky"
+msgstr[2] "%1 rokov"
 
 #: month/monthitem.cpp:443
-#, fuzzy, kde-format
-#| msgid "Move occurrence(s)"
+#, kde-format
 msgctxt "@info/plain"
 msgid "Move occurrence(s)"
 msgstr "Presunúť výskyt(y)"
@@ -1980,15 +1908,13 @@ msgid ""
 msgstr "Kliknite na toto tlačidlo a pohľad sa zroluje vpred v čase 1 mesiac."
 
 #: multiagenda/multiagendaview.cpp:97
-#, fuzzy, kde-format
-#| msgid "Agenda %1"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Agenda %1"
-msgstr "Program %1"
+msgstr "Agenda %1"
 
 #: multiagenda/multiagendaview.cpp:179
-#, fuzzy, kde-format
-#| msgid "All Day"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "All Day"
 msgstr "Celý deň"
@@ -2059,11 +1985,10 @@ msgid "9 (lowest)"
 msgstr "9 (najnižšie)"
 
 #: todo/todoview.cpp:260
-#, fuzzy, kde-format
-#| msgid "Cannot move to-do to itself or a child of itself."
+#, kde-format
 msgctxt "@info"
 msgid "Cannot move to-do to itself or a child of itself."
-msgstr "Nemôžem presunúť Urobiť do seba alebo pod seba."
+msgstr "Nie je možné presunúť úlohu do seba alebo pod seba."
 
 #: todo/todoview.cpp:261
 #, kde-format
@@ -2072,12 +1997,10 @@ msgid "Drop To-do"
 msgstr "Pustiť Urobiť"
 
 #: todo/todoview.cpp:332
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Create Event from To-do"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Create an open-ended to-do"
-msgstr "Vytvoriť udalosť z úlohy"
+msgstr "Vytvoriť úlohu bez termínu"
 
 #: todo/todoview.cpp:335
 #, kde-kuit-format
@@ -2088,54 +2011,43 @@ msgid ""
 "or recurrence. Edit the newly created if you want to add more properties.</"
 "note></para>"
 msgstr ""
+"Zadajte zhrnutie pre novú úlohu. <para><note>Nová úloha bude otvorená, čo "
+"znamená, že nemá čas začiatku ani konca, ani pripomienku alebo opakovanie. "
+"Ak chcete pridať ďalšie vlastnosti, upravte novú vytvorenú úlohu.</note></"
+"para>"
 
 #: todo/todoview.cpp:345
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Display to-do list in a full window"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Display to-dos in a full window without the sidebar"
-msgstr "Zobraziť zoznam úloh v plnom okne"
+msgstr "Zobraziť úlohy v plnom okne bez bočného panela"
 
 #: todo/todoview.cpp:347
-#, fuzzy, kde-format
-#| msgctxt "@info:whatsthis"
-#| msgid ""
-#| "Checking this option will cause the to-dos to be displayed as a flat list "
-#| "instead of a hierarchical tree; the parental relationships are removed in "
-#| "the display."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Checking this button will cause the to-dos to be displayed in a larger "
 "window by hiding the sidebar."
 msgstr ""
-"Zaškrtnutie tejto voľby spôsobí, že úlohy sa zobrazia ako plochý zoznam "
-"namiesto hierarchického stromu; rodičovské závislosti sa v zobrazení "
-"odstránia."
+"Zaškrtnutie tohto tlačidla spôsobí, že úlohy sa zobrazia vo väčšom okne "
+"skrytím bočného panela."
 
 #: todo/todoview.cpp:353
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Display to-dos in flat list instead of a tree"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Display to-dos in a flat list or a tree"
-msgstr "Zobraziť úlohy v plochom zozname namiesto stromu"
+msgstr "Zobraziť úlohy v plochom zozname alebo v strome"
 
 #: todo/todoview.cpp:355
-#, fuzzy, kde-format
-#| msgctxt "@info:whatsthis"
-#| msgid ""
-#| "Checking this option will cause the to-dos to be displayed as a flat list "
-#| "instead of a hierarchical tree; the parental relationships are removed in "
-#| "the display."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Checking this button will cause the to-dos to be displayed either as a flat "
 "list or a hierarchical tree where the parental relationships are removed."
 msgstr ""
-"Zaškrtnutie tejto voľby spôsobí, že úlohy sa zobrazia ako plochý zoznam "
-"namiesto hierarchického stromu; rodičovské závislosti sa v zobrazení "
-"odstránia."
+"Zaškrtnutie tohto tlačidla spôsobí, že úlohy sa zobrazia buď ako plochý "
+"zoznam, alebo ako hierarchický strom, v ktorom sa odstránia rodičovské "
+"závislosti."
 
 #: todo/todoview.cpp:394
 #, kde-format
@@ -2144,11 +2056,10 @@ msgid "&Show"
 msgstr "Zobraziť"
 
 #: todo/todoview.cpp:399
-#, fuzzy, kde-format
-#| msgid "&Edit"
+#, kde-format
 msgctxt "@action:inmenu edit the to-do"
 msgid "&Edit…"
-msgstr "&Upraviť"
+msgstr "&Upraviť…"
 
 #: todo/todoview.cpp:406
 #, kde-format
@@ -2157,35 +2068,28 @@ msgid "&Delete"
 msgstr "Vymazať"
 
 #: todo/todoview.cpp:415
-#, fuzzy, kde-format
-#| msgid "&Print"
+#, kde-format
 msgctxt "@action:inmenu print the to-do"
 msgid "&Print…"
-msgstr "&Tlačiť"
+msgstr "&Tlačiť…"
 
 #: todo/todoview.cpp:420
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu print preview the to-do"
-#| msgid "Print Previe&w..."
+#, kde-format
 msgctxt "@action:inmenu print preview the to-do"
 msgid "Print Previe&w…"
-msgstr "Náhľad t&lače..."
+msgstr "Náhľad t&lače…"
 
 #: todo/todoview.cpp:427
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu create a new to-do"
-#| msgid "New &To-do..."
+#, kde-format
 msgctxt "@action:inmenu create a new to-do"
 msgid "New &To-do…"
-msgstr "Nová úloha..."
+msgstr "Nová &úloha…"
 
 #: todo/todoview.cpp:431
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu create a new sub-to-do"
-#| msgid "New Su&b-to-do..."
+#, kde-format
 msgctxt "@action:inmenu create a new sub-to-do"
 msgid "New Su&b-to-do…"
-msgstr "Nová &podúloha..."
+msgstr "Nová po&dúloha…"
 
 #: todo/todoview.cpp:435
 #, kde-format
@@ -2206,18 +2110,16 @@ msgid "Create Event from To-do"
 msgstr "Vytvoriť udalosť z úlohy"
 
 #: todo/todoview.cpp:456
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu delete completed to-dos"
-#| msgid "Pur&ge Completed"
+#, kde-format
 msgctxt "@action:inmenu set or unset to-do is completed"
 msgid "Togg&le To-do Completed"
-msgstr "Vyčistiť dokončené"
+msgstr "Prep&núť dokončenie úlohy"
 
 #: todo/todoview.cpp:460
 #, kde-format
 msgctxt "@action:inmenu enable or disable reminder"
 msgid "&Toggle Reminder"
-msgstr ""
+msgstr "&Prepnúť pripomienku"
 
 #: todo/todoview.cpp:467
 #, kde-format
@@ -2283,38 +2185,37 @@ msgstr "8"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Toggle Reminder Off"
-msgstr ""
+msgstr "Pripo&menutie:"
 
 #: todo/todoview.cpp:856
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Toggle Reminder On"
-msgstr ""
+msgstr "Pripo&menutie:"
 
 #: todo/todoview.cpp:1194
-#, fuzzy, kde-format
-#| msgid "Display the current-time indicator"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Display the sidebar"
-msgstr "Zobraziť ukazovateľ aktuálneho času"
+msgstr "Zobraziť bočný panel"
 
 #: todo/todoview.cpp:1197
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Hide the sidebar"
-msgstr ""
+msgstr "Skryť bočný panel"
 
 #: todo/todoview.cpp:1216
 #, kde-format
 msgctxt "@info::tooltip"
 msgid "Switch to the tree list display"
-msgstr ""
+msgstr "Prepnúť na stromové zobrazenie zoznamu"
 
 #: todo/todoview.cpp:1219
 #, kde-format
 msgctxt "@info::tooltip"
 msgid "Switch to the flat list display"
-msgstr ""
+msgstr "Prepnúť na ploché zobrazenie zoznamu"
 
 #: todo/todoviewquickaddline.cpp:17
 #, kde-format
@@ -2336,9 +2237,7 @@ msgstr ""
 "Zadajte sem text na filtrovanie úloh, ktoré sú zobrazené zhodnými súhrnmi."
 
 #: todo/todoviewquicksearch.cpp:39
-#, fuzzy, kde-format
-#| msgctxt "@label in QuickSearchLine"
-#| msgid "Search Summaries..."
+#, kde-format
 msgctxt "@label in QuickSearchLine"
 msgid "Search Summaries…"
 msgstr "Hľadať zhrnutia..."
@@ -2455,24 +2354,19 @@ msgid "View Columns"
 msgstr "Zobraziť stĺpce"
 
 #: viewerapp/main.cpp:19
-#, fuzzy, kde-format
-#| msgid "ViewerApp"
+#, kde-format
 msgctxt "@label"
 msgid "ViewerApp"
 msgstr "ViewerApp"
 
 #: viewerapp/main.cpp:21
-#, fuzzy, kde-format
-#| msgid "A test app for embedding calendarviews"
+#, kde-format
 msgctxt "@info"
 msgid "A test app for embedding calendarviews"
-msgstr "Testovacia aplikácia na vloženie pohľadov kalendára"
+msgstr "Testovacia aplikácia na vkladanie zobrazení kalendára"
 
 #: viewerapp/main.cpp:23
-#, fuzzy, kde-format
-#| msgid ""
-#| "Copyright (C) 2010 Klarälvdalens Datakonsult AB, a KDAB Group company, "
-#| "info@kdab.net"
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Copyright (C) 2010 Klarälvdalens Datakonsult AB, a KDAB Group company, "
@@ -2482,18 +2376,16 @@ msgstr ""
 "info@kdab.net"
 
 #: viewerapp/main.cpp:24
-#, fuzzy, kde-format
-#| msgid "Kevin Krammer"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Kevin Krammer"
 msgstr "Kevin Krammer"
 
 #: viewerapp/main.cpp:33
-#, fuzzy, kde-format
-#| msgid "Optional list of view names to instantiate"
+#, kde-format
 msgctxt "@info:shell"
 msgid "Optional list of view names to instantiate"
-msgstr "Voliteľný zoznam zobrazených názvov na inštancovanie"
+msgstr "Voliteľný zoznam názvov zobrazení na vytvorenie inštancií"
 
 #. i18n: ectx: property (windowTitle), widget (QMainWindow, MainWindow)
 #: viewerapp/mainwindow.ui:14
@@ -2503,8 +2395,7 @@ msgstr "Prehliadač CalendarViews"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab)
 #: viewerapp/mainwindow.ui:55
-#, fuzzy, kde-format
-#| msgid "Tab 1"
+#, kde-format
 msgctxt "@title:tab a generic tab"
 msgid "Tab 1"
 msgstr "Karta 1"
