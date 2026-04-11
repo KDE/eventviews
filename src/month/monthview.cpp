@@ -599,12 +599,14 @@ void MonthView::reloadIncidences()
     }
 
     // add holidays
-    const QStringList holidayCats = CalendarSupport::KCalPrefs::instance()->holidayCategories();
-    auto const hols = holidays(actualStartDateTime().date(), actualEndDateTime().date(), holidayCats);
-    for (auto const &h : hols) {
-        /* cppcheck-suppress constVariablePointer */
-        MonthItem *holidayItem = new HolidayMonthItem(d->scene, h.observedStartDate(), h.observedEndDate(), h.name());
-        d->scene->mManagerList << holidayItem;
+    if (preferences()->showHolidaysMonthView()) {
+        const QStringList holidayCats = CalendarSupport::KCalPrefs::instance()->holidayCategories();
+        auto const hols = holidays(actualStartDateTime().date(), actualEndDateTime().date(), holidayCats);
+        for (auto const &h : hols) {
+            /* cppcheck-suppress constVariablePointer */
+            MonthItem *holidayItem = new HolidayMonthItem(d->scene, h.observedStartDate(), h.observedEndDate(), h.name());
+            d->scene->mManagerList << holidayItem;
+        }
     }
 
     // sort it

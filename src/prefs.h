@@ -260,6 +260,13 @@ public:
 
     /*!
      */
+    [[nodiscard]] bool showHolidaysMonthView() const;
+    /*!
+     */
+    void setShowHolidaysMonthView(bool show);
+
+    /*!
+     */
     [[nodiscard]] bool fullViewMonth() const;
     /*!
      */

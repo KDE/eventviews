@@ -800,6 +800,16 @@ void Prefs::setShowJournalsMonthView(bool show)
     d->setBool(d->mBaseConfig.showJournalsMonthViewItem(), show);
 }
 
+bool Prefs::showHolidaysMonthView() const
+{
+    return d->getBool(d->mBaseConfig.showHolidaysMonthViewItem());
+}
+
+void Prefs::setShowHolidaysMonthView(bool show)
+{
+    d->setBool(d->mBaseConfig.showHolidaysMonthViewItem(), show);
+}
+
 bool Prefs::fullViewMonth() const
 {
     return d->getBool(d->mBaseConfig.fullViewMonthItem());
