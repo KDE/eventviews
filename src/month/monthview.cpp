@@ -602,11 +602,9 @@ void MonthView::reloadIncidences()
     const QStringList holidayCats = CalendarSupport::KCalPrefs::instance()->holidayCategories();
     auto const hols = holidays(actualStartDateTime().date(), actualEndDateTime().date(), holidayCats);
     for (auto const &h : hols) {
-        if (h.dayType() == KHolidays::Holiday::NonWorkday) {
-            /* cppcheck-suppress constVariablePointer */
-            MonthItem *holidayItem = new HolidayMonthItem(d->scene, h.observedStartDate(), h.observedEndDate(), h.name());
-            d->scene->mManagerList << holidayItem;
-        }
+        /* cppcheck-suppress constVariablePointer */
+        MonthItem *holidayItem = new HolidayMonthItem(d->scene, h.observedStartDate(), h.observedEndDate(), h.name());
+        d->scene->mManagerList << holidayItem;
     }
 
     // sort it
