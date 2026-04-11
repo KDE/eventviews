@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-14 00:44+0000\n"
+"POT-Creation-Date: 2026-04-11 00:47+0000\n"
 "PO-Revision-Date: 2026-04-02 23:22+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -117,12 +117,12 @@ msgctxt "short_weekday short_monthname date (e.g. Mon Aug 13)"
 msgid "%1 %2 %3"
 msgstr "%2 %3 %1"
 
-#: agenda/agendaview.cpp:2332
+#: agenda/agendaview.cpp:2333
 #, kde-format
 msgid "Unable to modify this to-do, because it cannot be locked."
 msgstr "Ez da zeregin hau aldatzeko gai, ezin delako giltzatu."
 
-#: agenda/agendaview.cpp:2340
+#: agenda/agendaview.cpp:2341
 #, kde-format
 msgid "Unable to save %1 \"%2\"."
 msgstr "Ezin da  gorde %1 \"%2\"."
@@ -298,28 +298,28 @@ msgctxt "@title:window"
 msgid "Timezone"
 msgstr "Ordu-eremua"
 
-#: eventview.cpp:109
+#: eventview.cpp:121
 #, kde-format
 msgctxt "@title:window"
 msgid "Changing Recurring Item"
 msgstr "Elementu errepikakorra aldatzen"
 
-#: eventview.cpp:110
+#: eventview.cpp:122
 #, kde-format
 msgid "Also &Future Items"
 msgstr "Baita e&torkizuneko elementuak ere"
 
-#: eventview.cpp:111
+#: eventview.cpp:123
 #, kde-format
 msgid "Only &This Item"
 msgstr "Elementu &hau bakarrik"
 
-#: eventview.cpp:112
+#: eventview.cpp:124
 #, kde-format
 msgid "&All Occurrences"
 msgstr "Agerraldi guzti&ak"
 
-#: eventview.cpp:129
+#: eventview.cpp:141
 #, kde-format
 msgid ""
 "The item you are trying to change is a recurring item. Should the changes be "
@@ -330,7 +330,7 @@ msgstr ""
 "bakar honi ezarri beharko litzaizkioke, baita etorkizuneko elementuei, edo "
 "errepikapeneko elementu guztiei?"
 
-#: eventview.cpp:140
+#: eventview.cpp:152
 #, kde-format
 msgid ""
 "The item you are trying to change is a recurring item. Should the changes be "

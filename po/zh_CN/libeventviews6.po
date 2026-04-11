@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-14 00:44+0000\n"
+"POT-Creation-Date: 2026-04-11 00:47+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -112,12 +112,12 @@ msgctxt "short_weekday short_monthname date (e.g. Mon Aug 13)"
 msgid "%1 %2 %3"
 msgstr "%1 %2 %3"
 
-#: agenda/agendaview.cpp:2332
+#: agenda/agendaview.cpp:2333
 #, kde-format
 msgid "Unable to modify this to-do, because it cannot be locked."
 msgstr "无法修改此待办事项，因为无法锁定它。"
 
-#: agenda/agendaview.cpp:2340
+#: agenda/agendaview.cpp:2341
 #, kde-format
 msgid "Unable to save %1 \"%2\"."
 msgstr "无法保存 %1“%2”。"
@@ -279,28 +279,28 @@ msgctxt "@title:window"
 msgid "Timezone"
 msgstr "时区"
 
-#: eventview.cpp:109
+#: eventview.cpp:121
 #, kde-format
 msgctxt "@title:window"
 msgid "Changing Recurring Item"
 msgstr "更改重现项目"
 
-#: eventview.cpp:110
+#: eventview.cpp:122
 #, kde-format
 msgid "Also &Future Items"
 msgstr "只有未来(&F)"
 
-#: eventview.cpp:111
+#: eventview.cpp:123
 #, kde-format
 msgid "Only &This Item"
 msgstr "只有本次(&T)"
 
-#: eventview.cpp:112
+#: eventview.cpp:124
 #, kde-format
 msgid "&All Occurrences"
 msgstr "每次出现(&A)"
 
-#: eventview.cpp:129
+#: eventview.cpp:141
 #, kde-format
 msgid ""
 "The item you are trying to change is a recurring item. Should the changes be "
@@ -310,7 +310,7 @@ msgstr ""
 "您正试图更改一个重现项目。想要更改仅对单次重现生效，或是对未来重现生效，还是"
 "对所有重现生效？"
 
-#: eventview.cpp:140
+#: eventview.cpp:152
 #, kde-format
 msgid ""
 "The item you are trying to change is a recurring item. Should the changes be "

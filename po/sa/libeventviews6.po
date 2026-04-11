@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-14 00:44+0000\n"
+"POT-Creation-Date: 2026-04-11 00:47+0000\n"
 "PO-Revision-Date: 2024-12-24 20:39+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -122,12 +122,12 @@ msgctxt "short_weekday short_monthname date (e.g. Mon Aug 13)"
 msgid "%1 %2 %3"
 msgstr "%1 %2 %3"
 
-#: agenda/agendaview.cpp:2332
+#: agenda/agendaview.cpp:2333
 #, kde-format
 msgid "Unable to modify this to-do, because it cannot be locked."
 msgstr "एतत् कार्यं परिवर्तयितुं असमर्थः, यतः एतत् ताडयितुं न शक्यते ।"
 
-#: agenda/agendaview.cpp:2340
+#: agenda/agendaview.cpp:2341
 #, kde-format
 msgid "Unable to save %1 \"%2\"."
 msgstr "%1 \"%2\" रक्षितुं असमर्थः ।"
@@ -284,28 +284,28 @@ msgctxt "@title:window"
 msgid "Timezone"
 msgstr "समयक्षेत्रम्"
 
-#: eventview.cpp:109
+#: eventview.cpp:121
 #, kde-format
 msgctxt "@title:window"
 msgid "Changing Recurring Item"
 msgstr "आवर्तमानं द्रव्यं परिवर्तयन्"
 
-#: eventview.cpp:110
+#: eventview.cpp:122
 #, kde-format
 msgid "Also &Future Items"
 msgstr "Also &भविष्यस्य वस्तूनि"
 
-#: eventview.cpp:111
+#: eventview.cpp:123
 #, kde-format
 msgid "Only &This Item"
 msgstr "केवलं &This Item"
 
-#: eventview.cpp:112
+#: eventview.cpp:124
 #, kde-format
 msgid "&All Occurrences"
 msgstr "&सर्वः घटनाः"
 
-#: eventview.cpp:129
+#: eventview.cpp:141
 #, kde-format
 msgid ""
 "The item you are trying to change is a recurring item. Should the changes be "
@@ -315,7 +315,7 @@ msgstr ""
 "भवन्तः यत् द्रव्यं परिवर्तयितुं प्रयतन्ते तत् पुनरावर्तनीयं द्रव्यम् अस्ति । किं परिवर्तनं केवलम् "
 "अस्मिन् एकस्मिन् घटनायां प्रयोक्तव्यं, भविष्यत्वस्तूनि अपि, पुनरावृत्तौ सर्वेषु वस्तूनि वा?"
 
-#: eventview.cpp:140
+#: eventview.cpp:152
 #, kde-format
 msgid ""
 "The item you are trying to change is a recurring item. Should the changes be "

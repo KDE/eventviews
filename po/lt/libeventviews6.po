@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-14 00:44+0000\n"
+"POT-Creation-Date: 2026-04-11 00:47+0000\n"
 "PO-Revision-Date: 2015-12-29 20:54+0200\n"
 "Last-Translator: Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
@@ -130,12 +130,12 @@ msgctxt "short_weekday short_monthname date (e.g. Mon Aug 13)"
 msgid "%1 %2 %3"
 msgstr "%1, %2 - %3"
 
-#: agenda/agendaview.cpp:2332
+#: agenda/agendaview.cpp:2333
 #, kde-format
 msgid "Unable to modify this to-do, because it cannot be locked."
 msgstr ""
 
-#: agenda/agendaview.cpp:2340
+#: agenda/agendaview.cpp:2341
 #, kde-format
 msgid "Unable to save %1 \"%2\"."
 msgstr "Negalima išsaugoti %1 „%2“."
@@ -299,28 +299,28 @@ msgctxt "@title:window"
 msgid "Timezone"
 msgstr "Laiko juosta"
 
-#: eventview.cpp:109
+#: eventview.cpp:121
 #, kde-format
 msgctxt "@title:window"
 msgid "Changing Recurring Item"
 msgstr "Keičiamas pasikartojantis įrašas"
 
-#: eventview.cpp:110
+#: eventview.cpp:122
 #, kde-format
 msgid "Also &Future Items"
 msgstr "Ir &ateities įrašams"
 
-#: eventview.cpp:111
+#: eventview.cpp:123
 #, kde-format
 msgid "Only &This Item"
 msgstr "&Tik šiam įrašui"
 
-#: eventview.cpp:112
+#: eventview.cpp:124
 #, kde-format
 msgid "&All Occurrences"
 msgstr "&Visiems įrašams"
 
-#: eventview.cpp:129
+#: eventview.cpp:141
 #, kde-format
 msgid ""
 "The item you are trying to change is a recurring item. Should the changes be "
@@ -330,7 +330,7 @@ msgstr ""
 "Įrašas, kurį bandote pakeisti yra pasikartojantis. Ar pakeitimai turėtų būti "
 "pritaikyti tik šiam įrašui, tik ateities įrašams ar visiems?"
 
-#: eventview.cpp:140
+#: eventview.cpp:152
 #, kde-format
 msgid ""
 "The item you are trying to change is a recurring item. Should the changes be "

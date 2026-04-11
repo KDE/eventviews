@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-14 00:44+0000\n"
+"POT-Creation-Date: 2026-04-11 00:47+0000\n"
 "PO-Revision-Date: 2026-02-01 16:18+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -112,12 +112,12 @@ msgctxt "short_weekday short_monthname date (e.g. Mon Aug 13)"
 msgid "%1 %2 %3"
 msgstr "%1 %2 %3"
 
-#: agenda/agendaview.cpp:2332
+#: agenda/agendaview.cpp:2333
 #, kde-format
 msgid "Unable to modify this to-do, because it cannot be locked."
 msgstr "இச்செய்யவேண்டியதை பூட்ட முடியாத‍தால் இதை மாற்ற முடியாது."
 
-#: agenda/agendaview.cpp:2340
+#: agenda/agendaview.cpp:2341
 #, kde-format
 msgid "Unable to save %1 \"%2\"."
 msgstr "\"%2\" என்ற %1 தனை சேமிக்க முடியவில்லை."
@@ -278,28 +278,28 @@ msgctxt "@title:window"
 msgid "Timezone"
 msgstr "நேரமண்டலம்"
 
-#: eventview.cpp:109
+#: eventview.cpp:121
 #, kde-format
 msgctxt "@title:window"
 msgid "Changing Recurring Item"
 msgstr "மீளநிகழ்வதை மாற்றுவது"
 
-#: eventview.cpp:110
+#: eventview.cpp:122
 #, kde-format
 msgid "Also &Future Items"
 msgstr "&வருங்கால நிகழ்வுகளையும்"
 
-#: eventview.cpp:111
+#: eventview.cpp:123
 #, kde-format
 msgid "Only &This Item"
 msgstr "&இதை மட்டும்"
 
-#: eventview.cpp:112
+#: eventview.cpp:124
 #, kde-format
 msgid "&All Occurrences"
 msgstr "&அனைத்து நிகழ்வுகளையும்"
 
-#: eventview.cpp:129
+#: eventview.cpp:141
 #, kde-format
 msgid ""
 "The item you are trying to change is a recurring item. Should the changes be "
@@ -310,7 +310,7 @@ msgstr ""
 "செயல்படுத்த வேண்டுமா, இதன் வருங்கால மறுநிகழ்வுகளுக்குமா, அல்லது இதன் அனைத்து "
 "மறுநிகழ்வுகளுக்குமா?"
 
-#: eventview.cpp:140
+#: eventview.cpp:152
 #, kde-format
 msgid ""
 "The item you are trying to change is a recurring item. Should the changes be "
