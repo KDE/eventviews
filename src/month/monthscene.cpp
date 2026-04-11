@@ -11,7 +11,11 @@
 #include "monthview.h"
 #include "prefs.h"
 
+#include <CalendarSupport/KCalPrefs>
 #include <CalendarSupport/Utils>
+
+#include <KHolidays/HolidayCategories>
+#include <KHolidays/HolidayRegion>
 
 #include <KColorScheme>
 #include <KLocalizedString>
@@ -264,7 +268,14 @@ void MonthGraphicsView::drawBackground(QPainter *p, const QRectF &rect)
         p->setPen(mMonthView->preferences()->monthGridBackgroundColor().darker(150));
         p->setBrush(workDays.contains(d) ? workdayBg : holidayBg);
         p->drawRect(cellRect);
-        if (mMonthView->isBusyDay(d)) {
+        const QStringList holidayCats = CalendarSupport::KCalPrefs::instance()->holidayCategories();
+        auto const hols = mMonthView->holidays(d, d, holidayCats);
+        if (!hols.isEmpty() && mMonthView->preferences()->showHolidaysBackgroundMonthView()) {
+            QColor holidayColor = mMonthView->preferences()->holidayColor();
+            holidayColor.setAlpha(EventViews::BUSY_BACKGROUND_ALPHA);
+            p->setBrush(holidayColor);
+            p->drawRect(cellRect);
+        } else if (mMonthView->isBusyDay(d)) {
             QColor busyColor = mMonthView->preferences()->viewBgBusyColor();
             busyColor.setAlpha(EventViews::BUSY_BACKGROUND_ALPHA);
             p->setBrush(busyColor);

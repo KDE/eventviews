@@ -267,6 +267,13 @@ public:
 
     /*!
      */
+    [[nodiscard]] bool showHolidaysBackgroundMonthView() const;
+    /*!
+     */
+    void setShowHolidaysBackgroundMonthView(bool show);
+
+    /*!
+     */
     [[nodiscard]] bool fullViewMonth() const;
     /*!
      */

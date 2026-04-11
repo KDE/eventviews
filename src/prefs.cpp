@@ -810,6 +810,16 @@ void Prefs::setShowHolidaysMonthView(bool show)
     d->setBool(d->mBaseConfig.showHolidaysMonthViewItem(), show);
 }
 
+bool Prefs::showHolidaysBackgroundMonthView() const
+{
+    return d->getBool(d->mBaseConfig.showHolidaysBackgroundMonthViewItem());
+}
+
+void Prefs::setShowHolidaysBackgroundMonthView(bool show)
+{
+    d->setBool(d->mBaseConfig.showHolidaysBackgroundMonthViewItem(), show);
+}
+
 bool Prefs::fullViewMonth() const
 {
     return d->getBool(d->mBaseConfig.fullViewMonthItem());

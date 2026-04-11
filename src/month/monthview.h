@@ -110,6 +110,10 @@ public:
      */
     [[nodiscard]] bool isBusyDay(QDate day) const;
 
+    /*!
+     */
+    KHolidays::Holiday::List holidays(QDate startDate, QDate endDate, const QStringList &categories = QStringList());
+
 Q_SIGNALS:
     /*!
      */
@@ -172,10 +176,6 @@ protected:
     /*!
      */
     QPair<QDateTime, QDateTime> actualDateRange(const QDateTime &start, const QDateTime &end, const QDate &preferredMonth = QDate()) const override;
-
-    /*!
-     */
-    KHolidays::Holiday::List holidays(QDate startDate, QDate endDate, const QStringList &categories = QStringList());
 
     // Compute and update the whole view
     /*!
