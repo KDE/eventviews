@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-11 00:47+0000\n"
+"POT-Creation-Date: 2026-04-12 00:44+0000\n"
 "PO-Revision-Date: 2026-01-28 20:11+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -348,21 +348,21 @@ msgstr "Standardsättet att bilägga e-post som släpps på en händelse"
 
 #. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (Personal Settings)
 #. i18n: ectx: label, entry (DefaultTodoAttachMethod), group (Hidden Options)
-#: eventviews.kcfg:13 eventviews.kcfg:420
+#: eventviews.kcfg:13 eventviews.kcfg:433
 #, kde-format
 msgid "Always ask"
 msgstr "Fråga alltid"
 
 #. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (Personal Settings)
 #. i18n: ectx: label, entry (DefaultTodoAttachMethod), group (Hidden Options)
-#: eventviews.kcfg:16 eventviews.kcfg:423
+#: eventviews.kcfg:16 eventviews.kcfg:436
 #, kde-format
 msgid "Only attach link to message"
 msgstr "Bilägg bara en länk till brevet"
 
 #. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (Personal Settings)
 #. i18n: ectx: label, entry (DefaultTodoAttachMethod), group (Hidden Options)
-#: eventviews.kcfg:19 eventviews.kcfg:426
+#: eventviews.kcfg:19 eventviews.kcfg:439
 #, kde-format
 msgid "Attach complete message"
 msgstr "Bilägg det fullständiga brevet"
@@ -891,7 +891,7 @@ msgstr "Aktivera automatisk händelseredigering vid markering av tidsintervall"
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
-#: eventviews.kcfg:198 eventviews.kcfg:287 viewerapp/settings.kcfg:55
+#: eventviews.kcfg:198 eventviews.kcfg:300 viewerapp/settings.kcfg:55
 #: viewerapp/settings.kcfg:133
 #, kde-format
 msgid "Color Usage"
@@ -899,7 +899,7 @@ msgstr "Färganvändning"
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
-#: eventviews.kcfg:201 eventviews.kcfg:290
+#: eventviews.kcfg:201 eventviews.kcfg:303
 #, kde-format
 msgid "Tag inside, calendar outside"
 msgstr "Beteckning innanför, kalender utanför"
@@ -929,7 +929,7 @@ msgstr ""
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
-#: eventviews.kcfg:206 eventviews.kcfg:295
+#: eventviews.kcfg:206 eventviews.kcfg:308
 #, kde-format
 msgid "Calendar inside, tag outside"
 msgstr "Kalender innanför, beteckning utanför"
@@ -959,7 +959,7 @@ msgstr ""
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
-#: eventviews.kcfg:211 eventviews.kcfg:300
+#: eventviews.kcfg:211 eventviews.kcfg:313
 #, kde-format
 msgid "Only tag"
 msgstr "Bara beteckning"
@@ -984,7 +984,7 @@ msgstr "Rita agendaobjekt med beteckningsfärgen inuti och på kanten"
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
-#: eventviews.kcfg:216 eventviews.kcfg:305 viewerapp/settings.kcfg:73
+#: eventviews.kcfg:216 eventviews.kcfg:318 viewerapp/settings.kcfg:73
 #: viewerapp/settings.kcfg:151
 #, kde-format
 msgid "Only calendar"
@@ -1010,7 +1010,7 @@ msgstr "Rita agendaobjekt med kalenderfärgen inuti och på kanten"
 
 #. i18n: ectx: label, entry (ColorBusyDaysEnabled), group (Agenda View)
 #. i18n: ectx: label, entry (ColorMonthBusyDaysEnabled), group (Month View)
-#: eventviews.kcfg:224 eventviews.kcfg:313
+#: eventviews.kcfg:224 eventviews.kcfg:326
 #, kde-format
 msgid "Color busy days with a different background color"
 msgstr "Färglägg upptagna dagar med en annan bakgrundsfärg"
@@ -1187,14 +1187,59 @@ msgstr "Markera rutan för att visa journaler i månadsvyn."
 msgid "Display journals in the month view"
 msgstr "Visa journaler i månadsvyn"
 
+#. i18n: ectx: label, entry (ShowHolidaysMonthView), group (Month View)
+#: eventviews.kcfg:282
+#, fuzzy, kde-format
+#| msgid "Show to-dos"
+msgid "Show holidays"
+msgstr "Visa uppgifter"
+
+#. i18n: ectx: whatsthis, entry (ShowHolidaysMonthView), group (Month View)
+#: eventviews.kcfg:283
+#, fuzzy, kde-format
+#| msgid "Check this box to display to-dos in the month view."
+msgid "Check this box to display holidays in the month view."
+msgstr "Markera rutan för att visa uppgifter i månadsvyn."
+
+#. i18n: ectx: tooltip, entry (ShowHolidaysMonthView), group (Month View)
+#. i18n: ectx: tooltip, entry (ShowHolidaysBackgroundMonthView), group (Month View)
+#: eventviews.kcfg:284 eventviews.kcfg:291
+#, fuzzy, kde-format
+#| msgid "Display to-dos in the month view"
+msgid "Display holidays in the month view"
+msgstr "Visa uppgifter i månadsvyn"
+
+#. i18n: ectx: label, entry (ShowHolidaysBackgroundMonthView), group (Month View)
+#: eventviews.kcfg:288
+#, kde-format
+msgid ""
+"Use the Holiday background color when at least on holiday lands on a date"
+msgstr ""
+
+#. i18n: ectx: tooltip, entry (ShowHolidaysBackgroundMonthView), group (Month View)
+#: eventviews.kcfg:289
+#, kde-format
+msgid ""
+"Use the custom holiday color as the date's background color if a holiday "
+"lands on the date"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry (ShowHolidaysBackgroundMonthView), group (Month View)
+#: eventviews.kcfg:290
+#, kde-format
+msgid ""
+"Check this box to use the custom holiday as the date's background color when "
+"at least one holiday lands on a date."
+msgstr ""
+
 #. i18n: ectx: label, entry, group (Month View)
-#: eventviews.kcfg:282 viewerapp/settings.kcfg:128
+#: eventviews.kcfg:295 viewerapp/settings.kcfg:128
 #, kde-format
 msgid "Month view uses full window"
 msgstr "Månadsvyn använder hela fönstret"
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
-#: eventviews.kcfg:283 viewerapp/settings.kcfg:129
+#: eventviews.kcfg:296 viewerapp/settings.kcfg:129
 #, kde-format
 msgid ""
 "Check this box to use the full KOrganizer window when displaying the month "
@@ -1208,7 +1253,7 @@ msgstr ""
 "kalenderlistan, visas inte."
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
-#: eventviews.kcfg:291
+#: eventviews.kcfg:304
 #, kde-format
 msgid ""
 "Select the \"Tag inside, calendar outside\" option if you would like to draw "
@@ -1222,7 +1267,7 @@ msgstr ""
 "teckensnitt för att ställa in färgerna."
 
 #. i18n: ectx: tooltip, entry, group (Month View)
-#: eventviews.kcfg:292
+#: eventviews.kcfg:305
 #, kde-format
 msgid ""
 "Draw month items in their tag color inside and calendar color for their "
@@ -1232,7 +1277,7 @@ msgstr ""
 "kanterna"
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
-#: eventviews.kcfg:296
+#: eventviews.kcfg:309
 #, kde-format
 msgid ""
 "Select the \"Calendar inside, tag outside\" option if you would like to draw "
@@ -1246,7 +1291,7 @@ msgstr ""
 "teckensnitt för att ställa in färgerna."
 
 #. i18n: ectx: tooltip, entry, group (Month View)
-#: eventviews.kcfg:297
+#: eventviews.kcfg:310
 #, kde-format
 msgid ""
 "Draw month items in their calendar color inside and tag color for their "
@@ -1256,7 +1301,7 @@ msgstr ""
 "kanterna"
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
-#: eventviews.kcfg:301
+#: eventviews.kcfg:314
 #, kde-format
 msgid ""
 "Select the \"Only tag\" option if you would like to draw calendar items "
@@ -1268,13 +1313,13 @@ msgstr ""
 "inställningssidan Färger och teckensnitt för att ställa in färgerna."
 
 #. i18n: ectx: tooltip, entry, group (Month View)
-#: eventviews.kcfg:302
+#: eventviews.kcfg:315
 #, kde-format
 msgid "Draw month items using their tag color for the inside and border"
 msgstr "Rita månadsobjekt med sina beteckningsfärger inuti och på kanterna"
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
-#: eventviews.kcfg:306 viewerapp/settings.kcfg:152
+#: eventviews.kcfg:319 viewerapp/settings.kcfg:152
 #, kde-format
 msgid ""
 "Select the \"Only calendar\" option if you would like to draw calendar items "
@@ -1286,13 +1331,13 @@ msgstr ""
 "Färger och teckensnitt för att ställa in färgerna."
 
 #. i18n: ectx: tooltip, entry, group (Month View)
-#: eventviews.kcfg:307 viewerapp/settings.kcfg:153
+#: eventviews.kcfg:320 viewerapp/settings.kcfg:153
 #, kde-format
 msgid "Draw month items using their calendar color for the inside and border"
 msgstr "Rita månadsobjekt med sina kalenderfärger inuti och på kanterna"
 
 #. i18n: ectx: whatsthis, entry (ColorMonthBusyDaysEnabled), group (Month View)
-#: eventviews.kcfg:314
+#: eventviews.kcfg:327
 #, kde-format
 msgid ""
 "Check this box if you want month view's background to be filled with a "
@@ -1308,13 +1353,13 @@ msgstr ""
 "upptagna dagar\"."
 
 #. i18n: ectx: label, entry, group (Todo View)
-#: eventviews.kcfg:321 viewerapp/settings.kcfg:162
+#: eventviews.kcfg:334 viewerapp/settings.kcfg:162
 #, kde-format
 msgid "Always display completed to-dos at the bottom of the list"
 msgstr "Visa alltid färdiga uppgifter längst ner i listan"
 
 #. i18n: ectx: whatsthis, entry, group (Todo View)
-#: eventviews.kcfg:322 viewerapp/settings.kcfg:163
+#: eventviews.kcfg:335 viewerapp/settings.kcfg:163
 #, kde-format
 msgid ""
 "Check this box if you want all completed to-dos to be always grouped at the "
@@ -1324,13 +1369,13 @@ msgstr ""
 "längst ner i uppgiftslistan."
 
 #. i18n: ectx: label, entry, group (Todo View)
-#: eventviews.kcfg:326 viewerapp/settings.kcfg:167
+#: eventviews.kcfg:339 viewerapp/settings.kcfg:167
 #, kde-format
 msgid "To-do list view uses full window"
 msgstr "Uppgiftsvyn använder hela fönstret"
 
 #. i18n: ectx: whatsthis, entry, group (Todo View)
-#: eventviews.kcfg:327 viewerapp/settings.kcfg:168
+#: eventviews.kcfg:340 viewerapp/settings.kcfg:168
 #, kde-format
 msgid ""
 "Check this box to use the full KOrganizer window when displaying the to-do "
@@ -1344,19 +1389,19 @@ msgstr ""
 "kalenderlistan, visas inte."
 
 #. i18n: ectx: label, entry, group (Todo View)
-#: eventviews.kcfg:331
+#: eventviews.kcfg:344
 #, kde-format
 msgid "Display to-dos in a flat list"
 msgstr "Visa uppgifter i en enkel lista"
 
 #. i18n: ectx: tooltip, entry, group (Todo View)
-#: eventviews.kcfg:332
+#: eventviews.kcfg:345
 #, kde-format
 msgid "Display to-dos as a flat list instead of a hierarchical tree"
 msgstr "Visa uppgifter i en enkel lista istället för ett hierarkiskt träd"
 
 #. i18n: ectx: whatsthis, entry, group (Todo View)
-#: eventviews.kcfg:333
+#: eventviews.kcfg:346
 #, kde-format
 msgid ""
 "Check this box if you want to see all your to-dos in a flat list instead of "
@@ -1366,13 +1411,13 @@ msgstr ""
 "de arrangeras i ett hierarkiskt träd."
 
 #. i18n: ectx: label, entry, group (Todo View)
-#: eventviews.kcfg:337 viewerapp/settings.kcfg:172
+#: eventviews.kcfg:350 viewerapp/settings.kcfg:172
 #, kde-format
 msgid "Record completed to-dos in journal entries"
 msgstr "Lagra färdiga uppgifter i journalanteckningar"
 
 #. i18n: ectx: whatsthis, entry, group (Todo View)
-#: eventviews.kcfg:338 viewerapp/settings.kcfg:173
+#: eventviews.kcfg:351 viewerapp/settings.kcfg:173
 #, kde-format
 msgid ""
 "Check this box to record the completion of a to-do in a new entry of your "
@@ -1384,7 +1429,7 @@ msgstr ""
 #. i18n: ectx: label, entry, group (Colors)
 #. i18n: ectx: label, entry, group (Theming)
 #. i18n: ectx: label, entry, group (Theme/Month view)
-#: eventviews.kcfg:345 eventviews.kcfg:549 eventviews.kcfg:657
+#: eventviews.kcfg:358 eventviews.kcfg:562 eventviews.kcfg:670
 #: viewerapp/settings.kcfg:180
 #, kde-format
 msgid "Holiday color"
@@ -1393,7 +1438,7 @@ msgstr "Färg för helgdagar"
 #. i18n: ectx: whatsthis, entry, group (Colors)
 #. i18n: ectx: whatsthis, entry, group (Theming)
 #. i18n: ectx: whatsthis, entry, group (Theme/Month view)
-#: eventviews.kcfg:346 eventviews.kcfg:550 eventviews.kcfg:658
+#: eventviews.kcfg:359 eventviews.kcfg:563 eventviews.kcfg:671
 #: viewerapp/settings.kcfg:181
 #, kde-format
 msgid ""
@@ -1405,26 +1450,26 @@ msgstr ""
 
 #. i18n: ectx: label, entry (AgendaBgColor), group (Colors)
 #. i18n: ectx: label, entry, group (Theming)
-#: eventviews.kcfg:350 eventviews.kcfg:463 viewerapp/settings.kcfg:185
+#: eventviews.kcfg:363 eventviews.kcfg:476 viewerapp/settings.kcfg:185
 #, kde-format
 msgid "Agenda view background color"
 msgstr "Bakgrundsfärg för agendavy"
 
 #. i18n: ectx: whatsthis, entry (AgendaBgColor), group (Colors)
 #. i18n: ectx: whatsthis, entry, group (Theming)
-#: eventviews.kcfg:351 eventviews.kcfg:464 viewerapp/settings.kcfg:186
+#: eventviews.kcfg:364 eventviews.kcfg:477 viewerapp/settings.kcfg:186
 #, kde-format
 msgid "Select the agenda view background color here."
 msgstr "Välj agendavyns bakgrundsfärg här."
 
 #. i18n: ectx: label, entry (ViewBgBusyColor), group (Colors)
-#: eventviews.kcfg:355
+#: eventviews.kcfg:368
 #, kde-format
 msgid "Agenda/Month view background busy color"
 msgstr "Upptagetfärg för agendavyns eller månadsvyns bakgrund"
 
 #. i18n: ectx: whatsthis, entry (ViewBgBusyColor), group (Colors)
-#: eventviews.kcfg:356
+#: eventviews.kcfg:369
 #, kde-format
 msgid ""
 "When you have an all day event marked as busy, you can have a different "
@@ -1434,19 +1479,19 @@ msgstr ""
 "bakgrundsfärg på agendavyn eller månadsvyn för den dagen. Välj färgen här."
 
 #. i18n: ectx: label, entry, group (Colors)
-#: eventviews.kcfg:360 viewerapp/settings.kcfg:190
+#: eventviews.kcfg:373 viewerapp/settings.kcfg:190
 #, kde-format
 msgid "Agenda view current-time line color"
 msgstr "Färg på indikering av aktuell tid i agendavyn"
 
 #. i18n: ectx: whatsthis, entry, group (Colors)
-#: eventviews.kcfg:361 viewerapp/settings.kcfg:191
+#: eventviews.kcfg:374 viewerapp/settings.kcfg:191
 #, kde-format
 msgid "Select a color to use for the current-time (Marcus Bains) line."
 msgstr "Välj en färg att använda för aktuell tid (Marcus Bains rad)."
 
 #. i18n: ectx: tooltip, entry, group (Colors)
-#: eventviews.kcfg:362 viewerapp/settings.kcfg:192
+#: eventviews.kcfg:375 viewerapp/settings.kcfg:192
 #, kde-format
 msgid "Use this color for the Agenda View current-time (Marcus Bains) line"
 msgstr "Använd den här färgen för agendavyns aktuella tid (Marcus Bains rad)"
@@ -1454,14 +1499,14 @@ msgstr "Använd den här färgen för agendavyns aktuella tid (Marcus Bains rad)
 #. i18n: ectx: label, entry, group (Colors)
 #. i18n: ectx: label, entry, group (Theming)
 #. i18n: ectx: label, entry, group (Theme/Month view)
-#: eventviews.kcfg:366 eventviews.kcfg:475 eventviews.kcfg:572
+#: eventviews.kcfg:379 eventviews.kcfg:488 eventviews.kcfg:585
 #: viewerapp/settings.kcfg:197
 #, kde-format
 msgid "Working hours color"
 msgstr "Färg för arbetstimmar"
 
 #. i18n: ectx: whatsthis, entry, group (Colors)
-#: eventviews.kcfg:367 viewerapp/settings.kcfg:198
+#: eventviews.kcfg:380 viewerapp/settings.kcfg:198
 #, kde-format
 msgid "Select the working hours color for the agenda view here."
 msgstr "Välj färg för arbetstimmar i agendavyn här."
@@ -1469,7 +1514,7 @@ msgstr "Välj färg för arbetstimmar i agendavyn här."
 #. i18n: ectx: label, entry (TodoDueTodayColor), group (Colors)
 #. i18n: ectx: label, entry, group (Theming)
 #. i18n: ectx: label, entry, group (Theme/Month view)
-#: eventviews.kcfg:371 eventviews.kcfg:522 eventviews.kcfg:630
+#: eventviews.kcfg:384 eventviews.kcfg:535 eventviews.kcfg:643
 #: viewerapp/settings.kcfg:202
 #, kde-format
 msgid "To-do due today color"
@@ -1478,7 +1523,7 @@ msgstr "Färg för uppgifter som ska vara klara idag"
 #. i18n: ectx: whatsthis, entry (TodoDueTodayColor), group (Colors)
 #. i18n: ectx: whatsthis, entry, group (Theming)
 #. i18n: ectx: whatsthis, entry, group (Theme/Month view)
-#: eventviews.kcfg:372 eventviews.kcfg:523 eventviews.kcfg:631
+#: eventviews.kcfg:385 eventviews.kcfg:536 eventviews.kcfg:644
 #: viewerapp/settings.kcfg:203
 #, kde-format
 msgid "Select the to-do due today color here."
@@ -1487,7 +1532,7 @@ msgstr "Välj färg för uppgifter som ska vara klara i dag här."
 #. i18n: ectx: label, entry (TodoOverdueColor), group (Colors)
 #. i18n: ectx: label, entry, group (Theming)
 #. i18n: ectx: label, entry, group (Theme/Month view)
-#: eventviews.kcfg:376 eventviews.kcfg:535 eventviews.kcfg:643
+#: eventviews.kcfg:389 eventviews.kcfg:548 eventviews.kcfg:656
 #: viewerapp/settings.kcfg:207
 #, kde-format
 msgid "To-do overdue color"
@@ -1496,20 +1541,20 @@ msgstr "Färg för uppgifter som är försenade"
 #. i18n: ectx: whatsthis, entry (TodoOverdueColor), group (Colors)
 #. i18n: ectx: whatsthis, entry, group (Theming)
 #. i18n: ectx: whatsthis, entry, group (Theme/Month view)
-#: eventviews.kcfg:377 eventviews.kcfg:536 eventviews.kcfg:644
+#: eventviews.kcfg:390 eventviews.kcfg:549 eventviews.kcfg:657
 #: viewerapp/settings.kcfg:208
 #, kde-format
 msgid "Select the to-do overdue color here."
 msgstr "Välj färg för uppgifter som är försenade här."
 
 #. i18n: ectx: label, entry, group (Fonts)
-#: eventviews.kcfg:384 viewerapp/settings.kcfg:221
+#: eventviews.kcfg:397 viewerapp/settings.kcfg:221
 #, kde-format
 msgid "Time bar"
 msgstr "Tidrad"
 
 #. i18n: ectx: whatsthis, entry, group (Fonts)
-#: eventviews.kcfg:385 viewerapp/settings.kcfg:222
+#: eventviews.kcfg:398 viewerapp/settings.kcfg:222
 #, kde-format
 msgid ""
 "Press this button to configure the time bar font. The time bar is the widget "
@@ -1522,13 +1567,13 @@ msgstr ""
 "tidradens timmar."
 
 #. i18n: ectx: label, entry, group (Fonts)
-#: eventviews.kcfg:388 viewerapp/settings.kcfg:225
+#: eventviews.kcfg:401 viewerapp/settings.kcfg:225
 #, kde-format
 msgid "Month view"
 msgstr "Månadsvy"
 
 #. i18n: ectx: whatsthis, entry, group (Fonts)
-#: eventviews.kcfg:389 viewerapp/settings.kcfg:226
+#: eventviews.kcfg:402 viewerapp/settings.kcfg:226
 #, kde-format
 msgid ""
 "Press this button to configure the month view font. This button will open "
@@ -1540,13 +1585,13 @@ msgstr ""
 "objekten i månadsvyn."
 
 #. i18n: ectx: label, entry, group (Fonts)
-#: eventviews.kcfg:392 viewerapp/settings.kcfg:229
+#: eventviews.kcfg:405 viewerapp/settings.kcfg:229
 #, kde-format
 msgid "Agenda view"
 msgstr "Agendavy"
 
 #. i18n: ectx: whatsthis, entry, group (Fonts)
-#: eventviews.kcfg:393 viewerapp/settings.kcfg:230
+#: eventviews.kcfg:406 viewerapp/settings.kcfg:230
 #, kde-format
 msgid ""
 "Press this button to configure the agenda view font. This button will open "
@@ -1558,13 +1603,13 @@ msgstr ""
 "objekten i agendavyn."
 
 #. i18n: ectx: label, entry, group (Fonts)
-#: eventviews.kcfg:396 viewerapp/settings.kcfg:233
+#: eventviews.kcfg:409 viewerapp/settings.kcfg:233
 #, kde-format
 msgid "Current-time line"
 msgstr "Aktuell tid"
 
 #. i18n: ectx: whatsthis, entry, group (Fonts)
-#: eventviews.kcfg:397 viewerapp/settings.kcfg:234
+#: eventviews.kcfg:410 viewerapp/settings.kcfg:234
 #, kde-format
 msgid ""
 "Press this button to configure the current-time line font. This button will "
@@ -1576,26 +1621,26 @@ msgstr ""
 "för raden med aktuell tid i agendavyn."
 
 #. i18n: ectx: label, entry (DefaultTodoAttachMethod), group (Hidden Options)
-#: eventviews.kcfg:416
+#: eventviews.kcfg:429
 #, kde-format
 msgid "Default todo attachment method"
 msgstr "Standardmetod för att bilägga till uppgifter"
 
 #. i18n: ectx: whatsthis, entry (DefaultTodoAttachMethod), group (Hidden Options)
-#: eventviews.kcfg:417
+#: eventviews.kcfg:430
 #, kde-format
 msgid "The default way of attaching dropped emails to a task"
 msgstr "Standardsättet att bilägga e-post som släpps på en uppgift"
 
 #. i18n: ectx: label, entry, group (Theming)
 #. i18n: ectx: label, entry, group (Theme/Month view)
-#: eventviews.kcfg:470 eventviews.kcfg:567
+#: eventviews.kcfg:483 eventviews.kcfg:580
 #, kde-format
 msgid "Highlight color"
 msgstr "Färg för markering"
 
 #. i18n: ectx: whatsthis, entry, group (Theming)
-#: eventviews.kcfg:471
+#: eventviews.kcfg:484
 #, kde-format
 msgid ""
 "Select the highlight color here. The highlight color will be used for "
@@ -1605,25 +1650,25 @@ msgstr ""
 "området som för närvarande är valt i din agenda och i datumnavigeringen."
 
 #. i18n: ectx: whatsthis, entry, group (Theming)
-#: eventviews.kcfg:476
+#: eventviews.kcfg:489
 #, kde-format
 msgid "Select the working hours background color for the agenda view here."
 msgstr "Välj bakgrundsfärg för arbetstimmar i agendavyn här."
 
 #. i18n: ectx: label, entry, group (Theme/Month view)
-#: eventviews.kcfg:560
+#: eventviews.kcfg:573
 #, kde-format
 msgid "Month view background color"
 msgstr "Bakgrundsfärg för månadsvy"
 
 #. i18n: ectx: whatsthis, entry, group (Theme/Month view)
-#: eventviews.kcfg:561
+#: eventviews.kcfg:574
 #, kde-format
 msgid "Select the Month view background color here."
 msgstr "Välj månadsvyns bakgrundsfärg här."
 
 #. i18n: ectx: whatsthis, entry, group (Theme/Month view)
-#: eventviews.kcfg:568
+#: eventviews.kcfg:581
 #, kde-format
 msgid ""
 "Select the highlight color here. The highlight color will be used for "
@@ -1633,37 +1678,37 @@ msgstr ""
 "området som för närvarande är valt i din månadsvy och i datumnavigeringen."
 
 #. i18n: ectx: whatsthis, entry, group (Theme/Month view)
-#: eventviews.kcfg:573
+#: eventviews.kcfg:586
 #, kde-format
 msgid "Select the working hours background color for the Month view here."
 msgstr "Välj bakgrundsfärg för arbetstimmar i månadsvyn här."
 
 #. i18n: ectx: label, entry (MonthTodayColor), group (Theme/Month view)
-#: eventviews.kcfg:577
+#: eventviews.kcfg:590
 #, kde-format
 msgid "Month view today background color"
 msgstr "Bakgrundsfärg för idag i månadsvyn"
 
 #. i18n: ectx: tooltip, entry (MonthTodayColor), group (Theme/Month view)
-#: eventviews.kcfg:578
+#: eventviews.kcfg:591
 #, kde-format
 msgid "Set the background color for today's date in month view"
 msgstr "Ställ in bakgrundsfärgen för dagens datum i månadsvyn"
 
 #. i18n: ectx: whatsthis, entry (MonthTodayColor), group (Theme/Month view)
-#: eventviews.kcfg:579
+#: eventviews.kcfg:592
 #, kde-format
 msgid "In Month View, select the background color for today's date."
 msgstr "I månadsvyn, välj bakgrundsfärgen för dagens datum."
 
 #. i18n: ectx: label, entry, group (Theme/Month view)
-#: eventviews.kcfg:601
+#: eventviews.kcfg:614
 #, kde-format
 msgid "Default event color"
 msgstr "Standardfärg för händelser"
 
 #. i18n: ectx: whatsthis, entry, group (Theme/Month view)
-#: eventviews.kcfg:602
+#: eventviews.kcfg:615
 #, kde-format
 msgid ""
 "Select the default event color here. The default event color will be used "
@@ -1675,13 +1720,13 @@ msgstr ""
 "färg för varje händelsekategori nedan."
 
 #. i18n: ectx: label, entry, group (Theme/Month view)
-#: eventviews.kcfg:665
+#: eventviews.kcfg:678
 #, kde-format
 msgid "Use system color"
 msgstr "Använd systemfärg"
 
 #. i18n: ectx: whatsthis, entry, group (Theme/Month view)
-#: eventviews.kcfg:666
+#: eventviews.kcfg:679
 #, kde-format
 msgid "Use system color. If enabled will ignore all other color settings"
 msgstr ""
@@ -1812,13 +1857,13 @@ msgctxt "@info/plain"
 msgid "Move occurrence(s)"
 msgstr "Flytta förekomst(er)"
 
-#: month/monthscene.cpp:202
+#: month/monthscene.cpp:206
 #, kde-format
 msgctxt "monthname year"
 msgid "%1 %2"
 msgstr "%1 %2"
 
-#: month/monthscene.cpp:338
+#: month/monthscene.cpp:343
 #, kde-format
 msgctxt "'Month day' for month view cells"
 msgid "%1 %2"

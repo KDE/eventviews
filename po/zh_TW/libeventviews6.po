@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-11 00:47+0000\n"
+"POT-Creation-Date: 2026-04-12 00:44+0000\n"
 "PO-Revision-Date: 2026-03-16 16:43+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -335,21 +335,21 @@ msgstr "將電子郵件附加到事件的預設方法"
 
 #. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (Personal Settings)
 #. i18n: ectx: label, entry (DefaultTodoAttachMethod), group (Hidden Options)
-#: eventviews.kcfg:13 eventviews.kcfg:420
+#: eventviews.kcfg:13 eventviews.kcfg:433
 #, kde-format
 msgid "Always ask"
 msgstr "總是詢問"
 
 #. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (Personal Settings)
 #. i18n: ectx: label, entry (DefaultTodoAttachMethod), group (Hidden Options)
-#: eventviews.kcfg:16 eventviews.kcfg:423
+#: eventviews.kcfg:16 eventviews.kcfg:436
 #, kde-format
 msgid "Only attach link to message"
 msgstr "只附加連結"
 
 #. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (Personal Settings)
 #. i18n: ectx: label, entry (DefaultTodoAttachMethod), group (Hidden Options)
-#: eventviews.kcfg:19 eventviews.kcfg:426
+#: eventviews.kcfg:19 eventviews.kcfg:439
 #, kde-format
 msgid "Attach complete message"
 msgstr "附加完整的信件"
@@ -844,7 +844,7 @@ msgstr "在選取的時間範圍內開啟自動事件編輯器"
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
-#: eventviews.kcfg:198 eventviews.kcfg:287 viewerapp/settings.kcfg:55
+#: eventviews.kcfg:198 eventviews.kcfg:300 viewerapp/settings.kcfg:55
 #: viewerapp/settings.kcfg:133
 #, kde-format
 msgid "Color Usage"
@@ -852,7 +852,7 @@ msgstr "顏色的使用"
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
-#: eventviews.kcfg:201 eventviews.kcfg:290
+#: eventviews.kcfg:201 eventviews.kcfg:303
 #, kde-format
 msgid "Tag inside, calendar outside"
 msgstr "標籤在內，行事曆在外"
@@ -879,7 +879,7 @@ msgstr "繪製行程項目時，用標籤的顏色繪製內部，邊框則用行
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
-#: eventviews.kcfg:206 eventviews.kcfg:295
+#: eventviews.kcfg:206 eventviews.kcfg:308
 #, kde-format
 msgid "Calendar inside, tag outside"
 msgstr "行事曆在內，標籤在外"
@@ -906,7 +906,7 @@ msgstr "繪製行程項目時，用行事曆的顏色畫裡面，邊框則用標
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
-#: eventviews.kcfg:211 eventviews.kcfg:300
+#: eventviews.kcfg:211 eventviews.kcfg:313
 #, kde-format
 msgid "Only tag"
 msgstr "只有標籤"
@@ -930,7 +930,7 @@ msgstr "繪製行程項目時，用所屬標籤的顏色畫裡面與邊框"
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
-#: eventviews.kcfg:216 eventviews.kcfg:305 viewerapp/settings.kcfg:73
+#: eventviews.kcfg:216 eventviews.kcfg:318 viewerapp/settings.kcfg:73
 #: viewerapp/settings.kcfg:151
 #, kde-format
 msgid "Only calendar"
@@ -955,7 +955,7 @@ msgstr "繪製行程項目時，用所屬行事曆的顏色畫裡面與邊框"
 
 #. i18n: ectx: label, entry (ColorBusyDaysEnabled), group (Agenda View)
 #. i18n: ectx: label, entry (ColorMonthBusyDaysEnabled), group (Month View)
-#: eventviews.kcfg:224 eventviews.kcfg:313
+#: eventviews.kcfg:224 eventviews.kcfg:326
 #, kde-format
 msgid "Color busy days with a different background color"
 msgstr "將忙碌的日子畫上不同背景顏色"
@@ -1123,14 +1123,59 @@ msgstr "勾選此選項以便在月檢視的項目中顯示日誌。"
 msgid "Display journals in the month view"
 msgstr "在月檢視項目中顯示日誌"
 
+#. i18n: ectx: label, entry (ShowHolidaysMonthView), group (Month View)
+#: eventviews.kcfg:282
+#, fuzzy, kde-format
+#| msgid "Show to-dos"
+msgid "Show holidays"
+msgstr "顯示待辦事項"
+
+#. i18n: ectx: whatsthis, entry (ShowHolidaysMonthView), group (Month View)
+#: eventviews.kcfg:283
+#, fuzzy, kde-format
+#| msgid "Check this box to display to-dos in the month view."
+msgid "Check this box to display holidays in the month view."
+msgstr "勾選此選項以便在月檢視的項目中顯示待辦事項。"
+
+#. i18n: ectx: tooltip, entry (ShowHolidaysMonthView), group (Month View)
+#. i18n: ectx: tooltip, entry (ShowHolidaysBackgroundMonthView), group (Month View)
+#: eventviews.kcfg:284 eventviews.kcfg:291
+#, fuzzy, kde-format
+#| msgid "Display to-dos in the month view"
+msgid "Display holidays in the month view"
+msgstr "在月檢視項目中顯示待辦事項"
+
+#. i18n: ectx: label, entry (ShowHolidaysBackgroundMonthView), group (Month View)
+#: eventviews.kcfg:288
+#, kde-format
+msgid ""
+"Use the Holiday background color when at least on holiday lands on a date"
+msgstr ""
+
+#. i18n: ectx: tooltip, entry (ShowHolidaysBackgroundMonthView), group (Month View)
+#: eventviews.kcfg:289
+#, kde-format
+msgid ""
+"Use the custom holiday color as the date's background color if a holiday "
+"lands on the date"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry (ShowHolidaysBackgroundMonthView), group (Month View)
+#: eventviews.kcfg:290
+#, kde-format
+msgid ""
+"Check this box to use the custom holiday as the date's background color when "
+"at least one holiday lands on a date."
+msgstr ""
+
 #. i18n: ectx: label, entry, group (Month View)
-#: eventviews.kcfg:282 viewerapp/settings.kcfg:128
+#: eventviews.kcfg:295 viewerapp/settings.kcfg:128
 #, kde-format
 msgid "Month view uses full window"
 msgstr "月覽表使用整個視窗"
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
-#: eventviews.kcfg:283 viewerapp/settings.kcfg:129
+#: eventviews.kcfg:296 viewerapp/settings.kcfg:129
 #, kde-format
 msgid ""
 "Check this box to use the full KOrganizer window when displaying the month "
@@ -1142,7 +1187,7 @@ msgstr ""
 "詳情、行事曆列表等就不會顯示。"
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
-#: eventviews.kcfg:291
+#: eventviews.kcfg:304
 #, kde-format
 msgid ""
 "Select the \"Tag inside, calendar outside\" option if you would like to draw "
@@ -1154,7 +1199,7 @@ msgstr ""
 "依行事曆的顏色。您可以用「顏色與字型」設定頁面來設定這些顏色。"
 
 #. i18n: ectx: tooltip, entry, group (Month View)
-#: eventviews.kcfg:292
+#: eventviews.kcfg:305
 #, kde-format
 msgid ""
 "Draw month items in their tag color inside and calendar color for their "
@@ -1162,7 +1207,7 @@ msgid ""
 msgstr "繪製月檢視項目時，用標籤的顏色畫裡面，邊框則用行事曆的顏色"
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
-#: eventviews.kcfg:296
+#: eventviews.kcfg:309
 #, kde-format
 msgid ""
 "Select the \"Calendar inside, tag outside\" option if you would like to draw "
@@ -1174,7 +1219,7 @@ msgstr ""
 "所屬標籤的顏色。您可以用「顏色與字型」設定頁面來設定這些顏色。"
 
 #. i18n: ectx: tooltip, entry, group (Month View)
-#: eventviews.kcfg:297
+#: eventviews.kcfg:310
 #, kde-format
 msgid ""
 "Draw month items in their calendar color inside and tag color for their "
@@ -1182,7 +1227,7 @@ msgid ""
 msgstr "繪製月檢視項目時，用行事曆的顏色畫裡面，邊框則用標籤的顏色"
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
-#: eventviews.kcfg:301
+#: eventviews.kcfg:314
 #, kde-format
 msgid ""
 "Select the \"Only tag\" option if you would like to draw calendar items "
@@ -1193,13 +1238,13 @@ msgstr ""
 "型」設定頁面來設定這些顏色。"
 
 #. i18n: ectx: tooltip, entry, group (Month View)
-#: eventviews.kcfg:302
+#: eventviews.kcfg:315
 #, kde-format
 msgid "Draw month items using their tag color for the inside and border"
 msgstr "繪製月檢視項目時，用所屬標籤的顏色畫裡面與邊框"
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
-#: eventviews.kcfg:306 viewerapp/settings.kcfg:152
+#: eventviews.kcfg:319 viewerapp/settings.kcfg:152
 #, kde-format
 msgid ""
 "Select the \"Only calendar\" option if you would like to draw calendar items "
@@ -1210,13 +1255,13 @@ msgstr ""
 "型」設定頁面來設定這些顏色。"
 
 #. i18n: ectx: tooltip, entry, group (Month View)
-#: eventviews.kcfg:307 viewerapp/settings.kcfg:153
+#: eventviews.kcfg:320 viewerapp/settings.kcfg:153
 #, kde-format
 msgid "Draw month items using their calendar color for the inside and border"
 msgstr "繪製月檢視項目時，用所屬行事曆的顏色畫裡面與邊框"
 
 #. i18n: ectx: whatsthis, entry (ColorMonthBusyDaysEnabled), group (Month View)
-#: eventviews.kcfg:314
+#: eventviews.kcfg:327
 #, kde-format
 msgid ""
 "Check this box if you want month view's background to be filled with a "
@@ -1229,13 +1274,13 @@ msgstr ""
 "項。另外您可以在「顏色設定」頁面中修改顏色。請參考「忙碌日子背景顏色」設定。"
 
 #. i18n: ectx: label, entry, group (Todo View)
-#: eventviews.kcfg:321 viewerapp/settings.kcfg:162
+#: eventviews.kcfg:334 viewerapp/settings.kcfg:162
 #, kde-format
 msgid "Always display completed to-dos at the bottom of the list"
 msgstr "總是在清單底部顯示已完成的待辦事項"
 
 #. i18n: ectx: whatsthis, entry, group (Todo View)
-#: eventviews.kcfg:322 viewerapp/settings.kcfg:163
+#: eventviews.kcfg:335 viewerapp/settings.kcfg:163
 #, kde-format
 msgid ""
 "Check this box if you want all completed to-dos to be always grouped at the "
@@ -1243,13 +1288,13 @@ msgid ""
 msgstr "勾選此選項的話，所有已完成的待辦事項會集中在清單的底部。"
 
 #. i18n: ectx: label, entry, group (Todo View)
-#: eventviews.kcfg:326 viewerapp/settings.kcfg:167
+#: eventviews.kcfg:339 viewerapp/settings.kcfg:167
 #, kde-format
 msgid "To-do list view uses full window"
 msgstr "待辦事項檢視使用整個視窗"
 
 #. i18n: ectx: whatsthis, entry, group (Todo View)
-#: eventviews.kcfg:327 viewerapp/settings.kcfg:168
+#: eventviews.kcfg:340 viewerapp/settings.kcfg:168
 #, kde-format
 msgid ""
 "Check this box to use the full KOrganizer window when displaying the to-do "
@@ -1261,19 +1306,19 @@ msgstr ""
 "辦事項詳情、行事曆列表等就不會顯示。"
 
 #. i18n: ectx: label, entry, group (Todo View)
-#: eventviews.kcfg:331
+#: eventviews.kcfg:344
 #, kde-format
 msgid "Display to-dos in a flat list"
 msgstr "用平面清單顯示待辦事項"
 
 #. i18n: ectx: tooltip, entry, group (Todo View)
-#: eventviews.kcfg:332
+#: eventviews.kcfg:345
 #, kde-format
 msgid "Display to-dos as a flat list instead of a hierarchical tree"
 msgstr "用平面清單（而不用樹狀圖）顯示待辦事項"
 
 #. i18n: ectx: whatsthis, entry, group (Todo View)
-#: eventviews.kcfg:333
+#: eventviews.kcfg:346
 #, kde-format
 msgid ""
 "Check this box if you want to see all your to-dos in a flat list instead of "
@@ -1281,13 +1326,13 @@ msgid ""
 msgstr "若您要用平面清單而不是用樹狀圖來顯示待辦事項，則勾選此選項。"
 
 #. i18n: ectx: label, entry, group (Todo View)
-#: eventviews.kcfg:337 viewerapp/settings.kcfg:172
+#: eventviews.kcfg:350 viewerapp/settings.kcfg:172
 #, kde-format
 msgid "Record completed to-dos in journal entries"
 msgstr "在日誌項目中紀錄已完成的待辦事項"
 
 #. i18n: ectx: whatsthis, entry, group (Todo View)
-#: eventviews.kcfg:338 viewerapp/settings.kcfg:173
+#: eventviews.kcfg:351 viewerapp/settings.kcfg:173
 #, kde-format
 msgid ""
 "Check this box to record the completion of a to-do in a new entry of your "
@@ -1297,7 +1342,7 @@ msgstr "勾選此選項，會自動在日誌項目中紀錄已完成的待辦事
 #. i18n: ectx: label, entry, group (Colors)
 #. i18n: ectx: label, entry, group (Theming)
 #. i18n: ectx: label, entry, group (Theme/Month view)
-#: eventviews.kcfg:345 eventviews.kcfg:549 eventviews.kcfg:657
+#: eventviews.kcfg:358 eventviews.kcfg:562 eventviews.kcfg:670
 #: viewerapp/settings.kcfg:180
 #, kde-format
 msgid "Holiday color"
@@ -1306,7 +1351,7 @@ msgstr "假日顏色"
 #. i18n: ectx: whatsthis, entry, group (Colors)
 #. i18n: ectx: whatsthis, entry, group (Theming)
 #. i18n: ectx: whatsthis, entry, group (Theme/Month view)
-#: eventviews.kcfg:346 eventviews.kcfg:550 eventviews.kcfg:658
+#: eventviews.kcfg:359 eventviews.kcfg:563 eventviews.kcfg:671
 #: viewerapp/settings.kcfg:181
 #, kde-format
 msgid ""
@@ -1317,26 +1362,26 @@ msgstr ""
 
 #. i18n: ectx: label, entry (AgendaBgColor), group (Colors)
 #. i18n: ectx: label, entry, group (Theming)
-#: eventviews.kcfg:350 eventviews.kcfg:463 viewerapp/settings.kcfg:185
+#: eventviews.kcfg:363 eventviews.kcfg:476 viewerapp/settings.kcfg:185
 #, kde-format
 msgid "Agenda view background color"
 msgstr "行程表檢視背景顏色"
 
 #. i18n: ectx: whatsthis, entry (AgendaBgColor), group (Colors)
 #. i18n: ectx: whatsthis, entry, group (Theming)
-#: eventviews.kcfg:351 eventviews.kcfg:464 viewerapp/settings.kcfg:186
+#: eventviews.kcfg:364 eventviews.kcfg:477 viewerapp/settings.kcfg:186
 #, kde-format
 msgid "Select the agenda view background color here."
 msgstr "在此選擇行程表檢視背景顏色。"
 
 #. i18n: ectx: label, entry (ViewBgBusyColor), group (Colors)
-#: eventviews.kcfg:355
+#: eventviews.kcfg:368
 #, kde-format
 msgid "Agenda/Month view background busy color"
 msgstr "行程表/月檢視背景顏色"
 
 #. i18n: ectx: whatsthis, entry (ViewBgBusyColor), group (Colors)
-#: eventviews.kcfg:356
+#: eventviews.kcfg:369
 #, kde-format
 msgid ""
 "When you have an all day event marked as busy, you can have a different "
@@ -1346,19 +1391,19 @@ msgstr ""
 "讓您選擇顏色。"
 
 #. i18n: ectx: label, entry, group (Colors)
-#: eventviews.kcfg:360 viewerapp/settings.kcfg:190
+#: eventviews.kcfg:373 viewerapp/settings.kcfg:190
 #, kde-format
 msgid "Agenda view current-time line color"
 msgstr "行程檢視中目前時間線顏色"
 
 #. i18n: ectx: whatsthis, entry, group (Colors)
-#: eventviews.kcfg:361 viewerapp/settings.kcfg:191
+#: eventviews.kcfg:374 viewerapp/settings.kcfg:191
 #, kde-format
 msgid "Select a color to use for the current-time (Marcus Bains) line."
 msgstr "選擇目前時間線(MBL)的顏色"
 
 #. i18n: ectx: tooltip, entry, group (Colors)
-#: eventviews.kcfg:362 viewerapp/settings.kcfg:192
+#: eventviews.kcfg:375 viewerapp/settings.kcfg:192
 #, kde-format
 msgid "Use this color for the Agenda View current-time (Marcus Bains) line"
 msgstr "在行程檢視中的目前時間線(MBL)使用此顏色"
@@ -1366,14 +1411,14 @@ msgstr "在行程檢視中的目前時間線(MBL)使用此顏色"
 #. i18n: ectx: label, entry, group (Colors)
 #. i18n: ectx: label, entry, group (Theming)
 #. i18n: ectx: label, entry, group (Theme/Month view)
-#: eventviews.kcfg:366 eventviews.kcfg:475 eventviews.kcfg:572
+#: eventviews.kcfg:379 eventviews.kcfg:488 eventviews.kcfg:585
 #: viewerapp/settings.kcfg:197
 #, kde-format
 msgid "Working hours color"
 msgstr "工作時間顏色"
 
 #. i18n: ectx: whatsthis, entry, group (Colors)
-#: eventviews.kcfg:367 viewerapp/settings.kcfg:198
+#: eventviews.kcfg:380 viewerapp/settings.kcfg:198
 #, kde-format
 msgid "Select the working hours color for the agenda view here."
 msgstr "在此選擇行程表中工作時間的顏色。"
@@ -1381,7 +1426,7 @@ msgstr "在此選擇行程表中工作時間的顏色。"
 #. i18n: ectx: label, entry (TodoDueTodayColor), group (Colors)
 #. i18n: ectx: label, entry, group (Theming)
 #. i18n: ectx: label, entry, group (Theme/Month view)
-#: eventviews.kcfg:371 eventviews.kcfg:522 eventviews.kcfg:630
+#: eventviews.kcfg:384 eventviews.kcfg:535 eventviews.kcfg:643
 #: viewerapp/settings.kcfg:202
 #, kde-format
 msgid "To-do due today color"
@@ -1390,7 +1435,7 @@ msgstr "待辦事項今天到期的顏色"
 #. i18n: ectx: whatsthis, entry (TodoDueTodayColor), group (Colors)
 #. i18n: ectx: whatsthis, entry, group (Theming)
 #. i18n: ectx: whatsthis, entry, group (Theme/Month view)
-#: eventviews.kcfg:372 eventviews.kcfg:523 eventviews.kcfg:631
+#: eventviews.kcfg:385 eventviews.kcfg:536 eventviews.kcfg:644
 #: viewerapp/settings.kcfg:203
 #, kde-format
 msgid "Select the to-do due today color here."
@@ -1399,7 +1444,7 @@ msgstr "在此選擇待辦事項今天到期的顏色。"
 #. i18n: ectx: label, entry (TodoOverdueColor), group (Colors)
 #. i18n: ectx: label, entry, group (Theming)
 #. i18n: ectx: label, entry, group (Theme/Month view)
-#: eventviews.kcfg:376 eventviews.kcfg:535 eventviews.kcfg:643
+#: eventviews.kcfg:389 eventviews.kcfg:548 eventviews.kcfg:656
 #: viewerapp/settings.kcfg:207
 #, kde-format
 msgid "To-do overdue color"
@@ -1408,20 +1453,20 @@ msgstr "待辦事項已逾期的顏色"
 #. i18n: ectx: whatsthis, entry (TodoOverdueColor), group (Colors)
 #. i18n: ectx: whatsthis, entry, group (Theming)
 #. i18n: ectx: whatsthis, entry, group (Theme/Month view)
-#: eventviews.kcfg:377 eventviews.kcfg:536 eventviews.kcfg:644
+#: eventviews.kcfg:390 eventviews.kcfg:549 eventviews.kcfg:657
 #: viewerapp/settings.kcfg:208
 #, kde-format
 msgid "Select the to-do overdue color here."
 msgstr "在此選擇待辦事項已逾期的顏色。"
 
 #. i18n: ectx: label, entry, group (Fonts)
-#: eventviews.kcfg:384 viewerapp/settings.kcfg:221
+#: eventviews.kcfg:397 viewerapp/settings.kcfg:221
 #, kde-format
 msgid "Time bar"
 msgstr "時間列"
 
 #. i18n: ectx: whatsthis, entry, group (Fonts)
-#: eventviews.kcfg:385 viewerapp/settings.kcfg:222
+#: eventviews.kcfg:398 viewerapp/settings.kcfg:222
 #, kde-format
 msgid ""
 "Press this button to configure the time bar font. The time bar is the widget "
@@ -1432,13 +1477,13 @@ msgstr ""
 "啟「選擇字型」的對話框，讓您選擇時間列的字型。"
 
 #. i18n: ectx: label, entry, group (Fonts)
-#: eventviews.kcfg:388 viewerapp/settings.kcfg:225
+#: eventviews.kcfg:401 viewerapp/settings.kcfg:225
 #, kde-format
 msgid "Month view"
 msgstr "月檢視"
 
 #. i18n: ectx: whatsthis, entry, group (Fonts)
-#: eventviews.kcfg:389 viewerapp/settings.kcfg:226
+#: eventviews.kcfg:402 viewerapp/settings.kcfg:226
 #, kde-format
 msgid ""
 "Press this button to configure the month view font. This button will open "
@@ -1449,13 +1494,13 @@ msgstr ""
 "檢視的字型。"
 
 #. i18n: ectx: label, entry, group (Fonts)
-#: eventviews.kcfg:392 viewerapp/settings.kcfg:229
+#: eventviews.kcfg:405 viewerapp/settings.kcfg:229
 #, kde-format
 msgid "Agenda view"
 msgstr "行程檢視"
 
 #. i18n: ectx: whatsthis, entry, group (Fonts)
-#: eventviews.kcfg:393 viewerapp/settings.kcfg:230
+#: eventviews.kcfg:406 viewerapp/settings.kcfg:230
 #, kde-format
 msgid ""
 "Press this button to configure the agenda view font. This button will open "
@@ -1466,13 +1511,13 @@ msgstr ""
 "行程檢視的字型。"
 
 #. i18n: ectx: label, entry, group (Fonts)
-#: eventviews.kcfg:396 viewerapp/settings.kcfg:233
+#: eventviews.kcfg:409 viewerapp/settings.kcfg:233
 #, kde-format
 msgid "Current-time line"
 msgstr "目前時間線(MBL)"
 
 #. i18n: ectx: whatsthis, entry, group (Fonts)
-#: eventviews.kcfg:397 viewerapp/settings.kcfg:234
+#: eventviews.kcfg:410 viewerapp/settings.kcfg:234
 #, kde-format
 msgid ""
 "Press this button to configure the current-time line font. This button will "
@@ -1483,26 +1528,26 @@ msgstr ""
 "您選擇目前時間線的字型。"
 
 #. i18n: ectx: label, entry (DefaultTodoAttachMethod), group (Hidden Options)
-#: eventviews.kcfg:416
+#: eventviews.kcfg:429
 #, kde-format
 msgid "Default todo attachment method"
 msgstr "預設附加待辦事項的方法"
 
 #. i18n: ectx: whatsthis, entry (DefaultTodoAttachMethod), group (Hidden Options)
-#: eventviews.kcfg:417
+#: eventviews.kcfg:430
 #, kde-format
 msgid "The default way of attaching dropped emails to a task"
 msgstr "將電子郵件附加到工作的預設方法"
 
 #. i18n: ectx: label, entry, group (Theming)
 #. i18n: ectx: label, entry, group (Theme/Month view)
-#: eventviews.kcfg:470 eventviews.kcfg:567
+#: eventviews.kcfg:483 eventviews.kcfg:580
 #, kde-format
 msgid "Highlight color"
 msgstr "重點顏色"
 
 #. i18n: ectx: whatsthis, entry, group (Theming)
-#: eventviews.kcfg:471
+#: eventviews.kcfg:484
 #, kde-format
 msgid ""
 "Select the highlight color here. The highlight color will be used for "
@@ -1510,25 +1555,25 @@ msgid ""
 msgstr "選擇重點顏色。重點顏色會用於行程表或日期瀏覽中，標示目前所選擇的區域。"
 
 #. i18n: ectx: whatsthis, entry, group (Theming)
-#: eventviews.kcfg:476
+#: eventviews.kcfg:489
 #, kde-format
 msgid "Select the working hours background color for the agenda view here."
 msgstr "在此選擇行程表中工作時間的背景顏色。"
 
 #. i18n: ectx: label, entry, group (Theme/Month view)
-#: eventviews.kcfg:560
+#: eventviews.kcfg:573
 #, kde-format
 msgid "Month view background color"
 msgstr "月檢視背景顏色"
 
 #. i18n: ectx: whatsthis, entry, group (Theme/Month view)
-#: eventviews.kcfg:561
+#: eventviews.kcfg:574
 #, kde-format
 msgid "Select the Month view background color here."
 msgstr "在此選擇月檢視背景顏色。"
 
 #. i18n: ectx: whatsthis, entry, group (Theme/Month view)
-#: eventviews.kcfg:568
+#: eventviews.kcfg:581
 #, kde-format
 msgid ""
 "Select the highlight color here. The highlight color will be used for "
@@ -1536,37 +1581,37 @@ msgid ""
 msgstr "選擇突顯顏色。突顯顏色會用於月檢視或日期瀏覽中，標示目前所選擇的區域。"
 
 #. i18n: ectx: whatsthis, entry, group (Theme/Month view)
-#: eventviews.kcfg:573
+#: eventviews.kcfg:586
 #, kde-format
 msgid "Select the working hours background color for the Month view here."
 msgstr "在此選擇月檢視中工作時間的背景顏色。"
 
 #. i18n: ectx: label, entry (MonthTodayColor), group (Theme/Month view)
-#: eventviews.kcfg:577
+#: eventviews.kcfg:590
 #, kde-format
 msgid "Month view today background color"
 msgstr "月檢視今天的背景顏色"
 
 #. i18n: ectx: tooltip, entry (MonthTodayColor), group (Theme/Month view)
-#: eventviews.kcfg:578
+#: eventviews.kcfg:591
 #, kde-format
 msgid "Set the background color for today's date in month view"
 msgstr "設定月檢視中今天日期的背景顏色"
 
 #. i18n: ectx: whatsthis, entry (MonthTodayColor), group (Theme/Month view)
-#: eventviews.kcfg:579
+#: eventviews.kcfg:592
 #, kde-format
 msgid "In Month View, select the background color for today's date."
 msgstr "選擇月檢視當中今天的日期的背景顏色。"
 
 #. i18n: ectx: label, entry, group (Theme/Month view)
-#: eventviews.kcfg:601
+#: eventviews.kcfg:614
 #, kde-format
 msgid "Default event color"
 msgstr "預設事件顏色"
 
 #. i18n: ectx: whatsthis, entry, group (Theme/Month view)
-#: eventviews.kcfg:602
+#: eventviews.kcfg:615
 #, kde-format
 msgid ""
 "Select the default event color here. The default event color will be used "
@@ -1577,13 +1622,13 @@ msgstr ""
 "擇某一個事件標籤的顏色。"
 
 #. i18n: ectx: label, entry, group (Theme/Month view)
-#: eventviews.kcfg:665
+#: eventviews.kcfg:678
 #, kde-format
 msgid "Use system color"
 msgstr "使用系統色彩"
 
 #. i18n: ectx: whatsthis, entry, group (Theme/Month view)
-#: eventviews.kcfg:666
+#: eventviews.kcfg:679
 #, kde-format
 msgid "Use system color. If enabled will ignore all other color settings"
 msgstr "使用系統色彩。若啟用，將會忽略所有其他的色彩設定"
@@ -1711,13 +1756,13 @@ msgctxt "@info/plain"
 msgid "Move occurrence(s)"
 msgstr "移動事件"
 
-#: month/monthscene.cpp:202
+#: month/monthscene.cpp:206
 #, kde-format
 msgctxt "monthname year"
 msgid "%1 %2"
 msgstr "%1 %2"
 
-#: month/monthscene.cpp:338
+#: month/monthscene.cpp:343
 #, kde-format
 msgctxt "'Month day' for month view cells"
 msgid "%1 %2"
