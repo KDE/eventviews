@@ -434,6 +434,7 @@ void AgendaHeader::addDay(const DecorationList &decoList, QDate date, bool withD
         if (date == QDate::currentDate()) {
             QFont font = dayLabel->font();
             font.setBold(true);
+            font.setUnderline(true);
             dayLabel->setFont(font);
         }
         mDateDayLabels.append(dayLabel);
