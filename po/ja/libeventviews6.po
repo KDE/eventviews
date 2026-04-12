@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-26 02:43+0000\n"
+"POT-Creation-Date: 2026-04-12 02:41+0000\n"
 "PO-Revision-Date: 2010-05-08 12:40-0700\n"
 "Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -1617,7 +1617,7 @@ msgctxt "monthname year"
 msgid "%1 %2"
 msgstr ""
 
-#: month/monthscene.cpp:338
+#: month/monthscene.cpp:332
 #, kde-format
 msgctxt "'Month day' for month view cells"
 msgid "%1 %2"
