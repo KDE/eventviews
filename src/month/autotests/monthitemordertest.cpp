@@ -20,7 +20,7 @@ private Q_SLOTS:
     void stableOrder();
 
 public:
-    IncidenceMonthItem *eventItem(QDate start, QDate end);
+    std::unique_ptr<IncidenceMonthItem> eventItem(QDate start, QDate end);
 };
 
 /**
@@ -30,22 +30,22 @@ public:
 void MonthItemOrderTest::longerInstancesFirst()
 {
     const QDate startDate(2000, 01, 01);
-    const IncidenceMonthItem *longEvent = eventItem(startDate, startDate.addDays(1));
-    auto longHoliday = new HolidayMonthItem(nullptr, startDate, startDate.addDays(1), QString());
+    const auto longEvent = eventItem(startDate, startDate.addDays(1));
+    auto longHoliday = std::make_unique<HolidayMonthItem>(nullptr, startDate, startDate.addDays(1), QString());
     for (int offset = -1; offset < 3; offset++) {
         const QDate d = startDate.addDays(offset);
 
-        const IncidenceMonthItem *shortEvent = eventItem(d, d);
-        QVERIFY(MonthItem::greaterThan(longEvent, shortEvent));
-        QVERIFY(!MonthItem::greaterThan(shortEvent, longEvent));
-        QVERIFY(MonthItem::greaterThan(longHoliday, shortEvent));
-        QVERIFY(!MonthItem::greaterThan(shortEvent, longHoliday));
+        const auto shortEvent = eventItem(d, d);
+        QVERIFY(MonthItem::greaterThan(longEvent.get(), shortEvent.get()));
+        QVERIFY(!MonthItem::greaterThan(shortEvent.get(), longEvent.get()));
+        QVERIFY(MonthItem::greaterThan(longHoliday.get(), shortEvent.get()));
+        QVERIFY(!MonthItem::greaterThan(shortEvent.get(), longHoliday.get()));
 
-        auto shortHoliday = new HolidayMonthItem(nullptr, d, QString());
-        QVERIFY(MonthItem::greaterThan(longEvent, shortHoliday));
-        QVERIFY(!MonthItem::greaterThan(shortHoliday, longEvent));
-        QVERIFY(MonthItem::greaterThan(longHoliday, shortHoliday));
-        QVERIFY(!MonthItem::greaterThan(shortHoliday, longHoliday));
+        auto shortHoliday = std::make_unique<HolidayMonthItem>(nullptr, d, QString());
+        QVERIFY(MonthItem::greaterThan(longEvent.get(), shortHoliday.get()));
+        QVERIFY(!MonthItem::greaterThan(shortHoliday.get(), longEvent.get()));
+        QVERIFY(MonthItem::greaterThan(longHoliday.get(), shortHoliday.get()));
+        QVERIFY(!MonthItem::greaterThan(shortHoliday.get(), longHoliday.get()));
     }
 }
 
@@ -55,10 +55,10 @@ void MonthItemOrderTest::longerInstancesFirst()
 void MonthItemOrderTest::holidaysFirst()
 {
     const QDate startDate(2000, 01, 01);
-    const IncidenceMonthItem *event = eventItem(startDate, startDate);
-    auto holiday = new HolidayMonthItem(nullptr, startDate, QString());
-    QVERIFY(!MonthItem::greaterThan(event, holiday));
-    QVERIFY(MonthItem::greaterThan(holiday, event));
+    const auto event = eventItem(startDate, startDate);
+    auto holiday = std::make_unique<HolidayMonthItem>(nullptr, startDate, QString());
+    QVERIFY(!MonthItem::greaterThan(event.get(), holiday.get()));
+    QVERIFY(MonthItem::greaterThan(holiday.get(), event.get()));
 }
 
 /**
@@ -69,22 +69,22 @@ void MonthItemOrderTest::stableOrder()
 {
     const QDate startDate(2000, 01, 01);
 
-    auto holiday = new HolidayMonthItem(nullptr, startDate, QString());
-    auto otherHoliday = new HolidayMonthItem(nullptr, startDate, QString());
-    QVERIFY(!(MonthItem::greaterThan(otherHoliday, holiday) && MonthItem::greaterThan(holiday, otherHoliday)));
+    auto holiday = std::make_unique<HolidayMonthItem>(nullptr, startDate, QString());
+    auto otherHoliday = std::make_unique<HolidayMonthItem>(nullptr, startDate, QString());
+    QVERIFY(!(MonthItem::greaterThan(otherHoliday.get(), holiday.get()) && MonthItem::greaterThan(holiday.get(), otherHoliday.get())));
 
-    const IncidenceMonthItem *event = eventItem(startDate, startDate);
-    const IncidenceMonthItem *otherEvent = eventItem(startDate, startDate);
-    QVERIFY(!(MonthItem::greaterThan(otherEvent, event) && MonthItem::greaterThan(event, otherEvent)));
+    const auto event = eventItem(startDate, startDate);
+    const auto otherEvent = eventItem(startDate, startDate);
+    QVERIFY(!(MonthItem::greaterThan(otherEvent.get(), event.get()) && MonthItem::greaterThan(event.get(), otherEvent.get())));
 }
 
-IncidenceMonthItem *MonthItemOrderTest::eventItem(QDate start, QDate end)
+std::unique_ptr<IncidenceMonthItem> MonthItemOrderTest::eventItem(QDate start, QDate end)
 {
     auto e = new KCalendarCore::Event;
     e->setDtStart(QDateTime(start, QTime(00, 00, 00)));
     e->setDtEnd(QDateTime(end, QTime(00, 00, 00)));
     e->setAllDay(true);
-    return new IncidenceMonthItem(nullptr, nullptr, Akonadi::Item(), KCalendarCore::Event::Ptr(e), start);
+    return std::make_unique<IncidenceMonthItem>(nullptr, nullptr, Akonadi::Item(), KCalendarCore::Event::Ptr(e), start);
 }
 
 QTEST_MAIN(MonthItemOrderTest)
