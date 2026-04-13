@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-12 00:44+0000\n"
+"POT-Creation-Date: 2026-04-13 00:44+0000\n"
 "PO-Revision-Date: 2026-03-14 12:40+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -123,12 +123,12 @@ msgctxt "short_weekday short_monthname date (e.g. Mon Aug 13)"
 msgid "%1 %2 %3"
 msgstr "%1 %2 %3"
 
-#: agenda/agendaview.cpp:2333
+#: agenda/agendaview.cpp:2334
 #, kde-format
 msgid "Unable to modify this to-do, because it cannot be locked."
 msgstr "Bu yapılacak ögesi düzenlenemiyor; çünkü bu öge kilitlenemiyor."
 
-#: agenda/agendaview.cpp:2341
+#: agenda/agendaview.cpp:2342
 #, kde-format
 msgid "Unable to save %1 \"%2\"."
 msgstr "%1 “%2” kaydedilemiyor."

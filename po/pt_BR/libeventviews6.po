@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-12 00:44+0000\n"
-"PO-Revision-Date: 2026-03-14 09:57-0300\n"
+"POT-Creation-Date: 2026-04-13 00:44+0000\n"
+"PO-Revision-Date: 2026-04-12 09:36-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -121,13 +121,13 @@ msgctxt "short_weekday short_monthname date (e.g. Mon Aug 13)"
 msgid "%1 %2 %3"
 msgstr "%1, %2 de %3"
 
-#: agenda/agendaview.cpp:2333
+#: agenda/agendaview.cpp:2334
 #, kde-format
 msgid "Unable to modify this to-do, because it cannot be locked."
 msgstr ""
 "Não foi possível modificar esta tarefa, porque ela não pôde ser bloqueada."
 
-#: agenda/agendaview.cpp:2341
+#: agenda/agendaview.cpp:2342
 #, kde-format
 msgid "Unable to save %1 \"%2\"."
 msgstr "Não foi possível salvar %1 \"%2\"."
@@ -1223,25 +1223,22 @@ msgstr "Exibir diários na visão mensal"
 
 #. i18n: ectx: label, entry (ShowHolidaysMonthView), group (Month View)
 #: eventviews.kcfg:282
-#, fuzzy, kde-format
-#| msgid "Show to-dos"
+#, kde-format
 msgid "Show holidays"
-msgstr "Mostrar tarefas"
+msgstr "Mostrar feriados"
 
 #. i18n: ectx: whatsthis, entry (ShowHolidaysMonthView), group (Month View)
 #: eventviews.kcfg:283
-#, fuzzy, kde-format
-#| msgid "Check this box to display to-dos in the month view."
+#, kde-format
 msgid "Check this box to display holidays in the month view."
-msgstr "Marque esta opção para mostrar as tarefas na visão mensal."
+msgstr "Marque esta opção para mostrar os feriados na visão mensal."
 
 #. i18n: ectx: tooltip, entry (ShowHolidaysMonthView), group (Month View)
 #. i18n: ectx: tooltip, entry (ShowHolidaysBackgroundMonthView), group (Month View)
 #: eventviews.kcfg:284 eventviews.kcfg:291
-#, fuzzy, kde-format
-#| msgid "Display to-dos in the month view"
+#, kde-format
 msgid "Display holidays in the month view"
-msgstr "Mostrar tarefas na visão mensal"
+msgstr "Mostrar feriados na visão mensal"
 
 #. i18n: ectx: label, entry (ShowHolidaysBackgroundMonthView), group (Month View)
 #: eventviews.kcfg:288
@@ -1249,6 +1246,7 @@ msgstr "Mostrar tarefas na visão mensal"
 msgid ""
 "Use the Holiday background color when at least on holiday lands on a date"
 msgstr ""
+"Usar a cor de fundo \"Feriado\" quando pelo menos um feriado cair em uma data"
 
 #. i18n: ectx: tooltip, entry (ShowHolidaysBackgroundMonthView), group (Month View)
 #: eventviews.kcfg:289
@@ -1257,6 +1255,8 @@ msgid ""
 "Use the custom holiday color as the date's background color if a holiday "
 "lands on the date"
 msgstr ""
+"Usar cor personalizada do feriado como cor de fundo da data se um feriado "
+"cair na data"
 
 #. i18n: ectx: whatsthis, entry (ShowHolidaysBackgroundMonthView), group (Month View)
 #: eventviews.kcfg:290
@@ -1265,6 +1265,8 @@ msgid ""
 "Check this box to use the custom holiday as the date's background color when "
 "at least one holiday lands on a date."
 msgstr ""
+"Marque esta caixa para usar o feriado personalizado como cor de fundo da "
+"data quando pelo menos um feriado coincidir com a data."
 
 #. i18n: ectx: label, entry, group (Month View)
 #: eventviews.kcfg:295 viewerapp/settings.kcfg:128

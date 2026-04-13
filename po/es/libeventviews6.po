@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-12 00:44+0000\n"
-"PO-Revision-Date: 2026-03-14 11:47+0100\n"
+"POT-Creation-Date: 2026-04-13 00:44+0000\n"
+"PO-Revision-Date: 2026-04-12 21:42+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -118,13 +118,13 @@ msgctxt "short_weekday short_monthname date (e.g. Mon Aug 13)"
 msgid "%1 %2 %3"
 msgstr "%1 %2 %3"
 
-#: agenda/agendaview.cpp:2333
+#: agenda/agendaview.cpp:2334
 #, kde-format
 msgid "Unable to modify this to-do, because it cannot be locked."
 msgstr ""
 "No se puede modificar esta tarea pendiente porque no se puede bloquear."
 
-#: agenda/agendaview.cpp:2341
+#: agenda/agendaview.cpp:2342
 #, kde-format
 msgid "Unable to save %1 \"%2\"."
 msgstr "No se puede guardar %1 «%2»."
@@ -1243,26 +1243,22 @@ msgstr "Mostrar entradas de diario en la vista de mes"
 
 #. i18n: ectx: label, entry (ShowHolidaysMonthView), group (Month View)
 #: eventviews.kcfg:282
-#, fuzzy, kde-format
-#| msgid "Show to-dos"
+#, kde-format
 msgid "Show holidays"
-msgstr "Mostrar tareas pendientes"
+msgstr "Mostrar días festivos"
 
 #. i18n: ectx: whatsthis, entry (ShowHolidaysMonthView), group (Month View)
 #: eventviews.kcfg:283
-#, fuzzy, kde-format
-#| msgid "Check this box to display to-dos in the month view."
+#, kde-format
 msgid "Check this box to display holidays in the month view."
-msgstr ""
-"Marque esta casilla para mostrar tareas pendientes en la vista mensual."
+msgstr "Marque esta casilla para mostrar días festivos en la vista mensual."
 
 #. i18n: ectx: tooltip, entry (ShowHolidaysMonthView), group (Month View)
 #. i18n: ectx: tooltip, entry (ShowHolidaysBackgroundMonthView), group (Month View)
 #: eventviews.kcfg:284 eventviews.kcfg:291
-#, fuzzy, kde-format
-#| msgid "Display to-dos in the month view"
+#, kde-format
 msgid "Display holidays in the month view"
-msgstr "Mostrar tareas pendientes en la vista de mes"
+msgstr "Mostrar días festivos en la vista de mes"
 
 #. i18n: ectx: label, entry (ShowHolidaysBackgroundMonthView), group (Month View)
 #: eventviews.kcfg:288
@@ -1270,6 +1266,8 @@ msgstr "Mostrar tareas pendientes en la vista de mes"
 msgid ""
 "Use the Holiday background color when at least on holiday lands on a date"
 msgstr ""
+"Usar el color de fondo para días festivos cuando coincida al menos un día "
+"festivo en una fecha"
 
 #. i18n: ectx: tooltip, entry (ShowHolidaysBackgroundMonthView), group (Month View)
 #: eventviews.kcfg:289
@@ -1278,6 +1276,8 @@ msgid ""
 "Use the custom holiday color as the date's background color if a holiday "
 "lands on the date"
 msgstr ""
+"Usar el color personalizado para días festivos como color de fondo de la "
+"fecha si coincide algún día festivo en dicha fecha"
 
 #. i18n: ectx: whatsthis, entry (ShowHolidaysBackgroundMonthView), group (Month View)
 #: eventviews.kcfg:290
@@ -1286,6 +1286,9 @@ msgid ""
 "Check this box to use the custom holiday as the date's background color when "
 "at least one holiday lands on a date."
 msgstr ""
+"Marque esta casilla para usar el color personalizado de días festivos como "
+"color de fondo de la fecha cuando coincide al menos un día festivo con dicha "
+"fecha."
 
 #. i18n: ectx: label, entry, group (Month View)
 #: eventviews.kcfg:295 viewerapp/settings.kcfg:128
