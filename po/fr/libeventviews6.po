@@ -13,9 +13,9 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-13 00:44+0000\n"
-"PO-Revision-Date: 2026-03-15 17:45+0100\n"
+"PO-Revision-Date: 2026-04-12 16:10+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
-"Language-Team: \n"
+"Language-Team: fr\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1252,25 +1252,24 @@ msgstr "Afficher les journaux dans la vue mensuelle"
 
 #. i18n: ectx: label, entry (ShowHolidaysMonthView), group (Month View)
 #: eventviews.kcfg:282
-#, fuzzy, kde-format
-#| msgid "Show to-dos"
+#, kde-format
 msgid "Show holidays"
-msgstr "Afficher les tâches"
+msgstr "Afficher les jours fériés"
 
 #. i18n: ectx: whatsthis, entry (ShowHolidaysMonthView), group (Month View)
 #: eventviews.kcfg:283
-#, fuzzy, kde-format
-#| msgid "Check this box to display to-dos in the month view."
+#, kde-format
 msgid "Check this box to display holidays in the month view."
-msgstr "Cochez cette case pour afficher les tâches dans la vue mensuelle."
+msgstr ""
+"Veuillez cocher cette case pour afficher les jours fériés dans la vue en "
+"mois."
 
 #. i18n: ectx: tooltip, entry (ShowHolidaysMonthView), group (Month View)
 #. i18n: ectx: tooltip, entry (ShowHolidaysBackgroundMonthView), group (Month View)
 #: eventviews.kcfg:284 eventviews.kcfg:291
-#, fuzzy, kde-format
-#| msgid "Display to-dos in the month view"
+#, kde-format
 msgid "Display holidays in the month view"
-msgstr "Afficher les tâches dans la vue mensuelle"
+msgstr "Afficher les jours fériés dans la vue en mois"
 
 #. i18n: ectx: label, entry (ShowHolidaysBackgroundMonthView), group (Month View)
 #: eventviews.kcfg:288
@@ -1278,6 +1277,8 @@ msgstr "Afficher les tâches dans la vue mensuelle"
 msgid ""
 "Use the Holiday background color when at least on holiday lands on a date"
 msgstr ""
+"Utilisez la couleur de fond des jours fériés lorsqu'au moins un jour férié "
+"est placé à cette date"
 
 #. i18n: ectx: tooltip, entry (ShowHolidaysBackgroundMonthView), group (Month View)
 #: eventviews.kcfg:289
@@ -1286,6 +1287,8 @@ msgid ""
 "Use the custom holiday color as the date's background color if a holiday "
 "lands on the date"
 msgstr ""
+"Utilisez la couleur personnalisée des jours fériés comme couleur de fond des "
+"dates si un jour férié est placé à cette date"
 
 #. i18n: ectx: whatsthis, entry (ShowHolidaysBackgroundMonthView), group (Month View)
 #: eventviews.kcfg:290
@@ -1294,6 +1297,8 @@ msgid ""
 "Check this box to use the custom holiday as the date's background color when "
 "at least one holiday lands on a date."
 msgstr ""
+"Cochez cette case pour utiliser le jour férié personnalisé comme couleur "
+"d'arrière-plan de dates lorsqu'au moins un jour férié se place sur une date."
 
 #. i18n: ectx: label, entry, group (Month View)
 #: eventviews.kcfg:295 viewerapp/settings.kcfg:128

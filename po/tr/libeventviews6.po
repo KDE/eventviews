@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kdepim-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-13 00:44+0000\n"
-"PO-Revision-Date: 2026-03-14 12:40+0300\n"
+"PO-Revision-Date: 2026-04-13 20:54+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -1207,36 +1207,33 @@ msgstr "Ay görünümünde günceleri görüntülemek için bu kutuyu işaretley
 #: eventviews.kcfg:278 viewerapp/settings.kcfg:124
 #, kde-format
 msgid "Display journals in the month view"
-msgstr "Ay görünümünde günceleri göster"
+msgstr "Ay görünümünde günceleri görüntüle"
 
 #. i18n: ectx: label, entry (ShowHolidaysMonthView), group (Month View)
 #: eventviews.kcfg:282
-#, fuzzy, kde-format
-#| msgid "Show to-dos"
+#, kde-format
 msgid "Show holidays"
-msgstr "Yapılacakları göster"
+msgstr "Tatilleri göster"
 
 #. i18n: ectx: whatsthis, entry (ShowHolidaysMonthView), group (Month View)
 #: eventviews.kcfg:283
-#, fuzzy, kde-format
-#| msgid "Check this box to display to-dos in the month view."
+#, kde-format
 msgid "Check this box to display holidays in the month view."
-msgstr "Ay görünümünde yapılacakları görüntülemek için bu kutuyu işaretleyin."
+msgstr "Ay görünümünde tatilleri görüntülemek için bu kutuyu işaretleyin."
 
 #. i18n: ectx: tooltip, entry (ShowHolidaysMonthView), group (Month View)
 #. i18n: ectx: tooltip, entry (ShowHolidaysBackgroundMonthView), group (Month View)
 #: eventviews.kcfg:284 eventviews.kcfg:291
-#, fuzzy, kde-format
-#| msgid "Display to-dos in the month view"
+#, kde-format
 msgid "Display holidays in the month view"
-msgstr "Ay görünümünde yapılacakları göster"
+msgstr "Ay görünümünde tatilleri görüntüle"
 
 #. i18n: ectx: label, entry (ShowHolidaysBackgroundMonthView), group (Month View)
 #: eventviews.kcfg:288
 #, kde-format
 msgid ""
 "Use the Holiday background color when at least on holiday lands on a date"
-msgstr ""
+msgstr "Tatil bir tarihe denk geliyorsa tatil arka plan rengini kullan"
 
 #. i18n: ectx: tooltip, entry (ShowHolidaysBackgroundMonthView), group (Month View)
 #: eventviews.kcfg:289
@@ -1245,6 +1242,8 @@ msgid ""
 "Use the custom holiday color as the date's background color if a holiday "
 "lands on the date"
 msgstr ""
+"Tatil bir tarihe denk geliyorsa tarihin arka plan rengi olarak özel tatil "
+"rengini kullan"
 
 #. i18n: ectx: whatsthis, entry (ShowHolidaysBackgroundMonthView), group (Month View)
 #: eventviews.kcfg:290
@@ -1253,6 +1252,8 @@ msgid ""
 "Check this box to use the custom holiday as the date's background color when "
 "at least one holiday lands on a date."
 msgstr ""
+"En az bir tatil bir tarihin üzerine denk geliyorsa tarihin arka plan rengi "
+"olarak özel tatil rengini kullanmak için bu kutuyu işaretleyin."
 
 #. i18n: ectx: label, entry, group (Month View)
 #: eventviews.kcfg:295 viewerapp/settings.kcfg:128
