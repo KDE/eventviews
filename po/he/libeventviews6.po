@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-13 00:44+0000\n"
-"PO-Revision-Date: 2026-04-13 22:23+0300\n"
+"PO-Revision-Date: 2026-04-14 21:39+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -1192,7 +1192,7 @@ msgstr "הצגת חגים בתצוגת חודש"
 #, kde-format
 msgid ""
 "Use the Holiday background color when at least on holiday lands on a date"
-msgstr ""
+msgstr "להשתמש בצבע הרקע של החג כאשר לפחות חג אחד יוצא על תאריך"
 
 #. i18n: ectx: tooltip, entry (ShowHolidaysBackgroundMonthView), group (Month View)
 #: eventviews.kcfg:289
@@ -1201,6 +1201,7 @@ msgid ""
 "Use the custom holiday color as the date's background color if a holiday "
 "lands on the date"
 msgstr ""
+"להשתמש בצבע החג כברירת מחדל בתור צבע הרקע של התאריך אם חג יוצא על התאריך"
 
 #. i18n: ectx: whatsthis, entry (ShowHolidaysBackgroundMonthView), group (Month View)
 #: eventviews.kcfg:290
@@ -1209,6 +1210,8 @@ msgid ""
 "Check this box to use the custom holiday as the date's background color when "
 "at least one holiday lands on a date."
 msgstr ""
+"יש לסמן את התיבה הזאת כדי להשתמש בחג שמותאם אישית בתור צבע הרקע של התאריך "
+"כאשר לפחות חג אחד יוצא על תאריך."
 
 #. i18n: ectx: label, entry, group (Month View)
 #: eventviews.kcfg:295 viewerapp/settings.kcfg:128
