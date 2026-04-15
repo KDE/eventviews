@@ -551,7 +551,9 @@ KHolidays::Holiday::List MonthView::holidays(QDate startDate, QDate endDate, con
     for (auto const &r : regions) {
         KHolidays::HolidayRegion region(r);
         if (region.isValid()) {
+#if KHOLIDAYS_VERSION >= QT_VERSION_CHECK(6, 26, 0)
             region.setCategories(categories);
+#endif
             holidays += region.rawHolidaysWithAstroSeasons(startDate, endDate);
         }
     }

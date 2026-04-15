@@ -14,8 +14,10 @@
 #include <CalendarSupport/KCalPrefs>
 #include <CalendarSupport/Utils>
 
-#include <KHolidays/HolidayCategories>
 #include <KHolidays/HolidayRegion>
+#if KHOLIDAYS_VERSION >= QT_VERSION_CHECK(6, 26, 0)
+#include <KHolidays/HolidayCategories>
+#endif
 
 #include <KColorScheme>
 #include <KLocalizedString>
