@@ -1,30 +1,31 @@
+# SPDX-FileCopyrightText: 2002-2007 Stefan Winter <swinter@kde.org>
 # SPDX-FileCopyrightText: 2024 Johannes Obermayr <johannesobermayr@gmx.de>
-# SPDX-FileCopyrightText: 2002, 2003, 2004, 2005, 2006, 2007 Stefan Winter <swinter@kde.org>
 # Thomas Diehl <thd@kde.org>, 2002,2003, 2005.
-# SPDX-FileCopyrightText: 2003, 2004, 2005, 2006 Stephan Johach <hunsum@gmx.de>
+# SPDX-FileCopyrightText: 2003-2006 Stephan Johach <hunsum@gmx.de>
 # SPDX-FileCopyrightText: 2004 Matthias Kalle Dalheimer <kalle@kdab.net>
-# SPDX-FileCopyrightText: 2005, 2006, 2007, 2008, 2009, 2010 Thomas Reitelbach <tr@erdfunkstelle.de>
-# SPDX-FileCopyrightText: 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2017, 2018, 2019, 2020, 2021 Burkhard Lück <lueck@hube-lueck.de>
-# SPDX-FileCopyrightText: 2009, 2010, 2011, 2012, 2016, 2022 Frederik Schwarzer <schwarzer@kde.org>
+# SPDX-FileCopyrightText: 2005-2010 Thomas Reitelbach <tr@erdfunkstelle.de>
+# SPDX-FileCopyrightText: 2008-2015, 2017-2021 Burkhard Lück <lueck@hube-lueck.de>
+# SPDX-FileCopyrightText: 2009-2012, 2016, 2022 Frederik Schwarzer <schwarzer@kde.org>
 # SPDX-FileCopyrightText: 2010 Moritz Baumann <flamingmo@online.de>
 # SPDX-FileCopyrightText: 2010 Panagiotis Papadopoulos <pano_90@gmx.net>
 # SPDX-FileCopyrightText: 2011 Torbjörn Klatt <torbjoern@torbjoern-klatt.de>
 # SPDX-FileCopyrightText: 2025 Alois Spitzbart <spitz234@hotmail.com>
+# SPDX-FileCopyrightText: 2026 Alexander Becker <alex-at-kde-l10n-de@freenet.de>
 # Intevation GmbH, 2010.
 msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-13 00:44+0000\n"
-"PO-Revision-Date: 2025-06-08 22:19+0200\n"
-"Last-Translator: Alois Spitzbart <spitz234@hotmail.com>\n"
+"PO-Revision-Date: 2026-04-14 22:46+0200\n"
+"Last-Translator: Alexander Becker <alex-at-kde-l10n-de@freenet.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -100,31 +101,24 @@ msgid "- %1"
 msgstr "- %1"
 
 #: agenda/agendaitem.cpp:909 agenda/agendaitem.cpp:932
-#, fuzzy, kde-format
-#| msgctxt "date, from - to"
-#| msgid "%1, %2 - %3"
+#, kde-format
 msgid "%1: %2 - %3"
-msgstr "%1, %2 – %3"
+msgstr "%1: %2 – %3"
 
 #: agenda/agendaitem.cpp:1041
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Edit calendar settings"
+#, kde-format
 msgid "Google Calendar Settings"
-msgstr "Kalendereinstellungen bearbeiten"
+msgstr "„Google Kalender“-Einstellungen"
 
 #: agenda/agendaitem.cpp:1041
-#, fuzzy, kde-format
-#| msgid "Holiday"
+#, kde-format
 msgid "Public Holiday"
-msgstr "Feiertag"
+msgstr "Gesetzlicher Feiertag"
 
 #: agenda/agendaitem.cpp:1053
-#, fuzzy, kde-format
-#| msgctxt "subitem counter"
-#| msgid "%1: "
+#, kde-format
 msgid "%1: %2"
-msgstr "%1: "
+msgstr "%1: %2"
 
 #: agenda/agendaview.cpp:421
 #, kde-format
@@ -147,7 +141,7 @@ msgstr "Speichern von %1 „%2“ nicht möglich."
 #: agenda/timelabels.cpp:329
 #, kde-format
 msgid "&Add Timezones…"
-msgstr "Zeitzonen &hinzufügen …"
+msgstr "Zeitzonen &hinzufügen …"
 
 #: agenda/timelabels.cpp:330
 #, kde-format
@@ -187,18 +181,16 @@ msgid ""
 msgstr ""
 
 #: agenda/timelabels.cpp:347
-#, fuzzy, kde-format
-#| msgid "1 hour "
-#| msgid_plural "%1 hours "
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "12 Hour Clock"
-msgstr "1 Stunde "
+msgstr "12-Stunden-Zeitanzeige"
 
 #: agenda/timelabels.cpp:349
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "24 Hour Clock"
-msgstr ""
+msgstr "24-Stunden-Zeitanzeige"
 
 #: agenda/timelabels.cpp:351
 #, kde-format
@@ -484,7 +476,7 @@ msgstr ""
 #: eventviews.kcfg:59
 #, kde-format
 msgid "Be asked which calendar to use"
-msgstr "Nachfragen, welcher Kalender benutzt werden soll"
+msgstr "Nachfragen, welcher Kalender verwendet werden soll"
 
 #. i18n: ectx: whatsthis, entry (Destination), group (Save Settings)
 #: eventviews.kcfg:60
@@ -605,7 +597,7 @@ msgstr ""
 #: eventviews.kcfg:104 viewerapp/settings.kcfg:9
 #, kde-format
 msgid "Enable tooltips for displaying summaries"
-msgstr "Kurzinfos für Anzeige von Zusammenfassungen einschalten"
+msgstr "Kurzinfos für Anzeige von Zusammenfassungen aktivieren"
 
 #. i18n: ectx: whatsthis, entry, group (General View)
 #: eventviews.kcfg:105 viewerapp/settings.kcfg:10
@@ -743,8 +735,8 @@ msgid ""
 "Check this box to select a working week when clicking on the Date "
 "Navigator's week numbers, or uncheck it to choose the whole week."
 msgstr ""
-"Aktivieren Sie diese Einstellung, so wird bei einem Klick auf einen "
-"Kalenderwoche die Arbeitswoche anstelle der ganzen Woche ausgewählt."
+"Aktivieren Sie diese Einstellung, um bei einem Klick auf eine Kalenderwoche "
+"die Arbeitswoche anstelle der ganzen Woche auszuwählen."
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #: eventviews.kcfg:148 viewerapp/settings.kcfg:17
@@ -774,7 +766,7 @@ msgstr ""
 #: eventviews.kcfg:156
 #, kde-format
 msgid "Draw bold horizontal grid lines for the even hours"
-msgstr ""
+msgstr "Fette waagerechte Rasterlinien für die geraden Stunden zeichnen"
 
 #. i18n: ectx: whatsthis, entry (EnableAgendaBoldEvenHours), group (Agenda View)
 #: eventviews.kcfg:157
@@ -782,12 +774,14 @@ msgstr ""
 msgid ""
 "Draw a bolder horizontal grid line for the even hours (12am, 2am, 4am, etc)."
 msgstr ""
+"Fettere waagerechte Rasterlinien für die geraden Stunden (0:00, 2:00, 4:00, "
+"…) zeichnen."
 
 #. i18n: ectx: tooltip, entry (EnableAgendaBoldEvenHours), group (Agenda View)
 #: eventviews.kcfg:158
 #, kde-format
 msgid "Draw bolder even hour grid lines"
-msgstr ""
+msgstr "Fettere Rasterlinien für gerade Stunden zeichnen"
 
 #. i18n: ectx: label, entry (EnableAgendaItemIcons), group (Agenda View)
 #: eventviews.kcfg:162 viewerapp/settings.kcfg:25
@@ -1300,7 +1294,7 @@ msgid ""
 "calendars list, will not be displayed."
 msgstr ""
 "Kreuzen Sie dieses Feld an, wenn bei der Monatsansicht die gesamte "
-"Fenstergröße des KOrganizer-Fensters benutzt werden soll. Dadurch bekommen "
+"Fenstergröße des KOrganizer-Fensters verwendet werden soll. Dadurch bekommen "
 "Sie mehr Platz für die Monatsansicht. Allerdings werden andere Elemente, wie "
 "zum Beispiel der Datumsnavigator, die Detailansicht für Einträge und die "
 "Kalenderliste nicht angezeigt."
@@ -1441,7 +1435,7 @@ msgid ""
 "and the calendars list, will not be displayed."
 msgstr ""
 "Kreuzen Sie dieses Feld an, wenn bei der Aufgabenansicht die gesamte "
-"Fenstergröße des KOrganizer Fensters benutzt werden soll. Dadurch bekommen "
+"Fenstergröße des KOrganizer-Fensters verwendet werden soll. Dadurch bekommen "
 "Sie mehr Platz für die Aufgabenansicht. Allerdings werden andere Elemente, "
 "wie zum Beispiel der Datumsnavigator, die Detailansicht von Aufgaben und die "
 "Kalenderliste nicht angezeigt."
@@ -1758,23 +1752,21 @@ msgstr "Wählen Sie hier die Hintergrundfarbe für die Monatsansicht aus."
 
 #. i18n: ectx: label, entry (MonthTodayColor), group (Theme/Month view)
 #: eventviews.kcfg:590
-#, fuzzy, kde-format
-#| msgid "Month view background color"
+#, kde-format
 msgid "Month view today background color"
-msgstr "Hintergrundfarbe für Monatsansicht"
+msgstr "Hintergrundfarbe für „Heute“ in der Monatsansicht"
 
 #. i18n: ectx: tooltip, entry (MonthTodayColor), group (Theme/Month view)
 #: eventviews.kcfg:591
-#, fuzzy, kde-format
-#| msgid "Select the working hours background color for the Month view here."
+#, kde-format
 msgid "Set the background color for today's date in month view"
-msgstr "Wählen Sie hier die Hintergrundfarbe für die Monatsansicht aus."
+msgstr "Legen Sie die Hintergrundfarbe für „Heute“ in der Monatsansicht fest."
 
 #. i18n: ectx: whatsthis, entry (MonthTodayColor), group (Theme/Month view)
 #: eventviews.kcfg:592
 #, kde-format
 msgid "In Month View, select the background color for today's date."
-msgstr ""
+msgstr "Wählen Sie die Hintergrundfarbe für „Heute“ in der Monatsansicht aus."
 
 #. i18n: ectx: label, entry, group (Theme/Month view)
 #: eventviews.kcfg:614
@@ -1798,7 +1790,7 @@ msgstr ""
 #: eventviews.kcfg:678
 #, kde-format
 msgid "Use system color"
-msgstr "Systemfarben benutzen"
+msgstr "Systemfarben verwenden"
 
 #. i18n: ectx: whatsthis, entry, group (Theme/Month view)
 #: eventviews.kcfg:679
@@ -1907,7 +1899,7 @@ msgstr "Stichwörter"
 #: list/listview.cpp:367
 #, kde-format
 msgid "Summary [%1 - %2]"
-msgstr "Zusammenfassung [%1 - %2]"
+msgstr "Zusammenfassung [%1 – %2]"
 
 #: month/monthitem.cpp:307
 #, kde-format
@@ -1962,9 +1954,9 @@ msgid ""
 "Click this button and the month view will be enlarged to fill the maximum "
 "available window space / or shrunk back to its normal size."
 msgstr ""
-"Drücken Sie auf diesen Knopf und die Monatsansicht wird soweit vergrößert, "
-"dass der maximal verfügbare Platz im Fenster ausgefüllt wird, oder die "
-"Monatsansicht wird wieder auf die normale Größe verringert."
+"Klicken Sie auf diesen Knopf, um die Monatsansicht so weit zu vergrößern, "
+"sodass der maximal verfügbare Platz im Fenster ausgefüllt wird, oder die "
+"Monatsansicht wieder auf die normale Größe verringert wird."
 
 #: month/monthview.cpp:220
 #, kde-format
@@ -1977,9 +1969,7 @@ msgstr "Einen Monat zurückgehen"
 msgctxt "@info:whatsthis"
 msgid ""
 "Click this button and the view will be scrolled back in time by 1 month."
-msgstr ""
-"Klicken Sie auf diesen Knopf, dann wird die Ansicht des vorherigen Monats "
-"angezeigt."
+msgstr "Klicken Sie auf diesen Knopf, um den vorherigen Monat anzuzeigen."
 
 #: month/monthview.cpp:227
 #, kde-format
@@ -1991,9 +1981,7 @@ msgstr "Eine Woche zurückgehen"
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Click this button and the view will be scrolled back in time by 1 week."
-msgstr ""
-"Klicken Sie auf diesen Knopf, dann wird die Ansicht der vorherigen Woche "
-"angezeigt."
+msgstr "Klicken Sie auf diesen Knopf, um die vorherige Woche anzuzeigen."
 
 #: month/monthview.cpp:234
 #, kde-format
@@ -2006,9 +1994,7 @@ msgstr "Eine Woche vorwärts gehen"
 msgctxt "@info:whatsthis"
 msgid ""
 "Click this button and the view will be scrolled forward in time by 1 week."
-msgstr ""
-"Klicken Sie auf diesen Knopf, dann wird die Ansicht der folgenden Woche "
-"angezeigt."
+msgstr "Klicken Sie auf diesen Knopf, um die folgende Woche anzuzeigen."
 
 #: month/monthview.cpp:241
 #, kde-format
@@ -2021,9 +2007,7 @@ msgstr "Einen Monat vorwärts gehen"
 msgctxt "@info:whatsthis"
 msgid ""
 "Click this button and the view will be scrolled forward in time by 1 month."
-msgstr ""
-"Klicken Sie auf diesen Knopf, dann wird die Ansicht des folgenden Monats "
-"angezeigt."
+msgstr "Klicken Sie auf diesen Knopf, um den folgenden Monat anzuzeigen."
 
 #: multiagenda/multiagendaview.cpp:97
 #, kde-format
@@ -2117,11 +2101,10 @@ msgid "Drop To-do"
 msgstr "Aufgabe fallen lassen"
 
 #: todo/todoview.cpp:332
-#, fuzzy, kde-format
-#| msgid "Create a new To-do"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Create an open-ended to-do"
-msgstr "Eine neue Aufgabe hinzufügen"
+msgstr "Eine unbefristete Aufgabe erstellen"
 
 #: todo/todoview.cpp:335
 #, kde-kuit-format
@@ -2132,51 +2115,43 @@ msgid ""
 "or recurrence. Edit the newly created if you want to add more properties.</"
 "note></para>"
 msgstr ""
+"Geben Sie die Zusammenfassung für eine neue Aufgabe ein. <para><note>Die "
+"neue Aufgabe ist unbefristet – sie hat keinen Start- und keinen "
+"Endzeitpunkt, für sie wird es keine Erinnerung geben und sie wiederholt sich "
+"nicht. Bearbeiten Sie die neu erstellte Aufgabe, wenn Sie weitere "
+"Eigenschaften hinzufügen möchten.</note></para>"
 
 #: todo/todoview.cpp:345
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Display to-do list in a full window"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Display to-dos in a full window without the sidebar"
-msgstr "Aufgabenliste fensterfüllend anzeigen"
+msgstr "Aufgaben fensterfüllend ohne Seitenleiste anzeigen"
 
 #: todo/todoview.cpp:347
-#, fuzzy, kde-format
-#| msgctxt "@info:whatsthis"
-#| msgid ""
-#| "Checking this option will cause the to-dos to be displayed as a flat list "
-#| "instead of a hierarchical tree; the parental relationships are removed in "
-#| "the display."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Checking this button will cause the to-dos to be displayed in a larger "
 "window by hiding the sidebar."
 msgstr ""
-"Wenn diese Einstellung aktiviert ist, werden Aufgaben als flache Liste "
-"angezeigt, anstatt in einer hierarchischen Baumansicht. In dieser Ansicht "
-"werden keine Beziehungen zu Hauptaufgaben angezeigt."
+"Durch Aktivieren dieser Einstellung werden die Aufgaben in einem größeren "
+"Fenster angezeigt, da die Seitenleiste ausgeblendet wird."
 
 #: todo/todoview.cpp:353
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display to-dos in a flat list or a tree"
-msgstr "Aufgaben als flache Liste oder Baumansicht anzeigen"
+msgstr "Aufgaben als flache Liste oder in der Baumansicht anzeigen"
 
 #: todo/todoview.cpp:355
-#, fuzzy, kde-format
-#| msgctxt "@info:whatsthis"
-#| msgid ""
-#| "Checking this option will cause the to-dos to be displayed as a flat list "
-#| "instead of a hierarchical tree; the parental relationships are removed in "
-#| "the display."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Checking this button will cause the to-dos to be displayed either as a flat "
 "list or a hierarchical tree where the parental relationships are removed."
 msgstr ""
-"Wenn diese Einstellung aktiviert ist, werden Aufgaben als flache Liste "
-"angezeigt, anstatt in einer hierarchischen Baumansicht. In dieser Ansicht "
+"Wenn diese Einstellung aktiviert ist, werden Aufgaben entweder als flache "
+"Liste oder in einer hierarchischen Baumansicht angezeigt. In dieser Ansicht "
 "werden keine Beziehungen zu Hauptaufgaben angezeigt."
 
 #: todo/todoview.cpp:394
@@ -2189,7 +2164,7 @@ msgstr "An&zeigen"
 #, kde-format
 msgctxt "@action:inmenu edit the to-do"
 msgid "&Edit…"
-msgstr "&Bearbeiten …"
+msgstr "&Bearbeiten …"
 
 #: todo/todoview.cpp:406
 #, kde-format
@@ -2201,25 +2176,25 @@ msgstr "&Löschen"
 #, kde-format
 msgctxt "@action:inmenu print the to-do"
 msgid "&Print…"
-msgstr "&Drucken …"
+msgstr "&Drucken …"
 
 #: todo/todoview.cpp:420
 #, kde-format
 msgctxt "@action:inmenu print preview the to-do"
 msgid "Print Previe&w…"
-msgstr "Druck&vorschau …"
+msgstr "Druck&vorschau …"
 
 #: todo/todoview.cpp:427
 #, kde-format
 msgctxt "@action:inmenu create a new to-do"
 msgid "New &To-do…"
-msgstr "Neue &Aufgabe …"
+msgstr "Neue &Aufgabe …"
 
 #: todo/todoview.cpp:431
 #, kde-format
 msgctxt "@action:inmenu create a new sub-to-do"
 msgid "New Su&b-to-do…"
-msgstr "Neue &Unteraufgabe …"
+msgstr "Neue &Unteraufgabe …"
 
 #: todo/todoview.cpp:435
 #, kde-format
@@ -2240,18 +2215,16 @@ msgid "Create Event from To-do"
 msgstr "Termin aus Aufgabe erstellen"
 
 #: todo/todoview.cpp:456
-#, fuzzy, kde-format
-#| msgid "Togg&le To-do Completed"
+#, kde-format
 msgctxt "@action:inmenu set or unset to-do is completed"
 msgid "Togg&le To-do Completed"
 msgstr "Markierung „Aufgabe erledigt“ umschalten"
 
 #: todo/todoview.cpp:460
-#, fuzzy, kde-format
-#| msgid "&Toggle Reminder"
+#, kde-format
 msgctxt "@action:inmenu enable or disable reminder"
 msgid "&Toggle Reminder"
-msgstr "&Erinnerung ein-/ausschalten"
+msgstr "&Erinnerung umschalten"
 
 #: todo/todoview.cpp:467
 #, kde-format
@@ -2314,18 +2287,16 @@ msgid "8"
 msgstr "8"
 
 #: todo/todoview.cpp:855
-#, fuzzy, kde-format
-#| msgid "&Toggle Reminder"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&Toggle Reminder Off"
-msgstr "&Erinnerung ein-/ausschalten"
+msgstr "&Erinnerung deaktivieren"
 
 #: todo/todoview.cpp:856
-#, fuzzy, kde-format
-#| msgid "&Toggle Reminder"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&Toggle Reminder On"
-msgstr "&Erinnerung ein-/ausschalten"
+msgstr "&Erinnerung aktivieren"
 
 #: todo/todoview.cpp:1194
 #, kde-format
@@ -2343,13 +2314,13 @@ msgstr "Seitenleiste ausblenden"
 #, kde-format
 msgctxt "@info::tooltip"
 msgid "Switch to the tree list display"
-msgstr ""
+msgstr "Zur Baumansicht wechseln"
 
 #: todo/todoview.cpp:1219
 #, kde-format
 msgctxt "@info::tooltip"
 msgid "Switch to the flat list display"
-msgstr ""
+msgstr "Zur Listenansicht wechseln"
 
 #: todo/todoviewquickaddline.cpp:17
 #, kde-format
@@ -2375,7 +2346,7 @@ msgstr ""
 #, kde-format
 msgctxt "@label in QuickSearchLine"
 msgid "Search Summaries…"
-msgstr "Zusammenfassungen durchsuchen …"
+msgstr "Zusammenfassungen durchsuchen …"
 
 #: todo/todoviewquicksearch.cpp:46
 #, kde-format
@@ -2495,8 +2466,7 @@ msgid "ViewerApp"
 msgstr "Ansichtsprogramm"
 
 #: viewerapp/main.cpp:21
-#, fuzzy, kde-format
-#| msgid "A test app for embedding calendarviews"
+#, kde-format
 msgctxt "@info"
 msgid "A test app for embedding calendarviews"
 msgstr "Ein Testprogramm zur Einbettung von Kalenderansichten"
