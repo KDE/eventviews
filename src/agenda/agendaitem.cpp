@@ -1038,6 +1038,7 @@ void AgendaItem::paintEvent(QPaintEvent *ev)
     KWordWrap::drawFadeoutText(&p, x, (margin + hlHeight + fm.ascent()) / 2 - 2, hTxtWidth, headline);
 
     // draw event text, possibly with the incidence description
+    bool usingDescription = false;
     auto fullText = mLabelText;
     const QStringList descBlackList = {i18n("Google Calendar Settings"), i18n("Public Holiday")};
     if (mEventView->preferences()->enableAgendaItemDesc()) {
@@ -1053,6 +1054,7 @@ void AgendaItem::paintEvent(QPaintEvent *ev)
             if (!found) {
                 const auto desc = QTextDocumentFragment::fromHtml(incidenceDesc).toPlainText();
                 fullText = i18n("%1: %2", mLabelText, desc);
+                usingDescription = true;
             }
         }
     }
@@ -1061,6 +1063,11 @@ void AgendaItem::paintEvent(QPaintEvent *ev)
     p.setBackground(QBrush(bgColor));
     p.setPen(textColor);
     QString const ws = ww.wrappedString();
+    if (usingDescription) {
+        // if we added a description then we no longer center the text.
+        // move the text up higher in the item block to allow more room to show the description.
+        y = hlHeight * 1.5;
+    }
     if (QStringView(ws).left(ws.length() - 1).indexOf(u'\n') >= 0) {
         ww.drawText(&p, eventX, y, Qt::AlignLeft | KWordWrap::FadeOut);
     } else {
