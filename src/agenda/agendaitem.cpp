@@ -34,6 +34,7 @@
 #include <QPainter>
 #include <QPainterPath>
 #include <QPixmapCache>
+#include <QTextDocumentFragment>
 #include <QToolTip>
 
 using namespace KCalendarCore;
@@ -1050,7 +1051,8 @@ void AgendaItem::paintEvent(QPaintEvent *ev)
                 }
             }
             if (!found) {
-                fullText = i18n("%1: %2", mLabelText, incidenceDesc);
+                const auto desc = QTextDocumentFragment::fromHtml(incidenceDesc).toPlainText();
+                fullText = i18n("%1: %2", mLabelText, desc);
             }
         }
     }
