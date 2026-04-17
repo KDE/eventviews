@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-13 00:44+0000\n"
+"POT-Creation-Date: 2026-04-17 00:44+0000\n"
 "PO-Revision-Date: 2026-04-12 21:42+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -64,50 +64,50 @@ msgctxt "@title:window"
 msgid "Error Occurred"
 msgstr "Ha ocurrido un error"
 
-#: agenda/agendaitem.cpp:81 list/listview.cpp:428
+#: agenda/agendaitem.cpp:82 list/listview.cpp:428
 #, kde-format
 msgid "%2 (1 year)"
 msgid_plural "%2 (%1 years)"
 msgstr[0] "%2 (1 año)"
 msgstr[1] "%2 (%1 años)"
 
-#: agenda/agendaitem.cpp:631
+#: agenda/agendaitem.cpp:632
 #, kde-format
 msgid "Attendee \"%1\" added to the calendar item \"%2\""
 msgstr "Asistente «%1» añadido al elemento de calendario «%2»"
 
-#: agenda/agendaitem.cpp:632
+#: agenda/agendaitem.cpp:633
 #, kde-format
 msgctxt "@title:window"
 msgid "Attendee added"
 msgstr "Asistente añadido"
 
-#: agenda/agendaitem.cpp:856 agenda/agendaitem.cpp:956
+#: agenda/agendaitem.cpp:857 agenda/agendaitem.cpp:957
 #, kde-format
 msgid "%1 - %2"
 msgstr "%1 - %2"
 
-#: agenda/agendaitem.cpp:865
+#: agenda/agendaitem.cpp:866
 #, kde-format
 msgid "- %1"
 msgstr "- %1"
 
-#: agenda/agendaitem.cpp:909 agenda/agendaitem.cpp:932
+#: agenda/agendaitem.cpp:910 agenda/agendaitem.cpp:933
 #, kde-format
 msgid "%1: %2 - %3"
 msgstr "%1: %2 - %3"
 
-#: agenda/agendaitem.cpp:1041
+#: agenda/agendaitem.cpp:1043
 #, kde-format
 msgid "Google Calendar Settings"
 msgstr "Preferencias del Calendario de Google"
 
-#: agenda/agendaitem.cpp:1041
+#: agenda/agendaitem.cpp:1043
 #, kde-format
 msgid "Public Holiday"
 msgstr "Festivo público"
 
-#: agenda/agendaitem.cpp:1053
+#: agenda/agendaitem.cpp:1056
 #, kde-format
 msgid "%1: %2"
 msgstr "%1: %2"
@@ -302,28 +302,28 @@ msgctxt "@title:window"
 msgid "Timezone"
 msgstr "Zona horaria"
 
-#: eventview.cpp:121
+#: eventview.cpp:125
 #, kde-format
 msgctxt "@title:window"
 msgid "Changing Recurring Item"
 msgstr "Cambiar un elemento que se repite"
 
-#: eventview.cpp:122
+#: eventview.cpp:126
 #, kde-format
 msgid "Also &Future Items"
 msgstr "También elementos &futuros"
 
-#: eventview.cpp:123
+#: eventview.cpp:127
 #, kde-format
 msgid "Only &This Item"
 msgstr "Solo es&te elemento"
 
-#: eventview.cpp:124
+#: eventview.cpp:128
 #, kde-format
 msgid "&All Occurrences"
 msgstr "Tod&as las repeticiones"
 
-#: eventview.cpp:141
+#: eventview.cpp:145
 #, kde-format
 msgid ""
 "The item you are trying to change is a recurring item. Should the changes be "
@@ -334,7 +334,7 @@ msgstr ""
 "aplicar los cambios solo a esta repetición en concreto, también a los "
 "elementos futuros o a todos los elementos de la repetición?"
 
-#: eventview.cpp:152
+#: eventview.cpp:156
 #, kde-format
 msgid ""
 "The item you are trying to change is a recurring item. Should the changes be "
@@ -1935,13 +1935,13 @@ msgctxt "@info/plain"
 msgid "Move occurrence(s)"
 msgstr "Mover apariciones"
 
-#: month/monthscene.cpp:206
+#: month/monthscene.cpp:208
 #, kde-format
 msgctxt "monthname year"
 msgid "%1 %2"
 msgstr "%1 %2"
 
-#: month/monthscene.cpp:343
+#: month/monthscene.cpp:345
 #, kde-format
 msgctxt "'Month day' for month view cells"
 msgid "%1 %2"

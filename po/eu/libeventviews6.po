@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-13 00:44+0000\n"
+"POT-Creation-Date: 2026-04-17 00:44+0000\n"
 "PO-Revision-Date: 2026-04-02 23:22+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -63,50 +63,50 @@ msgctxt "@title:window"
 msgid "Error Occurred"
 msgstr "Errorea gertatu da"
 
-#: agenda/agendaitem.cpp:81 list/listview.cpp:428
+#: agenda/agendaitem.cpp:82 list/listview.cpp:428
 #, kde-format
 msgid "%2 (1 year)"
 msgid_plural "%2 (%1 years)"
 msgstr[0] "%2 (urte 1)"
 msgstr[1] "%2 (%1 urte)"
 
-#: agenda/agendaitem.cpp:631
+#: agenda/agendaitem.cpp:632
 #, kde-format
 msgid "Attendee \"%1\" added to the calendar item \"%2\""
 msgstr "\"%1\" partaideak egutegiko \"%2\" elementuan gehitu du"
 
-#: agenda/agendaitem.cpp:632
+#: agenda/agendaitem.cpp:633
 #, kde-format
 msgctxt "@title:window"
 msgid "Attendee added"
 msgstr "Partaidea gehitu da"
 
-#: agenda/agendaitem.cpp:856 agenda/agendaitem.cpp:956
+#: agenda/agendaitem.cpp:857 agenda/agendaitem.cpp:957
 #, kde-format
 msgid "%1 - %2"
 msgstr "%1 - %2"
 
-#: agenda/agendaitem.cpp:865
+#: agenda/agendaitem.cpp:866
 #, kde-format
 msgid "- %1"
 msgstr "- %1"
 
-#: agenda/agendaitem.cpp:909 agenda/agendaitem.cpp:932
+#: agenda/agendaitem.cpp:910 agenda/agendaitem.cpp:933
 #, kde-format
 msgid "%1: %2 - %3"
 msgstr "%1: %2 - %3"
 
-#: agenda/agendaitem.cpp:1041
+#: agenda/agendaitem.cpp:1043
 #, kde-format
 msgid "Google Calendar Settings"
 msgstr "Google Calendar ezarpenak"
 
-#: agenda/agendaitem.cpp:1041
+#: agenda/agendaitem.cpp:1043
 #, kde-format
 msgid "Public Holiday"
 msgstr "Jai ofiziala"
 
-#: agenda/agendaitem.cpp:1053
+#: agenda/agendaitem.cpp:1056
 #, kde-format
 msgid "%1: %2"
 msgstr "%1: %2"
@@ -298,28 +298,28 @@ msgctxt "@title:window"
 msgid "Timezone"
 msgstr "Ordu-eremua"
 
-#: eventview.cpp:121
+#: eventview.cpp:125
 #, kde-format
 msgctxt "@title:window"
 msgid "Changing Recurring Item"
 msgstr "Elementu errepikakorra aldatzen"
 
-#: eventview.cpp:122
+#: eventview.cpp:126
 #, kde-format
 msgid "Also &Future Items"
 msgstr "Baita e&torkizuneko elementuak ere"
 
-#: eventview.cpp:123
+#: eventview.cpp:127
 #, kde-format
 msgid "Only &This Item"
 msgstr "Elementu &hau bakarrik"
 
-#: eventview.cpp:124
+#: eventview.cpp:128
 #, kde-format
 msgid "&All Occurrences"
 msgstr "Agerraldi guzti&ak"
 
-#: eventview.cpp:141
+#: eventview.cpp:145
 #, kde-format
 msgid ""
 "The item you are trying to change is a recurring item. Should the changes be "
@@ -330,7 +330,7 @@ msgstr ""
 "bakar honi ezarri beharko litzaizkioke, baita etorkizuneko elementuei, edo "
 "errepikapeneko elementu guztiei?"
 
-#: eventview.cpp:152
+#: eventview.cpp:156
 #, kde-format
 msgid ""
 "The item you are trying to change is a recurring item. Should the changes be "
@@ -1899,13 +1899,13 @@ msgctxt "@info/plain"
 msgid "Move occurrence(s)"
 msgstr "Mugitu agerraldia(k)"
 
-#: month/monthscene.cpp:206
+#: month/monthscene.cpp:208
 #, kde-format
 msgctxt "monthname year"
 msgid "%1 %2"
 msgstr "%2 %1"
 
-#: month/monthscene.cpp:343
+#: month/monthscene.cpp:345
 #, kde-format
 msgctxt "'Month day' for month view cells"
 msgid "%1 %2"

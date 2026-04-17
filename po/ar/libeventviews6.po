@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-13 00:44+0000\n"
-"PO-Revision-Date: 2026-03-15 09:34+0400\n"
+"POT-Creation-Date: 2026-04-17 00:44+0000\n"
+"PO-Revision-Date: 2026-04-16 12:05+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -60,7 +60,7 @@ msgctxt "@title:window"
 msgid "Error Occurred"
 msgstr "حدث خطأ"
 
-#: agenda/agendaitem.cpp:81 list/listview.cpp:428
+#: agenda/agendaitem.cpp:82 list/listview.cpp:428
 #, kde-format
 msgid "%2 (1 year)"
 msgid_plural "%2 (%1 years)"
@@ -71,43 +71,43 @@ msgstr[3] "%2 (%1 سنوات)"
 msgstr[4] "%2 (%1 سنةً)"
 msgstr[5] "%2 (%1 سنة)"
 
-#: agenda/agendaitem.cpp:631
+#: agenda/agendaitem.cpp:632
 #, kde-format
 msgid "Attendee \"%1\" added to the calendar item \"%2\""
 msgstr "أُضيف الحاضر ”%1“ إلى عنصر التقويم ”%2“"
 
-#: agenda/agendaitem.cpp:632
+#: agenda/agendaitem.cpp:633
 #, kde-format
 msgctxt "@title:window"
 msgid "Attendee added"
 msgstr "أُضيف حاضرًا"
 
-#: agenda/agendaitem.cpp:856 agenda/agendaitem.cpp:956
+#: agenda/agendaitem.cpp:857 agenda/agendaitem.cpp:957
 #, kde-format
 msgid "%1 - %2"
 msgstr "‏%1 - ‏%2"
 
-#: agenda/agendaitem.cpp:865
+#: agenda/agendaitem.cpp:866
 #, kde-format
 msgid "- %1"
 msgstr "- ‏%1"
 
-#: agenda/agendaitem.cpp:909 agenda/agendaitem.cpp:932
+#: agenda/agendaitem.cpp:910 agenda/agendaitem.cpp:933
 #, kde-format
 msgid "%1: %2 - %3"
 msgstr "%1: %2 - %3"
 
-#: agenda/agendaitem.cpp:1041
+#: agenda/agendaitem.cpp:1043
 #, kde-format
 msgid "Google Calendar Settings"
 msgstr "إعدادات تقويم غوغل"
 
-#: agenda/agendaitem.cpp:1041
+#: agenda/agendaitem.cpp:1043
 #, kde-format
 msgid "Public Holiday"
 msgstr "عطلة رسمية"
 
-#: agenda/agendaitem.cpp:1053
+#: agenda/agendaitem.cpp:1056
 #, kde-format
 msgid "%1: %2"
 msgstr "%1: %2"
@@ -296,28 +296,28 @@ msgctxt "@title:window"
 msgid "Timezone"
 msgstr "المنطقة الزمنية"
 
-#: eventview.cpp:121
+#: eventview.cpp:125
 #, kde-format
 msgctxt "@title:window"
 msgid "Changing Recurring Item"
 msgstr "تغيير عنصر يتكرّر"
 
-#: eventview.cpp:122
+#: eventview.cpp:126
 #, kde-format
 msgid "Also &Future Items"
 msgstr "العناصر الم&ستقبليّة أيضًا"
 
-#: eventview.cpp:123
+#: eventview.cpp:127
 #, kde-format
 msgid "Only &This Item"
 msgstr "&هذا العنصر فقط"
 
-#: eventview.cpp:124
+#: eventview.cpp:128
 #, kde-format
 msgid "&All Occurrences"
 msgstr "كل ال&حدوثات"
 
-#: eventview.cpp:141
+#: eventview.cpp:145
 #, kde-format
 msgid ""
 "The item you are trying to change is a recurring item. Should the changes be "
@@ -327,7 +327,7 @@ msgstr ""
 "العنصر الذي تحاول تغييره هو عنصر يتكرّر. أيجب أن تُطبّق التغييرات على هذا "
 "الحدوث فقط، أو على العناصر المستقبليّة أيضًا، أو على كل العناصر في التكرار؟"
 
-#: eventview.cpp:152
+#: eventview.cpp:156
 #, kde-format
 msgid ""
 "The item you are trying to change is a recurring item. Should the changes be "
@@ -1173,25 +1173,22 @@ msgstr "اعرض اليوميّات في منظور الشهر"
 
 #. i18n: ectx: label, entry (ShowHolidaysMonthView), group (Month View)
 #: eventviews.kcfg:282
-#, fuzzy, kde-format
-#| msgid "Show to-dos"
+#, kde-format
 msgid "Show holidays"
-msgstr "اعرض المهام"
+msgstr "اعرض العُطل"
 
 #. i18n: ectx: whatsthis, entry (ShowHolidaysMonthView), group (Month View)
 #: eventviews.kcfg:283
-#, fuzzy, kde-format
-#| msgid "Check this box to display to-dos in the month view."
+#, kde-format
 msgid "Check this box to display holidays in the month view."
-msgstr "أشّر على هذا المربّع لعرض المهام في منظور الشهر."
+msgstr "أشّر على هذا المربّع لعرض العُطل في منظور الشهر."
 
 #. i18n: ectx: tooltip, entry (ShowHolidaysMonthView), group (Month View)
 #. i18n: ectx: tooltip, entry (ShowHolidaysBackgroundMonthView), group (Month View)
 #: eventviews.kcfg:284 eventviews.kcfg:291
-#, fuzzy, kde-format
-#| msgid "Display to-dos in the month view"
+#, kde-format
 msgid "Display holidays in the month view"
-msgstr "اعرض المهام في منظور الشهر"
+msgstr "اعرض العُطل في منظور الشهر"
 
 #. i18n: ectx: label, entry (ShowHolidaysBackgroundMonthView), group (Month View)
 #: eventviews.kcfg:288
@@ -1199,6 +1196,7 @@ msgstr "اعرض المهام في منظور الشهر"
 msgid ""
 "Use the Holiday background color when at least on holiday lands on a date"
 msgstr ""
+"استخدم لون خلفية ”العطلة“ عندما يقع يوم عطلة واحد على الأقل في تاريخ ما"
 
 #. i18n: ectx: tooltip, entry (ShowHolidaysBackgroundMonthView), group (Month View)
 #: eventviews.kcfg:289
@@ -1207,6 +1205,7 @@ msgid ""
 "Use the custom holiday color as the date's background color if a holiday "
 "lands on the date"
 msgstr ""
+"استخدم لون العطلة المخصص كلون خلفية للتاريخ إذا صادفت العطلة ذلك التاريخ"
 
 #. i18n: ectx: whatsthis, entry (ShowHolidaysBackgroundMonthView), group (Month View)
 #: eventviews.kcfg:290
@@ -1215,6 +1214,8 @@ msgid ""
 "Check this box to use the custom holiday as the date's background color when "
 "at least one holiday lands on a date."
 msgstr ""
+"حدد هذا المربع لاستخدام لون العطلة المخصصة كلون خلفية للتاريخ عندما يقع يوم "
+"عطلة واحد على الأقل في ذلك التاريخ."
 
 #. i18n: ectx: label, entry, group (Month View)
 #: eventviews.kcfg:295 viewerapp/settings.kcfg:128
@@ -1831,13 +1832,13 @@ msgctxt "@info/plain"
 msgid "Move occurrence(s)"
 msgstr "انقل التكرار(ات)"
 
-#: month/monthscene.cpp:206
+#: month/monthscene.cpp:208
 #, kde-format
 msgctxt "monthname year"
 msgid "%1 %2"
 msgstr "%1 %2"
 
-#: month/monthscene.cpp:343
+#: month/monthscene.cpp:345
 #, kde-format
 msgctxt "'Month day' for month view cells"
 msgid "%1 %2"
