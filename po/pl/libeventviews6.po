@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2023, 2024, 2025 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
+# SPDX-FileCopyrightText: 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2023, 2024, 2025, 2026 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 # Marta Rybczyńska <kde-i18n@rybczynska.net>, 2013.
 #
 msgid ""
@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-17 00:44+0000\n"
-"PO-Revision-Date: 2025-12-06 15:04+0100\n"
+"PO-Revision-Date: 2026-04-18 14:32+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
 "Language: pl\n"
@@ -94,28 +94,24 @@ msgid "- %1"
 msgstr "- %1"
 
 #: agenda/agendaitem.cpp:910 agenda/agendaitem.cpp:933
-#, fuzzy, kde-format
-#| msgctxt "date, from - to"
-#| msgid "%1, %2 - %3"
+#, kde-format
 msgid "%1: %2 - %3"
-msgstr "%1, %2 - %3"
+msgstr "%1: %2 - %3"
 
 #: agenda/agendaitem.cpp:1043
 #, kde-format
 msgid "Google Calendar Settings"
-msgstr ""
+msgstr "Ustawienia kalendarza Google"
 
 #: agenda/agendaitem.cpp:1043
 #, kde-format
 msgid "Public Holiday"
-msgstr ""
+msgstr "Święto publiczne"
 
 #: agenda/agendaitem.cpp:1056
-#, fuzzy, kde-format
-#| msgctxt "date, from - to"
-#| msgid "%1, %2 - %3"
+#, kde-format
 msgid "%1: %2"
-msgstr "%1, %2 - %3"
+msgstr "%1: %2"
 
 #: agenda/agendaview.cpp:421
 #, kde-format
@@ -126,7 +122,7 @@ msgstr "%1 %2 %3"
 #: agenda/agendaview.cpp:2334
 #, kde-format
 msgid "Unable to modify this to-do, because it cannot be locked."
-msgstr "Nie można zmodyfikować tego zadania, ponieważ nie można go zablokować."
+msgstr "Nie można zmienić tego zadania, ponieważ nie można go zablokować."
 
 #: agenda/agendaview.cpp:2342
 #, kde-format
@@ -764,7 +760,7 @@ msgstr "Ustaw wysokość (w pikselach) dla godziny w siatce planu zajęć"
 #: eventviews.kcfg:156
 #, kde-format
 msgid "Draw bold horizontal grid lines for the even hours"
-msgstr ""
+msgstr "Rysuj pogrubione, poziome linie siatki dla parzystych godzin"
 
 #. i18n: ectx: whatsthis, entry (EnableAgendaBoldEvenHours), group (Agenda View)
 #: eventviews.kcfg:157
@@ -772,12 +768,14 @@ msgstr ""
 msgid ""
 "Draw a bolder horizontal grid line for the even hours (12am, 2am, 4am, etc)."
 msgstr ""
+"Rysuj bardziej pogrubione, poziome linie siatki dla parzystych godzin (12am, "
+"2am, 4am, itp.)."
 
 #. i18n: ectx: tooltip, entry (EnableAgendaBoldEvenHours), group (Agenda View)
 #: eventviews.kcfg:158
 #, kde-format
 msgid "Draw bolder even hour grid lines"
-msgstr ""
+msgstr "Rysuj bardziej pogrubione linie siatki dla parzystych godzin"
 
 #. i18n: ectx: label, entry (EnableAgendaItemIcons), group (Agenda View)
 #: eventviews.kcfg:162 viewerapp/settings.kcfg:25
@@ -803,29 +801,23 @@ msgstr "Wyświetl ikony w elementach widoku planu zajęć"
 
 #. i18n: ectx: label, entry (EnableAgendaItemDesc), group (Agenda View)
 #: eventviews.kcfg:168
-#, fuzzy, kde-format
-#| msgid "Show icons in agenda view items"
+#, kde-format
 msgid "Show incidence descriptions in agenda view items"
-msgstr "Pokaż ikony w elementach widoku planu zajęć"
+msgstr "Pokaż opisy wystąpień na elementach widoku planu"
 
 #. i18n: ectx: whatsthis, entry (EnableAgendaItemDesc), group (Agenda View)
 #: eventviews.kcfg:169
-#, fuzzy, kde-format
-#| msgid ""
-#| "Check this box to display icons (alarm, recursion, etc.) in agenda view "
-#| "items."
+#, kde-format
 msgid ""
 "Check this box to display the incidence descriptions in agenda view items."
 msgstr ""
-"Zaznacz to pole, aby wyświetlić ikony (alarm, powtarzanie, itd.) w "
-"elementach widoku planu zajęć."
+"Zaznacz to pole, aby wyświetlić opis wystąpienia w widoku elementów planu."
 
 #. i18n: ectx: tooltip, entry (EnableAgendaItemDesc), group (Agenda View)
 #: eventviews.kcfg:170
-#, fuzzy, kde-format
-#| msgid "Display icons in agenda view items"
+#, kde-format
 msgid "Display incidence descriptions agenda view items"
-msgstr "Wyświetl ikony w elementach widoku planu zajęć"
+msgstr "Pokaż opisy wystąpień na elementach widoku planu"
 
 #. i18n: ectx: label, entry (ShowTodosAgendaView), group (Agenda View)
 #. i18n: ectx: label, entry (ShowTodosMonthView), group (Month View)
@@ -1217,25 +1209,22 @@ msgstr "Wyświetl dzienniki w widoku miesiąca"
 
 #. i18n: ectx: label, entry (ShowHolidaysMonthView), group (Month View)
 #: eventviews.kcfg:282
-#, fuzzy, kde-format
-#| msgid "Show to-dos"
+#, kde-format
 msgid "Show holidays"
-msgstr "Pokaż zadania"
+msgstr "Pokaż święta"
 
 #. i18n: ectx: whatsthis, entry (ShowHolidaysMonthView), group (Month View)
 #: eventviews.kcfg:283
-#, fuzzy, kde-format
-#| msgid "Check this box to display to-dos in the month view."
+#, kde-format
 msgid "Check this box to display holidays in the month view."
-msgstr "Zaznacz to pole, aby wyświetlić zadania w widoku miesiąca."
+msgstr "Zaznacz to pole, aby wyświetlać święta w widoku miesiąca."
 
 #. i18n: ectx: tooltip, entry (ShowHolidaysMonthView), group (Month View)
 #. i18n: ectx: tooltip, entry (ShowHolidaysBackgroundMonthView), group (Month View)
 #: eventviews.kcfg:284 eventviews.kcfg:291
-#, fuzzy, kde-format
-#| msgid "Display to-dos in the month view"
+#, kde-format
 msgid "Display holidays in the month view"
-msgstr "Wyświetl zadania w widoku miesiąca"
+msgstr "Wyświetl święta w widoku miesiąca"
 
 #. i18n: ectx: label, entry (ShowHolidaysBackgroundMonthView), group (Month View)
 #: eventviews.kcfg:288
@@ -1243,6 +1232,7 @@ msgstr "Wyświetl zadania w widoku miesiąca"
 msgid ""
 "Use the Holiday background color when at least on holiday lands on a date"
 msgstr ""
+"Użyj barwy święta, jeśli co najmniej jedno święto przypada na daną datę"
 
 #. i18n: ectx: tooltip, entry (ShowHolidaysBackgroundMonthView), group (Month View)
 #: eventviews.kcfg:289
@@ -1251,6 +1241,8 @@ msgid ""
 "Use the custom holiday color as the date's background color if a holiday "
 "lands on the date"
 msgstr ""
+"Użyj własnej barwy święta, jako barwy tła daty, jeśli co najmniej jedno "
+"święto przypada na daną datę"
 
 #. i18n: ectx: whatsthis, entry (ShowHolidaysBackgroundMonthView), group (Month View)
 #: eventviews.kcfg:290
@@ -1259,6 +1251,8 @@ msgid ""
 "Check this box to use the custom holiday as the date's background color when "
 "at least one holiday lands on a date."
 msgstr ""
+"Zaznacz to pole, aby użyć własnej barwy tła święta jako barwy tła daty, gdy "
+"co najmniej jedno święto przypada na daną datę."
 
 #. i18n: ectx: label, entry, group (Month View)
 #: eventviews.kcfg:295 viewerapp/settings.kcfg:128
@@ -1718,23 +1712,21 @@ msgstr "Tutaj wybierz kolor tła godzin pracy dla widoku miesiąca."
 
 #. i18n: ectx: label, entry (MonthTodayColor), group (Theme/Month view)
 #: eventviews.kcfg:590
-#, fuzzy, kde-format
-#| msgid "Month view background color"
+#, kde-format
 msgid "Month view today background color"
-msgstr "Kolor tła widoku miesiąca"
+msgstr "Kolor tła dnia dzisiejszego na widoku miesiąca"
 
 #. i18n: ectx: tooltip, entry (MonthTodayColor), group (Theme/Month view)
 #: eventviews.kcfg:591
-#, fuzzy, kde-format
-#| msgid "Select the working hours background color for the Month view here."
+#, kde-format
 msgid "Set the background color for today's date in month view"
-msgstr "Tutaj wybierz kolor tła godzin pracy dla widoku miesiąca."
+msgstr "Ustaw kolor tła dla dzisiejszej daty w widoku miesiąca"
 
 #. i18n: ectx: whatsthis, entry (MonthTodayColor), group (Theme/Month view)
 #: eventviews.kcfg:592
 #, kde-format
 msgid "In Month View, select the background color for today's date."
-msgstr ""
+msgstr "W widoku miesiąca, wybierze kolor tła dla dnia dzisiejszego."
 
 #. i18n: ectx: label, entry, group (Theme/Month view)
 #: eventviews.kcfg:614
@@ -2265,20 +2257,16 @@ msgid "8"
 msgstr "8"
 
 #: todo/todoview.cpp:855
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu enable or disable reminder"
-#| msgid "&Toggle Reminder"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&Toggle Reminder Off"
-msgstr "Przełącz p&rzypomnienia"
+msgstr "Wyłącz p&rzypomnienia"
 
 #: todo/todoview.cpp:856
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu enable or disable reminder"
-#| msgid "&Toggle Reminder"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&Toggle Reminder On"
-msgstr "Przełącz p&rzypomnienia"
+msgstr "Włącz p&rzypomnienia"
 
 #: todo/todoview.cpp:1194
 #, kde-format
