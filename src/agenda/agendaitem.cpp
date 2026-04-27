@@ -1037,8 +1037,9 @@ void AgendaItem::paintEvent(QPaintEvent *ev)
     p.setPen(EventViews::getTextColor(frameColor));
     KWordWrap::drawFadeoutText(&p, x, (margin + hlHeight + fm.ascent()) / 2 - 2, hTxtWidth, headline);
 
-    // draw event text, possibly with the incidence description
+    // draw event text, possibly with the incidence description and/or location
     bool usingDescription = false;
+    bool usingLocation = false;
     auto fullText = mLabelText;
     const QStringList descBlackList = {i18n("Google Calendar Settings"), i18n("Public Holiday")};
     if (mEventView->preferences()->enableAgendaItemDesc()) {
@@ -1053,9 +1054,17 @@ void AgendaItem::paintEvent(QPaintEvent *ev)
             }
             if (!found) {
                 const auto desc = QTextDocumentFragment::fromHtml(incidenceDesc).toPlainText();
-                fullText = i18n("%1: %2", mLabelText, desc);
+                fullText = i18n("%1: %2", fullText, desc);
                 usingDescription = true;
             }
+        }
+    }
+    if (mEventView->preferences()->enableAgendaItemLocation()) {
+        const auto incidenceLocation = mIncidence->location();
+        if (!incidenceLocation.trimmed().isEmpty()) {
+            const auto location = QTextDocumentFragment::fromHtml(incidenceLocation).toPlainText();
+            fullText = i18n("%1 (%2)", fullText, location);
+            usingLocation = true;
         }
     }
     ww = KWordWrap::formatText(fm, QRect(0, 0, txtWidth, height() - margin - y), 0, fullText);
@@ -1063,7 +1072,7 @@ void AgendaItem::paintEvent(QPaintEvent *ev)
     p.setBackground(QBrush(bgColor));
     p.setPen(textColor);
     QString const ws = ww.wrappedString();
-    if (usingDescription) {
+    if (usingDescription || usingLocation) {
         // if we added a description then we no longer center the text.
         // move the text up higher in the item block to allow more room to show the description.
         y = hlHeight * 1.5;

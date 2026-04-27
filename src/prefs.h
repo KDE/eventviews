@@ -169,6 +169,13 @@ public:
 
     /*!
      */
+    void setEnableAgendaItemLocation(bool enable);
+    /*!
+     */
+    [[nodiscard]] bool enableAgendaItemLocation() const;
+
+    /*!
+     */
     void setTodosUseCategoryColors(bool useColors);
     /*!
      */

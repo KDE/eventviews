@@ -680,6 +680,16 @@ bool Prefs::enableAgendaItemDesc() const
     return d->getBool(d->mBaseConfig.enableAgendaItemDescItem());
 }
 
+void Prefs::setEnableAgendaItemLocation(bool enable)
+{
+    d->setBool(d->mBaseConfig.enableAgendaItemLocationItem(), enable);
+}
+
+bool Prefs::enableAgendaItemLocation() const
+{
+    return d->getBool(d->mBaseConfig.enableAgendaItemLocationItem());
+}
+
 void Prefs::setTodosUseCategoryColors(bool useColors)
 {
     d->setBool(d->mBaseConfig.todosUseCategoryColorsItem(), useColors);
