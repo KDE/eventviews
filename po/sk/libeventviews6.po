@@ -193,8 +193,8 @@ msgid ""
 "Display the time label hours in 24-hour \"military\" format or according to "
 "your locale"
 msgstr ""
-"Display the time label hours in 24-hour \"military\" format or podľa your "
-"locale"
+"Zobraziť hodiny v časovom štítku v 24-hodinovom „vojenskom” formáte alebo "
+"podľa vášho miestneho nastavenia"
 
 #: agenda/timelabels.cpp:353
 #, kde-format
@@ -203,8 +203,8 @@ msgid ""
 "This menu selection shows the time hour labels according to 24-hour "
 "\"military\" time or your system locale."
 msgstr ""
-"This menu selection shows the time hour labels podľa 24-hour \"military\" "
-"time or your system locale."
+"Táto voľba ponuky zobrazuje hodiny v časových štítkoch podľa 24-hodinového "
+"„vojenského” času alebo vášho systémového miestneho nastavenia."
 
 #: agenda/timelabels.cpp:358
 #, kde-format
