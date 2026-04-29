@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-28 00:45+0000\n"
-"PO-Revision-Date: 2026-04-14 21:39+0300\n"
+"PO-Revision-Date: 2026-04-28 08:59+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -110,11 +110,9 @@ msgid "%1: %2"
 msgstr "%1: %2"
 
 #: agenda/agendaitem.cpp:1066
-#, fuzzy, kde-format
-#| msgctxt "%1 is an item summary. %2 is the date when this item reoccurs"
-#| msgid "%1 (next: %2)"
+#, kde-format
 msgid "%1 (%2)"
-msgstr "%1 (הבא: %2)"
+msgstr "%1 (%2)"
 
 #: agenda/agendaview.cpp:421
 #, kde-format
@@ -801,25 +799,21 @@ msgstr "הצגת תיאורי חזרות בפריטי תצוגת סדר יום"
 
 #. i18n: ectx: label, entry (EnableAgendaItemLocation), group (Agenda View)
 #: eventviews.kcfg:174
-#, fuzzy, kde-format
-#| msgid "Show incidence descriptions in agenda view items"
+#, kde-format
 msgid "Show incidence locations in agenda view items"
-msgstr "להציג תיאורי חזרות בפריטי תצוגת סדר יום"
+msgstr "להציג מקומות חזרות בפריטי תצוגת סדר יום"
 
 #. i18n: ectx: whatsthis, entry (EnableAgendaItemLocation), group (Agenda View)
 #: eventviews.kcfg:175
-#, fuzzy, kde-format
-#| msgid ""
-#| "Check this box to display the incidence descriptions in agenda view items."
+#, kde-format
 msgid "Check this box to display the incidence locations in agenda view items."
-msgstr "יש לסמן את התיבה הזאת כדי להציג את תיאורי החזרות בפריטי תצוגת סדר יום."
+msgstr "יש לסמן את התיבה הזאת כדי להציג את מקומות החזרות בפריטי תצוגת סדר יום."
 
 #. i18n: ectx: tooltip, entry (EnableAgendaItemLocation), group (Agenda View)
 #: eventviews.kcfg:176
-#, fuzzy, kde-format
-#| msgid "Display incidence descriptions agenda view items"
+#, kde-format
 msgid "Display incidence locations agenda view items"
-msgstr "הצגת תיאורי חזרות בפריטי תצוגת סדר יום"
+msgstr "הצגת מקומות חזרות בפריטי תצוגת סדר יום"
 
 #. i18n: ectx: label, entry (ShowTodosAgendaView), group (Agenda View)
 #. i18n: ectx: label, entry (ShowTodosMonthView), group (Month View)

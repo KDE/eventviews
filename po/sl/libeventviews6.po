@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-28 00:45+0000\n"
-"PO-Revision-Date: 2026-04-12 07:40+0200\n"
+"PO-Revision-Date: 2026-04-28 07:31+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -119,11 +119,9 @@ msgid "%1: %2"
 msgstr "%1: %2"
 
 #: agenda/agendaitem.cpp:1066
-#, fuzzy, kde-format
-#| msgctxt "%1 is an item summary. %2 is the date when this item reoccurs"
-#| msgid "%1 (next: %2)"
+#, kde-format
 msgid "%1 (%2)"
-msgstr "%1 (naslednjič: %2)"
+msgstr "%1 (%2)"
 
 #: agenda/agendaview.cpp:421
 #, kde-format
@@ -825,27 +823,23 @@ msgstr "Prikaz opisov incidence elementov dnevnega reda"
 
 #. i18n: ectx: label, entry (EnableAgendaItemLocation), group (Agenda View)
 #: eventviews.kcfg:174
-#, fuzzy, kde-format
-#| msgid "Show incidence descriptions in agenda view items"
+#, kde-format
 msgid "Show incidence locations in agenda view items"
-msgstr "Prikaži opise incidence v elementih pogleda dnevnega reda"
+msgstr "Prikaži mesta incidence v elementih pogleda dnevnega reda"
 
 #. i18n: ectx: whatsthis, entry (EnableAgendaItemLocation), group (Agenda View)
 #: eventviews.kcfg:175
-#, fuzzy, kde-format
-#| msgid ""
-#| "Check this box to display the incidence descriptions in agenda view items."
+#, kde-format
 msgid "Check this box to display the incidence locations in agenda view items."
 msgstr ""
-"Označite to polje, če želite prikazati opise incidence v elementih pogleda "
+"Označite to polje, če želite prikazati mesta incidence v elementih pogleda "
 "dnevnega reda."
 
 #. i18n: ectx: tooltip, entry (EnableAgendaItemLocation), group (Agenda View)
 #: eventviews.kcfg:176
-#, fuzzy, kde-format
-#| msgid "Display incidence descriptions agenda view items"
+#, kde-format
 msgid "Display incidence locations agenda view items"
-msgstr "Prikaz opisov incidence elementov dnevnega reda"
+msgstr "Prikaz mesta incidence elementov dnevnega reda"
 
 #. i18n: ectx: label, entry (ShowTodosAgendaView), group (Agenda View)
 #. i18n: ectx: label, entry (ShowTodosMonthView), group (Month View)
@@ -1262,7 +1256,7 @@ msgid ""
 "Use the Holiday background color when at least on holiday lands on a date"
 msgstr ""
 "Uporabite barvo ozadja za praznike, vsaj kadar prazniki pristanejo na "
-"določen datum."
+"določen datum"
 
 #. i18n: ectx: tooltip, entry (ShowHolidaysBackgroundMonthView), group (Month View)
 #: eventviews.kcfg:295
