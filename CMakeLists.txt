@@ -124,7 +124,6 @@ find_package(KPim6CalendarUtils ${CALENDARUTILS_LIB_VERSION} CONFIG REQUIRED)
 find_package(KF6CalendarCore ${KF_MIN_VERSION} CONFIG REQUIRED)
 find_package(KPim6CalendarSupport ${CALENDARSUPPORT_LIB_VERSION} CONFIG REQUIRED)
 find_package(KPim6AkonadiCalendar ${AKONADICALENDAR_LIB_VERSION} CONFIG REQUIRED)
-find_package(KPim6Mime ${KMIME_LIB_VERSION} CONFIG REQUIRED)
 
 ecm_setup_version(PROJECT VARIABLE_PREFIX EVENTVIEWS
                         VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/src/eventviews_version.h"

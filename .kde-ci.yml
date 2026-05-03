@@ -12,7 +12,6 @@ Dependencies:
     'pim/akonadi-calendar': '@same'
     'pim/calendarsupport': '@same'
     'pim/kcalutils': '@same'
-    'pim/kmime': '@same'
     'pim/libkdepim': '@same'
 
 Options:
