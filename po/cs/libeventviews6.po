@@ -113,11 +113,9 @@ msgid "%1: %2"
 msgstr "%1: %2"
 
 #: agenda/agendaitem.cpp:1066
-#, fuzzy, kde-format
-#| msgctxt "%1 is an item summary. %2 is the date when this item reoccurs"
-#| msgid "%1 (next: %2)"
+#, kde-format
 msgid "%1 (%2)"
-msgstr "%1 (následující: %2)"
+msgstr "%1 (%2)"
 
 #: agenda/agendaview.cpp:421
 #, kde-format
