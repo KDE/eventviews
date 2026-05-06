@@ -481,15 +481,11 @@ QFont PrefsPrivate::getFont(const KConfigSkeleton::ItemFont *baseConfigItem) con
 Prefs::Prefs()
     : d(new PrefsPrivate())
 {
-    // necessary to use CollectionColorAttribute in the EventViews::resourceColor and EventViews::setResourceColor
-    Akonadi::AttributeFactory::registerAttribute<Akonadi::CollectionColorAttribute>();
 }
 
 Prefs::Prefs(KCoreConfigSkeleton *appConfig)
     : d(new PrefsPrivate(appConfig))
 {
-    // necessary to use CollectionColorAttribute in the EventViews::resourceColor and EventViews::setResourceColor
-    Akonadi::AttributeFactory::registerAttribute<Akonadi::CollectionColorAttribute>();
 }
 
 Prefs::~Prefs() = default;
