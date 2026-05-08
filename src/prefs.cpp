@@ -786,6 +786,16 @@ void Prefs::setShowTimeInMonthView(bool show)
     d->setBool(d->mBaseConfig.showTimeInMonthViewItem(), show);
 }
 
+bool Prefs::showEndTimeInMonthView() const
+{
+    return d->getBool(d->mBaseConfig.showEndTimeInMonthViewItem());
+}
+
+void Prefs::setShowEndTimeInMonthView(bool show)
+{
+    d->setBool(d->mBaseConfig.showEndTimeInMonthViewItem(), show);
+}
+
 bool Prefs::showTodosMonthView() const
 {
     return d->getBool(d->mBaseConfig.showTodosMonthViewItem());

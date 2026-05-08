@@ -252,8 +252,7 @@ void MonthGraphicsItem::paint(QPainter *p, const QStyleOptionGraphicsItem *, QWi
         alignFlag |= Qt::AlignHCenter;
     }
 
-    // !isBeginItem() is not always isEndItem()
-    QString text = mMonthItem->text(!isBeginItem());
+    QString text = mMonthItem->text();
     p->setFont(mMonthItem->monthScene()->monthView()->preferences()->monthViewFont());
 
     // Every item should set its own LayoutDirection, or eliding fails miserably

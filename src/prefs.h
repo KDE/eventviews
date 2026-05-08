@@ -253,6 +253,13 @@ public:
 
     /*!
      */
+    [[nodiscard]] bool showEndTimeInMonthView() const;
+    /*!
+     */
+    void setShowEndTimeInMonthView(bool show);
+
+    /*!
+     */
     [[nodiscard]] bool showTodosMonthView() const;
     /*!
      */

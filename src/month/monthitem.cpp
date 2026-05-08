@@ -470,40 +470,43 @@ void IncidenceMonthItem::updateSelection(const Akonadi::Item &incidence, QDate d
     setSelected(incidence == akonadiItem());
 }
 
-QString IncidenceMonthItem::text(bool end) const
+QString IncidenceMonthItem::text() const
 {
-    QString ret = mIncidence->summary();
-    if (!allDay() && !mIsJournal && monthScene()->monthView()->preferences()->showTimeInMonthView()) {
+    QString retString = mIncidence->summary();
+    const bool showStart =
+        monthScene()->monthView()->preferences()->showTimeInMonthView() || monthScene()->monthView()->preferences()->showEndTimeInMonthView();
+    const bool showEnd = monthScene()->monthView()->preferences()->showEndTimeInMonthView();
+    if (!allDay() && !mIsJournal && showStart) {
         // Prepend the time str to the text
-        QString timeStr;
+        QString startTimeStr;
+        QString endTimeStr;
         if (mIsTodo) {
             KCalendarCore::Todo::Ptr const todo = mIncidence.staticCast<Todo>();
-            timeStr = QLocale().toString(todo->dtDue().toLocalTime().time(), QLocale::ShortFormat);
+            startTimeStr = QLocale().toString(todo->dtDue().toLocalTime().time(), QLocale::ShortFormat);
         } else {
-            if (!end) {
-                QTime time;
-                if (mIncidence->recurs()) {
-                    const auto start = mIncidence->dtStart().addDays(mRecurDayOffset).addSecs(-1);
-                    time = mIncidence->recurrence()->getNextDateTime(start).toLocalTime().time();
-                } else {
-                    time = mIncidence->dtStart().toLocalTime().time();
-                }
-                timeStr = QLocale().toString(time, QLocale::ShortFormat);
+            QTime time;
+            if (mIncidence->recurs()) {
+                const auto start = mIncidence->dtStart().addDays(mRecurDayOffset).addSecs(-1);
+                time = mIncidence->recurrence()->getNextDateTime(start).toLocalTime().time();
             } else {
+                time = mIncidence->dtStart().toLocalTime().time();
+            }
+            startTimeStr = QLocale().toString(time, QLocale::ShortFormat);
+            if (showEnd) {
                 KCalendarCore::Event::Ptr const event = mIncidence.staticCast<Event>();
-                timeStr = QLocale().toString(event->dtEnd().toLocalTime().time(), QLocale::ShortFormat);
+                endTimeStr = QLocale().toString(event->dtEnd().toLocalTime().time(), QLocale::ShortFormat);
             }
         }
-        if (!timeStr.isEmpty()) {
-            if (!end) {
-                ret = timeStr + u' ' + ret;
+        if (!startTimeStr.isEmpty()) {
+            if (endTimeStr.isEmpty()) {
+                retString = startTimeStr + u' ' + retString;
             } else {
-                ret = ret + u' ' + timeStr;
+                retString = startTimeStr + u'-' + endTimeStr + u' ' + retString;
             }
         }
     }
 
-    return ret;
+    return retString;
 }
 
 QString IncidenceMonthItem::toolTipText(const QDate &date) const

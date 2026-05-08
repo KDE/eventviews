@@ -220,10 +220,8 @@ public:
 
     /*!
       Returns the text to draw in an item.
-
-     \a end True if the text at the end of an item should be returned.
     */
-    virtual QString text(bool end) const = 0;
+    virtual QString text() const = 0;
 
     /*!
        Returns the text for the tooltip of the item
@@ -330,7 +328,7 @@ public:
 
     /*!
      */
-    QString text(bool end) const override;
+    QString text() const override;
     /*!
      */
     QString toolTipText(const QDate &date) const override;
@@ -435,9 +433,8 @@ public:
 
     /*!
      */
-    QString text(bool end) const override
+    QString text() const override
     {
-        Q_UNUSED(end)
         return mName;
     }
 
