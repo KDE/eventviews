@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-28 00:45+0000\n"
+"POT-Creation-Date: 2026-05-09 00:44+0000\n"
 "PO-Revision-Date: 2025-07-13 21:02+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -342,21 +342,21 @@ msgstr "Az eseményekre ejtett levelek csatolási módja"
 
 #. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (Personal Settings)
 #. i18n: ectx: label, entry (DefaultTodoAttachMethod), group (Hidden Options)
-#: eventviews.kcfg:13 eventviews.kcfg:439
+#: eventviews.kcfg:13 eventviews.kcfg:445
 #, kde-format
 msgid "Always ask"
 msgstr "Mindig kérdez"
 
 #. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (Personal Settings)
 #. i18n: ectx: label, entry (DefaultTodoAttachMethod), group (Hidden Options)
-#: eventviews.kcfg:16 eventviews.kcfg:442
+#: eventviews.kcfg:16 eventviews.kcfg:448
 #, kde-format
 msgid "Only attach link to message"
 msgstr "Csak a hivatkozás csatolása"
 
 #. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (Personal Settings)
 #. i18n: ectx: label, entry (DefaultTodoAttachMethod), group (Hidden Options)
-#: eventviews.kcfg:19 eventviews.kcfg:445
+#: eventviews.kcfg:19 eventviews.kcfg:451
 #, kde-format
 msgid "Attach complete message"
 msgstr "A teljes üzenet csatolása"
@@ -837,7 +837,7 @@ msgstr "Ikonok használata az áttekintő nézetben"
 
 #. i18n: ectx: label, entry (ShowTodosAgendaView), group (Agenda View)
 #. i18n: ectx: label, entry (ShowTodosMonthView), group (Month View)
-#: eventviews.kcfg:180 eventviews.kcfg:276 viewerapp/settings.kcfg:31
+#: eventviews.kcfg:180 eventviews.kcfg:282 viewerapp/settings.kcfg:31
 #: viewerapp/settings.kcfg:116
 #, kde-format
 msgid "Show to-dos"
@@ -927,7 +927,7 @@ msgstr "Automatikus eseményszerkesztés időtartomány kiválasztásakor"
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
-#: eventviews.kcfg:204 eventviews.kcfg:306 viewerapp/settings.kcfg:55
+#: eventviews.kcfg:204 eventviews.kcfg:312 viewerapp/settings.kcfg:55
 #: viewerapp/settings.kcfg:133
 #, kde-format
 msgid "Color Usage"
@@ -935,7 +935,7 @@ msgstr "Színhasználat"
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
-#: eventviews.kcfg:207 eventviews.kcfg:309
+#: eventviews.kcfg:207 eventviews.kcfg:315
 #, kde-format
 msgid "Tag inside, calendar outside"
 msgstr "Címke belül, naptár kívül"
@@ -966,7 +966,7 @@ msgstr ""
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
-#: eventviews.kcfg:212 eventviews.kcfg:314
+#: eventviews.kcfg:212 eventviews.kcfg:320
 #, kde-format
 msgid "Calendar inside, tag outside"
 msgstr "Naptár belül, címke kívül"
@@ -996,7 +996,7 @@ msgstr ""
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
-#: eventviews.kcfg:217 eventviews.kcfg:319
+#: eventviews.kcfg:217 eventviews.kcfg:325
 #, kde-format
 msgid "Only tag"
 msgstr "Csak címke"
@@ -1022,7 +1022,7 @@ msgstr ""
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
-#: eventviews.kcfg:222 eventviews.kcfg:324 viewerapp/settings.kcfg:73
+#: eventviews.kcfg:222 eventviews.kcfg:330 viewerapp/settings.kcfg:73
 #: viewerapp/settings.kcfg:151
 #, kde-format
 msgid "Only calendar"
@@ -1049,7 +1049,7 @@ msgstr ""
 
 #. i18n: ectx: label, entry (ColorBusyDaysEnabled), group (Agenda View)
 #. i18n: ectx: label, entry (ColorMonthBusyDaysEnabled), group (Month View)
-#: eventviews.kcfg:230 eventviews.kcfg:332
+#: eventviews.kcfg:230 eventviews.kcfg:338
 #, kde-format
 msgid "Color busy days with a different background color"
 msgstr "Színezze a zsúfolt napokat különböző háttérszínnel"
@@ -1179,25 +1179,52 @@ msgstr "Ikonok használata a hónapos nézet elemeinek megjelenítéséhez"
 
 #. i18n: ectx: label, entry (ShowTimeInMonthView), group (Month View)
 #: eventviews.kcfg:270
-#, kde-format
-msgid "Show time in month view items"
+#, fuzzy, kde-format
+#| msgid "Show time in month view items"
+msgid "Show start-times without end-times in month view items"
 msgstr "Mutassa az időt a havi nézetben"
 
 #. i18n: ectx: whatsthis, entry (ShowTimeInMonthView), group (Month View)
 #: eventviews.kcfg:271
-#, kde-format
-msgid "Check this box to display the time in month view items."
+#, fuzzy, kde-format
+#| msgid "Check this box to display the time in month view items."
+msgid ""
+"Check this box to display the start-time without the end-time in month view "
+"items."
 msgstr ""
 "Jelölje be ezt a jelölőnégyzetet az idő megjelenítéséhez a havi nézetben."
 
 #. i18n: ectx: tooltip, entry (ShowTimeInMonthView), group (Month View)
 #: eventviews.kcfg:272
-#, kde-format
-msgid "Display time in month view items"
+#, fuzzy, kde-format
+#| msgid "Display time in month view items"
+msgid "Display start-time without the end-time in month view items"
+msgstr "Mutassa az időt a havi nézetben"
+
+#. i18n: ectx: label, entry (ShowEndTimeInMonthView), group (Month View)
+#: eventviews.kcfg:276
+#, fuzzy, kde-format
+#| msgid "Show time in month view items"
+msgid "Show the start-time and the end-time in month view items"
+msgstr "Mutassa az időt a havi nézetben"
+
+#. i18n: ectx: whatsthis, entry (ShowEndTimeInMonthView), group (Month View)
+#: eventviews.kcfg:277
+#, fuzzy, kde-format
+#| msgid "Check this box to display the time in month view items."
+msgid "Check this box to display the start and end times in month view items."
+msgstr ""
+"Jelölje be ezt a jelölőnégyzetet az idő megjelenítéséhez a havi nézetben."
+
+#. i18n: ectx: tooltip, entry (ShowEndTimeInMonthView), group (Month View)
+#: eventviews.kcfg:278
+#, fuzzy, kde-format
+#| msgid "Display time in month view items"
+msgid "Display the start and end times in month view items"
 msgstr "Mutassa az időt a havi nézetben"
 
 #. i18n: ectx: whatsthis, entry (ShowTodosMonthView), group (Month View)
-#: eventviews.kcfg:277 viewerapp/settings.kcfg:117
+#: eventviews.kcfg:283 viewerapp/settings.kcfg:117
 #, kde-format
 msgid "Check this box to display to-dos in the month view."
 msgstr ""
@@ -1205,38 +1232,38 @@ msgstr ""
 "megjelenítéséhez (emlékeztetők, ismétlődés stb. jelzésére)."
 
 #. i18n: ectx: tooltip, entry (ShowTodosMonthView), group (Month View)
-#: eventviews.kcfg:278 viewerapp/settings.kcfg:118
+#: eventviews.kcfg:284 viewerapp/settings.kcfg:118
 #, kde-format
 msgid "Display to-dos in the month view"
 msgstr "A feladatok megjelenítése hónapos nézetben"
 
 #. i18n: ectx: label, entry (ShowJournalsMonthView), group (Month View)
-#: eventviews.kcfg:282 viewerapp/settings.kcfg:122
+#: eventviews.kcfg:288 viewerapp/settings.kcfg:122
 #, kde-format
 msgid "Show journals"
 msgstr "A naplók megjelenítése"
 
 #. i18n: ectx: whatsthis, entry (ShowJournalsMonthView), group (Month View)
-#: eventviews.kcfg:283 viewerapp/settings.kcfg:123
+#: eventviews.kcfg:289 viewerapp/settings.kcfg:123
 #, kde-format
 msgid "Check this box to display journals in the month view."
 msgstr "Ha ez be van jelölve, a naplóbejegyzések megjelennek hónapos nézetben."
 
 #. i18n: ectx: tooltip, entry (ShowJournalsMonthView), group (Month View)
-#: eventviews.kcfg:284 viewerapp/settings.kcfg:124
+#: eventviews.kcfg:290 viewerapp/settings.kcfg:124
 #, kde-format
 msgid "Display journals in the month view"
 msgstr "A naplóbejegyzések megjelenítése hónapos nézetben"
 
 #. i18n: ectx: label, entry (ShowHolidaysMonthView), group (Month View)
-#: eventviews.kcfg:288
+#: eventviews.kcfg:294
 #, fuzzy, kde-format
 #| msgid "Show to-dos"
 msgid "Show holidays"
 msgstr "A feladatok megjelenítése"
 
 #. i18n: ectx: whatsthis, entry (ShowHolidaysMonthView), group (Month View)
-#: eventviews.kcfg:289
+#: eventviews.kcfg:295
 #, fuzzy, kde-format
 #| msgid "Check this box to display to-dos in the month view."
 msgid "Check this box to display holidays in the month view."
@@ -1246,21 +1273,21 @@ msgstr ""
 
 #. i18n: ectx: tooltip, entry (ShowHolidaysMonthView), group (Month View)
 #. i18n: ectx: tooltip, entry (ShowHolidaysBackgroundMonthView), group (Month View)
-#: eventviews.kcfg:290 eventviews.kcfg:297
+#: eventviews.kcfg:296 eventviews.kcfg:303
 #, fuzzy, kde-format
 #| msgid "Display to-dos in the month view"
 msgid "Display holidays in the month view"
 msgstr "A feladatok megjelenítése hónapos nézetben"
 
 #. i18n: ectx: label, entry (ShowHolidaysBackgroundMonthView), group (Month View)
-#: eventviews.kcfg:294
-#, kde-format
-msgid ""
-"Use the Holiday background color when at least on holiday lands on a date"
-msgstr ""
+#: eventviews.kcfg:300
+#, fuzzy, kde-format
+#| msgid "Select the working hours background color for the Month view here."
+msgid "Use the Holiday background color when a holiday lands on the date"
+msgstr "Itt lehet kiválasztani, mi legyen a munkaidő színe havi nézetben."
 
 #. i18n: ectx: tooltip, entry (ShowHolidaysBackgroundMonthView), group (Month View)
-#: eventviews.kcfg:295
+#: eventviews.kcfg:301
 #, kde-format
 msgid ""
 "Use the custom holiday color as the date's background color if a holiday "
@@ -1268,7 +1295,7 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (ShowHolidaysBackgroundMonthView), group (Month View)
-#: eventviews.kcfg:296
+#: eventviews.kcfg:302
 #, kde-format
 msgid ""
 "Check this box to use the custom holiday as the date's background color when "
@@ -1276,13 +1303,13 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: label, entry, group (Month View)
-#: eventviews.kcfg:301 viewerapp/settings.kcfg:128
+#: eventviews.kcfg:307 viewerapp/settings.kcfg:128
 #, kde-format
 msgid "Month view uses full window"
 msgstr "A hónapos nézet teljes ablakos legyen"
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
-#: eventviews.kcfg:302 viewerapp/settings.kcfg:129
+#: eventviews.kcfg:308 viewerapp/settings.kcfg:129
 #, kde-format
 msgid ""
 "Check this box to use the full KOrganizer window when displaying the month "
@@ -1296,7 +1323,7 @@ msgstr ""
 "és a naptárlista nem fog megjelenni."
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
-#: eventviews.kcfg:310
+#: eventviews.kcfg:316
 #, kde-format
 msgid ""
 "Select the \"Tag inside, calendar outside\" option if you would like to draw "
@@ -1310,7 +1337,7 @@ msgstr ""
 "beállítani."
 
 #. i18n: ectx: tooltip, entry, group (Month View)
-#: eventviews.kcfg:311
+#: eventviews.kcfg:317
 #, kde-format
 msgid ""
 "Draw month items in their tag color inside and calendar color for their "
@@ -1320,7 +1347,7 @@ msgstr ""
 "színével"
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
-#: eventviews.kcfg:315
+#: eventviews.kcfg:321
 #, kde-format
 msgid ""
 "Select the \"Calendar inside, tag outside\" option if you would like to draw "
@@ -1333,7 +1360,7 @@ msgstr ""
 "címkéjük színével. A színeket a Színek és betűtípusok lapon lehet beállítani."
 
 #. i18n: ectx: tooltip, entry, group (Month View)
-#: eventviews.kcfg:316
+#: eventviews.kcfg:322
 #, kde-format
 msgid ""
 "Draw month items in their calendar color inside and tag color for their "
@@ -1343,7 +1370,7 @@ msgstr ""
 "színével"
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
-#: eventviews.kcfg:320
+#: eventviews.kcfg:326
 #, kde-format
 msgid ""
 "Select the \"Only tag\" option if you would like to draw calendar items "
@@ -1355,13 +1382,13 @@ msgstr ""
 "lapon lehet beállítani."
 
 #. i18n: ectx: tooltip, entry, group (Month View)
-#: eventviews.kcfg:321
+#: eventviews.kcfg:327
 #, kde-format
 msgid "Draw month items using their tag color for the inside and border"
 msgstr "A hónap elemek belseje és szegélye is a címke színével jelenjen meg"
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
-#: eventviews.kcfg:325 viewerapp/settings.kcfg:152
+#: eventviews.kcfg:331 viewerapp/settings.kcfg:152
 #, kde-format
 msgid ""
 "Select the \"Only calendar\" option if you would like to draw calendar items "
@@ -1373,13 +1400,13 @@ msgstr ""
 "betűtípusok lapon lehet beállítani."
 
 #. i18n: ectx: tooltip, entry, group (Month View)
-#: eventviews.kcfg:326 viewerapp/settings.kcfg:153
+#: eventviews.kcfg:332 viewerapp/settings.kcfg:153
 #, kde-format
 msgid "Draw month items using their calendar color for the inside and border"
 msgstr "A hónap elemek belseje és szegélye is a naptár színével jelenjen meg"
 
 #. i18n: ectx: whatsthis, entry (ColorMonthBusyDaysEnabled), group (Month View)
-#: eventviews.kcfg:333
+#: eventviews.kcfg:339
 #, kde-format
 msgid ""
 "Check this box if you want month view's background to be filled with a "
@@ -1394,13 +1421,13 @@ msgstr ""
 "megváltoztathatja. Keresse a \"Zsúfolt napok háttérszíne\" beállítást."
 
 #. i18n: ectx: label, entry, group (Todo View)
-#: eventviews.kcfg:340 viewerapp/settings.kcfg:162
+#: eventviews.kcfg:346 viewerapp/settings.kcfg:162
 #, kde-format
 msgid "Always display completed to-dos at the bottom of the list"
 msgstr "A befejezett feladatok a lista aljára kerülnek"
 
 #. i18n: ectx: whatsthis, entry, group (Todo View)
-#: eventviews.kcfg:341 viewerapp/settings.kcfg:163
+#: eventviews.kcfg:347 viewerapp/settings.kcfg:163
 #, kde-format
 msgid ""
 "Check this box if you want all completed to-dos to be always grouped at the "
@@ -1410,13 +1437,13 @@ msgstr ""
 "alján jelennek meg."
 
 #. i18n: ectx: label, entry, group (Todo View)
-#: eventviews.kcfg:345 viewerapp/settings.kcfg:167
+#: eventviews.kcfg:351 viewerapp/settings.kcfg:167
 #, kde-format
 msgid "To-do list view uses full window"
 msgstr "Teljes ablakos feladatnézet"
 
 #. i18n: ectx: whatsthis, entry, group (Todo View)
-#: eventviews.kcfg:346 viewerapp/settings.kcfg:168
+#: eventviews.kcfg:352 viewerapp/settings.kcfg:168
 #, kde-format
 msgid ""
 "Check this box to use the full KOrganizer window when displaying the to-do "
@@ -1430,19 +1457,19 @@ msgstr ""
 "részletek ablaka és az naptárlista nem fog megjelenni."
 
 #. i18n: ectx: label, entry, group (Todo View)
-#: eventviews.kcfg:350
+#: eventviews.kcfg:356
 #, kde-format
 msgid "Display to-dos in a flat list"
 msgstr "Feladatok megjelenítése egyszerű listában"
 
 #. i18n: ectx: tooltip, entry, group (Todo View)
-#: eventviews.kcfg:351
+#: eventviews.kcfg:357
 #, kde-format
 msgid "Display to-dos as a flat list instead of a hierarchical tree"
 msgstr "Feladatok megjelenítése egyszerű listában hierarchikus fa helyett"
 
 #. i18n: ectx: whatsthis, entry, group (Todo View)
-#: eventviews.kcfg:352
+#: eventviews.kcfg:358
 #, kde-format
 msgid ""
 "Check this box if you want to see all your to-dos in a flat list instead of "
@@ -1452,13 +1479,13 @@ msgstr ""
 "látni egy rendezett, hierarchikus faszerkezet helyett."
 
 #. i18n: ectx: label, entry, group (Todo View)
-#: eventviews.kcfg:356 viewerapp/settings.kcfg:172
+#: eventviews.kcfg:362 viewerapp/settings.kcfg:172
 #, kde-format
 msgid "Record completed to-dos in journal entries"
 msgstr "A befejezett feladatok regisztrálása a naplóban"
 
 #. i18n: ectx: whatsthis, entry, group (Todo View)
-#: eventviews.kcfg:357 viewerapp/settings.kcfg:173
+#: eventviews.kcfg:363 viewerapp/settings.kcfg:173
 #, kde-format
 msgid ""
 "Check this box to record the completion of a to-do in a new entry of your "
@@ -1470,7 +1497,7 @@ msgstr ""
 #. i18n: ectx: label, entry, group (Colors)
 #. i18n: ectx: label, entry, group (Theming)
 #. i18n: ectx: label, entry, group (Theme/Month view)
-#: eventviews.kcfg:364 eventviews.kcfg:568 eventviews.kcfg:676
+#: eventviews.kcfg:370 eventviews.kcfg:574 eventviews.kcfg:682
 #: viewerapp/settings.kcfg:180
 #, kde-format
 msgid "Holiday color"
@@ -1479,7 +1506,7 @@ msgstr "A szabadság napjainak színe"
 #. i18n: ectx: whatsthis, entry, group (Colors)
 #. i18n: ectx: whatsthis, entry, group (Theming)
 #. i18n: ectx: whatsthis, entry, group (Theme/Month view)
-#: eventviews.kcfg:365 eventviews.kcfg:569 eventviews.kcfg:677
+#: eventviews.kcfg:371 eventviews.kcfg:575 eventviews.kcfg:683
 #: viewerapp/settings.kcfg:181
 #, kde-format
 msgid ""
@@ -1492,26 +1519,26 @@ msgstr ""
 
 #. i18n: ectx: label, entry (AgendaBgColor), group (Colors)
 #. i18n: ectx: label, entry, group (Theming)
-#: eventviews.kcfg:369 eventviews.kcfg:482 viewerapp/settings.kcfg:185
+#: eventviews.kcfg:375 eventviews.kcfg:488 viewerapp/settings.kcfg:185
 #, kde-format
 msgid "Agenda view background color"
 msgstr "Áttekintés nézetben a háttér színe"
 
 #. i18n: ectx: whatsthis, entry (AgendaBgColor), group (Colors)
 #. i18n: ectx: whatsthis, entry, group (Theming)
-#: eventviews.kcfg:370 eventviews.kcfg:483 viewerapp/settings.kcfg:186
+#: eventviews.kcfg:376 eventviews.kcfg:489 viewerapp/settings.kcfg:186
 #, kde-format
 msgid "Select the agenda view background color here."
 msgstr "A feladatok áttekintő nézetében ez lesz a háttérszín."
 
 #. i18n: ectx: label, entry (ViewBgBusyColor), group (Colors)
-#: eventviews.kcfg:374
+#: eventviews.kcfg:380
 #, kde-format
 msgid "Agenda/Month view background busy color"
 msgstr "Áttekintő/hónap nézet hátterének elfoglalt színe"
 
 #. i18n: ectx: whatsthis, entry (ViewBgBusyColor), group (Colors)
-#: eventviews.kcfg:375
+#: eventviews.kcfg:381
 #, kde-format
 msgid ""
 "When you have an all day event marked as busy, you can have a different "
@@ -1522,20 +1549,20 @@ msgstr ""
 "színt itt választhatja ki."
 
 #. i18n: ectx: label, entry, group (Colors)
-#: eventviews.kcfg:379 viewerapp/settings.kcfg:190
+#: eventviews.kcfg:385 viewerapp/settings.kcfg:190
 #, kde-format
 msgid "Agenda view current-time line color"
 msgstr "Az aktuális idővonal színe áttekintő nézetben"
 
 #. i18n: ectx: whatsthis, entry, group (Colors)
-#: eventviews.kcfg:380 viewerapp/settings.kcfg:191
+#: eventviews.kcfg:386 viewerapp/settings.kcfg:191
 #, kde-format
 msgid "Select a color to use for the current-time (Marcus Bains) line."
 msgstr ""
 "Az aktuális idővonal (Marcus Bains-vonal) megjelenítésénél használt szín."
 
 #. i18n: ectx: tooltip, entry, group (Colors)
-#: eventviews.kcfg:381 viewerapp/settings.kcfg:192
+#: eventviews.kcfg:387 viewerapp/settings.kcfg:192
 #, kde-format
 msgid "Use this color for the Agenda View current-time (Marcus Bains) line"
 msgstr ""
@@ -1545,14 +1572,14 @@ msgstr ""
 #. i18n: ectx: label, entry, group (Colors)
 #. i18n: ectx: label, entry, group (Theming)
 #. i18n: ectx: label, entry, group (Theme/Month view)
-#: eventviews.kcfg:385 eventviews.kcfg:494 eventviews.kcfg:591
+#: eventviews.kcfg:391 eventviews.kcfg:500 eventviews.kcfg:597
 #: viewerapp/settings.kcfg:197
 #, kde-format
 msgid "Working hours color"
 msgstr "A munkaidő óráinak színe"
 
 #. i18n: ectx: whatsthis, entry, group (Colors)
-#: eventviews.kcfg:386 viewerapp/settings.kcfg:198
+#: eventviews.kcfg:392 viewerapp/settings.kcfg:198
 #, kde-format
 msgid "Select the working hours color for the agenda view here."
 msgstr "Itt lehet kiválasztani, mi legyen a munkaidő színe áttekintő nézetben."
@@ -1560,7 +1587,7 @@ msgstr "Itt lehet kiválasztani, mi legyen a munkaidő színe áttekintő nézet
 #. i18n: ectx: label, entry (TodoDueTodayColor), group (Colors)
 #. i18n: ectx: label, entry, group (Theming)
 #. i18n: ectx: label, entry, group (Theme/Month view)
-#: eventviews.kcfg:390 eventviews.kcfg:541 eventviews.kcfg:649
+#: eventviews.kcfg:396 eventviews.kcfg:547 eventviews.kcfg:655
 #: viewerapp/settings.kcfg:202
 #, kde-format
 msgid "To-do due today color"
@@ -1569,7 +1596,7 @@ msgstr "A mai határidejű feladatok színe"
 #. i18n: ectx: whatsthis, entry (TodoDueTodayColor), group (Colors)
 #. i18n: ectx: whatsthis, entry, group (Theming)
 #. i18n: ectx: whatsthis, entry, group (Theme/Month view)
-#: eventviews.kcfg:391 eventviews.kcfg:542 eventviews.kcfg:650
+#: eventviews.kcfg:397 eventviews.kcfg:548 eventviews.kcfg:656
 #: viewerapp/settings.kcfg:203
 #, kde-format
 msgid "Select the to-do due today color here."
@@ -1578,7 +1605,7 @@ msgstr "Itt lehet kiválasztani a mai határidejű feladatok színét."
 #. i18n: ectx: label, entry (TodoOverdueColor), group (Colors)
 #. i18n: ectx: label, entry, group (Theming)
 #. i18n: ectx: label, entry, group (Theme/Month view)
-#: eventviews.kcfg:395 eventviews.kcfg:554 eventviews.kcfg:662
+#: eventviews.kcfg:401 eventviews.kcfg:560 eventviews.kcfg:668
 #: viewerapp/settings.kcfg:207
 #, kde-format
 msgid "To-do overdue color"
@@ -1587,20 +1614,20 @@ msgstr "A lejárt határidejű feladatok színe"
 #. i18n: ectx: whatsthis, entry (TodoOverdueColor), group (Colors)
 #. i18n: ectx: whatsthis, entry, group (Theming)
 #. i18n: ectx: whatsthis, entry, group (Theme/Month view)
-#: eventviews.kcfg:396 eventviews.kcfg:555 eventviews.kcfg:663
+#: eventviews.kcfg:402 eventviews.kcfg:561 eventviews.kcfg:669
 #: viewerapp/settings.kcfg:208
 #, kde-format
 msgid "Select the to-do overdue color here."
 msgstr "Itt lehet kiválasztani a lejárt határidejű feladatok színét."
 
 #. i18n: ectx: label, entry, group (Fonts)
-#: eventviews.kcfg:403 viewerapp/settings.kcfg:221
+#: eventviews.kcfg:409 viewerapp/settings.kcfg:221
 #, kde-format
 msgid "Time bar"
 msgstr "Idősáv"
 
 #. i18n: ectx: whatsthis, entry, group (Fonts)
-#: eventviews.kcfg:404 viewerapp/settings.kcfg:222
+#: eventviews.kcfg:410 viewerapp/settings.kcfg:222
 #, kde-format
 msgid ""
 "Press this button to configure the time bar font. The time bar is the widget "
@@ -1612,13 +1639,13 @@ msgstr ""
 "választó párbeszédablakot, ahol kiválaszthatja az óraszámok betűtípusát."
 
 #. i18n: ectx: label, entry, group (Fonts)
-#: eventviews.kcfg:407 viewerapp/settings.kcfg:225
+#: eventviews.kcfg:413 viewerapp/settings.kcfg:225
 #, kde-format
 msgid "Month view"
 msgstr "Havi nézet"
 
 #. i18n: ectx: whatsthis, entry, group (Fonts)
-#: eventviews.kcfg:408 viewerapp/settings.kcfg:226
+#: eventviews.kcfg:414 viewerapp/settings.kcfg:226
 #, kde-format
 msgid ""
 "Press this button to configure the month view font. This button will open "
@@ -1630,13 +1657,13 @@ msgstr ""
 "havi nézetben megjelenő elemek betűkészletét."
 
 #. i18n: ectx: label, entry, group (Fonts)
-#: eventviews.kcfg:411 viewerapp/settings.kcfg:229
+#: eventviews.kcfg:417 viewerapp/settings.kcfg:229
 #, kde-format
 msgid "Agenda view"
 msgstr "Áttekintő nézet"
 
 #. i18n: ectx: whatsthis, entry, group (Fonts)
-#: eventviews.kcfg:412 viewerapp/settings.kcfg:230
+#: eventviews.kcfg:418 viewerapp/settings.kcfg:230
 #, kde-format
 msgid ""
 "Press this button to configure the agenda view font. This button will open "
@@ -1648,13 +1675,13 @@ msgstr ""
 "lehet választani, melyik betűtípus legyen érvényes az áttekintő nézetben."
 
 #. i18n: ectx: label, entry, group (Fonts)
-#: eventviews.kcfg:415 viewerapp/settings.kcfg:233
+#: eventviews.kcfg:421 viewerapp/settings.kcfg:233
 #, kde-format
 msgid "Current-time line"
 msgstr "Az aktuális idővonal"
 
 #. i18n: ectx: whatsthis, entry, group (Fonts)
-#: eventviews.kcfg:416 viewerapp/settings.kcfg:234
+#: eventviews.kcfg:422 viewerapp/settings.kcfg:234
 #, kde-format
 msgid ""
 "Press this button to configure the current-time line font. This button will "
@@ -1666,26 +1693,26 @@ msgstr ""
 "áttekintő nézetben megjelenő aktuális idővonal betűtípusát."
 
 #. i18n: ectx: label, entry (DefaultTodoAttachMethod), group (Hidden Options)
-#: eventviews.kcfg:435
+#: eventviews.kcfg:441
 #, kde-format
 msgid "Default todo attachment method"
 msgstr "Alapértelmezett feladatcsatolás"
 
 #. i18n: ectx: whatsthis, entry (DefaultTodoAttachMethod), group (Hidden Options)
-#: eventviews.kcfg:436
+#: eventviews.kcfg:442
 #, kde-format
 msgid "The default way of attaching dropped emails to a task"
 msgstr "Levél feladatra történő ejtésekor az alapértelmezett csatolási mód"
 
 #. i18n: ectx: label, entry, group (Theming)
 #. i18n: ectx: label, entry, group (Theme/Month view)
-#: eventviews.kcfg:489 eventviews.kcfg:586
+#: eventviews.kcfg:495 eventviews.kcfg:592
 #, kde-format
 msgid "Highlight color"
 msgstr "Kiemelési szín"
 
 #. i18n: ectx: whatsthis, entry, group (Theming)
-#: eventviews.kcfg:490
+#: eventviews.kcfg:496
 #, kde-format
 msgid ""
 "Select the highlight color here. The highlight color will be used for "
@@ -1695,25 +1722,25 @@ msgstr ""
 "megjelölt terület feladatnézetben és a dátumnavigátorban."
 
 #. i18n: ectx: whatsthis, entry, group (Theming)
-#: eventviews.kcfg:495
+#: eventviews.kcfg:501
 #, kde-format
 msgid "Select the working hours background color for the agenda view here."
 msgstr "Itt lehet kiválasztani, mi legyen a munkaidő színe áttekintő nézetben."
 
 #. i18n: ectx: label, entry, group (Theme/Month view)
-#: eventviews.kcfg:579
+#: eventviews.kcfg:585
 #, kde-format
 msgid "Month view background color"
 msgstr "Háttérszín havi nézetben"
 
 #. i18n: ectx: whatsthis, entry, group (Theme/Month view)
-#: eventviews.kcfg:580
+#: eventviews.kcfg:586
 #, kde-format
 msgid "Select the Month view background color here."
 msgstr "Itt lehet kiválasztani a havi nézet háttérszínét."
 
 #. i18n: ectx: whatsthis, entry, group (Theme/Month view)
-#: eventviews.kcfg:587
+#: eventviews.kcfg:593
 #, kde-format
 msgid ""
 "Select the highlight color here. The highlight color will be used for "
@@ -1723,39 +1750,39 @@ msgstr ""
 "megjelölt terület havi nézetben és a dátumnavigátorban."
 
 #. i18n: ectx: whatsthis, entry, group (Theme/Month view)
-#: eventviews.kcfg:592
+#: eventviews.kcfg:598
 #, kde-format
 msgid "Select the working hours background color for the Month view here."
 msgstr "Itt lehet kiválasztani, mi legyen a munkaidő színe havi nézetben."
 
 #. i18n: ectx: label, entry (MonthTodayColor), group (Theme/Month view)
-#: eventviews.kcfg:596
+#: eventviews.kcfg:602
 #, fuzzy, kde-format
 #| msgid "Month view background color"
 msgid "Month view today background color"
 msgstr "Háttérszín havi nézetben"
 
 #. i18n: ectx: tooltip, entry (MonthTodayColor), group (Theme/Month view)
-#: eventviews.kcfg:597
+#: eventviews.kcfg:603
 #, fuzzy, kde-format
 #| msgid "Select the working hours background color for the Month view here."
 msgid "Set the background color for today's date in month view"
 msgstr "Itt lehet kiválasztani, mi legyen a munkaidő színe havi nézetben."
 
 #. i18n: ectx: whatsthis, entry (MonthTodayColor), group (Theme/Month view)
-#: eventviews.kcfg:598
+#: eventviews.kcfg:604
 #, kde-format
 msgid "In Month View, select the background color for today's date."
 msgstr ""
 
 #. i18n: ectx: label, entry, group (Theme/Month view)
-#: eventviews.kcfg:620
+#: eventviews.kcfg:626
 #, kde-format
 msgid "Default event color"
 msgstr "Alapértelmezett eseményszín"
 
 #. i18n: ectx: whatsthis, entry, group (Theme/Month view)
-#: eventviews.kcfg:621
+#: eventviews.kcfg:627
 #, kde-format
 msgid ""
 "Select the default event color here. The default event color will be used "
@@ -1767,13 +1794,13 @@ msgstr ""
 "beállítani minden eseménycímkéhez."
 
 #. i18n: ectx: label, entry, group (Theme/Month view)
-#: eventviews.kcfg:684
+#: eventviews.kcfg:690
 #, kde-format
 msgid "Use system color"
 msgstr "Rendszerszínek használata"
 
 #. i18n: ectx: whatsthis, entry, group (Theme/Month view)
-#: eventviews.kcfg:685
+#: eventviews.kcfg:691
 #, kde-format
 msgid "Use system color. If enabled will ignore all other color settings"
 msgstr ""
