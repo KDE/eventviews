@@ -429,6 +429,7 @@ void MonthView::changeIncidenceDisplay(const Akonadi::Item &incidence, int actio
 void MonthView::updateView()
 {
     d->view->update();
+    d->scene->update();
 }
 
 #ifndef QT_NO_WHEELEVENT
