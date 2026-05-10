@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: libeventviews6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-09 00:44+0000\n"
-"PO-Revision-Date: 2026-04-29 00:11+0100\n"
+"PO-Revision-Date: 2026-05-09 16:50+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -1219,49 +1219,53 @@ msgstr "Mostrar iconos en los elementos de vista de mes"
 
 #. i18n: ectx: label, entry (ShowTimeInMonthView), group (Month View)
 #: eventviews.kcfg:270
-#, fuzzy, kde-format
-#| msgid "Show time in month view items"
+#, kde-format
 msgid "Show start-times without end-times in month view items"
-msgstr "Mostrar tiempo en elementos de vista de mes"
+msgstr ""
+"Mostrar horas de inicio sin horas de finalización en los elementos de la "
+"vista mensual"
 
 #. i18n: ectx: whatsthis, entry (ShowTimeInMonthView), group (Month View)
 #: eventviews.kcfg:271
-#, fuzzy, kde-format
-#| msgid "Check this box to display the time in month view items."
+#, kde-format
 msgid ""
 "Check this box to display the start-time without the end-time in month view "
 "items."
 msgstr ""
-"Marque esta casilla para mostrar el tiempo en elementos de vista de mes."
+"Marque esta casilla para mostrar la hora de inicio sin la hora de "
+"finalización en los elementos de la vista mensual."
 
 #. i18n: ectx: tooltip, entry (ShowTimeInMonthView), group (Month View)
 #: eventviews.kcfg:272
-#, fuzzy, kde-format
-#| msgid "Display time in month view items"
+#, kde-format
 msgid "Display start-time without the end-time in month view items"
-msgstr "Mostrar tiempo en elementos de vista de mes"
+msgstr ""
+"Mostrar hora de inicio sin hora de finalización en elementos de la vista "
+"mensual"
 
 #. i18n: ectx: label, entry (ShowEndTimeInMonthView), group (Month View)
 #: eventviews.kcfg:276
-#, fuzzy, kde-format
-#| msgid "Show time in month view items"
+#, kde-format
 msgid "Show the start-time and the end-time in month view items"
-msgstr "Mostrar tiempo en elementos de vista de mes"
+msgstr ""
+"Mostrar la hora de inicio y la de finalización en los elementos de la vista "
+"mensual"
 
 #. i18n: ectx: whatsthis, entry (ShowEndTimeInMonthView), group (Month View)
 #: eventviews.kcfg:277
-#, fuzzy, kde-format
-#| msgid "Check this box to display the time in month view items."
+#, kde-format
 msgid "Check this box to display the start and end times in month view items."
 msgstr ""
-"Marque esta casilla para mostrar el tiempo en elementos de vista de mes."
+"Marque esta casilla para mostrar las horas de inicio y de finalización en "
+"los elementos de la vista mensual."
 
 #. i18n: ectx: tooltip, entry (ShowEndTimeInMonthView), group (Month View)
 #: eventviews.kcfg:278
-#, fuzzy, kde-format
-#| msgid "Display time in month view items"
+#, kde-format
 msgid "Display the start and end times in month view items"
-msgstr "Mostrar tiempo en elementos de vista de mes"
+msgstr ""
+"Mostrar horas de inicio y de finalización en los elementos de la vista "
+"mensual"
 
 #. i18n: ectx: whatsthis, entry (ShowTodosMonthView), group (Month View)
 #: eventviews.kcfg:283 viewerapp/settings.kcfg:117
@@ -1316,13 +1320,11 @@ msgstr "Mostrar días festivos en la vista de mes"
 
 #. i18n: ectx: label, entry (ShowHolidaysBackgroundMonthView), group (Month View)
 #: eventviews.kcfg:300
-#, fuzzy, kde-format
-#| msgid ""
-#| "Use the Holiday background color when at least on holiday lands on a date"
+#, kde-format
 msgid "Use the Holiday background color when a holiday lands on the date"
 msgstr ""
-"Usar el color de fondo para días festivos cuando coincida al menos un día "
-"festivo en una fecha"
+"Usar el color de fondo de días festivos cuando coincida un día festivo en la "
+"fecha"
 
 #. i18n: ectx: tooltip, entry (ShowHolidaysBackgroundMonthView), group (Month View)
 #: eventviews.kcfg:301
