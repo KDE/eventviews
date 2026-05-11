@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-09 00:44+0000\n"
+"POT-Creation-Date: 2026-05-11 00:44+0000\n"
 "PO-Revision-Date: 2026-05-09 16:50+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -2004,13 +2004,13 @@ msgctxt "'Month day' for month view cells"
 msgid "%1 %2"
 msgstr "%1 %2"
 
-#: month/monthview.cpp:210 month/monthview.cpp:480
+#: month/monthview.cpp:210 month/monthview.cpp:481
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display calendar in a normal size"
 msgstr "Mostrar calendario en tamaño normal"
 
-#: month/monthview.cpp:211 month/monthview.cpp:483
+#: month/monthview.cpp:211 month/monthview.cpp:484
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display calendar in a full window"

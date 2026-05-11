@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-09 00:44+0000\n"
-"PO-Revision-Date: 2026-04-28 12:11+0200\n"
+"POT-Creation-Date: 2026-05-11 00:44+0000\n"
+"PO-Revision-Date: 2026-05-10 18:11+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -1187,51 +1187,45 @@ msgstr "Pictogrammen tonen in maandweergave"
 
 #. i18n: ectx: label, entry (ShowTimeInMonthView), group (Month View)
 #: eventviews.kcfg:270
-#, fuzzy, kde-format
-#| msgid "Show time in month view items"
+#, kde-format
 msgid "Show start-times without end-times in month view items"
-msgstr "Tijd tonen in maandweergave"
+msgstr "Starttijden tonen in zonder eindtijden in maandweergave"
 
 #. i18n: ectx: whatsthis, entry (ShowTimeInMonthView), group (Month View)
 #: eventviews.kcfg:271
-#, fuzzy, kde-format
-#| msgid "Check this box to display the time in month view items."
+#, kde-format
 msgid ""
 "Check this box to display the start-time without the end-time in month view "
 "items."
 msgstr ""
-"Selecteer dit keuzevakje als u de tijd in de maandweergave wilt laten "
-"weergeven."
+"Activeer dit vakje om de starttijd zonder de eindtijd in de items in de "
+"maandweergave te tonen."
 
 #. i18n: ectx: tooltip, entry (ShowTimeInMonthView), group (Month View)
 #: eventviews.kcfg:272
-#, fuzzy, kde-format
-#| msgid "Display time in month view items"
+#, kde-format
 msgid "Display start-time without the end-time in month view items"
-msgstr "Tijd tonen in maandweergave"
+msgstr "Starttijd zonder de eindtijd in items in de maandweergave tonen"
 
 #. i18n: ectx: label, entry (ShowEndTimeInMonthView), group (Month View)
 #: eventviews.kcfg:276
-#, fuzzy, kde-format
-#| msgid "Show time in month view items"
+#, kde-format
 msgid "Show the start-time and the end-time in month view items"
-msgstr "Tijd tonen in maandweergave"
+msgstr "De starttijd en de eindtijd in de items in de maandweergave tonen"
 
 #. i18n: ectx: whatsthis, entry (ShowEndTimeInMonthView), group (Month View)
 #: eventviews.kcfg:277
-#, fuzzy, kde-format
-#| msgid "Check this box to display the time in month view items."
+#, kde-format
 msgid "Check this box to display the start and end times in month view items."
 msgstr ""
-"Selecteer dit keuzevakje als u de tijd in de maandweergave wilt laten "
-"weergeven."
+"Selecteer dit keuzevakje om de starttijd en de eindtijd in de items van de "
+"maandweergave te tonen."
 
 #. i18n: ectx: tooltip, entry (ShowEndTimeInMonthView), group (Month View)
 #: eventviews.kcfg:278
-#, fuzzy, kde-format
-#| msgid "Display time in month view items"
+#, kde-format
 msgid "Display the start and end times in month view items"
-msgstr "Tijd tonen in maandweergave"
+msgstr "De start- en de eindtijden tonen in de items van de maandweergave"
 
 #. i18n: ectx: whatsthis, entry (ShowTodosMonthView), group (Month View)
 #: eventviews.kcfg:283 viewerapp/settings.kcfg:117
@@ -1290,13 +1284,10 @@ msgstr "Vakantiedagen tonen in maandweergave"
 
 #. i18n: ectx: label, entry (ShowHolidaysBackgroundMonthView), group (Month View)
 #: eventviews.kcfg:300
-#, fuzzy, kde-format
-#| msgid ""
-#| "Use the Holiday background color when at least on holiday lands on a date"
+#, kde-format
 msgid "Use the Holiday background color when a holiday lands on the date"
 msgstr ""
-"Gebruik de vakantiedagachtergrondkleur wanneer minstens één vakantiedag op "
-"een datum valt"
+"Gebruik de vakantiedagachtergrondkleur wanneer vakantiedag op de datum valt"
 
 #. i18n: ectx: tooltip, entry (ShowHolidaysBackgroundMonthView), group (Month View)
 #: eventviews.kcfg:301
@@ -1970,13 +1961,13 @@ msgctxt "'Month day' for month view cells"
 msgid "%1 %2"
 msgstr "%1 %2"
 
-#: month/monthview.cpp:210 month/monthview.cpp:480
+#: month/monthview.cpp:210 month/monthview.cpp:481
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display calendar in a normal size"
 msgstr "Agenda in normale grootte tonen"
 
-#: month/monthview.cpp:211 month/monthview.cpp:483
+#: month/monthview.cpp:211 month/monthview.cpp:484
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display calendar in a full window"

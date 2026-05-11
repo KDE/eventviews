@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-09 00:44+0000\n"
+"POT-Creation-Date: 2026-05-11 00:44+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -20,13 +20,14 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "KDE 中国, Guo Yunhe, Tyson Tan, Eric Zhao"
+msgstr "KDE 中国, Guo Yunhe, Tyson Tan, Eric Zhao, ShiroAzusa"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr ""
-"kde-china@kde.org, i@guoyunhe.me, tds00@qq.com, zxybbb7892020@outlook.com"
+"kde-china@kde.org, i@guoyunhe.me, tds00@qq.com, zxybbb7892020@outlook.com, "
+"azusa@shiroazusa.net"
 
 #: agenda/agenda.cpp:956
 #, kde-format
@@ -89,27 +90,27 @@ msgstr "- %1"
 #: agenda/agendaitem.cpp:910 agenda/agendaitem.cpp:933
 #, kde-format
 msgid "%1: %2 - %3"
-msgstr ""
+msgstr "%1：%2 - %3"
 
 #: agenda/agendaitem.cpp:1044
 #, kde-format
 msgid "Google Calendar Settings"
-msgstr ""
+msgstr "Google 日历设置"
 
 #: agenda/agendaitem.cpp:1044
 #, kde-format
 msgid "Public Holiday"
-msgstr ""
+msgstr "公共节假日"
 
 #: agenda/agendaitem.cpp:1057
 #, kde-format
 msgid "%1: %2"
-msgstr ""
+msgstr "%1：%2"
 
 #: agenda/agendaitem.cpp:1066
 #, kde-format
 msgid "%1 (%2)"
-msgstr ""
+msgstr "%1 (%2)"
 
 #: agenda/agendaview.cpp:421
 #, kde-format
@@ -709,20 +710,20 @@ msgstr "设定议事日程图中的小时格高度(按像素)"
 #: eventviews.kcfg:156
 #, kde-format
 msgid "Draw bold horizontal grid lines for the even hours"
-msgstr ""
+msgstr "为偶数小时绘制粗的水平网格线"
 
 #. i18n: ectx: whatsthis, entry (EnableAgendaBoldEvenHours), group (Agenda View)
 #: eventviews.kcfg:157
 #, kde-format
 msgid ""
 "Draw a bolder horizontal grid line for the even hours (12am, 2am, 4am, etc)."
-msgstr ""
+msgstr "为偶数小时 (如凌晨 12 点、凌晨 2 点、凌晨 4 点等) 绘制更粗的水平网格线"
 
 #. i18n: ectx: tooltip, entry (EnableAgendaBoldEvenHours), group (Agenda View)
 #: eventviews.kcfg:158
 #, kde-format
 msgid "Draw bolder even hour grid lines"
-msgstr ""
+msgstr "加粗偶数小时网格线"
 
 #. i18n: ectx: label, entry (EnableAgendaItemIcons), group (Agenda View)
 #: eventviews.kcfg:162 viewerapp/settings.kcfg:25
@@ -748,38 +749,38 @@ msgstr "显示议事日程视图项目的图标"
 #: eventviews.kcfg:168
 #, kde-format
 msgid "Show incidence descriptions in agenda view items"
-msgstr ""
+msgstr "在日程视图项目中显示事件描述"
 
 #. i18n: ectx: whatsthis, entry (EnableAgendaItemDesc), group (Agenda View)
 #: eventviews.kcfg:169
 #, kde-format
 msgid ""
 "Check this box to display the incidence descriptions in agenda view items."
-msgstr ""
+msgstr "选中此项可在日程视图项目中显示事件描述。"
 
 #. i18n: ectx: tooltip, entry (EnableAgendaItemDesc), group (Agenda View)
 #: eventviews.kcfg:170
 #, kde-format
 msgid "Display incidence descriptions agenda view items"
-msgstr ""
+msgstr "在日程视图项目中显示事件描述"
 
 #. i18n: ectx: label, entry (EnableAgendaItemLocation), group (Agenda View)
 #: eventviews.kcfg:174
 #, kde-format
 msgid "Show incidence locations in agenda view items"
-msgstr ""
+msgstr "在日程视图项目中显示事件地点"
 
 #. i18n: ectx: whatsthis, entry (EnableAgendaItemLocation), group (Agenda View)
 #: eventviews.kcfg:175
 #, kde-format
 msgid "Check this box to display the incidence locations in agenda view items."
-msgstr ""
+msgstr "选中此项可在日程视图项目中显示事件地点。"
 
 #. i18n: ectx: tooltip, entry (EnableAgendaItemLocation), group (Agenda View)
 #: eventviews.kcfg:176
 #, kde-format
 msgid "Display incidence locations agenda view items"
-msgstr ""
+msgstr "在日程视图项目中显示事件地点"
 
 #. i18n: ectx: label, entry (ShowTodosAgendaView), group (Agenda View)
 #. i18n: ectx: label, entry (ShowTodosMonthView), group (Month View)
@@ -1093,47 +1094,41 @@ msgstr "在月视图项目中显示图标"
 
 #. i18n: ectx: label, entry (ShowTimeInMonthView), group (Month View)
 #: eventviews.kcfg:270
-#, fuzzy, kde-format
-#| msgid "Show time in month view items"
+#, kde-format
 msgid "Show start-times without end-times in month view items"
-msgstr "在月视图项目中显示时间"
+msgstr ""
 
 #. i18n: ectx: whatsthis, entry (ShowTimeInMonthView), group (Month View)
 #: eventviews.kcfg:271
-#, fuzzy, kde-format
-#| msgid "Check this box to display the time in month view items."
+#, kde-format
 msgid ""
 "Check this box to display the start-time without the end-time in month view "
 "items."
-msgstr "选中此项以在月视图项目中显示时间。"
+msgstr ""
 
 #. i18n: ectx: tooltip, entry (ShowTimeInMonthView), group (Month View)
 #: eventviews.kcfg:272
-#, fuzzy, kde-format
-#| msgid "Display time in month view items"
+#, kde-format
 msgid "Display start-time without the end-time in month view items"
-msgstr "在月视图项目中显示时间"
+msgstr ""
 
 #. i18n: ectx: label, entry (ShowEndTimeInMonthView), group (Month View)
 #: eventviews.kcfg:276
-#, fuzzy, kde-format
-#| msgid "Show time in month view items"
+#, kde-format
 msgid "Show the start-time and the end-time in month view items"
-msgstr "在月视图项目中显示时间"
+msgstr ""
 
 #. i18n: ectx: whatsthis, entry (ShowEndTimeInMonthView), group (Month View)
 #: eventviews.kcfg:277
-#, fuzzy, kde-format
-#| msgid "Check this box to display the time in month view items."
+#, kde-format
 msgid "Check this box to display the start and end times in month view items."
-msgstr "选中此项以在月视图项目中显示时间。"
+msgstr ""
 
 #. i18n: ectx: tooltip, entry (ShowEndTimeInMonthView), group (Month View)
 #: eventviews.kcfg:278
-#, fuzzy, kde-format
-#| msgid "Display time in month view items"
+#, kde-format
 msgid "Display the start and end times in month view items"
-msgstr "在月视图项目中显示时间"
+msgstr ""
 
 #. i18n: ectx: whatsthis, entry (ShowTodosMonthView), group (Month View)
 #: eventviews.kcfg:283 viewerapp/settings.kcfg:117
@@ -1169,20 +1164,20 @@ msgstr "在月视图中显示日记"
 #: eventviews.kcfg:294
 #, kde-format
 msgid "Show holidays"
-msgstr ""
+msgstr "显示节假日"
 
 #. i18n: ectx: whatsthis, entry (ShowHolidaysMonthView), group (Month View)
 #: eventviews.kcfg:295
 #, kde-format
 msgid "Check this box to display holidays in the month view."
-msgstr ""
+msgstr "选中此项可在月视图中显示节假日。"
 
 #. i18n: ectx: tooltip, entry (ShowHolidaysMonthView), group (Month View)
 #. i18n: ectx: tooltip, entry (ShowHolidaysBackgroundMonthView), group (Month View)
 #: eventviews.kcfg:296 eventviews.kcfg:303
 #, kde-format
 msgid "Display holidays in the month view"
-msgstr ""
+msgstr "在月视图中显示节假日"
 
 #. i18n: ectx: label, entry (ShowHolidaysBackgroundMonthView), group (Month View)
 #: eventviews.kcfg:300
@@ -1196,7 +1191,7 @@ msgstr ""
 msgid ""
 "Use the custom holiday color as the date's background color if a holiday "
 "lands on the date"
-msgstr ""
+msgstr "若某日期包含节假日，则使用自定义节假日颜色作为该日期的背景色"
 
 #. i18n: ectx: whatsthis, entry (ShowHolidaysBackgroundMonthView), group (Month View)
 #: eventviews.kcfg:302
@@ -1205,6 +1200,8 @@ msgid ""
 "Check this box to use the custom holiday as the date's background color when "
 "at least one holiday lands on a date."
 msgstr ""
+"选中此项，当某日期至少包含一个节假日时，使用自定义节假日颜色作为该日期的背景"
+"色。"
 
 #. i18n: ectx: label, entry, group (Month View)
 #: eventviews.kcfg:307 viewerapp/settings.kcfg:128
@@ -1630,19 +1627,19 @@ msgstr "在此选择月视图的工作时间背景色。"
 #: eventviews.kcfg:602
 #, kde-format
 msgid "Month view today background color"
-msgstr ""
+msgstr "月视图今日背景色"
 
 #. i18n: ectx: tooltip, entry (MonthTodayColor), group (Theme/Month view)
 #: eventviews.kcfg:603
 #, kde-format
 msgid "Set the background color for today's date in month view"
-msgstr ""
+msgstr "设置月视图中今日日期的背景颜色"
 
 #. i18n: ectx: whatsthis, entry (MonthTodayColor), group (Theme/Month view)
 #: eventviews.kcfg:604
 #, kde-format
 msgid "In Month View, select the background color for today's date."
-msgstr ""
+msgstr "在月视图中，选择今日日期的背景颜色。"
 
 #. i18n: ectx: label, entry, group (Theme/Month view)
 #: eventviews.kcfg:626
@@ -1808,13 +1805,13 @@ msgctxt "'Month day' for month view cells"
 msgid "%1 %2"
 msgstr "%1 %2"
 
-#: month/monthview.cpp:210 month/monthview.cpp:480
+#: month/monthview.cpp:210 month/monthview.cpp:481
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display calendar in a normal size"
 msgstr "显示正常大小的日历"
 
-#: month/monthview.cpp:211 month/monthview.cpp:483
+#: month/monthview.cpp:211 month/monthview.cpp:484
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display calendar in a full window"
@@ -2151,13 +2148,13 @@ msgstr "8"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Toggle Reminder Off"
-msgstr ""
+msgstr "关闭提醒(&T)"
 
 #: todo/todoview.cpp:856
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Toggle Reminder On"
-msgstr ""
+msgstr "开启提醒(&T)"
 
 #: todo/todoview.cpp:1194
 #, kde-format
