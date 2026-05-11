@@ -20,13 +20,14 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "KDE 中国, Guo Yunhe, Tyson Tan, Eric Zhao"
+msgstr "KDE 中国, Guo Yunhe, Tyson Tan, Eric Zhao, ShiroAzusa"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr ""
-"kde-china@kde.org, i@guoyunhe.me, tds00@qq.com, zxybbb7892020@outlook.com"
+"kde-china@kde.org, i@guoyunhe.me, tds00@qq.com, zxybbb7892020@outlook.com, "
+"azusa@shiroazusa.net"
 
 #: agenda/agenda.cpp:956
 #, kde-format
@@ -89,22 +90,22 @@ msgstr "- %1"
 #: agenda/agendaitem.cpp:910 agenda/agendaitem.cpp:933
 #, kde-format
 msgid "%1: %2 - %3"
-msgstr ""
+msgstr "%1：%2 - %3"
 
 #: agenda/agendaitem.cpp:1043
 #, kde-format
 msgid "Google Calendar Settings"
-msgstr ""
+msgstr "Google 日历设置"
 
 #: agenda/agendaitem.cpp:1043
 #, kde-format
 msgid "Public Holiday"
-msgstr ""
+msgstr "公共节假日"
 
 #: agenda/agendaitem.cpp:1056
 #, kde-format
 msgid "%1: %2"
-msgstr ""
+msgstr "%1：%2"
 
 #: agenda/agendaview.cpp:421
 #, kde-format
@@ -724,20 +725,20 @@ msgstr "显示议事日程视图项目的图标"
 #: eventviews.kcfg:162
 #, kde-format
 msgid "Show incidence descriptions in agenda view items"
-msgstr ""
+msgstr "在日程视图项目中显示事件描述"
 
 #. i18n: ectx: whatsthis, entry (EnableAgendaItemDesc), group (Agenda View)
 #: eventviews.kcfg:163
 #, kde-format
 msgid ""
 "Check this box to display the incidence descriptions in agenda view items."
-msgstr ""
+msgstr "选中此项可在日程视图项目中显示事件描述。"
 
 #. i18n: ectx: tooltip, entry (EnableAgendaItemDesc), group (Agenda View)
 #: eventviews.kcfg:164
 #, kde-format
 msgid "Display incidence descriptions agenda view items"
-msgstr ""
+msgstr "在日程视图项目中显示事件描述"
 
 #. i18n: ectx: label, entry (ShowTodosAgendaView), group (Agenda View)
 #. i18n: ectx: label, entry (ShowTodosMonthView), group (Month View)
@@ -1521,19 +1522,19 @@ msgstr "在此选择月视图的工作时间背景色。"
 #: eventviews.kcfg:571
 #, kde-format
 msgid "Month view today background color"
-msgstr ""
+msgstr "月视图今日背景色"
 
 #. i18n: ectx: tooltip, entry (MonthTodayColor), group (Theme/Month view)
 #: eventviews.kcfg:572
 #, kde-format
 msgid "Set the background color for today's date in month view"
-msgstr ""
+msgstr "设置月视图中今日日期的背景颜色"
 
 #. i18n: ectx: whatsthis, entry (MonthTodayColor), group (Theme/Month view)
 #: eventviews.kcfg:573
 #, kde-format
 msgid "In Month View, select the background color for today's date."
-msgstr ""
+msgstr "在月视图中，选择今日日期的背景颜色。"
 
 #. i18n: ectx: label, entry, group (Theme/Month view)
 #: eventviews.kcfg:595
