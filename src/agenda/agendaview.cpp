@@ -1735,7 +1735,7 @@ bool AgendaView::selectedIsSingleCell() const
 
 void AgendaView::updateView()
 {
-    fillAgenda();
+    fillAgenda(true);
 }
 
 /*
@@ -2084,8 +2084,9 @@ void AgendaView::showIncidences(const Akonadi::Item::List &incidences, const QDa
     d->mAgenda->selectItem(first);
 }
 
-void AgendaView::fillAgenda()
+void AgendaView::fillAgenda(bool updateDayLabels)
 {
+    createDayLabels(updateDayLabels);
     if (changes() == NothingChanged) {
         return;
     }

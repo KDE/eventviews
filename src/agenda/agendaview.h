@@ -248,7 +248,7 @@ Q_SIGNALS:
 
 protected:
     /*! Fill agenda using the current set value for the start date */
-    void fillAgenda();
+    void fillAgenda(bool updateDayLabels = false);
 
     /*!
      */
