@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-11 00:44+0000\n"
-"PO-Revision-Date: 2026-04-28 16:19+0200\n"
+"PO-Revision-Date: 2026-05-11 10:24+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -1203,49 +1203,48 @@ msgstr "Monstra icones in elementos de vista de mense"
 
 #. i18n: ectx: label, entry (ShowTimeInMonthView), group (Month View)
 #: eventviews.kcfg:270
-#, fuzzy, kde-format
-#| msgid "Show time in month view items"
+#, kde-format
 msgid "Show start-times without end-times in month view items"
-msgstr "Monstra tempore in elementos de vista de mense"
+msgstr ""
+"Monstra tempore de initio sin tempores de fin in elementos de vista de mense"
 
 #. i18n: ectx: whatsthis, entry (ShowTimeInMonthView), group (Month View)
 #: eventviews.kcfg:271
-#, fuzzy, kde-format
-#| msgid "Check this box to display the time in month view items."
+#, kde-format
 msgid ""
 "Check this box to display the start-time without the end-time in month view "
 "items."
 msgstr ""
-"Marca iste quadrato pro monstrar le tempore in elementos de vista de mense"
+"Marca iste quadrato pro monstrar le tempore de initio sin tempore de fin in "
+"elementos de vista de mense"
 
 #. i18n: ectx: tooltip, entry (ShowTimeInMonthView), group (Month View)
 #: eventviews.kcfg:272
-#, fuzzy, kde-format
-#| msgid "Display time in month view items"
+#, kde-format
 msgid "Display start-time without the end-time in month view items"
-msgstr "Monstra tempore in elementos de vista de mense"
+msgstr ""
+"Monstra tempore de initio sin tempore de fin in elementos de vista de mense"
 
 #. i18n: ectx: label, entry (ShowEndTimeInMonthView), group (Month View)
 #: eventviews.kcfg:276
-#, fuzzy, kde-format
-#| msgid "Show time in month view items"
+#, kde-format
 msgid "Show the start-time and the end-time in month view items"
-msgstr "Monstra tempore in elementos de vista de mense"
+msgstr ""
+"Monstra tempore de initio e tempore de fin in elementos de vista de mense"
 
 #. i18n: ectx: whatsthis, entry (ShowEndTimeInMonthView), group (Month View)
 #: eventviews.kcfg:277
-#, fuzzy, kde-format
-#| msgid "Check this box to display the time in month view items."
+#, kde-format
 msgid "Check this box to display the start and end times in month view items."
 msgstr ""
-"Marca iste quadrato pro monstrar le tempore in elementos de vista de mense"
+"Marca iste quadrato pro monstrar le tempores de initio e de fin in "
+"elementos  de vista de mense"
 
 #. i18n: ectx: tooltip, entry (ShowEndTimeInMonthView), group (Month View)
 #: eventviews.kcfg:278
-#, fuzzy, kde-format
-#| msgid "Display time in month view items"
+#, kde-format
 msgid "Display the start and end times in month view items"
-msgstr "Monstra tempore in elementos de vista de mense"
+msgstr "Monstra tempores de initio e de fin in elementos de vista de mense"
 
 #. i18n: ectx: whatsthis, entry (ShowTodosMonthView), group (Month View)
 #: eventviews.kcfg:283 viewerapp/settings.kcfg:117
@@ -1298,13 +1297,10 @@ msgstr "Monstra dies feriate in le vista de mense"
 
 #. i18n: ectx: label, entry (ShowHolidaysBackgroundMonthView), group (Month View)
 #: eventviews.kcfg:300
-#, fuzzy, kde-format
-#| msgid ""
-#| "Use the Holiday background color when at least on holiday lands on a date"
+#, kde-format
 msgid "Use the Holiday background color when a holiday lands on the date"
 msgstr ""
-"Usa Color de fundo de die feriate quando al minus un die feriate cade sur un "
-"data"
+"Usa Color de fundo de die feriate quando un die feriate cade sur le data"
 
 #. i18n: ectx: tooltip, entry (ShowHolidaysBackgroundMonthView), group (Month View)
 #: eventviews.kcfg:301

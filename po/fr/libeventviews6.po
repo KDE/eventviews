@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Geoffray Levasseur <geoffray.levasseurbrandin@numericable.fr>, 2010, 2011, 2012, 2013.
 # Anne-Marie Mahfouf <annemarie.mahfouf@free.fr>, 2010.
-# SPDX-FileCopyrightText: 2012, 2020, 2021, 2023, 2024, 2025, 2026 Xavier Besnard <xavier.besnard@kde.org>
+# SPDX-FileCopyrightText: 2012, 2020-2021, 2023-2026 Xavier Besnard <xavier.besnard@kde.org>
 # Sebastien Renard <renard@kde.org>, 2013.
 # Vincent Pinon <vpinon@kde.org>, 2017, 2018.
 # Simon Depiets <sdepiets@gmail.com>, 2018, 2019, 2020.
@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-11 00:44+0000\n"
-"PO-Revision-Date: 2026-04-29 17:23+0200\n"
+"PO-Revision-Date: 2026-05-10 18:18+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Accelerator-Marker: &\n"
 "X-Environment: kde\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 26.04.0\n"
 "X-Text-Markup: kde4\n"
 
 #, kde-format
@@ -1233,47 +1233,51 @@ msgstr "Afficher des icônes pour les éléments de la vue mensuelle"
 
 #. i18n: ectx: label, entry (ShowTimeInMonthView), group (Month View)
 #: eventviews.kcfg:270
-#, fuzzy, kde-format
-#| msgid "Show time in month view items"
+#, kde-format
 msgid "Show start-times without end-times in month view items"
-msgstr "Afficher les heures pour les éléments de la vue mensuelle"
+msgstr ""
+"Afficher les heures de début sans date de fin pour les éléments de la vue "
+"mensuelle"
 
 #. i18n: ectx: whatsthis, entry (ShowTimeInMonthView), group (Month View)
 #: eventviews.kcfg:271
-#, fuzzy, kde-format
-#| msgid "Check this box to display the time in month view items."
+#, kde-format
 msgid ""
 "Check this box to display the start-time without the end-time in month view "
 "items."
-msgstr "Cochez cette case pour afficher les heures dans la vue mensuelle."
+msgstr ""
+"Cochez cette case pour afficher les heures de début sans dates de fin pour "
+"les éléments de la vue mensuelle."
 
 #. i18n: ectx: tooltip, entry (ShowTimeInMonthView), group (Month View)
 #: eventviews.kcfg:272
-#, fuzzy, kde-format
-#| msgid "Display time in month view items"
+#, kde-format
 msgid "Display start-time without the end-time in month view items"
-msgstr "Afficher des heures pour les éléments de la vue mensuelle"
+msgstr ""
+"Afficher les heures de début sans heures de fin pour les éléments de la vue "
+"mensuelle"
 
 #. i18n: ectx: label, entry (ShowEndTimeInMonthView), group (Month View)
 #: eventviews.kcfg:276
-#, fuzzy, kde-format
-#| msgid "Show time in month view items"
+#, kde-format
 msgid "Show the start-time and the end-time in month view items"
-msgstr "Afficher les heures pour les éléments de la vue mensuelle"
+msgstr ""
+"Afficher les heures de début et de fin pour les éléments de la vue mensuelle"
 
 #. i18n: ectx: whatsthis, entry (ShowEndTimeInMonthView), group (Month View)
 #: eventviews.kcfg:277
-#, fuzzy, kde-format
-#| msgid "Check this box to display the time in month view items."
+#, kde-format
 msgid "Check this box to display the start and end times in month view items."
-msgstr "Cochez cette case pour afficher les heures dans la vue mensuelle."
+msgstr ""
+"Cochez cette case pour afficher les heures de début et de fin dans les "
+"éléments de la vue mensuelle."
 
 #. i18n: ectx: tooltip, entry (ShowEndTimeInMonthView), group (Month View)
 #: eventviews.kcfg:278
-#, fuzzy, kde-format
-#| msgid "Display time in month view items"
+#, kde-format
 msgid "Display the start and end times in month view items"
-msgstr "Afficher des heures pour les éléments de la vue mensuelle"
+msgstr ""
+"Afficher les heures de début et de fin pour les éléments de la vue mensuelle"
 
 #. i18n: ectx: whatsthis, entry (ShowTodosMonthView), group (Month View)
 #: eventviews.kcfg:283 viewerapp/settings.kcfg:117
@@ -1328,13 +1332,11 @@ msgstr "Afficher les jours fériés dans la vue en mois"
 
 #. i18n: ectx: label, entry (ShowHolidaysBackgroundMonthView), group (Month View)
 #: eventviews.kcfg:300
-#, fuzzy, kde-format
-#| msgid ""
-#| "Use the Holiday background color when at least on holiday lands on a date"
+#, kde-format
 msgid "Use the Holiday background color when a holiday lands on the date"
 msgstr ""
-"Utilisez la couleur de fond des jours fériés lorsqu'au moins un jour férié "
-"est placé à cette date"
+"Utilisez la couleur d'arrière-plan des jours fériés lorsqu'un jour férié est "
+"placé à cette date"
 
 #. i18n: ectx: tooltip, entry (ShowHolidaysBackgroundMonthView), group (Month View)
 #: eventviews.kcfg:301
