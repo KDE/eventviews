@@ -494,7 +494,10 @@ QString IncidenceMonthItem::text() const
             startTimeStr = QLocale().toString(time, QLocale::ShortFormat);
             if (showEnd) {
                 KCalendarCore::Event::Ptr const event = mIncidence.staticCast<Event>();
-                endTimeStr = QLocale().toString(event->dtEnd().toLocalTime().time(), QLocale::ShortFormat);
+                const int isMultiDay = (event->dtStart().daysTo(event->dtEnd().toLocalTime()) != 0);
+                if (!isMultiDay) {
+                    endTimeStr = QLocale().toString(event->dtEnd().toLocalTime().time(), QLocale::ShortFormat);
+                }
             }
         }
         if (!startTimeStr.isEmpty()) {
