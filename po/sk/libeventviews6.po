@@ -1175,47 +1175,45 @@ msgstr "Zobraziť ikony v položkách pohľadu mesiaca"
 
 #. i18n: ectx: label, entry (ShowTimeInMonthView), group (Month View)
 #: eventviews.kcfg:270
-#, fuzzy, kde-format
-#| msgid "Show time in month view items"
+#, kde-format
 msgid "Show start-times without end-times in month view items"
-msgstr "Ukázať čas v položkách pohľadu mesiaca"
+msgstr "Zobraziť časy začiatkov bez časov koncov v položkách mesačného pohľadu"
 
 #. i18n: ectx: whatsthis, entry (ShowTimeInMonthView), group (Month View)
 #: eventviews.kcfg:271
-#, fuzzy, kde-format
-#| msgid "Check this box to display the time in month view items."
+#, kde-format
 msgid ""
 "Check this box to display the start-time without the end-time in month view "
 "items."
-msgstr "Zaškrtnúť toto pole pre zobrazovanie času v položkách pohľadu mesiaca."
+msgstr ""
+"Zaškrtnite toto pole na zobrazenie času začiatku bez času konca v položkách "
+"mesačného pohľadu."
 
 #. i18n: ectx: tooltip, entry (ShowTimeInMonthView), group (Month View)
 #: eventviews.kcfg:272
-#, fuzzy, kde-format
-#| msgid "Display time in month view items"
+#, kde-format
 msgid "Display start-time without the end-time in month view items"
-msgstr "Zobraziť čas v položkách pohľadu mesiaca"
+msgstr "Zobraziť čas začiatku bez času konca v položkách mesačného pohľadu"
 
 #. i18n: ectx: label, entry (ShowEndTimeInMonthView), group (Month View)
 #: eventviews.kcfg:276
-#, fuzzy, kde-format
-#| msgid "Show time in month view items"
+#, kde-format
 msgid "Show the start-time and the end-time in month view items"
-msgstr "Ukázať čas v položkách pohľadu mesiaca"
+msgstr "Zobraziť čas začiatku a čas konca v položkách mesačného pohľadu"
 
 #. i18n: ectx: whatsthis, entry (ShowEndTimeInMonthView), group (Month View)
 #: eventviews.kcfg:277
-#, fuzzy, kde-format
-#| msgid "Check this box to display the time in month view items."
+#, kde-format
 msgid "Check this box to display the start and end times in month view items."
-msgstr "Zaškrtnúť toto pole pre zobrazovanie času v položkách pohľadu mesiaca."
+msgstr ""
+"Zaškrtnite toto pole na zobrazenie časov začiatku a konca v položkách "
+"mesačného pohľadu."
 
 #. i18n: ectx: tooltip, entry (ShowEndTimeInMonthView), group (Month View)
 #: eventviews.kcfg:278
-#, fuzzy, kde-format
-#| msgid "Display time in month view items"
+#, kde-format
 msgid "Display the start and end times in month view items"
-msgstr "Zobraziť čas v položkách pohľadu mesiaca"
+msgstr "Zobraziť časy začiatku a konca v položkách mesačného pohľadu"
 
 #. i18n: ectx: whatsthis, entry (ShowTodosMonthView), group (Month View)
 #: eventviews.kcfg:283 viewerapp/settings.kcfg:117
@@ -1268,12 +1266,9 @@ msgstr "Zobraziť sviatky v mesačnom pohľade"
 
 #. i18n: ectx: label, entry (ShowHolidaysBackgroundMonthView), group (Month View)
 #: eventviews.kcfg:300
-#, fuzzy, kde-format
-#| msgid ""
-#| "Use the Holiday background color when at least on holiday lands on a date"
+#, kde-format
 msgid "Use the Holiday background color when a holiday lands on the date"
-msgstr ""
-"Použiť farbu pozadia sviatkov, keď aspoň jeden sviatok pripadá na dátum"
+msgstr "Použiť farbu pozadia sviatku, keď sviatok pripadá na dátum"
 
 #. i18n: ectx: tooltip, entry (ShowHolidaysBackgroundMonthView), group (Month View)
 #: eventviews.kcfg:301
