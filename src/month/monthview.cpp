@@ -554,7 +554,19 @@ KHolidays::Holiday::List MonthView::holidays(QDate startDate, QDate endDate)
             holidays += region.rawHolidaysWithAstroSeasons(startDate, endDate);
         }
     }
-    return holidays;
+    // remove duplicates
+    QSet<QString> existing;
+    existing.reserve(holidays.count());
+    KHolidays::Holiday::List filtered;
+    filtered.reserve(holidays.count());
+    for (const KHolidays::Holiday &holiday : std::as_const(holidays)) {
+        const QString name = holiday.name();
+        if (!existing.contains(name)) {
+            existing.insert(name);
+            filtered.append(holiday);
+        }
+    }
+    return filtered;
 }
 
 void MonthView::reloadIncidences()
