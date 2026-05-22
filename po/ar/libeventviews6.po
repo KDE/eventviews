@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-13 00:46+0000\n"
-"PO-Revision-Date: 2026-04-30 09:13+0400\n"
+"PO-Revision-Date: 2026-05-21 11:49+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -1148,47 +1148,41 @@ msgstr "اعرض أيقونات في عناصر منظور الشهر"
 
 #. i18n: ectx: label, entry (ShowTimeInMonthView), group (Month View)
 #: eventviews.kcfg:270
-#, fuzzy, kde-format
-#| msgid "Show time in month view items"
+#, kde-format
 msgid "Show start-times without end-times in month view items"
-msgstr "اعرض الوقت في عناصر منظور الشهر"
+msgstr "أظهر أوقات البداية دون أوقات النهاية في عناصر عرض الشهر."
 
 #. i18n: ectx: whatsthis, entry (ShowTimeInMonthView), group (Month View)
 #: eventviews.kcfg:271
-#, fuzzy, kde-format
-#| msgid "Check this box to display the time in month view items."
+#, kde-format
 msgid ""
 "Check this box to display the start-time without the end-time in month view "
 "items."
-msgstr "أشّر على هذا المربّع لعرض الوقت في عناصر منظور الشهر."
+msgstr "حدد هذا المربع لعرض وقت البداية دون وقت النهاية في عناصر عرض الشهر."
 
 #. i18n: ectx: tooltip, entry (ShowTimeInMonthView), group (Month View)
 #: eventviews.kcfg:272
-#, fuzzy, kde-format
-#| msgid "Display time in month view items"
+#, kde-format
 msgid "Display start-time without the end-time in month view items"
-msgstr "اعرض الوقت في عناصر منظور الشهر"
+msgstr "اعرض وقت البدء دون وقت الانتهاء في عناصر عرض الشهر."
 
 #. i18n: ectx: label, entry (ShowEndTimeInMonthView), group (Month View)
 #: eventviews.kcfg:276
-#, fuzzy, kde-format
-#| msgid "Show time in month view items"
+#, kde-format
 msgid "Show the start-time and the end-time in month view items"
-msgstr "اعرض الوقت في عناصر منظور الشهر"
+msgstr "اعرض وقت البدء ووقت الانتهاء في عناصر عرض الشهر"
 
 #. i18n: ectx: whatsthis, entry (ShowEndTimeInMonthView), group (Month View)
 #: eventviews.kcfg:277
-#, fuzzy, kde-format
-#| msgid "Check this box to display the time in month view items."
+#, kde-format
 msgid "Check this box to display the start and end times in month view items."
-msgstr "أشّر على هذا المربّع لعرض الوقت في عناصر منظور الشهر."
+msgstr "حدد هذا المربع لعرض أوقات البداية والنهاية في عناصر عرض الشهر."
 
 #. i18n: ectx: tooltip, entry (ShowEndTimeInMonthView), group (Month View)
 #: eventviews.kcfg:278
-#, fuzzy, kde-format
-#| msgid "Display time in month view items"
+#, kde-format
 msgid "Display the start and end times in month view items"
-msgstr "اعرض الوقت في عناصر منظور الشهر"
+msgstr "اعرض أوقات البداية والنهاية في عناصر عرض الشهر"
 
 #. i18n: ectx: whatsthis, entry (ShowTodosMonthView), group (Month View)
 #: eventviews.kcfg:283 viewerapp/settings.kcfg:117
@@ -1241,12 +1235,9 @@ msgstr "اعرض العُطل في منظور الشهر"
 
 #. i18n: ectx: label, entry (ShowHolidaysBackgroundMonthView), group (Month View)
 #: eventviews.kcfg:300
-#, fuzzy, kde-format
-#| msgid ""
-#| "Use the Holiday background color when at least on holiday lands on a date"
+#, kde-format
 msgid "Use the Holiday background color when a holiday lands on the date"
-msgstr ""
-"استخدم لون خلفية ”العطلة“ عندما يقع يوم عطلة واحد على الأقل في تاريخ ما"
+msgstr "استخدم لون خلفية العطلة عندما تصادف العطلة التاريخ."
 
 #. i18n: ectx: tooltip, entry (ShowHolidaysBackgroundMonthView), group (Month View)
 #: eventviews.kcfg:301
