@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2017, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Shinjo Park <kde@peremen.name>
+# SPDX-FileCopyrightText: 2017, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-17 02:40+0000\n"
-"PO-Revision-Date: 2025-06-11 00:09+0200\n"
+"PO-Revision-Date: 2026-05-25 18:57+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -86,28 +86,24 @@ msgid "- %1"
 msgstr "- %1"
 
 #: agenda/agendaitem.cpp:910 agenda/agendaitem.cpp:933
-#, fuzzy, kde-format
-#| msgctxt "date, from - to"
-#| msgid "%1, %2 - %3"
+#, kde-format
 msgid "%1: %2 - %3"
-msgstr "%1, %2 - %3"
+msgstr "%1: %2 - %3"
 
 #: agenda/agendaitem.cpp:1043
 #, kde-format
 msgid "Google Calendar Settings"
-msgstr ""
+msgstr "Google 캘린더 설정"
 
 #: agenda/agendaitem.cpp:1043
 #, kde-format
 msgid "Public Holiday"
-msgstr ""
+msgstr "공휴일"
 
 #: agenda/agendaitem.cpp:1056
-#, fuzzy, kde-format
-#| msgctxt "date, from - to"
-#| msgid "%1, %2 - %3"
+#, kde-format
 msgid "%1: %2"
-msgstr "%1, %2 - %3"
+msgstr "%1: %2"
 
 #: agenda/agendaview.cpp:421
 #, kde-format
@@ -134,7 +130,7 @@ msgstr "시간대 추가(&A)…"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Add a timelabel display column for a new timezone"
-msgstr ""
+msgstr "새 시간대에 따른 시간 레이블 표시 열 추가"
 
 #: agenda/timelabels.cpp:333
 #, kde-format
@@ -145,6 +141,9 @@ msgid ""
 "This feature is very useful when showing calendar events for people in "
 "timezones other than your own."
 msgstr ""
+"이 메뉴는 시간대 선택 대화 상자를 표시하며, 시스템 시간대와 같이 표시할 시간 "
+"레이블에 사용할 별도의 시간대를 선택할 수 있습니다. 다른 시간대에 있는 사람"
+"과 관련된 이벤트를 취급할 때 유용합니다."
 
 #: agenda/timelabels.cpp:336
 #, kde-format
@@ -158,6 +157,8 @@ msgid ""
 "Remove the hour label column for the currently selected timezone, for non-"
 "system timezones only."
 msgstr ""
+"현재 선택한 시간대의 시간 레이블 열을 삭제합니다. 시스템 시간대가 아닌 시간대"
+"에만 적용됩니다."
 
 #: agenda/timelabels.cpp:343
 #, kde-format
@@ -166,6 +167,8 @@ msgid ""
 "For non-system timezones, this menu selection removes the time hour labels "
 "display column for the currently selected timezone."
 msgstr ""
+"이 메뉴 항목은 현재 선택한 시간대의 시간 레이블 표시 열을 삭제합니다. 시스템 "
+"시간대가 아닌 시간대에만 적용됩니다."
 
 #: agenda/timelabels.cpp:347
 #, kde-format
@@ -185,7 +188,7 @@ msgctxt "@info:tooltip"
 msgid ""
 "Display the time label hours in 24-hour \"military\" format or according to "
 "your locale"
-msgstr ""
+msgstr "시간 레이블의 시를 24시간제 형식이나 현재 로캘의 형식으로 표시"
 
 #: agenda/timelabels.cpp:353
 #, kde-format
@@ -194,36 +197,38 @@ msgid ""
 "This menu selection shows the time hour labels according to 24-hour "
 "\"military\" time or your system locale."
 msgstr ""
+"이 메뉴 항목은 시간 레이블을 24시간제 형식 또는 현재 시스템 로캘에 따른 형식"
+"으로 표시합니다."
 
 #: agenda/timelabels.cpp:358
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Right-side Time Labels"
-msgstr ""
+msgstr "오른쪽 시간 레이블 숨기기"
 
 #: agenda/timelabels.cpp:360
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Right-side Time Labels"
-msgstr ""
+msgstr "오른쪽 시간 레이블 표시"
 
 #: agenda/timelabels.cpp:364
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Left-side Time Labels"
-msgstr ""
+msgstr "왼쪽 시간 레이블 숨기기"
 
 #: agenda/timelabels.cpp:366
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Left-side Time Labels"
-msgstr ""
+msgstr "왼쪽 시간 레이블 표시"
 
 #: agenda/timelabels.cpp:369
 #, kde-format
 msgctxt "@info::tooltip"
 msgid "Show or hide time labels on both sides of the agenda view"
-msgstr ""
+msgstr "일정 보기의 양쪽에 있는 시간 레이블 표시 및 숨기기"
 
 #: agenda/timelabels.cpp:371
 #, kde-format
@@ -234,6 +239,10 @@ msgid ""
 "shown on the second side to save screen space. Similarly, the vertical "
 "scrollbar is removed when the time labels are shown on both sides."
 msgstr ""
+"이 메뉴 항목은 일정 보기의 양쪽에 시간 레이블의 표시 여부를 선택합니다. 주로 "
+"사용하지 않는 쪽에는 화면 공간을 절약하기 위해서 시스템 시간대만 표시하고 추"
+"가 선택한 시간대를 표시하지 않습니다. 비슷하게, 양쪽에 시간 레이블이 다 표시"
+"되어 있다면 수직 스크롤바를 숨깁니다."
 
 #: agenda/timelabels.cpp:426
 #, kde-format
@@ -743,28 +752,22 @@ msgstr "일정 보기 항목에 아이콘 표시"
 
 #. i18n: ectx: label, entry (EnableAgendaItemDesc), group (Agenda View)
 #: eventviews.kcfg:162
-#, fuzzy, kde-format
-#| msgid "Show icons in agenda view items"
+#, kde-format
 msgid "Show incidence descriptions in agenda view items"
-msgstr "일정 보기 항목에 아이콘 표시"
+msgstr "일정 보기 항목에 항목 설명 표시"
 
 #. i18n: ectx: whatsthis, entry (EnableAgendaItemDesc), group (Agenda View)
 #: eventviews.kcfg:163
-#, fuzzy, kde-format
-#| msgid ""
-#| "Check this box to display icons (alarm, recursion, etc.) in agenda view "
-#| "items."
+#, kde-format
 msgid ""
 "Check this box to display the incidence descriptions in agenda view items."
-msgstr ""
-"이 옵션을 사용하면 일정 보기 항목에 아이콘(알람, 반복 등)을 표시합니다."
+msgstr "이 옵션을 사용하면 일정 보기 항목에 항목 설명을 표시합니다."
 
 #. i18n: ectx: tooltip, entry (EnableAgendaItemDesc), group (Agenda View)
 #: eventviews.kcfg:164
-#, fuzzy, kde-format
-#| msgid "Display icons in agenda view items"
+#, kde-format
 msgid "Display incidence descriptions agenda view items"
-msgstr "일정 보기 항목에 아이콘 표시"
+msgstr "일정 보기 항목에 항목 설명 표시"
 
 #. i18n: ectx: label, entry (ShowTodosAgendaView), group (Agenda View)
 #. i18n: ectx: label, entry (ShowTodosMonthView), group (Month View)
@@ -1568,23 +1571,21 @@ msgstr "월간 보기에 사용할 업무 시간 배경색을 선택하십시오
 
 #. i18n: ectx: label, entry (MonthTodayColor), group (Theme/Month view)
 #: eventviews.kcfg:571
-#, fuzzy, kde-format
-#| msgid "Month view background color"
+#, kde-format
 msgid "Month view today background color"
-msgstr "월간 보기 배경색"
+msgstr "월간 보기 오늘 배경색"
 
 #. i18n: ectx: tooltip, entry (MonthTodayColor), group (Theme/Month view)
 #: eventviews.kcfg:572
-#, fuzzy, kde-format
-#| msgid "Select the working hours background color for the Month view here."
+#, kde-format
 msgid "Set the background color for today's date in month view"
-msgstr "월간 보기에 사용할 업무 시간 배경색을 선택하십시오."
+msgstr "월간 보기의 오늘 날짜에 사용할 배경색 선택"
 
 #. i18n: ectx: whatsthis, entry (MonthTodayColor), group (Theme/Month view)
 #: eventviews.kcfg:573
 #, kde-format
 msgid "In Month View, select the background color for today's date."
-msgstr ""
+msgstr "월간 보기에서 오늘 날짜에 사용할 배경색을 선택하십시오."
 
 #. i18n: ectx: label, entry, group (Theme/Month view)
 #: eventviews.kcfg:595
