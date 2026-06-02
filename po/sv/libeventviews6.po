@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-13 00:46+0000\n"
+"POT-Creation-Date: 2026-06-02 00:44+0000\n"
 "PO-Revision-Date: 2026-01-28 20:11+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -808,8 +808,9 @@ msgstr "Markera rutan för att visa förekomstbeskrivningar i agendavyns objekt.
 
 #. i18n: ectx: tooltip, entry (EnableAgendaItemDesc), group (Agenda View)
 #: eventviews.kcfg:170
-#, kde-format
-msgid "Display incidence descriptions agenda view items"
+#, fuzzy, kde-format
+#| msgid "Display incidence descriptions agenda view items"
+msgid "Display incidence descriptions in agenda view items"
 msgstr "Visa förekomstbeskrivningar i agendavyns objekt"
 
 #. i18n: ectx: label, entry (EnableAgendaItemLocation), group (Agenda View)
@@ -831,7 +832,7 @@ msgstr "Markera rutan för att visa förekomstbeskrivningar i agendavyns objekt.
 #: eventviews.kcfg:176
 #, fuzzy, kde-format
 #| msgid "Display incidence descriptions agenda view items"
-msgid "Display incidence locations agenda view items"
+msgid "Display incidence locations in agenda view items"
 msgstr "Visa förekomstbeskrivningar i agendavyns objekt"
 
 #. i18n: ectx: label, entry (ShowTodosAgendaView), group (Agenda View)

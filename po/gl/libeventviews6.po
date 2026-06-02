@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-13 00:46+0000\n"
+"POT-Creation-Date: 2026-06-02 00:44+0000\n"
 "PO-Revision-Date: 2025-06-22 06:29+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.gal>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -817,7 +817,7 @@ msgstr ""
 #: eventviews.kcfg:170
 #, fuzzy, kde-format
 #| msgid "Display icons in agenda view items"
-msgid "Display incidence descriptions agenda view items"
+msgid "Display incidence descriptions in agenda view items"
 msgstr "Amosar as iconas dos elementos da vista de axenda"
 
 #. i18n: ectx: label, entry (EnableAgendaItemLocation), group (Agenda View)
@@ -842,7 +842,7 @@ msgstr ""
 #: eventviews.kcfg:176
 #, fuzzy, kde-format
 #| msgid "Display icons in agenda view items"
-msgid "Display incidence locations agenda view items"
+msgid "Display incidence locations in agenda view items"
 msgstr "Amosar as iconas dos elementos da vista de axenda"
 
 #. i18n: ectx: label, entry (ShowTodosAgendaView), group (Agenda View)

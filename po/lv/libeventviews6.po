@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-13 00:46+0000\n"
+"POT-Creation-Date: 2026-06-02 00:44+0000\n"
 "PO-Revision-Date: 2026-03-04 17:08+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -808,8 +808,9 @@ msgstr ""
 
 #. i18n: ectx: tooltip, entry (EnableAgendaItemDesc), group (Agenda View)
 #: eventviews.kcfg:170
-#, kde-format
-msgid "Display incidence descriptions agenda view items"
+#, fuzzy, kde-format
+#| msgid "Display incidence descriptions agenda view items"
+msgid "Display incidence descriptions in agenda view items"
 msgstr "Pie dienaskārtības skata vienumiem parādīt notikumu aprakstus"
 
 #. i18n: ectx: label, entry (EnableAgendaItemLocation), group (Agenda View)
@@ -833,7 +834,7 @@ msgstr ""
 #: eventviews.kcfg:176
 #, fuzzy, kde-format
 #| msgid "Display incidence descriptions agenda view items"
-msgid "Display incidence locations agenda view items"
+msgid "Display incidence locations in agenda view items"
 msgstr "Pie dienaskārtības skata vienumiem parādīt notikumu aprakstus"
 
 #. i18n: ectx: label, entry (ShowTodosAgendaView), group (Agenda View)

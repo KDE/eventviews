@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-13 00:46+0000\n"
+"POT-Creation-Date: 2026-06-02 00:44+0000\n"
 "PO-Revision-Date: 2026-05-25 18:57+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -789,8 +789,9 @@ msgstr "이 옵션을 사용하면 일정 보기 항목에 항목 설명을 표�
 
 #. i18n: ectx: tooltip, entry (EnableAgendaItemDesc), group (Agenda View)
 #: eventviews.kcfg:170
-#, kde-format
-msgid "Display incidence descriptions agenda view items"
+#, fuzzy, kde-format
+#| msgid "Display incidence descriptions agenda view items"
+msgid "Display incidence descriptions in agenda view items"
 msgstr "일정 보기 항목에 항목 설명 표시"
 
 #. i18n: ectx: label, entry (EnableAgendaItemLocation), group (Agenda View)
@@ -807,8 +808,9 @@ msgstr "이 옵션을 사용하면 일정 보기 항목에 항목 위치를 표�
 
 #. i18n: ectx: tooltip, entry (EnableAgendaItemLocation), group (Agenda View)
 #: eventviews.kcfg:176
-#, kde-format
-msgid "Display incidence locations agenda view items"
+#, fuzzy, kde-format
+#| msgid "Display incidence locations agenda view items"
+msgid "Display incidence locations in agenda view items"
 msgstr "일정 보기 항목에 항목 위치 표시"
 
 #. i18n: ectx: label, entry (ShowTodosAgendaView), group (Agenda View)

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-13 00:46+0000\n"
+"POT-Creation-Date: 2026-06-02 00:44+0000\n"
 "PO-Revision-Date: 2015-12-29 20:54+0200\n"
 "Last-Translator: Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
@@ -816,7 +816,7 @@ msgstr ""
 #: eventviews.kcfg:170
 #, fuzzy, kde-format
 #| msgid "Display icons in agenda view items"
-msgid "Display incidence descriptions agenda view items"
+msgid "Display incidence descriptions in agenda view items"
 msgstr "Darbotvarkės peržiūros elementuose rodyti ženkliukus"
 
 #. i18n: ectx: label, entry (EnableAgendaItemLocation), group (Agenda View)
@@ -841,7 +841,7 @@ msgstr ""
 #: eventviews.kcfg:176
 #, fuzzy, kde-format
 #| msgid "Display icons in agenda view items"
-msgid "Display incidence locations agenda view items"
+msgid "Display incidence locations in agenda view items"
 msgstr "Darbotvarkės peržiūros elementuose rodyti ženkliukus"
 
 #. i18n: ectx: label, entry (ShowTodosAgendaView), group (Agenda View)

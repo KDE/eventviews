@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-13 00:46+0000\n"
+"POT-Creation-Date: 2026-06-02 00:44+0000\n"
 "PO-Revision-Date: 2026-05-09 16:50+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -839,8 +839,9 @@ msgstr ""
 
 #. i18n: ectx: tooltip, entry (EnableAgendaItemDesc), group (Agenda View)
 #: eventviews.kcfg:170
-#, kde-format
-msgid "Display incidence descriptions agenda view items"
+#, fuzzy, kde-format
+#| msgid "Display incidence descriptions agenda view items"
+msgid "Display incidence descriptions in agenda view items"
 msgstr ""
 "Mostrar descripciones de incidencias en los elementos de la vista de agenda"
 
@@ -861,8 +862,9 @@ msgstr ""
 
 #. i18n: ectx: tooltip, entry (EnableAgendaItemLocation), group (Agenda View)
 #: eventviews.kcfg:176
-#, kde-format
-msgid "Display incidence locations agenda view items"
+#, fuzzy, kde-format
+#| msgid "Display incidence locations agenda view items"
+msgid "Display incidence locations in agenda view items"
 msgstr ""
 "Mostrar ubicaciones de incidencias en los elementos de la vista de agenda"
 

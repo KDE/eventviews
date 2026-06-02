@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-13 00:46+0000\n"
+"POT-Creation-Date: 2026-06-02 00:44+0000\n"
 "PO-Revision-Date: 2026-05-09 07:10+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -793,8 +793,9 @@ msgstr "יש לסמן את התיבה הזאת כדי להציג את תיאור
 
 #. i18n: ectx: tooltip, entry (EnableAgendaItemDesc), group (Agenda View)
 #: eventviews.kcfg:170
-#, kde-format
-msgid "Display incidence descriptions agenda view items"
+#, fuzzy, kde-format
+#| msgid "Display incidence descriptions agenda view items"
+msgid "Display incidence descriptions in agenda view items"
 msgstr "הצגת תיאורי חזרות בפריטי תצוגת סדר יום"
 
 #. i18n: ectx: label, entry (EnableAgendaItemLocation), group (Agenda View)
@@ -811,8 +812,9 @@ msgstr "יש לסמן את התיבה הזאת כדי להציג את מקומו
 
 #. i18n: ectx: tooltip, entry (EnableAgendaItemLocation), group (Agenda View)
 #: eventviews.kcfg:176
-#, kde-format
-msgid "Display incidence locations agenda view items"
+#, fuzzy, kde-format
+#| msgid "Display incidence locations agenda view items"
+msgid "Display incidence locations in agenda view items"
 msgstr "הצגת מקומות חזרות בפריטי תצוגת סדר יום"
 
 #. i18n: ectx: label, entry (ShowTodosAgendaView), group (Agenda View)

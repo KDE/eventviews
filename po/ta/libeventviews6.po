@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-13 00:46+0000\n"
+"POT-Creation-Date: 2026-06-02 00:44+0000\n"
 "PO-Revision-Date: 2026-05-10 16:36+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -746,7 +746,7 @@ msgstr "உருப்படிகளை நீக்கும்போது �
 #: eventviews.kcfg:170
 #, fuzzy, kde-format
 #| msgid "Display icons in agenda view items"
-msgid "Display incidence descriptions agenda view items"
+msgid "Display incidence descriptions in agenda view items"
 msgstr "நிகழ்ச்சிநிரல் காட்சிமுறையில் சின்னங்களைக் காட்டு"
 
 #. i18n: ectx: label, entry (EnableAgendaItemLocation), group (Agenda View)
@@ -767,7 +767,7 @@ msgstr "உருப்படிகளை நீக்கும்போது �
 #: eventviews.kcfg:176
 #, fuzzy, kde-format
 #| msgid "Display icons in agenda view items"
-msgid "Display incidence locations agenda view items"
+msgid "Display incidence locations in agenda view items"
 msgstr "நிகழ்ச்சிநிரல் காட்சிமுறையில் சின்னங்களைக் காட்டு"
 
 #. i18n: ectx: label, entry (ShowTodosAgendaView), group (Agenda View)

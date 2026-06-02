@@ -7,25 +7,26 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-13 00:46+0000\n"
-"PO-Revision-Date: 2013-09-08 07:05+0900\n"
-"Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
+"POT-Creation-Date: 2026-06-02 00:44+0000\n"
+"PO-Revision-Date: 2026-05-30 16:23-0400\n"
+"Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
 "Language: ug\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.9\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "ئابدۇقادىر ئابلىز, غەيرەت كەنجى"
+msgstr "ئابدۇقادىر ئابلىز، غەيرەت كەنجى"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "sahran.ug@gmail.com,  gheyret@gmail.com"
+msgstr "sahranbay@gmail.com, gheyret@gmail.com"
 
 #: agenda/agenda.cpp:956
 #, kde-format
@@ -37,7 +38,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Locking Failed"
-msgstr ""
+msgstr "قۇلۇپلىيالمىدى"
 
 #: agenda/agenda.cpp:1173
 #, kde-format
@@ -53,8 +54,7 @@ msgid ""
 msgstr ""
 
 #: agenda/agenda.cpp:1198 month/monthitem.cpp:452
-#, fuzzy, kde-format
-#| msgid "Error Occurred"
+#, kde-format
 msgctxt "@title:window"
 msgid "Error Occurred"
 msgstr "خاتالىق كۆرۈلدى"
@@ -87,11 +87,9 @@ msgid "- %1"
 msgstr ""
 
 #: agenda/agendaitem.cpp:910 agenda/agendaitem.cpp:933
-#, fuzzy, kde-format
-#| msgctxt "date, from - to"
-#| msgid "%1, %2 - %3"
+#, kde-format
 msgid "%1: %2 - %3"
-msgstr "%1، %2 - %3"
+msgstr ""
 
 #: agenda/agendaitem.cpp:1044
 #, kde-format
@@ -104,25 +102,20 @@ msgid "Public Holiday"
 msgstr ""
 
 #: agenda/agendaitem.cpp:1057
-#, fuzzy, kde-format
-#| msgctxt "date, from - to"
-#| msgid "%1, %2 - %3"
+#, kde-format
 msgid "%1: %2"
-msgstr "%1، %2 - %3"
+msgstr "%1: %2"
 
 #: agenda/agendaitem.cpp:1066
-#, fuzzy, kde-format
-#| msgid "<b>%1</b>"
+#, kde-format
 msgid "%1 (%2)"
-msgstr "<b>%1</b>"
+msgstr "%1 (%2)"
 
 #: agenda/agendaview.cpp:421
-#, fuzzy, kde-format
-#| msgctxt "date, from - to"
-#| msgid "%1, %2 - %3"
+#, kde-format
 msgctxt "short_weekday short_monthname date (e.g. Mon Aug 13)"
 msgid "%1 %2 %3"
-msgstr "%1، %2 - %3"
+msgstr "%1 %2 %3"
 
 #: agenda/agendaview.cpp:2335
 #, kde-format
@@ -135,10 +128,9 @@ msgid "Unable to save %1 \"%2\"."
 msgstr "%1 «%2» نى ساقلىغىلى بولمىدى."
 
 #: agenda/timelabels.cpp:329
-#, fuzzy, kde-format
-#| msgid "Timezone"
+#, kde-format
 msgid "&Add Timezones…"
-msgstr "ۋاقىت رايونى"
+msgstr ""
 
 #: agenda/timelabels.cpp:330
 #, kde-format
@@ -246,11 +238,10 @@ msgid ""
 msgstr ""
 
 #: agenda/timelabels.cpp:426
-#, fuzzy, kde-format
-#| msgid "<b>%1</b>"
+#, kde-format
 msgctxt "title for timezone info, the timezone id and utc offset"
 msgid "<b>%1 (%2)</b>"
-msgstr "<b>%1</b>"
+msgstr ""
 
 #: agenda/timelabels.cpp:430
 #, kde-format
@@ -283,8 +274,7 @@ msgid "%1%2<br/>%3 (%4)"
 msgstr ""
 
 #: agenda/timescaleconfigdialog.cpp:50
-#, fuzzy, kde-format
-#| msgid "Timezone"
+#, kde-format
 msgctxt "@title:window"
 msgid "Timezone"
 msgstr "ۋاقىت رايونى"
@@ -740,28 +730,26 @@ msgstr ""
 #: eventviews.kcfg:170
 #, fuzzy, kde-format
 #| msgid "Display icons in month view items"
-msgid "Display incidence descriptions agenda view items"
+msgid "Display incidence descriptions in agenda view items"
 msgstr "ئاي كۆرسىتىش تۈرىدە سىنبەلگىلەرنى كۆرسەت"
 
 #. i18n: ectx: label, entry (EnableAgendaItemLocation), group (Agenda View)
 #: eventviews.kcfg:174
-#, fuzzy, kde-format
-#| msgid "Display icons in month view items"
+#, kde-format
 msgid "Show incidence locations in agenda view items"
-msgstr "ئاي كۆرسىتىش تۈرىدە سىنبەلگىلەرنى كۆرسەت"
+msgstr ""
 
 #. i18n: ectx: whatsthis, entry (EnableAgendaItemLocation), group (Agenda View)
 #: eventviews.kcfg:175
-#, fuzzy, kde-format
-#| msgid "Display to-dos in the month view"
+#, kde-format
 msgid "Check this box to display the incidence locations in agenda view items."
-msgstr "ئاي كۆرسىتىشنىڭ ئىچىدە قىلىدىغان ئىشلارنى كۆرسەت"
+msgstr ""
 
 #. i18n: ectx: tooltip, entry (EnableAgendaItemLocation), group (Agenda View)
 #: eventviews.kcfg:176
 #, fuzzy, kde-format
 #| msgid "Display icons in month view items"
-msgid "Display incidence locations agenda view items"
+msgid "Display incidence locations in agenda view items"
 msgstr "ئاي كۆرسىتىش تۈرىدە سىنبەلگىلەرنى كۆرسەت"
 
 #. i18n: ectx: label, entry (ShowTodosAgendaView), group (Agenda View)
@@ -854,10 +842,9 @@ msgstr "رەڭ ئىشلىتىش"
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
 #: eventviews.kcfg:207 eventviews.kcfg:315
-#, fuzzy, kde-format
-#| msgid "Category inside, calendar outside"
+#, kde-format
 msgid "Tag inside, calendar outside"
-msgstr "كاتېگورىيە ئىچىدە، يىلنامە سىرتىدا"
+msgstr ""
 
 #. i18n: ectx: whatsthis, entry, group (Agenda View)
 #: eventviews.kcfg:208
@@ -880,10 +867,9 @@ msgstr ""
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
 #: eventviews.kcfg:212 eventviews.kcfg:320
-#, fuzzy, kde-format
-#| msgid "Calendar inside, category outside"
+#, kde-format
 msgid "Calendar inside, tag outside"
-msgstr "يىلنامە ئىچىدە، كاتېگورىيە سىرتىدا"
+msgstr ""
 
 #. i18n: ectx: whatsthis, entry, group (Agenda View)
 #: eventviews.kcfg:213
@@ -906,10 +892,9 @@ msgstr ""
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
 #: eventviews.kcfg:217 eventviews.kcfg:325
-#, fuzzy, kde-format
-#| msgid "Only category"
+#, kde-format
 msgid "Only tag"
-msgstr "كاتېگورىيەلا"
+msgstr ""
 
 #. i18n: ectx: whatsthis, entry, group (Agenda View)
 #: eventviews.kcfg:218
@@ -1067,47 +1052,41 @@ msgstr "ئاي كۆرسىتىش تۈرىدە سىنبەلگىلەرنى كۆرس
 
 #. i18n: ectx: label, entry (ShowTimeInMonthView), group (Month View)
 #: eventviews.kcfg:270
-#, fuzzy, kde-format
-#| msgid "Show time in month view items"
+#, kde-format
 msgid "Show start-times without end-times in month view items"
-msgstr "ئاي كۆرسىتىش تۈرىدە ۋاقىتنى كۆرسەت"
+msgstr ""
 
 #. i18n: ectx: whatsthis, entry (ShowTimeInMonthView), group (Month View)
 #: eventviews.kcfg:271
-#, fuzzy, kde-format
-#| msgid "Display to-dos in the month view"
+#, kde-format
 msgid ""
 "Check this box to display the start-time without the end-time in month view "
 "items."
-msgstr "ئاي كۆرسىتىشنىڭ ئىچىدە قىلىدىغان ئىشلارنى كۆرسەت"
+msgstr ""
 
 #. i18n: ectx: tooltip, entry (ShowTimeInMonthView), group (Month View)
 #: eventviews.kcfg:272
-#, fuzzy, kde-format
-#| msgid "Display time in month view items"
+#, kde-format
 msgid "Display start-time without the end-time in month view items"
-msgstr "ئاي كۆرسىتىش تۈرىدە ۋاقىتنى كۆرسەت"
+msgstr ""
 
 #. i18n: ectx: label, entry (ShowEndTimeInMonthView), group (Month View)
 #: eventviews.kcfg:276
-#, fuzzy, kde-format
-#| msgid "Show time in month view items"
+#, kde-format
 msgid "Show the start-time and the end-time in month view items"
-msgstr "ئاي كۆرسىتىش تۈرىدە ۋاقىتنى كۆرسەت"
+msgstr ""
 
 #. i18n: ectx: whatsthis, entry (ShowEndTimeInMonthView), group (Month View)
 #: eventviews.kcfg:277
-#, fuzzy, kde-format
-#| msgid "Display to-dos in the month view"
+#, kde-format
 msgid "Check this box to display the start and end times in month view items."
-msgstr "ئاي كۆرسىتىشنىڭ ئىچىدە قىلىدىغان ئىشلارنى كۆرسەت"
+msgstr ""
 
 #. i18n: ectx: tooltip, entry (ShowEndTimeInMonthView), group (Month View)
 #: eventviews.kcfg:278
-#, fuzzy, kde-format
-#| msgid "Display time in month view items"
+#, kde-format
 msgid "Display the start and end times in month view items"
-msgstr "ئاي كۆرسىتىش تۈرىدە ۋاقىتنى كۆرسەت"
+msgstr ""
 
 #. i18n: ectx: whatsthis, entry (ShowTodosMonthView), group (Month View)
 #: eventviews.kcfg:283 viewerapp/settings.kcfg:117
@@ -1119,7 +1098,7 @@ msgstr ""
 #: eventviews.kcfg:284 viewerapp/settings.kcfg:118
 #, kde-format
 msgid "Display to-dos in the month view"
-msgstr "ئاي كۆرسىتىشنىڭ ئىچىدە قىلىدىغان ئىشلارنى كۆرسەت"
+msgstr "ئاي كۆرسىتىشنىڭ ئىچىدە بېجىرىدىغاننى كۆرسەت"
 
 #. i18n: ectx: label, entry (ShowJournalsMonthView), group (Month View)
 #: eventviews.kcfg:288 viewerapp/settings.kcfg:122
@@ -1141,25 +1120,22 @@ msgstr ""
 
 #. i18n: ectx: label, entry (ShowHolidaysMonthView), group (Month View)
 #: eventviews.kcfg:294
-#, fuzzy, kde-format
-#| msgid "Show to-dos"
+#, kde-format
 msgid "Show holidays"
-msgstr "قىلىدىغان ئىشلار(to-dos)نى كۆرسەت"
+msgstr ""
 
 #. i18n: ectx: whatsthis, entry (ShowHolidaysMonthView), group (Month View)
 #: eventviews.kcfg:295
-#, fuzzy, kde-format
-#| msgid "Display to-dos in the month view"
+#, kde-format
 msgid "Check this box to display holidays in the month view."
-msgstr "ئاي كۆرسىتىشنىڭ ئىچىدە قىلىدىغان ئىشلارنى كۆرسەت"
+msgstr ""
 
 #. i18n: ectx: tooltip, entry (ShowHolidaysMonthView), group (Month View)
 #. i18n: ectx: tooltip, entry (ShowHolidaysBackgroundMonthView), group (Month View)
 #: eventviews.kcfg:296 eventviews.kcfg:303
-#, fuzzy, kde-format
-#| msgid "Display to-dos in the month view"
+#, kde-format
 msgid "Display holidays in the month view"
-msgstr "ئاي كۆرسىتىشنىڭ ئىچىدە قىلىدىغان ئىشلارنى كۆرسەت"
+msgstr ""
 
 #. i18n: ectx: label, entry (ShowHolidaysBackgroundMonthView), group (Month View)
 #: eventviews.kcfg:300
@@ -1280,7 +1256,7 @@ msgstr ""
 #: eventviews.kcfg:346 viewerapp/settings.kcfg:162
 #, kde-format
 msgid "Always display completed to-dos at the bottom of the list"
-msgstr "تاماملانغان قىلىدىغان ئىشلارنى ھەمىشە تىزىمنىڭ ئاستىدا كۆرسەت"
+msgstr "تاماملانغان بېجىرىدىغاننى ھەمىشە تىزىمنىڭ ئاستىدا كۆرسەت"
 
 #. i18n: ectx: whatsthis, entry, group (Todo View)
 #: eventviews.kcfg:347 viewerapp/settings.kcfg:163
@@ -1578,10 +1554,9 @@ msgstr ""
 
 #. i18n: ectx: label, entry (MonthTodayColor), group (Theme/Month view)
 #: eventviews.kcfg:602
-#, fuzzy, kde-format
-#| msgid "Month view background color"
+#, kde-format
 msgid "Month view today background color"
-msgstr "ئاي كۆرۈنۈشىنىڭ تەگلىك رەڭگى"
+msgstr ""
 
 #. i18n: ectx: tooltip, entry (MonthTodayColor), group (Theme/Month view)
 #: eventviews.kcfg:603
@@ -1623,8 +1598,7 @@ msgid "Use system color. If enabled will ignore all other color settings"
 msgstr ""
 
 #: journal/journalframe.cpp:150
-#, fuzzy, kde-format
-#| msgid "&Edit"
+#, kde-format
 msgctxt "@action: button"
 msgid "&Edit"
 msgstr "تەھرىر(&E)"
@@ -1642,8 +1616,7 @@ msgid "Opens an editor dialog for this journal entry"
 msgstr ""
 
 #: journal/journalframe.cpp:160
-#, fuzzy, kde-format
-#| msgid "&Delete"
+#, kde-format
 msgctxt "@action: button"
 msgid "&Delete"
 msgstr "ئۆچۈر(&D)"
@@ -1661,11 +1634,10 @@ msgid "Delete this journal entry"
 msgstr ""
 
 #: journal/journalframe.cpp:169
-#, fuzzy, kde-format
-#| msgid "&Print"
+#, kde-format
 msgctxt "@action: button"
 msgid "&Print"
-msgstr "باس(&P)"
+msgstr ""
 
 #: journal/journalframe.cpp:173
 #, kde-format
@@ -1680,12 +1652,10 @@ msgid "Opens a print dialog for this journal entry"
 msgstr ""
 
 #: journal/journalframe.cpp:179
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu print preview the to-do"
-#| msgid "Print Previe&w..."
+#, kde-format
 msgctxt "@action: button"
 msgid "Print preview"
-msgstr "بېسىشنى ئالدىن كۆزەت(&W)…"
+msgstr ""
 
 #: journal/journalframe.cpp:183
 #, kde-format
@@ -1708,7 +1678,7 @@ msgstr ""
 #: list/listview.cpp:291
 #, kde-format
 msgid "Summary"
-msgstr "ئۈزۈندى"
+msgstr "ئۈزۈندە"
 
 #: list/listview.cpp:292
 #, kde-format
@@ -1723,7 +1693,7 @@ msgstr ""
 #: list/listview.cpp:294
 #, kde-format
 msgid "Tags"
-msgstr ""
+msgstr "بەلگە"
 
 #: list/listview.cpp:367
 #, kde-format
@@ -1745,11 +1715,10 @@ msgid_plural "%1 years"
 msgstr[0] ""
 
 #: month/monthitem.cpp:443
-#, fuzzy, kde-format
-#| msgid "&All Occurrences"
+#, kde-format
 msgctxt "@info/plain"
 msgid "Move occurrence(s)"
-msgstr "ھەممىسى(&A)"
+msgstr ""
 
 #: month/monthscene.cpp:208
 #, kde-format
@@ -1835,15 +1804,13 @@ msgid ""
 msgstr ""
 
 #: multiagenda/multiagendaview.cpp:97
-#, fuzzy, kde-format
-#| msgid "Agenda %1"
+#, kde-format
 msgctxt "@item:intable"
 msgid "Agenda %1"
-msgstr "كۈنتەرتىپ %1"
+msgstr ""
 
 #: multiagenda/multiagendaview.cpp:179
-#, fuzzy, kde-format
-#| msgid "All Day"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "All Day"
 msgstr "كۈن بويى"
@@ -1893,7 +1860,7 @@ msgstr "5 (ئوتتۇرا)"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "6"
-msgstr "6"
+msgstr ""
 
 #: todo/tododelegates.cpp:159
 #, kde-format
@@ -1905,7 +1872,7 @@ msgstr "7"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "8"
-msgstr "8"
+msgstr ""
 
 #: todo/tododelegates.cpp:161 todo/todoview.cpp:497
 #, kde-format
@@ -1942,11 +1909,10 @@ msgid ""
 msgstr ""
 
 #: todo/todoview.cpp:345
-#, fuzzy, kde-format
-#| msgid "Display to-dos in the month view"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Display to-dos in a full window without the sidebar"
-msgstr "ئاي كۆرسىتىشنىڭ ئىچىدە قىلىدىغان ئىشلارنى كۆرسەت"
+msgstr ""
 
 #: todo/todoview.cpp:347
 #, kde-format
@@ -1957,11 +1923,10 @@ msgid ""
 msgstr ""
 
 #: todo/todoview.cpp:353
-#, fuzzy, kde-format
-#| msgid "Display to-dos in the month view"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Display to-dos in a flat list or a tree"
-msgstr "ئاي كۆرسىتىشنىڭ ئىچىدە قىلىدىغان ئىشلارنى كۆرسەت"
+msgstr ""
 
 #: todo/todoview.cpp:355
 #, kde-format
@@ -1978,11 +1943,10 @@ msgid "&Show"
 msgstr "كۆرسەت(&S)"
 
 #: todo/todoview.cpp:399
-#, fuzzy, kde-format
-#| msgid "&Edit"
+#, kde-format
 msgctxt "@action:inmenu edit the to-do"
 msgid "&Edit…"
-msgstr "تەھرىر(&E)"
+msgstr "تەھرىر(&E)…"
 
 #: todo/todoview.cpp:406
 #, kde-format
@@ -1991,35 +1955,28 @@ msgid "&Delete"
 msgstr "ئۆچۈر(&D)"
 
 #: todo/todoview.cpp:415
-#, fuzzy, kde-format
-#| msgid "&Print"
+#, kde-format
 msgctxt "@action:inmenu print the to-do"
 msgid "&Print…"
-msgstr "باس(&P)"
+msgstr "باس(&P)…"
 
 #: todo/todoview.cpp:420
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu print preview the to-do"
-#| msgid "Print Previe&w..."
+#, kde-format
 msgctxt "@action:inmenu print preview the to-do"
 msgid "Print Previe&w…"
-msgstr "بېسىشنى ئالدىن كۆزەت(&W)…"
+msgstr ""
 
 #: todo/todoview.cpp:427
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu create a new to-do"
-#| msgid "New &To-do..."
+#, kde-format
 msgctxt "@action:inmenu create a new to-do"
 msgid "New &To-do…"
-msgstr "يېڭى قىلىدىغان ئىشلار(&T)…"
+msgstr ""
 
 #: todo/todoview.cpp:431
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu create a new sub-to-do"
-#| msgid "New Su&b-to-do..."
+#, kde-format
 msgctxt "@action:inmenu create a new sub-to-do"
 msgid "New Su&b-to-do…"
-msgstr "يېڭى تارماق قىلىدىغان ئىشلار(&B)…"
+msgstr ""
 
 #: todo/todoview.cpp:435
 #, kde-format
@@ -2046,11 +2003,10 @@ msgid "Togg&le To-do Completed"
 msgstr ""
 
 #: todo/todoview.cpp:460
-#, fuzzy, kde-format
-#| msgid "Reminder"
+#, kde-format
 msgctxt "@action:inmenu enable or disable reminder"
 msgid "&Toggle Reminder"
-msgstr "ئەسكەرتكۈچ"
+msgstr ""
 
 #: todo/todoview.cpp:467
 #, kde-format
@@ -2098,7 +2054,7 @@ msgstr "4"
 #, kde-format
 msgctxt "@action:inmenu priority value=6"
 msgid "6"
-msgstr "6"
+msgstr ""
 
 #: todo/todoview.cpp:495
 #, kde-format
@@ -2110,28 +2066,25 @@ msgstr "7"
 #, kde-format
 msgctxt "@action:inmenu priority value=8"
 msgid "8"
-msgstr "8"
+msgstr ""
 
 #: todo/todoview.cpp:855
-#, fuzzy, kde-format
-#| msgid "Reminder"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&Toggle Reminder Off"
-msgstr "ئەسكەرتكۈچ"
+msgstr ""
 
 #: todo/todoview.cpp:856
-#, fuzzy, kde-format
-#| msgid "Reminder"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&Toggle Reminder On"
-msgstr "ئەسكەرتكۈچ"
+msgstr ""
 
 #: todo/todoview.cpp:1194
-#, fuzzy, kde-format
-#| msgid "Display the current-time indicator"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Display the sidebar"
-msgstr "نۆۋەتتىكى ۋاقىت كۆرسەتكۈچىنى كۆرسەت"
+msgstr ""
 
 #: todo/todoview.cpp:1197
 #, kde-format
@@ -2190,12 +2143,10 @@ msgid ""
 msgstr ""
 
 #: todo/todoviewquicksearch.cpp:50
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox"
-#| msgid "Select Categories"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Select Tags"
-msgstr "كاتېگورىيەلەرنى تاللاش"
+msgstr ""
 
 #: todo/todoviewquicksearch.cpp:73
 #, kde-format
@@ -2282,7 +2233,7 @@ msgstr ""
 #: todo/todoviewview.cpp:48
 #, kde-format
 msgid "View Columns"
-msgstr "ئىستونلارنى كۆرۈش"
+msgstr "رەتنى كۆرۈش"
 
 #: viewerapp/main.cpp:19
 #, kde-format
@@ -2305,11 +2256,10 @@ msgid ""
 msgstr ""
 
 #: viewerapp/main.cpp:24
-#, fuzzy, kde-format
-#| msgid "Kevin Krammer"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Kevin Krammer"
-msgstr "Kevin Krammer"
+msgstr ""
 
 #: viewerapp/main.cpp:33
 #, kde-format
@@ -2325,11 +2275,10 @@ msgstr ""
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab)
 #: viewerapp/mainwindow.ui:55
-#, fuzzy, kde-format
-#| msgid "Tab 1"
+#, kde-format
 msgctxt "@title:tab a generic tab"
 msgid "Tab 1"
-msgstr "بەتكۈچ 1"
+msgstr "1-بەتكۈچ‎‏"
 
 #. i18n: ectx: property (title), widget (QMenu, addViewMenu)
 #: viewerapp/mainwindow.ui:74
@@ -2341,7 +2290,7 @@ msgstr "كۆرۈنۈش قوش"
 #: viewerapp/mainwindow.ui:86
 #, kde-format
 msgid "Agenda"
-msgstr ""
+msgstr "كۈنتەرتىپ"
 
 #. i18n: ectx: property (text), widget (QStatusBar, statusbar)
 #: viewerapp/mainwindow.ui:91
@@ -2584,7 +2533,6 @@ msgstr ""
 #~ msgid "No"
 #~ msgstr "ياق"
 
-#, fuzzy
 #~| msgctxt "@item:intext delimiter for joining holiday names"
 #~| msgid ","
 #~ msgctxt "delimiter for joining category/tag names"
@@ -2601,7 +2549,6 @@ msgstr ""
 #~ msgid "Complete"
 #~ msgstr "تولۇق"
 
-#, fuzzy
 #~| msgctxt "@title:column percent complete"
 #~| msgid "Complete"
 #~ msgctxt "@title:column date completed"
