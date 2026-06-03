@@ -1,6 +1,5 @@
+# SPDX-FileCopyrightText: 2002-2003, 2005 Thomas Diehl <thd@kde.org>
 # SPDX-FileCopyrightText: 2002-2007 Stefan Winter <swinter@kde.org>
-# SPDX-FileCopyrightText: 2024 Johannes Obermayr <johannesobermayr@gmx.de>
-# Thomas Diehl <thd@kde.org>, 2002,2003, 2005.
 # SPDX-FileCopyrightText: 2003-2006 Stephan Johach <hunsum@gmx.de>
 # SPDX-FileCopyrightText: 2004 Matthias Kalle Dalheimer <kalle@kdab.net>
 # SPDX-FileCopyrightText: 2005-2010 Thomas Reitelbach <tr@erdfunkstelle.de>
@@ -9,23 +8,25 @@
 # SPDX-FileCopyrightText: 2010 Moritz Baumann <flamingmo@online.de>
 # SPDX-FileCopyrightText: 2010 Panagiotis Papadopoulos <pano_90@gmx.net>
 # SPDX-FileCopyrightText: 2011 Torbjörn Klatt <torbjoern@torbjoern-klatt.de>
+# SPDX-FileCopyrightText: 2024 Johannes Obermayr <johannesobermayr@gmx.de>
 # SPDX-FileCopyrightText: 2025 Alois Spitzbart <spitz234@hotmail.com>
 # SPDX-FileCopyrightText: 2026 Alexander Becker <alex-at-kde-l10n-de@freenet.de>
-# Intevation GmbH, 2010.
+# SPDX-FileCopyrightText: 2026 Philipp Kiemle <l10n.daphipz@fastmail.de>
+# SPDX-FileCopyrightText: 2010 Intevation GmbH
 msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-02 00:44+0000\n"
-"PO-Revision-Date: 2026-04-14 22:46+0200\n"
-"Last-Translator: Alexander Becker <alex-at-kde-l10n-de@freenet.de>\n"
+"PO-Revision-Date: 2026-06-01 16:50+0200\n"
+"Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 26.04.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -121,9 +122,7 @@ msgid "%1: %2"
 msgstr "%1: %2"
 
 #: agenda/agendaitem.cpp:1066
-#, fuzzy, kde-format
-#| msgctxt "weekOfYear (year)"
-#| msgid "%1 (%2)"
+#, kde-format
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
@@ -781,8 +780,8 @@ msgstr "Fette waagerechte Rasterlinien für die geraden Stunden zeichnen"
 msgid ""
 "Draw a bolder horizontal grid line for the even hours (12am, 2am, 4am, etc)."
 msgstr ""
-"Fettere waagerechte Rasterlinien für die geraden Stunden (0:00, 2:00, 4:00, "
-"…) zeichnen."
+"Fettere waagerechte Rasterlinien für die geraden Stunden (0:00, 2:00, "
+"4:00, …) zeichnen."
 
 #. i18n: ectx: tooltip, entry (EnableAgendaBoldEvenHours), group (Agenda View)
 #: eventviews.kcfg:158
@@ -814,22 +813,18 @@ msgstr "Ereignis-Symbole in Terminplanansicht anzeigen"
 
 #. i18n: ectx: label, entry (EnableAgendaItemDesc), group (Agenda View)
 #: eventviews.kcfg:168
-#, fuzzy, kde-format
-#| msgid "Show icons in agenda view items"
+#, kde-format
 msgid "Show incidence descriptions in agenda view items"
-msgstr "Ereignis-Symbole in Terminplanansicht anzeigen"
+msgstr "Ereignisbeschreibungen in Terminplanansicht-Elementen anzeigen"
 
 #. i18n: ectx: whatsthis, entry (EnableAgendaItemDesc), group (Agenda View)
 #: eventviews.kcfg:169
-#, fuzzy, kde-format
-#| msgid ""
-#| "Check this box to display icons (alarm, recursion, etc.) in agenda view "
-#| "items."
+#, kde-format
 msgid ""
 "Check this box to display the incidence descriptions in agenda view items."
 msgstr ""
-"Aktivieren Sie diese Einstellung, um in der Terminplanansicht auch Ereignis-"
-"Symbole anzeigen zu lassen (Erinnerung, Wiederholung usw.)."
+"Aktivieren Sie diese Einstellung, um Ereignisbeschreibungen in den "
+"Terminplanansicht-Einträgen anzuzeigen."
 
 #. i18n: ectx: tooltip, entry (EnableAgendaItemDesc), group (Agenda View)
 #: eventviews.kcfg:170
@@ -840,21 +835,17 @@ msgstr "Ereignis-Symbole in Terminplanansicht anzeigen"
 
 #. i18n: ectx: label, entry (EnableAgendaItemLocation), group (Agenda View)
 #: eventviews.kcfg:174
-#, fuzzy, kde-format
-#| msgid "Show icons in agenda view items"
+#, kde-format
 msgid "Show incidence locations in agenda view items"
-msgstr "Ereignis-Symbole in Terminplanansicht anzeigen"
+msgstr "Ereignisorte in Terminplanansicht-Einträgen anzeigen"
 
 #. i18n: ectx: whatsthis, entry (EnableAgendaItemLocation), group (Agenda View)
 #: eventviews.kcfg:175
-#, fuzzy, kde-format
-#| msgid ""
-#| "Check this box to display icons (alarm, recursion, etc.) in agenda view "
-#| "items."
+#, kde-format
 msgid "Check this box to display the incidence locations in agenda view items."
 msgstr ""
-"Aktivieren Sie diese Einstellung, um in der Terminplanansicht auch Ereignis-"
-"Symbole anzeigen zu lassen (Erinnerung, Wiederholung usw.)."
+"Aktivieren Sie diese Einstellung, um Ereignisorte in den Terminplanansicht-"
+"Einträgen anzuzeigen."
 
 #. i18n: ectx: tooltip, entry (EnableAgendaItemLocation), group (Agenda View)
 #: eventviews.kcfg:176
@@ -1211,51 +1202,45 @@ msgstr "Ereignis-Symbole in der Monatsansicht anzeigen"
 
 #. i18n: ectx: label, entry (ShowTimeInMonthView), group (Month View)
 #: eventviews.kcfg:270
-#, fuzzy, kde-format
-#| msgid "Show time in month view items"
+#, kde-format
 msgid "Show start-times without end-times in month view items"
-msgstr "Zeit in der Monatsansicht anzeigen"
+msgstr "Startzeiten ohne Endzeiten in Monatsansicht-Einträgen anzeigen"
 
 #. i18n: ectx: whatsthis, entry (ShowTimeInMonthView), group (Month View)
 #: eventviews.kcfg:271
-#, fuzzy, kde-format
-#| msgid "Check this box to display the time in month view items."
+#, kde-format
 msgid ""
 "Check this box to display the start-time without the end-time in month view "
 "items."
 msgstr ""
-"Aktivieren Sie diese Einstellung, um die Zeit in der Monatsansicht "
-"anzuzeigen."
+"Aktivieren Sie diese Einstellung, um die Startzeit ohne die Endzeit in der "
+"Monatsansicht anzuzeigen."
 
 #. i18n: ectx: tooltip, entry (ShowTimeInMonthView), group (Month View)
 #: eventviews.kcfg:272
-#, fuzzy, kde-format
-#| msgid "Display time in month view items"
+#, kde-format
 msgid "Display start-time without the end-time in month view items"
-msgstr "Zeit in der Monatsansicht anzeigen"
+msgstr "Die Startzeit ohne die Endzeit in der Monatsansicht anzeigen"
 
 #. i18n: ectx: label, entry (ShowEndTimeInMonthView), group (Month View)
 #: eventviews.kcfg:276
-#, fuzzy, kde-format
-#| msgid "Show time in month view items"
+#, kde-format
 msgid "Show the start-time and the end-time in month view items"
-msgstr "Zeit in der Monatsansicht anzeigen"
+msgstr "Die Start- und die Endzeit in der Monatsansicht anzeigen"
 
 #. i18n: ectx: whatsthis, entry (ShowEndTimeInMonthView), group (Month View)
 #: eventviews.kcfg:277
-#, fuzzy, kde-format
-#| msgid "Check this box to display the time in month view items."
+#, kde-format
 msgid "Check this box to display the start and end times in month view items."
 msgstr ""
-"Aktivieren Sie diese Einstellung, um die Zeit in der Monatsansicht "
-"anzuzeigen."
+"Aktivieren Sie diese Einstellung, um die Start- und Endzeit in der "
+"Monatsansicht anzuzeigen."
 
 #. i18n: ectx: tooltip, entry (ShowEndTimeInMonthView), group (Month View)
 #: eventviews.kcfg:278
-#, fuzzy, kde-format
-#| msgid "Display time in month view items"
+#, kde-format
 msgid "Display the start and end times in month view items"
-msgstr "Zeit in der Monatsansicht anzeigen"
+msgstr "Die Start- und die Endzeit in der Monatsansicht anzeigen"
 
 #. i18n: ectx: whatsthis, entry (ShowTodosMonthView), group (Month View)
 #: eventviews.kcfg:283 viewerapp/settings.kcfg:117
@@ -1293,34 +1278,32 @@ msgstr "Journale In der Monatsansicht anzeigen"
 
 #. i18n: ectx: label, entry (ShowHolidaysMonthView), group (Month View)
 #: eventviews.kcfg:294
-#, fuzzy, kde-format
-#| msgid "Show holidays as:"
+#, kde-format
 msgid "Show holidays"
-msgstr "Urlaubstage anzeigen als:"
+msgstr "Feiertage anzeigen"
 
 #. i18n: ectx: whatsthis, entry (ShowHolidaysMonthView), group (Month View)
 #: eventviews.kcfg:295
-#, fuzzy, kde-format
-#| msgid "Check this box to display to-dos in the month view."
+#, kde-format
 msgid "Check this box to display holidays in the month view."
 msgstr ""
-"Aktivieren Sie diese Einstellung, um Aufgaben in der Monatsansicht "
+"Aktivieren Sie diese Einstellung, um Feiertage in der Monatsansicht "
 "anzuzeigen."
 
 #. i18n: ectx: tooltip, entry (ShowHolidaysMonthView), group (Month View)
 #. i18n: ectx: tooltip, entry (ShowHolidaysBackgroundMonthView), group (Month View)
 #: eventviews.kcfg:296 eventviews.kcfg:303
-#, fuzzy, kde-format
-#| msgid "Display to-dos in the month view"
+#, kde-format
 msgid "Display holidays in the month view"
-msgstr "Aufgaben in der Monatsansicht anzeigen"
+msgstr "Feiertage in der Monatsansicht anzeigen"
 
 #. i18n: ectx: label, entry (ShowHolidaysBackgroundMonthView), group (Month View)
 #: eventviews.kcfg:300
-#, fuzzy, kde-format
-#| msgid "Set the background color for today's date in month view"
+#, kde-format
 msgid "Use the Holiday background color when a holiday lands on the date"
-msgstr "Legen Sie die Hintergrundfarbe für „Heute“ in der Monatsansicht fest."
+msgstr ""
+"Die Hintergrundfarbe für Feiertage verwenden, wenn an diesem Datum ein "
+"Feiertag ist"
 
 #. i18n: ectx: tooltip, entry (ShowHolidaysBackgroundMonthView), group (Month View)
 #: eventviews.kcfg:301
@@ -1329,6 +1312,8 @@ msgid ""
 "Use the custom holiday color as the date's background color if a holiday "
 "lands on the date"
 msgstr ""
+"Die benutzerdefinierte Hintergrundfarbe für Feiertage verwenden, wenn an "
+"diesem Datum ein Feiertag ist"
 
 #. i18n: ectx: whatsthis, entry (ShowHolidaysBackgroundMonthView), group (Month View)
 #: eventviews.kcfg:302
@@ -1337,6 +1322,9 @@ msgid ""
 "Check this box to use the custom holiday as the date's background color when "
 "at least one holiday lands on a date."
 msgstr ""
+"Aktivieren Sie diese Einstellung, wenn die benutzerdefinierte Farbe für "
+"Feiertage als Hintergrundfarbe des Datums verwendet werden soll, wenn "
+"mindestens ein Feiertag auf das Datum fällt."
 
 #. i18n: ectx: label, entry, group (Month View)
 #: eventviews.kcfg:307 viewerapp/settings.kcfg:128
@@ -2794,10 +2782,10 @@ msgid ""
 "Configuring Kontact as a KDE Kolab client)."
 msgstr ""
 "Aktivieren Sie diese Option, wenn Sie möchten, dass automatisch E-Mails "
-"versendet werden, wenn Sie Termine (oder Aufgaben) anlegen, bearbeiten oder "
+"erstellt werden, wenn Sie Termine (oder Aufgaben) anlegen, bearbeiten oder "
 "löschen, an denen andere Teilnehmer beteiligt sind. Sie sollten diese Option "
-"aktivieren, wenn Sie die Groupware-Funktionalität verwenden möchten (um z. "
-"B. Kontact als KDE Kolab-Client zu verwenden)."
+"aktivieren, wenn Sie die Groupware-Funktionalität verwenden möchten (um "
+"z. B. Kontact als KDE Kolab-Client zu verwenden)."
 
 #: whatsnext/whatsnextview.cpp:62
 #, kde-format
