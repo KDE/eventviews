@@ -1,6 +1,5 @@
+# SPDX-FileCopyrightText: 2002-2003, 2005 Thomas Diehl <thd@kde.org>
 # SPDX-FileCopyrightText: 2002-2007 Stefan Winter <swinter@kde.org>
-# SPDX-FileCopyrightText: 2024 Johannes Obermayr <johannesobermayr@gmx.de>
-# Thomas Diehl <thd@kde.org>, 2002,2003, 2005.
 # SPDX-FileCopyrightText: 2003-2006 Stephan Johach <hunsum@gmx.de>
 # SPDX-FileCopyrightText: 2004 Matthias Kalle Dalheimer <kalle@kdab.net>
 # SPDX-FileCopyrightText: 2005-2010 Thomas Reitelbach <tr@erdfunkstelle.de>
@@ -9,23 +8,25 @@
 # SPDX-FileCopyrightText: 2010 Moritz Baumann <flamingmo@online.de>
 # SPDX-FileCopyrightText: 2010 Panagiotis Papadopoulos <pano_90@gmx.net>
 # SPDX-FileCopyrightText: 2011 Torbjörn Klatt <torbjoern@torbjoern-klatt.de>
+# SPDX-FileCopyrightText: 2024 Johannes Obermayr <johannesobermayr@gmx.de>
 # SPDX-FileCopyrightText: 2025 Alois Spitzbart <spitz234@hotmail.com>
 # SPDX-FileCopyrightText: 2026 Alexander Becker <alex-at-kde-l10n-de@freenet.de>
-# Intevation GmbH, 2010.
+# SPDX-FileCopyrightText: 2026 Philipp Kiemle <l10n.daphipz@fastmail.de>
+# SPDX-FileCopyrightText: 2010 Intevation GmbH
 msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-17 02:40+0000\n"
-"PO-Revision-Date: 2026-04-14 22:46+0200\n"
-"Last-Translator: Alexander Becker <alex-at-kde-l10n-de@freenet.de>\n"
+"PO-Revision-Date: 2026-06-01 16:50+0200\n"
+"Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 26.04.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -786,29 +787,24 @@ msgstr "Ereignis-Symbole in Terminplanansicht anzeigen"
 
 #. i18n: ectx: label, entry (EnableAgendaItemDesc), group (Agenda View)
 #: eventviews.kcfg:162
-#, fuzzy, kde-format
-#| msgid "Show icons in agenda view items"
+#, kde-format
 msgid "Show incidence descriptions in agenda view items"
-msgstr "Ereignis-Symbole in Terminplanansicht anzeigen"
+msgstr "Ereignisbeschreibungen in Terminplanansicht-Elementen anzeigen"
 
 #. i18n: ectx: whatsthis, entry (EnableAgendaItemDesc), group (Agenda View)
 #: eventviews.kcfg:163
-#, fuzzy, kde-format
-#| msgid ""
-#| "Check this box to display icons (alarm, recursion, etc.) in agenda view "
-#| "items."
+#, kde-format
 msgid ""
 "Check this box to display the incidence descriptions in agenda view items."
 msgstr ""
-"Aktivieren Sie diese Einstellung, um in der Terminplanansicht auch Ereignis-"
-"Symbole anzeigen zu lassen (Erinnerung, Wiederholung usw.)."
+"Aktivieren Sie diese Einstellung, um Ereignisbeschreibungen in den "
+"Terminplanansicht-Einträgen anzuzeigen."
 
 #. i18n: ectx: tooltip, entry (EnableAgendaItemDesc), group (Agenda View)
 #: eventviews.kcfg:164
-#, fuzzy, kde-format
-#| msgid "Display icons in agenda view items"
+#, kde-format
 msgid "Display incidence descriptions agenda view items"
-msgstr "Ereignis-Symbole in Terminplanansicht anzeigen"
+msgstr "Ereignisbeschreibungen in Terminplanansicht-Einträgen anzeigen"
 
 #. i18n: ectx: label, entry (ShowTodosAgendaView), group (Agenda View)
 #. i18n: ectx: label, entry (ShowTodosMonthView), group (Month View)
@@ -2654,10 +2650,10 @@ msgid ""
 "Configuring Kontact as a KDE Kolab client)."
 msgstr ""
 "Aktivieren Sie diese Option, wenn Sie möchten, dass automatisch E-Mails "
-"versendet werden, wenn Sie Termine (oder Aufgaben) anlegen, bearbeiten oder "
+"erstellt werden, wenn Sie Termine (oder Aufgaben) anlegen, bearbeiten oder "
 "löschen, an denen andere Teilnehmer beteiligt sind. Sie sollten diese Option "
-"aktivieren, wenn Sie die Groupware-Funktionalität verwenden möchten (um z. "
-"B. Kontact als KDE Kolab-Client zu verwenden)."
+"aktivieren, wenn Sie die Groupware-Funktionalität verwenden möchten (um "
+"z. B. Kontact als KDE Kolab-Client zu verwenden)."
 
 #: whatsnext/whatsnextview.cpp:62
 #, kde-format
