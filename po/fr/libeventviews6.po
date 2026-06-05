@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-02 00:44+0000\n"
-"PO-Revision-Date: 2026-05-10 18:18+0200\n"
+"PO-Revision-Date: 2026-06-03 21:36+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Accelerator-Marker: &\n"
 "X-Environment: kde\n"
-"X-Generator: Lokalize 26.04.0\n"
+"X-Generator: Lokalize 26.04.1\n"
 "X-Text-Markup: kde4\n"
 
 #, kde-format
@@ -847,11 +847,10 @@ msgstr ""
 
 #. i18n: ectx: tooltip, entry (EnableAgendaItemDesc), group (Agenda View)
 #: eventviews.kcfg:170
-#, fuzzy, kde-format
-#| msgid "Display incidence descriptions agenda view items"
+#, kde-format
 msgid "Display incidence descriptions in agenda view items"
 msgstr ""
-"Afficher les descriptions de récurrence dans les éléments de la vue d'agenda"
+"Afficher les descriptions de récurrence dans les éléments de la vue en Agenda"
 
 #. i18n: ectx: label, entry (EnableAgendaItemLocation), group (Agenda View)
 #: eventviews.kcfg:174
@@ -871,12 +870,11 @@ msgstr ""
 
 #. i18n: ectx: tooltip, entry (EnableAgendaItemLocation), group (Agenda View)
 #: eventviews.kcfg:176
-#, fuzzy, kde-format
-#| msgid "Display incidence locations agenda view items"
+#, kde-format
 msgid "Display incidence locations in agenda view items"
 msgstr ""
-"Afficher les emplacements des récurrences dans les éléments de la vue "
-"d'agenda"
+"Afficher les emplacements des récurrences dans les éléments de la vue en "
+"Agenda"
 
 #. i18n: ectx: label, entry (ShowTodosAgendaView), group (Agenda View)
 #. i18n: ectx: label, entry (ShowTodosMonthView), group (Month View)
