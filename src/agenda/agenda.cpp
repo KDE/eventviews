@@ -2135,7 +2135,7 @@ void Agenda::checkScrollBoundaries()
 
 void Agenda::checkScrollBoundaries(int v)
 {
-    int const yMin = int((v) / d->mGridSpacingY);
+    int const yMin = int(v / d->mGridSpacingY);
     int const yMax = int((v + d->mScrollArea->height()) / d->mGridSpacingY);
 
     if (yMin != d->mOldLowerScrollValue) {
