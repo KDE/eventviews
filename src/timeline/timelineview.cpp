@@ -118,6 +118,8 @@ private:
     int mRowHeight;
 };
 
+namespace
+{
 class GanttHeaderView : public QHeaderView
 {
 public:
@@ -134,6 +136,7 @@ public:
         return s;
     }
 };
+
 class GanttItemDelegate : public KGantt::ItemDelegate
 {
 public:
@@ -204,6 +207,7 @@ private:
         }
     }
 };
+}
 }
 
 TimelineView::TimelineView(const EventViews::PrefsPtr &preferences, QWidget *parent)

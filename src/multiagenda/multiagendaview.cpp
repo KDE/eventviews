@@ -73,6 +73,8 @@ static void printObject( QObject *o, int level = 0 )
 }
 */
 
+namespace
+{
 class DefaultCalendarFactory : public MultiAgendaView::CalendarFactory
 {
 public:
@@ -91,6 +93,7 @@ public:
 private:
     MultiAgendaView *mView;
 };
+}
 
 static QString generateColumnLabel(int c)
 {

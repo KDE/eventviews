@@ -76,6 +76,8 @@ static QByteArray monthViewIconDefaults()
     return iconDefaults;
 }
 
+namespace
+{
 class BaseConfig : public PrefsBase
 {
 public:
@@ -224,6 +226,7 @@ bool BaseConfig::usrSave()
     monthViewConfig.writeEntry<QByteArray>("monthViewItemIcons", monthIconArray);
 
     return KConfigSkeleton::usrSave();
+}
 }
 
 class EventViews::PrefsPrivate

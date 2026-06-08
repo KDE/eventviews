@@ -59,6 +59,8 @@ static QString cleanSummary(const QString &summary, const QDateTime &next)
     return retStr;
 }
 
+namespace
+{
 class ListViewItem : public QTreeWidgetItem
 {
 public:
@@ -105,6 +107,7 @@ bool ListViewItem::operator<(const QTreeWidgetItem &other) const
     default:
         return QTreeWidgetItem::operator<(other);
     }
+}
 }
 
 class EventViews::ListViewPrivate

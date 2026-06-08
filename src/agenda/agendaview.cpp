@@ -63,6 +63,8 @@ enum {
 
 // Layout which places the widgets in equally sized columns,
 // matching the calculation of the columns in the agenda.
+namespace
+{
 class AgendaHeaderLayout : public QLayout
 {
 public:
@@ -498,6 +500,7 @@ CalendarDecoration::Decoration *AgendaHeader::loadCalendarDecoration(const QStri
         qCDebug(CALENDARVIEW_LOG) << "Factory creation failed" << result.errorString;
         return nullptr;
     }
+}
 }
 
 class EventViews::EventIndicatorPrivate

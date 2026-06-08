@@ -9,6 +9,8 @@
 
 using namespace EventViews;
 
+namespace
+{
 class MonthItemOrderTest : public QObject
 {
     Q_OBJECT
@@ -85,6 +87,7 @@ std::unique_ptr<IncidenceMonthItem> MonthItemOrderTest::eventItem(QDate start, Q
     e->setDtEnd(QDateTime(end, QTime(00, 00, 00)));
     e->setAllDay(true);
     return std::make_unique<IncidenceMonthItem>(nullptr, nullptr, Akonadi::Item(), KCalendarCore::Event::Ptr(e), start);
+}
 }
 
 QTEST_MAIN(MonthItemOrderTest)
