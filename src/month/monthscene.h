@@ -339,6 +339,9 @@ public:
     void setActionCursor(MonthScene::ActionType actionType);
 
 protected:
+    /** Draws the cells */
+    void drawBackground(QPainter *painter, const QRectF &rect) override;
+
     void resizeEvent(QResizeEvent *) override;
 
     /* Draws the cells */

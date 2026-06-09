@@ -119,13 +119,16 @@ public:
         return false;
     }
 
+protected:
+    /*!
+     */
+    void showDates(const QDate &start, const QDate &end, const QDate &preferredMonth = QDate()) override;
+
 public Q_SLOTS:
     /*!
      */
     void setIncidenceChanger(Akonadi::IncidenceChanger *changer) override;
-    /*!
-     */
-    void showDates(const QDate &start, const QDate &end, const QDate &preferredMonth = QDate()) override;
+
     /*!
      */
     void showIncidences(const Akonadi::Item::List &incidenceList, const QDate &date) override;
