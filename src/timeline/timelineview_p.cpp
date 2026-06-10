@@ -55,7 +55,7 @@ void TimelineViewPrivate::contextMenuRequested(QPoint point)
         Q_EMIT q->showNewEventPopupSignal();
         mSelectedItemList = Akonadi::Item::List();
     } else {
-        if (const auto calendar = tlitem->parent()->calendar(); calendar) {
+        if (const auto calendar = tlitem->parentItem()->calendar(); calendar) {
             Q_EMIT q->showIncidencePopupSignal(calendar, tlitem->incidence(), Akonadi::CalendarUtils::incidence(tlitem->incidence())->dtStart().date());
         }
 
@@ -180,7 +180,7 @@ void TimelineViewPrivate::itemChanged(QStandardItem *item)
         }
     }
     inc->setDuration(duration);
-    TimelineItem *parent = tlit->parent();
+    TimelineItem *parent = tlit->parentItem();
     parent->moveItems(i, tlit->originalStart().secsTo(newStart), duration + allDayOffset);
 }
 

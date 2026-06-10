@@ -2072,7 +2072,7 @@ void Agenda::scrollDown()
     verticalScrollBar()->setValue(currentValue + d->mScrollOffset);
 }
 
-QSize Agenda::minimumSize() const
+QSize Agenda::agendaMinimumSize() const
 {
     return sizeHint();
 }
@@ -2082,7 +2082,7 @@ QSize Agenda::minimumSizeHint() const
     return sizeHint();
 }
 
-int Agenda::minimumHeight() const
+int Agenda::agendaMinimumHeight() const
 {
     // all day agenda never has scrollbars and the scrollarea will
     // resize it to fit exactly on the viewport.

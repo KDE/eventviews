@@ -83,10 +83,10 @@ public:
     QSize minimumSizeHint() const override;
     /*!
      */
-    QSize minimumSize() const;
+    QSize agendaMinimumSize() const;
     /*!
      */
-    int minimumHeight() const;
+    int agendaMinimumHeight() const;
 
     /*!
      */

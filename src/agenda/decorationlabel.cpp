@@ -23,13 +23,13 @@ DecorationLabel::DecorationLabel(CalendarDecoration::Element *e, QWidget *parent
     , mPixmap(e->newPixmap(size()))
     , mUrl(e->url())
 {
-    setUrl(mUrl);
+    slotSetUrl(mUrl);
 
-    connect(e, &CalendarDecoration::Element::gotNewExtensiveText, this, &DecorationLabel::setExtensiveText);
-    connect(e, &CalendarDecoration::Element::gotNewLongText, this, &DecorationLabel::setLongText);
-    connect(e, &CalendarDecoration::Element::gotNewPixmap, this, &DecorationLabel::setPixmap);
-    connect(e, &CalendarDecoration::Element::gotNewShortText, this, &DecorationLabel::setShortText);
-    connect(e, &CalendarDecoration::Element::gotNewUrl, this, &DecorationLabel::setUrl);
+    connect(e, &CalendarDecoration::Element::gotNewExtensiveText, this, &DecorationLabel::slotSetExtensiveText);
+    connect(e, &CalendarDecoration::Element::gotNewLongText, this, &DecorationLabel::slotSetLongText);
+    connect(e, &CalendarDecoration::Element::gotNewPixmap, this, &DecorationLabel::slotSetPixmap);
+    connect(e, &CalendarDecoration::Element::gotNewShortText, this, &DecorationLabel::slotSetShortText);
+    connect(e, &CalendarDecoration::Element::gotNewUrl, this, &DecorationLabel::slotSetUrl);
     squeezeContentsToLabel();
 }
 
@@ -45,7 +45,7 @@ DecorationLabel::DecorationLabel(const QString &shortText,
     , mExtensiveText(extensiveText)
     , mPixmap(pixmap)
 {
-    setUrl(url);
+    slotSetUrl(url);
 
     squeezeContentsToLabel();
 }
@@ -80,36 +80,36 @@ void DecorationLabel::resizeEvent(QResizeEvent *event)
     squeezeContentsToLabel();
 }
 
-void DecorationLabel::setExtensiveText(const QString &text)
+void DecorationLabel::slotSetExtensiveText(const QString &text)
 {
     mExtensiveText = text;
     squeezeContentsToLabel();
 }
 
-void DecorationLabel::setLongText(const QString &text)
+void DecorationLabel::slotSetLongText(const QString &text)
 {
     mLongText = text;
     squeezeContentsToLabel();
 }
 
-void DecorationLabel::setPixmap(const QPixmap &pixmap)
+void DecorationLabel::slotSetPixmap(const QPixmap &pixmap)
 {
     mPixmap = pixmap.scaled(size(), Qt::KeepAspectRatio);
     squeezeContentsToLabel();
 }
 
-void DecorationLabel::setShortText(const QString &text)
+void DecorationLabel::slotSetShortText(const QString &text)
 {
     mShortText = text;
     squeezeContentsToLabel();
 }
 
-void DecorationLabel::setText(const QString &text)
+void DecorationLabel::slotSetText(const QString &text)
 {
-    setLongText(text);
+    slotSetLongText(text);
 }
 
-void DecorationLabel::setUrl(const QUrl &url)
+void DecorationLabel::slotSetUrl(const QUrl &url)
 {
     mUrl = url;
     QFont f = font();

@@ -51,14 +51,14 @@ public:
     QSize minimumSizeHint() const override;
 
 protected:
+    /** */
+    bool event(QEvent *event) override;
+
     /**  */
     void paintEvent(QPaintEvent *e) override;
 
     /** */
     void contextMenuEvent(QContextMenuEvent *event) override;
-
-    /** */
-    bool event(QEvent *event) override;
 
 private:
     [[nodiscard]] int yposToCell(const int ypos) const;
