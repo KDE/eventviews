@@ -79,6 +79,9 @@ public Q_SLOTS:
 
     /*!
      */
+    void showDates(const QDate &start, const QDate &end, const QDate &preferredMonth = QDate()) override;
+    /*!
+     */
     void showIncidences(const Akonadi::Item::List &incidences, const QDate &date) override;
 
     /*!
@@ -111,10 +114,6 @@ protected:
     /*!
      */
     void clearEntries();
-
-    /*!
-     */
-    void showDates(const QDate &start, const QDate &end, const QDate &preferredMonth = QDate()) override;
 
 private:
     [[nodiscard]] Akonadi::CollectionCalendar::Ptr findCalendar(const KCalendarCore::Journal::Ptr &journal) const;

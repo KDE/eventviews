@@ -124,6 +124,9 @@ public Q_SLOTS:
 
     /*!
      */
+    void showDates(const QDate &start, const QDate &end, const QDate &preferredMonth = QDate()) override;
+    /*!
+     */
     void showIncidences(const Akonadi::Item::List &incidenceList, const QDate &date) override;
     /*!
      */
@@ -137,10 +140,6 @@ public Q_SLOTS:
     void setIncidenceChanger(Akonadi::IncidenceChanger *changer) override;
 
 protected:
-    /*!
-     */
-    void showDates(const QDate &start, const QDate &end, const QDate &preferredMonth = QDate()) override;
-
     /*!
      */
     void resizeEvent(QResizeEvent *event) override;

@@ -56,6 +56,9 @@ public:
      */
     [[nodiscard]] int currentDateCount() const override;
 
+    // ensure start and end are valid before calling this.
+    void showDates(const QDate &, const QDate &, const QDate &preferredMonth = QDate()) override;
+
     // Unused.
     /*! \deprecated Use EventView::startDateTime. */
     [[deprecated("Use EventView::startDateTime.")]] [[nodiscard]] QDate startDate() const;
@@ -86,9 +89,6 @@ Q_SIGNALS:
     void showIncidencePopupSignal(const Akonadi::CollectionCalendar::Ptr &, const Akonadi::Item &, const QDate &);
 
 protected:
-    // ensure start and end are valid before calling this.
-    void showDates(const QDate &, const QDate &, const QDate &preferredMonth = QDate()) override;
-
     bool eventFilter(QObject *object, QEvent *event) override;
 
 private:

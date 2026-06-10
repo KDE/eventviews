@@ -27,18 +27,19 @@ public:
                              QWidget *parent = nullptr);
     ~DecorationLabel() override;
 
-public Q_SLOTS:
-    void setExtensiveText(const QString &);
-    void setLongText(const QString &);
-    void setPixmap(const QPixmap &);
-    void setShortText(const QString &);
-    void setText(const QString &);
-    void setUrl(const QUrl &);
     void useShortText(bool allowAutomaticSqueeze = false);
     void useLongText(bool allowAutomaticSqueeze = false);
     void useExtensiveText(bool allowAutomaticSqueeze = false);
     void usePixmap(bool allowAutomaticSqueeze = false);
     void useDefaultText();
+
+public Q_SLOTS:
+    void slotSetExtensiveText(const QString &);
+    void slotSetLongText(const QString &);
+    void slotSetPixmap(const QPixmap &);
+    void slotSetShortText(const QString &);
+    void slotSetText(const QString &);
+    void slotSetUrl(const QUrl &);
 
 protected:
     void resizeEvent(QResizeEvent *) override;

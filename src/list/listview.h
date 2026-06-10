@@ -83,15 +83,14 @@ public:
     void clear();
     QSize sizeHint() const override;
 
-protected:
-    /*!
-     */
-    void showDates(const QDate &start, const QDate &end, const QDate &preferredMonth = QDate()) override;
-
 public Q_SLOTS:
     /*!
      */
     void updateView() override;
+
+    /*!
+     */
+    void showDates(const QDate &start, const QDate &end, const QDate &preferredMonth = QDate()) override;
 
     /*!
      */

@@ -73,7 +73,7 @@ public:
     void setEndTime(const QDateTime &dt);
     [[nodiscard]] QDateTime endTime() const;
 
-    [[nodiscard]] TimelineItem *parent() const
+    [[nodiscard]] TimelineItem *parentItem() const
     {
         return mParent;
     }

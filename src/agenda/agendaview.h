@@ -157,6 +157,10 @@ public:
 
     /*!
      */
+    void showDates(const QDate &start, const QDate &end, const QDate &preferredMonth = QDate()) override;
+
+    /*!
+     */
     void showIncidences(const Akonadi::Item::List &incidences, const QDate &date) override;
 
     /*!
@@ -243,10 +247,6 @@ Q_SIGNALS:
     void timeSpanSelectionChanged();
 
 protected:
-    /*!
-     */
-    void showDates(const QDate &start, const QDate &end, const QDate &preferredMonth = QDate()) override;
-
     /*! Fill agenda using the current set value for the start date */
     void fillAgenda(bool updateDayLabels = false);
 
