@@ -33,12 +33,6 @@ public:
     /**  */
     void setAgenda(Agenda *agenda);
 
-    /**  */
-    void paintEvent(QPaintEvent *e) override;
-
-    /** */
-    void contextMenuEvent(QContextMenuEvent *event) override;
-
     /** Returns the time zone of this label */
     [[nodiscard]] QTimeZone timeZone() const;
 
@@ -55,6 +49,13 @@ public:
     QSize sizeHint() const override;
 
     QSize minimumSizeHint() const override;
+
+protected:
+    /**  */
+    void paintEvent(QPaintEvent *e) override;
+
+    /** */
+    void contextMenuEvent(QContextMenuEvent *event) override;
 
     /** */
     bool event(QEvent *event) override;

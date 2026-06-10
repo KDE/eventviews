@@ -345,6 +345,8 @@ public:
      */
     [[nodiscard]] Akonadi::CollectionCalendar::Ptr calendarForCollection(Akonadi::Collection::Id collectionId) const;
 
+    virtual void showDates(const QDate &start, const QDate &end, const QDate &preferredMonth = QDate()) = 0;
+
 public Q_SLOTS:
     /*!
       Shows given incidences. Depending on the actual view it might not
@@ -546,11 +548,6 @@ protected:
      * reimplement to write view-specific settings.
      */
     virtual void doSaveConfig(KConfigGroup &configGroup);
-
-    /*!
-      \deprecated
-     */
-    virtual void showDates(const QDate &start, const QDate &end, const QDate &preferredMonth = QDate()) = 0;
 
     /*!
      * from the requested date range (passed via setDateRange()), calculates the

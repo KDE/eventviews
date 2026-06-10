@@ -73,17 +73,6 @@ public:
         mDescendantsProxy.setSourceModel(model);
     }
 
-    bool filterAcceptsRow(int source_row, const QModelIndex &source_parent) const override
-    {
-        const auto source_index = sourceModel()->index(source_row, 0, source_parent);
-        const auto item = sourceModel()->data(source_index, Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
-
-        if (!item.isValid()) {
-            return false;
-        }
-        return mEnabledCalendars.contains(item.parentCollection().id());
-    }
-
     void addCalendar(const Akonadi::CollectionCalendar::Ptr &calendar)
     {
         if (!calendar || !calendar->collection().isValid()) {
@@ -120,6 +109,18 @@ public:
 #else
         invalidateFilter();
 #endif
+    }
+
+protected:
+    bool filterAcceptsRow(int source_row, const QModelIndex &source_parent) const override
+    {
+        const auto source_index = sourceModel()->index(source_row, 0, source_parent);
+        const auto item = sourceModel()->data(source_index, Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
+
+        if (!item.isValid()) {
+            return false;
+        }
+        return mEnabledCalendars.contains(item.parentCollection().id());
     }
 
 private:

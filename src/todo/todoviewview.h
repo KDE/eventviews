@@ -23,10 +23,10 @@ public:
 
     [[nodiscard]] bool isEditing(const QModelIndex &index) const;
 
-    [[nodiscard]] bool eventFilter(QObject *watched, QEvent *event) override;
     [[nodiscard]] KDatePickerPopup *startPopupMenu();
 
 protected:
+    [[nodiscard]] bool eventFilter(QObject *watched, QEvent *event) override;
     QModelIndex moveCursor(CursorAction cursorAction, Qt::KeyboardModifiers modifiers) override;
     void mousePressEvent(QMouseEvent *) override;
     void mouseReleaseEvent(QMouseEvent *) override;

@@ -27,6 +27,7 @@ public:
     {
     }
 
+protected:
     /*! Reimplemented from QTextBrowser to handle links. */
     void doSetSource(const QUrl &name, QTextDocument::ResourceType type = QTextDocument::UnknownResource) override;
 

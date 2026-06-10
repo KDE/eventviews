@@ -125,10 +125,6 @@ public:
 
     /*!
      */
-    void paintEvent(QPaintEvent *) override;
-
-    /*!
-     */
     [[nodiscard]] QPoint contentsToGrid(QPoint pos) const;
     /*!
      */
@@ -363,6 +359,10 @@ private:
     createAgendaItem(const KCalendarCore::Incidence::Ptr &incidence, int itemPos, int itemCount, const QDateTime &recurrenceId, bool isSelected);
 
 protected:
+    /*!
+     */
+    void paintEvent(QPaintEvent *) override;
+
     /*!
       Draw the background grid of the agenda.
       \a cw grid width

@@ -331,11 +331,6 @@ class MonthGraphicsView : public QGraphicsView
 public:
     explicit MonthGraphicsView(MonthView *parent);
 
-    /**
-      Draws the cells.
-    */
-    void drawBackground(QPainter *painter, const QRectF &rect) override;
-
     void setScene(MonthScene *scene);
 
     /**
@@ -345,6 +340,9 @@ public:
 
 protected:
     void resizeEvent(QResizeEvent *) override;
+
+    /* Draws the cells */
+    void drawBackground(QPainter *painter, const QRectF &rect) override;
 
 private:
     MonthScene *mScene = nullptr;
