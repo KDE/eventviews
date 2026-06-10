@@ -208,7 +208,7 @@ public:
         mLabelText = text;
     }
 
-    [[nodiscard]] QString text() const
+    [[nodiscard]] QString &text()
     {
         return mLabelText;
     }

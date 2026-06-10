@@ -276,7 +276,7 @@ void MonthItem::updatePosition()
     mPosition = firstFreeSpace;
 }
 
-QList<MonthGraphicsItem *> EventViews::MonthItem::monthGraphicsItems() const
+QList<MonthGraphicsItem *> &EventViews::MonthItem::monthGraphicsItems()
 {
     return mMonthGraphicsItemList;
 }

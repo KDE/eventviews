@@ -845,12 +845,12 @@ int MultiAgendaView::customNumberOfColumns() const
     return d->mCustomNumberOfColumns;
 }
 
-QList<KCheckableProxyModel *> MultiAgendaView::collectionSelectionModels() const
+QList<KCheckableProxyModel *> &MultiAgendaView::collectionSelectionModels() const
 {
     return d->mCollectionSelectionModels;
 }
 
-QStringList MultiAgendaView::customColumnTitles() const
+QStringList &MultiAgendaView::customColumnTitles() const
 {
     return d->mCustomColumnTitles;
 }

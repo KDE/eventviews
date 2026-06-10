@@ -86,7 +86,7 @@ public:
     void setResourceColor(const QString &resource, const QColor &color);
 
     void setTimeScaleTimezones(const QStringList &timeZones);
-    QStringList timeScaleTimezones() const;
+    QStringList &timeScaleTimezones();
     void setUse24HourClock(bool enable);
     bool use24HourClock() const;
     void setUseDualLabels(bool enable);
@@ -137,7 +137,7 @@ void BaseConfig::setTimeScaleTimezones(const QStringList &timeZones)
     mTimeScaleTimeZones = timeZones;
 }
 
-QStringList BaseConfig::timeScaleTimezones() const
+QStringList &BaseConfig::timeScaleTimezones()
 {
     return mTimeScaleTimeZones;
 }
@@ -1098,7 +1098,7 @@ void Prefs::setDecorationsAtAgendaViewBottom(const QStringList &decorations)
     d->mBaseConfig.setDecorationsAtAgendaViewBottom(decorations);
 }
 
-QSet<EventViews::EventView::ItemIcon> Prefs::agendaViewIcons() const
+QSet<EventViews::EventView::ItemIcon> &Prefs::agendaViewIcons() const
 {
     return d->mBaseConfig.mAgendaViewIcons;
 }
@@ -1108,7 +1108,7 @@ void Prefs::setAgendaViewIcons(const QSet<EventViews::EventView::ItemIcon> &icon
     d->mBaseConfig.mAgendaViewIcons = icons;
 }
 
-QSet<EventViews::EventView::ItemIcon> Prefs::monthViewIcons() const
+QSet<EventViews::EventView::ItemIcon> &Prefs::monthViewIcons() const
 {
     return d->mBaseConfig.mMonthViewIcons;
 }

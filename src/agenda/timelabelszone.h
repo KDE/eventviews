@@ -41,7 +41,7 @@ public:
     void setAgendaView(AgendaView *agenda);
     void setReadOnly(bool enable);
 
-    [[nodiscard]] QList<QScrollArea *> timeLabels() const;
+    [[nodiscard]] QList<QScrollArea *> &timeLabels();
 
     void setPreferences(const PrefsPtr &prefs);
     [[nodiscard]] PrefsPtr preferences() const;

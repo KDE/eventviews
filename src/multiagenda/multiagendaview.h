@@ -96,10 +96,10 @@ public:
     [[nodiscard]] int customNumberOfColumns() const;
     /*!
      */
-    [[nodiscard]] QStringList customColumnTitles() const;
+    [[nodiscard]] QStringList &customColumnTitles() const;
     /*!
      */
-    [[nodiscard]] QList<KCheckableProxyModel *> collectionSelectionModels() const;
+    [[nodiscard]] QList<KCheckableProxyModel *> &collectionSelectionModels() const;
 
     /*!
      */

@@ -117,7 +117,7 @@ public:
       persists across reloads and clear, so that if the same uid
       reappears, it can be reselected.
     */
-    [[nodiscard]] QString lastSelectedItemUid() const;
+    [[nodiscard]] QString &lastSelectedItemUid() const;
 
     /*!
      */

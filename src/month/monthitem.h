@@ -243,7 +243,7 @@ public:
     */
     virtual QList<QPixmap> icons() const = 0;
 
-    QList<MonthGraphicsItem *> monthGraphicsItems() const;
+    QList<MonthGraphicsItem *> &monthGraphicsItems();
 
 protected:
     /*!

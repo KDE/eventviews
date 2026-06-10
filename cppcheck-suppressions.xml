@@ -4,9 +4,6 @@
     <id>virtualCallInConstructor</id>
   </suppress>
   <suppress>
-    <id>returnByReference</id>
-  </suppress>
-  <suppress>
     <id>useStlAlgorithm</id>
   </suppress>
 </suppressions>

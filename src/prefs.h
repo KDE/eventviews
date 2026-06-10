@@ -439,14 +439,14 @@ public:
 
     /*!
      */
-    [[nodiscard]] QSet<EventViews::EventView::ItemIcon> agendaViewIcons() const;
+    [[nodiscard]] QSet<EventViews::EventView::ItemIcon> &agendaViewIcons() const;
     /*!
      */
     void setAgendaViewIcons(const QSet<EventViews::EventView::ItemIcon> &icons);
 
     /*!
      */
-    [[nodiscard]] QSet<EventViews::EventView::ItemIcon> monthViewIcons() const;
+    [[nodiscard]] QSet<EventViews::EventView::ItemIcon> &monthViewIcons() const;
     /*!
      */
     void setMonthViewIcons(const QSet<EventViews::EventView::ItemIcon> &icons);

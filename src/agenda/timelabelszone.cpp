@@ -130,7 +130,7 @@ void TimeLabelsZone::updateAll()
     }
 }
 
-QList<QScrollArea *> TimeLabelsZone::timeLabels() const
+QList<QScrollArea *> &TimeLabelsZone::timeLabels()
 {
     return mTimeLabelsList;
 }

@@ -339,7 +339,7 @@ QDate Agenda::selectedIncidenceDate() const
     return d->mSelectedItem ? d->mSelectedItem->occurrenceDate() : QDate();
 }
 
-QString Agenda::lastSelectedItemUid() const
+QString &Agenda::lastSelectedItemUid() const
 {
     return d->mSelectedId;
 }
