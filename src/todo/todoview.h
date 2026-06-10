@@ -218,11 +218,10 @@ Q_SIGNALS:
     void unSubTodoSignal();
     void unAllSubTodoSignal();
     void configChanged();
-    void fullViewChanged(bool enabled);
+    void fullViewChanged(bool);
     void printPreviewTodo();
     void printTodo();
-
-    void createEvent(const Akonadi::Item &item); // clazy:exclude=overloaded-signal
+    void createEvent(const Akonadi::Item &);
 
 private:
     EVENTVIEWS_NO_EXPORT QMenu *createCategoryPopupMenu();

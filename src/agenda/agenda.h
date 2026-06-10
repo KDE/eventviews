@@ -322,21 +322,21 @@ Q_SIGNALS:
     void startDragSignal(const KCalendarCore::Incidence::Ptr &);
     /*!
      */
-    void droppedIncidencesSignal(const KCalendarCore::Incidence::List &, const QPoint &gpos, bool allDay);
+    void droppedIncidencesSignal(const KCalendarCore::Incidence::List &, const QPoint &, bool);
     /*!
      */
-    void droppedUrlsSignal(const QList<QUrl> &, const QPoint &gpos, bool allDay);
+    void droppedUrlsSignal(const QList<QUrl> &, const QPoint &, bool);
 
     /*!
      */
-    void enableAgendaUpdate(bool enable);
+    void enableAgendaUpdate(bool);
     /*!
      */
-    void zoomView(const int delta, const QPoint &pos, const Qt::Orientation);
+    void zoomView(const int, const QPoint &, const Qt::Orientation);
 
     /*!
      */
-    void mousePosSignal(const QPoint &pos);
+    void mousePosSignal(const QPoint &);
     /*!
      */
     void enterAgenda();

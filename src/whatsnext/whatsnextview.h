@@ -31,7 +31,7 @@ public:
     void doSetSource(const QUrl &name, QTextDocument::ResourceType type = QTextDocument::UnknownResource) override;
 
 Q_SIGNALS:
-    void showIncidence(const QUrl &url);
+    void showIncidence(const QUrl &);
 };
 
 /*!

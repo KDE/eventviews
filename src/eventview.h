@@ -414,15 +414,14 @@ Q_SIGNALS:
      * the KDateNavigator object so that it changes appropriately,
      * and any other objects that need to be aware that the list of
      * selected dates has changed.
-     *   \a datelist the new list of selected dates
      */
-    void datesSelected(const KCalendarCore::DateList &datelist);
+    void datesSelected(const KCalendarCore::DateList &);
 
     /*!
      * Emitted when an event is moved using the mouse in an agenda
      * view (week / month).
      */
-    void shiftedEvent(const QDate &olddate, const QDate &newdate);
+    void shiftedEvent(const QDate &, const QDate &);
 
     /*!
      */

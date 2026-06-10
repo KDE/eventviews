@@ -117,13 +117,13 @@ public:
 Q_SIGNALS:
     /*!
      */
-    void showIncidencePopupSignal(const Akonadi::CollectionCalendar::Ptr &calendar, const Akonadi::Item &item, const QDate &date);
+    void showIncidencePopupSignal(const Akonadi::CollectionCalendar::Ptr &, const Akonadi::Item &, const QDate &);
     /*!
      */
     void showNewEventPopupSignal();
     /*!
      */
-    void fullViewChanged(bool enabled);
+    void fullViewChanged(bool);
 
 public Q_SLOTS:
     /*!

@@ -240,7 +240,7 @@ Q_SIGNALS:
     void showIncidencePopupSignal(const Akonadi::CollectionCalendar::Ptr &, const Akonadi::Item &, const QDate &);
     /*!
      */
-    void zoomViewHorizontally(const QDate &, int count);
+    void zoomViewHorizontally(const QDate &, int);
 
     /*!
      */

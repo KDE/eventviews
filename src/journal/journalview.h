@@ -102,13 +102,13 @@ Q_SIGNALS:
     void setIncidenceChangerSignal(Akonadi::IncidenceChanger *);
     /*!
      */
-    void journalEdited(const Akonadi::Item &journal);
+    void journalEdited(const Akonadi::Item &);
     /*!
      */
-    void journalDeleted(const Akonadi::Item &journal);
+    void journalDeleted(const Akonadi::Item &);
     /*!
      */
-    void printJournal(const KCalendarCore::Journal::Ptr &, bool preview);
+    void printJournal(const KCalendarCore::Journal::Ptr &, bool);
 
 protected:
     /*!
