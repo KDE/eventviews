@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-02 00:44+0000\n"
+"POT-Creation-Date: 2026-06-11 00:45+0000\n"
 "PO-Revision-Date: 2026-06-06 11:50+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -58,7 +58,7 @@ msgctxt "@title:window"
 msgid "Error Occurred"
 msgstr "오류가 발생함"
 
-#: agenda/agendaitem.cpp:82 list/listview.cpp:428
+#: agenda/agendaitem.cpp:82 list/listview.cpp:431
 #, kde-format
 msgid "%2 (1 year)"
 msgid_plural "%2 (%1 years)"
@@ -110,18 +110,18 @@ msgstr "%1: %2"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: agenda/agendaview.cpp:421
+#: agenda/agendaview.cpp:423
 #, kde-format
 msgctxt "short_weekday short_monthname date (e.g. Mon Aug 13)"
 msgid "%1 %2 %3"
 msgstr "%2 %3일(%1)"
 
-#: agenda/agendaview.cpp:2335
+#: agenda/agendaview.cpp:2338
 #, kde-format
 msgid "Unable to modify this to-do, because it cannot be locked."
 msgstr "항목을 잠글 수 없어서 이 할 일을 편집할 수 없습니다."
 
-#: agenda/agendaview.cpp:2343
+#: agenda/agendaview.cpp:2346
 #, kde-format
 msgid "Unable to save %1 \"%2\"."
 msgstr "%1 \"%2\"을(를) 저장할 수 없습니다."
@@ -1800,27 +1800,27 @@ msgctxt "%1 is an item summary. %2 is the date when this item reoccurs"
 msgid "%1 (next: %2)"
 msgstr "%1(다음: %2)"
 
-#: list/listview.cpp:291
+#: list/listview.cpp:294
 #, kde-format
 msgid "Summary"
 msgstr "요약"
 
-#: list/listview.cpp:292
+#: list/listview.cpp:295
 #, kde-format
 msgid "Start Date/Time"
 msgstr "시작 날짜와 시간"
 
-#: list/listview.cpp:293
+#: list/listview.cpp:296
 #, kde-format
 msgid "End Date/Time"
 msgstr "끝 날짜와 시간"
 
-#: list/listview.cpp:294
+#: list/listview.cpp:297
 #, kde-format
 msgid "Tags"
 msgstr "태그"
 
-#: list/listview.cpp:367
+#: list/listview.cpp:370
 #, kde-format
 msgid "Summary [%1 - %2]"
 msgstr "요약 [%1 - %2]"
@@ -1929,19 +1929,19 @@ msgid ""
 "Click this button and the view will be scrolled forward in time by 1 month."
 msgstr "이 단추를 클릭하면 한 달 앞으로 보기를 스크롤합니다."
 
-#: multiagenda/multiagendaview.cpp:97
+#: multiagenda/multiagendaview.cpp:100
 #, kde-format
 msgctxt "@item:intable"
 msgid "Agenda %1"
 msgstr "일정 %1"
 
-#: multiagenda/multiagendaview.cpp:179
+#: multiagenda/multiagendaview.cpp:182
 #, kde-format
 msgctxt "@label:textbox"
 msgid "All Day"
 msgstr "종일"
 
-#: timeline/timelineview.cpp:224
+#: timeline/timelineview.cpp:228
 #, kde-format
 msgid "Calendar"
 msgstr "캘린더"
@@ -1952,7 +1952,7 @@ msgctxt "@action:inmenu Unspecified priority"
 msgid "unspecified"
 msgstr "지정되지 않음"
 
-#: todo/tododelegates.cpp:153 todo/todoview.cpp:489
+#: todo/tododelegates.cpp:153 todo/todoview.cpp:490
 #, kde-format
 msgctxt "@action:inmenu highest priority"
 msgid "1 (highest)"
@@ -1976,7 +1976,7 @@ msgctxt "@action:inmenu"
 msgid "4"
 msgstr "4"
 
-#: todo/tododelegates.cpp:157 todo/todoview.cpp:493
+#: todo/tododelegates.cpp:157 todo/todoview.cpp:494
 #, kde-format
 msgctxt "@action:inmenu medium priority"
 msgid "5 (medium)"
@@ -2000,32 +2000,32 @@ msgctxt "@action:inmenu"
 msgid "8"
 msgstr "8"
 
-#: todo/tododelegates.cpp:161 todo/todoview.cpp:497
+#: todo/tododelegates.cpp:161 todo/todoview.cpp:498
 #, kde-format
 msgctxt "@action:inmenu lowest priority"
 msgid "9 (lowest)"
 msgstr "9(가장 낮음)"
 
-#: todo/todoview.cpp:260
+#: todo/todoview.cpp:261
 #, kde-format
 msgctxt "@info"
 msgid "Cannot move to-do to itself or a child of itself."
 msgstr ""
 "할 일 항목을 자기 자신이나 자기 자신의 자식 항목으로 이동할 수 없습니다."
 
-#: todo/todoview.cpp:261
+#: todo/todoview.cpp:262
 #, kde-format
 msgctxt "@title:window"
 msgid "Drop To-do"
 msgstr "할 일 드롭"
 
-#: todo/todoview.cpp:332
+#: todo/todoview.cpp:333
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Create an open-ended to-do"
 msgstr "기한 없는 할 일 만들기"
 
-#: todo/todoview.cpp:335
+#: todo/todoview.cpp:336
 #, kde-kuit-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -2038,13 +2038,13 @@ msgstr ""
 "간, 알림이나 반복이 설정되어 있지 않습니다. 더 많은 속성을 지정하려면 새 항목"
 "을 편집하십시오.</note></para>"
 
-#: todo/todoview.cpp:345
+#: todo/todoview.cpp:346
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display to-dos in a full window without the sidebar"
 msgstr "사이드바 없이 전체 창에 할 일 표시"
 
-#: todo/todoview.cpp:347
+#: todo/todoview.cpp:348
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -2052,13 +2052,13 @@ msgid ""
 "window by hiding the sidebar."
 msgstr "이 옵션을 사용하면 할 일을 사이드바가 숨겨진 큰 창에 표시합니다."
 
-#: todo/todoview.cpp:353
+#: todo/todoview.cpp:354
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display to-dos in a flat list or a tree"
 msgstr "할 일 목록을 단일 단계나 트리 구조로 표시"
 
-#: todo/todoview.cpp:355
+#: todo/todoview.cpp:356
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -2068,169 +2068,169 @@ msgstr ""
 "이 옵션을 사용하면 할 일 목록을 단일 단계 목록이나 부모-자식 관계를 표시하지 "
 "않는 계층적 트리 구조로 표시합니다."
 
-#: todo/todoview.cpp:394
+#: todo/todoview.cpp:395
 #, kde-format
 msgctxt "@action:inmenu show the to-do"
 msgid "&Show"
 msgstr "보기(&S)"
 
-#: todo/todoview.cpp:399
+#: todo/todoview.cpp:400
 #, kde-format
 msgctxt "@action:inmenu edit the to-do"
 msgid "&Edit…"
 msgstr "편집(&E)…"
 
-#: todo/todoview.cpp:406
+#: todo/todoview.cpp:407
 #, kde-format
 msgctxt "@action:inmenu delete the to-do"
 msgid "&Delete"
 msgstr "삭제(&D)"
 
-#: todo/todoview.cpp:415
+#: todo/todoview.cpp:416
 #, kde-format
 msgctxt "@action:inmenu print the to-do"
 msgid "&Print…"
 msgstr "인쇄(&P)…"
 
-#: todo/todoview.cpp:420
+#: todo/todoview.cpp:421
 #, kde-format
 msgctxt "@action:inmenu print preview the to-do"
 msgid "Print Previe&w…"
 msgstr "인쇄 미리 보기(&W)…"
 
-#: todo/todoview.cpp:427
+#: todo/todoview.cpp:428
 #, kde-format
 msgctxt "@action:inmenu create a new to-do"
 msgid "New &To-do…"
 msgstr "새 할 일(&T)…"
 
-#: todo/todoview.cpp:431
+#: todo/todoview.cpp:432
 #, kde-format
 msgctxt "@action:inmenu create a new sub-to-do"
 msgid "New Su&b-to-do…"
 msgstr "새 하위 할 일(&B)…"
 
-#: todo/todoview.cpp:435
+#: todo/todoview.cpp:436
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Make this To-do Independent"
 msgstr "이 할 일을 독립 항목으로 만들기(&M)"
 
-#: todo/todoview.cpp:437
+#: todo/todoview.cpp:438
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Make all Sub-to-dos &Independent"
 msgstr "모든 하위 할 일을 독립 항목으로 만들기(&I)"
 
-#: todo/todoview.cpp:448
+#: todo/todoview.cpp:449
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Create Event from To-do"
 msgstr "할 일에서 이벤트 만들기"
 
-#: todo/todoview.cpp:456
+#: todo/todoview.cpp:457
 #, kde-format
 msgctxt "@action:inmenu set or unset to-do is completed"
 msgid "Togg&le To-do Completed"
 msgstr "할 일 완료 여부 전환(&L)"
 
-#: todo/todoview.cpp:460
+#: todo/todoview.cpp:461
 #, kde-format
 msgctxt "@action:inmenu enable or disable reminder"
 msgid "&Toggle Reminder"
 msgstr "알림 전환(&T)"
 
-#: todo/todoview.cpp:467
+#: todo/todoview.cpp:468
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Copy To"
 msgstr "다음으로 복사(&C)"
 
-#: todo/todoview.cpp:474
+#: todo/todoview.cpp:475
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Move To"
 msgstr "다음으로 이동(&M)"
 
-#: todo/todoview.cpp:485
+#: todo/todoview.cpp:486
 #, kde-format
 msgctxt "@action:inmenu delete completed to-dos"
 msgid "Pur&ge Completed"
 msgstr "완료된 항목 정리(&G)"
 
-#: todo/todoview.cpp:488
+#: todo/todoview.cpp:489
 #, kde-format
 msgctxt "@action:inmenu unspecified priority"
 msgid "unspecified"
 msgstr "지정되지 않음"
 
-#: todo/todoview.cpp:490
+#: todo/todoview.cpp:491
 #, kde-format
 msgctxt "@action:inmenu priority value=2"
 msgid "2"
 msgstr "2"
 
-#: todo/todoview.cpp:491
+#: todo/todoview.cpp:492
 #, kde-format
 msgctxt "@action:inmenu priority value=3"
 msgid "3"
 msgstr "3"
 
-#: todo/todoview.cpp:492
+#: todo/todoview.cpp:493
 #, kde-format
 msgctxt "@action:inmenu priority value=4"
 msgid "4"
 msgstr "4"
 
-#: todo/todoview.cpp:494
+#: todo/todoview.cpp:495
 #, kde-format
 msgctxt "@action:inmenu priority value=6"
 msgid "6"
 msgstr "6"
 
-#: todo/todoview.cpp:495
+#: todo/todoview.cpp:496
 #, kde-format
 msgctxt "@action:inmenu priority value=7"
 msgid "7"
 msgstr "7"
 
-#: todo/todoview.cpp:496
+#: todo/todoview.cpp:497
 #, kde-format
 msgctxt "@action:inmenu priority value=8"
 msgid "8"
 msgstr "8"
 
-#: todo/todoview.cpp:855
+#: todo/todoview.cpp:856
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Toggle Reminder Off"
 msgstr "알림 해제(&T)"
 
-#: todo/todoview.cpp:856
+#: todo/todoview.cpp:857
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Toggle Reminder On"
 msgstr "알림 설정(&T)"
 
-#: todo/todoview.cpp:1194
+#: todo/todoview.cpp:1195
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display the sidebar"
 msgstr "사이드바 표시"
 
-#: todo/todoview.cpp:1197
+#: todo/todoview.cpp:1198
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Hide the sidebar"
 msgstr "사이드바 숨기기"
 
-#: todo/todoview.cpp:1216
+#: todo/todoview.cpp:1217
 #, kde-format
 msgctxt "@info::tooltip"
 msgid "Switch to the tree list display"
 msgstr "트리 목록 표시로 전환"
 
-#: todo/todoview.cpp:1219
+#: todo/todoview.cpp:1220
 #, kde-format
 msgctxt "@info::tooltip"
 msgid "Switch to the flat list display"

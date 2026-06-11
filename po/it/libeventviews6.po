@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-02 00:44+0000\n"
+"POT-Creation-Date: 2026-06-11 00:45+0000\n"
 "PO-Revision-Date: 2026-05-15 15:54+0200\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -70,7 +70,7 @@ msgctxt "@title:window"
 msgid "Error Occurred"
 msgstr "Si è verificato un errore"
 
-#: agenda/agendaitem.cpp:82 list/listview.cpp:428
+#: agenda/agendaitem.cpp:82 list/listview.cpp:431
 #, kde-format
 msgid "%2 (1 year)"
 msgid_plural "%2 (%1 years)"
@@ -123,19 +123,19 @@ msgstr "%1: %2"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: agenda/agendaview.cpp:421
+#: agenda/agendaview.cpp:423
 #, kde-format
 msgctxt "short_weekday short_monthname date (e.g. Mon Aug 13)"
 msgid "%1 %2 %3"
 msgstr "%1 %3 %2"
 
-#: agenda/agendaview.cpp:2335
+#: agenda/agendaview.cpp:2338
 #, kde-format
 msgid "Unable to modify this to-do, because it cannot be locked."
 msgstr ""
 "Impossibile modificare questa cosa da fare in quanto non può essere bloccata."
 
-#: agenda/agendaview.cpp:2343
+#: agenda/agendaview.cpp:2346
 #, kde-format
 msgid "Unable to save %1 \"%2\"."
 msgstr "Impossibile salvare %1 «%2»."
@@ -1920,27 +1920,27 @@ msgctxt "%1 is an item summary. %2 is the date when this item reoccurs"
 msgid "%1 (next: %2)"
 msgstr "%1 (successivo: %2)"
 
-#: list/listview.cpp:291
+#: list/listview.cpp:294
 #, kde-format
 msgid "Summary"
 msgstr "Sommario"
 
-#: list/listview.cpp:292
+#: list/listview.cpp:295
 #, kde-format
 msgid "Start Date/Time"
 msgstr "Data/ora di inizio"
 
-#: list/listview.cpp:293
+#: list/listview.cpp:296
 #, kde-format
 msgid "End Date/Time"
 msgstr "Data/ora di fine"
 
-#: list/listview.cpp:294
+#: list/listview.cpp:297
 #, kde-format
 msgid "Tags"
 msgstr "Etichette"
 
-#: list/listview.cpp:367
+#: list/listview.cpp:370
 #, kde-format
 msgid "Summary [%1 - %2]"
 msgstr "Sommario [%1 - %2]"
@@ -2061,19 +2061,19 @@ msgstr ""
 "Fai clic su questo pulsante e la vista si sposterà avanti nel tempo di un "
 "mese."
 
-#: multiagenda/multiagendaview.cpp:97
+#: multiagenda/multiagendaview.cpp:100
 #, kde-format
 msgctxt "@item:intable"
 msgid "Agenda %1"
 msgstr "Agenda %1"
 
-#: multiagenda/multiagendaview.cpp:179
+#: multiagenda/multiagendaview.cpp:182
 #, kde-format
 msgctxt "@label:textbox"
 msgid "All Day"
 msgstr "Tutto il giorno"
 
-#: timeline/timelineview.cpp:224
+#: timeline/timelineview.cpp:228
 #, kde-format
 msgid "Calendar"
 msgstr "Calendario"
@@ -2084,7 +2084,7 @@ msgctxt "@action:inmenu Unspecified priority"
 msgid "unspecified"
 msgstr "non specificata"
 
-#: todo/tododelegates.cpp:153 todo/todoview.cpp:489
+#: todo/tododelegates.cpp:153 todo/todoview.cpp:490
 #, kde-format
 msgctxt "@action:inmenu highest priority"
 msgid "1 (highest)"
@@ -2108,7 +2108,7 @@ msgctxt "@action:inmenu"
 msgid "4"
 msgstr "4"
 
-#: todo/tododelegates.cpp:157 todo/todoview.cpp:493
+#: todo/tododelegates.cpp:157 todo/todoview.cpp:494
 #, kde-format
 msgctxt "@action:inmenu medium priority"
 msgid "5 (medium)"
@@ -2132,13 +2132,13 @@ msgctxt "@action:inmenu"
 msgid "8"
 msgstr "8"
 
-#: todo/tododelegates.cpp:161 todo/todoview.cpp:497
+#: todo/tododelegates.cpp:161 todo/todoview.cpp:498
 #, kde-format
 msgctxt "@action:inmenu lowest priority"
 msgid "9 (lowest)"
 msgstr "9 (più bassa)"
 
-#: todo/todoview.cpp:260
+#: todo/todoview.cpp:261
 #, kde-format
 msgctxt "@info"
 msgid "Cannot move to-do to itself or a child of itself."
@@ -2146,19 +2146,19 @@ msgstr ""
 "Impossibile spostare una cosa da fare su sé stessa o su un proprio "
 "discendente."
 
-#: todo/todoview.cpp:261
+#: todo/todoview.cpp:262
 #, kde-format
 msgctxt "@title:window"
 msgid "Drop To-do"
 msgstr "Elimina cosa da fare"
 
-#: todo/todoview.cpp:332
+#: todo/todoview.cpp:333
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Create an open-ended to-do"
 msgstr "Crea una cosa da fare senza data di scadenza"
 
-#: todo/todoview.cpp:335
+#: todo/todoview.cpp:336
 #, kde-kuit-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -2172,13 +2172,13 @@ msgstr ""
 "fine, né avrà promemoria o ricorrenze. Modifica la cosa da fare appena "
 "creata se vuoi aggiungere ulteriori proprietà.</note></para>"
 
-#: todo/todoview.cpp:345
+#: todo/todoview.cpp:346
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display to-dos in a full window without the sidebar"
 msgstr "Mostra le cose da fare a finestra intera senza la barra laterale"
 
-#: todo/todoview.cpp:347
+#: todo/todoview.cpp:348
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -2188,13 +2188,13 @@ msgstr ""
 "Selezionando questo pulsante le cose da fare saranno mostrate in una "
 "finestra più grande nascondendo la barra laterale."
 
-#: todo/todoview.cpp:353
+#: todo/todoview.cpp:354
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display to-dos in a flat list or a tree"
 msgstr "Mostra cose da fare in una lista piatta invece che ad albero"
 
-#: todo/todoview.cpp:355
+#: todo/todoview.cpp:356
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -2205,169 +2205,169 @@ msgstr ""
 "piatta o in una ad albero gerarchica in cui le relazioni tra di esse sono "
 "rimosse."
 
-#: todo/todoview.cpp:394
+#: todo/todoview.cpp:395
 #, kde-format
 msgctxt "@action:inmenu show the to-do"
 msgid "&Show"
 msgstr "&Mostra"
 
-#: todo/todoview.cpp:399
+#: todo/todoview.cpp:400
 #, kde-format
 msgctxt "@action:inmenu edit the to-do"
 msgid "&Edit…"
 msgstr "&Modifica…"
 
-#: todo/todoview.cpp:406
+#: todo/todoview.cpp:407
 #, kde-format
 msgctxt "@action:inmenu delete the to-do"
 msgid "&Delete"
 msgstr "&Elimina"
 
-#: todo/todoview.cpp:415
+#: todo/todoview.cpp:416
 #, kde-format
 msgctxt "@action:inmenu print the to-do"
 msgid "&Print…"
 msgstr "Stam&pa…"
 
-#: todo/todoview.cpp:420
+#: todo/todoview.cpp:421
 #, kde-format
 msgctxt "@action:inmenu print preview the to-do"
 msgid "Print Previe&w…"
 msgstr "Anteprima &di stampa…"
 
-#: todo/todoview.cpp:427
+#: todo/todoview.cpp:428
 #, kde-format
 msgctxt "@action:inmenu create a new to-do"
 msgid "New &To-do…"
 msgstr "Nuova &cosa da fare…"
 
-#: todo/todoview.cpp:431
+#: todo/todoview.cpp:432
 #, kde-format
 msgctxt "@action:inmenu create a new sub-to-do"
 msgid "New Su&b-to-do…"
 msgstr "Nuova &cosa da fare secondaria…"
 
-#: todo/todoview.cpp:435
+#: todo/todoview.cpp:436
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Make this To-do Independent"
 msgstr "&Rendi indipendente questa cosa da fare"
 
-#: todo/todoview.cpp:437
+#: todo/todoview.cpp:438
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Make all Sub-to-dos &Independent"
 msgstr "Rendi &indipendenti tutte le cose da fare secondarie"
 
-#: todo/todoview.cpp:448
+#: todo/todoview.cpp:449
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Create Event from To-do"
 msgstr "Crea evento da cosa da fare"
 
-#: todo/todoview.cpp:456
+#: todo/todoview.cpp:457
 #, kde-format
 msgctxt "@action:inmenu set or unset to-do is completed"
 msgid "Togg&le To-do Completed"
 msgstr "Mostra/nascondi cose da fare comp&letate"
 
-#: todo/todoview.cpp:460
+#: todo/todoview.cpp:461
 #, kde-format
 msgctxt "@action:inmenu enable or disable reminder"
 msgid "&Toggle Reminder"
 msgstr "A&ttiva/disattiva promemoria"
 
-#: todo/todoview.cpp:467
+#: todo/todoview.cpp:468
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Copy To"
 msgstr "&Copia a"
 
-#: todo/todoview.cpp:474
+#: todo/todoview.cpp:475
 #, kde-format
 msgctxt "@title:menu"
 msgid "&Move To"
 msgstr "&Sposta a"
 
-#: todo/todoview.cpp:485
+#: todo/todoview.cpp:486
 #, kde-format
 msgctxt "@action:inmenu delete completed to-dos"
 msgid "Pur&ge Completed"
 msgstr "&Elimina completate"
 
-#: todo/todoview.cpp:488
+#: todo/todoview.cpp:489
 #, kde-format
 msgctxt "@action:inmenu unspecified priority"
 msgid "unspecified"
 msgstr "non specificata"
 
-#: todo/todoview.cpp:490
+#: todo/todoview.cpp:491
 #, kde-format
 msgctxt "@action:inmenu priority value=2"
 msgid "2"
 msgstr "2"
 
-#: todo/todoview.cpp:491
+#: todo/todoview.cpp:492
 #, kde-format
 msgctxt "@action:inmenu priority value=3"
 msgid "3"
 msgstr "3"
 
-#: todo/todoview.cpp:492
+#: todo/todoview.cpp:493
 #, kde-format
 msgctxt "@action:inmenu priority value=4"
 msgid "4"
 msgstr "4"
 
-#: todo/todoview.cpp:494
+#: todo/todoview.cpp:495
 #, kde-format
 msgctxt "@action:inmenu priority value=6"
 msgid "6"
 msgstr "6"
 
-#: todo/todoview.cpp:495
+#: todo/todoview.cpp:496
 #, kde-format
 msgctxt "@action:inmenu priority value=7"
 msgid "7"
 msgstr "7"
 
-#: todo/todoview.cpp:496
+#: todo/todoview.cpp:497
 #, kde-format
 msgctxt "@action:inmenu priority value=8"
 msgid "8"
 msgstr "8"
 
-#: todo/todoview.cpp:855
+#: todo/todoview.cpp:856
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Toggle Reminder Off"
 msgstr "Disa&ttiva promemoria"
 
-#: todo/todoview.cpp:856
+#: todo/todoview.cpp:857
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Toggle Reminder On"
 msgstr "A&ttiva promemoria"
 
-#: todo/todoview.cpp:1194
+#: todo/todoview.cpp:1195
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display the sidebar"
 msgstr "Mostra la barra laterale"
 
-#: todo/todoview.cpp:1197
+#: todo/todoview.cpp:1198
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Hide the sidebar"
 msgstr "Nascondi la barra laterale"
 
-#: todo/todoview.cpp:1216
+#: todo/todoview.cpp:1217
 #, kde-format
 msgctxt "@info::tooltip"
 msgid "Switch to the tree list display"
 msgstr "Passa alla visualizzazione a lista ad albero"
 
-#: todo/todoview.cpp:1219
+#: todo/todoview.cpp:1220
 #, kde-format
 msgctxt "@info::tooltip"
 msgid "Switch to the flat list display"
