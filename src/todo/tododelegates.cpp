@@ -45,10 +45,7 @@ void TodoCompleteDelegate::paint(QPainter *painter, const QStyleOptionViewItem &
             isEditing = view->isEditing(index);
         }
 
-        // TODO QTreeView does not set State_Editing. Qt task id 205051
-        // should be fixed with Qt 4.5, but wasn't. According to the
-        // task tracker the fix arrives in "Some future release".
-        if (!(opt.state & QStyle::State_Editing) && !isEditing) {
+        if (!isEditing) {
             QStyleOptionProgressBar pbOption;
             pbOption.QStyleOption::operator=(option);
             initStyleOptionProgressBar(&pbOption, index);
@@ -292,7 +289,12 @@ void TodoRichTextDelegate::paint(QPainter *painter, const QStyleOptionViewItem &
         } else {
             painter->setPen(QPen(opt.palette.brush(cg, QPalette::Text), 0));
         }
-        if (opt.state & QStyle::State_Editing) {
+        bool isEditing = false;
+        auto view = qobject_cast<TodoViewView *>(parent());
+        if (view) {
+            isEditing = view->isEditing(index);
+        }
+        if (isEditing) {
             painter->setPen(QPen(opt.palette.brush(cg, QPalette::Text), 0));
             painter->drawRect(textRect.adjusted(0, 0, -1, -1));
         }
