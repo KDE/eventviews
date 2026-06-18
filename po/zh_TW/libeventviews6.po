@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-12 00:44+0000\n"
-"PO-Revision-Date: 2026-05-21 22:38+0900\n"
+"PO-Revision-Date: 2026-06-17 13:10+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -109,11 +109,9 @@ msgid "%1: %2"
 msgstr "%1：%2"
 
 #: agenda/agendaitem.cpp:1066
-#, fuzzy, kde-format
-#| msgctxt "%1 is an item summary. %2 is the date when this item reoccurs"
-#| msgid "%1 (next: %2)"
+#, kde-format
 msgid "%1 (%2)"
-msgstr "%1 (下一個：%2)"
+msgstr "%1 (%2)"
 
 #: agenda/agendaview.cpp:423
 #, kde-format
@@ -762,32 +760,27 @@ msgstr "勾選此選項以便在行程檢視中顯示事件描述。"
 
 #. i18n: ectx: tooltip, entry (EnableAgendaItemDesc), group (Agenda View)
 #: eventviews.kcfg:170
-#, fuzzy, kde-format
-#| msgid "Display incidence descriptions agenda view items"
+#, kde-format
 msgid "Display incidence descriptions in agenda view items"
 msgstr "在行程檢視項目中顯示事件描述"
 
 #. i18n: ectx: label, entry (EnableAgendaItemLocation), group (Agenda View)
 #: eventviews.kcfg:174
-#, fuzzy, kde-format
-#| msgid "Show incidence descriptions in agenda view items"
+#, kde-format
 msgid "Show incidence locations in agenda view items"
-msgstr "在行程檢視項目中顯示事件描述"
+msgstr "在行程檢視項目中顯示事件位置"
 
 #. i18n: ectx: whatsthis, entry (EnableAgendaItemLocation), group (Agenda View)
 #: eventviews.kcfg:175
-#, fuzzy, kde-format
-#| msgid ""
-#| "Check this box to display the incidence descriptions in agenda view items."
+#, kde-format
 msgid "Check this box to display the incidence locations in agenda view items."
-msgstr "勾選此選項以便在行程檢視中顯示事件描述。"
+msgstr "勾選此選項以便在行程檢視中顯示事件位置。"
 
 #. i18n: ectx: tooltip, entry (EnableAgendaItemLocation), group (Agenda View)
 #: eventviews.kcfg:176
-#, fuzzy, kde-format
-#| msgid "Display incidence descriptions agenda view items"
+#, kde-format
 msgid "Display incidence locations in agenda view items"
-msgstr "在行程檢視項目中顯示事件描述"
+msgstr "在行程檢視項目中顯示事件位置"
 
 #. i18n: ectx: label, entry (ShowTodosAgendaView), group (Agenda View)
 #. i18n: ectx: label, entry (ShowTodosMonthView), group (Month View)
@@ -1107,47 +1100,41 @@ msgstr "在月檢視項目中顯示圖示"
 
 #. i18n: ectx: label, entry (ShowTimeInMonthView), group (Month View)
 #: eventviews.kcfg:270
-#, fuzzy, kde-format
-#| msgid "Show time in month view items"
+#, kde-format
 msgid "Show start-times without end-times in month view items"
-msgstr "在月檢視項目中顯示時間"
+msgstr "在月檢視項目中顯示開始時間（不顯示結束時間）"
 
 #. i18n: ectx: whatsthis, entry (ShowTimeInMonthView), group (Month View)
 #: eventviews.kcfg:271
-#, fuzzy, kde-format
-#| msgid "Check this box to display the time in month view items."
+#, kde-format
 msgid ""
 "Check this box to display the start-time without the end-time in month view "
 "items."
-msgstr "勾選此選項以便在月檢視的項目中顯示時間。"
+msgstr "勾選此選項以便在月檢視的項目中顯示開始時間（而不顯示結束時間）。"
 
 #. i18n: ectx: tooltip, entry (ShowTimeInMonthView), group (Month View)
 #: eventviews.kcfg:272
-#, fuzzy, kde-format
-#| msgid "Display time in month view items"
+#, kde-format
 msgid "Display start-time without the end-time in month view items"
-msgstr "在月檢視項目中顯示時間"
+msgstr "在月檢視項目中顯示開始時間（不顯示結束時間）"
 
 #. i18n: ectx: label, entry (ShowEndTimeInMonthView), group (Month View)
 #: eventviews.kcfg:276
-#, fuzzy, kde-format
-#| msgid "Show time in month view items"
+#, kde-format
 msgid "Show the start-time and the end-time in month view items"
-msgstr "在月檢視項目中顯示時間"
+msgstr "在月檢視項目中顯示開始與結束時間"
 
 #. i18n: ectx: whatsthis, entry (ShowEndTimeInMonthView), group (Month View)
 #: eventviews.kcfg:277
-#, fuzzy, kde-format
-#| msgid "Check this box to display the time in month view items."
+#, kde-format
 msgid "Check this box to display the start and end times in month view items."
-msgstr "勾選此選項以便在月檢視的項目中顯示時間。"
+msgstr "勾選此選項以便在月檢視的項目中顯示開始與結束時間。"
 
 #. i18n: ectx: tooltip, entry (ShowEndTimeInMonthView), group (Month View)
 #: eventviews.kcfg:278
-#, fuzzy, kde-format
-#| msgid "Display time in month view items"
+#, kde-format
 msgid "Display the start and end times in month view items"
-msgstr "在月檢視項目中顯示時間"
+msgstr "在月檢視項目中顯示開始與結束時間"
 
 #. i18n: ectx: whatsthis, entry (ShowTodosMonthView), group (Month View)
 #: eventviews.kcfg:283 viewerapp/settings.kcfg:117
@@ -1210,7 +1197,7 @@ msgstr "為是假日的日期使用假日背景顏色"
 msgid ""
 "Use the custom holiday color as the date's background color if a holiday "
 "lands on the date"
-msgstr ""
+msgstr "日期有假日項目時使用自訂假日顏色作為該日期的背景顏色"
 
 #. i18n: ectx: whatsthis, entry (ShowHolidaysBackgroundMonthView), group (Month View)
 #: eventviews.kcfg:302
@@ -1218,7 +1205,7 @@ msgstr ""
 msgid ""
 "Check this box to use the custom holiday as the date's background color when "
 "at least one holiday lands on a date."
-msgstr ""
+msgstr "勾選此選項以便使用自訂假日顏色作為有至少一個假日項目的日期的背景顏色。"
 
 #. i18n: ectx: label, entry, group (Month View)
 #: eventviews.kcfg:307 viewerapp/settings.kcfg:128
