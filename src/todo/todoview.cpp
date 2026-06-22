@@ -815,7 +815,7 @@ void TodoView::contextMenu(QPoint pos)
                 const auto collection = Akonadi::EntityTreeModel::updatedCollection(model(), item.storageCollectionId());
                 const bool incidenceIsRO = (collection.rights() & Akonadi::Collection::CanChangeItem) == 0;
 
-                enable = hasItem && (!actionIsRw || !incidenceIsRO);
+                enable = (!actionIsRw || !incidenceIsRO);
             }
         } else {
             enable = false;
