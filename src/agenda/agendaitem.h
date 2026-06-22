@@ -22,8 +22,10 @@ class AgendaItem;
 class EventView;
 
 struct MultiItemInfo {
-    int mStartCellXLeft, mStartCellXRight;
-    int mStartCellYTop, mStartCellYBottom;
+    int mStartCellXLeft = 0;
+    int mStartCellXRight = 0;
+    int mStartCellYTop = 0;
+    int mStartCellYBottom = 0;
     QPointer<AgendaItem> mFirstMultiItem;
     QPointer<AgendaItem> mPrevMultiItem;
     QPointer<AgendaItem> mNextMultiItem;
