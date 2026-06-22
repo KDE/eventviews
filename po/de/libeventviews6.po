@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: libeventviews6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-12 00:44+0000\n"
-"PO-Revision-Date: 2026-06-01 16:50+0200\n"
+"PO-Revision-Date: 2026-06-20 08:31+0200\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -26,7 +26,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 26.04.1\n"
+"X-Generator: Lokalize 26.04.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -1183,7 +1183,7 @@ msgstr ""
 #: eventviews.kcfg:264 viewerapp/settings.kcfg:110
 #, kde-format
 msgid "Show icons in month view items"
-msgstr "Ereignis-Symbole in der Monatsansicht anzeigen"
+msgstr "Ereignis-Symbole in Monatsansicht-Einträgen anzeigen"
 
 #. i18n: ectx: whatsthis, entry (EnableMonthItemIcons), group (Month View)
 #: eventviews.kcfg:265 viewerapp/settings.kcfg:111
@@ -1191,14 +1191,14 @@ msgstr "Ereignis-Symbole in der Monatsansicht anzeigen"
 msgid ""
 "Check this box to display icons (alarm, recursion, etc.) in month view items."
 msgstr ""
-"Aktivieren Sie diese Einstellung, um in der Monatsansicht auch Ereignis-"
-"Symbole anzeigen zu lassen (Erinnerung, Wiederholung usw.)."
+"Aktivieren Sie diese Einstellung, um in Monatsansicht-Einträgen auch "
+"Ereignis-Symbole anzeigen zu lassen (Erinnerung, Wiederholung usw.)."
 
 #. i18n: ectx: tooltip, entry (EnableMonthItemIcons), group (Month View)
 #: eventviews.kcfg:266 viewerapp/settings.kcfg:112
 #, kde-format
 msgid "Display icons in month view items"
-msgstr "Ereignis-Symbole in der Monatsansicht anzeigen"
+msgstr "Ereignis-Symbole in Monatsansicht-Einträgen anzeigen"
 
 #. i18n: ectx: label, entry (ShowTimeInMonthView), group (Month View)
 #: eventviews.kcfg:270
@@ -1213,34 +1213,34 @@ msgid ""
 "Check this box to display the start-time without the end-time in month view "
 "items."
 msgstr ""
-"Aktivieren Sie diese Einstellung, um die Startzeit ohne die Endzeit in der "
-"Monatsansicht anzuzeigen."
+"Aktivieren Sie diese Einstellung, um die Startzeit ohne die Endzeit in "
+"Monatsansicht-Einträgen anzuzeigen."
 
 #. i18n: ectx: tooltip, entry (ShowTimeInMonthView), group (Month View)
 #: eventviews.kcfg:272
 #, kde-format
 msgid "Display start-time without the end-time in month view items"
-msgstr "Die Startzeit ohne die Endzeit in der Monatsansicht anzeigen"
+msgstr "Die Startzeit ohne die Endzeit in Monatsansicht-Einträgen anzeigen"
 
 #. i18n: ectx: label, entry (ShowEndTimeInMonthView), group (Month View)
 #: eventviews.kcfg:276
 #, kde-format
 msgid "Show the start-time and the end-time in month view items"
-msgstr "Die Start- und die Endzeit in der Monatsansicht anzeigen"
+msgstr "Die Start- und die Endzeit in Monatsansicht-Einträgen anzeigen"
 
 #. i18n: ectx: whatsthis, entry (ShowEndTimeInMonthView), group (Month View)
 #: eventviews.kcfg:277
 #, kde-format
 msgid "Check this box to display the start and end times in month view items."
 msgstr ""
-"Aktivieren Sie diese Einstellung, um die Start- und Endzeit in der "
-"Monatsansicht anzuzeigen."
+"Aktivieren Sie diese Einstellung, um die Start- und Endzeit in Monatsansicht-"
+"Einträgen anzuzeigen."
 
 #. i18n: ectx: tooltip, entry (ShowEndTimeInMonthView), group (Month View)
 #: eventviews.kcfg:278
 #, kde-format
 msgid "Display the start and end times in month view items"
-msgstr "Die Start- und die Endzeit in der Monatsansicht anzeigen"
+msgstr "Die Start- und die Endzeit in Monatsansicht-Einträgen anzeigen"
 
 #. i18n: ectx: whatsthis, entry (ShowTodosMonthView), group (Month View)
 #: eventviews.kcfg:283 viewerapp/settings.kcfg:117
