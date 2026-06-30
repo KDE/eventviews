@@ -286,7 +286,7 @@ AgendaHeader::AgendaHeader(bool isSideBySide, bool isDualTimeLabels, QWidget *pa
         layout->addWidget(mCalendarNameLabel);
     }
 
-    auto *daysWidget = new QWidget(this);
+    auto daysWidget = new QWidget(this);
     layout->addWidget(daysWidget);
 
     auto daysLayout = new QHBoxLayout(daysWidget);
