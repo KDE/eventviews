@@ -165,7 +165,7 @@ ecm_generate_headers(eventviews_CamelCase_HEADERS
   Helper
   Prefs
   EventView
-  REQUIRED_HEADERS eventviews_CamelCase_HEADERS
+  REQUIRED_HEADERS eventviews_HEADERS
   PREFIX EventViews
 )
 
@@ -254,8 +254,8 @@ install(
 install(
     FILES
         ${CMAKE_CURRENT_BINARY_DIR}/eventviews_export.h
-        ${eventviews_CamelCase_HEADERS}
         ${eventviews_agenda_HEADERS}
+        ${eventviews_HEADERS}
         ${eventviews_todo_HEADERS}
         ${eventviews_whatsnext_HEADERS}
         ${eventviews_timeline_HEADERS}
