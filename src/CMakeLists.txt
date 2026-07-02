@@ -273,3 +273,37 @@ if(BUILD_TESTING)
     add_subdirectory(month/autotests)
 endif()
 ecm_generate_qdoc(KPim6EventViews eventviews.qdocconf)
+
+ecm_add_installed_library_check(KPim6EventViews
+    PACKAGE_NAME "KPim6EventViews"
+    PACKAGE_VERSION ${EVENTVIEWS_VERSION}
+    PACKAGE_TARGET_NAMESPACE "KPim6::"
+)
+
+ecm_installed_library_check_include_strings(KPim6EventViews
+    HEADERS
+    ${eventviews_agenda_HEADERS}
+    ${eventviews_HEADERS}
+    ${eventviews_todo_HEADERS}
+    ${eventviews_whatsnext_HEADERS}
+    ${eventviews_timeline_HEADERS}
+    ${eventviews_multiagenda_HEADERS}
+    ${eventviews_journal_HEADERS}
+    ${eventviews_list_HEADERS}
+    ${eventviews_month_HEADERS}
+    PREFIX eventviews
+)
+
+ecm_installed_library_check_include_strings(KPim6EventViews
+   HEADERS
+   ${eventviews_CamelCase_HEADERS}
+   ${eventviews_CamelCaseagenda_HEADERS}
+   ${eventviews_CamelCasetodo_HEADERS}
+   ${eventviews_CamelCasewhatsnext_HEADERS}
+   ${eventviews_CamelCasetimeline_HEADERS}
+   ${eventviews_CamelCasemultiagenda_HEADERS}
+   ${eventviews_CamelCasejournal_HEADERS}
+   ${eventviews_CamelCaselist_HEADERS}
+   ${eventviews_CamelCasemonth_HEADERS}
+    PREFIX EventViews
+)
