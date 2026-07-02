@@ -6,7 +6,7 @@
 */
 
 #pragma once
-
+#include <QString>
 class KCheckableProxyModel;
 
 namespace EventViews
