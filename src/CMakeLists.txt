@@ -125,11 +125,11 @@ target_link_libraries(
         KPim6::CalendarUtils
         KPim6::AkonadiCalendar
         KF6::ItemModels
-    PRIVATE
         KF6::Holidays
+        KF6::IconThemes
+    PRIVATE
         KF6::Completion
         KF6::Service
-        KF6::IconThemes
         KF6::GuiAddons
         KF6::I18n
         KF6::ColorScheme
