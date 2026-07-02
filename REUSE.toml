@@ -40,3 +40,9 @@ path = ["metainfo.yaml", ".krazy"]
 precedence = "aggregate"
 SPDX-FileCopyrightText = "none"
 SPDX-License-Identifier = "CC0-1.0"
+
+[[annotations]]
+path = ["README-ECMInstalledLibraryCheck.md"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2026 Laurent Montel <montel@kde.org>"
+SPDX-License-Identifier = "BSD-3-Clause"
