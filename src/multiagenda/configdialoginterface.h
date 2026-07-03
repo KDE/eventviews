@@ -7,6 +7,7 @@
 
 #pragma once
 #include <QString>
+#include <eventviews_version.h>
 class KCheckableProxyModel;
 
 namespace EventViews
