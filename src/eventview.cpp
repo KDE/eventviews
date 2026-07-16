@@ -25,10 +25,8 @@ using namespace Qt::Literals::StringLiterals;
 
 #include <KCalUtils/RecurrenceActions>
 
-#include <KHolidays/HolidayRegion>
-#if KHOLIDAYS_VERSION >= QT_VERSION_CHECK(6, 26, 0)
 #include <KHolidays/HolidayCategories>
-#endif
+#include <KHolidays/HolidayRegion>
 
 #include "calendarview_debug.h"
 #include <KCheckableProxyModel>
@@ -108,11 +106,9 @@ void EventView::setHolidayCategories(const QStringList &categories)
     Q_D(EventView);
     d->mHolidayCategories.clear();
     for (const QString &catStr : categories) {
-#if KHOLIDAYS_VERSION >= QT_VERSION_CHECK(6, 26, 0)
         if (KHolidays::isHolidayCategoryValid(catStr)) {
             d->mHolidayCategories.append(catStr);
         }
-#endif
     }
 }
 
