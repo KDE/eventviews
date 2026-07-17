@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-12 00:44+0000\n"
+"POT-Creation-Date: 2026-07-17 00:44+0000\n"
 "PO-Revision-Date: 2026-06-05 14:04+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -301,28 +301,28 @@ msgctxt "@title:window"
 msgid "Timezone"
 msgstr "المنطقة الزمنية"
 
-#: eventview.cpp:125
+#: eventview.cpp:121
 #, kde-format
 msgctxt "@title:window"
 msgid "Changing Recurring Item"
 msgstr "تغيير عنصر يتكرّر"
 
-#: eventview.cpp:126
+#: eventview.cpp:122
 #, kde-format
 msgid "Also &Future Items"
 msgstr "العناصر الم&ستقبليّة أيضًا"
 
-#: eventview.cpp:127
+#: eventview.cpp:123
 #, kde-format
 msgid "Only &This Item"
 msgstr "&هذا العنصر فقط"
 
-#: eventview.cpp:128
+#: eventview.cpp:124
 #, kde-format
 msgid "&All Occurrences"
 msgstr "كل ال&حدوثات"
 
-#: eventview.cpp:145
+#: eventview.cpp:141
 #, kde-format
 msgid ""
 "The item you are trying to change is a recurring item. Should the changes be "
@@ -332,7 +332,7 @@ msgstr ""
 "العنصر الذي تحاول تغييره هو عنصر يتكرّر. أيجب أن تُطبّق التغييرات على هذا "
 "الحدوث فقط، أو على العناصر المستقبليّة أيضًا، أو على كل العناصر في التكرار؟"
 
-#: eventview.cpp:156
+#: eventview.cpp:152
 #, kde-format
 msgid ""
 "The item you are trying to change is a recurring item. Should the changes be "
@@ -1873,13 +1873,13 @@ msgctxt "@info/plain"
 msgid "Move occurrence(s)"
 msgstr "انقل التكرار(ات)"
 
-#: month/monthscene.cpp:208
+#: month/monthscene.cpp:206
 #, kde-format
 msgctxt "monthname year"
 msgid "%1 %2"
 msgstr "%1 %2"
 
-#: month/monthscene.cpp:345
+#: month/monthscene.cpp:343
 #, kde-format
 msgctxt "'Month day' for month view cells"
 msgid "%1 %2"
