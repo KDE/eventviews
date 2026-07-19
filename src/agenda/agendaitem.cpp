@@ -18,9 +18,13 @@
 
 #include <KContacts/VCardDrag>
 
-#include <KCalUtils/ICalDrag>
 #include <KCalUtils/IncidenceFormatter>
+#if KCALENDARCORE_VERSION < QT_VERSION_CHECK(6, 29, 0)
+#include <KCalUtils/ICalDrag>
 #include <KCalUtils/VCalDrag>
+#else
+#include <KCalendarCore/MimeData>
+#endif
 
 #include <KEmailAddress>
 
@@ -605,7 +609,11 @@ void AgendaItem::expandRight(int dx)
 void AgendaItem::dragEnterEvent(QDragEnterEvent *e)
 {
     const QMimeData *md = e->mimeData();
+#if KCALENDARCORE_VERSION < QT_VERSION_CHECK(6, 29, 0)
     if (KCalUtils::ICalDrag::canDecode(md) || KCalUtils::VCalDrag::canDecode(md)) {
+#else
+    if (KCalendarCore::MimeData::canDecode(md)) {
+#endif
         // TODO: Allow dragging events/todos onto other events to create a relation
         e->ignore();
         return;
