@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-21 00:44+0000\n"
-"PO-Revision-Date: 2026-07-10 00:06+0200\n"
+"PO-Revision-Date: 2026-07-21 20:29+0200\n"
 "Last-Translator: Libor Filípek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -948,10 +948,9 @@ msgstr "Povolit automatický editor událostí s výběrem časového rozsahu"
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #: eventviews.kcfg:209
-#, fuzzy, kde-format
-#| msgid "Use system color"
+#, kde-format
 msgid "Agenda Item Color"
-msgstr "Používat systémové barvy"
+msgstr "Barva položky agendy"
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
@@ -1223,10 +1222,10 @@ msgstr "Zobrazit čas začátku a konce v položkách měsíčního zobrazení"
 
 #. i18n: ectx: tooltip, entry (ColorMonthBusyDaysEnabled), group (Month View)
 #: eventviews.kcfg:283
-#, fuzzy, kde-format
-#| msgid "Use the Holiday background color when a holiday lands on the date"
+#, kde-format
 msgid "Use the busy days background color setting for busy days"
-msgstr "Pokud na daný den připadá svátek, použít barvu pozadí svátku"
+msgstr ""
+"Pro zaneprázdněné dny použít nastavení barvy pozadí pro zaneprázdněné dny"
 
 #. i18n: ectx: whatsthis, entry (ColorMonthBusyDaysEnabled), group (Month View)
 #: eventviews.kcfg:284
@@ -1346,7 +1345,7 @@ msgstr ""
 #: eventviews.kcfg:318
 #, kde-format
 msgid "Month Item Colors"
-msgstr ""
+msgstr "Barvy měsíčních položek"
 
 #. i18n: ectx: tooltip, entry, group (Month View)
 #: eventviews.kcfg:322

@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kdepim-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-21 00:44+0000\n"
-"PO-Revision-Date: 2026-06-02 13:03+0300\n"
+"PO-Revision-Date: 2026-07-21 21:01+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 26.04.0\n"
+"X-Generator: Lokalize 26.04.2\n"
 "(http: //www.transifex.com/projects/p/kdepim-k-tr/language/tr/)\n"
 "X-POOTLE-MTIME: 1413132207.000000\n"
 
@@ -859,10 +859,10 @@ msgid ""
 "you can change the background color used for this option on the Colors "
 "configuration page. Look for the \"Busy days background color\" setting."
 msgstr ""
-"Eğer en az bir tüm gün meşgul olarak işaretlediğiniz günlerin ajanda arka "
+"Eğer en az bir tüm gün meşgûl olarak işaretlediğiniz günlerin ajanda arka "
 "planının farklı bir renkte doldurulmasını istiyorsanız bu kutuyu "
 "işaretleyin. Ayrıca, bu seçenek için kullanılacak arka plan rengini, Renkler "
-"yapılandırma sayfasından değiştirebilirsiniz. “Meşgul gün arka plan rengi” "
+"yapılandırma sayfasından değiştirebilirsiniz. “meşgûl gün arka plan rengi” "
 "ayarını arayın."
 
 #. i18n: ectx: label, entry (ShowTodosAgendaView), group (Agenda View)
@@ -954,10 +954,9 @@ msgstr "Zaman aralığı seçimiyle otomatik etkinlik düzenleyiciyi etkinleşti
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #: eventviews.kcfg:209
-#, fuzzy, kde-format
-#| msgid "Use system color"
+#, kde-format
 msgid "Agenda Item Color"
-msgstr "Sistem rengini kullan"
+msgstr "Ajanda ögesi rengi"
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
@@ -1231,10 +1230,9 @@ msgstr "Ay görünümü ögelerinde başlangıç ve bitiş zamanlarını görün
 
 #. i18n: ectx: tooltip, entry (ColorMonthBusyDaysEnabled), group (Month View)
 #: eventviews.kcfg:283
-#, fuzzy, kde-format
-#| msgid "Use the Holiday background color when a holiday lands on the date"
+#, kde-format
 msgid "Use the busy days background color setting for busy days"
-msgstr "Tatil bir tarihe denk geliyorsa tatil arka plan rengini kullan"
+msgstr "meşgûl günler için meşgûl günler arka plan rengini kullan"
 
 #. i18n: ectx: whatsthis, entry (ColorMonthBusyDaysEnabled), group (Month View)
 #: eventviews.kcfg:284
@@ -1246,10 +1244,10 @@ msgid ""
 "Colors configuration page. Look for the \"Busy days background color\" "
 "setting."
 msgstr ""
-"Eğer en az bir tüm gün meşgul olarak işaretlediğiniz günlerin aylık "
+"Eğer en az bir tüm gün meşgûl olarak işaretlediğiniz günlerin aylık "
 "görünümdeki arka planının farklı bir renkte doldurulmasını istiyorsanız bu "
 "kutuyu işaretleyin. Ayrıca, bu seçenek için kullanılacak arka plan rengini "
-"Renkler yapılandırma sayfasından değiştirebilirsiniz. “Meşgul gün arka plan "
+"Renkler yapılandırma sayfasından değiştirebilirsiniz. “meşgûl gün arka plan "
 "rengi” ayarını arayın."
 
 #. i18n: ectx: whatsthis, entry (ShowTodosMonthView), group (Month View)
@@ -1351,7 +1349,7 @@ msgstr ""
 #: eventviews.kcfg:318
 #, kde-format
 msgid "Month Item Colors"
-msgstr ""
+msgstr "Ay ögesi renkleri"
 
 #. i18n: ectx: tooltip, entry, group (Month View)
 #: eventviews.kcfg:322
@@ -1555,7 +1553,7 @@ msgstr "Ajanda görünümü arka plan rengini buradan seçin."
 #: eventviews.kcfg:381
 #, kde-format
 msgid "Agenda/Month view background busy color"
-msgstr "Ajanda/Ay görünümü arka plan meşgul rengi"
+msgstr "Ajanda/Ay görünümü arka plan meşgûl rengi"
 
 #. i18n: ectx: whatsthis, entry (ViewBgBusyColor), group (Colors)
 #: eventviews.kcfg:382
@@ -1564,7 +1562,7 @@ msgid ""
 "When you have an all day event marked as busy, you can have a different "
 "agenda or month view background color for that day. Select the color here."
 msgstr ""
-"Bir tüm gün olayında meşgulseniz o gün için farklı ajanda veya aylık görünüm "
+"Bir tüm gün olayında meşgûlseniz o gün için farklı ajanda veya aylık görünüm "
 "arka plan rengi seçebilirsiniz. Bu rengi buradan seçin."
 
 #. i18n: ectx: label, entry, group (Colors)
