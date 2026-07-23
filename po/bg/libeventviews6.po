@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-21 00:44+0000\n"
-"PO-Revision-Date: 2026-06-17 15:20+0200\n"
+"PO-Revision-Date: 2026-07-22 15:24+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -961,10 +961,9 @@ msgstr ""
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #: eventviews.kcfg:209
-#, fuzzy, kde-format
-#| msgid "Use system color"
+#, kde-format
 msgid "Agenda Item Color"
-msgstr "Използване на системен цвят"
+msgstr "Цвят на елементите на дневния ред"
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
@@ -1244,12 +1243,11 @@ msgstr "Показване на началния и крайния час в е�
 
 #. i18n: ectx: tooltip, entry (ColorMonthBusyDaysEnabled), group (Month View)
 #: eventviews.kcfg:283
-#, fuzzy, kde-format
-#| msgid "Use the Holiday background color when a holiday lands on the date"
+#, kde-format
 msgid "Use the busy days background color setting for busy days"
 msgstr ""
-"Използване на цвета за празници като фонов цвят, когато датата е официален "
-"празник"
+"Използване на стандартните настройки за цвят на фона за заетите дни за заети "
+"дни"
 
 #. i18n: ectx: whatsthis, entry (ColorMonthBusyDaysEnabled), group (Month View)
 #: eventviews.kcfg:284
@@ -1376,7 +1374,7 @@ msgstr ""
 #: eventviews.kcfg:318
 #, kde-format
 msgid "Month Item Colors"
-msgstr ""
+msgstr "Цветове на елементите в месечния изглед"
 
 #. i18n: ectx: tooltip, entry, group (Month View)
 #: eventviews.kcfg:322
