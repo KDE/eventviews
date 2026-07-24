@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-12 00:44+0000\n"
-"PO-Revision-Date: 2026-06-24 17:34+0200\n"
+"PO-Revision-Date: 2026-07-23 12:09+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -1686,7 +1686,7 @@ msgid ""
 msgstr ""
 "Pressa iste button pro configurar le font de vista de mense. Iste button "
 "aperira le dialogo de \"Selige Font\", permittente te de seliger le font de "
-"elementosin le vista de mense."
+"elemento sin le vista de mense."
 
 #. i18n: ectx: label, entry, group (Fonts)
 #: eventviews.kcfg:417 viewerapp/settings.kcfg:229
