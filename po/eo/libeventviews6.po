@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-21 00:44+0000\n"
+"POT-Creation-Date: 2026-07-26 00:44+0000\n"
 "PO-Revision-Date: 2024-06-21 23:56+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -29,27 +29,27 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "axel.rousseau@esperanto-france.org, olivermkellogg@gmail.com"
 
-#: agenda/agenda.cpp:956
+#: agenda/agenda.cpp:963
 #, fuzzy, kde-format
 #| msgid "Unable to lock item for modification. You cannot make any changes."
 msgctxt "@info"
 msgid "Unable to lock item for modification. You cannot make any changes."
 msgstr "Ne eblas ŝlosi eron por modifo. Vi ne povas fari iujn ŝanĝojn."
 
-#: agenda/agenda.cpp:958
+#: agenda/agenda.cpp:965
 #, kde-format
 msgctxt "@title:window"
 msgid "Locking Failed"
 msgstr "Ŝlosado Malsukcesis"
 
-#: agenda/agenda.cpp:1173
+#: agenda/agenda.cpp:1180
 #, fuzzy, kde-format
 #| msgid "Dissociate event from recurrence"
 msgctxt "@info/plain"
 msgid "Dissociate event from recurrence"
 msgstr "Malasociigi eventon de reapero"
 
-#: agenda/agenda.cpp:1196 month/monthitem.cpp:450
+#: agenda/agenda.cpp:1203 month/monthitem.cpp:450
 #, fuzzy, kde-format
 #| msgid ""
 #| "Unable to add the exception item to the calendar. No change will be done."
@@ -59,65 +59,65 @@ msgid ""
 msgstr ""
 "Ne eblas aldoni la escepteron al la kalendaro. Neniu ŝanĝo estos farita."
 
-#: agenda/agenda.cpp:1198 month/monthitem.cpp:452
+#: agenda/agenda.cpp:1205 month/monthitem.cpp:452
 #, kde-format
 msgctxt "@title:window"
 msgid "Error Occurred"
 msgstr "Eraro Okazis"
 
-#: agenda/agendaitem.cpp:82 list/listview.cpp:431
+#: agenda/agendaitem.cpp:86 list/listview.cpp:431
 #, kde-format
 msgid "%2 (1 year)"
 msgid_plural "%2 (%1 years)"
 msgstr[0] "%2 (1 jaro)"
 msgstr[1] "%2 (%1 jaroj)"
 
-#: agenda/agendaitem.cpp:632
+#: agenda/agendaitem.cpp:640
 #, kde-format
 msgid "Attendee \"%1\" added to the calendar item \"%2\""
 msgstr "Ĉeestanto \"%1\" aldonata al la kalendara ero \"%2\""
 
-#: agenda/agendaitem.cpp:633
+#: agenda/agendaitem.cpp:641
 #, kde-format
 msgctxt "@title:window"
 msgid "Attendee added"
 msgstr "Ĉeestanto aldonata"
 
-#: agenda/agendaitem.cpp:857 agenda/agendaitem.cpp:957
+#: agenda/agendaitem.cpp:865 agenda/agendaitem.cpp:965
 #, kde-format
 msgid "%1 - %2"
 msgstr "%1 - %2"
 
-#: agenda/agendaitem.cpp:866
+#: agenda/agendaitem.cpp:874
 #, kde-format
 msgid "- %1"
 msgstr "- %1"
 
-#: agenda/agendaitem.cpp:910 agenda/agendaitem.cpp:933
+#: agenda/agendaitem.cpp:918 agenda/agendaitem.cpp:941
 #, fuzzy, kde-format
 #| msgctxt "date, from - to"
 #| msgid "%1, %2 - %3"
 msgid "%1: %2 - %3"
 msgstr "%1, %2 - %3"
 
-#: agenda/agendaitem.cpp:1044
+#: agenda/agendaitem.cpp:1052
 #, kde-format
 msgid "Google Calendar Settings"
 msgstr ""
 
-#: agenda/agendaitem.cpp:1044
+#: agenda/agendaitem.cpp:1052
 #, kde-format
 msgid "Public Holiday"
 msgstr ""
 
-#: agenda/agendaitem.cpp:1057
+#: agenda/agendaitem.cpp:1065
 #, fuzzy, kde-format
 #| msgctxt "date, from - to"
 #| msgid "%1, %2 - %3"
 msgid "%1: %2"
 msgstr "%1, %2 - %3"
 
-#: agenda/agendaitem.cpp:1066
+#: agenda/agendaitem.cpp:1074
 #, fuzzy, kde-format
 #| msgctxt "%1 is an item summary. %2 is the date when this item reoccurs"
 #| msgid "%1 (next: %2)"
