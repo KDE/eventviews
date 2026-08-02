@@ -9,9 +9,9 @@
 */
 
 #include "eventview_p.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "prefs.h"
+#include "recurrenceactions.h"
 
 #include <CalendarSupport/CollectionSelection>
 #include <CalendarSupport/KCalPrefs>
@@ -22,8 +22,6 @@ using namespace Qt::Literals::StringLiterals;
 #include <Akonadi/EntityTreeModel>
 
 #include <KCalendarCore/CalFilter>
-
-#include <KCalUtils/RecurrenceActions>
 
 #include <KHolidays/HolidayCategories>
 #include <KHolidays/HolidayRegion>
@@ -40,6 +38,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <QKeyEvent>
 #include <QSortFilterProxyModel>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace KCalendarCore;
 using namespace EventViews;
 using namespace Akonadi;
@@ -116,7 +115,7 @@ int EventView::showMoveRecurDialog(const Incidence::Ptr &inc, QDate date)
 {
     QDateTime const dateTime(date, {}, QTimeZone::LocalTime);
 
-    int const availableOccurrences = KCalUtils::RecurrenceActions::availableOccurrences(inc, dateTime);
+    int const availableOccurrences = RecurrenceActions::availableOccurrences(inc, dateTime);
 
     const QString caption = i18nc("@title:window", "Changing Recurring Item");
     KGuiItem const itemFuture(i18n("Also &Future Items"));
@@ -124,39 +123,39 @@ int EventView::showMoveRecurDialog(const Incidence::Ptr &inc, QDate date)
     KGuiItem const itemAll(i18n("&All Occurrences"));
 
     switch (availableOccurrences) {
-    case KCalUtils::RecurrenceActions::NoOccurrence:
-        return KCalUtils::RecurrenceActions::NoOccurrence;
+    case RecurrenceActions::NoOccurrence:
+        return RecurrenceActions::NoOccurrence;
 
-    case KCalUtils::RecurrenceActions::SelectedOccurrence:
-        return KCalUtils::RecurrenceActions::SelectedOccurrence;
+    case RecurrenceActions::SelectedOccurrence:
+        return RecurrenceActions::SelectedOccurrence;
 
-    case KCalUtils::RecurrenceActions::AllOccurrences:
-        Q_ASSERT(availableOccurrences & KCalUtils::RecurrenceActions::SelectedOccurrence);
+    case RecurrenceActions::AllOccurrences:
+        Q_ASSERT(availableOccurrences & RecurrenceActions::SelectedOccurrence);
 
         // if there are all kinds of ooccurrences (i.e. past present and future) the user might
         // want the option only apply to current and future occurrences, leaving the past ones
         // provide a third choice for that ("Also future")
-        if (availableOccurrences == KCalUtils::RecurrenceActions::AllOccurrences) {
+        if (availableOccurrences == RecurrenceActions::AllOccurrences) {
             const QString message = i18n(
                 "The item you are trying to change is a recurring item. "
                 "Should the changes be applied only to this single occurrence, "
                 "also to future items, or to all items in the recurrence?");
-            return KCalUtils::RecurrenceActions::questionSelectedFutureAllCancel(message, caption, itemSelected, itemFuture, itemAll, this);
+            return RecurrenceActions::questionSelectedFutureAllCancel(message, caption, itemSelected, itemFuture, itemAll, this);
         }
         [[fallthrough]];
 
     default:
-        Q_ASSERT(availableOccurrences & KCalUtils::RecurrenceActions::SelectedOccurrence);
+        Q_ASSERT(availableOccurrences & RecurrenceActions::SelectedOccurrence);
         // selected occurrence and either past or future occurrences
         const QString message = i18n(
             "The item you are trying to change is a recurring item. "
             "Should the changes be applied only to this single occurrence "
             "or to all items in the recurrence?");
-        return KCalUtils::RecurrenceActions::questionSelectedAllCancel(message, caption, itemSelected, itemAll, this);
+        return RecurrenceActions::questionSelectedAllCancel(message, caption, itemSelected, itemAll, this);
         break;
     }
 
-    return KCalUtils::RecurrenceActions::NoOccurrence;
+    return RecurrenceActions::NoOccurrence;
 }
 
 void EventView::addCalendar(const Akonadi::CollectionCalendar::Ptr &calendar)

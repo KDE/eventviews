@@ -11,6 +11,7 @@
 #include "monthview.h"
 #include "prefs.h"
 #include "prefs_base.h" // Ugly, but needed for the Enums
+#include "recurrenceactions.h"
 
 #include <Akonadi/CalendarUtils>
 #include <Akonadi/EntityTreeModel>
@@ -20,7 +21,6 @@
 #include <CalendarSupport/Utils>
 
 #include <KCalUtils/IncidenceFormatter>
-#include <KCalUtils/RecurrenceActions>
 
 #include "calendarview_debug.h"
 #include <KMessageBox>
@@ -426,16 +426,16 @@ void IncidenceMonthItem::updateDates(int startOffset, int endOffset)
     if (mIncidence->recurs()) {
         const int res = monthScene()->mMonthView->showMoveRecurDialog(mIncidence, startDate());
         switch (res) {
-        case KCalUtils::RecurrenceActions::AllOccurrences: {
+        case RecurrenceActions::AllOccurrences: {
             // All occurrences
             KCalendarCore::Incidence::Ptr const oldIncidence(mIncidence->clone());
             setNewDates(mIncidence, startOffset, endOffset);
             changer->modifyIncidence(item, oldIncidence);
             break;
         }
-        case KCalUtils::RecurrenceActions::SelectedOccurrence: // Just this occurrence
-        case KCalUtils::RecurrenceActions::FutureOccurrences: { // All future occurrences
-            const bool thisAndFuture = (res == KCalUtils::RecurrenceActions::FutureOccurrences);
+        case RecurrenceActions::SelectedOccurrence: // Just this occurrence
+        case RecurrenceActions::FutureOccurrences: { // All future occurrences
+            const bool thisAndFuture = (res == RecurrenceActions::FutureOccurrences);
             QDateTime occurrenceDate(mIncidence->dtStart());
             occurrenceDate.setDate(startDate());
             KCalendarCore::Incidence::Ptr const newIncidence(KCalendarCore::Calendar::createException(mIncidence, occurrenceDate, thisAndFuture));

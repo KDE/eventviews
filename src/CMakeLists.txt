@@ -17,6 +17,7 @@ target_sources(
         eventview.cpp
         helper.cpp
         prefs.cpp
+        recurrenceactions.cpp
         # Agenda view specific code.
         agenda/agenda.cpp
         agenda/agendaitem.cpp

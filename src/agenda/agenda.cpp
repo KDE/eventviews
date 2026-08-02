@@ -13,6 +13,7 @@
 #include "agenda.h"
 #include "agendaview.h"
 #include "prefs.h"
+#include "recurrenceactions.h"
 
 #include <Akonadi/CalendarUtils>
 #include <Akonadi/IncidenceChanger>
@@ -22,8 +23,6 @@
 #if KCALENDARCORE_VERSION >= QT_VERSION_CHECK(6, 29, 0)
 #include <KCalendarCore/MimeData>
 #endif
-
-#include <KCalUtils/RecurrenceActions>
 
 #include "calendarview_debug.h"
 #include <KMessageBox>
@@ -1168,13 +1167,13 @@ void Agenda::endItemAction()
             }
 
             switch (res) {
-            case KCalUtils::RecurrenceActions::AllOccurrences: // All occurrences
+            case RecurrenceActions::AllOccurrences: // All occurrences
                 // Moving the whole sequence of events is handled by the itemModified below.
                 modify = true;
                 break;
-            case KCalUtils::RecurrenceActions::SelectedOccurrence:
-            case KCalUtils::RecurrenceActions::FutureOccurrences: {
-                const bool thisAndFuture = (res == KCalUtils::RecurrenceActions::FutureOccurrences);
+            case RecurrenceActions::SelectedOccurrence:
+            case RecurrenceActions::FutureOccurrences: {
+                const bool thisAndFuture = (res == RecurrenceActions::FutureOccurrences);
                 modify = true;
                 multiModify = true;
                 d->mChanger->startAtomicOperation(i18nc("@info/plain", "Dissociate event from recurrence"));
