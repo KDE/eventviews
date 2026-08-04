@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-26 00:44+0000\n"
+"POT-Creation-Date: 2026-08-04 00:45+0000\n"
 "PO-Revision-Date: 2020-09-08 19:18+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian\n"
@@ -28,7 +28,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr ""
 
-#: agenda/agenda.cpp:963
+#: agenda/agenda.cpp:962
 #, fuzzy, kde-format
 #| msgid "Unable to lock item for modification. You cannot make any changes."
 msgctxt "@info"
@@ -36,21 +36,21 @@ msgid "Unable to lock item for modification. You cannot make any changes."
 msgstr ""
 "Elementul nu poate fi blocat pentru modificare. Nu puteți face schimbări."
 
-#: agenda/agenda.cpp:965
+#: agenda/agenda.cpp:964
 #, fuzzy, kde-format
 #| msgid "Locking Failed"
 msgctxt "@title:window"
 msgid "Locking Failed"
 msgstr "Blocare eșuată"
 
-#: agenda/agenda.cpp:1180
+#: agenda/agenda.cpp:1179
 #, fuzzy, kde-format
 #| msgid "Dissociate event from recurrence"
 msgctxt "@info/plain"
 msgid "Dissociate event from recurrence"
 msgstr "Disociază evenimentul de recurență"
 
-#: agenda/agenda.cpp:1203 month/monthitem.cpp:450
+#: agenda/agenda.cpp:1202 month/monthitem.cpp:450
 #, fuzzy, kde-format
 #| msgid ""
 #| "Unable to add the future items to the calendar. No change will be done."
@@ -61,7 +61,7 @@ msgstr ""
 "Elementele viitoare nu au putut fi adăugate la calendar. Nu se vor face "
 "modificări."
 
-#: agenda/agenda.cpp:1205 month/monthitem.cpp:452
+#: agenda/agenda.cpp:1204 month/monthitem.cpp:452
 #, fuzzy, kde-format
 #| msgid "Error Occurred"
 msgctxt "@title:window"
@@ -300,28 +300,28 @@ msgctxt "@title:window"
 msgid "Timezone"
 msgstr "Fus orar"
 
-#: eventview.cpp:121
+#: eventview.cpp:120
 #, kde-format
 msgctxt "@title:window"
 msgid "Changing Recurring Item"
 msgstr "Se modifică elementul recurent"
 
-#: eventview.cpp:122
+#: eventview.cpp:121
 #, kde-format
 msgid "Also &Future Items"
 msgstr "Inclusiv elementele &viitoare"
 
-#: eventview.cpp:123
+#: eventview.cpp:122
 #, kde-format
 msgid "Only &This Item"
 msgstr "Numai aces&t element"
 
-#: eventview.cpp:124
+#: eventview.cpp:123
 #, kde-format
 msgid "&All Occurrences"
 msgstr "To&ate aparițiile"
 
-#: eventview.cpp:141
+#: eventview.cpp:140
 #, kde-format
 msgid ""
 "The item you are trying to change is a recurring item. Should the changes be "
@@ -332,7 +332,7 @@ msgstr ""
 "modificările să fie aplicate: numai asupra acestei apariții, inclusiv "
 "elementelor viitoare, tuturor elementelor din recurență?"
 
-#: eventview.cpp:152
+#: eventview.cpp:151
 #, kde-format
 msgid ""
 "The item you are trying to change is a recurring item. Should the changes be "

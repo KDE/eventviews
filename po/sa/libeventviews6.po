@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-26 00:44+0000\n"
+"POT-Creation-Date: 2026-08-04 00:45+0000\n"
 "PO-Revision-Date: 2024-12-24 20:39+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -29,27 +29,27 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "skkalwar999@gmail.com"
 
-#: agenda/agenda.cpp:963
+#: agenda/agenda.cpp:962
 #, fuzzy, kde-format
 #| msgid "Unable to lock item for modification. You cannot make any changes."
 msgctxt "@info"
 msgid "Unable to lock item for modification. You cannot make any changes."
 msgstr "परिवर्तनार्थं द्रव्यं ताडयितुं असमर्थः। भवन्तः किमपि परिवर्तनं कर्तुं न शक्नुवन्ति।"
 
-#: agenda/agenda.cpp:965
+#: agenda/agenda.cpp:964
 #, kde-format
 msgctxt "@title:window"
 msgid "Locking Failed"
 msgstr "तालाबन्दी विफलम्"
 
-#: agenda/agenda.cpp:1180
+#: agenda/agenda.cpp:1179
 #, fuzzy, kde-format
 #| msgid "Dissociate event from recurrence"
 msgctxt "@info/plain"
 msgid "Dissociate event from recurrence"
 msgstr "घटनां पुनरावृत्तितः विच्छेदयन्तु"
 
-#: agenda/agenda.cpp:1203 month/monthitem.cpp:450
+#: agenda/agenda.cpp:1202 month/monthitem.cpp:450
 #, fuzzy, kde-format
 #| msgid ""
 #| "Unable to add the exception item to the calendar. No change will be done."
@@ -58,7 +58,7 @@ msgid ""
 "Unable to add the exception item to the calendar. No change will be done."
 msgstr "अपवाद-वस्तुं पञ्चाङ्गे योजयितुं असमर्थः । परिवर्तनं न भविष्यति।"
 
-#: agenda/agenda.cpp:1205 month/monthitem.cpp:452
+#: agenda/agenda.cpp:1204 month/monthitem.cpp:452
 #, kde-format
 msgctxt "@title:window"
 msgid "Error Occurred"
@@ -291,28 +291,28 @@ msgctxt "@title:window"
 msgid "Timezone"
 msgstr "समयक्षेत्रम्"
 
-#: eventview.cpp:121
+#: eventview.cpp:120
 #, kde-format
 msgctxt "@title:window"
 msgid "Changing Recurring Item"
 msgstr "आवर्तमानं द्रव्यं परिवर्तयन्"
 
-#: eventview.cpp:122
+#: eventview.cpp:121
 #, kde-format
 msgid "Also &Future Items"
 msgstr "Also &भविष्यस्य वस्तूनि"
 
-#: eventview.cpp:123
+#: eventview.cpp:122
 #, kde-format
 msgid "Only &This Item"
 msgstr "केवलं &This Item"
 
-#: eventview.cpp:124
+#: eventview.cpp:123
 #, kde-format
 msgid "&All Occurrences"
 msgstr "&सर्वः घटनाः"
 
-#: eventview.cpp:141
+#: eventview.cpp:140
 #, kde-format
 msgid ""
 "The item you are trying to change is a recurring item. Should the changes be "
@@ -322,7 +322,7 @@ msgstr ""
 "भवन्तः यत् द्रव्यं परिवर्तयितुं प्रयतन्ते तत् पुनरावर्तनीयं द्रव्यम् अस्ति । किं परिवर्तनं केवलम् "
 "अस्मिन् एकस्मिन् घटनायां प्रयोक्तव्यं, भविष्यत्वस्तूनि अपि, पुनरावृत्तौ सर्वेषु वस्तूनि वा?"
 
-#: eventview.cpp:152
+#: eventview.cpp:151
 #, kde-format
 msgid ""
 "The item you are trying to change is a recurring item. Should the changes be "

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-26 00:44+0000\n"
+"POT-Creation-Date: 2026-08-04 00:45+0000\n"
 "PO-Revision-Date: 2013-09-27 17:58+0200\n"
 "Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@nuug.no>\n"
@@ -29,7 +29,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "bjornst@skogkatt.homelinux.org"
 
-#: agenda/agenda.cpp:963
+#: agenda/agenda.cpp:962
 #, fuzzy, kde-format
 #| msgid "Unable to lock item for modification. You cannot make any changes."
 msgctxt "@info"
@@ -37,20 +37,20 @@ msgid "Unable to lock item for modification. You cannot make any changes."
 msgstr ""
 "Klarer ikke låse  elementet for endring. Du kan ikke gjøre noen endringer."
 
-#: agenda/agenda.cpp:965
+#: agenda/agenda.cpp:964
 #, fuzzy, kde-format
 msgctxt "@title:window"
 msgid "Locking Failed"
 msgstr "Låsing mislyktes"
 
-#: agenda/agenda.cpp:1180
+#: agenda/agenda.cpp:1179
 #, fuzzy, kde-format
 #| msgid "Dissociate event from recurrence"
 msgctxt "@info/plain"
 msgid "Dissociate event from recurrence"
 msgstr "Fjern en hendelse fra gjentakelsen"
 
-#: agenda/agenda.cpp:1203 month/monthitem.cpp:450
+#: agenda/agenda.cpp:1202 month/monthitem.cpp:450
 #, fuzzy, kde-format
 #| msgid ""
 #| "Unable to add the exception item to the calendar. No change will be done."
@@ -61,7 +61,7 @@ msgstr ""
 "Klarte ikke å legge til unntakselementet i kalenderen. Ingen endringer er "
 "gjort."
 
-#: agenda/agenda.cpp:1205 month/monthitem.cpp:452
+#: agenda/agenda.cpp:1204 month/monthitem.cpp:452
 #, fuzzy, kde-format
 msgctxt "@title:window"
 msgid "Error Occurred"
@@ -294,28 +294,28 @@ msgctxt "@title:window"
 msgid "Timezone"
 msgstr ""
 
-#: eventview.cpp:121
+#: eventview.cpp:120
 #, kde-format
 msgctxt "@title:window"
 msgid "Changing Recurring Item"
 msgstr "Endre en gjentakende hendelse"
 
-#: eventview.cpp:122
+#: eventview.cpp:121
 #, kde-format
 msgid "Also &Future Items"
 msgstr "Også &framtidige elementer"
 
-#: eventview.cpp:123
+#: eventview.cpp:122
 #, kde-format
 msgid "Only &This Item"
 msgstr "Bare &dette elementet"
 
-#: eventview.cpp:124
+#: eventview.cpp:123
 #, kde-format
 msgid "&All Occurrences"
 msgstr "&Alle tilfeller"
 
-#: eventview.cpp:141
+#: eventview.cpp:140
 #, kde-format
 msgid ""
 "The item you are trying to change is a recurring item. Should the changes be "
@@ -326,7 +326,7 @@ msgstr ""
 "benyttes bare på dette tilfellet, også på framtidige tilfeller, eller på "
 "alle elementer i gjentakelsen?"
 
-#: eventview.cpp:152
+#: eventview.cpp:151
 #, kde-format
 msgid ""
 "The item you are trying to change is a recurring item. Should the changes be "

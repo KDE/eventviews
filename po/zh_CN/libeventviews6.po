@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-26 00:44+0000\n"
+"POT-Creation-Date: 2026-08-04 00:45+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -29,32 +29,32 @@ msgstr ""
 "kde-china@kde.org, i@guoyunhe.me, tds00@qq.com, zxybbb7892020@outlook.com, "
 "azusa@shiroazusa.net"
 
-#: agenda/agenda.cpp:963
+#: agenda/agenda.cpp:962
 #, kde-format
 msgctxt "@info"
 msgid "Unable to lock item for modification. You cannot make any changes."
 msgstr "无法锁定对项目的修改。您无法进行任何更改。"
 
-#: agenda/agenda.cpp:965
+#: agenda/agenda.cpp:964
 #, kde-format
 msgctxt "@title:window"
 msgid "Locking Failed"
 msgstr "锁定失败"
 
-#: agenda/agenda.cpp:1180
+#: agenda/agenda.cpp:1179
 #, kde-format
 msgctxt "@info/plain"
 msgid "Dissociate event from recurrence"
 msgstr "解除事件与复发之间的关联"
 
-#: agenda/agenda.cpp:1203 month/monthitem.cpp:450
+#: agenda/agenda.cpp:1202 month/monthitem.cpp:450
 #, kde-format
 msgctxt "@info"
 msgid ""
 "Unable to add the exception item to the calendar. No change will be done."
 msgstr "无法将异常项目添加到日历。将不会做任何更改。"
 
-#: agenda/agenda.cpp:1205 month/monthitem.cpp:452
+#: agenda/agenda.cpp:1204 month/monthitem.cpp:452
 #, kde-format
 msgctxt "@title:window"
 msgid "Error Occurred"
@@ -285,28 +285,28 @@ msgctxt "@title:window"
 msgid "Timezone"
 msgstr "时区"
 
-#: eventview.cpp:121
+#: eventview.cpp:120
 #, kde-format
 msgctxt "@title:window"
 msgid "Changing Recurring Item"
 msgstr "更改重现项目"
 
-#: eventview.cpp:122
+#: eventview.cpp:121
 #, kde-format
 msgid "Also &Future Items"
 msgstr "只有未来(&F)"
 
-#: eventview.cpp:123
+#: eventview.cpp:122
 #, kde-format
 msgid "Only &This Item"
 msgstr "只有本次(&T)"
 
-#: eventview.cpp:124
+#: eventview.cpp:123
 #, kde-format
 msgid "&All Occurrences"
 msgstr "每次出现(&A)"
 
-#: eventview.cpp:141
+#: eventview.cpp:140
 #, kde-format
 msgid ""
 "The item you are trying to change is a recurring item. Should the changes be "
@@ -316,7 +316,7 @@ msgstr ""
 "您正试图更改一个重现项目。想要更改仅对单次重现生效，或是对未来重现生效，还是"
 "对所有重现生效？"
 
-#: eventview.cpp:152
+#: eventview.cpp:151
 #, kde-format
 msgid ""
 "The item you are trying to change is a recurring item. Should the changes be "

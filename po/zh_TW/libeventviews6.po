@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-26 00:44+0000\n"
+"POT-Creation-Date: 2026-08-04 00:45+0000\n"
 "PO-Revision-Date: 2026-07-22 01:16+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -30,32 +30,32 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "franklin@goodhorse.idv.tw, s8321414@gmail.com"
 
-#: agenda/agenda.cpp:963
+#: agenda/agenda.cpp:962
 #, kde-format
 msgctxt "@info"
 msgid "Unable to lock item for modification. You cannot make any changes."
 msgstr "無法鎖定要變更的項目。您無法做任何變更。"
 
-#: agenda/agenda.cpp:965
+#: agenda/agenda.cpp:964
 #, kde-format
 msgctxt "@title:window"
 msgid "Locking Failed"
 msgstr "鎖定失敗"
 
-#: agenda/agenda.cpp:1180
+#: agenda/agenda.cpp:1179
 #, kde-format
 msgctxt "@info/plain"
 msgid "Dissociate event from recurrence"
 msgstr "將此事件從循環中分離出來"
 
-#: agenda/agenda.cpp:1203 month/monthitem.cpp:450
+#: agenda/agenda.cpp:1202 month/monthitem.cpp:450
 #, kde-format
 msgctxt "@info"
 msgid ""
 "Unable to add the exception item to the calendar. No change will be done."
 msgstr "無法將例外的項目加入行事曆。將不做任何變更。"
 
-#: agenda/agenda.cpp:1205 month/monthitem.cpp:452
+#: agenda/agenda.cpp:1204 month/monthitem.cpp:452
 #, kde-format
 msgctxt "@title:window"
 msgid "Error Occurred"
@@ -286,28 +286,28 @@ msgctxt "@title:window"
 msgid "Timezone"
 msgstr "時區"
 
-#: eventview.cpp:121
+#: eventview.cpp:120
 #, kde-format
 msgctxt "@title:window"
 msgid "Changing Recurring Item"
 msgstr "改變循環事件"
 
-#: eventview.cpp:122
+#: eventview.cpp:121
 #, kde-format
 msgid "Also &Future Items"
 msgstr "同時對未來的項目(&F)"
 
-#: eventview.cpp:123
+#: eventview.cpp:122
 #, kde-format
 msgid "Only &This Item"
 msgstr "只對此項目(&T)"
 
-#: eventview.cpp:124
+#: eventview.cpp:123
 #, kde-format
 msgid "&All Occurrences"
 msgstr "所有的事件(&A)"
 
-#: eventview.cpp:141
+#: eventview.cpp:140
 #, kde-format
 msgid ""
 "The item you are trying to change is a recurring item. Should the changes be "
@@ -317,7 +317,7 @@ msgstr ""
 "您試圖變更的是一個循環項目。您要將此變更只套用在目前的事件，或是同時套用在未"
 "來的項目，還是循環中所有的項目？"
 
-#: eventview.cpp:152
+#: eventview.cpp:151
 #, kde-format
 msgid ""
 "The item you are trying to change is a recurring item. Should the changes be "

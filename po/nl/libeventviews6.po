@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-26 00:44+0000\n"
+"POT-Creation-Date: 2026-08-04 00:45+0000\n"
 "PO-Revision-Date: 2026-07-21 16:03+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -27,7 +27,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "freekdekruijf@kde.nl"
 
-#: agenda/agenda.cpp:963
+#: agenda/agenda.cpp:962
 #, kde-format
 msgctxt "@info"
 msgid "Unable to lock item for modification. You cannot make any changes."
@@ -35,19 +35,19 @@ msgstr ""
 "Kon het item niet voor bewerking vergrendelen. U kunt geen veranderingen "
 "aanbrengen."
 
-#: agenda/agenda.cpp:965
+#: agenda/agenda.cpp:964
 #, kde-format
 msgctxt "@title:window"
 msgid "Locking Failed"
 msgstr "Vergrendelen mislukt"
 
-#: agenda/agenda.cpp:1180
+#: agenda/agenda.cpp:1179
 #, kde-format
 msgctxt "@info/plain"
 msgid "Dissociate event from recurrence"
 msgstr "Activiteit loskoppelen van herhaling"
 
-#: agenda/agenda.cpp:1203 month/monthitem.cpp:450
+#: agenda/agenda.cpp:1202 month/monthitem.cpp:450
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -55,7 +55,7 @@ msgid ""
 msgstr ""
 "Kon de uitzondering niet toevoegen aan de agenda. Er wordt niets gewijzigd."
 
-#: agenda/agenda.cpp:1205 month/monthitem.cpp:452
+#: agenda/agenda.cpp:1204 month/monthitem.cpp:452
 #, kde-format
 msgctxt "@title:window"
 msgid "Error Occurred"
@@ -298,28 +298,28 @@ msgctxt "@title:window"
 msgid "Timezone"
 msgstr "Tijdzone"
 
-#: eventview.cpp:121
+#: eventview.cpp:120
 #, kde-format
 msgctxt "@title:window"
 msgid "Changing Recurring Item"
 msgstr "Veranderen van een terugkerend item"
 
-#: eventview.cpp:122
+#: eventview.cpp:121
 #, kde-format
 msgid "Also &Future Items"
 msgstr "Ook toekomsti&ge items"
 
-#: eventview.cpp:123
+#: eventview.cpp:122
 #, kde-format
 msgid "Only &This Item"
 msgstr "Alleen dit i&tem"
 
-#: eventview.cpp:124
+#: eventview.cpp:123
 #, kde-format
 msgid "&All Occurrences"
 msgstr "&Alle herhalingen"
 
-#: eventview.cpp:141
+#: eventview.cpp:140
 #, kde-format
 msgid ""
 "The item you are trying to change is a recurring item. Should the changes be "
@@ -330,7 +330,7 @@ msgstr ""
 "toegepast worden, alleen deze ene keer, of ook op toekomstige items of op "
 "alle items in de herhaling?"
 
-#: eventview.cpp:152
+#: eventview.cpp:151
 #, kde-format
 msgid ""
 "The item you are trying to change is a recurring item. Should the changes be "
