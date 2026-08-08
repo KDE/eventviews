@@ -26,6 +26,7 @@ target_sources(
         agenda/calendardecoration.cpp
         agenda/decorationlabel.cpp
         agenda/timelabels.cpp
+        agenda/timelabelutil.cpp
         agenda/timelabelszone.cpp
         agenda/timescaleconfigdialog.cpp
         agenda/viewcalendar.cpp

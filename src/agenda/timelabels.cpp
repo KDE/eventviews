@@ -12,9 +12,8 @@ using namespace Qt::Literals::StringLiterals;
 #include "agendaview.h"
 #include "prefs.h"
 #include "timelabelszone.h"
+#include "timelabelutil_p.h"
 #include "timescaleconfigdialog.h"
-
-#include <KCalUtils/Stringify>
 
 #include <KLocalizedString>
 
@@ -425,7 +424,7 @@ QString TimeLabels::headerToolTip() const
     toolTip += i18nc("title for timezone info, the timezone id and utc offset",
                      "<b>%1 (%2)</b>",
                      i18n(mTimezone.id().constData()),
-                     KCalUtils::Stringify::tzUTCOffsetStr(mTimezone));
+                     EventViews::tzUTCOffsetStr(mTimezone));
     toolTip += "<hr>"_L1;
     toolTip += i18nc("heading for timezone display name", "<i>Name:</i> %1", mTimezone.displayName(now, QTimeZone::LongName));
     toolTip += "<br/>"_L1;
@@ -469,7 +468,7 @@ bool TimeLabels::event(QEvent *event)
                          cellToHour(cell),
                          cellToSuffix(cell),
                          i18n(mTimezone.id().constData()),
-                         KCalUtils::Stringify::tzUTCOffsetStr(mTimezone));
+                         EventViews::tzUTCOffsetStr(mTimezone));
         toolTip += "</qt>"_L1;
 
         QToolTip::showText(helpEvent->globalPos(), toolTip, this);

@@ -4,9 +4,9 @@
   SPDX-License-Identifier: GPL-2.0-or-later WITH LicenseRef-Qt-Commercial-exception-1.0
 */
 #include "timescaleconfigdialog.h"
-#include "prefs.h"
 
-#include <KCalUtils/Stringify>
+#include "prefs.h"
+#include "timelabelutil_p.h"
 
 #include <KLocalizedString>
 
@@ -40,7 +40,7 @@ using TimeZoneNamePair = QPair<QString, QByteArray>;
 static QString tzWithUTC(const QByteArray &zoneId)
 {
     auto tz = QTimeZone(zoneId);
-    return QStringLiteral("%1 (%2)").arg(i18n(zoneId.constData()), KCalUtils::Stringify::tzUTCOffsetStr(tz));
+    return QStringLiteral("%1 (%2)").arg(i18n(zoneId.constData()), EventViews::tzUTCOffsetStr(tz));
 }
 
 TimeScaleConfigDialog::TimeScaleConfigDialog(const PrefsPtr &preferences, QWidget *parent)

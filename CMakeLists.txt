@@ -166,6 +166,7 @@ add_compile_definitions(QT_ENABLE_STRICT_MODE_UP_TO=0x060B00)
 add_subdirectory(src)
 if(BUILD_TESTING)
     find_package(Qt6 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Test)
+    add_subdirectory(autotests)
     add_subdirectory(tests)
 endif()
 
