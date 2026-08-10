@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-04 00:45+0000\n"
+"POT-Creation-Date: 2026-08-10 00:46+0000\n"
 "PO-Revision-Date: 2026-03-04 17:08+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -132,18 +132,18 @@ msgstr "Neizdodas rediģēt uzdevumu, jo to nevar slēgt."
 msgid "Unable to save %1 \"%2\"."
 msgstr "Neizdevās saglabāt „%1“ „%2“."
 
-#: agenda/timelabels.cpp:329
+#: agenda/timelabels.cpp:328
 #, kde-format
 msgid "&Add Timezones…"
 msgstr "&Pievienot laika joslas…"
 
-#: agenda/timelabels.cpp:330
+#: agenda/timelabels.cpp:329
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Add a timelabel display column for a new timezone"
 msgstr "Pievienot laika etiķetes parādīšanas kolonnu jaunai laika joslai"
 
-#: agenda/timelabels.cpp:333
+#: agenda/timelabels.cpp:332
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -157,12 +157,12 @@ msgstr ""
 "iespēja ir noderīga, lai parādītu kalendāra notikumus cilvēkiem citās laika "
 "joslās."
 
-#: agenda/timelabels.cpp:336
+#: agenda/timelabels.cpp:335
 #, kde-format
 msgid "&Remove Timezone %1"
 msgstr "&Noņemt laika joslu „%1“"
 
-#: agenda/timelabels.cpp:340
+#: agenda/timelabels.cpp:339
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -172,7 +172,7 @@ msgstr ""
 "Noņemt stundas etiķetes kolonnas pašreiz atlasītajai laika joslai, tikai "
 "laika joslām, kas nav sistēmas laika josla."
 
-#: agenda/timelabels.cpp:343
+#: agenda/timelabels.cpp:342
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -182,19 +182,19 @@ msgstr ""
 "Ne sistēmas laika joslām šī izvēlne noņem laika marķējumu kolonnu "
 "atlasītajai laika joslai."
 
-#: agenda/timelabels.cpp:347
+#: agenda/timelabels.cpp:346
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "12 Hour Clock"
 msgstr "12 stundu pulkstenis"
 
-#: agenda/timelabels.cpp:349
+#: agenda/timelabels.cpp:348
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "24 Hour Clock"
 msgstr "24 stundu pulkstenis"
 
-#: agenda/timelabels.cpp:351
+#: agenda/timelabels.cpp:350
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -203,7 +203,7 @@ msgid ""
 msgstr ""
 "Parādīt laika etiķeti stundās 24 stundu formātā vai atbilstoši jūsu lokālei"
 
-#: agenda/timelabels.cpp:353
+#: agenda/timelabels.cpp:352
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -213,37 +213,37 @@ msgstr ""
 "Šī izvēlne liek parādīt laika etiķeti 24 stundu formātā vai saskaņā ar "
 "sistēmas lokāli."
 
-#: agenda/timelabels.cpp:358
+#: agenda/timelabels.cpp:357
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Right-side Time Labels"
 msgstr "Slēpt labās puses laika etiķetes"
 
-#: agenda/timelabels.cpp:360
+#: agenda/timelabels.cpp:359
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Right-side Time Labels"
 msgstr "Rādīt labās puses laika etiķetes"
 
-#: agenda/timelabels.cpp:364
+#: agenda/timelabels.cpp:363
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Left-side Time Labels"
 msgstr "Slēpt kreisās puses laika etiķetes"
 
-#: agenda/timelabels.cpp:366
+#: agenda/timelabels.cpp:365
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Left-side Time Labels"
 msgstr "Rādīt kreisās puses laika etiķetes"
 
-#: agenda/timelabels.cpp:369
+#: agenda/timelabels.cpp:368
 #, kde-format
 msgctxt "@info::tooltip"
 msgid "Show or hide time labels on both sides of the agenda view"
 msgstr "Slēpt vai rādīt etiķetes dienaskārtības skata abās pusēs"
 
-#: agenda/timelabels.cpp:371
+#: agenda/timelabels.cpp:370
 #, kde-format
 msgctxt "@info::whatsthis"
 msgid ""
@@ -257,37 +257,37 @@ msgstr ""
 "laika josla (bez jebkādām papildu laika joslām). Tāpat arī, rādot laiku abās "
 "pusēs, tiek noņemta ritjosla."
 
-#: agenda/timelabels.cpp:426
+#: agenda/timelabels.cpp:425
 #, kde-format
 msgctxt "title for timezone info, the timezone id and utc offset"
 msgid "<b>%1 (%2)</b>"
 msgstr "<b>%1 (%2)</b>"
 
-#: agenda/timelabels.cpp:430
+#: agenda/timelabels.cpp:429
 #, kde-format
 msgctxt "heading for timezone display name"
 msgid "<i>Name:</i> %1"
 msgstr "<i>Nosaukums:</i> %1"
 
-#: agenda/timelabels.cpp:434
+#: agenda/timelabels.cpp:433
 #, kde-format
 msgctxt "heading for timezone country"
 msgid "<i>Country:</i> %1"
 msgstr "<i>Valsts:</i> %1"
 
-#: agenda/timelabels.cpp:446
+#: agenda/timelabels.cpp:445
 #, kde-format
 msgctxt "heading for comma-separated list of timezone abbreviations"
 msgid "<i>Abbreviations:</i>"
 msgstr "<i>Abreviatūras:</i>"
 
-#: agenda/timelabels.cpp:452
+#: agenda/timelabels.cpp:451
 #, kde-format
 msgctxt "heading for the timezone comment"
 msgid "<i>Comment:</i> %1"
 msgstr "<i>Komentārs:</i> %1"
 
-#: agenda/timelabels.cpp:468
+#: agenda/timelabels.cpp:467
 #, kde-format
 msgctxt "[hour of the day][am/pm/00] [timezone id (timezone-offset)]"
 msgid "%1%2<br/>%3 (%4)"

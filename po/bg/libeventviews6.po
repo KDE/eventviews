@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-04 00:45+0000\n"
+"POT-Creation-Date: 2026-08-10 00:46+0000\n"
 "PO-Revision-Date: 2026-07-22 15:24+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -130,18 +130,18 @@ msgstr "Не може да се промени тази задача, защот
 msgid "Unable to save %1 \"%2\"."
 msgstr "Неуспешен запис на %1 „%2“."
 
-#: agenda/timelabels.cpp:329
+#: agenda/timelabels.cpp:328
 #, kde-format
 msgid "&Add Timezones…"
 msgstr "&Добавяне на часови зони…"
 
-#: agenda/timelabels.cpp:330
+#: agenda/timelabels.cpp:329
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Add a timelabel display column for a new timezone"
 msgstr "Добавяне на колона за показване на времето за нова часова зона"
 
-#: agenda/timelabels.cpp:333
+#: agenda/timelabels.cpp:332
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -156,12 +156,12 @@ msgstr ""
 "полезна, когато показвате събития от календара за хора в часови зони, "
 "различни от вашата."
 
-#: agenda/timelabels.cpp:336
+#: agenda/timelabels.cpp:335
 #, kde-format
 msgid "&Remove Timezone %1"
 msgstr "&Премахване на часовата зона %1"
 
-#: agenda/timelabels.cpp:340
+#: agenda/timelabels.cpp:339
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -171,7 +171,7 @@ msgstr ""
 "Премахване на колоната с етикета за час за текущо избраната часова зона, "
 "само за несистемни часови зони."
 
-#: agenda/timelabels.cpp:343
+#: agenda/timelabels.cpp:342
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -181,19 +181,19 @@ msgstr ""
 "За несистемни часови зони този избор от менюто премахва колоната с етикетите "
 "за часовете за текущо избраната часова зона."
 
-#: agenda/timelabels.cpp:347
+#: agenda/timelabels.cpp:346
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "12 Hour Clock"
 msgstr "Часовник с формат 12 часа"
 
-#: agenda/timelabels.cpp:349
+#: agenda/timelabels.cpp:348
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "24 Hour Clock"
 msgstr "Часовник с формат 24 часа"
 
-#: agenda/timelabels.cpp:351
+#: agenda/timelabels.cpp:350
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -203,7 +203,7 @@ msgstr ""
 "Показване на часовете в 24-часов „военен“ формат или според вашата локална "
 "настройка"
 
-#: agenda/timelabels.cpp:353
+#: agenda/timelabels.cpp:352
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -213,31 +213,31 @@ msgstr ""
 "Това меню показва етикетите за часовете в 24-часов „военен“ формат или "
 "според локалната настройка на вашата система."
 
-#: agenda/timelabels.cpp:358
+#: agenda/timelabels.cpp:357
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Right-side Time Labels"
 msgstr "Скриване на етикетите за време от дясната страна"
 
-#: agenda/timelabels.cpp:360
+#: agenda/timelabels.cpp:359
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Right-side Time Labels"
 msgstr "Показване на етикетите за време от дясната страна"
 
-#: agenda/timelabels.cpp:364
+#: agenda/timelabels.cpp:363
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Left-side Time Labels"
 msgstr "Скриване на етикетите за време от лявата страна"
 
-#: agenda/timelabels.cpp:366
+#: agenda/timelabels.cpp:365
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Left-side Time Labels"
 msgstr "Показване на етикетите за време от лявата страна"
 
-#: agenda/timelabels.cpp:369
+#: agenda/timelabels.cpp:368
 #, kde-format
 msgctxt "@info::tooltip"
 msgid "Show or hide time labels on both sides of the agenda view"
@@ -245,7 +245,7 @@ msgstr ""
 "Показване или скриване на етикети с време от двете страни на изгледа на "
 "дневния ред"
 
-#: agenda/timelabels.cpp:371
+#: agenda/timelabels.cpp:370
 #, kde-format
 msgctxt "@info::whatsthis"
 msgid ""
@@ -260,37 +260,37 @@ msgstr ""
 "добавени часови зони). По същия начин вертикалната лента за превъртане се "
 "премахва, когато етикетите с времето се показват от двете страни."
 
-#: agenda/timelabels.cpp:426
+#: agenda/timelabels.cpp:425
 #, kde-format
 msgctxt "title for timezone info, the timezone id and utc offset"
 msgid "<b>%1 (%2)</b>"
 msgstr "<b> %1 ( %2) </b>"
 
-#: agenda/timelabels.cpp:430
+#: agenda/timelabels.cpp:429
 #, kde-format
 msgctxt "heading for timezone display name"
 msgid "<i>Name:</i> %1"
 msgstr "<i> Име: </i> %1"
 
-#: agenda/timelabels.cpp:434
+#: agenda/timelabels.cpp:433
 #, kde-format
 msgctxt "heading for timezone country"
 msgid "<i>Country:</i> %1"
 msgstr "<i> Държава: </i> %1"
 
-#: agenda/timelabels.cpp:446
+#: agenda/timelabels.cpp:445
 #, kde-format
 msgctxt "heading for comma-separated list of timezone abbreviations"
 msgid "<i>Abbreviations:</i>"
 msgstr "<i> Съкращения: </i>"
 
-#: agenda/timelabels.cpp:452
+#: agenda/timelabels.cpp:451
 #, kde-format
 msgctxt "heading for the timezone comment"
 msgid "<i>Comment:</i> %1"
 msgstr "<i> Коментар: </i> %1"
 
-#: agenda/timelabels.cpp:468
+#: agenda/timelabels.cpp:467
 #, kde-format
 msgctxt "[hour of the day][am/pm/00] [timezone id (timezone-offset)]"
 msgid "%1%2<br/>%3 (%4)"

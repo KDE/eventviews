@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-04 00:45+0000\n"
+"POT-Creation-Date: 2026-08-10 00:46+0000\n"
 "PO-Revision-Date: 2026-05-10 16:36+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -127,18 +127,18 @@ msgstr "இச்செய்யவேண்டியதை பூட்ட ம�
 msgid "Unable to save %1 \"%2\"."
 msgstr "\"%2\" என்ற %1 தனை சேமிக்க முடியவில்லை."
 
-#: agenda/timelabels.cpp:329
+#: agenda/timelabels.cpp:328
 #, kde-format
 msgid "&Add Timezones…"
 msgstr "நேரமண்டலங்களை &சேர்…"
 
-#: agenda/timelabels.cpp:330
+#: agenda/timelabels.cpp:329
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Add a timelabel display column for a new timezone"
 msgstr "வேறு நேரமண்டலத்தில் நேரத்தைக் காட்டும் நெடுவரிசையை சேர்க்கும்"
 
-#: agenda/timelabels.cpp:333
+#: agenda/timelabels.cpp:332
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -148,12 +148,12 @@ msgid ""
 "timezones other than your own."
 msgstr ""
 
-#: agenda/timelabels.cpp:336
+#: agenda/timelabels.cpp:335
 #, kde-format
 msgid "&Remove Timezone %1"
 msgstr "%1 என்ற நேரமண்டலத்தை &நீக்கு"
 
-#: agenda/timelabels.cpp:340
+#: agenda/timelabels.cpp:339
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -163,7 +163,7 @@ msgstr ""
 "தற்போது தேர்ந்தெடுத்துள்ள நேரமண்டலத்திற்கான நெடுவரிசையை நீக்கும் (அது கணினி "
 "முழுவதற்குமான நேரமண்டலமாக இல்லாத பட்சத்தில்)."
 
-#: agenda/timelabels.cpp:343
+#: agenda/timelabels.cpp:342
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -171,19 +171,19 @@ msgid ""
 "display column for the currently selected timezone."
 msgstr ""
 
-#: agenda/timelabels.cpp:347
+#: agenda/timelabels.cpp:346
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "12 Hour Clock"
 msgstr "12 மணிநேர கடிகாரம்"
 
-#: agenda/timelabels.cpp:349
+#: agenda/timelabels.cpp:348
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "24 Hour Clock"
 msgstr "24 மணிநேர கடிகாரம்"
 
-#: agenda/timelabels.cpp:351
+#: agenda/timelabels.cpp:350
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -191,7 +191,7 @@ msgid ""
 "your locale"
 msgstr ""
 
-#: agenda/timelabels.cpp:353
+#: agenda/timelabels.cpp:352
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -199,31 +199,31 @@ msgid ""
 "\"military\" time or your system locale."
 msgstr ""
 
-#: agenda/timelabels.cpp:358
+#: agenda/timelabels.cpp:357
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Right-side Time Labels"
 msgstr "வலதுபக்கத்திலுள்ள நேர தலைப்புகளை மறை"
 
-#: agenda/timelabels.cpp:360
+#: agenda/timelabels.cpp:359
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Right-side Time Labels"
 msgstr "வலதுபக்கத்தில் நேர தலைப்புகளைக் காட்டு"
 
-#: agenda/timelabels.cpp:364
+#: agenda/timelabels.cpp:363
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Left-side Time Labels"
 msgstr "இடதுபக்கத்திலுள்ள நேர தலைப்புகளை மறை"
 
-#: agenda/timelabels.cpp:366
+#: agenda/timelabels.cpp:365
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Left-side Time Labels"
 msgstr "இடதுபக்கத்தில் நேர தலைப்புகளை மறை"
 
-#: agenda/timelabels.cpp:369
+#: agenda/timelabels.cpp:368
 #, kde-format
 msgctxt "@info::tooltip"
 msgid "Show or hide time labels on both sides of the agenda view"
@@ -231,7 +231,7 @@ msgstr ""
 "நிகழ்ச்சிநிரல் காட்சிமுறையின் இடதிலும் வலதிலும் நேரத்தைக் குறிக்கும் தலைப்புகளைக் காட்டலாம் "
 "அல்லது மறைக்கலாம்"
 
-#: agenda/timelabels.cpp:371
+#: agenda/timelabels.cpp:370
 #, kde-format
 msgctxt "@info::whatsthis"
 msgid ""
@@ -241,37 +241,37 @@ msgid ""
 "scrollbar is removed when the time labels are shown on both sides."
 msgstr ""
 
-#: agenda/timelabels.cpp:426
+#: agenda/timelabels.cpp:425
 #, kde-format
 msgctxt "title for timezone info, the timezone id and utc offset"
 msgid "<b>%1 (%2)</b>"
 msgstr "<b>%1 (%2)</b>"
 
-#: agenda/timelabels.cpp:430
+#: agenda/timelabels.cpp:429
 #, kde-format
 msgctxt "heading for timezone display name"
 msgid "<i>Name:</i> %1"
 msgstr "<i>பெயர்:</i> %1"
 
-#: agenda/timelabels.cpp:434
+#: agenda/timelabels.cpp:433
 #, kde-format
 msgctxt "heading for timezone country"
 msgid "<i>Country:</i> %1"
 msgstr "<i>நாடு:</i> %1"
 
-#: agenda/timelabels.cpp:446
+#: agenda/timelabels.cpp:445
 #, kde-format
 msgctxt "heading for comma-separated list of timezone abbreviations"
 msgid "<i>Abbreviations:</i>"
 msgstr "<i>சுருக்கப்பெயர்கள்:</i>"
 
-#: agenda/timelabels.cpp:452
+#: agenda/timelabels.cpp:451
 #, kde-format
 msgctxt "heading for the timezone comment"
 msgid "<i>Comment:</i> %1"
 msgstr "<i>குறிப்பு:</i> %1"
 
-#: agenda/timelabels.cpp:468
+#: agenda/timelabels.cpp:467
 #, kde-format
 msgctxt "[hour of the day][am/pm/00] [timezone id (timezone-offset)]"
 msgid "%1%2<br/>%3 (%4)"

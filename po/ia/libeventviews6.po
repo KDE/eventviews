@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-04 00:45+0000\n"
+"POT-Creation-Date: 2026-08-10 00:46+0000\n"
 "PO-Revision-Date: 2026-07-22 17:57+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -133,19 +133,19 @@ msgstr ""
 msgid "Unable to save %1 \"%2\"."
 msgstr "Incapace de salveguardar %1 \"%2\"."
 
-#: agenda/timelabels.cpp:329
+#: agenda/timelabels.cpp:328
 #, kde-format
 msgid "&Add Timezones…"
 msgstr "&Adde Fuso Horari..."
 
-#: agenda/timelabels.cpp:330
+#: agenda/timelabels.cpp:329
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Add a timelabel display column for a new timezone"
 msgstr ""
 "Adde un columna de monstrator de etiquetta de tempore per un nove fuso horari"
 
-#: agenda/timelabels.cpp:333
+#: agenda/timelabels.cpp:332
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -159,12 +159,12 @@ msgstr ""
 "hora de fuso horari de systema. Iste characteristica es multe utile quando "
 "on monstra eventos de calendario per gente in altere fuso horari que le tu."
 
-#: agenda/timelabels.cpp:336
+#: agenda/timelabels.cpp:335
 #, kde-format
 msgid "&Remove Timezone %1"
 msgstr "&Remove zona de tempore %1"
 
-#: agenda/timelabels.cpp:340
+#: agenda/timelabels.cpp:339
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -174,7 +174,7 @@ msgstr ""
 "Remove le columna de etiquetta de hora per le fuso horari currentemente "
 "seligite, solmente per fusos horari non de systema."
 
-#: agenda/timelabels.cpp:343
+#: agenda/timelabels.cpp:342
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -184,19 +184,19 @@ msgstr ""
 "Per fusos horari non de systema, iste menu remove le coluimna de monstrator "
 "de etiquettas de hora de tempore per le fuso horari currentemente seligite."
 
-#: agenda/timelabels.cpp:347
+#: agenda/timelabels.cpp:346
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "12 Hour Clock"
 msgstr "Horologio de 12-horas"
 
-#: agenda/timelabels.cpp:349
+#: agenda/timelabels.cpp:348
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "24 Hour Clock"
 msgstr "Horologio de 24-horas"
 
-#: agenda/timelabels.cpp:351
+#: agenda/timelabels.cpp:350
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -206,7 +206,7 @@ msgstr ""
 "Monstra le horas de etiquettas de tempore in le formato \"militar\" de 24-"
 "horas o secundo tu localisation"
 
-#: agenda/timelabels.cpp:353
+#: agenda/timelabels.cpp:352
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -216,38 +216,38 @@ msgstr ""
 "Iste selection de menu monstra le etiquettas de hora de tempore secundo le "
 "tempore \"militar\" de 24-horas o tu localisation de systema."
 
-#: agenda/timelabels.cpp:358
+#: agenda/timelabels.cpp:357
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Right-side Time Labels"
 msgstr "Cela Etiquettas de Tempore del Lato Dextere"
 
-#: agenda/timelabels.cpp:360
+#: agenda/timelabels.cpp:359
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Right-side Time Labels"
 msgstr "Monstra etiquettas de Tempore de Lato Dextere"
 
-#: agenda/timelabels.cpp:364
+#: agenda/timelabels.cpp:363
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Left-side Time Labels"
 msgstr "Cela Etiquettas de Tempore del Lato Sinistre"
 
-#: agenda/timelabels.cpp:366
+#: agenda/timelabels.cpp:365
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Left-side Time Labels"
 msgstr "Monstra Etiquettas de Tempore del Lato Sinistre"
 
-#: agenda/timelabels.cpp:369
+#: agenda/timelabels.cpp:368
 #, kde-format
 msgctxt "@info::tooltip"
 msgid "Show or hide time labels on both sides of the agenda view"
 msgstr ""
 "Monstra o cela etiquettas de tempore sur ambe lateres del vista de agenda"
 
-#: agenda/timelabels.cpp:371
+#: agenda/timelabels.cpp:370
 #, kde-format
 msgctxt "@info::whatsthis"
 msgid ""
@@ -262,37 +262,37 @@ msgstr ""
 "salveguardar spatio de schermo. Similarmente, le barra a rolar vertical es "
 "removite quando le etiquettas de tempore es monstrate sur ambe lateres."
 
-#: agenda/timelabels.cpp:426
+#: agenda/timelabels.cpp:425
 #, kde-format
 msgctxt "title for timezone info, the timezone id and utc offset"
 msgid "<b>%1 (%2)</b>"
 msgstr "<b>%1 (%2)</b>"
 
-#: agenda/timelabels.cpp:430
+#: agenda/timelabels.cpp:429
 #, kde-format
 msgctxt "heading for timezone display name"
 msgid "<i>Name:</i> %1"
 msgstr "<i>Nomine:</i> %1"
 
-#: agenda/timelabels.cpp:434
+#: agenda/timelabels.cpp:433
 #, kde-format
 msgctxt "heading for timezone country"
 msgid "<i>Country:</i> %1"
 msgstr "<i>Pais:</i> %1"
 
-#: agenda/timelabels.cpp:446
+#: agenda/timelabels.cpp:445
 #, kde-format
 msgctxt "heading for comma-separated list of timezone abbreviations"
 msgid "<i>Abbreviations:</i>"
 msgstr "<i>Abbreviationes:</i>"
 
-#: agenda/timelabels.cpp:452
+#: agenda/timelabels.cpp:451
 #, kde-format
 msgctxt "heading for the timezone comment"
 msgid "<i>Comment:</i> %1"
 msgstr "<i>Commento: </i> %1"
 
-#: agenda/timelabels.cpp:468
+#: agenda/timelabels.cpp:467
 #, kde-format
 msgctxt "[hour of the day][am/pm/00] [timezone id (timezone-offset)]"
 msgid "%1%2<br/>%3 (%4)"
