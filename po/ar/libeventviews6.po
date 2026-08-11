@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-10 00:46+0000\n"
-"PO-Revision-Date: 2026-06-05 14:04+0400\n"
+"PO-Revision-Date: 2026-08-10 13:48+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -926,10 +926,9 @@ msgstr "مكّن محرر الأحداث الآليّ مع تحديد النطا
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #: eventviews.kcfg:209
-#, fuzzy, kde-format
-#| msgid "Use system color"
+#, kde-format
 msgid "Agenda Item Color"
-msgstr "استخدم لون النظام"
+msgstr "لون عنصر جدول الأعمال"
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
@@ -1185,10 +1184,9 @@ msgstr "اعرض أوقات البداية والنهاية في عناصر عر
 
 #. i18n: ectx: tooltip, entry (ColorMonthBusyDaysEnabled), group (Month View)
 #: eventviews.kcfg:283
-#, fuzzy, kde-format
-#| msgid "Use the Holiday background color when a holiday lands on the date"
+#, kde-format
 msgid "Use the busy days background color setting for busy days"
-msgstr "استخدم لون خلفية العطلة عندما تصادف العطلة التاريخ."
+msgstr "استخدم إعداد لون الخلفية الخاص بالأيام المزدحمة للأيام المزدحمة"
 
 #. i18n: ectx: whatsthis, entry (ColorMonthBusyDaysEnabled), group (Month View)
 #: eventviews.kcfg:284
@@ -1301,7 +1299,7 @@ msgstr ""
 #: eventviews.kcfg:318
 #, kde-format
 msgid "Month Item Colors"
-msgstr ""
+msgstr "ألوان عنصر الشهر"
 
 #. i18n: ectx: tooltip, entry, group (Month View)
 #: eventviews.kcfg:322
