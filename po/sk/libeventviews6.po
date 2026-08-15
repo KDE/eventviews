@@ -945,10 +945,9 @@ msgstr "Povoliť automatický editor udalostí s výberom časového rozsahu"
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #: eventviews.kcfg:209
-#, fuzzy, kde-format
-#| msgid "Use system color"
+#, kde-format
 msgid "Agenda Item Color"
-msgstr "Použiť systémovú farbu"
+msgstr "Farba položky agendy"
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
@@ -1216,10 +1215,9 @@ msgstr "Zobraziť časy začiatku a konca v položkách mesačného pohľadu"
 
 #. i18n: ectx: tooltip, entry (ColorMonthBusyDaysEnabled), group (Month View)
 #: eventviews.kcfg:283
-#, fuzzy, kde-format
-#| msgid "Use the Holiday background color when a holiday lands on the date"
+#, kde-format
 msgid "Use the busy days background color setting for busy days"
-msgstr "Použiť farbu pozadia sviatku, keď sviatok pripadá na dátum"
+msgstr "Použiť nastavenie farby pozadia pre zaneprázdnené dni"
 
 #. i18n: ectx: whatsthis, entry (ColorMonthBusyDaysEnabled), group (Month View)
 #: eventviews.kcfg:284
@@ -1336,7 +1334,7 @@ msgstr ""
 #: eventviews.kcfg:318
 #, kde-format
 msgid "Month Item Colors"
-msgstr ""
+msgstr "Farby položiek mesiaca"
 
 #. i18n: ectx: tooltip, entry, group (Month View)
 #: eventviews.kcfg:322
