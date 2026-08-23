@@ -526,7 +526,7 @@ QPair<QDateTime, QDateTime> MonthView::actualDateRange(const QDateTime &start, c
     QDateTime actualStart = dayOne.addDays(-weekdayCol);
     actualStart.setTime(QTime(0, 0, 0, 0));
     QDateTime actualEnd = actualStart.addDays(6 * 7 - 1);
-    actualEnd.setTime(QTime(23, 59, 59, 99));
+    actualEnd.setTime(QTime(23, 59, 59, 999));
     return qMakePair(std::move(actualStart), std::move(actualEnd));
 }
 
