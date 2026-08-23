@@ -1916,7 +1916,7 @@ void Agenda::insertMultiItem(const KCalendarCore::Incidence::Ptr &event,
 void Agenda::removeIncidence(const KCalendarCore::Incidence::Ptr &incidence)
 {
     if (!incidence) {
-        qCWarning(CALENDARVIEW_LOG) << "Agenda::removeIncidence() incidence is invalid" << incidence->uid();
+        qCWarning(CALENDARVIEW_LOG) << "Agenda::removeIncidence() incidence is invalid";
         return;
     }
 
