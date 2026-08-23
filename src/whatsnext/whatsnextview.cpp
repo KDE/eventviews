@@ -312,8 +312,8 @@ void WhatsNextView::appendTodo(const Akonadi::CollectionCalendar::Ptr &calendar,
         if (todo->hasDueDate()) {
             mText += i18nc("to-do due date", "  (Due: %1)", KCalUtils::IncidenceFormatter::dateTimeToString(todo->dtDue(), todo->allDay()));
         }
-        mText += "</li>\n"_L1;
     }
+    mText += "</li>\n"_L1;
 }
 
 static std::optional<Akonadi::Item::Id> idFromQuery(const QUrlQuery &query, const QString &queryValue)
