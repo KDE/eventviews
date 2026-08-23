@@ -203,11 +203,11 @@ public:
     [[nodiscard]] QDate occurrenceDate() const;
 
     /** Update the date of this item's occurrence (not in the event) */
-    void setOccurrenceDateTime(const QDateTime &qd);
+    void setOccurrenceDateTime(QDateTime qd);
 
-    void setText(const QString &text)
+    void setText(QString text)
     {
-        mLabelText = text;
+        mLabelText = std::move(text);
     }
 
     [[nodiscard]] QString &text()
@@ -216,7 +216,7 @@ public:
     }
 
     QList<AgendaItem::QPtr> &conflictItems();
-    void setConflictItems(const QList<AgendaItem::QPtr> &);
+    void setConflictItems(QList<AgendaItem::QPtr>);
     void addConflictItem(const AgendaItem::QPtr &ci);
 
     [[nodiscard]] QString label() const override;

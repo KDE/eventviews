@@ -108,7 +108,7 @@ void MarcusBains::updateLocationRecalc(bool recalculate)
     const bool showSeconds = d->mEventView->preferences()->marcusBainsShowSeconds();
     const QColor color = d->mEventView->preferences()->agendaMarcusBainsLineLineColor();
 
-    const QDateTime now = QDateTime::currentDateTime();
+    QDateTime now = QDateTime::currentDateTime();
     const QTime time = now.time();
 
     if (now.date() != d->mOldDateTime.date()) {
@@ -120,7 +120,7 @@ void MarcusBains::updateLocationRecalc(bool recalculate)
     const int minutes = time.hour() * 60 + time.minute();
     const int minutesPerCell = 24 * 60 / d->mAgenda->rows();
 
-    d->mOldDateTime = now;
+    d->mOldDateTime = std::move(now);
     d->mOldTodayCol = todayCol;
 
     int y = int(minutes * d->mAgenda->gridSpacingY() / minutesPerCell);
@@ -1153,7 +1153,7 @@ void Agenda::endItemAction()
             } else if (CalendarSupport::hasTodo(incidence)) {
                 mainIncidence = cal->todo(incidence->uid());
             }
-            incidence = mainIncidence;
+            incidence = std::move(mainIncidence);
         }
 
         Akonadi::Item item = d->mCalendar->item(incidence);
@@ -1885,7 +1885,7 @@ void Agenda::insertMultiItem(const KCalendarCore::Incidence::Ptr &event,
 
             current = insertItem(event, recurrenceId, cellX, cellYTop, cellYBottom, width, count, isSelected);
             Q_ASSERT(current);
-            current->setText(newtext);
+            current->setText(std::move(newtext));
             multiItems.append(current);
         }
     }

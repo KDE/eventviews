@@ -1168,12 +1168,12 @@ void TodoView::changedCategories(QAction *action)
     if (collection.rights() & Akonadi::Collection::CanChangeItem) {
         const KCalendarCore::Todo::Ptr oldTodo(todo->clone());
 
-        const QString cat = action->data().toString();
+        QString cat = action->data().toString();
         QStringList categories = todo->categories();
         if (categories.contains(cat)) {
             categories.removeAll(cat);
         } else {
-            categories.append(cat);
+            categories.append(std::move(cat));
         }
         categories.sort();
         todo->setCategories(categories);

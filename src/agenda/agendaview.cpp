@@ -418,19 +418,19 @@ void AgendaHeader::addDay(const DecorationList &decoList, QDate date, bool withD
 
     if (withDayLabel) {
         int const dW = date.dayOfWeek();
-        QString const veryLongStr = QLocale::system().toString(date, QLocale::LongFormat);
-        QString const longstr = i18nc("short_weekday short_monthname date (e.g. Mon Aug 13)",
-                                      "%1 %2 %3",
-                                      QLocale::system().dayName(dW, QLocale::ShortFormat),
-                                      QLocale::system().monthName(date.month(), QLocale::ShortFormat),
-                                      date.day());
+        QString veryLongStr = QLocale::system().toString(date, QLocale::LongFormat);
+        QString longstr = i18nc("short_weekday short_monthname date (e.g. Mon Aug 13)",
+                                "%1 %2 %3",
+                                QLocale::system().dayName(dW, QLocale::ShortFormat),
+                                QLocale::system().monthName(date.month(), QLocale::ShortFormat),
+                                date.day());
         QString shortstr = QLocale::system().toString(date, QLocale::NarrowFormat);
         // according to the Qt documentation, NarrowFormat can return an empty string
         if (shortstr.isEmpty()) {
             shortstr = QString::number(date.day());
         }
 
-        auto dayLabel = new AlternateLabel(shortstr, longstr, veryLongStr, topDayLabelBox);
+        auto dayLabel = new AlternateLabel(std::move(shortstr), std::move(longstr), std::move(veryLongStr), topDayLabelBox);
         topDayLabelBoxLayout->addWidget(dayLabel);
         dayLabel->setAlignment(Qt::AlignHCenter);
         if (date == QDate::currentDate()) {
@@ -1979,7 +1979,7 @@ void AgendaView::updateEventDates(AgendaItem *item, bool addIncidence, Akonadi::
     }
 
     if (!incidence->hasRecurrenceId()) {
-        item->setOccurrenceDateTime(startDt);
+        item->setOccurrenceDateTime(std::move(startDt));
     }
 
     bool result;
@@ -2009,7 +2009,7 @@ void AgendaView::updateEventDates(AgendaItem *item, bool addIncidence, Akonadi::
     // Only the actually moved agenda item is already at the correct position and mustn't be
     // recreated. All others have to!!!
     if (incidence->recurs() || incidence->hasRecurrenceId()) {
-        d->mUpdateItem = aitem;
+        d->mUpdateItem = std::move(aitem);
         QMetaObject::invokeMethod(this, &AgendaView::updateView, Qt::QueuedConnection);
     }
 
@@ -2253,17 +2253,17 @@ bool AgendaView::displayIncidence(const KCalendarCore::Incidence::Ptr &incidence
         }
 
         if (dateToAdd <= lastVisibleDateTime && incidenceEnd > firstVisibleDateTime) {
-            dateTimeList.push_back(dateToAdd);
+            dateTimeList.push_back(std::move(dateToAdd));
         }
     }
 
     // ToDo items shall be displayed today if they are overdue
-    const QDateTime dateTimeToday = QDateTime(today, QTime(0, 0), QTimeZone::LocalTime);
+    QDateTime dateTimeToday = QDateTime(today, QTime(0, 0), QTimeZone::LocalTime);
     if (todo && todo->isOverdue() && dateTimeToday >= firstVisibleDateTime && dateTimeToday <= lastVisibleDateTime) {
         /* If there's a recurring instance showing up today don't add "today" again
          * we don't want the event to appear duplicated */
         if (!alreadyAddedToday) {
-            dateTimeList.push_back(dateTimeToday);
+            dateTimeList.push_back(std::move(dateTimeToday));
         }
     }
 

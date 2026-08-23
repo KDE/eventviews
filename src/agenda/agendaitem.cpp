@@ -228,9 +228,9 @@ int AgendaItem::cellWidth() const
     return mCellXRight - mCellXLeft + 1;
 }
 
-void AgendaItem::setOccurrenceDateTime(const QDateTime &qd)
+void AgendaItem::setOccurrenceDateTime(QDateTime qd)
 {
-    mOccurrenceDateTime = qd;
+    mOccurrenceDateTime = std::move(qd);
 }
 
 QDate AgendaItem::occurrenceDate() const
@@ -680,9 +680,9 @@ QList<AgendaItem::QPtr> &AgendaItem::conflictItems()
     return mConflictItems;
 }
 
-void AgendaItem::setConflictItems(const QList<AgendaItem::QPtr> &ci)
+void AgendaItem::setConflictItems(QList<AgendaItem::QPtr> ci)
 {
-    mConflictItems = ci;
+    mConflictItems = std::move(ci);
     for (QList<AgendaItem::QPtr>::iterator it = mConflictItems.begin(), end(mConflictItems.end()); it != end; ++it) {
         (*it)->addConflictItem(this);
     }
@@ -1032,13 +1032,13 @@ void AgendaItem::paintEvent(QPaintEvent *ev)
     QString headline;
     int hw = fm.boundingRect(longH).width();
     if (hw > hTxtWidth) {
-        headline = shortH;
         hw = fm.boundingRect(shortH).width();
+        headline = std::move(shortH);
         if (hw < txtWidth) {
             x += (hTxtWidth - hw) / 2;
         }
     } else {
-        headline = longH;
+        headline = std::move(longH);
         x += (hTxtWidth - hw) / 2;
     }
     p.setBackground(QBrush(frameColor));

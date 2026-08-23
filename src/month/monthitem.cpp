@@ -309,7 +309,7 @@ IncidenceMonthItem::IncidenceMonthItem(MonthScene *monthScene,
                 inc->setDescription(i18ncp("@info/plain number of years of marriage", "1 year", "%1 years", years));
             }
             inc->setReadOnly(true);
-            mIncidence = inc;
+            mIncidence = std::move(inc);
         }
     }
 

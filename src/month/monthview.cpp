@@ -527,7 +527,7 @@ QPair<QDateTime, QDateTime> MonthView::actualDateRange(const QDateTime &start, c
     actualStart.setTime(QTime(0, 0, 0, 0));
     QDateTime actualEnd = actualStart.addDays(6 * 7 - 1);
     actualEnd.setTime(QTime(23, 59, 59, 99));
-    return qMakePair(actualStart, actualEnd);
+    return qMakePair(std::move(actualStart), std::move(actualEnd));
 }
 
 Akonadi::Item::List MonthView::selectedIncidences() const
@@ -536,9 +536,9 @@ Akonadi::Item::List MonthView::selectedIncidences() const
     if (d->scene->selectedItem()) {
         auto tmp = qobject_cast<IncidenceMonthItem *>(d->scene->selectedItem());
         if (tmp) {
-            Akonadi::Item const incidenceSelected = tmp->akonadiItem();
+            Akonadi::Item incidenceSelected = tmp->akonadiItem();
             if (incidenceSelected.isValid()) {
-                selected.append(incidenceSelected);
+                selected.append(std::move(incidenceSelected));
             }
         }
     }

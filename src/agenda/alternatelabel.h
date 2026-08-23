@@ -14,7 +14,7 @@ class AlternateLabel : public QLabel
 {
     Q_OBJECT
 public:
-    AlternateLabel(const QString &shortlabel, const QString &longlabel, const QString &extensivelabel = QString(), QWidget *parent = nullptr);
+    AlternateLabel(QString shortlabel, QString longlabel, QString extensivelabel = QString(), QWidget *parent = nullptr);
     ~AlternateLabel() override;
 
     enum TextType {

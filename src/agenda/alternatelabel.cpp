@@ -8,11 +8,11 @@
 
 using namespace EventViews;
 
-AlternateLabel::AlternateLabel(const QString &shortlabel, const QString &longlabel, const QString &extensivelabel, QWidget *parent)
+AlternateLabel::AlternateLabel(QString shortlabel, QString longlabel, QString extensivelabel, QWidget *parent)
     : QLabel(parent)
-    , mShortText(shortlabel)
-    , mLongText(longlabel)
-    , mExtensiveText(extensivelabel)
+    , mShortText(std::move(shortlabel))
+    , mLongText(std::move(longlabel))
+    , mExtensiveText(std::move(extensivelabel))
 {
     setSizePolicy(QSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed));
     if (mExtensiveText.isEmpty()) {
@@ -21,7 +21,7 @@ AlternateLabel::AlternateLabel(const QString &shortlabel, const QString &longlab
     const QFontMetrics &fm = fontMetrics();
     // We use at least averageCharWidth * 2 here to avoid misalignment
     // for single char labels.
-    setMinimumWidth(qMax(fm.averageCharWidth() * 2, fm.boundingRect(shortlabel).width()) + getIndent());
+    setMinimumWidth(qMax(fm.averageCharWidth() * 2, fm.boundingRect(mShortText).width()) + getIndent());
 
     squeezeTextToLabel();
 }
