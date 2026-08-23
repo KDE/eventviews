@@ -656,7 +656,7 @@ bool Agenda::eventFilter_mouse(QObject *object, QMouseEvent *me)
                 AgendaItem::QPtr const item = qobject_cast<AgendaItem *>(object);
                 if (item) {
                     KCalendarCore::Incidence::Ptr const incidence = item->incidence();
-                    if (incidence->isReadOnly()) {
+                    if (incidence && incidence->isReadOnly()) {
                         d->mActionItem = nullptr;
                     } else {
                         d->mActionItem = item;
