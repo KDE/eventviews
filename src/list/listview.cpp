@@ -621,4 +621,9 @@ QSize ListView::sizeHint() const
     return {s.width() + style()->pixelMetric(QStyle::PM_ScrollBarExtent) + 1, s.height()};
 }
 
+QTreeWidget *ListView::treeWidget()
+{
+    return d->mTreeWidget;
+}
+
 #include "moc_listview.cpp"

@@ -14,6 +14,7 @@
 class KConfig;
 
 class QModelIndex;
+class QTreeWidget;
 
 namespace EventViews
 {
@@ -82,6 +83,12 @@ public:
 
     void clear();
     QSize sizeHint() const override;
+
+    /*!
+     * Return a pointer to the internal QTreeWidget.
+     * \since 6.9.0
+     */
+    QTreeWidget *treeWidget();
 
 public Q_SLOTS:
     /*!
