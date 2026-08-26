@@ -245,7 +245,7 @@ public:
     bool createDayLabels(const KCalendarCore::DateList &dates, bool withDayLabel, const QStringList &decoNames, const QStringList &enabledDecos);
     void setWeekWidth(int width);
     void updateDayLabelSizes();
-    void updateMargins();
+    void updateMargins(bool isTop = true, bool isRightHandMenuVisible = false, int rightIndent = 0);
 
     [[nodiscard]] AgendaHeaderLayout *dayLabelsLayout();
 
@@ -326,13 +326,20 @@ void AgendaHeader::setCalendarName(const QString &calendarName)
     }
 }
 
-void AgendaHeader::updateMargins()
+void AgendaHeader::updateMargins(bool isTop, bool isRightHandMenuVisible, int rightIndent)
 {
     const int frameWidth = (mAgenda && mAgenda->verticalScrollBar()->isVisible()) ? mAgenda->scrollArea()->frameWidth() : 0;
     const int scrollBarWidth = (mIsSideBySide || !mAgenda || !mAgenda->verticalScrollBar()->isVisible()) ? 0 : mAgenda->verticalScrollBar()->width();
     const bool isLTR = (layoutDirection() == Qt::LeftToRight);
-    const int leftSpacing = SPACING + frameWidth;
-    const int rightSpacing = scrollBarWidth + frameWidth;
+    int leftSpacing = SPACING + frameWidth;
+    int rightSpacing = scrollBarWidth + frameWidth;
+    if (!isTop && isRightHandMenuVisible) {
+        if (isLTR) {
+            rightSpacing += rightIndent;
+        } else {
+            leftSpacing += rightIndent;
+        }
+    }
     mDayLabelsLayout->setContentsMargins(isLTR ? leftSpacing : rightSpacing, 0, isLTR ? rightSpacing : leftSpacing, 0);
 }
 
@@ -1352,17 +1359,16 @@ void AgendaView::showEvent(QShowEvent *showEvent)
     EventView::showEvent(showEvent);
 
     // agenda scrollbar width only set now, so redo margin calculation
-    d->mTopDayLabelsFrame->updateMargins();
-    d->mBottomDayLabelsFrame->updateMargins();
+    d->mTopDayLabelsFrame->updateMargins(true);
+    d->mBottomDayLabelsFrame->updateMargins(false, d->mTimeLabelsZoneRight->isVisible(), d->mTimeLabelsZoneRight->width());
     d->updateAllDayRightSpacer();
 }
 
 bool AgendaView::eventFilter(QObject *object, QEvent *event)
 {
     if ((object == d->mAgenda->verticalScrollBar()) && ((event->type() == QEvent::Show) || (event->type() == QEvent::Hide))) {
-        d->mTopDayLabelsFrame->updateMargins();
-        d->mBottomDayLabelsFrame->updateMargins();
-        d->updateAllDayRightSpacer();
+        d->mTopDayLabelsFrame->updateMargins(true);
+        d->mBottomDayLabelsFrame->updateMargins(false, d->mTimeLabelsZoneRight->isVisible(), d->mTimeLabelsZoneRight->width());
     }
     return false;
 }
