@@ -9,6 +9,8 @@
 
 using namespace EventViews;
 
+namespace
+{
 class TimeLabelUtilTest : public QObject
 {
     Q_OBJECT
@@ -40,6 +42,7 @@ private Q_SLOTS:
         QCOMPARE(tzUTCOffsetStr(tz8), QStringLiteral("-12:59"));
     }
 };
+}
 
 QTEST_APPLESS_MAIN(TimeLabelUtilTest)
 
