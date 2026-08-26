@@ -2015,7 +2015,7 @@ void AgendaView::updateEventDates(AgendaItem *item, bool addIncidence, Akonadi::
     // Only the actually moved agenda item is already at the correct position and mustn't be
     // recreated. All others have to!!!
     if (incidence->recurs() || incidence->hasRecurrenceId()) {
-        d->mUpdateItem = std::move(aitem);
+        d->mUpdateItem = aitem;
         QMetaObject::invokeMethod(this, &AgendaView::updateView, Qt::QueuedConnection);
     }
 
