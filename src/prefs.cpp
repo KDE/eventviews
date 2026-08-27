@@ -569,16 +569,6 @@ int Prefs::hourSize() const
     return d->getInt(d->mBaseConfig.hourSizeItem());
 }
 
-void Prefs::setDayBegins(const QDateTime &dateTime)
-{
-    d->setDateTime(d->mBaseConfig.dayBeginsItem(), dateTime);
-}
-
-QDateTime Prefs::dayBegins() const
-{
-    return d->getDateTime(d->mBaseConfig.dayBeginsItem());
-}
-
 void Prefs::setFirstDayOfWeek(const int day)
 {
     d->setInt(d->mBaseConfig.weekStartDayItem(), day - 1);

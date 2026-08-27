@@ -48,11 +48,6 @@
       <whatsthis>Enter the ending time for your daily schedule here. Your daily schedule hours will be marked with a separate color.</whatsthis>
       <default>QDateTime(QDate(1752,1,1), QTime(17,0))</default>
     </entry>
-    <entry type="DateTime" name="DayBegins">
-      <label>Day begins at</label>
-      <whatsthis>Enter the start time for events here. This time should be the earliest time that you use for events, as it will be displayed at the top.</whatsthis>
-      <default>QDateTime(QDate(1752,1,1), QTime(7,0))</default>
-    </entry>
   </group>
   <!-- Views Page: General Tab -->
   <group name="General View">

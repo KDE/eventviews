@@ -17,6 +17,8 @@
 
 #include <Akonadi/CalendarUtils>
 #include <Akonadi/IncidenceChanger>
+
+#include <CalendarSupport/KCalPrefs>
 #include <CalendarSupport/Utils>
 
 #include <KCalendarCore/Incidence>
@@ -2323,7 +2325,7 @@ AgendaScrollArea::AgendaScrollArea(bool isAllDay, AgendaView *agendaView, bool i
     setWidget(mAgenda);
     setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
 
-    mAgenda->setStartTime(agendaView->preferences()->dayBegins().time());
+    mAgenda->setStartTime(CalendarSupport::KCalPrefs::instance()->dayBegins().time());
 }
 
 AgendaScrollArea::~AgendaScrollArea() = default;

@@ -92,13 +92,6 @@ public:
 
     /*!
      */
-    void setDayBegins(const QDateTime &dateTime);
-    /*!
-     */
-    [[nodiscard]] QDateTime dayBegins() const;
-
-    /*!
-     */
     void setWorkingHoursStart(const QDateTime &dateTime);
     /*!
      */
