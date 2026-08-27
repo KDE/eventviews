@@ -325,14 +325,15 @@ void TimeLabels::contextMenuEvent(QContextMenuEvent *event)
 
     QMenu popup(this);
 
-    QAction *editTimeZones = popup.addAction(QIcon::fromTheme(QStringLiteral("document-properties")), i18n("&Add Timezones…"));
+    QAction *editTimeZones = popup.addAction(QIcon::fromTheme(QStringLiteral("document-properties")), i18nc("@action:inmenu", "&Add Timezones…"));
     editTimeZones->setToolTip(i18nc("@info:tooltip", "Add a timelabel display column for a new timezone"));
     editTimeZones->setWhatsThis(i18nc(
         "@info:whatsthis",
         "This menu will show a timezone selection dialog allowing you to select a timezone for showing hour labels alongside your system timezone hour labels. "
         "This feature is very useful when showing calendar events for people in timezones other than your own."));
 
-    QAction *removeTimeZone = popup.addAction(QIcon::fromTheme(QStringLiteral("edit-delete")), i18n("&Remove Timezone %1", i18n(mTimezone.id().constData())));
+    QAction *removeTimeZone =
+        popup.addAction(QIcon::fromTheme(QStringLiteral("edit-delete")), i18nc("@action:inmenu", "&Remove Timezone %1", i18n(mTimezone.id().constData())));
     if (!mTimezone.isValid() || mTimeLabelsZone->preferences()->timeScaleTimezones().isEmpty() || mTimezone == mTimeLabelsZone->preferences()->timeZone()) {
         removeTimeZone->setEnabled(false);
     }
@@ -421,16 +422,16 @@ QString TimeLabels::headerToolTip() const
     QString toolTip;
 
     toolTip += "<qt>"_L1;
-    toolTip += i18nc("title for timezone info, the timezone id and utc offset",
-                     "<b>%1 (%2)</b>",
-                     i18n(mTimezone.id().constData()),
-                     EventViews::tzUTCOffsetStr(mTimezone));
+    toolTip += xi18nc("@info:tooltip title for timezone info, the timezone id and utc offset",
+                      "<b>%1 (%2)</b>",
+                      i18n(mTimezone.id().constData()),
+                      EventViews::tzUTCOffsetStr(mTimezone));
     toolTip += "<hr>"_L1;
-    toolTip += i18nc("heading for timezone display name", "<i>Name:</i> %1", mTimezone.displayName(now, QTimeZone::LongName));
+    toolTip += xi18nc("@info:tooltip heading for timezone display name", "<emphasis>Name:</emphasis> %1", mTimezone.displayName(now, QTimeZone::LongName));
     toolTip += "<br/>"_L1;
 
     if (mTimezone.territory() != QLocale::AnyCountry) {
-        toolTip += i18nc("heading for timezone country", "<i>Country:</i> %1", QLocale::territoryToString(mTimezone.territory()));
+        toolTip += xi18nc("@info:tooltip heading for timezone country", "<emphasis>Country:</emphasis> %1", QLocale::territoryToString(mTimezone.territory()));
         toolTip += "<br/>"_L1;
     }
 
@@ -442,13 +443,13 @@ QString TimeLabels::headerToolTip() const
     }
     abbreviations.chop(7);
     if (!abbreviations.isEmpty()) {
-        toolTip += i18nc("heading for comma-separated list of timezone abbreviations", "<i>Abbreviations:</i>");
+        toolTip += xi18nc("@info:tooltip heading for comma-separated list of timezone abbreviations", "<emphasis>Abbreviations:</emphasis>");
         toolTip += abbreviations;
         toolTip += "<br/>"_L1;
     }
     const QString timeZoneComment(mTimezone.comment());
     if (!timeZoneComment.isEmpty()) {
-        toolTip += i18nc("heading for the timezone comment", "<i>Comment:</i> %1", timeZoneComment);
+        toolTip += xi18nc("@info:tooltip heading for the timezone comment", "<emphasis>Comment:</emphasis> %1", timeZoneComment);
     }
     toolTip += "</qt>"_L1;
 
@@ -460,15 +461,21 @@ bool TimeLabels::event(QEvent *event)
     if (event->type() == QEvent::ToolTip) {
         auto helpEvent = static_cast<QHelpEvent *>(event);
         const int cell = yposToCell(helpEvent->pos().y());
+        const int hour = cellToHour(cell);
+
+        QString clock = QString::number(hour);
+        if (!use12Clock() && hour < 10) {
+            clock = "0"_L1 + clock;
+        }
 
         QString toolTip;
         toolTip += "<qt>"_L1;
-        toolTip += i18nc("[hour of the day][am/pm/00] [timezone id (timezone-offset)]",
-                         "%1%2<br/>%3 (%4)",
-                         cellToHour(cell),
-                         cellToSuffix(cell),
-                         i18n(mTimezone.id().constData()),
-                         EventViews::tzUTCOffsetStr(mTimezone));
+        toolTip += xi18nc("@info:tooltip [hour of the day][am/pm/00] [timezone id (timezone-offset)]",
+                          "%1%2<nl/>%3 (%4)",
+                          clock,
+                          cellToSuffix(cell),
+                          i18n(mTimezone.id().constData()),
+                          EventViews::tzUTCOffsetStr(mTimezone));
         toolTip += "</qt>"_L1;
 
         QToolTip::showText(helpEvent->globalPos(), toolTip, this);
