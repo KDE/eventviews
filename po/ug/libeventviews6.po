@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-12 00:44+0000\n"
+"POT-Creation-Date: 2026-08-27 02:42+0000\n"
 "PO-Revision-Date: 2026-05-30 16:23-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -111,18 +111,18 @@ msgstr "%1: %2"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: agenda/agendaview.cpp:423
+#: agenda/agendaview.cpp:430
 #, kde-format
 msgctxt "short_weekday short_monthname date (e.g. Mon Aug 13)"
 msgid "%1 %2 %3"
 msgstr "%1 %2 %3"
 
-#: agenda/agendaview.cpp:2338
+#: agenda/agendaview.cpp:2344
 #, kde-format
 msgid "Unable to modify this to-do, because it cannot be locked."
 msgstr ""
 
-#: agenda/agendaview.cpp:2346
+#: agenda/agendaview.cpp:2352
 #, kde-format
 msgid "Unable to save %1 \"%2\"."
 msgstr "%1 «%2» نى ساقلىغىلى بولمىدى."
