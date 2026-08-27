@@ -374,12 +374,6 @@
       <whatsthis>Select a color to use for the current-time (Marcus Bains) line.</whatsthis>
       <default>255,0,0</default>
     </entry>
-    <entry key="Agenda Holidays Background Color" type="Color">
-      <label>Holiday color</label>
-      <tooltip>Set the color for Holidays in Agenda View</tooltip>
-      <whatsthis>Select the holiday color here. The holiday color will be used for the holiday name in the Month View and the holiday number in the Date Navigator.</whatsthis>
-      <default>255, 100, 100</default>
-    </entry>
     <entry type="Color" key="Todo due today Color" name="TodoDueTodayColor">
       <label>To-do due today color</label>
       <tooltip>Set the color for to-dos that are due today</tooltip>

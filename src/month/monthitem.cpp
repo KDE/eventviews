@@ -746,10 +746,7 @@ QList<QPixmap> HolidayMonthItem::icons() const
 
 QColor HolidayMonthItem::bgColor() const
 {
-    // FIXME: Currently, only this value is settable in the options.
-    // There is a monthHolidaysBackgroundColor() option too. Maybe it would be
-    // wise to merge those two.
-    return monthScene()->monthView()->preferences()->agendaHolidaysBackgroundColor();
+    return monthScene()->monthView()->preferences()->holidayColor();
 }
 
 QColor HolidayMonthItem::frameColor() const

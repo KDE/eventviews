@@ -176,13 +176,6 @@ public:
 
     /*!
      */
-    void setAgendaHolidaysBackgroundColor(const QColor &color) const;
-    /*!
-     */
-    [[nodiscard]] QColor agendaHolidaysBackgroundColor() const;
-
-    /*!
-     */
     void setAgendaViewColors(int colors);
     /*!
      */

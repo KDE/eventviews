@@ -689,16 +689,6 @@ bool Prefs::todosUseCategoryColors() const
     return d->getBool(d->mBaseConfig.todosUseCategoryColorsItem());
 }
 
-void Prefs::setAgendaHolidaysBackgroundColor(const QColor &color) const
-{
-    d->setColor(d->mBaseConfig.agendaHolidaysBackgroundColorItem(), color);
-}
-
-QColor Prefs::agendaHolidaysBackgroundColor() const
-{
-    return d->getColor(d->mBaseConfig.agendaHolidaysBackgroundColorItem());
-}
-
 void Prefs::setAgendaViewColors(int colors)
 {
     d->setInt(d->mBaseConfig.agendaViewColorsItem(), colors);
