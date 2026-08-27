@@ -436,10 +436,10 @@
   <!-- Custom Pages Page -->
   <!-- Options currently not visible in the GUI -->
   <group name="Hidden Options">
-    <entry type="Bool" key="Quick Todo" name="EnableQuickTodo">
+    <entry type="Bool" key="Quick Todo" name="EnableQuickTodo" hidden="true">
       <default>true</default>
     </entry>
-    <entry type="Bool" key="Todo Quick Search" name="EnableTodoQuickSearch">
+    <entry type="Bool" key="Todo Quick Search" name="EnableTodoQuickSearch" hidden="true">
       <default>true</default>
     </entry>
     <entry type="Enum" name="DefaultTodoAttachMethod" hidden="true">
@@ -473,7 +473,7 @@
     <entry type="StringList" key="DefaultResourceColors" hidden="true">
       <default>#c1d4e7,#d0e7c1,#e3e7c1,#e7c1e6,#a1b1c1</default>
     </entry>
-    <entry type="Bool" key="AssignDefaultResourceColors">
+    <entry type="Bool" key="AssignDefaultResourceColors" hidden="true">
       <default>true</default>
     </entry>
     <entry key="Decorations At Month View Top" type="StringList" hidden="true"/>
