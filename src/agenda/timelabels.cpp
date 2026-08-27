@@ -461,12 +461,18 @@ bool TimeLabels::event(QEvent *event)
     if (event->type() == QEvent::ToolTip) {
         auto helpEvent = static_cast<QHelpEvent *>(event);
         const int cell = yposToCell(helpEvent->pos().y());
+        const int hour = cellToHour(cell);
+
+        QString clock = QString::number(hour);
+        if (!use12Clock() && hour < 10) {
+            clock = "0"_L1 + clock;
+        }
 
         QString toolTip;
         toolTip += "<qt>"_L1;
         toolTip += i18nc("[hour of the day][am/pm/00] [timezone id (timezone-offset)]",
                          "%1%2<br/>%3 (%4)",
-                         cellToHour(cell),
+                         clock,
                          cellToSuffix(cell),
                          i18n(mTimezone.id().constData()),
                          KCalUtils::Stringify::tzUTCOffsetStr(mTimezone));
