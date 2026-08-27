@@ -214,7 +214,7 @@ public:
 
     bool isQueuedForDeletion(const QString &uid) const
     {
-        // if mAgendaItemsById contains it it means that a createAgendaItem() was called
+        // if mAgendaItemsById contains it means that a createAgendaItem() was called
         // before the previous agenda items were deleted.
         return mItemsQueuedForDeletion.contains(uid) && !mAgendaItemsById.contains(uid);
     }
@@ -304,7 +304,7 @@ public:
 };
 
 /*
-  Create an agenda widget with rows rows and columns columns.
+  Create an agenda widget with "rows" rows and "columns" columns.
 */
 Agenda::Agenda(AgendaView *agendaView, QScrollArea *scrollArea, int columns, int rows, int rowSize, bool isInteractive)
     : QWidget(scrollArea)
@@ -316,7 +316,7 @@ Agenda::Agenda(AgendaView *agendaView, QScrollArea *scrollArea, int columns, int
 }
 
 /*
-  Create an agenda widget with columns columns and one row. This is used for
+  Create an agenda widget with "columns" columns and one row. This is used for
   all-day events.
 */
 Agenda::Agenda(AgendaView *agendaView, QScrollArea *scrollArea, int columns, bool isInteractive)

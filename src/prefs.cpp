@@ -989,7 +989,7 @@ QColor Prefs::resourceColor(const QString &cal)
 
     // assign default color if enabled
     if (!color.isValid() && d->getBool(d->mBaseConfig.assignDefaultResourceColorsItem())) {
-        color.setRgb(0x37, 0x7A, 0xBC); // blueish
+        color.setRgb(0x37, 0x7A, 0xBC); // blue-ish
         const int seed = d->getInt(d->mBaseConfig.defaultResourceColorSeedItem());
         const QStringList colors = d->getStringList(d->mBaseConfig.defaultResourceColorsItem());
         if (seed > 0 && seed - 1 < colors.size()) {
