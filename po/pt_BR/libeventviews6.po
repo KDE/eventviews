@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-27 02:42+0000\n"
+"POT-Creation-Date: 2026-08-28 02:45+0000\n"
 "PO-Revision-Date: 2026-06-02 07:30-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -298,7 +298,7 @@ msgctxt "heading for the timezone comment"
 msgid "<i>Comment:</i> %1"
 msgstr "<i>Comentário:</i> %1"
 
-#: agenda/timelabels.cpp:468
+#: agenda/timelabels.cpp:474
 #, kde-format
 msgctxt "[hour of the day][am/pm/00] [timezone id (timezone-offset)]"
 msgid "%1%2<br/>%3 (%4)"
