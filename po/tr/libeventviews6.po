@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kdepim-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-28 00:46+0000\n"
-"PO-Revision-Date: 2026-07-21 21:01+0300\n"
+"PO-Revision-Date: 2026-08-28 20:05+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 26.04.2\n"
+"X-Generator: Lokalize 26.08.0\n"
 "(http: //www.transifex.com/projects/p/kdepim-k-tr/language/tr/)\n"
 "X-POOTLE-MTIME: 1413132207.000000\n"
 
@@ -139,8 +139,7 @@ msgid "Unable to save %1 \"%2\"."
 msgstr "%1 “%2” kaydedilemiyor."
 
 #: agenda/timelabels.cpp:328
-#, fuzzy, kde-format
-#| msgid "&Add Timezones…"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&Add Timezones…"
 msgstr "Zaman Dilimleri &Ekle…"
@@ -166,8 +165,7 @@ msgstr ""
 "olan kişilerle olan takvim etkinliklerini gösterirken yararlıdır."
 
 #: agenda/timelabels.cpp:336
-#, fuzzy, kde-format
-#| msgid "&Remove Timezone %1"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&Remove Timezone %1"
 msgstr "%1 Zaman Dilimini &Kaldır"
@@ -269,54 +267,42 @@ msgstr ""
 "dikey sarma çubuğu kaldırılır."
 
 #: agenda/timelabels.cpp:426
-#, fuzzy, kde-kuit-format
-#| msgctxt "title for timezone info, the timezone id and utc offset"
-#| msgid "<b>%1 (%2)</b>"
+#, kde-kuit-format
 msgctxt "@info:tooltip title for timezone info, the timezone id and utc offset"
 msgid "<b>%1 (%2)</b>"
 msgstr "<b>%1 (%2)</b>"
 
 #: agenda/timelabels.cpp:430
-#, fuzzy, kde-kuit-format
-#| msgctxt "heading for timezone display name"
-#| msgid "<i>Name:</i> %1"
+#, kde-kuit-format
 msgctxt "@info:tooltip heading for timezone display name"
 msgid "<emphasis>Name:</emphasis> %1"
-msgstr "<i>Ad:</i> %1"
+msgstr "<emphasis>Ad:</emphasis> %1"
 
 #: agenda/timelabels.cpp:434
-#, fuzzy, kde-kuit-format
-#| msgctxt "heading for timezone country"
-#| msgid "<i>Country:</i> %1"
+#, kde-kuit-format
 msgctxt "@info:tooltip heading for timezone country"
 msgid "<emphasis>Country:</emphasis> %1"
-msgstr "<i>Ülke:</i> %1"
+msgstr "<emphasis>Ülke:</emphasis> %1"
 
 #: agenda/timelabels.cpp:446
-#, fuzzy, kde-kuit-format
-#| msgctxt "heading for comma-separated list of timezone abbreviations"
-#| msgid "<i>Abbreviations:</i>"
+#, kde-kuit-format
 msgctxt ""
 "@info:tooltip heading for comma-separated list of timezone abbreviations"
 msgid "<emphasis>Abbreviations:</emphasis>"
-msgstr "<i>Kısaltmalar:</i>"
+msgstr "<emphasis>Kısaltmalar:</emphasis>"
 
 #: agenda/timelabels.cpp:452
-#, fuzzy, kde-kuit-format
-#| msgctxt "heading for the timezone comment"
-#| msgid "<i>Comment:</i> %1"
+#, kde-kuit-format
 msgctxt "@info:tooltip heading for the timezone comment"
 msgid "<emphasis>Comment:</emphasis> %1"
-msgstr "<i>Açıklama:</i> %1"
+msgstr "<emphasis>Açıklama:</emphasis> %1"
 
 #: agenda/timelabels.cpp:474
-#, fuzzy, kde-kuit-format
-#| msgctxt "[hour of the day][am/pm/00] [timezone id (timezone-offset)]"
-#| msgid "%1%2<br/>%3 (%4)"
+#, kde-kuit-format
 msgctxt ""
 "@info:tooltip [hour of the day][am/pm/00] [timezone id (timezone-offset)]"
 msgid "%1%2<nl/>%3 (%4)"
-msgstr "%1%2<br/>%3 (%4)"
+msgstr "%1 %2<nl/>%3 (%4)"
 
 #: agenda/timescaleconfigdialog.cpp:50
 #, kde-format
@@ -373,10 +359,9 @@ msgstr "Silme işlemlerini onayla"
 
 #. i18n: ectx: tooltip, entry (Confirm), group (Save Settings)
 #: eventviews.kcfg:10
-#, fuzzy, kde-format
-#| msgid "Check this box to display a confirmation dialog when deleting items."
+#, kde-format
 msgid "Always confirm when deleting items"
-msgstr "Ögeleri silerken size sorulmasını istiyorsanız bu kutuyu işaretleyin."
+msgstr "Ögeleri silerken her zaman onay iste"
 
 #. i18n: ectx: whatsthis, entry (Confirm), group (Save Settings)
 #: eventviews.kcfg:11
@@ -392,30 +377,25 @@ msgstr "Yeni Etkinlikler, Yapılacaklar ve Günce Girdileri"
 
 #. i18n: ectx: label, entry (Destination), group (Save Settings)
 #: eventviews.kcfg:18
-#, fuzzy, kde-format
-#| msgid "Be added to the standard calendar"
+#, kde-format
 msgid "Be added to the default calendar"
-msgstr "Standart takvime eklensin"
+msgstr "Öntanımlı takvime eklensin"
 
 #. i18n: ectx: tooltip, entry (Destination), group (Save Settings)
 #: eventviews.kcfg:19
-#, fuzzy, kde-format
-#| msgid "Be added to the standard calendar"
+#, kde-format
 msgid "Always save to the default calendar"
-msgstr "Standart takvime eklensin"
+msgstr "Her zaman öntanımlı takvime kaydet"
 
 #. i18n: ectx: whatsthis, entry (Destination), group (Save Settings)
 #: eventviews.kcfg:20
-#, fuzzy, kde-format
-#| msgid ""
-#| "Select this option to always record new events, to-dos and journal "
-#| "entries using the standard calendar."
+#, kde-format
 msgid ""
 "Select this option to always record new events, to-dos and journal entries "
 "using the current default calendar."
 msgstr ""
-"Yeni etkinlikleri, yapılacakları ve günce girdilerini her zaman öntanımlı "
-"takvim kullanarak kaydetmek için bu seçeneği seçin."
+"Yeni etkinlikleri, yapılacakları ve günce girdilerini her zaman geçerli "
+"öntanımlı takvimi kullanarak kaydetmek için bu seçeneği seçin."
 
 #. i18n: ectx: label, entry (Destination), group (Save Settings)
 #: eventviews.kcfg:23
@@ -427,7 +407,7 @@ msgstr "Hangi takvimin kullanılacağı sorulsun"
 #: eventviews.kcfg:24
 #, kde-format
 msgid "Always prompt for the calendar to use"
-msgstr ""
+msgstr "Kullanılacak takvimi her zaman sor"
 
 #. i18n: ectx: whatsthis, entry (Destination), group (Save Settings)
 #: eventviews.kcfg:25
@@ -436,6 +416,8 @@ msgid ""
 "Select this option to choose the calendar to be used to record the item each "
 "time you create a new event, to-do or journal entry."
 msgstr ""
+"Yeni bir etkinlik, yapılacaklar listesi veya günce kaydı oluşturduğunuzda, "
+"ögeyi kaydetmek için kullanılacak takvimi seçmek üzere bu seçeneği ayarlayın."
 
 #. i18n: ectx: label, entry (WeekStartDay), group (Time &amp; Date)
 #: eventviews.kcfg:34
@@ -463,51 +445,45 @@ msgstr ""
 #: eventviews.kcfg:40
 #, kde-format
 msgid "Daily starting hour"
-msgstr "Her günün başlama saati"
+msgstr "Günün başlayış saati"
 
 #. i18n: ectx: tooltip, entry (WorkingHoursStart), group (Time &amp; Date)
 #: eventviews.kcfg:41
 #, kde-format
 msgid "Set the time you typically start your day"
-msgstr ""
+msgstr "Güne başlama saatini ayarla"
 
 #. i18n: ectx: whatsthis, entry (WorkingHoursStart), group (Time &amp; Date)
 #: eventviews.kcfg:42
-#, fuzzy, kde-format
-#| msgid ""
-#| "Enter the start time for the working hours here. The working hours will "
-#| "be marked with color by KOrganizer."
+#, kde-format
 msgid ""
 "Enter the start time for your daily schedule here. Your daily schedule hours "
 "will be marked with a separate color."
 msgstr ""
-"Çalışma saatleri için başlangıç zamanını buraya girin. Çalışma saatleri K "
-"Organizatör tarafından renkli olarak işaretlenecektir."
+"Günlük programınızın başlangıç saatini buraya girin. Günlük program "
+"saatleriniz farklı bir renkle işaretlenecektir."
 
 #. i18n: ectx: label, entry (WorkingHoursEnd), group (Time &amp; Date)
 #: eventviews.kcfg:46
 #, kde-format
 msgid "Daily ending hour"
-msgstr "Her günün bitiş saati"
+msgstr "Günün bitiş saati"
 
 #. i18n: ectx: tooltip, entry (WorkingHoursEnd), group (Time &amp; Date)
 #: eventviews.kcfg:47
 #, kde-format
 msgid "Set the time you typically end your day"
-msgstr ""
+msgstr "Günün bitme saatini ayarla"
 
 #. i18n: ectx: whatsthis, entry (WorkingHoursEnd), group (Time &amp; Date)
 #: eventviews.kcfg:48
-#, fuzzy, kde-format
-#| msgid ""
-#| "Enter the ending time for the working hours here. The working hours will "
-#| "be marked with color by KOrganizer."
+#, kde-format
 msgid ""
 "Enter the ending time for your daily schedule here. Your daily schedule "
 "hours will be marked with a separate color."
 msgstr ""
-"Buraya çalışma saatleri için sonlanma zamanını girin. Çalışma saatleri K "
-"Organizatör tarafından sağlanan renkli olarak işaretlenecek."
+"Günlük programınızın bitiş saatini buraya girin. Günlük program saatleriniz "
+"farklı bir renkle işaretlenecektir."
 
 #. i18n: ectx: label, entry, group (General View)
 #: eventviews.kcfg:55 viewerapp/settings.kcfg:9
@@ -519,7 +495,7 @@ msgstr "Özetlerini göstermek için ipuçlarını etkinleştir"
 #: eventviews.kcfg:56
 #, kde-format
 msgid "Show event or to-do item tooltips"
-msgstr ""
+msgstr "Etkinlik veya yapılacak ögeler için olan araç ipuçlarını göster"
 
 #. i18n: ectx: whatsthis, entry, group (General View)
 #: eventviews.kcfg:57 viewerapp/settings.kcfg:10
@@ -539,10 +515,9 @@ msgstr "Yapılacaklar, künye renklerini kullanır"
 
 #. i18n: ectx: tooltip, entry, group (General View)
 #: eventviews.kcfg:62
-#, fuzzy, kde-format
-#| msgid "To-dos use tag colors"
+#, kde-format
 msgid "Draw to-do items using tag colors"
-msgstr "Yapılacaklar, künye renklerini kullanır"
+msgstr "Yapılacakları künye renkleri ile göster"
 
 #. i18n: ectx: whatsthis, entry, group (General View)
 #: eventviews.kcfg:63
@@ -590,22 +565,20 @@ msgstr "Günlük yinelenen ögeleri göster"
 #, kde-format
 msgid "Use a bold typeface to more easily identify daily recurring incidences"
 msgstr ""
+"Günlük olarak yinelenen olayları daha kolay ayırt etmek için kalın bir "
+"yazıyüzü kullan"
 
 #. i18n: ectx: whatsthis, entry (DailyRecur), group (General View)
 #: eventviews.kcfg:75
-#, fuzzy, kde-format
-#| msgid ""
-#| "Check this box to show the days containing daily recurring events in bold "
-#| "typeface in the Date Navigator, or uncheck it to give more prominence to "
-#| "other (non daily recurring) events."
+#, kde-format
 msgid ""
 "Check this box to show the days containing daily recurring incidences in "
 "bold typeface in the Date Navigator, or uncheck it to give more prominence "
 "to other (non daily recurring) incidences."
 msgstr ""
-"Günlük yinelenen etkinlikleri Tarih Gezgini’nde kalın yazıyüzü ile göstermek "
-"için bu kutuyu işaretleyin veya başka etkinliklere (günlük yinelenmeyen) "
-"daha çok önem vermek için işareti kaldırın."
+"Günlük yinelenen olayları Tarih Gezgini’nde kalın yazıyüzü ile göstermek "
+"için bu kutuyu işaretleyin veya başka olaylara (günlük yinelenmeyen) daha "
+"çok önem vermek için işareti kaldırın."
 
 #. i18n: ectx: label, entry (WeeklyRecur), group (General View)
 #: eventviews.kcfg:79
@@ -618,6 +591,8 @@ msgstr "Haftalık yinelenen ögeleri göster"
 #, kde-format
 msgid "Use a bold typeface to more easily identify weekly recurring incidences"
 msgstr ""
+"Haftalık olarak yinelenen olayları daha kolay ayırt etmek için kalın bir "
+"yazıyüzü kullan"
 
 #. i18n: ectx: whatsthis, entry (WeeklyRecur), group (General View)
 #: eventviews.kcfg:81
@@ -635,25 +610,24 @@ msgstr ""
 #: eventviews.kcfg:85
 #, kde-format
 msgid "Show to-dos instead of events when in Todo View"
-msgstr "Yapılacaklar Görünümü’nde etkinlikler yerine yapılacakları göster"
+msgstr "Yapılacaklar görünümünde etkinlikler yerine yapılacakları göster"
 
 #. i18n: ectx: tooltip, entry (HighlightTodos), group (General View)
 #: eventviews.kcfg:86
 #, kde-format
 msgid "In Todo View, use a bold typeface to more easily identify to-dos"
 msgstr ""
+"Yapılacaklar görünümünde, yapılacakları daha kolay ayırt etmek için kalın "
+"bir yazıyüzü kullan"
 
 #. i18n: ectx: whatsthis, entry (HighlightTodos), group (General View)
 #: eventviews.kcfg:87
-#, fuzzy, kde-format
-#| msgid ""
-#| "Check this box to show the days containing to-dos in bold typeface in the "
-#| "Date Navigator when in to-do view."
+#, kde-format
 msgid ""
 "Check this box to show the days containing to-dos in bold typeface in the "
 "Date Navigator when in Todo View."
 msgstr ""
-"Yapılacak görünümünde, yapılacak içeren günleri Tarih Gezgini’nde kalın "
+"Yapılacaklar görünümünde, yapılacak içeren günleri Tarih Gezgini’nde kalın "
 "yazıyüzü ile göstermek için bu kutuyu işaretleyin."
 
 #. i18n: ectx: label, entry (HighlightJournals), group (General View)
@@ -667,13 +641,12 @@ msgstr "Günce Görünümünde etkinlikler yerine günceleri göster"
 #, kde-format
 msgid "In Journal View, use a bold typeface to more easily identify journals"
 msgstr ""
+"Günce görünümünde, günceleri daha kolay ayırt etmek için kalın bir yazıyüzü "
+"kullan"
 
 #. i18n: ectx: whatsthis, entry (HighlightJournals), group (General View)
 #: eventviews.kcfg:93
-#, fuzzy, kde-format
-#| msgid ""
-#| "Check this box to show the days containing journals in bold typeface in "
-#| "the Date Navigator when in journal view."
+#, kde-format
 msgid ""
 "Check this box to show the days containing journals in bold typeface in the "
 "Date Navigator when in Journal View."
@@ -693,20 +666,20 @@ msgstr "Çalışma haftası kipinde iken hafta sayıları bir çalışma haftas�
 msgid ""
 "In work week mode, allow selecting a work week rather than the whole week"
 msgstr ""
+"Çalışma haftası kipinde, haftanın tamamı yerine yalnızca iş günlerini "
+"seçmeye olanak tanı"
 
 #. i18n: ectx: whatsthis, entry (WeekNumbersShowWork), group (General View)
 #: eventviews.kcfg:99
-#, fuzzy, kde-format
-#| msgid ""
-#| "Check this box to select a working week when clicking on the Date "
-#| "Navigator's week numbers, or uncheck it to choose the whole week."
+#, kde-format
 msgid ""
 "Check this box to select a working week when clicking on the Date "
 "Navigator's week numbers, or uncheck it to choose the whole week.  Ignored "
 "if week numbers are not shown."
 msgstr ""
-"Tarih Gezgini’nin hafta numarasına tıklandığında bir çalışma haftası seçmek "
-"için bu kutuyu işaretleyin veya tüm haftayı seçmek için işareti kaldırın."
+"Tarih Gezgini’nin hafta numarasına tıklandığında yalnızca iş günlerini "
+"seçmek için bu kutuyu işaretleyin veya tüm haftayı seçmek için işareti "
+"kaldırın. Hafta numarası gösterilmiyorsa yok sayılır."
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #: eventviews.kcfg:106 viewerapp/settings.kcfg:17
@@ -732,17 +705,13 @@ msgstr "Ajanda ızgarasındaki her saat için yüksekliği (piksel olarak) ayarl
 
 #. i18n: ectx: label, entry (EnableAgendaItemIcons), group (Agenda View)
 #: eventviews.kcfg:114
-#, fuzzy, kde-format
-#| msgid "Show icons in agenda view items"
+#, kde-format
 msgid "Show icons in Agenda View items"
 msgstr "Ajanda görünümü ögelerinde simgeleri göster"
 
 #. i18n: ectx: whatsthis, entry (EnableAgendaItemIcons), group (Agenda View)
 #: eventviews.kcfg:115
-#, fuzzy, kde-format
-#| msgid ""
-#| "Check this box to display icons (alarm, recursion, etc.) in agenda view "
-#| "items."
+#, kde-format
 msgid ""
 "Check this box to display icons (alarm, recursion, etc.) in Agenda View "
 "items."
@@ -752,8 +721,7 @@ msgstr ""
 
 #. i18n: ectx: tooltip, entry (EnableAgendaItemIcons), group (Agenda View)
 #: eventviews.kcfg:116
-#, fuzzy, kde-format
-#| msgid "Display icons in agenda view items"
+#, kde-format
 msgid "Display icons in Agenda View items"
 msgstr "Ajanda görünümü ögelerinde simgeleri görüntüle"
 
@@ -780,16 +748,13 @@ msgstr "Çift saatler için daha kalın ızgara çizgileri çiz"
 
 #. i18n: ectx: label, entry (EnableAgendaItemDesc), group (Agenda View)
 #: eventviews.kcfg:126
-#, fuzzy, kde-format
-#| msgid "Show incidence descriptions in agenda view items"
+#, kde-format
 msgid "Show incidence descriptions in Agenda View items"
 msgstr "Ajanda görünümü ögelerinde olay açıklamalarını göster"
 
 #. i18n: ectx: whatsthis, entry (EnableAgendaItemDesc), group (Agenda View)
 #: eventviews.kcfg:127
-#, fuzzy, kde-format
-#| msgid ""
-#| "Check this box to display the incidence descriptions in agenda view items."
+#, kde-format
 msgid ""
 "Check this box to display the incidence descriptions in Agenda View items."
 msgstr ""
@@ -798,23 +763,19 @@ msgstr ""
 
 #. i18n: ectx: tooltip, entry (EnableAgendaItemDesc), group (Agenda View)
 #: eventviews.kcfg:128
-#, fuzzy, kde-format
-#| msgid "Display incidence descriptions in agenda view items"
+#, kde-format
 msgid "Display incidence descriptions in Agenda View items"
 msgstr "Ajanda görünümü ögelerinde olay açıklamalarını görüntüle"
 
 #. i18n: ectx: label, entry (EnableAgendaItemLocation), group (Agenda View)
 #: eventviews.kcfg:132
-#, fuzzy, kde-format
-#| msgid "Show incidence locations in agenda view items"
+#, kde-format
 msgid "Show incidence locations in Agenda View items"
 msgstr "Ajanda görünümü ögelerinde olay konumlarını göster"
 
 #. i18n: ectx: whatsthis, entry (EnableAgendaItemLocation), group (Agenda View)
 #: eventviews.kcfg:133
-#, fuzzy, kde-format
-#| msgid ""
-#| "Check this box to display the incidence locations in agenda view items."
+#, kde-format
 msgid "Check this box to display the incidence locations in Agenda View items."
 msgstr ""
 "Ajanda görünümü ögelerinde olay konumlarını görüntülemek için bu kutuyu "
@@ -822,8 +783,7 @@ msgstr ""
 
 #. i18n: ectx: tooltip, entry (EnableAgendaItemLocation), group (Agenda View)
 #: eventviews.kcfg:134
-#, fuzzy, kde-format
-#| msgid "Display incidence locations in agenda view items"
+#, kde-format
 msgid "Display incidence locations in Agenda View items"
 msgstr "Ajanda görünümü ögelerinde olay konumlarını görüntüle"
 
@@ -832,7 +792,7 @@ msgstr "Ajanda görünümü ögelerinde olay konumlarını görüntüle"
 #: eventviews.kcfg:138 eventviews.kcfg:246
 #, kde-format
 msgid "Color busy days with a different background color"
-msgstr "İş günlerini farklı bir artalan rengi ile doldur"
+msgstr "İş günlerini farklı bir ardalan rengi ile doldur"
 
 #. i18n: ectx: tooltip, entry (ColorBusyDaysEnabled), group (Agenda View)
 #. i18n: ectx: tooltip, entry (ColorMonthBusyDaysEnabled), group (Month View)
@@ -866,15 +826,13 @@ msgstr "Yapılacakları göster"
 
 #. i18n: ectx: whatsthis, entry (ShowTodosAgendaView), group (Agenda View)
 #: eventviews.kcfg:145
-#, fuzzy, kde-format
-#| msgid "Check this box to display to-dos in the agenda view."
+#, kde-format
 msgid "Check this box to display to-dos in the Agenda View."
 msgstr "Ay görünümünde yapılacakları görüntülemek için bu kutuyu işaretleyin."
 
 #. i18n: ectx: tooltip, entry (ShowTodosAgendaView), group (Agenda View)
 #: eventviews.kcfg:146
-#, fuzzy, kde-format
-#| msgid "Display to-dos in the agenda view"
+#, kde-format
 msgid "Display to-dos in the Agenda View"
 msgstr "Ajanda görünümünde yapılacakları göster"
 
@@ -898,40 +856,42 @@ msgstr ""
 #: eventviews.kcfg:152 viewerapp/settings.kcfg:39
 #, kde-format
 msgid "Display the current-time indicator"
-msgstr "Geçerli zaman çizelgesi üzerinde göster"
+msgstr "Şu anki zaman göstergesini görüntüle"
 
 #. i18n: ectx: label, entry (MarcusBainsShowSeconds), group (Agenda View)
 #: eventviews.kcfg:156
-#, fuzzy, kde-format
-#| msgid "Show seconds on the current-time (Marcus Bains) line"
+#, kde-format
 msgid "Show seconds and timezone on the current-time (Marcus Bains) line"
-msgstr "Geçerli zaman akışı (Marcus Bains) üzerinde saniyeleri göster"
+msgstr ""
+"Geçerli zaman akışı (Marcus Bains) üzerinde saniyeleri ve zaman dilimini "
+"göster"
 
 #. i18n: ectx: whatsthis, entry (MarcusBainsShowSeconds), group (Agenda View)
 #: eventviews.kcfg:157
-#, fuzzy, kde-format
-#| msgid "Check this box if you want to show seconds on the current-time line."
+#, kde-format
 msgid ""
 "Check this box if you want to show seconds on the current-time (Marcus "
 "Bains) line. Depending on your locale, the timezone will also be displayed."
 msgstr ""
-"Geçerli zaman çizelgesi üzerinde saniyeleri göstermek için bu kutuyu "
-"işaretleyin."
+"Geçerli zaman akışı (Marcus Bains) üzerinde saniyeleri göstermek için bu "
+"kutuyu işaretleyin. Yerel ayarlarınıza bağlı olarak zaman dilimi de "
+"görüntülenir."
 
 #. i18n: ectx: tooltip, entry (MarcusBainsShowSeconds), group (Agenda View)
 #: eventviews.kcfg:158
-#, fuzzy, kde-format
-#| msgid "Display seconds with the current-time indicator"
+#, kde-format
 msgid ""
 "Display seconds (possibly with timezone) with the current-time indicator"
-msgstr "Geçerli zaman çizelgesi üzerinde saniyeleri göster"
+msgstr ""
+"Geçerli zaman göstergesi ile saniyeleri göster (büyük olasılıkla zaman "
+"dilimi ile)"
 
 #. i18n: ectx: label, entry (SelectionStartsEditor), group (Agenda View)
 #: eventviews.kcfg:162
-#, fuzzy, kde-format
-#| msgid "Time range selection in agenda view starts event editor"
+#, kde-format
 msgid "Time range selection in Agenda View starts event editor"
-msgstr "Ajanda görünümünde zaman aralığı seçimi olay düzenleyicisini başlatır"
+msgstr ""
+"Ajanda görünümünde zaman erimi seçimi, etkinlik düzenleyicisini başlatır"
 
 #. i18n: ectx: whatsthis, entry (SelectionStartsEditor), group (Agenda View)
 #: eventviews.kcfg:163 viewerapp/settings.kcfg:50
@@ -954,10 +914,9 @@ msgstr "Zaman aralığı seçimiyle otomatik etkinlik düzenleyiciyi etkinleşti
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #: eventviews.kcfg:168
-#, fuzzy, kde-format
-#| msgid "Agenda Item Color"
+#, kde-format
 msgid "Agenda Item Colors"
-msgstr "Ajanda ögesi rengi"
+msgstr "Ajanda ögesi renkleri"
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
