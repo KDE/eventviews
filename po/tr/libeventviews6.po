@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kdepim-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-28 02:45+0000\n"
-"PO-Revision-Date: 2026-06-02 13:03+0300\n"
+"PO-Revision-Date: 2026-08-28 20:05+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 26.04.0\n"
+"X-Generator: Lokalize 26.08.0\n"
 "(http: //www.transifex.com/projects/p/kdepim-k-tr/language/tr/)\n"
 "X-POOTLE-MTIME: 1413132207.000000\n"
 
@@ -546,7 +546,7 @@ msgstr ""
 #: eventviews.kcfg:85
 #, kde-format
 msgid "Daily starting hour"
-msgstr "Her günün başlama saati"
+msgstr "Günün başlayış saati"
 
 #. i18n: ectx: whatsthis, entry (WorkingHoursStart), group (Time &amp; Date)
 #: eventviews.kcfg:86
@@ -562,7 +562,7 @@ msgstr ""
 #: eventviews.kcfg:90
 #, kde-format
 msgid "Daily ending hour"
-msgstr "Her günün bitiş saati"
+msgstr "Günün bitiş saati"
 
 #. i18n: ectx: whatsthis, entry (WorkingHoursEnd), group (Time &amp; Date)
 #: eventviews.kcfg:91
@@ -693,7 +693,7 @@ msgstr ""
 #: eventviews.kcfg:130
 #, kde-format
 msgid "Show to-dos instead of events when in Todo View"
-msgstr "Yapılacaklar Görünümü’nde etkinlikler yerine yapılacakları göster"
+msgstr "Yapılacaklar görünümünde etkinlikler yerine yapılacakları göster"
 
 #. i18n: ectx: whatsthis, entry (HighlightTodos), group (General View)
 #: eventviews.kcfg:131
@@ -883,7 +883,7 @@ msgstr ""
 #: eventviews.kcfg:188 viewerapp/settings.kcfg:39
 #, kde-format
 msgid "Display the current-time indicator"
-msgstr "Geçerli zaman çizelgesi üzerinde göster"
+msgstr "Şu anki zaman göstergesini görüntüle"
 
 #. i18n: ectx: label, entry (MarcusBainsShowSeconds), group (Agenda View)
 #: eventviews.kcfg:192 viewerapp/settings.kcfg:43
@@ -1060,7 +1060,7 @@ msgstr ""
 #: eventviews.kcfg:230 eventviews.kcfg:338
 #, kde-format
 msgid "Color busy days with a different background color"
-msgstr "İş günlerini farklı bir artalan rengi ile doldur"
+msgstr "İş günlerini farklı bir ardalan rengi ile doldur"
 
 #. i18n: ectx: whatsthis, entry (ColorBusyDaysEnabled), group (Agenda View)
 #: eventviews.kcfg:231

@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: libeventviews6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-28 02:45+0000\n"
-"PO-Revision-Date: 2026-06-02 22:07+0100\n"
+"PO-Revision-Date: 2026-08-28 17:32+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.04.1\n"
+"X-Generator: Lokalize 26.08.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -248,7 +248,7 @@ msgstr "Mostrar etiquetas de tiempo del lado izquierdo"
 msgctxt "@info::tooltip"
 msgid "Show or hide time labels on both sides of the agenda view"
 msgstr ""
-"Mostrar u ocultar etiquetas de tiempo en ambos lados de la vista de la agenda"
+"Mostrar u ocultar etiquetas de tiempo en ambos lados de la vista de agenda"
 
 #: agenda/timelabels.cpp:371
 #, kde-format
@@ -260,7 +260,7 @@ msgid ""
 "scrollbar is removed when the time labels are shown on both sides."
 msgstr ""
 "Esta opción del menú muestra u oculta las etiquetas de tiempo en ambos lados "
-"de la vista de la agenda. Solo se muestra la zona horaria del sistema (sin "
+"de la vista de agenda. Solo se muestra la zona horaria del sistema (sin "
 "zonas horarias adicionales) en el segundo lado para ahorrar espacio en la "
 "pantalla. Del mismo modo, la barra de desplazamiento vertical se elimina "
 "cuando las etiquetas de tiempo se muestran en ambos lados."
@@ -695,9 +695,9 @@ msgid ""
 "other (non weekly recurring) events."
 msgstr ""
 "Marque esta casilla para mostrar los días que contienen eventos que se "
-"repiten semanalmente con tipo de letra negrita en el selector de fechas o "
-"desmárquela para darle más importancia al resto de eventos (los que no se "
-"repiten semanalmente)."
+"repiten semanalmente en negrita en el selector de fechas o desmárquela para "
+"darle más importancia al resto de eventos (los que no se repiten "
+"semanalmente)."
 
 #. i18n: ectx: label, entry (HighlightTodos), group (General View)
 #: eventviews.kcfg:130
@@ -740,8 +740,8 @@ msgstr ""
 #, kde-format
 msgid "Week numbers select a work week when in work week mode"
 msgstr ""
-"Los números de semana seleccionan una semana de trabajo en el modo de "
-"trabajo semanal"
+"Los números de semana seleccionan una semana laboral en el modo de semana "
+"laboral"
 
 #. i18n: ectx: whatsthis, entry (WeekNumbersShowWork), group (General View)
 #: eventviews.kcfg:141
@@ -934,8 +934,8 @@ msgstr "Mostrar segundos con el indicador de hora actual"
 #, kde-format
 msgid "Time range selection in agenda view starts event editor"
 msgstr ""
-"La selección de intervalos de horas de la vista de la agenda inicia el "
-"editor de eventos"
+"La selección de intervalos de horas de la vista de agenda inicia el editor "
+"de eventos"
 
 #. i18n: ectx: whatsthis, entry (SelectionStartsEditor), group (Agenda View)
 #: eventviews.kcfg:199 viewerapp/settings.kcfg:50
@@ -1102,10 +1102,10 @@ msgid ""
 "configuration page. Look for the \"Busy days background color\" setting."
 msgstr ""
 "Marque esta casilla si quiere que el fondo de la agenda se rellene con un "
-"color diferente en los días que tienen al menos un evento marcado como "
-"ocupado. Además, puede cambiar el color de fondo que se usa en esta opción "
-"en la página de configuración de colores. Busque la configuración de "
-"«Mostrar color de fondo para días ocupados»."
+"color diferente en los días que tienen al menos un evento de todo el día "
+"marcado como ocupado. Además, puede cambiar el color de fondo que se usa en "
+"esta opción en la página de configuración de colores. Busque la "
+"configuración de «Mostrar color de fondo para días ocupados»."
 
 #. i18n: ectx: label, entry (AgendaViewCalendarDisplay), group (Agenda View)
 #: eventviews.kcfg:235 viewerapp/settings.kcfg:81
@@ -1126,7 +1126,7 @@ msgid ""
 "Select the \"Merge all calendars into one view\" option if you would like "
 "all your calendars to be shown together in one agenda view."
 msgstr ""
-"Seleccione la opción «Mezclar todos los calendarios en una vista» si el "
+"Seleccione la opción «Mezclar todos los calendarios en una vista» si le "
 "gustaría que se muestren todos los calendarios conjuntamente en una vista de "
 "agenda."
 
@@ -1184,7 +1184,7 @@ msgstr "Tabulador para cambiar de calendario"
 #: eventviews.kcfg:259 viewerapp/settings.kcfg:105
 #, kde-format
 msgid "Enable scrollbars in month view cells"
-msgstr "Activar las barras de desplazamiento en las celdas de la vista del mes"
+msgstr "Activar las barras de desplazamiento en las celdas de la vista mensual"
 
 #. i18n: ectx: whatsthis, entry (EnableMonthScroll), group (Month View)
 #: eventviews.kcfg:260 viewerapp/settings.kcfg:106
@@ -1194,13 +1194,13 @@ msgid ""
 "view; they will only appear when needed though."
 msgstr ""
 "Marque esta casilla para mostrar barras de desplazamiento cuando haga clic "
-"sobre una celda de la vista de mes. Solo aparecerán cuando sean necesarias."
+"sobre una celda de la vista mensual. Solo aparecerán cuando sean necesarias."
 
 #. i18n: ectx: label, entry (EnableMonthItemIcons), group (Month View)
 #: eventviews.kcfg:264 viewerapp/settings.kcfg:110
 #, kde-format
 msgid "Show icons in month view items"
-msgstr "Mostrar iconos en la vista de mes"
+msgstr "Mostrar iconos en la vista mensual"
 
 #. i18n: ectx: whatsthis, entry (EnableMonthItemIcons), group (Month View)
 #: eventviews.kcfg:265 viewerapp/settings.kcfg:111
@@ -1215,7 +1215,7 @@ msgstr ""
 #: eventviews.kcfg:266 viewerapp/settings.kcfg:112
 #, kde-format
 msgid "Display icons in month view items"
-msgstr "Mostrar iconos en los elementos de vista de mes"
+msgstr "Mostrar iconos en los elementos de vista mensual"
 
 #. i18n: ectx: label, entry (ShowTimeInMonthView), group (Month View)
 #: eventviews.kcfg:270
@@ -1278,7 +1278,7 @@ msgstr ""
 #: eventviews.kcfg:284 viewerapp/settings.kcfg:118
 #, kde-format
 msgid "Display to-dos in the month view"
-msgstr "Mostrar tareas pendientes en la vista de mes"
+msgstr "Mostrar tareas pendientes en la vista mensual"
 
 #. i18n: ectx: label, entry (ShowJournalsMonthView), group (Month View)
 #: eventviews.kcfg:288 viewerapp/settings.kcfg:122
@@ -1297,7 +1297,7 @@ msgstr ""
 #: eventviews.kcfg:290 viewerapp/settings.kcfg:124
 #, kde-format
 msgid "Display journals in the month view"
-msgstr "Mostrar entradas de diario en la vista de mes"
+msgstr "Mostrar entradas de diario en la vista mensual"
 
 #. i18n: ectx: label, entry (ShowHolidaysMonthView), group (Month View)
 #: eventviews.kcfg:294
@@ -1351,7 +1351,7 @@ msgstr ""
 #: eventviews.kcfg:307 viewerapp/settings.kcfg:128
 #, kde-format
 msgid "Month view uses full window"
-msgstr "La vista de mes usa la ventana completa"
+msgstr "La vista mensual usa la ventana completa"
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
 #: eventviews.kcfg:308 viewerapp/settings.kcfg:129
@@ -1363,9 +1363,10 @@ msgid ""
 "calendars list, will not be displayed."
 msgstr ""
 "Marque esta casilla para usar la ventana completa de KOrganizer cuando se "
-"muestre la vista de mes. Si la casilla está marcada, tendrá más espacio para "
-"la vista de mes, pero en otros controles, como en el selector de fechas, no "
-"se mostrarán ni los detalles del elemento ni la lista de calendarios."
+"muestre la vista mensual. Si la casilla está marcada, tendrá más espacio "
+"para la vista mensual, pero en otros controles, como en el selector de "
+"fechas, no se mostrarán ni los detalles del elemento ni la lista de "
+"calendarios."
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
 #: eventviews.kcfg:316
@@ -1645,7 +1646,7 @@ msgstr "Seleccione aquí el color del horario laboral en la vista de agenda."
 #: viewerapp/settings.kcfg:202
 #, kde-format
 msgid "To-do due today color"
-msgstr "Color para las tareas pendientes que cumplen hoy"
+msgstr "Color para las tareas pendientes que vencen hoy"
 
 #. i18n: ectx: whatsthis, entry (TodoDueTodayColor), group (Colors)
 #. i18n: ectx: whatsthis, entry, group (Theming)
@@ -1663,7 +1664,7 @@ msgstr "Seleccione aquí el color para la tarea pendiente que vence hoy."
 #: viewerapp/settings.kcfg:207
 #, kde-format
 msgid "To-do overdue color"
-msgstr "Color de tareas pendientes cumplidas"
+msgstr "Color de tareas pendientes vencidas"
 
 #. i18n: ectx: whatsthis, entry (TodoOverdueColor), group (Colors)
 #. i18n: ectx: whatsthis, entry, group (Theming)
@@ -1672,7 +1673,7 @@ msgstr "Color de tareas pendientes cumplidas"
 #: viewerapp/settings.kcfg:208
 #, kde-format
 msgid "Select the to-do overdue color here."
-msgstr "Seleccione aquí el color de la tarea pendiente cumplida."
+msgstr "Seleccione aquí el color de las tareas pendientes vencidas."
 
 #. i18n: ectx: label, entry, group (Fonts)
 #: eventviews.kcfg:409 viewerapp/settings.kcfg:221
@@ -1697,7 +1698,7 @@ msgstr ""
 #: eventviews.kcfg:413 viewerapp/settings.kcfg:225
 #, kde-format
 msgid "Month view"
-msgstr "Vista de mes"
+msgstr "Vista mensual"
 
 #. i18n: ectx: whatsthis, entry, group (Fonts)
 #: eventviews.kcfg:414 viewerapp/settings.kcfg:226
@@ -1707,9 +1708,9 @@ msgid ""
 "the \"Select Font\" dialog, allowing you to choose the font for the items in "
 "the month view."
 msgstr ""
-"Pulse este botón para configurar el tipo de letra de la vista de mes. Este "
+"Pulse este botón para configurar el tipo de letra de la vista mensual. Este "
 "botón abre el cuadro de diálogo «Seleccionar tipo de letra» para permitirle "
-"que elija el tipo de letra para los elementos de la vista de mes."
+"que elija el tipo de letra para los elementos de la vista mensual."
 
 #. i18n: ectx: label, entry, group (Fonts)
 #: eventviews.kcfg:417 viewerapp/settings.kcfg:229
@@ -2023,7 +2024,7 @@ msgid ""
 "Click this button and the month view will be enlarged to fill the maximum "
 "available window space / or shrunk back to its normal size."
 msgstr ""
-"Pulse este botón y la vista de mes se ampliará para ajustarse al máximo "
+"Pulse este botón y la vista mensual se ampliará para ajustarse al máximo "
 "espacio de ventana disponible o se reducirá a su tamaño normal."
 
 #: month/monthview.cpp:220
@@ -2406,8 +2407,8 @@ msgctxt "@info:whatsthis"
 msgid ""
 "Enter text here to filter the to-dos that are shown by matching summaries."
 msgstr ""
-"Introduzca texto aquí para filtrar las tareas pendientes que se muestren en "
-"resúmenes coincidentes."
+"Introduzca aquí el texto para filtrar las tareas pendientes que se muestren "
+"en resúmenes coincidentes."
 
 #: todo/todoviewquicksearch.cpp:39
 #, kde-format
@@ -2620,7 +2621,7 @@ msgid ""
 "configuration page for setting these colors."
 msgstr ""
 "Seleccione la opción «Categoría dentro, calendario fuera» si le gustaría "
-"pintar elementos de calendario en el color asociado a su categoría, con el "
+"dibujar elementos de calendario con el color asociado a su categoría, con el "
 "borde de elemento pintado en el color de su calendario. Use la página de "
 "configuración de colores y tipos de letra para configurar estos colores."
 
@@ -2631,8 +2632,8 @@ msgid ""
 "Draw agenda items in their category color inside and calendar color for "
 "their border"
 msgstr ""
-"Pintar elementos de la agenda usando el color de su categoría en el interior "
-"y el color del calendario en el borde"
+"Dibujar elementos de la agenda usando el color de su categoría en el "
+"interior y el color del calendario en el borde"
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
@@ -2651,8 +2652,8 @@ msgid ""
 "configuration page for setting these colors."
 msgstr ""
 "Seleccione la opción «Calendario dentro, categoría fuera» si le gustaría "
-"pintar elementos de calendario en el color asociado a su calendario, con el "
-"borde de elemento pintado en el color de su categoría. Use la página de "
+"dibujar elementos de calendario con el color asociado a su calendario, con "
+"el borde de elemento pintado en el color de su categoría. Use la página de "
 "configuración de colores y tipos de letra para configurar estos colores."
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
@@ -2662,7 +2663,7 @@ msgid ""
 "Draw agenda items in their calendar color inside and category color for "
 "their border"
 msgstr ""
-"Pintar elementos de la agenda usando el color de su calendario en el "
+"Dibujar elementos de la agenda usando el color de su calendario en el "
 "interior y el color de su categoría en el borde"
 
 #. i18n: ectx: label, entry, group (Agenda View)
@@ -2703,7 +2704,7 @@ msgid ""
 "configuration page for setting these colors."
 msgstr ""
 "Seleccione la opción «Categoría dentro, calendario fuera» si le gustaría "
-"pintar elementos de calendario en el color asociado a su categoría, con el "
+"dibujar elementos de calendario con el color asociado a su categoría, con el "
 "borde de elemento pintado en el color de su calendario. Use la página de "
 "configuración de colores y tipos de letra para configurar estos colores."
 
@@ -2714,8 +2715,8 @@ msgid ""
 "Draw month items in their category color inside and calendar color for their "
 "border"
 msgstr ""
-"Pintar elementos de mensuales usando el color de su categoría en el interior "
-"y el color del calendario en el borde"
+"Dibujar elementos de mensuales usando el color de su categoría en el "
+"interior y el color del calendario en el borde"
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
 #: viewerapp/settings.kcfg:142
@@ -2727,8 +2728,8 @@ msgid ""
 "configuration page for setting these colors."
 msgstr ""
 "Seleccione la opción «Calendario dentro, categoría fuera» si le gustaría "
-"pintar elementos de calendario en el color asociado a su calendario, con el "
-"borde de elemento pintado en el color de su categoría. Use la página de "
+"dibujar elementos de calendario con el color asociado a su calendario, con "
+"el borde de elemento pintado en el color de su categoría. Use la página de "
 "configuración de colores y tipos de letra para configurar estos colores."
 
 #. i18n: ectx: tooltip, entry, group (Month View)
@@ -2738,8 +2739,8 @@ msgid ""
 "Draw month items in their calendar color inside and category color for their "
 "border"
 msgstr ""
-"Pintar elementos mensuales usando el color de su calendario en el interior y "
-"el color de su categoría en el borde"
+"Dibujar elementos mensuales usando el color de su calendario en el interior "
+"y el color de su categoría en el borde"
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
 #: viewerapp/settings.kcfg:147
@@ -2779,8 +2780,8 @@ msgid ""
 msgstr ""
 "Seleccione un color para usar para las situaciones de «sin categoría» o "
 "«categoría no establecida», cuando un elemento no pertenece a ninguna "
-"categoría. Este color se usa cuando se dibujan elementos en la agenda o "
-"vistas de mes usando el esquema «Solo categoría»."
+"categoría. Este color se usa cuando se dibujan elementos en la agenda o en "
+"vistas mensuales usando el esquema «Solo categoría»."
 
 #. i18n: ectx: tooltip, entry, group (Colors)
 #: viewerapp/settings.kcfg:214
@@ -2846,4 +2847,4 @@ msgstr "%1, %2 - %3"
 #, kde-format
 msgctxt "to-do due date"
 msgid "  (Due: %1)"
-msgstr "  (Vencido: %1)"
+msgstr "  (Vencida: %1)"
