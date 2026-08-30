@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-28 00:46+0000\n"
-"PO-Revision-Date: 2026-08-10 13:48+0400\n"
+"PO-Revision-Date: 2026-08-29 16:43+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -134,8 +134,7 @@ msgid "Unable to save %1 \"%2\"."
 msgstr "تعذّر حفظ %1 ”%2“."
 
 #: agenda/timelabels.cpp:328
-#, fuzzy, kde-format
-#| msgid "&Add Timezones…"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&Add Timezones…"
 msgstr "أضف &مناطق زمنية…"
@@ -161,8 +160,7 @@ msgstr ""
 "أخرى غير منطقتك."
 
 #: agenda/timelabels.cpp:336
-#, fuzzy, kde-format
-#| msgid "&Remove Timezone %1"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&Remove Timezone %1"
 msgstr "أ&زِل المنطقة الزمنية %1"
@@ -264,54 +262,42 @@ msgstr ""
 "تُعرض تسميات الوقت على كلا الجانبين."
 
 #: agenda/timelabels.cpp:426
-#, fuzzy, kde-kuit-format
-#| msgctxt "title for timezone info, the timezone id and utc offset"
-#| msgid "<b>%1 (%2)</b>"
+#, kde-kuit-format
 msgctxt "@info:tooltip title for timezone info, the timezone id and utc offset"
 msgid "<b>%1 (%2)</b>"
-msgstr "<b>‏%1 ‏(%2)</b>"
+msgstr "<b>%1 (%2)</b>"
 
 #: agenda/timelabels.cpp:430
-#, fuzzy, kde-kuit-format
-#| msgctxt "heading for timezone display name"
-#| msgid "<i>Name:</i> %1"
+#, kde-kuit-format
 msgctxt "@info:tooltip heading for timezone display name"
 msgid "<emphasis>Name:</emphasis> %1"
-msgstr "الاسم: %1"
+msgstr "<emphasis>الاسم:</emphasis> %1"
 
 #: agenda/timelabels.cpp:434
-#, fuzzy, kde-kuit-format
-#| msgctxt "heading for timezone country"
-#| msgid "<i>Country:</i> %1"
+#, kde-kuit-format
 msgctxt "@info:tooltip heading for timezone country"
 msgid "<emphasis>Country:</emphasis> %1"
-msgstr "الدولة: %1"
+msgstr "<emphasis>الدولة:</emphasis> %1"
 
 #: agenda/timelabels.cpp:446
-#, fuzzy, kde-kuit-format
-#| msgctxt "heading for comma-separated list of timezone abbreviations"
-#| msgid "<i>Abbreviations:</i>"
+#, kde-kuit-format
 msgctxt ""
 "@info:tooltip heading for comma-separated list of timezone abbreviations"
 msgid "<emphasis>Abbreviations:</emphasis>"
-msgstr "الاختصارات:"
+msgstr "<emphasis>الاختصار:</emphasis>"
 
 #: agenda/timelabels.cpp:452
-#, fuzzy, kde-kuit-format
-#| msgctxt "heading for the timezone comment"
-#| msgid "<i>Comment:</i> %1"
+#, kde-kuit-format
 msgctxt "@info:tooltip heading for the timezone comment"
 msgid "<emphasis>Comment:</emphasis> %1"
-msgstr "تعليق: %1"
+msgstr "<emphasis>التعليق:</emphasis> %1"
 
 #: agenda/timelabels.cpp:474
-#, fuzzy, kde-kuit-format
-#| msgctxt "[hour of the day][am/pm/00] [timezone id (timezone-offset)]"
-#| msgid "%1%2<br/>%3 (%4)"
+#, kde-kuit-format
 msgctxt ""
 "@info:tooltip [hour of the day][am/pm/00] [timezone id (timezone-offset)]"
 msgid "%1%2<nl/>%3 (%4)"
-msgstr "‏%1‏%2<br/>‏%3 ‏(%4)"
+msgstr "%1%2<nl/>%3 (%4)"
 
 #: agenda/timescaleconfigdialog.cpp:50
 #, kde-format
@@ -367,10 +353,9 @@ msgstr "أكّد عمليّات الحذف"
 
 #. i18n: ectx: tooltip, entry (Confirm), group (Save Settings)
 #: eventviews.kcfg:10
-#, fuzzy, kde-format
-#| msgid "Check this box to display a confirmation dialog when deleting items."
+#, kde-format
 msgid "Always confirm when deleting items"
-msgstr "أشّر على هذا المربّع لعرض حواريّ تأكيد عند حذف العناصر."
+msgstr "أكّد دومًا عند حذف العناصر"
 
 #. i18n: ectx: whatsthis, entry (Confirm), group (Save Settings)
 #: eventviews.kcfg:11
@@ -386,30 +371,25 @@ msgstr "الأحداث والمهام ومدخلات اليوميّة الجدي
 
 #. i18n: ectx: label, entry (Destination), group (Save Settings)
 #: eventviews.kcfg:18
-#, fuzzy, kde-format
-#| msgid "Be added to the standard calendar"
+#, kde-format
 msgid "Be added to the default calendar"
-msgstr "ستُضاف إلى التقويم القياسي"
+msgstr "ستُضاف إلى التقويم المبدئي"
 
 #. i18n: ectx: tooltip, entry (Destination), group (Save Settings)
 #: eventviews.kcfg:19
-#, fuzzy, kde-format
-#| msgid "Be added to the standard calendar"
+#, kde-format
 msgid "Always save to the default calendar"
-msgstr "ستُضاف إلى التقويم القياسي"
+msgstr "احفظ دائمًا في التقويم المبدئي"
 
 #. i18n: ectx: whatsthis, entry (Destination), group (Save Settings)
 #: eventviews.kcfg:20
-#, fuzzy, kde-format
-#| msgid ""
-#| "Select this option to always record new events, to-dos and journal "
-#| "entries using the standard calendar."
+#, kde-format
 msgid ""
 "Select this option to always record new events, to-dos and journal entries "
 "using the current default calendar."
 msgstr ""
-"حدد هذا الخيار لتسجيل الأحداث الجديدة والمهام وإدخالات اليومية دائمًا "
-"باستخدام التقويم القياسي."
+"حدد هذا الخيار لتسجيل الأحداث الجديدة والمهام وقيود اليومية دائمًا باستخدام "
+"التقويم المبدئي الحالي."
 
 #. i18n: ectx: label, entry (Destination), group (Save Settings)
 #: eventviews.kcfg:23
@@ -421,7 +401,7 @@ msgstr "ستسألك عن التقويم الذي سيُستخدم"
 #: eventviews.kcfg:24
 #, kde-format
 msgid "Always prompt for the calendar to use"
-msgstr ""
+msgstr "اطلب دائمًا اختيار التقويم المستخدم"
 
 #. i18n: ectx: whatsthis, entry (Destination), group (Save Settings)
 #: eventviews.kcfg:25
@@ -430,6 +410,8 @@ msgid ""
 "Select this option to choose the calendar to be used to record the item each "
 "time you create a new event, to-do or journal entry."
 msgstr ""
+"حدد هذا الخيار لاختيار التقويم المستخدم لتسجيل العنصر في كل مرة تنشئ فيها "
+"حدثًا أو مهمة أو قيدًا في اليوميات."
 
 #. i18n: ectx: label, entry (WeekStartDay), group (Time &amp; Date)
 #: eventviews.kcfg:34
@@ -461,18 +443,15 @@ msgstr "ساعة البداية اليومية"
 #: eventviews.kcfg:41
 #, kde-format
 msgid "Set the time you typically start your day"
-msgstr ""
+msgstr "حدد الوقت الذي تبدأ فيه يومك عادةً"
 
 #. i18n: ectx: whatsthis, entry (WorkingHoursStart), group (Time &amp; Date)
 #: eventviews.kcfg:42
-#, fuzzy, kde-format
-#| msgid ""
-#| "Enter the start time for the working hours here. The working hours will "
-#| "be marked with color by KOrganizer."
+#, kde-format
 msgid ""
 "Enter the start time for your daily schedule here. Your daily schedule hours "
 "will be marked with a separate color."
-msgstr "أدخِل هنا وقت بداية ساعات العمل. سيُعلّم «منظّمك» ساعات العمل بلون."
+msgstr "أدخِل وقت بدء جدولك اليومي هنا. ستُميز ساعات جدولك اليومي بلون منفصل."
 
 #. i18n: ectx: label, entry (WorkingHoursEnd), group (Time &amp; Date)
 #: eventviews.kcfg:46
@@ -484,18 +463,15 @@ msgstr "ساعة النهاية اليومية"
 #: eventviews.kcfg:47
 #, kde-format
 msgid "Set the time you typically end your day"
-msgstr ""
+msgstr "حدد الوقت الذي ينتهي فيه يومك عادةً"
 
 #. i18n: ectx: whatsthis, entry (WorkingHoursEnd), group (Time &amp; Date)
 #: eventviews.kcfg:48
-#, fuzzy, kde-format
-#| msgid ""
-#| "Enter the ending time for the working hours here. The working hours will "
-#| "be marked with color by KOrganizer."
+#, kde-format
 msgid ""
 "Enter the ending time for your daily schedule here. Your daily schedule "
 "hours will be marked with a separate color."
-msgstr "أدخِل هنا وقت انتهاء ساعات العمل. سيُعلّم «منظّمك» ساعات العمل بلون."
+msgstr "أدخِل وقت نهاية جدولك اليومي هنا. ستُميز ساعات جدولك اليومي بلون منفصل."
 
 #. i18n: ectx: label, entry, group (General View)
 #: eventviews.kcfg:55 viewerapp/settings.kcfg:9
@@ -507,7 +483,7 @@ msgstr "مكّن التلميحات لعرض الملخّصات"
 #: eventviews.kcfg:56
 #, kde-format
 msgid "Show event or to-do item tooltips"
-msgstr ""
+msgstr "اعرض تلميحات الأحداث أو عناصر المهام"
 
 #. i18n: ectx: whatsthis, entry, group (General View)
 #: eventviews.kcfg:57 viewerapp/settings.kcfg:10
@@ -527,10 +503,9 @@ msgstr "تستخدم المهام ألوان الوسوم"
 
 #. i18n: ectx: tooltip, entry, group (General View)
 #: eventviews.kcfg:62
-#, fuzzy, kde-format
-#| msgid "To-dos use tag colors"
+#, kde-format
 msgid "Draw to-do items using tag colors"
-msgstr "تستخدم المهام ألوان الوسوم"
+msgstr "ارسم عناصر المهام باستخدام ألوان الوسوم"
 
 #. i18n: ectx: whatsthis, entry, group (General View)
 #: eventviews.kcfg:63
@@ -575,23 +550,19 @@ msgstr "اعرض العناصر التي تتكرّر يوميًا"
 #: eventviews.kcfg:74
 #, kde-format
 msgid "Use a bold typeface to more easily identify daily recurring incidences"
-msgstr ""
+msgstr "استخدم خطًا عريضًا لتسهيل تمييز الأحداث المتكررة يوميًا"
 
 #. i18n: ectx: whatsthis, entry (DailyRecur), group (General View)
 #: eventviews.kcfg:75
-#, fuzzy, kde-format
-#| msgid ""
-#| "Check this box to show the days containing daily recurring events in bold "
-#| "typeface in the Date Navigator, or uncheck it to give more prominence to "
-#| "other (non daily recurring) events."
+#, kde-format
 msgid ""
 "Check this box to show the days containing daily recurring incidences in "
 "bold typeface in the Date Navigator, or uncheck it to give more prominence "
 "to other (non daily recurring) incidences."
 msgstr ""
-"أشر على هذا المربع لإظهار الأيام التي تحتوي على أحداث يومية متكررة بخط عريض "
-"في متصفح التاريخ، أو ألغ التأشير عليه لإعطاء أهمية أكبر للأحداث الأخرى (غير "
-"المتكررة اليومية)."
+"حدد هذا المربع لإظهار الأيام التي تحتوي على أحداث متكررة يوميًا بخط عريض في "
+"متصفح التواريخ، أو ألغِ تحديده لإعطاء بروز أكبر للأحداث الأخرى (غير المتكررة "
+"يوميًا)."
 
 #. i18n: ectx: label, entry (WeeklyRecur), group (General View)
 #: eventviews.kcfg:79
@@ -603,7 +574,7 @@ msgstr "اعرض العناصر التي تتكرّر أسبوعيًا"
 #: eventviews.kcfg:80
 #, kde-format
 msgid "Use a bold typeface to more easily identify weekly recurring incidences"
-msgstr ""
+msgstr "استخدم خطًا عريضًا لتسهيل تمييز الأحداث المتكررة أسبوعيًا"
 
 #. i18n: ectx: whatsthis, entry (WeeklyRecur), group (General View)
 #: eventviews.kcfg:81
@@ -627,14 +598,11 @@ msgstr "اعرض المهام بدلًا من الأحداث عندما تكون
 #: eventviews.kcfg:86
 #, kde-format
 msgid "In Todo View, use a bold typeface to more easily identify to-dos"
-msgstr ""
+msgstr "في عرض المهام، استخدم خطًا عريضًا لتسهيل تمييز المهام"
 
 #. i18n: ectx: whatsthis, entry (HighlightTodos), group (General View)
 #: eventviews.kcfg:87
-#, fuzzy, kde-format
-#| msgid ""
-#| "Check this box to show the days containing to-dos in bold typeface in the "
-#| "Date Navigator when in to-do view."
+#, kde-format
 msgid ""
 "Check this box to show the days containing to-dos in bold typeface in the "
 "Date Navigator when in Todo View."
@@ -652,14 +620,11 @@ msgstr "اعرض اليوميّات بدل الأحداث في منظور الي
 #: eventviews.kcfg:92
 #, kde-format
 msgid "In Journal View, use a bold typeface to more easily identify journals"
-msgstr ""
+msgstr "في عرض اليوميات، استخدم خطًا عريضًا لتسهيل تمييز اليوميات"
 
 #. i18n: ectx: whatsthis, entry (HighlightJournals), group (General View)
 #: eventviews.kcfg:93
-#, fuzzy, kde-format
-#| msgid ""
-#| "Check this box to show the days containing journals in bold typeface in "
-#| "the Date Navigator when in journal view."
+#, kde-format
 msgid ""
 "Check this box to show the days containing journals in bold typeface in the "
 "Date Navigator when in Journal View."
@@ -678,21 +643,19 @@ msgstr "أرقام الأسبوع تحدد أسبوع العمل عندما تك
 #, kde-format
 msgid ""
 "In work week mode, allow selecting a work week rather than the whole week"
-msgstr ""
+msgstr "في وضع أسبوع العمل، اسمح بتحديد أسبوع عمل بدلًا من الأسبوع كاملًا"
 
 #. i18n: ectx: whatsthis, entry (WeekNumbersShowWork), group (General View)
 #: eventviews.kcfg:99
-#, fuzzy, kde-format
-#| msgid ""
-#| "Check this box to select a working week when clicking on the Date "
-#| "Navigator's week numbers, or uncheck it to choose the whole week."
+#, kde-format
 msgid ""
 "Check this box to select a working week when clicking on the Date "
 "Navigator's week numbers, or uncheck it to choose the whole week.  Ignored "
 "if week numbers are not shown."
 msgstr ""
-"أشر على هذا المربع لتحديد أسبوع عمل عند النقر على أرقام الأسبوع الخاصة "
-"بمستكشف التاريخ، أو ألغ تحديده لاختيار الأسبوع بأكمله."
+"حدد هذا المربع لتحديد أسبوع عمل عند النقر على أرقام الأسابيع في مستعرض "
+"التاريخ، أو إلغاء تحديده وتحديد الأسبوع بأكمله. لا يعمل بهذا الخيار إذا لم "
+"تظهر أرقام الأسابيع."
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #: eventviews.kcfg:106 viewerapp/settings.kcfg:17
@@ -718,28 +681,23 @@ msgstr "اضبط الارتفاع (بالبكسل) لوحدة ساعة في شب
 
 #. i18n: ectx: label, entry (EnableAgendaItemIcons), group (Agenda View)
 #: eventviews.kcfg:114
-#, fuzzy, kde-format
-#| msgid "Show icons in agenda view items"
+#, kde-format
 msgid "Show icons in Agenda View items"
 msgstr "اعرض الأيقونات في عناصر منظور جدول الأعمال"
 
 #. i18n: ectx: whatsthis, entry (EnableAgendaItemIcons), group (Agenda View)
 #: eventviews.kcfg:115
-#, fuzzy, kde-format
-#| msgid ""
-#| "Check this box to display icons (alarm, recursion, etc.) in agenda view "
-#| "items."
+#, kde-format
 msgid ""
 "Check this box to display icons (alarm, recursion, etc.) in Agenda View "
 "items."
 msgstr ""
 "أشّر على هذا المربّع لعرض الأيقونات (مثل المنبّهات والتكرارات وغيرها) في عناصر "
-"منظور دفتر الأعمال."
+"منظور جدول الأعمال."
 
 #. i18n: ectx: tooltip, entry (EnableAgendaItemIcons), group (Agenda View)
 #: eventviews.kcfg:116
-#, fuzzy, kde-format
-#| msgid "Display icons in agenda view items"
+#, kde-format
 msgid "Display icons in Agenda View items"
 msgstr "اعرض الأيقونات في عناصر منظور جدول الأعمال"
 
@@ -766,46 +724,38 @@ msgstr "ارسم خطوطًا أكثر سمكًا لشبكة الساعات"
 
 #. i18n: ectx: label, entry (EnableAgendaItemDesc), group (Agenda View)
 #: eventviews.kcfg:126
-#, fuzzy, kde-format
-#| msgid "Show incidence descriptions in agenda view items"
+#, kde-format
 msgid "Show incidence descriptions in Agenda View items"
-msgstr "اعرض أوصاف الأحداث في عناصر عرض جدول الأعمال"
+msgstr "اعرض أوصاف الأحداث في عناصر منظور جدول الأعمال"
 
 #. i18n: ectx: whatsthis, entry (EnableAgendaItemDesc), group (Agenda View)
 #: eventviews.kcfg:127
-#, fuzzy, kde-format
-#| msgid ""
-#| "Check this box to display the incidence descriptions in agenda view items."
+#, kde-format
 msgid ""
 "Check this box to display the incidence descriptions in Agenda View items."
 msgstr "أشّر على هذا المربّع لعرض أوصاف الأحداث في عناصر منظور جدول الأعمال."
 
 #. i18n: ectx: tooltip, entry (EnableAgendaItemDesc), group (Agenda View)
 #: eventviews.kcfg:128
-#, fuzzy, kde-format
-#| msgid "Display incidence descriptions in agenda view items"
+#, kde-format
 msgid "Display incidence descriptions in Agenda View items"
 msgstr "اعرض أوصاف الأحداث في عناصر منظور جدول الأعمال"
 
 #. i18n: ectx: label, entry (EnableAgendaItemLocation), group (Agenda View)
 #: eventviews.kcfg:132
-#, fuzzy, kde-format
-#| msgid "Show incidence locations in agenda view items"
+#, kde-format
 msgid "Show incidence locations in Agenda View items"
-msgstr "اعرض أماكن الأحداث في عناصر عرض جدول الأعمال"
+msgstr "اعرض أماكن الأحداث في عناصر منظور جدول الأعمال"
 
 #. i18n: ectx: whatsthis, entry (EnableAgendaItemLocation), group (Agenda View)
 #: eventviews.kcfg:133
-#, fuzzy, kde-format
-#| msgid ""
-#| "Check this box to display the incidence locations in agenda view items."
+#, kde-format
 msgid "Check this box to display the incidence locations in Agenda View items."
 msgstr "أشّر على هذا المربّع لعرض أماكن الأحداث في عناصر منظور جدول الأعمال."
 
 #. i18n: ectx: tooltip, entry (EnableAgendaItemLocation), group (Agenda View)
 #: eventviews.kcfg:134
-#, fuzzy, kde-format
-#| msgid "Display incidence locations in agenda view items"
+#, kde-format
 msgid "Display incidence locations in Agenda View items"
 msgstr "اعرض أماكن الأحداث في عناصر منظور جدول الأعمال"
 
@@ -847,15 +797,13 @@ msgstr "اعرض المهام"
 
 #. i18n: ectx: whatsthis, entry (ShowTodosAgendaView), group (Agenda View)
 #: eventviews.kcfg:145
-#, fuzzy, kde-format
-#| msgid "Check this box to display to-dos in the agenda view."
+#, kde-format
 msgid "Check this box to display to-dos in the Agenda View."
 msgstr "أشّر على هذا المربّع لعرض المهام في منظور جدول الأعمال."
 
 #. i18n: ectx: tooltip, entry (ShowTodosAgendaView), group (Agenda View)
 #: eventviews.kcfg:146
-#, fuzzy, kde-format
-#| msgid "Display to-dos in the agenda view"
+#, kde-format
 msgid "Display to-dos in the Agenda View"
 msgstr "اعرض المهام في منظور جدول الأعمال"
 
@@ -883,34 +831,32 @@ msgstr "اعرض مؤشّر الوقت الحالي"
 
 #. i18n: ectx: label, entry (MarcusBainsShowSeconds), group (Agenda View)
 #: eventviews.kcfg:156
-#, fuzzy, kde-format
-#| msgid "Show seconds on the current-time (Marcus Bains) line"
+#, kde-format
 msgid "Show seconds and timezone on the current-time (Marcus Bains) line"
-msgstr "اعرض الثواني في خط الوقت الحالي (ماركوس بينز)"
+msgstr "أظهر الثواني والمنطقة الزمنية على خط الوقت الحالي (ماركوس بينز)"
 
 #. i18n: ectx: whatsthis, entry (MarcusBainsShowSeconds), group (Agenda View)
 #: eventviews.kcfg:157
-#, fuzzy, kde-format
-#| msgid "Check this box if you want to show seconds on the current-time line."
+#, kde-format
 msgid ""
 "Check this box if you want to show seconds on the current-time (Marcus "
 "Bains) line. Depending on your locale, the timezone will also be displayed."
-msgstr "أشّر على هذا المربّع إن أردت عرض الثواني في خط الوقت الحالي."
+msgstr ""
+"حدد هذا المربع إذا كنت تريد عرض الثواني على خط الوقت الحالي (ماركوس باينز). "
+"وفقًا لموقعك، سيُعرض أيضًا المنطقة الزمنية."
 
 #. i18n: ectx: tooltip, entry (MarcusBainsShowSeconds), group (Agenda View)
 #: eventviews.kcfg:158
-#, fuzzy, kde-format
-#| msgid "Display seconds with the current-time indicator"
+#, kde-format
 msgid ""
 "Display seconds (possibly with timezone) with the current-time indicator"
-msgstr "اعرض الثواني مع مؤشّر الوقت الحالي"
+msgstr "اعرض الثواني (ربما مع المنطقة الزمنية) باستخدام مؤشر الوقت الحالي"
 
 #. i18n: ectx: label, entry (SelectionStartsEditor), group (Agenda View)
 #: eventviews.kcfg:162
-#, fuzzy, kde-format
-#| msgid "Time range selection in agenda view starts event editor"
+#, kde-format
 msgid "Time range selection in Agenda View starts event editor"
-msgstr "تحديد النطاق الزمني في عرض جدول الأعمال يبدأ محرر الأحداث"
+msgstr "تحديد النطاق الزمني في منظور جدول الأعمال يبدأ محرر الأحداث"
 
 #. i18n: ectx: whatsthis, entry (SelectionStartsEditor), group (Agenda View)
 #: eventviews.kcfg:163 viewerapp/settings.kcfg:50
@@ -932,10 +878,9 @@ msgstr "مكّن محرر الأحداث الآليّ مع تحديد النطا
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #: eventviews.kcfg:168
-#, fuzzy, kde-format
-#| msgid "Agenda Item Color"
+#, kde-format
 msgid "Agenda Item Colors"
-msgstr "لون عنصر جدول الأعمال"
+msgstr "ألوان عناصر جدول الأعمال"
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
@@ -946,33 +891,25 @@ msgstr "الوسم داخليًا، التقويم خارجيًا"
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
 #: eventviews.kcfg:172
-#, fuzzy, kde-format
-#| msgid ""
-#| "Draw agenda items in their tag color inside and calendar color for their "
-#| "border"
+#, kde-format
 msgid ""
 "Draw agenda items with their tag color inside and calendar color for their "
 "border"
-msgstr "ارسم بنود جدول الأعمال بلون وسمها للداخل ولون التقويم للحدود"
+msgstr "رسم بنود جدول الأعمال بلون علامتها الداخلية ولون التقويم لحدودها"
 
 #. i18n: ectx: whatsthis, entry, group (Agenda View)
 #. i18n: ectx: whatsthis, entry, group (Month View)
 #: eventviews.kcfg:173 eventviews.kcfg:282
-#, fuzzy, kde-format
-#| msgid ""
-#| "Select the \"Tag inside, calendar outside\" option if you would like to "
-#| "draw calendar items in their associated tag color, with the item's border "
-#| "drawn in the color of its calendar.  Please use the Colors and Fonts "
-#| "configuration page for setting these colors."
+#, kde-format
 msgid ""
 "Select the \"Tag inside, calendar outside\" option if you would like to draw "
 "calendar items using their associated tag color, with the item's border "
 "drawn in the color of its calendar.  Please use the Colors and Fonts "
 "configuration page for setting these colors."
 msgstr ""
-"حدد خيار \"الوسم داخليًا، التقويم خارجيًا\" إذا كنت ترغب في رسم عناصر التقويم "
-"بلون وسمها، مع رسم حدود العنصر بلون تقويمك. يُرجى استخدام صفحة ضبط الألوان "
-"والخطوط لتعيين هذه الألوان."
+"حدد خيار \"الوسم بالداخل والتقويم بالخارج\" إذا كنت ترغب في رسم عناصر "
+"التقويم باستخدام لون الوسم المرتبط بها، مع رسم حدود العنصر بلون تقويمك. يُرجى "
+"استخدام صفحة ضبط الألوان والخطوط لتعيين هذه الألوان."
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
@@ -983,33 +920,26 @@ msgstr "التقويم داخليًا، الوسم خارجيًا"
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
 #: eventviews.kcfg:177
-#, fuzzy, kde-format
-#| msgid ""
-#| "Draw agenda items in their calendar color inside and tag color for their "
-#| "border"
+#, kde-format
 msgid ""
 "Draw agenda items with their calendar color inside and tag color for their "
 "border"
-msgstr "ارسم بنود جدول الأعمال بلون تقويمها للداخل و لون وسمها للحدود"
+msgstr ""
+"ارسم بنود جدول الأعمال بلون التقويم الخاص بها بالداخل وحدد اللون الخاص "
+"بحدودها"
 
 #. i18n: ectx: whatsthis, entry, group (Agenda View)
 #. i18n: ectx: whatsthis, entry, group (Month View)
 #: eventviews.kcfg:178 eventviews.kcfg:287
-#, fuzzy, kde-format
-#| msgid ""
-#| "Select the \"Calendar inside, tag outside\" option if you would like to "
-#| "draw calendar items in their associated calendar color, with the item's "
-#| "border drawn in the color of its tag.  Please use the Colors and Fonts "
-#| "configuration page for setting these colors."
+#, kde-format
 msgid ""
 "Select the \"Calendar inside, tag outside\" option if you would like to draw "
 "calendar items using their associated calendar color, with the item's border "
 "drawn in the color of its tag.  Please use the Colors and Fonts "
 "configuration page for setting these colors."
 msgstr ""
-"حدد خيار \"التقويم داخليًا، الوسم خارجيًا\" إذا كنت ترغب في رسم عناصر التقويم "
-"بلون تقويمها، مع رسم حدود العنصر بلون وسمها. يرجى استخدام صفحة ضبط الألوان "
-"والخطوط لتعيين هذه الألوان."
+"حدد خيار \"التقويم بالداخل، علامة بالخارج\" إذا كنت ترغب في رسم عناصر "
+"التقويم باستخدام لون التقويم المرتبط بها، مع رسم حدود العنصر بلون علامته.  "
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
@@ -1026,18 +956,14 @@ msgstr "ارسم بنود جدول الأعمال باستخدام لون وسم
 
 #. i18n: ectx: whatsthis, entry, group (Agenda View)
 #: eventviews.kcfg:183
-#, fuzzy, kde-format
-#| msgid ""
-#| "Select the \"Only tag\" option if you would like to draw calendar items "
-#| "(both inside and border) in the color of their associated tag.  Please "
-#| "use the Colors and Fonts configuration page for setting these colors."
+#, kde-format
 msgid ""
 "Select the \"Only tag\" option if you would like to draw calendar items "
 "(both inside and border) using the color of their associated tag.  Please "
 "use the Colors and Fonts configuration page for setting these colors."
 msgstr ""
-"حدد خيار \"الوسم فقط\" إذا كنت ترغب في رسم عناصر التقويم (سواء الداخلية أو "
-"الحدودية) بلون الوسم المرتبطة بها."
+"حدد خيار \"العلامة فقط\" إذا كنت ترغب في رسم عناصر التقويم (سواء الداخلية أو "
+"الحدودية) باستخدام لون العلامة المرتبطة بها.  "
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
@@ -1055,18 +981,14 @@ msgstr "ارسم بنود جدول الأعمال باستخدام لون تقو
 
 #. i18n: ectx: whatsthis, entry, group (Agenda View)
 #: eventviews.kcfg:188
-#, fuzzy, kde-format
-#| msgid ""
-#| "Select the \"Only calendar\" option if you would like to draw calendar "
-#| "items (both inside and border) in the color of their calendar. Please use "
-#| "the Colors and Fonts configuration page for setting these colors."
+#, kde-format
 msgid ""
 "Select the \"Only calendar\" option if you would like to draw calendar items "
 "(both inside and border) using the color of their calendar. Please use the "
 "Colors and Fonts configuration page for setting these colors."
 msgstr ""
-"حدد خيار \"التقويم فقط\" إذا كنت ترغب في رسم عناصر التقويم (داخليًا وحدوديًا) "
-"بلون تقويمها. يُرجى استخدام صفحة ضبط الألوان والخطوط لتعيين هذه الألوان."
+"حدد خيار \"التقويم فقط\" إذا كنت تريد رسم عناصر التقويم (سواء الداخلية أو "
+"الحدودية) باستخدام لون التقويم الخاص بها. "
 
 #. i18n: ectx: label, entry (AgendaViewCalendarDisplay), group (Agenda View)
 #: eventviews.kcfg:194 viewerapp/settings.kcfg:81
@@ -1082,10 +1004,7 @@ msgstr "ادمج كل التقاويم في منظور واحد"
 
 #. i18n: ectx: whatsthis, entry (AgendaViewCalendarDisplay), group (Agenda View)
 #: eventviews.kcfg:198
-#, fuzzy, kde-format
-#| msgid ""
-#| "Select the \"Merge all calendars into one view\" option if you would like "
-#| "all your calendars to be shown together in one agenda view."
+#, kde-format
 msgid ""
 "Select the \"Merge all calendars into one view\" option if you would like "
 "all your calendars to be shown together in one Agenda View."
@@ -1170,24 +1089,19 @@ msgstr "لون ساعات العمل"
 
 #. i18n: ectx: whatsthis, entry, group (Agenda View)
 #: eventviews.kcfg:221
-#, fuzzy, kde-format
-#| msgid "Select the working hours background color for the agenda view here."
+#, kde-format
 msgid "Select the working hours background color for the Agenda View here."
 msgstr "حدد لون خلفية ساعات العمل لعرض جدول الأعمال هنا."
 
 #. i18n: ectx: label, entry (EnableMonthItemIcons), group (Month View)
 #: eventviews.kcfg:228
-#, fuzzy, kde-format
-#| msgid "Show icons in month view items"
+#, kde-format
 msgid "Show icons in Month View items"
 msgstr "اعرض أيقونات في عناصر منظور الشهر"
 
 #. i18n: ectx: whatsthis, entry (EnableMonthItemIcons), group (Month View)
 #: eventviews.kcfg:229
-#, fuzzy, kde-format
-#| msgid ""
-#| "Check this box to display icons (alarm, recursion, etc.) in month view "
-#| "items."
+#, kde-format
 msgid ""
 "Check this box to display icons (alarm, recursion, etc.) in Month View items."
 msgstr ""
@@ -1196,24 +1110,19 @@ msgstr ""
 
 #. i18n: ectx: tooltip, entry (EnableMonthItemIcons), group (Month View)
 #: eventviews.kcfg:230
-#, fuzzy, kde-format
-#| msgid "Display icons in month view items"
+#, kde-format
 msgid "Display icons in Month View items"
 msgstr "اعرض أيقونات في عناصر منظور الشهر"
 
 #. i18n: ectx: label, entry (ShowTimeInMonthView), group (Month View)
 #: eventviews.kcfg:234
-#, fuzzy, kde-format
-#| msgid "Show start-times without end-times in month view items"
+#, kde-format
 msgid "Show start-times without end-times in Month View items"
 msgstr "أظهر أوقات البداية دون أوقات النهاية في عناصر عرض الشهر."
 
 #. i18n: ectx: whatsthis, entry (ShowTimeInMonthView), group (Month View)
 #: eventviews.kcfg:235
-#, fuzzy, kde-format
-#| msgid ""
-#| "Check this box to display the start-time without the end-time in month "
-#| "view items."
+#, kde-format
 msgid ""
 "Check this box to display the start-time without the end-time in Month View "
 "items."
@@ -1221,42 +1130,31 @@ msgstr "حدد هذا المربع لعرض وقت البداية دون وقت 
 
 #. i18n: ectx: tooltip, entry (ShowTimeInMonthView), group (Month View)
 #: eventviews.kcfg:236
-#, fuzzy, kde-format
-#| msgid "Display start-time without the end-time in month view items"
+#, kde-format
 msgid "Display start-time without the end-time in Month View items"
 msgstr "اعرض وقت البدء دون وقت الانتهاء في عناصر عرض الشهر."
 
 #. i18n: ectx: label, entry (ShowEndTimeInMonthView), group (Month View)
 #: eventviews.kcfg:240
-#, fuzzy, kde-format
-#| msgid "Show the start-time and the end-time in month view items"
+#, kde-format
 msgid "Show the start-time and the end-time in Month View items"
 msgstr "اعرض وقت البدء ووقت الانتهاء في عناصر عرض الشهر"
 
 #. i18n: ectx: whatsthis, entry (ShowEndTimeInMonthView), group (Month View)
 #: eventviews.kcfg:241
-#, fuzzy, kde-format
-#| msgid ""
-#| "Check this box to display the start and end times in month view items."
+#, kde-format
 msgid "Check this box to display the start and end times in Month View items."
 msgstr "حدد هذا المربع لعرض أوقات البداية والنهاية في عناصر عرض الشهر."
 
 #. i18n: ectx: tooltip, entry (ShowEndTimeInMonthView), group (Month View)
 #: eventviews.kcfg:242
-#, fuzzy, kde-format
-#| msgid "Display the start and end times in month view items"
+#, kde-format
 msgid "Display the start and end times in Month View items"
 msgstr "اعرض أوقات البداية والنهاية في عناصر عرض الشهر"
 
 #. i18n: ectx: whatsthis, entry (ColorMonthBusyDaysEnabled), group (Month View)
 #: eventviews.kcfg:248
-#, fuzzy, kde-format
-#| msgid ""
-#| "Check this box if you want month view's background to be filled with a "
-#| "different color on days which have at least one all day event marked as "
-#| "busy. Also, you can change the background color used for this option on "
-#| "the Colors configuration page. Look for the \"Busy days background color"
-#| "\" setting."
+#, kde-format
 msgid ""
 "Check this box if you want Month View's background to be filled with a "
 "different color on days which have at least one all day event marked as "
@@ -1270,15 +1168,13 @@ msgstr ""
 
 #. i18n: ectx: whatsthis, entry (ShowTodosMonthView), group (Month View)
 #: eventviews.kcfg:253
-#, fuzzy, kde-format
-#| msgid "Check this box to display to-dos in the month view."
+#, kde-format
 msgid "Check this box to display to-dos in the Month View."
 msgstr "أشّر على هذا المربّع لعرض المهام في منظور الشهر."
 
 #. i18n: ectx: tooltip, entry (ShowTodosMonthView), group (Month View)
 #: eventviews.kcfg:254
-#, fuzzy, kde-format
-#| msgid "Display to-dos in the month view"
+#, kde-format
 msgid "Display to-dos in the Month View"
 msgstr "اعرض المهام في منظور الشهر"
 
@@ -1290,15 +1186,13 @@ msgstr "اعرض اليوميّات"
 
 #. i18n: ectx: whatsthis, entry (ShowJournalsMonthView), group (Month View)
 #: eventviews.kcfg:259
-#, fuzzy, kde-format
-#| msgid "Check this box to display journals in the month view."
+#, kde-format
 msgid "Check this box to display journals in the Month View."
 msgstr "أشّر على هذا المربّع لعرض اليوميّات في منظور الشهر."
 
 #. i18n: ectx: tooltip, entry (ShowJournalsMonthView), group (Month View)
 #: eventviews.kcfg:260
-#, fuzzy, kde-format
-#| msgid "Display journals in the month view"
+#, kde-format
 msgid "Display journals in the Month View"
 msgstr "اعرض اليوميّات في منظور الشهر"
 
@@ -1310,16 +1204,14 @@ msgstr "اعرض العُطل"
 
 #. i18n: ectx: whatsthis, entry (ShowHolidaysMonthView), group (Month View)
 #: eventviews.kcfg:265
-#, fuzzy, kde-format
-#| msgid "Check this box to display holidays in the month view."
+#, kde-format
 msgid "Check this box to display holidays in the Month View."
 msgstr "أشّر على هذا المربّع لعرض العُطل في منظور الشهر."
 
 #. i18n: ectx: tooltip, entry (ShowHolidaysMonthView), group (Month View)
 #. i18n: ectx: tooltip, entry (ShowHolidaysBackgroundMonthView), group (Month View)
 #: eventviews.kcfg:266 eventviews.kcfg:273
-#, fuzzy, kde-format
-#| msgid "Display holidays in the month view"
+#, kde-format
 msgid "Display holidays in the Month View"
 msgstr "اعرض العُطل في منظور الشهر"
 
@@ -1340,17 +1232,15 @@ msgstr ""
 
 #. i18n: ectx: whatsthis, entry (ShowHolidaysBackgroundMonthView), group (Month View)
 #: eventviews.kcfg:272
-#, fuzzy, kde-format
-#| msgid ""
-#| "Check this box to use the custom holiday as the date's background color "
-#| "when at least one holiday lands on a date."
+#, kde-format
 msgid ""
 "Check this box to use the custom holiday as the date's background color when "
 "at least one holiday lands on a date. Configure the holiday color in the "
 "Settings->Colors and Fonts."
 msgstr ""
 "حدد هذا المربع لاستخدام لون العطلة المخصصة كلون خلفية للتاريخ عندما يقع يوم "
-"عطلة واحد على الأقل في ذلك التاريخ."
+"عطلة واحد على الأقل في ذلك التاريخ. اضبط لون العُطل من إعدادات ثم الألوان "
+"والخطوط ."
 
 #. i18n: ectx: label, entry, group (Month View)
 #: eventviews.kcfg:277
@@ -1360,21 +1250,15 @@ msgstr "ألوان عنصر الشهر"
 
 #. i18n: ectx: tooltip, entry, group (Month View)
 #: eventviews.kcfg:281
-#, fuzzy, kde-format
-#| msgid ""
-#| "Draw month items in their tag color inside and calendar color for their "
-#| "border"
+#, kde-format
 msgid ""
 "Draw month items with their tag color inside and calendar color for their "
 "border"
-msgstr "ارسم عناصر الشهر بلون وسمها داخليًا ولون التقويم لحدودها"
+msgstr "ارسم عناصر الشهر بلون علامتها الداخلية ولون التقويم لحدودها"
 
 #. i18n: ectx: tooltip, entry, group (Month View)
 #: eventviews.kcfg:286
-#, fuzzy, kde-format
-#| msgid ""
-#| "Draw month items in their calendar color inside and tag color for their "
-#| "border"
+#, kde-format
 msgid ""
 "Draw month items with their calendar color inside and tag color for their "
 "border"
@@ -1416,27 +1300,20 @@ msgstr ""
 
 #. i18n: ectx: label, entry, group (Month View)
 #: eventviews.kcfg:303
-#, fuzzy, kde-format
-#| msgid "Month view uses full window"
+#, kde-format
 msgid "Month View uses full window"
 msgstr "يستخدم منظور الشهر النافذة كاملة"
 
 #. i18n: ectx: tooltip, entry, group (Month View)
 #. i18n: ectx: tooltip, entry, group (Todo View)
 #: eventviews.kcfg:304 eventviews.kcfg:329
-#, fuzzy, kde-format
-#| msgid "Display to-dos in a flat list"
+#, kde-format
 msgid "Display to-do list in a full KOrganizer window"
-msgstr "اعرض قائمة المهام كقائمة مسطحة"
+msgstr "اعرض قائمة المهام في نافذة منظمك الكاملة"
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
 #: eventviews.kcfg:305
-#, fuzzy, kde-format
-#| msgid ""
-#| "Check this box to use the full KOrganizer window when displaying the "
-#| "month view. If this box is checked, you will gain some space for the "
-#| "monthly view, but other widgets, such as the date navigator, the item "
-#| "details and the calendars list, will not be displayed."
+#, kde-format
 msgid ""
 "Check this box to use the full KOrganizer window when displaying the Month "
 "View. If this box is checked, you will gain some space for the monthly view, "
@@ -1449,22 +1326,19 @@ msgstr ""
 
 #. i18n: ectx: label, entry, group (Month View)
 #: eventviews.kcfg:309
-#, fuzzy, kde-format
-#| msgid "Month view background color"
+#, kde-format
 msgid "Month View background color"
 msgstr "لون خلفية منظور الشهر"
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
 #: eventviews.kcfg:310
-#, fuzzy, kde-format
-#| msgid "Select the Month view background color here."
+#, kde-format
 msgid "Select the Month View background color here."
 msgstr "اختر من هنا لون خلفية منظور الشهر."
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
 #: eventviews.kcfg:315
-#, fuzzy, kde-format
-#| msgid "Select the working hours background color for the Month view here."
+#, kde-format
 msgid "Select the working hours background color for the Month View here."
 msgstr "حدد لون خلفية ساعات العمل لعرض الشهر هنا."
 
@@ -1480,7 +1354,7 @@ msgstr "عرض المهام المكتملة دائمًا في أسفل القا
 msgid ""
 "Completed to-dos are displayed at the bottom of the list, regardless of "
 "priority"
-msgstr ""
+msgstr "عرض المهام المكتملة في أسفل القائمة، بغض النظر عن الأولوية"
 
 #. i18n: ectx: whatsthis, entry, group (Todo View)
 #: eventviews.kcfg:324 viewerapp/settings.kcfg:163
@@ -1500,12 +1374,7 @@ msgstr "تستخدم قائمة المَهام كامل النافذة"
 
 #. i18n: ectx: whatsthis, entry, group (Todo View)
 #: eventviews.kcfg:330
-#, fuzzy, kde-format
-#| msgid ""
-#| "Check this box to use the full KOrganizer window when displaying the to-"
-#| "do list view. If this box is checked, you will gain some space for the to-"
-#| "do list view, but other widgets, such as the date navigator, the to-do "
-#| "details and the calendars list, will not be displayed."
+#, kde-format
 msgid ""
 "Check this box to use the full KOrganizer window when displaying the to-do "
 "list view. If this box is checked, you will gain some space for the to-do "
@@ -1548,7 +1417,7 @@ msgstr "سجّل المهام المكتملة في إدخالات دفتر ال
 #: eventviews.kcfg:341
 #, kde-format
 msgid "Add a journal entry each time a to-do is marked as completed"
-msgstr ""
+msgstr "أضف قيدًا في اليوميات في كل مرة تُعلَّم فيها مهمة على أنها مكتملة"
 
 #. i18n: ectx: whatsthis, entry, group (Todo View)
 #: eventviews.kcfg:342 viewerapp/settings.kcfg:173
@@ -1563,13 +1432,13 @@ msgstr ""
 #: eventviews.kcfg:349
 #, kde-format
 msgid "Use system colors for some background colors"
-msgstr ""
+msgstr "استخدم ألوان النظام لبعض ألوان الخلفية"
 
 #. i18n: ectx: tooltip, entry, group (Colors)
 #: eventviews.kcfg:350
 #, kde-format
 msgid "Use system colors instead of custom colors for some background colors"
-msgstr ""
+msgstr "استخدم ألوان النظام بدلًا من الألوان المخصصة لبعض ألوان الخلفية"
 
 #. i18n: ectx: whatsthis, entry, group (Colors)
 #: eventviews.kcfg:351
@@ -1579,12 +1448,14 @@ msgid ""
 "background color\", \"Busy days background color\" and the \"Working hours "
 "color\" (and possibly others)."
 msgstr ""
+"استخدم ألوان النظام بدلًا من الألوان المحددة من قبل المستخدم في ”لون خلفية "
+"عرض جدول الأعمال“ و”لون خلفية الأيام المشغولة“ و”لون ساعات العمل“ (وربما "
+"عناصر أخرى)."
 
 #. i18n: ectx: label, entry, group (Colors)
 #. i18n: ectx: label, entry (AgendaBgColor), group (Colors)
 #: eventviews.kcfg:355 eventviews.kcfg:403
-#, fuzzy, kde-format
-#| msgid "Agenda view background color"
+#, kde-format
 msgid "Agenda View background color"
 msgstr "لون خلفية منظور جدول الأعمال"
 
@@ -1593,22 +1464,20 @@ msgstr "لون خلفية منظور جدول الأعمال"
 #, kde-format
 msgid ""
 "When not using system colors, set the color for the Agenda View background"
-msgstr ""
+msgstr "عند عدم استخدام ألوان النظام، اضبط لون خلفية منظور جدول الأعمال"
 
 #. i18n: ectx: whatsthis, entry, group (Colors)
 #. i18n: ectx: whatsthis, entry (AgendaBgColor), group (Colors)
 #: eventviews.kcfg:357 eventviews.kcfg:404
-#, fuzzy, kde-format
-#| msgid "Select the agenda view background color here."
+#, kde-format
 msgid "Select the Agenda View background color here."
 msgstr "اختر من هنا لون خلفية منظور جدول الأعمال."
 
 #. i18n: ectx: label, entry (ViewBgBusyColor), group (Colors)
 #: eventviews.kcfg:361
-#, fuzzy, kde-format
-#| msgid "Month view today background color"
+#, kde-format
 msgid "Busy days background color"
-msgstr "لون خلفية اليوم في عرض الشهر"
+msgstr "لون خلفية أيام الانشغال"
 
 #. i18n: ectx: tooltip, entry (ViewBgBusyColor), group (Colors)
 #: eventviews.kcfg:362
@@ -1616,6 +1485,7 @@ msgstr "لون خلفية اليوم في عرض الشهر"
 msgid ""
 "When not using system colors, set the color for all day events marked as busy"
 msgstr ""
+"عند عدم استخدام ألوان النظام، اضبط لون الأحداث طوال اليوم المعلَّمة كمشغولة"
 
 #. i18n: ectx: whatsthis, entry (ViewBgBusyColor), group (Colors)
 #: eventviews.kcfg:363
@@ -1624,6 +1494,8 @@ msgid ""
 "In Agenda and Month views, when you have an all day event marked as busy, "
 "draw that item's background using the specified color."
 msgstr ""
+"في عرضي جدول الأعمال والشهر، عندما يكون لديك حدث طوال اليوم معلَّم كمشغول، "
+"ارسم خلفية ذلك العنصر باستخدام اللون المحدد."
 
 #. i18n: ectx: tooltip, entry, group (Colors)
 #: eventviews.kcfg:368
@@ -1632,27 +1504,25 @@ msgid ""
 "When not using system colors, set the color for the Agenda View working "
 "hours grid"
 msgstr ""
+"عند عدم استخدام ألوان النظام، اضبط لون شبكة ساعات العمل في منظور جدول الأعمال"
 
 #. i18n: ectx: whatsthis, entry, group (Colors)
 #: eventviews.kcfg:369
-#, fuzzy, kde-format
-#| msgid "Select the working hours color for the agenda view here."
+#, kde-format
 msgid "Select the working hours color for the Agenda View here."
 msgstr "اختر من هنا لون ساعات العمل في منظور جدول الأعمال."
 
 #. i18n: ectx: label, entry, group (Colors)
 #: eventviews.kcfg:373
-#, fuzzy, kde-format
-#| msgid "Agenda view current-time line color"
+#, kde-format
 msgid "Agenda View current-time (Marcus Bains) line color"
-msgstr "لون خط عرض جدول الأعمال في الوقت الحالي"
+msgstr "لون خط منظور جدول الأعمال في الوقت الحالي (ماركوس باينز)"
 
 #. i18n: ectx: tooltip, entry, group (Colors)
 #: eventviews.kcfg:374
-#, fuzzy, kde-format
-#| msgid "Use this color for the Agenda View current-time (Marcus Bains) line"
+#, kde-format
 msgid "Set the color for the Agenda View current-time (Marcus Bains) line"
-msgstr "استخدم هذا اللون لخط الوقت الحالي (ماركوس بينز) في منظور دفتر الأعمال."
+msgstr "عيّن اللون لخط الوقت الحالي (ماركوس بينز) في منظور جدول الأعمال."
 
 #. i18n: ectx: whatsthis, entry, group (Colors)
 #: eventviews.kcfg:375 viewerapp/settings.kcfg:191
@@ -1670,7 +1540,7 @@ msgstr "لون المهام المستحقّة اليوم"
 #: eventviews.kcfg:380
 #, kde-format
 msgid "Set the color for to-dos that are due today"
-msgstr ""
+msgstr "اضبط لون المهام المستحقة اليوم"
 
 #. i18n: ectx: whatsthis, entry (TodoDueTodayColor), group (Colors)
 #: eventviews.kcfg:381 viewerapp/settings.kcfg:203
@@ -1686,10 +1556,9 @@ msgstr "لون المهام المتأخّرة"
 
 #. i18n: ectx: tooltip, entry (TodoOverdueColor), group (Colors)
 #: eventviews.kcfg:386
-#, fuzzy, kde-format
-#| msgid "Select the to-do overdue color here."
+#, kde-format
 msgid "Set the color for overdue to-dos"
-msgstr "اختر من هنا لون المهام المتأخّرة."
+msgstr "اضبط لون المهام المتأخرة"
 
 #. i18n: ectx: whatsthis, entry (TodoOverdueColor), group (Colors)
 #: eventviews.kcfg:387 viewerapp/settings.kcfg:208
@@ -1699,15 +1568,13 @@ msgstr "اختر من هنا لون المهام المتأخّرة."
 
 #. i18n: ectx: label, entry (MonthTodayColor), group (Colors)
 #: eventviews.kcfg:391
-#, fuzzy, kde-format
-#| msgid "Month view today background color"
+#, kde-format
 msgid "Month View today background color"
 msgstr "لون خلفية اليوم في عرض الشهر"
 
 #. i18n: ectx: tooltip, entry (MonthTodayColor), group (Colors)
 #: eventviews.kcfg:392
-#, fuzzy, kde-format
-#| msgid "Set the background color for today's date in month view"
+#, kde-format
 msgid "Set the background color for today's date in Month View"
 msgstr "عيّن لون الخلفية لتاريخ اليوم في عرض الشهر"
 
@@ -1719,32 +1586,26 @@ msgstr "في عرض الشهر، حدد لون الخلفية لتاريخ ال�
 
 #. i18n: ectx: label, entry, group (Colors)
 #: eventviews.kcfg:397
-#, fuzzy, kde-format
-#| msgid "Month view background color"
+#, kde-format
 msgid "Month View holiday color"
-msgstr "لون خلفية منظور الشهر"
+msgstr "لون العُطل منظور الشهر"
 
 #. i18n: ectx: tooltip, entry, group (Colors)
 #: eventviews.kcfg:398
-#, fuzzy, kde-format
-#| msgid "Set the background color for today's date in month view"
+#, kde-format
 msgid "Set the color for holidays in Month View"
-msgstr "عيّن لون الخلفية لتاريخ اليوم في عرض الشهر"
+msgstr "عيّن لون العُطل في عرض الشهر"
 
 #. i18n: ectx: whatsthis, entry, group (Colors)
 #: eventviews.kcfg:399
-#, fuzzy, kde-format
-#| msgid ""
-#| "Select the holiday color here. The holiday color will be used for the "
-#| "holiday name in the month view and the holiday number in the date "
-#| "navigator."
+#, kde-format
 msgid ""
 "In Month View, select the color for holidays. This color will be used for "
 "the holiday backgrounds in the Month View and the holiday dates in the Date "
 "Navigator."
 msgstr ""
-"اختر من هنا لون العُطل. سيُستخدم هذا اللون لأسماء العُطل في منظور الشهر ولرقم "
-"العطلة في متصفّح التواريخ."
+"في عرض الشهر، حدد لون أيام العطلات. سيُستخدم هذا اللون لخلفيات أيام العطلات "
+"في عرض الشهر وتواريخ العطلات في شريط التنقل حسب التاريخ"
 
 #. i18n: ectx: label, entry, group (Fonts)
 #: eventviews.kcfg:411 viewerapp/settings.kcfg:221
@@ -1756,16 +1617,11 @@ msgstr "شريط الوقت"
 #: eventviews.kcfg:412
 #, kde-format
 msgid "Set the Agenda View time bar labels font"
-msgstr ""
+msgstr "اضبط خط تسميات شريط الوقت في منظور جدول الأعمال"
 
 #. i18n: ectx: whatsthis, entry, group (Fonts)
 #: eventviews.kcfg:413
-#, fuzzy, kde-format
-#| msgid ""
-#| "Press this button to configure the time bar font. The time bar is the "
-#| "widget that shows the hours in the agenda view. This button will open the "
-#| "\"Select Font\" dialog, allowing you to choose the hour font for the time "
-#| "bar."
+#, kde-format
 msgid ""
 "Press this button to configure the time bar font. The time bar is the widget "
 "that shows the hours in the Agenda View. This button will open the \"Select "
@@ -1777,25 +1633,19 @@ msgstr ""
 
 #. i18n: ectx: label, entry, group (Fonts)
 #: eventviews.kcfg:416
-#, fuzzy, kde-format
-#| msgid "Month view"
+#, kde-format
 msgid "Month View"
 msgstr "منظور الشهر"
 
 #. i18n: ectx: tooltip, entry, group (Fonts)
 #: eventviews.kcfg:417
-#, fuzzy, kde-format
-#| msgid "Show icons in month view items"
+#, kde-format
 msgid "Set the font for Month View items"
-msgstr "اعرض أيقونات في عناصر منظور الشهر"
+msgstr "اضبط خط عناصر عرض الشهر"
 
 #. i18n: ectx: whatsthis, entry, group (Fonts)
 #: eventviews.kcfg:418
-#, fuzzy, kde-format
-#| msgid ""
-#| "Press this button to configure the month view font. This button will open "
-#| "the \"Select Font\" dialog, allowing you to choose the font for the items "
-#| "in the month view."
+#, kde-format
 msgid ""
 "Press this button to configure the Month View font. This button will open "
 "the \"Select Font\" dialog, allowing you to choose the font for the items in "
@@ -1806,25 +1656,19 @@ msgstr ""
 
 #. i18n: ectx: label, entry, group (Fonts)
 #: eventviews.kcfg:421
-#, fuzzy, kde-format
-#| msgid "Agenda view"
+#, kde-format
 msgid "Agenda View"
 msgstr "منظور جدول الأعمال"
 
 #. i18n: ectx: tooltip, entry, group (Fonts)
 #: eventviews.kcfg:422
-#, fuzzy, kde-format
-#| msgid "Show icons in agenda view items"
+#, kde-format
 msgid "Set the font for Agenda View items"
-msgstr "اعرض الأيقونات في عناصر منظور جدول الأعمال"
+msgstr "اضبط خط عناصر منظور جدول الأعمال"
 
 #. i18n: ectx: whatsthis, entry, group (Fonts)
 #: eventviews.kcfg:423
-#, fuzzy, kde-format
-#| msgid ""
-#| "Press this button to configure the agenda view font. This button will "
-#| "open the \"Select Font\" dialog, allowing you to choose the font for the "
-#| "events in the agenda view."
+#, kde-format
 msgid ""
 "Press this button to configure the Agenda View font. This button will open "
 "the \"Select Font\" dialog, allowing you to choose the font for the events "
@@ -1835,33 +1679,27 @@ msgstr ""
 
 #. i18n: ectx: label, entry, group (Fonts)
 #: eventviews.kcfg:426
-#, fuzzy, kde-format
-#| msgid "Show current-time (Marcus Bains) line"
+#, kde-format
 msgid "Current-time (Marcus Bains) line"
-msgstr "اعرض خط الوقت الحالي (ماركوس بينز)"
+msgstr "خط الوقت الحالي (ماركوس بينز)"
 
 #. i18n: ectx: tooltip, entry, group (Fonts)
 #: eventviews.kcfg:427
-#, fuzzy, kde-format
-#| msgid "Show seconds on the current-time (Marcus Bains) line"
+#, kde-format
 msgid "Set the font for the current-time (Marcus Bains) line in Agenda View"
-msgstr "اعرض الثواني في خط الوقت الحالي (ماركوس بينز)"
+msgstr "اضبط خط خط الوقت الحالي (ماركوس بينز) في منظور جدول الأعمال"
 
 #. i18n: ectx: whatsthis, entry, group (Fonts)
 #: eventviews.kcfg:428
-#, fuzzy, kde-format
-#| msgid ""
-#| "Press this button to configure the current-time line font. This button "
-#| "will open the \"Select Font\" dialog, allowing you to choose the font for "
-#| "the current-time line in the agenda view."
+#, kde-format
 msgid ""
 "Press this button to configure the current-time (Marcus Bains) line font. "
 "This button will open the \"Select Font\" dialog, allowing you to choose the "
 "font for the current-time line in the Agenda View."
 msgstr ""
-"اضغط على هذا الزر لضبط خط خط الوقت الحالي. سيؤدي هذا الزر إلى فتح مربع "
-"الحوار ”حدّد الخط“، مما يتيح لك اختيار الخط لخط الوقت الحالي في منظور جدول "
-"الأعمال."
+"اضغط على هذا الزر لضبط خط سطر الوقت الحالي (ماركوس باينز). سيفتح هذا الزر "
+"مربع الحوار \"تحديد الخط\"، مما يسمح لك باختيار الخط لسطر الوقت الحالي في "
+"عرض الأجندة."
 
 #. i18n: ectx: label, entry (DefaultTodoAttachMethod), group (Hidden Options)
 #: eventviews.kcfg:447
