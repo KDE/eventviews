@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-28 02:45+0000\n"
-"PO-Revision-Date: 2026-07-18 17:01+0200\n"
+"PO-Revision-Date: 2026-08-29 21:51+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
 "Language: pl\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 26.04.2\n"
+"X-Generator: Lokalize 26.08.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -47,7 +47,7 @@ msgstr "Nieudane zablokowanie"
 #, kde-format
 msgctxt "@info/plain"
 msgid "Dissociate event from recurrence"
-msgstr "Oddziel zdarzenie od powtarzalności"
+msgstr "Oddziel zdarzenie od ciągu zdarzeń"
 
 #: agenda/agenda.cpp:1196 month/monthitem.cpp:450
 #, kde-format
@@ -751,15 +751,15 @@ msgid ""
 "Select the height of the hour rows in the agenda grid, in pixels. Increasing "
 "this value will make each row in the agenda grid taller."
 msgstr ""
-"Wybierz, w pikselach, wysokość wierszy godzin w siatce planu zajęć. "
-"Zwiększenie tej wartości spowoduje, że każdy wiersz w siatce planu zajęć "
+"Wybierz, w pikselach, wysokość wierszy godzin w siatce rozkładu zajęć. "
+"Zwiększenie tej wartości spowoduje, że każdy wiersz w siatce rozkładu zajęć "
 "będzie wyższy."
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
 #: eventviews.kcfg:150 viewerapp/settings.kcfg:19
 #, kde-format
 msgid "Set the height (in pixels) for an hour in the agenda grid"
-msgstr "Ustaw wysokość (w pikselach) dla godziny w siatce planu zajęć"
+msgstr "Ustaw wysokość (w pikselach) dla godziny w siatce rozkładu zajęć"
 
 #. i18n: ectx: label, entry (EnableAgendaBoldEvenHours), group (Agenda View)
 #: eventviews.kcfg:156
@@ -808,7 +808,7 @@ msgstr "Wyświetl ikony w elementach widoku planu zajęć"
 #: eventviews.kcfg:168
 #, kde-format
 msgid "Show incidence descriptions in agenda view items"
-msgstr "Pokaż opisy wystąpień na elementach na widoku planu"
+msgstr "Pokaż opisy wystąpień na elementach na widoku rozkładu"
 
 #. i18n: ectx: whatsthis, entry (EnableAgendaItemDesc), group (Agenda View)
 #: eventviews.kcfg:169
@@ -816,19 +816,19 @@ msgstr "Pokaż opisy wystąpień na elementach na widoku planu"
 msgid ""
 "Check this box to display the incidence descriptions in agenda view items."
 msgstr ""
-"Zaznacz to pole, aby wyświetlić opis wystąpienia w widoku elementów planu."
+"Zaznacz to pole, aby wyświetlić opis wystąpienia w widoku elementów rozkładu."
 
 #. i18n: ectx: tooltip, entry (EnableAgendaItemDesc), group (Agenda View)
 #: eventviews.kcfg:170
 #, kde-format
 msgid "Display incidence descriptions in agenda view items"
-msgstr "Pokaż opisy wystąpień na elementach na widoku planu"
+msgstr "Pokaż opisy wystąpień na elementach na widoku rozkładu"
 
 #. i18n: ectx: label, entry (EnableAgendaItemLocation), group (Agenda View)
 #: eventviews.kcfg:174
 #, kde-format
 msgid "Show incidence locations in agenda view items"
-msgstr "Pokaż miejsca wystąpień na elementach na widoku planu"
+msgstr "Pokaż miejsca wystąpień na elementach na widoku rozkładu"
 
 #. i18n: ectx: whatsthis, entry (EnableAgendaItemLocation), group (Agenda View)
 #: eventviews.kcfg:175
@@ -836,13 +836,13 @@ msgstr "Pokaż miejsca wystąpień na elementach na widoku planu"
 msgid "Check this box to display the incidence locations in agenda view items."
 msgstr ""
 "Zaznacz to pole, aby wyświetlić miejsca wystąpień na elementach na widoku "
-"planu."
+"rozkładu."
 
 #. i18n: ectx: tooltip, entry (EnableAgendaItemLocation), group (Agenda View)
 #: eventviews.kcfg:176
 #, kde-format
 msgid "Display incidence locations in agenda view items"
-msgstr "Pokaż miejsca wystąpień na elementach na widoku planu"
+msgstr "Pokaż miejsca wystąpień na elementach na widoku rozkładu"
 
 #. i18n: ectx: label, entry (ShowTodosAgendaView), group (Agenda View)
 #. i18n: ectx: label, entry (ShowTodosMonthView), group (Month View)
@@ -966,7 +966,7 @@ msgid ""
 "Draw agenda items in their tag color inside and calendar color for their "
 "border"
 msgstr ""
-"Rysuj wpisy planu zajęć w kolorze kategorii, dla wnętrza, i w kolorze "
+"Rysuj wpisy rozkładu zajęć w kolorze kategorii, dla wnętrza, i w kolorze "
 "kalendarza, dla obwódki"
 
 #. i18n: ectx: label, entry, group (Agenda View)
@@ -997,7 +997,7 @@ msgid ""
 "Draw agenda items in their calendar color inside and tag color for their "
 "border"
 msgstr ""
-"Rysuj wpisy planu zajęć w kolorze kalendarza, dla wnętrza, i w kolorze "
+"Rysuj wpisy rozkładu zajęć w kolorze kalendarza, dla wnętrza, i w kolorze "
 "kategorii, dla obwódki"
 
 #. i18n: ectx: label, entry, group (Agenda View)
@@ -1024,7 +1024,7 @@ msgstr ""
 #, kde-format
 msgid "Draw agenda items using their tag color for the inside and border"
 msgstr ""
-"Pokazuj wpisy planu zajęć używając koloru znacznika zarówno wewnątrz i w "
+"Pokazuj wpisy rozkładu zajęć używając koloru znacznika zarówno wewnątrz i w "
 "obwódce"
 
 #. i18n: ectx: label, entry, group (Agenda View)
@@ -1051,7 +1051,7 @@ msgstr ""
 #: eventviews.kcfg:224 viewerapp/settings.kcfg:75
 #, kde-format
 msgid "Draw agenda items using their calendar color for the inside and border"
-msgstr "Rysuj wpisy planu zajęć w kolorze kalendarza, dla wnętrza i obwódki"
+msgstr "Rysuj wpisy rozkładu zajęć w kolorze kalendarza, dla wnętrza i obwódki"
 
 #. i18n: ectx: label, entry (ColorBusyDaysEnabled), group (Agenda View)
 #. i18n: ectx: label, entry (ColorMonthBusyDaysEnabled), group (Month View)
@@ -1069,10 +1069,10 @@ msgid ""
 "you can change the background color used for this option on the Colors "
 "configuration page. Look for the \"Busy days background color\" setting."
 msgstr ""
-"Zaznacz to pole, jeśli chcesz, aby tło planu zajęć zostało wypełnione innym "
-"kolorem, w przypadku dni, które posiadają przynajmniej jedno, trwające cały "
-"dzień, zadanie oznaczone jako 'zajęte'. Możesz również zmienić kolor tła, "
-"używany dla tej opcji, na stronie konfiguracji kolorów. Zwróć uwagę na "
+"Zaznacz to pole, jeśli chcesz, aby tło rozkładu zajęć zostało wypełnione "
+"innym kolorem, w przypadku dni, które posiadają przynajmniej jedno, trwające "
+"cały dzień, zadanie oznaczone jako 'zajęte'. Możesz również zmienić kolor "
+"tła, używany dla tej opcji, na stronie konfiguracji kolorów. Zwróć uwagę na "
 "ustawienie \"Kolor tła zajętych dni\"."
 
 #. i18n: ectx: label, entry (AgendaViewCalendarDisplay), group (Agenda View)
@@ -1085,7 +1085,7 @@ msgstr "Wyświetlanie wielu kalendarzy"
 #: eventviews.kcfg:238 viewerapp/settings.kcfg:84
 #, kde-format
 msgid "Merge all calendars into one view"
-msgstr "Scal wszystkie kalendarze w jednym widoku"
+msgstr "Scal wszystkie kalendarze na jednym widoku"
 
 #. i18n: ectx: whatsthis, entry (AgendaViewCalendarDisplay), group (Agenda View)
 #: eventviews.kcfg:239 viewerapp/settings.kcfg:85
@@ -1182,7 +1182,7 @@ msgstr ""
 #: eventviews.kcfg:266 viewerapp/settings.kcfg:112
 #, kde-format
 msgid "Display icons in month view items"
-msgstr "Pokaż ikony w elementach widoku miesiąca"
+msgstr "Pokaż ikony w elementach na widoku miesiąca"
 
 #. i18n: ectx: label, entry (ShowTimeInMonthView), group (Month View)
 #: eventviews.kcfg:270
@@ -1242,7 +1242,7 @@ msgstr "Zaznacz to pole, aby wyświetlić zadania w widoku miesiąca."
 #: eventviews.kcfg:284 viewerapp/settings.kcfg:118
 #, kde-format
 msgid "Display to-dos in the month view"
-msgstr "Wyświetl zadania w widoku miesiąca"
+msgstr "Wyświetl zadania na widoku miesiąca"
 
 #. i18n: ectx: label, entry (ShowJournalsMonthView), group (Month View)
 #: eventviews.kcfg:288 viewerapp/settings.kcfg:122
@@ -1543,7 +1543,7 @@ msgstr "Tutaj wybierz kolor tła widoku planu zajęć."
 #: eventviews.kcfg:380
 #, kde-format
 msgid "Agenda/Month view background busy color"
-msgstr "Kolor stanu zajętego widoku planu zajęć/miesiąca"
+msgstr "Kolor stanu zajętego widoku rozkładu zajęć/miesiąca"
 
 #. i18n: ectx: whatsthis, entry (ViewBgBusyColor), group (Colors)
 #: eventviews.kcfg:381
@@ -1702,7 +1702,7 @@ msgstr ""
 #: eventviews.kcfg:441
 #, kde-format
 msgid "Default todo attachment method"
-msgstr "Domyślna metoda załączania zadań"
+msgstr "Domyślny sposób załączania zadań"
 
 #. i18n: ectx: whatsthis, entry (DefaultTodoAttachMethod), group (Hidden Options)
 #: eventviews.kcfg:442
@@ -1732,13 +1732,13 @@ msgstr ""
 #: eventviews.kcfg:501
 #, kde-format
 msgid "Select the working hours background color for the agenda view here."
-msgstr "Tutaj wybierz kolor tła godzin pracy dla widoku planu zajęć."
+msgstr "Tutaj wybierz kolor tła godzin pracy dla widoku rozkładu zajęć."
 
 #. i18n: ectx: label, entry, group (Theme/Month view)
 #: eventviews.kcfg:585
 #, kde-format
 msgid "Month view background color"
-msgstr "Kolor tła widoku miesiąca"
+msgstr "Kolor tła na widoku miesiąca"
 
 #. i18n: ectx: whatsthis, entry, group (Theme/Month view)
 #: eventviews.kcfg:586
