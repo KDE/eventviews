@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-28 00:46+0000\n"
-"PO-Revision-Date: 2026-08-31 15:48+0200\n"
+"PO-Revision-Date: 2026-09-02 15:26+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -418,7 +418,7 @@ msgid ""
 "time you create a new event, to-do or journal entry."
 msgstr ""
 "Selige iste option pro eliger le calendario que essera usate pro registrar "
-"le elemento cata vice que tu crea un nove evento, cosade facer o nota de  "
+"le elemento cata vice que tu crea un nove evento, cosa de facer o nota de  "
 "diario (jornal)."
 
 #. i18n: ectx: label, entry (WeekStartDay), group (Time &amp; Date)
@@ -1230,7 +1230,7 @@ msgstr ""
 "Marca iste quadrato si tu vole que le fundo del vista del mense essera "
 "plenate con un color differente sur dies que ha al minus un evento de tote "
 "die marcate como occupate. De plus, tu pote modificar le color de fundo "
-"usate pro iste option in le pagina de configuration de color.Cerca le "
+"usate pro iste option in le pagina de configuration de color. Cerca le "
 "preferentia de \"Color de fundo de dies occupate\"."
 
 #. i18n: ectx: whatsthis, entry (ShowTodosMonthView), group (Month View)
@@ -1603,13 +1603,13 @@ msgid ""
 "hours grid"
 msgstr ""
 "Quando on non usa colores de systema, defini le color pro le grillia de "
-"horasde travalio del Vista de Agenda."
+"horas de travalio del Vista de Agenda."
 
 #. i18n: ectx: whatsthis, entry, group (Colors)
 #: eventviews.kcfg:369
 #, kde-format
 msgid "Select the working hours color for the Agenda View here."
-msgstr "Selige ci le color de horas de labor pro ;le Vista de Agenda."
+msgstr "Selige ci le color de horas de labor pro ; le Vista de Agenda."
 
 #. i18n: ectx: label, entry, group (Colors)
 #: eventviews.kcfg:373
@@ -1642,7 +1642,7 @@ msgstr "Color de activitate de facer expirante hodie"
 #: eventviews.kcfg:380
 #, kde-format
 msgid "Set the color for to-dos that are due today"
-msgstr "Assigna le color per cargas /actiones de facer) que es expirate hodie"
+msgstr "Assigna le color per cargas (actiones de facer) que es expirate hodie"
 
 #. i18n: ectx: whatsthis, entry (TodoDueTodayColor), group (Colors)
 #: eventviews.kcfg:381 viewerapp/settings.kcfg:203
@@ -1708,7 +1708,7 @@ msgid ""
 msgstr ""
 "Selige hic le color de die feriate. Le color de die feriate essera usate pro "
 "le nomine del die feriate in le vista de mense e le numero de die feriate in "
-"le navigator de date."
+"le navigator de data."
 
 #. i18n: ectx: label, entry, group (Fonts)
 #: eventviews.kcfg:411 viewerapp/settings.kcfg:221
@@ -1757,7 +1757,7 @@ msgid ""
 msgstr ""
 "Pressa iste button pro configurar le font de vista de mense. Iste button "
 "aperira le dialogo de \"Selige Font\", permittente te de seliger le font de "
-"elementosin le vista de mense."
+"elementos in le vista de mense."
 
 #. i18n: ectx: label, entry, group (Fonts)
 #: eventviews.kcfg:421
@@ -2942,7 +2942,7 @@ msgid ""
 msgstr ""
 "Selige hic le color de die feriate. Le color de die feriate essera usate pro "
 "le nomine del die feriate in le vista de mense e le numero de die feriate in "
-"le navigator de date."
+"le navigator de data."
 
 #. i18n: ectx: label, entry (AgendaBgColor), group (Colors)
 #: viewerapp/settings.kcfg:185
@@ -3032,7 +3032,7 @@ msgid ""
 msgstr ""
 "Pressa iste button pro configurar le font de vista de mense. Iste button "
 "aperira le dialogo de \"Selige Font\", permittente te de seliger le font de "
-"elementosin le vista de mense."
+"elemento sin le vista de mense."
 
 #. i18n: ectx: label, entry, group (Fonts)
 #: viewerapp/settings.kcfg:229
@@ -3050,7 +3050,7 @@ msgid ""
 msgstr ""
 "Pressa iste button pro configurar le font de vista de agenda. Iste button "
 "aperira le dialogo de \"Selige Font\", permittente te de seliger le font de "
-"eventosin le vista de agenda."
+"eventos in le vista de agenda."
 
 #. i18n: ectx: label, entry, group (Fonts)
 #: viewerapp/settings.kcfg:233
