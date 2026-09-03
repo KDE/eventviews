@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-28 02:45+0000\n"
-"PO-Revision-Date: 2026-07-23 12:09+0200\n"
+"PO-Revision-Date: 2026-09-02 16:12+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -1704,7 +1704,7 @@ msgid ""
 msgstr ""
 "Pressa iste button pro configurar le font de vista de agenda. Iste button "
 "aperira le dialogo de \"Selige Font\", permittente te de seliger le font de "
-"eventosin le vista de agenda."
+"eventos in le vista de agenda."
 
 #. i18n: ectx: label, entry, group (Fonts)
 #: eventviews.kcfg:421 viewerapp/settings.kcfg:233
