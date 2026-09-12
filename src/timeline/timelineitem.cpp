@@ -146,7 +146,7 @@ void TimelineSubItem::updateToolTip()
     mToolTipNeedsUpdate = false;
 
     const auto name = Akonadi::CalendarUtils::displayName(mParent->calendar()->model(), mIncidence.parentCollection());
-    setData(IncidenceFormatter::toolTipStr(name, Akonadi::CalendarUtils::incidence(mIncidence), originalStart().date(), true), Qt::ToolTipRole);
+    setData(IncidenceFormatter::toolTipStr(name, Akonadi::CalendarUtils::incidence(mIncidence), originalStart().date()), Qt::ToolTipRole);
 }
 
 #include "moc_timelineitem.cpp"

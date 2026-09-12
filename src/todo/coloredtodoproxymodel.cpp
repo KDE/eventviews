@@ -64,7 +64,7 @@ QVariant ColoredTodoProxyModel::data(const QModelIndex &index, int role) const
                 displayName = col.displayName();
             }
         }
-        return KCalUtils::IncidenceFormatter::toolTipStr(displayName, todo, QDate::currentDate(), true);
+        return KCalUtils::IncidenceFormatter::toolTipStr(displayName, todo, QDate::currentDate());
     }
 
     return QIdentityProxyModel::data(index, role);

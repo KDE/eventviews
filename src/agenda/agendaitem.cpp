@@ -1227,7 +1227,7 @@ bool AgendaItem::event(QEvent *event)
         } else if (mValid) {
             auto helpEvent = static_cast<QHelpEvent *>(event);
             QToolTip::showText(helpEvent->globalPos(),
-                               KCalUtils::IncidenceFormatter::toolTipStr(mCalendar->displayName(mIncidence), mIncidence, occurrenceDate(), true),
+                               KCalUtils::IncidenceFormatter::toolTipStr(mCalendar->displayName(mIncidence), mIncidence, occurrenceDate()),
                                this);
         }
     }
