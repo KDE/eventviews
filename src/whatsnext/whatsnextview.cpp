@@ -291,7 +291,7 @@ void WhatsNextView::appendEvent(const Akonadi::CollectionCalendar::Ptr &calendar
     mText += "</b></td>"_L1;
     const QString proto = incidence->type() == KCalendarCore::Incidence::TypeTodo ? QStringLiteral("todo") : QStringLiteral("event");
     mText += QStringLiteral(R"(<td><a href="%1:%2?itemId=%3&calendarId=%5">%4</a></td>)")
-                 .arg(proto, incidence->uid(), incidence->customProperty("VOLATILE", "AKONADI-ID"), incidence->summary())
+                 .arg(proto, incidence->uid(), incidence->customProperty("VOLATILE", "AKONADI-ID"), incidence->summary().toHtmlEscaped())
                  .arg(calendar->collection().id());
     mText += "</tr>\n"_L1;
 }
@@ -305,7 +305,7 @@ void WhatsNextView::appendTodo(const Akonadi::CollectionCalendar::Ptr &calendar,
     mTodos.append(aitem);
     mText += "<li>"_L1;
     mText += QStringLiteral(R"(<a href="todo:%1?itemId=%2&calendarId=%4">%3</a>)")
-                 .arg(incidence->uid(), incidence->customProperty("VOLATILE", "AKONADI-ID"), incidence->summary())
+                 .arg(incidence->uid(), incidence->customProperty("VOLATILE", "AKONADI-ID"), incidence->summary().toHtmlEscaped())
                  .arg(calendar->collection().id());
 
     if (const KCalendarCore::Todo::Ptr todo = Akonadi::CalendarUtils::todo(aitem)) {
