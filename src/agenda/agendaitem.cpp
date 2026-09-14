@@ -18,7 +18,7 @@
 
 #include <KContacts/VCardDrag>
 
-#include <KCalUtils/IncidenceFormatter>
+#include <kcalendarcore_version.h>
 #if KCALENDARCORE_VERSION < QT_VERSION_CHECK(6, 29, 0)
 #include <KCalUtils/ICalDrag>
 #include <KCalUtils/VCalDrag>
@@ -1226,9 +1226,7 @@ bool AgendaItem::event(QEvent *event)
             return true;
         } else if (mValid) {
             auto helpEvent = static_cast<QHelpEvent *>(event);
-            QToolTip::showText(helpEvent->globalPos(),
-                               KCalUtils::IncidenceFormatter::toolTipStr(mCalendar->displayName(mIncidence), mIncidence, occurrenceDate()),
-                               this);
+            QToolTip::showText(helpEvent->globalPos(), CalendarSupport::toolTipString(mCalendar->displayName(mIncidence), mIncidence, occurrenceDate()), this);
         }
     }
     return QWidget::event(event);

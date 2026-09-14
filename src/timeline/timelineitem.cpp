@@ -8,14 +8,13 @@
 
 #include "timelineitem.h"
 
+#include <CalendarSupport/Utils>
+
 #include <Akonadi/CalendarUtils>
 
 #include <KGanttGlobal>
 
-#include <KCalUtils/IncidenceFormatter>
-
 using namespace KCalendarCore;
-using namespace KCalUtils;
 using namespace EventViews;
 
 TimelineItem::TimelineItem(const Akonadi::CollectionCalendar::Ptr &calendar, uint index, QStandardItemModel *model, QObject *parent)
@@ -146,7 +145,7 @@ void TimelineSubItem::updateToolTip()
     mToolTipNeedsUpdate = false;
 
     const auto name = Akonadi::CalendarUtils::displayName(mParent->calendar()->model(), mIncidence.parentCollection());
-    setData(IncidenceFormatter::toolTipStr(name, Akonadi::CalendarUtils::incidence(mIncidence), originalStart().date()), Qt::ToolTipRole);
+    setData(CalendarSupport::toolTipString(name, Akonadi::CalendarUtils::incidence(mIncidence), originalStart().date()), Qt::ToolTipRole);
 }
 
 #include "moc_timelineitem.cpp"

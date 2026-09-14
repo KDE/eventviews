@@ -16,8 +16,6 @@ using namespace Qt::Literals::StringLiterals;
 #include <CalendarSupport/KCalPrefs>
 #include <CalendarSupport/Utils>
 
-#include <KCalUtils/IncidenceFormatter>
-
 #include <QBoxLayout>
 #include <QUrlQuery>
 
@@ -310,7 +308,10 @@ void WhatsNextView::appendTodo(const Akonadi::CollectionCalendar::Ptr &calendar,
 
     if (const KCalendarCore::Todo::Ptr todo = Akonadi::CalendarUtils::todo(aitem)) {
         if (todo->hasDueDate()) {
-            mText += i18nc("to-do due date", "  (Due: %1)", KCalUtils::IncidenceFormatter::dateTimeToString(todo->dtDue(), todo->allDay()));
+            mText +=
+                i18nc("to-do due date",
+                      "  (Due: %1)",
+                      todo->allDay() ? QLocale().toString(todo->dtDue().date(), QLocale::LongFormat) : QLocale().toString(todo->dtDue(), QLocale::LongFormat));
         }
     }
     mText += "</li>\n"_L1;

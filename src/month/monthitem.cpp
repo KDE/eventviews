@@ -20,8 +20,6 @@
 #include <CalendarSupport/KCalPrefs>
 #include <CalendarSupport/Utils>
 
-#include <KCalUtils/IncidenceFormatter>
-
 #include "calendarview_debug.h"
 #include <KMessageBox>
 
@@ -513,9 +511,7 @@ QString IncidenceMonthItem::text() const
 
 QString IncidenceMonthItem::toolTipText(const QDate &date) const
 {
-    return KCalUtils::IncidenceFormatter::toolTipStr(Akonadi::CalendarUtils::displayName(mCalendar->model(), akonadiItem().parentCollection()),
-                                                     mIncidence,
-                                                     date);
+    return CalendarSupport::toolTipString(Akonadi::CalendarUtils::displayName(mCalendar->model(), akonadiItem().parentCollection()), mIncidence, date);
 }
 
 QList<QPixmap> IncidenceMonthItem::icons() const

@@ -18,7 +18,6 @@
 #include <Akonadi/CalendarUtils>
 #include <Akonadi/IncidenceChanger>
 
-#include <KCalUtils/IncidenceFormatter>
 #include <KCalendarCore/Visitor>
 
 #include <KConfig>
@@ -34,7 +33,6 @@
 
 using namespace EventViews;
 using namespace KCalendarCore;
-using namespace KCalUtils;
 
 enum {
     Summary_Column = 0,
@@ -76,7 +74,7 @@ public:
     {
         if (role == Qt::ToolTipRole) {
             const auto incidence = mIncidence.payload<KCalendarCore::Incidence::Ptr>();
-            return IncidenceFormatter::toolTipStr(Akonadi::CalendarUtils::displayName(mCalendar->model(), mIncidence.parentCollection()),
+            return CalendarSupport::toolTipString(Akonadi::CalendarUtils::displayName(mCalendar->model(), mIncidence.parentCollection()),
                                                   incidence,
                                                   start.date());
         }

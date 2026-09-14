@@ -18,8 +18,6 @@ using namespace Qt::Literals::StringLiterals;
 
 #include <KCalendarCore/Journal>
 
-#include <KCalUtils/IncidenceFormatter>
-
 #include "calendarview_debug.h"
 #include <KLocalizedString>
 #include <QTextBrowser>
@@ -293,7 +291,8 @@ void JournalFrame::readJournal(const Akonadi::Item &item)
     QTextCharFormat dateFormat = bodyFormat;
     dateFormat.setFontWeight(QFont::Bold);
     dateFormat.setFontPointSize(baseFontSize + 1);
-    cursor.insertText(KCalUtils::IncidenceFormatter::dateTimeToString(j->dtStart(), j->allDay()), dateFormat);
+    cursor.insertText(j->allDay() ? QLocale().toString(j->dtStart().date(), QLocale::LongFormat) : QLocale().toString(j->dtStart(), QLocale::LongFormat),
+                      dateFormat);
     cursor.insertBlock();
     cursor.insertBlock();
     cursor.setBlockCharFormat(bodyFormat);
