@@ -6,9 +6,9 @@
 
 #include "coloredtodoproxymodel.h"
 
-#include <Akonadi/TodoModel>
+#include <CalendarSupport/Utils>
 
-#include <KCalUtils/IncidenceFormatter>
+#include <Akonadi/TodoModel>
 
 class ColoredTodoProxyModelPrivate
 {
@@ -64,7 +64,7 @@ QVariant ColoredTodoProxyModel::data(const QModelIndex &index, int role) const
                 displayName = col.displayName();
             }
         }
-        return KCalUtils::IncidenceFormatter::toolTipStr(displayName, todo, QDate::currentDate());
+        return CalendarSupport::toolTipString(displayName, todo, QDate::currentDate());
     }
 
     return QIdentityProxyModel::data(index, role);
