@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-28 02:45+0000\n"
-"PO-Revision-Date: 2026-09-02 16:12+0200\n"
+"PO-Revision-Date: 2026-09-14 15:39+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -2367,7 +2367,7 @@ msgstr "Commuta amonstrar le lista platte"
 #: todo/todoviewquickaddline.cpp:17
 #, kde-format
 msgid "Enter a summary to create a new to-do"
-msgstr "Inserta un summario per crear unnove action de facer"
+msgstr "Inserta un summario per crear un nove action de facer"
 
 #: todo/todoviewquicksearch.cpp:37
 #, kde-format

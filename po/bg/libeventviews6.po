@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-28 02:45+0000\n"
-"PO-Revision-Date: 2026-06-17 15:20+0200\n"
+"PO-Revision-Date: 2026-09-14 18:19+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.04.2\n"
+"X-Generator: Lokalize 26.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -159,7 +159,7 @@ msgstr ""
 #: agenda/timelabels.cpp:336
 #, kde-format
 msgid "&Remove Timezone %1"
-msgstr "&Премахване на часовата зона %1"
+msgstr "&Премахване на часови пояс %1"
 
 #: agenda/timelabels.cpp:340
 #, kde-format
@@ -264,7 +264,7 @@ msgstr ""
 #, kde-format
 msgctxt "title for timezone info, the timezone id and utc offset"
 msgid "<b>%1 (%2)</b>"
-msgstr "<b> %1 ( %2) </b>"
+msgstr "<b>%1 (%2)</b>"
 
 #: agenda/timelabels.cpp:430
 #, kde-format
@@ -451,7 +451,8 @@ msgstr "Потвърждение при изтриване"
 #: eventviews.kcfg:48
 #, kde-format
 msgid "Check this box to display a confirmation dialog when deleting items."
-msgstr "Потвърждение при изтриване на записи от календара."
+msgstr ""
+"Поставете отметка тук за потвърждение при изтриване на записи от календара."
 
 #. i18n: ectx: label, entry (Destination), group (Save Settings)
 #: eventviews.kcfg:52
@@ -609,8 +610,8 @@ msgid ""
 "Check this box to display summary tooltips when hovering the mouse over an "
 "event or a to-do."
 msgstr ""
-"Поставете отметка в това квадратче, за да се покажат подсказки с описанието, "
-"когато задържите мишката върху събитие или задача."
+"Поставете отметка тук, за да се покажат подсказки с описанието, когато "
+"задържите мишката върху събитие или задача."
 
 #. i18n: ectx: label, entry, group (General View)
 #: eventviews.kcfg:109
@@ -625,9 +626,9 @@ msgid ""
 "Check this box so that to-dos will use tag colors and not colors specific to "
 "their due, due today or overdue state"
 msgstr ""
-"Поставете отметка в това квадратче, така че задачите да използват цветове на "
-"категория, а не цветове според крайния срок на изпълнение (за изпълнение на "
-"деня или просрочени)"
+"Поставете отметка тук, така че задачите да използват цветове на етикети, а "
+"не цветове според крайния срок на изпълнение (за изпълнение на деня или "
+"просрочени)"
 
 #. i18n: ectx: label, entry, group (General View)
 #: eventviews.kcfg:114
@@ -685,9 +686,9 @@ msgid ""
 "typeface in the Date Navigator, or uncheck it to give more prominence to "
 "other (non weekly recurring) events."
 msgstr ""
-"Поставете отметка в това квадратче, за да покажете дните с ежеседмично "
-"повтарящи се събития в удебелен шрифт в Навигатора на срещи или премахнете "
-"отметката, за да откроите други (не ежеседмично повтарящи се) събития."
+"Поставете отметка тук, за да покажете дните с ежеседмично повтарящи се "
+"събития в удебелен шрифт в Навигатора на дати или премахнете отметката, за "
+"да откроите други (не ежеседмично повтарящи се) събития."
 
 #. i18n: ectx: label, entry (HighlightTodos), group (General View)
 #: eventviews.kcfg:130
@@ -768,7 +769,7 @@ msgstr "Задайте височината (в пиксели) за един ч
 #: eventviews.kcfg:156
 #, kde-format
 msgid "Draw bold horizontal grid lines for the even hours"
-msgstr "Изчертаване на удебелени хоризонтални линии за четните часове"
+msgstr "Представяне на удебелени хоризонтални линии за четните часове"
 
 #. i18n: ectx: whatsthis, entry (EnableAgendaBoldEvenHours), group (Agenda View)
 #: eventviews.kcfg:157
@@ -798,8 +799,8 @@ msgid ""
 "Check this box to display icons (alarm, recursion, etc.) in agenda view "
 "items."
 msgstr ""
-"Поставете отметка в това квадратче, за да се показват икони (аларма, "
-"рекурсия и т.н.) в елементите от изгледа на дневния ред."
+"Поставете отметка тук, за да се показват икони (аларма, рекурсия и т.н.) в "
+"елементите от изгледа на дневния ред."
 
 #. i18n: ectx: tooltip, entry (EnableAgendaItemIcons), group (Agenda View)
 #: eventviews.kcfg:164 viewerapp/settings.kcfg:27
@@ -861,8 +862,7 @@ msgstr "Показване на задачите"
 #, kde-format
 msgid "Check this box to display to-dos in the agenda view."
 msgstr ""
-"Поставете отметка в това квадратче, за да се покажат задачи в изгледа на "
-"дневния ред."
+"Поставете отметка тук, за да се покажат задачи в изгледа на дневния ред."
 
 #. i18n: ectx: tooltip, entry (ShowTodosAgendaView), group (Agenda View)
 #: eventviews.kcfg:182 viewerapp/settings.kcfg:33
@@ -883,8 +883,8 @@ msgid ""
 "Check this box to display a line in the day or week view indicating the "
 "current-time line (Marcus Bains line)."
 msgstr ""
-"Поставете отметка в това квадратче, за да се покаже линия в изгледа за деня "
-"или седмицата (линията за текущо време на Marcus Bains)."
+"Поставете отметка тук, за да се покаже линия в изгледа за деня или седмицата "
+"(линията за текущо време на Marcus Bains)."
 
 #. i18n: ectx: tooltip, entry (MarcusBainsEnabled), group (Agenda View)
 #: eventviews.kcfg:188 viewerapp/settings.kcfg:39
@@ -925,10 +925,10 @@ msgid ""
 "time range in the daily and weekly view. To select a time range, drag the "
 "mouse from the start time to the end time of the event you are about to plan."
 msgstr ""
-"Автоматично стартиране на редактора на събития чрез избор на интервал от "
-"време в дневния и седмичния режим на преглед. За да изберете период от "
-"време, щракнете с мишката и влачете до края на периода, за които искате да "
-"въведете ново събитие или задача."
+"Поставете отметка тук за автоматично стартиране на редактора на събития чрез "
+"избор на интервал от време в дневния и седмичния режим на преглед. За да "
+"изберете период от време, щракнете с мишката и влачете до края на периода, "
+"за които искате да въведете ново събитие или задача."
 
 #. i18n: ectx: tooltip, entry (SelectionStartsEditor), group (Agenda View)
 #: eventviews.kcfg:200 viewerapp/settings.kcfg:51
@@ -950,7 +950,7 @@ msgstr "Използване на цветовете"
 #: eventviews.kcfg:207 eventviews.kcfg:315
 #, kde-format
 msgid "Tag inside, calendar outside"
-msgstr "Категория вътре, календар отвън"
+msgstr "Етикет вътре, календар отвън"
 
 #. i18n: ectx: whatsthis, entry, group (Agenda View)
 #: eventviews.kcfg:208
@@ -982,7 +982,7 @@ msgstr ""
 #: eventviews.kcfg:212 eventviews.kcfg:320
 #, kde-format
 msgid "Calendar inside, tag outside"
-msgstr "Календар вътре, категория отвън"
+msgstr "Календар вътре, еткет отвън"
 
 #. i18n: ectx: whatsthis, entry, group (Agenda View)
 #: eventviews.kcfg:213
@@ -1014,7 +1014,7 @@ msgstr ""
 #: eventviews.kcfg:217 eventviews.kcfg:325
 #, kde-format
 msgid "Only tag"
-msgstr "Само категория"
+msgstr "Само етикет"
 
 #. i18n: ectx: whatsthis, entry, group (Agenda View)
 #: eventviews.kcfg:218
@@ -1034,7 +1034,7 @@ msgstr ""
 #, kde-format
 msgid "Draw agenda items using their tag color for the inside and border"
 msgstr ""
-"Представяне на точки от дневния ред, използвайки цвета на категорията им за "
+"Представяне на точки от дневния ред, използвайки цвета на етикета им за "
 "вътрешността и рамката"
 
 #. i18n: ectx: label, entry, group (Agenda View)
@@ -1082,11 +1082,11 @@ msgid ""
 "you can change the background color used for this option on the Colors "
 "configuration page. Look for the \"Busy days background color\" setting."
 msgstr ""
-"Поставете отметка в това квадратче, ако искате фонът на дневния ред да се "
-"запълни с различен цвят в дните, в които поне едно събитие през целия ден е "
-"отбелязано като заето. Също така можете да промените цвета на фона, "
-"използван за тази опция, на страницата за конфигурация на Цветове. Потърсете "
-"настройката \"Цвят на фона на заетите дни\"."
+"Поставете отметка тук, ако искате фонът на дневния ред да се запълни с "
+"различен цвят в дните, в които поне едно събитие през целия ден е отбелязано "
+"като заето. Също така можете да промените цвета на фона, използван за тази "
+"опция, на страницата за конфигурация на Цветове. Потърсете настройката "
+"\"Цвят на фона на заетите дни\"."
 
 #. i18n: ectx: label, entry (AgendaViewCalendarDisplay), group (Agenda View)
 #: eventviews.kcfg:235 viewerapp/settings.kcfg:81
@@ -1174,9 +1174,9 @@ msgid ""
 "Check this box to display scrollbars when clicking on a cell in the month "
 "view; they will only appear when needed though."
 msgstr ""
-"Поставете отметка в това квадратче, за да се покажат лентите за превъртане, "
-"когато щракнете върху клетка в месечния изглед; те ще се появят само когато "
-"е необходимо."
+"Поставете отметка тук, за да се покажат лентите за превъртане, когато "
+"щракнете върху клетка в месечния изглед; те ще се появят само когато е "
+"необходимо."
 
 #. i18n: ectx: label, entry (EnableMonthItemIcons), group (Month View)
 #: eventviews.kcfg:264 viewerapp/settings.kcfg:110
@@ -1190,8 +1190,8 @@ msgstr "Показване на икони в месечен изглед"
 msgid ""
 "Check this box to display icons (alarm, recursion, etc.) in month view items."
 msgstr ""
-"Поставете отметка в това квадратче, за да се показват икони (аларма, "
-"рекурсия и т.н.) в елементи от месечния изглед."
+"Поставете отметка тук, за да се показват икони (аларма, рекурсия и т.н.) в "
+"елементи от месечния изглед."
 
 #. i18n: ectx: tooltip, entry (EnableMonthItemIcons), group (Month View)
 #: eventviews.kcfg:266 viewerapp/settings.kcfg:112
@@ -1247,9 +1247,7 @@ msgstr "Показване на началния и крайния час в е�
 #: eventviews.kcfg:283 viewerapp/settings.kcfg:117
 #, kde-format
 msgid "Check this box to display to-dos in the month view."
-msgstr ""
-"Поставете отметка в това квадратче, за да се покажат задачи в месечния "
-"изглед."
+msgstr "Поставете отметка тук, за да се покажат задачи в месечния изглед."
 
 #. i18n: ectx: tooltip, entry (ShowTodosMonthView), group (Month View)
 #: eventviews.kcfg:284 viewerapp/settings.kcfg:118
@@ -1267,9 +1265,7 @@ msgstr "Показване на дневници"
 #: eventviews.kcfg:289 viewerapp/settings.kcfg:123
 #, kde-format
 msgid "Check this box to display journals in the month view."
-msgstr ""
-"Поставете отметка в това квадратче, за да се показват дневници в месечния "
-"изглед."
+msgstr "Поставете отметка тук, за да се показват дневници в месечния изглед."
 
 #. i18n: ectx: tooltip, entry (ShowJournalsMonthView), group (Month View)
 #: eventviews.kcfg:290 viewerapp/settings.kcfg:124
@@ -1342,11 +1338,11 @@ msgid ""
 "but other widgets, such as the date navigator, the item details and the "
 "calendars list, will not be displayed."
 msgstr ""
-"Поставете отметка в това квадратче, за да използвате пълния прозорец на "
-"KOrganizer при показване на месечния изглед. Ако това квадратче е отметнато, "
-"ще спечелите малко място за месечния изглед, но други уиджети, като например "
-"навигатора на датите, подробностите за елементите и списъка с календари, "
-"няма да се покаже."
+"Поставете отметка тук, за да използвате пълния прозорец на KOrganizer при "
+"показване на месечния изглед. Ако това квадратче е отметнато, ще спечелите "
+"малко място за месечния изглед, но други уиджети, като например навигатора "
+"на датите, подробностите за елементите и списъка с календари, няма да се "
+"покаже."
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
 #: eventviews.kcfg:316
@@ -1406,17 +1402,17 @@ msgid ""
 "(both inside and border) in the color of their associated tag.  Please use "
 "the Colors and Fonts configuration page for setting these colors."
 msgstr ""
-"Изберете опцията „Само категория“, ако искате да представите елементи от "
-"календара (както от вътре, така и от рамката) в цвета на свързаната с тях "
-"категория. Моля, използвайте страницата за конфигурация Цветове и шрифтове "
-"за задаване на тези цветове."
+"Изберете опцията „Само етикет“, ако искате да представите елементи от "
+"календара (както от вътре, така и от рамката) в цвета на етикета. "
+"Използвайте страницата за конфигурация Цветове и шрифтове за задаване на "
+"тези цветове."
 
 #. i18n: ectx: tooltip, entry, group (Month View)
 #: eventviews.kcfg:327
 #, kde-format
 msgid "Draw month items using their tag color for the inside and border"
 msgstr ""
-"Представяне на месечни елементи, използвайки цвета на тяхната категория за "
+"Представяне на месечни елементи, използвайки цвета на техния етикет за "
 "вътрешността и рамката"
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
@@ -1428,8 +1424,8 @@ msgid ""
 "Colors and Fonts configuration page for setting these colors."
 msgstr ""
 "Изберете опцията  „Само календар \", ако искате да представите елементи от "
-"календара (както отвътре, така и от рамката) в цвета на календара им. Моля, "
-"използвайте страницата за конфигурация Цветове и шрифтове за задаване на "
+"календара (както отвътре, така и рамката) в цвета на календара им. "
+"Използвайте страницата за конфигурация Цветове и шрифтове за задаване на "
 "тези цветове."
 
 #. i18n: ectx: tooltip, entry, group (Month View)
@@ -1469,8 +1465,8 @@ msgid ""
 "Check this box if you want all completed to-dos to be always grouped at the "
 "bottom of the to-do list."
 msgstr ""
-"Поставете отметка в това квадратче, ако искате всички завършени задачи "
-"винаги да бъдат групирани в долната част на списъка със задачи."
+"Поставете отметка тук, ако искате всички завършени задачи винаги да бъдат "
+"групирани в долната част на списъка със задачи."
 
 #. i18n: ectx: label, entry, group (Todo View)
 #: eventviews.kcfg:351 viewerapp/settings.kcfg:167
@@ -1487,11 +1483,11 @@ msgid ""
 "list view, but other widgets, such as the date navigator, the to-do details "
 "and the calendars list, will not be displayed."
 msgstr ""
-"Поставете отметка в това квадратче, за да използвате пълния прозорец на "
-"KOrganizer, когато показвате изгледа на списъка със задачи. Ако това поле е "
-"поставено, ще спечелите малко място за изгледа на списъка със задачи, но "
-"други джаджи, като например навигатора на датите, -до подробности и списък с "
-"календари, няма да бъдат показани."
+"Поставете отметка тук, за да използвате пълния прозорец на KOrganizer, "
+"когато показвате изгледа на списъка със задачи. Ако това поле е поставено, "
+"ще спечелите малко място за изгледа на списъка със задачи, но други джаджи, "
+"като например навигатора на датите, -до подробности и списък с календари, "
+"няма да бъдат показани."
 
 #. i18n: ectx: label, entry, group (Todo View)
 #: eventviews.kcfg:356
@@ -1512,8 +1508,8 @@ msgid ""
 "Check this box if you want to see all your to-dos in a flat list instead of "
 "being arranged in a hierarchical tree."
 msgstr ""
-"Поставете отметка в това квадратче, ако искате да видите всичките си задачи "
-"в плосък списък, вместо да сте подредени в йерархично дърво."
+"Поставете отметка тук, ако искате да видите всичките си задачи в плосък "
+"списък, вместо да сте подредени в йерархично дърво."
 
 #. i18n: ectx: label, entry, group (Todo View)
 #: eventviews.kcfg:362 viewerapp/settings.kcfg:172
@@ -1528,7 +1524,7 @@ msgid ""
 "Check this box to record the completion of a to-do in a new entry of your "
 "journal automatically."
 msgstr ""
-"Включете тази отметка, ако искате да автоматично да запишете завършена "
+"Поставете отметка тук, ако искате да автоматично да запишете завършена "
 "задача в дневника."
 
 #. i18n: ectx: label, entry, group (Colors)
@@ -2411,7 +2407,7 @@ msgid ""
 "tags."
 msgstr ""
 "Използвайте този падащ списък, за да филтрирате задачите, които са показани "
-"от списък с избрани категории."
+"от списък с избрани етикети."
 
 #: todo/todoviewquicksearch.cpp:50
 #, kde-format
@@ -2752,7 +2748,7 @@ msgstr ""
 #: viewerapp/settings.kcfg:212
 #, kde-format
 msgid "\"No category\" color (for \"Only category\" drawing schemes)"
-msgstr "\"Без категория\" цвят (за \"Само категории\" схеми за изписване)"
+msgstr "Цвят \"Без категория\" (за схеми за представяне „Само категории“)"
 
 #. i18n: ectx: whatsthis, entry, group (Colors)
 #: viewerapp/settings.kcfg:213
@@ -2789,11 +2785,11 @@ msgid ""
 "should check this box if you want to use the groupware functionality (e.g. "
 "Configuring Kontact as a KDE Kolab client)."
 msgstr ""
-"Поставете отметка в това квадратче, за да активирате автоматично генериране "
-"на поща при създаване, актуализиране или изтриване на събития (или задачи), "
-"включващи други участници. Трябва да поставите отметка в това квадратче, ако "
-"искате да използвате функционалността на груповия софтуер (напр. "
-"Конфигуриране на Kontact като клиент на KDE Kolab) ."
+"Поставете отметка тук, за да активирате автоматично генериране на поща при "
+"създаване, актуализиране или изтриване на събития (или задачи), включващи "
+"други участници. Трябва да поставите отметка в това квадратче, ако искате да "
+"използвате функционалността на груповия софтуер (напр. Конфигуриране на "
+"Kontact като клиент на KDE Kolab) ."
 
 #: whatsnext/whatsnextview.cpp:62
 #, kde-format
