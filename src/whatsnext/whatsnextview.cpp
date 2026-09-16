@@ -311,7 +311,7 @@ void WhatsNextView::appendTodo(const Akonadi::CollectionCalendar::Ptr &calendar,
             mText +=
                 i18nc("to-do due date",
                       "  (Due: %1)",
-                      todo->allDay() ? QLocale().toString(todo->dtDue().date(), QLocale::LongFormat) : QLocale().toString(todo->dtDue(), QLocale::LongFormat));
+                      todo->allDay() ? QLocale().toString(todo->dtDue().date(), QLocale::LongFormat) : QLocale().toString(todo->dtDue(), QLocale::ShortFormat));
         }
     }
     mText += "</li>\n"_L1;

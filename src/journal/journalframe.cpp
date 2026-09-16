@@ -291,7 +291,7 @@ void JournalFrame::readJournal(const Akonadi::Item &item)
     QTextCharFormat dateFormat = bodyFormat;
     dateFormat.setFontWeight(QFont::Bold);
     dateFormat.setFontPointSize(baseFontSize + 1);
-    cursor.insertText(j->allDay() ? QLocale().toString(j->dtStart().date(), QLocale::LongFormat) : QLocale().toString(j->dtStart(), QLocale::LongFormat),
+    cursor.insertText(j->allDay() ? QLocale().toString(j->dtStart().date(), QLocale::LongFormat) : QLocale().toString(j->dtStart(), QLocale::ShortFormat),
                       dateFormat);
     cursor.insertBlock();
     cursor.insertBlock();
