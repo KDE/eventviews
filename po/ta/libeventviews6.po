@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-28 00:46+0000\n"
-"PO-Revision-Date: 2026-05-10 16:36+0530\n"
+"PO-Revision-Date: 2026-09-20 14:18+0200\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.04.1\n"
+"X-Generator: Lokalize 26.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -128,8 +128,7 @@ msgid "Unable to save %1 \"%2\"."
 msgstr "\"%2\" என்ற %1 தனை சேமிக்க முடியவில்லை."
 
 #: agenda/timelabels.cpp:328
-#, fuzzy, kde-format
-#| msgid "&Add Timezones…"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&Add Timezones…"
 msgstr "நேரமண்டலங்களை &சேர்…"
@@ -151,8 +150,7 @@ msgid ""
 msgstr ""
 
 #: agenda/timelabels.cpp:336
-#, fuzzy, kde-format
-#| msgid "&Remove Timezone %1"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&Remove Timezone %1"
 msgstr "%1 என்ற நேரமண்டலத்தை &நீக்கு"
@@ -246,54 +244,42 @@ msgid ""
 msgstr ""
 
 #: agenda/timelabels.cpp:426
-#, fuzzy, kde-kuit-format
-#| msgctxt "title for timezone info, the timezone id and utc offset"
-#| msgid "<b>%1 (%2)</b>"
+#, kde-kuit-format
 msgctxt "@info:tooltip title for timezone info, the timezone id and utc offset"
 msgid "<b>%1 (%2)</b>"
 msgstr "<b>%1 (%2)</b>"
 
 #: agenda/timelabels.cpp:430
-#, fuzzy, kde-kuit-format
-#| msgctxt "heading for timezone display name"
-#| msgid "<i>Name:</i> %1"
+#, kde-kuit-format
 msgctxt "@info:tooltip heading for timezone display name"
 msgid "<emphasis>Name:</emphasis> %1"
-msgstr "<i>பெயர்:</i> %1"
+msgstr "<emphasis>பெயர்:</emphasis> %1"
 
 #: agenda/timelabels.cpp:434
-#, fuzzy, kde-kuit-format
-#| msgctxt "heading for timezone country"
-#| msgid "<i>Country:</i> %1"
+#, kde-kuit-format
 msgctxt "@info:tooltip heading for timezone country"
 msgid "<emphasis>Country:</emphasis> %1"
-msgstr "<i>நாடு:</i> %1"
+msgstr "<emphasis>நாடு:</emphasis> %1"
 
 #: agenda/timelabels.cpp:446
-#, fuzzy, kde-kuit-format
-#| msgctxt "heading for comma-separated list of timezone abbreviations"
-#| msgid "<i>Abbreviations:</i>"
+#, kde-kuit-format
 msgctxt ""
 "@info:tooltip heading for comma-separated list of timezone abbreviations"
 msgid "<emphasis>Abbreviations:</emphasis>"
-msgstr "<i>சுருக்கப்பெயர்கள்:</i>"
+msgstr "<emphasis>சுருக்கப்பெயர்கள்:</emphasis>"
 
 #: agenda/timelabels.cpp:452
-#, fuzzy, kde-kuit-format
-#| msgctxt "heading for the timezone comment"
-#| msgid "<i>Comment:</i> %1"
+#, kde-kuit-format
 msgctxt "@info:tooltip heading for the timezone comment"
 msgid "<emphasis>Comment:</emphasis> %1"
-msgstr "<i>குறிப்பு:</i> %1"
+msgstr "<emphasis>குறிப்பு:</emphasis> %1"
 
 #: agenda/timelabels.cpp:474
-#, fuzzy, kde-kuit-format
-#| msgctxt "[hour of the day][am/pm/00] [timezone id (timezone-offset)]"
-#| msgid "%1%2<br/>%3 (%4)"
+#, kde-kuit-format
 msgctxt ""
 "@info:tooltip [hour of the day][am/pm/00] [timezone id (timezone-offset)]"
 msgid "%1%2<nl/>%3 (%4)"
-msgstr "%1%2<br/>%3 (%4)"
+msgstr "%1%2<nl/>%3 (%4)"
 
 #: agenda/timescaleconfigdialog.cpp:50
 #, kde-format
@@ -350,10 +336,9 @@ msgstr "நீக்கவதை உறுதிப்படுத்து"
 
 #. i18n: ectx: tooltip, entry (Confirm), group (Save Settings)
 #: eventviews.kcfg:10
-#, fuzzy, kde-format
-#| msgid "Check this box to display a confirmation dialog when deleting items."
+#, kde-format
 msgid "Always confirm when deleting items"
-msgstr "உருப்படிகளை நீக்கும்போது உறுதிகோர வேண்டுமெனில் இப்பெட்டியைக் குறிக்கவும்."
+msgstr "நீக்குமுன் உறுதி கோரு"
 
 #. i18n: ectx: whatsthis, entry (Confirm), group (Save Settings)
 #: eventviews.kcfg:11
@@ -369,8 +354,7 @@ msgstr "புதிய நிகழ்வுகள், செய்யவேண
 
 #. i18n: ectx: label, entry (Destination), group (Save Settings)
 #: eventviews.kcfg:18
-#, fuzzy, kde-format
-#| msgid "Be added to the standard calendar"
+#, kde-format
 msgid "Be added to the default calendar"
 msgstr "இயல்பிருப்பு நாள்காட்டியில் சேர்"
 
@@ -479,7 +463,7 @@ msgstr "சுருக்க விளக்கங்களை கொண்ட 
 #: eventviews.kcfg:56
 #, kde-format
 msgid "Show event or to-do item tooltips"
-msgstr ""
+msgstr "நிகழ்வுகளுக்கும் செய்யவேண்டியவற்றிற்கும் கருவித்துப்புகளைக் காட்டு"
 
 #. i18n: ectx: whatsthis, entry, group (General View)
 #: eventviews.kcfg:57 viewerapp/settings.kcfg:10
@@ -660,8 +644,7 @@ msgstr ""
 
 #. i18n: ectx: label, entry (EnableAgendaItemIcons), group (Agenda View)
 #: eventviews.kcfg:114
-#, fuzzy, kde-format
-#| msgid "Show icons in agenda view items"
+#, kde-format
 msgid "Show icons in Agenda View items"
 msgstr "நிகழ்ச்சிநிரல் காட்சிமுறையில் சின்னங்களைக் காட்டு"
 
@@ -685,7 +668,7 @@ msgstr "நிகழ்ச்சிநிரல் காட்சிமுற�
 #: eventviews.kcfg:120
 #, kde-format
 msgid "Draw bold horizontal grid lines for the even hours"
-msgstr ""
+msgstr "இரட்டைப்படை எண்களில் கனமான கோடுகளை வரை"
 
 #. i18n: ectx: whatsthis, entry (EnableAgendaBoldEvenHours), group (Agenda View)
 #: eventviews.kcfg:121
@@ -702,8 +685,7 @@ msgstr ""
 
 #. i18n: ectx: label, entry (EnableAgendaItemDesc), group (Agenda View)
 #: eventviews.kcfg:126
-#, fuzzy, kde-format
-#| msgid "Show incidence descriptions in agenda view items"
+#, kde-format
 msgid "Show incidence descriptions in Agenda View items"
 msgstr "நிகழ்ச்சிநிரல் காட்சிமுறையில் நிகழ்வுகளின் விவரணங்களைக் காட்டு"
 
@@ -724,10 +706,9 @@ msgstr "நிகழ்ச்சிநிரல் காட்சிமுற�
 
 #. i18n: ectx: label, entry (EnableAgendaItemLocation), group (Agenda View)
 #: eventviews.kcfg:132
-#, fuzzy, kde-format
-#| msgid "Show incidence descriptions in agenda view items"
+#, kde-format
 msgid "Show incidence locations in Agenda View items"
-msgstr "நிகழ்ச்சிநிரல் காட்சிமுறையில் நிகழ்வுகளின் விவரணங்களைக் காட்டு"
+msgstr "நிகழ்ச்சிநிரல் காட்சிமுறையில் நிகழ்வுகளுக்கான இடங்களைக் காட்டு"
 
 #. i18n: ectx: whatsthis, entry (EnableAgendaItemLocation), group (Agenda View)
 #: eventviews.kcfg:133
@@ -748,7 +729,7 @@ msgstr "நிகழ்ச்சிநிரல் காட்சிமுற�
 #: eventviews.kcfg:138 eventviews.kcfg:246
 #, kde-format
 msgid "Color busy days with a different background color"
-msgstr ""
+msgstr "வேலையுள்ள நாட்களுக்கு வேறு பின்புலநிறத்தைப் பயன்படுத்து"
 
 #. i18n: ectx: tooltip, entry (ColorBusyDaysEnabled), group (Agenda View)
 #. i18n: ectx: tooltip, entry (ColorMonthBusyDaysEnabled), group (Month View)
@@ -811,10 +792,9 @@ msgstr "தற்போதைய நேரத்தைக் குறி"
 
 #. i18n: ectx: label, entry (MarcusBainsShowSeconds), group (Agenda View)
 #: eventviews.kcfg:156
-#, fuzzy, kde-format
-#| msgid "Show current-time (Marcus Bains) line"
+#, kde-format
 msgid "Show seconds and timezone on the current-time (Marcus Bains) line"
-msgstr "தற்போதைய நேரத்தை கோடாகக் காட்டு (Marcus Bains கோடு)"
+msgstr "தற்போதைய நேரத்திற்கான குறியில் நொடிகளையும் நேரமண்டலத்தையும் காட்டு"
 
 #. i18n: ectx: whatsthis, entry (MarcusBainsShowSeconds), group (Agenda View)
 #: eventviews.kcfg:157
@@ -837,6 +817,8 @@ msgstr "தற்போதைய நேரத்தைக் குறி"
 #, kde-format
 msgid "Time range selection in Agenda View starts event editor"
 msgstr ""
+"நிகழ்ச்சிநிரல் காட்சிமுறையில் ஓர் நேர இடைவெளியைத் தேர்ந்தெடுப்பது, நிகழ்வு திருத்தியைத் "
+"திறக்கும்"
 
 #. i18n: ectx: whatsthis, entry (SelectionStartsEditor), group (Agenda View)
 #: eventviews.kcfg:163 viewerapp/settings.kcfg:50
@@ -857,7 +839,7 @@ msgstr ""
 #: eventviews.kcfg:168
 #, kde-format
 msgid "Agenda Item Colors"
-msgstr ""
+msgstr "நிகழ்ச்சிநிரல் காட்சிமுறையில் உருப்படிகளுக்கான நிறங்கள்"
 
 #. i18n: ectx: label, entry, group (Agenda View)
 #. i18n: ectx: label, entry, group (Month View)
@@ -966,7 +948,7 @@ msgstr "பல நாள்காட்டிகளைக் காட்டு�
 #: eventviews.kcfg:197 viewerapp/settings.kcfg:84
 #, kde-format
 msgid "Merge all calendars into one view"
-msgstr ""
+msgstr "அனைத்து நாள்காட்டிகளையும் ஒருங்கே காட்டு"
 
 #. i18n: ectx: whatsthis, entry (AgendaViewCalendarDisplay), group (Agenda View)
 #: eventviews.kcfg:198
@@ -1000,13 +982,13 @@ msgstr ""
 #: eventviews.kcfg:204 viewerapp/settings.kcfg:91
 #, kde-format
 msgid "Show two calendars side-by-side"
-msgstr ""
+msgstr "இரண்டு நாள்காட்டிகளை பக்கத்துப்பக்கத்தில் காட்டு"
 
 #. i18n: ectx: label, entry (AgendaViewCalendarDisplay), group (Agenda View)
 #: eventviews.kcfg:207 viewerapp/settings.kcfg:94
 #, kde-format
 msgid "Switch between views with tabs"
-msgstr ""
+msgstr "தத்தல் விசையைக் கொண்டு காட்சிப்பகுதிகளுக்கிடையே தாவு"
 
 #. i18n: ectx: whatsthis, entry (AgendaViewCalendarDisplay), group (Agenda View)
 #: eventviews.kcfg:208 viewerapp/settings.kcfg:95
@@ -1026,7 +1008,7 @@ msgstr "நாள்காட்டிகளை கீற்றுகளில�
 #: eventviews.kcfg:215
 #, kde-format
 msgid "Highlight color"
-msgstr ""
+msgstr "தேர்ந்தெடுத்துள்ளதற்கான நிறம்"
 
 #. i18n: ectx: whatsthis, entry, group (Agenda View)
 #: eventviews.kcfg:216
@@ -1043,7 +1025,7 @@ msgstr ""
 #: viewerapp/settings.kcfg:197
 #, kde-format
 msgid "Working hours color"
-msgstr ""
+msgstr "வேலைநேர நிறம்"
 
 #. i18n: ectx: whatsthis, entry, group (Agenda View)
 #: eventviews.kcfg:221
@@ -1053,8 +1035,7 @@ msgstr ""
 
 #. i18n: ectx: label, entry (EnableMonthItemIcons), group (Month View)
 #: eventviews.kcfg:228
-#, fuzzy, kde-format
-#| msgid "Show icons in month view items"
+#, kde-format
 msgid "Show icons in Month View items"
 msgstr "மாதக் காட்சிமுறையில் சின்னங்களைக் காட்டு"
 
@@ -1075,10 +1056,9 @@ msgstr "மாதக் காட்சிமுறையில் சின்�
 
 #. i18n: ectx: label, entry (ShowTimeInMonthView), group (Month View)
 #: eventviews.kcfg:234
-#, fuzzy, kde-format
-#| msgid "Show icons in month view items"
+#, kde-format
 msgid "Show start-times without end-times in Month View items"
-msgstr "மாதக் காட்சிமுறையில் சின்னங்களைக் காட்டு"
+msgstr "மாதக் காட்சிமுறையில் நிகழ்வுகளின் துவக்க நேரத்தை மட்டும் காட்டு"
 
 #. i18n: ectx: whatsthis, entry (ShowTimeInMonthView), group (Month View)
 #: eventviews.kcfg:235
@@ -1098,10 +1078,9 @@ msgstr "மாதக் காட்சிமுறையில் சின்�
 
 #. i18n: ectx: label, entry (ShowEndTimeInMonthView), group (Month View)
 #: eventviews.kcfg:240
-#, fuzzy, kde-format
-#| msgid "Show icons in month view items"
+#, kde-format
 msgid "Show the start-time and the end-time in Month View items"
-msgstr "மாதக் காட்சிமுறையில் சின்னங்களைக் காட்டு"
+msgstr "மாதக் காட்சிமுறையில் நிகழ்வுகளின் துவக்க நேரத்துடன் முடிவு நேரத்தையும் காட்டு"
 
 #. i18n: ectx: whatsthis, entry (ShowEndTimeInMonthView), group (Month View)
 #: eventviews.kcfg:241
