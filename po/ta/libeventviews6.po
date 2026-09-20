@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-28 02:45+0000\n"
-"PO-Revision-Date: 2026-05-10 16:36+0530\n"
+"PO-Revision-Date: 2026-09-20 14:16+0200\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.04.1\n"
+"X-Generator: Lokalize 26.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -693,7 +693,7 @@ msgstr ""
 #: eventviews.kcfg:156
 #, kde-format
 msgid "Draw bold horizontal grid lines for the even hours"
-msgstr ""
+msgstr "இரட்டைப்படை எண்களில் கனமான கோடுகளை வரை"
 
 #. i18n: ectx: whatsthis, entry (EnableAgendaBoldEvenHours), group (Agenda View)
 #: eventviews.kcfg:157
@@ -957,7 +957,7 @@ msgstr ""
 #: eventviews.kcfg:230 eventviews.kcfg:338
 #, kde-format
 msgid "Color busy days with a different background color"
-msgstr ""
+msgstr "வேலையுள்ள நாட்களுக்கு வேறு பின்புலநிறத்தைப் பயன்படுத்து"
 
 #. i18n: ectx: whatsthis, entry (ColorBusyDaysEnabled), group (Agenda View)
 #: eventviews.kcfg:231
@@ -979,7 +979,7 @@ msgstr "பல நாள்காட்டிகளைக் காட்டு�
 #: eventviews.kcfg:238 viewerapp/settings.kcfg:84
 #, kde-format
 msgid "Merge all calendars into one view"
-msgstr ""
+msgstr "அனைத்து நாள்காட்டிகளையும் ஒருங்கே காட்டு"
 
 #. i18n: ectx: whatsthis, entry (AgendaViewCalendarDisplay), group (Agenda View)
 #: eventviews.kcfg:239 viewerapp/settings.kcfg:85
@@ -1013,13 +1013,13 @@ msgstr ""
 #: eventviews.kcfg:245 viewerapp/settings.kcfg:91
 #, kde-format
 msgid "Show two calendars side-by-side"
-msgstr ""
+msgstr "இரண்டு நாள்காட்டிகளை பக்கத்துப்பக்கத்தில் காட்டு"
 
 #. i18n: ectx: label, entry (AgendaViewCalendarDisplay), group (Agenda View)
 #: eventviews.kcfg:248 viewerapp/settings.kcfg:94
 #, kde-format
 msgid "Switch between views with tabs"
-msgstr ""
+msgstr "தத்தல் விசையைக் கொண்டு காட்சிப்பகுதிகளுக்கிடையே தாவு"
 
 #. i18n: ectx: whatsthis, entry (AgendaViewCalendarDisplay), group (Agenda View)
 #: eventviews.kcfg:249 viewerapp/settings.kcfg:95
@@ -1416,7 +1416,7 @@ msgstr ""
 #: viewerapp/settings.kcfg:197
 #, kde-format
 msgid "Working hours color"
-msgstr ""
+msgstr "வேலைநேர நிறம்"
 
 #. i18n: ectx: whatsthis, entry, group (Colors)
 #: eventviews.kcfg:392 viewerapp/settings.kcfg:198
@@ -1537,7 +1537,7 @@ msgstr ""
 #: eventviews.kcfg:495 eventviews.kcfg:592
 #, kde-format
 msgid "Highlight color"
-msgstr ""
+msgstr "தேர்ந்தெடுத்துள்ளதற்கான நிறம்"
 
 #. i18n: ectx: whatsthis, entry, group (Theming)
 #: eventviews.kcfg:496
