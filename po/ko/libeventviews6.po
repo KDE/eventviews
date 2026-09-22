@@ -1,21 +1,21 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2017, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 Shinjo Park <kde@peremen.name>
+# SPDX-FileCopyrightText: 2017, 2019-2026 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-28 02:45+0000\n"
-"PO-Revision-Date: 2026-06-06 11:50+0200\n"
-"Last-Translator: Shinjo Park <kde@peremen.name>\n"
-"Language-Team: Korean <kde-kr@kde.org>\n"
+"PO-Revision-Date: 2026-09-21 21:22+0200\n"
+"Last-Translator: Shinjo Park <peremen@gmail.com>\n"
+"Language-Team: Korean\n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 26.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -508,7 +508,7 @@ msgstr ""
 #: eventviews.kcfg:80
 #, kde-format
 msgid "Day begins at"
-msgstr "일일 시작 시간"
+msgstr "주간 시작 시간"
 
 #. i18n: ectx: whatsthis, entry (DayBegins), group (Time &amp; Date)
 #: eventviews.kcfg:81
@@ -594,7 +594,7 @@ msgstr ""
 #: eventviews.kcfg:109
 #, kde-format
 msgid "To-dos use tag colors"
-msgstr "할 일에 태그색상 적용"
+msgstr "할 일에 태그 색상 적용"
 
 #. i18n: ectx: whatsthis, entry, group (General View)
 #: eventviews.kcfg:110
@@ -693,7 +693,7 @@ msgid ""
 "Check this box to show the days containing journals in bold typeface in the "
 "Date Navigator when in journal view."
 msgstr ""
-"이 옵션을 사용하면 할 일 보기의 날짜 탐색기에 저널이 있는 날을 굵은 글씨로 표"
+"이 옵션을 사용하면 저널 보기의 날짜 탐색기에 저널이 있는 날을 굵은 글씨로 표"
 "시합니다."
 
 #. i18n: ectx: label, entry (WeekNumbersShowWork), group (General View)
@@ -1279,7 +1279,7 @@ msgstr ""
 msgid ""
 "Draw month items in their tag color inside and calendar color for their "
 "border"
-msgstr "월간 보기 항목 내부에 태그 색상, 테두리에 캘린더 색상 사용"
+msgstr "월 항목 내부에 태그 색상, 테두리에 캘린더 색상 사용"
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
 #: eventviews.kcfg:321
@@ -1300,7 +1300,7 @@ msgstr ""
 msgid ""
 "Draw month items in their calendar color inside and tag color for their "
 "border"
-msgstr "월간 보기 항목 내부에 캘린더 색상, 테두리에 태그 색상 사용"
+msgstr "월 항목 내부에 캘린더 색상, 테두리에 태그 색상 사용"
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
 #: eventviews.kcfg:326
@@ -1317,7 +1317,7 @@ msgstr ""
 #: eventviews.kcfg:327
 #, kde-format
 msgid "Draw month items using their tag color for the inside and border"
-msgstr "월간 보기 항목 내부와 테두리에 태그 색상 사용"
+msgstr "월 항목 내부와 테두리에 태그 색상 사용"
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
 #: eventviews.kcfg:331 viewerapp/settings.kcfg:152
@@ -1355,7 +1355,7 @@ msgstr ""
 #: eventviews.kcfg:346 viewerapp/settings.kcfg:162
 #, kde-format
 msgid "Always display completed to-dos at the bottom of the list"
-msgstr "완료한 할 일을 항상 목록 아래쪽에 표시"
+msgstr "완료된 할 일을 항상 목록 아래쪽에 표시"
 
 #. i18n: ectx: whatsthis, entry, group (Todo View)
 #: eventviews.kcfg:347 viewerapp/settings.kcfg:163
@@ -1673,7 +1673,7 @@ msgstr ""
 #: eventviews.kcfg:598
 #, kde-format
 msgid "Select the working hours background color for the Month view here."
-msgstr "월간 보기에 사용할 업무 시간 배경색을 선택하십시오."
+msgstr "월간 보기의 업무 시간에 사용할 배경색을 선택하십시오."
 
 #. i18n: ectx: label, entry (MonthTodayColor), group (Theme/Month view)
 #: eventviews.kcfg:602
