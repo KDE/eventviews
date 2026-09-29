@@ -381,7 +381,6 @@ msgstr "Запрашивать подтверждение при удалени�
 msgid "New Events, To-dos and Journal Entries Should"
 msgstr "Новые события, задачи и записи дневника"
 
-# BUGME: standard -> default? --aspotashev
 #. i18n: ectx: label, entry (Destination), group (Save Settings)
 #: eventviews.kcfg:18
 #, kde-format
