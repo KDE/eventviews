@@ -52,7 +52,7 @@ public:
     [[nodiscard]] int columnWidth() const;
     [[nodiscard]] int rowHeight() const;
 
-    MonthCell *firstCellForMonthItem(MonthItem *manager);
+    [[nodiscard]] MonthCell *firstCellForMonthItem(const MonthItem *manager);
     [[nodiscard]] int height(MonthItem *manager);
     [[nodiscard]] int itemHeight();
     [[nodiscard]] int itemHeightIncludingSpacing();

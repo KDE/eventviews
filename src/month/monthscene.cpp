@@ -99,7 +99,7 @@ int MonthScene::itemHeight()
     return MonthCell::topMargin();
 }
 
-MonthCell *MonthScene::firstCellForMonthItem(MonthItem *manager)
+MonthCell *MonthScene::firstCellForMonthItem(const MonthItem *manager)
 {
     for (QDate d = manager->startDate(); d <= manager->endDate(); d = d.addDays(1)) {
         MonthCell *monthCell = mMonthCellMap.value(d); // NOLINT(misc-const-correctness)
