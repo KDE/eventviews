@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-28 00:46+0000\n"
+"POT-Creation-Date: 2026-10-01 00:46+0000\n"
 "PO-Revision-Date: 2026-09-09 20:36+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -46,7 +46,7 @@ msgctxt "@info/plain"
 msgid "Dissociate event from recurrence"
 msgstr "Отделяне на събитието от повторение"
 
-#: agenda/agenda.cpp:1204 month/monthitem.cpp:450
+#: agenda/agenda.cpp:1204 month/monthitem.cpp:448
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -55,13 +55,13 @@ msgstr ""
 "Не може да се добави елементът за изключение в календара. Няма да се прави "
 "промяна."
 
-#: agenda/agenda.cpp:1206 month/monthitem.cpp:452
+#: agenda/agenda.cpp:1206 month/monthitem.cpp:450
 #, kde-format
 msgctxt "@title:window"
 msgid "Error Occurred"
 msgstr "Възникна грешка"
 
-#: agenda/agendaitem.cpp:86 list/listview.cpp:431
+#: agenda/agendaitem.cpp:86 list/listview.cpp:429
 #, kde-format
 msgid "%2 (1 year)"
 msgid_plural "%2 (%1 years)"
@@ -1826,110 +1826,110 @@ msgstr "Прикачване само на връзка към съобщени�
 msgid "Attach complete message"
 msgstr "Прикачване на пълно съобщение"
 
-#: journal/journalframe.cpp:150
+#: journal/journalframe.cpp:148
 #, kde-format
 msgctxt "@action: button"
 msgid "&Edit"
 msgstr "&Редактиране"
 
-#: journal/journalframe.cpp:153
+#: journal/journalframe.cpp:151
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Edit this journal entry"
 msgstr "Редактиране на този запис в дневника"
 
-#: journal/journalframe.cpp:154
+#: journal/journalframe.cpp:152
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Opens an editor dialog for this journal entry"
 msgstr "Отваря диалогов прозорец на редактор за този запис в дневника"
 
-#: journal/journalframe.cpp:160
+#: journal/journalframe.cpp:158
 #, kde-format
 msgctxt "@action: button"
 msgid "&Delete"
 msgstr "&Изтриване"
 
-#: journal/journalframe.cpp:163
+#: journal/journalframe.cpp:161
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete this journal entry"
 msgstr "Изтриване на този запис в дневника"
 
-#: journal/journalframe.cpp:164
+#: journal/journalframe.cpp:162
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Delete this journal entry"
 msgstr "Изтриване на този запис в дневника"
 
-#: journal/journalframe.cpp:169
+#: journal/journalframe.cpp:167
 #, kde-format
 msgctxt "@action: button"
 msgid "&Print"
 msgstr "&Печат"
 
-#: journal/journalframe.cpp:173
+#: journal/journalframe.cpp:171
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Print this journal entry"
 msgstr "Печат на този запис в дневника"
 
-#: journal/journalframe.cpp:174
+#: journal/journalframe.cpp:172
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Opens a print dialog for this journal entry"
 msgstr "Отваря диалогов прозорец за печат за този запис в дневника"
 
-#: journal/journalframe.cpp:179
+#: journal/journalframe.cpp:177
 #, kde-format
 msgctxt "@action: button"
 msgid "Print preview"
 msgstr "Преглед преди печат"
 
-#: journal/journalframe.cpp:183
+#: journal/journalframe.cpp:181
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Print preview this journal entry"
 msgstr "Предварителен преглед на този запис в дневника"
 
-#: journal/journalframe.cpp:184
+#: journal/journalframe.cpp:182
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Opens a print preview of this journal entry"
 msgstr "Отваря диалогов прозорец за печат за този запис в дневника"
 
-#: list/listview.cpp:57
+#: list/listview.cpp:55
 #, kde-format
 msgctxt "%1 is an item summary. %2 is the date when this item reoccurs"
 msgid "%1 (next: %2)"
 msgstr "%1 (следващ: %2)"
 
-#: list/listview.cpp:294
+#: list/listview.cpp:292
 #, kde-format
 msgid "Summary"
 msgstr "Описание"
 
-#: list/listview.cpp:295
+#: list/listview.cpp:293
 #, kde-format
 msgid "Start Date/Time"
 msgstr "Начална дата/час"
 
-#: list/listview.cpp:296
+#: list/listview.cpp:294
 #, kde-format
 msgid "End Date/Time"
 msgstr "Крайна дата/час"
 
-#: list/listview.cpp:297
+#: list/listview.cpp:295
 #, kde-format
 msgid "Tags"
 msgstr "Етикети"
 
-#: list/listview.cpp:370
+#: list/listview.cpp:368
 #, kde-format
 msgid "Summary [%1 - %2]"
 msgstr "Обобщение [ %1 - %2]"
 
-#: month/monthitem.cpp:307
+#: month/monthitem.cpp:305
 #, kde-format
 msgctxt "@info/plain a person's age"
 msgid "1 year old"
@@ -1937,7 +1937,7 @@ msgid_plural "%1 years old"
 msgstr[0] "на 1 година"
 msgstr[1] "на %1 години"
 
-#: month/monthitem.cpp:309
+#: month/monthitem.cpp:307
 #, kde-format
 msgctxt "@info/plain number of years of marriage"
 msgid "1 year"
@@ -1945,7 +1945,7 @@ msgid_plural "%1 years"
 msgstr[0] "1 година"
 msgstr[1] "%1 години"
 
-#: month/monthitem.cpp:443
+#: month/monthitem.cpp:441
 #, kde-format
 msgctxt "@info/plain"
 msgid "Move occurrence(s)"
@@ -3082,34 +3082,34 @@ msgstr ""
 "използвате функционалността на груповия софтуер (напр. Конфигуриране на "
 "Kontact като клиент на KDE Kolab) ."
 
-#: whatsnext/whatsnextview.cpp:62
+#: whatsnext/whatsnextview.cpp:60
 #, kde-format
 msgid "To-dos:"
 msgstr "Задачи:"
 
-#: whatsnext/whatsnextview.cpp:78
+#: whatsnext/whatsnextview.cpp:76
 #, kde-format
 msgid "What's Next?"
 msgstr "Какво следва?"
 
-#: whatsnext/whatsnextview.cpp:85 whatsnext/whatsnextview.cpp:272
-#: whatsnext/whatsnextview.cpp:277
+#: whatsnext/whatsnextview.cpp:83 whatsnext/whatsnextview.cpp:270
+#: whatsnext/whatsnextview.cpp:275
 #, kde-format
 msgctxt "date from - to"
 msgid "%1 - %2"
 msgstr "%1 - %2"
 
-#: whatsnext/whatsnextview.cpp:102
+#: whatsnext/whatsnextview.cpp:100
 #, kde-format
 msgid "Events:"
 msgstr "Събития:"
 
-#: whatsnext/whatsnextview.cpp:194 whatsnext/whatsnextview.cpp:218
+#: whatsnext/whatsnextview.cpp:192 whatsnext/whatsnextview.cpp:216
 #, kde-format
 msgid "Events and to-dos that need a reply:"
 msgstr "Събития и задачи, които се нуждаят от отговор:"
 
-#: whatsnext/whatsnextview.cpp:284
+#: whatsnext/whatsnextview.cpp:282
 #, kde-format
 msgctxt "date, from - to"
 msgid "%1, %2 - %3"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-28 00:46+0000\n"
+"POT-Creation-Date: 2026-10-01 00:46+0000\n"
 "PO-Revision-Date: 2024-12-24 20:39+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -49,7 +49,7 @@ msgctxt "@info/plain"
 msgid "Dissociate event from recurrence"
 msgstr "घटनां पुनरावृत्तितः विच्छेदयन्तु"
 
-#: agenda/agenda.cpp:1204 month/monthitem.cpp:450
+#: agenda/agenda.cpp:1204 month/monthitem.cpp:448
 #, fuzzy, kde-format
 #| msgid ""
 #| "Unable to add the exception item to the calendar. No change will be done."
@@ -58,13 +58,13 @@ msgid ""
 "Unable to add the exception item to the calendar. No change will be done."
 msgstr "अपवाद-वस्तुं पञ्चाङ्गे योजयितुं असमर्थः । परिवर्तनं न भविष्यति।"
 
-#: agenda/agenda.cpp:1206 month/monthitem.cpp:452
+#: agenda/agenda.cpp:1206 month/monthitem.cpp:450
 #, kde-format
 msgctxt "@title:window"
 msgid "Error Occurred"
 msgstr "त्रुटिः अभवत्"
 
-#: agenda/agendaitem.cpp:86 list/listview.cpp:431
+#: agenda/agendaitem.cpp:86 list/listview.cpp:429
 #, kde-format
 msgid "%2 (1 year)"
 msgid_plural "%2 (%1 years)"
@@ -1889,118 +1889,118 @@ msgstr "केवलं सन्देशस्य लिङ्कं संल
 msgid "Attach complete message"
 msgstr "सम्पूर्ण सन्देश संलग्न करें"
 
-#: journal/journalframe.cpp:150
+#: journal/journalframe.cpp:148
 #, fuzzy, kde-format
 #| msgid "&Edit"
 msgctxt "@action: button"
 msgid "&Edit"
 msgstr "&सम्पादन"
 
-#: journal/journalframe.cpp:153
+#: journal/journalframe.cpp:151
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Edit this journal entry"
 msgstr "एतत् पत्रिकाप्रविष्टिं सम्पादयन्तु"
 
-#: journal/journalframe.cpp:154
+#: journal/journalframe.cpp:152
 #, fuzzy, kde-format
 #| msgid "Opens an editor dialog for this journal entry"
 msgctxt "@info:whatsthis"
 msgid "Opens an editor dialog for this journal entry"
 msgstr "अस्य पत्रिकाप्रविष्टेः कृते सम्पादकसंवादं उद्घाटयति"
 
-#: journal/journalframe.cpp:160
+#: journal/journalframe.cpp:158
 #, fuzzy, kde-format
 #| msgid "&Delete"
 msgctxt "@action: button"
 msgid "&Delete"
 msgstr "&लुप्"
 
-#: journal/journalframe.cpp:163
+#: journal/journalframe.cpp:161
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete this journal entry"
 msgstr "एतत् पत्रिकाप्रविष्टिं विलोपयन्तु"
 
-#: journal/journalframe.cpp:164
+#: journal/journalframe.cpp:162
 #, fuzzy, kde-format
 #| msgid "Delete this journal entry"
 msgctxt "@info:whatsthis"
 msgid "Delete this journal entry"
 msgstr "एतत् पत्रिकाप्रविष्टिं विलोपयन्तु"
 
-#: journal/journalframe.cpp:169
+#: journal/journalframe.cpp:167
 #, fuzzy, kde-format
 #| msgid "&Print"
 msgctxt "@action: button"
 msgid "&Print"
 msgstr "&मुद्रण"
 
-#: journal/journalframe.cpp:173
+#: journal/journalframe.cpp:171
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Print this journal entry"
 msgstr "एतत् पत्रिकाप्रविष्टिं मुद्रयन्तु"
 
-#: journal/journalframe.cpp:174
+#: journal/journalframe.cpp:172
 #, fuzzy, kde-format
 #| msgid "Opens a print dialog for this journal entry"
 msgctxt "@info:whatsthis"
 msgid "Opens a print dialog for this journal entry"
 msgstr "अस्य पत्रिकाप्रविष्टेः कृते मुद्रणसंवादं उद्घाटयति"
 
-#: journal/journalframe.cpp:179
+#: journal/journalframe.cpp:177
 #, fuzzy, kde-format
 #| msgid "Print preview"
 msgctxt "@action: button"
 msgid "Print preview"
 msgstr "मुद्रण पूर्वावलोकनम्"
 
-#: journal/journalframe.cpp:183
+#: journal/journalframe.cpp:181
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Print preview this journal entry"
 msgstr "मुद्रणपूर्वावलोकनं अस्य पत्रिकाप्रविष्टेः"
 
-#: journal/journalframe.cpp:184
+#: journal/journalframe.cpp:182
 #, fuzzy, kde-format
 #| msgid "Opens a print dialog for this journal entry"
 msgctxt "@info:whatsthis"
 msgid "Opens a print preview of this journal entry"
 msgstr "अस्य पत्रिकाप्रविष्टेः कृते मुद्रणसंवादं उद्घाटयति"
 
-#: list/listview.cpp:57
+#: list/listview.cpp:55
 #, kde-format
 msgctxt "%1 is an item summary. %2 is the date when this item reoccurs"
 msgid "%1 (next: %2)"
 msgstr "%1 (अनन्तरम्: %2)"
 
-#: list/listview.cpp:294
+#: list/listview.cpp:292
 #, kde-format
 msgid "Summary"
 msgstr "संक्षेपः"
 
-#: list/listview.cpp:295
+#: list/listview.cpp:293
 #, kde-format
 msgid "Start Date/Time"
 msgstr "प्रारम्भ तिथि/समय"
 
-#: list/listview.cpp:296
+#: list/listview.cpp:294
 #, kde-format
 msgid "End Date/Time"
 msgstr "समाप्तितिथिः/समयः"
 
-#: list/listview.cpp:297
+#: list/listview.cpp:295
 #, kde-format
 msgid "Tags"
 msgstr "टैग्स"
 
-#: list/listview.cpp:370
+#: list/listview.cpp:368
 #, kde-format
 msgid "Summary [%1 - %2]"
 msgstr "सारांशः [%1 - %2] ।"
 
-#: month/monthitem.cpp:307
+#: month/monthitem.cpp:305
 #, fuzzy, kde-format
 #| msgid "%2 1 year"
 #| msgid_plural "%2 %1 years"
@@ -2010,7 +2010,7 @@ msgid_plural "%1 years old"
 msgstr[0] "%2 १ वर्ष"
 msgstr[1] "%2 %1 वर्ष"
 
-#: month/monthitem.cpp:309
+#: month/monthitem.cpp:307
 #, fuzzy, kde-format
 #| msgid "%2 1 year"
 #| msgid_plural "%2 %1 years"
@@ -2020,7 +2020,7 @@ msgid_plural "%1 years"
 msgstr[0] "%2 १ वर्ष"
 msgstr[1] "%2 %1 वर्ष"
 
-#: month/monthitem.cpp:443
+#: month/monthitem.cpp:441
 #, fuzzy, kde-format
 #| msgid "Move occurrence(s)"
 msgctxt "@info/plain"
@@ -3130,34 +3130,34 @@ msgstr ""
 "(उदा. Kontact इत्यस्य KDE Kolab क्लायन्ट् इत्यस्य रूपेण विन्यस्तं) उपयोक्तुं इच्छति तर्हि "
 "भवान् एतत् पेटीम् अवलोकयतु ।"
 
-#: whatsnext/whatsnextview.cpp:62
+#: whatsnext/whatsnextview.cpp:60
 #, kde-format
 msgid "To-dos:"
 msgstr "कार्याणि :"
 
-#: whatsnext/whatsnextview.cpp:78
+#: whatsnext/whatsnextview.cpp:76
 #, kde-format
 msgid "What's Next?"
 msgstr "अग्रे किम् ?"
 
-#: whatsnext/whatsnextview.cpp:85 whatsnext/whatsnextview.cpp:272
-#: whatsnext/whatsnextview.cpp:277
+#: whatsnext/whatsnextview.cpp:83 whatsnext/whatsnextview.cpp:270
+#: whatsnext/whatsnextview.cpp:275
 #, kde-format
 msgctxt "date from - to"
 msgid "%1 - %2"
 msgstr "%1 - %2"
 
-#: whatsnext/whatsnextview.cpp:102
+#: whatsnext/whatsnextview.cpp:100
 #, kde-format
 msgid "Events:"
 msgstr "घटनाः :"
 
-#: whatsnext/whatsnextview.cpp:194 whatsnext/whatsnextview.cpp:218
+#: whatsnext/whatsnextview.cpp:192 whatsnext/whatsnextview.cpp:216
 #, kde-format
 msgid "Events and to-dos that need a reply:"
 msgstr "घटनाः कार्याणि च येषां उत्तरस्य आवश्यकता वर्तते:"
 
-#: whatsnext/whatsnextview.cpp:284
+#: whatsnext/whatsnextview.cpp:282
 #, kde-format
 msgctxt "date, from - to"
 msgid "%1, %2 - %3"

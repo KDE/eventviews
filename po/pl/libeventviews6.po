@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-28 00:46+0000\n"
+"POT-Creation-Date: 2026-10-01 00:46+0000\n"
 "PO-Revision-Date: 2026-09-27 21:07+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
@@ -49,7 +49,7 @@ msgctxt "@info/plain"
 msgid "Dissociate event from recurrence"
 msgstr "Oddziel zdarzenie od ciągu zdarzeń"
 
-#: agenda/agenda.cpp:1204 month/monthitem.cpp:450
+#: agenda/agenda.cpp:1204 month/monthitem.cpp:448
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -58,13 +58,13 @@ msgstr ""
 "Nie można dodać elementu wyjątku do kalendarza. Nie zostanie wprowadzona "
 "żadna zmiana."
 
-#: agenda/agenda.cpp:1206 month/monthitem.cpp:452
+#: agenda/agenda.cpp:1206 month/monthitem.cpp:450
 #, kde-format
 msgctxt "@title:window"
 msgid "Error Occurred"
 msgstr "Wystąpił błąd"
 
-#: agenda/agendaitem.cpp:86 list/listview.cpp:431
+#: agenda/agendaitem.cpp:86 list/listview.cpp:429
 #, kde-format
 msgid "%2 (1 year)"
 msgid_plural "%2 (%1 years)"
@@ -1864,110 +1864,110 @@ msgstr "Załącz jedynie odnośnik do wiadomości"
 msgid "Attach complete message"
 msgstr "Załącz całkowitą wiadomość"
 
-#: journal/journalframe.cpp:150
+#: journal/journalframe.cpp:148
 #, kde-format
 msgctxt "@action: button"
 msgid "&Edit"
 msgstr "&Edytuj"
 
-#: journal/journalframe.cpp:153
+#: journal/journalframe.cpp:151
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Edit this journal entry"
 msgstr "Edytuj ten wpis dziennika"
 
-#: journal/journalframe.cpp:154
+#: journal/journalframe.cpp:152
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Opens an editor dialog for this journal entry"
 msgstr "Otwiera okno edytora dla tego wpisu dziennika"
 
-#: journal/journalframe.cpp:160
+#: journal/journalframe.cpp:158
 #, kde-format
 msgctxt "@action: button"
 msgid "&Delete"
 msgstr "&Usuń"
 
-#: journal/journalframe.cpp:163
+#: journal/journalframe.cpp:161
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete this journal entry"
 msgstr "Usuń ten wpis dziennika"
 
-#: journal/journalframe.cpp:164
+#: journal/journalframe.cpp:162
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Delete this journal entry"
 msgstr "Usuń ten wpis dziennika"
 
-#: journal/journalframe.cpp:169
+#: journal/journalframe.cpp:167
 #, kde-format
 msgctxt "@action: button"
 msgid "&Print"
 msgstr "Wy&drukuj"
 
-#: journal/journalframe.cpp:173
+#: journal/journalframe.cpp:171
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Print this journal entry"
 msgstr "Wydrukuj ten wpis dziennika"
 
-#: journal/journalframe.cpp:174
+#: journal/journalframe.cpp:172
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Opens a print dialog for this journal entry"
 msgstr "Otwiera okno drukowania dla tego wpisu dziennika"
 
-#: journal/journalframe.cpp:179
+#: journal/journalframe.cpp:177
 #, kde-format
 msgctxt "@action: button"
 msgid "Print preview"
 msgstr "Podgląd wydruku"
 
-#: journal/journalframe.cpp:183
+#: journal/journalframe.cpp:181
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Print preview this journal entry"
 msgstr "Podejrzyj wydruk tego wpisu dziennika"
 
-#: journal/journalframe.cpp:184
+#: journal/journalframe.cpp:182
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Opens a print preview of this journal entry"
 msgstr "Otwiera podgląd wydruku dla tego wpisu dziennika"
 
-#: list/listview.cpp:57
+#: list/listview.cpp:55
 #, kde-format
 msgctxt "%1 is an item summary. %2 is the date when this item reoccurs"
 msgid "%1 (next: %2)"
 msgstr "%1 (następny: %2)"
 
-#: list/listview.cpp:294
+#: list/listview.cpp:292
 #, kde-format
 msgid "Summary"
 msgstr "Podsumowanie"
 
-#: list/listview.cpp:295
+#: list/listview.cpp:293
 #, kde-format
 msgid "Start Date/Time"
 msgstr "Data/czas rozpoczęcia"
 
-#: list/listview.cpp:296
+#: list/listview.cpp:294
 #, kde-format
 msgid "End Date/Time"
 msgstr "Data/czas zakończenia"
 
-#: list/listview.cpp:297
+#: list/listview.cpp:295
 #, kde-format
 msgid "Tags"
 msgstr "Znaczniki"
 
-#: list/listview.cpp:370
+#: list/listview.cpp:368
 #, kde-format
 msgid "Summary [%1 - %2]"
 msgstr "Podsumowanie [%1 - %2]"
 
-#: month/monthitem.cpp:307
+#: month/monthitem.cpp:305
 #, kde-format
 msgctxt "@info/plain a person's age"
 msgid "1 year old"
@@ -1976,7 +1976,7 @@ msgstr[0] "1 rok"
 msgstr[1] "%1 lata"
 msgstr[2] "%1 lata"
 
-#: month/monthitem.cpp:309
+#: month/monthitem.cpp:307
 #, kde-format
 msgctxt "@info/plain number of years of marriage"
 msgid "1 year"
@@ -1985,7 +1985,7 @@ msgstr[0] "1 rok"
 msgstr[1] "%1 lata"
 msgstr[2] "%1 lat"
 
-#: month/monthitem.cpp:443
+#: month/monthitem.cpp:441
 #, kde-format
 msgctxt "@info/plain"
 msgid "Move occurrence(s)"
@@ -3109,34 +3109,34 @@ msgstr ""
 "funkcjonalności pracy grupowej (np.: konfiguracji kontaktu jako klienta KDE "
 "Kolab)."
 
-#: whatsnext/whatsnextview.cpp:62
+#: whatsnext/whatsnextview.cpp:60
 #, kde-format
 msgid "To-dos:"
 msgstr "Zadania:"
 
-#: whatsnext/whatsnextview.cpp:78
+#: whatsnext/whatsnextview.cpp:76
 #, kde-format
 msgid "What's Next?"
 msgstr "Co dalej?"
 
-#: whatsnext/whatsnextview.cpp:85 whatsnext/whatsnextview.cpp:272
-#: whatsnext/whatsnextview.cpp:277
+#: whatsnext/whatsnextview.cpp:83 whatsnext/whatsnextview.cpp:270
+#: whatsnext/whatsnextview.cpp:275
 #, kde-format
 msgctxt "date from - to"
 msgid "%1 - %2"
 msgstr "%1 - %2"
 
-#: whatsnext/whatsnextview.cpp:102
+#: whatsnext/whatsnextview.cpp:100
 #, kde-format
 msgid "Events:"
 msgstr "Wydarzenia:"
 
-#: whatsnext/whatsnextview.cpp:194 whatsnext/whatsnextview.cpp:218
+#: whatsnext/whatsnextview.cpp:192 whatsnext/whatsnextview.cpp:216
 #, kde-format
 msgid "Events and to-dos that need a reply:"
 msgstr "Wydarzenia i zadania wymagające odpowiedzi:"
 
-#: whatsnext/whatsnextview.cpp:284
+#: whatsnext/whatsnextview.cpp:282
 #, kde-format
 msgctxt "date, from - to"
 msgid "%1, %2 - %3"
