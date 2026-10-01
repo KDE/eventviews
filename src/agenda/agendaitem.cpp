@@ -1080,6 +1080,7 @@ void AgendaItem::paintEvent(QPaintEvent *ev)
     p.setBackground(QBrush(bgColor));
     p.setPen(textColor);
     QString const ws = ww.wrappedString();
+    /* cppcheck-suppress knownConditionTrueFalse */
     if (usingDescription || usingLocation) {
         // if we added a description then we no longer center the text.
         // move the text up higher in the item block to allow more room to show the description.
