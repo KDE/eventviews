@@ -10,6 +10,6 @@
     <id>shadowFunction</id>
   </suppress>
   <suppress>
-    <id>constParameterCallback&gt;</id>
+    <id>constParameterCallback</id>
   </suppress>
 </suppressions>
