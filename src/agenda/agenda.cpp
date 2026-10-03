@@ -22,9 +22,7 @@
 #include <CalendarSupport/Utils>
 
 #include <KCalendarCore/Incidence>
-#if KCALENDARCORE_VERSION >= QT_VERSION_CHECK(6, 29, 0)
 #include <KCalendarCore/MimeData>
-#endif
 
 #include "calendarview_debug.h"
 #include <KMessageBox>
@@ -561,11 +559,7 @@ bool Agenda::eventFilter_drag(QObject *obj, QDropEvent *de)
         }
 
         const QList<QUrl> incidenceUrls = CalendarSupport::incidenceItemUrls(md);
-#if KCALENDARCORE_VERSION < QT_VERSION_CHECK(6, 29, 0)
-        const KCalendarCore::Incidence::List incidences = CalendarSupport::incidences(md);
-#else
         const KCalendarCore::Incidence::List incidences = KCalendarCore::MimeData::decodeIncidences(md);
-#endif
 
         Q_ASSERT(!incidenceUrls.isEmpty() || !incidences.isEmpty());
 
