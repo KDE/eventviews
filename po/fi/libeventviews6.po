@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-28 02:45+0000\n"
-"PO-Revision-Date: 2026-02-25 13:47+0200\n"
+"PO-Revision-Date: 2026-09-07 19:20+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -111,11 +111,9 @@ msgid "%1: %2"
 msgstr "%1: %2"
 
 #: agenda/agendaitem.cpp:1066
-#, fuzzy, kde-format
-#| msgctxt "%1 is an item summary. %2 is the date when this item reoccurs"
-#| msgid "%1 (next: %2)"
+#, kde-format
 msgid "%1 (%2)"
-msgstr "%1 (seuraava: %2)"
+msgstr "%1 (%2)"
 
 #: agenda/agendaview.cpp:430
 #, kde-format
@@ -752,7 +750,7 @@ msgstr "Aseta päivyrinäkymän tunnin korkeus (kuvapisteinä)"
 #: eventviews.kcfg:156
 #, kde-format
 msgid "Draw bold horizontal grid lines for the even hours"
-msgstr ""
+msgstr "Piirrä parillisille tunneille paksut vaakaruudukkoviivat"
 
 #. i18n: ectx: whatsthis, entry (EnableAgendaBoldEvenHours), group (Agenda View)
 #: eventviews.kcfg:157
@@ -760,12 +758,13 @@ msgstr ""
 msgid ""
 "Draw a bolder horizontal grid line for the even hours (12am, 2am, 4am, etc)."
 msgstr ""
+"Piirrä parillisille tunneille paksut vaakaruudukkoviivat (12, 2, 4 jne.)"
 
 #. i18n: ectx: tooltip, entry (EnableAgendaBoldEvenHours), group (Agenda View)
 #: eventviews.kcfg:158
 #, kde-format
 msgid "Draw bolder even hour grid lines"
-msgstr ""
+msgstr "Piirrä parillisille tunneille paksummat ruudukkoviivat"
 
 #. i18n: ectx: label, entry (EnableAgendaItemIcons), group (Agenda View)
 #: eventviews.kcfg:162 viewerapp/settings.kcfg:25
@@ -805,35 +804,28 @@ msgstr ""
 
 #. i18n: ectx: tooltip, entry (EnableAgendaItemDesc), group (Agenda View)
 #: eventviews.kcfg:170
-#, fuzzy, kde-format
-#| msgid "Display icons in agenda view items"
+#, kde-format
 msgid "Display incidence descriptions in agenda view items"
-msgstr "Näytä kuvakkeet päivyrinäkymän merkinnöille"
+msgstr "Näytä päivyrinäkymän merkinnöissä esiintymäkuvaukset"
 
 #. i18n: ectx: label, entry (EnableAgendaItemLocation), group (Agenda View)
 #: eventviews.kcfg:174
-#, fuzzy, kde-format
-#| msgid "Show icons in agenda view items"
+#, kde-format
 msgid "Show incidence locations in agenda view items"
-msgstr "Näytä kuvakkeet päivyrinäkymän merkinnöille"
+msgstr "Näytä päivyrinäkymän merkinnöille esiintymien sijainnit"
 
 #. i18n: ectx: whatsthis, entry (EnableAgendaItemLocation), group (Agenda View)
 #: eventviews.kcfg:175
-#, fuzzy, kde-format
-#| msgid ""
-#| "Check this box to display icons (alarm, recursion, etc.) in agenda view "
-#| "items."
+#, kde-format
 msgid "Check this box to display the incidence locations in agenda view items."
 msgstr ""
-"Valitse tämä, jos haluat nähdä kuvakkeet (hälytykset, toisto jne.) "
-"päivyrinäkymän merkinnöille."
+"Valitse tämä, jos haluat päivyrinäkymän merkintöihin esiintymien sijainnit."
 
 #. i18n: ectx: tooltip, entry (EnableAgendaItemLocation), group (Agenda View)
 #: eventviews.kcfg:176
-#, fuzzy, kde-format
-#| msgid "Display icons in agenda view items"
+#, kde-format
 msgid "Display incidence locations in agenda view items"
-msgstr "Näytä kuvakkeet päivyrinäkymän merkinnöille"
+msgstr "Näytä päivyrinäkymän merkinnöille esiintymien sijainnit"
 
 #. i18n: ectx: label, entry (ShowTodosAgendaView), group (Agenda View)
 #. i18n: ectx: label, entry (ShowTodosMonthView), group (Month View)
@@ -1172,47 +1164,43 @@ msgstr "Näytä kuukausinäkymän merkintöjen kuvakkeet"
 
 #. i18n: ectx: label, entry (ShowTimeInMonthView), group (Month View)
 #: eventviews.kcfg:270
-#, fuzzy, kde-format
-#| msgid "Show time in month view items"
+#, kde-format
 msgid "Show start-times without end-times in month view items"
-msgstr "Näytä kuukausinäkymän merkintöjen kellonajat"
+msgstr "Näytä kuukausinäkymän merkinnöille alkuajat loppuajoitta"
 
 #. i18n: ectx: whatsthis, entry (ShowTimeInMonthView), group (Month View)
 #: eventviews.kcfg:271
-#, fuzzy, kde-format
-#| msgid "Check this box to display the time in month view items."
+#, kde-format
 msgid ""
 "Check this box to display the start-time without the end-time in month view "
 "items."
-msgstr "Valitsemalla tämän kuukausinäkymän merkinnöille näytetään kellonajat."
+msgstr ""
+"Valitse tämä, jos haluat kuukausinäkymän merkintöihin alkuajat loppuajoitta."
 
 #. i18n: ectx: tooltip, entry (ShowTimeInMonthView), group (Month View)
 #: eventviews.kcfg:272
-#, fuzzy, kde-format
-#| msgid "Display time in month view items"
+#, kde-format
 msgid "Display start-time without the end-time in month view items"
-msgstr "Näytä kuukausinäkymän merkintöjen kellonajat"
+msgstr "Näytä kuukausinäkymän merkinnöillä alkuajat loppuajoitta"
 
 #. i18n: ectx: label, entry (ShowEndTimeInMonthView), group (Month View)
 #: eventviews.kcfg:276
-#, fuzzy, kde-format
-#| msgid "Show time in month view items"
+#, kde-format
 msgid "Show the start-time and the end-time in month view items"
-msgstr "Näytä kuukausinäkymän merkintöjen kellonajat"
+msgstr "Näytä kuukausinäkymän merkinnöille alku- ja loppuajat"
 
 #. i18n: ectx: whatsthis, entry (ShowEndTimeInMonthView), group (Month View)
 #: eventviews.kcfg:277
-#, fuzzy, kde-format
-#| msgid "Check this box to display the time in month view items."
+#, kde-format
 msgid "Check this box to display the start and end times in month view items."
-msgstr "Valitsemalla tämän kuukausinäkymän merkinnöille näytetään kellonajat."
+msgstr ""
+"Valitse tämä, jos haluat kuukausinäkymän merkintöihin alku- ja loppuajat."
 
 #. i18n: ectx: tooltip, entry (ShowEndTimeInMonthView), group (Month View)
 #: eventviews.kcfg:278
-#, fuzzy, kde-format
-#| msgid "Display time in month view items"
+#, kde-format
 msgid "Display the start and end times in month view items"
-msgstr "Näytä kuukausinäkymän merkintöjen kellonajat"
+msgstr "Näytä kuukausinäkymän merkinnöille alku- ja loppuajat"
 
 #. i18n: ectx: whatsthis, entry (ShowTodosMonthView), group (Month View)
 #: eventviews.kcfg:283 viewerapp/settings.kcfg:117
@@ -1246,32 +1234,28 @@ msgstr "Näytä päiväkirjat kuukausinäkymässä"
 
 #. i18n: ectx: label, entry (ShowHolidaysMonthView), group (Month View)
 #: eventviews.kcfg:294
-#, fuzzy, kde-format
-#| msgid "Show to-dos"
+#, kde-format
 msgid "Show holidays"
-msgstr "Näytä tehtävät"
+msgstr "Näytä vapaapäivät"
 
 #. i18n: ectx: whatsthis, entry (ShowHolidaysMonthView), group (Month View)
 #: eventviews.kcfg:295
-#, fuzzy, kde-format
-#| msgid "Check this box to display to-dos in the month view."
+#, kde-format
 msgid "Check this box to display holidays in the month view."
-msgstr "Valitsemalla tämän kuukausinäkymässä näytetään tehtävät."
+msgstr "Valitse tämä, jos haluat kuukausinäkymään vapaapäivät."
 
 #. i18n: ectx: tooltip, entry (ShowHolidaysMonthView), group (Month View)
 #. i18n: ectx: tooltip, entry (ShowHolidaysBackgroundMonthView), group (Month View)
 #: eventviews.kcfg:296 eventviews.kcfg:303
-#, fuzzy, kde-format
-#| msgid "Display to-dos in the month view"
+#, kde-format
 msgid "Display holidays in the month view"
-msgstr "Näytä tehtävät kuukausinäkymässä"
+msgstr "Näytä kuukausinäkymässä vapaapäivät"
 
 #. i18n: ectx: label, entry (ShowHolidaysBackgroundMonthView), group (Month View)
 #: eventviews.kcfg:300
-#, fuzzy, kde-format
-#| msgid "Select the working hours background color for the Month view here."
+#, kde-format
 msgid "Use the Holiday background color when a holiday lands on the date"
-msgstr "Valitse tässä työajan taustaväri kuukausinäytölle."
+msgstr "Käytä vapaapäivän taustaväriä, kun vapaa osuu päiväksi"
 
 #. i18n: ectx: tooltip, entry (ShowHolidaysBackgroundMonthView), group (Month View)
 #: eventviews.kcfg:301
@@ -1280,6 +1264,7 @@ msgid ""
 "Use the custom holiday color as the date's background color if a holiday "
 "lands on the date"
 msgstr ""
+"Käytä omaa vapaapäiväväriä päivän taustaväriksi, jos vapaapäivä osuu siihen"
 
 #. i18n: ectx: whatsthis, entry (ShowHolidaysBackgroundMonthView), group (Month View)
 #: eventviews.kcfg:302
@@ -1288,6 +1273,8 @@ msgid ""
 "Check this box to use the custom holiday as the date's background color when "
 "at least one holiday lands on a date."
 msgstr ""
+"Valitse tämä ruutu, jos haluat käyttää taustavärinä omaa vapaapäiväväriä "
+"vähintään yhden vapaan osuessa siksi."
 
 #. i18n: ectx: label, entry, group (Month View)
 #: eventviews.kcfg:307 viewerapp/settings.kcfg:128
@@ -2275,20 +2262,16 @@ msgid "8"
 msgstr "8"
 
 #: todo/todoview.cpp:856
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu enable or disable reminder"
-#| msgid "&Toggle Reminder"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&Toggle Reminder Off"
-msgstr "&Vaihda muistutuksen tilaa"
+msgstr "&Poista muistutus käytöstä"
 
 #: todo/todoview.cpp:857
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu enable or disable reminder"
-#| msgid "&Toggle Reminder"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&Toggle Reminder On"
-msgstr "&Vaihda muistutuksen tilaa"
+msgstr "&Ota muistutus käyttöön"
 
 #: todo/todoview.cpp:1195
 #, kde-format
