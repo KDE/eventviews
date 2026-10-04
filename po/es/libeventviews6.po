@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-01 00:46+0000\n"
+"POT-Creation-Date: 2026-10-04 00:47+0000\n"
 "PO-Revision-Date: 2026-08-28 17:32+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -29,7 +29,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "ecuadra@eloihr.net,fjvinal@gmail.com"
 
-#: agenda/agenda.cpp:964
+#: agenda/agenda.cpp:958
 #, kde-format
 msgctxt "@info"
 msgid "Unable to lock item for modification. You cannot make any changes."
@@ -37,19 +37,19 @@ msgstr ""
 "No se puede bloquear el elemento para modificarlo. No puede realizar ningún "
 "cambio."
 
-#: agenda/agenda.cpp:966
+#: agenda/agenda.cpp:960
 #, kde-format
 msgctxt "@title:window"
 msgid "Locking Failed"
 msgstr "El bloqueo ha fallado"
 
-#: agenda/agenda.cpp:1181
+#: agenda/agenda.cpp:1175
 #, kde-format
 msgctxt "@info/plain"
 msgid "Dissociate event from recurrence"
 msgstr "Disociar el evento de la repetición"
 
-#: agenda/agenda.cpp:1204 month/monthitem.cpp:448
+#: agenda/agenda.cpp:1198 month/monthitem.cpp:448
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -58,61 +58,61 @@ msgstr ""
 "No se puede añadir el elemento de la excepción al calendario. No se hará "
 "ningún cambio."
 
-#: agenda/agenda.cpp:1206 month/monthitem.cpp:450
+#: agenda/agenda.cpp:1200 month/monthitem.cpp:450
 #, kde-format
 msgctxt "@title:window"
 msgid "Error Occurred"
 msgstr "Ha ocurrido un error"
 
-#: agenda/agendaitem.cpp:86 list/listview.cpp:429
+#: agenda/agendaitem.cpp:80 list/listview.cpp:429
 #, kde-format
 msgid "%2 (1 year)"
 msgid_plural "%2 (%1 years)"
 msgstr[0] "%2 (1 año)"
 msgstr[1] "%2 (%1 años)"
 
-#: agenda/agendaitem.cpp:640
+#: agenda/agendaitem.cpp:630
 #, kde-format
 msgid "Attendee \"%1\" added to the calendar item \"%2\""
 msgstr "Asistente «%1» añadido al elemento de calendario «%2»"
 
-#: agenda/agendaitem.cpp:641
+#: agenda/agendaitem.cpp:631
 #, kde-format
 msgctxt "@title:window"
 msgid "Attendee added"
 msgstr "Asistente añadido"
 
-#: agenda/agendaitem.cpp:865 agenda/agendaitem.cpp:965
+#: agenda/agendaitem.cpp:855 agenda/agendaitem.cpp:955
 #, kde-format
 msgid "%1 - %2"
 msgstr "%1 - %2"
 
-#: agenda/agendaitem.cpp:874
+#: agenda/agendaitem.cpp:864
 #, kde-format
 msgid "- %1"
 msgstr "- %1"
 
-#: agenda/agendaitem.cpp:918 agenda/agendaitem.cpp:941
+#: agenda/agendaitem.cpp:908 agenda/agendaitem.cpp:931
 #, kde-format
 msgid "%1: %2 - %3"
 msgstr "%1: %2 - %3"
 
-#: agenda/agendaitem.cpp:1052
+#: agenda/agendaitem.cpp:1042
 #, kde-format
 msgid "Google Calendar Settings"
 msgstr "Preferencias del Calendario de Google"
 
-#: agenda/agendaitem.cpp:1052
+#: agenda/agendaitem.cpp:1042
 #, kde-format
 msgid "Public Holiday"
 msgstr "Festivo público"
 
-#: agenda/agendaitem.cpp:1065
+#: agenda/agendaitem.cpp:1055
 #, kde-format
 msgid "%1: %2"
 msgstr "%1: %2"
 
-#: agenda/agendaitem.cpp:1074
+#: agenda/agendaitem.cpp:1064
 #, kde-format
 msgid "%1 (%2)"
 msgstr "%1 (%2)"

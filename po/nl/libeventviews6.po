@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-01 00:46+0000\n"
+"POT-Creation-Date: 2026-10-04 00:47+0000\n"
 "PO-Revision-Date: 2026-08-28 10:21+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -27,7 +27,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "freekdekruijf@kde.nl"
 
-#: agenda/agenda.cpp:964
+#: agenda/agenda.cpp:958
 #, kde-format
 msgctxt "@info"
 msgid "Unable to lock item for modification. You cannot make any changes."
@@ -35,19 +35,19 @@ msgstr ""
 "Kon het item niet voor bewerking vergrendelen. U kunt geen veranderingen "
 "aanbrengen."
 
-#: agenda/agenda.cpp:966
+#: agenda/agenda.cpp:960
 #, kde-format
 msgctxt "@title:window"
 msgid "Locking Failed"
 msgstr "Vergrendelen mislukt"
 
-#: agenda/agenda.cpp:1181
+#: agenda/agenda.cpp:1175
 #, kde-format
 msgctxt "@info/plain"
 msgid "Dissociate event from recurrence"
 msgstr "Activiteit loskoppelen van herhaling"
 
-#: agenda/agenda.cpp:1204 month/monthitem.cpp:448
+#: agenda/agenda.cpp:1198 month/monthitem.cpp:448
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -55,61 +55,61 @@ msgid ""
 msgstr ""
 "Kon de uitzondering niet toevoegen aan de agenda. Er wordt niets gewijzigd."
 
-#: agenda/agenda.cpp:1206 month/monthitem.cpp:450
+#: agenda/agenda.cpp:1200 month/monthitem.cpp:450
 #, kde-format
 msgctxt "@title:window"
 msgid "Error Occurred"
 msgstr "Er deed zich een fout voor"
 
-#: agenda/agendaitem.cpp:86 list/listview.cpp:429
+#: agenda/agendaitem.cpp:80 list/listview.cpp:429
 #, kde-format
 msgid "%2 (1 year)"
 msgid_plural "%2 (%1 years)"
 msgstr[0] "%2 (1 jaar)"
 msgstr[1] "%2 (%1 jaren)"
 
-#: agenda/agendaitem.cpp:640
+#: agenda/agendaitem.cpp:630
 #, kde-format
 msgid "Attendee \"%1\" added to the calendar item \"%2\""
 msgstr "Deelnemer \"%1\" toegevoegd aan agendaitem \"%2\""
 
-#: agenda/agendaitem.cpp:641
+#: agenda/agendaitem.cpp:631
 #, kde-format
 msgctxt "@title:window"
 msgid "Attendee added"
 msgstr "Deelnemer toegevoegd"
 
-#: agenda/agendaitem.cpp:865 agenda/agendaitem.cpp:965
+#: agenda/agendaitem.cpp:855 agenda/agendaitem.cpp:955
 #, kde-format
 msgid "%1 - %2"
 msgstr "%1 - %2"
 
-#: agenda/agendaitem.cpp:874
+#: agenda/agendaitem.cpp:864
 #, kde-format
 msgid "- %1"
 msgstr "- %1"
 
-#: agenda/agendaitem.cpp:918 agenda/agendaitem.cpp:941
+#: agenda/agendaitem.cpp:908 agenda/agendaitem.cpp:931
 #, kde-format
 msgid "%1: %2 - %3"
 msgstr "%1: %2 - %3"
 
-#: agenda/agendaitem.cpp:1052
+#: agenda/agendaitem.cpp:1042
 #, kde-format
 msgid "Google Calendar Settings"
 msgstr "Agenda-instellingen van Google"
 
-#: agenda/agendaitem.cpp:1052
+#: agenda/agendaitem.cpp:1042
 #, kde-format
 msgid "Public Holiday"
 msgstr "Publieke feestdag"
 
-#: agenda/agendaitem.cpp:1065
+#: agenda/agendaitem.cpp:1055
 #, kde-format
 msgid "%1: %2"
 msgstr "%1: %2"
 
-#: agenda/agendaitem.cpp:1074
+#: agenda/agendaitem.cpp:1064
 #, kde-format
 msgid "%1 (%2)"
 msgstr "%1 (%2)"

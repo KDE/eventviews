@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-01 00:46+0000\n"
+"POT-Creation-Date: 2026-10-04 00:47+0000\n"
 "PO-Revision-Date: 2026-08-30 22:07+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -28,38 +28,38 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kde-l10n-he@kde.org"
 
-#: agenda/agenda.cpp:964
+#: agenda/agenda.cpp:958
 #, kde-format
 msgctxt "@info"
 msgid "Unable to lock item for modification. You cannot make any changes."
 msgstr "לא ניתן לנעול את הפריט מפני שינויים."
 
-#: agenda/agenda.cpp:966
+#: agenda/agenda.cpp:960
 #, kde-format
 msgctxt "@title:window"
 msgid "Locking Failed"
 msgstr "הנעילה נכשלה"
 
-#: agenda/agenda.cpp:1181
+#: agenda/agenda.cpp:1175
 #, kde-format
 msgctxt "@info/plain"
 msgid "Dissociate event from recurrence"
 msgstr "ניתוק אירוע מהמחזור"
 
-#: agenda/agenda.cpp:1204 month/monthitem.cpp:448
+#: agenda/agenda.cpp:1198 month/monthitem.cpp:448
 #, kde-format
 msgctxt "@info"
 msgid ""
 "Unable to add the exception item to the calendar. No change will be done."
 msgstr "לא ניתן להוסיף את פריט ההחרגה ללוח השנה. לא יבוצע אף שינוי."
 
-#: agenda/agenda.cpp:1206 month/monthitem.cpp:450
+#: agenda/agenda.cpp:1200 month/monthitem.cpp:450
 #, kde-format
 msgctxt "@title:window"
 msgid "Error Occurred"
 msgstr "אירעה שגיאה"
 
-#: agenda/agendaitem.cpp:86 list/listview.cpp:429
+#: agenda/agendaitem.cpp:80 list/listview.cpp:429
 #, kde-format
 msgid "%2 (1 year)"
 msgid_plural "%2 (%1 years)"
@@ -68,48 +68,48 @@ msgstr[1] "%2 (שנתיים)"
 msgstr[2] "%2 (%1 שנה)"
 msgstr[3] "%2 (%1 שנים)"
 
-#: agenda/agendaitem.cpp:640
+#: agenda/agendaitem.cpp:630
 #, kde-format
 msgid "Attendee \"%1\" added to the calendar item \"%2\""
 msgstr "המשתתף או המשתתפת „%1” הוסיפו את פריט לוח השנה „%2”"
 
-#: agenda/agendaitem.cpp:641
+#: agenda/agendaitem.cpp:631
 #, kde-format
 msgctxt "@title:window"
 msgid "Attendee added"
 msgstr "נוספו משתתפים"
 
-#: agenda/agendaitem.cpp:865 agenda/agendaitem.cpp:965
+#: agenda/agendaitem.cpp:855 agenda/agendaitem.cpp:955
 #, kde-format
 msgid "%1 - %2"
 msgstr "%1 - %2"
 
-#: agenda/agendaitem.cpp:874
+#: agenda/agendaitem.cpp:864
 #, kde-format
 msgid "- %1"
 msgstr "- %1"
 
-#: agenda/agendaitem.cpp:918 agenda/agendaitem.cpp:941
+#: agenda/agendaitem.cpp:908 agenda/agendaitem.cpp:931
 #, kde-format
 msgid "%1: %2 - %3"
 msgstr "%1: %2 - %3"
 
-#: agenda/agendaitem.cpp:1052
+#: agenda/agendaitem.cpp:1042
 #, kde-format
 msgid "Google Calendar Settings"
 msgstr "הגדרות Google Calendar"
 
-#: agenda/agendaitem.cpp:1052
+#: agenda/agendaitem.cpp:1042
 #, kde-format
 msgid "Public Holiday"
 msgstr "חג ציבורי"
 
-#: agenda/agendaitem.cpp:1065
+#: agenda/agendaitem.cpp:1055
 #, kde-format
 msgid "%1: %2"
 msgstr "%1: %2"
 
-#: agenda/agendaitem.cpp:1074
+#: agenda/agendaitem.cpp:1064
 #, kde-format
 msgid "%1 (%2)"
 msgstr "%1 (%2)"

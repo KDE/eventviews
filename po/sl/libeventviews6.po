@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-01 00:46+0000\n"
+"POT-Creation-Date: 2026-10-04 00:47+0000\n"
 "PO-Revision-Date: 2026-08-28 15:30+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -35,7 +35,7 @@ msgstr ""
 "andrej.vernekar@gmail.com,jlp@holodeck1.com,miles@filmsi.net,andrejm@ubuntu."
 "si,matjaz.jeran@amis.net"
 
-#: agenda/agenda.cpp:964
+#: agenda/agenda.cpp:958
 #, kde-format
 msgctxt "@info"
 msgid "Unable to lock item for modification. You cannot make any changes."
@@ -43,32 +43,32 @@ msgstr ""
 "Ni mogoče zakleniti predmeta za spreminjanje. Opraviti ne morete nobene "
 "spremembe."
 
-#: agenda/agenda.cpp:966
+#: agenda/agenda.cpp:960
 #, kde-format
 msgctxt "@title:window"
 msgid "Locking Failed"
 msgstr "Zaklep ni uspel"
 
-#: agenda/agenda.cpp:1181
+#: agenda/agenda.cpp:1175
 #, kde-format
 msgctxt "@info/plain"
 msgid "Dissociate event from recurrence"
 msgstr "Razloči dogodek od ponovitve"
 
-#: agenda/agenda.cpp:1204 month/monthitem.cpp:448
+#: agenda/agenda.cpp:1198 month/monthitem.cpp:448
 #, kde-format
 msgctxt "@info"
 msgid ""
 "Unable to add the exception item to the calendar. No change will be done."
 msgstr "Ni mogoče dodati predmeta izjeme v koledar. Nič ne bo spremenjeno."
 
-#: agenda/agenda.cpp:1206 month/monthitem.cpp:450
+#: agenda/agenda.cpp:1200 month/monthitem.cpp:450
 #, kde-format
 msgctxt "@title:window"
 msgid "Error Occurred"
 msgstr "Prišlo je do napake"
 
-#: agenda/agendaitem.cpp:86 list/listview.cpp:429
+#: agenda/agendaitem.cpp:80 list/listview.cpp:429
 #, kde-format
 msgid "%2 (1 year)"
 msgid_plural "%2 (%1 years)"
@@ -77,48 +77,48 @@ msgstr[1] "%2 (%1 leti)"
 msgstr[2] "%2 (%1 leta)"
 msgstr[3] "%2 (%1 let)"
 
-#: agenda/agendaitem.cpp:640
+#: agenda/agendaitem.cpp:630
 #, kde-format
 msgid "Attendee \"%1\" added to the calendar item \"%2\""
 msgstr "Udeleženec \"%1\" je dodan k \"%2\" v koledarju"
 
-#: agenda/agendaitem.cpp:641
+#: agenda/agendaitem.cpp:631
 #, kde-format
 msgctxt "@title:window"
 msgid "Attendee added"
 msgstr "Udeleženec dodan"
 
-#: agenda/agendaitem.cpp:865 agenda/agendaitem.cpp:965
+#: agenda/agendaitem.cpp:855 agenda/agendaitem.cpp:955
 #, kde-format
 msgid "%1 - %2"
 msgstr "%1 – %2"
 
-#: agenda/agendaitem.cpp:874
+#: agenda/agendaitem.cpp:864
 #, kde-format
 msgid "- %1"
 msgstr "– %1"
 
-#: agenda/agendaitem.cpp:918 agenda/agendaitem.cpp:941
+#: agenda/agendaitem.cpp:908 agenda/agendaitem.cpp:931
 #, kde-format
 msgid "%1: %2 - %3"
 msgstr "%1: %2 - %3"
 
-#: agenda/agendaitem.cpp:1052
+#: agenda/agendaitem.cpp:1042
 #, kde-format
 msgid "Google Calendar Settings"
 msgstr "Nastavitve Google Koledarja"
 
-#: agenda/agendaitem.cpp:1052
+#: agenda/agendaitem.cpp:1042
 #, kde-format
 msgid "Public Holiday"
 msgstr "Državni praznik"
 
-#: agenda/agendaitem.cpp:1065
+#: agenda/agendaitem.cpp:1055
 #, kde-format
 msgid "%1: %2"
 msgstr "%1: %2"
 
-#: agenda/agendaitem.cpp:1074
+#: agenda/agendaitem.cpp:1064
 #, kde-format
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
