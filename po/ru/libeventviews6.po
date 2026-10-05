@@ -166,9 +166,9 @@ msgid ""
 "timezones other than your own."
 msgstr ""
 "В этом меню откроется диалог выбора часового пояса, позволяющий указать "
-"часовой пояс для отображения меток времени рядом с метками времени вашей "
-"системы. Эта функция особенно полезна при показе событий календаря для людей "
-"в других часовых поясах."
+"часовой пояс для показа меток времени рядом с метками времени вашей системы. "
+"Эта функция особенно полезна при показе событий календаря для людей в других "
+"часовых поясах."
 
 #: agenda/timelabels.cpp:336
 #, kde-format
@@ -215,8 +215,8 @@ msgid ""
 "Display the time label hours in 24-hour \"military\" format or according to "
 "your locale"
 msgstr ""
-"Отображать часы метки времени в 24-часовом формате или в соответствии с "
-"региональными настройками."
+"Показывать часы на метках времени в 24-часовом формате или в соответствии с "
+"региональными параметрами"
 
 #: agenda/timelabels.cpp:353
 #, kde-format
@@ -225,8 +225,8 @@ msgid ""
 "This menu selection shows the time hour labels according to 24-hour "
 "\"military\" time or your system locale."
 msgstr ""
-"Этот пункт меню отображает часы меток времени в 24-часовом формате или "
-"согласно региональным настройкам системы."
+"Этот пункт меню показывает часы на метках времени в 24-часовом формате или "
+"согласно региональным параметрам системы."
 
 #: agenda/timelabels.cpp:358
 #, kde-format
@@ -267,11 +267,11 @@ msgid ""
 "shown on the second side to save screen space. Similarly, the vertical "
 "scrollbar is removed when the time labels are shown on both sides."
 msgstr ""
-"Этот пункт меню включает или скрывает метки времени с обеих сторон "
-"расписания дня. На второй стороне отображается лишь системный часовой пояс, "
+"Этот пункт меню показывает или скрывает метки времени с обеих сторон "
+"расписания дня. На второй стороне показывается лишь системный часовой пояс, "
 "без дополнительных, что позволяет экономить место на экране. При этом "
 "вертикальная полоса прокрутки исчезает, когда метки времени видны с обеих "
-"сторон"
+"сторон."
 
 #: agenda/timelabels.cpp:426
 #, kde-kuit-format
@@ -326,7 +326,7 @@ msgstr "Изменение повторяющегося события"
 #: eventview.cpp:121
 #, kde-format
 msgid "Also &Future Items"
-msgstr "&Будущие повторы"
+msgstr "Этот и &будущие повторы"
 
 #: eventview.cpp:122
 #, kde-format
@@ -445,9 +445,8 @@ msgid ""
 "Select the first day of each week. Normally, you can ignore this since it is "
 "set in your locale."
 msgstr ""
-"Выбор дня, с которого начинается неделя. Обычно изменение значения этого "
-"параметра не требуется потому как используются значения, заданные в "
-"региональных настройках. "
+"Выбор дня, с которого начинается неделя. Обычно изменять этот параметр не "
+"требуется: используется значение, заданное в региональных параметрах."
 
 #. i18n: ectx: label, entry (WorkingHoursStart), group (Time &amp; Date)
 #: eventviews.kcfg:40
@@ -548,17 +547,17 @@ msgid ""
 "access the next \"x\" days view, choose the \"Next X Days\" menu item from "
 "the \"View\" menu."
 msgstr ""
-"Выберите число дней «х», которые будут отображены при просмотре следующих "
+"Выберите число дней «х», которые будут показаны при просмотре следующих "
 "дней. Чтобы посмотреть следующие «х» дней, выберите пункт «Следующие Х дней» "
-"в меню «Переход»."
+"в меню «Вид»."
 
 #. i18n: ectx: tooltip, entry, group (General View)
 #: eventviews.kcfg:69
 #, kde-format
 msgid "Show this many days at a time in the Next \"x\" days view"
 msgstr ""
-"Показать указанное количество дней вместе в режиме просмотра «Следующие х "
-"дней\""
+"Показывать указанное количество дней за раз в режиме просмотра «Следующие х "
+"дней»"
 
 #. i18n: ectx: label, entry (DailyRecur), group (General View)
 #: eventviews.kcfg:73
@@ -607,7 +606,7 @@ msgid ""
 "typeface in the Date Navigator, or uncheck it to give more prominence to "
 "other (non weekly recurring) events."
 msgstr ""
-"Выделять в календаре еженедельно повторяющиеся событиям жирным шрифтом. Если "
+"Выделять в календаре еженедельно повторяющиеся события жирным шрифтом. Если "
 "флажок не установлен, будут выделены другие (не еженедельные) события."
 
 #. i18n: ectx: label, entry (HighlightTodos), group (General View)
@@ -630,7 +629,8 @@ msgstr ""
 msgid ""
 "Check this box to show the days containing to-dos in bold typeface in the "
 "Date Navigator when in Todo View."
-msgstr "В режиме просмотра задач выделять в календаре задачи жирным шрифтом."
+msgstr ""
+"В режиме просмотра задач выделять в календаре дни с задачами жирным шрифтом."
 
 #. i18n: ectx: label, entry (HighlightJournals), group (General View)
 #: eventviews.kcfg:91
@@ -660,8 +660,7 @@ msgstr ""
 #: eventviews.kcfg:97
 #, kde-format
 msgid "Week numbers select a work week when in work week mode"
-msgstr ""
-"Выделять рабочую неделю номером недели в режиме просмотра рабочей недели"
+msgstr "Номер недели выделяет рабочую неделю в режиме рабочей недели"
 
 #. i18n: ectx: tooltip, entry (WeekNumbersShowWork), group (General View)
 #: eventviews.kcfg:98
@@ -697,7 +696,7 @@ msgid ""
 "this value will make each row in the agenda grid taller."
 msgstr ""
 "Значение в соответствующем поле определяет высоту строки часов в сетке "
-"расписания на день (в пикселах). При  увеличении этого значения все строки в "
+"расписания на день (в пикселах). При увеличении этого значения все строки в "
 "сетке расписания станут выше."
 
 #. i18n: ectx: tooltip, entry, group (Agenda View)
@@ -783,8 +782,7 @@ msgstr ""
 #, kde-format
 msgid "Check this box to display the incidence locations in Agenda View items."
 msgstr ""
-"Отметьте этот флажок для показа местоположений событий в элементах "
-"представления повестки дня."
+"Показывать места проведения событий в режиме просмотра расписания на день."
 
 #. i18n: ectx: tooltip, entry (EnableAgendaItemLocation), group (Agenda View)
 #: eventviews.kcfg:134
@@ -1040,7 +1038,7 @@ msgstr ""
 #: eventviews.kcfg:194 viewerapp/settings.kcfg:81
 #, kde-format
 msgid "Multiple Calendar Display"
-msgstr "Показ несколько календарей"
+msgstr "Показ нескольких календарей"
 
 #. i18n: ectx: label, entry (AgendaViewCalendarDisplay), group (Agenda View)
 #: eventviews.kcfg:197 viewerapp/settings.kcfg:84
@@ -1055,7 +1053,7 @@ msgid ""
 "Select the \"Merge all calendars into one view\" option if you would like "
 "all your calendars to be shown together in one Agenda View."
 msgstr ""
-"Выберите параметр «Объединить все календари в один», чтобы сразу все "
+"Выберите параметр «Объединять все календари в один», чтобы сразу все "
 "календари были показаны в одном расписании."
 
 #. i18n: ectx: tooltip, entry (AgendaViewCalendarDisplay), group (Agenda View)
@@ -1077,8 +1075,8 @@ msgid ""
 "Select the \"Show calendars side by side\" option if you would like to see "
 "two calendars at once, in a side-by-side view."
 msgstr ""
-"Включите этот параметр, чтобы видеть сразу два календаря, расположенных бок-"
-"о-бок."
+"Включите этот параметр, чтобы видеть сразу два календаря, расположенных бок "
+"о бок."
 
 #. i18n: ectx: tooltip, entry (AgendaViewCalendarDisplay), group (Agenda View)
 #: eventviews.kcfg:204 viewerapp/settings.kcfg:91
@@ -1228,7 +1226,7 @@ msgstr "Показывать задачи в режиме просмотра м�
 #: eventviews.kcfg:254
 #, kde-format
 msgid "Display to-dos in the Month View"
-msgstr "Показывать задачи в режиме просмотра месяца."
+msgstr "Показывать задачи в режиме просмотра месяца"
 
 #. i18n: ectx: label, entry (ShowJournalsMonthView), group (Month View)
 #: eventviews.kcfg:258 viewerapp/settings.kcfg:122
@@ -1376,7 +1374,7 @@ msgid ""
 msgstr ""
 "Использовать всё пространство окна KOrganizer для показа расписания на "
 "месяц. При этом другие виджеты, такие как навигатор, описания элементов, "
-"список календарей, отображаться не будут."
+"список календарей, показываться не будут."
 
 #. i18n: ectx: label, entry, group (Month View)
 #: eventviews.kcfg:309
@@ -1436,7 +1434,7 @@ msgid ""
 msgstr ""
 "Использовать всё пространство окна KOrganizer для показа списка задач. При "
 "этом другие виджеты, такие как навигатор, описания элементов, список "
-"календарей, отображаться не будут."
+"календарей, показываться не будут."
 
 #. i18n: ectx: label, entry, group (Todo View)
 #: eventviews.kcfg:334
@@ -1747,7 +1745,7 @@ msgstr ""
 #: eventviews.kcfg:426
 #, kde-format
 msgid "Current-time (Marcus Bains) line"
-msgstr "Показывать линию текущего времени (Marcus Bains)"
+msgstr "Линия текущего времени (Marcus Bains)"
 
 #. i18n: ectx: tooltip, entry, group (Fonts)
 #: eventviews.kcfg:427
@@ -1899,7 +1897,7 @@ msgstr "Метки"
 #: list/listview.cpp:368
 #, kde-format
 msgid "Summary [%1 - %2]"
-msgstr "Описание [%1 - %2]"
+msgstr "Описание [%1 — %2]"
 
 #: month/monthitem.cpp:305
 #, kde-format
@@ -1973,7 +1971,7 @@ msgctxt "@info:whatsthis"
 msgid ""
 "Click this button and the view will be scrolled back in time by 1 month."
 msgstr ""
-"При нажатии этой кнопки отображаемое в календаре время будет смещено на один "
+"При нажатии этой кнопки показываемое в календаре время будет смещено на один "
 "месяц назад."
 
 #: month/monthview.cpp:227
@@ -1987,7 +1985,7 @@ msgstr "Перейти на неделю назад"
 msgctxt "@info:whatsthis"
 msgid "Click this button and the view will be scrolled back in time by 1 week."
 msgstr ""
-"При нажатии этой кнопки отображаемое в календаре время будет смещено на одну "
+"При нажатии этой кнопки показываемое в календаре время будет смещено на одну "
 "неделю назад."
 
 #: month/monthview.cpp:234
@@ -2002,7 +2000,7 @@ msgctxt "@info:whatsthis"
 msgid ""
 "Click this button and the view will be scrolled forward in time by 1 week."
 msgstr ""
-"При нажатии этой кнопки отображаемое в календаре время будет смещено на одну "
+"При нажатии этой кнопки показываемое в календаре время будет смещено на одну "
 "неделю вперёд."
 
 #: month/monthview.cpp:241
@@ -2017,7 +2015,7 @@ msgctxt "@info:whatsthis"
 msgid ""
 "Click this button and the view will be scrolled forward in time by 1 month."
 msgstr ""
-"При нажатии этой кнопки отображаемое в календаре время будет смещено на один "
+"При нажатии этой кнопки показываемое в календаре время будет смещено на один "
 "месяц вперёд."
 
 #: multiagenda/multiagendaview.cpp:100
@@ -2141,14 +2139,14 @@ msgid ""
 "Checking this button will cause the to-dos to be displayed in a larger "
 "window by hiding the sidebar."
 msgstr ""
-"Установка этого флажка приведёт к отображению задач в большем окне за счёт "
+"Установка этого флажка приведёт к показу задач в большем окне за счёт "
 "скрытия боковой панели."
 
 #: todo/todoview.cpp:354
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display to-dos in a flat list or a tree"
-msgstr "Показывать задачи в виде плоского списка, а не дерева"
+msgstr "Показывать задачи в виде плоского списка или дерева"
 
 #: todo/todoview.cpp:356
 #, kde-format
@@ -2157,8 +2155,8 @@ msgid ""
 "Checking this button will cause the to-dos to be displayed either as a flat "
 "list or a hierarchical tree where the parental relationships are removed."
 msgstr ""
-"Выберите этот пункт , чтобы задачи были показаны в виде плоского списка, а "
-"не иерархического дерева. Все родительские связи при этом будут скрыты."
+"Выберите этот пункт, чтобы задачи были показаны в виде плоского списка, а не "
+"иерархического дерева. Все родительские связи при этом будут скрыты."
 
 #: todo/todoview.cpp:395
 #, kde-format
@@ -2230,7 +2228,7 @@ msgstr "Задача выполн&ена"
 #, kde-format
 msgctxt "@action:inmenu enable or disable reminder"
 msgid "&Toggle Reminder"
-msgstr "&Активировать напоминание"
+msgstr "&Переключить напоминание"
 
 #: todo/todoview.cpp:468
 #, kde-format
@@ -2622,7 +2620,7 @@ msgid ""
 "border drawn in the color of its calendar. Please use the Colors and Fonts "
 "configuration page for setting these colors."
 msgstr ""
-"Если включить этот параметр, элементы календаря буду окрашиваться в цвет "
+"Если включить этот параметр, элементы календаря будут окрашиваться в цвет "
 "категории, а рамка вокруг элементов — в цвет календаря. Выбрать цвета можно "
 "на странице настройки цвета и шрифтов."
 
@@ -2652,7 +2650,7 @@ msgid ""
 "border drawn in the color of its category. Please use the Colors and Fonts "
 "configuration page for setting these colors."
 msgstr ""
-"Если включить этот параметр, элементы календаря буду окрашиваться в цвет "
+"Если включить этот параметр, элементы календаря будут окрашиваться в цвет "
 "календаря, а рамка вокруг элементов — в цвет категории. Выбрать цвета можно "
 "на странице настройки цвета и шрифтов."
 
@@ -2711,14 +2709,14 @@ msgid ""
 "Select the \"Merge all calendars into one view\" option if you would like "
 "all your calendars to be shown together in one agenda view."
 msgstr ""
-"Выберите опцию «Объединить все календари в один», чтобы сразу все календари "
-"были показаны в одном расписании."
+"Выберите параметр «Объединять все календари в один», чтобы сразу все "
+"календари были показаны в одном расписании."
 
 #. i18n: ectx: label, entry (EnableMonthScroll), group (Month View)
 #: viewerapp/settings.kcfg:105
 #, kde-format
 msgid "Enable scrollbars in month view cells"
-msgstr "Показать полосы прокрутки в ячейках просмотра месяца"
+msgstr "Показывать полосы прокрутки в ячейках просмотра месяца"
 
 #. i18n: ectx: whatsthis, entry (EnableMonthScroll), group (Month View)
 #: viewerapp/settings.kcfg:106
@@ -2761,7 +2759,7 @@ msgstr "Показывать задачи в режиме просмотра м�
 #: viewerapp/settings.kcfg:118
 #, kde-format
 msgid "Display to-dos in the month view"
-msgstr "Показывать задачи в режиме просмотра месяца."
+msgstr "Показывать задачи в режиме просмотра месяца"
 
 #. i18n: ectx: whatsthis, entry (ShowJournalsMonthView), group (Month View)
 #: viewerapp/settings.kcfg:123
@@ -2792,7 +2790,7 @@ msgid ""
 msgstr ""
 "Использовать всё пространство окна KOrganizer для показа расписания на "
 "месяц. При этом другие виджеты, такие как навигатор, описания элементов, "
-"список календарей, отображаться не будут."
+"список календарей, показываться не будут."
 
 #. i18n: ectx: whatsthis, entry, group (Month View)
 #: viewerapp/settings.kcfg:137
@@ -2803,7 +2801,7 @@ msgid ""
 "border drawn in the color of its calendar.  Please use the Colors and Fonts "
 "configuration page for setting these colors."
 msgstr ""
-"Если включить этот параметр, элементы календаря буду окрашиваться в цвет "
+"Если включить этот параметр, элементы календаря будут окрашиваться в цвет "
 "категории, а рамка вокруг элементов — в цвет календаря. Выбрать цвета можно "
 "на странице настройки цвета и шрифтов."
 
@@ -2825,7 +2823,7 @@ msgid ""
 "border drawn in the color of its category.  Please use the Colors and Fonts "
 "configuration page for setting these colors."
 msgstr ""
-"Если включить этот параметр, элементы календаря буду окрашиваться в цвет "
+"Если включить этот параметр, элементы календаря будут окрашиваться в цвет "
 "календаря, а рамка вокруг элементов — в цвет категории. Выбрать цвета можно "
 "на странице настройки цвета и шрифтов."
 
@@ -2867,7 +2865,7 @@ msgid ""
 msgstr ""
 "Использовать всё пространство окна KOrganizer для показа списка задач. При "
 "этом другие виджеты, такие как навигатор, описания элементов, список "
-"календарей, отображаться не будут."
+"календарей, показываться не будут."
 
 #. i18n: ectx: label, entry, group (Colors)
 #: viewerapp/settings.kcfg:180
@@ -2951,7 +2949,7 @@ msgid ""
 "Font\" dialog, allowing you to choose the hour font for the time bar."
 msgstr ""
 "Настроить шрифт шкалы времени. Шкала времени является виджетом, который "
-"показывает время в расписании на день. Нажатие кнопки «Выбрать...» откроет "
+"показывает время в расписании на день. Нажатие кнопки «Выбрать…» откроет "
 "диалоговое окно, в котором можно будет выбрать шрифт."
 
 #. i18n: ectx: label, entry, group (Fonts)
@@ -2969,7 +2967,7 @@ msgid ""
 "the month view."
 msgstr ""
 "Настроить шрифт, используемый в режиме просмотра расписания на месяц. "
-"Нажатие кнопки «Выбрать...» откроет диалоговое окно, в котором можно будет "
+"Нажатие кнопки «Выбрать…» откроет диалоговое окно, в котором можно будет "
 "выбрать шрифт."
 
 #. i18n: ectx: label, entry, group (Fonts)
@@ -2987,7 +2985,7 @@ msgid ""
 "in the agenda view."
 msgstr ""
 "Настроить шрифт, используемый в режиме просмотра расписания на день. Нажатие "
-"кнопки «Выбрать...» откроет диалоговое окно, в котором можно будет выбрать "
+"кнопки «Выбрать…» откроет диалоговое окно, в котором можно будет выбрать "
 "шрифт."
 
 #. i18n: ectx: label, entry, group (Fonts)
@@ -3005,7 +3003,7 @@ msgid ""
 "current-time line in the agenda view."
 msgstr ""
 "Настроить шрифт, используемый для обозначения текущего времени. Нажатие "
-"кнопки «Выбрать...» откроет диалоговое окно, в котором можно будет выбрать "
+"кнопки «Выбрать…» откроет диалоговое окно, в котором можно будет выбрать "
 "шрифт."
 
 #. i18n: ectx: label, entry, group (Group Scheduling)
