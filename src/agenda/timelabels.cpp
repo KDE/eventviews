@@ -6,7 +6,6 @@
   SPDX-License-Identifier: GPL-2.0-or-later WITH LicenseRef-Qt-Commercial-exception-1.0
 */
 #include "timelabels.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "agenda.h"
 #include "agendaview.h"
@@ -24,6 +23,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <QPointer>
 #include <QToolTip>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace EventViews;
 
 TimeLabels::TimeLabels(const QTimeZone &zone, int rows, TimeLabelsZone *parent, Qt::WindowFlags f)

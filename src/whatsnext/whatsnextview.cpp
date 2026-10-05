@@ -8,7 +8,6 @@
 // krazy:excludeall=i18ncheckarg internal error for unknown reason
 
 #include "whatsnextview.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "calendarview_debug.h"
 
@@ -21,6 +20,7 @@ using namespace Qt::Literals::StringLiterals;
 
 #include <optional>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace EventViews;
 void WhatsNextTextBrowser::doSetSource(const QUrl &name, QTextDocument::ResourceType type)
 {

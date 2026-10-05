@@ -6,7 +6,6 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 #include "multiagendaview.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "agenda/agenda.h"
 #include "agenda/agendaview.h"
@@ -36,6 +35,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <QSplitter>
 #include <QTimer>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace Akonadi;
 using namespace EventViews;
 

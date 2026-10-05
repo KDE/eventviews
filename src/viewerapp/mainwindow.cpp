@@ -6,7 +6,6 @@
 */
 
 #include "mainwindow.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "settings.h"
 
@@ -32,6 +31,7 @@ using namespace Qt::Literals::StringLiterals;
 
 #include <KCheckableProxyModel>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace Akonadi;
 using namespace CalendarSupport;
 using namespace EventViews;

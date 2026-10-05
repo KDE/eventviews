@@ -11,7 +11,6 @@
 */
 
 #include "todoview.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "calendarview_debug.h"
 #include "coloredtodoproxymodel.h"
@@ -47,6 +46,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <QSortFilterProxyModel>
 #include <QToolButton>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace std::chrono_literals;
 
 Q_DECLARE_METATYPE(QPointer<QMenu>)

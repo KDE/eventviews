@@ -11,7 +11,6 @@
 // Journal Entry
 
 #include "journalframe.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include <Akonadi/CalendarUtils>
 #include <CalendarSupport/Utils>
@@ -27,6 +26,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <QHBoxLayout>
 #include <QPushButton>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace EventViews;
 
 JournalDateView::JournalDateView(const Akonadi::CollectionCalendar::Ptr &calendar, QWidget *parent)
