@@ -15,6 +15,11 @@
 #include <CalendarSupport/KCalPrefs>
 #include <CalendarSupport/Utils>
 
+#include <kcoreaddons_version.h> //remove when KF_MIN_VERSION is "6.31"
+#if KCOREADDONS_VERSION >= QT_VERSION_CHECK(6, 31, 0)
+#include <KFormat>
+#endif
+
 #include <QBoxLayout>
 #include <QUrlQuery>
 
@@ -268,21 +273,27 @@ void WhatsNextView::appendEvent(const Akonadi::CollectionCalendar::Ptr &calendar
             if (event->allDay()) {
                 mText += i18nc("date from - to",
                                "%1 - %2",
-                               QLocale().toString(starttime.date(), QLocale::ShortFormat),
-                               QLocale().toString(endtime.date(), QLocale::ShortFormat));
+                               QLocale().toString(starttime.date(), QLocale::LongFormat),
+                               QLocale().toString(endtime.date(), QLocale::LongFormat));
             } else {
-                mText +=
-                    i18nc("date from - to", "%1 - %2", QLocale().toString(starttime, QLocale::ShortFormat), QLocale().toString(endtime, QLocale::ShortFormat));
+#if KCOREADDONS_VERSION >= QT_VERSION_CHECK(6, 31, 0)
+                const KFormat format;
+                const QString dtStartStr = format.formatDateTime(starttime, QLocale::LongFormat, KFormat::DoNotAddTimeZone);
+                const QString dtEndStr = format.formatDateTime(endtime, QLocale::LongFormat, KFormat::AddTimezoneAbbreviationIfNeeded);
+#else
+                const QString dtStartStr = QLocale().toString(starttime, QLocale::ShortFormat);
+                const QString dtEndStr = QLocale().toString(endtime, QLocale::ShortFormat);
+#endif
+                mText += i18nc("date from - to", "%1 - %2", dtStartStr, dtEndStr);
             }
         } else {
             if (event->allDay()) {
-                mText += QLocale().toString(starttime.date(), QLocale::ShortFormat);
+                mText += QLocale().toString(starttime.date(), QLocale::LongFormat);
             } else {
-                mText += i18nc("date, from - to",
-                               "%1, %2 - %3",
-                               QLocale().toString(starttime.date(), QLocale::ShortFormat),
-                               QLocale().toString(starttime.time(), QLocale::ShortFormat),
-                               QLocale().toString(endtime.time(), QLocale::ShortFormat));
+                const KFormat format;
+                const QString startStr = format.formatTime(starttime, QLocale::LongFormat, KFormat::DoNotAddTimeZone);
+                const QString endStr = format.formatTime(endtime, QLocale::LongFormat, KFormat::AddTimezoneAbbreviationIfNeeded);
+                mText += i18nc("date, from - to", "%1, %2 - %3", QLocale().toString(starttime.date(), QLocale::LongFormat), startStr, endStr);
             }
         }
     }
@@ -308,10 +319,16 @@ void WhatsNextView::appendTodo(const Akonadi::CollectionCalendar::Ptr &calendar,
 
     if (const KCalendarCore::Todo::Ptr todo = Akonadi::CalendarUtils::todo(aitem)) {
         if (todo->hasDueDate()) {
-            mText +=
-                i18nc("to-do due date",
-                      "  (Due: %1)",
-                      todo->allDay() ? QLocale().toString(todo->dtDue().date(), QLocale::LongFormat) : QLocale().toString(todo->dtDue(), QLocale::ShortFormat));
+            const QDateTime dt = todo->dtDue().toLocalTime();
+#if KCOREADDONS_VERSION >= QT_VERSION_CHECK(6, 31, 0)
+            const KFormat format;
+            const QString dueStr = todo->allDay() ? QLocale().toString(dt.date(), QLocale::LongFormat)
+                                                  : format.formatDateTime(dt, QLocale::LongFormat, KFormat::AddTimezoneAbbreviationIfNeeded);
+#else
+            const QString dueStr = todo->allDay() ? QLocale().toString(todo->dtDue().toLocalTime.date(), QLocale::LongFormat)
+                                                  : QLocale().toString(todo->dtDue(), QLocale::ShortFormat);
+#endif
+            mText += i18nc("to-do due date", "  (Due: %1)", dueStr);
         }
     }
     mText += "</li>\n"_L1;
