@@ -11,19 +11,22 @@
 // TODO: put a reminder and/or recurs icon on the item?
 
 #include "listview.h"
+#include "calendarview_debug.h"
 #include "helper.h"
-
-#include <CalendarSupport/Utils>
 
 #include <Akonadi/CalendarUtils>
 #include <Akonadi/IncidenceChanger>
 
-#include <KCalendarCore/Visitor>
+#include <CalendarSupport/Utils>
 
+#include <KCalendarCore/Journal>
+#include <KCalendarCore/Visitor>
 #include <KConfig>
 #include <KConfigGroup>
-
-#include "calendarview_debug.h"
+#include <kcoreaddons_version.h> //remove when KF_MIN_VERSION is "6.31"
+#if KCOREADDONS_VERSION >= QT_VERSION_CHECK(6, 31, 0)
+#include <KFormat>
+#endif
 
 #include <QBoxLayout>
 #include <QHeaderView>
@@ -51,7 +54,7 @@ static QString cleanSummary(const QString &summary, const QDateTime &next)
     retStr.replace(QLatin1Char('\n'), u' ');
 
     if (next.isValid()) {
-        const QString dateStr = QLocale().toString(next.date(), QLocale::ShortFormat);
+        const QString dateStr = QLocale().toString(next.date(), QLocale::LongFormat);
         retStr = i18nc("%1 is an item summary. %2 is the date when this item reoccurs", "%1 (next: %2)", retStr, dateStr);
     }
     return retStr;
@@ -194,11 +197,19 @@ bool ListViewPrivate::ListItemVisitor::visit(const Event::Ptr &e)
     if (e->allDay()) {
         mItem->start.setTime(DAY_START);
         mItem->end.setTime(DAY_END);
-        mItem->setText(StartDateTime_Column, QLocale().toString(mItem->start.date(), QLocale::ShortFormat));
-        mItem->setText(EndDateTime_Column, QLocale().toString(mItem->end.date(), QLocale::ShortFormat));
+        mItem->setText(StartDateTime_Column, QLocale().toString(mItem->start.date(), QLocale::LongFormat));
+        mItem->setText(EndDateTime_Column, QLocale().toString(mItem->end.date(), QLocale::LongFormat));
     } else {
-        mItem->setText(StartDateTime_Column, QLocale().toString(mItem->start, QLocale::ShortFormat));
-        mItem->setText(EndDateTime_Column, QLocale().toString(mItem->end, QLocale::ShortFormat));
+#if KCOREADDONS_VERSION >= QT_VERSION_CHECK(6, 31, 0)
+        const KFormat format;
+        const QString dtStartStr = format.formatDateTime(mItem->start, QLocale::LongFormat, KFormat::AddTimezoneAbbreviationIfNeeded);
+        const QString dtEndStr = format.formatDateTime(mItem->start, QLocale::LongFormat, KFormat::AddTimezoneAbbreviationIfNeeded);
+#else
+        const QString dtStartStr = QLocale().toString(mItem->start, QLocale::ShortFormat);
+        const QString dtEndStr = QLocale().toString(mItem->end, QLocale::ShortFormat);
+#endif
+        mItem->setText(StartDateTime_Column, dtStartStr);
+        mItem->setText(EndDateTime_Column, dtEndStr);
     }
 
     mItem->setText(Categories_Column, e->categoriesStr());
@@ -233,9 +244,16 @@ bool ListViewPrivate::ListItemVisitor::visit(const Todo::Ptr &t)
 
     if (t->hasStartDate()) {
         if (t->allDay()) {
-            mItem->setText(StartDateTime_Column, QLocale().toString(t->dtStart().toLocalTime().date(), QLocale::ShortFormat));
+            mItem->setText(StartDateTime_Column, QLocale().toString(t->dtStart().toLocalTime().date(), QLocale::LongFormat));
         } else {
-            mItem->setText(StartDateTime_Column, QLocale().toString(t->dtStart().toLocalTime(), QLocale::ShortFormat));
+            const QDateTime dt = t->dtStart().toLocalTime();
+#if KCOREADDONS_VERSION >= QT_VERSION_CHECK(6, 31, 0)
+            const KFormat format;
+            const QString dtStartStr = format.formatDateTime(dt, QLocale::LongFormat, KFormat::AddTimezoneAbbreviationIfNeeded);
+#else
+            const QString dtStartStr = QLocale().toString(dt, QLocale::ShortFormat);
+#endif
+            mItem->setText(StartDateTime_Column, dtStartStr);
         }
     } else {
         mItem->setText(StartDateTime_Column, QStringLiteral("---"));
@@ -243,9 +261,16 @@ bool ListViewPrivate::ListItemVisitor::visit(const Todo::Ptr &t)
 
     if (t->hasDueDate()) {
         if (t->allDay()) {
-            mItem->setText(EndDateTime_Column, QLocale().toString(t->dtDue().toLocalTime().date(), QLocale::ShortFormat));
+            mItem->setText(EndDateTime_Column, QLocale().toString(t->dtDue().toLocalTime().date(), QLocale::LongFormat));
         } else {
-            mItem->setText(EndDateTime_Column, QLocale().toString(t->dtDue().toLocalTime(), QLocale::ShortFormat));
+            const QDateTime dt = t->dtDue().toLocalTime();
+#if KCOREADDONS_VERSION >= QT_VERSION_CHECK(6, 31, 0)
+            const KFormat format;
+            const QString dtDueStr = format.formatDateTime(dt, QLocale::LongFormat, KFormat::AddTimezoneAbbreviationIfNeeded);
+#else
+            const QString dtDueStr = QLocale().toString(dt, QLocale::ShortFormat);
+#endif
+            mItem->setText(EndDateTime_Column, dtDueStr);
         }
     } else {
         mItem->setText(EndDateTime_Column, QStringLiteral("---"));
@@ -269,9 +294,16 @@ bool ListViewPrivate::ListItemVisitor::visit(const Journal::Ptr &j)
     }
     if (j->allDay()) {
         mItem->start.setTime(DAY_START);
-        mItem->setText(StartDateTime_Column, QLocale().toString(j->dtStart().toLocalTime().date(), QLocale::ShortFormat));
+        mItem->setText(StartDateTime_Column, QLocale().toString(j->dtStart().toLocalTime().date(), QLocale::LongFormat));
     } else {
-        mItem->setText(StartDateTime_Column, QLocale().toString(j->dtStart().toLocalTime(), QLocale::ShortFormat));
+        const QDateTime dt = j->dtStart().toLocalTime();
+#if KCOREADDONS_VERSION >= QT_VERSION_CHECK(6, 31, 0)
+        const KFormat format;
+        const QString dtStartStr = format.formatDateTime(dt, QLocale::LongFormat, KFormat::AddTimezoneAbbreviationIfNeeded);
+#else
+        const QString dtStartStr = QLocale().toString(dt, QLocale::ShortFormat);
+#endif
+        mItem->setText(StartDateTime_Column, dtStartStr);
     }
     mItem->setText(EndDateTime_Column, QStringLiteral("---"));
     mItem->setText(Categories_Column, j->categoriesStr());
@@ -362,8 +394,8 @@ void ListView::showDates(const QDate &start, const QDate &end, const QDate &pref
     d->mStartDate = start;
     d->mEndDate = end;
 
-    const QString startStr = QLocale().toString(start, QLocale::ShortFormat);
-    const QString endStr = QLocale().toString(end, QLocale::ShortFormat);
+    const QString startStr = QLocale().toString(start, QLocale::LongFormat);
+    const QString endStr = QLocale().toString(end, QLocale::LongFormat);
 
     d->mTreeWidget->headerItem()->setText(Summary_Column, i18n("Summary [%1 - %2]", startStr, endStr));
 
