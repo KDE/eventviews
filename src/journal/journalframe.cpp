@@ -11,20 +11,23 @@
 // Journal Entry
 
 #include "journalframe.h"
+#include "calendarview_debug.h"
 
 #include <Akonadi/CalendarUtils>
 #include <CalendarSupport/Utils>
 
 #include <KCalendarCore/Journal>
-
-#include "calendarview_debug.h"
+#include <kcoreaddons_version.h> //remove when KF_MIN_VERSION is "6.31"
+#if KCOREADDONS_VERSION >= QT_VERSION_CHECK(6, 31, 0)
+#include <KFormat>
+#endif
 #include <KLocalizedString>
-#include <QTextBrowser>
 
 #include <QEvent>
 #include <QFontDatabase>
 #include <QHBoxLayout>
 #include <QPushButton>
+#include <QTextBrowser>
 
 using namespace Qt::Literals::StringLiterals;
 using namespace EventViews;
@@ -291,8 +294,15 @@ void JournalFrame::readJournal(const Akonadi::Item &item)
     QTextCharFormat dateFormat = bodyFormat;
     dateFormat.setFontWeight(QFont::Bold);
     dateFormat.setFontPointSize(baseFontSize + 1);
-    cursor.insertText(j->allDay() ? QLocale().toString(j->dtStart().date(), QLocale::LongFormat) : QLocale().toString(j->dtStart(), QLocale::ShortFormat),
-                      dateFormat);
+    const QDateTime dt = j->dtStart().toLocalTime();
+#if KCOREADDONS_VERSION >= QT_VERSION_CHECK(6, 31, 0)
+    const KFormat format;
+    const QString dtStartStr = format.formatDateTime(dt, QLocale::LongFormat, KFormat::AddTimezoneAbbreviationIfNeeded);
+#else
+    const QString dtStartStr = QLocale().toString(dt, QLocale::ShortFormat);
+#endif
+
+    cursor.insertText(j->allDay() ? QLocale().toString(dt.date(), QLocale::LongFormat) : dtStartStr, dateFormat);
     cursor.insertBlock();
     cursor.insertBlock();
     cursor.setBlockCharFormat(bodyFormat);
