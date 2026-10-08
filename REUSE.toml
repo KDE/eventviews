@@ -46,3 +46,9 @@ path = ["README-ECMInstalledLibraryCheck.md"]
 precedence = "aggregate"
 SPDX-FileCopyrightText = "2026 Laurent Montel <montel@kde.org>"
 SPDX-License-Identifier = "BSD-3-Clause"
+
+[[annotations]]
+path = ["yamlfmt"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2026 Allen Winter <winter@kde.org>"
+SPDX-License-Identifier = "CC0-1.0"

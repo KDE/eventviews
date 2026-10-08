@@ -1,24 +1,22 @@
 # SPDX-FileCopyrightText: None
 # SPDX-License-Identifier: CC0-1.0
-
 Dependencies:
- - 'on': ['Linux', 'FreeBSD', 'Windows', 'macOS']
-   'require':
-    'frameworks/extra-cmake-modules': '@latest-kf6'
-    'frameworks/kcalendarcore': '@latest-kf6'
-    'frameworks/kcolorscheme': '@latest-kf6'
-    'graphics/kdiagram': '@latest-kf6'
-    'pim/akonadi': '@same'
-    'pim/akonadi-calendar': '@same'
-    'pim/calendarsupport': '@same'
-    'pim/kcalutils': '@same'
-    'pim/libkdepim': '@same'
-
+  - 'on': ['Linux', 'FreeBSD', 'Windows', 'macOS']
+    'require':
+      'frameworks/extra-cmake-modules': '@latest-kf6'
+      'frameworks/kcalendarcore': '@latest-kf6'
+      'frameworks/kcolorscheme': '@latest-kf6'
+      'graphics/kdiagram': '@latest-kf6'
+      'pim/akonadi': '@same'
+      'pim/akonadi-calendar': '@same'
+      'pim/calendarsupport': '@same'
+      'pim/kcalutils': '@same'
+      'pim/libkdepim': '@same'
 Options:
- cmake-options: '-DKDEPIM_BUILD_EXAMPLES=ON'
- require-passing-tests-on: ['Linux', 'FreeBSD', 'Windows']
- tests-run-in-parallel: true
- cppcheck-arguments: '--enable=warning,performance,portability,style --suppress-xml=cppcheck-suppressions.xml'
- require-cppcheck-clean: false
- enable-lsan: true
- run-installed-library-check-on: ['@all']
+  cmake-options: '-DKDEPIM_BUILD_EXAMPLES=ON'
+  require-passing-tests-on: ['Linux', 'FreeBSD', 'Windows']
+  tests-run-in-parallel: true
+  cppcheck-arguments: '--enable=warning,performance,portability,style --suppress-xml=cppcheck-suppressions.xml'
+  require-cppcheck-clean: false
+  enable-lsan: true
+  run-installed-library-check-on: ['@all']
