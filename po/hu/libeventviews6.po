@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-04 00:47+0000\n"
+"POT-Creation-Date: 2026-10-08 00:46+0000\n"
 "PO-Revision-Date: 2025-07-13 21:02+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -60,7 +60,7 @@ msgctxt "@title:window"
 msgid "Error Occurred"
 msgstr "Hiba történt"
 
-#: agenda/agendaitem.cpp:80 list/listview.cpp:429
+#: agenda/agendaitem.cpp:80 list/listview.cpp:461
 #, kde-format
 msgid "%2 (1 year)"
 msgid_plural "%2 (%1 years)"
@@ -1929,105 +1929,105 @@ msgstr "Csak a hivatkozás csatolása"
 msgid "Attach complete message"
 msgstr "A teljes üzenet csatolása"
 
-#: journal/journalframe.cpp:148
+#: journal/journalframe.cpp:151
 #, kde-format
 msgctxt "@action: button"
 msgid "&Edit"
 msgstr "S&zerkesztés"
 
-#: journal/journalframe.cpp:151
+#: journal/journalframe.cpp:154
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Edit this journal entry"
 msgstr "A naplóbejegyzés szerkesztése"
 
-#: journal/journalframe.cpp:152
+#: journal/journalframe.cpp:155
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Opens an editor dialog for this journal entry"
 msgstr "Megnyit egy szerkesztőablakot a naplóbejegyzéshez"
 
-#: journal/journalframe.cpp:158
+#: journal/journalframe.cpp:161
 #, kde-format
 msgctxt "@action: button"
 msgid "&Delete"
 msgstr "&Törlés"
 
-#: journal/journalframe.cpp:161
+#: journal/journalframe.cpp:164
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete this journal entry"
 msgstr "A naplóbejegyzés törlése"
 
-#: journal/journalframe.cpp:162
+#: journal/journalframe.cpp:165
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Delete this journal entry"
 msgstr "Naplóbejegyzés törlése"
 
-#: journal/journalframe.cpp:167
+#: journal/journalframe.cpp:170
 #, kde-format
 msgctxt "@action: button"
 msgid "&Print"
 msgstr "&Nyomtatás"
 
-#: journal/journalframe.cpp:171
+#: journal/journalframe.cpp:174
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Print this journal entry"
 msgstr "A naplóbejegyzés kinyomtatása"
 
-#: journal/journalframe.cpp:172
+#: journal/journalframe.cpp:175
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Opens a print dialog for this journal entry"
 msgstr "Megnyitja a nyomtatási párbeszédablakot a naplóbejegyzéshez"
 
-#: journal/journalframe.cpp:177
+#: journal/journalframe.cpp:180
 #, kde-format
 msgctxt "@action: button"
 msgid "Print preview"
 msgstr "Nyomtatási kép"
 
-#: journal/journalframe.cpp:181
+#: journal/journalframe.cpp:184
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Print preview this journal entry"
 msgstr "A naplóbejegyzés nyomtatási képe"
 
-#: journal/journalframe.cpp:182
+#: journal/journalframe.cpp:185
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Opens a print preview of this journal entry"
 msgstr "Megnyitja a naplóbejegyzés nyomtatási képét"
 
-#: list/listview.cpp:55
+#: list/listview.cpp:58
 #, kde-format
 msgctxt "%1 is an item summary. %2 is the date when this item reoccurs"
 msgid "%1 (next: %2)"
 msgstr "%1 (következő: %2)"
 
-#: list/listview.cpp:292
+#: list/listview.cpp:324
 #, kde-format
 msgid "Summary"
 msgstr "Összegzés"
 
-#: list/listview.cpp:293
+#: list/listview.cpp:325
 #, kde-format
 msgid "Start Date/Time"
 msgstr "Kezdési dátum/idő"
 
-#: list/listview.cpp:294
+#: list/listview.cpp:326
 #, kde-format
 msgid "End Date/Time"
 msgstr "Befejezési dátum/idő"
 
-#: list/listview.cpp:295
+#: list/listview.cpp:327
 #, kde-format
 msgid "Tags"
 msgstr "Címkék"
 
-#: list/listview.cpp:368
+#: list/listview.cpp:400
 #, kde-format
 msgid "Summary [%1 - %2]"
 msgstr "Összegzés [%1 - %2]"
@@ -3172,40 +3172,40 @@ msgstr ""
 "törlése esetén. Jelölje be, ha használni szeretné a csoportmunka-funkciókat "
 "(pl. ha a Kontactot KDE Kolab-kliensként használja)."
 
-#: whatsnext/whatsnextview.cpp:60
+#: whatsnext/whatsnextview.cpp:65
 #, kde-format
 msgid "To-dos:"
 msgstr "Feladatok:"
 
-#: whatsnext/whatsnextview.cpp:76
+#: whatsnext/whatsnextview.cpp:81
 #, kde-format
 msgid "What's Next?"
 msgstr "Mi következik?"
 
-#: whatsnext/whatsnextview.cpp:83 whatsnext/whatsnextview.cpp:270
-#: whatsnext/whatsnextview.cpp:275
+#: whatsnext/whatsnextview.cpp:88 whatsnext/whatsnextview.cpp:275
+#: whatsnext/whatsnextview.cpp:287
 #, kde-format
 msgctxt "date from - to"
 msgid "%1 - %2"
 msgstr "%1 - %2"
 
-#: whatsnext/whatsnextview.cpp:100
+#: whatsnext/whatsnextview.cpp:105
 #, kde-format
 msgid "Events:"
 msgstr "Események:"
 
-#: whatsnext/whatsnextview.cpp:192 whatsnext/whatsnextview.cpp:216
+#: whatsnext/whatsnextview.cpp:197 whatsnext/whatsnextview.cpp:221
 #, kde-format
 msgid "Events and to-dos that need a reply:"
 msgstr "Választ igénylő események és feladatok:"
 
-#: whatsnext/whatsnextview.cpp:282
+#: whatsnext/whatsnextview.cpp:296
 #, kde-format
 msgctxt "date, from - to"
 msgid "%1, %2 - %3"
 msgstr "%1, %2 - %3"
 
-#: whatsnext/whatsnextview.cpp:313
+#: whatsnext/whatsnextview.cpp:331
 #, kde-format
 msgctxt "to-do due date"
 msgid "  (Due: %1)"

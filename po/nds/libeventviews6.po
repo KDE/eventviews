@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-04 00:47+0000\n"
+"POT-Creation-Date: 2026-10-08 00:46+0000\n"
 "PO-Revision-Date: 2014-04-06 20:54+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -67,7 +67,7 @@ msgctxt "@title:window"
 msgid "Error Occurred"
 msgstr "Fehler"
 
-#: agenda/agendaitem.cpp:80 list/listview.cpp:429
+#: agenda/agendaitem.cpp:80 list/listview.cpp:461
 #, kde-format
 msgid "%2 (1 year)"
 msgid_plural "%2 (%1 years)"
@@ -1951,70 +1951,70 @@ msgstr "Bloots Link na de Naricht bileggen"
 msgid "Attach complete message"
 msgstr "Heel Naricht bileggen"
 
-#: journal/journalframe.cpp:148
+#: journal/journalframe.cpp:151
 #, fuzzy, kde-format
 #| msgid "&Edit"
 msgctxt "@action: button"
 msgid "&Edit"
 msgstr "&Bewerken"
 
-#: journal/journalframe.cpp:151
+#: journal/journalframe.cpp:154
 #, fuzzy, kde-format
 #| msgid "Edit this journal entry"
 msgctxt "@info:tooltip"
 msgid "Edit this journal entry"
 msgstr "Dissen Daagbookindrag bewerken"
 
-#: journal/journalframe.cpp:152
+#: journal/journalframe.cpp:155
 #, fuzzy, kde-format
 #| msgid "Opens an editor dialog for this journal entry"
 msgctxt "@info:whatsthis"
 msgid "Opens an editor dialog for this journal entry"
 msgstr "Maakt en Editordialoog för dissen Indrag op"
 
-#: journal/journalframe.cpp:158
+#: journal/journalframe.cpp:161
 #, fuzzy, kde-format
 #| msgid "&Delete"
 msgctxt "@action: button"
 msgid "&Delete"
 msgstr "&Wegdoon"
 
-#: journal/journalframe.cpp:161
+#: journal/journalframe.cpp:164
 #, fuzzy, kde-format
 #| msgid "Delete this journal entry"
 msgctxt "@info:tooltip"
 msgid "Delete this journal entry"
 msgstr "Dissen Daagbookindrag wegdoon"
 
-#: journal/journalframe.cpp:162
+#: journal/journalframe.cpp:165
 #, fuzzy, kde-format
 #| msgid "Delete this journal entry"
 msgctxt "@info:whatsthis"
 msgid "Delete this journal entry"
 msgstr "Dissen Daagbookindrag wegdoon"
 
-#: journal/journalframe.cpp:167
+#: journal/journalframe.cpp:170
 #, fuzzy, kde-format
 #| msgid "&Print"
 msgctxt "@action: button"
 msgid "&Print"
 msgstr "&Drucken"
 
-#: journal/journalframe.cpp:171
+#: journal/journalframe.cpp:174
 #, fuzzy, kde-format
 #| msgid "Print this journal entry"
 msgctxt "@info:tooltip"
 msgid "Print this journal entry"
 msgstr "Dissen Daagbookindrag drucken"
 
-#: journal/journalframe.cpp:172
+#: journal/journalframe.cpp:175
 #, fuzzy, kde-format
 #| msgid "Opens a print dialog for this journal entry"
 msgctxt "@info:whatsthis"
 msgid "Opens a print dialog for this journal entry"
 msgstr "Maakt en Druckdialoog för dissen Indrag op"
 
-#: journal/journalframe.cpp:177
+#: journal/journalframe.cpp:180
 #, fuzzy, kde-format
 #| msgctxt "@action:inmenu print preview the to-do"
 #| msgid "Print Previe&w..."
@@ -2022,47 +2022,47 @@ msgctxt "@action: button"
 msgid "Print preview"
 msgstr "Druck&vöransicht..."
 
-#: journal/journalframe.cpp:181
+#: journal/journalframe.cpp:184
 #, fuzzy, kde-format
 #| msgid "Print this journal entry"
 msgctxt "@info:tooltip"
 msgid "Print preview this journal entry"
 msgstr "Dissen Daagbookindrag drucken"
 
-#: journal/journalframe.cpp:182
+#: journal/journalframe.cpp:185
 #, fuzzy, kde-format
 #| msgid "Opens a print dialog for this journal entry"
 msgctxt "@info:whatsthis"
 msgid "Opens a print preview of this journal entry"
 msgstr "Maakt en Druckdialoog för dissen Indrag op"
 
-#: list/listview.cpp:55
+#: list/listview.cpp:58
 #, kde-format
 msgctxt "%1 is an item summary. %2 is the date when this item reoccurs"
 msgid "%1 (next: %2)"
 msgstr "%1 (nakamen: %2)"
 
-#: list/listview.cpp:292
+#: list/listview.cpp:324
 #, kde-format
 msgid "Summary"
 msgstr "Tosamenfaten"
 
-#: list/listview.cpp:293
+#: list/listview.cpp:325
 #, kde-format
 msgid "Start Date/Time"
 msgstr "Startdatum un -Tiet"
 
-#: list/listview.cpp:294
+#: list/listview.cpp:326
 #, kde-format
 msgid "End Date/Time"
 msgstr "Enndatum un -Tiet"
 
-#: list/listview.cpp:295
+#: list/listview.cpp:327
 #, kde-format
 msgid "Tags"
 msgstr ""
 
-#: list/listview.cpp:368
+#: list/listview.cpp:400
 #, kde-format
 msgid "Summary [%1 - %2]"
 msgstr "Tosamenfaten [%1 -%2]"
@@ -3250,40 +3250,40 @@ msgstr ""
 "Deelnehmers angaht. Maak dat an, wenn Du de Arbeitkoppel-Funkschonen bruken "
 "wullt (a.B. för den Bruuk vun Kontact as Kolab-Client för KDE)."
 
-#: whatsnext/whatsnextview.cpp:60
+#: whatsnext/whatsnextview.cpp:65
 #, kde-format
 msgid "To-dos:"
 msgstr "Opgaven:"
 
-#: whatsnext/whatsnextview.cpp:76
+#: whatsnext/whatsnextview.cpp:81
 #, kde-format
 msgid "What's Next?"
 msgstr "Wat kummt neegst?"
 
-#: whatsnext/whatsnextview.cpp:83 whatsnext/whatsnextview.cpp:270
-#: whatsnext/whatsnextview.cpp:275
+#: whatsnext/whatsnextview.cpp:88 whatsnext/whatsnextview.cpp:275
+#: whatsnext/whatsnextview.cpp:287
 #, kde-format
 msgctxt "date from - to"
 msgid "%1 - %2"
 msgstr "%1 - %2"
 
-#: whatsnext/whatsnextview.cpp:100
+#: whatsnext/whatsnextview.cpp:105
 #, kde-format
 msgid "Events:"
 msgstr "Begeefnissen:"
 
-#: whatsnext/whatsnextview.cpp:192 whatsnext/whatsnextview.cpp:216
+#: whatsnext/whatsnextview.cpp:197 whatsnext/whatsnextview.cpp:221
 #, kde-format
 msgid "Events and to-dos that need a reply:"
 msgstr "Begeefnissen un Opgaven, bi de Du noch en Antwoort utsteiht:"
 
-#: whatsnext/whatsnextview.cpp:282
+#: whatsnext/whatsnextview.cpp:296
 #, kde-format
 msgctxt "date, from - to"
 msgid "%1, %2 - %3"
 msgstr "%1, %2 - %3"
 
-#: whatsnext/whatsnextview.cpp:313
+#: whatsnext/whatsnextview.cpp:331
 #, kde-format
 msgctxt "to-do due date"
 msgid "  (Due: %1)"

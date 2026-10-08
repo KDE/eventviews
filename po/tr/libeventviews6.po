@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-04 00:47+0000\n"
+"POT-Creation-Date: 2026-10-08 00:46+0000\n"
 "PO-Revision-Date: 2026-09-08 19:11+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -69,7 +69,7 @@ msgctxt "@title:window"
 msgid "Error Occurred"
 msgstr "Hata Oluştu"
 
-#: agenda/agendaitem.cpp:80 list/listview.cpp:429
+#: agenda/agendaitem.cpp:80 list/listview.cpp:461
 #, kde-format
 msgid "%2 (1 year)"
 msgid_plural "%2 (%1 years)"
@@ -1823,105 +1823,105 @@ msgstr "İletiye yalnızca bağlantıyı iliştir"
 msgid "Attach complete message"
 msgstr "Tüm iletiyi iliştir"
 
-#: journal/journalframe.cpp:148
+#: journal/journalframe.cpp:151
 #, kde-format
 msgctxt "@action: button"
 msgid "&Edit"
 msgstr "Dü&zenle"
 
-#: journal/journalframe.cpp:151
+#: journal/journalframe.cpp:154
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Edit this journal entry"
 msgstr "Bu günce girdisini düzenle"
 
-#: journal/journalframe.cpp:152
+#: journal/journalframe.cpp:155
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Opens an editor dialog for this journal entry"
 msgstr "Bu günce girdisi için bir düzenleyici iletişim kutusu açar"
 
-#: journal/journalframe.cpp:158
+#: journal/journalframe.cpp:161
 #, kde-format
 msgctxt "@action: button"
 msgid "&Delete"
 msgstr "&Sil"
 
-#: journal/journalframe.cpp:161
+#: journal/journalframe.cpp:164
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete this journal entry"
 msgstr "Bu günce girdisini sil"
 
-#: journal/journalframe.cpp:162
+#: journal/journalframe.cpp:165
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Delete this journal entry"
 msgstr "Bu günce girdisini sil"
 
-#: journal/journalframe.cpp:167
+#: journal/journalframe.cpp:170
 #, kde-format
 msgctxt "@action: button"
 msgid "&Print"
 msgstr "&Yazdır"
 
-#: journal/journalframe.cpp:171
+#: journal/journalframe.cpp:174
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Print this journal entry"
 msgstr "Bu günce girdisini yazdır"
 
-#: journal/journalframe.cpp:172
+#: journal/journalframe.cpp:175
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Opens a print dialog for this journal entry"
 msgstr "Bu günce girdisi için bir yazdırma iletişim kutusu açar"
 
-#: journal/journalframe.cpp:177
+#: journal/journalframe.cpp:180
 #, kde-format
 msgctxt "@action: button"
 msgid "Print preview"
 msgstr "Yazdırma Önizlemesi"
 
-#: journal/journalframe.cpp:181
+#: journal/journalframe.cpp:184
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Print preview this journal entry"
 msgstr "Bu günce girdisinin yazdırma önizlemesi"
 
-#: journal/journalframe.cpp:182
+#: journal/journalframe.cpp:185
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Opens a print preview of this journal entry"
 msgstr "Bu günce girdisi için bir yazdırma iletişim kutusu açar"
 
-#: list/listview.cpp:55
+#: list/listview.cpp:58
 #, kde-format
 msgctxt "%1 is an item summary. %2 is the date when this item reoccurs"
 msgid "%1 (next: %2)"
 msgstr "%1 (sonraki: %2)"
 
-#: list/listview.cpp:292
+#: list/listview.cpp:324
 #, kde-format
 msgid "Summary"
 msgstr "Özet"
 
-#: list/listview.cpp:293
+#: list/listview.cpp:325
 #, kde-format
 msgid "Start Date/Time"
 msgstr "Başlangıç Tarihi/Saati"
 
-#: list/listview.cpp:294
+#: list/listview.cpp:326
 #, kde-format
 msgid "End Date/Time"
 msgstr "Bitiş Tarihi/Saati"
 
-#: list/listview.cpp:295
+#: list/listview.cpp:327
 #, kde-format
 msgid "Tags"
 msgstr "Künyeler"
 
-#: list/listview.cpp:368
+#: list/listview.cpp:400
 #, kde-format
 msgid "Summary [%1 - %2]"
 msgstr "Özet [%1 — %2]"
@@ -3063,40 +3063,40 @@ msgstr ""
 "istiyorsanız; örneğin, Kontak’ı KDE Kolab istemcisi olarak düzenlemek "
 "istiyorsanız, bu kutucuğu seçmeniz önerilir."
 
-#: whatsnext/whatsnextview.cpp:60
+#: whatsnext/whatsnextview.cpp:65
 #, kde-format
 msgid "To-dos:"
 msgstr "Yapılacaklar:"
 
-#: whatsnext/whatsnextview.cpp:76
+#: whatsnext/whatsnextview.cpp:81
 #, kde-format
 msgid "What's Next?"
 msgstr "Sırada ne var?"
 
-#: whatsnext/whatsnextview.cpp:83 whatsnext/whatsnextview.cpp:270
-#: whatsnext/whatsnextview.cpp:275
+#: whatsnext/whatsnextview.cpp:88 whatsnext/whatsnextview.cpp:275
+#: whatsnext/whatsnextview.cpp:287
 #, kde-format
 msgctxt "date from - to"
 msgid "%1 - %2"
 msgstr "%1–%2"
 
-#: whatsnext/whatsnextview.cpp:100
+#: whatsnext/whatsnextview.cpp:105
 #, kde-format
 msgid "Events:"
 msgstr "Etkinlikler:"
 
-#: whatsnext/whatsnextview.cpp:192 whatsnext/whatsnextview.cpp:216
+#: whatsnext/whatsnextview.cpp:197 whatsnext/whatsnextview.cpp:221
 #, kde-format
 msgid "Events and to-dos that need a reply:"
 msgstr "Yanıt gerektiren etkinlikler ve yapılacaklar:"
 
-#: whatsnext/whatsnextview.cpp:282
+#: whatsnext/whatsnextview.cpp:296
 #, kde-format
 msgctxt "date, from - to"
 msgid "%1, %2 - %3"
 msgstr "%1, %2–%3"
 
-#: whatsnext/whatsnextview.cpp:313
+#: whatsnext/whatsnextview.cpp:331
 #, kde-format
 msgctxt "to-do due date"
 msgid "  (Due: %1)"
