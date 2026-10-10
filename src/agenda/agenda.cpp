@@ -1861,6 +1861,7 @@ void Agenda::insertMultiItem(const KCalendarCore::Incidence::Ptr &event,
     int count = 0;
     AgendaItem::QPtr current = nullptr;
     QList<AgendaItem::QPtr> multiItems;
+    multiItems.reserve(width);
     int const visibleCount = d->mSelectedDates.first().daysTo(d->mSelectedDates.last());
     for (cellX = XBegin; cellX <= XEnd; ++cellX) {
         ++count;
