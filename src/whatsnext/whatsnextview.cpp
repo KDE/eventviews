@@ -290,9 +290,14 @@ void WhatsNextView::appendEvent(const Akonadi::CollectionCalendar::Ptr &calendar
             if (event->allDay()) {
                 mText += QLocale().toString(starttime.date(), QLocale::LongFormat);
             } else {
+#if KCOREADDONS_VERSION >= QT_VERSION_CHECK(6, 31, 0)
                 const KFormat format;
                 const QString startStr = format.formatTime(starttime, QLocale::LongFormat, KFormat::DoNotAddTimeZone);
                 const QString endStr = format.formatTime(endtime, QLocale::LongFormat, KFormat::AddTimezoneAbbreviationIfNeeded);
+#else
+                const QString startStr = QLocale().toString(starttime, QLocale::ShortFormat);
+                const QString endStr = QLocale().toString(endtime, QLocale::ShortFormat);
+#endif
                 mText += i18nc("date, from - to", "%1, %2 - %3", QLocale().toString(starttime.date(), QLocale::LongFormat), startStr, endStr);
             }
         }
