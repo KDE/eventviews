@@ -330,8 +330,7 @@ void WhatsNextView::appendTodo(const Akonadi::CollectionCalendar::Ptr &calendar,
             const QString dueStr = todo->allDay() ? QLocale().toString(dt.date(), QLocale::LongFormat)
                                                   : format.formatDateTime(dt, QLocale::LongFormat, KFormat::AddTimezoneAbbreviationIfNeeded);
 #else
-            const QString dueStr = todo->allDay() ? QLocale().toString(todo->dtDue().toLocalTime.date(), QLocale::LongFormat)
-                                                  : QLocale().toString(todo->dtDue(), QLocale::ShortFormat);
+            const QString dueStr = todo->allDay() ? QLocale().toString(dt.date(), QLocale::LongFormat) : QLocale().toString(dt, QLocale::ShortFormat);
 #endif
             mText += i18nc("to-do due date", "  (Due: %1)", dueStr);
         }
