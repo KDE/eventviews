@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-08 00:46+0000\n"
+"POT-Creation-Date: 2026-10-12 00:52+0000\n"
 "PO-Revision-Date: 2026-09-01 22:17+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -3026,13 +3026,13 @@ msgstr "Händelser:"
 msgid "Events and to-dos that need a reply:"
 msgstr "Händelser och uppgifter som behöver ett svar:"
 
-#: whatsnext/whatsnextview.cpp:296
+#: whatsnext/whatsnextview.cpp:301
 #, kde-format
 msgctxt "date, from - to"
 msgid "%1, %2 - %3"
 msgstr "%1, %2 - %3"
 
-#: whatsnext/whatsnextview.cpp:331
+#: whatsnext/whatsnextview.cpp:335
 #, kde-format
 msgctxt "to-do due date"
 msgid "  (Due: %1)"

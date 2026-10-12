@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-08 00:46+0000\n"
+"POT-Creation-Date: 2026-10-12 00:52+0000\n"
 "PO-Revision-Date: 2010-05-08 12:40-0700\n"
 "Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -2761,13 +2761,13 @@ msgstr ""
 msgid "Events and to-dos that need a reply:"
 msgstr ""
 
-#: whatsnext/whatsnextview.cpp:296
+#: whatsnext/whatsnextview.cpp:301
 #, kde-format
 msgctxt "date, from - to"
 msgid "%1, %2 - %3"
 msgstr ""
 
-#: whatsnext/whatsnextview.cpp:331
+#: whatsnext/whatsnextview.cpp:335
 #, kde-format
 msgctxt "to-do due date"
 msgid "  (Due: %1)"

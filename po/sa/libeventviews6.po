@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-08 00:46+0000\n"
+"POT-Creation-Date: 2026-10-12 00:52+0000\n"
 "PO-Revision-Date: 2024-12-24 20:39+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -3157,13 +3157,13 @@ msgstr "घटनाः :"
 msgid "Events and to-dos that need a reply:"
 msgstr "घटनाः कार्याणि च येषां उत्तरस्य आवश्यकता वर्तते:"
 
-#: whatsnext/whatsnextview.cpp:296
+#: whatsnext/whatsnextview.cpp:301
 #, kde-format
 msgctxt "date, from - to"
 msgid "%1, %2 - %3"
 msgstr "%1, %2 - %3"
 
-#: whatsnext/whatsnextview.cpp:331
+#: whatsnext/whatsnextview.cpp:335
 #, kde-format
 msgctxt "to-do due date"
 msgid "  (Due: %1)"
