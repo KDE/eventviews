@@ -10,7 +10,6 @@ Dependencies:
       'pim/akonadi': '@same'
       'pim/akonadi-calendar': '@same'
       'pim/calendarsupport': '@same'
-      'pim/kcalutils': '@same'
       'pim/libkdepim': '@same'
 Options:
   cmake-options: '-DKDEPIM_BUILD_EXAMPLES=ON'

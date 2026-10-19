@@ -1,5 +1,5 @@
 /*
-  This file is part of the kcalutils library.
+  This file is part of the eventviews library.
 
   SPDX-FileCopyrightText: 2001-2003 Cornelius Schumacher <schumacher@kde.org>
   SPDX-FileCopyrightText: 2004 Reinhold Kainhofer <reinhold@kainhofer.com>
