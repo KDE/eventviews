@@ -15,10 +15,6 @@ find_dependency(
     "@KF_MIN_VERSION@"
 )
 find_dependency(
-    KPim6CalendarUtils
-    "@CALENDARUTILS_LIB_VERSION@"
-)
-find_dependency(
     KPim6AkonadiCalendar
     "@AKONADICALENDAR_LIB_VERSION@"
 )
