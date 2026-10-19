@@ -124,7 +124,6 @@ target_link_libraries(
         KPim6::AkonadiCore
         KPim6::CalendarSupport
         KF6::CalendarCore
-        KPim6::CalendarUtils
         KPim6::AkonadiCalendar
         KF6::ItemModels
         KF6::Holidays
