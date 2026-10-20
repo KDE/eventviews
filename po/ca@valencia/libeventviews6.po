@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: eventviews\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-12 00:52+0000\n"
-"PO-Revision-Date: 2026-09-06 18:12+0200\n"
+"PO-Revision-Date: 2026-10-15 19:24+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -382,7 +382,7 @@ msgstr "Els esdeveniments, tasques pendents i entrades de diari noves han de"
 #: eventviews.kcfg:18
 #, kde-format
 msgid "Be added to the default calendar"
-msgstr "S'afegiran al calendari predeterminat"
+msgstr "D'afegir-se al calendari predeterminat"
 
 #. i18n: ectx: tooltip, entry (Destination), group (Save Settings)
 #: eventviews.kcfg:19
@@ -1752,7 +1752,7 @@ msgid ""
 msgstr ""
 "Premeu este botó per a configurar la lletra de la barra d'hores. La barra "
 "d'hores és el giny que mostra les hores en la vista d'agenda. Este botó "
-"obrirà el diàleg «Tria una lletra», permetent-vos triar la lletra de l'hora "
+"obrirà el diàleg «Tria una lletra», que us permet triar la lletra de l'hora "
 "per a la barra d'hores."
 
 #. i18n: ectx: label, entry, group (Fonts)
@@ -1776,7 +1776,7 @@ msgid ""
 "the Month View."
 msgstr ""
 "Premeu este botó per a configurar la lletra de la vista mensual. Este botó "
-"obrirà el diàleg «Tria una lletra», permetent-vos triar la lletra per als "
+"obrirà el diàleg «Tria una lletra», que us permet triar la lletra per als "
 "elements en la vista mensual."
 
 #. i18n: ectx: label, entry, group (Fonts)
@@ -1800,7 +1800,7 @@ msgid ""
 "in the Agenda View."
 msgstr ""
 "Premeu este botó per a configurar la lletra per a la vista d'agenda. Este "
-"botó obrirà el diàleg «Tria una lletra», permetent-vos triar la lletra per "
+"botó obrirà el diàleg «Tria una lletra», que us permet triar la lletra per "
 "als esdeveniments en la vista d'agenda."
 
 #. i18n: ectx: label, entry, group (Fonts)
@@ -1826,7 +1826,7 @@ msgid ""
 "font for the current-time line in the Agenda View."
 msgstr ""
 "Premeu este botó per a configurar la lletra de la línia de temps actual "
-"(Marcus Bains). Este botó obrirà el diàleg «Tria una lletra», permetent-vos "
+"(Marcus Bains). Este botó obrirà el diàleg «Tria una lletra», que us permet "
 "triar la lletra per a la línia de temps actual en la vista d'agenda."
 
 #. i18n: ectx: label, entry (DefaultTodoAttachMethod), group (Hidden Options)
@@ -3029,7 +3029,7 @@ msgid ""
 msgstr ""
 "Premeu este botó per a configurar la lletra de la barra d'hores. La barra "
 "d'hores és el giny que mostra les hores en la vista d'agenda. Este botó "
-"obrirà el diàleg «Tria una lletra», permetent-vos triar la lletra de l'hora "
+"obrirà el diàleg «Tria una lletra», que us permet triar la lletra de l'hora "
 "per a la barra d'hores."
 
 #. i18n: ectx: label, entry, group (Fonts)
@@ -3047,7 +3047,7 @@ msgid ""
 "the month view."
 msgstr ""
 "Premeu este botó per a configurar la lletra de la vista mensual. Este botó "
-"obrirà el diàleg «Tria una lletra», permetent-vos triar la lletra per als "
+"obrirà el diàleg «Tria una lletra», que us permet triar la lletra per als "
 "elements en la vista mensual."
 
 #. i18n: ectx: label, entry, group (Fonts)
@@ -3065,7 +3065,7 @@ msgid ""
 "in the agenda view."
 msgstr ""
 "Premeu este botó per a configurar la lletra per a la vista d'agenda. Este "
-"botó obrirà el diàleg «Tria una lletra», permetent-vos triar la lletra per "
+"botó obrirà el diàleg «Tria una lletra», que us permet triar la lletra per "
 "als esdeveniments en la vista d'agenda."
 
 #. i18n: ectx: label, entry, group (Fonts)
@@ -3083,7 +3083,7 @@ msgid ""
 "current-time line in the agenda view."
 msgstr ""
 "Premeu este botó per a configurar la lletra de la línia de temps actual. "
-"Este botó obrirà el diàleg «Tria una lletra», permetent-vos triar la lletra "
+"Este botó obrirà el diàleg «Tria una lletra», que us permet triar la lletra "
 "per a la línia de temps actual en la vista d'agenda."
 
 #. i18n: ectx: label, entry, group (Group Scheduling)
