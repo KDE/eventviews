@@ -165,12 +165,6 @@ public:
     [[nodiscard]] bool isMoving() const;
 
     /**
-      Returns true if this item is currently being resized (ie. the
-      associated MonthItem is being moved).
-    */
-    [[nodiscard]] bool isResizing() const;
-
-    /**
       Returns true if this MonthGraphicsItem is the first one of the
       MonthItem ones.
     */

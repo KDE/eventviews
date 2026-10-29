@@ -28,7 +28,6 @@ namespace CalendarDecoration
 class Decoration;
 }
 
-class TimeLabels;
 class TimeLabelsZone;
 
 class Agenda;
@@ -322,7 +321,6 @@ private:
 
     void init(QDate start, QDate end);
     bool filterByCollectionSelection(const KCalendarCore::Incidence::Ptr &incidence);
-    void setupTimeLabel(TimeLabels *timeLabel);
     bool displayIncidence(const KCalendarCore::Incidence::Ptr &incidence, bool createSelected);
 
     friend class TimeLabelsZone;

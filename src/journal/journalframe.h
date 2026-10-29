@@ -45,7 +45,6 @@ public:
         return mDate;
     }
 
-    void clear();
     void readJournal(const Akonadi::Item &item);
 
 protected Q_SLOTS:

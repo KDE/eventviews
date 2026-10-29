@@ -53,7 +53,6 @@ public:
     [[nodiscard]] int rowHeight() const;
 
     [[nodiscard]] MonthCell *firstCellForMonthItem(const MonthItem *manager);
-    [[nodiscard]] int height(MonthItem *manager);
     [[nodiscard]] int itemHeight();
     [[nodiscard]] int itemHeightIncludingSpacing();
     QList<MonthItem *> mManagerList;
