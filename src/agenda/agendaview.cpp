@@ -2217,6 +2217,14 @@ bool AgendaView::displayIncidence(const KCalendarCore::Incidence::Ptr &incidence
         while (rIt.hasNext()) {
             rIt.next();
             auto nextOccurrenceDate = rIt.occurrenceStartDate().toLocalTime();
+            // An occurrence exception can move an occurrence out of the visible range while
+            // its original slot stays inside it. OccurrenceIterator still reports it (see
+            // the TODO in KCalendarCore's OccurrenceIterator::setupIterator), and
+            // insertIncidence() would clamp its column to the first visible day and draw a
+            // phantom entry there. Nothing of that occurrence is visible, so skip it.
+            if (const QDateTime occurrenceEnd = rIt.occurrenceEndDate().toLocalTime(); occurrenceEnd.isValid() && occurrenceEnd < firstVisibleDateTime) {
+                continue;
+            }
             if (const auto nextTodo = CalendarSupport::todo(rIt.incidence())) {
                 // Recurrence exceptions may have durations different from the normal recurrences.
                 nextOccurrenceDate = nextOccurrenceDate.addSecs(nextTodo->dtStart().secsTo(nextTodo->dtDue()));
