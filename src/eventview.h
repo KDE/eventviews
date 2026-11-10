@@ -560,7 +560,7 @@ protected:
      * month to show when the week crosses months.  It's a QDate instead of
      * uint so it can be easily fed to KCalendarSystem's functions.
      */
-    virtual QPair<QDateTime, QDateTime> actualDateRange(const QDateTime &start, const QDateTime &end, const QDate &preferredMonth = QDate()) const;
+    virtual std::pair<QDateTime, QDateTime> actualDateRange(const QDateTime &start, const QDateTime &end, const QDate &preferredMonth = QDate()) const;
     virtual void handleBackendError(const QString &error);
 
 private:

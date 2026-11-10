@@ -37,7 +37,7 @@ enum {
     TimeZoneNameRole = Qt::UserRole
 };
 
-using TimeZoneNamePair = QPair<QString, QByteArray>;
+using TimeZoneNamePair = std::pair<QString, QByteArray>;
 
 static QString tzWithUTC(const QByteArray &zoneId)
 {

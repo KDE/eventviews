@@ -514,7 +514,7 @@ void MonthView::showDates(const QDate &start, const QDate &end, const QDate &pre
     d->triggerDelayedReload(DatesChanged);
 }
 
-QPair<QDateTime, QDateTime> MonthView::actualDateRange(const QDateTime &start, const QDateTime &, const QDate &preferredMonth) const
+std::pair<QDateTime, QDateTime> MonthView::actualDateRange(const QDateTime &start, const QDateTime &, const QDate &preferredMonth) const
 {
     QDateTime dayOne = preferredMonth.isValid() ? QDateTime(preferredMonth.startOfDay()) : start;
 
@@ -524,7 +524,7 @@ QPair<QDateTime, QDateTime> MonthView::actualDateRange(const QDateTime &start, c
     actualStart.setTime(QTime(0, 0, 0, 0));
     QDateTime actualEnd = actualStart.addDays(6 * 7 - 1);
     actualEnd.setTime(QTime(23, 59, 59, 999));
-    return qMakePair(std::move(actualStart), std::move(actualEnd));
+    return std::make_pair(std::move(actualStart), std::move(actualEnd));
 }
 
 Akonadi::Item::List MonthView::selectedIncidences() const

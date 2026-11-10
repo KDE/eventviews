@@ -175,7 +175,7 @@ protected:
 
     /*!
      */
-    QPair<QDateTime, QDateTime> actualDateRange(const QDateTime &start, const QDateTime &end, const QDate &preferredMonth = QDate()) const override;
+    std::pair<QDateTime, QDateTime> actualDateRange(const QDateTime &start, const QDateTime &end, const QDate &preferredMonth = QDate()) const override;
 
     // Compute and update the whole view
     /*!
