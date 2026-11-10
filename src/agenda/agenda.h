@@ -16,8 +16,6 @@
 
 #include <Akonadi/Item>
 
-#include <KCalendarCore/Todo>
-
 #include <QFrame>
 #include <QScrollArea>
 
@@ -31,7 +29,6 @@ class IncidenceChanger;
 namespace EventViews
 {
 class Agenda;
-class AgendaItem;
 class AgendaView;
 
 class MarcusBainsPrivate;

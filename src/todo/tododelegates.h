@@ -8,11 +8,9 @@
 
 #pragma once
 
+#include <QSlider>
 #include <QStyledItemDelegate>
 
-class QPainter;
-class QSize;
-class QStyleOptionViewItem;
 class QTextDocument;
 
 /**

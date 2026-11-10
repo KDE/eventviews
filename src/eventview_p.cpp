@@ -23,8 +23,6 @@
 #include <QAbstractProxyModel>
 #include <QApplication>
 
-#include <ranges>
-
 using namespace EventViews;
 
 EventViewPrivate::EventViewPrivate(EventView *qq)

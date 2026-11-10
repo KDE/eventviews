@@ -15,8 +15,6 @@
 #include <QAbstractProxyModel>
 #include <QSharedPointer>
 
-#include <ranges>
-
 using namespace EventViews;
 
 ViewCalendar::~ViewCalendar() = default;

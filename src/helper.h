@@ -9,6 +9,7 @@
 
 #include <QColor>
 #include <QSharedPointer>
+#include <QString>
 
 namespace Akonadi
 {

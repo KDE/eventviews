@@ -10,8 +10,6 @@
 
 #include <CalendarSupport/CellItem>
 
-#include <Akonadi/Item>
-
 #include <QDateTime>
 #include <QPointer>
 #include <QWidget>

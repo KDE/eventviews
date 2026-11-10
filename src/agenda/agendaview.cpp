@@ -23,7 +23,6 @@
 #include <Akonadi/CalendarUtils>
 #include <Akonadi/EntityTreeModel>
 #include <Akonadi/IncidenceChanger>
-#include <CalendarSupport/CollectionSelection>
 #include <CalendarSupport/KCalPrefs>
 #include <CalendarSupport/Utils>
 
@@ -31,15 +30,16 @@
 #include <KCalendarCore/CalFormat>
 #include <KCalendarCore/OccurrenceIterator>
 
-#include <KIconLoader> // for SmallIcon()
-#include <KMessageBox>
+#include <KConfigGroup>
+#include <KIconLoader>
 #include <KPluginFactory>
+#include <KSharedConfig>
 #include <KSqueezedTextLabel>
 
 #include <KLocalizedString>
 #include <QApplication>
+#include <QBoxLayout>
 #include <QDrag>
-#include <QGridLayout>
 #include <QLabel>
 #include <QPainter>
 #include <QScrollBar>

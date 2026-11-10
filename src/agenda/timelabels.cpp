@@ -16,6 +16,8 @@
 
 #include <KLocalizedString>
 
+#include <QApplication>
+#include <QFrame>
 #include <QHelpEvent>
 #include <QIcon>
 #include <QMenu>

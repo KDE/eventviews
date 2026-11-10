@@ -15,6 +15,10 @@
 #include <QDate>
 #include <QObject>
 
+class QColor;
+class QPixmap;
+class QWidget;
+
 namespace EventViews
 {
 class MonthGraphicsItem;

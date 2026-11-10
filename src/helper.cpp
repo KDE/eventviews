@@ -9,9 +9,7 @@
 #include "prefs.h"
 
 #include <Akonadi/Collection>
-#include <Akonadi/Item>
 
-#include <Akonadi/AttributeFactory>
 #include <Akonadi/CollectionColorAttribute>
 #include <Akonadi/CollectionModifyJob>
 

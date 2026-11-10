@@ -12,6 +12,7 @@
 
 #include <KConfigSkeleton>
 
+#include <QSharedPointer>
 #include <QTimeZone>
 
 #include <memory>

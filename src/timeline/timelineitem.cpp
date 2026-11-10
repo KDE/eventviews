@@ -12,6 +12,8 @@
 
 #include <Akonadi/CalendarUtils>
 
+#include <KCalendarCore/Incidence>
+
 #include <KGanttGlobal>
 
 using namespace KCalendarCore;

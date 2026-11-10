@@ -20,12 +20,10 @@
 
 #include <Akonadi/CalendarUtils>
 #include <Akonadi/IncidenceChanger>
-#include <CalendarSupport/CollectionSelection>
 
 #include "calendarview_debug.h"
 
 #include <KLocalizedString>
-#include <QApplication>
 #include <QHeaderView>
 #include <QHelpEvent>
 #include <QPainter>

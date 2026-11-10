@@ -16,6 +16,8 @@
 #include <QTimeZone>
 #include <QVBoxLayout>
 
+#include <algorithm>
+
 using namespace EventViews;
 
 class EventViews::TimeScaleConfigDialogPrivate

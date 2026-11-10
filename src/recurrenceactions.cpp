@@ -112,5 +112,3 @@ int RecurrenceActions::questionSelectedFutureAllCancel(const QString &message,
 
     return NoOccurrence;
 }
-
-#include "moc_recurrenceactions.cpp"

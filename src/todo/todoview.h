@@ -16,7 +16,8 @@
 #include <Akonadi/IncidenceChanger>
 
 #include <QPointer>
-#include <akonadi/collectioncalendar.h>
+
+#include <memory>
 
 class KJob;
 class TodoCategoriesDelegate;

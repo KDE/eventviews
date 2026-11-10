@@ -8,7 +8,6 @@
 
 #pragma once
 
-#include <Akonadi/Collection>
 #include <Akonadi/CollectionCalendar>
 #include <Akonadi/Item>
 

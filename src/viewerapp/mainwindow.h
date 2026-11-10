@@ -16,8 +16,9 @@
 
 namespace Akonadi
 {
-class IncidenceChanger;
 class Collection;
+class EntityTreeModel;
+class IncidenceChanger;
 class Monitor;
 }
 

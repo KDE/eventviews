@@ -14,6 +14,8 @@
 #include <QPixmap>
 #include <QVariant>
 
+class QWidget;
+
 namespace EventViews
 {
 namespace CalendarDecoration

@@ -11,10 +11,10 @@
 
 #include <Akonadi/IncidenceChanger>
 
-#include <KIconLoader>
-
 #include <QTextBrowser>
 #include <QUrl>
+
+class KIconLoader;
 
 namespace EventViews
 {

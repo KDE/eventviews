@@ -11,10 +11,8 @@
 
 #include "calendarview_debug.h"
 
-#include <Akonadi/AttributeFactory>
-#include <Akonadi/CollectionColorAttribute>
-
 #include <QFontDatabase>
+#include <QLocale>
 #include <QRandomGenerator>
 using namespace EventViews;
 

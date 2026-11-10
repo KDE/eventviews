@@ -26,12 +26,14 @@
 #include <kcoreaddons_version.h> //remove when KF_MIN_VERSION is "6.32"
 #if KCOREADDONS_VERSION >= QT_VERSION_CHECK(6, 32, 0)
 #include <KFormat>
+#include <KLocalizedString>
 #endif
 
 #include <QBoxLayout>
 #include <QHeaderView>
 #include <QIcon>
 #include <QLocale>
+#include <QStyle>
 #include <QTreeWidget>
 
 using namespace EventViews;

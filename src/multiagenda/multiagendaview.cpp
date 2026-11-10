@@ -18,8 +18,6 @@
 #include <Akonadi/ETMViewStateSaver>
 #include <Akonadi/EntityTreeModel>
 
-#include <CalendarSupport/CollectionSelection>
-
 #include <KCheckableProxyModel>
 #include <KLocalizedString>
 #include <KRearrangeColumnsProxyModel>
@@ -27,12 +25,12 @@
 
 #include <QHBoxLayout>
 #include <QLabel>
-#include <QPainter>
 #include <QResizeEvent>
 #include <QScrollArea>
 #include <QScrollBar>
 #include <QSortFilterProxyModel>
 #include <QSplitter>
+#include <QStyle>
 #include <QTimer>
 
 using namespace Qt::Literals::StringLiterals;

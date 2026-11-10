@@ -9,7 +9,6 @@
 #include "todoviewsortfilterproxymodel.h"
 
 #include <Akonadi/TodoModel>
-#include <CalendarSupport/Utils>
 #include <KCalendarCore/CalFilter>
 
 #include <KLocalizedString>

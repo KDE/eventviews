@@ -12,14 +12,11 @@
 #include "monthscene.h"
 #include "prefs.h"
 
-#include <Akonadi/CalendarBase>
-#include <CalendarSupport/CollectionSelection>
 #include <CalendarSupport/KCalPrefs>
 #include <CalendarSupport/Utils>
 
 #include "calendarview_debug.h"
 #include <KCalendarCore/OccurrenceIterator>
-#include <KCheckableProxyModel>
 #include <KLocalizedString>
 #include <QIcon>
 

@@ -9,15 +9,14 @@
 
 #include <QTimeZone>
 
-#include <QFrame>
+#include <QWidget>
+
+class QFrame;
 
 namespace EventViews
 {
 class Agenda;
 class TimeLabelsZone;
-
-class Prefs;
-using PrefsPtr = QSharedPointer<Prefs>;
 
 class TimeLabels : public QWidget
 {

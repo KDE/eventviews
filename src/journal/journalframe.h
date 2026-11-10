@@ -11,11 +11,18 @@
 #pragma once
 
 #include <Akonadi/CollectionCalendar>
-#include <Akonadi/IncidenceChanger>
 #include <Akonadi/Item>
+
+#include <KCalendarCore/Journal>
 
 #include <QDate>
 #include <QFrame>
+#include <QMap>
+
+namespace Akonadi
+{
+class IncidenceChanger;
+}
 
 class QTextBrowser;
 class QPushButton;

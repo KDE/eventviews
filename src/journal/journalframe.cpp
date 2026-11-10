@@ -26,6 +26,7 @@
 #include <QEvent>
 #include <QFontDatabase>
 #include <QHBoxLayout>
+#include <QIcon>
 #include <QPushButton>
 #include <QTextBrowser>
 

@@ -13,8 +13,6 @@
 #include "eventviews_export.h"
 #include "viewcalendar.h"
 
-#include <KCalendarCore/Todo>
-
 #include <memory>
 
 class KConfig;
@@ -23,16 +21,10 @@ class QSplitter;
 
 namespace EventViews
 {
-namespace CalendarDecoration
-{
-class Decoration;
-}
-
 class TimeLabelsZone;
 
 class Agenda;
 class AgendaItem;
-class AgendaView;
 
 class EventIndicatorPrivate;
 

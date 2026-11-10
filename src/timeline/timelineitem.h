@@ -8,11 +8,10 @@
 
 #pragma once
 
-#include <KCalendarCore/Incidence>
-
 #include <Akonadi/CollectionCalendar>
 #include <Akonadi/Item>
 
+#include <QColor>
 #include <QDateTime>
 #include <QList>
 #include <QMap>

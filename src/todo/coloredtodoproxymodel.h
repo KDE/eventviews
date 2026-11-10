@@ -6,7 +6,6 @@
 
 #pragma once
 
-#include "eventviews_export.h"
 #include "prefs.h"
 
 #include <QIdentityProxyModel>

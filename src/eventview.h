@@ -37,6 +37,7 @@ class KCalPrefs;
 
 namespace Akonadi
 {
+class EntityTreeModel;
 class IncidenceChanger;
 }
 

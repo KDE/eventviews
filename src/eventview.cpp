@@ -13,7 +13,6 @@
 #include "prefs.h"
 #include "recurrenceactions.h"
 
-#include <CalendarSupport/CollectionSelection>
 #include <CalendarSupport/KCalPrefs>
 
 #include <Akonadi/CalendarUtils>
@@ -21,7 +20,7 @@
 #include <Akonadi/EntityDisplayAttribute>
 #include <Akonadi/EntityTreeModel>
 
-#include <KCalendarCore/CalFilter>
+#include <KCalendarCore/Event>
 
 #include <KHolidays/HolidayCategories>
 #include <KHolidays/HolidayRegion>

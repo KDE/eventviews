@@ -12,6 +12,7 @@
 #include <QTreeView>
 
 class KDatePickerPopup;
+class QAction;
 class QMenu;
 
 class TodoViewView : public QTreeView

@@ -27,11 +27,11 @@
 #include <KWordWrap>
 
 #include <QDragEnterEvent>
+#include <QIcon>
 #include <QLocale>
 #include <QMimeData>
 #include <QPainter>
 #include <QPainterPath>
-#include <QPixmapCache>
 #include <QTextDocumentFragment>
 #include <QToolTip>
 

@@ -5,7 +5,6 @@
 */
 
 #include "monthscene.h"
-#include "helper.h"
 #include "monthgraphicsitems.h"
 #include "monthitem.h"
 #include "monthview.h"
@@ -13,9 +12,6 @@
 
 #include <CalendarSupport/KCalPrefs>
 #include <CalendarSupport/Utils>
-
-#include <KHolidays/HolidayCategories>
-#include <KHolidays/HolidayRegion>
 
 #include <KColorScheme>
 #include <KLocalizedString>

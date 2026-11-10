@@ -9,15 +9,12 @@
 */
 
 #include "todoviewquicksearch.h"
-#include <CalendarSupport/KCalPrefs>
 
 #include <Akonadi/TagSelectionComboBox>
 
 #include <Libkdepim/KCheckComboBox>
 
 #include <CalendarSupport/CategoryHierarchyReader>
-
-#include <KCalendarCore/CalFilter>
 
 #include <KLocalizedString>
 #include <QLineEdit>

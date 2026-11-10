@@ -14,6 +14,7 @@
 
 #include <QAction>
 #include <QContextMenuEvent>
+#include <QCursor>
 #include <QEvent>
 #include <QHeaderView>
 #include <QMouseEvent>

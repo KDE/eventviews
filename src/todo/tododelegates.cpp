@@ -11,13 +11,12 @@
 
 #include <Akonadi/TagSelectionComboBox>
 #include <Akonadi/TodoModel>
-#include <CalendarSupport/CategoryHierarchyReader>
-
-#include <KCalendarCore/CalFilter>
 
 #include <KDateComboBox>
+#include <KLocalizedString>
 
 #include <QApplication>
+#include <QComboBox>
 #include <QPainter>
 #include <QTextDocument>
 #include <QToolTip>

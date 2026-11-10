@@ -13,6 +13,8 @@
 
 #include <Akonadi/CollectionCalendar>
 
+#include <QDateTime>
+
 #include <memory>
 
 namespace KHolidays
@@ -20,14 +22,8 @@ namespace KHolidays
 class HolidayRegion;
 }
 
-class KCheckableProxyModel;
-
-#include <QDateTime>
-
 namespace EventViews
 {
-class EventView;
-
 class EventViewPrivate
 {
 public: /// Methods

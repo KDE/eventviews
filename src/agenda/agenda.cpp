@@ -29,7 +29,6 @@
 
 #include <KLocalizedString>
 #include <QApplication>
-#include <QHash>
 #include <QLabel>
 #include <QMouseEvent>
 #include <QMultiHash>

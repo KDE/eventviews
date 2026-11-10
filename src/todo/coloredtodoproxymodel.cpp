@@ -8,7 +8,10 @@
 
 #include <CalendarSupport/Utils>
 
+#include <Akonadi/EntityTreeModel>
 #include <Akonadi/TodoModel>
+
+#include <QBrush>
 
 class ColoredTodoProxyModelPrivate
 {

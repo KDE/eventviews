@@ -9,7 +9,6 @@
 
 #include "settings.h"
 
-#include "agenda/agenda.h"
 #include "agenda/agendaview.h"
 #include "calendarview_debug.h"
 #include "month/monthview.h"
@@ -27,9 +26,11 @@
 
 #include <CalendarSupport/CollectionSelection>
 
-#include <KCalendarCore/Event>
+#include <KCalendarCore/Incidence>
 
 #include <KCheckableProxyModel>
+
+#include <QItemSelectionModel>
 
 using namespace Qt::Literals::StringLiterals;
 using namespace Akonadi;

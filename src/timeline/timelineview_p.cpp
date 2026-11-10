@@ -12,8 +12,6 @@
 #include <KGanttGraphicsView>
 
 #include <Akonadi/CalendarUtils>
-#include <Akonadi/IncidenceChanger>
-#include <CalendarSupport/CollectionSelection>
 #include <KCalendarCore/OccurrenceIterator>
 
 #include "calendarview_debug.h"
