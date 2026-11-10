@@ -23,8 +23,8 @@
 #include <KCalendarCore/Visitor>
 #include <KConfig>
 #include <KConfigGroup>
-#include <kcoreaddons_version.h> //remove when KF_MIN_VERSION is "6.31"
-#if KCOREADDONS_VERSION >= QT_VERSION_CHECK(6, 31, 0)
+#include <kcoreaddons_version.h> //remove when KF_MIN_VERSION is "6.32"
+#if KCOREADDONS_VERSION >= QT_VERSION_CHECK(6, 32, 0)
 #include <KFormat>
 #endif
 
@@ -200,7 +200,7 @@ bool ListViewPrivate::ListItemVisitor::visit(const Event::Ptr &e)
         mItem->setText(StartDateTime_Column, QLocale().toString(mItem->start.date(), QLocale::LongFormat));
         mItem->setText(EndDateTime_Column, QLocale().toString(mItem->end.date(), QLocale::LongFormat));
     } else {
-#if KCOREADDONS_VERSION >= QT_VERSION_CHECK(6, 31, 0)
+#if KCOREADDONS_VERSION >= QT_VERSION_CHECK(6, 32, 0)
         const KFormat format;
         const QString dtStartStr = format.formatDateTime(mItem->start, QLocale::LongFormat, KFormat::AddTimezoneAbbreviationIfNeeded);
         const QString dtEndStr = format.formatDateTime(mItem->start, QLocale::LongFormat, KFormat::AddTimezoneAbbreviationIfNeeded);
@@ -247,7 +247,7 @@ bool ListViewPrivate::ListItemVisitor::visit(const Todo::Ptr &t)
             mItem->setText(StartDateTime_Column, QLocale().toString(t->dtStart().toLocalTime().date(), QLocale::LongFormat));
         } else {
             const QDateTime dt = t->dtStart().toLocalTime();
-#if KCOREADDONS_VERSION >= QT_VERSION_CHECK(6, 31, 0)
+#if KCOREADDONS_VERSION >= QT_VERSION_CHECK(6, 32, 0)
             const KFormat format;
             const QString dtStartStr = format.formatDateTime(dt, QLocale::LongFormat, KFormat::AddTimezoneAbbreviationIfNeeded);
 #else
@@ -264,7 +264,7 @@ bool ListViewPrivate::ListItemVisitor::visit(const Todo::Ptr &t)
             mItem->setText(EndDateTime_Column, QLocale().toString(t->dtDue().toLocalTime().date(), QLocale::LongFormat));
         } else {
             const QDateTime dt = t->dtDue().toLocalTime();
-#if KCOREADDONS_VERSION >= QT_VERSION_CHECK(6, 31, 0)
+#if KCOREADDONS_VERSION >= QT_VERSION_CHECK(6, 32, 0)
             const KFormat format;
             const QString dtDueStr = format.formatDateTime(dt, QLocale::LongFormat, KFormat::AddTimezoneAbbreviationIfNeeded);
 #else
@@ -297,7 +297,7 @@ bool ListViewPrivate::ListItemVisitor::visit(const Journal::Ptr &j)
         mItem->setText(StartDateTime_Column, QLocale().toString(j->dtStart().toLocalTime().date(), QLocale::LongFormat));
     } else {
         const QDateTime dt = j->dtStart().toLocalTime();
-#if KCOREADDONS_VERSION >= QT_VERSION_CHECK(6, 31, 0)
+#if KCOREADDONS_VERSION >= QT_VERSION_CHECK(6, 32, 0)
         const KFormat format;
         const QString dtStartStr = format.formatDateTime(dt, QLocale::LongFormat, KFormat::AddTimezoneAbbreviationIfNeeded);
 #else
