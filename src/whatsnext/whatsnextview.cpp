@@ -13,11 +13,10 @@
 
 #include <Akonadi/CalendarUtils>
 #include <CalendarSupport/KCalPrefs>
-
+#include <KIconLoader>
 #include <kcoreaddons_version.h> //remove when KF_MIN_VERSION is "6.32
 #if KCOREADDONS_VERSION >= QT_VERSION_CHECK(6, 32, 0)
 #include <KFormat>
-#include <KIconLoader>
 #endif
 
 #include <QBoxLayout>
