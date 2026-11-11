@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-04 01:03+0000\n"
+"POT-Creation-Date: 2026-11-11 01:02+0000\n"
 "PO-Revision-Date: 2026-08-28 11:43+0200\n"
 "Last-Translator: Libor Filipek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -31,38 +31,38 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "vit@pelcak.org,libor.filipek@gmail.com"
 
-#: agenda/agenda.cpp:958
+#: agenda/agenda.cpp:957
 #, kde-format
 msgctxt "@info"
 msgid "Unable to lock item for modification. You cannot make any changes."
 msgstr "Nelze uzamknout položku pro úpravy. Nelze provést žádné změny."
 
-#: agenda/agenda.cpp:960
+#: agenda/agenda.cpp:959
 #, kde-format
 msgctxt "@title:window"
 msgid "Locking Failed"
 msgstr "Uzamknutí selhalo"
 
-#: agenda/agenda.cpp:1175
+#: agenda/agenda.cpp:1174
 #, kde-format
 msgctxt "@info/plain"
 msgid "Dissociate event from recurrence"
 msgstr "Oddělit událost od opakování"
 
-#: agenda/agenda.cpp:1198 month/monthitem.cpp:448
+#: agenda/agenda.cpp:1197 month/monthitem.cpp:448
 #, kde-format
 msgctxt "@info"
 msgid ""
 "Unable to add the exception item to the calendar. No change will be done."
 msgstr "Nelze přidat výjimku do kalendáře. Nebude provedena žádná změna."
 
-#: agenda/agenda.cpp:1200 month/monthitem.cpp:450
+#: agenda/agenda.cpp:1199 month/monthitem.cpp:450
 #, kde-format
 msgctxt "@title:window"
 msgid "Error Occurred"
 msgstr "Nastala chyba"
 
-#: agenda/agendaitem.cpp:80 list/listview.cpp:461
+#: agenda/agendaitem.cpp:80 list/listview.cpp:463
 #, kde-format
 msgid "%2 (1 year)"
 msgid_plural "%2 (%1 years)"
@@ -132,19 +132,19 @@ msgstr "Není možné upravit tento úkol, protože ji nelze zamknout."
 msgid "Unable to save %1 \"%2\"."
 msgstr "Nelze uložit %1 do \"%2\"."
 
-#: agenda/timelabels.cpp:328
+#: agenda/timelabels.cpp:330
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Add Timezones…"
 msgstr "Přid&at časová pásma…"
 
-#: agenda/timelabels.cpp:329
+#: agenda/timelabels.cpp:331
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Add a timelabel display column for a new timezone"
 msgstr "Přidat sloupec pro zobrazení časových značek pro nové časové pásmo"
 
-#: agenda/timelabels.cpp:332
+#: agenda/timelabels.cpp:334
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -159,13 +159,13 @@ msgstr ""
 "užitečná při zobrazování událostí v kalendáři pro osoby, které se nacházejí "
 "v jiných časových pásmech než vy."
 
-#: agenda/timelabels.cpp:336
+#: agenda/timelabels.cpp:338
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Remove Timezone %1"
 msgstr "Odst&ranit časové pásmo %1"
 
-#: agenda/timelabels.cpp:340
+#: agenda/timelabels.cpp:342
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -175,7 +175,7 @@ msgstr ""
 "Odstranit sloupec s označením hodin pro aktuálně vybrané časové pásmo; platí "
 "pouze pro časová pásma, která nejsou systémová."
 
-#: agenda/timelabels.cpp:343
+#: agenda/timelabels.cpp:345
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -185,19 +185,19 @@ msgstr ""
 "U časových pásem, která nejsou systémová, tato volba z nabídky skryje "
 "sloupec s označením hodin pro aktuálně vybrané časové pásmo."
 
-#: agenda/timelabels.cpp:347
+#: agenda/timelabels.cpp:349
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "12 Hour Clock"
 msgstr "12-hodinový formát času"
 
-#: agenda/timelabels.cpp:349
+#: agenda/timelabels.cpp:351
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "24 Hour Clock"
 msgstr "24-hodinový formát času"
 
-#: agenda/timelabels.cpp:351
+#: agenda/timelabels.cpp:353
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -207,7 +207,7 @@ msgstr ""
 "Zobrazit čas v hodinách ve 24hodinovém \"vojenském\" formátu nebo podle "
 "místního nastavení"
 
-#: agenda/timelabels.cpp:353
+#: agenda/timelabels.cpp:355
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -217,37 +217,37 @@ msgstr ""
 "Tato položka nabídky zobrazuje označení hodin podle 24hodinového \"vojenského"
 "\" formátu nebo podle místního nastavení vašeho systému."
 
-#: agenda/timelabels.cpp:358
+#: agenda/timelabels.cpp:360
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Right-side Time Labels"
 msgstr "Skrýt časové popisky na pravé straně"
 
-#: agenda/timelabels.cpp:360
+#: agenda/timelabels.cpp:362
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Right-side Time Labels"
 msgstr "Zobrazit časové popisky na pravé straně"
 
-#: agenda/timelabels.cpp:364
+#: agenda/timelabels.cpp:366
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Left-side Time Labels"
 msgstr "Skrýt časové popisky na levé straně"
 
-#: agenda/timelabels.cpp:366
+#: agenda/timelabels.cpp:368
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Left-side Time Labels"
 msgstr "Zobrazit časové popisky na levé straně"
 
-#: agenda/timelabels.cpp:369
+#: agenda/timelabels.cpp:371
 #, kde-format
 msgctxt "@info::tooltip"
 msgid "Show or hide time labels on both sides of the agenda view"
 msgstr "Zobrazit nebo skrýt časové popisky na obou stranách zobrazení agendy"
 
-#: agenda/timelabels.cpp:371
+#: agenda/timelabels.cpp:373
 #, kde-format
 msgctxt "@info::whatsthis"
 msgid ""
@@ -262,72 +262,72 @@ msgstr ""
 "Stejně tak se vertikální posuvník skryje, jsou-li časové popisky zobrazeny "
 "na obou stranách."
 
-#: agenda/timelabels.cpp:426
+#: agenda/timelabels.cpp:428
 #, kde-kuit-format
 msgctxt "@info:tooltip title for timezone info, the timezone id and utc offset"
 msgid "<b>%1 (%2)</b>"
 msgstr "<b>%1 (%2)</b>"
 
-#: agenda/timelabels.cpp:430
+#: agenda/timelabels.cpp:432
 #, kde-kuit-format
 msgctxt "@info:tooltip heading for timezone display name"
 msgid "<emphasis>Name:</emphasis> %1"
 msgstr "<emphasis>Název:</emphasis> %1"
 
-#: agenda/timelabels.cpp:434
+#: agenda/timelabels.cpp:436
 #, kde-kuit-format
 msgctxt "@info:tooltip heading for timezone country"
 msgid "<emphasis>Country:</emphasis> %1"
 msgstr "<emphasis>Země:</emphasis> %1"
 
-#: agenda/timelabels.cpp:446
+#: agenda/timelabels.cpp:448
 #, kde-kuit-format
 msgctxt ""
 "@info:tooltip heading for comma-separated list of timezone abbreviations"
 msgid "<emphasis>Abbreviations:</emphasis>"
 msgstr "<emphasis>Zkratky:</emphasis>"
 
-#: agenda/timelabels.cpp:452
+#: agenda/timelabels.cpp:454
 #, kde-kuit-format
 msgctxt "@info:tooltip heading for the timezone comment"
 msgid "<emphasis>Comment:</emphasis> %1"
 msgstr "<emphasis>Komentář:</emphasis> %1"
 
-#: agenda/timelabels.cpp:474
+#: agenda/timelabels.cpp:476
 #, kde-kuit-format
 msgctxt ""
 "@info:tooltip [hour of the day][am/pm/00] [timezone id (timezone-offset)]"
 msgid "%1%2<nl/>%3 (%4)"
 msgstr "%1%2<nl/>%3 (%4)"
 
-#: agenda/timescaleconfigdialog.cpp:50
+#: agenda/timescaleconfigdialog.cpp:52
 #, kde-format
 msgctxt "@title:window"
 msgid "Timezone"
 msgstr "Časové pásmo"
 
-#: eventview.cpp:120
+#: eventview.cpp:119
 #, kde-format
 msgctxt "@title:window"
 msgid "Changing Recurring Item"
 msgstr "Změna opakující se události"
 
-#: eventview.cpp:121
+#: eventview.cpp:120
 #, kde-format
 msgid "Also &Future Items"
 msgstr "Také &budoucí položky"
 
-#: eventview.cpp:122
+#: eventview.cpp:121
 #, kde-format
 msgid "Only &This Item"
 msgstr "Pouze &tato položka"
 
-#: eventview.cpp:123
+#: eventview.cpp:122
 #, kde-format
 msgid "&All Occurrences"
 msgstr "Vš&echny výskyty"
 
-#: eventview.cpp:140
+#: eventview.cpp:139
 #, kde-format
 msgid ""
 "The item you are trying to change is a recurring item. Should the changes be "
@@ -338,7 +338,7 @@ msgstr ""
 "uplatnit pouze na tento jediný výskyt a na budoucí položky, nebo na všechny "
 "opakované položky?"
 
-#: eventview.cpp:151
+#: eventview.cpp:150
 #, kde-format
 msgid ""
 "The item you are trying to change is a recurring item. Should the changes be "
@@ -1801,105 +1801,105 @@ msgstr "Pouze připojit odkaz na zprávu"
 msgid "Attach complete message"
 msgstr "Připojit celou zprávu"
 
-#: journal/journalframe.cpp:151
+#: journal/journalframe.cpp:152
 #, kde-format
 msgctxt "@action: button"
 msgid "&Edit"
 msgstr "&Upravit"
 
-#: journal/journalframe.cpp:154
+#: journal/journalframe.cpp:155
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Edit this journal entry"
 msgstr "Upravit tuto položku deníku"
 
-#: journal/journalframe.cpp:155
+#: journal/journalframe.cpp:156
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Opens an editor dialog for this journal entry"
 msgstr "Otevře dialogové okno editoru pro tento záznam v deníku"
 
-#: journal/journalframe.cpp:161
+#: journal/journalframe.cpp:162
 #, kde-format
 msgctxt "@action: button"
 msgid "&Delete"
 msgstr "&Smazat"
 
-#: journal/journalframe.cpp:164
+#: journal/journalframe.cpp:165
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete this journal entry"
 msgstr "Smazat tento záznam z deníku"
 
-#: journal/journalframe.cpp:165
+#: journal/journalframe.cpp:166
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Delete this journal entry"
 msgstr "Smazat tento záznam z deníku"
 
-#: journal/journalframe.cpp:170
+#: journal/journalframe.cpp:171
 #, kde-format
 msgctxt "@action: button"
 msgid "&Print"
 msgstr "Vy&tisknout"
 
-#: journal/journalframe.cpp:174
+#: journal/journalframe.cpp:175
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Print this journal entry"
 msgstr "Vytisknout tuto položku deníku"
 
-#: journal/journalframe.cpp:175
+#: journal/journalframe.cpp:176
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Opens a print dialog for this journal entry"
 msgstr "Otevře dialogové okno pro tisk této položky deníku"
 
-#: journal/journalframe.cpp:180
+#: journal/journalframe.cpp:181
 #, kde-format
 msgctxt "@action: button"
 msgid "Print preview"
 msgstr "Náhled před tiskem"
 
-#: journal/journalframe.cpp:184
+#: journal/journalframe.cpp:185
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Print preview this journal entry"
 msgstr "Vytisknout náhled této položky deníku"
 
-#: journal/journalframe.cpp:185
+#: journal/journalframe.cpp:186
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Opens a print preview of this journal entry"
 msgstr "Otevře náhled před tiskem této položky deníku"
 
-#: list/listview.cpp:58
+#: list/listview.cpp:60
 #, kde-format
 msgctxt "%1 is an item summary. %2 is the date when this item reoccurs"
 msgid "%1 (next: %2)"
 msgstr "%1 (následující: %2)"
 
-#: list/listview.cpp:324
+#: list/listview.cpp:326
 #, kde-format
 msgid "Summary"
 msgstr "Shrnutí"
 
-#: list/listview.cpp:325
+#: list/listview.cpp:327
 #, kde-format
 msgid "Start Date/Time"
 msgstr "Počáteční datum a čas"
 
-#: list/listview.cpp:326
+#: list/listview.cpp:328
 #, kde-format
 msgid "End Date/Time"
 msgstr "Konečný datum a čas"
 
-#: list/listview.cpp:327
+#: list/listview.cpp:329
 #, kde-format
 msgid "Tags"
 msgstr "Značky"
 
-#: list/listview.cpp:400
+#: list/listview.cpp:402
 #, kde-format
 msgid "Summary [%1 - %2]"
 msgstr "Shrnutí [%1 - %2]"
@@ -1928,31 +1928,31 @@ msgctxt "@info/plain"
 msgid "Move occurrence(s)"
 msgstr "Posunout výskyt(y)"
 
-#: month/monthscene.cpp:206
+#: month/monthscene.cpp:202
 #, kde-format
 msgctxt "monthname year"
 msgid "%1 %2"
 msgstr "%1 %2"
 
-#: month/monthscene.cpp:343
+#: month/monthscene.cpp:339
 #, kde-format
 msgctxt "'Month day' for month view cells"
 msgid "%1 %2"
 msgstr "%1 %2"
 
-#: month/monthview.cpp:210 month/monthview.cpp:481
+#: month/monthview.cpp:207 month/monthview.cpp:478
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display calendar in a normal size"
 msgstr "Zobrazit kalendář v normální velikosti"
 
-#: month/monthview.cpp:211 month/monthview.cpp:484
+#: month/monthview.cpp:208 month/monthview.cpp:481
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display calendar in a full window"
 msgstr "Zobrazit kalendář v celém okně"
 
-#: month/monthview.cpp:213
+#: month/monthview.cpp:210
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1963,38 +1963,38 @@ msgstr ""
 "maximální dostupný prostor okna, nebo se zmenší zpět na svou normální "
 "velikost."
 
-#: month/monthview.cpp:220
+#: month/monthview.cpp:217
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Go back one month"
 msgstr "Přejít zpět o jeden měsíc"
 
-#: month/monthview.cpp:221
+#: month/monthview.cpp:218
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Click this button and the view will be scrolled back in time by 1 month."
 msgstr "Kliknutím na toto tlačítko se zobrazení posune o 1 měsíc zpět v času."
 
-#: month/monthview.cpp:227
+#: month/monthview.cpp:224
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Go back one week"
 msgstr "Přejít zpět o jeden týden"
 
-#: month/monthview.cpp:228
+#: month/monthview.cpp:225
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Click this button and the view will be scrolled back in time by 1 week."
 msgstr "Kliknutím na toto tlačítko se zobrazení posune o 1 týden zpět v času."
 
-#: month/monthview.cpp:234
+#: month/monthview.cpp:231
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Go forward one week"
 msgstr "Přejít vpřed o jeden týden"
 
-#: month/monthview.cpp:235
+#: month/monthview.cpp:232
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -2002,13 +2002,13 @@ msgid ""
 msgstr ""
 "Kliknutím na toto tlačítko se zobrazení posune o 1 týden dopředu v času."
 
-#: month/monthview.cpp:241
+#: month/monthview.cpp:238
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Go forward one month"
 msgstr "Přejít vpřed o jeden měsíc"
 
-#: month/monthview.cpp:242
+#: month/monthview.cpp:239
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -2016,78 +2016,78 @@ msgid ""
 msgstr ""
 "Kliknutím na toto tlačítko se zobrazení posune o 1 měsíc dopředu v času."
 
-#: multiagenda/multiagendaview.cpp:100
+#: multiagenda/multiagendaview.cpp:98
 #, kde-format
 msgctxt "@item:intable"
 msgid "Agenda %1"
 msgstr "Agenda %1"
 
-#: multiagenda/multiagendaview.cpp:182
+#: multiagenda/multiagendaview.cpp:180
 #, kde-format
 msgctxt "@label:textbox"
 msgid "All Day"
 msgstr "Celý den"
 
-#: timeline/timelineview.cpp:228
+#: timeline/timelineview.cpp:226
 #, kde-format
 msgid "Calendar"
 msgstr "Kalendář"
 
-#: todo/tododelegates.cpp:149
+#: todo/tododelegates.cpp:148
 #, kde-format
 msgctxt "@action:inmenu Unspecified priority"
 msgid "unspecified"
 msgstr "neurčeno"
 
-#: todo/tododelegates.cpp:150 todo/todoview.cpp:490
+#: todo/tododelegates.cpp:149 todo/todoview.cpp:490
 #, kde-format
 msgctxt "@action:inmenu highest priority"
 msgid "1 (highest)"
 msgstr "1 (nejvyšší)"
 
-#: todo/tododelegates.cpp:151
+#: todo/tododelegates.cpp:150
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "2"
 msgstr "2"
 
-#: todo/tododelegates.cpp:152
+#: todo/tododelegates.cpp:151
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "3"
 msgstr "3"
 
-#: todo/tododelegates.cpp:153
+#: todo/tododelegates.cpp:152
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "4"
 msgstr "4"
 
-#: todo/tododelegates.cpp:154 todo/todoview.cpp:494
+#: todo/tododelegates.cpp:153 todo/todoview.cpp:494
 #, kde-format
 msgctxt "@action:inmenu medium priority"
 msgid "5 (medium)"
 msgstr "5 (střední)"
 
-#: todo/tododelegates.cpp:155
+#: todo/tododelegates.cpp:154
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "6"
 msgstr "6"
 
-#: todo/tododelegates.cpp:156
+#: todo/tododelegates.cpp:155
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "7"
 msgstr "7"
 
-#: todo/tododelegates.cpp:157
+#: todo/tododelegates.cpp:156
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "8"
 msgstr "8"
 
-#: todo/tododelegates.cpp:158 todo/todoview.cpp:498
+#: todo/tododelegates.cpp:157 todo/todoview.cpp:498
 #, kde-format
 msgctxt "@action:inmenu lowest priority"
 msgid "9 (lowest)"
@@ -2330,13 +2330,13 @@ msgstr "Přepnout na zobrazení v podobě přehledného seznamu"
 msgid "Enter a summary to create a new to-do"
 msgstr "Zadejte popis, abyste vytvořili nový úkol"
 
-#: todo/todoviewquicksearch.cpp:37
+#: todo/todoviewquicksearch.cpp:34
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Filter on matching summaries"
 msgstr "Filtrovat podle shodných popisů"
 
-#: todo/todoviewquicksearch.cpp:38
+#: todo/todoviewquicksearch.cpp:35
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -2345,19 +2345,19 @@ msgstr ""
 "Zadejte sem text, podle kterého se budou filtrovat zobrazené úkoly na "
 "základě shody s jejich popisy."
 
-#: todo/todoviewquicksearch.cpp:39
+#: todo/todoviewquicksearch.cpp:36
 #, kde-format
 msgctxt "@label in QuickSearchLine"
 msgid "Search Summaries…"
 msgstr "Souhrny hledání…"
 
-#: todo/todoviewquicksearch.cpp:46
+#: todo/todoviewquicksearch.cpp:43
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Filter on these tags"
 msgstr "Filtr na tyto značky"
 
-#: todo/todoviewquicksearch.cpp:48
+#: todo/todoviewquicksearch.cpp:45
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -2367,19 +2367,19 @@ msgstr ""
 "Pomocí tohoto rozevíracího seznamu můžete filtrovat zobrazené úkoly podle "
 "seznamu vybraných značek."
 
-#: todo/todoviewquicksearch.cpp:50
+#: todo/todoviewquicksearch.cpp:47
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Select Tags"
 msgstr "Vyberte značky"
 
-#: todo/todoviewquicksearch.cpp:73
+#: todo/todoviewquicksearch.cpp:70
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Filter on these priorities"
 msgstr "Filtrovat podle těchto priorit"
 
-#: todo/todoviewquicksearch.cpp:75
+#: todo/todoviewquicksearch.cpp:72
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -2389,75 +2389,75 @@ msgstr ""
 "Pomocí tohoto rozevíracího seznamu můžete filtrovat zobrazené úkoly podle "
 "seznamu vybraných priorit."
 
-#: todo/todoviewquicksearch.cpp:77
+#: todo/todoviewquicksearch.cpp:74
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Select Priority"
 msgstr "Vybrat prioritu"
 
-#: todo/todoviewquicksearch.cpp:96
+#: todo/todoviewquicksearch.cpp:93
 #, kde-format
 msgctxt "@action:inmenu priority is unspecified"
 msgid "unspecified"
 msgstr "neurčeno"
 
-#: todo/todoviewquicksearch.cpp:97
+#: todo/todoviewquicksearch.cpp:94
 #, kde-format
 msgctxt "@action:inmenu highest priority"
 msgid "%1 (highest)"
 msgstr "%1 (nejvyšší)"
 
-#: todo/todoviewquicksearch.cpp:100
+#: todo/todoviewquicksearch.cpp:97
 #, kde-format
 msgctxt "@action:inmenu medium priority"
 msgid "%1 (medium)"
 msgstr "%1 (střední)"
 
-#: todo/todoviewquicksearch.cpp:102
+#: todo/todoviewquicksearch.cpp:99
 #, kde-format
 msgctxt "@action:inmenu lowest priority"
 msgid "%1 (lowest)"
 msgstr "%1 (nejnižší)"
 
-#: todo/todoviewquicksearch.cpp:104
+#: todo/todoviewquicksearch.cpp:101
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "%1"
 msgstr "%1"
 
-#: todo/todoviewsortfilterproxymodel.cpp:160
+#: todo/todoviewsortfilterproxymodel.cpp:159
 #, kde-format
 msgctxt "priority is unspecified"
 msgid "unspecified"
 msgstr "neurčeno"
 
-#: todo/todoviewsortfilterproxymodel.cpp:161
-#: todo/todoviewsortfilterproxymodel.cpp:163
-#: todo/todoviewsortfilterproxymodel.cpp:165
-#: todo/todoviewsortfilterproxymodel.cpp:167
+#: todo/todoviewsortfilterproxymodel.cpp:160
+#: todo/todoviewsortfilterproxymodel.cpp:162
+#: todo/todoviewsortfilterproxymodel.cpp:164
+#: todo/todoviewsortfilterproxymodel.cpp:166
 #, kde-format
 msgid "%1"
 msgstr "%1"
 
-#: todo/todoviewsortfilterproxymodel.cpp:162
+#: todo/todoviewsortfilterproxymodel.cpp:161
 #, kde-format
 msgctxt "highest priority"
 msgid "%1 (highest)"
 msgstr "%1 (nejvyšší)"
 
-#: todo/todoviewsortfilterproxymodel.cpp:164
+#: todo/todoviewsortfilterproxymodel.cpp:163
 #, kde-format
 msgctxt "medium priority"
 msgid "%1 (medium)"
 msgstr "%1 (střední)"
 
-#: todo/todoviewsortfilterproxymodel.cpp:166
+#: todo/todoviewsortfilterproxymodel.cpp:165
 #, kde-format
 msgctxt "lowest priority"
 msgid "%1 (lowest)"
 msgstr "%1 (nejnižší)"
 
-#: todo/todoviewview.cpp:48
+#: todo/todoviewview.cpp:49
 #, kde-format
 msgid "View Columns"
 msgstr "Zobrazit sloupce"

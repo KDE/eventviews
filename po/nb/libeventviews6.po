@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-04 01:03+0000\n"
+"POT-Creation-Date: 2026-11-11 01:02+0000\n"
 "PO-Revision-Date: 2013-09-27 17:58+0200\n"
 "Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@nuug.no>\n"
@@ -29,7 +29,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "bjornst@skogkatt.homelinux.org"
 
-#: agenda/agenda.cpp:958
+#: agenda/agenda.cpp:957
 #, fuzzy, kde-format
 #| msgid "Unable to lock item for modification. You cannot make any changes."
 msgctxt "@info"
@@ -37,20 +37,20 @@ msgid "Unable to lock item for modification. You cannot make any changes."
 msgstr ""
 "Klarer ikke låse  elementet for endring. Du kan ikke gjøre noen endringer."
 
-#: agenda/agenda.cpp:960
+#: agenda/agenda.cpp:959
 #, fuzzy, kde-format
 msgctxt "@title:window"
 msgid "Locking Failed"
 msgstr "Låsing mislyktes"
 
-#: agenda/agenda.cpp:1175
+#: agenda/agenda.cpp:1174
 #, fuzzy, kde-format
 #| msgid "Dissociate event from recurrence"
 msgctxt "@info/plain"
 msgid "Dissociate event from recurrence"
 msgstr "Fjern en hendelse fra gjentakelsen"
 
-#: agenda/agenda.cpp:1198 month/monthitem.cpp:448
+#: agenda/agenda.cpp:1197 month/monthitem.cpp:448
 #, fuzzy, kde-format
 #| msgid ""
 #| "Unable to add the exception item to the calendar. No change will be done."
@@ -61,13 +61,13 @@ msgstr ""
 "Klarte ikke å legge til unntakselementet i kalenderen. Ingen endringer er "
 "gjort."
 
-#: agenda/agenda.cpp:1200 month/monthitem.cpp:450
+#: agenda/agenda.cpp:1199 month/monthitem.cpp:450
 #, fuzzy, kde-format
 msgctxt "@title:window"
 msgid "Error Occurred"
 msgstr "En feil oppsto"
 
-#: agenda/agendaitem.cpp:80 list/listview.cpp:461
+#: agenda/agendaitem.cpp:80 list/listview.cpp:463
 #, kde-format
 msgid "%2 (1 year)"
 msgid_plural "%2 (%1 years)"
@@ -142,19 +142,19 @@ msgstr "Klarte ikke endre dette gjøremålet fordi det ikke kan låses."
 msgid "Unable to save %1 \"%2\"."
 msgstr "Klarte ikke lagre %1 «%2»."
 
-#: agenda/timelabels.cpp:328
+#: agenda/timelabels.cpp:330
 #, fuzzy, kde-format
 msgctxt "@action:inmenu"
 msgid "&Add Timezones…"
 msgstr "&Legg til tidssoner …"
 
-#: agenda/timelabels.cpp:329
+#: agenda/timelabels.cpp:331
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Add a timelabel display column for a new timezone"
 msgstr ""
 
-#: agenda/timelabels.cpp:332
+#: agenda/timelabels.cpp:334
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -164,14 +164,14 @@ msgid ""
 "timezones other than your own."
 msgstr ""
 
-#: agenda/timelabels.cpp:336
+#: agenda/timelabels.cpp:338
 #, fuzzy, kde-format
 #| msgid "&Remove Timezone %1"
 msgctxt "@action:inmenu"
 msgid "&Remove Timezone %1"
 msgstr "&Fjern tidssone %1"
 
-#: agenda/timelabels.cpp:340
+#: agenda/timelabels.cpp:342
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -179,7 +179,7 @@ msgid ""
 "system timezones only."
 msgstr ""
 
-#: agenda/timelabels.cpp:343
+#: agenda/timelabels.cpp:345
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -187,19 +187,19 @@ msgid ""
 "display column for the currently selected timezone."
 msgstr ""
 
-#: agenda/timelabels.cpp:347
+#: agenda/timelabels.cpp:349
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "12 Hour Clock"
 msgstr ""
 
-#: agenda/timelabels.cpp:349
+#: agenda/timelabels.cpp:351
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "24 Hour Clock"
 msgstr ""
 
-#: agenda/timelabels.cpp:351
+#: agenda/timelabels.cpp:353
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -207,7 +207,7 @@ msgid ""
 "your locale"
 msgstr ""
 
-#: agenda/timelabels.cpp:353
+#: agenda/timelabels.cpp:355
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -215,37 +215,37 @@ msgid ""
 "\"military\" time or your system locale."
 msgstr ""
 
-#: agenda/timelabels.cpp:358
+#: agenda/timelabels.cpp:360
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Right-side Time Labels"
 msgstr ""
 
-#: agenda/timelabels.cpp:360
+#: agenda/timelabels.cpp:362
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Right-side Time Labels"
 msgstr ""
 
-#: agenda/timelabels.cpp:364
+#: agenda/timelabels.cpp:366
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Left-side Time Labels"
 msgstr ""
 
-#: agenda/timelabels.cpp:366
+#: agenda/timelabels.cpp:368
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Left-side Time Labels"
 msgstr ""
 
-#: agenda/timelabels.cpp:369
+#: agenda/timelabels.cpp:371
 #, kde-format
 msgctxt "@info::tooltip"
 msgid "Show or hide time labels on both sides of the agenda view"
 msgstr ""
 
-#: agenda/timelabels.cpp:371
+#: agenda/timelabels.cpp:373
 #, kde-format
 msgctxt "@info::whatsthis"
 msgid ""
@@ -255,7 +255,7 @@ msgid ""
 "scrollbar is removed when the time labels are shown on both sides."
 msgstr ""
 
-#: agenda/timelabels.cpp:426
+#: agenda/timelabels.cpp:428
 #, fuzzy, kde-kuit-format
 #| msgctxt "%1 is an item summary. %2 is the date when this item reoccurs"
 #| msgid "%1 (next: %2)"
@@ -263,66 +263,66 @@ msgctxt "@info:tooltip title for timezone info, the timezone id and utc offset"
 msgid "<b>%1 (%2)</b>"
 msgstr "%1 (neste: %2)"
 
-#: agenda/timelabels.cpp:430
+#: agenda/timelabels.cpp:432
 #, kde-kuit-format
 msgctxt "@info:tooltip heading for timezone display name"
 msgid "<emphasis>Name:</emphasis> %1"
 msgstr ""
 
-#: agenda/timelabels.cpp:434
+#: agenda/timelabels.cpp:436
 #, kde-kuit-format
 msgctxt "@info:tooltip heading for timezone country"
 msgid "<emphasis>Country:</emphasis> %1"
 msgstr ""
 
-#: agenda/timelabels.cpp:446
+#: agenda/timelabels.cpp:448
 #, kde-kuit-format
 msgctxt ""
 "@info:tooltip heading for comma-separated list of timezone abbreviations"
 msgid "<emphasis>Abbreviations:</emphasis>"
 msgstr ""
 
-#: agenda/timelabels.cpp:452
+#: agenda/timelabels.cpp:454
 #, kde-kuit-format
 msgctxt "@info:tooltip heading for the timezone comment"
 msgid "<emphasis>Comment:</emphasis> %1"
 msgstr ""
 
-#: agenda/timelabels.cpp:474
+#: agenda/timelabels.cpp:476
 #, kde-kuit-format
 msgctxt ""
 "@info:tooltip [hour of the day][am/pm/00] [timezone id (timezone-offset)]"
 msgid "%1%2<nl/>%3 (%4)"
 msgstr ""
 
-#: agenda/timescaleconfigdialog.cpp:50
+#: agenda/timescaleconfigdialog.cpp:52
 #, kde-format
 msgctxt "@title:window"
 msgid "Timezone"
 msgstr ""
 
-#: eventview.cpp:120
+#: eventview.cpp:119
 #, kde-format
 msgctxt "@title:window"
 msgid "Changing Recurring Item"
 msgstr "Endre en gjentakende hendelse"
 
-#: eventview.cpp:121
+#: eventview.cpp:120
 #, kde-format
 msgid "Also &Future Items"
 msgstr "Også &framtidige elementer"
 
-#: eventview.cpp:122
+#: eventview.cpp:121
 #, kde-format
 msgid "Only &This Item"
 msgstr "Bare &dette elementet"
 
-#: eventview.cpp:123
+#: eventview.cpp:122
 #, kde-format
 msgid "&All Occurrences"
 msgstr "&Alle tilfeller"
 
-#: eventview.cpp:140
+#: eventview.cpp:139
 #, kde-format
 msgid ""
 "The item you are trying to change is a recurring item. Should the changes be "
@@ -333,7 +333,7 @@ msgstr ""
 "benyttes bare på dette tilfellet, også på framtidige tilfeller, eller på "
 "alle elementer i gjentakelsen?"
 
-#: eventview.cpp:151
+#: eventview.cpp:150
 #, kde-format
 msgid ""
 "The item you are trying to change is a recurring item. Should the changes be "
@@ -1878,112 +1878,112 @@ msgstr "Legg bare ved lenke i melding"
 msgid "Attach complete message"
 msgstr "Legg ved komplett melding"
 
-#: journal/journalframe.cpp:151
+#: journal/journalframe.cpp:152
 #, fuzzy, kde-format
 #| msgid "&Edit"
 msgctxt "@action: button"
 msgid "&Edit"
 msgstr "&Rediger"
 
-#: journal/journalframe.cpp:154
+#: journal/journalframe.cpp:155
 #, fuzzy, kde-format
 msgctxt "@info:tooltip"
 msgid "Edit this journal entry"
 msgstr "Rediger denne dagbokoppføringen"
 
-#: journal/journalframe.cpp:155
+#: journal/journalframe.cpp:156
 #, fuzzy, kde-format
 #| msgid "Opens an editor dialog for this journal entry"
 msgctxt "@info:whatsthis"
 msgid "Opens an editor dialog for this journal entry"
 msgstr "Åpner en redigering for denne dagbokoppføringen"
 
-#: journal/journalframe.cpp:161
+#: journal/journalframe.cpp:162
 #, fuzzy, kde-format
 #| msgid "&Delete"
 msgctxt "@action: button"
 msgid "&Delete"
 msgstr "&Slett"
 
-#: journal/journalframe.cpp:164
+#: journal/journalframe.cpp:165
 #, fuzzy, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete this journal entry"
 msgstr "Slett denne dagbokoppføringen"
 
-#: journal/journalframe.cpp:165
+#: journal/journalframe.cpp:166
 #, fuzzy, kde-format
 #| msgid "Delete this journal entry"
 msgctxt "@info:whatsthis"
 msgid "Delete this journal entry"
 msgstr "Slett denne dagbokoppføringen"
 
-#: journal/journalframe.cpp:170
+#: journal/journalframe.cpp:171
 #, fuzzy, kde-format
 #| msgid "&Print"
 msgctxt "@action: button"
 msgid "&Print"
 msgstr "Skriv &ut"
 
-#: journal/journalframe.cpp:174
+#: journal/journalframe.cpp:175
 #, fuzzy, kde-format
 msgctxt "@info:tooltip"
 msgid "Print this journal entry"
 msgstr "Skriv ut denne dagbokoppføringen"
 
-#: journal/journalframe.cpp:175
+#: journal/journalframe.cpp:176
 #, fuzzy, kde-format
 #| msgid "Opens a print dialog for this journal entry"
 msgctxt "@info:whatsthis"
 msgid "Opens a print dialog for this journal entry"
 msgstr "Åpner en utskriftsdialog for denne dagbokoppføringen"
 
-#: journal/journalframe.cpp:180
+#: journal/journalframe.cpp:181
 #, fuzzy, kde-format
 msgctxt "@action: button"
 msgid "Print preview"
 msgstr "Forhånds&vis utskrift …"
 
-#: journal/journalframe.cpp:184
+#: journal/journalframe.cpp:185
 #, fuzzy, kde-format
 msgctxt "@info:tooltip"
 msgid "Print preview this journal entry"
 msgstr "Skriv ut denne dagbokoppføringen"
 
-#: journal/journalframe.cpp:185
+#: journal/journalframe.cpp:186
 #, fuzzy, kde-format
 #| msgid "Opens a print dialog for this journal entry"
 msgctxt "@info:whatsthis"
 msgid "Opens a print preview of this journal entry"
 msgstr "Åpner en utskriftsdialog for denne dagbokoppføringen"
 
-#: list/listview.cpp:58
+#: list/listview.cpp:60
 #, kde-format
 msgctxt "%1 is an item summary. %2 is the date when this item reoccurs"
 msgid "%1 (next: %2)"
 msgstr "%1 (neste: %2)"
 
-#: list/listview.cpp:324
+#: list/listview.cpp:326
 #, kde-format
 msgid "Summary"
 msgstr "Sammendrag"
 
-#: list/listview.cpp:325
+#: list/listview.cpp:327
 #, kde-format
 msgid "Start Date/Time"
 msgstr "Startdato og -tidspunkt"
 
-#: list/listview.cpp:326
+#: list/listview.cpp:328
 #, kde-format
 msgid "End Date/Time"
 msgstr "Sluttdato og -tidspunkt"
 
-#: list/listview.cpp:327
+#: list/listview.cpp:329
 #, kde-format
 msgid "Tags"
 msgstr ""
 
-#: list/listview.cpp:400
+#: list/listview.cpp:402
 #, kde-format
 msgid "Summary [%1 - %2]"
 msgstr "Sammendrag [%1 – %2]"
@@ -2015,31 +2015,31 @@ msgctxt "@info/plain"
 msgid "Move occurrence(s)"
 msgstr "Flytt forekomst(er)"
 
-#: month/monthscene.cpp:206
+#: month/monthscene.cpp:202
 #, kde-format
 msgctxt "monthname year"
 msgid "%1 %2"
 msgstr "%1 %2"
 
-#: month/monthscene.cpp:343
+#: month/monthscene.cpp:339
 #, kde-format
 msgctxt "'Month day' for month view cells"
 msgid "%1 %2"
 msgstr "%1 %2"
 
-#: month/monthview.cpp:210 month/monthview.cpp:481
+#: month/monthview.cpp:207 month/monthview.cpp:478
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display calendar in a normal size"
 msgstr "Vis kalender i normal størrelse"
 
-#: month/monthview.cpp:211 month/monthview.cpp:484
+#: month/monthview.cpp:208 month/monthview.cpp:481
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display calendar in a full window"
 msgstr "Vis kalender i hele vinduet"
 
-#: month/monthview.cpp:213
+#: month/monthview.cpp:210
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -2049,13 +2049,13 @@ msgstr ""
 "Trykk denne knappen, så blir månedsvisningen forstørret til å fylle all "
 "tilgjengelig vindusplass / eller krympet tilbake til sin normale størrelse."
 
-#: month/monthview.cpp:220
+#: month/monthview.cpp:217
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Go back one month"
 msgstr "Gå tilbake én måned"
 
-#: month/monthview.cpp:221
+#: month/monthview.cpp:218
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -2063,116 +2063,116 @@ msgid ""
 msgstr ""
 "Trykk denne knappen, så blir visningen rullet tilbake i tid med én måned."
 
-#: month/monthview.cpp:227
+#: month/monthview.cpp:224
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Go back one week"
 msgstr "Gå tilbake én uke"
 
-#: month/monthview.cpp:228
+#: month/monthview.cpp:225
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Click this button and the view will be scrolled back in time by 1 week."
 msgstr "Trykk denne knappen, så blir visningen rullet tilbake i tid med én uke"
 
-#: month/monthview.cpp:234
+#: month/monthview.cpp:231
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Go forward one week"
 msgstr "Gå fram én uke"
 
-#: month/monthview.cpp:235
+#: month/monthview.cpp:232
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Click this button and the view will be scrolled forward in time by 1 week."
 msgstr "Trykk denne knappen, så blir visningen rullet fram i tid med én uke"
 
-#: month/monthview.cpp:241
+#: month/monthview.cpp:238
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Go forward one month"
 msgstr "Gå fram én måned"
 
-#: month/monthview.cpp:242
+#: month/monthview.cpp:239
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Click this button and the view will be scrolled forward in time by 1 month."
 msgstr "Trykk denne knappen, så blir visningen rullet fram i tid med én måned."
 
-#: multiagenda/multiagendaview.cpp:100
+#: multiagenda/multiagendaview.cpp:98
 #, fuzzy, kde-format
 msgctxt "@item:intable"
 msgid "Agenda %1"
 msgstr "Dagsorden %1"
 
-#: multiagenda/multiagendaview.cpp:182
+#: multiagenda/multiagendaview.cpp:180
 #, fuzzy, kde-format
 msgctxt "@label:textbox"
 msgid "All Day"
 msgstr "Hele dagen"
 
-#: timeline/timelineview.cpp:228
+#: timeline/timelineview.cpp:226
 #, kde-format
 msgid "Calendar"
 msgstr "Kalender"
 
-#: todo/tododelegates.cpp:149
+#: todo/tododelegates.cpp:148
 #, kde-format
 msgctxt "@action:inmenu Unspecified priority"
 msgid "unspecified"
 msgstr "uspesifisert"
 
-#: todo/tododelegates.cpp:150 todo/todoview.cpp:490
+#: todo/tododelegates.cpp:149 todo/todoview.cpp:490
 #, kde-format
 msgctxt "@action:inmenu highest priority"
 msgid "1 (highest)"
 msgstr "1 (høyest)"
 
-#: todo/tododelegates.cpp:151
+#: todo/tododelegates.cpp:150
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "2"
 msgstr "2"
 
-#: todo/tododelegates.cpp:152
+#: todo/tododelegates.cpp:151
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "3"
 msgstr "3"
 
-#: todo/tododelegates.cpp:153
+#: todo/tododelegates.cpp:152
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "4"
 msgstr "4"
 
-#: todo/tododelegates.cpp:154 todo/todoview.cpp:494
+#: todo/tododelegates.cpp:153 todo/todoview.cpp:494
 #, kde-format
 msgctxt "@action:inmenu medium priority"
 msgid "5 (medium)"
 msgstr "5 (middels)"
 
-#: todo/tododelegates.cpp:155
+#: todo/tododelegates.cpp:154
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "6"
 msgstr "6"
 
-#: todo/tododelegates.cpp:156
+#: todo/tododelegates.cpp:155
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "7"
 msgstr "7"
 
-#: todo/tododelegates.cpp:157
+#: todo/tododelegates.cpp:156
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "8"
 msgstr "8"
 
-#: todo/tododelegates.cpp:158 todo/todoview.cpp:498
+#: todo/tododelegates.cpp:157 todo/todoview.cpp:498
 #, kde-format
 msgctxt "@action:inmenu lowest priority"
 msgid "9 (lowest)"
@@ -2417,13 +2417,13 @@ msgstr ""
 msgid "Enter a summary to create a new to-do"
 msgstr ""
 
-#: todo/todoviewquicksearch.cpp:37
+#: todo/todoviewquicksearch.cpp:34
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Filter on matching summaries"
 msgstr "Filtrer på samsvarende sammendrag"
 
-#: todo/todoviewquicksearch.cpp:38
+#: todo/todoviewquicksearch.cpp:35
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -2432,19 +2432,19 @@ msgstr ""
 "Skriv inn tekst her for å filtrere gjøremålene som vises etter samsvarende "
 "sammendrag."
 
-#: todo/todoviewquicksearch.cpp:39
+#: todo/todoviewquicksearch.cpp:36
 #, kde-format
 msgctxt "@label in QuickSearchLine"
 msgid "Search Summaries…"
 msgstr ""
 
-#: todo/todoviewquicksearch.cpp:46
+#: todo/todoviewquicksearch.cpp:43
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Filter on these tags"
 msgstr ""
 
-#: todo/todoviewquicksearch.cpp:48
+#: todo/todoviewquicksearch.cpp:45
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -2452,19 +2452,19 @@ msgid ""
 "tags."
 msgstr ""
 
-#: todo/todoviewquicksearch.cpp:50
+#: todo/todoviewquicksearch.cpp:47
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Select Tags"
 msgstr ""
 
-#: todo/todoviewquicksearch.cpp:73
+#: todo/todoviewquicksearch.cpp:70
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Filter on these priorities"
 msgstr "Filtrer på disse prioritetene"
 
-#: todo/todoviewquicksearch.cpp:75
+#: todo/todoviewquicksearch.cpp:72
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -2474,75 +2474,75 @@ msgstr ""
 "Bruk denne kombinasjonsboksen til å filtrere gjøremål som vises ved en liste "
 "over valgte prioriteter."
 
-#: todo/todoviewquicksearch.cpp:77
+#: todo/todoviewquicksearch.cpp:74
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Select Priority"
 msgstr "Velg prioritet"
 
-#: todo/todoviewquicksearch.cpp:96
+#: todo/todoviewquicksearch.cpp:93
 #, kde-format
 msgctxt "@action:inmenu priority is unspecified"
 msgid "unspecified"
 msgstr "uspesifisert"
 
-#: todo/todoviewquicksearch.cpp:97
+#: todo/todoviewquicksearch.cpp:94
 #, kde-format
 msgctxt "@action:inmenu highest priority"
 msgid "%1 (highest)"
 msgstr "%1 (høyest)"
 
-#: todo/todoviewquicksearch.cpp:100
+#: todo/todoviewquicksearch.cpp:97
 #, kde-format
 msgctxt "@action:inmenu medium priority"
 msgid "%1 (medium)"
 msgstr "%1 (middels)"
 
-#: todo/todoviewquicksearch.cpp:102
+#: todo/todoviewquicksearch.cpp:99
 #, kde-format
 msgctxt "@action:inmenu lowest priority"
 msgid "%1 (lowest)"
 msgstr "%1 (lavest)"
 
-#: todo/todoviewquicksearch.cpp:104
+#: todo/todoviewquicksearch.cpp:101
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "%1"
 msgstr "%1"
 
-#: todo/todoviewsortfilterproxymodel.cpp:160
+#: todo/todoviewsortfilterproxymodel.cpp:159
 #, kde-format
 msgctxt "priority is unspecified"
 msgid "unspecified"
 msgstr "uspesifisert"
 
-#: todo/todoviewsortfilterproxymodel.cpp:161
-#: todo/todoviewsortfilterproxymodel.cpp:163
-#: todo/todoviewsortfilterproxymodel.cpp:165
-#: todo/todoviewsortfilterproxymodel.cpp:167
+#: todo/todoviewsortfilterproxymodel.cpp:160
+#: todo/todoviewsortfilterproxymodel.cpp:162
+#: todo/todoviewsortfilterproxymodel.cpp:164
+#: todo/todoviewsortfilterproxymodel.cpp:166
 #, kde-format
 msgid "%1"
 msgstr "%1"
 
-#: todo/todoviewsortfilterproxymodel.cpp:162
+#: todo/todoviewsortfilterproxymodel.cpp:161
 #, kde-format
 msgctxt "highest priority"
 msgid "%1 (highest)"
 msgstr "%1 (høyest)"
 
-#: todo/todoviewsortfilterproxymodel.cpp:164
+#: todo/todoviewsortfilterproxymodel.cpp:163
 #, kde-format
 msgctxt "medium priority"
 msgid "%1 (medium)"
 msgstr "%1 (middels)"
 
-#: todo/todoviewsortfilterproxymodel.cpp:166
+#: todo/todoviewsortfilterproxymodel.cpp:165
 #, kde-format
 msgctxt "lowest priority"
 msgid "%1 (lowest)"
 msgstr "%1 (lavest)"
 
-#: todo/todoviewview.cpp:48
+#: todo/todoviewview.cpp:49
 #, kde-format
 msgid "View Columns"
 msgstr "Vis kolonner"
