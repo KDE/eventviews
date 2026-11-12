@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-11 01:02+0000\n"
+"POT-Creation-Date: 2026-11-12 01:02+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -2800,40 +2800,40 @@ msgstr ""
 "件。如果您想要使用群件功能(如将 Kontact 配置为 KDE Kolab 客户端)，请选中此"
 "项。"
 
-#: whatsnext/whatsnextview.cpp:65
+#: whatsnext/whatsnextview.cpp:64
 #, kde-format
 msgid "To-dos:"
 msgstr "待办事项："
 
-#: whatsnext/whatsnextview.cpp:81
+#: whatsnext/whatsnextview.cpp:80
 #, kde-format
 msgid "What's Next?"
 msgstr "接下来干什么？"
 
-#: whatsnext/whatsnextview.cpp:88 whatsnext/whatsnextview.cpp:275
-#: whatsnext/whatsnextview.cpp:287
+#: whatsnext/whatsnextview.cpp:87 whatsnext/whatsnextview.cpp:274
+#: whatsnext/whatsnextview.cpp:286
 #, kde-format
 msgctxt "date from - to"
 msgid "%1 - %2"
 msgstr "%1 - %2"
 
-#: whatsnext/whatsnextview.cpp:105
+#: whatsnext/whatsnextview.cpp:104
 #, kde-format
 msgid "Events:"
 msgstr "事件："
 
-#: whatsnext/whatsnextview.cpp:197 whatsnext/whatsnextview.cpp:221
+#: whatsnext/whatsnextview.cpp:196 whatsnext/whatsnextview.cpp:220
 #, kde-format
 msgid "Events and to-dos that need a reply:"
 msgstr "需要答复的事件或待办："
 
-#: whatsnext/whatsnextview.cpp:301
+#: whatsnext/whatsnextview.cpp:300
 #, kde-format
 msgctxt "date, from - to"
 msgid "%1, %2 - %3"
 msgstr "%1， %2 - %3"
 
-#: whatsnext/whatsnextview.cpp:335
+#: whatsnext/whatsnextview.cpp:334
 #, kde-format
 msgctxt "to-do due date"
 msgid "  (Due: %1)"

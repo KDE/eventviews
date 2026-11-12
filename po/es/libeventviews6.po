@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-11 01:02+0000\n"
+"POT-Creation-Date: 2026-11-12 01:02+0000\n"
 "PO-Revision-Date: 2026-08-28 17:32+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -3119,40 +3119,40 @@ msgstr ""
 "funcionalidad de colaboración (p. ej. la configuración de Kontact como un "
 "cliente de KDE Kolab)."
 
-#: whatsnext/whatsnextview.cpp:65
+#: whatsnext/whatsnextview.cpp:64
 #, kde-format
 msgid "To-dos:"
 msgstr "Tareas pendientes:"
 
-#: whatsnext/whatsnextview.cpp:81
+#: whatsnext/whatsnextview.cpp:80
 #, kde-format
 msgid "What's Next?"
 msgstr "¿Qué es lo siguiente?"
 
-#: whatsnext/whatsnextview.cpp:88 whatsnext/whatsnextview.cpp:275
-#: whatsnext/whatsnextview.cpp:287
+#: whatsnext/whatsnextview.cpp:87 whatsnext/whatsnextview.cpp:274
+#: whatsnext/whatsnextview.cpp:286
 #, kde-format
 msgctxt "date from - to"
 msgid "%1 - %2"
 msgstr "%1 - %2"
 
-#: whatsnext/whatsnextview.cpp:105
+#: whatsnext/whatsnextview.cpp:104
 #, kde-format
 msgid "Events:"
 msgstr "Eventos:"
 
-#: whatsnext/whatsnextview.cpp:197 whatsnext/whatsnextview.cpp:221
+#: whatsnext/whatsnextview.cpp:196 whatsnext/whatsnextview.cpp:220
 #, kde-format
 msgid "Events and to-dos that need a reply:"
 msgstr "Eventos y tareas pendientes que necesitan una respuesta:"
 
-#: whatsnext/whatsnextview.cpp:301
+#: whatsnext/whatsnextview.cpp:300
 #, kde-format
 msgctxt "date, from - to"
 msgid "%1, %2 - %3"
 msgstr "%1, %2 - %3"
 
-#: whatsnext/whatsnextview.cpp:335
+#: whatsnext/whatsnextview.cpp:334
 #, kde-format
 msgctxt "to-do due date"
 msgid "  (Due: %1)"
