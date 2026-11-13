@@ -125,7 +125,7 @@ void MarcusBains::updateLocationRecalc(bool recalculate)
     int y = int(minutes * d->mAgenda->gridSpacingY() / minutesPerCell);
     int x = int(d->mAgenda->gridSpacingX() * todayCol);
 
-    bool const hideIt = !(d->mEventView->preferences()->marcusBainsEnabled());
+    bool const hideIt = !d->mEventView->preferences()->marcusBainsEnabled();
     if (!isHidden() && (hideIt || (todayCol < 0))) {
         hide();
         d->mTimeBox->hide();
@@ -853,7 +853,7 @@ Agenda::MouseActionType Agenda::isInResizeArea(bool horizontal, QPoint pos, cons
         return NOP;
     }
     QPoint const gridpos = contentsToGrid(pos);
-    QPoint const contpos = gridToContents(gridpos + QPoint((QApplication::isRightToLeft()) ? 1 : 0, 0));
+    QPoint const contpos = gridToContents(gridpos + QPoint(QApplication::isRightToLeft() ? 1 : 0, 0));
 
     if (horizontal) {
         int clXLeft = item->cellXLeft();
@@ -1693,7 +1693,7 @@ QList<int> Agenda::minContentsY() const
         if (item) {
             int const ymin = item->cellYTop();
             int const index = item->cellXLeft();
-            if (index >= 0 && index < (int)(d->mSelectedDates.count())) {
+            if (index >= 0 && index < (int)d->mSelectedDates.count()) {
                 if (ymin < minArray[index] && !d->mItemsToDelete.contains(item)) {
                     minArray[index] = ymin;
                 }
@@ -1713,7 +1713,7 @@ QList<int> Agenda::maxContentsY() const
             int const ymax = item->cellYBottom();
 
             int const index = item->cellXLeft();
-            if (index >= 0 && index < (int)(d->mSelectedDates.count())) {
+            if (index >= 0 && index < (int)d->mSelectedDates.count()) {
                 if (ymax > maxArray[index] && !d->mItemsToDelete.contains(item)) {
                     maxArray[index] = ymax;
                 }
@@ -1802,7 +1802,7 @@ AgendaItem::QPtr Agenda::insertAllDayItem(const KCalendarCore::Incidence::Ptr &i
     agendaItem->setCellXY(XBegin, 0, 0);
     agendaItem->setCellXRight(XEnd);
 
-    const double startIt = d->mGridSpacingX * (agendaItem->cellXLeft());
+    const double startIt = d->mGridSpacingX * agendaItem->cellXLeft();
     const double endIt = d->mGridSpacingX * (agendaItem->cellWidth() + agendaItem->cellXLeft());
 
     agendaItem->resize(int(endIt) - int(startIt), int(d->mGridSpacingY));

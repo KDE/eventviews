@@ -33,7 +33,7 @@ void MonthItemOrderTest::longerInstancesFirst()
 {
     const QDate startDate(2000, 01, 01);
     const auto longEvent = eventItem(startDate, startDate.addDays(1));
-    auto longHoliday = std::make_unique<HolidayMonthItem>(nullptr, startDate, startDate.addDays(1), QString());
+    auto const longHoliday = std::make_unique<HolidayMonthItem>(nullptr, startDate, startDate.addDays(1), QString());
     for (int offset = -1; offset < 3; offset++) {
         const QDate d = startDate.addDays(offset);
 
@@ -43,7 +43,7 @@ void MonthItemOrderTest::longerInstancesFirst()
         QVERIFY(MonthItem::greaterThan(longHoliday.get(), shortEvent.get()));
         QVERIFY(!MonthItem::greaterThan(shortEvent.get(), longHoliday.get()));
 
-        auto shortHoliday = std::make_unique<HolidayMonthItem>(nullptr, d, QString());
+        auto const shortHoliday = std::make_unique<HolidayMonthItem>(nullptr, d, QString());
         QVERIFY(MonthItem::greaterThan(longEvent.get(), shortHoliday.get()));
         QVERIFY(!MonthItem::greaterThan(shortHoliday.get(), longEvent.get()));
         QVERIFY(MonthItem::greaterThan(longHoliday.get(), shortHoliday.get()));
@@ -58,7 +58,7 @@ void MonthItemOrderTest::holidaysFirst()
 {
     const QDate startDate(2000, 01, 01);
     const auto event = eventItem(startDate, startDate);
-    auto holiday = std::make_unique<HolidayMonthItem>(nullptr, startDate, QString());
+    auto const holiday = std::make_unique<HolidayMonthItem>(nullptr, startDate, QString());
     QVERIFY(!MonthItem::greaterThan(event.get(), holiday.get()));
     QVERIFY(MonthItem::greaterThan(holiday.get(), event.get()));
 }
@@ -71,8 +71,8 @@ void MonthItemOrderTest::stableOrder()
 {
     const QDate startDate(2000, 01, 01);
 
-    auto holiday = std::make_unique<HolidayMonthItem>(nullptr, startDate, QString());
-    auto otherHoliday = std::make_unique<HolidayMonthItem>(nullptr, startDate, QString());
+    auto const holiday = std::make_unique<HolidayMonthItem>(nullptr, startDate, QString());
+    auto const otherHoliday = std::make_unique<HolidayMonthItem>(nullptr, startDate, QString());
     QVERIFY(!(MonthItem::greaterThan(otherHoliday.get(), holiday.get()) && MonthItem::greaterThan(holiday.get(), otherHoliday.get())));
 
     const auto event = eventItem(startDate, startDate);

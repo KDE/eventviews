@@ -70,7 +70,7 @@ void TimelineViewPrivate::newEventWithHint(const QDateTime &dt)
 
 TimelineItem *TimelineViewPrivate::calendarItemForIncidence(const Akonadi::Item &item) const
 {
-    auto timelineItem = mCalendarItemMap.constFind(item.parentCollection().id());
+    auto const timelineItem = mCalendarItemMap.constFind(item.parentCollection().id());
     if (timelineItem == mCalendarItemMap.cend()) {
         return mCalendarItemMap.value(-1);
     }

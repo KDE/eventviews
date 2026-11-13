@@ -41,7 +41,7 @@ using TimeZoneNamePair = std::pair<QString, QByteArray>;
 
 static QString tzWithUTC(const QByteArray &zoneId)
 {
-    auto tz = QTimeZone(zoneId);
+    auto const tz = QTimeZone(zoneId);
     return QStringLiteral("%1 (%2)").arg(i18n(zoneId.constData()), EventViews::tzUTCOffsetStr(tz));
 }
 

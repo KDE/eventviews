@@ -268,7 +268,8 @@ MonthView::MonthView(NavButtonsVisibility visibility, QWidget *parent)
 
 MonthView::~MonthView()
 {
-    for (auto &calendar : calendars()) {
+    const auto cals = calendars();
+    for (auto const &calendar : cals) {
         calendar->unregisterObserver(d.get());
     }
 }
@@ -376,8 +377,8 @@ static QTime adjustedDefaultStartTime(const QDate &startDt)
 bool MonthView::eventDurationHint(QDateTime &startDt, QDateTime &endDt, bool &allDay) const
 {
     Q_UNUSED(allDay);
-    auto defaultDuration = CalendarSupport::KCalPrefs::instance()->defaultDuration().time();
-    auto duration = (defaultDuration.hour() * 3600) + (defaultDuration.minute() * 60);
+    auto const defaultDuration = CalendarSupport::KCalPrefs::instance()->defaultDuration().time();
+    auto const duration = (defaultDuration.hour() * 3600) + (defaultDuration.minute() * 60);
     if (startDt.isValid()) {
         if (endDt.isValid()) {
             if (startDt >= endDt) {

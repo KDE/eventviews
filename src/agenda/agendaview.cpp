@@ -499,7 +499,7 @@ void AgendaHeader::loadDecorations(const QStringList &decorations, const QString
 
 CalendarDecoration::Decoration *AgendaHeader::loadCalendarDecoration(const QString &name)
 {
-    auto result = KPluginFactory::instantiatePlugin<CalendarDecoration::Decoration>(KPluginMetaData(QStringLiteral("pim6/korganizer/") + name));
+    auto const result = KPluginFactory::instantiatePlugin<CalendarDecoration::Decoration>(KPluginMetaData(QStringLiteral("pim6/korganizer/") + name));
 
     if (result) {
         return result.plugin;
@@ -837,7 +837,7 @@ void AgendaViewPrivate::calendarIncidenceAdded(const KCalendarCore::Incidence::P
     if (incidence->hasRecurrenceId()) {
         const auto cal = q->calendar2(incidence);
         if (cal) {
-            if (auto mainIncidence = cal->incidence(incidence->uid())) {
+            if (auto const mainIncidence = cal->incidence(incidence->uid())) {
                 // Reevaluate the main event instead, if it was inserted before this one.
                 reevaluateIncidence(mainIncidence);
             } else if (q->displayIncidence(incidence, false)) {
@@ -1326,7 +1326,7 @@ void AgendaView::addCalendar(const Akonadi::CollectionCalendar::Ptr &calendar)
         return;
     }
 
-    auto view = AkonadiViewCalendar::Ptr::create();
+    auto const view = AkonadiViewCalendar::Ptr::create();
     view->mCalendar = calendar;
     view->mAgendaView = this;
     addCalendar(view);
@@ -1339,8 +1339,8 @@ void AgendaView::removeCalendar(const Akonadi::CollectionCalendar::Ptr &calendar
     }
     EventView::removeCalendar(calendar);
 
-    auto cal = std::find_if(d->mViewCalendar->mSubCalendars.cbegin(), d->mViewCalendar->mSubCalendars.cend(), [calendar](const auto &subcal) {
-        auto s = subcal->getCalendar();
+    auto const cal = std::find_if(d->mViewCalendar->mSubCalendars.cbegin(), d->mViewCalendar->mSubCalendars.cend(), [calendar](const auto &subcal) {
+        auto const s = subcal->getCalendar();
         if (s) {
             return s == calendar;
         }
@@ -1710,7 +1710,7 @@ bool AgendaView::eventDurationHint(QDateTime &startDt, QDateTime &endDt, bool &a
         }
 
         startDt = start;
-        endDt = end;
+        endDt = std::move(end);
         allDay = selectedIsAllDay();
         return true;
     }
@@ -1883,7 +1883,7 @@ void AgendaView::updateEventDates(AgendaItem *item, bool addIncidence, Akonadi::
     // by the number of days the agenda item was really moved. Smart, isn't it?)
     QDate thisDate;
     if (item->cellXLeft() < 0) {
-        thisDate = (d->mSelectedDates.first()).addDays(item->cellXLeft());
+        thisDate = d->mSelectedDates.first().addDays(item->cellXLeft());
     } else {
         thisDate = d->mSelectedDates[item->cellXLeft()];
     }
@@ -1990,7 +1990,7 @@ void AgendaView::updateEventDates(AgendaItem *item, bool addIncidence, Akonadi::
 
     bool result;
     if (addIncidence) {
-        auto collection = Akonadi::EntityTreeModel::updatedCollection(model(), collectionId);
+        auto const collection = Akonadi::EntityTreeModel::updatedCollection(model(), collectionId);
         result = changer()->createIncidence(incidence, collection, this) != -1;
     } else {
         KCalendarCore::Incidence::Ptr const oldIncidence(Akonadi::CalendarUtils::incidence(aitem));
@@ -2370,22 +2370,22 @@ static void setDateTime(const KCalendarCore::Incidence::Ptr &incidence, const QD
 {
     incidence->setAllDay(allDay);
 
-    if (auto todo = CalendarSupport::todo(incidence)) {
+    if (auto const todo = CalendarSupport::todo(incidence)) {
         // To-dos are displayed on their due date and time.  Make sure the todo is displayed
         // where it was dropped.
         QDateTime dtStart = todo->dtStart();
         if (dtStart.isValid()) {
-            auto duration = todo->dtStart().daysTo(todo->dtDue());
+            auto const duration = todo->dtStart().daysTo(todo->dtDue());
             dtStart = dt.addDays(-duration);
             dtStart.setTime({0, 0, 0});
         }
         // Set dtDue before dtStart;  see comment in updateEventDates().
         todo->setDtDue(dt, true);
         todo->setDtStart(dtStart);
-    } else if (auto event = CalendarSupport::event(incidence)) {
+    } else if (auto const event = CalendarSupport::event(incidence)) {
         auto duration = event->dtStart().secsTo(event->dtEnd());
         if (duration == 0) {
-            auto defaultDuration = CalendarSupport::KCalPrefs::instance()->defaultDuration().time();
+            auto const defaultDuration = CalendarSupport::KCalPrefs::instance()->defaultDuration().time();
             duration = (defaultDuration.hour() * 3600) + (defaultDuration.minute() * 60);
         }
         event->setDtEnd(dt.addSecs(duration));
@@ -2408,7 +2408,7 @@ void AgendaView::slotIncidencesDropped(const KCalendarCore::Incidence::List &inc
     for (const KCalendarCore::Incidence::Ptr &incidence : incidences) {
         const Akonadi::Item existingItem = d->mViewCalendar->item(incidence);
         if (existingItem.isValid()) {
-            auto newIncidence = existingItem.payload<KCalendarCore::Incidence::Ptr>();
+            auto const newIncidence = existingItem.payload<KCalendarCore::Incidence::Ptr>();
 
             if (newIncidence->dtStart() == newTime && newIncidence->allDay() == allDay) {
                 // Nothing changed

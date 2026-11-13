@@ -495,7 +495,7 @@ void MultiAgendaViewPrivate::setActiveAgenda(AgendaView *view)
         return;
     }
 
-    auto calendars = view->calendars();
+    auto const calendars = view->calendars();
     if (calendars.empty()) {
         return;
     }
@@ -828,7 +828,7 @@ void MultiAgendaView::customCollectionsChanged(ConfigDialogInterface *dlg)
         newModels[i] = dlg->takeSelectionModel(i);
         d->mCustomColumnTitles.push_back(dlg->columnTitle(i));
     }
-    d->mCollectionSelectionModels = newModels;
+    d->mCollectionSelectionModels = std::move(newModels);
     d->mPendingChanges = true;
     recreateViews();
 }

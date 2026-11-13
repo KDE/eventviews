@@ -364,13 +364,13 @@ void WhatsNextView::showIncidence(const QUrl &uri)
         return;
     }
 
-    auto calendar = calendarForCollection(*calendarId);
+    auto const calendar = calendarForCollection(*calendarId);
     if (!calendar) {
         qCWarning(CALENDARVIEW_LOG) << "Calendar for collection " << *calendarId << " not present in current view";
         return;
     }
 
-    auto item = calendar->item(*itemId);
+    auto const item = calendar->item(*itemId);
     if (!item.isValid()) {
         qCWarning(CALENDARVIEW_LOG) << "Item " << *itemId << " not found in collection " << *calendarId;
         return;

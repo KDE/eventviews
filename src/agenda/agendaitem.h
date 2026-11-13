@@ -143,12 +143,12 @@ public:
 
     AgendaItem::QPtr prevMoveItem() const
     {
-        return (mStartMoveInfo) ? (mStartMoveInfo->mPrevMultiItem) : nullptr;
+        return mStartMoveInfo ? mStartMoveInfo->mPrevMultiItem : nullptr;
     }
 
     AgendaItem::QPtr nextMoveItem() const
     {
-        return (mStartMoveInfo) ? (mStartMoveInfo->mNextMultiItem) : nullptr;
+        return mStartMoveInfo ? mStartMoveInfo->mNextMultiItem : nullptr;
     }
 
     MultiItemInfo *moveInfo() const
@@ -166,22 +166,22 @@ public:
 
     AgendaItem::QPtr firstMultiItem() const
     {
-        return (mMultiItemInfo) ? (mMultiItemInfo->mFirstMultiItem) : nullptr;
+        return mMultiItemInfo ? mMultiItemInfo->mFirstMultiItem : nullptr;
     }
 
     AgendaItem::QPtr prevMultiItem() const
     {
-        return (mMultiItemInfo) ? (mMultiItemInfo->mPrevMultiItem) : nullptr;
+        return mMultiItemInfo ? mMultiItemInfo->mPrevMultiItem : nullptr;
     }
 
     AgendaItem::QPtr nextMultiItem() const
     {
-        return (mMultiItemInfo) ? (mMultiItemInfo->mNextMultiItem) : nullptr;
+        return mMultiItemInfo ? mMultiItemInfo->mNextMultiItem : nullptr;
     }
 
     AgendaItem::QPtr lastMultiItem() const
     {
-        return (mMultiItemInfo) ? (mMultiItemInfo->mLastMultiItem) : nullptr;
+        return mMultiItemInfo ? mMultiItemInfo->mLastMultiItem : nullptr;
     }
 
     [[nodiscard]] bool dissociateFromMultiItem();

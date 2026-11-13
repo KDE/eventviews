@@ -197,7 +197,7 @@ public:
 
     /*!
      */
-    Decoration(QObject *parent = nullptr, const QVariantList &args = {});
+    explicit Decoration(QObject *parent = nullptr, const QVariantList &args = {});
     /*!
      */
     ~Decoration() override;

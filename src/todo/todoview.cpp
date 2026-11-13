@@ -700,7 +700,7 @@ void TodoView::updateView()
         return;
     }
 
-    auto &calendar = calendarList.first();
+    auto const &calendar = calendarList.first();
     mProxyModel->setCalFilter(calendar->filter());
 }
 
@@ -1032,7 +1032,7 @@ void TodoView::onTagsFetched(KJob *job)
     }
     auto fetchJob = static_cast<Akonadi::TagFetchJob *>(job);
     const QStringList checkedCategories = job->property("checkedCategories").toStringList();
-    auto menu = job->property("menu").value<QPointer<QMenu>>();
+    auto const menu = job->property("menu").value<QPointer<QMenu>>();
     if (menu) {
         const auto lst = fetchJob->tags();
         for (const Akonadi::Tag &tag : lst) {
@@ -1239,7 +1239,7 @@ void TodoView::onRowsInserted(const QModelIndex &parent, int start, int end)
         return;
     }
 
-    auto item = v.value<Akonadi::Item>();
+    auto const item = v.value<Akonadi::Item>();
     if (!item.isValid()) {
         return;
     }

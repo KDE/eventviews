@@ -61,7 +61,7 @@ void TimeLabelsZone::init()
     const auto lst = mPrefs->timeScaleTimezones();
     for (const QString &zoneStr : lst) {
         if (!seenTimeZones.contains(zoneStr)) {
-            auto zone = QTimeZone(zoneStr.toUtf8());
+            auto const zone = QTimeZone(zoneStr.toUtf8());
             if (zone.isValid()) {
                 addTimeLabels(zone);
                 seenTimeZones += zoneStr;
