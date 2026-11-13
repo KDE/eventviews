@@ -9,6 +9,9 @@ documentationinheaders = true
 headerdirs += .
 sourcedirs += .
 
+excludedirs += \
+    month/autotests
+
 outputformats = HTML
 
 depends += \
