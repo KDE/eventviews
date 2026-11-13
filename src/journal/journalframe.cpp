@@ -17,8 +17,8 @@
 #include <CalendarSupport/Utils>
 
 #include <KCalendarCore/Journal>
-#include <kcoreaddons_version.h> //remove when KF_MIN_VERSION is "6.31"
-#if KCOREADDONS_VERSION >= QT_VERSION_CHECK(6, 31, 0)
+#include <kcoreaddons_version.h> //remove when KF_MIN_VERSION is "6.32"
+#if KCOREADDONS_VERSION >= QT_VERSION_CHECK(6, 32, 0)
 #include <KFormat>
 #endif
 #include <KLocalizedString>
@@ -295,7 +295,7 @@ void JournalFrame::readJournal(const Akonadi::Item &item)
     dateFormat.setFontWeight(QFont::Bold);
     dateFormat.setFontPointSize(baseFontSize + 1);
     const QDateTime dt = j->dtStart().toLocalTime();
-#if KCOREADDONS_VERSION >= QT_VERSION_CHECK(6, 31, 0)
+#if KCOREADDONS_VERSION >= QT_VERSION_CHECK(6, 32, 0)
     const KFormat format;
     const QString dtStartStr = format.formatDateTime(dt, QLocale::LongFormat, KFormat::AddTimezoneAbbreviationIfNeeded);
 #else
