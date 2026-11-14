@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-12 01:02+0000\n"
+"POT-Creation-Date: 2026-11-14 01:04+0000\n"
 "PO-Revision-Date: 2026-08-28 11:43+0200\n"
 "Last-Translator: Libor Filipek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -1940,13 +1940,13 @@ msgctxt "'Month day' for month view cells"
 msgid "%1 %2"
 msgstr "%1 %2"
 
-#: month/monthview.cpp:207 month/monthview.cpp:478
+#: month/monthview.cpp:207 month/monthview.cpp:479
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display calendar in a normal size"
 msgstr "Zobrazit kalendář v normální velikosti"
 
-#: month/monthview.cpp:208 month/monthview.cpp:481
+#: month/monthview.cpp:208 month/monthview.cpp:482
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Display calendar in a full window"
