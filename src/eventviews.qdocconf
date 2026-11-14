@@ -1,6 +1,7 @@
 include($KDE_DOCS/global/qt-module-defaults.qdocconf)
 
 project = EventViews
+moduleheader = eventviews_qdocmoduleheader.h
 description = Event views library.
 
 
