@@ -7,7 +7,22 @@ description = Event views library.
 
 documentationinheaders = true
 
-headerdirs += .
+headers += \
+    agenda/agendaview.h \
+    agenda/calendardecoration.h \
+    agenda/viewcalendar.h \
+    eventview.h \
+    eventviews_qdocmoduleheader.h \
+    helper.h \
+    journal/journalview.h \
+    list/listview.h \
+    month/monthview.h \
+    multiagenda/configdialoginterface.h \
+    multiagenda/multiagendaview.h \
+    prefs.h \
+    timeline/timelineview.h \
+    todo/todoview.h \
+    whatsnext/whatsnextview.h
 sourcedirs += .
 
 excludedirs += \
