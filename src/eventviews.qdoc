@@ -2,8 +2,8 @@
     \module EventViews
     \title EventViews C++ Classes
     \ingroup modules
-    \cmakepackage KPim6
-    \cmakecomponent EventViews
+    \cmakepackage KPim6EventViews
+    \cmaketargetitem KPim6::EventViews
 
     \brief Event views library.
 */

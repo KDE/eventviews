@@ -10,7 +10,7 @@
 
     \section2 Building with CMake
 
-    \include {module-use.qdocinc} {building with cmake} {KPim6} {EventViews} {KPim6::EventViews}
+    \include {module-use.qdocinc} {building with cmake nomodule} {KPim6EventViews} {KPim6::EventViews}
 
     \section1 API Reference
 
