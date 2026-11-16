@@ -252,18 +252,22 @@ install(
     COMPONENT Devel
 )
 
+set(EVENTVIEWS_FILES
+    ${eventviews_agenda_HEADERS}
+    ${eventviews_HEADERS}
+    ${eventviews_todo_HEADERS}
+    ${eventviews_whatsnext_HEADERS}
+    ${eventviews_timeline_HEADERS}
+    ${eventviews_multiagenda_HEADERS}
+    ${eventviews_journal_HEADERS}
+    ${eventviews_list_HEADERS}
+    ${eventviews_month_HEADERS}
+)
+
 install(
     FILES
         ${CMAKE_CURRENT_BINARY_DIR}/eventviews_export.h
-        ${eventviews_agenda_HEADERS}
-        ${eventviews_HEADERS}
-        ${eventviews_todo_HEADERS}
-        ${eventviews_whatsnext_HEADERS}
-        ${eventviews_timeline_HEADERS}
-        ${eventviews_multiagenda_HEADERS}
-        ${eventviews_journal_HEADERS}
-        ${eventviews_list_HEADERS}
-        ${eventviews_month_HEADERS}
+        ${EVENTVIEWS_FILES}
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/EventViews/eventviews
     COMPONENT Devel
 )
@@ -283,15 +287,7 @@ ecm_add_installed_library_check(KPim6EventViews
 
 ecm_installed_library_check_include_strings(KPim6EventViews
     HEADERS
-    ${eventviews_agenda_HEADERS}
-    ${eventviews_HEADERS}
-    ${eventviews_todo_HEADERS}
-    ${eventviews_whatsnext_HEADERS}
-    ${eventviews_timeline_HEADERS}
-    ${eventviews_multiagenda_HEADERS}
-    ${eventviews_journal_HEADERS}
-    ${eventviews_list_HEADERS}
-    ${eventviews_month_HEADERS}
+    ${EVENTVIEWS_FILES}
     PREFIX eventviews
 )
 
