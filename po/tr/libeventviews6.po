@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kdepim-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-14 01:04+0000\n"
-"PO-Revision-Date: 2026-11-15 20:04+0300\n"
+"PO-Revision-Date: 2026-11-16 18:49+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -1880,13 +1880,13 @@ msgstr "Bu günce girdisi için bir yazdırma iletişim kutusu açar"
 #, kde-format
 msgctxt "@action: button"
 msgid "Print preview"
-msgstr "Yazdırma Önizlemesi"
+msgstr "Yazdırma Ön İzlemesi"
 
 #: journal/journalframe.cpp:185
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Print preview this journal entry"
-msgstr "Bu günce girdisinin yazdırma önizlemesi"
+msgstr "Bu günce girdisinin yazdırma ön izlemesi"
 
 #: journal/journalframe.cpp:186
 #, kde-format
@@ -2204,7 +2204,7 @@ msgstr "&Yazdır…"
 #, kde-format
 msgctxt "@action:inmenu print preview the to-do"
 msgid "Print Previe&w…"
-msgstr "&Yazdırma Önizlemesi…"
+msgstr "&Yazdırma Ön İzlemesi…"
 
 #: todo/todoview.cpp:428
 #, kde-format
