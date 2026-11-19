@@ -142,6 +142,7 @@ endif()
 
 ########### Targets ###########
 add_definitions(-DQT_NO_CONTEXTLESS_CONNECT)
+add_definitions(-DQT_NO_JAVA_STYLE_ITERATORS)
 if(BUILD_TESTING)
     add_definitions(-DBUILD_TESTING)
 endif()
