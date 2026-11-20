@@ -7,6 +7,7 @@
 
 #include "eventviews_export.h"
 
+#include <QObject>
 #include <QUrl>
 
 #include <QDate>

@@ -9,6 +9,7 @@
 
 #include <QDate>
 #include <QGraphicsItem>
+#include <QHash>
 
 namespace EventViews
 {
