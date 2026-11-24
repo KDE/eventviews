@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kdepim-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-14 01:04+0000\n"
-"PO-Revision-Date: 2026-11-18 19:18+0300\n"
+"PO-Revision-Date: 2026-11-23 18:11+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -381,13 +381,13 @@ msgstr "Yeni Etkinlikler, Yapılacaklar ve Günce Girdileri"
 #: eventviews.kcfg:18
 #, kde-format
 msgid "Be added to the default calendar"
-msgstr "Öntanımlı takvime eklensin"
+msgstr "Varsayılan takvime eklensin"
 
 #. i18n: ectx: tooltip, entry (Destination), group (Save Settings)
 #: eventviews.kcfg:19
 #, kde-format
 msgid "Always save to the default calendar"
-msgstr "Her zaman öntanımlı takvime kaydet"
+msgstr "Her zaman varsayılan takvime kaydet"
 
 #. i18n: ectx: whatsthis, entry (Destination), group (Save Settings)
 #: eventviews.kcfg:20
@@ -397,7 +397,7 @@ msgid ""
 "using the current default calendar."
 msgstr ""
 "Yeni etkinlikleri, yapılacakları ve günce girdilerini her zaman geçerli "
-"öntanımlı takvimi kullanarak kaydetmek için bu seçeneği seçin."
+"varsayılan takvimi kullanarak kaydetmek için bu seçeneği seçin."
 
 #. i18n: ectx: label, entry (Destination), group (Save Settings)
 #: eventviews.kcfg:23
@@ -1796,13 +1796,13 @@ msgstr ""
 #: eventviews.kcfg:447
 #, kde-format
 msgid "Default todo attachment method"
-msgstr "Öntanımlı yapılacak ekleme yöntemi"
+msgstr "Varsayılan yapılacak ekleme yöntemi"
 
 #. i18n: ectx: whatsthis, entry (DefaultTodoAttachMethod), group (Hidden Options)
 #: eventviews.kcfg:448
 #, kde-format
 msgid "The default way of attaching dropped emails to a task"
-msgstr "Bir göreve bırakılan e-postaları eklemenin öntanımlı yolu"
+msgstr "Bir göreve bırakılan e-postaları eklemenin varsayılan yolu"
 
 #. i18n: ectx: label, entry (DefaultTodoAttachMethod), group (Hidden Options)
 #: eventviews.kcfg:451
