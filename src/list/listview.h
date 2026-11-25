@@ -55,6 +55,8 @@ public:
     [[nodiscard]] KCalendarCore::DateList selectedIncidenceDates() const override;
 
     // Shows all incidences of the calendar
+    /*!
+     */
     void showAll();
 
     /*!
@@ -81,7 +83,11 @@ public:
      */
     void writeSettings(KConfigGroup &cfgGroup);
 
+    /*!
+     */
     void clear();
+    /*!
+     */
     QSize sizeHint() const override;
 
     /*!

@@ -28,23 +28,42 @@ class AgendaItem;
 
 class EventIndicatorPrivate;
 
+/*!
+ * \class EventViews::EventIndicator
+ * \inmodule EventViews
+ * \inheaderfile EventViews/AgendaView
+ */
 class EventIndicator : public QWidget
 {
     Q_OBJECT
 public:
+    /*!
+     */
     enum Location {
         Top,
         Bottom
     };
+    /*!
+     */
     explicit EventIndicator(Location loc = Top, QWidget *parent = nullptr);
+    /*!
+     */
     ~EventIndicator() override;
 
+    /*!
+     */
     void changeColumns(int columns);
 
+    /*!
+     */
     void enableColumn(int column, bool enable);
 
 protected:
+    /*!
+     */
     void paintEvent(QPaintEvent *event) override;
+    /*!
+     */
     bool eventFilter(QObject *, QEvent *) override;
 
 private:
@@ -77,6 +96,8 @@ public:
      */
     ~AgendaView() override;
 
+    /*!
+     */
     enum {
         MAX_DAY_COUNT = 42 // (6 * 7)
     };
@@ -116,6 +137,8 @@ public:
     [[nodiscard]] bool selectedIsSingleCell() const;
 
     /* reimp from EventView */
+    /*!
+     */
     virtual void addCalendar(const ViewCalendar::Ptr &cal);
 
     /*!
@@ -134,6 +157,8 @@ public:
     */
     void updateEventDates(AgendaItem *item, bool addIncidence, Akonadi::Collection::Id collectionId);
 
+    /*!
+     */
     [[nodiscard]] QList<bool> busyDayMask() const;
 
     /*!
@@ -202,6 +227,8 @@ public:
     void clearTimeSpanSelection();
 
     // Used by the timelabelszone
+    /*!
+     */
     void updateTimeBarWidth();
     /*! Create labels for the selected dates. */
     void createDayLabels(bool force);

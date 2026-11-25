@@ -18,10 +18,17 @@ class KIconLoader;
 
 namespace EventViews
 {
+/*!
+ * \class EventViews::WhatsNextTextBrowser
+ * \inmodule EventViews
+ * \inheaderfile EventViews/WhatsNextView
+ */
 class WhatsNextTextBrowser : public QTextBrowser
 {
     Q_OBJECT
 public:
+    /*!
+     */
     explicit WhatsNextTextBrowser(QWidget *parent)
         : QTextBrowser(parent)
     {
@@ -32,6 +39,8 @@ protected:
     void doSetSource(const QUrl &name, QTextDocument::ResourceType type = QTextDocument::UnknownResource) override;
 
 Q_SIGNALS:
+    /*!
+     */
     void showIncidence(const QUrl &);
 };
 

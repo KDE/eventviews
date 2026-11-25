@@ -7,3 +7,9 @@
 
     \brief Event views library.
 */
+
+/*!
+    \namespace EventViews
+    \inmodule EventViews
+    \brief The EventViews namespace contains the classes of the EventViews module.
+*/

@@ -90,6 +90,8 @@ public:
     }
 
     /* cppcheck-suppress functionStatic */
+    /*!
+     */
     void setDocumentId(const QString &)
     {
     }
@@ -215,13 +217,29 @@ private Q_SLOTS:
     EVENTVIEWS_NO_EXPORT void onTagsFetched(KJob *);
 
 Q_SIGNALS:
+    /*!
+     */
     void purgeCompletedSignal();
+    /*!
+     */
     void unSubTodoSignal();
+    /*!
+     */
     void unAllSubTodoSignal();
+    /*!
+     */
     void configChanged();
+    /*!
+     */
     void fullViewChanged(bool);
+    /*!
+     */
     void printPreviewTodo();
+    /*!
+     */
     void printTodo();
+    /*!
+     */
     void createEvent(const Akonadi::Item &);
 
 private:

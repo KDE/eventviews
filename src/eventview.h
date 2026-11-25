@@ -76,11 +76,15 @@ class EVENTVIEWS_EXPORT EventView : public QWidget
 {
     Q_OBJECT
 public:
+    /*!
+     */
     enum {
         // This value is passed to QColor's lighter(int factor) for selected events
         BRIGHTNESS_FACTOR = 110
     };
 
+    /*!
+     */
     enum ItemIcon {
         CalendarCustomIcon = 0,
         TaskIcon = 1,
@@ -95,6 +99,8 @@ public:
         IconCount = 10 // Always keep at the end
     };
 
+    /*!
+     */
     enum Change {
         NothingChanged = 0,
         IncidencesAdded = 1,
@@ -310,6 +316,8 @@ public:
      * Sets the QObject that will receive key events that were made
      * while the new event dialog was still being created.
      */
+    /*!
+     */
     void setTypeAheadReceiver(QObject *o);
 
     /*!
@@ -346,6 +354,8 @@ public:
      */
     [[nodiscard]] Akonadi::CollectionCalendar::Ptr calendarForCollection(Akonadi::Collection::Id collectionId) const;
 
+    /*!
+     */
     virtual void showDates(const QDate &start, const QDate &end, const QDate &preferredMonth = QDate()) = 0;
 
 public Q_SLOTS:
@@ -533,11 +543,21 @@ private:
     EVENTVIEWS_NO_EXPORT void onCollectionChanged(const Akonadi::Collection &, const QSet<QByteArray> &);
 
 protected:
+    /*!
+     */
     QList<Akonadi::CollectionCalendar::Ptr> calendars() const;
+    /*!
+     */
     Akonadi::CollectionCalendar::Ptr calendar3(const Akonadi::Item &item) const;
+    /*!
+     */
     Akonadi::CollectionCalendar::Ptr calendar3(const KCalendarCore::Incidence::Ptr &incidence) const;
 
+    /*!
+     */
     bool makesWholeDayBusy(const KCalendarCore::Incidence::Ptr &incidence) const;
+    /*!
+     */
     Akonadi::IncidenceChanger *changer() const;
 
     /*!
@@ -561,6 +581,8 @@ protected:
      * uint so it can be easily fed to KCalendarSystem's functions.
      */
     virtual std::pair<QDateTime, QDateTime> actualDateRange(const QDateTime &start, const QDateTime &end, const QDate &preferredMonth = QDate()) const;
+    /*!
+     */
     virtual void handleBackendError(const QString &error);
 
 private:

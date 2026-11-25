@@ -29,6 +29,8 @@ class EVENTVIEWS_EXPORT MonthView : public EventView
 {
     Q_OBJECT
 public:
+    /*!
+     */
     enum NavButtonsVisibility {
         Visible,
         Hidden

@@ -30,14 +30,25 @@ class EVENTVIEWS_EXPORT MultiAgendaView : public EventView
 {
     Q_OBJECT
 public:
+    /*!
+     * \class EventViews::MultiAgendaView::CalendarFactory
+     * \inmodule EventViews
+     * \inheaderfile EventViews/MultiAgendaView
+     */
     class CalendarFactory
     {
     public:
         using Ptr = QSharedPointer<CalendarFactory>;
 
+        /*!
+         */
         explicit CalendarFactory() = default;
+        /*!
+         */
         virtual ~CalendarFactory() = default;
 
+        /*!
+         */
         virtual Akonadi::CollectionCalendar::Ptr calendarForCollection(const Akonadi::Collection &collection) = 0;
     };
 

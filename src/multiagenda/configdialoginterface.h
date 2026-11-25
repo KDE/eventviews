@@ -12,15 +12,30 @@ class KCheckableProxyModel;
 
 namespace EventViews
 {
+/*!
+ * \class EventViews::ConfigDialogInterface
+ * \inmodule EventViews
+ * \inheaderfile EventViews/ConfigDialogInterface
+ */
 class ConfigDialogInterface
 {
 public:
+    /*!
+     */
     virtual ~ConfigDialogInterface() = default;
 
+    /*!
+     */
     virtual int numberOfColumns() const = 0;
+    /*!
+     */
     virtual bool useCustomColumns() const = 0;
+    /*!
+     */
     virtual QString columnTitle(int column) const = 0;
 
+    /*!
+     */
     virtual KCheckableProxyModel *takeSelectionModel(int column) = 0;
 };
 }

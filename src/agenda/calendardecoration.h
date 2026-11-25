@@ -19,9 +19,17 @@ class QWidget;
 
 namespace EventViews
 {
+/*!
+ * \namespace EventViews::CalendarDecoration
+ * \inmodule EventViews
+ * \inheaderfile EventViews/CalendarDecoration
+ */
 namespace CalendarDecoration
 {
 /*!
+ * \class EventViews::CalendarDecoration::Element
+ * \inmodule EventViews
+ * \inheaderfile EventViews/CalendarDecoration
   \brief Class for calendar decoration elements
 
   It provides entities like texts and pictures for a given date.
@@ -109,10 +117,15 @@ Q_SIGNALS:
     void gotNewUrl(const QUrl &);
 
 protected:
+    /*!
+     */
     QString mId;
 };
 
 /*!
+ * \class EventViews::CalendarDecoration::StoredElement
+ * \inmodule EventViews
+ * \inheaderfile EventViews/CalendarDecoration
   This class provides a stored element, which contains all data for the given
   date/month/year.
 */
@@ -172,10 +185,20 @@ public:
     [[nodiscard]] QUrl url() const override;
 
 protected:
+    /*!
+     */
     QString mShortText;
+    /*!
+     */
     QString mLongText;
+    /*!
+     */
     QString mExtensiveText;
+    /*!
+     */
     QPixmap mPixmap;
+    /*!
+     */
     QUrl mUrl;
 };
 
@@ -223,8 +246,12 @@ public:
     */
     virtual Element::List yearElements(const QDate &d);
 
+    /*!
+     */
     virtual void configure(QWidget *);
 
+    /*!
+     */
     virtual QString info() const = 0;
 
 protected:

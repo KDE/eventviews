@@ -63,6 +63,8 @@ public:
 
 public Q_SLOTS:
     // Don't update the view when midnight passed, otherwise we'll have data loss (bug 79145)
+    /*!
+     */
     void dayPassed(const QDate &) override
     {
     }
